@@ -1,10 +1,11 @@
 [project]
 name = "hl7types"
-version = "0.1.2"
+version = "0.1.3"
 description = "Typed, Pydantic-powered HL7 v2 models with built-in ER7 and XML serialisation"
 readme = "README.md"
 requires-python = ">=3.10"
-license = {text = "MIT"}
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [
     {name = "Keiron O'Shea", email = "keiron@keiron.xyz"}
 ]
@@ -16,7 +17,6 @@ keywords = [
     "pydantic",
     "er7",
     "xml",
-    "fhir",
     "clinical",
     "messaging",
 ]
@@ -26,6 +26,10 @@ classifiers = [
     "Intended Audience :: Healthcare Industry",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
     "Topic :: Scientific/Engineering :: Medical Science Apps.",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
@@ -34,13 +38,14 @@ dependencies = [
 ]
 
 [project.urls]
-Homepage = "https://github.com/KeironO/hl7types"
 Repository = "https://github.com/KeironO/hl7types"
 Issues = "https://github.com/KeironO/hl7types/issues"
 
 [dependency-groups]
 dev = [
+    "hatchling>=1.27.0",
     "pre-commit>=4.6.0",
+    "pyright>=1.1.0",
     "pytest>=8.0",
     "pytest-cov>=6.0",
     "ruff>=0.15.15",
@@ -50,6 +55,12 @@ dev = [
 testpaths = ["tests"]
 addopts = "-v --tb=short"
 
+[tool.coverage.run]
+source = ["hl7types/codecs", "hl7types/__init__.py"]
+
+[tool.coverage.report]
+show_missing = true
+
 [tool.ruff]
 line-length = 100
 exclude = ["hl7types/hl7/**", "tests/**"]
@@ -57,6 +68,16 @@ exclude = ["hl7types/hl7/**", "tests/**"]
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]
 ignore = ["E501"]
+
+[tool.pyright]
+include = ["hl7types/codecs", "hl7types/__init__.py"]
+pythonVersion = "3.10"
+typeCheckingMode = "basic"
+reportMissingImports = true
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
 
 [tool.ruff.lint.per-file-ignores]
 "hl7types/hl7/**/__init__.py" = ["F401"]
