@@ -142,7 +142,7 @@ def _parse_field(raw: str, base_type: Any, is_list: bool, enc: EncodingChars) ->
     return _parse_rep(raw, base_type, enc)
 
 
-def decode_segment(
+def decode_er7_segment(
     seg_str: str,
     seg_cls: type[BaseModel],
     enc: EncodingChars = DEFAULT_ENCODING,
@@ -206,7 +206,7 @@ def _decode_struct(
     if _is_segment_cls(model_cls):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
             return idx, None
-        return idx + 1, decode_segment(segs[idx][1], model_cls, enc)
+        return idx + 1, decode_er7_segment(segs[idx][1], model_cls, enc)
 
     hints = get_type_hints(model_cls)
     data: dict[str, Any] = {}
@@ -277,7 +277,7 @@ def _resolve_msg_cls(wire: str, segment_separator: str) -> type[BaseModel]:
     return getattr(module, structure)
 
 
-def decode(
+def decode_er7(
     wire: str,
     msg_cls: type[BaseModel] | None = None,
     segment_separator: str = "\r",

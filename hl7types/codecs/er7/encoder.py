@@ -129,7 +129,7 @@ def _collect_segments(obj: BaseModel) -> list[BaseModel]:
     return segs
 
 
-def encode_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) -> str:
+def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) -> str:
     seg_name = type(seg).__name__
     d = seg.model_dump(by_alias=True)
     pm = _pos_map(d)
@@ -154,9 +154,9 @@ def encode_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) -> str
     return _strip_trailing(result, enc.field)
 
 
-def encode(model: BaseModel, segment_separator: str = "\r") -> str:
+def encode_er7(model: BaseModel, segment_separator: str = "\r") -> str:
     if _is_segment(model):
-        return encode_segment(model)
+        return encode_er7_segment(model)
 
     segments = _collect_segments(model)
     if not segments:
@@ -179,4 +179,4 @@ def encode(model: BaseModel, segment_separator: str = "\r") -> str:
             )
             break
 
-    return segment_separator.join(encode_segment(seg, enc) for seg in segments)
+    return segment_separator.join(encode_er7_segment(seg, enc) for seg in segments)

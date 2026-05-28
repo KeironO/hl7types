@@ -12,11 +12,12 @@ from pydantic import BaseModel
 from hl7types.codecs.er7.encoder import (
     DEFAULT_ENCODING,
     EncodingChars,
-    encode,
-    encode_segment,
+    encode_er7,
+    encode_er7_segment,
     _is_segment,
 )
-from hl7types.codecs.er7.decoder import decode, decode_segment, _is_segment_cls
+from hl7types.codecs.er7.decoder import decode_er7, decode_er7_segment, _is_segment_cls
+from hl7types.codecs.xml.encoder import encode_xml
 
 
 def _dump_er7(
@@ -26,8 +27,8 @@ def _dump_er7(
 ) -> str:
     effective_enc = enc if enc is not None else DEFAULT_ENCODING
     if _is_segment(self):
-        return encode_segment(self, effective_enc)
-    return encode(self, segment_separator=segment_separator)
+        return encode_er7_segment(self, effective_enc)
+    return encode_er7(self, segment_separator=segment_separator)
 
 
 def _validate_er7(
@@ -38,13 +39,22 @@ def _validate_er7(
 ) -> BaseModel:
     effective_enc = enc if enc is not None else DEFAULT_ENCODING
     if _is_segment_cls(cls):
-        return decode_segment(wire, cls, effective_enc)
-    return decode(wire, msg_cls=cls, segment_separator=segment_separator)
+        return decode_er7_segment(wire, cls, effective_enc)
+    return decode_er7(wire, msg_cls=cls, segment_separator=segment_separator)
+
+
+def _dump_xml(
+    self: BaseModel,
+    *,
+    pretty: bool = True,
+) -> str:
+    return encode_xml(self, pretty=pretty)
 
 
 def _inject(cls: type) -> None:
     cls.model_dump_er7 = _dump_er7
     cls.model_validate_er7 = classmethod(_validate_er7)
+    cls.model_dump_xml = _dump_xml
 
 
 _original_init_subclass = BaseModel.__init_subclass__
@@ -63,8 +73,9 @@ BaseModel.__init_subclass__ = _patched_init_subclass  # type: ignore[method-assi
 __all__ = [
     "EncodingChars",
     "DEFAULT_ENCODING",
-    "encode",
-    "encode_segment",
-    "decode",
-    "decode_segment",
+    "encode_er7",
+    "encode_er7_segment",
+    "decode_er7",
+    "decode_er7_segment",
+    "encode_xml",
 ]
