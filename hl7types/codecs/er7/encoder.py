@@ -6,11 +6,9 @@ from typing import Any
 
 from pydantic import BaseModel
 
-_DELIM_DEF_SEGMENTS = frozenset({"MSH", "FHS", "BHS"})
+_DELIM_DEF = frozenset({"MSH", "FHS", "BHS"})
 _SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,2}\.\d+$")
 
-
-# Encoding characters
 
 @dataclass(frozen=True)
 class EncodingChars:
@@ -35,13 +33,23 @@ class EncodingChars:
 DEFAULT_ENCODING = EncodingChars()
 
 
-# Helpers
-
 def _strip_trailing(s: str, delim: str) -> str:
     n = len(delim)
     while s.endswith(delim):
         s = s[:-n]
     return s
+
+
+def _pos(key: str) -> int | None:
+    dot = key.rfind(".")
+    if dot == -1:
+        return None
+    suffix = key[dot + 1:]
+    return int(suffix) if suffix.isdigit() else None
+
+
+def _pos_map(d: dict[str, Any]) -> dict[int, Any]:
+    return {_pos(k): v for k, v in d.items() if _pos(k) is not None}
 
 
 def _escape(value: str, enc: EncodingChars) -> str:
@@ -54,22 +62,6 @@ def _escape(value: str, enc: EncodingChars) -> str:
     return value
 
 
-def _pos(key: str) -> int | None:
-    """'XPN.2' → 2, 'MSH.12' → 12, anything else → None."""
-    dot = key.rfind(".")
-    if dot == -1:
-        return None
-    suffix = key[dot + 1 :]
-    return int(suffix) if suffix.isdigit() else None
-
-
-def _pos_map(d: dict[str, Any]) -> dict[int, Any]:
-    return {_pos(k): v for k, v in d.items() if _pos(k) is not None}
-
-
-# Value encoding (3hree levels - field to composite to sub-composite)
-
-
 def _encode_subcomposite(d: dict[str, Any], enc: EncodingChars) -> str:
     pm = _pos_map(d)
     if not pm:
@@ -77,12 +69,7 @@ def _encode_subcomposite(d: dict[str, Any], enc: EncodingChars) -> str:
     parts = []
     for i in range(1, max(pm) + 1):
         val = pm.get(i)
-        if val is None:
-            parts.append("")
-        elif isinstance(val, str):
-            parts.append(_escape(val, enc))
-        else:
-            parts.append("")  # shouldn't occur deeper than sub-component
+        parts.append(_escape(val, enc) if isinstance(val, str) else "")
     return _strip_trailing(enc.subcomponent.join(parts), enc.subcomponent)
 
 
@@ -117,38 +104,6 @@ def _encode_value(val: Any, enc: EncodingChars) -> str:
     return _escape(str(val), enc)
 
 
-# Segment encoding
-
-def encode_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) -> str:
-    seg_name = type(seg).__name__
-    d = seg.model_dump(by_alias=True)
-
-    pm = _pos_map(d)
-    if not pm:
-        return seg_name
-
-    max_pos = max(pm)
-
-    if seg_name in _DELIM_DEF_SEGMENTS:
-        # Field 1 is the separator (already encoded as the first |).
-        # Field 2 is the encoding chars string — written literally, never re-escaped.
-        enc_chars_literal = str(pm.get(2, "^~\\&") or "^~\\&")
-        parts = [enc_chars_literal]
-        for i in range(3, max_pos + 1):
-            val = pm.get(i)
-            parts.append(_encode_value(val, enc) if val is not None else "")
-    else:
-        parts = []
-        for i in range(1, max_pos + 1):
-            val = pm.get(i)
-            parts.append(_encode_value(val, enc) if val is not None else "")
-
-    result = seg_name + enc.field + enc.field.join(parts)
-    return _strip_trailing(result, enc.field)
-
-# Message encoding
-
-
 def _is_segment(model: BaseModel) -> bool:
     for fi in type(model).model_fields.values():
         alias = fi.serialization_alias
@@ -158,7 +113,6 @@ def _is_segment(model: BaseModel) -> bool:
 
 
 def _collect_segments(obj: BaseModel) -> list[BaseModel]:
-    """Walk a message/group in field-declaration order, collecting segment leaves."""
     segs: list[BaseModel] = []
     for fname in type(obj).model_fields:
         value = getattr(obj, fname)
@@ -175,11 +129,32 @@ def _collect_segments(obj: BaseModel) -> list[BaseModel]:
     return segs
 
 
-def encode(model: BaseModel, segment_separator: str = "\r") -> str:
-    """Encode a message or a single segment to HL7 v2 pipe format.
+def encode_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) -> str:
+    seg_name = type(seg).__name__
+    d = seg.model_dump(by_alias=True)
+    pm = _pos_map(d)
+    if not pm:
+        return seg_name
 
-    For a message, segments are joined with *segment_separator* (``\\r`` by default).
-    """
+    max_pos = max(pm)
+
+    if seg_name in _DELIM_DEF:
+        enc_chars_literal = str(pm.get(2, "^~\\&") or "^~\\&")
+        parts = [enc_chars_literal]
+        for i in range(3, max_pos + 1):
+            val = pm.get(i)
+            parts.append(_encode_value(val, enc) if val is not None else "")
+    else:
+        parts = []
+        for i in range(1, max_pos + 1):
+            val = pm.get(i)
+            parts.append(_encode_value(val, enc) if val is not None else "")
+
+    result = seg_name + enc.field + enc.field.join(parts)
+    return _strip_trailing(result, enc.field)
+
+
+def encode(model: BaseModel, segment_separator: str = "\r") -> str:
     if _is_segment(model):
         return encode_segment(model)
 
@@ -187,11 +162,9 @@ def encode(model: BaseModel, segment_separator: str = "\r") -> str:
     if not segments:
         return ""
 
-    # Derive encoding chars from the first delimiter-defining segment (MSH/FHS/BHS).
-    # MSH.1 carries the field separator; MSH.2 carries the other four encoding chars.
     enc = DEFAULT_ENCODING
     for seg in segments:
-        if type(seg).__name__ in _DELIM_DEF_SEGMENTS:
+        if type(seg).__name__ in _DELIM_DEF:
             d = seg.model_dump(by_alias=True)
             msh1 = d.get("MSH.1") or d.get("FHS.1") or d.get("BHS.1")
             msh2 = d.get("MSH.2") or d.get("FHS.2") or d.get("BHS.2")
