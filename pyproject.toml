@@ -1,9 +1,39 @@
 [project]
 name = "hl7types"
 version = "0.1.0"
-description = "Add your description here"
+description = "Typed, Pydantic-powered HL7 v2 models with built-in ER7 and XML serialisation"
 readme = "README.md"
 requires-python = ">=3.14"
+license = {text = "MIT"}
+authors = [
+    {name = "Keiron O'Shea", email = "keiron@keiron.xyz"}
+]
+keywords = [
+    "hl7",
+    "hl7v2",
+    "healthcare",
+    "interoperability",
+    "pydantic",
+    "er7",
+    "xml",
+    "fhir",
+    "clinical",
+    "messaging",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Healthcare Industry",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Medical Science Apps.",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
 dependencies = [
     "pydantic>=2.13.4",
 ]
+
+[project.urls]
+Homepage = "https://github.com/KeironO/hl7types"
+Repository = "https://github.com/KeironO/hl7types"
+Issues = "https://github.com/KeironO/hl7types/issues"
