@@ -1,0 +1,86 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.5
+Class: OUL_R24
+Type: Message
+"""
+from __future__ import annotations
+
+from typing import Optional, List
+from pydantic import BaseModel, Field
+
+from ..segments.DSC import DSC
+from ..segments.MSH import MSH
+from ..segments.NTE import NTE
+from ..segments.SFT import SFT
+
+from ..groups.OUL_R24_ORDER import OUL_R24_ORDER
+from ..groups.OUL_R24_PATIENT import OUL_R24_PATIENT
+from ..groups.OUL_R24_VISIT import OUL_R24_VISIT
+
+_DSC = DSC
+_MSH = MSH
+_NTE = NTE
+_OUL_R24_ORDER = OUL_R24_ORDER
+_OUL_R24_PATIENT = OUL_R24_PATIENT
+_OUL_R24_VISIT = OUL_R24_VISIT
+_SFT = SFT
+
+
+class OUL_R24(BaseModel):
+    """HL7 v2 OUL_R24 message.
+
+    Attributes:
+        MSH (MSH): required
+        SFT (Optional[List[SFT]]): optional
+        NTE (Optional[NTE]): optional
+        PATIENT (Optional[OUL_R24_PATIENT]): optional
+        VISIT (Optional[OUL_R24_VISIT]): optional
+        ORDER (List[OUL_R24_ORDER]): required
+        DSC (Optional[DSC]): optional
+    """
+
+    MSH: _MSH = Field(
+        default=...,
+        title="MSH",
+        description="Required",
+    )
+
+    SFT: Optional[List[_SFT]] = Field(
+        default=None,
+        title="SFT",
+        description="Optional, repeating",
+    )
+
+    NTE: Optional[_NTE] = Field(
+        default=None,
+        title="NTE",
+        description="Optional",
+    )
+
+    PATIENT: Optional[_OUL_R24_PATIENT] = Field(
+        default=None,
+        title="PATIENT",
+        description="Optional",
+    )
+
+    VISIT: Optional[_OUL_R24_VISIT] = Field(
+        default=None,
+        title="VISIT",
+        description="Optional",
+    )
+
+    ORDER: List[_OUL_R24_ORDER] = Field(
+        default=...,
+        title="ORDER",
+        description="Required, repeating",
+    )
+
+    DSC: Optional[_DSC] = Field(
+        default=None,
+        title="DSC",
+        description="Optional",
+    )
+
+    model_config = {"populate_by_name": True}

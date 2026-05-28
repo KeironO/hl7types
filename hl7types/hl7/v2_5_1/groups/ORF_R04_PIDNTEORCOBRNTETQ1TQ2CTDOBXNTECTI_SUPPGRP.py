@@ -1,0 +1,40 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.5.1
+Class: ORF_R04.PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
+Type: Group
+"""
+from __future__ import annotations
+
+from typing import Optional, List
+from pydantic import BaseModel, Field
+
+from .ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP import ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
+from .ORF_R04_PIDNTE_SUPPGRP import ORF_R04_PIDNTE_SUPPGRP
+
+_ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP = ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
+_ORF_R04_PIDNTE_SUPPGRP = ORF_R04_PIDNTE_SUPPGRP
+
+
+class ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(BaseModel):
+    """HL7 v2 ORF_R04.PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP group.
+
+    Attributes:
+        PIDNTE_SUPPGRP (Optional[ORF_R04_PIDNTE_SUPPGRP]): optional
+        ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP (List[ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP]): required
+    """
+
+    PIDNTE_SUPPGRP: Optional[_ORF_R04_PIDNTE_SUPPGRP] = Field(
+        default=None,
+        title="PIDNTE_SUPPGRP",
+        description="Optional",
+    )
+
+    ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP: List[_ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP] = Field(
+        default=...,
+        title="ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP",
+        description="Required, repeating",
+    )
+
+    model_config = {"populate_by_name": True}

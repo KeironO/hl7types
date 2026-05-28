@@ -220,3 +220,5 @@ __marimo__/
 .idea
 uv.lock
 .python-version
+
+scratch.py

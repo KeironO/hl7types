@@ -1,0 +1,49 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.5.1
+Class: OUL_R23.PIDPD1NTE_SUPPGRP
+Type: Group
+"""
+from __future__ import annotations
+
+from typing import Optional, List
+from pydantic import BaseModel, Field
+
+from ..segments.NTE import NTE
+from ..segments.PD1 import PD1
+from ..segments.PID import PID
+
+_NTE = NTE
+_PD1 = PD1
+_PID = PID
+
+
+class OUL_R23_PIDPD1NTE_SUPPGRP(BaseModel):
+    """HL7 v2 OUL_R23.PIDPD1NTE_SUPPGRP group.
+
+    Attributes:
+        PID (PID): required
+        PD1 (Optional[PD1]): optional
+        NTE (Optional[List[NTE]]): optional
+    """
+
+    PID: _PID = Field(
+        default=...,
+        title="PID",
+        description="Required",
+    )
+
+    PD1: Optional[_PD1] = Field(
+        default=None,
+        title="PD1",
+        description="Optional",
+    )
+
+    NTE: Optional[List[_NTE]] = Field(
+        default=None,
+        title="NTE",
+        description="Optional, repeating",
+    )
+
+    model_config = {"populate_by_name": True}
