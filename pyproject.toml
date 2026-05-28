@@ -1,6 +1,6 @@
 [project]
 name = "hl7types"
-version = "0.1.1"
+version = "0.1.2"
 description = "Typed, Pydantic-powered HL7 v2 models with built-in ER7 and XML serialisation"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -41,12 +41,18 @@ Issues = "https://github.com/KeironO/hl7types/issues"
 [dependency-groups]
 dev = [
     "pre-commit>=4.6.0",
+    "pytest>=8.0",
+    "pytest-cov>=6.0",
     "ruff>=0.15.15",
 ]
 
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
+
 [tool.ruff]
 line-length = 100
-exclude = ["hl7types/hl7/**"]
+exclude = ["hl7types/hl7/**", "tests/**"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]

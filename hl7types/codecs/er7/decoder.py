@@ -194,6 +194,23 @@ def decode_er7_segment(
             if val is not None:
                 data[alias] = val
 
+    # Real-world messages routinely omit fields that the XSD marks as required.
+    # Inject safe empty defaults so model_validate doesn't raise on missing keys:
+    # composite fields get an empty dict (all their sub-fields are optional so
+    # Pydantic constructs a zero-value instance), lists get [], scalars get "".
+    for pos, (fname, base_type, is_list) in pm.items():
+        fi = seg_cls.model_fields[fname]
+        if fi.serialization_alias in data:
+            continue
+        if not fi.is_required():
+            continue
+        if is_list:
+            data[fi.serialization_alias] = []
+        elif _is_model(base_type):
+            data[fi.serialization_alias] = {}
+        else:
+            data[fi.serialization_alias] = ""
+
     return seg_cls.model_validate(data)
 
 
@@ -237,6 +254,24 @@ def _decode_struct(
 
     if not data:
         return idx, None
+
+    # A required segment or group may be absent from the wire (sender omitted it).
+    # model_validate would raise on a missing required key, so we inject a
+    # model_construct() placeholder — a bare instance with no field validation —
+    # for any required model-type field that wasn't found in the segment stream.
+    # Scalar required fields on message/group models are not handled here because
+    # those are owned by segments, which are covered in decode_er7_segment above.
+    for fname, fi in model_cls.model_fields.items():
+        if fname in data or not fi.is_required():
+            continue
+        ann = hints.get(fname)
+        if ann is None:
+            continue
+        base_type, is_list = _unwrap(ann)
+        if not _is_model(base_type):
+            continue
+        data[fname] = [] if is_list else base_type.model_construct()
+
     return idx, model_cls.model_validate(data)
 
 
@@ -252,9 +287,13 @@ def _resolve_msg_cls(wire: str, segment_separator: str) -> type[BaseModel]:
     if not msh_str:
         raise ValueError("No MSH segment found — cannot auto-detect message type")
 
+    if len(msh_str) < 4:
+        raise ValueError(f"MSH segment too short to contain a field separator: {msh_str!r}")
     field_sep = msh_str[3]
     tokens = msh_str.split(field_sep)
-    comp_sep = tokens[1][0] if len(tokens) > 1 and tokens[1] else "^"
+    msh2 = tokens[1] if len(tokens) > 1 else ""
+    enc = EncodingChars.from_msh2(msh2) if msh2 else DEFAULT_ENCODING
+    comp_sep = enc.component
 
     msh9 = tokens[8] if len(tokens) > 8 else ""
     msh12 = tokens[11] if len(tokens) > 11 else ""
@@ -272,7 +311,7 @@ def _resolve_msg_cls(wire: str, segment_separator: str) -> type[BaseModel]:
     else:
         structure = parts[0]
 
-    mod_name = _version_to_module(msh12)
+    mod_name = _version_to_module(msh12.split(comp_sep)[0])
     module = importlib.import_module(f"hl7types.hl7.{mod_name}.messages.{structure}")
     return getattr(module, structure)
 
@@ -282,7 +321,7 @@ def decode_er7(
     msg_cls: type[BaseModel] | None = None,
     segment_separator: str = "\r",
 ) -> BaseModel:
-    seg_strings = [s for s in wire.split(segment_separator) if s]
+    seg_strings = [s for s in re.split(r"\r\n|\r|\n", wire) if s]
     if not seg_strings:
         raise ValueError("Empty wire string")
 

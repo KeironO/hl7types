@@ -21,7 +21,9 @@ class EncodingChars:
     @classmethod
     def from_msh2(cls, msh2: str) -> EncodingChars:
         if len(msh2) < 4:
-            return cls()
+            raise ValueError(
+                f"MSH.2 must be exactly 4 encoding characters, got {len(msh2)!r}: {msh2!r}"
+            )
         return cls(
             component=msh2[0],
             repetition=msh2[1],
@@ -53,13 +55,22 @@ def _pos_map(d: dict[str, Any]) -> dict[int, Any]:
 
 
 def _escape(value: str, enc: EncodingChars) -> str:
-    # Escape char must come first to avoid double-escaping
-    value = value.replace(enc.escape, f"{enc.escape}E{enc.escape}")
-    value = value.replace(enc.field, f"{enc.escape}F{enc.escape}")
-    value = value.replace(enc.component, f"{enc.escape}S{enc.escape}")
-    value = value.replace(enc.repetition, f"{enc.escape}R{enc.escape}")
-    value = value.replace(enc.subcomponent, f"{enc.escape}T{enc.escape}")
-    return value
+    e = re.escape(enc.escape)
+    # Split on existing escape sequences (\XXXX\) so they are preserved verbatim.
+    # Even-indexed parts are literal text; odd-indexed parts are captured sequences.
+    parts = re.split(f"({e}[^{e}]+{e})", value)
+    out = []
+    for i, part in enumerate(parts):
+        if i % 2 == 1:
+            out.append(part)
+        else:
+            part = part.replace(enc.escape, f"{enc.escape}E{enc.escape}")
+            part = part.replace(enc.field, f"{enc.escape}F{enc.escape}")
+            part = part.replace(enc.component, f"{enc.escape}S{enc.escape}")
+            part = part.replace(enc.repetition, f"{enc.escape}R{enc.escape}")
+            part = part.replace(enc.subcomponent, f"{enc.escape}T{enc.escape}")
+            out.append(part)
+    return "".join(out)
 
 
 def _encode_subcomposite(d: dict[str, Any], enc: EncodingChars) -> str:
