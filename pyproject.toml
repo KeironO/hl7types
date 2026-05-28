@@ -41,8 +41,14 @@ Issues = "https://github.com/KeironO/hl7types/issues"
 [dependency-groups]
 dev = [
     "pre-commit>=4.6.0",
+    "pytest>=8.0",
+    "pytest-cov>=6.0",
     "ruff>=0.15.15",
 ]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-v --tb=short"
 
 [tool.ruff]
 line-length = 100
