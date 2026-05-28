@@ -23,7 +23,7 @@ ADT_A31_WIRE = (
     "PID|||ZZZZZZ83M64Z148R^^^SSN^SSN^^20070103\r"
 )
 
-# Wire taken verbatim from testAmpersandCorrectlyParsed (Java println → \n line endings).
+# Wire taken verbatim from testAmpersandCorrectlyParsed (Java println to \n line endings).
 # OBX.5 contains a literal & which must be escaped to \T\ on re-encode.
 AMPERSAND_WIRE = (
     "MSH|^~\\&|OADD||DADD||20090511130702||ORU^R01|91310000023|P|2.3||||\n"
@@ -61,7 +61,7 @@ def test_ampersand_escaped_in_encode() -> None:
 
 
 def test_ampersand_roundtrip() -> None:
-    """& in OBX.5 survives decode → re-encode as \\T\\ (testAmpersandCorrectlyParsed, @Ignore in HAPI)."""
+    """& in OBX.5 survives decode to re-encode as \\T\\ (testAmpersandCorrectlyParsed, @Ignore in HAPI)."""
     msg = decode_er7(AMPERSAND_WIRE)
     encoded = msg.model_dump_er7()
     assert "\\T\\ normal in appearance" in encoded

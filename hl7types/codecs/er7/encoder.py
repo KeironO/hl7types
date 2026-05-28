@@ -51,7 +51,12 @@ def _pos(key: str) -> int | None:
 
 
 def _pos_map(d: dict[str, Any]) -> dict[int, Any]:
-    return {_pos(k): v for k, v in d.items() if _pos(k) is not None}
+    result: dict[int, Any] = {}
+    for k, v in d.items():
+        p = _pos(k)
+        if p is not None:
+            result[p] = v
+    return result
 
 
 def _escape(value: str, enc: EncodingChars) -> str:
@@ -84,7 +89,7 @@ def _encode_subcomposite(d: dict[str, Any], enc: EncodingChars) -> str:
     return _strip_trailing(enc.subcomponent.join(parts), enc.subcomponent)
 
 
-def _encode_composite(d: dict[str, Any], enc: EncodingChars) -> str:
+def _encode_composite(d: dict[str, Any], enc: EncodingChars, skip_escape: bool = False) -> str:
     pm = _pos_map(d)
     if not pm:
         return ""
@@ -94,7 +99,8 @@ def _encode_composite(d: dict[str, Any], enc: EncodingChars) -> str:
         if val is None:
             parts.append("")
         elif isinstance(val, str):
-            parts.append(_escape(val, enc))
+            # Skip escaping for MSH-9 message type field
+            parts.append(val if skip_escape else _escape(val, enc))
         elif isinstance(val, dict):
             parts.append(_encode_subcomposite(val, enc))
         else:
@@ -154,7 +160,16 @@ def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) ->
         parts = [enc_chars_literal]
         for i in range(3, max_pos + 1):
             val = pm.get(i)
-            parts.append(_encode_value(val, enc) if val is not None else "")
+            # MSH-9 contains composite separators literally; never escape them
+            if seg_name == "MSH" and i == 9:
+                if isinstance(val, dict):
+                    parts.append(_encode_composite(val, enc))
+                elif isinstance(val, str):
+                    parts.append(val)
+                else:
+                    parts.append(_encode_value(val, enc) if val is not None else "")
+            else:
+                parts.append(_encode_value(val, enc) if val is not None else "")
     else:
         parts = []
         for i in range(1, max_pos + 1):

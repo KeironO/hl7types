@@ -170,17 +170,22 @@ def decode_er7_segment(
 
     if seg_name in _DELIM_DEF:
         if 1 in pm:
-            data[seg_cls.model_fields[pm[1][0]].serialization_alias] = enc.field
+            alias1 = seg_cls.model_fields[pm[1][0]].serialization_alias
+            assert alias1 is not None
+            data[alias1] = enc.field
         for i, token in enumerate(tokens[1:], start=2):
             if i not in pm:
                 continue
             if i == 2:
-                data[seg_cls.model_fields[pm[2][0]].serialization_alias] = token
+                alias2 = seg_cls.model_fields[pm[2][0]].serialization_alias
+                assert alias2 is not None
+                data[alias2] = token
                 continue
             if not token:
                 continue
             fname, base_type, is_list = pm[i]
             alias = seg_cls.model_fields[fname].serialization_alias
+            assert alias is not None
             val = _parse_field(token, base_type, is_list, enc)
             if val is not None:
                 data[alias] = val
@@ -190,6 +195,7 @@ def decode_er7_segment(
                 continue
             fname, base_type, is_list = pm[i]
             alias = seg_cls.model_fields[fname].serialization_alias
+            assert alias is not None
             val = _parse_field(token, base_type, is_list, enc)
             if val is not None:
                 data[alias] = val
@@ -200,16 +206,18 @@ def decode_er7_segment(
     # Pydantic constructs a zero-value instance), lists get [], scalars get "".
     for pos, (fname, base_type, is_list) in pm.items():
         fi = seg_cls.model_fields[fname]
-        if fi.serialization_alias in data:
+        fi_alias = fi.serialization_alias
+        assert fi_alias is not None
+        if fi_alias in data:
             continue
         if not fi.is_required():
             continue
         if is_list:
-            data[fi.serialization_alias] = []
+            data[fi_alias] = []
         elif _is_model(base_type):
-            data[fi.serialization_alias] = {}
+            data[fi_alias] = {}
         else:
-            data[fi.serialization_alias] = ""
+            data[fi_alias] = ""
 
     return seg_cls.model_validate(data)
 

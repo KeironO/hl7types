@@ -70,7 +70,7 @@ def test_unescape_uuencoded_real_data() -> None:
 # --- message-level round-trip ---
 
 def test_formatting_chars_roundtrip() -> None:
-    """Presentation escapes in OBX.5 FT data survive decode → re-encode (EscapeTest.testFormattingCharacters2)."""
+    """Presentation escapes in OBX.5 FT data survive decode to re-encode (EscapeTest.testFormattingCharacters2)."""
     msg = decode_er7(FORMATTING_WIRE)
     encoded = msg.model_dump_er7()
     msg2 = decode_er7(encoded)
