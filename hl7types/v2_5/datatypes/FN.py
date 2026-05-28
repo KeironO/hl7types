@@ -1,0 +1,72 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.5
+Class: FN
+Type: Datatype
+"""
+from __future__ import annotations
+
+from typing import Optional
+from pydantic import AliasChoices, BaseModel, Field
+
+
+class FN(BaseModel):
+    """HL7 v2 FN data type."""
+
+    fn_1: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "fn_1",
+            "surname",
+            "FN.1",
+        ),
+        serialization_alias="FN.1",
+        title="Surname",
+    )
+
+    fn_2: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "fn_2",
+            "own_surname_prefix",
+            "FN.2",
+        ),
+        serialization_alias="FN.2",
+        title="Own Surname Prefix",
+    )
+
+    fn_3: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "fn_3",
+            "own_surname",
+            "FN.3",
+        ),
+        serialization_alias="FN.3",
+        title="Own Surname",
+    )
+
+    fn_4: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "fn_4",
+            "surname_prefix_from_partner_spouse",
+            "FN.4",
+        ),
+        serialization_alias="FN.4",
+        title="Surname Prefix From Partner/Spouse",
+    )
+
+    fn_5: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "fn_5",
+            "surname_from_partner_spouse",
+            "FN.5",
+        ),
+        serialization_alias="FN.5",
+        title="Surname From Partner/Spouse",
+    )
+
+    model_config = {"populate_by_name": True}

@@ -1,0 +1,40 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.4
+Class: ORF_R04.RESPONSE
+Type: Group
+"""
+from _future__ import annotations
+
+from typing import Optional, List
+from pydantic import BaseModel, Field
+
+from .ORF_R04_ORDER import ORF_R04_ORDER
+from .ORF_R04_PATIENT import ORF_R04_PATIENT
+
+_ORF_R04_ORDER = ORF_R04_ORDER
+_ORF_R04_PATIENT = ORF_R04_PATIENT
+
+
+class ORF_R04_RESPONSE(BaseModel):
+    """HL7 v2 ORF_R04.RESPONSE group.
+
+    Attributes:
+        PATIENT (Optional[ORF_R04_PATIENT]): optional
+        ORDER (List[ORF_R04_ORDER]): required
+    """
+
+    PATIENT: Optional[_ORF_R04_PATIENT] = Field(
+        default=None,
+        title="PATIENT",
+        description="Optional",
+    )
+
+    ORDER: List[_ORF_R04_ORDER] = Field(
+        default=...,
+        title="ORDER",
+        description="Required, repeating",
+    )
+
+    model_config = {"populate_by_name": True}

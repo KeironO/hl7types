@@ -1,0 +1,39 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.4
+Class: SRT
+Type: Datatype
+"""
+from __future__ import annotations
+
+from typing import Optional
+from pydantic import AliasChoices, BaseModel, Field
+
+
+class SRT(BaseModel):
+    """HL7 v2 SRT data type."""
+
+    srt_1: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "srt_1",
+            "sort_by_field",
+            "SRT.1",
+        ),
+        serialization_alias="SRT.1",
+        title="sort-by field",
+    )
+
+    srt_2: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "srt_2",
+            "sequencing",
+            "SRT.2",
+        ),
+        serialization_alias="SRT.2",
+        title="sequencing",
+    )
+
+    model_config = {"populate_by_name": True}

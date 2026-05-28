@@ -1,0 +1,85 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.4
+Class: PN
+Type: Datatype
+"""
+from __future__ import annotations
+
+from typing import Optional
+from pydantic import AliasChoices, BaseModel, Field
+
+from .FN import FN
+
+
+class PN(BaseModel):
+    """HL7 v2 PN data type."""
+
+    pn_1: Optional[FN] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pn_1",
+            "family_name",
+            "PN.1",
+        ),
+        serialization_alias="PN.1",
+        title="family name",
+    )
+
+    pn_2: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pn_2",
+            "given_name",
+            "PN.2",
+        ),
+        serialization_alias="PN.2",
+        title="given name",
+    )
+
+    pn_3: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pn_3",
+            "second_and_further_given_names_or_initials_thereof",
+            "PN.3",
+        ),
+        serialization_alias="PN.3",
+        title="second and further given names or initials thereof",
+    )
+
+    pn_4: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pn_4",
+            "suffix_e_g_jr_or_iii",
+            "PN.4",
+        ),
+        serialization_alias="PN.4",
+        title="suffix (e.g., JR or III)",
+    )
+
+    pn_5: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pn_5",
+            "prefix_e_g_dr",
+            "PN.5",
+        ),
+        serialization_alias="PN.5",
+        title="prefix (e.g., DR)",
+    )
+
+    pn_6: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pn_6",
+            "degree_e_g_md",
+            "PN.6",
+        ),
+        serialization_alias="PN.6",
+        title="degree (e.g., MD)",
+    )
+
+    model_config = {"populate_by_name": True}

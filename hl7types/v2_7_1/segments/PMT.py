@@ -1,0 +1,167 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.7.1
+Class: PMT
+Type: Segment
+"""
+from __future__ import annotations
+
+from typing import Optional
+from pydantic import AliasChoices, BaseModel, Field
+
+from ..datatypes.CP import CP
+from ..datatypes.CWE import CWE
+from ..datatypes.CX import CX
+from ..datatypes.EI import EI
+from ..datatypes.XON import XON
+
+
+class PMT(BaseModel):
+    """HL7 v2 PMT segment."""
+
+    pmt_1: EI = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pmt_1",
+            "payment_remittance_advice_number",
+            "PMT.1",
+        ),
+        serialization_alias="PMT.1",
+        title="Payment/Remittance Advice Number",
+        description="Item #2018",
+    )
+
+    pmt_2: str = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pmt_2",
+            "payment_remittance_effective_date_time",
+            "PMT.2",
+        ),
+        serialization_alias="PMT.2",
+        title="Payment/Remittance Effective Date/Time",
+        description="Item #2019",
+    )
+
+    pmt_3: str = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pmt_3",
+            "payment_remittance_expiration_date_time",
+            "PMT.3",
+        ),
+        serialization_alias="PMT.3",
+        title="Payment/Remittance Expiration Date/Time",
+        description="Item #2020",
+    )
+
+    pmt_4: CWE = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pmt_4",
+            "payment_method",
+            "PMT.4",
+        ),
+        serialization_alias="PMT.4",
+        title="Payment Method",
+        description="Item #2021 | Table HL70570",
+    )
+
+    pmt_5: str = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pmt_5",
+            "payment_remittance_date_time",
+            "PMT.5",
+        ),
+        serialization_alias="PMT.5",
+        title="Payment/Remittance Date/Time",
+        description="Item #2022",
+    )
+
+    pmt_6: CP = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pmt_6",
+            "payment_remittance_amount",
+            "PMT.6",
+        ),
+        serialization_alias="PMT.6",
+        title="Payment/Remittance Amount",
+        description="Item #2023",
+    )
+
+    pmt_7: Optional[EI] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pmt_7",
+            "check_number",
+            "PMT.7",
+        ),
+        serialization_alias="PMT.7",
+        title="Check Number",
+        description="Item #2024",
+    )
+
+    pmt_8: Optional[XON] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pmt_8",
+            "payee_bank_identification",
+            "PMT.8",
+        ),
+        serialization_alias="PMT.8",
+        title="Payee Bank Identification",
+        description="Item #2025",
+    )
+
+    pmt_9: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pmt_9",
+            "payee_transit_number",
+            "PMT.9",
+        ),
+        serialization_alias="PMT.9",
+        title="Payee Transit Number",
+        description="Item #2026",
+    )
+
+    pmt_10: Optional[CX] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pmt_10",
+            "payee_bank_account_id",
+            "PMT.10",
+        ),
+        serialization_alias="PMT.10",
+        title="Payee Bank Account ID",
+        description="Item #2027",
+    )
+
+    pmt_11: XON = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pmt_11",
+            "payment_organization",
+            "PMT.11",
+        ),
+        serialization_alias="PMT.11",
+        title="Payment Organization",
+        description="Item #2028",
+    )
+
+    pmt_12: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pmt_12",
+            "esr_code_line",
+            "PMT.12",
+        ),
+        serialization_alias="PMT.12",
+        title="ESR-Code-Line",
+        description="Item #2029",
+    )
+
+    model_config = {"populate_by_name": True}

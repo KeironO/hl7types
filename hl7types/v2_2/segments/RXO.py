@@ -1,0 +1,223 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.2
+Class: RXO
+Type: Segment
+"""
+from __future__ import annotations
+
+from typing import Optional, List
+from pydantic import AliasChoices, BaseModel, Field
+
+from ..datatypes.CE import CE
+
+
+class RXO(BaseModel):
+    """HL7 v2 RXO segment."""
+
+    rxo_1: CE = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "rxo_1",
+            "requested_give_code",
+            "RXO.1",
+        ),
+        serialization_alias="RXO.1",
+        title="Requested Give Code",
+        description="Item #292",
+    )
+
+    rxo_2: str = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "rxo_2",
+            "requested_give_amount_minimum",
+            "RXO.2",
+        ),
+        serialization_alias="RXO.2",
+        title="Requested Give Amount - Minimum",
+        description="Item #293",
+    )
+
+    rxo_3: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_3",
+            "requested_give_amount_maximum",
+            "RXO.3",
+        ),
+        serialization_alias="RXO.3",
+        title="Requested Give Amount - Maximum",
+        description="Item #294",
+    )
+
+    rxo_4: CE = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "rxo_4",
+            "requested_give_units",
+            "RXO.4",
+        ),
+        serialization_alias="RXO.4",
+        title="Requested Give Units",
+        description="Item #295",
+    )
+
+    rxo_5: Optional[CE] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_5",
+            "requested_dosage_form",
+            "RXO.5",
+        ),
+        serialization_alias="RXO.5",
+        title="Requested Dosage Form",
+        description="Item #296",
+    )
+
+    rxo_6: Optional[List[CE]] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_6",
+            "provider_s_pharmacy_instructions",
+            "RXO.6",
+        ),
+        serialization_alias="RXO.6",
+        title="Provider's Pharmacy Instructions",
+        description="Item #297",
+    )
+
+    rxo_7: Optional[List[CE]] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_7",
+            "provider_s_administration_instructions",
+            "RXO.7",
+        ),
+        serialization_alias="RXO.7",
+        title="Provider's Administration Instructions",
+        description="Item #298",
+    )
+
+    rxo_8: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_8",
+            "deliver_to_location",
+            "RXO.8",
+        ),
+        serialization_alias="RXO.8",
+        title="Deliver-to location",
+        description="Item #299",
+    )
+
+    rxo_9: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_9",
+            "allow_substitutions",
+            "RXO.9",
+        ),
+        serialization_alias="RXO.9",
+        title="Allow Substitutions",
+        description="Item #300 | Table HL70161",
+    )
+
+    rxo_10: Optional[CE] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_10",
+            "requested_dispense_code",
+            "RXO.10",
+        ),
+        serialization_alias="RXO.10",
+        title="Requested Dispense Code",
+        description="Item #301",
+    )
+
+    rxo_11: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_11",
+            "requested_dispense_amount",
+            "RXO.11",
+        ),
+        serialization_alias="RXO.11",
+        title="Requested Dispense Amount",
+        description="Item #302",
+    )
+
+    rxo_12: Optional[CE] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_12",
+            "requested_dispense_units",
+            "RXO.12",
+        ),
+        serialization_alias="RXO.12",
+        title="Requested Dispense Units",
+        description="Item #303",
+    )
+
+    rxo_13: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_13",
+            "number_of_refills",
+            "RXO.13",
+        ),
+        serialization_alias="RXO.13",
+        title="Number of Refills",
+        description="Item #304",
+    )
+
+    rxo_14: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_14",
+            "ordering_provider_s_dea_number",
+            "RXO.14",
+        ),
+        serialization_alias="RXO.14",
+        title="Ordering Provider's DEA Number",
+        description="Item #305",
+    )
+
+    rxo_15: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_15",
+            "pharmacist_verifier_id",
+            "RXO.15",
+        ),
+        serialization_alias="RXO.15",
+        title="Pharmacist Verifier ID",
+        description="Item #306",
+    )
+
+    rxo_16: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_16",
+            "needs_human_review",
+            "RXO.16",
+        ),
+        serialization_alias="RXO.16",
+        title="Needs Human Review",
+        description="Item #307",
+    )
+
+    rxo_17: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "rxo_17",
+            "requested_give_per_time_unit",
+            "RXO.17",
+        ),
+        serialization_alias="RXO.17",
+        title="Requested Give Per (Time Unit)",
+        description="Item #308",
+    )
+
+    model_config = {"populate_by_name": True}

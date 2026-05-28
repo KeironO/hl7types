@@ -1,0 +1,41 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.3
+Class: RRA_O02.ORDER
+Type: Group
+"""
+from _future__ import annotations
+
+from typing import Optional, List
+from pydantic import BaseModel, Field
+
+from ..segments.ORC import ORC
+
+from .RRA_O02_ADMINISTRATION import RRA_O02_ADMINISTRATION
+
+_ORC = ORC
+_RRA_O02_ADMINISTRATION = RRA_O02_ADMINISTRATION
+
+
+class RRA_O02_ORDER(BaseModel):
+    """HL7 v2 RRA_O02.ORDER group.
+
+    Attributes:
+        ORC (ORC): required
+        ADMINISTRATION (Optional[List[RRA_O02_ADMINISTRATION]]): optional
+    """
+
+    ORC: _ORC = Field(
+        default=...,
+        title="ORC",
+        description="Required",
+    )
+
+    ADMINISTRATION: Optional[List[_RRA_O02_ADMINISTRATION]] = Field(
+        default=None,
+        title="ADMINISTRATION",
+        description="Optional, repeating",
+    )
+
+    model_config = {"populate_by_name": True}

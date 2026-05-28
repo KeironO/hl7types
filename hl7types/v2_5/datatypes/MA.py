@@ -1,0 +1,83 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.5
+Class: MA
+Type: Datatype
+"""
+from __future__ import annotations
+
+from typing import Optional
+from pydantic import AliasChoices, BaseModel, Field
+
+
+class MA(BaseModel):
+    """HL7 v2 MA data type."""
+
+    ma_1: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "ma_1",
+            "sample_1_from_channel_1",
+            "MA.1",
+        ),
+        serialization_alias="MA.1",
+        title="Sample 1 From Channel 1",
+    )
+
+    ma_2: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "ma_2",
+            "sample_1_from_channel_2",
+            "MA.2",
+        ),
+        serialization_alias="MA.2",
+        title="Sample 1 From Channel 2",
+    )
+
+    ma_3: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "ma_3",
+            "sample_1_from_channel_n",
+            "MA.3",
+        ),
+        serialization_alias="MA.3",
+        title="Sample 1 From Channel N",
+    )
+
+    ma_4: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "ma_4",
+            "sample_2_from_channel_1",
+            "MA.4",
+        ),
+        serialization_alias="MA.4",
+        title="Sample 2 From Channel 1",
+    )
+
+    ma_5: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "ma_5",
+            "sample_2_from_channel_n",
+            "MA.5",
+        ),
+        serialization_alias="MA.5",
+        title="Sample 2 From Channel N",
+    )
+
+    ma_6: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "ma_6",
+            "sample_n_from_channel_n",
+            "MA.6",
+        ),
+        serialization_alias="MA.6",
+        title="Sample N From Channel N",
+    )
+
+    model_config = {"populate_by_name": True}

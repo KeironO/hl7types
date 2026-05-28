@@ -1,0 +1,201 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.7
+Class: PDC
+Type: Segment
+"""
+from __future__ import annotations
+
+from typing import Optional, List
+from pydantic import AliasChoices, BaseModel, Field
+
+from ..datatypes.CQ import CQ
+from ..datatypes.CWE import CWE
+from ..datatypes.XON import XON
+
+
+class PDC(BaseModel):
+    """HL7 v2 PDC segment."""
+
+    pdc_1: List[XON] = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pdc_1",
+            "manufacturer_distributor",
+            "PDC.1",
+        ),
+        serialization_alias="PDC.1",
+        title="Manufacturer/Distributor",
+        description="Item #1247",
+    )
+
+    pdc_2: CWE = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pdc_2",
+            "country",
+            "PDC.2",
+        ),
+        serialization_alias="PDC.2",
+        title="Country",
+        description="Item #1248 | Table HL79999",
+    )
+
+    pdc_3: str = Field(
+        default=...,
+        validation_alias=AliasChoices(
+            "pdc_3",
+            "brand_name",
+            "PDC.3",
+        ),
+        serialization_alias="PDC.3",
+        title="Brand Name",
+        description="Item #1249",
+    )
+
+    pdc_4: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_4",
+            "device_family_name",
+            "PDC.4",
+        ),
+        serialization_alias="PDC.4",
+        title="Device Family Name",
+        description="Item #1250",
+    )
+
+    pdc_5: Optional[CWE] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_5",
+            "generic_name",
+            "PDC.5",
+        ),
+        serialization_alias="PDC.5",
+        title="Generic Name",
+        description="Item #1251 | Table HL79999",
+    )
+
+    pdc_6: Optional[List[str]] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_6",
+            "model_identifier",
+            "PDC.6",
+        ),
+        serialization_alias="PDC.6",
+        title="Model Identifier",
+        description="Item #1252",
+    )
+
+    pdc_7: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_7",
+            "catalogue_identifier",
+            "PDC.7",
+        ),
+        serialization_alias="PDC.7",
+        title="Catalogue Identifier",
+        description="Item #1253",
+    )
+
+    pdc_8: Optional[List[str]] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_8",
+            "other_identifier",
+            "PDC.8",
+        ),
+        serialization_alias="PDC.8",
+        title="Other Identifier",
+        description="Item #1254",
+    )
+
+    pdc_9: Optional[CWE] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_9",
+            "product_code",
+            "PDC.9",
+        ),
+        serialization_alias="PDC.9",
+        title="Product Code",
+        description="Item #1255 | Table HL79999",
+    )
+
+    pdc_10: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_10",
+            "marketing_basis",
+            "PDC.10",
+        ),
+        serialization_alias="PDC.10",
+        title="Marketing Basis",
+        description="Item #1256 | Table HL70330",
+    )
+
+    pdc_11: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_11",
+            "marketing_approval_id",
+            "PDC.11",
+        ),
+        serialization_alias="PDC.11",
+        title="Marketing Approval ID",
+        description="Item #1257",
+    )
+
+    pdc_12: Optional[CQ] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_12",
+            "labeled_shelf_life",
+            "PDC.12",
+        ),
+        serialization_alias="PDC.12",
+        title="Labeled Shelf Life",
+        description="Item #1258",
+    )
+
+    pdc_13: Optional[CQ] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_13",
+            "expected_shelf_life",
+            "PDC.13",
+        ),
+        serialization_alias="PDC.13",
+        title="Expected Shelf Life",
+        description="Item #1259",
+    )
+
+    pdc_14: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_14",
+            "date_first_marketed",
+            "PDC.14",
+        ),
+        serialization_alias="PDC.14",
+        title="Date First Marketed",
+        description="Item #1260",
+    )
+
+    pdc_15: Optional[str] = Field(
+        default=None,
+        validation_alias=AliasChoices(
+            "pdc_15",
+            "date_last_marketed",
+            "PDC.15",
+        ),
+        serialization_alias="PDC.15",
+        title="Date Last Marketed",
+        description="Item #1261",
+    )
+
+    model_config = {"populate_by_name": True}

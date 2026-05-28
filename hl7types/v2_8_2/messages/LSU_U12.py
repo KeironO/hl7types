@@ -1,0 +1,67 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.8.2
+Class: LSU_U12
+Type: Message
+"""
+from _future__ import annotations
+
+from typing import Optional, List
+from pydantic import BaseModel, Field
+
+from ..segments.EQP import EQP
+from ..segments.EQU import EQU
+from ..segments.MSH import MSH
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
+
+_EQP = EQP
+_EQU = EQU
+_MSH = MSH
+_SFT = SFT
+_UAC = UAC
+
+
+class LSU_U12(BaseModel):
+    """HL7 v2 LSU_U12 message.
+
+    Attributes:
+        MSH (MSH): required
+        SFT (Optional[List[SFT]]): optional
+        UAC (Optional[UAC]): optional
+        EQU (EQU): required
+        EQP (List[EQP]): required
+    """
+
+    MSH: _MSH = Field(
+        default=...,
+        title="MSH",
+        description="Required",
+    )
+
+    SFT: Optional[List[_SFT]] = Field(
+        default=None,
+        title="SFT",
+        description="Optional, repeating",
+    )
+
+    UAC: Optional[_UAC] = Field(
+        default=None,
+        title="UAC",
+        description="Optional",
+    )
+
+    EQU: _EQU = Field(
+        default=...,
+        title="EQU",
+        description="Required",
+    )
+
+    EQP: List[_EQP] = Field(
+        default=...,
+        title="EQP",
+        description="Required, repeating",
+    )
+
+    model_config = {"populate_by_name": True}

@@ -1,0 +1,209 @@
+from __future__ import annotations
+
+import re
+from dataclasses import dataclass
+from typing import Any
+
+from pydantic import BaseModel
+
+_DELIM_DEF_SEGMENTS = frozenset({"MSH", "FHS", "BHS"})
+_SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,2}\.\d+$")
+
+
+# Encoding characters
+
+@dataclass(frozen=True)
+class EncodingChars:
+    field: str = "|"
+    component: str = "^"
+    repetition: str = "~"
+    escape: str = "\\"
+    subcomponent: str = "&"
+
+    @classmethod
+    def from_msh2(cls, msh2: str) -> EncodingChars:
+        if len(msh2) < 4:
+            return cls()
+        return cls(
+            component=msh2[0],
+            repetition=msh2[1],
+            escape=msh2[2],
+            subcomponent=msh2[3],
+        )
+
+
+DEFAULT_ENCODING = EncodingChars()
+
+
+# Helpers
+
+def _strip_trailing(s: str, delim: str) -> str:
+    n = len(delim)
+    while s.endswith(delim):
+        s = s[:-n]
+    return s
+
+
+def _escape(value: str, enc: EncodingChars) -> str:
+    # Escape char must come first to avoid double-escaping
+    value = value.replace(enc.escape, f"{enc.escape}E{enc.escape}")
+    value = value.replace(enc.field, f"{enc.escape}F{enc.escape}")
+    value = value.replace(enc.component, f"{enc.escape}S{enc.escape}")
+    value = value.replace(enc.repetition, f"{enc.escape}R{enc.escape}")
+    value = value.replace(enc.subcomponent, f"{enc.escape}T{enc.escape}")
+    return value
+
+
+def _pos(key: str) -> int | None:
+    """'XPN.2' → 2, 'MSH.12' → 12, anything else → None."""
+    dot = key.rfind(".")
+    if dot == -1:
+        return None
+    suffix = key[dot + 1 :]
+    return int(suffix) if suffix.isdigit() else None
+
+
+def _pos_map(d: dict[str, Any]) -> dict[int, Any]:
+    return {_pos(k): v for k, v in d.items() if _pos(k) is not None}
+
+
+# Value encoding (3hree levels - field to composite to sub-composite)
+
+
+def _encode_subcomposite(d: dict[str, Any], enc: EncodingChars) -> str:
+    pm = _pos_map(d)
+    if not pm:
+        return ""
+    parts = []
+    for i in range(1, max(pm) + 1):
+        val = pm.get(i)
+        if val is None:
+            parts.append("")
+        elif isinstance(val, str):
+            parts.append(_escape(val, enc))
+        else:
+            parts.append("")  # shouldn't occur deeper than sub-component
+    return _strip_trailing(enc.subcomponent.join(parts), enc.subcomponent)
+
+
+def _encode_composite(d: dict[str, Any], enc: EncodingChars) -> str:
+    pm = _pos_map(d)
+    if not pm:
+        return ""
+    parts = []
+    for i in range(1, max(pm) + 1):
+        val = pm.get(i)
+        if val is None:
+            parts.append("")
+        elif isinstance(val, str):
+            parts.append(_escape(val, enc))
+        elif isinstance(val, dict):
+            parts.append(_encode_subcomposite(val, enc))
+        else:
+            parts.append("")
+    return _strip_trailing(enc.component.join(parts), enc.component)
+
+
+def _encode_value(val: Any, enc: EncodingChars) -> str:
+    if val is None:
+        return ""
+    if isinstance(val, str):
+        return _escape(val, enc)
+    if isinstance(val, list):
+        reps = [_encode_value(item, enc) for item in val]
+        return _strip_trailing(enc.repetition.join(reps), enc.repetition)
+    if isinstance(val, dict):
+        return _encode_composite(val, enc)
+    return _escape(str(val), enc)
+
+
+# Segment encoding
+
+def encode_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) -> str:
+    seg_name = type(seg).__name__
+    d = seg.model_dump(by_alias=True)
+
+    pm = _pos_map(d)
+    if not pm:
+        return seg_name
+
+    max_pos = max(pm)
+
+    if seg_name in _DELIM_DEF_SEGMENTS:
+        # Field 1 is the separator (already encoded as the first |).
+        # Field 2 is the encoding chars string — written literally, never re-escaped.
+        enc_chars_literal = str(pm.get(2, "^~\\&") or "^~\\&")
+        parts = [enc_chars_literal]
+        for i in range(3, max_pos + 1):
+            val = pm.get(i)
+            parts.append(_encode_value(val, enc) if val is not None else "")
+    else:
+        parts = []
+        for i in range(1, max_pos + 1):
+            val = pm.get(i)
+            parts.append(_encode_value(val, enc) if val is not None else "")
+
+    result = seg_name + enc.field + enc.field.join(parts)
+    return _strip_trailing(result, enc.field)
+
+# Message encoding
+
+
+def _is_segment(model: BaseModel) -> bool:
+    for fi in type(model).model_fields.values():
+        alias = fi.serialization_alias
+        if isinstance(alias, str) and _SEG_ALIAS_RE.match(alias):
+            return True
+    return False
+
+
+def _collect_segments(obj: BaseModel) -> list[BaseModel]:
+    """Walk a message/group in field-declaration order, collecting segment leaves."""
+    segs: list[BaseModel] = []
+    for fname in type(obj).model_fields:
+        value = getattr(obj, fname)
+        if value is None:
+            continue
+        items = value if isinstance(value, list) else [value]
+        for item in items:
+            if not isinstance(item, BaseModel):
+                continue
+            if _is_segment(item):
+                segs.append(item)
+            else:
+                segs.extend(_collect_segments(item))
+    return segs
+
+
+def encode(model: BaseModel, segment_separator: str = "\r") -> str:
+    """Encode a message or a single segment to HL7 v2 pipe format.
+
+    For a message, segments are joined with *segment_separator* (``\\r`` by default).
+    """
+    if _is_segment(model):
+        return encode_segment(model)
+
+    segments = _collect_segments(model)
+    if not segments:
+        return ""
+
+    # Derive encoding chars from the first delimiter-defining segment (MSH/FHS/BHS).
+    # MSH.1 carries the field separator; MSH.2 carries the other four encoding chars.
+    enc = DEFAULT_ENCODING
+    for seg in segments:
+        if type(seg).__name__ in _DELIM_DEF_SEGMENTS:
+            d = seg.model_dump(by_alias=True)
+            msh1 = d.get("MSH.1") or d.get("FHS.1") or d.get("BHS.1")
+            msh2 = d.get("MSH.2") or d.get("FHS.2") or d.get("BHS.2")
+            field_sep = msh1 if isinstance(msh1, str) and msh1 else DEFAULT_ENCODING.field
+            base = EncodingChars.from_msh2(msh2) if msh2 else DEFAULT_ENCODING
+            enc = EncodingChars(
+                field=field_sep,
+                component=base.component,
+                repetition=base.repetition,
+                escape=base.escape,
+                subcomponent=base.subcomponent,
+            )
+            break
+
+    return segment_separator.join(encode_segment(seg, enc) for seg in segments)
