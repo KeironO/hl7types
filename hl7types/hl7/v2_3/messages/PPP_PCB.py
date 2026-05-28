@@ -5,15 +5,16 @@ Version: 2.3
 Class: PPP_PCB
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.PID import PID
 
 from ..groups.PPP_PCB_PATHWAY import PPP_PCB_PATHWAY
 from ..groups.PPP_PCB_PATIENT_VISIT import PPP_PCB_PATIENT_VISIT
-from ..segments.MSH import MSH
-from ..segments.PID import PID
 
 _MSH = MSH
 _PID = PID
@@ -43,13 +44,13 @@ class PPP_PCB(BaseModel):
         description="Required",
     )
 
-    PATIENT_VISIT: _PPP_PCB_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_PPP_PCB_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    PATHWAY: list[_PPP_PCB_PATHWAY] = Field(
+    PATHWAY: List[_PPP_PCB_PATHWAY] = Field(
         default=...,
         title="PATHWAY",
         description="Required, repeating",

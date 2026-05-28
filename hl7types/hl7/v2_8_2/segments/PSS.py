@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: PSS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -29,7 +29,7 @@ class PSS(BaseModel):
         description="Item #1946",
     )
 
-    pss_2: EI | None = Field(
+    pss_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pss_2",

@@ -5,9 +5,9 @@ Version: 2.7
 Class: PRB
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -66,7 +66,7 @@ class PRB(BaseModel):
         description="Item #839",
     )
 
-    prb_5: EI | None = Field(
+    prb_5: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_5",
@@ -78,7 +78,7 @@ class PRB(BaseModel):
         description="Item #820",
     )
 
-    prb_6: str | None = Field(
+    prb_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_6",
@@ -90,7 +90,7 @@ class PRB(BaseModel):
         description="Item #841",
     )
 
-    prb_7: str | None = Field(
+    prb_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_7",
@@ -102,7 +102,7 @@ class PRB(BaseModel):
         description="Item #842",
     )
 
-    prb_8: str | None = Field(
+    prb_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_8",
@@ -114,7 +114,7 @@ class PRB(BaseModel):
         description="Item #843",
     )
 
-    prb_9: str | None = Field(
+    prb_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_9",
@@ -126,7 +126,7 @@ class PRB(BaseModel):
         description="Item #844",
     )
 
-    prb_10: CWE | None = Field(
+    prb_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_10",
@@ -138,7 +138,7 @@ class PRB(BaseModel):
         description="Item #845",
     )
 
-    prb_11: list[CWE] | None = Field(
+    prb_11: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_11",
@@ -150,7 +150,7 @@ class PRB(BaseModel):
         description="Item #846",
     )
 
-    prb_12: CWE | None = Field(
+    prb_12: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_12",
@@ -162,7 +162,7 @@ class PRB(BaseModel):
         description="Item #847",
     )
 
-    prb_13: CWE | None = Field(
+    prb_13: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_13",
@@ -174,7 +174,7 @@ class PRB(BaseModel):
         description="Item #848",
     )
 
-    prb_14: CWE | None = Field(
+    prb_14: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_14",
@@ -186,7 +186,7 @@ class PRB(BaseModel):
         description="Item #849",
     )
 
-    prb_15: str | None = Field(
+    prb_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_15",
@@ -198,7 +198,7 @@ class PRB(BaseModel):
         description="Item #850",
     )
 
-    prb_16: str | None = Field(
+    prb_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_16",
@@ -210,7 +210,7 @@ class PRB(BaseModel):
         description="Item #851",
     )
 
-    prb_17: str | None = Field(
+    prb_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_17",
@@ -222,7 +222,7 @@ class PRB(BaseModel):
         description="Item #852",
     )
 
-    prb_18: CWE | None = Field(
+    prb_18: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_18",
@@ -234,7 +234,7 @@ class PRB(BaseModel):
         description="Item #853",
     )
 
-    prb_19: CWE | None = Field(
+    prb_19: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_19",
@@ -246,7 +246,7 @@ class PRB(BaseModel):
         description="Item #854",
     )
 
-    prb_20: str | None = Field(
+    prb_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_20",
@@ -258,7 +258,7 @@ class PRB(BaseModel):
         description="Item #855",
     )
 
-    prb_21: CWE | None = Field(
+    prb_21: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_21",
@@ -270,7 +270,7 @@ class PRB(BaseModel):
         description="Item #856",
     )
 
-    prb_22: CWE | None = Field(
+    prb_22: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_22",
@@ -282,7 +282,7 @@ class PRB(BaseModel):
         description="Item #857",
     )
 
-    prb_23: CWE | None = Field(
+    prb_23: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_23",
@@ -294,7 +294,7 @@ class PRB(BaseModel):
         description="Item #858",
     )
 
-    prb_24: str | None = Field(
+    prb_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_24",
@@ -306,7 +306,7 @@ class PRB(BaseModel):
         description="Item #859",
     )
 
-    prb_25: CWE | None = Field(
+    prb_25: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_25",
@@ -318,7 +318,7 @@ class PRB(BaseModel):
         description="Item #823",
     )
 
-    prb_26: CWE | None = Field(
+    prb_26: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_26",
@@ -330,7 +330,7 @@ class PRB(BaseModel):
         description="Item #2234 | Table HL70836",
     )
 
-    prb_27: CWE | None = Field(
+    prb_27: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_27",
@@ -342,7 +342,7 @@ class PRB(BaseModel):
         description="Item #2235 | Table HL70838",
     )
 
-    prb_28: CNE | None = Field(
+    prb_28: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prb_28",

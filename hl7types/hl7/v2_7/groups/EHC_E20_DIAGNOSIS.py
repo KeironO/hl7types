@@ -5,9 +5,9 @@ Version: 2.7
 Class: EHC_E20.DIAGNOSIS
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
@@ -31,7 +31,7 @@ class EHC_E20_DIAGNOSIS(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

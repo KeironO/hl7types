@@ -5,9 +5,9 @@ Version: 2.4
 Class: OSP
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -16,7 +16,7 @@ from .CE import CE
 class OSP(BaseModel):
     """HL7 v2 OSP data type."""
 
-    osp_1: CE | None = Field(
+    osp_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osp_1",
@@ -27,7 +27,7 @@ class OSP(BaseModel):
         title="occurrence span code",
     )
 
-    osp_2: str | None = Field(
+    osp_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osp_2",
@@ -38,7 +38,7 @@ class OSP(BaseModel):
         title="occurrence span start date",
     )
 
-    osp_3: str | None = Field(
+    osp_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osp_3",

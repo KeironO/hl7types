@@ -5,12 +5,11 @@ Version: 2.8.2
 Class: BAR_P05
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.BAR_P05_VISIT import BAR_P05_VISIT
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
 from ..segments.PD1 import PD1
@@ -19,6 +18,8 @@ from ..segments.PRT import PRT
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.BAR_P05_VISIT import BAR_P05_VISIT
 
 _BAR_P05_VISIT = BAR_P05_VISIT
 _EVN = EVN
@@ -52,13 +53,13 @@ class BAR_P05(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -76,25 +77,25 @@ class BAR_P05(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    VISIT: list[_BAR_P05_VISIT] = Field(
+    VISIT: List[_BAR_P05_VISIT] = Field(
         default=...,
         title="VISIT",
         description="Required, repeating",

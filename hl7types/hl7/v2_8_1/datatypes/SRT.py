@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: SRT
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class SRT(BaseModel):
         title="Sort-by Field",
     )
 
-    srt_2: str | None = Field(
+    srt_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "srt_2",

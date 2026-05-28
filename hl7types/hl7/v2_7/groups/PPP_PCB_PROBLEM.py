@@ -5,14 +5,15 @@ Version: 2.7
 Class: PPP_PCB.PROBLEM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
+
 from .PPP_PCB_GOAL import PPP_PCB_GOAL
 from .PPP_PCB_ORDER import PPP_PCB_ORDER
 from .PPP_PCB_PROBLEM_OBSERVATION import PPP_PCB_PROBLEM_OBSERVATION
@@ -46,37 +47,37 @@ class PPP_PCB_PROBLEM(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PROBLEM_ROLE: list[_PPP_PCB_PROBLEM_ROLE] | None = Field(
+    PROBLEM_ROLE: Optional[List[_PPP_PCB_PROBLEM_ROLE]] = Field(
         default=None,
         title="PROBLEM_ROLE",
         description="Optional, repeating",
     )
 
-    PROBLEM_OBSERVATION: list[_PPP_PCB_PROBLEM_OBSERVATION] | None = Field(
+    PROBLEM_OBSERVATION: Optional[List[_PPP_PCB_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
         description="Optional, repeating",
     )
 
-    GOAL: list[_PPP_PCB_GOAL] | None = Field(
+    GOAL: Optional[List[_PPP_PCB_GOAL]] = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",
     )
 
-    ORDER: list[_PPP_PCB_ORDER] | None = Field(
+    ORDER: Optional[List[_PPP_PCB_ORDER]] = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

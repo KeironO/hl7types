@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: SCD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -21,7 +21,7 @@ from ..datatypes.XCN import XCN
 class SCD(BaseModel):
     """HL7 v2 SCD segment."""
 
-    scd_1: str | None = Field(
+    scd_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_1",
@@ -33,7 +33,7 @@ class SCD(BaseModel):
         description="Item #2104",
     )
 
-    scd_2: str | None = Field(
+    scd_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_2",
@@ -45,7 +45,7 @@ class SCD(BaseModel):
         description="Item #2105",
     )
 
-    scd_3: CQ | None = Field(
+    scd_3: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_3",
@@ -57,7 +57,7 @@ class SCD(BaseModel):
         description="Item #2106",
     )
 
-    scd_4: CQ | None = Field(
+    scd_4: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_4",
@@ -69,7 +69,7 @@ class SCD(BaseModel):
         description="Item #2107",
     )
 
-    scd_5: str | None = Field(
+    scd_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_5",
@@ -81,7 +81,7 @@ class SCD(BaseModel):
         description="Item #2108",
     )
 
-    scd_6: CQ | None = Field(
+    scd_6: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_6",
@@ -93,7 +93,7 @@ class SCD(BaseModel):
         description="Item #2109",
     )
 
-    scd_7: CQ | None = Field(
+    scd_7: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_7",
@@ -105,7 +105,7 @@ class SCD(BaseModel):
         description="Item #2110",
     )
 
-    scd_8: CQ | None = Field(
+    scd_8: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_8",
@@ -117,7 +117,7 @@ class SCD(BaseModel):
         description="Item #2111",
     )
 
-    scd_9: CQ | None = Field(
+    scd_9: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_9",
@@ -129,7 +129,7 @@ class SCD(BaseModel):
         description="Item #2112",
     )
 
-    scd_10: CWE | None = Field(
+    scd_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_10",
@@ -141,7 +141,7 @@ class SCD(BaseModel):
         description="Item #2113 | Table HL70682",
     )
 
-    scd_11: str | None = Field(
+    scd_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_11",
@@ -153,7 +153,7 @@ class SCD(BaseModel):
         description="Item #2114",
     )
 
-    scd_12: CQ | None = Field(
+    scd_12: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_12",
@@ -165,7 +165,7 @@ class SCD(BaseModel):
         description="Item #2115",
     )
 
-    scd_13: CQ | None = Field(
+    scd_13: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_13",
@@ -177,7 +177,7 @@ class SCD(BaseModel):
         description="Item #2116",
     )
 
-    scd_14: CQ | None = Field(
+    scd_14: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_14",
@@ -189,7 +189,7 @@ class SCD(BaseModel):
         description="Item #2117",
     )
 
-    scd_15: CQ | None = Field(
+    scd_15: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_15",
@@ -201,7 +201,7 @@ class SCD(BaseModel):
         description="Item #2118",
     )
 
-    scd_16: str | None = Field(
+    scd_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_16",
@@ -213,7 +213,7 @@ class SCD(BaseModel):
         description="Item #2119",
     )
 
-    scd_17: CQ | None = Field(
+    scd_17: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_17",
@@ -225,7 +225,7 @@ class SCD(BaseModel):
         description="Item #2120",
     )
 
-    scd_18: CQ | None = Field(
+    scd_18: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_18",
@@ -237,7 +237,7 @@ class SCD(BaseModel):
         description="Item #2121",
     )
 
-    scd_19: CNE | None = Field(
+    scd_19: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_19",
@@ -249,7 +249,7 @@ class SCD(BaseModel):
         description="Item #2122 | Table HL70532",
     )
 
-    scd_20: CNE | None = Field(
+    scd_20: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_20",
@@ -261,7 +261,7 @@ class SCD(BaseModel):
         description="Item #2123 | Table HL70532",
     )
 
-    scd_21: CNE | None = Field(
+    scd_21: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_21",
@@ -273,7 +273,7 @@ class SCD(BaseModel):
         description="Item #2124 | Table HL70532",
     )
 
-    scd_22: CNE | None = Field(
+    scd_22: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_22",
@@ -285,7 +285,7 @@ class SCD(BaseModel):
         description="Item #2125 | Table HL70532",
     )
 
-    scd_23: CNE | None = Field(
+    scd_23: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_23",
@@ -297,7 +297,7 @@ class SCD(BaseModel):
         description="Item #2126 | Table HL70532",
     )
 
-    scd_24: CNE | None = Field(
+    scd_24: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_24",
@@ -309,7 +309,7 @@ class SCD(BaseModel):
         description="Item #2127 | Table HL70532",
     )
 
-    scd_25: XCN | None = Field(
+    scd_25: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_25",
@@ -321,7 +321,7 @@ class SCD(BaseModel):
         description="Item #2128",
     )
 
-    scd_26: CNE | None = Field(
+    scd_26: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_26",
@@ -333,7 +333,7 @@ class SCD(BaseModel):
         description="Item #2129 | Table HL70532",
     )
 
-    scd_27: CNE | None = Field(
+    scd_27: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_27",
@@ -345,7 +345,7 @@ class SCD(BaseModel):
         description="Item #2130 | Table HL70532",
     )
 
-    scd_28: CWE | None = Field(
+    scd_28: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_28",
@@ -357,7 +357,7 @@ class SCD(BaseModel):
         description="Item #2131 | Table HL70702",
     )
 
-    scd_29: CQ | None = Field(
+    scd_29: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_29",
@@ -369,7 +369,7 @@ class SCD(BaseModel):
         description="Item #2132",
     )
 
-    scd_30: CQ | None = Field(
+    scd_30: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_30",
@@ -381,7 +381,7 @@ class SCD(BaseModel):
         description="Item #2133",
     )
 
-    scd_31: CQ | None = Field(
+    scd_31: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_31",
@@ -393,7 +393,7 @@ class SCD(BaseModel):
         description="Item #2134",
     )
 
-    scd_32: CNE | None = Field(
+    scd_32: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_32",
@@ -405,7 +405,7 @@ class SCD(BaseModel):
         description="Item #393 | Table HL70088",
     )
 
-    scd_33: list[CX] | None = Field(
+    scd_33: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_33",
@@ -417,7 +417,7 @@ class SCD(BaseModel):
         description="Item #106",
     )
 
-    scd_34: XCN | None = Field(
+    scd_34: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_34",
@@ -429,7 +429,7 @@ class SCD(BaseModel):
         description="Item #137 | Table HL70010",
     )
 
-    scd_35: SN | None = Field(
+    scd_35: Optional[SN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_35",
@@ -441,7 +441,7 @@ class SCD(BaseModel):
         description="Item #1356",
     )
 
-    scd_36: CQ | None = Field(
+    scd_36: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_36",
@@ -453,7 +453,7 @@ class SCD(BaseModel):
         description="Item #2139",
     )
 
-    scd_37: CQ | None = Field(
+    scd_37: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "scd_37",

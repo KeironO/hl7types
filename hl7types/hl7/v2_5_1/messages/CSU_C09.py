@@ -5,14 +5,15 @@ Version: 2.5.1
 Class: CSU_C09
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.CSU_C09_PATIENT import CSU_C09_PATIENT
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
+
+from ..groups.CSU_C09_PATIENT import CSU_C09_PATIENT
 
 _CSU_C09_PATIENT = CSU_C09_PATIENT
 _MSH = MSH
@@ -34,13 +35,13 @@ class CSU_C09(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    PATIENT: list[_CSU_C09_PATIENT] = Field(
+    PATIENT: List[_CSU_C09_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

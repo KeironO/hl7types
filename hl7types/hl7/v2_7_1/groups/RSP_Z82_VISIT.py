@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RSP_Z82.VISIT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
@@ -28,7 +28,7 @@ class RSP_Z82_VISIT(BaseModel):
         PV2 (Optional[PV2]): optional
     """
 
-    AL1: list[_AL1] = Field(
+    AL1: List[_AL1] = Field(
         default=...,
         title="AL1",
         description="Required, repeating",
@@ -40,7 +40,7 @@ class RSP_Z82_VISIT(BaseModel):
         description="Required",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",

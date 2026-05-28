@@ -5,9 +5,9 @@ Version: 2.1
 Class: ORO
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -16,7 +16,7 @@ from ..datatypes.CE import CE
 class ORO(BaseModel):
     """HL7 v2 ORO segment."""
 
-    oro_1: CE | None = Field(
+    oro_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "oro_1",
@@ -28,7 +28,7 @@ class ORO(BaseModel):
         description="Item #731",
     )
 
-    oro_2: str | None = Field(
+    oro_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "oro_2",
@@ -40,7 +40,7 @@ class ORO(BaseModel):
         description="Item #120",
     )
 
-    oro_3: list[str] | None = Field(
+    oro_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "oro_3",
@@ -52,7 +52,7 @@ class ORO(BaseModel):
         description="Item #586",
     )
 
-    oro_4: str | None = Field(
+    oro_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "oro_4",

@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_POSITION
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_POSITION(BaseModel):
     """HL7 v2 CM_POSITION data type."""
 
-    cm_position_1: str | None = Field(
+    cm_position_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_position_1",
@@ -25,7 +25,7 @@ class CM_POSITION(BaseModel):
         title="Saal",
     )
 
-    cm_position_2: str | None = Field(
+    cm_position_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_position_2",
@@ -36,7 +36,7 @@ class CM_POSITION(BaseModel):
         title="Tisch",
     )
 
-    cm_position_3: str | None = Field(
+    cm_position_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_position_3",

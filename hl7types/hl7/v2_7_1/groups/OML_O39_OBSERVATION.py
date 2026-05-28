@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: OML_O39.OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -37,19 +37,19 @@ class OML_O39_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TCD: _TCD | None = Field(
+    TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

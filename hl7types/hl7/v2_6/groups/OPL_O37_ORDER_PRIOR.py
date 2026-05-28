@@ -5,15 +5,16 @@ Version: 2.6
 Class: OPL_O37.ORDER_PRIOR
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
 from ..segments.OBX import OBX
 from ..segments.ORC import ORC
 from ..segments.ROL import ROL
+
 from .OPL_O37_TIMING import OPL_O37_TIMING
 
 _OBR = OBR
@@ -40,25 +41,25 @@ class OPL_O37_ORDER_PRIOR(BaseModel):
         description="Required",
     )
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    TIMING: _OPL_O37_TIMING | None = Field(
+    TIMING: Optional[_OPL_O37_TIMING] = Field(
         default=None,
         title="TIMING",
         description="Optional",
     )
 
-    OBX: list[_OBX] = Field(
+    OBX: List[_OBX] = Field(
         default=...,
         title="OBX",
         description="Required, repeating",

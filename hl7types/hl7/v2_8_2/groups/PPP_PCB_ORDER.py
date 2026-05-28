@@ -5,12 +5,13 @@ Version: 2.8.2
 Class: PPP_PCB.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .PPP_PCB_ORDER_DETAIL import PPP_PCB_ORDER_DETAIL
 
 _ORC = ORC
@@ -31,7 +32,7 @@ class PPP_PCB_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: _PPP_PCB_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_PPP_PCB_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",

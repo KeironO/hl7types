@@ -5,14 +5,15 @@ Version: 2.4
 Class: PEX_P07.ASSOCIATED_PERSON
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
 from ..segments.OBX import OBX
 from ..segments.PRB import PRB
+
 from .PEX_P07_ASSOCIATED_RX_ADMIN import PEX_P07_ASSOCIATED_RX_ADMIN
 from .PEX_P07_ASSOCIATED_RX_ORDER import PEX_P07_ASSOCIATED_RX_ORDER
 
@@ -40,25 +41,25 @@ class PEX_P07_ASSOCIATED_PERSON(BaseModel):
         description="Required",
     )
 
-    ASSOCIATED_RX_ORDER: _PEX_P07_ASSOCIATED_RX_ORDER | None = Field(
+    ASSOCIATED_RX_ORDER: Optional[_PEX_P07_ASSOCIATED_RX_ORDER] = Field(
         default=None,
         title="ASSOCIATED_RX_ORDER",
         description="Optional",
     )
 
-    ASSOCIATED_RX_ADMIN: list[_PEX_P07_ASSOCIATED_RX_ADMIN] | None = Field(
+    ASSOCIATED_RX_ADMIN: Optional[List[_PEX_P07_ASSOCIATED_RX_ADMIN]] = Field(
         default=None,
         title="ASSOCIATED_RX_ADMIN",
         description="Optional, repeating",
     )
 
-    PRB: list[_PRB] | None = Field(
+    PRB: Optional[List[_PRB]] = Field(
         default=None,
         title="PRB",
         description="Optional, repeating",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: LA1
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .AD import AD
@@ -17,7 +17,7 @@ from .HD import HD
 class LA1(BaseModel):
     """HL7 v2 LA1 data type."""
 
-    la1_1: str | None = Field(
+    la1_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_1",
@@ -28,7 +28,7 @@ class LA1(BaseModel):
         title="point of care (IS)",
     )
 
-    la1_2: str | None = Field(
+    la1_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_2",
@@ -39,7 +39,7 @@ class LA1(BaseModel):
         title="room",
     )
 
-    la1_3: str | None = Field(
+    la1_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_3",
@@ -50,7 +50,7 @@ class LA1(BaseModel):
         title="bed",
     )
 
-    la1_4: HD | None = Field(
+    la1_4: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_4",
@@ -61,7 +61,7 @@ class LA1(BaseModel):
         title="facility (HD)",
     )
 
-    la1_5: str | None = Field(
+    la1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_5",
@@ -72,7 +72,7 @@ class LA1(BaseModel):
         title="location status",
     )
 
-    la1_6: str | None = Field(
+    la1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_6",
@@ -83,7 +83,7 @@ class LA1(BaseModel):
         title="person location type",
     )
 
-    la1_7: str | None = Field(
+    la1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_7",
@@ -94,7 +94,7 @@ class LA1(BaseModel):
         title="building",
     )
 
-    la1_8: str | None = Field(
+    la1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_8",
@@ -105,7 +105,7 @@ class LA1(BaseModel):
         title="floor",
     )
 
-    la1_9: AD | None = Field(
+    la1_9: Optional[AD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la1_9",

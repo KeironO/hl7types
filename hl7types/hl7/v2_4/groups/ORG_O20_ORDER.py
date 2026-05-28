@@ -5,9 +5,9 @@ Version: 2.4
 Class: ORG_O20.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
@@ -37,19 +37,19 @@ class ORG_O20_ORDER(BaseModel):
         description="Required",
     )
 
-    OBR: _OBR | None = Field(
+    OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

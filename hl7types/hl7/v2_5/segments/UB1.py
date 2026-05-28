@@ -5,9 +5,9 @@ Version: 2.5
 Class: UB1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -18,7 +18,7 @@ from ..datatypes.UVC import UVC
 class UB1(BaseModel):
     """HL7 v2 UB1 segment."""
 
-    ub1_1: str | None = Field(
+    ub1_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_1",
@@ -30,7 +30,7 @@ class UB1(BaseModel):
         description="Item #530",
     )
 
-    ub1_2: str | None = Field(
+    ub1_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_2",
@@ -42,7 +42,7 @@ class UB1(BaseModel):
         description="Item #531",
     )
 
-    ub1_3: str | None = Field(
+    ub1_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_3",
@@ -54,7 +54,7 @@ class UB1(BaseModel):
         description="Item #532",
     )
 
-    ub1_4: str | None = Field(
+    ub1_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_4",
@@ -66,7 +66,7 @@ class UB1(BaseModel):
         description="Item #533",
     )
 
-    ub1_5: str | None = Field(
+    ub1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_5",
@@ -78,7 +78,7 @@ class UB1(BaseModel):
         description="Item #534",
     )
 
-    ub1_6: str | None = Field(
+    ub1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_6",
@@ -90,7 +90,7 @@ class UB1(BaseModel):
         description="Item #535",
     )
 
-    ub1_7: list[str] | None = Field(
+    ub1_7: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_7",
@@ -102,7 +102,7 @@ class UB1(BaseModel):
         description="Item #536 | Table HL70043",
     )
 
-    ub1_8: str | None = Field(
+    ub1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_8",
@@ -114,7 +114,7 @@ class UB1(BaseModel):
         description="Item #537",
     )
 
-    ub1_9: str | None = Field(
+    ub1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_9",
@@ -126,7 +126,7 @@ class UB1(BaseModel):
         description="Item #538",
     )
 
-    ub1_10: list[UVC] | None = Field(
+    ub1_10: Optional[List[UVC]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_10",
@@ -138,7 +138,7 @@ class UB1(BaseModel):
         description="Item #539",
     )
 
-    ub1_11: str | None = Field(
+    ub1_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_11",
@@ -150,7 +150,7 @@ class UB1(BaseModel):
         description="Item #540",
     )
 
-    ub1_12: CE | None = Field(
+    ub1_12: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_12",
@@ -162,7 +162,7 @@ class UB1(BaseModel):
         description="Item #541 | Table HL70348",
     )
 
-    ub1_13: CE | None = Field(
+    ub1_13: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_13",
@@ -174,7 +174,7 @@ class UB1(BaseModel):
         description="Item #542 | Table HL70349",
     )
 
-    ub1_14: str | None = Field(
+    ub1_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_14",
@@ -186,7 +186,7 @@ class UB1(BaseModel):
         description="Item #543",
     )
 
-    ub1_15: str | None = Field(
+    ub1_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_15",
@@ -198,7 +198,7 @@ class UB1(BaseModel):
         description="Item #544",
     )
 
-    ub1_16: list[OCD] | None = Field(
+    ub1_16: Optional[List[OCD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_16",
@@ -210,7 +210,7 @@ class UB1(BaseModel):
         description="Item #545",
     )
 
-    ub1_17: CE | None = Field(
+    ub1_17: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_17",
@@ -222,7 +222,7 @@ class UB1(BaseModel):
         description="Item #546 | Table HL70351",
     )
 
-    ub1_18: str | None = Field(
+    ub1_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_18",
@@ -234,7 +234,7 @@ class UB1(BaseModel):
         description="Item #547",
     )
 
-    ub1_19: str | None = Field(
+    ub1_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_19",
@@ -246,7 +246,7 @@ class UB1(BaseModel):
         description="Item #548",
     )
 
-    ub1_20: str | None = Field(
+    ub1_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_20",
@@ -258,7 +258,7 @@ class UB1(BaseModel):
         description="Item #549",
     )
 
-    ub1_21: str | None = Field(
+    ub1_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_21",
@@ -270,7 +270,7 @@ class UB1(BaseModel):
         description="Item #550",
     )
 
-    ub1_22: str | None = Field(
+    ub1_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_22",
@@ -282,7 +282,7 @@ class UB1(BaseModel):
         description="Item #551",
     )
 
-    ub1_23: str | None = Field(
+    ub1_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ub1_23",

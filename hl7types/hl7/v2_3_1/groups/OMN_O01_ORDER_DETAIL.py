@@ -5,14 +5,15 @@ Version: 2.3.1
 Class: OMN_O01.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RQ1 import RQ1
 from ..segments.RQD import RQD
+
 from .OMN_O01_OBSERVATION import OMN_O01_OBSERVATION
 
 _NTE = NTE
@@ -37,19 +38,19 @@ class OMN_O01_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    RQ1: _RQ1 | None = Field(
+    RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_OMN_O01_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_OMN_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

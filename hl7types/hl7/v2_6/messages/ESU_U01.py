@@ -5,9 +5,9 @@ Version: 2.6
 Class: ESU_U01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EQU import EQU
@@ -43,13 +43,13 @@ class ESU_U01(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -61,13 +61,13 @@ class ESU_U01(BaseModel):
         description="Required",
     )
 
-    ISD: list[_ISD] | None = Field(
+    ISD: Optional[List[_ISD]] = Field(
         default=None,
         title="ISD",
         description="Optional, repeating",
     )
 
-    ROL: _ROL | None = Field(
+    ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
         description="Optional",

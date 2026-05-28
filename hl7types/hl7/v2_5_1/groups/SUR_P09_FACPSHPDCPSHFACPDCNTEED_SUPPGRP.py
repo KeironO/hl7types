@@ -5,15 +5,14 @@ Version: 2.5.1
 Class: SUR_P09.FACPSHPDCPSHFACPDCNTEED_SUPPGRP
 Type: Group
 """
-
 from __future__ import annotations
 
-from typing import Any
-
+from typing import Optional, List, Any
 from pydantic import BaseModel, Field
 
 from ..segments.FAC import FAC
 from ..segments.PSH import PSH
+
 from .SUR_P09_FACPDCNTE_SUPPGRP import SUR_P09_FACPDCNTE_SUPPGRP
 from .SUR_P09_PSHPDC_SUPPGRP import SUR_P09_PSHPDC_SUPPGRP
 
@@ -40,7 +39,7 @@ class SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP(BaseModel):
         description="Required",
     )
 
-    PSHPDC_SUPPGRP: list[_SUR_P09_PSHPDC_SUPPGRP] = Field(
+    PSHPDC_SUPPGRP: List[_SUR_P09_PSHPDC_SUPPGRP] = Field(
         default=...,
         title="PSHPDC_SUPPGRP",
         description="Required, repeating",
@@ -52,7 +51,7 @@ class SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP(BaseModel):
         description="Required",
     )
 
-    FACPDCNTE_SUPPGRP: list[_SUR_P09_FACPDCNTE_SUPPGRP] = Field(
+    FACPDCNTE_SUPPGRP: List[_SUR_P09_FACPDCNTE_SUPPGRP] = Field(
         default=...,
         title="FACPDCNTE_SUPPGRP",
         description="Required, repeating",

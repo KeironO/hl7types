@@ -5,15 +5,16 @@ Version: 2.6
 Class: RGR_RGR.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.RXC import RXC
 from ..segments.RXG import RXG
 from ..segments.RXR import RXR
+
 from .RGR_RGR_ENCODING import RGR_RGR_ENCODING
 
 _ORC = ORC
@@ -40,25 +41,25 @@ class RGR_RGR_ORDER(BaseModel):
         description="Required",
     )
 
-    ENCODING: _RGR_RGR_ENCODING | None = Field(
+    ENCODING: Optional[_RGR_RGR_ENCODING] = Field(
         default=None,
         title="ENCODING",
         description="Optional",
     )
 
-    RXG: list[_RXG] = Field(
+    RXG: List[_RXG] = Field(
         default=...,
         title="RXG",
         description="Required, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: list[_RXC] | None = Field(
+    RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

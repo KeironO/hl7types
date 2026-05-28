@@ -5,9 +5,9 @@ Version: 2.4
 Class: MFK_M01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ERR import ERR
@@ -46,7 +46,7 @@ class MFK_M01(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -58,7 +58,7 @@ class MFK_M01(BaseModel):
         description="Required",
     )
 
-    MFA: list[_MFA] | None = Field(
+    MFA: Optional[List[_MFA]] = Field(
         default=None,
         title="MFA",
         description="Optional, repeating",

@@ -5,18 +5,19 @@ Version: 2.5
 Class: OUL_R23
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.OUL_R23_PATIENT import OUL_R23_PATIENT
-from ..groups.OUL_R23_SPECIMEN import OUL_R23_SPECIMEN
-from ..groups.OUL_R23_VISIT import OUL_R23_VISIT
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
+
+from ..groups.OUL_R23_PATIENT import OUL_R23_PATIENT
+from ..groups.OUL_R23_SPECIMEN import OUL_R23_SPECIMEN
+from ..groups.OUL_R23_VISIT import OUL_R23_VISIT
 
 _DSC = DSC
 _MSH = MSH
@@ -46,37 +47,37 @@ class OUL_R23(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: _NTE | None = Field(
+    NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
         description="Optional",
     )
 
-    PATIENT: _OUL_R23_PATIENT | None = Field(
+    PATIENT: Optional[_OUL_R23_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    VISIT: _OUL_R23_VISIT | None = Field(
+    VISIT: Optional[_OUL_R23_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
     )
 
-    SPECIMEN: list[_OUL_R23_SPECIMEN] = Field(
+    SPECIMEN: List[_OUL_R23_SPECIMEN] = Field(
         default=...,
         title="SPECIMEN",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

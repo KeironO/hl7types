@@ -5,9 +5,9 @@ Version: 2.3
 Class: VQQ_Q01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -43,13 +43,13 @@ class VQQ_Q01(BaseModel):
         description="Required",
     )
 
-    RDF: _RDF | None = Field(
+    RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
         description="Optional",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

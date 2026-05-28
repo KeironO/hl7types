@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: AUT
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -23,7 +23,7 @@ from ..datatypes.XTN import XTN
 class AUT(BaseModel):
     """HL7 v2 AUT segment."""
 
-    aut_1: CWE | None = Field(
+    aut_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_1",
@@ -47,7 +47,7 @@ class AUT(BaseModel):
         description="Item #1147 | Table HL70285",
     )
 
-    aut_3: str | None = Field(
+    aut_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_3",
@@ -59,7 +59,7 @@ class AUT(BaseModel):
         description="Item #1148",
     )
 
-    aut_4: str | None = Field(
+    aut_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_4",
@@ -71,7 +71,7 @@ class AUT(BaseModel):
         description="Item #1149",
     )
 
-    aut_5: str | None = Field(
+    aut_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_5",
@@ -83,7 +83,7 @@ class AUT(BaseModel):
         description="Item #1150",
     )
 
-    aut_6: EI | None = Field(
+    aut_6: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_6",
@@ -95,7 +95,7 @@ class AUT(BaseModel):
         description="Item #1151",
     )
 
-    aut_7: CP | None = Field(
+    aut_7: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_7",
@@ -107,7 +107,7 @@ class AUT(BaseModel):
         description="Item #1152",
     )
 
-    aut_8: CQ | None = Field(
+    aut_8: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_8",
@@ -119,7 +119,7 @@ class AUT(BaseModel):
         description="Item #1153",
     )
 
-    aut_9: CQ | None = Field(
+    aut_9: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_9",
@@ -131,7 +131,7 @@ class AUT(BaseModel):
         description="Item #1154",
     )
 
-    aut_10: str | None = Field(
+    aut_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_10",
@@ -143,7 +143,7 @@ class AUT(BaseModel):
         description="Item #1145",
     )
 
-    aut_11: list[CWE] | None = Field(
+    aut_11: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_11",
@@ -155,7 +155,7 @@ class AUT(BaseModel):
         description="Item #2375",
     )
 
-    aut_12: list[CWE] | None = Field(
+    aut_12: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_12",
@@ -179,7 +179,7 @@ class AUT(BaseModel):
         description="Item #3413",
     )
 
-    aut_14: CWE | None = Field(
+    aut_14: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_14",
@@ -191,7 +191,7 @@ class AUT(BaseModel):
         description="Item #3414",
     )
 
-    aut_15: str | None = Field(
+    aut_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_15",
@@ -203,7 +203,7 @@ class AUT(BaseModel):
         description="Item #3415",
     )
 
-    aut_16: CWE | None = Field(
+    aut_16: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_16",
@@ -215,7 +215,7 @@ class AUT(BaseModel):
         description="Item #3416",
     )
 
-    aut_17: str | None = Field(
+    aut_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_17",
@@ -227,7 +227,7 @@ class AUT(BaseModel):
         description="Item #3417",
     )
 
-    aut_18: CQ | None = Field(
+    aut_18: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_18",
@@ -239,7 +239,7 @@ class AUT(BaseModel):
         description="Item #3418",
     )
 
-    aut_19: CQ | None = Field(
+    aut_19: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_19",
@@ -251,7 +251,7 @@ class AUT(BaseModel):
         description="Item #3419",
     )
 
-    aut_20: CQ | None = Field(
+    aut_20: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_20",
@@ -263,7 +263,7 @@ class AUT(BaseModel):
         description="Item #3420",
     )
 
-    aut_21: CWE | None = Field(
+    aut_21: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_21",
@@ -275,7 +275,7 @@ class AUT(BaseModel):
         description="Item #3421",
     )
 
-    aut_22: MO | None = Field(
+    aut_22: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_22",
@@ -287,7 +287,7 @@ class AUT(BaseModel):
         description="Item #3422",
     )
 
-    aut_23: XON | None = Field(
+    aut_23: Optional[XON] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_23",
@@ -299,7 +299,7 @@ class AUT(BaseModel):
         description="Item #3423",
     )
 
-    aut_24: XCN | None = Field(
+    aut_24: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_24",
@@ -311,7 +311,7 @@ class AUT(BaseModel):
         description="Item #3424",
     )
 
-    aut_25: str | None = Field(
+    aut_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_25",
@@ -323,7 +323,7 @@ class AUT(BaseModel):
         description="Item #3425",
     )
 
-    aut_26: str | None = Field(
+    aut_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_26",
@@ -335,7 +335,7 @@ class AUT(BaseModel):
         description="Item #3426",
     )
 
-    aut_27: XTN | None = Field(
+    aut_27: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_27",
@@ -347,7 +347,7 @@ class AUT(BaseModel):
         description="Item #3427",
     )
 
-    aut_28: str | None = Field(
+    aut_28: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_28",
@@ -359,7 +359,7 @@ class AUT(BaseModel):
         description="Item #3428",
     )
 
-    aut_29: str | None = Field(
+    aut_29: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_29",

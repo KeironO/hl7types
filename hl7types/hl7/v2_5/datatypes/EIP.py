@@ -5,9 +5,9 @@ Version: 2.5
 Class: EIP
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .EI import EI
@@ -16,7 +16,7 @@ from .EI import EI
 class EIP(BaseModel):
     """HL7 v2 EIP data type."""
 
-    eip_1: EI | None = Field(
+    eip_1: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "eip_1",
@@ -27,7 +27,7 @@ class EIP(BaseModel):
         title="Placer Assigned Identifier",
     )
 
-    eip_2: EI | None = Field(
+    eip_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "eip_2",

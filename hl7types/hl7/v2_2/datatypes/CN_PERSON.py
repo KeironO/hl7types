@@ -5,16 +5,16 @@ Version: 2.2
 Class: CN_PERSON
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CN_PERSON(BaseModel):
     """HL7 v2 CN_PERSON data type."""
 
-    cn_person_1: str | None = Field(
+    cn_person_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_1",
@@ -25,7 +25,7 @@ class CN_PERSON(BaseModel):
         title="ID number",
     )
 
-    cn_person_2: str | None = Field(
+    cn_person_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_2",
@@ -36,7 +36,7 @@ class CN_PERSON(BaseModel):
         title="familiy name",
     )
 
-    cn_person_3: str | None = Field(
+    cn_person_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_3",
@@ -47,7 +47,7 @@ class CN_PERSON(BaseModel):
         title="given name",
     )
 
-    cn_person_4: str | None = Field(
+    cn_person_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_4",
@@ -58,7 +58,7 @@ class CN_PERSON(BaseModel):
         title="middle initial or name",
     )
 
-    cn_person_5: str | None = Field(
+    cn_person_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_5",
@@ -69,7 +69,7 @@ class CN_PERSON(BaseModel):
         title="suffix (e.g. JR or III)",
     )
 
-    cn_person_6: str | None = Field(
+    cn_person_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_6",
@@ -80,7 +80,7 @@ class CN_PERSON(BaseModel):
         title="prefix (e.g. DR)",
     )
 
-    cn_person_7: str | None = Field(
+    cn_person_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_7",
@@ -91,7 +91,7 @@ class CN_PERSON(BaseModel):
         title="degree (e.g. MD)",
     )
 
-    cn_person_8: str | None = Field(
+    cn_person_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_person_8",

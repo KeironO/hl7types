@@ -5,9 +5,9 @@ Version: 2.7
 Class: OML_O39.PATIENT_VISIT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
@@ -34,13 +34,13 @@ class OML_O39_PATIENT_VISIT(BaseModel):
         description="Required",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

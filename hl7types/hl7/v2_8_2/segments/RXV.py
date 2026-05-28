@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: RXV
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -17,7 +17,7 @@ from ..datatypes.CWE import CWE
 class RXV(BaseModel):
     """HL7 v2 RXV segment."""
 
-    rxv_1: str | None = Field(
+    rxv_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_1",
@@ -41,7 +41,7 @@ class RXV(BaseModel):
         description="Item #3319 | Table HL70917",
     )
 
-    rxv_3: str | None = Field(
+    rxv_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_3",
@@ -53,7 +53,7 @@ class RXV(BaseModel):
         description="Item #3320",
     )
 
-    rxv_4: CWE | None = Field(
+    rxv_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_4",
@@ -65,7 +65,7 @@ class RXV(BaseModel):
         description="Item #3321 | Table HL79999",
     )
 
-    rxv_5: str | None = Field(
+    rxv_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_5",
@@ -77,7 +77,7 @@ class RXV(BaseModel):
         description="Item #3322",
     )
 
-    rxv_6: CWE | None = Field(
+    rxv_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_6",
@@ -101,7 +101,7 @@ class RXV(BaseModel):
         description="Item #3324 | Table HL70918",
     )
 
-    rxv_8: str | None = Field(
+    rxv_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_8",
@@ -113,7 +113,7 @@ class RXV(BaseModel):
         description="Item #3325",
     )
 
-    rxv_9: CWE | None = Field(
+    rxv_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_9",
@@ -125,7 +125,7 @@ class RXV(BaseModel):
         description="Item #3326 | Table HL79999",
     )
 
-    rxv_10: str | None = Field(
+    rxv_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_10",
@@ -137,7 +137,7 @@ class RXV(BaseModel):
         description="Item #3327",
     )
 
-    rxv_11: CWE | None = Field(
+    rxv_11: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_11",
@@ -149,7 +149,7 @@ class RXV(BaseModel):
         description="Item #3328 | Table HL79999",
     )
 
-    rxv_12: str | None = Field(
+    rxv_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_12",
@@ -161,7 +161,7 @@ class RXV(BaseModel):
         description="Item #3329",
     )
 
-    rxv_13: CWE | None = Field(
+    rxv_13: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_13",
@@ -173,7 +173,7 @@ class RXV(BaseModel):
         description="Item #3330 | Table HL79999",
     )
 
-    rxv_14: str | None = Field(
+    rxv_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_14",
@@ -185,7 +185,7 @@ class RXV(BaseModel):
         description="Item #3331",
     )
 
-    rxv_15: CWE | None = Field(
+    rxv_15: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_15",
@@ -209,7 +209,7 @@ class RXV(BaseModel):
         description="Item #3333",
     )
 
-    rxv_17: CQ | None = Field(
+    rxv_17: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_17",
@@ -221,7 +221,7 @@ class RXV(BaseModel):
         description="Item #3334",
     )
 
-    rxv_18: CWE | None = Field(
+    rxv_18: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_18",
@@ -233,7 +233,7 @@ class RXV(BaseModel):
         description="Item #3339",
     )
 
-    rxv_19: CWE | None = Field(
+    rxv_19: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_19",
@@ -245,7 +245,7 @@ class RXV(BaseModel):
         description="Item #3385",
     )
 
-    rxv_20: str | None = Field(
+    rxv_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_20",
@@ -257,7 +257,7 @@ class RXV(BaseModel):
         description="Item #3386",
     )
 
-    rxv_21: CWE | None = Field(
+    rxv_21: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_21",
@@ -269,7 +269,7 @@ class RXV(BaseModel):
         description="Item #3431",
     )
 
-    rxv_22: str | None = Field(
+    rxv_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxv_22",

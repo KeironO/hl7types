@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: NMQ_N01.CLOCK_AND_STATISTICS
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.NCK import NCK
@@ -28,19 +28,19 @@ class NMQ_N01_CLOCK_AND_STATISTICS(BaseModel):
         NSC (Optional[NSC]): optional
     """
 
-    NCK: _NCK | None = Field(
+    NCK: Optional[_NCK] = Field(
         default=None,
         title="NCK",
         description="Optional",
     )
 
-    NST: _NST | None = Field(
+    NST: Optional[_NST] = Field(
         default=None,
         title="NST",
         description="Optional",
     )
 
-    NSC: _NSC | None = Field(
+    NSC: Optional[_NSC] = Field(
         default=None,
         title="NSC",
         description="Optional",

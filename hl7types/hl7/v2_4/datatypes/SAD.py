@@ -5,16 +5,16 @@ Version: 2.4
 Class: SAD
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class SAD(BaseModel):
     """HL7 v2 SAD data type."""
 
-    sad_1: str | None = Field(
+    sad_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sad_1",
@@ -25,7 +25,7 @@ class SAD(BaseModel):
         title="street or mailing address",
     )
 
-    sad_2: str | None = Field(
+    sad_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sad_2",
@@ -36,7 +36,7 @@ class SAD(BaseModel):
         title="street name",
     )
 
-    sad_3: str | None = Field(
+    sad_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sad_3",

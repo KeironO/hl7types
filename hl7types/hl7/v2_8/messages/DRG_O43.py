@@ -5,15 +5,16 @@ Version: 2.8
 Class: DRG_O43
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.DRG_O43_DONOR import DRG_O43_DONOR
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.DRG_O43_DONOR import DRG_O43_DONOR
 
 _DRG_O43_DONOR = DRG_O43_DONOR
 _MSH = MSH
@@ -37,19 +38,19 @@ class DRG_O43(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    DONOR: _DRG_O43_DONOR | None = Field(
+    DONOR: Optional[_DRG_O43_DONOR] = Field(
         default=None,
         title="DONOR",
         description="Optional",

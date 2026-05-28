@@ -5,9 +5,9 @@ Version: 2.6
 Class: PYE
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.XAD import XAD
@@ -42,7 +42,7 @@ class PYE(BaseModel):
         description="Item #1940 | Table HL70557",
     )
 
-    pye_3: str | None = Field(
+    pye_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pye_3",
@@ -54,7 +54,7 @@ class PYE(BaseModel):
         description="Item #1941 | Table HL70558",
     )
 
-    pye_4: list[XON] | None = Field(
+    pye_4: Optional[List[XON]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pye_4",
@@ -66,7 +66,7 @@ class PYE(BaseModel):
         description="Item #1942",
     )
 
-    pye_5: list[XPN] | None = Field(
+    pye_5: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pye_5",
@@ -78,7 +78,7 @@ class PYE(BaseModel):
         description="Item #1943",
     )
 
-    pye_6: list[XAD] | None = Field(
+    pye_6: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pye_6",
@@ -90,7 +90,7 @@ class PYE(BaseModel):
         description="Item #1944",
     )
 
-    pye_7: str | None = Field(
+    pye_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pye_7",

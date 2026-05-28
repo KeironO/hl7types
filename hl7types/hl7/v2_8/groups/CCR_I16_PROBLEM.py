@@ -5,13 +5,14 @@ Version: 2.8
 Class: CCR_I16.PROBLEM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
+
 from .CCR_I16_ROLE_OBSERVATION import CCR_I16_ROLE_OBSERVATION
 from .CCR_I16_ROLE_PROBLEM import CCR_I16_ROLE_PROBLEM
 
@@ -37,19 +38,19 @@ class CCR_I16_PROBLEM(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_PROBLEM: list[_CCR_I16_ROLE_PROBLEM] | None = Field(
+    ROLE_PROBLEM: Optional[List[_CCR_I16_ROLE_PROBLEM]] = Field(
         default=None,
         title="ROLE_PROBLEM",
         description="Optional, repeating",
     )
 
-    ROLE_OBSERVATION: list[_CCR_I16_ROLE_OBSERVATION] | None = Field(
+    ROLE_OBSERVATION: Optional[List[_CCR_I16_ROLE_OBSERVATION]] = Field(
         default=None,
         title="ROLE_OBSERVATION",
         description="Optional, repeating",

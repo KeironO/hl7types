@@ -5,18 +5,19 @@ Version: 2.6
 Class: BRP_O30
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.BRP_O30_RESPONSE import BRP_O30_RESPONSE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.BRP_O30_RESPONSE import BRP_O30_RESPONSE
 
 _BRP_O30_RESPONSE = BRP_O30_RESPONSE
 _ERR = ERR
@@ -52,31 +53,31 @@ class BRP_O30(BaseModel):
         description="Required",
     )
 
-    ERR: list[_ERR] | None = Field(
+    ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESPONSE: _BRP_O30_RESPONSE | None = Field(
+    RESPONSE: Optional[_BRP_O30_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
         description="Optional",

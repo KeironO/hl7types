@@ -5,9 +5,9 @@ Version: 2.7
 Class: ADT_A60.VISIT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ARV import ARV
@@ -34,13 +34,13 @@ class ADT_A60_VISIT(BaseModel):
         description="Required",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    ARV: list[_ARV] | None = Field(
+    ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",

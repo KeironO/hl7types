@@ -5,9 +5,9 @@ Version: 2.5
 Class: CER
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -33,7 +33,7 @@ class CER(BaseModel):
         description="Item #1856",
     )
 
-    cer_2: str | None = Field(
+    cer_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_2",
@@ -45,7 +45,7 @@ class CER(BaseModel):
         description="Item #1857",
     )
 
-    cer_3: str | None = Field(
+    cer_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_3",
@@ -57,7 +57,7 @@ class CER(BaseModel):
         description="Item #1858",
     )
 
-    cer_4: XON | None = Field(
+    cer_4: Optional[XON] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_4",
@@ -69,7 +69,7 @@ class CER(BaseModel):
         description="Item #1859",
     )
 
-    cer_5: XCN | None = Field(
+    cer_5: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_5",
@@ -81,7 +81,7 @@ class CER(BaseModel):
         description="Item #1860",
     )
 
-    cer_6: ED | None = Field(
+    cer_6: Optional[ED] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_6",
@@ -93,7 +93,7 @@ class CER(BaseModel):
         description="Item #1861",
     )
 
-    cer_7: str | None = Field(
+    cer_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_7",
@@ -105,7 +105,7 @@ class CER(BaseModel):
         description="Item #1862 | Table HL70399",
     )
 
-    cer_8: CWE | None = Field(
+    cer_8: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_8",
@@ -117,7 +117,7 @@ class CER(BaseModel):
         description="Item #1863 | Table HL70347",
     )
 
-    cer_9: CWE | None = Field(
+    cer_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_9",
@@ -129,7 +129,7 @@ class CER(BaseModel):
         description="Item #1864 | Table HL70289",
     )
 
-    cer_10: CWE | None = Field(
+    cer_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_10",
@@ -141,7 +141,7 @@ class CER(BaseModel):
         description="Item #1865",
     )
 
-    cer_11: CWE | None = Field(
+    cer_11: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_11",
@@ -153,7 +153,7 @@ class CER(BaseModel):
         description="Item #1866",
     )
 
-    cer_12: str | None = Field(
+    cer_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_12",
@@ -177,7 +177,7 @@ class CER(BaseModel):
         description="Item #1907",
     )
 
-    cer_14: list[CWE] | None = Field(
+    cer_14: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_14",
@@ -185,11 +185,13 @@ class CER(BaseModel):
             "CER.14",
         ),
         serialization_alias="CER.14",
-        title=("Subject Directory Attribute Extension (Health Professional Data)"),
+        title=(
+            "Subject Directory Attribute Extension (Health Professional Data)"
+        ),
         description="Item #1868",
     )
 
-    cer_15: CWE | None = Field(
+    cer_15: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_15",
@@ -201,7 +203,7 @@ class CER(BaseModel):
         description="Item #1869",
     )
 
-    cer_16: CWE | None = Field(
+    cer_16: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_16",
@@ -213,7 +215,7 @@ class CER(BaseModel):
         description="Item #1870",
     )
 
-    cer_17: str | None = Field(
+    cer_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_17",
@@ -225,7 +227,7 @@ class CER(BaseModel):
         description="Item #1871 | Table HL70136",
     )
 
-    cer_18: list[CWE] | None = Field(
+    cer_18: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_18",
@@ -237,7 +239,7 @@ class CER(BaseModel):
         description="Item #1872",
     )
 
-    cer_19: str | None = Field(
+    cer_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_19",
@@ -249,7 +251,7 @@ class CER(BaseModel):
         description="Item #1875 | Table HL70399",
     )
 
-    cer_20: CWE | None = Field(
+    cer_20: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_20",
@@ -261,7 +263,7 @@ class CER(BaseModel):
         description="Item #1873 | Table HL70347",
     )
 
-    cer_21: CWE | None = Field(
+    cer_21: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_21",
@@ -273,7 +275,7 @@ class CER(BaseModel):
         description="Item #1874 | Table HL70289",
     )
 
-    cer_22: list[CWE] | None = Field(
+    cer_22: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_22",
@@ -285,7 +287,7 @@ class CER(BaseModel):
         description="Item #1895 | Table HL70547",
     )
 
-    cer_23: TS | None = Field(
+    cer_23: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_23",
@@ -297,7 +299,7 @@ class CER(BaseModel):
         description="Item #1876",
     )
 
-    cer_24: TS | None = Field(
+    cer_24: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_24",
@@ -309,7 +311,7 @@ class CER(BaseModel):
         description="Item #1877",
     )
 
-    cer_25: TS | None = Field(
+    cer_25: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_25",
@@ -321,7 +323,7 @@ class CER(BaseModel):
         description="Item #1878",
     )
 
-    cer_26: TS | None = Field(
+    cer_26: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_26",
@@ -333,7 +335,7 @@ class CER(BaseModel):
         description="Item #1879",
     )
 
-    cer_27: TS | None = Field(
+    cer_27: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_27",
@@ -345,7 +347,7 @@ class CER(BaseModel):
         description="Item #1880",
     )
 
-    cer_28: TS | None = Field(
+    cer_28: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_28",
@@ -357,7 +359,7 @@ class CER(BaseModel):
         description="Item #1881",
     )
 
-    cer_29: TS | None = Field(
+    cer_29: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_29",
@@ -369,7 +371,7 @@ class CER(BaseModel):
         description="Item #1882",
     )
 
-    cer_30: CE | None = Field(
+    cer_30: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_30",
@@ -381,7 +383,7 @@ class CER(BaseModel):
         description="Item #1883",
     )
 
-    cer_31: CWE | None = Field(
+    cer_31: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cer_31",

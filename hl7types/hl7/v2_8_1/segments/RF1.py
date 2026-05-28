@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: RF1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -21,7 +21,7 @@ from ..datatypes.XTN import XTN
 class RF1(BaseModel):
     """HL7 v2 RF1 segment."""
 
-    rf1_1: CWE | None = Field(
+    rf1_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_1",
@@ -33,7 +33,7 @@ class RF1(BaseModel):
         description="Item #1137 | Table HL70283",
     )
 
-    rf1_2: CWE | None = Field(
+    rf1_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_2",
@@ -45,7 +45,7 @@ class RF1(BaseModel):
         description="Item #1138 | Table HL70280",
     )
 
-    rf1_3: CWE | None = Field(
+    rf1_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_3",
@@ -57,7 +57,7 @@ class RF1(BaseModel):
         description="Item #1139 | Table HL70281",
     )
 
-    rf1_4: list[CWE] | None = Field(
+    rf1_4: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_4",
@@ -69,7 +69,7 @@ class RF1(BaseModel):
         description="Item #1140 | Table HL70282",
     )
 
-    rf1_5: CWE | None = Field(
+    rf1_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_5",
@@ -93,7 +93,7 @@ class RF1(BaseModel):
         description="Item #1142",
     )
 
-    rf1_7: str | None = Field(
+    rf1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_7",
@@ -105,7 +105,7 @@ class RF1(BaseModel):
         description="Item #1143",
     )
 
-    rf1_8: str | None = Field(
+    rf1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_8",
@@ -117,7 +117,7 @@ class RF1(BaseModel):
         description="Item #1144",
     )
 
-    rf1_9: str | None = Field(
+    rf1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_9",
@@ -129,7 +129,7 @@ class RF1(BaseModel):
         description="Item #1145",
     )
 
-    rf1_10: list[CWE] | None = Field(
+    rf1_10: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_10",
@@ -141,7 +141,7 @@ class RF1(BaseModel):
         description="Item #1228 | Table HL70336",
     )
 
-    rf1_11: list[EI] | None = Field(
+    rf1_11: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_11",
@@ -153,7 +153,7 @@ class RF1(BaseModel):
         description="Item #1300",
     )
 
-    rf1_12: CWE | None = Field(
+    rf1_12: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_12",
@@ -165,7 +165,7 @@ class RF1(BaseModel):
         description="Item #2262 | Table HL70865",
     )
 
-    rf1_13: str | None = Field(
+    rf1_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_13",
@@ -177,7 +177,7 @@ class RF1(BaseModel):
         description="Item #3400",
     )
 
-    rf1_14: str | None = Field(
+    rf1_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_14",
@@ -189,7 +189,7 @@ class RF1(BaseModel):
         description="Item #3401",
     )
 
-    rf1_15: CQ | None = Field(
+    rf1_15: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_15",
@@ -201,7 +201,7 @@ class RF1(BaseModel):
         description="Item #3402",
     )
 
-    rf1_16: CQ | None = Field(
+    rf1_16: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_16",
@@ -213,7 +213,7 @@ class RF1(BaseModel):
         description="Item #3403",
     )
 
-    rf1_17: CQ | None = Field(
+    rf1_17: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_17",
@@ -225,7 +225,7 @@ class RF1(BaseModel):
         description="Item #3404",
     )
 
-    rf1_19: XON | None = Field(
+    rf1_19: Optional[XON] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_19",
@@ -237,7 +237,7 @@ class RF1(BaseModel):
         description="Item #3406",
     )
 
-    rf1_20: XCN | None = Field(
+    rf1_20: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_20",
@@ -249,7 +249,7 @@ class RF1(BaseModel):
         description="Item #3407",
     )
 
-    rf1_21: str | None = Field(
+    rf1_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_21",
@@ -261,7 +261,7 @@ class RF1(BaseModel):
         description="Item #3408",
     )
 
-    rf1_22: str | None = Field(
+    rf1_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_22",
@@ -273,7 +273,7 @@ class RF1(BaseModel):
         description="Item #3409",
     )
 
-    rf1_23: XTN | None = Field(
+    rf1_23: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_23",
@@ -285,7 +285,7 @@ class RF1(BaseModel):
         description="Item #3410",
     )
 
-    rf1_24: str | None = Field(
+    rf1_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_24",
@@ -297,7 +297,7 @@ class RF1(BaseModel):
         description="Item #3411",
     )
 
-    rf1_25: str | None = Field(
+    rf1_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_25",

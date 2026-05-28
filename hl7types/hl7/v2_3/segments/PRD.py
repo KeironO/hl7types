@@ -5,9 +5,9 @@ Version: 2.3
 Class: PRD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -21,7 +21,7 @@ from ..datatypes.XTN import XTN
 class PRD(BaseModel):
     """HL7 v2 PRD segment."""
 
-    prd_1: list[CE] = Field(
+    prd_1: List[CE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "prd_1",
@@ -33,7 +33,7 @@ class PRD(BaseModel):
         description="Item #1155 | Table HL70286",
     )
 
-    prd_2: list[XPN] | None = Field(
+    prd_2: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_2",
@@ -45,7 +45,7 @@ class PRD(BaseModel):
         description="Item #1156",
     )
 
-    prd_3: XAD | None = Field(
+    prd_3: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_3",
@@ -57,7 +57,7 @@ class PRD(BaseModel):
         description="Item #1157",
     )
 
-    prd_4: PL | None = Field(
+    prd_4: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_4",
@@ -69,7 +69,7 @@ class PRD(BaseModel):
         description="Item #1158",
     )
 
-    prd_5: list[XTN] | None = Field(
+    prd_5: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_5",
@@ -81,7 +81,7 @@ class PRD(BaseModel):
         description="Item #1159",
     )
 
-    prd_6: CE | None = Field(
+    prd_6: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_6",
@@ -93,7 +93,7 @@ class PRD(BaseModel):
         description="Item #684 | Table HL70185",
     )
 
-    prd_7: list[str] | None = Field(
+    prd_7: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_7",
@@ -105,7 +105,7 @@ class PRD(BaseModel):
         description="Item #1162",
     )
 
-    prd_8: TS | None = Field(
+    prd_8: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_8",
@@ -117,7 +117,7 @@ class PRD(BaseModel):
         description="Item #1163",
     )
 
-    prd_9: TS | None = Field(
+    prd_9: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_9",

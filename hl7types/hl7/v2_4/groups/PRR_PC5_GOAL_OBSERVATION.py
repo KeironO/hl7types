@@ -5,9 +5,9 @@ Version: 2.4
 Class: PRR_PC5.GOAL_OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -31,7 +31,7 @@ class PRR_PC5_GOAL_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

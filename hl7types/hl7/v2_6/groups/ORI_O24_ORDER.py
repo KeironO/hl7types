@@ -5,9 +5,9 @@ Version: 2.6
 Class: ORI_O24.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.IPC import IPC
@@ -15,6 +15,7 @@ from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
 from ..segments.ROL import ROL
+
 from .ORI_O24_TIMING import ORI_O24_TIMING
 
 _IPC = IPC
@@ -43,7 +44,7 @@ class ORI_O24_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: list[_ORI_O24_TIMING] | None = Field(
+    TIMING: Optional[List[_ORI_O24_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -55,19 +56,19 @@ class ORI_O24_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    IPC: list[_IPC] = Field(
+    IPC: List[_IPC] = Field(
         default=...,
         title="IPC",
         description="Required, repeating",

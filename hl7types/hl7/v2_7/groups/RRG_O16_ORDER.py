@@ -5,13 +5,14 @@ Version: 2.7
 Class: RRG_O16.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
+
 from .RRG_O16_GIVE import RRG_O16_GIVE
 from .RRG_O16_TIMING import RRG_O16_TIMING
 
@@ -37,19 +38,19 @@ class RRG_O16_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: list[_RRG_O16_TIMING] | None = Field(
+    TIMING: Optional[List[_RRG_O16_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    GIVE: _RRG_O16_GIVE | None = Field(
+    GIVE: Optional[_RRG_O16_GIVE] = Field(
         default=None,
         title="GIVE",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: QBP_Q13
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -49,13 +49,13 @@ class QBP_Q13(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -67,13 +67,13 @@ class QBP_Q13(BaseModel):
         description="Required",
     )
 
-    PID: _PID | None = Field(
+    PID: Optional[_PID] = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    RDF: _RDF | None = Field(
+    RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
         description="Optional",
@@ -85,7 +85,7 @@ class QBP_Q13(BaseModel):
         description="Required",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: EAR_U08.COMMAND_RESPONSE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ECD import ECD
@@ -34,7 +34,7 @@ class EAR_U08_COMMAND_RESPONSE(BaseModel):
         description="Required",
     )
 
-    SAC: _SAC | None = Field(
+    SAC: Optional[_SAC] = Field(
         default=None,
         title="SAC",
         description="Optional",

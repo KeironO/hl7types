@@ -5,15 +5,16 @@ Version: 2.5.1
 Class: RDS_O13.ENCODING
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
+
 from .RDS_O13_TIMING_ENCODED import RDS_O13_TIMING_ENCODED
 
 _NTE = NTE
@@ -40,25 +41,25 @@ class RDS_O13_ENCODING(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_ENCODED: list[_RDS_O13_TIMING_ENCODED] = Field(
+    TIMING_ENCODED: List[_RDS_O13_TIMING_ENCODED] = Field(
         default=...,
         title="TIMING_ENCODED",
         description="Required, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: list[_RXC] | None = Field(
+    RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

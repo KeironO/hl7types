@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: EHC_E15.ADJUSTMENT_PAYEE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ADJ import ADJ
@@ -34,13 +34,13 @@ class EHC_E15_ADJUSTMENT_PAYEE(BaseModel):
         description="Required",
     )
 
-    PRT: _PRT | None = Field(
+    PRT: Optional[_PRT] = Field(
         default=None,
         title="PRT",
         description="Optional",
     )
 
-    ROL: _ROL | None = Field(
+    ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
         description="Optional",

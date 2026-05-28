@@ -5,9 +5,9 @@ Version: 2.2
 Class: CM_PIP
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -16,7 +16,7 @@ from .CE import CE
 class CM_PIP(BaseModel):
     """HL7 v2 CM_PIP data type."""
 
-    cm_pip_1: CE | None = Field(
+    cm_pip_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pip_1",
@@ -27,7 +27,7 @@ class CM_PIP(BaseModel):
         title="Privilege",
     )
 
-    cm_pip_2: CE | None = Field(
+    cm_pip_2: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pip_2",
@@ -38,7 +38,7 @@ class CM_PIP(BaseModel):
         title="privilege class",
     )
 
-    cm_pip_3: str | None = Field(
+    cm_pip_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pip_3",
@@ -49,7 +49,7 @@ class CM_PIP(BaseModel):
         title="expiration date",
     )
 
-    cm_pip_4: str | None = Field(
+    cm_pip_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pip_4",

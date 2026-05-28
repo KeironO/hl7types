@@ -5,9 +5,9 @@ Version: 2.3
 Class: PEX_P07.STUDY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CSP import CSP
@@ -31,7 +31,7 @@ class PEX_P07_STUDY(BaseModel):
         description="Required",
     )
 
-    CSP: list[_CSP] | None = Field(
+    CSP: Optional[List[_CSP]] = Field(
         default=None,
         title="CSP",
         description="Optional, repeating",

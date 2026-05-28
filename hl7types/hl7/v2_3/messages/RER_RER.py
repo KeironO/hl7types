@@ -5,16 +5,17 @@ Version: 2.3
 Class: RER_RER
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RER_RER_DEFINITION import RER_RER_DEFINITION
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
+
+from ..groups.RER_RER_DEFINITION import RER_RER_DEFINITION
 
 _DSC = DSC
 _ERR = ERR
@@ -46,19 +47,19 @@ class RER_RER(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    DEFINITION: list[_RER_RER_DEFINITION] = Field(
+    DEFINITION: List[_RER_RER_DEFINITION] = Field(
         default=...,
         title="DEFINITION",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

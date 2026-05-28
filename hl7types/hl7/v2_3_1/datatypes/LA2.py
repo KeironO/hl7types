@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: LA2
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .HD import HD
@@ -16,7 +16,7 @@ from .HD import HD
 class LA2(BaseModel):
     """HL7 v2 LA2 data type."""
 
-    la2_1: str | None = Field(
+    la2_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_1",
@@ -27,7 +27,7 @@ class LA2(BaseModel):
         title="point of care (IS)",
     )
 
-    la2_2: str | None = Field(
+    la2_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_2",
@@ -38,7 +38,7 @@ class LA2(BaseModel):
         title="room",
     )
 
-    la2_3: str | None = Field(
+    la2_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_3",
@@ -49,7 +49,7 @@ class LA2(BaseModel):
         title="bed",
     )
 
-    la2_4: HD | None = Field(
+    la2_4: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_4",
@@ -60,7 +60,7 @@ class LA2(BaseModel):
         title="facility (HD)",
     )
 
-    la2_5: str | None = Field(
+    la2_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_5",
@@ -71,7 +71,7 @@ class LA2(BaseModel):
         title="location status",
     )
 
-    la2_6: str | None = Field(
+    la2_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_6",
@@ -82,7 +82,7 @@ class LA2(BaseModel):
         title="person location type",
     )
 
-    la2_7: str | None = Field(
+    la2_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_7",
@@ -93,7 +93,7 @@ class LA2(BaseModel):
         title="building",
     )
 
-    la2_8: str | None = Field(
+    la2_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_8",
@@ -104,7 +104,7 @@ class LA2(BaseModel):
         title="floor",
     )
 
-    la2_9: str | None = Field(
+    la2_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_9",
@@ -115,7 +115,7 @@ class LA2(BaseModel):
         title="street address",
     )
 
-    la2_10: str | None = Field(
+    la2_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_10",
@@ -126,7 +126,7 @@ class LA2(BaseModel):
         title="other designation",
     )
 
-    la2_11: str | None = Field(
+    la2_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_11",
@@ -137,7 +137,7 @@ class LA2(BaseModel):
         title="city",
     )
 
-    la2_12: str | None = Field(
+    la2_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_12",
@@ -148,7 +148,7 @@ class LA2(BaseModel):
         title="state or province",
     )
 
-    la2_13: str | None = Field(
+    la2_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_13",
@@ -159,7 +159,7 @@ class LA2(BaseModel):
         title="zip or postal code",
     )
 
-    la2_14: str | None = Field(
+    la2_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_14",
@@ -170,7 +170,7 @@ class LA2(BaseModel):
         title="country",
     )
 
-    la2_15: str | None = Field(
+    la2_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_15",
@@ -181,7 +181,7 @@ class LA2(BaseModel):
         title="address type",
     )
 
-    la2_16: str | None = Field(
+    la2_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "la2_16",

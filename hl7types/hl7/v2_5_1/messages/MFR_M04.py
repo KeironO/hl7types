@@ -5,12 +5,11 @@ Version: 2.5.1
 Class: MFR_M04
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.MFR_M04_MF_QUERY import MFR_M04_MF_QUERY
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MFI import MFI
@@ -20,6 +19,8 @@ from ..segments.QAK import QAK
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
+
+from ..groups.MFR_M04_MF_QUERY import MFR_M04_MF_QUERY
 
 _DSC = DSC
 _ERR = ERR
@@ -55,7 +56,7 @@ class MFR_M04(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -67,13 +68,13 @@ class MFR_M04(BaseModel):
         description="Required",
     )
 
-    ERR: list[_ERR] | None = Field(
+    ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    QAK: _QAK | None = Field(
+    QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
         description="Optional",
@@ -85,7 +86,7 @@ class MFR_M04(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
@@ -97,13 +98,13 @@ class MFR_M04(BaseModel):
         description="Required",
     )
 
-    MF_QUERY: list[_MFR_M04_MF_QUERY] = Field(
+    MF_QUERY: List[_MFR_M04_MF_QUERY] = Field(
         default=...,
         title="MF_QUERY",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

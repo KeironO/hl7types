@@ -5,9 +5,9 @@ Version: 2.6
 Class: WVI
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class WVI(BaseModel):
         title="Channel Number",
     )
 
-    wvi_2: str | None = Field(
+    wvi_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "wvi_2",

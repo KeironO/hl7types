@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RSP_K31.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
@@ -15,6 +15,7 @@ from ..segments.PRT import PRT
 from ..segments.RXC import RXC
 from ..segments.RXD import RXD
 from ..segments.RXR import RXR
+
 from .RSP_K31_ENCODING import RSP_K31_ENCODING
 from .RSP_K31_OBSERVATION import RSP_K31_OBSERVATION
 from .RSP_K31_ORDER_DETAIL import RSP_K31_ORDER_DETAIL
@@ -52,19 +53,19 @@ class RSP_K31_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: list[_RSP_K31_TIMING] | None = Field(
+    TIMING: Optional[List[_RSP_K31_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL: _RSP_K31_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_RSP_K31_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    ENCODING: _RSP_K31_ENCODING | None = Field(
+    ENCODING: Optional[_RSP_K31_ENCODING] = Field(
         default=None,
         title="ENCODING",
         description="Optional",
@@ -76,25 +77,25 @@ class RSP_K31_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: list[_RXC] | None = Field(
+    RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_RSP_K31_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_RSP_K31_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

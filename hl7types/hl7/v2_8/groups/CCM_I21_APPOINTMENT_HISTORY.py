@@ -5,12 +5,13 @@ Version: 2.8
 Class: CCM_I21.APPOINTMENT_HISTORY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SCH import SCH
+
 from .CCM_I21_RESOURCES import CCM_I21_RESOURCES
 
 _CCM_I21_RESOURCES = CCM_I21_RESOURCES
@@ -31,7 +32,7 @@ class CCM_I21_APPOINTMENT_HISTORY(BaseModel):
         description="Required",
     )
 
-    RESOURCES: list[_CCM_I21_RESOURCES] | None = Field(
+    RESOURCES: Optional[List[_CCM_I21_RESOURCES]] = Field(
         default=None,
         title="RESOURCES",
         description="Optional, repeating",

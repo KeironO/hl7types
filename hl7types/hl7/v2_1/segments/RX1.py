@@ -5,9 +5,9 @@ Version: 2.1
 Class: RX1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -17,7 +17,7 @@ from ..datatypes.TX import TX
 class RX1(BaseModel):
     """HL7 v2 RX1 segment."""
 
-    rx1_1: str | None = Field(
+    rx1_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_1",
@@ -29,7 +29,7 @@ class RX1(BaseModel):
         description="Item #770",
     )
 
-    rx1_2: str | None = Field(
+    rx1_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_2",
@@ -41,7 +41,7 @@ class RX1(BaseModel):
         description="Item #771",
     )
 
-    rx1_3: str | None = Field(
+    rx1_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_3",
@@ -53,7 +53,7 @@ class RX1(BaseModel):
         description="Item #129 | Table HL70033",
     )
 
-    rx1_4: str | None = Field(
+    rx1_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_4",
@@ -65,7 +65,7 @@ class RX1(BaseModel):
         description="Item #130 | Table HL70034",
     )
 
-    rx1_5: str | None = Field(
+    rx1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_5",
@@ -77,7 +77,7 @@ class RX1(BaseModel):
         description="Item #131",
     )
 
-    rx1_6: str | None = Field(
+    rx1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_6",
@@ -89,7 +89,7 @@ class RX1(BaseModel):
         description="Item #133",
     )
 
-    rx1_7: str | None = Field(
+    rx1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_7",
@@ -101,7 +101,7 @@ class RX1(BaseModel):
         description="Item #137",
     )
 
-    rx1_8: str | None = Field(
+    rx1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_8",
@@ -113,7 +113,7 @@ class RX1(BaseModel):
         description="Item #138",
     )
 
-    rx1_9: str | None = Field(
+    rx1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_9",
@@ -125,7 +125,7 @@ class RX1(BaseModel):
         description="Item #135",
     )
 
-    rx1_10: str | None = Field(
+    rx1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_10",
@@ -137,7 +137,7 @@ class RX1(BaseModel):
         description="Item #139",
     )
 
-    rx1_11: str | None = Field(
+    rx1_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_11",
@@ -149,7 +149,7 @@ class RX1(BaseModel):
         description="Item #469",
     )
 
-    rx1_12: str | None = Field(
+    rx1_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_12",
@@ -161,7 +161,7 @@ class RX1(BaseModel):
         description="Item #470",
     )
 
-    rx1_13: str | None = Field(
+    rx1_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_13",
@@ -173,7 +173,7 @@ class RX1(BaseModel):
         description="Item #772",
     )
 
-    rx1_14: CE | None = Field(
+    rx1_14: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_14",
@@ -185,7 +185,7 @@ class RX1(BaseModel):
         description="Item #473 | Table HL70057",
     )
 
-    rx1_15: list[str] | None = Field(
+    rx1_15: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_15",
@@ -197,7 +197,7 @@ class RX1(BaseModel):
         description="Item #474",
     )
 
-    rx1_16: str | None = Field(
+    rx1_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_16",
@@ -209,7 +209,7 @@ class RX1(BaseModel):
         description="Item #479",
     )
 
-    rx1_17: str | None = Field(
+    rx1_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_17",
@@ -221,7 +221,7 @@ class RX1(BaseModel):
         description="Item #480",
     )
 
-    rx1_18: str | None = Field(
+    rx1_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_18",
@@ -233,7 +233,7 @@ class RX1(BaseModel):
         description="Item #588 | Table HL70038",
     )
 
-    rx1_19: str | None = Field(
+    rx1_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_19",
@@ -245,7 +245,7 @@ class RX1(BaseModel):
         description="Item #481",
     )
 
-    rx1_20: str | None = Field(
+    rx1_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_20",
@@ -257,7 +257,7 @@ class RX1(BaseModel):
         description="Item #773",
     )
 
-    rx1_21: str | None = Field(
+    rx1_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_21",
@@ -269,7 +269,7 @@ class RX1(BaseModel):
         description="Item #482",
     )
 
-    rx1_22: str | None = Field(
+    rx1_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_22",
@@ -281,7 +281,7 @@ class RX1(BaseModel):
         description="Item #619",
     )
 
-    rx1_23: str | None = Field(
+    rx1_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_23",
@@ -293,7 +293,7 @@ class RX1(BaseModel):
         description="Item #620",
     )
 
-    rx1_24: str | None = Field(
+    rx1_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_24",
@@ -305,7 +305,7 @@ class RX1(BaseModel):
         description="Item #774",
     )
 
-    rx1_25: str | None = Field(
+    rx1_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_25",
@@ -317,7 +317,7 @@ class RX1(BaseModel):
         description="Item #483",
     )
 
-    rx1_26: str | None = Field(
+    rx1_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_26",
@@ -329,7 +329,7 @@ class RX1(BaseModel):
         description="Item #596",
     )
 
-    rx1_27: str | None = Field(
+    rx1_27: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_27",
@@ -341,7 +341,7 @@ class RX1(BaseModel):
         description="Item #621",
     )
 
-    rx1_28: list[TX] | None = Field(
+    rx1_28: Optional[List[TX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_28",
@@ -353,7 +353,7 @@ class RX1(BaseModel):
         description="Item #484",
     )
 
-    rx1_29: list[TX] | None = Field(
+    rx1_29: Optional[List[TX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_29",
@@ -365,7 +365,7 @@ class RX1(BaseModel):
         description="Item #489",
     )
 
-    rx1_30: list[TX] | None = Field(
+    rx1_30: Optional[List[TX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_30",

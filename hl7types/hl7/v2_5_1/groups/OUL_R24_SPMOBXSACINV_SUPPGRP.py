@@ -5,13 +5,14 @@ Version: 2.5.1
 Class: OUL_R24.SPMOBXSACINV_SUPPGRP
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.SPM import SPM
+
 from .OUL_R24_CONTAINER import OUL_R24_CONTAINER
 
 _OBX = OBX
@@ -34,13 +35,13 @@ class OUL_R24_SPMOBXSACINV_SUPPGRP(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    CONTAINER: list[_OUL_R24_CONTAINER] | None = Field(
+    CONTAINER: Optional[List[_OUL_R24_CONTAINER]] = Field(
         default=None,
         title="CONTAINER",
         description="Optional, repeating",

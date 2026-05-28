@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: CP
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -17,7 +17,7 @@ from .MO import MO
 class CP(BaseModel):
     """HL7 v2 CP data type."""
 
-    cp_1: MO | None = Field(
+    cp_1: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_1",
@@ -28,7 +28,7 @@ class CP(BaseModel):
         title="price",
     )
 
-    cp_2: str | None = Field(
+    cp_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_2",
@@ -39,7 +39,7 @@ class CP(BaseModel):
         title="price type",
     )
 
-    cp_3: str | None = Field(
+    cp_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_3",
@@ -50,7 +50,7 @@ class CP(BaseModel):
         title="from value",
     )
 
-    cp_4: str | None = Field(
+    cp_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_4",
@@ -61,7 +61,7 @@ class CP(BaseModel):
         title="to value",
     )
 
-    cp_5: CE | None = Field(
+    cp_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_5",
@@ -72,7 +72,7 @@ class CP(BaseModel):
         title="range units",
     )
 
-    cp_6: str | None = Field(
+    cp_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_6",

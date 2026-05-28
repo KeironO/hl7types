@@ -5,17 +5,18 @@ Version: 2.8.1
 Class: DEL_O46
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.DEL_O46_DONOR import DEL_O46_DONOR
 from ..segments.DON import DON
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.DEL_O46_DONOR import DEL_O46_DONOR
 
 _DEL_O46_DONOR = DEL_O46_DONOR
 _DON = DON
@@ -43,19 +44,19 @@ class DEL_O46(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    DONOR: _DEL_O46_DONOR | None = Field(
+    DONOR: Optional[_DEL_O46_DONOR] = Field(
         default=None,
         title="DONOR",
         description="Optional",
@@ -67,7 +68,7 @@ class DEL_O46(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

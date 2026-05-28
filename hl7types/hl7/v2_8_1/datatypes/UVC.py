@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: UVC
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -28,7 +28,7 @@ class UVC(BaseModel):
         title="Value Code",
     )
 
-    uvc_2: MO | None = Field(
+    uvc_2: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "uvc_2",
@@ -39,7 +39,7 @@ class UVC(BaseModel):
         title="Value Amount",
     )
 
-    uvc_3: str | None = Field(
+    uvc_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "uvc_3",
@@ -50,7 +50,7 @@ class UVC(BaseModel):
         title="Non-Monetary Value Amount / Quantity",
     )
 
-    uvc_4: CWE | None = Field(
+    uvc_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "uvc_4",

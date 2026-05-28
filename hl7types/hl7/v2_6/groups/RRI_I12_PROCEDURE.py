@@ -5,12 +5,13 @@ Version: 2.6
 Class: RRI_I12.PROCEDURE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PR1 import PR1
+
 from .RRI_I12_AUTHORIZATION_CONTACT import RRI_I12_AUTHORIZATION_CONTACT
 
 _PR1 = PR1
@@ -31,7 +32,7 @@ class RRI_I12_PROCEDURE(BaseModel):
         description="Required",
     )
 
-    AUTHORIZATION_CONTACT: _RRI_I12_AUTHORIZATION_CONTACT | None = Field(
+    AUTHORIZATION_CONTACT: Optional[_RRI_I12_AUTHORIZATION_CONTACT] = Field(
         default=None,
         title="AUTHORIZATION_CONTACT",
         description="Optional",

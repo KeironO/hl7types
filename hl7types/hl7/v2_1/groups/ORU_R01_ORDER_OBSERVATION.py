@@ -5,14 +5,15 @@ Version: 2.1
 Class: ORU_R01.ORDER_OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
+
 from .ORU_R01_OBSERVATION import ORU_R01_OBSERVATION
 
 _NTE = NTE
@@ -31,7 +32,7 @@ class ORU_R01_ORDER_OBSERVATION(BaseModel):
         OBSERVATION (List[ORU_R01_OBSERVATION]): required
     """
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
@@ -43,13 +44,13 @@ class ORU_R01_ORDER_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_ORU_R01_OBSERVATION] = Field(
+    OBSERVATION: List[_ORU_R01_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

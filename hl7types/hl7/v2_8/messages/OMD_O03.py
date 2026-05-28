@@ -5,18 +5,19 @@ Version: 2.8
 Class: OMD_O03
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.OMD_O03_ORDER_DIET import OMD_O03_ORDER_DIET
-from ..groups.OMD_O03_ORDER_TRAY import OMD_O03_ORDER_TRAY
-from ..groups.OMD_O03_PATIENT import OMD_O03_PATIENT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.OMD_O03_ORDER_DIET import OMD_O03_ORDER_DIET
+from ..groups.OMD_O03_ORDER_TRAY import OMD_O03_ORDER_TRAY
+from ..groups.OMD_O03_PATIENT import OMD_O03_PATIENT
 
 _MSH = MSH
 _NTE = NTE
@@ -46,37 +47,37 @@ class OMD_O03(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: _OMD_O03_PATIENT | None = Field(
+    PATIENT: Optional[_OMD_O03_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER_DIET: list[_OMD_O03_ORDER_DIET] = Field(
+    ORDER_DIET: List[_OMD_O03_ORDER_DIET] = Field(
         default=...,
         title="ORDER_DIET",
         description="Required, repeating",
     )
 
-    ORDER_TRAY: list[_OMD_O03_ORDER_TRAY] | None = Field(
+    ORDER_TRAY: Optional[List[_OMD_O03_ORDER_TRAY]] = Field(
         default=None,
         title="ORDER_TRAY",
         description="Optional, repeating",

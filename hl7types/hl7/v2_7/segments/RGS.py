@@ -5,9 +5,9 @@ Version: 2.7
 Class: RGS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -28,7 +28,7 @@ class RGS(BaseModel):
         description="Item #1203",
     )
 
-    rgs_2: str | None = Field(
+    rgs_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rgs_2",
@@ -40,7 +40,7 @@ class RGS(BaseModel):
         description="Item #763 | Table HL70206",
     )
 
-    rgs_3: CWE | None = Field(
+    rgs_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rgs_3",

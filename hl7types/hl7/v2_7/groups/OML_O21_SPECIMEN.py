@@ -5,12 +5,13 @@ Version: 2.7
 Class: OML_O21.SPECIMEN
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SPM import SPM
+
 from .OML_O21_CONTAINER import OML_O21_CONTAINER
 from .OML_O21_SPECIMEN_OBSERVATION import OML_O21_SPECIMEN_OBSERVATION
 
@@ -34,13 +35,13 @@ class OML_O21_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_OBSERVATION: list[_OML_O21_SPECIMEN_OBSERVATION] | None = Field(
+    SPECIMEN_OBSERVATION: Optional[List[_OML_O21_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
         description="Optional, repeating",
     )
 
-    CONTAINER: list[_OML_O21_CONTAINER] | None = Field(
+    CONTAINER: Optional[List[_OML_O21_CONTAINER]] = Field(
         default=None,
         title="CONTAINER",
         description="Optional, repeating",

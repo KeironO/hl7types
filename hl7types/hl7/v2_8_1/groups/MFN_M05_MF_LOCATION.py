@@ -5,15 +5,16 @@ Version: 2.8.1
 Class: MFN_M05.MF_LOCATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.LCH import LCH
 from ..segments.LOC import LOC
 from ..segments.LRL import LRL
 from ..segments.MFE import MFE
+
 from .MFN_M05_MF_LOC_DEPT import MFN_M05_MF_LOC_DEPT
 
 _LCH = LCH
@@ -46,19 +47,19 @@ class MFN_M05_MF_LOCATION(BaseModel):
         description="Required",
     )
 
-    LCH: list[_LCH] | None = Field(
+    LCH: Optional[List[_LCH]] = Field(
         default=None,
         title="LCH",
         description="Optional, repeating",
     )
 
-    LRL: list[_LRL] | None = Field(
+    LRL: Optional[List[_LRL]] = Field(
         default=None,
         title="LRL",
         description="Optional, repeating",
     )
 
-    MF_LOC_DEPT: list[_MFN_M05_MF_LOC_DEPT] = Field(
+    MF_LOC_DEPT: List[_MFN_M05_MF_LOC_DEPT] = Field(
         default=...,
         title="MF_LOC_DEPT",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: OPU_R25.COMMON_ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
@@ -31,7 +31,7 @@ class OPU_R25_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

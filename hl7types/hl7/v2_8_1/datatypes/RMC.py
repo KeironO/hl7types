@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: RMC
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -28,7 +28,7 @@ class RMC(BaseModel):
         title="Room Type",
     )
 
-    rmc_2: CWE | None = Field(
+    rmc_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmc_2",

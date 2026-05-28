@@ -5,9 +5,9 @@ Version: 2.5
 Class: SPM
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -20,7 +20,7 @@ from ..datatypes.TS import TS
 class SPM(BaseModel):
     """HL7 v2 SPM segment."""
 
-    spm_1: str | None = Field(
+    spm_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_1",
@@ -32,7 +32,7 @@ class SPM(BaseModel):
         description="Item #1754",
     )
 
-    spm_2: EIP | None = Field(
+    spm_2: Optional[EIP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_2",
@@ -44,7 +44,7 @@ class SPM(BaseModel):
         description="Item #1755",
     )
 
-    spm_3: list[EIP] | None = Field(
+    spm_3: Optional[List[EIP]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_3",
@@ -68,7 +68,7 @@ class SPM(BaseModel):
         description="Item #1900 | Table HL70487",
     )
 
-    spm_5: list[CWE] | None = Field(
+    spm_5: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_5",
@@ -80,7 +80,7 @@ class SPM(BaseModel):
         description="Item #1757 | Table HL70541",
     )
 
-    spm_6: list[CWE] | None = Field(
+    spm_6: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_6",
@@ -92,7 +92,7 @@ class SPM(BaseModel):
         description="Item #1758 | Table HL70371",
     )
 
-    spm_7: CWE | None = Field(
+    spm_7: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_7",
@@ -104,7 +104,7 @@ class SPM(BaseModel):
         description="Item #1759 | Table HL70488",
     )
 
-    spm_8: CWE | None = Field(
+    spm_8: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_8",
@@ -116,7 +116,7 @@ class SPM(BaseModel):
         description="Item #1901",
     )
 
-    spm_9: list[CWE] | None = Field(
+    spm_9: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_9",
@@ -128,7 +128,7 @@ class SPM(BaseModel):
         description="Item #1760 | Table HL70542",
     )
 
-    spm_10: CWE | None = Field(
+    spm_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_10",
@@ -140,7 +140,7 @@ class SPM(BaseModel):
         description="Item #1761 | Table HL70543",
     )
 
-    spm_11: list[CWE] | None = Field(
+    spm_11: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_11",
@@ -152,7 +152,7 @@ class SPM(BaseModel):
         description="Item #1762 | Table HL70369",
     )
 
-    spm_12: CQ | None = Field(
+    spm_12: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_12",
@@ -164,7 +164,7 @@ class SPM(BaseModel):
         description="Item #1902",
     )
 
-    spm_13: str | None = Field(
+    spm_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_13",
@@ -176,7 +176,7 @@ class SPM(BaseModel):
         description="Item #1763",
     )
 
-    spm_14: list[str] | None = Field(
+    spm_14: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_14",
@@ -188,7 +188,7 @@ class SPM(BaseModel):
         description="Item #1764",
     )
 
-    spm_15: list[CWE] | None = Field(
+    spm_15: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_15",
@@ -200,7 +200,7 @@ class SPM(BaseModel):
         description="Item #1908 | Table HL70376",
     )
 
-    spm_16: list[CWE] | None = Field(
+    spm_16: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_16",
@@ -212,7 +212,7 @@ class SPM(BaseModel):
         description="Item #1903 | Table HL70489",
     )
 
-    spm_17: DR | None = Field(
+    spm_17: Optional[DR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_17",
@@ -224,7 +224,7 @@ class SPM(BaseModel):
         description="Item #1765",
     )
 
-    spm_18: TS | None = Field(
+    spm_18: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_18",
@@ -236,7 +236,7 @@ class SPM(BaseModel):
         description="Item #248",
     )
 
-    spm_19: TS | None = Field(
+    spm_19: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_19",
@@ -248,7 +248,7 @@ class SPM(BaseModel):
         description="Item #1904",
     )
 
-    spm_20: str | None = Field(
+    spm_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_20",
@@ -260,7 +260,7 @@ class SPM(BaseModel):
         description="Item #1766 | Table HL70136",
     )
 
-    spm_21: list[CWE] | None = Field(
+    spm_21: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_21",
@@ -272,7 +272,7 @@ class SPM(BaseModel):
         description="Item #1767 | Table HL70490",
     )
 
-    spm_22: CWE | None = Field(
+    spm_22: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_22",
@@ -284,7 +284,7 @@ class SPM(BaseModel):
         description="Item #1768 | Table HL70491",
     )
 
-    spm_23: CWE | None = Field(
+    spm_23: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_23",
@@ -296,7 +296,7 @@ class SPM(BaseModel):
         description="Item #1769 | Table HL70492",
     )
 
-    spm_24: list[CWE] | None = Field(
+    spm_24: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_24",
@@ -308,7 +308,7 @@ class SPM(BaseModel):
         description="Item #1770 | Table HL70493",
     )
 
-    spm_25: CQ | None = Field(
+    spm_25: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_25",
@@ -320,7 +320,7 @@ class SPM(BaseModel):
         description="Item #1771",
     )
 
-    spm_26: str | None = Field(
+    spm_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_26",
@@ -332,7 +332,7 @@ class SPM(BaseModel):
         description="Item #1772",
     )
 
-    spm_27: CWE | None = Field(
+    spm_27: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_27",
@@ -344,7 +344,7 @@ class SPM(BaseModel):
         description="Item #1773",
     )
 
-    spm_28: CWE | None = Field(
+    spm_28: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_28",
@@ -356,7 +356,7 @@ class SPM(BaseModel):
         description="Item #1774 | Table HL70544",
     )
 
-    spm_29: CWE | None = Field(
+    spm_29: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spm_29",

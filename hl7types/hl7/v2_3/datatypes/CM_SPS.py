@@ -5,9 +5,9 @@ Version: 2.3
 Class: CM_SPS
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -17,7 +17,7 @@ from .TX import TX
 class CM_SPS(BaseModel):
     """HL7 v2 CM_SPS data type."""
 
-    cm_sps_1: CE | None = Field(
+    cm_sps_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_1",
@@ -28,7 +28,7 @@ class CM_SPS(BaseModel):
         title="specimen source name or code",
     )
 
-    cm_sps_2: TX | None = Field(
+    cm_sps_2: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_2",
@@ -39,7 +39,7 @@ class CM_SPS(BaseModel):
         title="additives",
     )
 
-    cm_sps_3: TX | None = Field(
+    cm_sps_3: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_3",
@@ -50,7 +50,7 @@ class CM_SPS(BaseModel):
         title="freetext",
     )
 
-    cm_sps_4: CE | None = Field(
+    cm_sps_4: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_4",
@@ -61,7 +61,7 @@ class CM_SPS(BaseModel):
         title="body site",
     )
 
-    cm_sps_5: CE | None = Field(
+    cm_sps_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_5",
@@ -72,7 +72,7 @@ class CM_SPS(BaseModel):
         title="site modifier",
     )
 
-    cm_sps_6: CE | None = Field(
+    cm_sps_6: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_6",

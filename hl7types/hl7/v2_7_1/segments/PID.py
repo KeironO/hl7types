@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: PID
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -21,7 +21,7 @@ from ..datatypes.XTN import XTN
 class PID(BaseModel):
     """HL7 v2 PID segment."""
 
-    pid_1: str | None = Field(
+    pid_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_1",
@@ -33,7 +33,7 @@ class PID(BaseModel):
         description="Item #104",
     )
 
-    pid_3: list[CX] = Field(
+    pid_3: List[CX] = Field(
         default=...,
         validation_alias=AliasChoices(
             "pid_3",
@@ -45,7 +45,7 @@ class PID(BaseModel):
         description="Item #106",
     )
 
-    pid_5: list[XPN] = Field(
+    pid_5: List[XPN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "pid_5",
@@ -57,7 +57,7 @@ class PID(BaseModel):
         description="Item #108 | Table HL70200",
     )
 
-    pid_6: list[XPN] | None = Field(
+    pid_6: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_6",
@@ -69,7 +69,7 @@ class PID(BaseModel):
         description="Item #109",
     )
 
-    pid_7: str | None = Field(
+    pid_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_7",
@@ -81,7 +81,7 @@ class PID(BaseModel):
         description="Item #110",
     )
 
-    pid_8: CWE | None = Field(
+    pid_8: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_8",
@@ -93,7 +93,7 @@ class PID(BaseModel):
         description="Item #111 | Table HL70001",
     )
 
-    pid_10: list[CWE] | None = Field(
+    pid_10: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_10",
@@ -105,7 +105,7 @@ class PID(BaseModel):
         description="Item #113 | Table HL70005",
     )
 
-    pid_11: list[XAD] | None = Field(
+    pid_11: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_11",
@@ -117,7 +117,7 @@ class PID(BaseModel):
         description="Item #114",
     )
 
-    pid_13: list[XTN] | None = Field(
+    pid_13: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_13",
@@ -129,7 +129,7 @@ class PID(BaseModel):
         description="Item #116",
     )
 
-    pid_14: list[XTN] | None = Field(
+    pid_14: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_14",
@@ -141,7 +141,7 @@ class PID(BaseModel):
         description="Item #117",
     )
 
-    pid_15: CWE | None = Field(
+    pid_15: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_15",
@@ -153,7 +153,7 @@ class PID(BaseModel):
         description="Item #118 | Table HL70296",
     )
 
-    pid_16: CWE | None = Field(
+    pid_16: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_16",
@@ -165,7 +165,7 @@ class PID(BaseModel):
         description="Item #119 | Table HL70002",
     )
 
-    pid_17: CWE | None = Field(
+    pid_17: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_17",
@@ -177,7 +177,7 @@ class PID(BaseModel):
         description="Item #120 | Table HL70006",
     )
 
-    pid_18: CX | None = Field(
+    pid_18: Optional[CX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_18",
@@ -189,7 +189,7 @@ class PID(BaseModel):
         description="Item #121",
     )
 
-    pid_21: list[CX] | None = Field(
+    pid_21: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_21",
@@ -201,7 +201,7 @@ class PID(BaseModel):
         description="Item #124",
     )
 
-    pid_22: list[CWE] | None = Field(
+    pid_22: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_22",
@@ -213,7 +213,7 @@ class PID(BaseModel):
         description="Item #125 | Table HL70189",
     )
 
-    pid_23: str | None = Field(
+    pid_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_23",
@@ -225,7 +225,7 @@ class PID(BaseModel):
         description="Item #126",
     )
 
-    pid_24: str | None = Field(
+    pid_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_24",
@@ -237,7 +237,7 @@ class PID(BaseModel):
         description="Item #127 | Table HL70136",
     )
 
-    pid_25: str | None = Field(
+    pid_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_25",
@@ -249,7 +249,7 @@ class PID(BaseModel):
         description="Item #128",
     )
 
-    pid_26: list[CWE] | None = Field(
+    pid_26: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_26",
@@ -261,7 +261,7 @@ class PID(BaseModel):
         description="Item #129 | Table HL70171",
     )
 
-    pid_27: CWE | None = Field(
+    pid_27: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_27",
@@ -273,7 +273,7 @@ class PID(BaseModel):
         description="Item #130 | Table HL70172",
     )
 
-    pid_29: str | None = Field(
+    pid_29: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_29",
@@ -285,7 +285,7 @@ class PID(BaseModel):
         description="Item #740",
     )
 
-    pid_30: str | None = Field(
+    pid_30: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_30",
@@ -297,7 +297,7 @@ class PID(BaseModel):
         description="Item #741 | Table HL70136",
     )
 
-    pid_31: str | None = Field(
+    pid_31: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_31",
@@ -309,7 +309,7 @@ class PID(BaseModel):
         description="Item #1535 | Table HL70136",
     )
 
-    pid_32: list[CWE] | None = Field(
+    pid_32: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_32",
@@ -321,7 +321,7 @@ class PID(BaseModel):
         description="Item #1536 | Table HL70445",
     )
 
-    pid_33: str | None = Field(
+    pid_33: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_33",
@@ -333,7 +333,7 @@ class PID(BaseModel):
         description="Item #1537",
     )
 
-    pid_34: HD | None = Field(
+    pid_34: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_34",
@@ -345,7 +345,7 @@ class PID(BaseModel):
         description="Item #1538",
     )
 
-    pid_35: CWE | None = Field(
+    pid_35: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_35",
@@ -357,7 +357,7 @@ class PID(BaseModel):
         description="Item #1539 | Table HL70446",
     )
 
-    pid_36: CWE | None = Field(
+    pid_36: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_36",
@@ -369,7 +369,7 @@ class PID(BaseModel):
         description="Item #1540 | Table HL70447",
     )
 
-    pid_37: str | None = Field(
+    pid_37: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_37",
@@ -381,7 +381,7 @@ class PID(BaseModel):
         description="Item #1541",
     )
 
-    pid_38: list[CWE] | None = Field(
+    pid_38: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_38",
@@ -393,7 +393,7 @@ class PID(BaseModel):
         description="Item #1542 | Table HL70429",
     )
 
-    pid_39: list[CWE] | None = Field(
+    pid_39: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_39",
@@ -405,7 +405,7 @@ class PID(BaseModel):
         description="Item #1840 | Table HL70171",
     )
 
-    pid_40: list[XTN] | None = Field(
+    pid_40: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pid_40",

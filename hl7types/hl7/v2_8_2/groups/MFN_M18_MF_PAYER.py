@@ -5,12 +5,13 @@ Version: 2.8.2
 Class: MFN_M18.MF_PAYER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
+
 from .MFN_M18_PAYER_MF_ENTRY import MFN_M18_PAYER_MF_ENTRY
 
 _MFE = MFE
@@ -31,7 +32,7 @@ class MFN_M18_MF_PAYER(BaseModel):
         description="Required",
     )
 
-    PAYER_MF_ENTRY: list[_MFN_M18_PAYER_MF_ENTRY] = Field(
+    PAYER_MF_ENTRY: List[_MFN_M18_PAYER_MF_ENTRY] = Field(
         default=...,
         title="PAYER_MF_ENTRY",
         description="Required, repeating",

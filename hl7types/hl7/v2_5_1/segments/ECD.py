@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ECD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -42,7 +42,7 @@ class ECD(BaseModel):
         description="Item #1391 | Table HL70368",
     )
 
-    ecd_3: str | None = Field(
+    ecd_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ecd_3",
@@ -54,7 +54,7 @@ class ECD(BaseModel):
         description="Item #1392 | Table HL70136",
     )
 
-    ecd_4: TQ | None = Field(
+    ecd_4: Optional[TQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ecd_4",
@@ -66,7 +66,7 @@ class ECD(BaseModel):
         description="Item #1393",
     )
 
-    ecd_5: list[TX] | None = Field(
+    ecd_5: Optional[List[TX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ecd_5",

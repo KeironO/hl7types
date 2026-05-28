@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: NK1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -34,7 +34,7 @@ class NK1(BaseModel):
         description="Item #190",
     )
 
-    nk1_2: list[XPN] | None = Field(
+    nk1_2: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_2",
@@ -46,7 +46,7 @@ class NK1(BaseModel):
         description="Item #191 | Table HL70200",
     )
 
-    nk1_3: CWE | None = Field(
+    nk1_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_3",
@@ -58,7 +58,7 @@ class NK1(BaseModel):
         description="Item #192 | Table HL70063",
     )
 
-    nk1_4: list[XAD] | None = Field(
+    nk1_4: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_4",
@@ -70,7 +70,7 @@ class NK1(BaseModel):
         description="Item #193",
     )
 
-    nk1_5: list[XTN] | None = Field(
+    nk1_5: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_5",
@@ -82,7 +82,7 @@ class NK1(BaseModel):
         description="Item #194",
     )
 
-    nk1_6: list[XTN] | None = Field(
+    nk1_6: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_6",
@@ -94,7 +94,7 @@ class NK1(BaseModel):
         description="Item #195",
     )
 
-    nk1_7: CWE | None = Field(
+    nk1_7: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_7",
@@ -106,7 +106,7 @@ class NK1(BaseModel):
         description="Item #196 | Table HL70131",
     )
 
-    nk1_8: str | None = Field(
+    nk1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_8",
@@ -118,7 +118,7 @@ class NK1(BaseModel):
         description="Item #197",
     )
 
-    nk1_9: str | None = Field(
+    nk1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_9",
@@ -130,7 +130,7 @@ class NK1(BaseModel):
         description="Item #198",
     )
 
-    nk1_10: str | None = Field(
+    nk1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_10",
@@ -142,7 +142,7 @@ class NK1(BaseModel):
         description="Item #199",
     )
 
-    nk1_11: JCC | None = Field(
+    nk1_11: Optional[JCC] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_11",
@@ -154,7 +154,7 @@ class NK1(BaseModel):
         description="Item #200",
     )
 
-    nk1_12: CX | None = Field(
+    nk1_12: Optional[CX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_12",
@@ -166,7 +166,7 @@ class NK1(BaseModel):
         description="Item #201",
     )
 
-    nk1_13: list[XON] | None = Field(
+    nk1_13: Optional[List[XON]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_13",
@@ -178,7 +178,7 @@ class NK1(BaseModel):
         description="Item #202",
     )
 
-    nk1_14: CWE | None = Field(
+    nk1_14: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_14",
@@ -190,7 +190,7 @@ class NK1(BaseModel):
         description="Item #119 | Table HL70002",
     )
 
-    nk1_15: CWE | None = Field(
+    nk1_15: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_15",
@@ -202,7 +202,7 @@ class NK1(BaseModel):
         description="Item #111 | Table HL70001",
     )
 
-    nk1_16: str | None = Field(
+    nk1_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_16",
@@ -214,7 +214,7 @@ class NK1(BaseModel):
         description="Item #110",
     )
 
-    nk1_17: list[CWE] | None = Field(
+    nk1_17: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_17",
@@ -226,7 +226,7 @@ class NK1(BaseModel):
         description="Item #755 | Table HL70223",
     )
 
-    nk1_18: list[CWE] | None = Field(
+    nk1_18: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_18",
@@ -238,7 +238,7 @@ class NK1(BaseModel):
         description="Item #145 | Table HL70009",
     )
 
-    nk1_19: list[CWE] | None = Field(
+    nk1_19: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_19",
@@ -250,7 +250,7 @@ class NK1(BaseModel):
         description="Item #129 | Table HL70171",
     )
 
-    nk1_20: CWE | None = Field(
+    nk1_20: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_20",
@@ -262,7 +262,7 @@ class NK1(BaseModel):
         description="Item #118 | Table HL70296",
     )
 
-    nk1_21: CWE | None = Field(
+    nk1_21: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_21",
@@ -274,7 +274,7 @@ class NK1(BaseModel):
         description="Item #742 | Table HL70220",
     )
 
-    nk1_22: CWE | None = Field(
+    nk1_22: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_22",
@@ -286,7 +286,7 @@ class NK1(BaseModel):
         description="Item #743 | Table HL70215",
     )
 
-    nk1_23: str | None = Field(
+    nk1_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_23",
@@ -298,7 +298,7 @@ class NK1(BaseModel):
         description="Item #744 | Table HL70136",
     )
 
-    nk1_24: CWE | None = Field(
+    nk1_24: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_24",
@@ -310,7 +310,7 @@ class NK1(BaseModel):
         description="Item #745 | Table HL70231",
     )
 
-    nk1_25: CWE | None = Field(
+    nk1_25: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_25",
@@ -322,7 +322,7 @@ class NK1(BaseModel):
         description="Item #120 | Table HL70006",
     )
 
-    nk1_26: list[XPN] | None = Field(
+    nk1_26: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_26",
@@ -334,7 +334,7 @@ class NK1(BaseModel):
         description="Item #109",
     )
 
-    nk1_27: CWE | None = Field(
+    nk1_27: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_27",
@@ -346,7 +346,7 @@ class NK1(BaseModel):
         description="Item #739 | Table HL70212",
     )
 
-    nk1_28: list[CWE] | None = Field(
+    nk1_28: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_28",
@@ -358,7 +358,7 @@ class NK1(BaseModel):
         description="Item #125 | Table HL70189",
     )
 
-    nk1_29: list[CWE] | None = Field(
+    nk1_29: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_29",
@@ -370,7 +370,7 @@ class NK1(BaseModel):
         description="Item #747 | Table HL70222",
     )
 
-    nk1_30: list[XPN] | None = Field(
+    nk1_30: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_30",
@@ -382,7 +382,7 @@ class NK1(BaseModel):
         description="Item #748 | Table HL70200",
     )
 
-    nk1_31: list[XTN] | None = Field(
+    nk1_31: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_31",
@@ -394,7 +394,7 @@ class NK1(BaseModel):
         description="Item #749",
     )
 
-    nk1_32: list[XAD] | None = Field(
+    nk1_32: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_32",
@@ -406,7 +406,7 @@ class NK1(BaseModel):
         description="Item #750",
     )
 
-    nk1_33: list[CX] | None = Field(
+    nk1_33: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_33",
@@ -418,7 +418,7 @@ class NK1(BaseModel):
         description="Item #751",
     )
 
-    nk1_34: CWE | None = Field(
+    nk1_34: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_34",
@@ -430,7 +430,7 @@ class NK1(BaseModel):
         description="Item #752 | Table HL70311",
     )
 
-    nk1_35: list[CWE] | None = Field(
+    nk1_35: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_35",
@@ -442,7 +442,7 @@ class NK1(BaseModel):
         description="Item #113 | Table HL70005",
     )
 
-    nk1_36: CWE | None = Field(
+    nk1_36: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_36",
@@ -454,7 +454,7 @@ class NK1(BaseModel):
         description="Item #753 | Table HL70295",
     )
 
-    nk1_37: str | None = Field(
+    nk1_37: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_37",
@@ -466,7 +466,7 @@ class NK1(BaseModel):
         description="Item #754",
     )
 
-    nk1_38: str | None = Field(
+    nk1_38: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_38",
@@ -478,7 +478,7 @@ class NK1(BaseModel):
         description="Item #1905",
     )
 
-    nk1_39: CWE | None = Field(
+    nk1_39: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_39",
@@ -490,7 +490,7 @@ class NK1(BaseModel):
         description="Item #146 | Table HL70099",
     )
 
-    nk1_40: XTN | None = Field(
+    nk1_40: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_40",
@@ -502,7 +502,7 @@ class NK1(BaseModel):
         description="Item #2292",
     )
 
-    nk1_41: XTN | None = Field(
+    nk1_41: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_41",

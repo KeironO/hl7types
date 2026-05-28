@@ -5,9 +5,9 @@ Version: 2.8
 Class: PMU_B01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AFF import AFF
@@ -67,13 +67,13 @@ class PMU_B01(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -91,55 +91,55 @@ class PMU_B01(BaseModel):
         description="Required",
     )
 
-    PRA: list[_PRA] | None = Field(
+    PRA: Optional[List[_PRA]] = Field(
         default=None,
         title="PRA",
         description="Optional, repeating",
     )
 
-    ORG: list[_ORG] | None = Field(
+    ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
         description="Optional, repeating",
     )
 
-    AFF: list[_AFF] | None = Field(
+    AFF: Optional[List[_AFF]] = Field(
         default=None,
         title="AFF",
         description="Optional, repeating",
     )
 
-    LAN: list[_LAN] | None = Field(
+    LAN: Optional[List[_LAN]] = Field(
         default=None,
         title="LAN",
         description="Optional, repeating",
     )
 
-    EDU: list[_EDU] | None = Field(
+    EDU: Optional[List[_EDU]] = Field(
         default=None,
         title="EDU",
         description="Optional, repeating",
     )
 
-    CER: list[_CER] | None = Field(
+    CER: Optional[List[_CER]] = Field(
         default=None,
         title="CER",
         description="Optional, repeating",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",

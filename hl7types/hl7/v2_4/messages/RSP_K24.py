@@ -5,9 +5,9 @@ Version: 2.4
 Class: RSP_K24
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -52,7 +52,7 @@ class RSP_K24(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -70,13 +70,13 @@ class RSP_K24(BaseModel):
         description="Required",
     )
 
-    PID: _PID | None = Field(
+    PID: Optional[_PID] = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

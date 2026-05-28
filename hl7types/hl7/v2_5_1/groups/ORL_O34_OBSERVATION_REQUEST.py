@@ -5,12 +5,13 @@ Version: 2.5.1
 Class: ORL_O34.OBSERVATION_REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
+
 from .ORL_O34_SPMSAC_SUPPGRP2 import ORL_O34_SPMSAC_SUPPGRP2
 
 _OBR = OBR
@@ -31,7 +32,7 @@ class ORL_O34_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    SPMSAC_SUPPGRP2: list[_ORL_O34_SPMSAC_SUPPGRP2] | None = Field(
+    SPMSAC_SUPPGRP2: Optional[List[_ORL_O34_SPMSAC_SUPPGRP2]] = Field(
         default=None,
         title="SPMSAC_SUPPGRP2",
         description="Optional, repeating",

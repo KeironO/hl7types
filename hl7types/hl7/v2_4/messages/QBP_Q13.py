@@ -5,17 +5,18 @@ Version: 2.4
 Class: QBP_Q13
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
-from ..groups.QBP_Q13_QBP import QBP_Q13_QBP
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
 from ..segments.QPD import QPD
 from ..segments.RCP import RCP
 from ..segments.RDF import RDF
+
+from ..groups.QBP_Q13_QBP import QBP_Q13_QBP
 
 _DSC = DSC
 _MSH = MSH
@@ -49,13 +50,13 @@ class QBP_Q13(BaseModel):
         description="Required",
     )
 
-    QBP: _QBP_Q13_QBP | None = Field(
+    QBP: Optional[_QBP_Q13_QBP] = Field(
         default=None,
         title="QBP",
         description="Optional",
     )
 
-    RDF: _RDF | None = Field(
+    RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
         description="Optional",
@@ -67,7 +68,7 @@ class QBP_Q13(BaseModel):
         description="Required",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

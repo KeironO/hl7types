@@ -5,12 +5,13 @@ Version: 2.4
 Class: RDS_O13.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.RXO import RXO
+
 from .RDS_O13_ORDER_DETAIL_SUPPLEMENT import RDS_O13_ORDER_DETAIL_SUPPLEMENT
 
 _RDS_O13_ORDER_DETAIL_SUPPLEMENT = RDS_O13_ORDER_DETAIL_SUPPLEMENT
@@ -31,7 +32,7 @@ class RDS_O13_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL_SUPPLEMENT: _RDS_O13_ORDER_DETAIL_SUPPLEMENT | None = Field(
+    ORDER_DETAIL_SUPPLEMENT: Optional[_RDS_O13_ORDER_DETAIL_SUPPLEMENT] = Field(
         default=None,
         title="ORDER_DETAIL_SUPPLEMENT",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.3
 Class: CM_LA1
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .HD import HD
@@ -16,7 +16,7 @@ from .HD import HD
 class CM_LA1(BaseModel):
     """HL7 v2 CM_LA1 data type."""
 
-    cm_la1_1: str | None = Field(
+    cm_la1_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_1",
@@ -27,7 +27,7 @@ class CM_LA1(BaseModel):
         title="point of care (ST)",
     )
 
-    cm_la1_2: str | None = Field(
+    cm_la1_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_2",
@@ -38,7 +38,7 @@ class CM_LA1(BaseModel):
         title="room",
     )
 
-    cm_la1_3: str | None = Field(
+    cm_la1_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_3",
@@ -49,7 +49,7 @@ class CM_LA1(BaseModel):
         title="bed",
     )
 
-    cm_la1_4: HD | None = Field(
+    cm_la1_4: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_4",
@@ -60,7 +60,7 @@ class CM_LA1(BaseModel):
         title="facility (HD)",
     )
 
-    cm_la1_5: str | None = Field(
+    cm_la1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_5",
@@ -71,7 +71,7 @@ class CM_LA1(BaseModel):
         title="location status",
     )
 
-    cm_la1_6: str | None = Field(
+    cm_la1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_6",
@@ -82,7 +82,7 @@ class CM_LA1(BaseModel):
         title="person location type",
     )
 
-    cm_la1_7: str | None = Field(
+    cm_la1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_7",
@@ -93,7 +93,7 @@ class CM_LA1(BaseModel):
         title="building",
     )
 
-    cm_la1_8: str | None = Field(
+    cm_la1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_8",
@@ -104,7 +104,7 @@ class CM_LA1(BaseModel):
         title="floor",
     )
 
-    cm_la1_9: str | None = Field(
+    cm_la1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_9",
@@ -115,7 +115,7 @@ class CM_LA1(BaseModel):
         title="street address",
     )
 
-    cm_la1_10: str | None = Field(
+    cm_la1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_10",
@@ -126,7 +126,7 @@ class CM_LA1(BaseModel):
         title="other designation",
     )
 
-    cm_la1_11: str | None = Field(
+    cm_la1_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_11",
@@ -137,7 +137,7 @@ class CM_LA1(BaseModel):
         title="city",
     )
 
-    cm_la1_12: str | None = Field(
+    cm_la1_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_12",
@@ -148,7 +148,7 @@ class CM_LA1(BaseModel):
         title="state or province",
     )
 
-    cm_la1_13: str | None = Field(
+    cm_la1_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_13",
@@ -159,7 +159,7 @@ class CM_LA1(BaseModel):
         title="zip or postal code",
     )
 
-    cm_la1_14: str | None = Field(
+    cm_la1_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_14",
@@ -170,7 +170,7 @@ class CM_LA1(BaseModel):
         title="country",
     )
 
-    cm_la1_15: str | None = Field(
+    cm_la1_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_15",
@@ -181,7 +181,7 @@ class CM_LA1(BaseModel):
         title="address type",
     )
 
-    cm_la1_16: str | None = Field(
+    cm_la1_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_16",

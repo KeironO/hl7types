@@ -5,10 +5,10 @@ Version: 2.8.2
 Class: PPG_PCG.CHOICE
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class PPG_PCG_CHOICE(BaseModel):

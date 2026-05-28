@@ -5,13 +5,14 @@ Version: 2.8
 Class: CCU_I20.PROBLEM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
+
 from .CCU_I20_PROBLEM_OBSERVATION import CCU_I20_PROBLEM_OBSERVATION
 from .CCU_I20_ROLE_PROBLEM import CCU_I20_ROLE_PROBLEM
 
@@ -37,19 +38,19 @@ class CCU_I20_PROBLEM(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_PROBLEM: list[_CCU_I20_ROLE_PROBLEM] | None = Field(
+    ROLE_PROBLEM: Optional[List[_CCU_I20_ROLE_PROBLEM]] = Field(
         default=None,
         title="ROLE_PROBLEM",
         description="Optional, repeating",
     )
 
-    PROBLEM_OBSERVATION: list[_CCU_I20_PROBLEM_OBSERVATION] | None = Field(
+    PROBLEM_OBSERVATION: Optional[List[_CCU_I20_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
         description="Optional, repeating",

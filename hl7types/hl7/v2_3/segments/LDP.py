@@ -5,9 +5,9 @@ Version: 2.3
 Class: LDP
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -44,7 +44,7 @@ class LDP(BaseModel):
         description="Item #964 | Table HL70264",
     )
 
-    ldp_3: list[str] | None = Field(
+    ldp_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_3",
@@ -56,7 +56,7 @@ class LDP(BaseModel):
         description="Item #965 | Table HL70069",
     )
 
-    ldp_4: list[CE] | None = Field(
+    ldp_4: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_4",
@@ -68,7 +68,7 @@ class LDP(BaseModel):
         description="Item #966 | Table HL70265",
     )
 
-    ldp_5: list[str] | None = Field(
+    ldp_5: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_5",
@@ -80,7 +80,7 @@ class LDP(BaseModel):
         description="Item #967 | Table HL70004",
     )
 
-    ldp_6: str | None = Field(
+    ldp_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_6",
@@ -92,7 +92,7 @@ class LDP(BaseModel):
         description="Item #675 | Table HL70183",
     )
 
-    ldp_7: TS | None = Field(
+    ldp_7: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_7",
@@ -104,7 +104,7 @@ class LDP(BaseModel):
         description="Item #969",
     )
 
-    ldp_8: TS | None = Field(
+    ldp_8: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_8",
@@ -116,7 +116,7 @@ class LDP(BaseModel):
         description="Item #970",
     )
 
-    ldp_9: str | None = Field(
+    ldp_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_9",
@@ -128,7 +128,7 @@ class LDP(BaseModel):
         description="Item #971",
     )
 
-    ldp_10: list[VH] | None = Field(
+    ldp_10: Optional[List[VH]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_10",
@@ -140,7 +140,7 @@ class LDP(BaseModel):
         description="Item #976 | Table HL70267",
     )
 
-    ldp_11: XTN | None = Field(
+    ldp_11: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ldp_11",

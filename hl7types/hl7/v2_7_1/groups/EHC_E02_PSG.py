@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: EHC_E02.PSG
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PSG import PSG
@@ -31,7 +31,7 @@ class EHC_E02_PSG(BaseModel):
         description="Required",
     )
 
-    PSL: list[_PSL] | None = Field(
+    PSL: Optional[List[_PSL]] = Field(
         default=None,
         title="PSL",
         description="Optional, repeating",

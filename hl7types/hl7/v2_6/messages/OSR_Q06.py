@@ -5,12 +5,11 @@ Version: 2.6
 Class: OSR_Q06
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.OSR_Q06_RESPONSE import OSR_Q06_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -20,6 +19,8 @@ from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.OSR_Q06_RESPONSE import OSR_Q06_RESPONSE
 
 _DSC = DSC
 _ERR = ERR
@@ -61,25 +62,25 @@ class OSR_Q06(BaseModel):
         description="Required",
     )
 
-    ERR: list[_ERR] | None = Field(
+    ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
@@ -91,19 +92,19 @@ class OSR_Q06(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    RESPONSE: _OSR_Q06_RESPONSE | None = Field(
+    RESPONSE: Optional[_OSR_Q06_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
         description="Optional",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

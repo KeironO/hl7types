@@ -5,14 +5,15 @@ Version: 2.8.2
 Class: RDR_RDR.ENCODING
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
+
 from .RDR_RDR_TIMING_ENCODED import RDR_RDR_TIMING_ENCODED
 
 _RDR_RDR_TIMING_ENCODED = RDR_RDR_TIMING_ENCODED
@@ -37,19 +38,19 @@ class RDR_RDR_ENCODING(BaseModel):
         description="Required",
     )
 
-    TIMING_ENCODED: list[_RDR_RDR_TIMING_ENCODED] | None = Field(
+    TIMING_ENCODED: Optional[List[_RDR_RDR_TIMING_ENCODED]] = Field(
         default=None,
         title="TIMING_ENCODED",
         description="Optional, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: list[_RXC] | None = Field(
+    RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

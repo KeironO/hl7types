@@ -5,9 +5,9 @@ Version: 2.4
 Class: SQR_S25.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
@@ -37,19 +37,19 @@ class SQR_S25_PATIENT(BaseModel):
         description="Required",
     )
 
-    PV1: _PV1 | None = Field(
+    PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    DG1: _DG1 | None = Field(
+    DG1: Optional[_DG1] = Field(
         default=None,
         title="DG1",
         description="Optional",

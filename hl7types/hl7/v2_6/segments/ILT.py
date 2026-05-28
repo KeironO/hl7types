@@ -5,9 +5,9 @@ Version: 2.6
 Class: ILT
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -41,7 +41,7 @@ class ILT(BaseModel):
         description="Item #1800",
     )
 
-    ilt_3: str | None = Field(
+    ilt_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_3",
@@ -53,7 +53,7 @@ class ILT(BaseModel):
         description="Item #1801",
     )
 
-    ilt_4: str | None = Field(
+    ilt_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_4",
@@ -65,7 +65,7 @@ class ILT(BaseModel):
         description="Item #1804",
     )
 
-    ilt_5: str | None = Field(
+    ilt_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_5",
@@ -77,7 +77,7 @@ class ILT(BaseModel):
         description="Item #1805",
     )
 
-    ilt_6: CWE | None = Field(
+    ilt_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_6",
@@ -89,7 +89,7 @@ class ILT(BaseModel):
         description="Item #1806",
     )
 
-    ilt_7: MO | None = Field(
+    ilt_7: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_7",
@@ -101,7 +101,7 @@ class ILT(BaseModel):
         description="Item #1807",
     )
 
-    ilt_8: str | None = Field(
+    ilt_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_8",
@@ -113,7 +113,7 @@ class ILT(BaseModel):
         description="Item #1808",
     )
 
-    ilt_9: str | None = Field(
+    ilt_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_9",
@@ -125,7 +125,7 @@ class ILT(BaseModel):
         description="Item #1809",
     )
 
-    ilt_10: CWE | None = Field(
+    ilt_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ilt_10",

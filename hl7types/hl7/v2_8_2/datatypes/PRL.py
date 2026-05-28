@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: PRL
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -29,7 +29,7 @@ class PRL(BaseModel):
         title="Parent Observation Identifier",
     )
 
-    prl_2: OG | None = Field(
+    prl_2: Optional[OG] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prl_2",
@@ -40,7 +40,7 @@ class PRL(BaseModel):
         title="Parent Observation Sub-identifier",
     )
 
-    prl_3: TX | None = Field(
+    prl_3: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prl_3",

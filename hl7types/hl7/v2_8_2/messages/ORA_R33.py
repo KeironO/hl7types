@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: ORA_R33
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ERR import ERR
@@ -43,13 +43,13 @@ class ORA_R33(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -61,13 +61,13 @@ class ORA_R33(BaseModel):
         description="Required",
     )
 
-    ERR: list[_ERR] | None = Field(
+    ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",

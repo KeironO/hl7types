@@ -5,18 +5,19 @@ Version: 2.8
 Class: ADT_A45
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.ADT_A45_MERGE_INFO import ADT_A45_MERGE_INFO
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.ADT_A45_MERGE_INFO import ADT_A45_MERGE_INFO
 
 _ADT_A45_MERGE_INFO = ADT_A45_MERGE_INFO
 _EVN = EVN
@@ -46,13 +47,13 @@ class ADT_A45(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -70,13 +71,13 @@ class ADT_A45(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    MERGE_INFO: list[_ADT_A45_MERGE_INFO] = Field(
+    MERGE_INFO: List[_ADT_A45_MERGE_INFO] = Field(
         default=...,
         title="MERGE_INFO",
         description="Required, repeating",

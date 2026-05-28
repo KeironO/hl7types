@@ -5,13 +5,14 @@ Version: 2.7
 Class: OSM_R26.PACKAGE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PAC import PAC
 from ..segments.PRT import PRT
+
 from .OSM_R26_SPECIMEN import OSM_R26_SPECIMEN
 
 _OSM_R26_SPECIMEN = OSM_R26_SPECIMEN
@@ -34,13 +35,13 @@ class OSM_R26_PACKAGE(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    SPECIMEN: list[_OSM_R26_SPECIMEN] | None = Field(
+    SPECIMEN: Optional[List[_OSM_R26_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",

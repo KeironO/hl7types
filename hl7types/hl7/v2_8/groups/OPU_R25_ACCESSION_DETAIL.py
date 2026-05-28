@@ -5,12 +5,13 @@ Version: 2.8
 Class: OPU_R25.ACCESSION_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
+
 from .OPU_R25_PATIENT import OPU_R25_PATIENT
 from .OPU_R25_SPECIMEN import OPU_R25_SPECIMEN
 
@@ -28,19 +29,19 @@ class OPU_R25_ACCESSION_DETAIL(BaseModel):
         SPECIMEN (List[OPU_R25_SPECIMEN]): required
     """
 
-    NK1: list[_NK1] = Field(
+    NK1: List[_NK1] = Field(
         default=...,
         title="NK1",
         description="Required, repeating",
     )
 
-    PATIENT: _OPU_R25_PATIENT | None = Field(
+    PATIENT: Optional[_OPU_R25_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    SPECIMEN: list[_OPU_R25_SPECIMEN] = Field(
+    SPECIMEN: List[_OPU_R25_SPECIMEN] = Field(
         default=...,
         title="SPECIMEN",
         description="Required, repeating",

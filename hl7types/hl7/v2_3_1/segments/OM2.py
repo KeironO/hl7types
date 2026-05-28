@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: OM2
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -20,7 +20,7 @@ from ..datatypes.TX import TX
 class OM2(BaseModel):
     """HL7 v2 OM2 segment."""
 
-    om2_1: str | None = Field(
+    om2_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_1",
@@ -32,7 +32,7 @@ class OM2(BaseModel):
         description="Item #586",
     )
 
-    om2_2: CE | None = Field(
+    om2_2: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_2",
@@ -44,7 +44,7 @@ class OM2(BaseModel):
         description="Item #627",
     )
 
-    om2_3: list[str] | None = Field(
+    om2_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_3",
@@ -56,7 +56,7 @@ class OM2(BaseModel):
         description="Item #628",
     )
 
-    om2_4: CE | None = Field(
+    om2_4: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_4",
@@ -68,7 +68,7 @@ class OM2(BaseModel):
         description="Item #629",
     )
 
-    om2_5: TX | None = Field(
+    om2_5: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_5",
@@ -80,7 +80,7 @@ class OM2(BaseModel):
         description="Item #630",
     )
 
-    om2_6: RFR | None = Field(
+    om2_6: Optional[RFR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_6",
@@ -92,7 +92,7 @@ class OM2(BaseModel):
         description="Item #631",
     )
 
-    om2_7: NR | None = Field(
+    om2_7: Optional[NR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_7",
@@ -104,7 +104,7 @@ class OM2(BaseModel):
         description="Item #632",
     )
 
-    om2_8: RFR | None = Field(
+    om2_8: Optional[RFR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_8",
@@ -116,7 +116,7 @@ class OM2(BaseModel):
         description="Item #633",
     )
 
-    om2_9: list[DLT] | None = Field(
+    om2_9: Optional[List[DLT]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_9",
@@ -128,7 +128,7 @@ class OM2(BaseModel):
         description="Item #634",
     )
 
-    om2_10: str | None = Field(
+    om2_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_10",

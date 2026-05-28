@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: NCK
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TS import TS

@@ -5,9 +5,9 @@ Version: 2.7
 Class: RSP_K31.ADDITIONAL_DEMOGRAPHICS
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PD1 import PD1
@@ -31,7 +31,7 @@ class RSP_K31_ADDITIONAL_DEMOGRAPHICS(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

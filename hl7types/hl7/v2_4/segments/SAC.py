@@ -5,9 +5,9 @@ Version: 2.4
 Class: SAC
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -21,7 +21,7 @@ from ..datatypes.TS import TS
 class SAC(BaseModel):
     """HL7 v2 SAC segment."""
 
-    sac_1: EI | None = Field(
+    sac_1: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_1",
@@ -33,7 +33,7 @@ class SAC(BaseModel):
         description="Item #1329",
     )
 
-    sac_2: EI | None = Field(
+    sac_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_2",
@@ -45,7 +45,7 @@ class SAC(BaseModel):
         description="Item #1330",
     )
 
-    sac_3: EI | None = Field(
+    sac_3: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_3",
@@ -57,7 +57,7 @@ class SAC(BaseModel):
         description="Item #1331",
     )
 
-    sac_4: EI | None = Field(
+    sac_4: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_4",
@@ -69,7 +69,7 @@ class SAC(BaseModel):
         description="Item #1332",
     )
 
-    sac_5: EI | None = Field(
+    sac_5: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_5",
@@ -81,7 +81,7 @@ class SAC(BaseModel):
         description="Item #1333",
     )
 
-    sac_6: SPS | None = Field(
+    sac_6: Optional[SPS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_6",
@@ -93,7 +93,7 @@ class SAC(BaseModel):
         description="Item #249 | Table HL70070",
     )
 
-    sac_7: TS | None = Field(
+    sac_7: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_7",
@@ -105,7 +105,7 @@ class SAC(BaseModel):
         description="Item #1334",
     )
 
-    sac_8: CE | None = Field(
+    sac_8: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_8",
@@ -117,7 +117,7 @@ class SAC(BaseModel):
         description="Item #1335 | Table HL70370",
     )
 
-    sac_9: CE | None = Field(
+    sac_9: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_9",
@@ -129,7 +129,7 @@ class SAC(BaseModel):
         description="Item #1336 | Table HL70378",
     )
 
-    sac_10: EI | None = Field(
+    sac_10: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_10",
@@ -141,7 +141,7 @@ class SAC(BaseModel):
         description="Item #1337",
     )
 
-    sac_11: NA | None = Field(
+    sac_11: Optional[NA] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_11",
@@ -153,7 +153,7 @@ class SAC(BaseModel):
         description="Item #1338",
     )
 
-    sac_12: CE | None = Field(
+    sac_12: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_12",
@@ -165,7 +165,7 @@ class SAC(BaseModel):
         description="Item #1339 | Table HL70379",
     )
 
-    sac_13: EI | None = Field(
+    sac_13: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_13",
@@ -177,7 +177,7 @@ class SAC(BaseModel):
         description="Item #1340",
     )
 
-    sac_14: NA | None = Field(
+    sac_14: Optional[NA] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_14",
@@ -189,7 +189,7 @@ class SAC(BaseModel):
         description="Item #1341",
     )
 
-    sac_15: list[CE] | None = Field(
+    sac_15: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_15",
@@ -201,7 +201,7 @@ class SAC(BaseModel):
         description="Item #1342",
     )
 
-    sac_16: str | None = Field(
+    sac_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_16",
@@ -213,7 +213,7 @@ class SAC(BaseModel):
         description="Item #1343",
     )
 
-    sac_17: str | None = Field(
+    sac_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_17",
@@ -225,7 +225,7 @@ class SAC(BaseModel):
         description="Item #1344",
     )
 
-    sac_18: str | None = Field(
+    sac_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_18",
@@ -237,7 +237,7 @@ class SAC(BaseModel):
         description="Item #1345",
     )
 
-    sac_19: str | None = Field(
+    sac_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_19",
@@ -249,7 +249,7 @@ class SAC(BaseModel):
         description="Item #1346",
     )
 
-    sac_20: CE | None = Field(
+    sac_20: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_20",
@@ -261,7 +261,7 @@ class SAC(BaseModel):
         description="Item #1347",
     )
 
-    sac_21: str | None = Field(
+    sac_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_21",
@@ -273,7 +273,7 @@ class SAC(BaseModel):
         description="Item #644",
     )
 
-    sac_22: str | None = Field(
+    sac_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_22",
@@ -285,7 +285,7 @@ class SAC(BaseModel):
         description="Item #1349",
     )
 
-    sac_23: str | None = Field(
+    sac_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_23",
@@ -297,7 +297,7 @@ class SAC(BaseModel):
         description="Item #1350",
     )
 
-    sac_24: CE | None = Field(
+    sac_24: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_24",
@@ -309,7 +309,7 @@ class SAC(BaseModel):
         description="Item #1351",
     )
 
-    sac_25: CE | None = Field(
+    sac_25: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_25",
@@ -321,7 +321,7 @@ class SAC(BaseModel):
         description="Item #1352 | Table HL70380",
     )
 
-    sac_26: CE | None = Field(
+    sac_26: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_26",
@@ -333,7 +333,7 @@ class SAC(BaseModel):
         description="Item #1353 | Table HL70381",
     )
 
-    sac_27: list[CE] | None = Field(
+    sac_27: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_27",
@@ -345,7 +345,7 @@ class SAC(BaseModel):
         description="Item #647 | Table HL70371",
     )
 
-    sac_28: CE | None = Field(
+    sac_28: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_28",
@@ -357,7 +357,7 @@ class SAC(BaseModel):
         description="Item #1355",
     )
 
-    sac_29: SN | None = Field(
+    sac_29: Optional[SN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_29",
@@ -369,7 +369,7 @@ class SAC(BaseModel):
         description="Item #1356",
     )
 
-    sac_30: CE | None = Field(
+    sac_30: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_30",
@@ -381,7 +381,7 @@ class SAC(BaseModel):
         description="Item #1357 | Table HL70373",
     )
 
-    sac_31: SN | None = Field(
+    sac_31: Optional[SN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_31",
@@ -393,7 +393,7 @@ class SAC(BaseModel):
         description="Item #1358",
     )
 
-    sac_32: str | None = Field(
+    sac_32: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_32",
@@ -405,7 +405,7 @@ class SAC(BaseModel):
         description="Item #1359",
     )
 
-    sac_33: CE | None = Field(
+    sac_33: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_33",
@@ -417,7 +417,7 @@ class SAC(BaseModel):
         description="Item #1360",
     )
 
-    sac_34: str | None = Field(
+    sac_34: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_34",
@@ -429,7 +429,7 @@ class SAC(BaseModel):
         description="Item #1361",
     )
 
-    sac_35: CE | None = Field(
+    sac_35: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_35",
@@ -441,7 +441,7 @@ class SAC(BaseModel):
         description="Item #1362",
     )
 
-    sac_36: str | None = Field(
+    sac_36: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_36",
@@ -453,7 +453,7 @@ class SAC(BaseModel):
         description="Item #1363",
     )
 
-    sac_37: CE | None = Field(
+    sac_37: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_37",
@@ -465,7 +465,7 @@ class SAC(BaseModel):
         description="Item #1364",
     )
 
-    sac_38: str | None = Field(
+    sac_38: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_38",
@@ -477,7 +477,7 @@ class SAC(BaseModel):
         description="Item #1365",
     )
 
-    sac_39: CE | None = Field(
+    sac_39: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_39",
@@ -489,7 +489,7 @@ class SAC(BaseModel):
         description="Item #1366",
     )
 
-    sac_40: list[CE] | None = Field(
+    sac_40: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_40",
@@ -501,7 +501,7 @@ class SAC(BaseModel):
         description="Item #1367 | Table HL70374",
     )
 
-    sac_41: list[CE] | None = Field(
+    sac_41: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_41",
@@ -513,7 +513,7 @@ class SAC(BaseModel):
         description="Item #1368 | Table HL70382",
     )
 
-    sac_42: CE | None = Field(
+    sac_42: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_42",
@@ -525,7 +525,7 @@ class SAC(BaseModel):
         description="Item #1369 | Table HL70375",
     )
 
-    sac_43: list[CE] | None = Field(
+    sac_43: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_43",
@@ -537,7 +537,7 @@ class SAC(BaseModel):
         description="Item #1370 | Table HL70376",
     )
 
-    sac_44: list[CE] | None = Field(
+    sac_44: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sac_44",

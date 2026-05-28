@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: IPR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -78,7 +78,7 @@ class IPR(BaseModel):
         description="Item #2034",
     )
 
-    ipr_6: CP | None = Field(
+    ipr_6: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ipr_6",
@@ -90,7 +90,7 @@ class IPR(BaseModel):
         description="Item #2035",
     )
 
-    ipr_7: str | None = Field(
+    ipr_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ipr_7",

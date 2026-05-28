@@ -5,15 +5,16 @@ Version: 2.4
 Class: ORM_O01.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
 from ..segments.CTI import CTI
 from ..segments.FT1 import FT1
 from ..segments.ORC import ORC
+
 from .ORM_O01_ORDER_DETAIL import ORM_O01_ORDER_DETAIL
 
 _BLG = BLG
@@ -40,25 +41,25 @@ class ORM_O01_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: _ORM_O01_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_ORM_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    FT1: list[_FT1] | None = Field(
+    FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    BLG: _BLG | None = Field(
+    BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
         description="Optional",

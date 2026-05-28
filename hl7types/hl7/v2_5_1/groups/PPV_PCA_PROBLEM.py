@@ -5,14 +5,15 @@ Version: 2.5.1
 Class: PPV_PCA.PROBLEM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
+
 from .PPV_PCA_PROBLEM_OBSERVATION import PPV_PCA_PROBLEM_OBSERVATION
 from .PPV_PCA_PROBLEM_ROLE import PPV_PCA_PROBLEM_ROLE
 
@@ -40,25 +41,25 @@ class PPV_PCA_PROBLEM(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PROBLEM_ROLE: list[_PPV_PCA_PROBLEM_ROLE] | None = Field(
+    PROBLEM_ROLE: Optional[List[_PPV_PCA_PROBLEM_ROLE]] = Field(
         default=None,
         title="PROBLEM_ROLE",
         description="Optional, repeating",
     )
 
-    PROBLEM_OBSERVATION: list[_PPV_PCA_PROBLEM_OBSERVATION] | None = Field(
+    PROBLEM_OBSERVATION: Optional[List[_PPV_PCA_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
         description="Optional, repeating",

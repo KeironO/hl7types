@@ -5,15 +5,16 @@ Version: 2.7
 Class: CRM_C01.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CSP import CSP
 from ..segments.CSR import CSR
 from ..segments.PID import PID
 from ..segments.PRT import PRT
+
 from .CRM_C01_PATIENT_VISIT import CRM_C01_PATIENT_VISIT
 
 _CRM_C01_PATIENT_VISIT = CRM_C01_PATIENT_VISIT
@@ -40,13 +41,13 @@ class CRM_C01_PATIENT(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: _CRM_C01_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_CRM_C01_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
@@ -58,7 +59,7 @@ class CRM_C01_PATIENT(BaseModel):
         description="Required",
     )
 
-    CSP: list[_CSP] | None = Field(
+    CSP: Optional[List[_CSP]] = Field(
         default=None,
         title="CSP",
         description="Optional, repeating",

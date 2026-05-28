@@ -5,16 +5,16 @@ Version: 2.2
 Class: CK_PAT_ID
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CK_PAT_ID(BaseModel):
     """HL7 v2 CK_PAT_ID data type."""
 
-    ck_pat_id_1: str | None = Field(
+    ck_pat_id_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_pat_id_1",
@@ -25,7 +25,7 @@ class CK_PAT_ID(BaseModel):
         title="Patient ID",
     )
 
-    ck_pat_id_2: str | None = Field(
+    ck_pat_id_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_pat_id_2",
@@ -36,7 +36,7 @@ class CK_PAT_ID(BaseModel):
         title="Check digit",
     )
 
-    ck_pat_id_3: str | None = Field(
+    ck_pat_id_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_pat_id_3",
@@ -47,7 +47,7 @@ class CK_PAT_ID(BaseModel):
         title="Check digit scheme",
     )
 
-    ck_pat_id_4: str | None = Field(
+    ck_pat_id_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_pat_id_4",

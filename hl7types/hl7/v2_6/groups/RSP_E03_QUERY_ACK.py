@@ -5,10 +5,10 @@ Version: 2.6
 Class: RSP_E03.QUERY_ACK
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class RSP_E03_QUERY_ACK(BaseModel):

@@ -5,9 +5,9 @@ Version: 2.8
 Class: EHC_E10.PRODUCT_SERVICE_LINE_INFO
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ADJ import ADJ
@@ -31,7 +31,7 @@ class EHC_E10_PRODUCT_SERVICE_LINE_INFO(BaseModel):
         description="Required",
     )
 
-    ADJ: list[_ADJ] | None = Field(
+    ADJ: Optional[List[_ADJ]] = Field(
         default=None,
         title="ADJ",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: ECR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -41,7 +41,7 @@ class ECR(BaseModel):
         description="Item #1396",
     )
 
-    ecr_3: list[str] | None = Field(
+    ecr_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ecr_3",

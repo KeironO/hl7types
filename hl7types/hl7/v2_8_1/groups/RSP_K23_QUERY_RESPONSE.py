@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: RSP_K23.QUERY_RESPONSE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID

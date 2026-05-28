@@ -5,19 +5,20 @@ Version: 2.5.1
 Class: MDM_T02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.MDM_T02_COMMON_ORDER import MDM_T02_COMMON_ORDER
-from ..groups.MDM_T02_OBXNTE_SUPPGRP import MDM_T02_OBXNTE_SUPPGRP
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
 from ..segments.PID import PID
 from ..segments.PV1 import PV1
 from ..segments.SFT import SFT
 from ..segments.TXA import TXA
+
+from ..groups.MDM_T02_COMMON_ORDER import MDM_T02_COMMON_ORDER
+from ..groups.MDM_T02_OBXNTE_SUPPGRP import MDM_T02_OBXNTE_SUPPGRP
 
 _EVN = EVN
 _MDM_T02_COMMON_ORDER = MDM_T02_COMMON_ORDER
@@ -49,7 +50,7 @@ class MDM_T02(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -73,7 +74,7 @@ class MDM_T02(BaseModel):
         description="Required",
     )
 
-    COMMON_ORDER: list[_MDM_T02_COMMON_ORDER] | None = Field(
+    COMMON_ORDER: Optional[List[_MDM_T02_COMMON_ORDER]] = Field(
         default=None,
         title="COMMON_ORDER",
         description="Optional, repeating",
@@ -85,7 +86,7 @@ class MDM_T02(BaseModel):
         description="Required",
     )
 
-    OBXNTE_SUPPGRP: list[_MDM_T02_OBXNTE_SUPPGRP] = Field(
+    OBXNTE_SUPPGRP: List[_MDM_T02_OBXNTE_SUPPGRP] = Field(
         default=...,
         title="OBXNTE_SUPPGRP",
         description="Required, repeating",

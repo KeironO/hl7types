@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: DBC_O41.DONOR
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
@@ -43,31 +43,31 @@ class DBC_O41_DONOR(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    ARV: list[_ARV] | None = Field(
+    ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",

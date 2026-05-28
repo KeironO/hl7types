@@ -5,13 +5,14 @@ Version: 2.4
 Class: RPA_I08.OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
+
 from .RPA_I08_RESULTS import RPA_I08_RESULTS
 
 _NTE = NTE
@@ -34,13 +35,13 @@ class RPA_I08_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESULTS: list[_RPA_I08_RESULTS] | None = Field(
+    RESULTS: Optional[List[_RPA_I08_RESULTS]] = Field(
         default=None,
         title="RESULTS",
         description="Optional, repeating",

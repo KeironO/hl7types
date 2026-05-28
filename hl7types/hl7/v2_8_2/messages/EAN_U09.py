@@ -5,16 +5,17 @@ Version: 2.8.2
 Class: EAN_U09
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.EAN_U09_NOTIFICATION import EAN_U09_NOTIFICATION
 from ..segments.EQU import EQU
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.EAN_U09_NOTIFICATION import EAN_U09_NOTIFICATION
 
 _EAN_U09_NOTIFICATION = EAN_U09_NOTIFICATION
 _EQU = EQU
@@ -40,13 +41,13 @@ class EAN_U09(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -58,7 +59,7 @@ class EAN_U09(BaseModel):
         description="Required",
     )
 
-    NOTIFICATION: list[_EAN_U09_NOTIFICATION] = Field(
+    NOTIFICATION: List[_EAN_U09_NOTIFICATION] = Field(
         default=...,
         title="NOTIFICATION",
         description="Required, repeating",

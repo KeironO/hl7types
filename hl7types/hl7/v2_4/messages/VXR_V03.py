@@ -5,14 +5,11 @@ Version: 2.4
 Class: VXR_V03
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.VXR_V03_INSURANCE import VXR_V03_INSURANCE
-from ..groups.VXR_V03_ORDER import VXR_V03_ORDER
-from ..groups.VXR_V03_PATIENT_VISIT import VXR_V03_PATIENT_VISIT
 from ..segments.GT1 import GT1
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
@@ -21,6 +18,10 @@ from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
+from ..groups.VXR_V03_INSURANCE import VXR_V03_INSURANCE
+from ..groups.VXR_V03_ORDER import VXR_V03_ORDER
+from ..groups.VXR_V03_PATIENT_VISIT import VXR_V03_PATIENT_VISIT
 
 _GT1 = GT1
 _MSA = MSA
@@ -70,7 +71,7 @@ class VXR_V03(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
@@ -82,37 +83,37 @@ class VXR_V03(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: _VXR_V03_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_VXR_V03_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    GT1: list[_GT1] | None = Field(
+    GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: list[_VXR_V03_INSURANCE] | None = Field(
+    INSURANCE: Optional[List[_VXR_V03_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ORDER: list[_VXR_V03_ORDER] | None = Field(
+    ORDER: Optional[List[_VXR_V03_ORDER]] = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

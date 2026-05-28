@@ -5,12 +5,13 @@ Version: 2.7.1
 Class: CCI_I22.RESOURCES
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RGS import RGS
+
 from .CCI_I22_RESOURCE_DETAIL import CCI_I22_RESOURCE_DETAIL
 
 _CCI_I22_RESOURCE_DETAIL = CCI_I22_RESOURCE_DETAIL
@@ -31,7 +32,7 @@ class CCI_I22_RESOURCES(BaseModel):
         description="Required",
     )
 
-    RESOURCE_DETAIL: list[_CCI_I22_RESOURCE_DETAIL] | None = Field(
+    RESOURCE_DETAIL: Optional[List[_CCI_I22_RESOURCE_DETAIL]] = Field(
         default=None,
         title="RESOURCE_DETAIL",
         description="Optional, repeating",

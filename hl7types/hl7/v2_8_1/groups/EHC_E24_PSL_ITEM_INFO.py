@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: EHC_E24.PSL_ITEM_INFO
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ADJ import ADJ
@@ -34,13 +34,13 @@ class EHC_E24_PSL_ITEM_INFO(BaseModel):
         description="Required",
     )
 
-    AUT: _AUT | None = Field(
+    AUT: Optional[_AUT] = Field(
         default=None,
         title="AUT",
         description="Optional",
     )
 
-    ADJ: list[_ADJ] | None = Field(
+    ADJ: Optional[List[_ADJ]] = Field(
         default=None,
         title="ADJ",
         description="Optional, repeating",

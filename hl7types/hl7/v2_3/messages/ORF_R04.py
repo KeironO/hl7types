@@ -5,17 +5,18 @@ Version: 2.3
 Class: ORF_R04
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.ORF_R04_QUERY_RESPONSE import ORF_R04_QUERY_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
+from ..groups.ORF_R04_QUERY_RESPONSE import ORF_R04_QUERY_RESPONSE
 
 _DSC = DSC
 _MSA = MSA
@@ -55,19 +56,19 @@ class ORF_R04(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    QUERY_RESPONSE: list[_ORF_R04_QUERY_RESPONSE] = Field(
+    QUERY_RESPONSE: List[_ORF_R04_QUERY_RESPONSE] = Field(
         default=...,
         title="QUERY_RESPONSE",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

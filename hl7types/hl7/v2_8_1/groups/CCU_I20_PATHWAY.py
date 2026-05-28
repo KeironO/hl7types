@@ -5,13 +5,14 @@ Version: 2.8.1
 Class: CCU_I20.PATHWAY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PTH import PTH
 from ..segments.VAR import VAR
+
 from .CCU_I20_PATHWAY_OBSERVATION import CCU_I20_PATHWAY_OBSERVATION
 from .CCU_I20_ROLE_PATHWAY import CCU_I20_ROLE_PATHWAY
 
@@ -37,19 +38,19 @@ class CCU_I20_PATHWAY(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_PATHWAY: list[_CCU_I20_ROLE_PATHWAY] | None = Field(
+    ROLE_PATHWAY: Optional[List[_CCU_I20_ROLE_PATHWAY]] = Field(
         default=None,
         title="ROLE_PATHWAY",
         description="Optional, repeating",
     )
 
-    PATHWAY_OBSERVATION: list[_CCU_I20_PATHWAY_OBSERVATION] | None = Field(
+    PATHWAY_OBSERVATION: Optional[List[_CCU_I20_PATHWAY_OBSERVATION]] = Field(
         default=None,
         title="PATHWAY_OBSERVATION",
         description="Optional, repeating",

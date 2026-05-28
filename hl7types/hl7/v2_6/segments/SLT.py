@@ -5,9 +5,9 @@ Version: 2.6
 Class: SLT
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.EI import EI
@@ -16,7 +16,7 @@ from ..datatypes.EI import EI
 class SLT(BaseModel):
     """HL7 v2 SLT segment."""
 
-    slt_1: EI | None = Field(
+    slt_1: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "slt_1",
@@ -28,7 +28,7 @@ class SLT(BaseModel):
         description="Item #2094",
     )
 
-    slt_2: str | None = Field(
+    slt_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "slt_2",
@@ -40,7 +40,7 @@ class SLT(BaseModel):
         description="Item #2280",
     )
 
-    slt_3: EI | None = Field(
+    slt_3: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "slt_3",
@@ -52,7 +52,7 @@ class SLT(BaseModel):
         description="Item #2095",
     )
 
-    slt_4: EI | None = Field(
+    slt_4: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "slt_4",
@@ -64,7 +64,7 @@ class SLT(BaseModel):
         description="Item #2096",
     )
 
-    slt_5: str | None = Field(
+    slt_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "slt_5",

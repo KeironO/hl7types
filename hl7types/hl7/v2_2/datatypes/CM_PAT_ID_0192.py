@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_PAT_ID_0192
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PAT_ID_0192(BaseModel):
     """HL7 v2 CM_PAT_ID_0192 data type."""
 
-    cm_pat_id_0192_1: str | None = Field(
+    cm_pat_id_0192_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pat_id_0192_1",
@@ -25,7 +25,7 @@ class CM_PAT_ID_0192(BaseModel):
         title="Patient ID",
     )
 
-    cm_pat_id_0192_2: str | None = Field(
+    cm_pat_id_0192_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pat_id_0192_2",
@@ -36,7 +36,7 @@ class CM_PAT_ID_0192(BaseModel):
         title="Check digit",
     )
 
-    cm_pat_id_0192_3: str | None = Field(
+    cm_pat_id_0192_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pat_id_0192_3",
@@ -47,7 +47,7 @@ class CM_PAT_ID_0192(BaseModel):
         title="Check digit scheme",
     )
 
-    cm_pat_id_0192_4: str | None = Field(
+    cm_pat_id_0192_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pat_id_0192_4",
@@ -58,7 +58,7 @@ class CM_PAT_ID_0192(BaseModel):
         title="Facility ID",
     )
 
-    cm_pat_id_0192_5: str | None = Field(
+    cm_pat_id_0192_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pat_id_0192_5",

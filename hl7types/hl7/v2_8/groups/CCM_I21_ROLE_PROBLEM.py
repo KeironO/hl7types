@@ -5,12 +5,13 @@ Version: 2.8
 Class: CCM_I21.ROLE_PROBLEM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.VAR import VAR
+
 from .CCM_I21_ROLE_PROBLEM_OBJECT import CCM_I21_ROLE_PROBLEM_OBJECT
 
 _CCM_I21_ROLE_PROBLEM_OBJECT = CCM_I21_ROLE_PROBLEM_OBJECT
@@ -31,7 +32,7 @@ class CCM_I21_ROLE_PROBLEM(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

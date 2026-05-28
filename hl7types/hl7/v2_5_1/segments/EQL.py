@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: EQL
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -16,7 +16,7 @@ from ..datatypes.CE import CE
 class EQL(BaseModel):
     """HL7 v2 EQL segment."""
 
-    eql_1: str | None = Field(
+    eql_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "eql_1",

@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: DPS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -29,7 +29,7 @@ class DPS(BaseModel):
         description="Item #3472 | Table HL70051",
     )
 
-    dps_2: list[CWE] = Field(
+    dps_2: List[CWE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "dps_2",
@@ -41,7 +41,7 @@ class DPS(BaseModel):
         description="Item #3484 | Table HL70941",
     )
 
-    dps_3: str | None = Field(
+    dps_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dps_3",
@@ -53,7 +53,7 @@ class DPS(BaseModel):
         description="Item #662",
     )
 
-    dps_4: str | None = Field(
+    dps_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dps_4",
@@ -65,7 +65,7 @@ class DPS(BaseModel):
         description="Item #3473",
     )
 
-    dps_5: CNE | None = Field(
+    dps_5: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dps_5",

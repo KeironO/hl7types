@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_GROUP_ID
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_GROUP_ID(BaseModel):
     """HL7 v2 CM_GROUP_ID data type."""
 
-    cm_group_id_1: str | None = Field(
+    cm_group_id_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_group_id_1",
@@ -25,7 +25,7 @@ class CM_GROUP_ID(BaseModel):
         title="unique group id",
     )
 
-    cm_group_id_2: str | None = Field(
+    cm_group_id_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_group_id_2",

@@ -5,16 +5,17 @@ Version: 2.4
 Class: RGR_RGR
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RGR_RGR_DEFINTION import RGR_RGR_DEFINTION
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
+
+from ..groups.RGR_RGR_DEFINTION import RGR_RGR_DEFINTION
 
 _DSC = DSC
 _ERR = ERR
@@ -46,19 +47,19 @@ class RGR_RGR(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    DEFINTION: list[_RGR_RGR_DEFINTION] = Field(
+    DEFINTION: List[_RGR_RGR_DEFINTION] = Field(
         default=...,
         title="DEFINTION",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

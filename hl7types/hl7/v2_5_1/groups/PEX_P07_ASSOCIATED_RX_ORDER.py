@@ -5,13 +5,14 @@ Version: 2.5.1
 Class: PEX_P07.ASSOCIATED_RX_ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
+
 from .PEX_P07_NK1_TIMING_QTY import PEX_P07_NK1_TIMING_QTY
 
 _PEX_P07_NK1_TIMING_QTY = PEX_P07_NK1_TIMING_QTY
@@ -34,13 +35,13 @@ class PEX_P07_ASSOCIATED_RX_ORDER(BaseModel):
         description="Required",
     )
 
-    NK1_TIMING_QTY: list[_PEX_P07_NK1_TIMING_QTY] = Field(
+    NK1_TIMING_QTY: List[_PEX_P07_NK1_TIMING_QTY] = Field(
         default=...,
         title="NK1_TIMING_QTY",
         description="Required, repeating",
     )
 
-    RXR: list[_RXR] | None = Field(
+    RXR: Optional[List[_RXR]] = Field(
         default=None,
         title="RXR",
         description="Optional, repeating",

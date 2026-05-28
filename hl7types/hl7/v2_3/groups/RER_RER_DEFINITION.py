@@ -5,13 +5,14 @@ Version: 2.3
 Class: RER_RER.DEFINITION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
 from .RER_RER_ORDER import RER_RER_ORDER
 from .RER_RER_PATIENT import RER_RER_PATIENT
 
@@ -37,19 +38,19 @@ class RER_RER_DEFINITION(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PATIENT: _RER_RER_PATIENT | None = Field(
+    PATIENT: Optional[_RER_RER_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: list[_RER_RER_ORDER] = Field(
+    ORDER: List[_RER_RER_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

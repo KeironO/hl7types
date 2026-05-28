@@ -5,9 +5,9 @@ Version: 2.4
 Class: TCU_U10
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EQU import EQU
@@ -43,13 +43,13 @@ class TCU_U10(BaseModel):
         description="Required",
     )
 
-    TCC: list[_TCC] = Field(
+    TCC: List[_TCC] = Field(
         default=...,
         title="TCC",
         description="Required, repeating",
     )
 
-    ROL: _ROL | None = Field(
+    ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
         description="Optional",

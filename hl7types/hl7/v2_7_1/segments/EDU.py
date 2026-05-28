@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: EDU
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -31,7 +31,7 @@ class EDU(BaseModel):
         description="Item #1448",
     )
 
-    edu_2: CWE | None = Field(
+    edu_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_2",
@@ -43,7 +43,7 @@ class EDU(BaseModel):
         description="Item #1449 | Table HL70360",
     )
 
-    edu_3: DR | None = Field(
+    edu_3: Optional[DR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_3",
@@ -55,7 +55,7 @@ class EDU(BaseModel):
         description="Item #1597",
     )
 
-    edu_4: DR | None = Field(
+    edu_4: Optional[DR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_4",
@@ -67,7 +67,7 @@ class EDU(BaseModel):
         description="Item #1450",
     )
 
-    edu_5: str | None = Field(
+    edu_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_5",
@@ -79,7 +79,7 @@ class EDU(BaseModel):
         description="Item #1451",
     )
 
-    edu_6: XON | None = Field(
+    edu_6: Optional[XON] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_6",
@@ -91,7 +91,7 @@ class EDU(BaseModel):
         description="Item #1452",
     )
 
-    edu_7: CWE | None = Field(
+    edu_7: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_7",
@@ -103,7 +103,7 @@ class EDU(BaseModel):
         description="Item #1453 | Table HL70402",
     )
 
-    edu_8: XAD | None = Field(
+    edu_8: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_8",
@@ -115,7 +115,7 @@ class EDU(BaseModel):
         description="Item #1454",
     )
 
-    edu_9: list[CWE] | None = Field(
+    edu_9: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_9",

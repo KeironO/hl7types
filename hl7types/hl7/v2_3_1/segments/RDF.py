@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: RDF
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.RCD import RCD
@@ -28,7 +28,7 @@ class RDF(BaseModel):
         description="Item #701",
     )
 
-    rdf_2: list[RCD] = Field(
+    rdf_2: List[RCD] = Field(
         default=...,
         validation_alias=AliasChoices(
             "rdf_2",

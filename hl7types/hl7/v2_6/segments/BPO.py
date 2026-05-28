@@ -5,9 +5,9 @@ Version: 2.6
 Class: BPO
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -42,7 +42,7 @@ class BPO(BaseModel):
         description="Item #1701 | Table HL79999",
     )
 
-    bpo_3: list[CWE] | None = Field(
+    bpo_3: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_3",
@@ -66,7 +66,7 @@ class BPO(BaseModel):
         description="Item #1703",
     )
 
-    bpo_5: str | None = Field(
+    bpo_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_5",
@@ -78,7 +78,7 @@ class BPO(BaseModel):
         description="Item #1704",
     )
 
-    bpo_6: CWE | None = Field(
+    bpo_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_6",
@@ -90,7 +90,7 @@ class BPO(BaseModel):
         description="Item #1705 | Table HL79999",
     )
 
-    bpo_7: str | None = Field(
+    bpo_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_7",
@@ -102,7 +102,7 @@ class BPO(BaseModel):
         description="Item #1706",
     )
 
-    bpo_8: PL | None = Field(
+    bpo_8: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_8",
@@ -114,7 +114,7 @@ class BPO(BaseModel):
         description="Item #1707",
     )
 
-    bpo_9: XAD | None = Field(
+    bpo_9: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_9",
@@ -126,7 +126,7 @@ class BPO(BaseModel):
         description="Item #1708",
     )
 
-    bpo_10: str | None = Field(
+    bpo_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_10",
@@ -138,7 +138,7 @@ class BPO(BaseModel):
         description="Item #1709",
     )
 
-    bpo_11: PL | None = Field(
+    bpo_11: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_11",
@@ -150,7 +150,7 @@ class BPO(BaseModel):
         description="Item #1710",
     )
 
-    bpo_12: XAD | None = Field(
+    bpo_12: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_12",
@@ -162,7 +162,7 @@ class BPO(BaseModel):
         description="Item #1711",
     )
 
-    bpo_13: list[CWE] | None = Field(
+    bpo_13: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_13",
@@ -174,7 +174,7 @@ class BPO(BaseModel):
         description="Item #1712 | Table HL70509",
     )
 
-    bpo_14: str | None = Field(
+    bpo_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpo_14",

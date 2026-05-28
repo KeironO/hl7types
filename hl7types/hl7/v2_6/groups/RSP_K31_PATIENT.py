@@ -5,15 +5,16 @@ Version: 2.6
 Class: RSP_K31.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
 from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
+
 from .RSP_K31_PATIENT_VISIT import RSP_K31_PATIENT_VISIT
 
 _AL1 = AL1
@@ -40,25 +41,25 @@ class RSP_K31_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: _RSP_K31_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_RSP_K31_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: CCI_I22.CLINICAL_HISTORY_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .CCI_I22_CLINICAL_HISTORY_OBJECT import CCI_I22_CLINICAL_HISTORY_OBJECT
@@ -31,7 +31,7 @@ class CCI_I22_CLINICAL_HISTORY_DETAIL(BaseModel):
         description="Required",
     )
 
-    CLINICAL_HISTORY_OBSERVATION: list[_CCI_I22_CLINICAL_HISTORY_OBSERVATION] | None = Field(
+    CLINICAL_HISTORY_OBSERVATION: Optional[List[_CCI_I22_CLINICAL_HISTORY_OBSERVATION]] = Field(
         default=None,
         title="CLINICAL_HISTORY_OBSERVATION",
         description="Optional, repeating",

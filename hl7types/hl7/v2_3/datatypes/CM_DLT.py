@@ -5,16 +5,16 @@ Version: 2.3
 Class: CM_DLT
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_DLT(BaseModel):
     """HL7 v2 CM_DLT data type."""
 
-    cm_dlt_1: str | None = Field(
+    cm_dlt_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_dlt_1",
@@ -25,7 +25,7 @@ class CM_DLT(BaseModel):
         title="Range",
     )
 
-    cm_dlt_2: str | None = Field(
+    cm_dlt_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_dlt_2",
@@ -36,7 +36,7 @@ class CM_DLT(BaseModel):
         title="numeric threshold",
     )
 
-    cm_dlt_3: str | None = Field(
+    cm_dlt_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_dlt_3",
@@ -47,7 +47,7 @@ class CM_DLT(BaseModel):
         title="change",
     )
 
-    cm_dlt_4: str | None = Field(
+    cm_dlt_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_dlt_4",

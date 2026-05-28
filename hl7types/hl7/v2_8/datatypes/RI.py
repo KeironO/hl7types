@@ -5,9 +5,9 @@ Version: 2.8
 Class: RI
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -16,7 +16,7 @@ from .CWE import CWE
 class RI(BaseModel):
     """HL7 v2 RI data type."""
 
-    ri_1: CWE | None = Field(
+    ri_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ri_1",
@@ -27,7 +27,7 @@ class RI(BaseModel):
         title="Repeat Pattern",
     )
 
-    ri_2: str | None = Field(
+    ri_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ri_2",

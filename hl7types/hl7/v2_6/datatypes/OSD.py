@@ -5,9 +5,9 @@ Version: 2.6
 Class: OSD
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -36,7 +36,7 @@ class OSD(BaseModel):
         title="Placer Order Number: Entity Identifier",
     )
 
-    osd_3: str | None = Field(
+    osd_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osd_3",
@@ -58,7 +58,7 @@ class OSD(BaseModel):
         title="Filler Order Number: Entity Identifier",
     )
 
-    osd_5: str | None = Field(
+    osd_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osd_5",
@@ -69,7 +69,7 @@ class OSD(BaseModel):
         title="Filler Order Number: Namespace ID",
     )
 
-    osd_6: str | None = Field(
+    osd_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osd_6",
@@ -80,7 +80,7 @@ class OSD(BaseModel):
         title="Sequence Condition Value",
     )
 
-    osd_7: str | None = Field(
+    osd_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osd_7",
@@ -102,7 +102,7 @@ class OSD(BaseModel):
         title="Placer Order Number: Universal ID",
     )
 
-    osd_9: str | None = Field(
+    osd_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osd_9",
@@ -124,7 +124,7 @@ class OSD(BaseModel):
         title="Filler Order Number: Universal ID",
     )
 
-    osd_11: str | None = Field(
+    osd_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "osd_11",

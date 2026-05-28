@@ -5,9 +5,9 @@ Version: 2.6
 Class: NMR_N01.CLOCK_AND_STATS_WITH_NOTES_ALT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from .NMR_N01_APP_STATS import NMR_N01_APP_STATS
@@ -28,19 +28,19 @@ class NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT(BaseModel):
         APP_STATUS (Optional[NMR_N01_APP_STATUS]): optional
     """
 
-    CLOCK: _NMR_N01_CLOCK | None = Field(
+    CLOCK: Optional[_NMR_N01_CLOCK] = Field(
         default=None,
         title="CLOCK",
         description="Optional",
     )
 
-    APP_STATS: _NMR_N01_APP_STATS | None = Field(
+    APP_STATS: Optional[_NMR_N01_APP_STATS] = Field(
         default=None,
         title="APP_STATS",
         description="Optional",
     )
 
-    APP_STATUS: _NMR_N01_APP_STATUS | None = Field(
+    APP_STATUS: Optional[_NMR_N01_APP_STATUS] = Field(
         default=None,
         title="APP_STATUS",
         description="Optional",

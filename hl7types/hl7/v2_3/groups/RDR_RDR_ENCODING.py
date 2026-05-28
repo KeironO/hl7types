@@ -5,9 +5,9 @@ Version: 2.3
 Class: RDR_RDR.ENCODING
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
@@ -40,7 +40,7 @@ class RDR_RDR_ENCODING(BaseModel):
         description="Required",
     )
 
-    RXC: list[_RXC] | None = Field(
+    RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: RSP_K32.QUERY_RESPONSE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
@@ -43,13 +43,13 @@ class RSP_K32_QUERY_RESPONSE(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
@@ -61,13 +61,13 @@ class RSP_K32_QUERY_RESPONSE(BaseModel):
         description="Required",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    QRI: _QRI | None = Field(
+    QRI: Optional[_QRI] = Field(
         default=None,
         title="QRI",
         description="Optional",

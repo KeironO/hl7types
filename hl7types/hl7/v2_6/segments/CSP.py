@@ -5,9 +5,9 @@ Version: 2.6
 Class: CSP
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -40,7 +40,7 @@ class CSP(BaseModel):
         description="Item #1052",
     )
 
-    csp_3: str | None = Field(
+    csp_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csp_3",
@@ -52,7 +52,7 @@ class CSP(BaseModel):
         description="Item #1053",
     )
 
-    csp_4: CWE | None = Field(
+    csp_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csp_4",

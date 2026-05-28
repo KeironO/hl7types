@@ -5,9 +5,9 @@ Version: 2.7
 Class: SRM_S01.LOCATION_RESOURCE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AIL import AIL
@@ -34,13 +34,13 @@ class SRM_S01_LOCATION_RESOURCE(BaseModel):
         description="Required",
     )
 
-    APR: _APR | None = Field(
+    APR: Optional[_APR] = Field(
         default=None,
         title="APR",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

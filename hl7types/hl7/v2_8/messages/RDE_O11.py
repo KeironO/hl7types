@@ -5,17 +5,18 @@ Version: 2.8
 Class: RDE_O11
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RDE_O11_ORDER import RDE_O11_ORDER
-from ..groups.RDE_O11_PATIENT import RDE_O11_PATIENT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.RDE_O11_ORDER import RDE_O11_ORDER
+from ..groups.RDE_O11_PATIENT import RDE_O11_PATIENT
 
 _MSH = MSH
 _NTE = NTE
@@ -43,31 +44,31 @@ class RDE_O11(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: _RDE_O11_PATIENT | None = Field(
+    PATIENT: Optional[_RDE_O11_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: list[_RDE_O11_ORDER] = Field(
+    ORDER: List[_RDE_O11_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

@@ -5,14 +5,15 @@ Version: 2.5
 Class: RAR_RAR.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.RXA import RXA
 from ..segments.RXR import RXR
+
 from .RAR_RAR_ENCODING import RAR_RAR_ENCODING
 
 _ORC = ORC
@@ -37,13 +38,13 @@ class RAR_RAR_ORDER(BaseModel):
         description="Required",
     )
 
-    ENCODING: _RAR_RAR_ENCODING | None = Field(
+    ENCODING: Optional[_RAR_RAR_ENCODING] = Field(
         default=None,
         title="ENCODING",
         description="Optional",
     )
 
-    RXA: list[_RXA] = Field(
+    RXA: List[_RXA] = Field(
         default=...,
         title="RXA",
         description="Required, repeating",

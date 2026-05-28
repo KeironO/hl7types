@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: AUI
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TS import TS
@@ -16,7 +16,7 @@ from .TS import TS
 class AUI(BaseModel):
     """HL7 v2 AUI data type."""
 
-    aui_1: str | None = Field(
+    aui_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aui_1",
@@ -27,7 +27,7 @@ class AUI(BaseModel):
         title="authorization number",
     )
 
-    aui_2: TS | None = Field(
+    aui_2: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aui_2",
@@ -38,7 +38,7 @@ class AUI(BaseModel):
         title="date",
     )
 
-    aui_3: str | None = Field(
+    aui_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aui_3",

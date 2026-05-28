@@ -5,14 +5,15 @@ Version: 2.7
 Class: CCM_I21.PATHWAY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.PTH import PTH
 from ..segments.VAR import VAR
+
 from .CCM_I21_ROLE_PATHWAY import CCM_I21_ROLE_PATHWAY
 
 _CCM_I21_ROLE_PATHWAY = CCM_I21_ROLE_PATHWAY
@@ -37,19 +38,19 @@ class CCM_I21_PATHWAY(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_PATHWAY: list[_CCM_I21_ROLE_PATHWAY] | None = Field(
+    ROLE_PATHWAY: Optional[List[_CCM_I21_ROLE_PATHWAY]] = Field(
         default=None,
         title="ROLE_PATHWAY",
         description="Optional, repeating",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

@@ -5,14 +5,15 @@ Version: 2.3
 Class: MFN_M06
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.MFN_M06_MF_CDM import MFN_M06_MF_CDM
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
+
+from ..groups.MFN_M06_MF_CDM import MFN_M06_MF_CDM
 
 _MFI = MFI
 _MFN_M06_MF_CDM = MFN_M06_MF_CDM
@@ -40,7 +41,7 @@ class MFN_M06(BaseModel):
         description="Required",
     )
 
-    MF_CDM: list[_MFN_M06_MF_CDM] = Field(
+    MF_CDM: List[_MFN_M06_MF_CDM] = Field(
         default=...,
         title="MF_CDM",
         description="Required, repeating",

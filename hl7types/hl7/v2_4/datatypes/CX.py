@@ -5,9 +5,9 @@ Version: 2.4
 Class: CX
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .HD import HD
@@ -16,7 +16,7 @@ from .HD import HD
 class CX(BaseModel):
     """HL7 v2 CX data type."""
 
-    cx_1: str | None = Field(
+    cx_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_1",
@@ -27,7 +27,7 @@ class CX(BaseModel):
         title="ID",
     )
 
-    cx_2: str | None = Field(
+    cx_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_2",
@@ -38,7 +38,7 @@ class CX(BaseModel):
         title="check digit (ST)",
     )
 
-    cx_3: str | None = Field(
+    cx_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_3",
@@ -49,7 +49,7 @@ class CX(BaseModel):
         title="code identifying the check digit scheme employed",
     )
 
-    cx_4: HD | None = Field(
+    cx_4: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_4",
@@ -60,7 +60,7 @@ class CX(BaseModel):
         title="assigning authority",
     )
 
-    cx_5: str | None = Field(
+    cx_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_5",
@@ -71,7 +71,7 @@ class CX(BaseModel):
         title="identifier type code (ID)",
     )
 
-    cx_6: HD | None = Field(
+    cx_6: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_6",
@@ -82,7 +82,7 @@ class CX(BaseModel):
         title="assigning facility",
     )
 
-    cx_7: str | None = Field(
+    cx_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_7",
@@ -93,7 +93,7 @@ class CX(BaseModel):
         title="effective date (DT)",
     )
 
-    cx_8: str | None = Field(
+    cx_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_8",

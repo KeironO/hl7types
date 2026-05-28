@@ -5,16 +5,11 @@ Version: 2.3
 Class: RRI_I12
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RRI_I12_AUTHORIZATION import RRI_I12_AUTHORIZATION
-from ..groups.RRI_I12_PROCEDURE import RRI_I12_PROCEDURE
-from ..groups.RRI_I12_PROVIDER import RRI_I12_PROVIDER
-from ..groups.RRI_I12_RESULTS import RRI_I12_RESULTS
-from ..groups.RRI_I12_VISIT import RRI_I12_VISIT
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
@@ -24,6 +19,12 @@ from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.RF1 import RF1
+
+from ..groups.RRI_I12_AUTHORIZATION import RRI_I12_AUTHORIZATION
+from ..groups.RRI_I12_PROCEDURE import RRI_I12_PROCEDURE
+from ..groups.RRI_I12_PROVIDER import RRI_I12_PROVIDER
+from ..groups.RRI_I12_RESULTS import RRI_I12_RESULTS
+from ..groups.RRI_I12_VISIT import RRI_I12_VISIT
 
 _ACC = ACC
 _AL1 = AL1
@@ -67,25 +68,25 @@ class RRI_I12(BaseModel):
         description="Required",
     )
 
-    MSA: _MSA | None = Field(
+    MSA: Optional[_MSA] = Field(
         default=None,
         title="MSA",
         description="Optional",
     )
 
-    RF1: _RF1 | None = Field(
+    RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
         description="Optional",
     )
 
-    AUTHORIZATION: _RRI_I12_AUTHORIZATION | None = Field(
+    AUTHORIZATION: Optional[_RRI_I12_AUTHORIZATION] = Field(
         default=None,
         title="AUTHORIZATION",
         description="Optional",
     )
 
-    PROVIDER: list[_RRI_I12_PROVIDER] = Field(
+    PROVIDER: List[_RRI_I12_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -97,49 +98,49 @@ class RRI_I12(BaseModel):
         description="Required",
     )
 
-    ACC: _ACC | None = Field(
+    ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: list[_DRG] | None = Field(
+    DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PROCEDURE: list[_RRI_I12_PROCEDURE] | None = Field(
+    PROCEDURE: Optional[List[_RRI_I12_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",
     )
 
-    RESULTS: list[_RRI_I12_RESULTS] | None = Field(
+    RESULTS: Optional[List[_RRI_I12_RESULTS]] = Field(
         default=None,
         title="RESULTS",
         description="Optional, repeating",
     )
 
-    VISIT: _RRI_I12_VISIT | None = Field(
+    VISIT: Optional[_RRI_I12_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

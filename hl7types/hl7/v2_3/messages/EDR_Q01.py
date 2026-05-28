@@ -5,9 +5,9 @@ Version: 2.3
 Class: EDR_Q01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -49,7 +49,7 @@ class EDR_Q01(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -61,13 +61,13 @@ class EDR_Q01(BaseModel):
         description="Required",
     )
 
-    DSP: list[_DSP] = Field(
+    DSP: List[_DSP] = Field(
         default=...,
         title="DSP",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

@@ -5,12 +5,13 @@ Version: 2.3.1
 Class: RRD_O02.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .RRD_O02_DISPENSE import RRD_O02_DISPENSE
 
 _ORC = ORC
@@ -31,7 +32,7 @@ class RRD_O02_ORDER(BaseModel):
         description="Required",
     )
 
-    DISPENSE: _RRD_O02_DISPENSE | None = Field(
+    DISPENSE: Optional[_RRD_O02_DISPENSE] = Field(
         default=None,
         title="DISPENSE",
         description="Optional",

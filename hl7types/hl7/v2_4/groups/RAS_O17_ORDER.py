@@ -5,15 +5,16 @@ Version: 2.4
 Class: RAS_O17.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
 from ..segments.RXA import RXA
 from ..segments.RXR import RXR
+
 from .RAS_O17_ENCODING import RAS_O17_ENCODING
 from .RAS_O17_OBSERVATION import RAS_O17_OBSERVATION
 from .RAS_O17_ORDER_DETAIL import RAS_O17_ORDER_DETAIL
@@ -46,19 +47,19 @@ class RAS_O17_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: _RAS_O17_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_RAS_O17_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    ENCODING: _RAS_O17_ENCODING | None = Field(
+    ENCODING: Optional[_RAS_O17_ENCODING] = Field(
         default=None,
         title="ENCODING",
         description="Optional",
     )
 
-    RXA: list[_RXA] = Field(
+    RXA: List[_RXA] = Field(
         default=...,
         title="RXA",
         description="Required, repeating",
@@ -70,13 +71,13 @@ class RAS_O17_ORDER(BaseModel):
         description="Required",
     )
 
-    OBSERVATION: list[_RAS_O17_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_RAS_O17_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

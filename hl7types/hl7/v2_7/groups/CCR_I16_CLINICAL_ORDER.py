@@ -5,13 +5,14 @@ Version: 2.7
 Class: CCR_I16.CLINICAL_ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
+
 from .CCR_I16_CLINICAL_ORDER_DETAIL import CCR_I16_CLINICAL_ORDER_DETAIL
 from .CCR_I16_CLINICAL_ORDER_TIMING import CCR_I16_CLINICAL_ORDER_TIMING
 
@@ -37,19 +38,19 @@ class CCR_I16_CLINICAL_ORDER(BaseModel):
         description="Required",
     )
 
-    CLINICAL_ORDER_TIMING: list[_CCR_I16_CLINICAL_ORDER_TIMING] | None = Field(
+    CLINICAL_ORDER_TIMING: Optional[List[_CCR_I16_CLINICAL_ORDER_TIMING]] = Field(
         default=None,
         title="CLINICAL_ORDER_TIMING",
         description="Optional, repeating",
     )
 
-    CLINICAL_ORDER_DETAIL: list[_CCR_I16_CLINICAL_ORDER_DETAIL] = Field(
+    CLINICAL_ORDER_DETAIL: List[_CCR_I16_CLINICAL_ORDER_DETAIL] = Field(
         default=...,
         title="CLINICAL_ORDER_DETAIL",
         description="Required, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: IPC
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -65,7 +65,7 @@ class IPC(BaseModel):
         description="Item #1660",
     )
 
-    ipc_5: CWE | None = Field(
+    ipc_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ipc_5",
@@ -77,7 +77,7 @@ class IPC(BaseModel):
         description="Item #1661 | Table HL79999",
     )
 
-    ipc_6: list[CWE] | None = Field(
+    ipc_6: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ipc_6",
@@ -89,7 +89,7 @@ class IPC(BaseModel):
         description="Item #1662 | Table HL79999",
     )
 
-    ipc_7: EI | None = Field(
+    ipc_7: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ipc_7",
@@ -101,7 +101,7 @@ class IPC(BaseModel):
         description="Item #1663",
     )
 
-    ipc_8: list[CWE] | None = Field(
+    ipc_8: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ipc_8",
@@ -113,7 +113,7 @@ class IPC(BaseModel):
         description="Item #1664 | Table HL79999",
     )
 
-    ipc_9: str | None = Field(
+    ipc_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ipc_9",

@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: OPL_O37.OBSERVATIONS_ON_PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
@@ -31,7 +31,7 @@ class OPL_O37_OBSERVATIONS_ON_PATIENT(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

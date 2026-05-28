@@ -5,9 +5,9 @@ Version: 2.4
 Class: SQM_S25.GENERAL_RESOURCE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.AIG import AIG
@@ -31,7 +31,7 @@ class SQM_S25_GENERAL_RESOURCE(BaseModel):
         description="Required",
     )
 
-    APR: _APR | None = Field(
+    APR: Optional[_APR] = Field(
         default=None,
         title="APR",
         description="Optional",

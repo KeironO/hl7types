@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: MFI
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -30,7 +30,7 @@ class MFI(BaseModel):
         description="Item #658 | Table HL70175",
     )
 
-    mfi_2: HD | None = Field(
+    mfi_2: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfi_2",
@@ -54,7 +54,7 @@ class MFI(BaseModel):
         description="Item #660 | Table HL70178",
     )
 
-    mfi_4: TS | None = Field(
+    mfi_4: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfi_4",
@@ -66,7 +66,7 @@ class MFI(BaseModel):
         description="Item #661",
     )
 
-    mfi_5: TS | None = Field(
+    mfi_5: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfi_5",

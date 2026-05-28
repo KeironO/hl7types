@@ -5,9 +5,9 @@ Version: 2.7
 Class: OVR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -18,7 +18,7 @@ from ..datatypes.XCN import XCN
 class OVR(BaseModel):
     """HL7 v2 OVR segment."""
 
-    ovr_1: CWE | None = Field(
+    ovr_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ovr_1",
@@ -30,7 +30,7 @@ class OVR(BaseModel):
         description="Item #1829 | Table HL70518",
     )
 
-    ovr_2: CWE | None = Field(
+    ovr_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ovr_2",
@@ -42,7 +42,7 @@ class OVR(BaseModel):
         description="Item #1830 | Table HL70521",
     )
 
-    ovr_3: TX | None = Field(
+    ovr_3: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ovr_3",
@@ -54,7 +54,7 @@ class OVR(BaseModel):
         description="Item #1831",
     )
 
-    ovr_4: XCN | None = Field(
+    ovr_4: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ovr_4",
@@ -66,7 +66,7 @@ class OVR(BaseModel):
         description="Item #1832",
     )
 
-    ovr_5: XCN | None = Field(
+    ovr_5: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ovr_5",

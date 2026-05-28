@@ -5,9 +5,9 @@ Version: 2.5
 Class: VID
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -16,7 +16,7 @@ from .CE import CE
 class VID(BaseModel):
     """HL7 v2 VID data type."""
 
-    vid_1: str | None = Field(
+    vid_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "vid_1",
@@ -27,7 +27,7 @@ class VID(BaseModel):
         title="Version ID",
     )
 
-    vid_2: CE | None = Field(
+    vid_2: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "vid_2",
@@ -38,7 +38,7 @@ class VID(BaseModel):
         title="Internationalization Code",
     )
 
-    vid_3: CE | None = Field(
+    vid_3: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "vid_3",

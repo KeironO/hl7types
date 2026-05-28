@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: MFN_M07.MF_CLIN_STUDY_SCHED
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CM0 import CM0
@@ -40,7 +40,7 @@ class MFN_M07_MF_CLIN_STUDY_SCHED(BaseModel):
         description="Required",
     )
 
-    CM2: list[_CM2] | None = Field(
+    CM2: Optional[List[_CM2]] = Field(
         default=None,
         title="CM2",
         description="Optional, repeating",

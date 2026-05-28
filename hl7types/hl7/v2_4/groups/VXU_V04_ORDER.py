@@ -5,14 +5,15 @@ Version: 2.4
 Class: VXU_V04.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.RXA import RXA
 from ..segments.RXR import RXR
+
 from .VXU_V04_OBSERVATION import VXU_V04_OBSERVATION
 
 _ORC = ORC
@@ -31,7 +32,7 @@ class VXU_V04_ORDER(BaseModel):
         OBSERVATION (Optional[List[VXU_V04_OBSERVATION]]): optional
     """
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
@@ -43,13 +44,13 @@ class VXU_V04_ORDER(BaseModel):
         description="Required",
     )
 
-    RXR: _RXR | None = Field(
+    RXR: Optional[_RXR] = Field(
         default=None,
         title="RXR",
         description="Optional",
     )
 
-    OBSERVATION: list[_VXU_V04_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_VXU_V04_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

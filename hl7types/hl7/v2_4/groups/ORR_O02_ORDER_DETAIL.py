@@ -5,10 +5,10 @@ Version: 2.4
 Class: ORR_O02.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class ORR_O02_ORDER_DETAIL(BaseModel):

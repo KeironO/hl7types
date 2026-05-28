@@ -5,9 +5,9 @@ Version: 2.4
 Class: RXR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -28,7 +28,7 @@ class RXR(BaseModel):
         description="Item #309 | Table HL70162",
     )
 
-    rxr_2: CE | None = Field(
+    rxr_2: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxr_2",
@@ -40,7 +40,7 @@ class RXR(BaseModel):
         description="Item #310 | Table HL70163",
     )
 
-    rxr_3: CE | None = Field(
+    rxr_3: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxr_3",
@@ -52,7 +52,7 @@ class RXR(BaseModel):
         description="Item #311 | Table HL70164",
     )
 
-    rxr_4: CE | None = Field(
+    rxr_4: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxr_4",
@@ -64,7 +64,7 @@ class RXR(BaseModel):
         description="Item #312 | Table HL70165",
     )
 
-    rxr_5: CE | None = Field(
+    rxr_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxr_5",

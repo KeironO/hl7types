@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: TCD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -29,7 +29,7 @@ class TCD(BaseModel):
         description="Item #238",
     )
 
-    tcd_2: SN | None = Field(
+    tcd_2: Optional[SN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcd_2",
@@ -41,7 +41,7 @@ class TCD(BaseModel):
         description="Item #1420",
     )
 
-    tcd_3: SN | None = Field(
+    tcd_3: Optional[SN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcd_3",
@@ -53,7 +53,7 @@ class TCD(BaseModel):
         description="Item #1421",
     )
 
-    tcd_4: SN | None = Field(
+    tcd_4: Optional[SN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcd_4",
@@ -65,7 +65,7 @@ class TCD(BaseModel):
         description="Item #1422",
     )
 
-    tcd_5: SN | None = Field(
+    tcd_5: Optional[SN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcd_5",
@@ -77,7 +77,7 @@ class TCD(BaseModel):
         description="Item #1413",
     )
 
-    tcd_6: str | None = Field(
+    tcd_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcd_6",
@@ -89,7 +89,7 @@ class TCD(BaseModel):
         description="Item #1416 | Table HL70136",
     )
 
-    tcd_7: str | None = Field(
+    tcd_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcd_7",
@@ -101,7 +101,7 @@ class TCD(BaseModel):
         description="Item #1424 | Table HL70136",
     )
 
-    tcd_8: CE | None = Field(
+    tcd_8: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcd_8",

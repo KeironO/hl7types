@@ -5,9 +5,9 @@ Version: 2.6
 Class: OPL_O37.OBSERVATION_REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
@@ -16,6 +16,7 @@ from ..segments.OBX import OBX
 from ..segments.ORC import ORC
 from ..segments.ROL import ROL
 from ..segments.TCD import TCD
+
 from .OPL_O37_TIMING import OPL_O37_TIMING
 
 _DG1 = DG1
@@ -52,31 +53,31 @@ class OPL_O37_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    TIMING: list[_OPL_O37_TIMING] | None = Field(
+    TIMING: Optional[List[_OPL_O37_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    TCD: _TCD | None = Field(
+    TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

@@ -5,15 +5,16 @@ Version: 2.6
 Class: ORS_O06.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
 from ..segments.RQ1 import RQ1
 from ..segments.RQD import RQD
+
 from .ORS_O06_TIMING import ORS_O06_TIMING
 
 _NTE = NTE
@@ -40,7 +41,7 @@ class ORS_O06_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: list[_ORS_O06_TIMING] | None = Field(
+    TIMING: Optional[List[_ORS_O06_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -52,13 +53,13 @@ class ORS_O06_ORDER(BaseModel):
         description="Required",
     )
 
-    RQ1: _RQ1 | None = Field(
+    RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

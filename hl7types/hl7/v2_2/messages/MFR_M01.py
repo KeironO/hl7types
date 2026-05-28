@@ -5,12 +5,11 @@ Version: 2.2
 Class: MFR_M01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.MFR_M01_MF import MFR_M01_MF
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MFI import MFI
@@ -18,6 +17,8 @@ from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
+from ..groups.MFR_M01_MF import MFR_M01_MF
 
 _DSC = DSC
 _ERR = ERR
@@ -55,7 +56,7 @@ class MFR_M01(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -67,7 +68,7 @@ class MFR_M01(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
@@ -79,13 +80,13 @@ class MFR_M01(BaseModel):
         description="Required",
     )
 
-    MF: list[_MFR_M01_MF] = Field(
+    MF: List[_MFR_M01_MF] = Field(
         default=...,
         title="MF",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

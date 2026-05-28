@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: ADT_A24
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DB1 import DB1
@@ -55,19 +55,19 @@ class ADT_A24(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    PV1: _PV1 | None = Field(
+    PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    DB1: list[_DB1] | None = Field(
+    DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
         description="Optional, repeating",

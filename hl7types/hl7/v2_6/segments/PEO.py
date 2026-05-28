@@ -5,9 +5,9 @@ Version: 2.6
 Class: PEO
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -20,7 +20,7 @@ from ..datatypes.XTN import XTN
 class PEO(BaseModel):
     """HL7 v2 PEO segment."""
 
-    peo_1: list[CWE] | None = Field(
+    peo_1: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_1",
@@ -32,7 +32,7 @@ class PEO(BaseModel):
         description="Item #1073 | Table HL79999",
     )
 
-    peo_2: list[CWE] | None = Field(
+    peo_2: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_2",
@@ -56,7 +56,7 @@ class PEO(BaseModel):
         description="Item #1075",
     )
 
-    peo_4: str | None = Field(
+    peo_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_4",
@@ -68,7 +68,7 @@ class PEO(BaseModel):
         description="Item #1076",
     )
 
-    peo_5: str | None = Field(
+    peo_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_5",
@@ -80,7 +80,7 @@ class PEO(BaseModel):
         description="Item #1077",
     )
 
-    peo_6: str | None = Field(
+    peo_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_6",
@@ -92,7 +92,7 @@ class PEO(BaseModel):
         description="Item #1078",
     )
 
-    peo_7: list[XAD] | None = Field(
+    peo_7: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_7",
@@ -104,7 +104,7 @@ class PEO(BaseModel):
         description="Item #1079",
     )
 
-    peo_8: list[str] | None = Field(
+    peo_8: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_8",
@@ -116,7 +116,7 @@ class PEO(BaseModel):
         description="Item #1080 | Table HL70237",
     )
 
-    peo_9: str | None = Field(
+    peo_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_9",
@@ -128,7 +128,7 @@ class PEO(BaseModel):
         description="Item #1081 | Table HL70238",
     )
 
-    peo_10: str | None = Field(
+    peo_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_10",
@@ -140,7 +140,7 @@ class PEO(BaseModel):
         description="Item #1082 | Table HL70239",
     )
 
-    peo_11: list[str] | None = Field(
+    peo_11: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_11",
@@ -152,7 +152,7 @@ class PEO(BaseModel):
         description="Item #1083 | Table HL70240",
     )
 
-    peo_12: str | None = Field(
+    peo_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_12",
@@ -164,7 +164,7 @@ class PEO(BaseModel):
         description="Item #1084 | Table HL70241",
     )
 
-    peo_13: list[FT] | None = Field(
+    peo_13: Optional[List[FT]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_13",
@@ -176,7 +176,7 @@ class PEO(BaseModel):
         description="Item #1085",
     )
 
-    peo_14: list[FT] | None = Field(
+    peo_14: Optional[List[FT]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_14",
@@ -188,7 +188,7 @@ class PEO(BaseModel):
         description="Item #1086",
     )
 
-    peo_15: list[FT] | None = Field(
+    peo_15: Optional[List[FT]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_15",
@@ -200,7 +200,7 @@ class PEO(BaseModel):
         description="Item #1087",
     )
 
-    peo_16: list[FT] | None = Field(
+    peo_16: Optional[List[FT]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_16",
@@ -212,7 +212,7 @@ class PEO(BaseModel):
         description="Item #1088",
     )
 
-    peo_17: list[FT] | None = Field(
+    peo_17: Optional[List[FT]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_17",
@@ -224,7 +224,7 @@ class PEO(BaseModel):
         description="Item #1089",
     )
 
-    peo_18: list[CWE] | None = Field(
+    peo_18: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_18",
@@ -236,7 +236,7 @@ class PEO(BaseModel):
         description="Item #1090 | Table HL79999",
     )
 
-    peo_19: list[XPN] | None = Field(
+    peo_19: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_19",
@@ -248,7 +248,7 @@ class PEO(BaseModel):
         description="Item #1091",
     )
 
-    peo_20: list[XAD] | None = Field(
+    peo_20: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_20",
@@ -260,7 +260,7 @@ class PEO(BaseModel):
         description="Item #1092",
     )
 
-    peo_21: list[XTN] | None = Field(
+    peo_21: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_21",
@@ -272,7 +272,7 @@ class PEO(BaseModel):
         description="Item #1093",
     )
 
-    peo_22: str | None = Field(
+    peo_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_22",
@@ -284,7 +284,7 @@ class PEO(BaseModel):
         description="Item #1094 | Table HL70242",
     )
 
-    peo_23: str | None = Field(
+    peo_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_23",
@@ -296,7 +296,7 @@ class PEO(BaseModel):
         description="Item #1095 | Table HL70242",
     )
 
-    peo_24: str | None = Field(
+    peo_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_24",
@@ -308,7 +308,7 @@ class PEO(BaseModel):
         description="Item #1096",
     )
 
-    peo_25: str | None = Field(
+    peo_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_25",

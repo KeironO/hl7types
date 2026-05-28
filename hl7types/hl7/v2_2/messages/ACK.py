@@ -5,9 +5,9 @@ Version: 2.2
 Class: ACK
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ERR import ERR
@@ -40,7 +40,7 @@ class ACK(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",

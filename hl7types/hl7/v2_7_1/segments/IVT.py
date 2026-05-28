@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: IVT
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -43,7 +43,7 @@ class IVT(BaseModel):
         description="Item #2063",
     )
 
-    ivt_3: str | None = Field(
+    ivt_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_3",
@@ -55,7 +55,7 @@ class IVT(BaseModel):
         description="Item #2277",
     )
 
-    ivt_4: EI | None = Field(
+    ivt_4: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_4",
@@ -67,7 +67,7 @@ class IVT(BaseModel):
         description="Item #2064",
     )
 
-    ivt_5: str | None = Field(
+    ivt_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_5",
@@ -79,7 +79,7 @@ class IVT(BaseModel):
         description="Item #2278",
     )
 
-    ivt_6: CWE | None = Field(
+    ivt_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_6",
@@ -91,7 +91,7 @@ class IVT(BaseModel):
         description="Item #2065 | Table HL70625",
     )
 
-    ivt_7: list[EI] | None = Field(
+    ivt_7: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_7",
@@ -103,7 +103,7 @@ class IVT(BaseModel):
         description="Item #2066",
     )
 
-    ivt_8: CWE | None = Field(
+    ivt_8: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_8",
@@ -115,7 +115,7 @@ class IVT(BaseModel):
         description="Item #2067 | Table HL70818",
     )
 
-    ivt_9: CWE | None = Field(
+    ivt_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_9",
@@ -127,7 +127,7 @@ class IVT(BaseModel):
         description="Item #2068",
     )
 
-    ivt_10: EI | None = Field(
+    ivt_10: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_10",
@@ -139,7 +139,7 @@ class IVT(BaseModel):
         description="Item #2069",
     )
 
-    ivt_11: CNE | None = Field(
+    ivt_11: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_11",
@@ -151,7 +151,7 @@ class IVT(BaseModel):
         description="Item #2070 | Table HL70532",
     )
 
-    ivt_12: CWE | None = Field(
+    ivt_12: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_12",
@@ -163,7 +163,7 @@ class IVT(BaseModel):
         description="Item #361 | Table HL70132",
     )
 
-    ivt_13: CP | None = Field(
+    ivt_13: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_13",
@@ -175,7 +175,7 @@ class IVT(BaseModel):
         description="Item #366",
     )
 
-    ivt_14: CWE | None = Field(
+    ivt_14: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_14",
@@ -187,7 +187,7 @@ class IVT(BaseModel):
         description="Item #2073 | Table HL70634",
     )
 
-    ivt_15: CNE | None = Field(
+    ivt_15: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_15",
@@ -199,7 +199,7 @@ class IVT(BaseModel):
         description="Item #2074 | Table HL70532",
     )
 
-    ivt_16: CNE | None = Field(
+    ivt_16: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_16",
@@ -211,7 +211,7 @@ class IVT(BaseModel):
         description="Item #2075 | Table HL70532",
     )
 
-    ivt_17: CNE | None = Field(
+    ivt_17: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_17",
@@ -223,7 +223,7 @@ class IVT(BaseModel):
         description="Item #2076 | Table HL70532",
     )
 
-    ivt_18: CP | None = Field(
+    ivt_18: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_18",
@@ -235,7 +235,7 @@ class IVT(BaseModel):
         description="Item #2077",
     )
 
-    ivt_19: list[EI] | None = Field(
+    ivt_19: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_19",
@@ -247,7 +247,7 @@ class IVT(BaseModel):
         description="Item #2078",
     )
 
-    ivt_20: EI | None = Field(
+    ivt_20: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_20",
@@ -259,7 +259,7 @@ class IVT(BaseModel):
         description="Item #2079",
     )
 
-    ivt_21: CWE | None = Field(
+    ivt_21: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_21",
@@ -271,7 +271,7 @@ class IVT(BaseModel):
         description="Item #2080 | Table HL70642",
     )
 
-    ivt_22: str | None = Field(
+    ivt_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_22",
@@ -283,7 +283,7 @@ class IVT(BaseModel):
         description="Item #2081",
     )
 
-    ivt_23: str | None = Field(
+    ivt_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_23",
@@ -295,7 +295,7 @@ class IVT(BaseModel):
         description="Item #2082",
     )
 
-    ivt_24: str | None = Field(
+    ivt_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_24",
@@ -307,7 +307,7 @@ class IVT(BaseModel):
         description="Item #2083",
     )
 
-    ivt_25: str | None = Field(
+    ivt_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_25",
@@ -319,7 +319,7 @@ class IVT(BaseModel):
         description="Item #2084",
     )
 
-    ivt_26: CNE | None = Field(
+    ivt_26: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivt_26",

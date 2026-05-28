@@ -5,10 +5,10 @@ Version: 2.5
 Class: ORM_O01.OBRRQDRQ1RXOODSODT_SUPPGRP
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class ORM_O01_OBRRQDRQ1RXOODSODT_SUPPGRP(BaseModel):

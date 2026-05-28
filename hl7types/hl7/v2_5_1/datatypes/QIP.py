@@ -5,16 +5,16 @@ Version: 2.5.1
 Class: QIP
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class QIP(BaseModel):
     """HL7 v2 QIP data type."""
 
-    qip_1: str | None = Field(
+    qip_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qip_1",
@@ -25,7 +25,7 @@ class QIP(BaseModel):
         title="Segment Field Name",
     )
 
-    qip_2: str | None = Field(
+    qip_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qip_2",

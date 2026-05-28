@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: RMC
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .MOP import MOP
@@ -16,7 +16,7 @@ from .MOP import MOP
 class RMC(BaseModel):
     """HL7 v2 RMC data type."""
 
-    rmc_1: str | None = Field(
+    rmc_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmc_1",
@@ -27,7 +27,7 @@ class RMC(BaseModel):
         title="Room Type",
     )
 
-    rmc_2: str | None = Field(
+    rmc_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmc_2",
@@ -38,7 +38,7 @@ class RMC(BaseModel):
         title="Amount Type",
     )
 
-    rmc_3: str | None = Field(
+    rmc_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmc_3",
@@ -49,7 +49,7 @@ class RMC(BaseModel):
         title="Coverage Amount",
     )
 
-    rmc_4: MOP | None = Field(
+    rmc_4: Optional[MOP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmc_4",

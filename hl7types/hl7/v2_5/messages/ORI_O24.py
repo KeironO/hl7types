@@ -5,17 +5,18 @@ Version: 2.5
 Class: ORI_O24
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.ORI_O24_RESPONSE import ORI_O24_RESPONSE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
+
+from ..groups.ORI_O24_RESPONSE import ORI_O24_RESPONSE
 
 _ERR = ERR
 _MSA = MSA
@@ -49,25 +50,25 @@ class ORI_O24(BaseModel):
         description="Required",
     )
 
-    ERR: list[_ERR] | None = Field(
+    ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESPONSE: _ORI_O24_RESPONSE | None = Field(
+    RESPONSE: Optional[_ORI_O24_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
         description="Optional",

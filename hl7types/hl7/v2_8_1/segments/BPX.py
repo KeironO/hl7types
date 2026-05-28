@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: BPX
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -70,7 +70,7 @@ class BPX(BaseModel):
         description="Item #1717",
     )
 
-    bpx_5: EI | None = Field(
+    bpx_5: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_5",
@@ -82,7 +82,7 @@ class BPX(BaseModel):
         description="Item #1718",
     )
 
-    bpx_6: CNE | None = Field(
+    bpx_6: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_6",
@@ -94,7 +94,7 @@ class BPX(BaseModel):
         description="Item #1719 | Table HL79999",
     )
 
-    bpx_7: CNE | None = Field(
+    bpx_7: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_7",
@@ -106,7 +106,7 @@ class BPX(BaseModel):
         description="Item #1720 | Table HL79999",
     )
 
-    bpx_8: CWE | None = Field(
+    bpx_8: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_8",
@@ -118,7 +118,7 @@ class BPX(BaseModel):
         description="Item #1721 | Table HL70512",
     )
 
-    bpx_9: XON | None = Field(
+    bpx_9: Optional[XON] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_9",
@@ -130,7 +130,7 @@ class BPX(BaseModel):
         description="Item #1722",
     )
 
-    bpx_10: EI | None = Field(
+    bpx_10: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_10",
@@ -142,7 +142,7 @@ class BPX(BaseModel):
         description="Item #1723",
     )
 
-    bpx_11: CNE | None = Field(
+    bpx_11: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_11",
@@ -154,7 +154,7 @@ class BPX(BaseModel):
         description="Item #1724 | Table HL79999",
     )
 
-    bpx_12: list[CNE] | None = Field(
+    bpx_12: Optional[List[CNE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_12",
@@ -166,7 +166,7 @@ class BPX(BaseModel):
         description="Item #1725 | Table HL79999",
     )
 
-    bpx_13: str | None = Field(
+    bpx_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_13",
@@ -190,7 +190,7 @@ class BPX(BaseModel):
         description="Item #1727",
     )
 
-    bpx_15: str | None = Field(
+    bpx_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_15",
@@ -202,7 +202,7 @@ class BPX(BaseModel):
         description="Item #1728",
     )
 
-    bpx_16: CWE | None = Field(
+    bpx_16: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_16",
@@ -214,7 +214,7 @@ class BPX(BaseModel):
         description="Item #1729 | Table HL79999",
     )
 
-    bpx_17: EI | None = Field(
+    bpx_17: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_17",
@@ -226,7 +226,7 @@ class BPX(BaseModel):
         description="Item #1730",
     )
 
-    bpx_18: PL | None = Field(
+    bpx_18: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_18",
@@ -238,7 +238,7 @@ class BPX(BaseModel):
         description="Item #1731",
     )
 
-    bpx_19: XAD | None = Field(
+    bpx_19: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_19",
@@ -250,7 +250,7 @@ class BPX(BaseModel):
         description="Item #1732",
     )
 
-    bpx_20: XCN | None = Field(
+    bpx_20: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_20",
@@ -262,7 +262,7 @@ class BPX(BaseModel):
         description="Item #1733",
     )
 
-    bpx_21: XCN | None = Field(
+    bpx_21: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bpx_21",

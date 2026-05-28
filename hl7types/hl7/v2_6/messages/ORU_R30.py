@@ -5,14 +5,11 @@ Version: 2.6
 Class: ORU_R30
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.ORU_R30_OBSERVATION import ORU_R30_OBSERVATION
-from ..groups.ORU_R30_TIMING_QTY import ORU_R30_TIMING_QTY
-from ..groups.ORU_R30_VISIT import ORU_R30_VISIT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
@@ -23,6 +20,10 @@ from ..segments.PID import PID
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.ORU_R30_OBSERVATION import ORU_R30_OBSERVATION
+from ..groups.ORU_R30_TIMING_QTY import ORU_R30_TIMING_QTY
+from ..groups.ORU_R30_VISIT import ORU_R30_VISIT
 
 _MSH = MSH
 _NTE = NTE
@@ -64,13 +65,13 @@ class ORU_R30(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -82,19 +83,19 @@ class ORU_R30(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    VISIT: _ORU_R30_VISIT | None = Field(
+    VISIT: Optional[_ORU_R30_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
@@ -112,25 +113,25 @@ class ORU_R30(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: list[_ORU_R30_TIMING_QTY] | None = Field(
+    TIMING_QTY: Optional[List[_ORU_R30_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_ORU_R30_OBSERVATION] = Field(
+    OBSERVATION: List[_ORU_R30_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

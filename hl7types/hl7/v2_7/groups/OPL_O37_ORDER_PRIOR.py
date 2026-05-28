@@ -5,14 +5,15 @@ Version: 2.7
 Class: OPL_O37.ORDER_PRIOR
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
+
 from .OPL_O37_OBSERVATION_RESULT_GROUP import OPL_O37_OBSERVATION_RESULT_GROUP
 from .OPL_O37_TIMING2 import OPL_O37_TIMING2
 
@@ -40,25 +41,25 @@ class OPL_O37_ORDER_PRIOR(BaseModel):
         description="Required",
     )
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING2: _OPL_O37_TIMING2 | None = Field(
+    TIMING2: Optional[_OPL_O37_TIMING2] = Field(
         default=None,
         title="TIMING2",
         description="Optional",
     )
 
-    OBSERVATION_RESULT_GROUP: list[_OPL_O37_OBSERVATION_RESULT_GROUP] = Field(
+    OBSERVATION_RESULT_GROUP: List[_OPL_O37_OBSERVATION_RESULT_GROUP] = Field(
         default=...,
         title="OBSERVATION_RESULT_GROUP",
         description="Required, repeating",

@@ -5,12 +5,11 @@ Version: 2.6
 Class: ADT_A60
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.ADT_A60_VISIT import ADT_A60_VISIT
 from ..segments.ARV import ARV
 from ..segments.EVN import EVN
 from ..segments.IAM import IAM
@@ -18,6 +17,8 @@ from ..segments.MSH import MSH
 from ..segments.PID import PID
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.ADT_A60_VISIT import ADT_A60_VISIT
 
 _ADT_A60_VISIT = ADT_A60_VISIT
 _ARV = ARV
@@ -49,13 +50,13 @@ class ADT_A60(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -73,19 +74,19 @@ class ADT_A60(BaseModel):
         description="Required",
     )
 
-    ARV: list[_ARV] | None = Field(
+    ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    VISIT: _ADT_A60_VISIT | None = Field(
+    VISIT: Optional[_ADT_A60_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
     )
 
-    IAM: list[_IAM] | None = Field(
+    IAM: Optional[List[_IAM]] = Field(
         default=None,
         title="IAM",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: CQU_I19.MEDICATION_ADMINISTRATION_OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
@@ -31,7 +31,7 @@ class CQU_I19_MEDICATION_ADMINISTRATION_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

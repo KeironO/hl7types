@@ -5,13 +5,14 @@ Version: 2.7
 Class: ORB_O28.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BPO import BPO
 from ..segments.ORC import ORC
+
 from .ORB_O28_TIMING import ORB_O28_TIMING
 
 _BPO = BPO
@@ -34,13 +35,13 @@ class ORB_O28_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: list[_ORB_O28_TIMING] | None = Field(
+    TIMING: Optional[List[_ORB_O28_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    BPO: _BPO | None = Field(
+    BPO: Optional[_BPO] = Field(
         default=None,
         title="BPO",
         description="Optional",

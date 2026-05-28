@@ -5,9 +5,9 @@ Version: 2.7
 Class: CX
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -28,7 +28,7 @@ class CX(BaseModel):
         title="ID Number",
     )
 
-    cx_2: str | None = Field(
+    cx_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_2",
@@ -39,7 +39,7 @@ class CX(BaseModel):
         title="Identifier Check Digit",
     )
 
-    cx_3: str | None = Field(
+    cx_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_3",
@@ -50,7 +50,7 @@ class CX(BaseModel):
         title="Check Digit Scheme",
     )
 
-    cx_4: HD | None = Field(
+    cx_4: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_4",
@@ -72,7 +72,7 @@ class CX(BaseModel):
         title="Identifier Type Code",
     )
 
-    cx_6: HD | None = Field(
+    cx_6: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_6",
@@ -83,7 +83,7 @@ class CX(BaseModel):
         title="Assigning Facility",
     )
 
-    cx_7: str | None = Field(
+    cx_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_7",
@@ -94,7 +94,7 @@ class CX(BaseModel):
         title="Effective Date",
     )
 
-    cx_8: str | None = Field(
+    cx_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_8",
@@ -105,7 +105,7 @@ class CX(BaseModel):
         title="Expiration Date",
     )
 
-    cx_9: CWE | None = Field(
+    cx_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_9",
@@ -116,7 +116,7 @@ class CX(BaseModel):
         title="Assigning Jurisdiction",
     )
 
-    cx_10: CWE | None = Field(
+    cx_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_10",
@@ -127,7 +127,7 @@ class CX(BaseModel):
         title="Assigning Agency or Department",
     )
 
-    cx_11: str | None = Field(
+    cx_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_11",
@@ -138,7 +138,7 @@ class CX(BaseModel):
         title="Security Check",
     )
 
-    cx_12: str | None = Field(
+    cx_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cx_12",

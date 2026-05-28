@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OM6
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TX import TX
@@ -16,7 +16,7 @@ from ..datatypes.TX import TX
 class OM6(BaseModel):
     """HL7 v2 OM6 segment."""
 
-    om6_1: str | None = Field(
+    om6_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om6_1",
@@ -28,7 +28,7 @@ class OM6(BaseModel):
         description="Item #586",
     )
 
-    om6_2: TX | None = Field(
+    om6_2: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om6_2",

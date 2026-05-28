@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: DEL_O46.DONOR
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
@@ -16,6 +16,7 @@ from ..segments.NTE import NTE
 from ..segments.OBX import OBX
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
+
 from .DEL_O46_DONOR_REGISTRATION import DEL_O46_DONOR_REGISTRATION
 
 _AL1 = AL1
@@ -46,37 +47,37 @@ class DEL_O46_DONOR(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    ARV: list[_ARV] | None = Field(
+    ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    DONOR_REGISTRATION: _DEL_O46_DONOR_REGISTRATION | None = Field(
+    DONOR_REGISTRATION: Optional[_DEL_O46_DONOR_REGISTRATION] = Field(
         default=None,
         title="DONOR_REGISTRATION",
         description="Optional",

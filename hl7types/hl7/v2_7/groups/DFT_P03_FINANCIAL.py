@@ -5,13 +5,14 @@ Version: 2.7
 Class: DFT_P03.FINANCIAL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.FT1 import FT1
 from ..segments.NTE import NTE
+
 from .DFT_P03_FINANCIAL_COMMON_ORDER import DFT_P03_FINANCIAL_COMMON_ORDER
 from .DFT_P03_FINANCIAL_PROCEDURE import DFT_P03_FINANCIAL_PROCEDURE
 
@@ -37,19 +38,19 @@ class DFT_P03_FINANCIAL(BaseModel):
         description="Required",
     )
 
-    NTE: _NTE | None = Field(
+    NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
         description="Optional",
     )
 
-    FINANCIAL_PROCEDURE: list[_DFT_P03_FINANCIAL_PROCEDURE] | None = Field(
+    FINANCIAL_PROCEDURE: Optional[List[_DFT_P03_FINANCIAL_PROCEDURE]] = Field(
         default=None,
         title="FINANCIAL_PROCEDURE",
         description="Optional, repeating",
     )
 
-    FINANCIAL_COMMON_ORDER: list[_DFT_P03_FINANCIAL_COMMON_ORDER] | None = Field(
+    FINANCIAL_COMMON_ORDER: Optional[List[_DFT_P03_FINANCIAL_COMMON_ORDER]] = Field(
         default=None,
         title="FINANCIAL_COMMON_ORDER",
         description="Optional, repeating",

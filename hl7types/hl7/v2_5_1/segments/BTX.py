@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: BTX
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -34,7 +34,7 @@ class BTX(BaseModel):
         description="Item #1735",
     )
 
-    btx_2: EI | None = Field(
+    btx_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_2",
@@ -46,7 +46,7 @@ class BTX(BaseModel):
         description="Item #1736",
     )
 
-    btx_3: CNE | None = Field(
+    btx_3: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_3",
@@ -58,7 +58,7 @@ class BTX(BaseModel):
         description="Item #1737",
     )
 
-    btx_4: CNE | None = Field(
+    btx_4: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_4",
@@ -70,7 +70,7 @@ class BTX(BaseModel):
         description="Item #1738",
     )
 
-    btx_5: CWE | None = Field(
+    btx_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_5",
@@ -82,7 +82,7 @@ class BTX(BaseModel):
         description="Item #1739 | Table HL70512",
     )
 
-    btx_6: XON | None = Field(
+    btx_6: Optional[XON] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_6",
@@ -94,7 +94,7 @@ class BTX(BaseModel):
         description="Item #1740",
     )
 
-    btx_7: EI | None = Field(
+    btx_7: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_7",
@@ -118,7 +118,7 @@ class BTX(BaseModel):
         description="Item #1742",
     )
 
-    btx_9: str | None = Field(
+    btx_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_9",
@@ -130,7 +130,7 @@ class BTX(BaseModel):
         description="Item #1743",
     )
 
-    btx_10: CE | None = Field(
+    btx_10: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_10",
@@ -178,7 +178,7 @@ class BTX(BaseModel):
         description="Item #1747",
     )
 
-    btx_14: XCN | None = Field(
+    btx_14: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_14",
@@ -190,7 +190,7 @@ class BTX(BaseModel):
         description="Item #1748",
     )
 
-    btx_15: XCN | None = Field(
+    btx_15: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_15",
@@ -202,7 +202,7 @@ class BTX(BaseModel):
         description="Item #1749",
     )
 
-    btx_16: TS | None = Field(
+    btx_16: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_16",
@@ -214,7 +214,7 @@ class BTX(BaseModel):
         description="Item #1750",
     )
 
-    btx_17: TS | None = Field(
+    btx_17: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_17",
@@ -226,7 +226,7 @@ class BTX(BaseModel):
         description="Item #1751",
     )
 
-    btx_18: list[CWE] | None = Field(
+    btx_18: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_18",
@@ -238,7 +238,7 @@ class BTX(BaseModel):
         description="Item #1752 | Table HL70514",
     )
 
-    btx_19: CWE | None = Field(
+    btx_19: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "btx_19",

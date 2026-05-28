@@ -5,12 +5,13 @@ Version: 2.7.1
 Class: PPV_PCA.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .PPV_PCA_ORDER_DETAIL import PPV_PCA_ORDER_DETAIL
 
 _ORC = ORC
@@ -31,7 +32,7 @@ class PPV_PCA_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: _PPV_PCA_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_PPV_PCA_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",

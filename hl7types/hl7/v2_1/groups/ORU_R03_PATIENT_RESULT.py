@@ -5,9 +5,9 @@ Version: 2.1
 Class: ORU_R03.PATIENT_RESULT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .ORU_R03_ORDER_OBSERVATION import ORU_R03_ORDER_OBSERVATION
@@ -25,13 +25,13 @@ class ORU_R03_PATIENT_RESULT(BaseModel):
         ORDER_OBSERVATION (List[ORU_R03_ORDER_OBSERVATION]): required
     """
 
-    PATIENT: _ORU_R03_PATIENT | None = Field(
+    PATIENT: Optional[_ORU_R03_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER_OBSERVATION: list[_ORU_R03_ORDER_OBSERVATION] = Field(
+    ORDER_OBSERVATION: List[_ORU_R03_ORDER_OBSERVATION] = Field(
         default=...,
         title="ORDER_OBSERVATION",
         description="Required, repeating",

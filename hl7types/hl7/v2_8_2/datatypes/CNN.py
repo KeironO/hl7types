@@ -5,16 +5,16 @@ Version: 2.8.2
 Class: CNN
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CNN(BaseModel):
     """HL7 v2 CNN data type."""
 
-    cnn_1: str | None = Field(
+    cnn_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_1",
@@ -25,7 +25,7 @@ class CNN(BaseModel):
         title="ID Number",
     )
 
-    cnn_2: str | None = Field(
+    cnn_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_2",
@@ -36,7 +36,7 @@ class CNN(BaseModel):
         title="Family Name",
     )
 
-    cnn_3: str | None = Field(
+    cnn_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_3",
@@ -47,7 +47,7 @@ class CNN(BaseModel):
         title="Given Name",
     )
 
-    cnn_4: str | None = Field(
+    cnn_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_4",
@@ -58,7 +58,7 @@ class CNN(BaseModel):
         title="Second and Further Given Names or Initials Thereof",
     )
 
-    cnn_5: str | None = Field(
+    cnn_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_5",
@@ -69,7 +69,7 @@ class CNN(BaseModel):
         title="Suffix (e.g., JR or III)",
     )
 
-    cnn_6: str | None = Field(
+    cnn_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_6",
@@ -80,7 +80,7 @@ class CNN(BaseModel):
         title="Prefix (e.g., DR)",
     )
 
-    cnn_7: str | None = Field(
+    cnn_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_7",
@@ -91,7 +91,7 @@ class CNN(BaseModel):
         title="Degree (e.g., MD)",
     )
 
-    cnn_8: str | None = Field(
+    cnn_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_8",
@@ -102,7 +102,7 @@ class CNN(BaseModel):
         title="Source Table",
     )
 
-    cnn_9: str | None = Field(
+    cnn_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_9",
@@ -113,7 +113,7 @@ class CNN(BaseModel):
         title="Assigning Authority   - Namespace ID",
     )
 
-    cnn_10: str | None = Field(
+    cnn_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_10",
@@ -124,7 +124,7 @@ class CNN(BaseModel):
         title="Assigning Authority  - Universal ID",
     )
 
-    cnn_11: str | None = Field(
+    cnn_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cnn_11",

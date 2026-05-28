@@ -5,17 +5,18 @@ Version: 2.5
 Class: SQR_S25
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.SQR_S25_SCHEDULE import SQR_S25_SCHEDULE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QAK import QAK
+
+from ..groups.SQR_S25_SCHEDULE import SQR_S25_SCHEDULE
 
 _DSC = DSC
 _ERR = ERR
@@ -49,7 +50,7 @@ class SQR_S25(BaseModel):
         description="Required",
     )
 
-    ERR: list[_ERR] | None = Field(
+    ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
@@ -61,13 +62,13 @@ class SQR_S25(BaseModel):
         description="Required",
     )
 
-    SCHEDULE: list[_SQR_S25_SCHEDULE] | None = Field(
+    SCHEDULE: Optional[List[_SQR_S25_SCHEDULE]] = Field(
         default=None,
         title="SCHEDULE",
         description="Optional, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

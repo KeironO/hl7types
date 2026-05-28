@@ -5,9 +5,9 @@ Version: 2.4
 Class: PDA
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -20,7 +20,7 @@ from ..datatypes.XCN import XCN
 class PDA(BaseModel):
     """HL7 v2 PDA segment."""
 
-    pda_1: list[CE] | None = Field(
+    pda_1: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_1",
@@ -32,7 +32,7 @@ class PDA(BaseModel):
         description="Item #1574",
     )
 
-    pda_2: PL | None = Field(
+    pda_2: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_2",
@@ -44,7 +44,7 @@ class PDA(BaseModel):
         description="Item #1575",
     )
 
-    pda_3: str | None = Field(
+    pda_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_3",
@@ -56,7 +56,7 @@ class PDA(BaseModel):
         description="Item #1576 | Table HL70136",
     )
 
-    pda_4: TS | None = Field(
+    pda_4: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_4",
@@ -68,7 +68,7 @@ class PDA(BaseModel):
         description="Item #1577",
     )
 
-    pda_5: XCN | None = Field(
+    pda_5: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_5",
@@ -80,7 +80,7 @@ class PDA(BaseModel):
         description="Item #1578",
     )
 
-    pda_6: str | None = Field(
+    pda_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_6",
@@ -92,7 +92,7 @@ class PDA(BaseModel):
         description="Item #1579 | Table HL70136",
     )
 
-    pda_7: DR | None = Field(
+    pda_7: Optional[DR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_7",
@@ -104,7 +104,7 @@ class PDA(BaseModel):
         description="Item #1580",
     )
 
-    pda_8: XCN | None = Field(
+    pda_8: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_8",
@@ -116,7 +116,7 @@ class PDA(BaseModel):
         description="Item #1581",
     )
 
-    pda_9: str | None = Field(
+    pda_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pda_9",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: AIG
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -29,7 +29,7 @@ class AIG(BaseModel):
         description="Item #896",
     )
 
-    aig_2: str | None = Field(
+    aig_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_2",
@@ -41,7 +41,7 @@ class AIG(BaseModel):
         description="Item #763 | Table HL70206",
     )
 
-    aig_3: CE | None = Field(
+    aig_3: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_3",
@@ -65,7 +65,7 @@ class AIG(BaseModel):
         description="Item #898",
     )
 
-    aig_5: list[CE] | None = Field(
+    aig_5: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_5",
@@ -77,7 +77,7 @@ class AIG(BaseModel):
         description="Item #899",
     )
 
-    aig_6: str | None = Field(
+    aig_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_6",
@@ -89,7 +89,7 @@ class AIG(BaseModel):
         description="Item #900",
     )
 
-    aig_7: CE | None = Field(
+    aig_7: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_7",
@@ -101,7 +101,7 @@ class AIG(BaseModel):
         description="Item #901",
     )
 
-    aig_8: TS | None = Field(
+    aig_8: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_8",
@@ -113,7 +113,7 @@ class AIG(BaseModel):
         description="Item #1202",
     )
 
-    aig_9: str | None = Field(
+    aig_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_9",
@@ -125,7 +125,7 @@ class AIG(BaseModel):
         description="Item #891",
     )
 
-    aig_10: CE | None = Field(
+    aig_10: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_10",
@@ -137,7 +137,7 @@ class AIG(BaseModel):
         description="Item #892",
     )
 
-    aig_11: str | None = Field(
+    aig_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_11",
@@ -149,7 +149,7 @@ class AIG(BaseModel):
         description="Item #893",
     )
 
-    aig_12: CE | None = Field(
+    aig_12: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_12",
@@ -161,7 +161,7 @@ class AIG(BaseModel):
         description="Item #894",
     )
 
-    aig_13: str | None = Field(
+    aig_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_13",
@@ -173,7 +173,7 @@ class AIG(BaseModel):
         description="Item #895 | Table HL70279",
     )
 
-    aig_14: CE | None = Field(
+    aig_14: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aig_14",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: SRR_S01.SERVICE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AIS import AIS
@@ -31,7 +31,7 @@ class SRR_S01_SERVICE(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

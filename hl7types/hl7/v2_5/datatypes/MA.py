@@ -5,16 +5,16 @@ Version: 2.5
 Class: MA
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class MA(BaseModel):
     """HL7 v2 MA data type."""
 
-    ma_1: str | None = Field(
+    ma_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ma_1",
@@ -25,7 +25,7 @@ class MA(BaseModel):
         title="Sample 1 From Channel 1",
     )
 
-    ma_2: str | None = Field(
+    ma_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ma_2",
@@ -36,7 +36,7 @@ class MA(BaseModel):
         title="Sample 1 From Channel 2",
     )
 
-    ma_3: str | None = Field(
+    ma_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ma_3",
@@ -47,7 +47,7 @@ class MA(BaseModel):
         title="Sample 1 From Channel N",
     )
 
-    ma_4: str | None = Field(
+    ma_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ma_4",
@@ -58,7 +58,7 @@ class MA(BaseModel):
         title="Sample 2 From Channel 1",
     )
 
-    ma_5: str | None = Field(
+    ma_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ma_5",
@@ -69,7 +69,7 @@ class MA(BaseModel):
         title="Sample 2 From Channel N",
     )
 
-    ma_6: str | None = Field(
+    ma_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ma_6",

@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ADT_A43.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MRG import MRG
@@ -34,7 +34,7 @@ class ADT_A43_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",

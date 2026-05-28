@@ -5,11 +5,9 @@ Version: 2.4
 Class: QVR_Q17
 Type: Message
 """
-
 from __future__ import annotations
 
-from typing import Any
-
+from typing import Optional, Any
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -46,7 +44,7 @@ class QVR_Q17(BaseModel):
         description="Required",
     )
 
-    anyzsegment: Any | None = None
+    anyzsegment: Optional[Any] = None
 
     RCP: _RCP = Field(
         default=...,
@@ -54,7 +52,7 @@ class QVR_Q17(BaseModel):
         description="Required",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

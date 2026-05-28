@@ -5,17 +5,18 @@ Version: 2.8
 Class: DPR_O48
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
 
 from ..groups.DPR_O48_DONATION import DPR_O48_DONATION
 from ..groups.DPR_O48_DONATION_ORDER import DPR_O48_DONATION_ORDER
 from ..groups.DPR_O48_DONOR import DPR_O48_DONOR
-from ..segments.MSH import MSH
-from ..segments.SFT import SFT
-from ..segments.UAC import UAC
 
 _DPR_O48_DONATION = DPR_O48_DONATION
 _DPR_O48_DONATION_ORDER = DPR_O48_DONATION_ORDER
@@ -43,31 +44,31 @@ class DPR_O48(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    DONOR: _DPR_O48_DONOR | None = Field(
+    DONOR: Optional[_DPR_O48_DONOR] = Field(
         default=None,
         title="DONOR",
         description="Optional",
     )
 
-    DONATION_ORDER: list[_DPR_O48_DONATION_ORDER] = Field(
+    DONATION_ORDER: List[_DPR_O48_DONATION_ORDER] = Field(
         default=...,
         title="DONATION_ORDER",
         description="Required, repeating",
     )
 
-    DONATION: _DPR_O48_DONATION | None = Field(
+    DONATION: Optional[_DPR_O48_DONATION] = Field(
         default=None,
         title="DONATION",
         description="Optional",

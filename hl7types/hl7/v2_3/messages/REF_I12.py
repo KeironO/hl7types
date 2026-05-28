@@ -5,17 +5,11 @@ Version: 2.3
 Class: REF_I12
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.REF_I12_AUTHORIZATION import REF_I12_AUTHORIZATION
-from ..groups.REF_I12_INSURANCE import REF_I12_INSURANCE
-from ..groups.REF_I12_PROCEDURE import REF_I12_PROCEDURE
-from ..groups.REF_I12_PROVIDER import REF_I12_PROVIDER
-from ..groups.REF_I12_RESULTS import REF_I12_RESULTS
-from ..groups.REF_I12_VISIT import REF_I12_VISIT
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
@@ -26,6 +20,13 @@ from ..segments.NK1 import NK1
 from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.RF1 import RF1
+
+from ..groups.REF_I12_AUTHORIZATION import REF_I12_AUTHORIZATION
+from ..groups.REF_I12_INSURANCE import REF_I12_INSURANCE
+from ..groups.REF_I12_PROCEDURE import REF_I12_PROCEDURE
+from ..groups.REF_I12_PROVIDER import REF_I12_PROVIDER
+from ..groups.REF_I12_RESULTS import REF_I12_RESULTS
+from ..groups.REF_I12_VISIT import REF_I12_VISIT
 
 _ACC = ACC
 _AL1 = AL1
@@ -73,19 +74,19 @@ class REF_I12(BaseModel):
         description="Required",
     )
 
-    RF1: _RF1 | None = Field(
+    RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
         description="Optional",
     )
 
-    AUTHORIZATION: _REF_I12_AUTHORIZATION | None = Field(
+    AUTHORIZATION: Optional[_REF_I12_AUTHORIZATION] = Field(
         default=None,
         title="AUTHORIZATION",
         description="Optional",
     )
 
-    PROVIDER: list[_REF_I12_PROVIDER] = Field(
+    PROVIDER: List[_REF_I12_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -97,67 +98,67 @@ class REF_I12(BaseModel):
         description="Required",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    GT1: list[_GT1] | None = Field(
+    GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: list[_REF_I12_INSURANCE] | None = Field(
+    INSURANCE: Optional[List[_REF_I12_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ACC: _ACC | None = Field(
+    ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: list[_DRG] | None = Field(
+    DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PROCEDURE: list[_REF_I12_PROCEDURE] | None = Field(
+    PROCEDURE: Optional[List[_REF_I12_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",
     )
 
-    RESULTS: list[_REF_I12_RESULTS] | None = Field(
+    RESULTS: Optional[List[_REF_I12_RESULTS]] = Field(
         default=None,
         title="RESULTS",
         description="Optional, repeating",
     )
 
-    VISIT: _REF_I12_VISIT | None = Field(
+    VISIT: Optional[_REF_I12_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

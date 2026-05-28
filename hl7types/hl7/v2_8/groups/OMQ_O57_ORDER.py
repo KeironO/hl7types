@@ -5,9 +5,9 @@ Version: 2.8
 Class: OMQ_O57.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -19,6 +19,7 @@ from ..segments.OBX import OBX
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
 from ..segments.TXA import TXA
+
 from .OMQ_O57_OBSERVATION import OMQ_O57_OBSERVATION
 from .OMQ_O57_PRIOR_RESULT import OMQ_O57_PRIOR_RESULT
 
@@ -58,7 +59,7 @@ class OMQ_O57_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
@@ -76,43 +77,43 @@ class OMQ_O57_ORDER(BaseModel):
         description="Required",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_OMQ_O57_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_OMQ_O57_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PRIOR_RESULT: list[_OMQ_O57_PRIOR_RESULT] | None = Field(
+    PRIOR_RESULT: Optional[List[_OMQ_O57_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
         description="Optional, repeating",
     )
 
-    FT1: list[_FT1] | None = Field(
+    FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    BLG: _BLG | None = Field(
+    BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
         description="Optional",

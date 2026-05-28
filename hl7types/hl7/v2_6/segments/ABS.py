@@ -5,9 +5,9 @@ Version: 2.6
 Class: ABS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -17,7 +17,7 @@ from ..datatypes.XCN import XCN
 class ABS(BaseModel):
     """HL7 v2 ABS segment."""
 
-    abs_1: XCN | None = Field(
+    abs_1: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_1",
@@ -29,7 +29,7 @@ class ABS(BaseModel):
         description="Item #1514 | Table HL70010",
     )
 
-    abs_2: CWE | None = Field(
+    abs_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_2",
@@ -41,7 +41,7 @@ class ABS(BaseModel):
         description="Item #1515 | Table HL70069",
     )
 
-    abs_3: CWE | None = Field(
+    abs_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_3",
@@ -53,7 +53,7 @@ class ABS(BaseModel):
         description="Item #1516 | Table HL70421",
     )
 
-    abs_4: str | None = Field(
+    abs_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_4",
@@ -65,7 +65,7 @@ class ABS(BaseModel):
         description="Item #1517",
     )
 
-    abs_5: XCN | None = Field(
+    abs_5: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_5",
@@ -77,7 +77,7 @@ class ABS(BaseModel):
         description="Item #1518",
     )
 
-    abs_6: CWE | None = Field(
+    abs_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_6",
@@ -89,7 +89,7 @@ class ABS(BaseModel):
         description="Item #1519 | Table HL70422",
     )
 
-    abs_7: str | None = Field(
+    abs_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_7",
@@ -101,7 +101,7 @@ class ABS(BaseModel):
         description="Item #1520",
     )
 
-    abs_8: XCN | None = Field(
+    abs_8: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_8",
@@ -113,7 +113,7 @@ class ABS(BaseModel):
         description="Item #1521",
     )
 
-    abs_9: CWE | None = Field(
+    abs_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_9",
@@ -125,7 +125,7 @@ class ABS(BaseModel):
         description="Item #1522 | Table HL70423",
     )
 
-    abs_10: str | None = Field(
+    abs_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_10",
@@ -137,7 +137,7 @@ class ABS(BaseModel):
         description="Item #1523 | Table HL70136",
     )
 
-    abs_11: CWE | None = Field(
+    abs_11: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_11",
@@ -149,7 +149,7 @@ class ABS(BaseModel):
         description="Item #1524 | Table HL70424",
     )
 
-    abs_12: str | None = Field(
+    abs_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_12",
@@ -161,7 +161,7 @@ class ABS(BaseModel):
         description="Item #1525",
     )
 
-    abs_13: CWE | None = Field(
+    abs_13: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_13",
@@ -173,7 +173,7 @@ class ABS(BaseModel):
         description="Item #1526 | Table HL70425",
     )
 
-    abs_14: str | None = Field(
+    abs_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "abs_14",

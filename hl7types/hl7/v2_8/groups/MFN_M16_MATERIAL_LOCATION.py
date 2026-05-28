@@ -5,9 +5,9 @@ Version: 2.8
 Class: MFN_M16.MATERIAL_LOCATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ILT import ILT
@@ -34,13 +34,13 @@ class MFN_M16_MATERIAL_LOCATION(BaseModel):
         description="Required",
     )
 
-    ILT: list[_ILT] | None = Field(
+    ILT: Optional[List[_ILT]] = Field(
         default=None,
         title="ILT",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

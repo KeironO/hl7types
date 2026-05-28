@@ -5,12 +5,13 @@ Version: 2.8.1
 Class: ORL_O43.SPECIMEN_CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
+
 from .ORL_O43_ORDER import ORL_O43_ORDER
 
 _ORL_O43_ORDER = ORL_O43_ORDER
@@ -31,7 +32,7 @@ class ORL_O43_SPECIMEN_CONTAINER(BaseModel):
         description="Required",
     )
 
-    ORDER: list[_ORL_O43_ORDER] | None = Field(
+    ORDER: Optional[List[_ORL_O43_ORDER]] = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

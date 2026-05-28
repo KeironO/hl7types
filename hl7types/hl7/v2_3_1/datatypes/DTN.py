@@ -5,16 +5,16 @@ Version: 2.3.1
 Class: DTN
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class DTN(BaseModel):
     """HL7 v2 DTN data type."""
 
-    dtn_1: str | None = Field(
+    dtn_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dtn_1",
@@ -25,7 +25,7 @@ class DTN(BaseModel):
         title="day type",
     )
 
-    dtn_2: str | None = Field(
+    dtn_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dtn_2",

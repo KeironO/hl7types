@@ -5,12 +5,11 @@ Version: 2.6
 Class: RCL_I06
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RCL_I06_PROVIDER import RCL_I06_PROVIDER
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
 from ..segments.DRG import DRG
@@ -24,6 +23,8 @@ from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.RCL_I06_PROVIDER import RCL_I06_PROVIDER
 
 _AL1 = AL1
 _DG1 = DG1
@@ -67,13 +68,13 @@ class RCL_I06(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -91,13 +92,13 @@ class RCL_I06(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PROVIDER: list[_RCL_I06_PROVIDER] = Field(
+    PROVIDER: List[_RCL_I06_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -109,37 +110,37 @@ class RCL_I06(BaseModel):
         description="Required",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: list[_DRG] | None = Field(
+    DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DSP: list[_DSP] | None = Field(
+    DSP: Optional[List[_DSP]] = Field(
         default=None,
         title="DSP",
         description="Optional, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

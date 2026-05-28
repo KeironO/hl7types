@@ -5,16 +5,17 @@ Version: 2.8.1
 Class: ORU_R01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.ORU_R01_PATIENT_RESULT import ORU_R01_PATIENT_RESULT
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.ORU_R01_PATIENT_RESULT import ORU_R01_PATIENT_RESULT
 
 _DSC = DSC
 _MSH = MSH
@@ -40,25 +41,25 @@ class ORU_R01(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    PATIENT_RESULT: list[_ORU_R01_PATIENT_RESULT] = Field(
+    PATIENT_RESULT: List[_ORU_R01_PATIENT_RESULT] = Field(
         default=...,
         title="PATIENT_RESULT",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

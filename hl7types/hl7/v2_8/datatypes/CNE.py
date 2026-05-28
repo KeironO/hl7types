@@ -5,9 +5,9 @@ Version: 2.8
 Class: CNE
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class CNE(BaseModel):
         title="Identifier",
     )
 
-    cne_2: str | None = Field(
+    cne_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_2",
@@ -36,7 +36,7 @@ class CNE(BaseModel):
         title="Text",
     )
 
-    cne_3: str | None = Field(
+    cne_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_3",
@@ -47,7 +47,7 @@ class CNE(BaseModel):
         title="Name of Coding System",
     )
 
-    cne_4: str | None = Field(
+    cne_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_4",
@@ -58,7 +58,7 @@ class CNE(BaseModel):
         title="Alternate Identifier",
     )
 
-    cne_5: str | None = Field(
+    cne_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_5",
@@ -69,7 +69,7 @@ class CNE(BaseModel):
         title="Alternate Text",
     )
 
-    cne_6: str | None = Field(
+    cne_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_6",
@@ -80,7 +80,7 @@ class CNE(BaseModel):
         title="Name of Alternate Coding System",
     )
 
-    cne_7: str | None = Field(
+    cne_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_7",
@@ -91,7 +91,7 @@ class CNE(BaseModel):
         title="Coding System Version ID",
     )
 
-    cne_8: str | None = Field(
+    cne_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_8",
@@ -102,7 +102,7 @@ class CNE(BaseModel):
         title="Alternate Coding System Version ID",
     )
 
-    cne_9: str | None = Field(
+    cne_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_9",
@@ -113,7 +113,7 @@ class CNE(BaseModel):
         title="Original Text",
     )
 
-    cne_10: str | None = Field(
+    cne_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_10",
@@ -124,7 +124,7 @@ class CNE(BaseModel):
         title="Second Alternate Identifier",
     )
 
-    cne_11: str | None = Field(
+    cne_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_11",
@@ -135,7 +135,7 @@ class CNE(BaseModel):
         title="Second Alternate Text",
     )
 
-    cne_12: str | None = Field(
+    cne_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_12",
@@ -146,7 +146,7 @@ class CNE(BaseModel):
         title="Name of Second Alternate Coding System",
     )
 
-    cne_13: str | None = Field(
+    cne_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_13",
@@ -157,7 +157,7 @@ class CNE(BaseModel):
         title="Second Alternate Coding System Version ID",
     )
 
-    cne_14: str | None = Field(
+    cne_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_14",
@@ -168,7 +168,7 @@ class CNE(BaseModel):
         title="Coding System OID",
     )
 
-    cne_15: str | None = Field(
+    cne_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_15",
@@ -179,7 +179,7 @@ class CNE(BaseModel):
         title="Value Set OID",
     )
 
-    cne_16: str | None = Field(
+    cne_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_16",
@@ -190,7 +190,7 @@ class CNE(BaseModel):
         title="Value Set Version ID",
     )
 
-    cne_17: str | None = Field(
+    cne_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_17",
@@ -201,7 +201,7 @@ class CNE(BaseModel):
         title="Alternate Coding System OID",
     )
 
-    cne_18: str | None = Field(
+    cne_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_18",
@@ -212,7 +212,7 @@ class CNE(BaseModel):
         title="Alternate Value Set OID",
     )
 
-    cne_19: str | None = Field(
+    cne_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_19",
@@ -223,7 +223,7 @@ class CNE(BaseModel):
         title="Alternate Value Set Version ID",
     )
 
-    cne_20: str | None = Field(
+    cne_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_20",
@@ -234,7 +234,7 @@ class CNE(BaseModel):
         title="Second Alternate Coding System OID",
     )
 
-    cne_21: str | None = Field(
+    cne_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_21",
@@ -245,7 +245,7 @@ class CNE(BaseModel):
         title="Second Alternate Value Set OID",
     )
 
-    cne_22: str | None = Field(
+    cne_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_22",

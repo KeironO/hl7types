@@ -5,12 +5,13 @@ Version: 2.4
 Class: DFT_P03.COMMON_ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .DFT_P03_OBSERVATION import DFT_P03_OBSERVATION
 from .DFT_P03_ORDER import DFT_P03_ORDER
 
@@ -28,19 +29,19 @@ class DFT_P03_COMMON_ORDER(BaseModel):
         OBSERVATION (Optional[List[DFT_P03_OBSERVATION]]): optional
     """
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    ORDER: _DFT_P03_ORDER | None = Field(
+    ORDER: Optional[_DFT_P03_ORDER] = Field(
         default=None,
         title="ORDER",
         description="Optional",
     )
 
-    OBSERVATION: list[_DFT_P03_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_DFT_P03_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

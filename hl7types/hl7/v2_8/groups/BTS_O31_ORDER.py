@@ -5,15 +5,16 @@ Version: 2.8
 Class: BTS_O31.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BPO import BPO
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
+
 from .BTS_O31_PRODUCT_STATUS import BTS_O31_PRODUCT_STATUS
 from .BTS_O31_TIMING import BTS_O31_TIMING
 
@@ -43,13 +44,13 @@ class BTS_O31_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: list[_BTS_O31_TIMING] | None = Field(
+    TIMING: Optional[List[_BTS_O31_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -61,13 +62,13 @@ class BTS_O31_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRODUCT_STATUS: list[_BTS_O31_PRODUCT_STATUS] | None = Field(
+    PRODUCT_STATUS: Optional[List[_BTS_O31_PRODUCT_STATUS]] = Field(
         default=None,
         title="PRODUCT_STATUS",
         description="Optional, repeating",

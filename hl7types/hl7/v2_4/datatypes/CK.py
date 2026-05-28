@@ -5,9 +5,9 @@ Version: 2.4
 Class: CK
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .HD import HD
@@ -16,7 +16,7 @@ from .HD import HD
 class CK(BaseModel):
     """HL7 v2 CK data type."""
 
-    ck_1: str | None = Field(
+    ck_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_1",
@@ -27,7 +27,7 @@ class CK(BaseModel):
         title="ID number (NM)",
     )
 
-    ck_2: str | None = Field(
+    ck_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_2",
@@ -38,7 +38,7 @@ class CK(BaseModel):
         title="check digit (NM)",
     )
 
-    ck_3: str | None = Field(
+    ck_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_3",
@@ -49,7 +49,7 @@ class CK(BaseModel):
         title="code identifying the check digit scheme employed",
     )
 
-    ck_4: HD | None = Field(
+    ck_4: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_4",

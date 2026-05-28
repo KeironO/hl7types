@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: SDD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -17,7 +17,7 @@ from ..datatypes.EI import EI
 class SDD(BaseModel):
     """HL7 v2 SDD segment."""
 
-    sdd_1: EI | None = Field(
+    sdd_1: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sdd_1",
@@ -29,7 +29,7 @@ class SDD(BaseModel):
         description="Item #2098",
     )
 
-    sdd_2: EI | None = Field(
+    sdd_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sdd_2",
@@ -41,7 +41,7 @@ class SDD(BaseModel):
         description="Item #2099",
     )
 
-    sdd_3: str | None = Field(
+    sdd_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sdd_3",
@@ -53,7 +53,7 @@ class SDD(BaseModel):
         description="Item #2281",
     )
 
-    sdd_4: CWE | None = Field(
+    sdd_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sdd_4",
@@ -65,7 +65,7 @@ class SDD(BaseModel):
         description="Item #2100 | Table HL70667",
     )
 
-    sdd_5: CWE | None = Field(
+    sdd_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sdd_5",
@@ -77,7 +77,7 @@ class SDD(BaseModel):
         description="Item #2101 | Table HL70669",
     )
 
-    sdd_6: str | None = Field(
+    sdd_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sdd_6",
@@ -89,7 +89,7 @@ class SDD(BaseModel):
         description="Item #2102",
     )
 
-    sdd_7: str | None = Field(
+    sdd_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sdd_7",

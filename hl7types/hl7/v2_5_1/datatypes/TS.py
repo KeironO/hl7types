@@ -5,16 +5,16 @@ Version: 2.5.1
 Class: TS
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class TS(BaseModel):
     """HL7 v2 TS data type."""
 
-    ts_1: str | None = Field(
+    ts_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ts_1",
@@ -25,7 +25,7 @@ class TS(BaseModel):
         title="Time",
     )
 
-    ts_2: str | None = Field(
+    ts_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ts_2",

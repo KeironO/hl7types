@@ -5,14 +5,15 @@ Version: 2.7.1
 Class: RDS_O13.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
 from ..segments.NTE import NTE
 from ..segments.PID import PID
+
 from .RDS_O13_ADDITIONAL_DEMOGRAPHICS import RDS_O13_ADDITIONAL_DEMOGRAPHICS
 from .RDS_O13_PATIENT_VISIT import RDS_O13_PATIENT_VISIT
 
@@ -40,25 +41,25 @@ class RDS_O13_PATIENT(BaseModel):
         description="Required",
     )
 
-    ADDITIONAL_DEMOGRAPHICS: _RDS_O13_ADDITIONAL_DEMOGRAPHICS | None = Field(
+    ADDITIONAL_DEMOGRAPHICS: Optional[_RDS_O13_ADDITIONAL_DEMOGRAPHICS] = Field(
         default=None,
         title="ADDITIONAL_DEMOGRAPHICS",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: _RDS_O13_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_RDS_O13_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",

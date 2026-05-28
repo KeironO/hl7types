@@ -5,9 +5,9 @@ Version: 2.8
 Class: ITM
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -33,7 +33,7 @@ class ITM(BaseModel):
         description="Item #2186",
     )
 
-    itm_2: str | None = Field(
+    itm_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_2",
@@ -45,7 +45,7 @@ class ITM(BaseModel):
         description="Item #2274",
     )
 
-    itm_3: CWE | None = Field(
+    itm_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_3",
@@ -57,7 +57,7 @@ class ITM(BaseModel):
         description="Item #2187 | Table HL70776",
     )
 
-    itm_4: CWE | None = Field(
+    itm_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_4",
@@ -69,7 +69,7 @@ class ITM(BaseModel):
         description="Item #2188 | Table HL70778",
     )
 
-    itm_5: CWE | None = Field(
+    itm_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_5",
@@ -81,7 +81,7 @@ class ITM(BaseModel):
         description="Item #2189",
     )
 
-    itm_6: CNE | None = Field(
+    itm_6: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_6",
@@ -93,7 +93,7 @@ class ITM(BaseModel):
         description="Item #2190 | Table HL70532",
     )
 
-    itm_7: EI | None = Field(
+    itm_7: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_7",
@@ -105,7 +105,7 @@ class ITM(BaseModel):
         description="Item #2191",
     )
 
-    itm_8: str | None = Field(
+    itm_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_8",
@@ -117,7 +117,7 @@ class ITM(BaseModel):
         description="Item #2275",
     )
 
-    itm_9: str | None = Field(
+    itm_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_9",
@@ -129,7 +129,7 @@ class ITM(BaseModel):
         description="Item #2192",
     )
 
-    itm_10: CWE | None = Field(
+    itm_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_10",
@@ -141,7 +141,7 @@ class ITM(BaseModel):
         description="Item #2193",
     )
 
-    itm_11: CNE | None = Field(
+    itm_11: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_11",
@@ -153,7 +153,7 @@ class ITM(BaseModel):
         description="Item #2070 | Table HL70532",
     )
 
-    itm_12: CWE | None = Field(
+    itm_12: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_12",
@@ -165,7 +165,7 @@ class ITM(BaseModel):
         description="Item #361 | Table HL70132",
     )
 
-    itm_13: CP | None = Field(
+    itm_13: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_13",
@@ -177,7 +177,7 @@ class ITM(BaseModel):
         description="Item #366",
     )
 
-    itm_14: CNE | None = Field(
+    itm_14: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_14",
@@ -189,7 +189,7 @@ class ITM(BaseModel):
         description="Item #2197 | Table HL70532",
     )
 
-    itm_15: CWE | None = Field(
+    itm_15: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_15",
@@ -201,7 +201,7 @@ class ITM(BaseModel):
         description="Item #2266 | Table HL70871",
     )
 
-    itm_16: list[XON] | None = Field(
+    itm_16: Optional[List[XON]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_16",
@@ -213,7 +213,7 @@ class ITM(BaseModel):
         description="Item #2199 | Table HL70790",
     )
 
-    itm_17: CNE | None = Field(
+    itm_17: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_17",
@@ -225,7 +225,7 @@ class ITM(BaseModel):
         description="Item #2200 | Table HL70532",
     )
 
-    itm_18: list[CWE] | None = Field(
+    itm_18: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_18",
@@ -237,7 +237,7 @@ class ITM(BaseModel):
         description="Item #2201 | Table HL70793",
     )
 
-    itm_19: CWE | None = Field(
+    itm_19: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_19",
@@ -249,7 +249,7 @@ class ITM(BaseModel):
         description="Item #282 | Table HL70320",
     )
 
-    itm_20: str | None = Field(
+    itm_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_20",
@@ -261,7 +261,7 @@ class ITM(BaseModel):
         description="Item #2203",
     )
 
-    itm_21: MO | None = Field(
+    itm_21: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_21",
@@ -273,7 +273,7 @@ class ITM(BaseModel):
         description="Item #2204",
     )
 
-    itm_22: CNE | None = Field(
+    itm_22: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_22",
@@ -285,7 +285,7 @@ class ITM(BaseModel):
         description="Item #2205 | Table HL70532",
     )
 
-    itm_23: CNE | None = Field(
+    itm_23: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_23",
@@ -297,7 +297,7 @@ class ITM(BaseModel):
         description="Item #2206 | Table HL70532",
     )
 
-    itm_24: CNE | None = Field(
+    itm_24: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_24",
@@ -309,7 +309,7 @@ class ITM(BaseModel):
         description="Item #2207 | Table HL70532",
     )
 
-    itm_25: EI | None = Field(
+    itm_25: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_25",
@@ -321,7 +321,7 @@ class ITM(BaseModel):
         description="Item #2208",
     )
 
-    itm_26: CNE | None = Field(
+    itm_26: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_26",
@@ -333,7 +333,7 @@ class ITM(BaseModel):
         description="Item #2209 | Table HL70532",
     )
 
-    itm_27: CNE | None = Field(
+    itm_27: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_27",
@@ -345,7 +345,7 @@ class ITM(BaseModel):
         description="Item #393 | Table HL70088",
     )
 
-    itm_28: list[CNE] | None = Field(
+    itm_28: Optional[List[CNE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_28",
@@ -357,7 +357,7 @@ class ITM(BaseModel):
         description="Item #1316 | Table HL70340",
     )
 
-    itm_29: CWE | None = Field(
+    itm_29: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_29",
@@ -369,7 +369,7 @@ class ITM(BaseModel):
         description="Item #1370 | Table HL70376",
     )
 
-    itm_30: CNE | None = Field(
+    itm_30: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_30",
@@ -381,7 +381,7 @@ class ITM(BaseModel):
         description="Item #3388 | Table HL70532",
     )
 
-    itm_31: CNE | None = Field(
+    itm_31: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_31",
@@ -393,7 +393,7 @@ class ITM(BaseModel):
         description="Item #3304 | Table HL70532",
     )
 
-    itm_32: EI | None = Field(
+    itm_32: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_32",
@@ -405,7 +405,7 @@ class ITM(BaseModel):
         description="Item #3305",
     )
 
-    itm_33: CWE | None = Field(
+    itm_33: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "itm_33",

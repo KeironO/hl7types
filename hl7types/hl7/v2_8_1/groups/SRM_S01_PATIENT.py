@@ -5,15 +5,16 @@ Version: 2.8.1
 Class: SRM_S01.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
 from ..segments.PID import PID
 from ..segments.PV1 import PV1
 from ..segments.PV2 import PV2
+
 from .SRM_S01_OBSERVATION import SRM_S01_OBSERVATION
 
 _DG1 = DG1
@@ -40,25 +41,25 @@ class SRM_S01_PATIENT(BaseModel):
         description="Required",
     )
 
-    PV1: _PV1 | None = Field(
+    PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    OBSERVATION: list[_SRM_S01_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_SRM_S01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",

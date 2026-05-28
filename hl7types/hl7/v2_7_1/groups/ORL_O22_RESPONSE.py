@@ -5,13 +5,14 @@ Version: 2.7.1
 Class: ORL_O22.RESPONSE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
 from ..segments.PRT import PRT
+
 from .ORL_O22_ORDER import ORL_O22_ORDER
 
 _ORL_O22_ORDER = ORL_O22_ORDER
@@ -34,13 +35,13 @@ class ORL_O22_RESPONSE(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ORDER: list[_ORL_O22_ORDER] | None = Field(
+    ORDER: Optional[List[_ORL_O22_ORDER]] = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

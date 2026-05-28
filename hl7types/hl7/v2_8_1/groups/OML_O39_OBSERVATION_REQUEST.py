@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OML_O39.OBSERVATION_REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -16,6 +16,7 @@ from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.PRT import PRT
 from ..segments.TCD import TCD
+
 from .OML_O39_OBSERVATION import OML_O39_OBSERVATION
 from .OML_O39_SPECIMEN_SHIPMENT import OML_O39_SPECIMEN_SHIPMENT
 
@@ -49,43 +50,43 @@ class OML_O39_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    TCD: _TCD | None = Field(
+    TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_OML_O39_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_OML_O39_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    SPECIMEN_SHIPMENT: list[_OML_O39_SPECIMEN_SHIPMENT] | None = Field(
+    SPECIMEN_SHIPMENT: Optional[List[_OML_O39_SPECIMEN_SHIPMENT]] = Field(
         default=None,
         title="SPECIMEN_SHIPMENT",
         description="Optional, repeating",

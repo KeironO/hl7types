@@ -5,9 +5,9 @@ Version: 2.6
 Class: EHC_E01.PATIENT_INFO
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ACC import ACC
@@ -15,6 +15,7 @@ from ..segments.OBX import OBX
 from ..segments.PID import PID
 from ..segments.PV1 import PV1
 from ..segments.PV2 import PV2
+
 from .EHC_E01_DIAGNOSIS import EHC_E01_DIAGNOSIS
 from .EHC_E01_INSURANCE import EHC_E01_INSURANCE
 
@@ -46,37 +47,37 @@ class EHC_E01_PATIENT_INFO(BaseModel):
         description="Required",
     )
 
-    PV1: _PV1 | None = Field(
+    PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    ACC: list[_ACC] | None = Field(
+    ACC: Optional[List[_ACC]] = Field(
         default=None,
         title="ACC",
         description="Optional, repeating",
     )
 
-    INSURANCE: list[_EHC_E01_INSURANCE] = Field(
+    INSURANCE: List[_EHC_E01_INSURANCE] = Field(
         default=...,
         title="INSURANCE",
         description="Required, repeating",
     )
 
-    DIAGNOSIS: list[_EHC_E01_DIAGNOSIS] | None = Field(
+    DIAGNOSIS: Optional[List[_EHC_E01_DIAGNOSIS]] = Field(
         default=None,
         title="DIAGNOSIS",
         description="Optional, repeating",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

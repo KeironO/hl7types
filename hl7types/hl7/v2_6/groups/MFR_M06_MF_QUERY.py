@@ -5,13 +5,14 @@ Version: 2.6
 Class: MFR_M06.MF_QUERY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CM0 import CM0
 from ..segments.MFE import MFE
+
 from .MFR_M06_MF_PHASE_SCHED_DETAIL import MFR_M06_MF_PHASE_SCHED_DETAIL
 
 _CM0 = CM0
@@ -40,7 +41,7 @@ class MFR_M06_MF_QUERY(BaseModel):
         description="Required",
     )
 
-    MF_PHASE_SCHED_DETAIL: list[_MFR_M06_MF_PHASE_SCHED_DETAIL] | None = Field(
+    MF_PHASE_SCHED_DETAIL: Optional[List[_MFR_M06_MF_PHASE_SCHED_DETAIL]] = Field(
         default=None,
         title="MF_PHASE_SCHED_DETAIL",
         description="Optional, repeating",

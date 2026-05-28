@@ -5,10 +5,10 @@ Version: 2.6
 Class: QBP_E03.QUERY_INFORMATION
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class QBP_E03_QUERY_INFORMATION(BaseModel):

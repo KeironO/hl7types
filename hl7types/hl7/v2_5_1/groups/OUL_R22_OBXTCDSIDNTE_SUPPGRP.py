@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: OUL_R22.OBXTCDSIDNTE_SUPPGRP
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -37,19 +37,19 @@ class OUL_R22_OBXTCDSIDNTE_SUPPGRP(BaseModel):
         description="Required",
     )
 
-    TCD: _TCD | None = Field(
+    TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    SID: list[_SID] | None = Field(
+    SID: Optional[List[_SID]] = Field(
         default=None,
         title="SID",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

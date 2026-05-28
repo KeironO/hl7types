@@ -5,9 +5,9 @@ Version: 2.5
 Class: PR1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -31,7 +31,7 @@ class PR1(BaseModel):
         description="Item #391",
     )
 
-    pr1_2: str | None = Field(
+    pr1_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_2",
@@ -55,7 +55,7 @@ class PR1(BaseModel):
         description="Item #393 | Table HL70088",
     )
 
-    pr1_4: str | None = Field(
+    pr1_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_4",
@@ -79,7 +79,7 @@ class PR1(BaseModel):
         description="Item #395",
     )
 
-    pr1_6: str | None = Field(
+    pr1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_6",
@@ -91,7 +91,7 @@ class PR1(BaseModel):
         description="Item #396 | Table HL70230",
     )
 
-    pr1_7: str | None = Field(
+    pr1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_7",
@@ -103,7 +103,7 @@ class PR1(BaseModel):
         description="Item #397",
     )
 
-    pr1_8: list[XCN] | None = Field(
+    pr1_8: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_8",
@@ -115,7 +115,7 @@ class PR1(BaseModel):
         description="Item #398 | Table HL70010",
     )
 
-    pr1_9: str | None = Field(
+    pr1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_9",
@@ -127,7 +127,7 @@ class PR1(BaseModel):
         description="Item #399 | Table HL70019",
     )
 
-    pr1_10: str | None = Field(
+    pr1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_10",
@@ -139,7 +139,7 @@ class PR1(BaseModel):
         description="Item #400",
     )
 
-    pr1_11: list[XCN] | None = Field(
+    pr1_11: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_11",
@@ -151,7 +151,7 @@ class PR1(BaseModel):
         description="Item #401 | Table HL70010",
     )
 
-    pr1_12: list[XCN] | None = Field(
+    pr1_12: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_12",
@@ -163,7 +163,7 @@ class PR1(BaseModel):
         description="Item #402 | Table HL70010",
     )
 
-    pr1_13: CE | None = Field(
+    pr1_13: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_13",
@@ -175,7 +175,7 @@ class PR1(BaseModel):
         description="Item #403 | Table HL70059",
     )
 
-    pr1_14: str | None = Field(
+    pr1_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_14",
@@ -187,7 +187,7 @@ class PR1(BaseModel):
         description="Item #404 | Table HL70418",
     )
 
-    pr1_15: CE | None = Field(
+    pr1_15: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_15",
@@ -199,7 +199,7 @@ class PR1(BaseModel):
         description="Item #772 | Table HL70051",
     )
 
-    pr1_16: list[CE] | None = Field(
+    pr1_16: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_16",
@@ -211,7 +211,7 @@ class PR1(BaseModel):
         description="Item #1316 | Table HL70340",
     )
 
-    pr1_17: str | None = Field(
+    pr1_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_17",
@@ -223,7 +223,7 @@ class PR1(BaseModel):
         description="Item #1501 | Table HL70416",
     )
 
-    pr1_18: list[CE] | None = Field(
+    pr1_18: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_18",
@@ -235,7 +235,7 @@ class PR1(BaseModel):
         description="Item #1502 | Table HL70417",
     )
 
-    pr1_19: EI | None = Field(
+    pr1_19: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_19",
@@ -247,7 +247,7 @@ class PR1(BaseModel):
         description="Item #1848",
     )
 
-    pr1_20: str | None = Field(
+    pr1_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pr1_20",

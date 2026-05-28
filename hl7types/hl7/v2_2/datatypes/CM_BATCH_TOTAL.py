@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_BATCH_TOTAL
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_BATCH_TOTAL(BaseModel):
     """HL7 v2 CM_BATCH_TOTAL data type."""
 
-    cm_batch_total_1: str | None = Field(
+    cm_batch_total_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_batch_total_1",
@@ -25,7 +25,7 @@ class CM_BATCH_TOTAL(BaseModel):
         title="Batch total 1",
     )
 
-    cm_batch_total_2: str | None = Field(
+    cm_batch_total_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_batch_total_2",

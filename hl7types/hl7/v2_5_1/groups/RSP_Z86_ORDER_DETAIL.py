@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: RSP_Z86.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
@@ -34,13 +34,13 @@ class RSP_Z86_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: list[_RXC] | None = Field(
+    RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

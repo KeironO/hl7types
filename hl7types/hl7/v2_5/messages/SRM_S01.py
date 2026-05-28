@@ -5,17 +5,18 @@ Version: 2.5
 Class: SRM_S01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.SRM_S01_PATIENT import SRM_S01_PATIENT
-from ..groups.SRM_S01_RESOURCES import SRM_S01_RESOURCES
 from ..segments.APR import APR
 from ..segments.ARQ import ARQ
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
+
+from ..groups.SRM_S01_PATIENT import SRM_S01_PATIENT
+from ..groups.SRM_S01_RESOURCES import SRM_S01_RESOURCES
 
 _APR = APR
 _ARQ = ARQ
@@ -49,25 +50,25 @@ class SRM_S01(BaseModel):
         description="Required",
     )
 
-    APR: _APR | None = Field(
+    APR: Optional[_APR] = Field(
         default=None,
         title="APR",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: list[_SRM_S01_PATIENT] | None = Field(
+    PATIENT: Optional[List[_SRM_S01_PATIENT]] = Field(
         default=None,
         title="PATIENT",
         description="Optional, repeating",
     )
 
-    RESOURCES: list[_SRM_S01_RESOURCES] = Field(
+    RESOURCES: List[_SRM_S01_RESOURCES] = Field(
         default=...,
         title="RESOURCES",
         description="Required, repeating",

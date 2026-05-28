@@ -5,9 +5,9 @@ Version: 2.7
 Class: STF
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -25,7 +25,7 @@ from ..datatypes.XTN import XTN
 class STF(BaseModel):
     """HL7 v2 STF segment."""
 
-    stf_1: CWE | None = Field(
+    stf_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_1",
@@ -37,7 +37,7 @@ class STF(BaseModel):
         description="Item #671 | Table HL79999",
     )
 
-    stf_2: list[CX] | None = Field(
+    stf_2: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_2",
@@ -49,7 +49,7 @@ class STF(BaseModel):
         description="Item #672 | Table HL70061",
     )
 
-    stf_3: list[XPN] | None = Field(
+    stf_3: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_3",
@@ -61,7 +61,7 @@ class STF(BaseModel):
         description="Item #673",
     )
 
-    stf_4: list[CWE] | None = Field(
+    stf_4: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_4",
@@ -73,7 +73,7 @@ class STF(BaseModel):
         description="Item #674 | Table HL70182",
     )
 
-    stf_5: CWE | None = Field(
+    stf_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_5",
@@ -85,7 +85,7 @@ class STF(BaseModel):
         description="Item #111 | Table HL70001",
     )
 
-    stf_6: str | None = Field(
+    stf_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_6",
@@ -97,7 +97,7 @@ class STF(BaseModel):
         description="Item #110",
     )
 
-    stf_7: str | None = Field(
+    stf_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_7",
@@ -109,7 +109,7 @@ class STF(BaseModel):
         description="Item #675 | Table HL70183",
     )
 
-    stf_8: list[CWE] | None = Field(
+    stf_8: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_8",
@@ -121,7 +121,7 @@ class STF(BaseModel):
         description="Item #676 | Table HL70184",
     )
 
-    stf_9: list[CWE] | None = Field(
+    stf_9: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_9",
@@ -133,7 +133,7 @@ class STF(BaseModel):
         description="Item #677 | Table HL70069",
     )
 
-    stf_10: list[XTN] | None = Field(
+    stf_10: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_10",
@@ -145,7 +145,7 @@ class STF(BaseModel):
         description="Item #678",
     )
 
-    stf_11: list[XAD] | None = Field(
+    stf_11: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_11",
@@ -157,7 +157,7 @@ class STF(BaseModel):
         description="Item #679",
     )
 
-    stf_12: list[DIN] | None = Field(
+    stf_12: Optional[List[DIN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_12",
@@ -169,7 +169,7 @@ class STF(BaseModel):
         description="Item #680 | Table HL70537",
     )
 
-    stf_13: list[DIN] | None = Field(
+    stf_13: Optional[List[DIN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_13",
@@ -181,7 +181,7 @@ class STF(BaseModel):
         description="Item #681 | Table HL70537",
     )
 
-    stf_14: list[CWE] | None = Field(
+    stf_14: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_14",
@@ -193,7 +193,7 @@ class STF(BaseModel):
         description="Item #682",
     )
 
-    stf_15: list[str] | None = Field(
+    stf_15: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_15",
@@ -205,7 +205,7 @@ class STF(BaseModel):
         description="Item #683",
     )
 
-    stf_16: CWE | None = Field(
+    stf_16: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_16",
@@ -217,7 +217,7 @@ class STF(BaseModel):
         description="Item #684 | Table HL70185",
     )
 
-    stf_17: CWE | None = Field(
+    stf_17: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_17",
@@ -229,7 +229,7 @@ class STF(BaseModel):
         description="Item #119 | Table HL70002",
     )
 
-    stf_18: str | None = Field(
+    stf_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_18",
@@ -241,7 +241,7 @@ class STF(BaseModel):
         description="Item #785",
     )
 
-    stf_19: JCC | None = Field(
+    stf_19: Optional[JCC] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_19",
@@ -253,7 +253,7 @@ class STF(BaseModel):
         description="Item #786 | Table HL70327",
     )
 
-    stf_20: CWE | None = Field(
+    stf_20: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_20",
@@ -265,7 +265,7 @@ class STF(BaseModel):
         description="Item #1276 | Table HL70066",
     )
 
-    stf_21: str | None = Field(
+    stf_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_21",
@@ -277,7 +277,7 @@ class STF(BaseModel):
         description="Item #1275 | Table HL70136",
     )
 
-    stf_22: DLN | None = Field(
+    stf_22: Optional[DLN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_22",
@@ -289,7 +289,7 @@ class STF(BaseModel):
         description="Item #1302",
     )
 
-    stf_23: str | None = Field(
+    stf_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_23",
@@ -301,7 +301,7 @@ class STF(BaseModel):
         description="Item #1229 | Table HL70136",
     )
 
-    stf_24: str | None = Field(
+    stf_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_24",
@@ -313,7 +313,7 @@ class STF(BaseModel):
         description="Item #1232",
     )
 
-    stf_25: str | None = Field(
+    stf_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_25",
@@ -325,7 +325,7 @@ class STF(BaseModel):
         description="Item #1298",
     )
 
-    stf_26: str | None = Field(
+    stf_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_26",
@@ -337,7 +337,7 @@ class STF(BaseModel):
         description="Item #1234",
     )
 
-    stf_27: CWE | None = Field(
+    stf_27: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_27",
@@ -349,7 +349,7 @@ class STF(BaseModel):
         description="Item #113 | Table HL70005",
     )
 
-    stf_28: CWE | None = Field(
+    stf_28: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_28",
@@ -361,7 +361,7 @@ class STF(BaseModel):
         description="Item #125 | Table HL70189",
     )
 
-    stf_29: str | None = Field(
+    stf_29: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_29",
@@ -373,7 +373,7 @@ class STF(BaseModel):
         description="Item #1596 | Table HL70136",
     )
 
-    stf_30: list[CWE] | None = Field(
+    stf_30: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_30",
@@ -385,7 +385,7 @@ class STF(BaseModel):
         description="Item #129 | Table HL70171",
     )
 
-    stf_31: str | None = Field(
+    stf_31: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_31",
@@ -397,7 +397,7 @@ class STF(BaseModel):
         description="Item #1886",
     )
 
-    stf_32: str | None = Field(
+    stf_32: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_32",
@@ -409,7 +409,7 @@ class STF(BaseModel):
         description="Item #1887 | Table HL70136",
     )
 
-    stf_33: CWE | None = Field(
+    stf_33: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_33",
@@ -421,7 +421,7 @@ class STF(BaseModel):
         description="Item #1888 | Table HL70538",
     )
 
-    stf_34: DR | None = Field(
+    stf_34: Optional[DR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_34",
@@ -433,7 +433,7 @@ class STF(BaseModel):
         description="Item #1889",
     )
 
-    stf_35: str | None = Field(
+    stf_35: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_35",
@@ -445,7 +445,7 @@ class STF(BaseModel):
         description="Item #1890",
     )
 
-    stf_36: list[CWE] | None = Field(
+    stf_36: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_36",
@@ -457,7 +457,7 @@ class STF(BaseModel):
         description="Item #1891 | Table HL70539",
     )
 
-    stf_37: str | None = Field(
+    stf_37: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_37",
@@ -469,7 +469,7 @@ class STF(BaseModel):
         description="Item #1892 | Table HL70136",
     )
 
-    stf_38: CWE | None = Field(
+    stf_38: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_38",
@@ -481,7 +481,7 @@ class STF(BaseModel):
         description="Item #1893 | Table HL70540",
     )
 
-    stf_39: list[CWE] | None = Field(
+    stf_39: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_39",
@@ -493,7 +493,7 @@ class STF(BaseModel):
         description="Item #2184 | Table HL70771",
     )
 
-    stf_40: CWE | None = Field(
+    stf_40: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_40",
@@ -505,7 +505,7 @@ class STF(BaseModel):
         description="Item #120 | Table HL70006",
     )
 
-    stf_41: ED | None = Field(
+    stf_41: Optional[ED] = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_41",

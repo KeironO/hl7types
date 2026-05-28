@@ -5,13 +5,14 @@ Version: 2.8
 Class: CCM_I21.GOAL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GOL import GOL
 from ..segments.VAR import VAR
+
 from .CCM_I21_GOAL_OBSERVATION import CCM_I21_GOAL_OBSERVATION
 from .CCM_I21_ROLE_GOAL import CCM_I21_ROLE_GOAL
 
@@ -37,19 +38,19 @@ class CCM_I21_GOAL(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_GOAL: list[_CCM_I21_ROLE_GOAL] | None = Field(
+    ROLE_GOAL: Optional[List[_CCM_I21_ROLE_GOAL]] = Field(
         default=None,
         title="ROLE_GOAL",
         description="Optional, repeating",
     )
 
-    GOAL_OBSERVATION: list[_CCM_I21_GOAL_OBSERVATION] | None = Field(
+    GOAL_OBSERVATION: Optional[List[_CCM_I21_GOAL_OBSERVATION]] = Field(
         default=None,
         title="GOAL_OBSERVATION",
         description="Optional, repeating",

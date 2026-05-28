@@ -5,10 +5,10 @@ Version: 2.8.1
 Class: QRD
 Type: Segment
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import AliasChoices, BaseModel, Field
 
 
 class QRD(BaseModel):

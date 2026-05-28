@@ -5,9 +5,9 @@ Version: 2.2
 Class: ACC
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TS import TS
@@ -16,7 +16,7 @@ from ..datatypes.TS import TS
 class ACC(BaseModel):
     """HL7 v2 ACC segment."""
 
-    acc_1: TS | None = Field(
+    acc_1: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_1",
@@ -28,7 +28,7 @@ class ACC(BaseModel):
         description="Item #527",
     )
 
-    acc_2: str | None = Field(
+    acc_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_2",
@@ -40,7 +40,7 @@ class ACC(BaseModel):
         description="Item #528 | Table HL70050",
     )
 
-    acc_3: str | None = Field(
+    acc_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_3",

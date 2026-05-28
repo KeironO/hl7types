@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: GP2
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -17,7 +17,7 @@ from ..datatypes.CWE import CWE
 class GP2(BaseModel):
     """HL7 v2 GP2 segment."""
 
-    gp2_1: CWE | None = Field(
+    gp2_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_1",
@@ -29,7 +29,7 @@ class GP2(BaseModel):
         description="Item #1600 | Table HL70456",
     )
 
-    gp2_2: str | None = Field(
+    gp2_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_2",
@@ -41,7 +41,7 @@ class GP2(BaseModel):
         description="Item #1604",
     )
 
-    gp2_3: CP | None = Field(
+    gp2_3: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_3",
@@ -53,7 +53,7 @@ class GP2(BaseModel):
         description="Item #1605",
     )
 
-    gp2_4: CWE | None = Field(
+    gp2_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_4",
@@ -65,7 +65,7 @@ class GP2(BaseModel):
         description="Item #1606 | Table HL70459",
     )
 
-    gp2_5: CWE | None = Field(
+    gp2_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_5",
@@ -77,7 +77,7 @@ class GP2(BaseModel):
         description="Item #1607 | Table HL70460",
     )
 
-    gp2_6: list[CWE] | None = Field(
+    gp2_6: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_6",
@@ -89,7 +89,7 @@ class GP2(BaseModel):
         description="Item #1608 | Table HL70458",
     )
 
-    gp2_7: CWE | None = Field(
+    gp2_7: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_7",
@@ -101,7 +101,7 @@ class GP2(BaseModel):
         description="Item #1609 | Table HL70466",
     )
 
-    gp2_8: list[CWE] | None = Field(
+    gp2_8: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_8",
@@ -113,7 +113,7 @@ class GP2(BaseModel):
         description="Item #1610 | Table HL70467",
     )
 
-    gp2_9: CWE | None = Field(
+    gp2_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_9",
@@ -125,7 +125,7 @@ class GP2(BaseModel):
         description="Item #1611 | Table HL70468",
     )
 
-    gp2_10: CWE | None = Field(
+    gp2_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_10",
@@ -137,7 +137,7 @@ class GP2(BaseModel):
         description="Item #1617 | Table HL70469",
     )
 
-    gp2_11: CP | None = Field(
+    gp2_11: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_11",
@@ -149,7 +149,7 @@ class GP2(BaseModel):
         description="Item #1618",
     )
 
-    gp2_12: CWE | None = Field(
+    gp2_12: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_12",
@@ -161,7 +161,7 @@ class GP2(BaseModel):
         description="Item #1619 | Table HL70470",
     )
 
-    gp2_13: CP | None = Field(
+    gp2_13: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_13",
@@ -173,7 +173,7 @@ class GP2(BaseModel):
         description="Item #1620",
     )
 
-    gp2_14: str | None = Field(
+    gp2_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "gp2_14",

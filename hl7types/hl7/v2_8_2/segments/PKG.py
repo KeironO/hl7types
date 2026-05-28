@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: PKG
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -30,7 +30,7 @@ class PKG(BaseModel):
         description="Item #2221",
     )
 
-    pkg_2: CWE | None = Field(
+    pkg_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pkg_2",
@@ -42,7 +42,7 @@ class PKG(BaseModel):
         description="Item #2222 | Table HL70818",
     )
 
-    pkg_3: CNE | None = Field(
+    pkg_3: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pkg_3",
@@ -54,7 +54,7 @@ class PKG(BaseModel):
         description="Item #2223 | Table HL70532",
     )
 
-    pkg_4: str | None = Field(
+    pkg_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pkg_4",
@@ -66,7 +66,7 @@ class PKG(BaseModel):
         description="Item #2224",
     )
 
-    pkg_5: CP | None = Field(
+    pkg_5: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pkg_5",
@@ -78,7 +78,7 @@ class PKG(BaseModel):
         description="Item #2225",
     )
 
-    pkg_6: CP | None = Field(
+    pkg_6: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pkg_6",
@@ -90,7 +90,7 @@ class PKG(BaseModel):
         description="Item #2226",
     )
 
-    pkg_7: str | None = Field(
+    pkg_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pkg_7",
@@ -102,7 +102,7 @@ class PKG(BaseModel):
         description="Item #2227",
     )
 
-    pkg_8: CWE | None = Field(
+    pkg_8: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pkg_8",

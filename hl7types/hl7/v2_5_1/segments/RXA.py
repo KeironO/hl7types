@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: RXA
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -92,7 +92,7 @@ class RXA(BaseModel):
         description="Item #348",
     )
 
-    rxa_7: CE | None = Field(
+    rxa_7: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_7",
@@ -104,7 +104,7 @@ class RXA(BaseModel):
         description="Item #349",
     )
 
-    rxa_8: CE | None = Field(
+    rxa_8: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_8",
@@ -116,7 +116,7 @@ class RXA(BaseModel):
         description="Item #350",
     )
 
-    rxa_9: list[CE] | None = Field(
+    rxa_9: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_9",
@@ -128,7 +128,7 @@ class RXA(BaseModel):
         description="Item #351",
     )
 
-    rxa_10: list[XCN] | None = Field(
+    rxa_10: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_10",
@@ -140,7 +140,7 @@ class RXA(BaseModel):
         description="Item #352",
     )
 
-    rxa_11: LA2 | None = Field(
+    rxa_11: Optional[LA2] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_11",
@@ -152,7 +152,7 @@ class RXA(BaseModel):
         description="Item #353",
     )
 
-    rxa_12: str | None = Field(
+    rxa_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_12",
@@ -164,7 +164,7 @@ class RXA(BaseModel):
         description="Item #354",
     )
 
-    rxa_13: str | None = Field(
+    rxa_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_13",
@@ -176,7 +176,7 @@ class RXA(BaseModel):
         description="Item #1134",
     )
 
-    rxa_14: CE | None = Field(
+    rxa_14: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_14",
@@ -188,7 +188,7 @@ class RXA(BaseModel):
         description="Item #1135",
     )
 
-    rxa_15: list[str] | None = Field(
+    rxa_15: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_15",
@@ -200,7 +200,7 @@ class RXA(BaseModel):
         description="Item #1129",
     )
 
-    rxa_16: list[TS] | None = Field(
+    rxa_16: Optional[List[TS]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_16",
@@ -212,7 +212,7 @@ class RXA(BaseModel):
         description="Item #1130",
     )
 
-    rxa_17: list[CE] | None = Field(
+    rxa_17: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_17",
@@ -224,7 +224,7 @@ class RXA(BaseModel):
         description="Item #1131 | Table HL70227",
     )
 
-    rxa_18: list[CE] | None = Field(
+    rxa_18: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_18",
@@ -236,7 +236,7 @@ class RXA(BaseModel):
         description="Item #1136",
     )
 
-    rxa_19: list[CE] | None = Field(
+    rxa_19: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_19",
@@ -248,7 +248,7 @@ class RXA(BaseModel):
         description="Item #1123",
     )
 
-    rxa_20: str | None = Field(
+    rxa_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_20",
@@ -260,7 +260,7 @@ class RXA(BaseModel):
         description="Item #1223 | Table HL70322",
     )
 
-    rxa_21: str | None = Field(
+    rxa_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_21",
@@ -272,7 +272,7 @@ class RXA(BaseModel):
         description="Item #1224 | Table HL70323",
     )
 
-    rxa_22: TS | None = Field(
+    rxa_22: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_22",
@@ -284,7 +284,7 @@ class RXA(BaseModel):
         description="Item #1225",
     )
 
-    rxa_23: str | None = Field(
+    rxa_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_23",
@@ -296,7 +296,7 @@ class RXA(BaseModel):
         description="Item #1696",
     )
 
-    rxa_24: CWE | None = Field(
+    rxa_24: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_24",
@@ -308,7 +308,7 @@ class RXA(BaseModel):
         description="Item #1697",
     )
 
-    rxa_25: CWE | None = Field(
+    rxa_25: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_25",
@@ -320,7 +320,7 @@ class RXA(BaseModel):
         description="Item #1698",
     )
 
-    rxa_26: str | None = Field(
+    rxa_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_26",

@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: CSU_C09.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ARV import ARV
@@ -16,6 +16,7 @@ from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.PRT import PRT
+
 from .CSU_C09_STUDY_PHASE import CSU_C09_STUDY_PHASE
 from .CSU_C09_VISIT import CSU_C09_VISIT
 
@@ -49,31 +50,31 @@ class CSU_C09_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ARV: list[_ARV] | None = Field(
+    ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VISIT: _CSU_C09_VISIT | None = Field(
+    VISIT: Optional[_CSU_C09_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
@@ -85,7 +86,7 @@ class CSU_C09_PATIENT(BaseModel):
         description="Required",
     )
 
-    STUDY_PHASE: list[_CSU_C09_STUDY_PHASE] = Field(
+    STUDY_PHASE: List[_CSU_C09_STUDY_PHASE] = Field(
         default=...,
         title="STUDY_PHASE",
         description="Required, repeating",

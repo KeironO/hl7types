@@ -5,9 +5,9 @@ Version: 2.4
 Class: NST
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TS import TS
@@ -28,7 +28,7 @@ class NST(BaseModel):
         description="Item #1173 | Table HL70136",
     )
 
-    nst_2: str | None = Field(
+    nst_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_2",
@@ -40,7 +40,7 @@ class NST(BaseModel):
         description="Item #1174",
     )
 
-    nst_3: str | None = Field(
+    nst_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_3",
@@ -52,7 +52,7 @@ class NST(BaseModel):
         description="Item #1175 | Table HL70332",
     )
 
-    nst_4: TS | None = Field(
+    nst_4: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_4",
@@ -64,7 +64,7 @@ class NST(BaseModel):
         description="Item #1176",
     )
 
-    nst_5: TS | None = Field(
+    nst_5: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_5",
@@ -76,7 +76,7 @@ class NST(BaseModel):
         description="Item #1177",
     )
 
-    nst_6: str | None = Field(
+    nst_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_6",
@@ -88,7 +88,7 @@ class NST(BaseModel):
         description="Item #1178",
     )
 
-    nst_7: str | None = Field(
+    nst_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_7",
@@ -100,7 +100,7 @@ class NST(BaseModel):
         description="Item #1179",
     )
 
-    nst_8: str | None = Field(
+    nst_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_8",
@@ -112,7 +112,7 @@ class NST(BaseModel):
         description="Item #1180",
     )
 
-    nst_9: str | None = Field(
+    nst_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_9",
@@ -124,7 +124,7 @@ class NST(BaseModel):
         description="Item #1181",
     )
 
-    nst_10: str | None = Field(
+    nst_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_10",
@@ -136,7 +136,7 @@ class NST(BaseModel):
         description="Item #1182",
     )
 
-    nst_11: str | None = Field(
+    nst_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_11",
@@ -148,7 +148,7 @@ class NST(BaseModel):
         description="Item #1183",
     )
 
-    nst_12: str | None = Field(
+    nst_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_12",
@@ -160,7 +160,7 @@ class NST(BaseModel):
         description="Item #1184",
     )
 
-    nst_13: str | None = Field(
+    nst_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_13",
@@ -172,7 +172,7 @@ class NST(BaseModel):
         description="Item #1185",
     )
 
-    nst_14: str | None = Field(
+    nst_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_14",
@@ -184,7 +184,7 @@ class NST(BaseModel):
         description="Item #1186",
     )
 
-    nst_15: str | None = Field(
+    nst_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nst_15",

@@ -5,16 +5,17 @@ Version: 2.3
 Class: RRD_O02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RRD_O02_PATIENT import RRD_O02_PATIENT
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
+
+from ..groups.RRD_O02_PATIENT import RRD_O02_PATIENT
 
 _ERR = ERR
 _MSA = MSA
@@ -46,19 +47,19 @@ class RRD_O02(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: _RRD_O02_PATIENT | None = Field(
+    PATIENT: Optional[_RRD_O02_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",

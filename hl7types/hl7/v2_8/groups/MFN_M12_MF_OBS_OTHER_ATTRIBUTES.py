@@ -5,9 +5,9 @@ Version: 2.8
 Class: MFN_M12.MF_OBS_OTHER_ATTRIBUTES
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OM7 import OM7
@@ -31,7 +31,7 @@ class MFN_M12_MF_OBS_OTHER_ATTRIBUTES(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

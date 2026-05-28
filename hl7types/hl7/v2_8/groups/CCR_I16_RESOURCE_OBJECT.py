@@ -5,10 +5,10 @@ Version: 2.8
 Class: CCR_I16.RESOURCE_OBJECT
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class CCR_I16_RESOURCE_OBJECT(BaseModel):

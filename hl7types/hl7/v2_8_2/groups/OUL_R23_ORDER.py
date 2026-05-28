@@ -5,15 +5,16 @@ Version: 2.8.2
 Class: OUL_R23.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.PRT import PRT
+
 from .OUL_R23_COMMON_ORDER import OUL_R23_COMMON_ORDER
 from .OUL_R23_RESULT import OUL_R23_RESULT
 from .OUL_R23_TIMING_QTY import OUL_R23_TIMING_QTY
@@ -46,37 +47,37 @@ class OUL_R23_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    COMMON_ORDER: _OUL_R23_COMMON_ORDER | None = Field(
+    COMMON_ORDER: Optional[_OUL_R23_COMMON_ORDER] = Field(
         default=None,
         title="COMMON_ORDER",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: list[_OUL_R23_TIMING_QTY] | None = Field(
+    TIMING_QTY: Optional[List[_OUL_R23_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    RESULT: list[_OUL_R23_RESULT] | None = Field(
+    RESULT: Optional[List[_OUL_R23_RESULT]] = Field(
         default=None,
         title="RESULT",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

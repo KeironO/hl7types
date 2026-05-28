@@ -5,10 +5,10 @@ Version: 2.7.1
 Class: EHC_E15.PAYMENT_REMITTANCE_HEADER_INFO
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO(BaseModel):

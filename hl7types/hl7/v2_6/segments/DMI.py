@@ -5,9 +5,9 @@ Version: 2.6
 Class: DMI
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -17,7 +17,7 @@ from ..datatypes.NR import NR
 class DMI(BaseModel):
     """HL7 v2 DMI segment."""
 
-    dmi_1: CNE | None = Field(
+    dmi_1: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dmi_1",
@@ -29,7 +29,7 @@ class DMI(BaseModel):
         description="Item #382 | Table HL70055",
     )
 
-    dmi_2: CNE | None = Field(
+    dmi_2: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dmi_2",
@@ -41,7 +41,7 @@ class DMI(BaseModel):
         description="Item #381 | Table HL70118",
     )
 
-    dmi_3: NR | None = Field(
+    dmi_3: Optional[NR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dmi_3",
@@ -53,7 +53,7 @@ class DMI(BaseModel):
         description="Item #2231",
     )
 
-    dmi_4: str | None = Field(
+    dmi_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dmi_4",
@@ -65,7 +65,7 @@ class DMI(BaseModel):
         description="Item #2232",
     )
 
-    dmi_5: str | None = Field(
+    dmi_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dmi_5",

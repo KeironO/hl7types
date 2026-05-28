@@ -5,13 +5,14 @@ Version: 2.2
 Class: ORR_O02.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
+
 from .ORR_O02_ORDER_DETAIL import ORR_O02_ORDER_DETAIL
 
 _NTE = NTE
@@ -34,13 +35,13 @@ class ORR_O02_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: _ORR_O02_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_ORR_O02_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

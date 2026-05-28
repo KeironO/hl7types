@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: OUL_R21.CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
@@ -31,7 +31,7 @@ class OUL_R21_CONTAINER(BaseModel):
         description="Required",
     )
 
-    SID: _SID | None = Field(
+    SID: Optional[_SID] = Field(
         default=None,
         title="SID",
         description="Optional",

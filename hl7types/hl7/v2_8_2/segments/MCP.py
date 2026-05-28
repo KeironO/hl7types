@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: MCP
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -41,7 +41,7 @@ class MCP(BaseModel):
         description="Item #587",
     )
 
-    mcp_3: MO | None = Field(
+    mcp_3: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mcp_3",
@@ -53,7 +53,7 @@ class MCP(BaseModel):
         description="Item #3469",
     )
 
-    mcp_4: MO | None = Field(
+    mcp_4: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mcp_4",
@@ -65,7 +65,7 @@ class MCP(BaseModel):
         description="Item #3470",
     )
 
-    mcp_5: str | None = Field(
+    mcp_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mcp_5",

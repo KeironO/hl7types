@@ -5,9 +5,9 @@ Version: 2.6
 Class: ED
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .HD import HD
@@ -17,7 +17,7 @@ from .TX import TX
 class ED(BaseModel):
     """HL7 v2 ED data type."""
 
-    ed_1: HD | None = Field(
+    ed_1: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ed_1",
@@ -39,7 +39,7 @@ class ED(BaseModel):
         title="Type of Data",
     )
 
-    ed_3: str | None = Field(
+    ed_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ed_3",

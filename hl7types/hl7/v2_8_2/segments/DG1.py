@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: DG1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -42,7 +42,7 @@ class DG1(BaseModel):
         description="Item #377 | Table HL70051",
     )
 
-    dg1_5: str | None = Field(
+    dg1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_5",
@@ -66,7 +66,7 @@ class DG1(BaseModel):
         description="Item #380 | Table HL70052",
     )
 
-    dg1_15: str | None = Field(
+    dg1_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_15",
@@ -78,7 +78,7 @@ class DG1(BaseModel):
         description="Item #389 | Table HL70359",
     )
 
-    dg1_16: list[XCN] | None = Field(
+    dg1_16: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_16",
@@ -90,7 +90,7 @@ class DG1(BaseModel):
         description="Item #390",
     )
 
-    dg1_17: CWE | None = Field(
+    dg1_17: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_17",
@@ -102,7 +102,7 @@ class DG1(BaseModel):
         description="Item #766 | Table HL70228",
     )
 
-    dg1_18: str | None = Field(
+    dg1_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_18",
@@ -114,7 +114,7 @@ class DG1(BaseModel):
         description="Item #767 | Table HL70136",
     )
 
-    dg1_19: str | None = Field(
+    dg1_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_19",
@@ -126,7 +126,7 @@ class DG1(BaseModel):
         description="Item #768",
     )
 
-    dg1_20: EI | None = Field(
+    dg1_20: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_20",
@@ -138,7 +138,7 @@ class DG1(BaseModel):
         description="Item #1850",
     )
 
-    dg1_21: str | None = Field(
+    dg1_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_21",
@@ -150,7 +150,7 @@ class DG1(BaseModel):
         description="Item #1894 | Table HL70206",
     )
 
-    dg1_22: EI | None = Field(
+    dg1_22: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_22",
@@ -162,7 +162,7 @@ class DG1(BaseModel):
         description="Item #2152",
     )
 
-    dg1_23: CWE | None = Field(
+    dg1_23: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_23",
@@ -174,7 +174,7 @@ class DG1(BaseModel):
         description="Item #2153 | Table HL70728",
     )
 
-    dg1_24: str | None = Field(
+    dg1_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_24",
@@ -186,7 +186,7 @@ class DG1(BaseModel):
         description="Item #2154 | Table HL70136",
     )
 
-    dg1_25: CWE | None = Field(
+    dg1_25: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_25",
@@ -198,7 +198,7 @@ class DG1(BaseModel):
         description="Item #2155 | Table HL70731",
     )
 
-    dg1_26: CWE | None = Field(
+    dg1_26: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dg1_26",

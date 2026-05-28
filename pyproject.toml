@@ -46,6 +46,7 @@ dev = [
 
 [tool.ruff]
 line-length = 100
+exclude = ["hl7types/hl7/**"]
 
 [tool.ruff.lint]
 select = ["E", "F", "I", "UP"]

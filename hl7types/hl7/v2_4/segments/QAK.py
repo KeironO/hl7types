@@ -5,9 +5,9 @@ Version: 2.4
 Class: QAK
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -16,7 +16,7 @@ from ..datatypes.CE import CE
 class QAK(BaseModel):
     """HL7 v2 QAK segment."""
 
-    qak_1: str | None = Field(
+    qak_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qak_1",
@@ -28,7 +28,7 @@ class QAK(BaseModel):
         description="Item #696",
     )
 
-    qak_2: str | None = Field(
+    qak_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qak_2",
@@ -40,7 +40,7 @@ class QAK(BaseModel):
         description="Item #708 | Table HL70208",
     )
 
-    qak_3: CE | None = Field(
+    qak_3: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qak_3",
@@ -52,7 +52,7 @@ class QAK(BaseModel):
         description="Item #1375 | Table HL70471",
     )
 
-    qak_4: str | None = Field(
+    qak_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qak_4",
@@ -64,7 +64,7 @@ class QAK(BaseModel):
         description="Item #1434",
     )
 
-    qak_5: str | None = Field(
+    qak_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qak_5",
@@ -76,7 +76,7 @@ class QAK(BaseModel):
         description="Item #1622",
     )
 
-    qak_6: str | None = Field(
+    qak_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qak_6",

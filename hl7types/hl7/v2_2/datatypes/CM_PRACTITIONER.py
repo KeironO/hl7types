@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_PRACTITIONER
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PRACTITIONER(BaseModel):
     """HL7 v2 CM_PRACTITIONER data type."""
 
-    cm_practitioner_1: str | None = Field(
+    cm_practitioner_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_practitioner_1",
@@ -25,7 +25,7 @@ class CM_PRACTITIONER(BaseModel):
         title="Procedure Practitioner  ID",
     )
 
-    cm_practitioner_2: str | None = Field(
+    cm_practitioner_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_practitioner_2",

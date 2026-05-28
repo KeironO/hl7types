@@ -5,11 +5,9 @@ Version: 2.5
 Class: RTB_Knn
 Type: Message
 """
-
 from __future__ import annotations
 
-from typing import Any
-
+from typing import Optional, List, Any
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -49,7 +47,7 @@ class RTB_Knn(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -61,7 +59,7 @@ class RTB_Knn(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -81,7 +79,7 @@ class RTB_Knn(BaseModel):
 
     anyhl7segment: Any
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

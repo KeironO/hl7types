@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OPU_R25.CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.INV import INV
@@ -31,7 +31,7 @@ class OPU_R25_CONTAINER(BaseModel):
         description="Required",
     )
 
-    INV: _INV | None = Field(
+    INV: Optional[_INV] = Field(
         default=None,
         title="INV",
         description="Optional",

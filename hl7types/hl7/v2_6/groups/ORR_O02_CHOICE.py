@@ -5,10 +5,10 @@ Version: 2.6
 Class: ORR_O02.CHOICE
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class ORR_O02_CHOICE(BaseModel):

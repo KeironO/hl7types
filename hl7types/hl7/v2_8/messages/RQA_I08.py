@@ -5,17 +5,11 @@ Version: 2.8
 Class: RQA_I08
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RQA_I08_AUTHORIZATION import RQA_I08_AUTHORIZATION
-from ..groups.RQA_I08_GUARANTOR_INSURANCE import RQA_I08_GUARANTOR_INSURANCE
-from ..groups.RQA_I08_OBSERVATION import RQA_I08_OBSERVATION
-from ..groups.RQA_I08_PROCEDURE import RQA_I08_PROCEDURE
-from ..groups.RQA_I08_PROVIDER import RQA_I08_PROVIDER
-from ..groups.RQA_I08_VISIT import RQA_I08_VISIT
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
@@ -27,6 +21,13 @@ from ..segments.PID import PID
 from ..segments.RF1 import RF1
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.RQA_I08_AUTHORIZATION import RQA_I08_AUTHORIZATION
+from ..groups.RQA_I08_GUARANTOR_INSURANCE import RQA_I08_GUARANTOR_INSURANCE
+from ..groups.RQA_I08_OBSERVATION import RQA_I08_OBSERVATION
+from ..groups.RQA_I08_PROCEDURE import RQA_I08_PROCEDURE
+from ..groups.RQA_I08_PROVIDER import RQA_I08_PROVIDER
+from ..groups.RQA_I08_VISIT import RQA_I08_VISIT
 
 _ACC = ACC
 _AL1 = AL1
@@ -76,31 +77,31 @@ class RQA_I08(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    RF1: _RF1 | None = Field(
+    RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
         description="Optional",
     )
 
-    AUTHORIZATION: _RQA_I08_AUTHORIZATION | None = Field(
+    AUTHORIZATION: Optional[_RQA_I08_AUTHORIZATION] = Field(
         default=None,
         title="AUTHORIZATION",
         description="Optional",
     )
 
-    PROVIDER: list[_RQA_I08_PROVIDER] = Field(
+    PROVIDER: List[_RQA_I08_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -112,61 +113,61 @@ class RQA_I08(BaseModel):
         description="Required",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    GUARANTOR_INSURANCE: _RQA_I08_GUARANTOR_INSURANCE | None = Field(
+    GUARANTOR_INSURANCE: Optional[_RQA_I08_GUARANTOR_INSURANCE] = Field(
         default=None,
         title="GUARANTOR_INSURANCE",
         description="Optional",
     )
 
-    ACC: _ACC | None = Field(
+    ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: list[_DRG] | None = Field(
+    DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PROCEDURE: list[_RQA_I08_PROCEDURE] | None = Field(
+    PROCEDURE: Optional[List[_RQA_I08_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_RQA_I08_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_RQA_I08_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    VISIT: _RQA_I08_VISIT | None = Field(
+    VISIT: Optional[_RQA_I08_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

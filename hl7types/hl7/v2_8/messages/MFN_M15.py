@@ -5,16 +5,17 @@ Version: 2.8
 Class: MFN_M15
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.MFN_M15_MF_INV_ITEM import MFN_M15_MF_INV_ITEM
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.MFN_M15_MF_INV_ITEM import MFN_M15_MF_INV_ITEM
 
 _MFI = MFI
 _MFN_M15_MF_INV_ITEM = MFN_M15_MF_INV_ITEM
@@ -40,13 +41,13 @@ class MFN_M15(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -58,7 +59,7 @@ class MFN_M15(BaseModel):
         description="Required",
     )
 
-    MF_INV_ITEM: list[_MFN_M15_MF_INV_ITEM] = Field(
+    MF_INV_ITEM: List[_MFN_M15_MF_INV_ITEM] = Field(
         default=...,
         title="MF_INV_ITEM",
         description="Required, repeating",

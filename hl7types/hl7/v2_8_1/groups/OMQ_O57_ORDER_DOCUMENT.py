@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OMQ_O57.ORDER_DOCUMENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -49,19 +49,19 @@ class OMQ_O57_ORDER_DOCUMENT(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TXA: _TXA | None = Field(
+    TXA: Optional[_TXA] = Field(
         default=None,
         title="TXA",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

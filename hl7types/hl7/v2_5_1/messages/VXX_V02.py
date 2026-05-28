@@ -5,17 +5,18 @@ Version: 2.5.1
 Class: VXX_V02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.VXX_V02_PATIENT import VXX_V02_PATIENT
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
+
+from ..groups.VXX_V02_PATIENT import VXX_V02_PATIENT
 
 _MSA = MSA
 _MSH = MSH
@@ -49,7 +50,7 @@ class VXX_V02(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -61,13 +62,13 @@ class VXX_V02(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PATIENT: list[_VXX_V02_PATIENT] = Field(
+    PATIENT: List[_VXX_V02_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: CDM
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -31,7 +31,7 @@ class CDM(BaseModel):
         description="Item #1306 | Table HL70132",
     )
 
-    cdm_2: list[CWE] | None = Field(
+    cdm_2: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_2",
@@ -55,7 +55,7 @@ class CDM(BaseModel):
         description="Item #984",
     )
 
-    cdm_4: str | None = Field(
+    cdm_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_4",
@@ -67,7 +67,7 @@ class CDM(BaseModel):
         description="Item #985",
     )
 
-    cdm_5: str | None = Field(
+    cdm_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_5",
@@ -79,7 +79,7 @@ class CDM(BaseModel):
         description="Item #986 | Table HL70268",
     )
 
-    cdm_6: list[CWE] | None = Field(
+    cdm_6: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_6",
@@ -91,7 +91,7 @@ class CDM(BaseModel):
         description="Item #987 | Table HL70132",
     )
 
-    cdm_7: list[CNE] | None = Field(
+    cdm_7: Optional[List[CNE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_7",
@@ -103,7 +103,7 @@ class CDM(BaseModel):
         description="Item #393 | Table HL70088",
     )
 
-    cdm_8: str | None = Field(
+    cdm_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_8",
@@ -115,7 +115,7 @@ class CDM(BaseModel):
         description="Item #675 | Table HL70183",
     )
 
-    cdm_9: list[CWE] | None = Field(
+    cdm_9: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_9",
@@ -127,7 +127,7 @@ class CDM(BaseModel):
         description="Item #990 | Table HL70463",
     )
 
-    cdm_10: str | None = Field(
+    cdm_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_10",
@@ -139,7 +139,7 @@ class CDM(BaseModel):
         description="Item #991",
     )
 
-    cdm_11: list[CX] | None = Field(
+    cdm_11: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_11",
@@ -151,7 +151,7 @@ class CDM(BaseModel):
         description="Item #992",
     )
 
-    cdm_12: list[XON] | None = Field(
+    cdm_12: Optional[List[XON]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_12",
@@ -163,7 +163,7 @@ class CDM(BaseModel):
         description="Item #993",
     )
 
-    cdm_13: str | None = Field(
+    cdm_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdm_13",

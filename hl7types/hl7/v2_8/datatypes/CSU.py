@@ -5,9 +5,9 @@ Version: 2.8
 Class: CSU
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class CSU(BaseModel):
         title="Channel Sensitivity",
     )
 
-    csu_2: str | None = Field(
+    csu_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_2",
@@ -36,7 +36,7 @@ class CSU(BaseModel):
         title="Unit of Measure Identifier",
     )
 
-    csu_3: str | None = Field(
+    csu_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_3",
@@ -47,7 +47,7 @@ class CSU(BaseModel):
         title="Unit of Measure Description",
     )
 
-    csu_4: str | None = Field(
+    csu_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_4",
@@ -58,7 +58,7 @@ class CSU(BaseModel):
         title="Unit of Measure Coding System",
     )
 
-    csu_5: str | None = Field(
+    csu_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_5",
@@ -69,7 +69,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Identifier",
     )
 
-    csu_6: str | None = Field(
+    csu_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_6",
@@ -80,7 +80,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Description",
     )
 
-    csu_7: str | None = Field(
+    csu_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_7",
@@ -91,7 +91,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Coding System",
     )
 
-    csu_8: str | None = Field(
+    csu_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_8",
@@ -102,7 +102,7 @@ class CSU(BaseModel):
         title="Unit of Measure Coding System Version ID",
     )
 
-    csu_9: str | None = Field(
+    csu_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_9",
@@ -113,7 +113,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Coding System Version ID",
     )
 
-    csu_10: str | None = Field(
+    csu_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_10",
@@ -124,7 +124,7 @@ class CSU(BaseModel):
         title="Original Text",
     )
 
-    csu_11: str | None = Field(
+    csu_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_11",
@@ -135,7 +135,7 @@ class CSU(BaseModel):
         title="Second Alternate Unit of Measure Identifier",
     )
 
-    csu_12: str | None = Field(
+    csu_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_12",
@@ -146,7 +146,7 @@ class CSU(BaseModel):
         title="Second Alternate Unit of Measure Text",
     )
 
-    csu_13: str | None = Field(
+    csu_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_13",
@@ -157,7 +157,7 @@ class CSU(BaseModel):
         title="Name of Second Alternate Unit of Measure Coding Sy",
     )
 
-    csu_14: str | None = Field(
+    csu_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_14",
@@ -168,7 +168,7 @@ class CSU(BaseModel):
         title="Second Alternate Unit of Measure Coding System Ver",
     )
 
-    csu_15: str | None = Field(
+    csu_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_15",
@@ -179,7 +179,7 @@ class CSU(BaseModel):
         title="Unit of Measure Coding System OID",
     )
 
-    csu_16: str | None = Field(
+    csu_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_16",
@@ -190,7 +190,7 @@ class CSU(BaseModel):
         title="Unit of Measure Value Set OID",
     )
 
-    csu_17: str | None = Field(
+    csu_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_17",
@@ -201,7 +201,7 @@ class CSU(BaseModel):
         title="Unit of Measure Value Set Version ID",
     )
 
-    csu_18: str | None = Field(
+    csu_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_18",
@@ -212,7 +212,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Coding System OID",
     )
 
-    csu_19: str | None = Field(
+    csu_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_19",
@@ -223,7 +223,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Value Set OID",
     )
 
-    csu_20: str | None = Field(
+    csu_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_20",
@@ -234,7 +234,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Value Set Version ID",
     )
 
-    csu_21: str | None = Field(
+    csu_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_21",
@@ -245,7 +245,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Coding System OID",
     )
 
-    csu_22: str | None = Field(
+    csu_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_22",
@@ -256,7 +256,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Value Set OID",
     )
 
-    csu_23: str | None = Field(
+    csu_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_23",

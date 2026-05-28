@@ -5,16 +5,15 @@ Version: 2.8
 Class: CCM_I21.MEDICATION_ADMINISTRATION_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXA import RXA
 from ..segments.RXR import RXR
-from .CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION import (
-    CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION,
-)
+
+from .CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION import CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION
 
 _CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION = CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION
 _RXA = RXA
@@ -30,7 +29,7 @@ class CCM_I21_MEDICATION_ADMINISTRATION_DETAIL(BaseModel):
         MEDICATION_ADMINISTRATION_OBSERVATION (Optional[List[CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION]]): optional
     """
 
-    RXA: list[_RXA] = Field(
+    RXA: List[_RXA] = Field(
         default=...,
         title="RXA",
         description="Required, repeating",
@@ -42,9 +41,7 @@ class CCM_I21_MEDICATION_ADMINISTRATION_DETAIL(BaseModel):
         description="Required",
     )
 
-    MEDICATION_ADMINISTRATION_OBSERVATION: (
-        list[_CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION] | None
-    ) = Field(
+    MEDICATION_ADMINISTRATION_OBSERVATION: Optional[List[_CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION]] = Field(
         default=None,
         title="MEDICATION_ADMINISTRATION_OBSERVATION",
         description="Optional, repeating",

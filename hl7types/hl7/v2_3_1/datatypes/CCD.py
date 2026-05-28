@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: CCD
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TS import TS
@@ -16,7 +16,7 @@ from .TS import TS
 class CCD(BaseModel):
     """HL7 v2 CCD data type."""
 
-    ccd_1: str | None = Field(
+    ccd_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ccd_1",
@@ -27,7 +27,7 @@ class CCD(BaseModel):
         title="when to charge code",
     )
 
-    ccd_2: TS | None = Field(
+    ccd_2: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ccd_2",

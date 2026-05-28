@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: MFN_M12.MF_OBS_ATTRIBUTES
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
@@ -40,7 +40,7 @@ class MFN_M12_MF_OBS_ATTRIBUTES(BaseModel):
         description="Required",
     )
 
-    OM7: _OM7 | None = Field(
+    OM7: Optional[_OM7] = Field(
         default=None,
         title="OM7",
         description="Optional",

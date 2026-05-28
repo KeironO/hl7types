@@ -5,9 +5,9 @@ Version: 2.7
 Class: PTH
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -66,7 +66,7 @@ class PTH(BaseModel):
         description="Item #1209",
     )
 
-    pth_5: CWE | None = Field(
+    pth_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pth_5",
@@ -78,7 +78,7 @@ class PTH(BaseModel):
         description="Item #1210",
     )
 
-    pth_6: str | None = Field(
+    pth_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pth_6",
@@ -90,7 +90,7 @@ class PTH(BaseModel):
         description="Item #1211",
     )
 
-    pth_7: CNE | None = Field(
+    pth_7: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pth_7",

@@ -5,9 +5,9 @@ Version: 2.5
 Class: ORF_R04.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -15,6 +15,7 @@ from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
+
 from .ORF_R04_OBSERVATION import ORF_R04_OBSERVATION
 from .ORF_R04_TIMING_QTY import ORF_R04_TIMING_QTY
 
@@ -40,7 +41,7 @@ class ORF_R04_ORDER(BaseModel):
         CTI (Optional[List[CTI]]): optional
     """
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
@@ -52,31 +53,31 @@ class ORF_R04_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: list[_ORF_R04_TIMING_QTY] | None = Field(
+    TIMING_QTY: Optional[List[_ORF_R04_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    OBSERVATION: list[_ORF_R04_OBSERVATION] = Field(
+    OBSERVATION: List[_ORF_R04_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

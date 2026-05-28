@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: RPT
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -16,7 +16,7 @@ from .CWE import CWE
 class RPT(BaseModel):
     """HL7 v2 RPT data type."""
 
-    rpt_1: CWE | None = Field(
+    rpt_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_1",
@@ -27,7 +27,7 @@ class RPT(BaseModel):
         title="Repeat Pattern Code",
     )
 
-    rpt_2: str | None = Field(
+    rpt_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_2",
@@ -38,7 +38,7 @@ class RPT(BaseModel):
         title="Calendar Alignment",
     )
 
-    rpt_3: str | None = Field(
+    rpt_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_3",
@@ -49,7 +49,7 @@ class RPT(BaseModel):
         title="Phase Range Begin Value",
     )
 
-    rpt_4: str | None = Field(
+    rpt_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_4",
@@ -60,7 +60,7 @@ class RPT(BaseModel):
         title="Phase Range End Value",
     )
 
-    rpt_5: str | None = Field(
+    rpt_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_5",
@@ -71,7 +71,7 @@ class RPT(BaseModel):
         title="Period Quantity",
     )
 
-    rpt_6: str | None = Field(
+    rpt_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_6",
@@ -82,7 +82,7 @@ class RPT(BaseModel):
         title="Period Units",
     )
 
-    rpt_7: str | None = Field(
+    rpt_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_7",
@@ -93,7 +93,7 @@ class RPT(BaseModel):
         title="Institution Specified Time",
     )
 
-    rpt_8: str | None = Field(
+    rpt_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_8",
@@ -104,7 +104,7 @@ class RPT(BaseModel):
         title="Event",
     )
 
-    rpt_9: str | None = Field(
+    rpt_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_9",
@@ -115,7 +115,7 @@ class RPT(BaseModel):
         title="Event Offset Quantity",
     )
 
-    rpt_10: str | None = Field(
+    rpt_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_10",
@@ -126,7 +126,7 @@ class RPT(BaseModel):
         title="Event Offset Units",
     )
 
-    rpt_11: str | None = Field(
+    rpt_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rpt_11",

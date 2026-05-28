@@ -5,9 +5,9 @@ Version: 2.3
 Class: CM_PRL
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -17,7 +17,7 @@ from .TX import TX
 class CM_PRL(BaseModel):
     """HL7 v2 CM_PRL data type."""
 
-    cm_prl_1: CE | None = Field(
+    cm_prl_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_prl_1",
@@ -28,7 +28,7 @@ class CM_PRL(BaseModel):
         title="OBX-3 observation identifier of parent result",
     )
 
-    cm_prl_2: str | None = Field(
+    cm_prl_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_prl_2",
@@ -39,7 +39,7 @@ class CM_PRL(BaseModel):
         title="OBX-4 sub-ID of parent result",
     )
 
-    cm_prl_3: TX | None = Field(
+    cm_prl_3: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_prl_3",

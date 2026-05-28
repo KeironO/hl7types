@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: MOC
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -17,7 +17,7 @@ from .MO import MO
 class MOC(BaseModel):
     """HL7 v2 MOC data type."""
 
-    moc_1: MO | None = Field(
+    moc_1: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "moc_1",
@@ -28,7 +28,7 @@ class MOC(BaseModel):
         title="Monetary Amount",
     )
 
-    moc_2: CWE | None = Field(
+    moc_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "moc_2",

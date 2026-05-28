@@ -5,12 +5,13 @@ Version: 2.5.1
 Class: CSU_C09.STUDY_SCHEDULE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CSS import CSS
+
 from .CSU_C09_ORCRXARXR_SUPPGRP import CSU_C09_ORCRXARXR_SUPPGRP
 from .CSU_C09_STUDY_OBSERVATION import CSU_C09_STUDY_OBSERVATION
 
@@ -28,19 +29,19 @@ class CSU_C09_STUDY_SCHEDULE(BaseModel):
         ORCRXARXR_SUPPGRP (List[CSU_C09_ORCRXARXR_SUPPGRP]): required
     """
 
-    CSS: _CSS | None = Field(
+    CSS: Optional[_CSS] = Field(
         default=None,
         title="CSS",
         description="Optional",
     )
 
-    STUDY_OBSERVATION: list[_CSU_C09_STUDY_OBSERVATION] = Field(
+    STUDY_OBSERVATION: List[_CSU_C09_STUDY_OBSERVATION] = Field(
         default=...,
         title="STUDY_OBSERVATION",
         description="Required, repeating",
     )
 
-    ORCRXARXR_SUPPGRP: list[_CSU_C09_ORCRXARXR_SUPPGRP] = Field(
+    ORCRXARXR_SUPPGRP: List[_CSU_C09_ORCRXARXR_SUPPGRP] = Field(
         default=...,
         title="ORCRXARXR_SUPPGRP",
         description="Required, repeating",

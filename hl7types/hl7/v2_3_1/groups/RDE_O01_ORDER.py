@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: RDE_O01.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
@@ -15,6 +15,7 @@ from ..segments.ORC import ORC
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
+
 from .RDE_O01_OBSERVATION import RDE_O01_OBSERVATION
 from .RDE_O01_ORDER_DETAIL import RDE_O01_ORDER_DETAIL
 
@@ -46,7 +47,7 @@ class RDE_O01_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: _RDE_O01_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_RDE_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
@@ -58,25 +59,25 @@ class RDE_O01_ORDER(BaseModel):
         description="Required",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: list[_RXC] | None = Field(
+    RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_RDE_O01_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_RDE_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

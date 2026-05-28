@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: IIM
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -42,7 +42,7 @@ class IIM(BaseModel):
         description="Item #1799",
     )
 
-    iim_3: str | None = Field(
+    iim_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_3",
@@ -54,7 +54,7 @@ class IIM(BaseModel):
         description="Item #1800",
     )
 
-    iim_4: str | None = Field(
+    iim_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_4",
@@ -66,7 +66,7 @@ class IIM(BaseModel):
         description="Item #1801",
     )
 
-    iim_5: CWE | None = Field(
+    iim_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_5",
@@ -78,7 +78,7 @@ class IIM(BaseModel):
         description="Item #1802",
     )
 
-    iim_6: CWE | None = Field(
+    iim_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_6",
@@ -90,7 +90,7 @@ class IIM(BaseModel):
         description="Item #1803",
     )
 
-    iim_7: str | None = Field(
+    iim_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_7",
@@ -102,7 +102,7 @@ class IIM(BaseModel):
         description="Item #1804",
     )
 
-    iim_8: str | None = Field(
+    iim_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_8",
@@ -114,7 +114,7 @@ class IIM(BaseModel):
         description="Item #1805",
     )
 
-    iim_9: CWE | None = Field(
+    iim_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_9",
@@ -126,7 +126,7 @@ class IIM(BaseModel):
         description="Item #1806",
     )
 
-    iim_10: MO | None = Field(
+    iim_10: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_10",
@@ -138,7 +138,7 @@ class IIM(BaseModel):
         description="Item #1807",
     )
 
-    iim_11: str | None = Field(
+    iim_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_11",
@@ -150,7 +150,7 @@ class IIM(BaseModel):
         description="Item #1808",
     )
 
-    iim_12: str | None = Field(
+    iim_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_12",
@@ -162,7 +162,7 @@ class IIM(BaseModel):
         description="Item #1809",
     )
 
-    iim_13: CWE | None = Field(
+    iim_13: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_13",
@@ -174,7 +174,7 @@ class IIM(BaseModel):
         description="Item #1810",
     )
 
-    iim_14: CNE | None = Field(
+    iim_14: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_14",
@@ -186,7 +186,7 @@ class IIM(BaseModel):
         description="Item #393 | Table HL70088",
     )
 
-    iim_15: list[CNE] | None = Field(
+    iim_15: Optional[List[CNE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iim_15",

@@ -5,12 +5,13 @@ Version: 2.7.1
 Class: PPV_PCA.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
+
 from .PPV_PCA_GOAL import PPV_PCA_GOAL
 from .PPV_PCA_PATIENT_VISIT import PPV_PCA_PATIENT_VISIT
 
@@ -34,13 +35,13 @@ class PPV_PCA_PATIENT(BaseModel):
         description="Required",
     )
 
-    PATIENT_VISIT: _PPV_PCA_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_PPV_PCA_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    GOAL: list[_PPV_PCA_GOAL] = Field(
+    GOAL: List[_PPV_PCA_GOAL] = Field(
         default=...,
         title="GOAL",
         description="Required, repeating",

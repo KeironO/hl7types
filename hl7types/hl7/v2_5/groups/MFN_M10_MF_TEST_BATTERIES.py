@@ -5,13 +5,14 @@ Version: 2.5
 Class: MFN_M10.MF_TEST_BATTERIES
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
 from ..segments.OM1 import OM1
+
 from .MFN_M10_MF_TEST_BATT_DETAIL import MFN_M10_MF_TEST_BATT_DETAIL
 
 _MFE = MFE
@@ -40,7 +41,7 @@ class MFN_M10_MF_TEST_BATTERIES(BaseModel):
         description="Required",
     )
 
-    MF_TEST_BATT_DETAIL: _MFN_M10_MF_TEST_BATT_DETAIL | None = Field(
+    MF_TEST_BATT_DETAIL: Optional[_MFN_M10_MF_TEST_BATT_DETAIL] = Field(
         default=None,
         title="MF_TEST_BATT_DETAIL",
         description="Optional",

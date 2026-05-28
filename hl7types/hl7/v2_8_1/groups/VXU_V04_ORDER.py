@@ -5,15 +5,16 @@ Version: 2.8.1
 Class: VXU_V04.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
 from ..segments.RXA import RXA
 from ..segments.RXR import RXR
+
 from .VXU_V04_OBSERVATION import VXU_V04_OBSERVATION
 from .VXU_V04_TIMING import VXU_V04_TIMING
 
@@ -43,13 +44,13 @@ class VXU_V04_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: list[_VXU_V04_TIMING] | None = Field(
+    TIMING: Optional[List[_VXU_V04_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -61,13 +62,13 @@ class VXU_V04_ORDER(BaseModel):
         description="Required",
     )
 
-    RXR: _RXR | None = Field(
+    RXR: Optional[_RXR] = Field(
         default=None,
         title="RXR",
         description="Optional",
     )
 
-    OBSERVATION: list[_VXU_V04_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_VXU_V04_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

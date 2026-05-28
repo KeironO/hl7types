@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: PRT
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -23,7 +23,7 @@ from ..datatypes.XTN import XTN
 class PRT(BaseModel):
     """HL7 v2 PRT segment."""
 
-    prt_1: EI | None = Field(
+    prt_1: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_1",
@@ -47,7 +47,7 @@ class PRT(BaseModel):
         description="Item #816 | Table HL70206",
     )
 
-    prt_3: CWE | None = Field(
+    prt_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_3",
@@ -71,7 +71,7 @@ class PRT(BaseModel):
         description="Item #2381 | Table HL70912",
     )
 
-    prt_5: list[XCN] | None = Field(
+    prt_5: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_5",
@@ -83,7 +83,7 @@ class PRT(BaseModel):
         description="Item #2382",
     )
 
-    prt_6: CWE | None = Field(
+    prt_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_6",
@@ -95,7 +95,7 @@ class PRT(BaseModel):
         description="Item #2383",
     )
 
-    prt_7: CWE | None = Field(
+    prt_7: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_7",
@@ -107,7 +107,7 @@ class PRT(BaseModel):
         description="Item #2384 | Table HL70406",
     )
 
-    prt_8: list[XON] | None = Field(
+    prt_8: Optional[List[XON]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_8",
@@ -119,7 +119,7 @@ class PRT(BaseModel):
         description="Item #2385",
     )
 
-    prt_9: list[PL] | None = Field(
+    prt_9: Optional[List[PL]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_9",
@@ -131,7 +131,7 @@ class PRT(BaseModel):
         description="Item #2386",
     )
 
-    prt_10: list[EI] | None = Field(
+    prt_10: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_10",
@@ -143,7 +143,7 @@ class PRT(BaseModel):
         description="Item #2348",
     )
 
-    prt_11: str | None = Field(
+    prt_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_11",
@@ -155,7 +155,7 @@ class PRT(BaseModel):
         description="Item #2387",
     )
 
-    prt_12: str | None = Field(
+    prt_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_12",
@@ -167,7 +167,7 @@ class PRT(BaseModel):
         description="Item #2388",
     )
 
-    prt_13: CWE | None = Field(
+    prt_13: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_13",
@@ -179,7 +179,7 @@ class PRT(BaseModel):
         description="Item #2389",
     )
 
-    prt_14: list[XAD] | None = Field(
+    prt_14: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_14",
@@ -191,7 +191,7 @@ class PRT(BaseModel):
         description="Item #2390",
     )
 
-    prt_15: list[XTN] | None = Field(
+    prt_15: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_15",
@@ -203,7 +203,7 @@ class PRT(BaseModel):
         description="Item #2391",
     )
 
-    prt_16: EI | None = Field(
+    prt_16: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_16",
@@ -215,7 +215,7 @@ class PRT(BaseModel):
         description="Item #3476",
     )
 
-    prt_17: str | None = Field(
+    prt_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_17",
@@ -227,7 +227,7 @@ class PRT(BaseModel):
         description="Item #3477",
     )
 
-    prt_18: str | None = Field(
+    prt_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_18",
@@ -239,7 +239,7 @@ class PRT(BaseModel):
         description="Item #3478",
     )
 
-    prt_19: str | None = Field(
+    prt_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_19",
@@ -251,7 +251,7 @@ class PRT(BaseModel):
         description="Item #3479",
     )
 
-    prt_20: str | None = Field(
+    prt_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_20",
@@ -263,7 +263,7 @@ class PRT(BaseModel):
         description="Item #3480",
     )
 
-    prt_21: EI | None = Field(
+    prt_21: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_21",
@@ -275,7 +275,7 @@ class PRT(BaseModel):
         description="Item #3481",
     )
 
-    prt_22: CNE | None = Field(
+    prt_22: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prt_22",

@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: ORL_O41.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
@@ -31,7 +31,7 @@ class ORL_O41_PATIENT(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

@@ -5,18 +5,19 @@ Version: 2.5
 Class: OUL_R24
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.OUL_R24_ORDER import OUL_R24_ORDER
-from ..groups.OUL_R24_PATIENT import OUL_R24_PATIENT
-from ..groups.OUL_R24_VISIT import OUL_R24_VISIT
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
+
+from ..groups.OUL_R24_ORDER import OUL_R24_ORDER
+from ..groups.OUL_R24_PATIENT import OUL_R24_PATIENT
+from ..groups.OUL_R24_VISIT import OUL_R24_VISIT
 
 _DSC = DSC
 _MSH = MSH
@@ -46,37 +47,37 @@ class OUL_R24(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: _NTE | None = Field(
+    NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
         description="Optional",
     )
 
-    PATIENT: _OUL_R24_PATIENT | None = Field(
+    PATIENT: Optional[_OUL_R24_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    VISIT: _OUL_R24_VISIT | None = Field(
+    VISIT: Optional[_OUL_R24_VISIT] = Field(
         default=None,
         title="VISIT",
         description="Optional",
     )
 
-    ORDER: list[_OUL_R24_ORDER] = Field(
+    ORDER: List[_OUL_R24_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

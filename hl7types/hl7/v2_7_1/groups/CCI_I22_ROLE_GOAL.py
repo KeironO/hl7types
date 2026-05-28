@@ -5,12 +5,13 @@ Version: 2.7.1
 Class: CCI_I22.ROLE_GOAL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.VAR import VAR
+
 from .CCI_I22_ROLE_GOAL_OBJECT import CCI_I22_ROLE_GOAL_OBJECT
 
 _CCI_I22_ROLE_GOAL_OBJECT = CCI_I22_ROLE_GOAL_OBJECT
@@ -31,7 +32,7 @@ class CCI_I22_ROLE_GOAL(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

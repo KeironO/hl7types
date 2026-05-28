@@ -5,10 +5,17 @@ Version: 2.7
 Class: CCR_I16
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.NK1 import NK1
+from ..segments.REL import REL
+from ..segments.RF1 import RF1
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
 
 from ..groups.CCR_I16_APPOINTMENT_HISTORY import CCR_I16_APPOINTMENT_HISTORY
 from ..groups.CCR_I16_CLINICAL_HISTORY import CCR_I16_CLINICAL_HISTORY
@@ -21,12 +28,6 @@ from ..groups.CCR_I16_PATIENT import CCR_I16_PATIENT
 from ..groups.CCR_I16_PATIENT_VISITS import CCR_I16_PATIENT_VISITS
 from ..groups.CCR_I16_PROBLEM import CCR_I16_PROBLEM
 from ..groups.CCR_I16_PROVIDER_CONTACT import CCR_I16_PROVIDER_CONTACT
-from ..segments.MSH import MSH
-from ..segments.NK1 import NK1
-from ..segments.REL import REL
-from ..segments.RF1 import RF1
-from ..segments.SFT import SFT
-from ..segments.UAC import UAC
 
 _CCR_I16_APPOINTMENT_HISTORY = CCR_I16_APPOINTMENT_HISTORY
 _CCR_I16_CLINICAL_HISTORY = CCR_I16_CLINICAL_HISTORY
@@ -76,97 +77,97 @@ class CCR_I16(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    RF1: list[_RF1] = Field(
+    RF1: List[_RF1] = Field(
         default=...,
         title="RF1",
         description="Required, repeating",
     )
 
-    PROVIDER_CONTACT: list[_CCR_I16_PROVIDER_CONTACT] = Field(
+    PROVIDER_CONTACT: List[_CCR_I16_PROVIDER_CONTACT] = Field(
         default=...,
         title="PROVIDER_CONTACT",
         description="Required, repeating",
     )
 
-    CLINICAL_ORDER: list[_CCR_I16_CLINICAL_ORDER] | None = Field(
+    CLINICAL_ORDER: Optional[List[_CCR_I16_CLINICAL_ORDER]] = Field(
         default=None,
         title="CLINICAL_ORDER",
         description="Optional, repeating",
     )
 
-    PATIENT: list[_CCR_I16_PATIENT] = Field(
+    PATIENT: List[_CCR_I16_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    INSURANCE: list[_CCR_I16_INSURANCE] | None = Field(
+    INSURANCE: Optional[List[_CCR_I16_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    APPOINTMENT_HISTORY: list[_CCR_I16_APPOINTMENT_HISTORY] | None = Field(
+    APPOINTMENT_HISTORY: Optional[List[_CCR_I16_APPOINTMENT_HISTORY]] = Field(
         default=None,
         title="APPOINTMENT_HISTORY",
         description="Optional, repeating",
     )
 
-    CLINICAL_HISTORY: list[_CCR_I16_CLINICAL_HISTORY] | None = Field(
+    CLINICAL_HISTORY: Optional[List[_CCR_I16_CLINICAL_HISTORY]] = Field(
         default=None,
         title="CLINICAL_HISTORY",
         description="Optional, repeating",
     )
 
-    PATIENT_VISITS: list[_CCR_I16_PATIENT_VISITS] = Field(
+    PATIENT_VISITS: List[_CCR_I16_PATIENT_VISITS] = Field(
         default=...,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )
 
-    MEDICATION_HISTORY: list[_CCR_I16_MEDICATION_HISTORY] | None = Field(
+    MEDICATION_HISTORY: Optional[List[_CCR_I16_MEDICATION_HISTORY]] = Field(
         default=None,
         title="MEDICATION_HISTORY",
         description="Optional, repeating",
     )
 
-    PROBLEM: list[_CCR_I16_PROBLEM] | None = Field(
+    PROBLEM: Optional[List[_CCR_I16_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",
     )
 
-    GOAL: list[_CCR_I16_GOAL] | None = Field(
+    GOAL: Optional[List[_CCR_I16_GOAL]] = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",
     )
 
-    PATHWAY: list[_CCR_I16_PATHWAY] | None = Field(
+    PATHWAY: Optional[List[_CCR_I16_PATHWAY]] = Field(
         default=None,
         title="PATHWAY",
         description="Optional, repeating",
     )
 
-    REL: list[_REL] | None = Field(
+    REL: Optional[List[_REL]] = Field(
         default=None,
         title="REL",
         description="Optional, repeating",

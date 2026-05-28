@@ -5,13 +5,14 @@ Version: 2.5.1
 Class: RGV_O15.ORDER_DETAIL_SUPPLEMENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RXR import RXR
+
 from .RGV_O15_COMPONENTS import RGV_O15_COMPONENTS
 
 _NTE = NTE
@@ -28,19 +29,19 @@ class RGV_O15_ORDER_DETAIL_SUPPLEMENT(BaseModel):
         COMPONENTS (Optional[List[RGV_O15_COMPONENTS]]): optional
     """
 
-    NTE: list[_NTE] = Field(
+    NTE: List[_NTE] = Field(
         default=...,
         title="NTE",
         description="Required, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENTS: list[_RGV_O15_COMPONENTS] | None = Field(
+    COMPONENTS: Optional[List[_RGV_O15_COMPONENTS]] = Field(
         default=None,
         title="COMPONENTS",
         description="Optional, repeating",

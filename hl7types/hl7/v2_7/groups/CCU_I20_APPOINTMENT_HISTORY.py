@@ -5,12 +5,13 @@ Version: 2.7
 Class: CCU_I20.APPOINTMENT_HISTORY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SCH import SCH
+
 from .CCU_I20_RESOURCES import CCU_I20_RESOURCES
 
 _CCU_I20_RESOURCES = CCU_I20_RESOURCES
@@ -31,7 +32,7 @@ class CCU_I20_APPOINTMENT_HISTORY(BaseModel):
         description="Required",
     )
 
-    RESOURCES: list[_CCU_I20_RESOURCES] | None = Field(
+    RESOURCES: Optional[List[_CCU_I20_RESOURCES]] = Field(
         default=None,
         title="RESOURCES",
         description="Optional, repeating",

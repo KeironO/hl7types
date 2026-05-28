@@ -5,16 +5,16 @@ Version: 2.3
 Class: CM_DDI
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_DDI(BaseModel):
     """HL7 v2 CM_DDI data type."""
 
-    cm_ddi_1: str | None = Field(
+    cm_ddi_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ddi_1",
@@ -25,7 +25,7 @@ class CM_DDI(BaseModel):
         title="delay days",
     )
 
-    cm_ddi_2: str | None = Field(
+    cm_ddi_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ddi_2",
@@ -36,7 +36,7 @@ class CM_DDI(BaseModel):
         title="amount",
     )
 
-    cm_ddi_3: str | None = Field(
+    cm_ddi_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ddi_3",

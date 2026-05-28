@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: PCF
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TS import TS
@@ -16,7 +16,7 @@ from .TS import TS
 class PCF(BaseModel):
     """HL7 v2 PCF data type."""
 
-    pcf_1: str | None = Field(
+    pcf_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcf_1",
@@ -27,7 +27,7 @@ class PCF(BaseModel):
         title="pre-certification patient type",
     )
 
-    pcf_2: str | None = Field(
+    pcf_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcf_2",
@@ -38,7 +38,7 @@ class PCF(BaseModel):
         title="pre-certification required",
     )
 
-    pcf_3: TS | None = Field(
+    pcf_3: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcf_3",

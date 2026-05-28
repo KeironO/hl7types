@@ -5,13 +5,14 @@ Version: 2.7
 Class: ORL_O36.RESPONSE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
 from ..segments.PRT import PRT
+
 from .ORL_O36_SPECIMEN import ORL_O36_SPECIMEN
 
 _ORL_O36_SPECIMEN = ORL_O36_SPECIMEN
@@ -34,13 +35,13 @@ class ORL_O36_RESPONSE(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    SPECIMEN: list[_ORL_O36_SPECIMEN] = Field(
+    SPECIMEN: List[_ORL_O36_SPECIMEN] = Field(
         default=...,
         title="SPECIMEN",
         description="Required, repeating",

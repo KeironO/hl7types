@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: RRA_O02.ADMINISTRATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXA import RXA
@@ -25,7 +25,7 @@ class RRA_O02_ADMINISTRATION(BaseModel):
         RXR (RXR): required
     """
 
-    RXA: list[_RXA] = Field(
+    RXA: List[_RXA] = Field(
         default=...,
         title="RXA",
         description="Required, repeating",

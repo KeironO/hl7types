@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: ADT_A01.INSURANCE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AUT import AUT
@@ -43,31 +43,31 @@ class ADT_A01_INSURANCE(BaseModel):
         description="Required",
     )
 
-    IN2: _IN2 | None = Field(
+    IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
         description="Optional",
     )
 
-    IN3: list[_IN3] | None = Field(
+    IN3: Optional[List[_IN3]] = Field(
         default=None,
         title="IN3",
         description="Optional, repeating",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    AUT: list[_AUT] | None = Field(
+    AUT: Optional[List[_AUT]] = Field(
         default=None,
         title="AUT",
         description="Optional, repeating",
     )
 
-    RF1: list[_RF1] | None = Field(
+    RF1: Optional[List[_RF1]] = Field(
         default=None,
         title="RF1",
         description="Optional, repeating",

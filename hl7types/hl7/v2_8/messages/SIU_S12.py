@@ -5,17 +5,18 @@ Version: 2.8
 Class: SIU_S12
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.SIU_S12_PATIENT import SIU_S12_PATIENT
-from ..groups.SIU_S12_RESOURCES import SIU_S12_RESOURCES
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SCH import SCH
 from ..segments.TQ1 import TQ1
+
+from ..groups.SIU_S12_PATIENT import SIU_S12_PATIENT
+from ..groups.SIU_S12_RESOURCES import SIU_S12_RESOURCES
 
 _MSH = MSH
 _NTE = NTE
@@ -49,25 +50,25 @@ class SIU_S12(BaseModel):
         description="Required",
     )
 
-    TQ1: list[_TQ1] | None = Field(
+    TQ1: Optional[List[_TQ1]] = Field(
         default=None,
         title="TQ1",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: list[_SIU_S12_PATIENT] | None = Field(
+    PATIENT: Optional[List[_SIU_S12_PATIENT]] = Field(
         default=None,
         title="PATIENT",
         description="Optional, repeating",
     )
 
-    RESOURCES: list[_SIU_S12_RESOURCES] = Field(
+    RESOURCES: List[_SIU_S12_RESOURCES] = Field(
         default=...,
         title="RESOURCES",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: XPN
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -17,7 +17,7 @@ from .FN import FN
 class XPN(BaseModel):
     """HL7 v2 XPN data type."""
 
-    xpn_1: FN | None = Field(
+    xpn_1: Optional[FN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_1",
@@ -28,7 +28,7 @@ class XPN(BaseModel):
         title="Family Name",
     )
 
-    xpn_2: str | None = Field(
+    xpn_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_2",
@@ -39,7 +39,7 @@ class XPN(BaseModel):
         title="Given Name",
     )
 
-    xpn_3: str | None = Field(
+    xpn_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_3",
@@ -50,7 +50,7 @@ class XPN(BaseModel):
         title="Second and Further Given Names or Initials Thereof",
     )
 
-    xpn_4: str | None = Field(
+    xpn_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_4",
@@ -61,7 +61,7 @@ class XPN(BaseModel):
         title="Suffix (e.g., JR or III)",
     )
 
-    xpn_5: str | None = Field(
+    xpn_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_5",
@@ -72,7 +72,7 @@ class XPN(BaseModel):
         title="Prefix (e.g., DR)",
     )
 
-    xpn_7: str | None = Field(
+    xpn_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_7",
@@ -83,7 +83,7 @@ class XPN(BaseModel):
         title="Name Type Code",
     )
 
-    xpn_8: str | None = Field(
+    xpn_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_8",
@@ -94,7 +94,7 @@ class XPN(BaseModel):
         title="Name Representation Code",
     )
 
-    xpn_9: CWE | None = Field(
+    xpn_9: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_9",
@@ -105,7 +105,7 @@ class XPN(BaseModel):
         title="Name Context",
     )
 
-    xpn_11: str | None = Field(
+    xpn_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_11",
@@ -116,7 +116,7 @@ class XPN(BaseModel):
         title="Name Assembly Order",
     )
 
-    xpn_12: str | None = Field(
+    xpn_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_12",
@@ -127,7 +127,7 @@ class XPN(BaseModel):
         title="Effective Date",
     )
 
-    xpn_13: str | None = Field(
+    xpn_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_13",
@@ -138,7 +138,7 @@ class XPN(BaseModel):
         title="Expiration Date",
     )
 
-    xpn_14: str | None = Field(
+    xpn_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_14",
@@ -149,7 +149,7 @@ class XPN(BaseModel):
         title="Professional Suffix",
     )
 
-    xpn_15: str | None = Field(
+    xpn_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_15",

@@ -5,15 +5,16 @@ Version: 2.4
 Class: OMG_O19
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.NTE import NTE
 
 from ..groups.OMG_O19_ORDER import OMG_O19_ORDER
 from ..groups.OMG_O19_PATIENT import OMG_O19_PATIENT
-from ..segments.MSH import MSH
-from ..segments.NTE import NTE
 
 _MSH = MSH
 _NTE = NTE
@@ -37,19 +38,19 @@ class OMG_O19(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: _OMG_O19_PATIENT | None = Field(
+    PATIENT: Optional[_OMG_O19_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: list[_OMG_O19_ORDER] = Field(
+    ORDER: List[_OMG_O19_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

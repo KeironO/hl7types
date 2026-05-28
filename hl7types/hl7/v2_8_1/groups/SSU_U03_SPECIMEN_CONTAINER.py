@@ -5,14 +5,15 @@ Version: 2.8.1
 Class: SSU_U03.SPECIMEN_CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
 from ..segments.SAC import SAC
+
 from .SSU_U03_SPECIMEN import SSU_U03_SPECIMEN
 
 _NTE = NTE
@@ -37,19 +38,19 @@ class SSU_U03_SPECIMEN_CONTAINER(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    SPECIMEN: list[_SSU_U03_SPECIMEN] | None = Field(
+    SPECIMEN: Optional[List[_SSU_U03_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",

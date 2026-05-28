@@ -5,15 +5,16 @@ Version: 2.5.1
 Class: OML_O35.OBSERVATION_REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.TCD import TCD
+
 from .OML_O35_OBSERVATION import OML_O35_OBSERVATION
 from .OML_O35_PRIOR_RESULT import OML_O35_PRIOR_RESULT
 
@@ -43,31 +44,31 @@ class OML_O35_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    TCD: _TCD | None = Field(
+    TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_OML_O35_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_OML_O35_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PRIOR_RESULT: list[_OML_O35_PRIOR_RESULT] | None = Field(
+    PRIOR_RESULT: Optional[List[_OML_O35_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
         description="Optional, repeating",

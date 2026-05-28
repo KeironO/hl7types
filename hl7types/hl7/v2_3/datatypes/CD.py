@@ -5,16 +5,16 @@ Version: 2.3
 Class: CD
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CD(BaseModel):
     """HL7 v2 CD data type."""
 
-    cd_1: str | None = Field(
+    cd_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_1",
@@ -25,7 +25,7 @@ class CD(BaseModel):
         title="channel identifier",
     )
 
-    cd_2: str | None = Field(
+    cd_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_2",
@@ -36,7 +36,7 @@ class CD(BaseModel):
         title="electrode names",
     )
 
-    cd_3: str | None = Field(
+    cd_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_3",
@@ -47,7 +47,7 @@ class CD(BaseModel):
         title="channel sensitivity/units",
     )
 
-    cd_4: str | None = Field(
+    cd_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_4",
@@ -58,7 +58,7 @@ class CD(BaseModel):
         title="calibration parameters",
     )
 
-    cd_5: str | None = Field(
+    cd_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_5",
@@ -69,7 +69,7 @@ class CD(BaseModel):
         title="sampling frequency",
     )
 
-    cd_6: str | None = Field(
+    cd_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_6",

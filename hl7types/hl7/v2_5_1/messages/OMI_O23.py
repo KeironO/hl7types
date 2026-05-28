@@ -5,16 +5,17 @@ Version: 2.5.1
 Class: OMI_O23
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.OMI_O23_ORDER import OMI_O23_ORDER
-from ..groups.OMI_O23_PATIENT import OMI_O23_PATIENT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
+
+from ..groups.OMI_O23_ORDER import OMI_O23_ORDER
+from ..groups.OMI_O23_PATIENT import OMI_O23_PATIENT
 
 _MSH = MSH
 _NTE = NTE
@@ -40,25 +41,25 @@ class OMI_O23(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: _OMI_O23_PATIENT | None = Field(
+    PATIENT: Optional[_OMI_O23_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: list[_OMI_O23_ORDER] = Field(
+    ORDER: List[_OMI_O23_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

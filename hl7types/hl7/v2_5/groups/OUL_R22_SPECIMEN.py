@@ -5,13 +5,14 @@ Version: 2.5
 Class: OUL_R22.SPECIMEN
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.SPM import SPM
+
 from .OUL_R22_CONTAINER import OUL_R22_CONTAINER
 from .OUL_R22_ORDER import OUL_R22_ORDER
 
@@ -37,19 +38,19 @@ class OUL_R22_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    CONTAINER: list[_OUL_R22_CONTAINER] | None = Field(
+    CONTAINER: Optional[List[_OUL_R22_CONTAINER]] = Field(
         default=None,
         title="CONTAINER",
         description="Optional, repeating",
     )
 
-    ORDER: list[_OUL_R22_ORDER] = Field(
+    ORDER: List[_OUL_R22_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

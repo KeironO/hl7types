@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: OM1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -20,7 +20,7 @@ from ..datatypes.XTN import XTN
 class OM1(BaseModel):
     """HL7 v2 OM1 segment."""
 
-    om1_1: str | None = Field(
+    om1_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_1",
@@ -32,7 +32,7 @@ class OM1(BaseModel):
         description="Item #586",
     )
 
-    om1_2: CE | None = Field(
+    om1_2: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_2",
@@ -44,7 +44,7 @@ class OM1(BaseModel):
         description="Item #587",
     )
 
-    om1_3: list[str] | None = Field(
+    om1_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_3",
@@ -56,7 +56,7 @@ class OM1(BaseModel):
         description="Item #588 | Table HL70125",
     )
 
-    om1_4: str | None = Field(
+    om1_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_4",
@@ -68,7 +68,7 @@ class OM1(BaseModel):
         description="Item #589 | Table HL70136",
     )
 
-    om1_5: CE | None = Field(
+    om1_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_5",
@@ -80,7 +80,7 @@ class OM1(BaseModel):
         description="Item #590",
     )
 
-    om1_6: TX | None = Field(
+    om1_6: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_6",
@@ -92,7 +92,7 @@ class OM1(BaseModel):
         description="Item #591",
     )
 
-    om1_7: CE | None = Field(
+    om1_7: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_7",
@@ -104,7 +104,7 @@ class OM1(BaseModel):
         description="Item #592",
     )
 
-    om1_8: list[str] | None = Field(
+    om1_8: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_8",
@@ -116,7 +116,7 @@ class OM1(BaseModel):
         description="Item #593",
     )
 
-    om1_9: str | None = Field(
+    om1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_9",
@@ -128,7 +128,7 @@ class OM1(BaseModel):
         description="Item #594",
     )
 
-    om1_10: str | None = Field(
+    om1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_10",
@@ -140,7 +140,7 @@ class OM1(BaseModel):
         description="Item #595",
     )
 
-    om1_11: str | None = Field(
+    om1_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_11",
@@ -152,7 +152,7 @@ class OM1(BaseModel):
         description="Item #596",
     )
 
-    om1_12: str | None = Field(
+    om1_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_12",
@@ -164,7 +164,7 @@ class OM1(BaseModel):
         description="Item #597 | Table HL70136",
     )
 
-    om1_13: list[CE] | None = Field(
+    om1_13: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_13",
@@ -176,7 +176,7 @@ class OM1(BaseModel):
         description="Item #598",
     )
 
-    om1_14: list[CE] | None = Field(
+    om1_14: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_14",
@@ -188,7 +188,7 @@ class OM1(BaseModel):
         description="Item #599",
     )
 
-    om1_15: str | None = Field(
+    om1_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_15",
@@ -200,7 +200,7 @@ class OM1(BaseModel):
         description="Item #600 | Table HL70136",
     )
 
-    om1_16: list[CE] | None = Field(
+    om1_16: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_16",
@@ -212,7 +212,7 @@ class OM1(BaseModel):
         description="Item #601",
     )
 
-    om1_17: XTN | None = Field(
+    om1_17: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_17",
@@ -236,7 +236,7 @@ class OM1(BaseModel):
         description="Item #603 | Table HL70174",
     )
 
-    om1_19: CE | None = Field(
+    om1_19: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_19",
@@ -248,7 +248,7 @@ class OM1(BaseModel):
         description="Item #604",
     )
 
-    om1_20: str | None = Field(
+    om1_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_20",
@@ -260,7 +260,7 @@ class OM1(BaseModel):
         description="Item #605",
     )
 
-    om1_21: TS | None = Field(
+    om1_21: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_21",
@@ -268,11 +268,13 @@ class OM1(BaseModel):
             "OM1.21",
         ),
         serialization_alias="OM1.21",
-        title=("Date/Time Stamp for any change in Definition for the Observation"),
+        title=(
+            "Date/Time Stamp for any change in Definition for the Observation"
+        ),
         description="Item #606",
     )
 
-    om1_22: TS | None = Field(
+    om1_22: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_22",
@@ -284,7 +286,7 @@ class OM1(BaseModel):
         description="Item #607",
     )
 
-    om1_23: str | None = Field(
+    om1_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_23",
@@ -296,7 +298,7 @@ class OM1(BaseModel):
         description="Item #608",
     )
 
-    om1_24: str | None = Field(
+    om1_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_24",
@@ -308,7 +310,7 @@ class OM1(BaseModel):
         description="Item #609",
     )
 
-    om1_25: list[str] | None = Field(
+    om1_25: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_25",
@@ -320,7 +322,7 @@ class OM1(BaseModel):
         description="Item #610 | Table HL70168",
     )
 
-    om1_26: str | None = Field(
+    om1_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_26",
@@ -332,7 +334,7 @@ class OM1(BaseModel):
         description="Item #611 | Table HL70169",
     )
 
-    om1_27: list[CE] | None = Field(
+    om1_27: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_27",
@@ -344,7 +346,7 @@ class OM1(BaseModel):
         description="Item #612",
     )
 
-    om1_28: list[XAD] | None = Field(
+    om1_28: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_28",
@@ -356,7 +358,7 @@ class OM1(BaseModel):
         description="Item #613",
     )
 
-    om1_29: XTN | None = Field(
+    om1_29: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_29",
@@ -368,7 +370,7 @@ class OM1(BaseModel):
         description="Item #614",
     )
 
-    om1_30: str | None = Field(
+    om1_30: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_30",
@@ -380,7 +382,7 @@ class OM1(BaseModel):
         description="Item #615 | Table HL70177",
     )
 
-    om1_31: CE | None = Field(
+    om1_31: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_31",
@@ -392,7 +394,7 @@ class OM1(BaseModel):
         description="Item #616",
     )
 
-    om1_32: TX | None = Field(
+    om1_32: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_32",
@@ -404,7 +406,7 @@ class OM1(BaseModel):
         description="Item #617",
     )
 
-    om1_33: CE | None = Field(
+    om1_33: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_33",
@@ -416,7 +418,7 @@ class OM1(BaseModel):
         description="Item #618",
     )
 
-    om1_34: list[CE] | None = Field(
+    om1_34: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_34",
@@ -428,7 +430,7 @@ class OM1(BaseModel):
         description="Item #619",
     )
 
-    om1_35: TX | None = Field(
+    om1_35: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_35",
@@ -440,7 +442,7 @@ class OM1(BaseModel):
         description="Item #620",
     )
 
-    om1_36: CE | None = Field(
+    om1_36: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_36",
@@ -452,7 +454,7 @@ class OM1(BaseModel):
         description="Item #621",
     )
 
-    om1_37: TX | None = Field(
+    om1_37: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_37",
@@ -464,7 +466,7 @@ class OM1(BaseModel):
         description="Item #622",
     )
 
-    om1_38: CE | None = Field(
+    om1_38: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_38",
@@ -476,7 +478,7 @@ class OM1(BaseModel):
         description="Item #623",
     )
 
-    om1_39: TX | None = Field(
+    om1_39: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_39",
@@ -488,7 +490,7 @@ class OM1(BaseModel):
         description="Item #624",
     )
 
-    om1_40: list[str] | None = Field(
+    om1_40: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_40",
@@ -500,7 +502,7 @@ class OM1(BaseModel):
         description="Item #625",
     )
 
-    om1_41: TX | None = Field(
+    om1_41: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_41",
@@ -512,7 +514,7 @@ class OM1(BaseModel):
         description="Item #626",
     )
 
-    om1_42: CE | None = Field(
+    om1_42: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_42",
@@ -524,7 +526,7 @@ class OM1(BaseModel):
         description="Item #937 | Table HL70254",
     )
 
-    om1_43: CE | None = Field(
+    om1_43: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_43",
@@ -536,7 +538,7 @@ class OM1(BaseModel):
         description="Item #938 | Table HL70255",
     )
 
-    om1_44: TX | None = Field(
+    om1_44: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_44",
@@ -548,7 +550,7 @@ class OM1(BaseModel):
         description="Item #939 | Table HL70256",
     )
 
-    om1_45: CE | None = Field(
+    om1_45: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_45",
@@ -560,7 +562,7 @@ class OM1(BaseModel):
         description="Item #940 | Table HL70258",
     )
 
-    om1_46: CE | None = Field(
+    om1_46: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_46",
@@ -572,7 +574,7 @@ class OM1(BaseModel):
         description="Item #941",
     )
 
-    om1_47: CE | None = Field(
+    om1_47: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_47",

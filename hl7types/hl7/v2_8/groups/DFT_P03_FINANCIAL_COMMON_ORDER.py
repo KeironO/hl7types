@@ -5,12 +5,13 @@ Version: 2.8
 Class: DFT_P03.FINANCIAL_COMMON_ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .DFT_P03_FINANCIAL_OBSERVATION import DFT_P03_FINANCIAL_OBSERVATION
 from .DFT_P03_FINANCIAL_ORDER import DFT_P03_FINANCIAL_ORDER
 from .DFT_P03_FINANCIAL_TIMING_QUANTITY import DFT_P03_FINANCIAL_TIMING_QUANTITY
@@ -31,25 +32,25 @@ class DFT_P03_FINANCIAL_COMMON_ORDER(BaseModel):
         FINANCIAL_OBSERVATION (Optional[List[DFT_P03_FINANCIAL_OBSERVATION]]): optional
     """
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    FINANCIAL_TIMING_QUANTITY: list[_DFT_P03_FINANCIAL_TIMING_QUANTITY] | None = Field(
+    FINANCIAL_TIMING_QUANTITY: Optional[List[_DFT_P03_FINANCIAL_TIMING_QUANTITY]] = Field(
         default=None,
         title="FINANCIAL_TIMING_QUANTITY",
         description="Optional, repeating",
     )
 
-    FINANCIAL_ORDER: _DFT_P03_FINANCIAL_ORDER | None = Field(
+    FINANCIAL_ORDER: Optional[_DFT_P03_FINANCIAL_ORDER] = Field(
         default=None,
         title="FINANCIAL_ORDER",
         description="Optional",
     )
 
-    FINANCIAL_OBSERVATION: list[_DFT_P03_FINANCIAL_OBSERVATION] | None = Field(
+    FINANCIAL_OBSERVATION: Optional[List[_DFT_P03_FINANCIAL_OBSERVATION]] = Field(
         default=None,
         title="FINANCIAL_OBSERVATION",
         description="Optional, repeating",

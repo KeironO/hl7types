@@ -5,9 +5,9 @@ Version: 2.5
 Class: MFR_M04.MF_QUERY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CDM import CDM
@@ -43,13 +43,13 @@ class MFR_M04_MF_QUERY(BaseModel):
         description="Required",
     )
 
-    LCH: list[_LCH] | None = Field(
+    LCH: Optional[List[_LCH]] = Field(
         default=None,
         title="LCH",
         description="Optional, repeating",
     )
 
-    PRC: list[_PRC] | None = Field(
+    PRC: Optional[List[_PRC]] = Field(
         default=None,
         title="PRC",
         description="Optional, repeating",

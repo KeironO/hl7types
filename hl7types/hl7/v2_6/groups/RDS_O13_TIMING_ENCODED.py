@@ -5,9 +5,9 @@ Version: 2.6
 Class: RDS_O13.TIMING_ENCODED
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.TQ1 import TQ1
@@ -31,7 +31,7 @@ class RDS_O13_TIMING_ENCODED(BaseModel):
         description="Required",
     )
 
-    TQ2: list[_TQ2] | None = Field(
+    TQ2: Optional[List[_TQ2]] = Field(
         default=None,
         title="TQ2",
         description="Optional, repeating",

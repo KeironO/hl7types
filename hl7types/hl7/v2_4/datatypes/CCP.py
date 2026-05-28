@@ -5,16 +5,16 @@ Version: 2.4
 Class: CCP
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CCP(BaseModel):
     """HL7 v2 CCP data type."""
 
-    ccp_1: str | None = Field(
+    ccp_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ccp_1",
@@ -25,7 +25,7 @@ class CCP(BaseModel):
         title="channel calibration sensitivity correction factor",
     )
 
-    ccp_2: str | None = Field(
+    ccp_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ccp_2",
@@ -36,7 +36,7 @@ class CCP(BaseModel):
         title="channel calibration baseline",
     )
 
-    ccp_3: str | None = Field(
+    ccp_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ccp_3",

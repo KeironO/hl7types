@@ -5,12 +5,13 @@ Version: 2.4
 Class: RSP_Z82.VISIT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
+
 from .RSP_Z82_PATIENT_VISIT import RSP_Z82_PATIENT_VISIT
 
 _AL1 = AL1
@@ -25,13 +26,13 @@ class RSP_Z82_VISIT(BaseModel):
         PATIENT_VISIT (Optional[RSP_Z82_PATIENT_VISIT]): optional
     """
 
-    AL1: list[_AL1] = Field(
+    AL1: List[_AL1] = Field(
         default=...,
         title="AL1",
         description="Required, repeating",
     )
 
-    PATIENT_VISIT: _RSP_Z82_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_RSP_Z82_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",

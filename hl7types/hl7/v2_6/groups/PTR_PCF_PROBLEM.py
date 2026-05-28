@@ -5,14 +5,15 @@ Version: 2.6
 Class: PTR_PCF.PROBLEM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
+
 from .PTR_PCF_GOAL import PTR_PCF_GOAL
 from .PTR_PCF_ORDER import PTR_PCF_ORDER
 from .PTR_PCF_PROBLEM_OBSERVATION import PTR_PCF_PROBLEM_OBSERVATION
@@ -46,37 +47,37 @@ class PTR_PCF_PROBLEM(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PROBLEM_ROLE: list[_PTR_PCF_PROBLEM_ROLE] | None = Field(
+    PROBLEM_ROLE: Optional[List[_PTR_PCF_PROBLEM_ROLE]] = Field(
         default=None,
         title="PROBLEM_ROLE",
         description="Optional, repeating",
     )
 
-    PROBLEM_OBSERVATION: list[_PTR_PCF_PROBLEM_OBSERVATION] | None = Field(
+    PROBLEM_OBSERVATION: Optional[List[_PTR_PCF_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
         description="Optional, repeating",
     )
 
-    GOAL: list[_PTR_PCF_GOAL] | None = Field(
+    GOAL: Optional[List[_PTR_PCF_GOAL]] = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",
     )
 
-    ORDER: list[_PTR_PCF_ORDER] | None = Field(
+    ORDER: Optional[List[_PTR_PCF_ORDER]] = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

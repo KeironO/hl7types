@@ -5,14 +5,15 @@ Version: 2.6
 Class: ORM_O01.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
 from ..segments.DG1 import DG1
 from ..segments.NTE import NTE
+
 from .ORM_O01_CHOICE import ORM_O01_CHOICE
 from .ORM_O01_OBSERVATION import ORM_O01_OBSERVATION
 
@@ -40,25 +41,25 @@ class ORM_O01_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_ORM_O01_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_ORM_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

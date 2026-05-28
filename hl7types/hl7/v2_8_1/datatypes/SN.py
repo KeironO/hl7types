@@ -5,16 +5,16 @@ Version: 2.8.1
 Class: SN
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class SN(BaseModel):
     """HL7 v2 SN data type."""
 
-    sn_1: str | None = Field(
+    sn_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sn_1",
@@ -25,7 +25,7 @@ class SN(BaseModel):
         title="Comparator",
     )
 
-    sn_2: str | None = Field(
+    sn_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sn_2",
@@ -36,7 +36,7 @@ class SN(BaseModel):
         title="Num1",
     )
 
-    sn_3: str | None = Field(
+    sn_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sn_3",
@@ -47,7 +47,7 @@ class SN(BaseModel):
         title="Separator/Suffix",
     )
 
-    sn_4: str | None = Field(
+    sn_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sn_4",

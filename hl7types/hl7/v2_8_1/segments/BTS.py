@@ -5,16 +5,16 @@ Version: 2.8.1
 Class: BTS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class BTS(BaseModel):
     """HL7 v2 BTS segment."""
 
-    bts_1: str | None = Field(
+    bts_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bts_1",
@@ -26,7 +26,7 @@ class BTS(BaseModel):
         description="Item #93",
     )
 
-    bts_2: str | None = Field(
+    bts_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bts_2",
@@ -38,7 +38,7 @@ class BTS(BaseModel):
         description="Item #90",
     )
 
-    bts_3: list[str] | None = Field(
+    bts_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bts_3",

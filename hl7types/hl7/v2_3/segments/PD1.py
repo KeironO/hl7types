@@ -5,9 +5,9 @@ Version: 2.3
 Class: PD1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -19,7 +19,7 @@ from ..datatypes.XON import XON
 class PD1(BaseModel):
     """HL7 v2 PD1 segment."""
 
-    pd1_1: str | None = Field(
+    pd1_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_1",
@@ -31,7 +31,7 @@ class PD1(BaseModel):
         description="Item #755 | Table HL70223",
     )
 
-    pd1_2: str | None = Field(
+    pd1_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_2",
@@ -43,7 +43,7 @@ class PD1(BaseModel):
         description="Item #742 | Table HL70220",
     )
 
-    pd1_3: list[XON] | None = Field(
+    pd1_3: Optional[List[XON]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_3",
@@ -55,7 +55,7 @@ class PD1(BaseModel):
         description="Item #756",
     )
 
-    pd1_4: list[XCN] | None = Field(
+    pd1_4: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_4",
@@ -67,7 +67,7 @@ class PD1(BaseModel):
         description="Item #757",
     )
 
-    pd1_5: str | None = Field(
+    pd1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_5",
@@ -79,7 +79,7 @@ class PD1(BaseModel):
         description="Item #745 | Table HL70231",
     )
 
-    pd1_6: str | None = Field(
+    pd1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_6",
@@ -91,7 +91,7 @@ class PD1(BaseModel):
         description="Item #753 | Table HL70310",
     )
 
-    pd1_7: str | None = Field(
+    pd1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_7",
@@ -103,7 +103,7 @@ class PD1(BaseModel):
         description="Item #759 | Table HL70315",
     )
 
-    pd1_8: str | None = Field(
+    pd1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_8",
@@ -115,7 +115,7 @@ class PD1(BaseModel):
         description="Item #760 | Table HL70316",
     )
 
-    pd1_9: str | None = Field(
+    pd1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_9",
@@ -127,7 +127,7 @@ class PD1(BaseModel):
         description="Item #761 | Table HL70136",
     )
 
-    pd1_10: list[CX] | None = Field(
+    pd1_10: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_10",
@@ -139,7 +139,7 @@ class PD1(BaseModel):
         description="Item #762",
     )
 
-    pd1_11: CE | None = Field(
+    pd1_11: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_11",
@@ -151,7 +151,7 @@ class PD1(BaseModel):
         description="Item #743 | Table HL70215",
     )
 
-    pd1_12: str | None = Field(
+    pd1_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pd1_12",

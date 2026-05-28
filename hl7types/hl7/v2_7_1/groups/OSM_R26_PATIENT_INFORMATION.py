@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: OSM_R26.PATIENT_INFORMATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
@@ -31,7 +31,7 @@ class OSM_R26_PATIENT_INFORMATION(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

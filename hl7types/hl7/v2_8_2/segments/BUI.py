@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: BUI
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -20,7 +20,7 @@ from ..datatypes.XON import XON
 class BUI(BaseModel):
     """HL7 v2 BUI segment."""
 
-    bui_1: str | None = Field(
+    bui_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "bui_1",

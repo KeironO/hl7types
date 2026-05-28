@@ -5,9 +5,9 @@ Version: 2.8
 Class: CP
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -28,7 +28,7 @@ class CP(BaseModel):
         title="Price",
     )
 
-    cp_2: str | None = Field(
+    cp_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_2",
@@ -39,7 +39,7 @@ class CP(BaseModel):
         title="Price Type",
     )
 
-    cp_3: str | None = Field(
+    cp_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_3",
@@ -50,7 +50,7 @@ class CP(BaseModel):
         title="From Value",
     )
 
-    cp_4: str | None = Field(
+    cp_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_4",
@@ -61,7 +61,7 @@ class CP(BaseModel):
         title="To Value",
     )
 
-    cp_5: CWE | None = Field(
+    cp_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_5",
@@ -72,7 +72,7 @@ class CP(BaseModel):
         title="Range Units",
     )
 
-    cp_6: str | None = Field(
+    cp_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cp_6",

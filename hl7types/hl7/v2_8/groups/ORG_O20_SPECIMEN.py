@@ -5,9 +5,9 @@ Version: 2.8
 Class: ORG_O20.SPECIMEN
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
@@ -31,7 +31,7 @@ class ORG_O20_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    SAC: list[_SAC] | None = Field(
+    SAC: Optional[List[_SAC]] = Field(
         default=None,
         title="SAC",
         description="Optional, repeating",

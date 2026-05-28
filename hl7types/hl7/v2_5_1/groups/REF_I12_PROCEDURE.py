@@ -5,12 +5,13 @@ Version: 2.5.1
 Class: REF_I12.PROCEDURE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PR1 import PR1
+
 from .REF_I12_AUTCTD_SUPPGRP2 import REF_I12_AUTCTD_SUPPGRP2
 
 _PR1 = PR1
@@ -31,7 +32,7 @@ class REF_I12_PROCEDURE(BaseModel):
         description="Required",
     )
 
-    AUTCTD_SUPPGRP2: _REF_I12_AUTCTD_SUPPGRP2 | None = Field(
+    AUTCTD_SUPPGRP2: Optional[_REF_I12_AUTCTD_SUPPGRP2] = Field(
         default=None,
         title="AUTCTD_SUPPGRP2",
         description="Optional",

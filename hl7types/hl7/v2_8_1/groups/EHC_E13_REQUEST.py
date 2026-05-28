@@ -5,14 +5,15 @@ Version: 2.8.1
 Class: EHC_E13.REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
+
 from .EHC_E13_RESPONSE import EHC_E13_RESPONSE
 
 _CTD = CTD
@@ -31,7 +32,7 @@ class EHC_E13_REQUEST(BaseModel):
         RESPONSE (List[EHC_E13_RESPONSE]): required
     """
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",
@@ -43,13 +44,13 @@ class EHC_E13_REQUEST(BaseModel):
         description="Required",
     )
 
-    NTE: _NTE | None = Field(
+    NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
         description="Optional",
     )
 
-    RESPONSE: list[_EHC_E13_RESPONSE] = Field(
+    RESPONSE: List[_EHC_E13_RESPONSE] = Field(
         default=...,
         title="RESPONSE",
         description="Required, repeating",

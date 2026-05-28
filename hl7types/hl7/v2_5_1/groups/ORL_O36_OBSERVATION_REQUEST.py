@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ORL_O36.OBSERVATION_REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR

@@ -5,9 +5,9 @@ Version: 2.5
 Class: CM0
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.EI import EI
@@ -19,7 +19,7 @@ from ..datatypes.XTN import XTN
 class CM0(BaseModel):
     """HL7 v2 CM0 segment."""
 
-    cm0_1: str | None = Field(
+    cm0_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_1",
@@ -43,7 +43,7 @@ class CM0(BaseModel):
         description="Item #1011",
     )
 
-    cm0_3: list[EI] | None = Field(
+    cm0_3: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_3",
@@ -67,7 +67,7 @@ class CM0(BaseModel):
         description="Item #1013",
     )
 
-    cm0_5: list[XCN] | None = Field(
+    cm0_5: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_5",
@@ -79,7 +79,7 @@ class CM0(BaseModel):
         description="Item #1014",
     )
 
-    cm0_6: str | None = Field(
+    cm0_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_6",
@@ -91,7 +91,7 @@ class CM0(BaseModel):
         description="Item #1015",
     )
 
-    cm0_7: str | None = Field(
+    cm0_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_7",
@@ -103,7 +103,7 @@ class CM0(BaseModel):
         description="Item #1016",
     )
 
-    cm0_8: str | None = Field(
+    cm0_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_8",
@@ -115,7 +115,7 @@ class CM0(BaseModel):
         description="Item #1017",
     )
 
-    cm0_9: list[XCN] | None = Field(
+    cm0_9: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_9",
@@ -127,7 +127,7 @@ class CM0(BaseModel):
         description="Item #1018",
     )
 
-    cm0_10: XTN | None = Field(
+    cm0_10: Optional[XTN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_10",
@@ -139,7 +139,7 @@ class CM0(BaseModel):
         description="Item #1019",
     )
 
-    cm0_11: list[XAD] | None = Field(
+    cm0_11: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm0_11",

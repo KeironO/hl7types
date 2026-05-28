@@ -5,14 +5,15 @@ Version: 2.8.1
 Class: DPR_O48.DONATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DON import DON
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
+
 from .DPR_O48_BLOOD_UNIT import DPR_O48_BLOOD_UNIT
 
 _DON = DON
@@ -37,19 +38,19 @@ class DPR_O48_DONATION(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    BLOOD_UNIT: _DPR_O48_BLOOD_UNIT | None = Field(
+    BLOOD_UNIT: Optional[_DPR_O48_BLOOD_UNIT] = Field(
         default=None,
         title="BLOOD_UNIT",
         description="Optional",

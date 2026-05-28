@@ -5,18 +5,19 @@ Version: 2.4
 Class: BAR_P10
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.BAR_P10_PROCEDURE import BAR_P10_PROCEDURE
 from ..segments.DG1 import DG1
 from ..segments.EVN import EVN
 from ..segments.GP1 import GP1
 from ..segments.MSH import MSH
 from ..segments.PID import PID
 from ..segments.PV1 import PV1
+
+from ..groups.BAR_P10_PROCEDURE import BAR_P10_PROCEDURE
 
 _BAR_P10_PROCEDURE = BAR_P10_PROCEDURE
 _DG1 = DG1
@@ -64,7 +65,7 @@ class BAR_P10(BaseModel):
         description="Required",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
@@ -76,7 +77,7 @@ class BAR_P10(BaseModel):
         description="Required",
     )
 
-    PROCEDURE: list[_BAR_P10_PROCEDURE] | None = Field(
+    PROCEDURE: Optional[List[_BAR_P10_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.7
 Class: CQU_I19.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PD1 import PD1
@@ -31,7 +31,7 @@ class CQU_I19_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",

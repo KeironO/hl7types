@@ -5,12 +5,11 @@ Version: 2.4
 Class: RSP_K25
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RSP_K25_STAFF import RSP_K25_STAFF
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -18,6 +17,8 @@ from ..segments.MSH import MSH
 from ..segments.QAK import QAK
 from ..segments.QPD import QPD
 from ..segments.RCP import RCP
+
+from ..groups.RSP_K25_STAFF import RSP_K25_STAFF
 
 _DSC = DSC
 _ERR = ERR
@@ -55,7 +56,7 @@ class RSP_K25(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -79,13 +80,13 @@ class RSP_K25(BaseModel):
         description="Required",
     )
 
-    STAFF: list[_RSP_K25_STAFF] = Field(
+    STAFF: List[_RSP_K25_STAFF] = Field(
         default=...,
         title="STAFF",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

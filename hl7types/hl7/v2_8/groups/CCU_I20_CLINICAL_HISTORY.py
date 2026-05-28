@@ -5,13 +5,14 @@ Version: 2.8
 Class: CCU_I20.CLINICAL_HISTORY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
+
 from .CCU_I20_CLINICAL_HISTORY_DETAIL import CCU_I20_CLINICAL_HISTORY_DETAIL
 from .CCU_I20_ROLE_CLINICAL_HISTORY import CCU_I20_ROLE_CLINICAL_HISTORY
 
@@ -37,19 +38,19 @@ class CCU_I20_CLINICAL_HISTORY(BaseModel):
         description="Required",
     )
 
-    CLINICAL_HISTORY_DETAIL: list[_CCU_I20_CLINICAL_HISTORY_DETAIL] | None = Field(
+    CLINICAL_HISTORY_DETAIL: Optional[List[_CCU_I20_CLINICAL_HISTORY_DETAIL]] = Field(
         default=None,
         title="CLINICAL_HISTORY_DETAIL",
         description="Optional, repeating",
     )
 
-    ROLE_CLINICAL_HISTORY: list[_CCU_I20_ROLE_CLINICAL_HISTORY] | None = Field(
+    ROLE_CLINICAL_HISTORY: Optional[List[_CCU_I20_ROLE_CLINICAL_HISTORY]] = Field(
         default=None,
         title="ROLE_CLINICAL_HISTORY",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

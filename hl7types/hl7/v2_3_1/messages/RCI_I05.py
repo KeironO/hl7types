@@ -5,13 +5,11 @@ Version: 2.3.1
 Class: RCI_I05
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RCI_I05_OBSERVATION import RCI_I05_OBSERVATION
-from ..groups.RCI_I05_PROVIDER import RCI_I05_PROVIDER
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
 from ..segments.DRG import DRG
@@ -21,6 +19,9 @@ from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
+from ..groups.RCI_I05_OBSERVATION import RCI_I05_OBSERVATION
+from ..groups.RCI_I05_PROVIDER import RCI_I05_PROVIDER
 
 _AL1 = AL1
 _DG1 = DG1
@@ -70,13 +71,13 @@ class RCI_I05(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PROVIDER: list[_RCI_I05_PROVIDER] = Field(
+    PROVIDER: List[_RCI_I05_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -88,31 +89,31 @@ class RCI_I05(BaseModel):
         description="Required",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: list[_DRG] | None = Field(
+    DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_RCI_I05_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_RCI_I05_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

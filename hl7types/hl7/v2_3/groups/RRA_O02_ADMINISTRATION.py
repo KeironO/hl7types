@@ -5,9 +5,9 @@ Version: 2.3
 Class: RRA_O02.ADMINISTRATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.RXA import RXA

@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_PLACER
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PLACER(BaseModel):
     """HL7 v2 CM_PLACER data type."""
 
-    cm_placer_1: str | None = Field(
+    cm_placer_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_placer_1",
@@ -25,7 +25,7 @@ class CM_PLACER(BaseModel):
         title="unique placer id",
     )
 
-    cm_placer_2: str | None = Field(
+    cm_placer_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_placer_2",

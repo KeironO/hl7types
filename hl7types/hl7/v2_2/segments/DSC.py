@@ -5,16 +5,16 @@ Version: 2.2
 Class: DSC
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class DSC(BaseModel):
     """HL7 v2 DSC segment."""
 
-    dsc_1: str | None = Field(
+    dsc_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dsc_1",

@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_JOB_CODE
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_JOB_CODE(BaseModel):
     """HL7 v2 CM_JOB_CODE data type."""
 
-    cm_job_code_1: str | None = Field(
+    cm_job_code_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_job_code_1",
@@ -25,7 +25,7 @@ class CM_JOB_CODE(BaseModel):
         title="job code",
     )
 
-    cm_job_code_2: str | None = Field(
+    cm_job_code_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_job_code_2",

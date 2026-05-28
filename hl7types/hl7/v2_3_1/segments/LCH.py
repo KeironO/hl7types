@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: LCH
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -30,7 +30,7 @@ class LCH(BaseModel):
         description="Item #1305",
     )
 
-    lch_2: str | None = Field(
+    lch_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "lch_2",
@@ -42,7 +42,7 @@ class LCH(BaseModel):
         description="Item #763 | Table HL70206",
     )
 
-    lch_3: EI | None = Field(
+    lch_3: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "lch_3",
@@ -66,7 +66,7 @@ class LCH(BaseModel):
         description="Item #1295 | Table HL70324",
     )
 
-    lch_5: CE | None = Field(
+    lch_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "lch_5",

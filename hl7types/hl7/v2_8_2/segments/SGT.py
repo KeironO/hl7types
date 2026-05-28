@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: SGT
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -26,7 +26,7 @@ class SGT(BaseModel):
         description="Item #3394",
     )
 
-    sgt_2: str | None = Field(
+    sgt_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sgt_2",

@@ -5,9 +5,9 @@ Version: 2.5
 Class: ADT_A45.MERGE_INFO
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MRG import MRG

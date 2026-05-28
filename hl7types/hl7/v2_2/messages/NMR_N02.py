@@ -5,16 +5,17 @@ Version: 2.2
 Class: NMR_N02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT import NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
+
+from ..groups.NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT import NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT
 
 _ERR = ERR
 _MSA = MSA
@@ -46,19 +47,19 @@ class NMR_N02(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    QRD: _QRD | None = Field(
+    QRD: Optional[_QRD] = Field(
         default=None,
         title="QRD",
         description="Optional",
     )
 
-    CLOCK_AND_STATS_WITH_NOTES_ALT: list[_NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT] = Field(
+    CLOCK_AND_STATS_WITH_NOTES_ALT: List[_NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT] = Field(
         default=...,
         title="CLOCK_AND_STATS_WITH_NOTES_ALT",
         description="Required, repeating",

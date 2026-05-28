@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: FHS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.HD import HD
@@ -41,7 +41,7 @@ class FHS(BaseModel):
         description="Item #68",
     )
 
-    fhs_3: HD | None = Field(
+    fhs_3: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_3",
@@ -53,7 +53,7 @@ class FHS(BaseModel):
         description="Item #69",
     )
 
-    fhs_4: HD | None = Field(
+    fhs_4: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_4",
@@ -65,7 +65,7 @@ class FHS(BaseModel):
         description="Item #70",
     )
 
-    fhs_5: HD | None = Field(
+    fhs_5: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_5",
@@ -77,7 +77,7 @@ class FHS(BaseModel):
         description="Item #71",
     )
 
-    fhs_6: HD | None = Field(
+    fhs_6: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_6",
@@ -89,7 +89,7 @@ class FHS(BaseModel):
         description="Item #72",
     )
 
-    fhs_7: TS | None = Field(
+    fhs_7: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_7",
@@ -101,7 +101,7 @@ class FHS(BaseModel):
         description="Item #73",
     )
 
-    fhs_8: str | None = Field(
+    fhs_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_8",
@@ -113,7 +113,7 @@ class FHS(BaseModel):
         description="Item #74",
     )
 
-    fhs_9: str | None = Field(
+    fhs_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_9",
@@ -125,7 +125,7 @@ class FHS(BaseModel):
         description="Item #75",
     )
 
-    fhs_10: str | None = Field(
+    fhs_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_10",
@@ -137,7 +137,7 @@ class FHS(BaseModel):
         description="Item #76",
     )
 
-    fhs_11: str | None = Field(
+    fhs_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_11",
@@ -149,7 +149,7 @@ class FHS(BaseModel):
         description="Item #77",
     )
 
-    fhs_12: str | None = Field(
+    fhs_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fhs_12",

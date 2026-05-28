@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: WVS
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class WVS(BaseModel):
         title="Source One Name",
     )
 
-    wvs_2: str | None = Field(
+    wvs_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "wvs_2",

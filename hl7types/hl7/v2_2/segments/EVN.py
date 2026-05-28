@@ -5,9 +5,9 @@ Version: 2.2
 Class: EVN
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TS import TS
@@ -40,7 +40,7 @@ class EVN(BaseModel):
         description="Item #100",
     )
 
-    evn_3: TS | None = Field(
+    evn_3: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_3",
@@ -52,7 +52,7 @@ class EVN(BaseModel):
         description="Item #101",
     )
 
-    evn_4: str | None = Field(
+    evn_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_4",
@@ -64,7 +64,7 @@ class EVN(BaseModel):
         description="Item #102 | Table HL70062",
     )
 
-    evn_5: str | None = Field(
+    evn_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_5",

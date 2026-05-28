@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: OMG_O19.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -21,6 +21,7 @@ from ..segments.ORC import ORC
 from ..segments.PRT import PRT
 from ..segments.SGH import SGH
 from ..segments.SGT import SGT
+
 from .OMG_O19_OBSERVATION import OMG_O19_OBSERVATION
 from .OMG_O19_PRIOR_RESULT import OMG_O19_PRIOR_RESULT
 from .OMG_O19_SPECIMEN import OMG_O19_SPECIMEN
@@ -70,13 +71,13 @@ class OMG_O19_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: list[_OMG_O19_TIMING] | None = Field(
+    TIMING: Optional[List[_OMG_O19_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -88,67 +89,67 @@ class OMG_O19_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_OMG_O19_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_OMG_O19_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    SPECIMEN: list[_OMG_O19_SPECIMEN] | None = Field(
+    SPECIMEN: Optional[List[_OMG_O19_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",
     )
 
-    SGH: _SGH | None = Field(
+    SGH: Optional[_SGH] = Field(
         default=None,
         title="SGH",
         description="Optional",
     )
 
-    PRIOR_RESULT: list[_OMG_O19_PRIOR_RESULT] | None = Field(
+    PRIOR_RESULT: Optional[List[_OMG_O19_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
         description="Optional, repeating",
     )
 
-    SGT: _SGT | None = Field(
+    SGT: Optional[_SGT] = Field(
         default=None,
         title="SGT",
         description="Optional",
     )
 
-    FT1: list[_FT1] | None = Field(
+    FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    BLG: _BLG | None = Field(
+    BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
         description="Optional",

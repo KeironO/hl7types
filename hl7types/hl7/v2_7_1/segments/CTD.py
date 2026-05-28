@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: CTD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -21,7 +21,7 @@ from ..datatypes.XTN import XTN
 class CTD(BaseModel):
     """HL7 v2 CTD segment."""
 
-    ctd_1: list[CWE] = Field(
+    ctd_1: List[CWE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "ctd_1",
@@ -33,7 +33,7 @@ class CTD(BaseModel):
         description="Item #196 | Table HL70131",
     )
 
-    ctd_2: list[XPN] | None = Field(
+    ctd_2: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ctd_2",
@@ -45,7 +45,7 @@ class CTD(BaseModel):
         description="Item #1165",
     )
 
-    ctd_3: list[XAD] | None = Field(
+    ctd_3: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ctd_3",
@@ -57,7 +57,7 @@ class CTD(BaseModel):
         description="Item #1166",
     )
 
-    ctd_4: PL | None = Field(
+    ctd_4: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ctd_4",
@@ -69,7 +69,7 @@ class CTD(BaseModel):
         description="Item #1167",
     )
 
-    ctd_5: list[XTN] | None = Field(
+    ctd_5: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ctd_5",
@@ -81,7 +81,7 @@ class CTD(BaseModel):
         description="Item #1168",
     )
 
-    ctd_6: CWE | None = Field(
+    ctd_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ctd_6",
@@ -93,7 +93,7 @@ class CTD(BaseModel):
         description="Item #684 | Table HL70185",
     )
 
-    ctd_7: list[PLN] | None = Field(
+    ctd_7: Optional[List[PLN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ctd_7",

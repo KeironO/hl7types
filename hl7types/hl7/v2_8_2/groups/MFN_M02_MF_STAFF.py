@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: MFN_M02.MF_STAFF
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AFF import AFF
@@ -58,43 +58,43 @@ class MFN_M02_MF_STAFF(BaseModel):
         description="Required",
     )
 
-    PRA: list[_PRA] | None = Field(
+    PRA: Optional[List[_PRA]] = Field(
         default=None,
         title="PRA",
         description="Optional, repeating",
     )
 
-    ORG: list[_ORG] | None = Field(
+    ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
         description="Optional, repeating",
     )
 
-    AFF: list[_AFF] | None = Field(
+    AFF: Optional[List[_AFF]] = Field(
         default=None,
         title="AFF",
         description="Optional, repeating",
     )
 
-    LAN: list[_LAN] | None = Field(
+    LAN: Optional[List[_LAN]] = Field(
         default=None,
         title="LAN",
         description="Optional, repeating",
     )
 
-    EDU: list[_EDU] | None = Field(
+    EDU: Optional[List[_EDU]] = Field(
         default=None,
         title="EDU",
         description="Optional, repeating",
     )
 
-    CER: list[_CER] | None = Field(
+    CER: Optional[List[_CER]] = Field(
         default=None,
         title="CER",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

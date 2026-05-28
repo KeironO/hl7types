@@ -5,9 +5,9 @@ Version: 2.3
 Class: PEX_P07.ASSOCIATED_RX_ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXE import RXE
@@ -31,7 +31,7 @@ class PEX_P07_ASSOCIATED_RX_ORDER(BaseModel):
         description="Required",
     )
 
-    RXR: list[_RXR] | None = Field(
+    RXR: Optional[List[_RXR]] = Field(
         default=None,
         title="RXR",
         description="Optional, repeating",

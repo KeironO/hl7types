@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: QCK_Q02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ERR import ERR
@@ -40,7 +40,7 @@ class QCK_Q02(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -52,13 +52,13 @@ class QCK_Q02(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    QAK: _QAK | None = Field(
+    QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
         description="Optional",

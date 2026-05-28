@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: QRI
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class QRI(BaseModel):
     """HL7 v2 QRI segment."""
 
-    qri_1: str | None = Field(
+    qri_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qri_1",
@@ -28,7 +28,7 @@ class QRI(BaseModel):
         description="Item #1436",
     )
 
-    qri_2: list[CWE] | None = Field(
+    qri_2: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qri_2",
@@ -40,7 +40,7 @@ class QRI(BaseModel):
         description="Item #1437 | Table HL70392",
     )
 
-    qri_3: CWE | None = Field(
+    qri_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "qri_3",

@@ -5,12 +5,13 @@ Version: 2.8.1
 Class: ORL_O44.SPECIMEN_SHIPMENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SHP import SHP
+
 from .ORL_O44_PACKAGE import ORL_O44_PACKAGE
 
 _ORL_O44_PACKAGE = ORL_O44_PACKAGE
@@ -31,7 +32,7 @@ class ORL_O44_SPECIMEN_SHIPMENT(BaseModel):
         description="Required",
     )
 
-    PACKAGE: list[_ORL_O44_PACKAGE] = Field(
+    PACKAGE: List[_ORL_O44_PACKAGE] = Field(
         default=...,
         title="PACKAGE",
         description="Required, repeating",

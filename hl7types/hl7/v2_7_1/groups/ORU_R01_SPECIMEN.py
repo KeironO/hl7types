@@ -5,12 +5,13 @@ Version: 2.7.1
 Class: ORU_R01.SPECIMEN
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SPM import SPM
+
 from .ORU_R01_PATIENT_OBSERVATION import ORU_R01_PATIENT_OBSERVATION
 
 _ORU_R01_PATIENT_OBSERVATION = ORU_R01_PATIENT_OBSERVATION
@@ -31,7 +32,7 @@ class ORU_R01_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    PATIENT_OBSERVATION: list[_ORU_R01_PATIENT_OBSERVATION] | None = Field(
+    PATIENT_OBSERVATION: Optional[List[_ORU_R01_PATIENT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_OBSERVATION",
         description="Optional, repeating",

@@ -5,16 +5,16 @@ Version: 2.8.1
 Class: DR
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class DR(BaseModel):
     """HL7 v2 DR data type."""
 
-    dr_1: str | None = Field(
+    dr_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dr_1",
@@ -25,7 +25,7 @@ class DR(BaseModel):
         title="Range Start Date/Time",
     )
 
-    dr_2: str | None = Field(
+    dr_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dr_2",

@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: SPR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -17,7 +17,7 @@ from ..datatypes.QIP import QIP
 class SPR(BaseModel):
     """HL7 v2 SPR segment."""
 
-    spr_1: str | None = Field(
+    spr_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spr_1",
@@ -53,7 +53,7 @@ class SPR(BaseModel):
         description="Item #704",
     )
 
-    spr_4: list[QIP] | None = Field(
+    spr_4: Optional[List[QIP]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "spr_4",

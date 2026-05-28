@@ -5,9 +5,9 @@ Version: 2.2
 Class: MRG
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -26,7 +26,7 @@ class MRG(BaseModel):
         description="Item #211",
     )
 
-    mrg_2: str | None = Field(
+    mrg_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mrg_2",
@@ -38,7 +38,7 @@ class MRG(BaseModel):
         description="Item #212",
     )
 
-    mrg_3: str | None = Field(
+    mrg_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mrg_3",
@@ -50,7 +50,7 @@ class MRG(BaseModel):
         description="Item #213",
     )
 
-    mrg_4: str | None = Field(
+    mrg_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mrg_4",

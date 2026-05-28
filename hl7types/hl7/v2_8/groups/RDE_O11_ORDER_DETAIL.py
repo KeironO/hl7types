@@ -5,15 +5,16 @@ Version: 2.8
 Class: RDE_O11.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PRT import PRT
 from ..segments.RXO import RXO
 from ..segments.RXR import RXR
+
 from .RDE_O11_COMPONENTS import RDE_O11_COMPONENTS
 
 _NTE = NTE
@@ -40,25 +41,25 @@ class RDE_O11_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENTS: list[_RDE_O11_COMPONENTS] | None = Field(
+    COMPONENTS: Optional[List[_RDE_O11_COMPONENTS]] = Field(
         default=None,
         title="COMPONENTS",
         description="Optional, repeating",

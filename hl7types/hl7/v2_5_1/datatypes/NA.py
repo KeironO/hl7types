@@ -5,16 +5,16 @@ Version: 2.5.1
 Class: NA
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class NA(BaseModel):
     """HL7 v2 NA data type."""
 
-    na_1: str | None = Field(
+    na_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "na_1",
@@ -25,7 +25,7 @@ class NA(BaseModel):
         title="Value1",
     )
 
-    na_2: str | None = Field(
+    na_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "na_2",
@@ -36,7 +36,7 @@ class NA(BaseModel):
         title="Value2",
     )
 
-    na_3: str | None = Field(
+    na_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "na_3",
@@ -47,7 +47,7 @@ class NA(BaseModel):
         title="Value3",
     )
 
-    na_4: str | None = Field(
+    na_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "na_4",

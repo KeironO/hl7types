@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: SPS
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -17,7 +17,7 @@ from .TX import TX
 class SPS(BaseModel):
     """HL7 v2 SPS data type."""
 
-    sps_1: CE | None = Field(
+    sps_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sps_1",
@@ -28,7 +28,7 @@ class SPS(BaseModel):
         title="specimen source name or code",
     )
 
-    sps_2: TX | None = Field(
+    sps_2: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sps_2",
@@ -39,7 +39,7 @@ class SPS(BaseModel):
         title="additives",
     )
 
-    sps_3: TX | None = Field(
+    sps_3: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sps_3",
@@ -50,7 +50,7 @@ class SPS(BaseModel):
         title="freetext",
     )
 
-    sps_4: CE | None = Field(
+    sps_4: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sps_4",
@@ -61,7 +61,7 @@ class SPS(BaseModel):
         title="body site",
     )
 
-    sps_5: CE | None = Field(
+    sps_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sps_5",
@@ -72,7 +72,7 @@ class SPS(BaseModel):
         title="site modifier",
     )
 
-    sps_6: CE | None = Field(
+    sps_6: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sps_6",
@@ -83,7 +83,7 @@ class SPS(BaseModel):
         title="collection modifier method code",
     )
 
-    sps_7: CE | None = Field(
+    sps_7: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sps_7",

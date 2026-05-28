@@ -5,9 +5,9 @@ Version: 2.3
 Class: TBR_Q01
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -52,7 +52,7 @@ class TBR_Q01(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -70,13 +70,13 @@ class TBR_Q01(BaseModel):
         description="Required",
     )
 
-    RDT: list[_RDT] = Field(
+    RDT: List[_RDT] = Field(
         default=...,
         title="RDT",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

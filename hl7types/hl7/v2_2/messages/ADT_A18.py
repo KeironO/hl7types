@@ -5,9 +5,9 @@ Version: 2.2
 Class: ADT_A18
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.EVN import EVN
@@ -52,7 +52,7 @@ class ADT_A18(BaseModel):
         description="Required",
     )
 
-    MRG: _MRG | None = Field(
+    MRG: Optional[_MRG] = Field(
         default=None,
         title="MRG",
         description="Optional",

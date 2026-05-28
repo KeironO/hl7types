@@ -5,9 +5,9 @@ Version: 2.4
 Class: CSU_C09.STUDY_OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
@@ -28,7 +28,7 @@ class CSU_C09_STUDY_OBSERVATION(BaseModel):
         OBX (List[OBX]): required
     """
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
@@ -40,7 +40,7 @@ class CSU_C09_STUDY_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] = Field(
+    OBX: List[_OBX] = Field(
         default=...,
         title="OBX",
         description="Required, repeating",

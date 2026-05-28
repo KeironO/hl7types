@@ -5,9 +5,9 @@ Version: 2.7
 Class: EQU
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -41,7 +41,7 @@ class EQU(BaseModel):
         description="Item #1322",
     )
 
-    equ_3: CWE | None = Field(
+    equ_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "equ_3",
@@ -53,7 +53,7 @@ class EQU(BaseModel):
         description="Item #1323 | Table HL70365",
     )
 
-    equ_4: CWE | None = Field(
+    equ_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "equ_4",
@@ -65,7 +65,7 @@ class EQU(BaseModel):
         description="Item #1324 | Table HL70366",
     )
 
-    equ_5: CWE | None = Field(
+    equ_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "equ_5",

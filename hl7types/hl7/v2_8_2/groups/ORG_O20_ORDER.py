@@ -5,15 +5,16 @@ Version: 2.8.2
 Class: ORG_O20.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
+
 from .ORG_O20_OBSERVATION_GROUP import ORG_O20_OBSERVATION_GROUP
 from .ORG_O20_SPECIMEN import ORG_O20_SPECIMEN
 from .ORG_O20_TIMING import ORG_O20_TIMING
@@ -46,37 +47,37 @@ class ORG_O20_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: list[_ORG_O20_TIMING] | None = Field(
+    TIMING: Optional[List[_ORG_O20_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    OBSERVATION_GROUP: _ORG_O20_OBSERVATION_GROUP | None = Field(
+    OBSERVATION_GROUP: Optional[_ORG_O20_OBSERVATION_GROUP] = Field(
         default=None,
         title="OBSERVATION_GROUP",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    SPECIMEN: list[_ORG_O20_SPECIMEN] | None = Field(
+    SPECIMEN: Optional[List[_ORG_O20_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",

@@ -5,14 +5,15 @@ Version: 2.3
 Class: BAR_P06
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.BAR_P06_PATIENT import BAR_P06_PATIENT
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
+
+from ..groups.BAR_P06_PATIENT import BAR_P06_PATIENT
 
 _BAR_P06_PATIENT = BAR_P06_PATIENT
 _EVN = EVN
@@ -40,7 +41,7 @@ class BAR_P06(BaseModel):
         description="Required",
     )
 
-    PATIENT: list[_BAR_P06_PATIENT] = Field(
+    PATIENT: List[_BAR_P06_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

@@ -5,10 +5,10 @@ Version: 2.7.1
 Class: ZL7
 Type: Segment
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import AliasChoices, BaseModel, Field
 
 
 class ZL7(BaseModel):

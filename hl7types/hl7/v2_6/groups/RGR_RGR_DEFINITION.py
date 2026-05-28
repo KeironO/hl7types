@@ -5,13 +5,14 @@ Version: 2.6
 Class: RGR_RGR.DEFINITION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
 from .RGR_RGR_ORDER import RGR_RGR_ORDER
 from .RGR_RGR_PATIENT import RGR_RGR_PATIENT
 
@@ -37,19 +38,19 @@ class RGR_RGR_DEFINITION(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PATIENT: _RGR_RGR_PATIENT | None = Field(
+    PATIENT: Optional[_RGR_RGR_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: list[_RGR_RGR_ORDER] = Field(
+    ORDER: List[_RGR_RGR_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

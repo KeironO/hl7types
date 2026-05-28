@@ -5,15 +5,16 @@ Version: 2.3.1
 Class: PPR_PC1
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.PID import PID
 
 from ..groups.PPR_PC1_PATIENT_VISIT import PPR_PC1_PATIENT_VISIT
 from ..groups.PPR_PC1_PROBLEM import PPR_PC1_PROBLEM
-from ..segments.MSH import MSH
-from ..segments.PID import PID
 
 _MSH = MSH
 _PID = PID
@@ -43,13 +44,13 @@ class PPR_PC1(BaseModel):
         description="Required",
     )
 
-    PATIENT_VISIT: _PPR_PC1_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_PPR_PC1_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    PROBLEM: list[_PPR_PC1_PROBLEM] = Field(
+    PROBLEM: List[_PPR_PC1_PROBLEM] = Field(
         default=...,
         title="PROBLEM",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.5
 Class: PMU_B08
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CER import CER
@@ -43,7 +43,7 @@ class PMU_B08(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -61,13 +61,13 @@ class PMU_B08(BaseModel):
         description="Required",
     )
 
-    PRA: _PRA | None = Field(
+    PRA: Optional[_PRA] = Field(
         default=None,
         title="PRA",
         description="Optional",
     )
 
-    CER: list[_CER] | None = Field(
+    CER: Optional[List[_CER]] = Field(
         default=None,
         title="CER",
         description="Optional, repeating",

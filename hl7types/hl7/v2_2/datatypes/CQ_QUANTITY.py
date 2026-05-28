@@ -5,16 +5,16 @@ Version: 2.2
 Class: CQ_QUANTITY
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CQ_QUANTITY(BaseModel):
     """HL7 v2 CQ_QUANTITY data type."""
 
-    cq_quantity_1: str | None = Field(
+    cq_quantity_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cq_quantity_1",
@@ -25,7 +25,7 @@ class CQ_QUANTITY(BaseModel):
         title="quantity",
     )
 
-    cq_quantity_2: str | None = Field(
+    cq_quantity_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cq_quantity_2",

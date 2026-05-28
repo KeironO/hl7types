@@ -5,16 +5,16 @@ Version: 2.6
 Class: FTS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class FTS(BaseModel):
     """HL7 v2 FTS segment."""
 
-    fts_1: str | None = Field(
+    fts_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fts_1",
@@ -26,7 +26,7 @@ class FTS(BaseModel):
         description="Item #79",
     )
 
-    fts_2: str | None = Field(
+    fts_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "fts_2",

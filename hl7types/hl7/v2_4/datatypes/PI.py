@@ -5,16 +5,16 @@ Version: 2.4
 Class: PI
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class PI(BaseModel):
     """HL7 v2 PI data type."""
 
-    pi_1: str | None = Field(
+    pi_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pi_1",
@@ -25,7 +25,7 @@ class PI(BaseModel):
         title="ID number (ST)",
     )
 
-    pi_2: str | None = Field(
+    pi_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pi_2",
@@ -36,7 +36,7 @@ class PI(BaseModel):
         title="type of ID number (IS)",
     )
 
-    pi_3: str | None = Field(
+    pi_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pi_3",

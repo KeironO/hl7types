@@ -5,16 +5,17 @@ Version: 2.4
 Class: RRG_O16
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RRG_O16_RESPONSE import RRG_O16_RESPONSE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
+
+from ..groups.RRG_O16_RESPONSE import RRG_O16_RESPONSE
 
 _ERR = ERR
 _MSA = MSA
@@ -46,19 +47,19 @@ class RRG_O16(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESPONSE: _RRG_O16_RESPONSE | None = Field(
+    RESPONSE: Optional[_RRG_O16_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
         description="Optional",

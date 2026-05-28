@@ -5,9 +5,9 @@ Version: 2.4
 Class: ORC
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -38,7 +38,7 @@ class ORC(BaseModel):
         description="Item #215 | Table HL70119",
     )
 
-    orc_2: EI | None = Field(
+    orc_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_2",
@@ -50,7 +50,7 @@ class ORC(BaseModel):
         description="Item #216",
     )
 
-    orc_3: EI | None = Field(
+    orc_3: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_3",
@@ -62,7 +62,7 @@ class ORC(BaseModel):
         description="Item #217",
     )
 
-    orc_4: EI | None = Field(
+    orc_4: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_4",
@@ -74,7 +74,7 @@ class ORC(BaseModel):
         description="Item #218",
     )
 
-    orc_5: str | None = Field(
+    orc_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_5",
@@ -86,7 +86,7 @@ class ORC(BaseModel):
         description="Item #219 | Table HL70038",
     )
 
-    orc_6: str | None = Field(
+    orc_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_6",
@@ -98,7 +98,7 @@ class ORC(BaseModel):
         description="Item #220 | Table HL70121",
     )
 
-    orc_7: list[TQ] | None = Field(
+    orc_7: Optional[List[TQ]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_7",
@@ -110,7 +110,7 @@ class ORC(BaseModel):
         description="Item #221",
     )
 
-    orc_8: EIP | None = Field(
+    orc_8: Optional[EIP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_8",
@@ -122,7 +122,7 @@ class ORC(BaseModel):
         description="Item #222",
     )
 
-    orc_9: TS | None = Field(
+    orc_9: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_9",
@@ -134,7 +134,7 @@ class ORC(BaseModel):
         description="Item #223",
     )
 
-    orc_10: list[XCN] | None = Field(
+    orc_10: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_10",
@@ -146,7 +146,7 @@ class ORC(BaseModel):
         description="Item #224",
     )
 
-    orc_11: list[XCN] | None = Field(
+    orc_11: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_11",
@@ -158,7 +158,7 @@ class ORC(BaseModel):
         description="Item #225",
     )
 
-    orc_12: list[XCN] | None = Field(
+    orc_12: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_12",
@@ -170,7 +170,7 @@ class ORC(BaseModel):
         description="Item #226",
     )
 
-    orc_13: PL | None = Field(
+    orc_13: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_13",
@@ -182,7 +182,7 @@ class ORC(BaseModel):
         description="Item #227",
     )
 
-    orc_14: list[XTN] | None = Field(
+    orc_14: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_14",
@@ -194,7 +194,7 @@ class ORC(BaseModel):
         description="Item #228",
     )
 
-    orc_15: TS | None = Field(
+    orc_15: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_15",
@@ -206,7 +206,7 @@ class ORC(BaseModel):
         description="Item #229",
     )
 
-    orc_16: CE | None = Field(
+    orc_16: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_16",
@@ -218,7 +218,7 @@ class ORC(BaseModel):
         description="Item #230",
     )
 
-    orc_17: CE | None = Field(
+    orc_17: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_17",
@@ -230,7 +230,7 @@ class ORC(BaseModel):
         description="Item #231",
     )
 
-    orc_18: CE | None = Field(
+    orc_18: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_18",
@@ -242,7 +242,7 @@ class ORC(BaseModel):
         description="Item #232",
     )
 
-    orc_19: list[XCN] | None = Field(
+    orc_19: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_19",
@@ -254,7 +254,7 @@ class ORC(BaseModel):
         description="Item #233",
     )
 
-    orc_20: CE | None = Field(
+    orc_20: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_20",
@@ -266,7 +266,7 @@ class ORC(BaseModel):
         description="Item #1310 | Table HL70339",
     )
 
-    orc_21: list[XON] | None = Field(
+    orc_21: Optional[List[XON]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_21",
@@ -278,7 +278,7 @@ class ORC(BaseModel):
         description="Item #1311",
     )
 
-    orc_22: list[XAD] | None = Field(
+    orc_22: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_22",
@@ -290,7 +290,7 @@ class ORC(BaseModel):
         description="Item #1312",
     )
 
-    orc_23: list[XTN] | None = Field(
+    orc_23: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_23",
@@ -302,7 +302,7 @@ class ORC(BaseModel):
         description="Item #1313",
     )
 
-    orc_24: list[XAD] | None = Field(
+    orc_24: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_24",
@@ -314,7 +314,7 @@ class ORC(BaseModel):
         description="Item #1314",
     )
 
-    orc_25: CWE | None = Field(
+    orc_25: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "orc_25",

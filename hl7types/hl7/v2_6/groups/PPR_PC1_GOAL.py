@@ -5,14 +5,15 @@ Version: 2.6
 Class: PPR_PC1.GOAL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GOL import GOL
 from ..segments.NTE import NTE
 from ..segments.VAR import VAR
+
 from .PPR_PC1_GOAL_OBSERVATION import PPR_PC1_GOAL_OBSERVATION
 from .PPR_PC1_GOAL_ROLE import PPR_PC1_GOAL_ROLE
 
@@ -40,25 +41,25 @@ class PPR_PC1_GOAL(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    GOAL_ROLE: list[_PPR_PC1_GOAL_ROLE] | None = Field(
+    GOAL_ROLE: Optional[List[_PPR_PC1_GOAL_ROLE]] = Field(
         default=None,
         title="GOAL_ROLE",
         description="Optional, repeating",
     )
 
-    GOAL_OBSERVATION: list[_PPR_PC1_GOAL_OBSERVATION] | None = Field(
+    GOAL_OBSERVATION: Optional[List[_PPR_PC1_GOAL_OBSERVATION]] = Field(
         default=None,
         title="GOAL_OBSERVATION",
         description="Optional, repeating",

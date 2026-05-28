@@ -5,9 +5,9 @@ Version: 2.8
 Class: CQU_I19.PROVIDER_CONTACT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -31,7 +31,7 @@ class CQU_I19_PROVIDER_CONTACT(BaseModel):
         description="Required",
     )
 
-    CTD: list[_CTD] | None = Field(
+    CTD: Optional[List[_CTD]] = Field(
         default=None,
         title="CTD",
         description="Optional, repeating",

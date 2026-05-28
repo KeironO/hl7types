@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RXO
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -24,7 +24,7 @@ from ..datatypes.XTN import XTN
 class RXO(BaseModel):
     """HL7 v2 RXO segment."""
 
-    rxo_1: CWE | None = Field(
+    rxo_1: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_1",
@@ -36,7 +36,7 @@ class RXO(BaseModel):
         description="Item #292 | Table HL79999",
     )
 
-    rxo_2: str | None = Field(
+    rxo_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_2",
@@ -48,7 +48,7 @@ class RXO(BaseModel):
         description="Item #293",
     )
 
-    rxo_3: str | None = Field(
+    rxo_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_3",
@@ -60,7 +60,7 @@ class RXO(BaseModel):
         description="Item #294",
     )
 
-    rxo_4: CWE | None = Field(
+    rxo_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_4",
@@ -72,7 +72,7 @@ class RXO(BaseModel):
         description="Item #295 | Table HL79999",
     )
 
-    rxo_5: CWE | None = Field(
+    rxo_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_5",
@@ -84,7 +84,7 @@ class RXO(BaseModel):
         description="Item #296 | Table HL79999",
     )
 
-    rxo_6: list[CWE] | None = Field(
+    rxo_6: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_6",
@@ -96,7 +96,7 @@ class RXO(BaseModel):
         description="Item #297 | Table HL79999",
     )
 
-    rxo_7: list[CWE] | None = Field(
+    rxo_7: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_7",
@@ -108,7 +108,7 @@ class RXO(BaseModel):
         description="Item #298 | Table HL79999",
     )
 
-    rxo_8: LA1 | None = Field(
+    rxo_8: Optional[LA1] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_8",
@@ -120,7 +120,7 @@ class RXO(BaseModel):
         description="Item #299",
     )
 
-    rxo_9: str | None = Field(
+    rxo_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_9",
@@ -132,7 +132,7 @@ class RXO(BaseModel):
         description="Item #300 | Table HL70161",
     )
 
-    rxo_10: CWE | None = Field(
+    rxo_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_10",
@@ -144,7 +144,7 @@ class RXO(BaseModel):
         description="Item #301 | Table HL79999",
     )
 
-    rxo_11: str | None = Field(
+    rxo_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_11",
@@ -156,7 +156,7 @@ class RXO(BaseModel):
         description="Item #302",
     )
 
-    rxo_12: CWE | None = Field(
+    rxo_12: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_12",
@@ -168,7 +168,7 @@ class RXO(BaseModel):
         description="Item #303 | Table HL79999",
     )
 
-    rxo_13: str | None = Field(
+    rxo_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_13",
@@ -180,7 +180,7 @@ class RXO(BaseModel):
         description="Item #304",
     )
 
-    rxo_14: list[XCN] | None = Field(
+    rxo_14: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_14",
@@ -192,7 +192,7 @@ class RXO(BaseModel):
         description="Item #305",
     )
 
-    rxo_15: list[XCN] | None = Field(
+    rxo_15: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_15",
@@ -204,7 +204,7 @@ class RXO(BaseModel):
         description="Item #306",
     )
 
-    rxo_16: str | None = Field(
+    rxo_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_16",
@@ -216,7 +216,7 @@ class RXO(BaseModel):
         description="Item #307 | Table HL70136",
     )
 
-    rxo_17: str | None = Field(
+    rxo_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_17",
@@ -228,7 +228,7 @@ class RXO(BaseModel):
         description="Item #308",
     )
 
-    rxo_18: str | None = Field(
+    rxo_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_18",
@@ -240,7 +240,7 @@ class RXO(BaseModel):
         description="Item #1121",
     )
 
-    rxo_19: CWE | None = Field(
+    rxo_19: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_19",
@@ -252,7 +252,7 @@ class RXO(BaseModel):
         description="Item #1122 | Table HL79999",
     )
 
-    rxo_20: list[CWE] | None = Field(
+    rxo_20: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_20",
@@ -264,7 +264,7 @@ class RXO(BaseModel):
         description="Item #1123 | Table HL79999",
     )
 
-    rxo_21: str | None = Field(
+    rxo_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_21",
@@ -276,7 +276,7 @@ class RXO(BaseModel):
         description="Item #1218",
     )
 
-    rxo_22: CWE | None = Field(
+    rxo_22: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_22",
@@ -288,7 +288,7 @@ class RXO(BaseModel):
         description="Item #1219 | Table HL79999",
     )
 
-    rxo_23: CQ | None = Field(
+    rxo_23: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_23",
@@ -300,7 +300,7 @@ class RXO(BaseModel):
         description="Item #329",
     )
 
-    rxo_24: list[CWE] | None = Field(
+    rxo_24: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_24",
@@ -312,7 +312,7 @@ class RXO(BaseModel):
         description="Item #1476 | Table HL79999",
     )
 
-    rxo_25: str | None = Field(
+    rxo_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_25",
@@ -324,7 +324,7 @@ class RXO(BaseModel):
         description="Item #1666",
     )
 
-    rxo_26: CWE | None = Field(
+    rxo_26: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_26",
@@ -336,7 +336,7 @@ class RXO(BaseModel):
         description="Item #1667 | Table HL79999",
     )
 
-    rxo_27: str | None = Field(
+    rxo_27: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_27",
@@ -348,7 +348,7 @@ class RXO(BaseModel):
         description="Item #1668 | Table HL70480",
     )
 
-    rxo_28: str | None = Field(
+    rxo_28: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_28",
@@ -360,7 +360,7 @@ class RXO(BaseModel):
         description="Item #1669",
     )
 
-    rxo_29: EI | None = Field(
+    rxo_29: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_29",
@@ -372,7 +372,7 @@ class RXO(BaseModel):
         description="Item #2149",
     )
 
-    rxo_30: EI | None = Field(
+    rxo_30: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_30",
@@ -384,7 +384,7 @@ class RXO(BaseModel):
         description="Item #2150",
     )
 
-    rxo_31: CNE | None = Field(
+    rxo_31: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_31",
@@ -396,7 +396,7 @@ class RXO(BaseModel):
         description="Item #2151 | Table HL70725",
     )
 
-    rxo_32: CWE | None = Field(
+    rxo_32: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_32",
@@ -408,7 +408,7 @@ class RXO(BaseModel):
         description="Item #1681 | Table HL79999",
     )
 
-    rxo_33: XAD | None = Field(
+    rxo_33: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_33",
@@ -420,7 +420,7 @@ class RXO(BaseModel):
         description="Item #1682",
     )
 
-    rxo_34: PL | None = Field(
+    rxo_34: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_34",
@@ -432,7 +432,7 @@ class RXO(BaseModel):
         description="Item #1683",
     )
 
-    rxo_35: XAD | None = Field(
+    rxo_35: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_35",
@@ -444,7 +444,7 @@ class RXO(BaseModel):
         description="Item #1684",
     )
 
-    rxo_36: list[XTN] | None = Field(
+    rxo_36: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxo_36",

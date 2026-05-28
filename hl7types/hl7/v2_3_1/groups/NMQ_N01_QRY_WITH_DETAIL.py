@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: NMQ_N01.QRY_WITH_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.QRD import QRD
@@ -31,7 +31,7 @@ class NMQ_N01_QRY_WITH_DETAIL(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",

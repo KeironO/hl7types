@@ -5,14 +5,15 @@ Version: 2.8
 Class: RAS_O17.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
+
 from .RAS_O17_ADMINISTRATION import RAS_O17_ADMINISTRATION
 from .RAS_O17_ENCODING import RAS_O17_ENCODING
 from .RAS_O17_ORDER_DETAIL import RAS_O17_ORDER_DETAIL
@@ -46,37 +47,37 @@ class RAS_O17_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: list[_RAS_O17_TIMING] | None = Field(
+    TIMING: Optional[List[_RAS_O17_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL: _RAS_O17_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_RAS_O17_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    ENCODING: _RAS_O17_ENCODING | None = Field(
+    ENCODING: Optional[_RAS_O17_ENCODING] = Field(
         default=None,
         title="ENCODING",
         description="Optional",
     )
 
-    ADMINISTRATION: list[_RAS_O17_ADMINISTRATION] = Field(
+    ADMINISTRATION: List[_RAS_O17_ADMINISTRATION] = Field(
         default=...,
         title="ADMINISTRATION",
         description="Required, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

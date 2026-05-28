@@ -5,12 +5,13 @@ Version: 2.6
 Class: EHC_E02.PRODUCT_SERVICE_SECTION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PSS import PSS
+
 from .EHC_E02_PSG import EHC_E02_PSG
 
 _EHC_E02_PSG = EHC_E02_PSG
@@ -31,7 +32,7 @@ class EHC_E02_PRODUCT_SERVICE_SECTION(BaseModel):
         description="Required",
     )
 
-    PSG: list[_EHC_E02_PSG] | None = Field(
+    PSG: Optional[List[_EHC_E02_PSG]] = Field(
         default=None,
         title="PSG",
         description="Optional, repeating",

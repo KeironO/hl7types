@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: IVC
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -33,7 +33,7 @@ class IVC(BaseModel):
         description="Item #1914",
     )
 
-    ivc_2: EI | None = Field(
+    ivc_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_2",
@@ -45,7 +45,7 @@ class IVC(BaseModel):
         description="Item #1915",
     )
 
-    ivc_3: EI | None = Field(
+    ivc_3: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_3",
@@ -117,7 +117,7 @@ class IVC(BaseModel):
         description="Item #1921",
     )
 
-    ivc_9: str | None = Field(
+    ivc_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_9",
@@ -153,7 +153,7 @@ class IVC(BaseModel):
         description="Item #1924",
     )
 
-    ivc_12: XCN | None = Field(
+    ivc_12: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_12",
@@ -165,7 +165,7 @@ class IVC(BaseModel):
         description="Item #1925",
     )
 
-    ivc_13: str | None = Field(
+    ivc_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_13",
@@ -177,7 +177,7 @@ class IVC(BaseModel):
         description="Item #1926 | Table HL70136",
     )
 
-    ivc_14: str | None = Field(
+    ivc_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_14",
@@ -189,7 +189,7 @@ class IVC(BaseModel):
         description="Item #1927",
     )
 
-    ivc_15: str | None = Field(
+    ivc_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_15",
@@ -201,7 +201,7 @@ class IVC(BaseModel):
         description="Item #1928",
     )
 
-    ivc_16: CP | None = Field(
+    ivc_16: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_16",
@@ -213,7 +213,7 @@ class IVC(BaseModel):
         description="Item #1929",
     )
 
-    ivc_17: CP | None = Field(
+    ivc_17: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_17",
@@ -225,7 +225,7 @@ class IVC(BaseModel):
         description="Item #1930",
     )
 
-    ivc_18: CP | None = Field(
+    ivc_18: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_18",
@@ -237,7 +237,7 @@ class IVC(BaseModel):
         description="Item #1931",
     )
 
-    ivc_19: XCN | None = Field(
+    ivc_19: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_19",
@@ -249,7 +249,7 @@ class IVC(BaseModel):
         description="Item #1932",
     )
 
-    ivc_20: CX | None = Field(
+    ivc_20: Optional[CX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_20",
@@ -261,7 +261,7 @@ class IVC(BaseModel):
         description="Item #1933",
     )
 
-    ivc_21: CP | None = Field(
+    ivc_21: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_21",
@@ -273,7 +273,7 @@ class IVC(BaseModel):
         description="Item #1934",
     )
 
-    ivc_22: CP | None = Field(
+    ivc_22: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_22",
@@ -285,7 +285,7 @@ class IVC(BaseModel):
         description="Item #1935",
     )
 
-    ivc_23: CP | None = Field(
+    ivc_23: Optional[CP] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_23",
@@ -297,7 +297,7 @@ class IVC(BaseModel):
         description="Item #1936",
     )
 
-    ivc_24: list[str] | None = Field(
+    ivc_24: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_24",
@@ -321,7 +321,7 @@ class IVC(BaseModel):
         description="Item #1938 | Table HL70556",
     )
 
-    ivc_26: str | None = Field(
+    ivc_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_26",
@@ -333,7 +333,7 @@ class IVC(BaseModel):
         description="Item #2038",
     )
 
-    ivc_27: str | None = Field(
+    ivc_27: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_27",
@@ -345,7 +345,7 @@ class IVC(BaseModel):
         description="Item #2039",
     )
 
-    ivc_28: CWE | None = Field(
+    ivc_28: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_28",
@@ -357,7 +357,7 @@ class IVC(BaseModel):
         description="Item #2040 | Table HL70572",
     )
 
-    ivc_29: CWE | None = Field(
+    ivc_29: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_29",
@@ -369,7 +369,7 @@ class IVC(BaseModel):
         description="Item #2041 | Table HL70572",
     )
 
-    ivc_30: str | None = Field(
+    ivc_30: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ivc_30",

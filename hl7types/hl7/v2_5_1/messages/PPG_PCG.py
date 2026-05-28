@@ -5,16 +5,17 @@ Version: 2.5.1
 Class: PPG_PCG
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.PPG_PCG_PATHWAY import PPG_PCG_PATHWAY
-from ..groups.PPG_PCG_PATIENT_VISIT import PPG_PCG_PATIENT_VISIT
 from ..segments.MSH import MSH
 from ..segments.PID import PID
 from ..segments.SFT import SFT
+
+from ..groups.PPG_PCG_PATHWAY import PPG_PCG_PATHWAY
+from ..groups.PPG_PCG_PATIENT_VISIT import PPG_PCG_PATIENT_VISIT
 
 _MSH = MSH
 _PID = PID
@@ -40,7 +41,7 @@ class PPG_PCG(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -52,13 +53,13 @@ class PPG_PCG(BaseModel):
         description="Required",
     )
 
-    PATIENT_VISIT: _PPG_PCG_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_PPG_PCG_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    PATHWAY: list[_PPG_PCG_PATHWAY] = Field(
+    PATHWAY: List[_PPG_PCG_PATHWAY] = Field(
         default=...,
         title="PATHWAY",
         description="Required, repeating",

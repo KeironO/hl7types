@@ -5,9 +5,9 @@ Version: 2.8
 Class: DRG_O43.DONOR_REGISTRATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -25,13 +25,13 @@ class DRG_O43_DONOR_REGISTRATION(BaseModel):
         NTE (Optional[List[NTE]]): optional
     """
 
-    PV1: _PV1 | None = Field(
+    PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

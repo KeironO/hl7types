@@ -5,9 +5,9 @@ Version: 2.4
 Class: CSR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -32,7 +32,7 @@ class CSR(BaseModel):
         description="Item #1011",
     )
 
-    csr_2: EI | None = Field(
+    csr_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_2",
@@ -44,7 +44,7 @@ class CSR(BaseModel):
         description="Item #1036",
     )
 
-    csr_3: CE | None = Field(
+    csr_3: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_3",
@@ -68,7 +68,7 @@ class CSR(BaseModel):
         description="Item #1038",
     )
 
-    csr_5: CX | None = Field(
+    csr_5: Optional[CX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_5",
@@ -92,7 +92,7 @@ class CSR(BaseModel):
         description="Item #1040",
     )
 
-    csr_7: list[XCN] | None = Field(
+    csr_7: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_7",
@@ -104,7 +104,7 @@ class CSR(BaseModel):
         description="Item #1041",
     )
 
-    csr_8: list[XCN] = Field(
+    csr_8: List[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "csr_8",
@@ -116,7 +116,7 @@ class CSR(BaseModel):
         description="Item #1042",
     )
 
-    csr_9: TS | None = Field(
+    csr_9: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_9",
@@ -128,7 +128,7 @@ class CSR(BaseModel):
         description="Item #1043",
     )
 
-    csr_10: CE | None = Field(
+    csr_10: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_10",
@@ -140,7 +140,7 @@ class CSR(BaseModel):
         description="Item #1044",
     )
 
-    csr_11: list[TS] | None = Field(
+    csr_11: Optional[List[TS]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_11",
@@ -152,7 +152,7 @@ class CSR(BaseModel):
         description="Item #1045",
     )
 
-    csr_12: list[CE] | None = Field(
+    csr_12: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_12",
@@ -164,7 +164,7 @@ class CSR(BaseModel):
         description="Item #1046",
     )
 
-    csr_13: list[CE] | None = Field(
+    csr_13: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_13",
@@ -176,7 +176,7 @@ class CSR(BaseModel):
         description="Item #1047",
     )
 
-    csr_14: CE | None = Field(
+    csr_14: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_14",
@@ -188,7 +188,7 @@ class CSR(BaseModel):
         description="Item #1048",
     )
 
-    csr_15: TS | None = Field(
+    csr_15: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_15",
@@ -200,7 +200,7 @@ class CSR(BaseModel):
         description="Item #1049",
     )
 
-    csr_16: CE | None = Field(
+    csr_16: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "csr_16",

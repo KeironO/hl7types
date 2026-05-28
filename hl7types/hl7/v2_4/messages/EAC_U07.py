@@ -5,9 +5,9 @@ Version: 2.4
 Class: EAC_U07
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CNS import CNS
@@ -49,25 +49,25 @@ class EAC_U07(BaseModel):
         description="Required",
     )
 
-    ECD: list[_ECD] = Field(
+    ECD: List[_ECD] = Field(
         default=...,
         title="ECD",
         description="Required, repeating",
     )
 
-    SAC: _SAC | None = Field(
+    SAC: Optional[_SAC] = Field(
         default=None,
         title="SAC",
         description="Optional",
     )
 
-    CNS: _CNS | None = Field(
+    CNS: Optional[_CNS] = Field(
         default=None,
         title="CNS",
         description="Optional",
     )
 
-    ROL: _ROL | None = Field(
+    ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
         description="Optional",

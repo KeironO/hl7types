@@ -5,15 +5,16 @@ Version: 2.7.1
 Class: SDR_S31
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.SDR_S31_ANTI_MICROBIAL_DEVICE_DATA import SDR_S31_ANTI_MICROBIAL_DEVICE_DATA
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.SDR_S31_ANTI_MICROBIAL_DEVICE_DATA import SDR_S31_ANTI_MICROBIAL_DEVICE_DATA
 
 _MSH = MSH
 _SDR_S31_ANTI_MICROBIAL_DEVICE_DATA = SDR_S31_ANTI_MICROBIAL_DEVICE_DATA
@@ -37,13 +38,13 @@ class SDR_S31(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",

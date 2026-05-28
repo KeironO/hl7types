@@ -5,13 +5,14 @@ Version: 2.4
 Class: NMD_N02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.NMD_N02_CLOCK_AND_STATS_WITH_NOTES import NMD_N02_CLOCK_AND_STATS_WITH_NOTES
 from ..segments.MSH import MSH
+
+from ..groups.NMD_N02_CLOCK_AND_STATS_WITH_NOTES import NMD_N02_CLOCK_AND_STATS_WITH_NOTES
 
 _MSH = MSH
 _NMD_N02_CLOCK_AND_STATS_WITH_NOTES = NMD_N02_CLOCK_AND_STATS_WITH_NOTES
@@ -31,7 +32,7 @@ class NMD_N02(BaseModel):
         description="Required",
     )
 
-    CLOCK_AND_STATS_WITH_NOTES: list[_NMD_N02_CLOCK_AND_STATS_WITH_NOTES] = Field(
+    CLOCK_AND_STATS_WITH_NOTES: List[_NMD_N02_CLOCK_AND_STATS_WITH_NOTES] = Field(
         default=...,
         title="CLOCK_AND_STATS_WITH_NOTES",
         description="Required, repeating",

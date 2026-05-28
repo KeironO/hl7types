@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: ISD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -28,7 +28,7 @@ class ISD(BaseModel):
         description="Item #1326",
     )
 
-    isd_2: CWE | None = Field(
+    isd_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "isd_2",

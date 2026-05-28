@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: REF_I12.AUTCTD_SUPPGRP2
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.AUT import AUT
@@ -31,7 +31,7 @@ class REF_I12_AUTCTD_SUPPGRP2(BaseModel):
         description="Required",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",

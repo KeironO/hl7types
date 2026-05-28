@@ -5,10 +5,10 @@ Version: 2.7.1
 Class: PPR_PC1.CHOICE
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class PPR_PC1_CHOICE(BaseModel):

@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: ORL_O44.SPECIMEN_CONTAINER_IN_PACKAGE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC

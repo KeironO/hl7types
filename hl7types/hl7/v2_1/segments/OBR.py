@@ -5,9 +5,9 @@ Version: 2.1
 Class: OBR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -16,7 +16,7 @@ from ..datatypes.CE import CE
 class OBR(BaseModel):
     """HL7 v2 OBR segment."""
 
-    obr_1: str | None = Field(
+    obr_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_1",
@@ -28,7 +28,7 @@ class OBR(BaseModel):
         description="Item #520",
     )
 
-    obr_2: str | None = Field(
+    obr_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_2",
@@ -40,7 +40,7 @@ class OBR(BaseModel):
         description="Item #732",
     )
 
-    obr_3: str | None = Field(
+    obr_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_3",
@@ -64,7 +64,7 @@ class OBR(BaseModel):
         description="Item #523",
     )
 
-    obr_5: str | None = Field(
+    obr_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_5",
@@ -76,7 +76,7 @@ class OBR(BaseModel):
         description="Item #524",
     )
 
-    obr_6: str | None = Field(
+    obr_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_6",
@@ -124,7 +124,7 @@ class OBR(BaseModel):
         description="Item #532 | Table HL70036",
     )
 
-    obr_10: list[str] | None = Field(
+    obr_10: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_10",
@@ -136,7 +136,7 @@ class OBR(BaseModel):
         description="Item #533",
     )
 
-    obr_11: str | None = Field(
+    obr_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_11",
@@ -148,7 +148,7 @@ class OBR(BaseModel):
         description="Item #534 | Table HL70065",
     )
 
-    obr_12: str | None = Field(
+    obr_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_12",
@@ -160,7 +160,7 @@ class OBR(BaseModel):
         description="Item #535 | Table HL70047",
     )
 
-    obr_13: str | None = Field(
+    obr_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_13",
@@ -184,7 +184,7 @@ class OBR(BaseModel):
         description="Item #537",
     )
 
-    obr_15: str | None = Field(
+    obr_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_15",
@@ -196,7 +196,7 @@ class OBR(BaseModel):
         description="Item #538 | Table HL70070",
     )
 
-    obr_16: list[str] | None = Field(
+    obr_16: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_16",
@@ -208,7 +208,7 @@ class OBR(BaseModel):
         description="Item #539 | Table HL70010",
     )
 
-    obr_17: list[str] | None = Field(
+    obr_17: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_17",
@@ -220,7 +220,7 @@ class OBR(BaseModel):
         description="Item #540",
     )
 
-    obr_18: str | None = Field(
+    obr_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_18",
@@ -232,7 +232,7 @@ class OBR(BaseModel):
         description="Item #541",
     )
 
-    obr_19: str | None = Field(
+    obr_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_19",
@@ -244,7 +244,7 @@ class OBR(BaseModel):
         description="Item #542",
     )
 
-    obr_20: str | None = Field(
+    obr_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_20",
@@ -256,7 +256,7 @@ class OBR(BaseModel):
         description="Item #543",
     )
 
-    obr_21: str | None = Field(
+    obr_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_21",
@@ -280,7 +280,7 @@ class OBR(BaseModel):
         description="Item #546",
     )
 
-    obr_23: str | None = Field(
+    obr_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_23",
@@ -292,7 +292,7 @@ class OBR(BaseModel):
         description="Item #547",
     )
 
-    obr_24: str | None = Field(
+    obr_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_24",
@@ -304,7 +304,7 @@ class OBR(BaseModel):
         description="Item #548 | Table HL70074",
     )
 
-    obr_25: str | None = Field(
+    obr_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_25",
@@ -316,7 +316,7 @@ class OBR(BaseModel):
         description="Item #734 | Table HL70123",
     )
 
-    obr_26: CE | None = Field(
+    obr_26: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_26",
@@ -328,7 +328,7 @@ class OBR(BaseModel):
         description="Item #550",
     )
 
-    obr_27: list[str] | None = Field(
+    obr_27: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_27",
@@ -340,7 +340,7 @@ class OBR(BaseModel):
         description="Item #735",
     )
 
-    obr_28: list[str] | None = Field(
+    obr_28: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_28",
@@ -352,7 +352,7 @@ class OBR(BaseModel):
         description="Item #551",
     )
 
-    obr_29: str | None = Field(
+    obr_29: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_29",
@@ -364,7 +364,7 @@ class OBR(BaseModel):
         description="Item #737",
     )
 
-    obr_30: str | None = Field(
+    obr_30: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_30",
@@ -376,7 +376,7 @@ class OBR(BaseModel):
         description="Item #625 | Table HL70124",
     )
 
-    obr_31: list[CE] | None = Field(
+    obr_31: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_31",
@@ -388,7 +388,7 @@ class OBR(BaseModel):
         description="Item #626",
     )
 
-    obr_32: str | None = Field(
+    obr_32: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_32",
@@ -400,7 +400,7 @@ class OBR(BaseModel):
         description="Item #627",
     )
 
-    obr_33: str | None = Field(
+    obr_33: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_33",
@@ -412,7 +412,7 @@ class OBR(BaseModel):
         description="Item #628",
     )
 
-    obr_34: str | None = Field(
+    obr_34: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_34",
@@ -424,7 +424,7 @@ class OBR(BaseModel):
         description="Item #630",
     )
 
-    obr_35: str | None = Field(
+    obr_35: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_35",
@@ -436,7 +436,7 @@ class OBR(BaseModel):
         description="Item #629",
     )
 
-    obr_36: str | None = Field(
+    obr_36: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "obr_36",

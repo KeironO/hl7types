@@ -5,14 +5,15 @@ Version: 2.3
 Class: RGV_O01.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
 from ..segments.NTE import NTE
 from ..segments.PID import PID
+
 from .RGV_O01_PATIENT_VISIT import RGV_O01_PATIENT_VISIT
 
 _AL1 = AL1
@@ -37,19 +38,19 @@ class RGV_O01_PATIENT(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    AL1: list[_AL1] | None = Field(
+    AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: _RGV_O01_PATIENT_VISIT | None = Field(
+    PATIENT_VISIT: Optional[_RGV_O01_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",

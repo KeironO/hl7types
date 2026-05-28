@@ -5,9 +5,9 @@ Version: 2.3
 Class: SIU_S12.GENERAL_RESOURCE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AIG import AIG
@@ -31,7 +31,7 @@ class SIU_S12_GENERAL_RESOURCE(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: MFN_M05.MF_LOC_DEPT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.LCC import LCC
@@ -34,13 +34,13 @@ class MFN_M05_MF_LOC_DEPT(BaseModel):
         description="Required",
     )
 
-    LCH: list[_LCH] | None = Field(
+    LCH: Optional[List[_LCH]] = Field(
         default=None,
         title="LCH",
         description="Optional, repeating",
     )
 
-    LCC: list[_LCC] | None = Field(
+    LCC: Optional[List[_LCC]] = Field(
         default=None,
         title="LCC",
         description="Optional, repeating",

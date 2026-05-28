@@ -5,16 +5,16 @@ Version: 2.6
 Class: AD
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class AD(BaseModel):
     """HL7 v2 AD data type."""
 
-    ad_1: str | None = Field(
+    ad_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_1",
@@ -25,7 +25,7 @@ class AD(BaseModel):
         title="Street Address",
     )
 
-    ad_2: str | None = Field(
+    ad_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_2",
@@ -36,7 +36,7 @@ class AD(BaseModel):
         title="Other Designation",
     )
 
-    ad_3: str | None = Field(
+    ad_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_3",
@@ -47,7 +47,7 @@ class AD(BaseModel):
         title="City",
     )
 
-    ad_4: str | None = Field(
+    ad_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_4",
@@ -58,7 +58,7 @@ class AD(BaseModel):
         title="State or Province",
     )
 
-    ad_5: str | None = Field(
+    ad_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_5",
@@ -69,7 +69,7 @@ class AD(BaseModel):
         title="Zip or Postal Code",
     )
 
-    ad_6: str | None = Field(
+    ad_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_6",
@@ -80,7 +80,7 @@ class AD(BaseModel):
         title="Country",
     )
 
-    ad_7: str | None = Field(
+    ad_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_7",
@@ -91,7 +91,7 @@ class AD(BaseModel):
         title="Address Type",
     )
 
-    ad_8: str | None = Field(
+    ad_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ad_8",

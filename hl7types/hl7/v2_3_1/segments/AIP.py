@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: AIP
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -30,7 +30,7 @@ class AIP(BaseModel):
         description="Item #906",
     )
 
-    aip_2: str | None = Field(
+    aip_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_2",
@@ -42,7 +42,7 @@ class AIP(BaseModel):
         description="Item #763 | Table HL70206",
     )
 
-    aip_3: list[XCN] | None = Field(
+    aip_3: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_3",
@@ -66,7 +66,7 @@ class AIP(BaseModel):
         description="Item #907",
     )
 
-    aip_5: CE | None = Field(
+    aip_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_5",
@@ -78,7 +78,7 @@ class AIP(BaseModel):
         description="Item #899",
     )
 
-    aip_6: TS | None = Field(
+    aip_6: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_6",
@@ -90,7 +90,7 @@ class AIP(BaseModel):
         description="Item #1202",
     )
 
-    aip_7: str | None = Field(
+    aip_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_7",
@@ -102,7 +102,7 @@ class AIP(BaseModel):
         description="Item #891",
     )
 
-    aip_8: CE | None = Field(
+    aip_8: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_8",
@@ -114,7 +114,7 @@ class AIP(BaseModel):
         description="Item #892",
     )
 
-    aip_9: str | None = Field(
+    aip_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_9",
@@ -126,7 +126,7 @@ class AIP(BaseModel):
         description="Item #893",
     )
 
-    aip_10: CE | None = Field(
+    aip_10: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_10",
@@ -138,7 +138,7 @@ class AIP(BaseModel):
         description="Item #894",
     )
 
-    aip_11: str | None = Field(
+    aip_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_11",
@@ -150,7 +150,7 @@ class AIP(BaseModel):
         description="Item #895 | Table HL70279",
     )
 
-    aip_12: CE | None = Field(
+    aip_12: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "aip_12",

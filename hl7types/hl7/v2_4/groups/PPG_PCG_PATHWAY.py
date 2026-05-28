@@ -5,14 +5,15 @@ Version: 2.4
 Class: PPG_PCG.PATHWAY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PTH import PTH
 from ..segments.VAR import VAR
+
 from .PPG_PCG_GOAL import PPG_PCG_GOAL
 from .PPG_PCG_PATHWAY_ROLE import PPG_PCG_PATHWAY_ROLE
 
@@ -40,25 +41,25 @@ class PPG_PCG_PATHWAY(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PATHWAY_ROLE: list[_PPG_PCG_PATHWAY_ROLE] | None = Field(
+    PATHWAY_ROLE: Optional[List[_PPG_PCG_PATHWAY_ROLE]] = Field(
         default=None,
         title="PATHWAY_ROLE",
         description="Optional, repeating",
     )
 
-    GOAL: list[_PPG_PCG_GOAL] | None = Field(
+    GOAL: Optional[List[_PPG_PCG_GOAL]] = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",

@@ -5,12 +5,13 @@ Version: 2.8
 Class: ORL_O40.SPECIMEN_IN_PACKAGE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SPM import SPM
+
 from .ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE import ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE
 
 _ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE = ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE
@@ -31,7 +32,7 @@ class ORL_O40_SPECIMEN_IN_PACKAGE(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_CONTAINER_IN_PACKAGE: list[_ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE] | None = Field(
+    SPECIMEN_CONTAINER_IN_PACKAGE: Optional[List[_ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE]] = Field(
         default=None,
         title="SPECIMEN_CONTAINER_IN_PACKAGE",
         description="Optional, repeating",

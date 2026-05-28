@@ -5,9 +5,9 @@ Version: 2.2
 Class: CM_FINANCE
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TS import TS
@@ -16,7 +16,7 @@ from .TS import TS
 class CM_FINANCE(BaseModel):
     """HL7 v2 CM_FINANCE data type."""
 
-    cm_finance_1: str | None = Field(
+    cm_finance_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_finance_1",
@@ -27,7 +27,7 @@ class CM_FINANCE(BaseModel):
         title="financial class ID",
     )
 
-    cm_finance_2: TS | None = Field(
+    cm_finance_2: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_finance_2",

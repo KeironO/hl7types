@@ -5,14 +5,15 @@ Version: 2.3.1
 Class: RDO_O01.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RXO import RXO
 from ..segments.RXR import RXR
+
 from .RDO_O01_COMPONENT import RDO_O01_COMPONENT
 from .RDO_O01_OBSERVATION import RDO_O01_OBSERVATION
 
@@ -40,25 +41,25 @@ class RDO_O01_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENT: _RDO_O01_COMPONENT | None = Field(
+    COMPONENT: Optional[_RDO_O01_COMPONENT] = Field(
         default=None,
         title="COMPONENT",
         description="Optional",
     )
 
-    OBSERVATION: list[_RDO_O01_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_RDO_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

@@ -5,12 +5,13 @@ Version: 2.7.1
 Class: EHC_E10.PRODUCT_SERVICE_GROUP
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PSG import PSG
+
 from .EHC_E10_PRODUCT_SERVICE_LINE_INFO import EHC_E10_PRODUCT_SERVICE_LINE_INFO
 
 _EHC_E10_PRODUCT_SERVICE_LINE_INFO = EHC_E10_PRODUCT_SERVICE_LINE_INFO
@@ -31,7 +32,7 @@ class EHC_E10_PRODUCT_SERVICE_GROUP(BaseModel):
         description="Required",
     )
 
-    PRODUCT_SERVICE_LINE_INFO: list[_EHC_E10_PRODUCT_SERVICE_LINE_INFO] = Field(
+    PRODUCT_SERVICE_LINE_INFO: List[_EHC_E10_PRODUCT_SERVICE_LINE_INFO] = Field(
         default=...,
         title="PRODUCT_SERVICE_LINE_INFO",
         description="Required, repeating",

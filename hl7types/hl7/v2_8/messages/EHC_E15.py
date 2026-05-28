@@ -5,17 +5,18 @@ Version: 2.8
 Class: EHC_E15
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
 
 from ..groups.EHC_E15_ADJUSTMENT_PAYEE import EHC_E15_ADJUSTMENT_PAYEE
 from ..groups.EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO import EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO
 from ..groups.EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO import EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO
-from ..segments.MSH import MSH
-from ..segments.SFT import SFT
-from ..segments.UAC import UAC
 
 _EHC_E15_ADJUSTMENT_PAYEE = EHC_E15_ADJUSTMENT_PAYEE
 _EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO = EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO
@@ -43,13 +44,13 @@ class EHC_E15(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: list[_UAC] | None = Field(
+    UAC: Optional[List[_UAC]] = Field(
         default=None,
         title="UAC",
         description="Optional, repeating",
@@ -61,13 +62,13 @@ class EHC_E15(BaseModel):
         description="Required",
     )
 
-    PAYMENT_REMITTANCE_DETAIL_INFO: list[_EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO] | None = Field(
+    PAYMENT_REMITTANCE_DETAIL_INFO: Optional[List[_EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO]] = Field(
         default=None,
         title="PAYMENT_REMITTANCE_DETAIL_INFO",
         description="Optional, repeating",
     )
 
-    ADJUSTMENT_PAYEE: list[_EHC_E15_ADJUSTMENT_PAYEE] | None = Field(
+    ADJUSTMENT_PAYEE: Optional[List[_EHC_E15_ADJUSTMENT_PAYEE]] = Field(
         default=None,
         title="ADJUSTMENT_PAYEE",
         description="Optional, repeating",

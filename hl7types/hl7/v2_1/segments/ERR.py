@@ -5,16 +5,16 @@ Version: 2.1
 Class: ERR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class ERR(BaseModel):
     """HL7 v2 ERR segment."""
 
-    err_1: list[str] = Field(
+    err_1: List[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "err_1",

@@ -5,12 +5,11 @@ Version: 2.8
 Class: RPL_I02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RPL_I02_PROVIDER import RPL_I02_PROVIDER
 from ..segments.DSC import DSC
 from ..segments.DSP import DSP
 from ..segments.MSA import MSA
@@ -18,6 +17,8 @@ from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.RPL_I02_PROVIDER import RPL_I02_PROVIDER
 
 _DSC = DSC
 _DSP = DSP
@@ -49,13 +50,13 @@ class RPL_I02(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -67,25 +68,25 @@ class RPL_I02(BaseModel):
         description="Required",
     )
 
-    PROVIDER: list[_RPL_I02_PROVIDER] = Field(
+    PROVIDER: List[_RPL_I02_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DSP: list[_DSP] | None = Field(
+    DSP: Optional[List[_DSP]] = Field(
         default=None,
         title="DSP",
         description="Optional, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

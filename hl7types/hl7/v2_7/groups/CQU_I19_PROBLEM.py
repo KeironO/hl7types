@@ -5,14 +5,15 @@ Version: 2.7
 Class: CQU_I19.PROBLEM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
+
 from .CQU_I19_ROLE_PROBLEM import CQU_I19_ROLE_PROBLEM
 
 _CQU_I19_ROLE_PROBLEM = CQU_I19_ROLE_PROBLEM
@@ -37,19 +38,19 @@ class CQU_I19_PROBLEM(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_PROBLEM: list[_CQU_I19_ROLE_PROBLEM] | None = Field(
+    ROLE_PROBLEM: Optional[List[_CQU_I19_ROLE_PROBLEM]] = Field(
         default=None,
         title="ROLE_PROBLEM",
         description="Optional, repeating",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

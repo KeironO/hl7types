@@ -5,11 +5,9 @@ Version: 2.8.2
 Class: MFN_Znn.MF_SITE_DEFINED
 Type: Group
 """
-
 from __future__ import annotations
 
-from typing import Any
-
+from typing import Optional, Any
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE

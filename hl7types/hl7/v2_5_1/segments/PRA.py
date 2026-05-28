@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: PRA
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -19,7 +19,7 @@ from ..datatypes.SPD import SPD
 class PRA(BaseModel):
     """HL7 v2 PRA segment."""
 
-    pra_1: CE | None = Field(
+    pra_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_1",
@@ -31,7 +31,7 @@ class PRA(BaseModel):
         description="Item #685 | Table HL79999",
     )
 
-    pra_2: list[CE] | None = Field(
+    pra_2: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_2",
@@ -43,7 +43,7 @@ class PRA(BaseModel):
         description="Item #686 | Table HL70358",
     )
 
-    pra_3: list[str] | None = Field(
+    pra_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_3",
@@ -55,7 +55,7 @@ class PRA(BaseModel):
         description="Item #687 | Table HL70186",
     )
 
-    pra_4: str | None = Field(
+    pra_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_4",
@@ -67,7 +67,7 @@ class PRA(BaseModel):
         description="Item #688 | Table HL70187",
     )
 
-    pra_5: list[SPD] | None = Field(
+    pra_5: Optional[List[SPD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_5",
@@ -79,7 +79,7 @@ class PRA(BaseModel):
         description="Item #689 | Table HL70337",
     )
 
-    pra_6: list[PLN] | None = Field(
+    pra_6: Optional[List[PLN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_6",
@@ -91,7 +91,7 @@ class PRA(BaseModel):
         description="Item #690 | Table HL70338",
     )
 
-    pra_7: list[PIP] | None = Field(
+    pra_7: Optional[List[PIP]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_7",
@@ -103,7 +103,7 @@ class PRA(BaseModel):
         description="Item #691",
     )
 
-    pra_8: str | None = Field(
+    pra_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_8",
@@ -115,7 +115,7 @@ class PRA(BaseModel):
         description="Item #1296",
     )
 
-    pra_9: CE | None = Field(
+    pra_9: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_9",
@@ -127,7 +127,7 @@ class PRA(BaseModel):
         description="Item #1613 | Table HL70537",
     )
 
-    pra_10: str | None = Field(
+    pra_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_10",
@@ -139,7 +139,7 @@ class PRA(BaseModel):
         description="Item #1348",
     )
 
-    pra_11: list[CE] | None = Field(
+    pra_11: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_11",
@@ -151,7 +151,7 @@ class PRA(BaseModel):
         description="Item #1388 | Table HL70401",
     )
 
-    pra_12: str | None = Field(
+    pra_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_12",

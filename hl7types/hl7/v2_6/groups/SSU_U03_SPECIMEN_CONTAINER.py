@@ -5,13 +5,14 @@ Version: 2.6
 Class: SSU_U03.SPECIMEN_CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.SAC import SAC
+
 from .SSU_U03_SPECIMEN import SSU_U03_SPECIMEN
 
 _OBX = OBX
@@ -34,13 +35,13 @@ class SSU_U03_SPECIMEN_CONTAINER(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    SPECIMEN: list[_SSU_U03_SPECIMEN] | None = Field(
+    SPECIMEN: Optional[List[_SSU_U03_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",

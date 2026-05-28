@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: ERL
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -36,7 +36,7 @@ class ERL(BaseModel):
         title="Segment Sequence",
     )
 
-    erl_3: str | None = Field(
+    erl_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "erl_3",
@@ -47,7 +47,7 @@ class ERL(BaseModel):
         title="Field Position",
     )
 
-    erl_4: str | None = Field(
+    erl_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "erl_4",
@@ -58,7 +58,7 @@ class ERL(BaseModel):
         title="Field Repetition",
     )
 
-    erl_5: str | None = Field(
+    erl_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "erl_5",
@@ -69,7 +69,7 @@ class ERL(BaseModel):
         title="Component Number",
     )
 
-    erl_6: str | None = Field(
+    erl_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "erl_6",

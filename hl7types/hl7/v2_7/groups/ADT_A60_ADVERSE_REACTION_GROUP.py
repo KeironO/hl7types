@@ -5,9 +5,9 @@ Version: 2.7
 Class: ADT_A60.ADVERSE_REACTION_GROUP
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.IAM import IAM
@@ -34,13 +34,13 @@ class ADT_A60_ADVERSE_REACTION_GROUP(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    IAR: list[_IAR] | None = Field(
+    IAR: Optional[List[_IAR]] = Field(
         default=None,
         title="IAR",
         description="Optional, repeating",

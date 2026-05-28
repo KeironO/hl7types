@@ -5,13 +5,14 @@ Version: 2.7.1
 Class: OML_O33.SPECIMEN
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
 from ..segments.SPM import SPM
+
 from .OML_O33_ORDER import OML_O33_ORDER
 from .OML_O33_SPECIMEN_OBSERVATION import OML_O33_SPECIMEN_OBSERVATION
 
@@ -37,19 +38,19 @@ class OML_O33_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_OBSERVATION: list[_OML_O33_SPECIMEN_OBSERVATION] | None = Field(
+    SPECIMEN_OBSERVATION: Optional[List[_OML_O33_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
         description="Optional, repeating",
     )
 
-    SAC: list[_SAC] | None = Field(
+    SAC: Optional[List[_SAC]] = Field(
         default=None,
         title="SAC",
         description="Optional, repeating",
     )
 
-    ORDER: list[_OML_O33_ORDER] = Field(
+    ORDER: List[_OML_O33_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.2
 Class: IN3
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -29,7 +29,7 @@ class IN3(BaseModel):
         description="Item #502",
     )
 
-    in3_2: str | None = Field(
+    in3_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_2",
@@ -41,7 +41,7 @@ class IN3(BaseModel):
         description="Item #503",
     )
 
-    in3_3: str | None = Field(
+    in3_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_3",
@@ -53,7 +53,7 @@ class IN3(BaseModel):
         description="Item #504",
     )
 
-    in3_4: str | None = Field(
+    in3_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_4",
@@ -65,7 +65,7 @@ class IN3(BaseModel):
         description="Item #505 | Table HL70136",
     )
 
-    in3_5: str | None = Field(
+    in3_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_5",
@@ -77,7 +77,7 @@ class IN3(BaseModel):
         description="Item #506 | Table HL70148",
     )
 
-    in3_6: TS | None = Field(
+    in3_6: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_6",
@@ -89,7 +89,7 @@ class IN3(BaseModel):
         description="Item #507",
     )
 
-    in3_7: TS | None = Field(
+    in3_7: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_7",
@@ -101,7 +101,7 @@ class IN3(BaseModel):
         description="Item #508",
     )
 
-    in3_8: str | None = Field(
+    in3_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_8",
@@ -113,7 +113,7 @@ class IN3(BaseModel):
         description="Item #509",
     )
 
-    in3_9: str | None = Field(
+    in3_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_9",
@@ -125,7 +125,7 @@ class IN3(BaseModel):
         description="Item #510",
     )
 
-    in3_10: str | None = Field(
+    in3_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_10",
@@ -137,7 +137,7 @@ class IN3(BaseModel):
         description="Item #511",
     )
 
-    in3_11: str | None = Field(
+    in3_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_11",
@@ -149,7 +149,7 @@ class IN3(BaseModel):
         description="Item #512 | Table HL70149",
     )
 
-    in3_12: CE | None = Field(
+    in3_12: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_12",
@@ -161,7 +161,7 @@ class IN3(BaseModel):
         description="Item #513",
     )
 
-    in3_13: TS | None = Field(
+    in3_13: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_13",
@@ -173,7 +173,7 @@ class IN3(BaseModel):
         description="Item #514",
     )
 
-    in3_14: str | None = Field(
+    in3_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_14",
@@ -185,7 +185,7 @@ class IN3(BaseModel):
         description="Item #515",
     )
 
-    in3_15: str | None = Field(
+    in3_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_15",
@@ -197,7 +197,7 @@ class IN3(BaseModel):
         description="Item #516",
     )
 
-    in3_16: list[str] | None = Field(
+    in3_16: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_16",
@@ -209,7 +209,7 @@ class IN3(BaseModel):
         description="Item #517",
     )
 
-    in3_17: CE | None = Field(
+    in3_17: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_17",
@@ -221,7 +221,7 @@ class IN3(BaseModel):
         description="Item #518",
     )
 
-    in3_18: CE | None = Field(
+    in3_18: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_18",
@@ -233,7 +233,7 @@ class IN3(BaseModel):
         description="Item #519",
     )
 
-    in3_19: list[str] | None = Field(
+    in3_19: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_19",
@@ -245,7 +245,7 @@ class IN3(BaseModel):
         description="Item #520",
     )
 
-    in3_20: list[str] | None = Field(
+    in3_20: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_20",
@@ -257,7 +257,7 @@ class IN3(BaseModel):
         description="Item #521 | Table HL70150",
     )
 
-    in3_21: str | None = Field(
+    in3_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_21",
@@ -269,7 +269,7 @@ class IN3(BaseModel):
         description="Item #522",
     )
 
-    in3_22: str | None = Field(
+    in3_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_22",
@@ -281,7 +281,7 @@ class IN3(BaseModel):
         description="Item #523",
     )
 
-    in3_23: str | None = Field(
+    in3_23: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_23",
@@ -293,7 +293,7 @@ class IN3(BaseModel):
         description="Item #524 | Table HL70151",
     )
 
-    in3_24: str | None = Field(
+    in3_24: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_24",
@@ -305,7 +305,7 @@ class IN3(BaseModel):
         description="Item #525 | Table HL70152",
     )
 
-    in3_25: str | None = Field(
+    in3_25: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "in3_25",

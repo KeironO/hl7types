@@ -5,9 +5,9 @@ Version: 2.6
 Class: OPU_R25.TIMING_QTY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.TQ1 import TQ1
@@ -31,7 +31,7 @@ class OPU_R25_TIMING_QTY(BaseModel):
         description="Required",
     )
 
-    TQ2: list[_TQ2] | None = Field(
+    TQ2: Optional[List[_TQ2]] = Field(
         default=None,
         title="TQ2",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: CF
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .FT import FT
@@ -16,7 +16,7 @@ from .FT import FT
 class CF(BaseModel):
     """HL7 v2 CF data type."""
 
-    cf_1: str | None = Field(
+    cf_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_1",
@@ -27,7 +27,7 @@ class CF(BaseModel):
         title="Identifier",
     )
 
-    cf_2: FT | None = Field(
+    cf_2: Optional[FT] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_2",
@@ -38,7 +38,7 @@ class CF(BaseModel):
         title="Formatted Text",
     )
 
-    cf_3: str | None = Field(
+    cf_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_3",
@@ -49,7 +49,7 @@ class CF(BaseModel):
         title="Name of Coding System",
     )
 
-    cf_4: str | None = Field(
+    cf_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_4",
@@ -60,7 +60,7 @@ class CF(BaseModel):
         title="Alternate Identifier",
     )
 
-    cf_5: FT | None = Field(
+    cf_5: Optional[FT] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_5",
@@ -71,7 +71,7 @@ class CF(BaseModel):
         title="Alternate Formatted Text",
     )
 
-    cf_6: str | None = Field(
+    cf_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_6",
@@ -82,7 +82,7 @@ class CF(BaseModel):
         title="Name of Alternate Coding System",
     )
 
-    cf_7: str | None = Field(
+    cf_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_7",
@@ -93,7 +93,7 @@ class CF(BaseModel):
         title="Coding System Version ID",
     )
 
-    cf_8: str | None = Field(
+    cf_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_8",
@@ -104,7 +104,7 @@ class CF(BaseModel):
         title="Alternate Coding System Version ID",
     )
 
-    cf_9: str | None = Field(
+    cf_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_9",
@@ -115,7 +115,7 @@ class CF(BaseModel):
         title="Original Text",
     )
 
-    cf_10: str | None = Field(
+    cf_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_10",
@@ -126,7 +126,7 @@ class CF(BaseModel):
         title="Second Alternate Identifier",
     )
 
-    cf_11: FT | None = Field(
+    cf_11: Optional[FT] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_11",
@@ -137,7 +137,7 @@ class CF(BaseModel):
         title="Second Alternate Formatted Text",
     )
 
-    cf_12: str | None = Field(
+    cf_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_12",
@@ -148,7 +148,7 @@ class CF(BaseModel):
         title="Name of Second Alternate Coding System",
     )
 
-    cf_13: str | None = Field(
+    cf_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_13",
@@ -159,7 +159,7 @@ class CF(BaseModel):
         title="Second Alternate Coding System Version ID",
     )
 
-    cf_14: str | None = Field(
+    cf_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_14",
@@ -170,7 +170,7 @@ class CF(BaseModel):
         title="Coding System OID",
     )
 
-    cf_15: str | None = Field(
+    cf_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_15",
@@ -181,7 +181,7 @@ class CF(BaseModel):
         title="Value Set OID",
     )
 
-    cf_16: str | None = Field(
+    cf_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_16",
@@ -192,7 +192,7 @@ class CF(BaseModel):
         title="Value Set Version ID",
     )
 
-    cf_17: str | None = Field(
+    cf_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_17",
@@ -203,7 +203,7 @@ class CF(BaseModel):
         title="Alternate Coding System OID",
     )
 
-    cf_18: str | None = Field(
+    cf_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_18",
@@ -214,7 +214,7 @@ class CF(BaseModel):
         title="Alternate Value Set OID",
     )
 
-    cf_19: str | None = Field(
+    cf_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_19",
@@ -225,7 +225,7 @@ class CF(BaseModel):
         title="Alternate Value Set Version ID",
     )
 
-    cf_20: str | None = Field(
+    cf_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_20",
@@ -236,7 +236,7 @@ class CF(BaseModel):
         title="Second Alternate Coding System OID",
     )
 
-    cf_21: str | None = Field(
+    cf_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_21",
@@ -247,7 +247,7 @@ class CF(BaseModel):
         title="Second Alternate Value Set OID",
     )
 
-    cf_22: str | None = Field(
+    cf_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_22",

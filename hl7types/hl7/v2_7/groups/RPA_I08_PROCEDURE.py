@@ -5,12 +5,13 @@ Version: 2.7
 Class: RPA_I08.PROCEDURE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PR1 import PR1
+
 from .RPA_I08_AUTHORIZATION2 import RPA_I08_AUTHORIZATION2
 
 _PR1 = PR1
@@ -31,7 +32,7 @@ class RPA_I08_PROCEDURE(BaseModel):
         description="Required",
     )
 
-    AUTHORIZATION2: _RPA_I08_AUTHORIZATION2 | None = Field(
+    AUTHORIZATION2: Optional[_RPA_I08_AUTHORIZATION2] = Field(
         default=None,
         title="AUTHORIZATION2",
         description="Optional",

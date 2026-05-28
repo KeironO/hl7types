@@ -5,13 +5,14 @@ Version: 2.5.1
 Class: ROR_ROR.DEFINITION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
 from .ROR_ROR_ORDER import ROR_ROR_ORDER
 from .ROR_ROR_PATIENT import ROR_ROR_PATIENT
 
@@ -37,19 +38,19 @@ class ROR_ROR_DEFINITION(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PATIENT: _ROR_ROR_PATIENT | None = Field(
+    PATIENT: Optional[_ROR_ROR_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: list[_ROR_ROR_ORDER] = Field(
+    ORDER: List[_ROR_ROR_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: CSS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -29,7 +29,7 @@ class CSS(BaseModel):
         description="Item #1055",
     )
 
-    css_2: TS | None = Field(
+    css_2: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "css_2",
@@ -41,7 +41,7 @@ class CSS(BaseModel):
         description="Item #1056",
     )
 
-    css_3: list[CE] | None = Field(
+    css_3: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "css_3",

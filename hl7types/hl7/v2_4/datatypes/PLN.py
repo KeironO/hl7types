@@ -5,16 +5,16 @@ Version: 2.4
 Class: PLN
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class PLN(BaseModel):
     """HL7 v2 PLN data type."""
 
-    pln_1: str | None = Field(
+    pln_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pln_1",
@@ -25,7 +25,7 @@ class PLN(BaseModel):
         title="ID number (ST)",
     )
 
-    pln_2: str | None = Field(
+    pln_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pln_2",
@@ -36,7 +36,7 @@ class PLN(BaseModel):
         title="type of ID number (IS)",
     )
 
-    pln_3: str | None = Field(
+    pln_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pln_3",
@@ -47,7 +47,7 @@ class PLN(BaseModel):
         title="state/other qualifying info",
     )
 
-    pln_4: str | None = Field(
+    pln_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pln_4",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: CF
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .FT import FT
@@ -16,7 +16,7 @@ from .FT import FT
 class CF(BaseModel):
     """HL7 v2 CF data type."""
 
-    cf_1: str | None = Field(
+    cf_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_1",
@@ -27,7 +27,7 @@ class CF(BaseModel):
         title="Identifier",
     )
 
-    cf_2: FT | None = Field(
+    cf_2: Optional[FT] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_2",
@@ -38,7 +38,7 @@ class CF(BaseModel):
         title="Formatted Text",
     )
 
-    cf_3: str | None = Field(
+    cf_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_3",
@@ -49,7 +49,7 @@ class CF(BaseModel):
         title="Name of Coding System",
     )
 
-    cf_4: str | None = Field(
+    cf_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_4",
@@ -60,7 +60,7 @@ class CF(BaseModel):
         title="Alternate Identifier",
     )
 
-    cf_5: FT | None = Field(
+    cf_5: Optional[FT] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_5",
@@ -71,7 +71,7 @@ class CF(BaseModel):
         title="Alternate Formatted Text",
     )
 
-    cf_6: str | None = Field(
+    cf_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_6",

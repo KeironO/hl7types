@@ -5,9 +5,9 @@ Version: 2.5
 Class: RFR
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .NR import NR
@@ -17,7 +17,7 @@ from .TX import TX
 class RFR(BaseModel):
     """HL7 v2 RFR data type."""
 
-    rfr_1: NR | None = Field(
+    rfr_1: Optional[NR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_1",
@@ -28,7 +28,7 @@ class RFR(BaseModel):
         title="Numeric Range",
     )
 
-    rfr_2: str | None = Field(
+    rfr_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_2",
@@ -39,7 +39,7 @@ class RFR(BaseModel):
         title="Administrative Sex",
     )
 
-    rfr_3: NR | None = Field(
+    rfr_3: Optional[NR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_3",
@@ -50,7 +50,7 @@ class RFR(BaseModel):
         title="Age Range",
     )
 
-    rfr_4: NR | None = Field(
+    rfr_4: Optional[NR] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_4",
@@ -61,7 +61,7 @@ class RFR(BaseModel):
         title="Gestational Age Range",
     )
 
-    rfr_5: str | None = Field(
+    rfr_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_5",
@@ -72,7 +72,7 @@ class RFR(BaseModel):
         title="Species",
     )
 
-    rfr_6: str | None = Field(
+    rfr_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_6",
@@ -83,7 +83,7 @@ class RFR(BaseModel):
         title="Race/subspecies",
     )
 
-    rfr_7: TX | None = Field(
+    rfr_7: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_7",

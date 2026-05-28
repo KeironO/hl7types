@@ -5,17 +5,18 @@ Version: 2.7.1
 Class: SSU_U03
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.SSU_U03_SPECIMEN_CONTAINER import SSU_U03_SPECIMEN_CONTAINER
 from ..segments.EQU import EQU
 from ..segments.MSH import MSH
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.SSU_U03_SPECIMEN_CONTAINER import SSU_U03_SPECIMEN_CONTAINER
 
 _EQU = EQU
 _MSH = MSH
@@ -43,13 +44,13 @@ class SSU_U03(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -61,13 +62,13 @@ class SSU_U03(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_CONTAINER: list[_SSU_U03_SPECIMEN_CONTAINER] = Field(
+    SPECIMEN_CONTAINER: List[_SSU_U03_SPECIMEN_CONTAINER] = Field(
         default=...,
         title="SPECIMEN_CONTAINER",
         description="Required, repeating",
     )
 
-    ROL: _ROL | None = Field(
+    ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.7
 Class: LSU_U12
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EQP import EQP
@@ -43,13 +43,13 @@ class LSU_U12(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -61,13 +61,13 @@ class LSU_U12(BaseModel):
         description="Required",
     )
 
-    EQP: list[_EQP] = Field(
+    EQP: List[_EQP] = Field(
         default=...,
         title="EQP",
         description="Required, repeating",
     )
 
-    ROL: _ROL | None = Field(
+    ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
         description="Optional",

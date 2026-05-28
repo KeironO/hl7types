@@ -5,9 +5,9 @@ Version: 2.7
 Class: ARQ
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -36,7 +36,7 @@ class ARQ(BaseModel):
         description="Item #860",
     )
 
-    arq_2: EI | None = Field(
+    arq_2: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_2",
@@ -48,7 +48,7 @@ class ARQ(BaseModel):
         description="Item #861",
     )
 
-    arq_3: str | None = Field(
+    arq_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_3",
@@ -60,7 +60,7 @@ class ARQ(BaseModel):
         description="Item #862",
     )
 
-    arq_4: EI | None = Field(
+    arq_4: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_4",
@@ -72,7 +72,7 @@ class ARQ(BaseModel):
         description="Item #218",
     )
 
-    arq_5: CWE | None = Field(
+    arq_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_5",
@@ -84,7 +84,7 @@ class ARQ(BaseModel):
         description="Item #864",
     )
 
-    arq_6: CWE | None = Field(
+    arq_6: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_6",
@@ -96,7 +96,7 @@ class ARQ(BaseModel):
         description="Item #865",
     )
 
-    arq_7: CWE | None = Field(
+    arq_7: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_7",
@@ -108,7 +108,7 @@ class ARQ(BaseModel):
         description="Item #866 | Table HL70276",
     )
 
-    arq_8: CWE | None = Field(
+    arq_8: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_8",
@@ -120,7 +120,7 @@ class ARQ(BaseModel):
         description="Item #867 | Table HL70277",
     )
 
-    arq_9: str | None = Field(
+    arq_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_9",
@@ -132,7 +132,7 @@ class ARQ(BaseModel):
         description="Item #868",
     )
 
-    arq_10: CNE | None = Field(
+    arq_10: Optional[CNE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_10",
@@ -144,7 +144,7 @@ class ARQ(BaseModel):
         description="Item #869",
     )
 
-    arq_11: list[DR] | None = Field(
+    arq_11: Optional[List[DR]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_11",
@@ -156,7 +156,7 @@ class ARQ(BaseModel):
         description="Item #870",
     )
 
-    arq_12: str | None = Field(
+    arq_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_12",
@@ -168,7 +168,7 @@ class ARQ(BaseModel):
         description="Item #871",
     )
 
-    arq_13: RI | None = Field(
+    arq_13: Optional[RI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_13",
@@ -180,7 +180,7 @@ class ARQ(BaseModel):
         description="Item #872",
     )
 
-    arq_14: str | None = Field(
+    arq_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_14",
@@ -192,7 +192,7 @@ class ARQ(BaseModel):
         description="Item #873",
     )
 
-    arq_15: list[XCN] = Field(
+    arq_15: List[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "arq_15",
@@ -204,7 +204,7 @@ class ARQ(BaseModel):
         description="Item #874",
     )
 
-    arq_16: list[XTN] | None = Field(
+    arq_16: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_16",
@@ -216,7 +216,7 @@ class ARQ(BaseModel):
         description="Item #875",
     )
 
-    arq_17: list[XAD] | None = Field(
+    arq_17: Optional[List[XAD]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_17",
@@ -228,7 +228,7 @@ class ARQ(BaseModel):
         description="Item #876",
     )
 
-    arq_18: PL | None = Field(
+    arq_18: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_18",
@@ -240,7 +240,7 @@ class ARQ(BaseModel):
         description="Item #877",
     )
 
-    arq_19: list[XCN] = Field(
+    arq_19: List[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "arq_19",
@@ -252,7 +252,7 @@ class ARQ(BaseModel):
         description="Item #878",
     )
 
-    arq_20: list[XTN] | None = Field(
+    arq_20: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_20",
@@ -264,7 +264,7 @@ class ARQ(BaseModel):
         description="Item #879",
     )
 
-    arq_21: PL | None = Field(
+    arq_21: Optional[PL] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_21",
@@ -276,7 +276,7 @@ class ARQ(BaseModel):
         description="Item #880",
     )
 
-    arq_22: EI | None = Field(
+    arq_22: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_22",
@@ -288,7 +288,7 @@ class ARQ(BaseModel):
         description="Item #881",
     )
 
-    arq_23: EI | None = Field(
+    arq_23: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_23",
@@ -300,7 +300,7 @@ class ARQ(BaseModel):
         description="Item #882",
     )
 
-    arq_24: list[EI] | None = Field(
+    arq_24: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_24",
@@ -312,7 +312,7 @@ class ARQ(BaseModel):
         description="Item #216",
     )
 
-    arq_25: list[EI] | None = Field(
+    arq_25: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "arq_25",

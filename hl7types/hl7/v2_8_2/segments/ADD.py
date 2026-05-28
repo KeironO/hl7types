@@ -5,16 +5,16 @@ Version: 2.8.2
 Class: ADD
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class ADD(BaseModel):
     """HL7 v2 ADD segment."""
 
-    add_1: str | None = Field(
+    add_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "add_1",

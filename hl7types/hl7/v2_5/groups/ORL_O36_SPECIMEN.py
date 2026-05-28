@@ -5,13 +5,14 @@ Version: 2.5
 Class: ORL_O36.SPECIMEN
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.SPM import SPM
+
 from .ORL_O36_SPECIMEN_CONTAINER import ORL_O36_SPECIMEN_CONTAINER
 
 _OBX = OBX
@@ -34,13 +35,13 @@ class ORL_O36_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    SPECIMEN_CONTAINER: list[_ORL_O36_SPECIMEN_CONTAINER] = Field(
+    SPECIMEN_CONTAINER: List[_ORL_O36_SPECIMEN_CONTAINER] = Field(
         default=...,
         title="SPECIMEN_CONTAINER",
         description="Required, repeating",

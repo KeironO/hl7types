@@ -5,13 +5,14 @@ Version: 2.8.2
 Class: RRE_O12.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
+
 from .RRE_O12_ENCODING import RRE_O12_ENCODING
 from .RRE_O12_TIMING import RRE_O12_TIMING
 
@@ -37,19 +38,19 @@ class RRE_O12_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: list[_RRE_O12_TIMING] | None = Field(
+    TIMING: Optional[List[_RRE_O12_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ENCODING: _RRE_O12_ENCODING | None = Field(
+    ENCODING: Optional[_RRE_O12_ENCODING] = Field(
         default=None,
         title="ENCODING",
         description="Optional",

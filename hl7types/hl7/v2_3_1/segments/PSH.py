@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: PSH
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -30,7 +30,7 @@ class PSH(BaseModel):
         description="Item #1233",
     )
 
-    psh_2: str | None = Field(
+    psh_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_2",
@@ -54,7 +54,7 @@ class PSH(BaseModel):
         description="Item #1235",
     )
 
-    psh_4: TS | None = Field(
+    psh_4: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_4",
@@ -66,7 +66,7 @@ class PSH(BaseModel):
         description="Item #1236",
     )
 
-    psh_5: TS | None = Field(
+    psh_5: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_5",
@@ -78,7 +78,7 @@ class PSH(BaseModel):
         description="Item #1237",
     )
 
-    psh_6: CQ | None = Field(
+    psh_6: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_6",
@@ -90,7 +90,7 @@ class PSH(BaseModel):
         description="Item #1238",
     )
 
-    psh_7: CQ | None = Field(
+    psh_7: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_7",
@@ -102,7 +102,7 @@ class PSH(BaseModel):
         description="Item #1239",
     )
 
-    psh_8: str | None = Field(
+    psh_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_8",
@@ -114,7 +114,7 @@ class PSH(BaseModel):
         description="Item #1240 | Table HL70329",
     )
 
-    psh_9: FT | None = Field(
+    psh_9: Optional[FT] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_9",
@@ -126,7 +126,7 @@ class PSH(BaseModel):
         description="Item #1241",
     )
 
-    psh_10: CQ | None = Field(
+    psh_10: Optional[CQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_10",
@@ -138,7 +138,7 @@ class PSH(BaseModel):
         description="Item #1242",
     )
 
-    psh_11: str | None = Field(
+    psh_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_11",
@@ -150,7 +150,7 @@ class PSH(BaseModel):
         description="Item #1243 | Table HL70329",
     )
 
-    psh_12: FT | None = Field(
+    psh_12: Optional[FT] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_12",
@@ -162,7 +162,7 @@ class PSH(BaseModel):
         description="Item #1244",
     )
 
-    psh_13: list[str] | None = Field(
+    psh_13: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_13",
@@ -174,7 +174,7 @@ class PSH(BaseModel):
         description="Item #1245",
     )
 
-    psh_14: list[str] | None = Field(
+    psh_14: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_14",

@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: EAN_U09.NOTIFICATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.NDS import NDS
@@ -31,7 +31,7 @@ class EAN_U09_NOTIFICATION(BaseModel):
         description="Required",
     )
 
-    NTE: _NTE | None = Field(
+    NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
         description="Optional",

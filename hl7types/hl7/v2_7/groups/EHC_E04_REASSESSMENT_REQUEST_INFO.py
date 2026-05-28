@@ -5,10 +5,10 @@ Version: 2.7
 Class: EHC_E04.REASSESSMENT_REQUEST_INFO
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class EHC_E04_REASSESSMENT_REQUEST_INFO(BaseModel):

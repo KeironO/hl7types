@@ -5,12 +5,13 @@ Version: 2.5
 Class: CSU_C09.STUDY_PHARM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .CSU_C09_RX_ADMIN import CSU_C09_RX_ADMIN
 
 _CSU_C09_RX_ADMIN = CSU_C09_RX_ADMIN
@@ -25,13 +26,13 @@ class CSU_C09_STUDY_PHARM(BaseModel):
         RX_ADMIN (List[CSU_C09_RX_ADMIN]): required
     """
 
-    ORC: _ORC | None = Field(
+    ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    RX_ADMIN: list[_CSU_C09_RX_ADMIN] = Field(
+    RX_ADMIN: List[_CSU_C09_RX_ADMIN] = Field(
         default=...,
         title="RX_ADMIN",
         description="Required, repeating",

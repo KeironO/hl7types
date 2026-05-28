@@ -5,16 +5,17 @@ Version: 2.8.2
 Class: DRC_O47
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.DRC_O47_DONATION_ORDER import DRC_O47_DONATION_ORDER
-from ..groups.DRC_O47_DONOR import DRC_O47_DONOR
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.DRC_O47_DONATION_ORDER import DRC_O47_DONATION_ORDER
+from ..groups.DRC_O47_DONOR import DRC_O47_DONOR
 
 _DRC_O47_DONATION_ORDER = DRC_O47_DONATION_ORDER
 _DRC_O47_DONOR = DRC_O47_DONOR
@@ -40,25 +41,25 @@ class DRC_O47(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    DONOR: _DRC_O47_DONOR | None = Field(
+    DONOR: Optional[_DRC_O47_DONOR] = Field(
         default=None,
         title="DONOR",
         description="Optional",
     )
 
-    DONATION_ORDER: list[_DRC_O47_DONATION_ORDER] = Field(
+    DONATION_ORDER: List[_DRC_O47_DONATION_ORDER] = Field(
         default=...,
         title="DONATION_ORDER",
         description="Required, repeating",

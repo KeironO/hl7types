@@ -5,9 +5,9 @@ Version: 2.5
 Class: JCC
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TX import TX
@@ -16,7 +16,7 @@ from .TX import TX
 class JCC(BaseModel):
     """HL7 v2 JCC data type."""
 
-    jcc_1: str | None = Field(
+    jcc_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "jcc_1",
@@ -27,7 +27,7 @@ class JCC(BaseModel):
         title="Job Code",
     )
 
-    jcc_2: str | None = Field(
+    jcc_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "jcc_2",
@@ -38,7 +38,7 @@ class JCC(BaseModel):
         title="Job Class",
     )
 
-    jcc_3: TX | None = Field(
+    jcc_3: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "jcc_3",

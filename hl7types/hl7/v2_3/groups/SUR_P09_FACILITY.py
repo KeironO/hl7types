@@ -5,13 +5,14 @@ Version: 2.3
 Class: SUR_P09.FACILITY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.FAC import FAC
 from ..segments.PSH import PSH
+
 from .SUR_P09_FACILITY_DETAIL import SUR_P09_FACILITY_DETAIL
 from .SUR_P09_PRODUCT import SUR_P09_PRODUCT
 
@@ -37,7 +38,7 @@ class SUR_P09_FACILITY(BaseModel):
         description="Required",
     )
 
-    PRODUCT: list[_SUR_P09_PRODUCT] = Field(
+    PRODUCT: List[_SUR_P09_PRODUCT] = Field(
         default=...,
         title="PRODUCT",
         description="Required, repeating",
@@ -49,7 +50,7 @@ class SUR_P09_FACILITY(BaseModel):
         description="Required",
     )
 
-    FACILITY_DETAIL: list[_SUR_P09_FACILITY_DETAIL] = Field(
+    FACILITY_DETAIL: List[_SUR_P09_FACILITY_DETAIL] = Field(
         default=...,
         title="FACILITY_DETAIL",
         description="Required, repeating",

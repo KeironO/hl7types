@@ -5,16 +5,16 @@ Version: 2.1
 Class: FT1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class FT1(BaseModel):
     """HL7 v2 FT1 segment."""
 
-    ft1_1: str | None = Field(
+    ft1_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_1",
@@ -26,7 +26,7 @@ class FT1(BaseModel):
         description="Item #507",
     )
 
-    ft1_2: str | None = Field(
+    ft1_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_2",
@@ -38,7 +38,7 @@ class FT1(BaseModel):
         description="Item #366",
     )
 
-    ft1_3: str | None = Field(
+    ft1_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_3",
@@ -62,7 +62,7 @@ class FT1(BaseModel):
         description="Item #351",
     )
 
-    ft1_5: str | None = Field(
+    ft1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_5",
@@ -98,7 +98,7 @@ class FT1(BaseModel):
         description="Item #354 | Table HL70096",
     )
 
-    ft1_8: str | None = Field(
+    ft1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_8",
@@ -110,7 +110,7 @@ class FT1(BaseModel):
         description="Item #356",
     )
 
-    ft1_9: str | None = Field(
+    ft1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_9",
@@ -122,7 +122,7 @@ class FT1(BaseModel):
         description="Item #706",
     )
 
-    ft1_10: str | None = Field(
+    ft1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_10",
@@ -134,7 +134,7 @@ class FT1(BaseModel):
         description="Item #358",
     )
 
-    ft1_11: str | None = Field(
+    ft1_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_11",
@@ -146,7 +146,7 @@ class FT1(BaseModel):
         description="Item #357",
     )
 
-    ft1_12: str | None = Field(
+    ft1_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_12",
@@ -158,7 +158,7 @@ class FT1(BaseModel):
         description="Item #782",
     )
 
-    ft1_13: str | None = Field(
+    ft1_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_13",
@@ -170,7 +170,7 @@ class FT1(BaseModel):
         description="Item #355 | Table HL70049",
     )
 
-    ft1_14: str | None = Field(
+    ft1_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_14",
@@ -182,7 +182,7 @@ class FT1(BaseModel):
         description="Item #359 | Table HL70072",
     )
 
-    ft1_15: str | None = Field(
+    ft1_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_15",
@@ -194,7 +194,7 @@ class FT1(BaseModel):
         description="Item #360",
     )
 
-    ft1_16: str | None = Field(
+    ft1_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_16",
@@ -206,7 +206,7 @@ class FT1(BaseModel):
         description="Item #361 | Table HL70079",
     )
 
-    ft1_17: str | None = Field(
+    ft1_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_17",
@@ -218,7 +218,7 @@ class FT1(BaseModel):
         description="Item #362 | Table HL70024",
     )
 
-    ft1_18: str | None = Field(
+    ft1_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_18",
@@ -230,7 +230,7 @@ class FT1(BaseModel):
         description="Item #363 | Table HL70018",
     )
 
-    ft1_19: str | None = Field(
+    ft1_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_19",
@@ -242,7 +242,7 @@ class FT1(BaseModel):
         description="Item #364 | Table HL70051",
     )
 
-    ft1_20: str | None = Field(
+    ft1_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_20",
@@ -254,7 +254,7 @@ class FT1(BaseModel):
         description="Item #377 | Table HL70084",
     )
 
-    ft1_21: str | None = Field(
+    ft1_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_21",
@@ -266,7 +266,7 @@ class FT1(BaseModel):
         description="Item #783",
     )
 
-    ft1_22: str | None = Field(
+    ft1_22: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_22",

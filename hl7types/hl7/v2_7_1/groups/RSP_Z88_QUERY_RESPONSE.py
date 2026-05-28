@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RSP_Z88.QUERY_RESPONSE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .RSP_Z88_COMMON_ORDER import RSP_Z88_COMMON_ORDER
@@ -25,13 +25,13 @@ class RSP_Z88_QUERY_RESPONSE(BaseModel):
         COMMON_ORDER (List[RSP_Z88_COMMON_ORDER]): required
     """
 
-    PATIENT: _RSP_Z88_PATIENT | None = Field(
+    PATIENT: Optional[_RSP_Z88_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    COMMON_ORDER: list[_RSP_Z88_COMMON_ORDER] = Field(
+    COMMON_ORDER: List[_RSP_Z88_COMMON_ORDER] = Field(
         default=...,
         title="COMMON_ORDER",
         description="Required, repeating",

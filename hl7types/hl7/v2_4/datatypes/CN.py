@@ -5,9 +5,9 @@ Version: 2.4
 Class: CN
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .FN import FN
@@ -17,7 +17,7 @@ from .HD import HD
 class CN(BaseModel):
     """HL7 v2 CN data type."""
 
-    cn_1: str | None = Field(
+    cn_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_1",
@@ -28,7 +28,7 @@ class CN(BaseModel):
         title="ID number (ST)",
     )
 
-    cn_2: FN | None = Field(
+    cn_2: Optional[FN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_2",
@@ -39,7 +39,7 @@ class CN(BaseModel):
         title="family name",
     )
 
-    cn_3: str | None = Field(
+    cn_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_3",
@@ -50,7 +50,7 @@ class CN(BaseModel):
         title="given name",
     )
 
-    cn_4: str | None = Field(
+    cn_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_4",
@@ -61,7 +61,7 @@ class CN(BaseModel):
         title="second and further given names or initials thereof",
     )
 
-    cn_5: str | None = Field(
+    cn_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_5",
@@ -72,7 +72,7 @@ class CN(BaseModel):
         title="suffix (e.g., JR or III)",
     )
 
-    cn_6: str | None = Field(
+    cn_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_6",
@@ -83,7 +83,7 @@ class CN(BaseModel):
         title="prefix (e.g., DR)",
     )
 
-    cn_7: str | None = Field(
+    cn_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_7",
@@ -94,7 +94,7 @@ class CN(BaseModel):
         title="degree (e.g., MD)",
     )
 
-    cn_8: str | None = Field(
+    cn_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_8",
@@ -105,7 +105,7 @@ class CN(BaseModel):
         title="source table",
     )
 
-    cn_9: HD | None = Field(
+    cn_9: Optional[HD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cn_9",

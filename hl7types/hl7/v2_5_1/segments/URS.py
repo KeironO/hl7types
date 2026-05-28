@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: URS
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TQ import TQ
@@ -17,7 +17,7 @@ from ..datatypes.TS import TS
 class URS(BaseModel):
     """HL7 v2 URS segment."""
 
-    urs_1: list[str] = Field(
+    urs_1: List[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "urs_1",
@@ -29,7 +29,7 @@ class URS(BaseModel):
         description="Item #52",
     )
 
-    urs_2: TS | None = Field(
+    urs_2: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_2",
@@ -41,7 +41,7 @@ class URS(BaseModel):
         description="Item #53",
     )
 
-    urs_3: TS | None = Field(
+    urs_3: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_3",
@@ -53,7 +53,7 @@ class URS(BaseModel):
         description="Item #54",
     )
 
-    urs_4: list[str] | None = Field(
+    urs_4: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_4",
@@ -65,7 +65,7 @@ class URS(BaseModel):
         description="Item #55",
     )
 
-    urs_5: list[str] | None = Field(
+    urs_5: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_5",
@@ -77,7 +77,7 @@ class URS(BaseModel):
         description="Item #56",
     )
 
-    urs_6: list[str] | None = Field(
+    urs_6: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_6",
@@ -89,7 +89,7 @@ class URS(BaseModel):
         description="Item #57 | Table HL70156",
     )
 
-    urs_7: list[str] | None = Field(
+    urs_7: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_7",
@@ -101,7 +101,7 @@ class URS(BaseModel):
         description="Item #58 | Table HL70157",
     )
 
-    urs_8: list[str] | None = Field(
+    urs_8: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_8",
@@ -113,7 +113,7 @@ class URS(BaseModel):
         description="Item #59 | Table HL70158",
     )
 
-    urs_9: TQ | None = Field(
+    urs_9: Optional[TQ] = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_9",

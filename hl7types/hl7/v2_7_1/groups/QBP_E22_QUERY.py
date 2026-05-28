@@ -5,10 +5,10 @@ Version: 2.7.1
 Class: QBP_E22.QUERY
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class QBP_E22_QUERY(BaseModel):

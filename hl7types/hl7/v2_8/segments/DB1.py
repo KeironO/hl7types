@@ -5,9 +5,9 @@ Version: 2.8
 Class: DB1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -29,7 +29,7 @@ class DB1(BaseModel):
         description="Item #1283",
     )
 
-    db1_2: CWE | None = Field(
+    db1_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "db1_2",
@@ -41,7 +41,7 @@ class DB1(BaseModel):
         description="Item #1284 | Table HL70334",
     )
 
-    db1_3: list[CX] | None = Field(
+    db1_3: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "db1_3",
@@ -53,7 +53,7 @@ class DB1(BaseModel):
         description="Item #1285",
     )
 
-    db1_4: str | None = Field(
+    db1_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "db1_4",
@@ -65,7 +65,7 @@ class DB1(BaseModel):
         description="Item #1286 | Table HL70136",
     )
 
-    db1_5: str | None = Field(
+    db1_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "db1_5",
@@ -77,7 +77,7 @@ class DB1(BaseModel):
         description="Item #1287",
     )
 
-    db1_6: str | None = Field(
+    db1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "db1_6",
@@ -89,7 +89,7 @@ class DB1(BaseModel):
         description="Item #1288",
     )
 
-    db1_7: str | None = Field(
+    db1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "db1_7",
@@ -101,7 +101,7 @@ class DB1(BaseModel):
         description="Item #1289",
     )
 
-    db1_8: str | None = Field(
+    db1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "db1_8",

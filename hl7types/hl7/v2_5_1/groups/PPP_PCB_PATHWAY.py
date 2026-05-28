@@ -5,14 +5,15 @@ Version: 2.5.1
 Class: PPP_PCB.PATHWAY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PTH import PTH
 from ..segments.VAR import VAR
+
 from .PPP_PCB_PATHWAY_ROLE import PPP_PCB_PATHWAY_ROLE
 from .PPP_PCB_PROBLEM import PPP_PCB_PROBLEM
 
@@ -40,25 +41,25 @@ class PPP_PCB_PATHWAY(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PATHWAY_ROLE: list[_PPP_PCB_PATHWAY_ROLE] | None = Field(
+    PATHWAY_ROLE: Optional[List[_PPP_PCB_PATHWAY_ROLE]] = Field(
         default=None,
         title="PATHWAY_ROLE",
         description="Optional, repeating",
     )
 
-    PROBLEM: list[_PPP_PCB_PROBLEM] | None = Field(
+    PROBLEM: Optional[List[_PPP_PCB_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",

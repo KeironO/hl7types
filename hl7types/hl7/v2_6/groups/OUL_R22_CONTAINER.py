@@ -5,9 +5,9 @@ Version: 2.6
 Class: OUL_R22.CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.INV import INV
@@ -31,7 +31,7 @@ class OUL_R22_CONTAINER(BaseModel):
         description="Required",
     )
 
-    INV: _INV | None = Field(
+    INV: Optional[_INV] = Field(
         default=None,
         title="INV",
         description="Optional",

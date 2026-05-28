@@ -5,9 +5,9 @@ Version: 2.2
 Class: MFE
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -29,7 +29,7 @@ class MFE(BaseModel):
         description="Item #664 | Table HL70180",
     )
 
-    mfe_2: str | None = Field(
+    mfe_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfe_2",
@@ -41,7 +41,7 @@ class MFE(BaseModel):
         description="Item #665",
     )
 
-    mfe_3: TS | None = Field(
+    mfe_3: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfe_3",
@@ -53,7 +53,7 @@ class MFE(BaseModel):
         description="Item #662",
     )
 
-    mfe_4: list[CE] = Field(
+    mfe_4: List[CE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "mfe_4",

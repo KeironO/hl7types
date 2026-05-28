@@ -5,9 +5,9 @@ Version: 2.3
 Class: VXX_V02.PATIENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
@@ -31,7 +31,7 @@ class VXX_V02_PATIENT(BaseModel):
         description="Required",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",

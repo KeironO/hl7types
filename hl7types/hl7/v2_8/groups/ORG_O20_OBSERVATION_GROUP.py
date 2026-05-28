@@ -5,9 +5,9 @@ Version: 2.8
 Class: ORG_O20.OBSERVATION_GROUP
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
@@ -31,7 +31,7 @@ class ORG_O20_OBSERVATION_GROUP(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

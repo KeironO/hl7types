@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RTB_Z74.ROW_DEFINITION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RDF import RDF
@@ -31,7 +31,7 @@ class RTB_Z74_ROW_DEFINITION(BaseModel):
         description="Required",
     )
 
-    RDT: list[_RDT] | None = Field(
+    RDT: Optional[List[_RDT]] = Field(
         default=None,
         title="RDT",
         description="Optional, repeating",

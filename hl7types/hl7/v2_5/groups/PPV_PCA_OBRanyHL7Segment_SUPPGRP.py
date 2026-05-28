@@ -5,10 +5,10 @@ Version: 2.5
 Class: PPV_PCA.OBRanyHL7Segment_SUPPGRP
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class PPV_PCA_OBRanyHL7Segment_SUPPGRP(BaseModel):

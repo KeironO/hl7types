@@ -5,12 +5,13 @@ Version: 2.8.2
 Class: OML_O39.SPECIMEN_SHIPMENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SHP import SHP
+
 from .OML_O39_PACKAGE import OML_O39_PACKAGE
 from .OML_O39_SHIPMENT_OBSERVATION import OML_O39_SHIPMENT_OBSERVATION
 
@@ -34,13 +35,13 @@ class OML_O39_SPECIMEN_SHIPMENT(BaseModel):
         description="Required",
     )
 
-    SHIPMENT_OBSERVATION: list[_OML_O39_SHIPMENT_OBSERVATION] | None = Field(
+    SHIPMENT_OBSERVATION: Optional[List[_OML_O39_SHIPMENT_OBSERVATION]] = Field(
         default=None,
         title="SHIPMENT_OBSERVATION",
         description="Optional, repeating",
     )
 
-    PACKAGE: list[_OML_O39_PACKAGE] = Field(
+    PACKAGE: List[_OML_O39_PACKAGE] = Field(
         default=...,
         title="PACKAGE",
         description="Required, repeating",

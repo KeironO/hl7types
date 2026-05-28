@@ -5,12 +5,10 @@ Version: 2.5.1
 Class: QVR_Q17.QBP
 Type: Group
 """
-
 from __future__ import annotations
 
-from typing import Any
-
-from pydantic import BaseModel
+from typing import Optional, Any
+from pydantic import BaseModel, Field
 
 
 class QVR_Q17_QBP(BaseModel):

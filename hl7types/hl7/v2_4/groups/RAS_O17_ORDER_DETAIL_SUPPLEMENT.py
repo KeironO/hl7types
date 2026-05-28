@@ -5,13 +5,14 @@ Version: 2.4
 Class: RAS_O17.ORDER_DETAIL_SUPPLEMENT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RXR import RXR
+
 from .RAS_O17_COMPONENTS import RAS_O17_COMPONENTS
 
 _NTE = NTE
@@ -28,19 +29,19 @@ class RAS_O17_ORDER_DETAIL_SUPPLEMENT(BaseModel):
         COMPONENTS (Optional[RAS_O17_COMPONENTS]): optional
     """
 
-    NTE: list[_NTE] = Field(
+    NTE: List[_NTE] = Field(
         default=...,
         title="NTE",
         description="Required, repeating",
     )
 
-    RXR: list[_RXR] = Field(
+    RXR: List[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENTS: _RAS_O17_COMPONENTS | None = Field(
+    COMPONENTS: Optional[_RAS_O17_COMPONENTS] = Field(
         default=None,
         title="COMPONENTS",
         description="Optional",

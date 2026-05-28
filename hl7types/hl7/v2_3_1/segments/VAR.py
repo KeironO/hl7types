@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: VAR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -43,7 +43,7 @@ class VAR(BaseModel):
         description="Item #1213",
     )
 
-    var_3: TS | None = Field(
+    var_3: Optional[TS] = Field(
         default=None,
         validation_alias=AliasChoices(
             "var_3",
@@ -55,7 +55,7 @@ class VAR(BaseModel):
         description="Item #1214",
     )
 
-    var_4: list[XCN] | None = Field(
+    var_4: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "var_4",
@@ -67,7 +67,7 @@ class VAR(BaseModel):
         description="Item #1215",
     )
 
-    var_5: CE | None = Field(
+    var_5: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "var_5",
@@ -79,7 +79,7 @@ class VAR(BaseModel):
         description="Item #1216",
     )
 
-    var_6: list[str] | None = Field(
+    var_6: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "var_6",

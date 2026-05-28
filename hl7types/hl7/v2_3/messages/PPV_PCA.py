@@ -5,16 +5,17 @@ Version: 2.3
 Class: PPV_PCA
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.PPV_PCA_PATIENT import PPV_PCA_PATIENT
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
+
+from ..groups.PPV_PCA_PATIENT import PPV_PCA_PATIENT
 
 _ERR = ERR
 _MSA = MSA
@@ -46,7 +47,7 @@ class PPV_PCA(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -58,7 +59,7 @@ class PPV_PCA(BaseModel):
         description="Required",
     )
 
-    PATIENT: list[_PPV_PCA_PATIENT] = Field(
+    PATIENT: List[_PPV_PCA_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

@@ -5,12 +5,13 @@ Version: 2.8
 Class: RAS_O17.ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.RXO import RXO
+
 from .RAS_O17_ORDER_DETAIL_SUPPLEMENT import RAS_O17_ORDER_DETAIL_SUPPLEMENT
 
 _RAS_O17_ORDER_DETAIL_SUPPLEMENT = RAS_O17_ORDER_DETAIL_SUPPLEMENT
@@ -31,7 +32,7 @@ class RAS_O17_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL_SUPPLEMENT: _RAS_O17_ORDER_DETAIL_SUPPLEMENT | None = Field(
+    ORDER_DETAIL_SUPPLEMENT: Optional[_RAS_O17_ORDER_DETAIL_SUPPLEMENT] = Field(
         default=None,
         title="ORDER_DETAIL_SUPPLEMENT",
         description="Optional",

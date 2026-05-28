@@ -5,12 +5,11 @@ Version: 2.6
 Class: OPU_R25
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.OPU_R25_ACCESSION_DETAIL import OPU_R25_ACCESSION_DETAIL
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
@@ -19,6 +18,8 @@ from ..segments.PV2 import PV2
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.OPU_R25_ACCESSION_DETAIL import OPU_R25_ACCESSION_DETAIL
 
 _MSH = MSH
 _NTE = NTE
@@ -52,19 +53,19 @@ class OPU_R25(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
@@ -76,25 +77,25 @@ class OPU_R25(BaseModel):
         description="Required",
     )
 
-    PV2: _PV2 | None = Field(
+    PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    ROL: list[_ROL] = Field(
+    ROL: List[_ROL] = Field(
         default=...,
         title="ROL",
         description="Required, repeating",
     )
 
-    ACCESSION_DETAIL: list[_OPU_R25_ACCESSION_DETAIL] = Field(
+    ACCESSION_DETAIL: List[_OPU_R25_ACCESSION_DETAIL] = Field(
         default=...,
         title="ACCESSION_DETAIL",
         description="Required, repeating",

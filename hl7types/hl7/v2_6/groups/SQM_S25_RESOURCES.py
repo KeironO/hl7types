@@ -5,12 +5,13 @@ Version: 2.6
 Class: SQM_S25.RESOURCES
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RGS import RGS
+
 from .SQM_S25_GENERAL_RESOURCE import SQM_S25_GENERAL_RESOURCE
 from .SQM_S25_LOCATION_RESOURCE import SQM_S25_LOCATION_RESOURCE
 from .SQM_S25_PERSONNEL_RESOURCE import SQM_S25_PERSONNEL_RESOURCE
@@ -40,25 +41,25 @@ class SQM_S25_RESOURCES(BaseModel):
         description="Required",
     )
 
-    SERVICE: list[_SQM_S25_SERVICE] | None = Field(
+    SERVICE: Optional[List[_SQM_S25_SERVICE]] = Field(
         default=None,
         title="SERVICE",
         description="Optional, repeating",
     )
 
-    GENERAL_RESOURCE: list[_SQM_S25_GENERAL_RESOURCE] | None = Field(
+    GENERAL_RESOURCE: Optional[List[_SQM_S25_GENERAL_RESOURCE]] = Field(
         default=None,
         title="GENERAL_RESOURCE",
         description="Optional, repeating",
     )
 
-    PERSONNEL_RESOURCE: list[_SQM_S25_PERSONNEL_RESOURCE] | None = Field(
+    PERSONNEL_RESOURCE: Optional[List[_SQM_S25_PERSONNEL_RESOURCE]] = Field(
         default=None,
         title="PERSONNEL_RESOURCE",
         description="Optional, repeating",
     )
 
-    LOCATION_RESOURCE: list[_SQM_S25_LOCATION_RESOURCE] | None = Field(
+    LOCATION_RESOURCE: Optional[List[_SQM_S25_LOCATION_RESOURCE]] = Field(
         default=None,
         title="LOCATION_RESOURCE",
         description="Optional, repeating",

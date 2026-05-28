@@ -5,9 +5,9 @@ Version: 2.5
 Class: DSR_Q03
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -52,25 +52,25 @@ class DSR_Q03(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    MSA: _MSA | None = Field(
+    MSA: Optional[_MSA] = Field(
         default=None,
         title="MSA",
         description="Optional",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    QAK: _QAK | None = Field(
+    QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
         description="Optional",
@@ -82,19 +82,19 @@ class DSR_Q03(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    DSP: list[_DSP] = Field(
+    DSP: List[_DSP] = Field(
         default=...,
         title="DSP",
         description="Required, repeating",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

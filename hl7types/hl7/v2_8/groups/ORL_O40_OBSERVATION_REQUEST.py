@@ -5,13 +5,14 @@ Version: 2.8
 Class: ORL_O40.OBSERVATION_REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
 from ..segments.PRT import PRT
+
 from .ORL_O40_SPECIMEN_SHIPMENT import ORL_O40_SPECIMEN_SHIPMENT
 
 _OBR = OBR
@@ -34,13 +35,13 @@ class ORL_O40_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    SPECIMEN_SHIPMENT: list[_ORL_O40_SPECIMEN_SHIPMENT] | None = Field(
+    SPECIMEN_SHIPMENT: Optional[List[_ORL_O40_SPECIMEN_SHIPMENT]] = Field(
         default=None,
         title="SPECIMEN_SHIPMENT",
         description="Optional, repeating",

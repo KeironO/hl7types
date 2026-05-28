@@ -5,9 +5,9 @@ Version: 2.4
 Class: RQA_I08.AUTHORIZATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.AUT import AUT
@@ -31,7 +31,7 @@ class RQA_I08_AUTHORIZATION(BaseModel):
         description="Required",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",

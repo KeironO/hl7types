@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: OML_O21.OBSERVATION_REQUEST
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -18,6 +18,7 @@ from ..segments.PRT import PRT
 from ..segments.SGH import SGH
 from ..segments.SGT import SGT
 from ..segments.TCD import TCD
+
 from .OML_O21_OBSERVATION import OML_O21_OBSERVATION
 from .OML_O21_PRIOR_RESULT import OML_O21_PRIOR_RESULT
 from .OML_O21_SPECIMEN import OML_O21_SPECIMEN
@@ -58,61 +59,61 @@ class OML_O21_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    TCD: _TCD | None = Field(
+    TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    CTD: _CTD | None = Field(
+    CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: list[_DG1] | None = Field(
+    DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: list[_OML_O21_OBSERVATION] | None = Field(
+    OBSERVATION: Optional[List[_OML_O21_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    SPECIMEN: list[_OML_O21_SPECIMEN] | None = Field(
+    SPECIMEN: Optional[List[_OML_O21_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",
     )
 
-    SGH: _SGH | None = Field(
+    SGH: Optional[_SGH] = Field(
         default=None,
         title="SGH",
         description="Optional",
     )
 
-    PRIOR_RESULT: list[_OML_O21_PRIOR_RESULT] | None = Field(
+    PRIOR_RESULT: Optional[List[_OML_O21_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
         description="Optional, repeating",
     )
 
-    SGT: _SGT | None = Field(
+    SGT: Optional[_SGT] = Field(
         default=None,
         title="SGT",
         description="Optional",

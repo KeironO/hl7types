@@ -5,14 +5,15 @@ Version: 2.8
 Class: CSU_C09.STUDY_OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
 from ..segments.OBX import OBX
 from ..segments.PRT import PRT
+
 from .CSU_C09_STUDY_OBSERVATION_ORDER import CSU_C09_STUDY_OBSERVATION_ORDER
 from .CSU_C09_TIMING_QTY import CSU_C09_TIMING_QTY
 
@@ -34,7 +35,7 @@ class CSU_C09_STUDY_OBSERVATION(BaseModel):
         OBX (OBX): required
     """
 
-    STUDY_OBSERVATION_ORDER: _CSU_C09_STUDY_OBSERVATION_ORDER | None = Field(
+    STUDY_OBSERVATION_ORDER: Optional[_CSU_C09_STUDY_OBSERVATION_ORDER] = Field(
         default=None,
         title="STUDY_OBSERVATION_ORDER",
         description="Optional",
@@ -46,13 +47,13 @@ class CSU_C09_STUDY_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: list[_CSU_C09_TIMING_QTY] | None = Field(
+    TIMING_QTY: Optional[List[_CSU_C09_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: ACC
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -18,7 +18,7 @@ from ..datatypes.XCN import XCN
 class ACC(BaseModel):
     """HL7 v2 ACC segment."""
 
-    acc_1: str | None = Field(
+    acc_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_1",
@@ -30,7 +30,7 @@ class ACC(BaseModel):
         description="Item #527",
     )
 
-    acc_2: CWE | None = Field(
+    acc_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_2",
@@ -42,7 +42,7 @@ class ACC(BaseModel):
         description="Item #528 | Table HL70050",
     )
 
-    acc_3: str | None = Field(
+    acc_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_3",
@@ -54,7 +54,7 @@ class ACC(BaseModel):
         description="Item #529",
     )
 
-    acc_4: CWE | None = Field(
+    acc_4: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_4",
@@ -66,7 +66,7 @@ class ACC(BaseModel):
         description="Item #812 | Table HL70347",
     )
 
-    acc_5: str | None = Field(
+    acc_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_5",
@@ -78,7 +78,7 @@ class ACC(BaseModel):
         description="Item #813 | Table HL70136",
     )
 
-    acc_6: str | None = Field(
+    acc_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_6",
@@ -90,7 +90,7 @@ class ACC(BaseModel):
         description="Item #814 | Table HL70136",
     )
 
-    acc_7: XCN | None = Field(
+    acc_7: Optional[XCN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_7",
@@ -102,7 +102,7 @@ class ACC(BaseModel):
         description="Item #224",
     )
 
-    acc_8: str | None = Field(
+    acc_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_8",
@@ -114,7 +114,7 @@ class ACC(BaseModel):
         description="Item #1503",
     )
 
-    acc_9: str | None = Field(
+    acc_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_9",
@@ -126,7 +126,7 @@ class ACC(BaseModel):
         description="Item #1504",
     )
 
-    acc_10: str | None = Field(
+    acc_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_10",
@@ -138,7 +138,7 @@ class ACC(BaseModel):
         description="Item #1505 | Table HL70136",
     )
 
-    acc_11: XAD | None = Field(
+    acc_11: Optional[XAD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_11",

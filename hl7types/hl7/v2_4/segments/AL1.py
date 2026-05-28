@@ -5,9 +5,9 @@ Version: 2.4
 Class: AL1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -28,7 +28,7 @@ class AL1(BaseModel):
         description="Item #203",
     )
 
-    al1_2: CE | None = Field(
+    al1_2: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "al1_2",
@@ -52,7 +52,7 @@ class AL1(BaseModel):
         description="Item #205",
     )
 
-    al1_4: CE | None = Field(
+    al1_4: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "al1_4",
@@ -64,7 +64,7 @@ class AL1(BaseModel):
         description="Item #206 | Table HL70128",
     )
 
-    al1_5: list[str] | None = Field(
+    al1_5: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "al1_5",
@@ -76,7 +76,7 @@ class AL1(BaseModel):
         description="Item #207",
     )
 
-    al1_6: str | None = Field(
+    al1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "al1_6",

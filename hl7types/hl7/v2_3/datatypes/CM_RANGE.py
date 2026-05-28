@@ -5,9 +5,9 @@ Version: 2.3
 Class: CM_RANGE
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -16,7 +16,7 @@ from .CE import CE
 class CM_RANGE(BaseModel):
     """HL7 v2 CM_RANGE data type."""
 
-    cm_range_1: CE | None = Field(
+    cm_range_1: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_range_1",
@@ -27,7 +27,7 @@ class CM_RANGE(BaseModel):
         title="Low Value",
     )
 
-    cm_range_2: CE | None = Field(
+    cm_range_2: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_range_2",

@@ -5,14 +5,15 @@ Version: 2.7.1
 Class: CCU_I20.GOAL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GOL import GOL
 from ..segments.OBX import OBX
 from ..segments.VAR import VAR
+
 from .CCU_I20_ROLE_GOAL import CCU_I20_ROLE_GOAL
 
 _CCU_I20_ROLE_GOAL = CCU_I20_ROLE_GOAL
@@ -37,19 +38,19 @@ class CCU_I20_GOAL(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_GOAL: list[_CCU_I20_ROLE_GOAL] | None = Field(
+    ROLE_GOAL: Optional[List[_CCU_I20_ROLE_GOAL]] = Field(
         default=None,
         title="ROLE_GOAL",
         description="Optional, repeating",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

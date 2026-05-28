@@ -5,16 +5,17 @@ Version: 2.5.1
 Class: SQM_S25
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
-from ..groups.SQM_S25_REQUEST import SQM_S25_REQUEST
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
+
+from ..groups.SQM_S25_REQUEST import SQM_S25_REQUEST
 
 _DSC = DSC
 _MSH = MSH
@@ -46,19 +47,19 @@ class SQM_S25(BaseModel):
         description="Required",
     )
 
-    QRF: _QRF | None = Field(
+    QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    REQUEST: _SQM_S25_REQUEST | None = Field(
+    REQUEST: Optional[_SQM_S25_REQUEST] = Field(
         default=None,
         title="REQUEST",
         description="Optional",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

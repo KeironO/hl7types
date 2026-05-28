@@ -5,9 +5,9 @@ Version: 2.7
 Class: PTR_PCF.PROBLEM_ROLE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ROL import ROL
@@ -31,7 +31,7 @@ class PTR_PCF_PROBLEM_ROLE(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

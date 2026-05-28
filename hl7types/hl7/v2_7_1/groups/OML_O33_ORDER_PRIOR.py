@@ -5,15 +5,16 @@ Version: 2.7.1
 Class: OML_O33.ORDER_PRIOR
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
+
 from .OML_O33_OBSERVATION_PRIOR import OML_O33_OBSERVATION_PRIOR
 from .OML_O33_TIMING_PRIOR import OML_O33_TIMING_PRIOR
 
@@ -49,25 +50,25 @@ class OML_O33_ORDER_PRIOR(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRT: list[_PRT] | None = Field(
+    PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING_PRIOR: list[_OML_O33_TIMING_PRIOR] | None = Field(
+    TIMING_PRIOR: Optional[List[_OML_O33_TIMING_PRIOR]] = Field(
         default=None,
         title="TIMING_PRIOR",
         description="Optional, repeating",
     )
 
-    OBSERVATION_PRIOR: list[_OML_O33_OBSERVATION_PRIOR] = Field(
+    OBSERVATION_PRIOR: List[_OML_O33_OBSERVATION_PRIOR] = Field(
         default=...,
         title="OBSERVATION_PRIOR",
         description="Required, repeating",

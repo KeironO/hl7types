@@ -5,9 +5,9 @@ Version: 2.8
 Class: RFI
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -38,7 +38,7 @@ class RFI(BaseModel):
         description="Item #1911",
     )
 
-    rfi_3: str | None = Field(
+    rfi_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfi_3",
@@ -50,7 +50,7 @@ class RFI(BaseModel):
         description="Item #1912 | Table HL70136",
     )
 
-    rfi_4: str | None = Field(
+    rfi_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfi_4",

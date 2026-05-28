@@ -5,9 +5,9 @@ Version: 2.4
 Class: PEX_P07.ASSOCIATED_RX_ADMIN
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.RXA import RXA
@@ -31,7 +31,7 @@ class PEX_P07_ASSOCIATED_RX_ADMIN(BaseModel):
         description="Required",
     )
 
-    RXR: _RXR | None = Field(
+    RXR: Optional[_RXR] = Field(
         default=None,
         title="RXR",
         description="Optional",

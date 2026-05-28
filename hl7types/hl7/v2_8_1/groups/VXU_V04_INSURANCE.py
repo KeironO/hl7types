@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: VXU_V04.INSURANCE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.IN1 import IN1
@@ -34,13 +34,13 @@ class VXU_V04_INSURANCE(BaseModel):
         description="Required",
     )
 
-    IN2: _IN2 | None = Field(
+    IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
         description="Optional",
     )
 
-    IN3: _IN3 | None = Field(
+    IN3: Optional[_IN3] = Field(
         default=None,
         title="IN3",
         description="Optional",

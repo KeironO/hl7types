@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: CSU_C09.RXARXR_SUPPGRP
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.RXA import RXA

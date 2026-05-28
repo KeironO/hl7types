@@ -71,7 +71,6 @@ from .TS import TS
 from .TX import TX
 from .TX_CHALLENGE import TX_CHALLENGE
 from .UVC import UVC
-from .varies import varies
 from .VH import VH
 from .VID import VID
 from .VR import VR
@@ -82,3 +81,4 @@ from .XCN import XCN
 from .XON import XON
 from .XPN import XPN
 from .XTN import XTN
+from .varies import varies

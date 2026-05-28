@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: MFN_M04.MF_CDM
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CDM import CDM
@@ -37,7 +37,7 @@ class MFN_M04_MF_CDM(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
@@ -49,7 +49,7 @@ class MFN_M04_MF_CDM(BaseModel):
         description="Required",
     )
 
-    PRC: list[_PRC] | None = Field(
+    PRC: Optional[List[_PRC]] = Field(
         default=None,
         title="PRC",
         description="Optional, repeating",

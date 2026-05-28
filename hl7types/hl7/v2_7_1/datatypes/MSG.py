@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: MSG
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 

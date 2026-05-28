@@ -5,16 +5,16 @@ Version: 2.6
 Class: VR
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class VR(BaseModel):
     """HL7 v2 VR data type."""
 
-    vr_1: str | None = Field(
+    vr_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "vr_1",
@@ -25,7 +25,7 @@ class VR(BaseModel):
         title="First Data Code Value",
     )
 
-    vr_2: str | None = Field(
+    vr_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "vr_2",

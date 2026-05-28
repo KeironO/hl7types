@@ -5,9 +5,9 @@ Version: 2.6
 Class: UVC
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CNE import CNE
@@ -28,7 +28,7 @@ class UVC(BaseModel):
         title="Value Code",
     )
 
-    uvc_2: MO | None = Field(
+    uvc_2: Optional[MO] = Field(
         default=None,
         validation_alias=AliasChoices(
             "uvc_2",

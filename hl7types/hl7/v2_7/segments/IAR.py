@@ -5,9 +5,9 @@ Version: 2.7
 Class: IAR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -40,7 +40,7 @@ class IAR(BaseModel):
         description="Item #3297 | Table HL70128",
     )
 
-    iar_3: CWE | None = Field(
+    iar_3: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iar_3",
@@ -52,7 +52,7 @@ class IAR(BaseModel):
         description="Item #3298 | Table HL70436",
     )
 
-    iar_4: str | None = Field(
+    iar_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "iar_4",

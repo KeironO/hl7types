@@ -5,16 +5,17 @@ Version: 2.5
 Class: RGV_O15
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RGV_O15_ORDER import RGV_O15_ORDER
-from ..groups.RGV_O15_PATIENT import RGV_O15_PATIENT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
+
+from ..groups.RGV_O15_ORDER import RGV_O15_ORDER
+from ..groups.RGV_O15_PATIENT import RGV_O15_PATIENT
 
 _MSH = MSH
 _NTE = NTE
@@ -40,25 +41,25 @@ class RGV_O15(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: _RGV_O15_PATIENT | None = Field(
+    PATIENT: Optional[_RGV_O15_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: list[_RGV_O15_ORDER] = Field(
+    ORDER: List[_RGV_O15_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

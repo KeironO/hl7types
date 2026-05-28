@@ -5,16 +5,17 @@ Version: 2.3.1
 Class: RRA_O02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RRA_O02_RESPONSE import RRA_O02_RESPONSE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
+
+from ..groups.RRA_O02_RESPONSE import RRA_O02_RESPONSE
 
 _ERR = ERR
 _MSA = MSA
@@ -46,19 +47,19 @@ class RRA_O02(BaseModel):
         description="Required",
     )
 
-    ERR: _ERR | None = Field(
+    ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESPONSE: _RRA_O02_RESPONSE | None = Field(
+    RESPONSE: Optional[_RRA_O02_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
         description="Optional",

@@ -5,12 +5,13 @@ Version: 2.4
 Class: ORL_O22.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .ORL_O22_OBSERVATION_REQUEST import ORL_O22_OBSERVATION_REQUEST
 
 _ORC = ORC
@@ -31,7 +32,7 @@ class ORL_O22_ORDER(BaseModel):
         description="Required",
     )
 
-    OBSERVATION_REQUEST: _ORL_O22_OBSERVATION_REQUEST | None = Field(
+    OBSERVATION_REQUEST: Optional[_ORL_O22_OBSERVATION_REQUEST] = Field(
         default=None,
         title="OBSERVATION_REQUEST",
         description="Optional",

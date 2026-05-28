@@ -5,14 +5,15 @@ Version: 2.3
 Class: ORM_O01.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
+
 from .ORM_O01_ORDER_DETAIL import ORM_O01_ORDER_DETAIL
 
 _BLG = BLG
@@ -37,19 +38,19 @@ class ORM_O01_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: _ORM_O01_ORDER_DETAIL | None = Field(
+    ORDER_DETAIL: Optional[_ORM_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    CTI: _CTI | None = Field(
+    CTI: Optional[_CTI] = Field(
         default=None,
         title="CTI",
         description="Optional",
     )
 
-    BLG: _BLG | None = Field(
+    BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
         description="Optional",

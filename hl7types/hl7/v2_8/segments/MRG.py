@@ -5,9 +5,9 @@ Version: 2.8
 Class: MRG
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CX import CX
@@ -17,7 +17,7 @@ from ..datatypes.XPN import XPN
 class MRG(BaseModel):
     """HL7 v2 MRG segment."""
 
-    mrg_1: list[CX] = Field(
+    mrg_1: List[CX] = Field(
         default=...,
         validation_alias=AliasChoices(
             "mrg_1",
@@ -29,7 +29,7 @@ class MRG(BaseModel):
         description="Item #211 | Table HL70061",
     )
 
-    mrg_3: CX | None = Field(
+    mrg_3: Optional[CX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mrg_3",
@@ -41,7 +41,7 @@ class MRG(BaseModel):
         description="Item #213 | Table HL70061",
     )
 
-    mrg_5: CX | None = Field(
+    mrg_5: Optional[CX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mrg_5",
@@ -53,7 +53,7 @@ class MRG(BaseModel):
         description="Item #1279 | Table HL70061",
     )
 
-    mrg_6: list[CX] | None = Field(
+    mrg_6: Optional[List[CX]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mrg_6",
@@ -65,7 +65,7 @@ class MRG(BaseModel):
         description="Item #1280 | Table HL70061",
     )
 
-    mrg_7: list[XPN] | None = Field(
+    mrg_7: Optional[List[XPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "mrg_7",

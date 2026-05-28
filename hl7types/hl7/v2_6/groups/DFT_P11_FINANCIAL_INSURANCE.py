@@ -5,9 +5,9 @@ Version: 2.6
 Class: DFT_P11.FINANCIAL_INSURANCE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.IN1 import IN1
@@ -37,19 +37,19 @@ class DFT_P11_FINANCIAL_INSURANCE(BaseModel):
         description="Required",
     )
 
-    IN2: _IN2 | None = Field(
+    IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
         description="Optional",
     )
 
-    IN3: list[_IN3] | None = Field(
+    IN3: Optional[List[_IN3]] = Field(
         default=None,
         title="IN3",
         description="Optional, repeating",
     )
 
-    ROL: list[_ROL] | None = Field(
+    ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",

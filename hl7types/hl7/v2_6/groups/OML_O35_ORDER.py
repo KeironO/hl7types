@@ -5,15 +5,16 @@ Version: 2.6
 Class: OML_O35.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
 from ..segments.CTI import CTI
 from ..segments.FT1 import FT1
 from ..segments.ORC import ORC
+
 from .OML_O35_OBSERVATION_REQUEST import OML_O35_OBSERVATION_REQUEST
 from .OML_O35_TIMING import OML_O35_TIMING
 
@@ -43,31 +44,31 @@ class OML_O35_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: list[_OML_O35_TIMING] | None = Field(
+    TIMING: Optional[List[_OML_O35_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    OBSERVATION_REQUEST: _OML_O35_OBSERVATION_REQUEST | None = Field(
+    OBSERVATION_REQUEST: Optional[_OML_O35_OBSERVATION_REQUEST] = Field(
         default=None,
         title="OBSERVATION_REQUEST",
         description="Optional",
     )
 
-    FT1: list[_FT1] | None = Field(
+    FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: list[_CTI] | None = Field(
+    CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    BLG: _BLG | None = Field(
+    BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
         description="Optional",

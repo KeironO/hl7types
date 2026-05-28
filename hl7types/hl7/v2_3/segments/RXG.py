@@ -5,9 +5,9 @@ Version: 2.3
 Class: RXG
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -18,7 +18,7 @@ from ..datatypes.TS import TS
 class RXG(BaseModel):
     """HL7 v2 RXG segment."""
 
-    rxg_1: str | None = Field(
+    rxg_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_1",
@@ -78,7 +78,7 @@ class RXG(BaseModel):
         description="Item #318",
     )
 
-    rxg_6: str | None = Field(
+    rxg_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_6",
@@ -102,7 +102,7 @@ class RXG(BaseModel):
         description="Item #320",
     )
 
-    rxg_8: CE | None = Field(
+    rxg_8: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_8",
@@ -114,7 +114,7 @@ class RXG(BaseModel):
         description="Item #321",
     )
 
-    rxg_9: list[CE] | None = Field(
+    rxg_9: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_9",
@@ -126,7 +126,7 @@ class RXG(BaseModel):
         description="Item #351",
     )
 
-    rxg_10: str | None = Field(
+    rxg_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_10",
@@ -138,7 +138,7 @@ class RXG(BaseModel):
         description="Item #322 | Table HL70167",
     )
 
-    rxg_11: str | None = Field(
+    rxg_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_11",
@@ -150,7 +150,7 @@ class RXG(BaseModel):
         description="Item #1303",
     )
 
-    rxg_12: str | None = Field(
+    rxg_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_12",
@@ -162,7 +162,7 @@ class RXG(BaseModel):
         description="Item #307 | Table HL70136",
     )
 
-    rxg_13: CE | None = Field(
+    rxg_13: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_13",
@@ -174,7 +174,7 @@ class RXG(BaseModel):
         description="Item #343",
     )
 
-    rxg_14: str | None = Field(
+    rxg_14: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_14",
@@ -186,7 +186,7 @@ class RXG(BaseModel):
         description="Item #331",
     )
 
-    rxg_15: str | None = Field(
+    rxg_15: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_15",
@@ -198,7 +198,7 @@ class RXG(BaseModel):
         description="Item #332",
     )
 
-    rxg_16: CE | None = Field(
+    rxg_16: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_16",
@@ -210,7 +210,7 @@ class RXG(BaseModel):
         description="Item #333",
     )
 
-    rxg_17: str | None = Field(
+    rxg_17: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_17",
@@ -222,7 +222,7 @@ class RXG(BaseModel):
         description="Item #1126",
     )
 
-    rxg_18: CE | None = Field(
+    rxg_18: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_18",
@@ -234,7 +234,7 @@ class RXG(BaseModel):
         description="Item #1127",
     )
 
-    rxg_19: list[str] | None = Field(
+    rxg_19: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_19",
@@ -246,7 +246,7 @@ class RXG(BaseModel):
         description="Item #1129",
     )
 
-    rxg_20: list[TS] | None = Field(
+    rxg_20: Optional[List[TS]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_20",
@@ -258,7 +258,7 @@ class RXG(BaseModel):
         description="Item #1130",
     )
 
-    rxg_21: list[CE] | None = Field(
+    rxg_21: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_21",
@@ -270,7 +270,7 @@ class RXG(BaseModel):
         description="Item #1131 | Table HL70227",
     )
 
-    rxg_22: CE | None = Field(
+    rxg_22: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxg_22",

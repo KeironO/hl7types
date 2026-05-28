@@ -5,12 +5,13 @@ Version: 2.7
 Class: CQU_I19.RESOURCE_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
+
 from .CQU_I19_RESOURCE_OBJECT import CQU_I19_RESOURCE_OBJECT
 
 _CQU_I19_RESOURCE_OBJECT = CQU_I19_RESOURCE_OBJECT
@@ -31,7 +32,7 @@ class CQU_I19_RESOURCE_DETAIL(BaseModel):
         description="Required",
     )
 
-    OBX: list[_OBX] | None = Field(
+    OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

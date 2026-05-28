@@ -5,13 +5,14 @@ Version: 2.7
 Class: OUL_R23.CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.INV import INV
 from ..segments.SAC import SAC
+
 from .OUL_R23_ORDER import OUL_R23_ORDER
 
 _INV = INV
@@ -34,13 +35,13 @@ class OUL_R23_CONTAINER(BaseModel):
         description="Required",
     )
 
-    INV: _INV | None = Field(
+    INV: Optional[_INV] = Field(
         default=None,
         title="INV",
         description="Optional",
     )
 
-    ORDER: list[_OUL_R23_ORDER] = Field(
+    ORDER: List[_OUL_R23_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

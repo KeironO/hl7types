@@ -5,10 +5,18 @@ Version: 2.8.1
 Class: CCM_I21
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.NK1 import NK1
+from ..segments.PD1 import PD1
+from ..segments.PID import PID
+from ..segments.REL import REL
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
 
 from ..groups.CCM_I21_APPOINTMENT_HISTORY import CCM_I21_APPOINTMENT_HISTORY
 from ..groups.CCM_I21_CLINICAL_HISTORY import CCM_I21_CLINICAL_HISTORY
@@ -18,13 +26,6 @@ from ..groups.CCM_I21_MEDICATION_HISTORY import CCM_I21_MEDICATION_HISTORY
 from ..groups.CCM_I21_PATHWAY import CCM_I21_PATHWAY
 from ..groups.CCM_I21_PATIENT_VISITS import CCM_I21_PATIENT_VISITS
 from ..groups.CCM_I21_PROBLEM import CCM_I21_PROBLEM
-from ..segments.MSH import MSH
-from ..segments.NK1 import NK1
-from ..segments.PD1 import PD1
-from ..segments.PID import PID
-from ..segments.REL import REL
-from ..segments.SFT import SFT
-from ..segments.UAC import UAC
 
 _CCM_I21_APPOINTMENT_HISTORY = CCM_I21_APPOINTMENT_HISTORY
 _CCM_I21_CLINICAL_HISTORY = CCM_I21_CLINICAL_HISTORY
@@ -70,13 +71,13 @@ class CCM_I21(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -88,67 +89,67 @@ class CCM_I21(BaseModel):
         description="Required",
     )
 
-    PD1: _PD1 | None = Field(
+    PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NK1: list[_NK1] | None = Field(
+    NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    INSURANCE: list[_CCM_I21_INSURANCE] | None = Field(
+    INSURANCE: Optional[List[_CCM_I21_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    APPOINTMENT_HISTORY: list[_CCM_I21_APPOINTMENT_HISTORY] | None = Field(
+    APPOINTMENT_HISTORY: Optional[List[_CCM_I21_APPOINTMENT_HISTORY]] = Field(
         default=None,
         title="APPOINTMENT_HISTORY",
         description="Optional, repeating",
     )
 
-    CLINICAL_HISTORY: list[_CCM_I21_CLINICAL_HISTORY] | None = Field(
+    CLINICAL_HISTORY: Optional[List[_CCM_I21_CLINICAL_HISTORY]] = Field(
         default=None,
         title="CLINICAL_HISTORY",
         description="Optional, repeating",
     )
 
-    PATIENT_VISITS: list[_CCM_I21_PATIENT_VISITS] = Field(
+    PATIENT_VISITS: List[_CCM_I21_PATIENT_VISITS] = Field(
         default=...,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )
 
-    MEDICATION_HISTORY: list[_CCM_I21_MEDICATION_HISTORY] | None = Field(
+    MEDICATION_HISTORY: Optional[List[_CCM_I21_MEDICATION_HISTORY]] = Field(
         default=None,
         title="MEDICATION_HISTORY",
         description="Optional, repeating",
     )
 
-    PROBLEM: list[_CCM_I21_PROBLEM] | None = Field(
+    PROBLEM: Optional[List[_CCM_I21_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",
     )
 
-    GOAL: list[_CCM_I21_GOAL] | None = Field(
+    GOAL: Optional[List[_CCM_I21_GOAL]] = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",
     )
 
-    PATHWAY: list[_CCM_I21_PATHWAY] | None = Field(
+    PATHWAY: Optional[List[_CCM_I21_PATHWAY]] = Field(
         default=None,
         title="PATHWAY",
         description="Optional, repeating",
     )
 
-    REL: list[_REL] | None = Field(
+    REL: Optional[List[_REL]] = Field(
         default=None,
         title="REL",
         description="Optional, repeating",

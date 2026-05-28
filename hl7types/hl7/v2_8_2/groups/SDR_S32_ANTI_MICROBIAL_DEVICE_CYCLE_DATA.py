@@ -5,10 +5,10 @@ Version: 2.8.2
 Class: SDR_S32.ANTI-MICROBIAL_DEVICE_CYCLE_DATA
 Type: Group
 """
-
 from __future__ import annotations
 
-from pydantic import BaseModel
+from typing import Optional
+from pydantic import BaseModel, Field
 
 
 class SDR_S32_ANTI_MICROBIAL_DEVICE_CYCLE_DATA(BaseModel):

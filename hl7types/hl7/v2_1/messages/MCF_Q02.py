@@ -5,9 +5,9 @@ Version: 2.1
 Class: MCF_Q02
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MSA import MSA

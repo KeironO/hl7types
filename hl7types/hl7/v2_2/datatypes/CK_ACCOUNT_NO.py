@@ -5,16 +5,16 @@ Version: 2.2
 Class: CK_ACCOUNT_NO
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CK_ACCOUNT_NO(BaseModel):
     """HL7 v2 CK_ACCOUNT_NO data type."""
 
-    ck_account_no_1: str | None = Field(
+    ck_account_no_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_account_no_1",
@@ -25,7 +25,7 @@ class CK_ACCOUNT_NO(BaseModel):
         title="account number",
     )
 
-    ck_account_no_2: str | None = Field(
+    ck_account_no_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_account_no_2",
@@ -36,7 +36,7 @@ class CK_ACCOUNT_NO(BaseModel):
         title="Check digit",
     )
 
-    ck_account_no_3: str | None = Field(
+    ck_account_no_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_account_no_3",
@@ -47,7 +47,7 @@ class CK_ACCOUNT_NO(BaseModel):
         title="Check digit scheme",
     )
 
-    ck_account_no_4: str | None = Field(
+    ck_account_no_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ck_account_no_4",

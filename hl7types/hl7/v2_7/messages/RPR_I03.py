@@ -5,18 +5,19 @@ Version: 2.7
 Class: RPR_I03
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.RPR_I03_PROVIDER import RPR_I03_PROVIDER
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.RPR_I03_PROVIDER import RPR_I03_PROVIDER
 
 _MSA = MSA
 _MSH = MSH
@@ -46,13 +47,13 @@ class RPR_I03(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -64,19 +65,19 @@ class RPR_I03(BaseModel):
         description="Required",
     )
 
-    PROVIDER: list[_RPR_I03_PROVIDER] = Field(
+    PROVIDER: List[_RPR_I03_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
     )
 
-    PID: list[_PID] | None = Field(
+    PID: Optional[List[_PID]] = Field(
         default=None,
         title="PID",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

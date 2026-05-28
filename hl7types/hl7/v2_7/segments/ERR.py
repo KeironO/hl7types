@@ -5,9 +5,9 @@ Version: 2.7
 Class: ERR
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -19,7 +19,7 @@ from ..datatypes.XTN import XTN
 class ERR(BaseModel):
     """HL7 v2 ERR segment."""
 
-    err_2: list[ERL] | None = Field(
+    err_2: Optional[List[ERL]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_2",
@@ -55,7 +55,7 @@ class ERR(BaseModel):
         description="Item #1814 | Table HL70516",
     )
 
-    err_5: CWE | None = Field(
+    err_5: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_5",
@@ -67,7 +67,7 @@ class ERR(BaseModel):
         description="Item #1815 | Table HL70533",
     )
 
-    err_6: list[str] | None = Field(
+    err_6: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_6",
@@ -79,7 +79,7 @@ class ERR(BaseModel):
         description="Item #1816",
     )
 
-    err_7: TX | None = Field(
+    err_7: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_7",
@@ -91,7 +91,7 @@ class ERR(BaseModel):
         description="Item #1817",
     )
 
-    err_8: TX | None = Field(
+    err_8: Optional[TX] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_8",
@@ -103,7 +103,7 @@ class ERR(BaseModel):
         description="Item #1818",
     )
 
-    err_9: list[CWE] | None = Field(
+    err_9: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_9",
@@ -115,7 +115,7 @@ class ERR(BaseModel):
         description="Item #1819 | Table HL70517",
     )
 
-    err_10: CWE | None = Field(
+    err_10: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_10",
@@ -127,7 +127,7 @@ class ERR(BaseModel):
         description="Item #1820 | Table HL70518",
     )
 
-    err_11: list[CWE] | None = Field(
+    err_11: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_11",
@@ -139,7 +139,7 @@ class ERR(BaseModel):
         description="Item #1821 | Table HL70519",
     )
 
-    err_12: list[XTN] | None = Field(
+    err_12: Optional[List[XTN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_12",

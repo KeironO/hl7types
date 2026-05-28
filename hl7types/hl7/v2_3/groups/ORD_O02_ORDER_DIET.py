@@ -5,9 +5,9 @@ Version: 2.3
 Class: ORD_O02.ORDER_DIET
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -34,13 +34,13 @@ class ORD_O02_ORDER_DIET(BaseModel):
         description="Required",
     )
 
-    ODS: list[_ODS] | None = Field(
+    ODS: Optional[List[_ODS]] = Field(
         default=None,
         title="ODS",
         description="Optional, repeating",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

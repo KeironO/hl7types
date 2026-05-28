@@ -5,15 +5,16 @@ Version: 2.4
 Class: OML_O21
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
+
+from ..segments.MSH import MSH
+from ..segments.NTE import NTE
 
 from ..groups.OML_O21_ORDER_GENERAL import OML_O21_ORDER_GENERAL
 from ..groups.OML_O21_PATIENT import OML_O21_PATIENT
-from ..segments.MSH import MSH
-from ..segments.NTE import NTE
 
 _MSH = MSH
 _NTE = NTE
@@ -37,19 +38,19 @@ class OML_O21(BaseModel):
         description="Required",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: _OML_O21_PATIENT | None = Field(
+    PATIENT: Optional[_OML_O21_PATIENT] = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER_GENERAL: list[_OML_O21_ORDER_GENERAL] = Field(
+    ORDER_GENERAL: List[_OML_O21_ORDER_GENERAL] = Field(
         default=...,
         title="ORDER_GENERAL",
         description="Required, repeating",

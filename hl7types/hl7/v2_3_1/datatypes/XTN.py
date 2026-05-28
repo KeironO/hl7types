@@ -5,16 +5,16 @@ Version: 2.3.1
 Class: XTN
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class XTN(BaseModel):
     """HL7 v2 XTN data type."""
 
-    xtn_1: str | None = Field(
+    xtn_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_1",
@@ -25,7 +25,7 @@ class XTN(BaseModel):
         title="[(999)] 999-9999 [X99999][C any text]",
     )
 
-    xtn_2: str | None = Field(
+    xtn_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_2",
@@ -36,7 +36,7 @@ class XTN(BaseModel):
         title="telecommunication use code",
     )
 
-    xtn_3: str | None = Field(
+    xtn_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_3",
@@ -47,7 +47,7 @@ class XTN(BaseModel):
         title="telecommunication equipment type (ID)",
     )
 
-    xtn_4: str | None = Field(
+    xtn_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_4",
@@ -58,7 +58,7 @@ class XTN(BaseModel):
         title="Email address",
     )
 
-    xtn_5: str | None = Field(
+    xtn_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_5",
@@ -69,7 +69,7 @@ class XTN(BaseModel):
         title="Country Code",
     )
 
-    xtn_6: str | None = Field(
+    xtn_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_6",
@@ -80,7 +80,7 @@ class XTN(BaseModel):
         title="Area/city code",
     )
 
-    xtn_7: str | None = Field(
+    xtn_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_7",
@@ -91,7 +91,7 @@ class XTN(BaseModel):
         title="Phone number",
     )
 
-    xtn_8: str | None = Field(
+    xtn_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_8",
@@ -102,7 +102,7 @@ class XTN(BaseModel):
         title="Extension",
     )
 
-    xtn_9: str | None = Field(
+    xtn_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "xtn_9",

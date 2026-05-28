@@ -5,9 +5,9 @@ Version: 2.2
 Class: NK1
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.AD import AD
@@ -30,7 +30,7 @@ class NK1(BaseModel):
         description="Item #190",
     )
 
-    nk1_2: PN | None = Field(
+    nk1_2: Optional[PN] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_2",
@@ -42,7 +42,7 @@ class NK1(BaseModel):
         description="Item #191",
     )
 
-    nk1_3: CE | None = Field(
+    nk1_3: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_3",
@@ -54,7 +54,7 @@ class NK1(BaseModel):
         description="Item #192 | Table HL70063",
     )
 
-    nk1_4: AD | None = Field(
+    nk1_4: Optional[AD] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_4",
@@ -66,7 +66,7 @@ class NK1(BaseModel):
         description="Item #193",
     )
 
-    nk1_5: list[str] | None = Field(
+    nk1_5: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_5",
@@ -78,7 +78,7 @@ class NK1(BaseModel):
         description="Item #194",
     )
 
-    nk1_6: str | None = Field(
+    nk1_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_6",
@@ -90,7 +90,7 @@ class NK1(BaseModel):
         description="Item #195",
     )
 
-    nk1_7: CE | None = Field(
+    nk1_7: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_7",
@@ -102,7 +102,7 @@ class NK1(BaseModel):
         description="Item #196 | Table HL70131",
     )
 
-    nk1_8: str | None = Field(
+    nk1_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_8",
@@ -114,7 +114,7 @@ class NK1(BaseModel):
         description="Item #197",
     )
 
-    nk1_9: str | None = Field(
+    nk1_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_9",
@@ -126,7 +126,7 @@ class NK1(BaseModel):
         description="Item #198",
     )
 
-    nk1_10: str | None = Field(
+    nk1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_10",
@@ -138,7 +138,7 @@ class NK1(BaseModel):
         description="Item #199",
     )
 
-    nk1_11: str | None = Field(
+    nk1_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_11",
@@ -150,7 +150,7 @@ class NK1(BaseModel):
         description="Item #200",
     )
 
-    nk1_12: str | None = Field(
+    nk1_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_12",
@@ -162,7 +162,7 @@ class NK1(BaseModel):
         description="Item #201",
     )
 
-    nk1_13: str | None = Field(
+    nk1_13: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_13",

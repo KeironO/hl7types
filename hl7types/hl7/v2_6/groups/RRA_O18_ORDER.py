@@ -5,12 +5,13 @@ Version: 2.6
 Class: RRA_O18.ORDER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
+
 from .RRA_O18_ADMINISTRATION import RRA_O18_ADMINISTRATION
 from .RRA_O18_TIMING import RRA_O18_TIMING
 
@@ -34,13 +35,13 @@ class RRA_O18_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: list[_RRA_O18_TIMING] | None = Field(
+    TIMING: Optional[List[_RRA_O18_TIMING]] = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ADMINISTRATION: _RRA_O18_ADMINISTRATION | None = Field(
+    ADMINISTRATION: Optional[_RRA_O18_ADMINISTRATION] = Field(
         default=None,
         title="ADMINISTRATION",
         description="Optional",

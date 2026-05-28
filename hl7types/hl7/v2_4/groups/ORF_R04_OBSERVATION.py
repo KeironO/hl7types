@@ -5,9 +5,9 @@ Version: 2.4
 Class: ORF_R04.OBSERVATION
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -25,13 +25,13 @@ class ORF_R04_OBSERVATION(BaseModel):
         NTE (Optional[List[NTE]]): optional
     """
 
-    OBX: _OBX | None = Field(
+    OBX: Optional[_OBX] = Field(
         default=None,
         title="OBX",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: TXA
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -43,7 +43,7 @@ class TXA(BaseModel):
         description="Item #915 | Table HL70270",
     )
 
-    txa_3: str | None = Field(
+    txa_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_3",
@@ -55,7 +55,7 @@ class TXA(BaseModel):
         description="Item #916 | Table HL70191",
     )
 
-    txa_4: str | None = Field(
+    txa_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_4",
@@ -67,7 +67,7 @@ class TXA(BaseModel):
         description="Item #917",
     )
 
-    txa_5: list[XCN] | None = Field(
+    txa_5: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_5",
@@ -79,7 +79,7 @@ class TXA(BaseModel):
         description="Item #918",
     )
 
-    txa_6: str | None = Field(
+    txa_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_6",
@@ -91,7 +91,7 @@ class TXA(BaseModel):
         description="Item #919",
     )
 
-    txa_7: str | None = Field(
+    txa_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_7",
@@ -103,7 +103,7 @@ class TXA(BaseModel):
         description="Item #920",
     )
 
-    txa_8: list[str] | None = Field(
+    txa_8: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_8",
@@ -115,7 +115,7 @@ class TXA(BaseModel):
         description="Item #921",
     )
 
-    txa_9: list[XCN] | None = Field(
+    txa_9: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_9",
@@ -127,7 +127,7 @@ class TXA(BaseModel):
         description="Item #922",
     )
 
-    txa_10: list[XCN] | None = Field(
+    txa_10: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_10",
@@ -139,7 +139,7 @@ class TXA(BaseModel):
         description="Item #923",
     )
 
-    txa_11: list[XCN] | None = Field(
+    txa_11: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_11",
@@ -163,7 +163,7 @@ class TXA(BaseModel):
         description="Item #925",
     )
 
-    txa_13: EI | None = Field(
+    txa_13: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_13",
@@ -175,7 +175,7 @@ class TXA(BaseModel):
         description="Item #926",
     )
 
-    txa_14: list[EI] | None = Field(
+    txa_14: Optional[List[EI]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_14",
@@ -187,7 +187,7 @@ class TXA(BaseModel):
         description="Item #216",
     )
 
-    txa_15: EI | None = Field(
+    txa_15: Optional[EI] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_15",
@@ -199,7 +199,7 @@ class TXA(BaseModel):
         description="Item #217",
     )
 
-    txa_16: str | None = Field(
+    txa_16: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_16",
@@ -223,7 +223,7 @@ class TXA(BaseModel):
         description="Item #928 | Table HL70271",
     )
 
-    txa_18: str | None = Field(
+    txa_18: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_18",
@@ -235,7 +235,7 @@ class TXA(BaseModel):
         description="Item #929 | Table HL70272",
     )
 
-    txa_19: str | None = Field(
+    txa_19: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_19",
@@ -247,7 +247,7 @@ class TXA(BaseModel):
         description="Item #930 | Table HL70273",
     )
 
-    txa_20: str | None = Field(
+    txa_20: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_20",
@@ -259,7 +259,7 @@ class TXA(BaseModel):
         description="Item #932 | Table HL70275",
     )
 
-    txa_21: str | None = Field(
+    txa_21: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_21",
@@ -271,7 +271,7 @@ class TXA(BaseModel):
         description="Item #933",
     )
 
-    txa_22: list[PPN] | None = Field(
+    txa_22: Optional[List[PPN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_22",
@@ -283,7 +283,7 @@ class TXA(BaseModel):
         description="Item #934",
     )
 
-    txa_23: list[XCN] | None = Field(
+    txa_23: Optional[List[XCN]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_23",
@@ -295,7 +295,7 @@ class TXA(BaseModel):
         description="Item #935",
     )
 
-    txa_24: list[CWE] | None = Field(
+    txa_24: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_24",
@@ -307,7 +307,7 @@ class TXA(BaseModel):
         description="Item #2378",
     )
 
-    txa_25: list[str] | None = Field(
+    txa_25: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_25",
@@ -319,7 +319,7 @@ class TXA(BaseModel):
         description="Item #3301",
     )
 
-    txa_26: str | None = Field(
+    txa_26: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "txa_26",

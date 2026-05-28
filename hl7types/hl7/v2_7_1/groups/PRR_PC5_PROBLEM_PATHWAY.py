@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: PRR_PC5.PROBLEM_PATHWAY
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PTH import PTH
@@ -31,7 +31,7 @@ class PRR_PC5_PROBLEM_PATHWAY(BaseModel):
         description="Required",
     )
 
-    VAR: list[_VAR] | None = Field(
+    VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

@@ -5,16 +5,17 @@ Version: 2.7.1
 Class: MFN_M04
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.MFN_M04_MF_CDM import MFN_M04_MF_CDM
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.MFN_M04_MF_CDM import MFN_M04_MF_CDM
 
 _MFI = MFI
 _MFN_M04_MF_CDM = MFN_M04_MF_CDM
@@ -40,13 +41,13 @@ class MFN_M04(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -58,7 +59,7 @@ class MFN_M04(BaseModel):
         description="Required",
     )
 
-    MF_CDM: list[_MFN_M04_MF_CDM] = Field(
+    MF_CDM: List[_MFN_M04_MF_CDM] = Field(
         default=...,
         title="MF_CDM",
         description="Required, repeating",

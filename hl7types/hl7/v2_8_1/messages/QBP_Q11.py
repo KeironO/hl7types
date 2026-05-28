@@ -5,18 +5,19 @@ Version: 2.8.1
 Class: QBP_Q11
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.QBP_Q11_QBP import QBP_Q11_QBP
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
 from ..segments.QPD import QPD
 from ..segments.RCP import RCP
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.QBP_Q11_QBP import QBP_Q11_QBP
 
 _DSC = DSC
 _MSH = MSH
@@ -46,13 +47,13 @@ class QBP_Q11(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -64,7 +65,7 @@ class QBP_Q11(BaseModel):
         description="Required",
     )
 
-    QBP: _QBP_Q11_QBP | None = Field(
+    QBP: Optional[_QBP_Q11_QBP] = Field(
         default=None,
         title="QBP",
         description="Optional",
@@ -76,7 +77,7 @@ class QBP_Q11(BaseModel):
         description="Required",
     )
 
-    DSC: _DSC | None = Field(
+    DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
         description="Optional",

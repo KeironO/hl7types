@@ -5,16 +5,16 @@ Version: 2.3.1
 Class: CNE
 Type: Datatype
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CNE(BaseModel):
     """HL7 v2 CNE data type."""
 
-    cne_1: str | None = Field(
+    cne_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_1",
@@ -25,7 +25,7 @@ class CNE(BaseModel):
         title="identifier",
     )
 
-    cne_2: str | None = Field(
+    cne_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_2",
@@ -36,7 +36,7 @@ class CNE(BaseModel):
         title="text",
     )
 
-    cne_3: str | None = Field(
+    cne_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_3",
@@ -47,7 +47,7 @@ class CNE(BaseModel):
         title="name of coding system",
     )
 
-    cne_4: str | None = Field(
+    cne_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_4",
@@ -58,7 +58,7 @@ class CNE(BaseModel):
         title="alternate identifier",
     )
 
-    cne_5: str | None = Field(
+    cne_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_5",
@@ -69,7 +69,7 @@ class CNE(BaseModel):
         title="alternate text",
     )
 
-    cne_6: str | None = Field(
+    cne_6: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_6",
@@ -80,7 +80,7 @@ class CNE(BaseModel):
         title="name of alternate coding system",
     )
 
-    cne_7: str | None = Field(
+    cne_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_7",
@@ -91,7 +91,7 @@ class CNE(BaseModel):
         title="coding system version ID",
     )
 
-    cne_8: str | None = Field(
+    cne_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_8",
@@ -102,7 +102,7 @@ class CNE(BaseModel):
         title="alternate coding system version ID",
     )
 
-    cne_9: str | None = Field(
+    cne_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cne_9",

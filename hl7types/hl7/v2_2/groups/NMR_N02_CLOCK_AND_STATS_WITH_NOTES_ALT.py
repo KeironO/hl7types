@@ -5,9 +5,9 @@ Version: 2.2
 Class: NMR_N02.CLOCK_AND_STATS_WITH_NOTES_ALT
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NCK import NCK
@@ -31,25 +31,25 @@ class NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT(BaseModel):
         NSC (Optional[NSC]): optional
     """
 
-    NCK: _NCK | None = Field(
+    NCK: Optional[_NCK] = Field(
         default=None,
         title="NCK",
         description="Optional",
     )
 
-    NTE: list[_NTE] | None = Field(
+    NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    NST: _NST | None = Field(
+    NST: Optional[_NST] = Field(
         default=None,
         title="NST",
         description="Optional",
     )
 
-    NSC: _NSC | None = Field(
+    NSC: Optional[_NSC] = Field(
         default=None,
         title="NSC",
         description="Optional",

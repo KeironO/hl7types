@@ -5,9 +5,9 @@ Version: 2.8
 Class: OM3
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class OM3(BaseModel):
     """HL7 v2 OM3 segment."""
 
-    om3_1: str | None = Field(
+    om3_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om3_1",
@@ -28,7 +28,7 @@ class OM3(BaseModel):
         description="Item #586",
     )
 
-    om3_2: CWE | None = Field(
+    om3_2: Optional[CWE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om3_2",
@@ -40,7 +40,7 @@ class OM3(BaseModel):
         description="Item #636 | Table HL79999",
     )
 
-    om3_3: list[CWE] | None = Field(
+    om3_3: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om3_3",
@@ -48,11 +48,11 @@ class OM3(BaseModel):
             "OM3.3",
         ),
         serialization_alias="OM3.3",
-        title='Valid Coded "Answers"',
+        title="Valid Coded \"Answers\"",
         description="Item #637 | Table HL79999",
     )
 
-    om3_4: list[CWE] | None = Field(
+    om3_4: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om3_4",
@@ -64,7 +64,7 @@ class OM3(BaseModel):
         description="Item #638 | Table HL79999",
     )
 
-    om3_5: list[CWE] | None = Field(
+    om3_5: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om3_5",
@@ -76,7 +76,7 @@ class OM3(BaseModel):
         description="Item #639 | Table HL79999",
     )
 
-    om3_6: list[CWE] | None = Field(
+    om3_6: Optional[List[CWE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om3_6",
@@ -88,7 +88,7 @@ class OM3(BaseModel):
         description="Item #640 | Table HL79999",
     )
 
-    om3_7: str | None = Field(
+    om3_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om3_7",

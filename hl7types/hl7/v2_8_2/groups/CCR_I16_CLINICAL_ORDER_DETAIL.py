@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: CCR_I16.CLINICAL_ORDER_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .CCR_I16_CLINICAL_ORDER_OBJECT import CCR_I16_CLINICAL_ORDER_OBJECT
@@ -31,7 +31,7 @@ class CCR_I16_CLINICAL_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    CLINICAL_ORDER_OBSERVATION: list[_CCR_I16_CLINICAL_ORDER_OBSERVATION] | None = Field(
+    CLINICAL_ORDER_OBSERVATION: Optional[List[_CCR_I16_CLINICAL_ORDER_OBSERVATION]] = Field(
         default=None,
         title="CLINICAL_ORDER_OBSERVATION",
         description="Optional, repeating",

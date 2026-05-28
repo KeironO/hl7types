@@ -5,16 +5,17 @@ Version: 2.6
 Class: ADT_A39
 Type: Message
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..groups.ADT_A39_PATIENT import ADT_A39_PATIENT
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
+
+from ..groups.ADT_A39_PATIENT import ADT_A39_PATIENT
 
 _ADT_A39_PATIENT = ADT_A39_PATIENT
 _EVN = EVN
@@ -40,13 +41,13 @@ class ADT_A39(BaseModel):
         description="Required",
     )
 
-    SFT: list[_SFT] | None = Field(
+    SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: _UAC | None = Field(
+    UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -58,7 +59,7 @@ class ADT_A39(BaseModel):
         description="Required",
     )
 
-    PATIENT: list[_ADT_A39_PATIENT] = Field(
+    PATIENT: List[_ADT_A39_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

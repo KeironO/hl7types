@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: MFN_M06.MF_PHASE_SCHED_DETAIL
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CM1 import CM1
@@ -31,7 +31,7 @@ class MFN_M06_MF_PHASE_SCHED_DETAIL(BaseModel):
         description="Required",
     )
 
-    CM2: list[_CM2] | None = Field(
+    CM2: Optional[List[_CM2]] = Field(
         default=None,
         title="CM2",
         description="Optional, repeating",

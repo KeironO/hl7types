@@ -5,12 +5,13 @@ Version: 2.4
 Class: RQA_I08.PROCEDURE
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PR1 import PR1
+
 from .RQA_I08_AUTCTD_SUPPGRP2 import RQA_I08_AUTCTD_SUPPGRP2
 
 _PR1 = PR1
@@ -31,7 +32,7 @@ class RQA_I08_PROCEDURE(BaseModel):
         description="Required",
     )
 
-    AUTCTD_SUPPGRP2: _RQA_I08_AUTCTD_SUPPGRP2 | None = Field(
+    AUTCTD_SUPPGRP2: Optional[_RQA_I08_AUTCTD_SUPPGRP2] = Field(
         default=None,
         title="AUTCTD_SUPPGRP2",
         description="Optional",

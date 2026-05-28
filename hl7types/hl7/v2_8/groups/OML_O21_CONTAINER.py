@@ -5,12 +5,13 @@ Version: 2.8
 Class: OML_O21.CONTAINER
 Type: Group
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
+
 from .OML_O21_CONTAINER_OBSERVATION import OML_O21_CONTAINER_OBSERVATION
 
 _OML_O21_CONTAINER_OBSERVATION = OML_O21_CONTAINER_OBSERVATION
@@ -31,7 +32,7 @@ class OML_O21_CONTAINER(BaseModel):
         description="Required",
     )
 
-    CONTAINER_OBSERVATION: list[_OML_O21_CONTAINER_OBSERVATION] | None = Field(
+    CONTAINER_OBSERVATION: Optional[List[_OML_O21_CONTAINER_OBSERVATION]] = Field(
         default=None,
         title="CONTAINER_OBSERVATION",
         description="Optional, repeating",

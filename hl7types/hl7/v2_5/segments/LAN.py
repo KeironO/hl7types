@@ -5,9 +5,9 @@ Version: 2.5
 Class: LAN
 Type: Segment
 """
-
 from __future__ import annotations
 
+from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -40,7 +40,7 @@ class LAN(BaseModel):
         description="Item #1456 | Table HL70296",
     )
 
-    lan_3: list[CE] | None = Field(
+    lan_3: Optional[List[CE]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "lan_3",
@@ -52,7 +52,7 @@ class LAN(BaseModel):
         description="Item #1457 | Table HL70403",
     )
 
-    lan_4: CE | None = Field(
+    lan_4: Optional[CE] = Field(
         default=None,
         validation_alias=AliasChoices(
             "lan_4",
