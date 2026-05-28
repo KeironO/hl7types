@@ -5,17 +5,16 @@ Version: 2.5
 Class: EAC_U07
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.EAC_U07_COMMAND import EAC_U07_COMMAND
 from ..segments.EQU import EQU
 from ..segments.MSH import MSH
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
-
-from ..groups.EAC_U07_COMMAND import EAC_U07_COMMAND
 
 _EAC_U07_COMMAND = EAC_U07_COMMAND
 _EQU = EQU
@@ -41,7 +40,7 @@ class EAC_U07(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -53,13 +52,13 @@ class EAC_U07(BaseModel):
         description="Required",
     )
 
-    COMMAND: List[_EAC_U07_COMMAND] = Field(
+    COMMAND: list[_EAC_U07_COMMAND] = Field(
         default=...,
         title="COMMAND",
         description="Required, repeating",
     )
 
-    ROL: Optional[_ROL] = Field(
+    ROL: _ROL | None = Field(
         default=None,
         title="ROL",
         description="Optional",

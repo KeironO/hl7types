@@ -5,16 +5,15 @@ Version: 2.8.2
 Class: DEO_O45.DONOR
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ARV import ARV
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
 from ..segments.PID import PID
-
 from .DEO_O45_DONOR_REGISTRATION import DEO_O45_DONOR_REGISTRATION
 
 _ARV = ARV
@@ -41,25 +40,25 @@ class DEO_O45_DONOR(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DONOR_REGISTRATION: Optional[_DEO_O45_DONOR_REGISTRATION] = Field(
+    DONOR_REGISTRATION: _DEO_O45_DONOR_REGISTRATION | None = Field(
         default=None,
         title="DONOR_REGISTRATION",
         description="Optional",

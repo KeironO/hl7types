@@ -5,9 +5,9 @@ Version: 2.7
 Class: PAC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -30,7 +30,7 @@ class PAC(BaseModel):
         description="Item #2350",
     )
 
-    pac_2: Optional[EI] = Field(
+    pac_2: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pac_2",
@@ -42,7 +42,7 @@ class PAC(BaseModel):
         description="Item #2351",
     )
 
-    pac_3: Optional[EI] = Field(
+    pac_3: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pac_3",
@@ -54,7 +54,7 @@ class PAC(BaseModel):
         description="Item #2352",
     )
 
-    pac_4: Optional[NA] = Field(
+    pac_4: NA | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pac_4",
@@ -78,7 +78,7 @@ class PAC(BaseModel):
         description="Item #2354 | Table HL70908",
     )
 
-    pac_6: Optional[List[CWE]] = Field(
+    pac_6: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pac_6",
@@ -90,7 +90,7 @@ class PAC(BaseModel):
         description="Item #2355 | Table HL70544",
     )
 
-    pac_7: Optional[List[CWE]] = Field(
+    pac_7: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pac_7",
@@ -102,7 +102,7 @@ class PAC(BaseModel):
         description="Item #2356 | Table HL70376",
     )
 
-    pac_8: Optional[List[CWE]] = Field(
+    pac_8: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pac_8",

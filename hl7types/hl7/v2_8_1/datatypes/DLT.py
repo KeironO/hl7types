@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: DLT
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .NR import NR
@@ -16,7 +16,7 @@ from .NR import NR
 class DLT(BaseModel):
     """HL7 v2 DLT data type."""
 
-    dlt_1: Optional[NR] = Field(
+    dlt_1: NR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dlt_1",
@@ -27,7 +27,7 @@ class DLT(BaseModel):
         title="Normal Range",
     )
 
-    dlt_2: Optional[str] = Field(
+    dlt_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dlt_2",
@@ -38,7 +38,7 @@ class DLT(BaseModel):
         title="Numeric Threshold",
     )
 
-    dlt_3: Optional[str] = Field(
+    dlt_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dlt_3",
@@ -49,7 +49,7 @@ class DLT(BaseModel):
         title="Change Computation",
     )
 
-    dlt_4: Optional[str] = Field(
+    dlt_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dlt_4",

@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: ADT_A02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ARV import ARV
@@ -64,13 +64,13 @@ class ADT_A02(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -88,19 +88,19 @@ class ADT_A02(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
@@ -112,25 +112,25 @@ class ADT_A02(BaseModel):
         description="Required",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    DB1: Optional[List[_DB1]] = Field(
+    DB1: list[_DB1] | None = Field(
         default=None,
         title="DB1",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    PDA: Optional[_PDA] = Field(
+    PDA: _PDA | None = Field(
         default=None,
         title="PDA",
         description="Optional",

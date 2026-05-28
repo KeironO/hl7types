@@ -5,13 +5,12 @@ Version: 2.3.1
 Class: RRA_O02.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
-
 from .RRA_O02_ADMINISTRATION import RRA_O02_ADMINISTRATION
 
 _ORC = ORC
@@ -32,7 +31,7 @@ class RRA_O02_ORDER(BaseModel):
         description="Required",
     )
 
-    ADMINISTRATION: Optional[_RRA_O02_ADMINISTRATION] = Field(
+    ADMINISTRATION: _RRA_O02_ADMINISTRATION | None = Field(
         default=None,
         title="ADMINISTRATION",
         description="Optional",

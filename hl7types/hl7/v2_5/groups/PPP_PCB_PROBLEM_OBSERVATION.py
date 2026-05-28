@@ -5,9 +5,9 @@ Version: 2.5
 Class: PPP_PCB.PROBLEM_OBSERVATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -31,7 +31,7 @@ class PPP_PCB_PROBLEM_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

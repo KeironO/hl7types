@@ -5,13 +5,12 @@ Version: 2.8.2
 Class: MFN_M18.PAYER_MF_ENTRY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PM1 import PM1
-
 from .MFN_M18_PAYER_MF_COVERAGE import MFN_M18_PAYER_MF_COVERAGE
 
 _MFN_M18_PAYER_MF_COVERAGE = MFN_M18_PAYER_MF_COVERAGE
@@ -32,7 +31,7 @@ class MFN_M18_PAYER_MF_ENTRY(BaseModel):
         description="Required",
     )
 
-    PAYER_MF_COVERAGE: List[_MFN_M18_PAYER_MF_COVERAGE] = Field(
+    PAYER_MF_COVERAGE: list[_MFN_M18_PAYER_MF_COVERAGE] = Field(
         default=...,
         title="PAYER_MF_COVERAGE",
         description="Required, repeating",

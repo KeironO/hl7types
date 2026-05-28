@@ -5,9 +5,9 @@ Version: 2.8
 Class: CCR_I16.GOAL_OBSERVATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
@@ -31,7 +31,7 @@ class CCR_I16_GOAL_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

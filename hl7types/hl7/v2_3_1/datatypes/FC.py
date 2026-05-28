@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: FC
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TS import TS
@@ -16,7 +16,7 @@ from .TS import TS
 class FC(BaseModel):
     """HL7 v2 FC data type."""
 
-    fc_1: Optional[str] = Field(
+    fc_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fc_1",
@@ -27,7 +27,7 @@ class FC(BaseModel):
         title="Financial Class",
     )
 
-    fc_2: Optional[TS] = Field(
+    fc_2: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fc_2",

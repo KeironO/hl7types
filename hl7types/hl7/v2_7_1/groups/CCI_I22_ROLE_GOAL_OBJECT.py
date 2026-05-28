@@ -5,10 +5,10 @@ Version: 2.7.1
 Class: CCI_I22.ROLE_GOAL_OBJECT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class CCI_I22_ROLE_GOAL_OBJECT(BaseModel):

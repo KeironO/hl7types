@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ORF_R04.ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -15,7 +15,6 @@ from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .ORF_R04_OBXNTE_SUPPGRP import ORF_R04_OBXNTE_SUPPGRP
 from .ORF_R04_TQ1TQ2_SUPPGRP import ORF_R04_TQ1TQ2_SUPPGRP
 
@@ -41,7 +40,7 @@ class ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(BaseModel):
         CTI (Optional[List[CTI]]): optional
     """
 
-    ORC: Optional[_ORC] = Field(
+    ORC: _ORC | None = Field(
         default=None,
         title="ORC",
         description="Optional",
@@ -53,31 +52,31 @@ class ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TQ1TQ2_SUPPGRP: Optional[List[_ORF_R04_TQ1TQ2_SUPPGRP]] = Field(
+    TQ1TQ2_SUPPGRP: list[_ORF_R04_TQ1TQ2_SUPPGRP] | None = Field(
         default=None,
         title="TQ1TQ2_SUPPGRP",
         description="Optional, repeating",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    OBXNTE_SUPPGRP: List[_ORF_R04_OBXNTE_SUPPGRP] = Field(
+    OBXNTE_SUPPGRP: list[_ORF_R04_OBXNTE_SUPPGRP] = Field(
         default=...,
         title="OBXNTE_SUPPGRP",
         description="Required, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

@@ -5,16 +5,16 @@ Version: 2.3.1
 Class: CNS
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CNS(BaseModel):
     """HL7 v2 CNS data type."""
 
-    cns_1: Optional[str] = Field(
+    cns_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_1",
@@ -25,7 +25,7 @@ class CNS(BaseModel):
         title="ID number (ST)",
     )
 
-    cns_2: Optional[str] = Field(
+    cns_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_2",
@@ -36,7 +36,7 @@ class CNS(BaseModel):
         title="family name",
     )
 
-    cns_3: Optional[str] = Field(
+    cns_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_3",
@@ -47,7 +47,7 @@ class CNS(BaseModel):
         title="given name",
     )
 
-    cns_4: Optional[str] = Field(
+    cns_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_4",
@@ -58,7 +58,7 @@ class CNS(BaseModel):
         title="second and further given names or initials thereof",
     )
 
-    cns_5: Optional[str] = Field(
+    cns_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_5",
@@ -69,7 +69,7 @@ class CNS(BaseModel):
         title="suffix (e.g., JR or III)",
     )
 
-    cns_6: Optional[str] = Field(
+    cns_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_6",
@@ -80,7 +80,7 @@ class CNS(BaseModel):
         title="prefix (e.g., DR)",
     )
 
-    cns_7: Optional[str] = Field(
+    cns_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_7",
@@ -91,7 +91,7 @@ class CNS(BaseModel):
         title="degree (e.g., MD)",
     )
 
-    cns_8: Optional[str] = Field(
+    cns_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_8",
@@ -102,7 +102,7 @@ class CNS(BaseModel):
         title="source table",
     )
 
-    cns_9: Optional[str] = Field(
+    cns_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_9",
@@ -113,7 +113,7 @@ class CNS(BaseModel):
         title="assigning authority namespace ID",
     )
 
-    cns_10: Optional[str] = Field(
+    cns_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_10",
@@ -124,7 +124,7 @@ class CNS(BaseModel):
         title="assigning authority universal ID",
     )
 
-    cns_11: Optional[str] = Field(
+    cns_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_11",

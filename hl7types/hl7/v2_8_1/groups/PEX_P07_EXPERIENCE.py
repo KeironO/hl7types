@@ -5,13 +5,12 @@ Version: 2.8.1
 Class: PEX_P07.EXPERIENCE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PES import PES
-
 from .PEX_P07_PEX_OBSERVATION import PEX_P07_PEX_OBSERVATION
 
 _PES = PES
@@ -32,7 +31,7 @@ class PEX_P07_EXPERIENCE(BaseModel):
         description="Required",
     )
 
-    PEX_OBSERVATION: List[_PEX_P07_PEX_OBSERVATION] = Field(
+    PEX_OBSERVATION: list[_PEX_P07_PEX_OBSERVATION] = Field(
         default=...,
         title="PEX_OBSERVATION",
         description="Required, repeating",

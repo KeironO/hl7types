@@ -5,9 +5,9 @@ Version: 2.8
 Class: ORL_O34.OBSERVATION_REQUEST
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBR import OBR
@@ -31,7 +31,7 @@ class ORL_O34_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

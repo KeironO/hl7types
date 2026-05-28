@@ -5,15 +5,14 @@ Version: 2.8
 Class: OSM_R26.SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
 from ..segments.PRT import PRT
 from ..segments.PV1 import PV1
-
 from .OSM_R26_PATIENT_INFORMATION import OSM_R26_PATIENT_INFORMATION
 from .OSM_R26_PATIENT_VISIT_OBSERVATION import OSM_R26_PATIENT_VISIT_OBSERVATION
 
@@ -41,25 +40,25 @@ class OSM_R26_SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT_OBSERVATION: Optional[List[_OSM_R26_PATIENT_VISIT_OBSERVATION]] = Field(
+    PATIENT_VISIT_OBSERVATION: list[_OSM_R26_PATIENT_VISIT_OBSERVATION] | None = Field(
         default=None,
         title="PATIENT_VISIT_OBSERVATION",
         description="Optional, repeating",
     )
 
-    PATIENT_INFORMATION: Optional[_OSM_R26_PATIENT_INFORMATION] = Field(
+    PATIENT_INFORMATION: _OSM_R26_PATIENT_INFORMATION | None = Field(
         default=None,
         title="PATIENT_INFORMATION",
         description="Optional",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",

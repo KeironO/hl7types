@@ -5,9 +5,9 @@ Version: 2.3
 Class: QRF
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TQ import TQ
@@ -17,7 +17,7 @@ from ..datatypes.TS import TS
 class QRF(BaseModel):
     """HL7 v2 QRF segment."""
 
-    qrf_1: List[str] = Field(
+    qrf_1: list[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "qrf_1",
@@ -29,7 +29,7 @@ class QRF(BaseModel):
         description="Item #37",
     )
 
-    qrf_2: Optional[TS] = Field(
+    qrf_2: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_2",
@@ -41,7 +41,7 @@ class QRF(BaseModel):
         description="Item #38",
     )
 
-    qrf_3: Optional[TS] = Field(
+    qrf_3: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_3",
@@ -53,7 +53,7 @@ class QRF(BaseModel):
         description="Item #39",
     )
 
-    qrf_4: Optional[List[str]] = Field(
+    qrf_4: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_4",
@@ -65,7 +65,7 @@ class QRF(BaseModel):
         description="Item #40",
     )
 
-    qrf_5: Optional[List[str]] = Field(
+    qrf_5: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_5",
@@ -77,7 +77,7 @@ class QRF(BaseModel):
         description="Item #41",
     )
 
-    qrf_6: Optional[List[str]] = Field(
+    qrf_6: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_6",
@@ -89,7 +89,7 @@ class QRF(BaseModel):
         description="Item #42 | Table HL70156",
     )
 
-    qrf_7: Optional[List[str]] = Field(
+    qrf_7: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_7",
@@ -101,7 +101,7 @@ class QRF(BaseModel):
         description="Item #43 | Table HL70157",
     )
 
-    qrf_8: Optional[List[str]] = Field(
+    qrf_8: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_8",
@@ -113,7 +113,7 @@ class QRF(BaseModel):
         description="Item #44 | Table HL70158",
     )
 
-    qrf_9: Optional[TQ] = Field(
+    qrf_9: TQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrf_9",

@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: QCK_Q02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ERR import ERR
@@ -43,13 +43,13 @@ class QCK_Q02(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    QAK: Optional[_QAK] = Field(
+    QAK: _QAK | None = Field(
         default=None,
         title="QAK",
         description="Optional",

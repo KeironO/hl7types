@@ -5,11 +5,14 @@ Version: 2.5.1
 Class: ORF_R04
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP import (
+    ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP,
+)
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -19,13 +22,13 @@ from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
 
-from ..groups.ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP import ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
-
 _DSC = DSC
 _ERR = ERR
 _MSA = MSA
 _MSH = MSH
-_ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP = ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
+_ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP = (
+    ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
+)
 _QAK = QAK
 _QRD = QRD
 _QRF = QRF
@@ -53,7 +56,7 @@ class ORF_R04(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -71,31 +74,33 @@ class ORF_R04(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP: List[_ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP] = Field(
+    PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP: list[
+        _ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
+    ] = Field(
         default=...,
         title="PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP",
         description="Required, repeating",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    QAK: Optional[_QAK] = Field(
+    QAK: _QAK | None = Field(
         default=None,
         title="QAK",
         description="Optional",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

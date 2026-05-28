@@ -5,14 +5,13 @@ Version: 2.3.1
 Class: OMS_O01.ORDER_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RQD import RQD
-
 from .OMS_O01_OBSERVATION import OMS_O01_OBSERVATION
 
 _NTE = NTE
@@ -35,13 +34,13 @@ class OMS_O01_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMS_O01_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMS_O01_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

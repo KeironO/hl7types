@@ -5,15 +5,14 @@ Version: 2.7
 Class: PPV_PCA.GOAL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GOL import GOL
 from ..segments.NTE import NTE
 from ..segments.VAR import VAR
-
 from .PPV_PCA_GOAL_OBSERVATION import PPV_PCA_GOAL_OBSERVATION
 from .PPV_PCA_GOAL_PATHWAY import PPV_PCA_GOAL_PATHWAY
 from .PPV_PCA_GOAL_ROLE import PPV_PCA_GOAL_ROLE
@@ -50,43 +49,43 @@ class PPV_PCA_GOAL(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    GOAL_ROLE: Optional[List[_PPV_PCA_GOAL_ROLE]] = Field(
+    GOAL_ROLE: list[_PPV_PCA_GOAL_ROLE] | None = Field(
         default=None,
         title="GOAL_ROLE",
         description="Optional, repeating",
     )
 
-    GOAL_PATHWAY: Optional[List[_PPV_PCA_GOAL_PATHWAY]] = Field(
+    GOAL_PATHWAY: list[_PPV_PCA_GOAL_PATHWAY] | None = Field(
         default=None,
         title="GOAL_PATHWAY",
         description="Optional, repeating",
     )
 
-    GOAL_OBSERVATION: Optional[List[_PPV_PCA_GOAL_OBSERVATION]] = Field(
+    GOAL_OBSERVATION: list[_PPV_PCA_GOAL_OBSERVATION] | None = Field(
         default=None,
         title="GOAL_OBSERVATION",
         description="Optional, repeating",
     )
 
-    PROBLEM: Optional[List[_PPV_PCA_PROBLEM]] = Field(
+    PROBLEM: list[_PPV_PCA_PROBLEM] | None = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_PPV_PCA_ORDER]] = Field(
+    ORDER: list[_PPV_PCA_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

@@ -5,16 +5,16 @@ Version: 2.1
 Class: URS
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class URS(BaseModel):
     """HL7 v2 URS segment."""
 
-    urs_1: List[str] = Field(
+    urs_1: list[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "urs_1",
@@ -26,7 +26,7 @@ class URS(BaseModel):
         description="Item #608",
     )
 
-    urs_2: Optional[str] = Field(
+    urs_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_2",
@@ -38,7 +38,7 @@ class URS(BaseModel):
         description="Item #609",
     )
 
-    urs_3: Optional[str] = Field(
+    urs_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_3",
@@ -50,7 +50,7 @@ class URS(BaseModel):
         description="Item #610",
     )
 
-    urs_4: Optional[List[str]] = Field(
+    urs_4: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_4",
@@ -62,7 +62,7 @@ class URS(BaseModel):
         description="Item #611",
     )
 
-    urs_5: Optional[List[str]] = Field(
+    urs_5: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urs_5",

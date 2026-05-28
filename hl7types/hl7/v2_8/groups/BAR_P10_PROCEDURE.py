@@ -5,9 +5,9 @@ Version: 2.8
 Class: BAR_P10.PROCEDURE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.GP2 import GP2
@@ -31,7 +31,7 @@ class BAR_P10_PROCEDURE(BaseModel):
         description="Required",
     )
 
-    GP2: Optional[_GP2] = Field(
+    GP2: _GP2 | None = Field(
         default=None,
         title="GP2",
         description="Optional",

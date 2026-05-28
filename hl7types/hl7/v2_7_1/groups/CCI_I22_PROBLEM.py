@@ -5,15 +5,14 @@ Version: 2.7.1
 Class: CCI_I22.PROBLEM
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
-
 from .CCI_I22_ROLE_PROBLEM import CCI_I22_ROLE_PROBLEM
 
 _CCI_I22_ROLE_PROBLEM = CCI_I22_ROLE_PROBLEM
@@ -38,19 +37,19 @@ class CCI_I22_PROBLEM(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_PROBLEM: Optional[List[_CCI_I22_ROLE_PROBLEM]] = Field(
+    ROLE_PROBLEM: list[_CCI_I22_ROLE_PROBLEM] | None = Field(
         default=None,
         title="ROLE_PROBLEM",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

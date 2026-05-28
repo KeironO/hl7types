@@ -5,15 +5,14 @@ Version: 2.4
 Class: MFN_M12
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M12_MF_OBS_ATTRIBUTES import MFN_M12_MF_OBS_ATTRIBUTES
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
-
-from ..groups.MFN_M12_MF_OBS_ATTRIBUTES import MFN_M12_MF_OBS_ATTRIBUTES
 
 _MFI = MFI
 _MFN_M12_MF_OBS_ATTRIBUTES = MFN_M12_MF_OBS_ATTRIBUTES
@@ -41,7 +40,7 @@ class MFN_M12(BaseModel):
         description="Required",
     )
 
-    MF_OBS_ATTRIBUTES: List[_MFN_M12_MF_OBS_ATTRIBUTES] = Field(
+    MF_OBS_ATTRIBUTES: list[_MFN_M12_MF_OBS_ATTRIBUTES] = Field(
         default=...,
         title="MF_OBS_ATTRIBUTES",
         description="Required, repeating",

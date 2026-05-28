@@ -5,13 +5,12 @@ Version: 2.7
 Class: OML_O35.SPECIMEN_CONTAINER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
-
 from .OML_O35_ORDER import OML_O35_ORDER
 
 _OML_O35_ORDER = OML_O35_ORDER
@@ -32,7 +31,7 @@ class OML_O35_SPECIMEN_CONTAINER(BaseModel):
         description="Required",
     )
 
-    ORDER: List[_OML_O35_ORDER] = Field(
+    ORDER: list[_OML_O35_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

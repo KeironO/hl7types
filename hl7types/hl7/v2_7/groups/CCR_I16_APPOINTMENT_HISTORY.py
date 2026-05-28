@@ -5,13 +5,12 @@ Version: 2.7
 Class: CCR_I16.APPOINTMENT_HISTORY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SCH import SCH
-
 from .CCR_I16_RESOURCES import CCR_I16_RESOURCES
 
 _CCR_I16_RESOURCES = CCR_I16_RESOURCES
@@ -32,7 +31,7 @@ class CCR_I16_APPOINTMENT_HISTORY(BaseModel):
         description="Required",
     )
 
-    RESOURCES: Optional[List[_CCR_I16_RESOURCES]] = Field(
+    RESOURCES: list[_CCR_I16_RESOURCES] | None = Field(
         default=None,
         title="RESOURCES",
         description="Optional, repeating",

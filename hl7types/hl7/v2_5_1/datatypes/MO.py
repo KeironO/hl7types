@@ -5,16 +5,16 @@ Version: 2.5.1
 Class: MO
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class MO(BaseModel):
     """HL7 v2 MO data type."""
 
-    mo_1: Optional[str] = Field(
+    mo_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mo_1",
@@ -25,7 +25,7 @@ class MO(BaseModel):
         title="Quantity",
     )
 
-    mo_2: Optional[str] = Field(
+    mo_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mo_2",

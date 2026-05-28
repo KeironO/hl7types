@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_EIP
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_EIP(BaseModel):
     """HL7 v2 CM_EIP data type."""
 
-    cm_eip_1: Optional[str] = Field(
+    cm_eip_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_eip_1",
@@ -25,7 +25,7 @@ class CM_EIP(BaseModel):
         title="parent´s placer order number",
     )
 
-    cm_eip_2: Optional[str] = Field(
+    cm_eip_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_eip_2",

@@ -5,18 +5,17 @@ Version: 2.3.1
 Class: RPL_I02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RPL_I02_PROVIDER import RPL_I02_PROVIDER
 from ..segments.DSC import DSC
 from ..segments.DSP import DSP
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
-
-from ..groups.RPL_I02_PROVIDER import RPL_I02_PROVIDER
 
 _DSC = DSC
 _DSP = DSP
@@ -50,25 +49,25 @@ class RPL_I02(BaseModel):
         description="Required",
     )
 
-    PROVIDER: List[_RPL_I02_PROVIDER] = Field(
+    PROVIDER: list[_RPL_I02_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DSP: Optional[List[_DSP]] = Field(
+    DSP: list[_DSP] | None = Field(
         default=None,
         title="DSP",
         description="Optional, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

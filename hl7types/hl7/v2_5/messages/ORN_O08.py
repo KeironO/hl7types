@@ -5,18 +5,17 @@ Version: 2.5
 Class: ORN_O08
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ORN_O08_RESPONSE import ORN_O08_RESPONSE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
-
-from ..groups.ORN_O08_RESPONSE import ORN_O08_RESPONSE
 
 _ERR = ERR
 _MSA = MSA
@@ -50,25 +49,25 @@ class ORN_O08(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESPONSE: Optional[_ORN_O08_RESPONSE] = Field(
+    RESPONSE: _ORN_O08_RESPONSE | None = Field(
         default=None,
         title="RESPONSE",
         description="Optional",

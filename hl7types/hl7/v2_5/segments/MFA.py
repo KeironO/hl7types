@@ -5,9 +5,9 @@ Version: 2.5
 Class: MFA
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -29,7 +29,7 @@ class MFA(BaseModel):
         description="Item #664 | Table HL70180",
     )
 
-    mfa_2: Optional[str] = Field(
+    mfa_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfa_2",
@@ -41,7 +41,7 @@ class MFA(BaseModel):
         description="Item #665",
     )
 
-    mfa_3: Optional[TS] = Field(
+    mfa_3: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfa_3",
@@ -65,7 +65,7 @@ class MFA(BaseModel):
         description="Item #669 | Table HL70181",
     )
 
-    mfa_5: List[str] = Field(
+    mfa_5: list[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "mfa_5",
@@ -77,7 +77,7 @@ class MFA(BaseModel):
         description="Item #1308 | Table HL79999",
     )
 
-    mfa_6: List[str] = Field(
+    mfa_6: list[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "mfa_6",

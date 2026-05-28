@@ -5,18 +5,17 @@ Version: 2.7.1
 Class: RSP_E03
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RSP_E03_QUERY_ACK import RSP_E03_QUERY_ACK
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RSP_E03_QUERY_ACK import RSP_E03_QUERY_ACK
 
 _ERR = ERR
 _MSA = MSA
@@ -44,13 +43,13 @@ class RSP_E03(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[List[_UAC]] = Field(
+    UAC: list[_UAC] | None = Field(
         default=None,
         title="UAC",
         description="Optional, repeating",
@@ -62,7 +61,7 @@ class RSP_E03(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",

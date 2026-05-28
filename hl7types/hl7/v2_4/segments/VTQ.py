@@ -5,9 +5,9 @@ Version: 2.4
 Class: VTQ
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -17,7 +17,7 @@ from ..datatypes.QSC import QSC
 class VTQ(BaseModel):
     """HL7 v2 VTQ segment."""
 
-    vtq_1: Optional[str] = Field(
+    vtq_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vtq_1",
@@ -65,7 +65,7 @@ class VTQ(BaseModel):
         description="Item #699",
     )
 
-    vtq_5: Optional[List[QSC]] = Field(
+    vtq_5: list[QSC] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vtq_5",

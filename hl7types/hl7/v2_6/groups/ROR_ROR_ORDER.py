@@ -5,9 +5,9 @@ Version: 2.6
 Class: ROR_ROR.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
@@ -43,13 +43,13 @@ class ROR_ROR_ORDER(BaseModel):
         description="Required",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

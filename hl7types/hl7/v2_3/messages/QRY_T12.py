@@ -5,9 +5,9 @@ Version: 2.3
 Class: QRY_T12
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MSH import MSH
@@ -40,7 +40,7 @@ class QRY_T12(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",

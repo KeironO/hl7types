@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: RQI_I01.PROVIDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -31,7 +31,7 @@ class RQI_I01_PROVIDER(BaseModel):
         description="Required",
     )
 
-    CTD: Optional[List[_CTD]] = Field(
+    CTD: list[_CTD] | None = Field(
         default=None,
         title="CTD",
         description="Optional, repeating",

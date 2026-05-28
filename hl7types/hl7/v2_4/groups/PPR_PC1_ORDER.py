@@ -5,13 +5,12 @@ Version: 2.4
 Class: PPR_PC1.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
-
 from .PPR_PC1_ORDER_DETAIL import PPR_PC1_ORDER_DETAIL
 
 _ORC = ORC
@@ -32,7 +31,7 @@ class PPR_PC1_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: Optional[_PPR_PC1_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _PPR_PC1_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.7
 Class: CCU_I20.MEDICATION_ADMINISTRATION_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
@@ -28,7 +28,7 @@ class CCU_I20_MEDICATION_ADMINISTRATION_DETAIL(BaseModel):
         OBX (Optional[List[OBX]]): optional
     """
 
-    RXA: List[_RXA] = Field(
+    RXA: list[_RXA] = Field(
         default=...,
         title="RXA",
         description="Required, repeating",
@@ -40,7 +40,7 @@ class CCU_I20_MEDICATION_ADMINISTRATION_DETAIL(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

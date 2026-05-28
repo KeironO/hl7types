@@ -5,9 +5,9 @@ Version: 2.5
 Class: OUL_R24.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -34,13 +34,13 @@ class OUL_R24_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

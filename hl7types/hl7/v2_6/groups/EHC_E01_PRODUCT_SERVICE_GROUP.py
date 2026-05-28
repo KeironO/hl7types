@@ -5,15 +5,14 @@ Version: 2.6
 Class: EHC_E01.PRODUCT_SERVICE_GROUP
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.LOC import LOC
 from ..segments.PSG import PSG
 from ..segments.ROL import ROL
-
 from .EHC_E01_INVOICE_PROCESSING import EHC_E01_INVOICE_PROCESSING
 from .EHC_E01_PATIENT_INFO import EHC_E01_PATIENT_INFO
 from .EHC_E01_PROCEDURE import EHC_E01_PROCEDURE
@@ -47,37 +46,37 @@ class EHC_E01_PRODUCT_SERVICE_GROUP(BaseModel):
         description="Required",
     )
 
-    LOC: Optional[List[_LOC]] = Field(
+    LOC: list[_LOC] | None = Field(
         default=None,
         title="LOC",
         description="Optional, repeating",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    PATIENT_INFO: Optional[List[_EHC_E01_PATIENT_INFO]] = Field(
+    PATIENT_INFO: list[_EHC_E01_PATIENT_INFO] | None = Field(
         default=None,
         title="PATIENT_INFO",
         description="Optional, repeating",
     )
 
-    PRODUCT_SERVICE_LINE_ITEM: List[_EHC_E01_PRODUCT_SERVICE_LINE_ITEM] = Field(
+    PRODUCT_SERVICE_LINE_ITEM: list[_EHC_E01_PRODUCT_SERVICE_LINE_ITEM] = Field(
         default=...,
         title="PRODUCT_SERVICE_LINE_ITEM",
         description="Required, repeating",
     )
 
-    PROCEDURE: Optional[List[_EHC_E01_PROCEDURE]] = Field(
+    PROCEDURE: list[_EHC_E01_PROCEDURE] | None = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",
     )
 
-    INVOICE_PROCESSING: Optional[List[_EHC_E01_INVOICE_PROCESSING]] = Field(
+    INVOICE_PROCESSING: list[_EHC_E01_INVOICE_PROCESSING] | None = Field(
         default=None,
         title="INVOICE_PROCESSING",
         description="Optional, repeating",

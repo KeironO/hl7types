@@ -5,16 +5,16 @@ Version: 2.2
 Class: PN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class PN(BaseModel):
     """HL7 v2 PN data type."""
 
-    pn_1: Optional[str] = Field(
+    pn_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pn_1",
@@ -25,7 +25,7 @@ class PN(BaseModel):
         title="familiy name",
     )
 
-    pn_2: Optional[str] = Field(
+    pn_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pn_2",
@@ -36,7 +36,7 @@ class PN(BaseModel):
         title="given name",
     )
 
-    pn_3: Optional[str] = Field(
+    pn_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pn_3",
@@ -47,7 +47,7 @@ class PN(BaseModel):
         title="middle initial or name",
     )
 
-    pn_4: Optional[str] = Field(
+    pn_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pn_4",
@@ -58,7 +58,7 @@ class PN(BaseModel):
         title="suffix (e.g. JR or III)",
     )
 
-    pn_5: Optional[str] = Field(
+    pn_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pn_5",
@@ -69,7 +69,7 @@ class PN(BaseModel):
         title="prefix (e.g. DR)",
     )
 
-    pn_6: Optional[str] = Field(
+    pn_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pn_6",

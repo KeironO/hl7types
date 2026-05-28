@@ -5,15 +5,14 @@ Version: 2.8.2
 Class: MFN_M12.MF_OBS_ATTRIBUTES
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
 from ..segments.OM1 import OM1
 from ..segments.PRT import PRT
-
 from .MFN_M12_MF_OBS_OTHER_ATTRIBUTES import MFN_M12_MF_OBS_OTHER_ATTRIBUTES
 
 _MFE = MFE
@@ -44,13 +43,13 @@ class MFN_M12_MF_OBS_ATTRIBUTES(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    MF_OBS_OTHER_ATTRIBUTES: Optional[_MFN_M12_MF_OBS_OTHER_ATTRIBUTES] = Field(
+    MF_OBS_OTHER_ATTRIBUTES: _MFN_M12_MF_OBS_OTHER_ATTRIBUTES | None = Field(
         default=None,
         title="MF_OBS_OTHER_ATTRIBUTES",
         description="Optional",

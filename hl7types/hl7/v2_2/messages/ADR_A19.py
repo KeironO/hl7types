@@ -5,18 +5,17 @@ Version: 2.2
 Class: ADR_A19
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ADR_A19_QUERY_RESPONSE import ADR_A19_QUERY_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
-
-from ..groups.ADR_A19_QUERY_RESPONSE import ADR_A19_QUERY_RESPONSE
 
 _ADR_A19_QUERY_RESPONSE = ADR_A19_QUERY_RESPONSE
 _DSC = DSC
@@ -50,7 +49,7 @@ class ADR_A19(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -62,13 +61,13 @@ class ADR_A19(BaseModel):
         description="Required",
     )
 
-    QUERY_RESPONSE: List[_ADR_A19_QUERY_RESPONSE] = Field(
+    QUERY_RESPONSE: list[_ADR_A19_QUERY_RESPONSE] = Field(
         default=...,
         title="QUERY_RESPONSE",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

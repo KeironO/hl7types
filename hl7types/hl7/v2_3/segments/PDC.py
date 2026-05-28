@@ -5,9 +5,9 @@ Version: 2.3
 Class: PDC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -55,7 +55,7 @@ class PDC(BaseModel):
         description="Item #1249",
     )
 
-    pdc_4: Optional[str] = Field(
+    pdc_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_4",
@@ -67,7 +67,7 @@ class PDC(BaseModel):
         description="Item #1250",
     )
 
-    pdc_5: Optional[CE] = Field(
+    pdc_5: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_5",
@@ -79,7 +79,7 @@ class PDC(BaseModel):
         description="Item #1251",
     )
 
-    pdc_6: Optional[List[str]] = Field(
+    pdc_6: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_6",
@@ -91,7 +91,7 @@ class PDC(BaseModel):
         description="Item #1252",
     )
 
-    pdc_7: Optional[str] = Field(
+    pdc_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_7",
@@ -103,7 +103,7 @@ class PDC(BaseModel):
         description="Item #1253",
     )
 
-    pdc_8: Optional[List[str]] = Field(
+    pdc_8: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_8",
@@ -115,7 +115,7 @@ class PDC(BaseModel):
         description="Item #1254",
     )
 
-    pdc_9: Optional[CE] = Field(
+    pdc_9: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_9",
@@ -127,7 +127,7 @@ class PDC(BaseModel):
         description="Item #1255",
     )
 
-    pdc_10: Optional[str] = Field(
+    pdc_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_10",
@@ -139,7 +139,7 @@ class PDC(BaseModel):
         description="Item #1256 | Table HL70330",
     )
 
-    pdc_11: Optional[str] = Field(
+    pdc_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_11",
@@ -151,7 +151,7 @@ class PDC(BaseModel):
         description="Item #1257",
     )
 
-    pdc_12: Optional[CQ] = Field(
+    pdc_12: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_12",
@@ -163,7 +163,7 @@ class PDC(BaseModel):
         description="Item #1258",
     )
 
-    pdc_13: Optional[CQ] = Field(
+    pdc_13: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_13",
@@ -175,7 +175,7 @@ class PDC(BaseModel):
         description="Item #1259",
     )
 
-    pdc_14: Optional[TS] = Field(
+    pdc_14: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_14",
@@ -187,7 +187,7 @@ class PDC(BaseModel):
         description="Item #1260",
     )
 
-    pdc_15: Optional[TS] = Field(
+    pdc_15: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pdc_15",

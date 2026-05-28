@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OMQ_O57.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -19,7 +19,6 @@ from ..segments.OBX import OBX
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
 from ..segments.TXA import TXA
-
 from .OMQ_O57_OBSERVATION import OMQ_O57_OBSERVATION
 from .OMQ_O57_ORDER_DOCUMENT import OMQ_O57_ORDER_DOCUMENT
 from .OMQ_O57_PRIOR_RESULT import OMQ_O57_PRIOR_RESULT
@@ -62,7 +61,7 @@ class OMQ_O57_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
@@ -80,49 +79,49 @@ class OMQ_O57_ORDER(BaseModel):
         description="Required",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    ORDER_DOCUMENT: Optional[List[_OMQ_O57_ORDER_DOCUMENT]] = Field(
+    ORDER_DOCUMENT: list[_OMQ_O57_ORDER_DOCUMENT] | None = Field(
         default=None,
         title="ORDER_DOCUMENT",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMQ_O57_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMQ_O57_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PRIOR_RESULT: Optional[List[_OMQ_O57_PRIOR_RESULT]] = Field(
+    PRIOR_RESULT: list[_OMQ_O57_PRIOR_RESULT] | None = Field(
         default=None,
         title="PRIOR_RESULT",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

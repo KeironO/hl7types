@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: NSC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.HD import HD
@@ -28,7 +28,7 @@ class NSC(BaseModel):
         description="Item #1188 | Table HL70409",
     )
 
-    nsc_2: Optional[str] = Field(
+    nsc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_2",
@@ -40,7 +40,7 @@ class NSC(BaseModel):
         description="Item #1189",
     )
 
-    nsc_3: Optional[str] = Field(
+    nsc_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_3",
@@ -52,7 +52,7 @@ class NSC(BaseModel):
         description="Item #1190",
     )
 
-    nsc_4: Optional[HD] = Field(
+    nsc_4: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_4",
@@ -64,7 +64,7 @@ class NSC(BaseModel):
         description="Item #1191",
     )
 
-    nsc_5: Optional[HD] = Field(
+    nsc_5: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_5",
@@ -76,7 +76,7 @@ class NSC(BaseModel):
         description="Item #1192",
     )
 
-    nsc_6: Optional[str] = Field(
+    nsc_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_6",
@@ -88,7 +88,7 @@ class NSC(BaseModel):
         description="Item #1193",
     )
 
-    nsc_7: Optional[str] = Field(
+    nsc_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_7",
@@ -100,7 +100,7 @@ class NSC(BaseModel):
         description="Item #1194",
     )
 
-    nsc_8: Optional[HD] = Field(
+    nsc_8: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_8",
@@ -112,7 +112,7 @@ class NSC(BaseModel):
         description="Item #1195",
     )
 
-    nsc_9: Optional[HD] = Field(
+    nsc_9: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_9",

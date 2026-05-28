@@ -5,9 +5,9 @@ Version: 2.4
 Class: SSU_U03.SPECIMEN_CONTAINER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
@@ -31,7 +31,7 @@ class SSU_U03_SPECIMEN_CONTAINER(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[_OBX] = Field(
+    OBX: _OBX | None = Field(
         default=None,
         title="OBX",
         description="Optional",

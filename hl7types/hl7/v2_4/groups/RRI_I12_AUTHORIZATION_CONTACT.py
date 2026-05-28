@@ -5,9 +5,9 @@ Version: 2.4
 Class: RRI_I12.AUTHORIZATION_CONTACT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.AUT import AUT
@@ -31,7 +31,7 @@ class RRI_I12_AUTHORIZATION_CONTACT(BaseModel):
         description="Required",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: SRR_S01.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
@@ -37,19 +37,19 @@ class SRR_S01_PATIENT(BaseModel):
         description="Required",
     )
 
-    PV1: Optional[_PV1] = Field(
+    PV1: _PV1 | None = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",

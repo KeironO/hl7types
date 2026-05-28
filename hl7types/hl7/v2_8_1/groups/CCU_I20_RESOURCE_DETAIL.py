@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: CCU_I20.RESOURCE_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .CCU_I20_RESOURCE_OBJECT import CCU_I20_RESOURCE_OBJECT
@@ -31,7 +31,7 @@ class CCU_I20_RESOURCE_DETAIL(BaseModel):
         description="Required",
     )
 
-    RESOURCE_OBSERVATION: Optional[List[_CCU_I20_RESOURCE_OBSERVATION]] = Field(
+    RESOURCE_OBSERVATION: list[_CCU_I20_RESOURCE_OBSERVATION] | None = Field(
         default=None,
         title="RESOURCE_OBSERVATION",
         description="Optional, repeating",

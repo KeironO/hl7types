@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: PLN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -38,7 +38,7 @@ class PLN(BaseModel):
         title="Type of ID Number",
     )
 
-    pln_3: Optional[str] = Field(
+    pln_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pln_3",
@@ -49,7 +49,7 @@ class PLN(BaseModel):
         title="State/other Qualifying Information",
     )
 
-    pln_4: Optional[str] = Field(
+    pln_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pln_4",

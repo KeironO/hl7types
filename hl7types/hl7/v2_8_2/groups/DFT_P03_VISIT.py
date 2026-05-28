@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: DFT_P03.VISIT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
@@ -34,13 +34,13 @@ class DFT_P03_VISIT(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",

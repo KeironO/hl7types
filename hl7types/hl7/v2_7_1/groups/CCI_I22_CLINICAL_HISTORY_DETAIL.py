@@ -5,13 +5,12 @@ Version: 2.7.1
 Class: CCI_I22.CLINICAL_HISTORY_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
-
 from .CCI_I22_CLINICAL_HISTORY_OBJECT import CCI_I22_CLINICAL_HISTORY_OBJECT
 
 _CCI_I22_CLINICAL_HISTORY_OBJECT = CCI_I22_CLINICAL_HISTORY_OBJECT
@@ -32,7 +31,7 @@ class CCI_I22_CLINICAL_HISTORY_DETAIL(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

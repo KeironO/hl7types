@@ -5,9 +5,9 @@ Version: 2.7
 Class: FC
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -27,7 +27,7 @@ class FC(BaseModel):
         title="Financial Class Code",
     )
 
-    fc_2: Optional[str] = Field(
+    fc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fc_2",

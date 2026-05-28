@@ -5,9 +5,9 @@ Version: 2.2
 Class: ORR_O02.ORDER_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from .ORR_O02_CHOICE import ORR_O02_CHOICE

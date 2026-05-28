@@ -5,9 +5,9 @@ Version: 2.7
 Class: FAC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.EI import EI
@@ -31,7 +31,7 @@ class FAC(BaseModel):
         description="Item #1262",
     )
 
-    fac_2: Optional[str] = Field(
+    fac_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_2",
@@ -43,7 +43,7 @@ class FAC(BaseModel):
         description="Item #1263 | Table HL70331",
     )
 
-    fac_3: List[XAD] = Field(
+    fac_3: list[XAD] = Field(
         default=...,
         validation_alias=AliasChoices(
             "fac_3",
@@ -67,7 +67,7 @@ class FAC(BaseModel):
         description="Item #1265",
     )
 
-    fac_5: Optional[List[XCN]] = Field(
+    fac_5: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_5",
@@ -79,7 +79,7 @@ class FAC(BaseModel):
         description="Item #1266",
     )
 
-    fac_6: Optional[List[str]] = Field(
+    fac_6: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_6",
@@ -91,7 +91,7 @@ class FAC(BaseModel):
         description="Item #1267",
     )
 
-    fac_7: Optional[List[XAD]] = Field(
+    fac_7: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_7",
@@ -103,7 +103,7 @@ class FAC(BaseModel):
         description="Item #1166",
     )
 
-    fac_8: Optional[List[XTN]] = Field(
+    fac_8: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_8",
@@ -115,7 +115,7 @@ class FAC(BaseModel):
         description="Item #1269",
     )
 
-    fac_9: List[XCN] = Field(
+    fac_9: list[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "fac_9",
@@ -127,7 +127,7 @@ class FAC(BaseModel):
         description="Item #1270",
     )
 
-    fac_10: Optional[str] = Field(
+    fac_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_10",
@@ -139,7 +139,7 @@ class FAC(BaseModel):
         description="Item #1271",
     )
 
-    fac_11: Optional[List[XAD]] = Field(
+    fac_11: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_11",
@@ -151,7 +151,7 @@ class FAC(BaseModel):
         description="Item #1272",
     )
 
-    fac_12: Optional[XTN] = Field(
+    fac_12: XTN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fac_12",

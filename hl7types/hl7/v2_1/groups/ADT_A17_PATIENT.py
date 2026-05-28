@@ -5,9 +5,9 @@ Version: 2.1
 Class: ADT_A17.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID

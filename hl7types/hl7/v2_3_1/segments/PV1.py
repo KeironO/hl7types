@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: PV1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -22,7 +22,7 @@ from ..datatypes.XCN import XCN
 class PV1(BaseModel):
     """HL7 v2 PV1 segment."""
 
-    pv1_1: Optional[str] = Field(
+    pv1_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_1",
@@ -46,7 +46,7 @@ class PV1(BaseModel):
         description="Item #132 | Table HL70004",
     )
 
-    pv1_3: Optional[PL] = Field(
+    pv1_3: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_3",
@@ -58,7 +58,7 @@ class PV1(BaseModel):
         description="Item #133",
     )
 
-    pv1_4: Optional[str] = Field(
+    pv1_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_4",
@@ -70,7 +70,7 @@ class PV1(BaseModel):
         description="Item #134 | Table HL70007",
     )
 
-    pv1_5: Optional[CX] = Field(
+    pv1_5: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_5",
@@ -82,7 +82,7 @@ class PV1(BaseModel):
         description="Item #135",
     )
 
-    pv1_6: Optional[PL] = Field(
+    pv1_6: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_6",
@@ -94,7 +94,7 @@ class PV1(BaseModel):
         description="Item #136",
     )
 
-    pv1_7: Optional[List[XCN]] = Field(
+    pv1_7: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_7",
@@ -106,7 +106,7 @@ class PV1(BaseModel):
         description="Item #137 | Table HL70010",
     )
 
-    pv1_8: Optional[List[XCN]] = Field(
+    pv1_8: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_8",
@@ -118,7 +118,7 @@ class PV1(BaseModel):
         description="Item #138 | Table HL70010",
     )
 
-    pv1_9: Optional[List[XCN]] = Field(
+    pv1_9: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_9",
@@ -130,7 +130,7 @@ class PV1(BaseModel):
         description="Item #139 | Table HL70010",
     )
 
-    pv1_10: Optional[str] = Field(
+    pv1_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_10",
@@ -142,7 +142,7 @@ class PV1(BaseModel):
         description="Item #140 | Table HL70069",
     )
 
-    pv1_11: Optional[PL] = Field(
+    pv1_11: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_11",
@@ -154,7 +154,7 @@ class PV1(BaseModel):
         description="Item #141",
     )
 
-    pv1_12: Optional[str] = Field(
+    pv1_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_12",
@@ -166,7 +166,7 @@ class PV1(BaseModel):
         description="Item #142 | Table HL70087",
     )
 
-    pv1_13: Optional[str] = Field(
+    pv1_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_13",
@@ -178,7 +178,7 @@ class PV1(BaseModel):
         description="Item #143 | Table HL70092",
     )
 
-    pv1_14: Optional[str] = Field(
+    pv1_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_14",
@@ -190,7 +190,7 @@ class PV1(BaseModel):
         description="Item #144 | Table HL70023",
     )
 
-    pv1_15: Optional[List[str]] = Field(
+    pv1_15: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_15",
@@ -202,7 +202,7 @@ class PV1(BaseModel):
         description="Item #145 | Table HL70009",
     )
 
-    pv1_16: Optional[str] = Field(
+    pv1_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_16",
@@ -214,7 +214,7 @@ class PV1(BaseModel):
         description="Item #146 | Table HL70099",
     )
 
-    pv1_17: Optional[List[XCN]] = Field(
+    pv1_17: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_17",
@@ -226,7 +226,7 @@ class PV1(BaseModel):
         description="Item #147 | Table HL70010",
     )
 
-    pv1_18: Optional[str] = Field(
+    pv1_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_18",
@@ -238,7 +238,7 @@ class PV1(BaseModel):
         description="Item #148 | Table HL70018",
     )
 
-    pv1_19: Optional[CX] = Field(
+    pv1_19: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_19",
@@ -250,7 +250,7 @@ class PV1(BaseModel):
         description="Item #149",
     )
 
-    pv1_20: Optional[List[FC]] = Field(
+    pv1_20: list[FC] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_20",
@@ -262,7 +262,7 @@ class PV1(BaseModel):
         description="Item #150 | Table HL70064",
     )
 
-    pv1_21: Optional[str] = Field(
+    pv1_21: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_21",
@@ -274,7 +274,7 @@ class PV1(BaseModel):
         description="Item #151 | Table HL70032",
     )
 
-    pv1_22: Optional[str] = Field(
+    pv1_22: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_22",
@@ -286,7 +286,7 @@ class PV1(BaseModel):
         description="Item #152 | Table HL70045",
     )
 
-    pv1_23: Optional[str] = Field(
+    pv1_23: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_23",
@@ -298,7 +298,7 @@ class PV1(BaseModel):
         description="Item #153 | Table HL70046",
     )
 
-    pv1_24: Optional[List[str]] = Field(
+    pv1_24: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_24",
@@ -310,7 +310,7 @@ class PV1(BaseModel):
         description="Item #154 | Table HL70044",
     )
 
-    pv1_25: Optional[List[str]] = Field(
+    pv1_25: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_25",
@@ -322,7 +322,7 @@ class PV1(BaseModel):
         description="Item #155",
     )
 
-    pv1_26: Optional[List[str]] = Field(
+    pv1_26: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_26",
@@ -334,7 +334,7 @@ class PV1(BaseModel):
         description="Item #156",
     )
 
-    pv1_27: Optional[List[str]] = Field(
+    pv1_27: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_27",
@@ -346,7 +346,7 @@ class PV1(BaseModel):
         description="Item #157",
     )
 
-    pv1_28: Optional[str] = Field(
+    pv1_28: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_28",
@@ -358,7 +358,7 @@ class PV1(BaseModel):
         description="Item #158 | Table HL70073",
     )
 
-    pv1_29: Optional[str] = Field(
+    pv1_29: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_29",
@@ -370,7 +370,7 @@ class PV1(BaseModel):
         description="Item #159 | Table HL70110",
     )
 
-    pv1_30: Optional[str] = Field(
+    pv1_30: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_30",
@@ -382,7 +382,7 @@ class PV1(BaseModel):
         description="Item #160",
     )
 
-    pv1_31: Optional[str] = Field(
+    pv1_31: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_31",
@@ -394,7 +394,7 @@ class PV1(BaseModel):
         description="Item #161 | Table HL70021",
     )
 
-    pv1_32: Optional[str] = Field(
+    pv1_32: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_32",
@@ -406,7 +406,7 @@ class PV1(BaseModel):
         description="Item #162",
     )
 
-    pv1_33: Optional[str] = Field(
+    pv1_33: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_33",
@@ -418,7 +418,7 @@ class PV1(BaseModel):
         description="Item #163",
     )
 
-    pv1_34: Optional[str] = Field(
+    pv1_34: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_34",
@@ -430,7 +430,7 @@ class PV1(BaseModel):
         description="Item #164 | Table HL70111",
     )
 
-    pv1_35: Optional[str] = Field(
+    pv1_35: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_35",
@@ -442,7 +442,7 @@ class PV1(BaseModel):
         description="Item #165",
     )
 
-    pv1_36: Optional[str] = Field(
+    pv1_36: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_36",
@@ -454,7 +454,7 @@ class PV1(BaseModel):
         description="Item #166 | Table HL70112",
     )
 
-    pv1_37: Optional[DLD] = Field(
+    pv1_37: DLD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_37",
@@ -466,7 +466,7 @@ class PV1(BaseModel):
         description="Item #167 | Table HL70113",
     )
 
-    pv1_38: Optional[CE] = Field(
+    pv1_38: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_38",
@@ -478,7 +478,7 @@ class PV1(BaseModel):
         description="Item #168 | Table HL70114",
     )
 
-    pv1_39: Optional[str] = Field(
+    pv1_39: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_39",
@@ -490,7 +490,7 @@ class PV1(BaseModel):
         description="Item #169 | Table HL70115",
     )
 
-    pv1_40: Optional[str] = Field(
+    pv1_40: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_40",
@@ -502,7 +502,7 @@ class PV1(BaseModel):
         description="Item #170 | Table HL70116",
     )
 
-    pv1_41: Optional[str] = Field(
+    pv1_41: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_41",
@@ -514,7 +514,7 @@ class PV1(BaseModel):
         description="Item #171 | Table HL70117",
     )
 
-    pv1_42: Optional[PL] = Field(
+    pv1_42: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_42",
@@ -526,7 +526,7 @@ class PV1(BaseModel):
         description="Item #172",
     )
 
-    pv1_43: Optional[PL] = Field(
+    pv1_43: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_43",
@@ -538,7 +538,7 @@ class PV1(BaseModel):
         description="Item #173",
     )
 
-    pv1_44: Optional[TS] = Field(
+    pv1_44: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_44",
@@ -550,7 +550,7 @@ class PV1(BaseModel):
         description="Item #174",
     )
 
-    pv1_45: Optional[TS] = Field(
+    pv1_45: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_45",
@@ -562,7 +562,7 @@ class PV1(BaseModel):
         description="Item #175",
     )
 
-    pv1_46: Optional[str] = Field(
+    pv1_46: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_46",
@@ -574,7 +574,7 @@ class PV1(BaseModel):
         description="Item #176",
     )
 
-    pv1_47: Optional[str] = Field(
+    pv1_47: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_47",
@@ -586,7 +586,7 @@ class PV1(BaseModel):
         description="Item #177",
     )
 
-    pv1_48: Optional[str] = Field(
+    pv1_48: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_48",
@@ -598,7 +598,7 @@ class PV1(BaseModel):
         description="Item #178",
     )
 
-    pv1_49: Optional[str] = Field(
+    pv1_49: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_49",
@@ -610,7 +610,7 @@ class PV1(BaseModel):
         description="Item #179",
     )
 
-    pv1_50: Optional[CX] = Field(
+    pv1_50: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_50",
@@ -622,7 +622,7 @@ class PV1(BaseModel):
         description="Item #180 | Table HL70203",
     )
 
-    pv1_51: Optional[str] = Field(
+    pv1_51: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_51",
@@ -634,7 +634,7 @@ class PV1(BaseModel):
         description="Item #1226 | Table HL70326",
     )
 
-    pv1_52: Optional[List[XCN]] = Field(
+    pv1_52: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv1_52",

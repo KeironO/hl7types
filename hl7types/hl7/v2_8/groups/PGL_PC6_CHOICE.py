@@ -5,10 +5,10 @@ Version: 2.8
 Class: PGL_PC6.CHOICE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class PGL_PC6_CHOICE(BaseModel):

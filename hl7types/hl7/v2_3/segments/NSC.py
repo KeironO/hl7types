@@ -5,16 +5,16 @@ Version: 2.3
 Class: NSC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class NSC(BaseModel):
     """HL7 v2 NSC segment."""
 
-    nsc_1: Optional[str] = Field(
+    nsc_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_1",
@@ -26,7 +26,7 @@ class NSC(BaseModel):
         description="Item #1188",
     )
 
-    nsc_2: Optional[str] = Field(
+    nsc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_2",
@@ -38,7 +38,7 @@ class NSC(BaseModel):
         description="Item #1189",
     )
 
-    nsc_3: Optional[str] = Field(
+    nsc_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_3",
@@ -50,7 +50,7 @@ class NSC(BaseModel):
         description="Item #1190",
     )
 
-    nsc_4: Optional[str] = Field(
+    nsc_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_4",
@@ -62,7 +62,7 @@ class NSC(BaseModel):
         description="Item #1191",
     )
 
-    nsc_5: Optional[str] = Field(
+    nsc_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_5",
@@ -74,7 +74,7 @@ class NSC(BaseModel):
         description="Item #1192",
     )
 
-    nsc_6: Optional[str] = Field(
+    nsc_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_6",
@@ -86,7 +86,7 @@ class NSC(BaseModel):
         description="Item #1193 | Table HL70206",
     )
 
-    nsc_7: Optional[str] = Field(
+    nsc_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_7",
@@ -98,7 +98,7 @@ class NSC(BaseModel):
         description="Item #1194",
     )
 
-    nsc_8: Optional[str] = Field(
+    nsc_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nsc_8",

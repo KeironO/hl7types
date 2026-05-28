@@ -5,10 +5,12 @@ Version: 2.4
 Class: QBP_Q13.QBP
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, Any
-from pydantic import BaseModel, Field
+from typing import Any
+
+from pydantic import BaseModel
 
 
 class QBP_Q13_QBP(BaseModel):
@@ -18,6 +20,6 @@ class QBP_Q13_QBP(BaseModel):
         anyzsegment (Optional[Any]): optional
     """
 
-    anyzsegment: Optional[Any] = None
+    anyzsegment: Any | None = None
 
     model_config = {"populate_by_name": True}

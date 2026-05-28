@@ -5,16 +5,15 @@ Version: 2.7
 Class: OPU_R25.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .OPU_R25_RESULT import OPU_R25_RESULT
 from .OPU_R25_TIMING_QTY import OPU_R25_TIMING_QTY
 
@@ -44,31 +43,31 @@ class OPU_R25_ORDER(BaseModel):
         description="Required",
     )
 
-    ORC: Optional[_ORC] = Field(
+    ORC: _ORC | None = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: Optional[List[_OPU_R25_TIMING_QTY]] = Field(
+    TIMING_QTY: list[_OPU_R25_TIMING_QTY] | None = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    RESULT: List[_OPU_R25_RESULT] = Field(
+    RESULT: list[_OPU_R25_RESULT] = Field(
         default=...,
         title="RESULT",
         description="Required, repeating",

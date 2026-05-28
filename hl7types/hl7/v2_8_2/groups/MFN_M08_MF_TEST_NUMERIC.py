@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: MFN_M08.MF_TEST_NUMERIC
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
@@ -52,31 +52,31 @@ class MFN_M08_MF_TEST_NUMERIC(BaseModel):
         description="Required",
     )
 
-    OMC: Optional[List[_OMC]] = Field(
+    OMC: list[_OMC] | None = Field(
         default=None,
         title="OMC",
         description="Optional, repeating",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    OM2: Optional[_OM2] = Field(
+    OM2: _OM2 | None = Field(
         default=None,
         title="OM2",
         description="Optional",
     )
 
-    OM3: Optional[_OM3] = Field(
+    OM3: _OM3 | None = Field(
         default=None,
         title="OM3",
         description="Optional",
     )
 
-    OM4: Optional[List[_OM4]] = Field(
+    OM4: list[_OM4] | None = Field(
         default=None,
         title="OM4",
         description="Optional, repeating",

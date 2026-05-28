@@ -5,9 +5,9 @@ Version: 2.2
 Class: RXC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE

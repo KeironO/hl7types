@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: EAC_U07.SPECIMEN_CONTAINER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
@@ -31,7 +31,7 @@ class EAC_U07_SPECIMEN_CONTAINER(BaseModel):
         description="Required",
     )
 
-    SPM: Optional[List[_SPM]] = Field(
+    SPM: list[_SPM] | None = Field(
         default=None,
         title="SPM",
         description="Optional, repeating",

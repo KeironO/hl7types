@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: QSC
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class QSC(BaseModel):
         title="Segment Field Name",
     )
 
-    qsc_2: Optional[str] = Field(
+    qsc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qsc_2",
@@ -36,7 +36,7 @@ class QSC(BaseModel):
         title="Relational Operator",
     )
 
-    qsc_3: Optional[str] = Field(
+    qsc_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qsc_3",
@@ -47,7 +47,7 @@ class QSC(BaseModel):
         title="Value",
     )
 
-    qsc_4: Optional[str] = Field(
+    qsc_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qsc_4",

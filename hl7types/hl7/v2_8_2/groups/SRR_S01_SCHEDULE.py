@@ -5,15 +5,14 @@ Version: 2.8.2
 Class: SRR_S01.SCHEDULE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.SCH import SCH
 from ..segments.TQ1 import TQ1
-
 from .SRR_S01_PATIENT import SRR_S01_PATIENT
 from .SRR_S01_RESOURCES import SRR_S01_RESOURCES
 
@@ -41,25 +40,25 @@ class SRR_S01_SCHEDULE(BaseModel):
         description="Required",
     )
 
-    TQ1: Optional[List[_TQ1]] = Field(
+    TQ1: list[_TQ1] | None = Field(
         default=None,
         title="TQ1",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[List[_SRR_S01_PATIENT]] = Field(
+    PATIENT: list[_SRR_S01_PATIENT] | None = Field(
         default=None,
         title="PATIENT",
         description="Optional, repeating",
     )
 
-    RESOURCES: List[_SRR_S01_RESOURCES] = Field(
+    RESOURCES: list[_SRR_S01_RESOURCES] = Field(
         default=...,
         title="RESOURCES",
         description="Required, repeating",

@@ -5,16 +5,15 @@ Version: 2.4
 Class: CSU_C09.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CSR import CSR
 from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
-
 from .CSU_C09_STUDY_PHASE import CSU_C09_STUDY_PHASE
 from .CSU_C09_VISIT import CSU_C09_VISIT
 
@@ -44,19 +43,19 @@ class CSU_C09_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VISIT: Optional[_CSU_C09_VISIT] = Field(
+    VISIT: _CSU_C09_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",
@@ -68,7 +67,7 @@ class CSU_C09_PATIENT(BaseModel):
         description="Required",
     )
 
-    STUDY_PHASE: List[_CSU_C09_STUDY_PHASE] = Field(
+    STUDY_PHASE: list[_CSU_C09_STUDY_PHASE] = Field(
         default=...,
         title="STUDY_PHASE",
         description="Required, repeating",

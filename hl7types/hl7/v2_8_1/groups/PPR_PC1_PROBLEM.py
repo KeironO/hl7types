@@ -5,15 +5,14 @@ Version: 2.8.1
 Class: PPR_PC1.PROBLEM
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
-
 from .PPR_PC1_GOAL import PPR_PC1_GOAL
 from .PPR_PC1_ORDER import PPR_PC1_ORDER
 from .PPR_PC1_PATHWAY import PPR_PC1_PATHWAY
@@ -50,43 +49,43 @@ class PPR_PC1_PROBLEM(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PROBLEM_ROLE: Optional[List[_PPR_PC1_PROBLEM_ROLE]] = Field(
+    PROBLEM_ROLE: list[_PPR_PC1_PROBLEM_ROLE] | None = Field(
         default=None,
         title="PROBLEM_ROLE",
         description="Optional, repeating",
     )
 
-    PATHWAY: Optional[List[_PPR_PC1_PATHWAY]] = Field(
+    PATHWAY: list[_PPR_PC1_PATHWAY] | None = Field(
         default=None,
         title="PATHWAY",
         description="Optional, repeating",
     )
 
-    PROBLEM_OBSERVATION: Optional[List[_PPR_PC1_PROBLEM_OBSERVATION]] = Field(
+    PROBLEM_OBSERVATION: list[_PPR_PC1_PROBLEM_OBSERVATION] | None = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
         description="Optional, repeating",
     )
 
-    GOAL: Optional[List[_PPR_PC1_GOAL]] = Field(
+    GOAL: list[_PPR_PC1_GOAL] | None = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_PPR_PC1_ORDER]] = Field(
+    ORDER: list[_PPR_PC1_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

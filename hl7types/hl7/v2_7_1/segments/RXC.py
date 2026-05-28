@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RXC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -64,7 +64,7 @@ class RXC(BaseModel):
         description="Item #316 | Table HL79999",
     )
 
-    rxc_5: Optional[str] = Field(
+    rxc_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxc_5",
@@ -76,7 +76,7 @@ class RXC(BaseModel):
         description="Item #1124",
     )
 
-    rxc_6: Optional[CWE] = Field(
+    rxc_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxc_6",
@@ -88,7 +88,7 @@ class RXC(BaseModel):
         description="Item #1125 | Table HL79999",
     )
 
-    rxc_7: Optional[List[CWE]] = Field(
+    rxc_7: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxc_7",
@@ -100,7 +100,7 @@ class RXC(BaseModel):
         description="Item #1476 | Table HL79999",
     )
 
-    rxc_8: Optional[str] = Field(
+    rxc_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxc_8",
@@ -112,7 +112,7 @@ class RXC(BaseModel):
         description="Item #1671",
     )
 
-    rxc_9: Optional[CWE] = Field(
+    rxc_9: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxc_9",

@@ -5,14 +5,13 @@ Version: 2.6
 Class: OPL_O37.SPECIMEN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.SPM import SPM
-
 from .OPL_O37_CONTAINER import OPL_O37_CONTAINER
 from .OPL_O37_OBSERVATION_REQUEST import OPL_O37_OBSERVATION_REQUEST
 
@@ -38,19 +37,19 @@ class OPL_O37_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    CONTAINER: Optional[List[_OPL_O37_CONTAINER]] = Field(
+    CONTAINER: list[_OPL_O37_CONTAINER] | None = Field(
         default=None,
         title="CONTAINER",
         description="Optional, repeating",
     )
 
-    OBSERVATION_REQUEST: List[_OPL_O37_OBSERVATION_REQUEST] = Field(
+    OBSERVATION_REQUEST: list[_OPL_O37_OBSERVATION_REQUEST] = Field(
         default=...,
         title="OBSERVATION_REQUEST",
         description="Required, repeating",

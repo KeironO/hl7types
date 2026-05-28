@@ -5,9 +5,9 @@ Version: 2.2
 Class: CM_NDL
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TS import TS
@@ -16,7 +16,7 @@ from .TS import TS
 class CM_NDL(BaseModel):
     """HL7 v2 CM_NDL data type."""
 
-    cm_ndl_1: Optional[str] = Field(
+    cm_ndl_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ndl_1",
@@ -27,7 +27,7 @@ class CM_NDL(BaseModel):
         title="interpreter / technician",
     )
 
-    cm_ndl_2: Optional[TS] = Field(
+    cm_ndl_2: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ndl_2",
@@ -38,7 +38,7 @@ class CM_NDL(BaseModel):
         title="start date/time",
     )
 
-    cm_ndl_3: Optional[TS] = Field(
+    cm_ndl_3: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ndl_3",
@@ -49,7 +49,7 @@ class CM_NDL(BaseModel):
         title="end date/time",
     )
 
-    cm_ndl_4: Optional[str] = Field(
+    cm_ndl_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ndl_4",

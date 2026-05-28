@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: ORD_O02.ORDER_TRAY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -34,13 +34,13 @@ class ORD_O02_ORDER_TRAY(BaseModel):
         description="Required",
     )
 
-    ODT: Optional[List[_ODT]] = Field(
+    ODT: list[_ODT] | None = Field(
         default=None,
         title="ODT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

@@ -5,19 +5,10 @@ Version: 2.7.1
 Class: CQU_I19
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.ERR import ERR
-from ..segments.MSA import MSA
-from ..segments.MSH import MSH
-from ..segments.NK1 import NK1
-from ..segments.REL import REL
-from ..segments.RF1 import RF1
-from ..segments.SFT import SFT
-from ..segments.UAC import UAC
 
 from ..groups.CQU_I19_APPOINTMENT_HISTORY import CQU_I19_APPOINTMENT_HISTORY
 from ..groups.CQU_I19_CLINICAL_HISTORY import CQU_I19_CLINICAL_HISTORY
@@ -29,6 +20,14 @@ from ..groups.CQU_I19_PATIENT import CQU_I19_PATIENT
 from ..groups.CQU_I19_PATIENT_VISITS import CQU_I19_PATIENT_VISITS
 from ..groups.CQU_I19_PROBLEM import CQU_I19_PROBLEM
 from ..groups.CQU_I19_PROVIDER_CONTACT import CQU_I19_PROVIDER_CONTACT
+from ..segments.ERR import ERR
+from ..segments.MSA import MSA
+from ..segments.MSH import MSH
+from ..segments.NK1 import NK1
+from ..segments.REL import REL
+from ..segments.RF1 import RF1
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
 
 _CQU_I19_APPOINTMENT_HISTORY = CQU_I19_APPOINTMENT_HISTORY
 _CQU_I19_CLINICAL_HISTORY = CQU_I19_CLINICAL_HISTORY
@@ -80,13 +79,13 @@ class CQU_I19(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -98,7 +97,7 @@ class CQU_I19(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
@@ -110,73 +109,73 @@ class CQU_I19(BaseModel):
         description="Required",
     )
 
-    PROVIDER_CONTACT: Optional[List[_CQU_I19_PROVIDER_CONTACT]] = Field(
+    PROVIDER_CONTACT: list[_CQU_I19_PROVIDER_CONTACT] | None = Field(
         default=None,
         title="PROVIDER_CONTACT",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[List[_CQU_I19_PATIENT]] = Field(
+    PATIENT: list[_CQU_I19_PATIENT] | None = Field(
         default=None,
         title="PATIENT",
         description="Optional, repeating",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_CQU_I19_INSURANCE]] = Field(
+    INSURANCE: list[_CQU_I19_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    APPOINTMENT_HISTORY: Optional[List[_CQU_I19_APPOINTMENT_HISTORY]] = Field(
+    APPOINTMENT_HISTORY: list[_CQU_I19_APPOINTMENT_HISTORY] | None = Field(
         default=None,
         title="APPOINTMENT_HISTORY",
         description="Optional, repeating",
     )
 
-    CLINICAL_HISTORY: Optional[List[_CQU_I19_CLINICAL_HISTORY]] = Field(
+    CLINICAL_HISTORY: list[_CQU_I19_CLINICAL_HISTORY] | None = Field(
         default=None,
         title="CLINICAL_HISTORY",
         description="Optional, repeating",
     )
 
-    PATIENT_VISITS: List[_CQU_I19_PATIENT_VISITS] = Field(
+    PATIENT_VISITS: list[_CQU_I19_PATIENT_VISITS] = Field(
         default=...,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )
 
-    MEDICATION_HISTORY: Optional[List[_CQU_I19_MEDICATION_HISTORY]] = Field(
+    MEDICATION_HISTORY: list[_CQU_I19_MEDICATION_HISTORY] | None = Field(
         default=None,
         title="MEDICATION_HISTORY",
         description="Optional, repeating",
     )
 
-    PROBLEM: Optional[List[_CQU_I19_PROBLEM]] = Field(
+    PROBLEM: list[_CQU_I19_PROBLEM] | None = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",
     )
 
-    GOAL: Optional[List[_CQU_I19_GOAL]] = Field(
+    GOAL: list[_CQU_I19_GOAL] | None = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",
     )
 
-    PATHWAY: Optional[List[_CQU_I19_PATHWAY]] = Field(
+    PATHWAY: list[_CQU_I19_PATHWAY] | None = Field(
         default=None,
         title="PATHWAY",
         description="Optional, repeating",
     )
 
-    REL: Optional[List[_REL]] = Field(
+    REL: list[_REL] | None = Field(
         default=None,
         title="REL",
         description="Optional, repeating",

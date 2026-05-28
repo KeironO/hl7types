@@ -5,15 +5,14 @@ Version: 2.8
 Class: RDE_O11.PHARMACY_TREATMENT_INFUSION_ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PRT import PRT
 from ..segments.RXV import RXV
-
 from .RDE_O11_TIMING_ENCODED import RDE_O11_TIMING_ENCODED
 
 _NTE = NTE
@@ -38,19 +37,19 @@ class RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_ENCODED: List[_RDE_O11_TIMING_ENCODED] = Field(
+    TIMING_ENCODED: list[_RDE_O11_TIMING_ENCODED] = Field(
         default=...,
         title="TIMING_ENCODED",
         description="Required, repeating",

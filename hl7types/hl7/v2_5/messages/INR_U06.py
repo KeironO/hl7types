@@ -5,9 +5,9 @@ Version: 2.5
 Class: INR_U06
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EQU import EQU
@@ -40,7 +40,7 @@ class INR_U06(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -52,13 +52,13 @@ class INR_U06(BaseModel):
         description="Required",
     )
 
-    INV: List[_INV] = Field(
+    INV: list[_INV] = Field(
         default=...,
         title="INV",
         description="Required, repeating",
     )
 
-    ROL: Optional[_ROL] = Field(
+    ROL: _ROL | None = Field(
         default=None,
         title="ROL",
         description="Optional",

@@ -5,16 +5,16 @@ Version: 2.4
 Class: EI
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class EI(BaseModel):
     """HL7 v2 EI data type."""
 
-    ei_1: Optional[str] = Field(
+    ei_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ei_1",
@@ -25,7 +25,7 @@ class EI(BaseModel):
         title="entity identifier",
     )
 
-    ei_2: Optional[str] = Field(
+    ei_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ei_2",
@@ -36,7 +36,7 @@ class EI(BaseModel):
         title="namespace ID",
     )
 
-    ei_3: Optional[str] = Field(
+    ei_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ei_3",
@@ -47,7 +47,7 @@ class EI(BaseModel):
         title="universal ID",
     )
 
-    ei_4: Optional[str] = Field(
+    ei_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ei_4",

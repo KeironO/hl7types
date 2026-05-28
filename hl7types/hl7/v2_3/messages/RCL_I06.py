@@ -5,11 +5,12 @@ Version: 2.3
 Class: RCL_I06
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RCL_I06_PROVIDER import RCL_I06_PROVIDER
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
 from ..segments.DRG import DRG
@@ -21,8 +22,6 @@ from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
-
-from ..groups.RCL_I06_PROVIDER import RCL_I06_PROVIDER
 
 _AL1 = AL1
 _DG1 = DG1
@@ -74,13 +73,13 @@ class RCL_I06(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PROVIDER: List[_RCL_I06_PROVIDER] = Field(
+    PROVIDER: list[_RCL_I06_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -92,37 +91,37 @@ class RCL_I06(BaseModel):
         description="Required",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[List[_DRG]] = Field(
+    DRG: list[_DRG] | None = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DSP: Optional[List[_DSP]] = Field(
+    DSP: list[_DSP] | None = Field(
         default=None,
         title="DSP",
         description="Optional, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

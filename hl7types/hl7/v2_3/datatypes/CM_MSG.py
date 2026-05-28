@@ -5,16 +5,16 @@ Version: 2.3
 Class: CM_MSG
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_MSG(BaseModel):
     """HL7 v2 CM_MSG data type."""
 
-    cm_msg_1: Optional[str] = Field(
+    cm_msg_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_msg_1",
@@ -25,7 +25,7 @@ class CM_MSG(BaseModel):
         title="message type",
     )
 
-    cm_msg_2: Optional[str] = Field(
+    cm_msg_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_msg_2",

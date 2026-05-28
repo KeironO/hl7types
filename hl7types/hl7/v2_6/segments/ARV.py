@@ -5,9 +5,9 @@ Version: 2.6
 Class: ARV
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -18,7 +18,7 @@ from ..datatypes.DR import DR
 class ARV(BaseModel):
     """HL7 v2 ARV segment."""
 
-    arv_1: Optional[str] = Field(
+    arv_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "arv_1",
@@ -54,7 +54,7 @@ class ARV(BaseModel):
         description="Item #2145 | Table HL70717",
     )
 
-    arv_4: Optional[List[CWE]] = Field(
+    arv_4: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "arv_4",
@@ -66,7 +66,7 @@ class ARV(BaseModel):
         description="Item #2146 | Table HL70719",
     )
 
-    arv_5: Optional[List[str]] = Field(
+    arv_5: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "arv_5",
@@ -78,7 +78,7 @@ class ARV(BaseModel):
         description="Item #2147",
     )
 
-    arv_6: Optional[DR] = Field(
+    arv_6: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "arv_6",

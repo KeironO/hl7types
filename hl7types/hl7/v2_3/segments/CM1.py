@@ -5,9 +5,9 @@ Version: 2.3
 Class: CM1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -28,7 +28,7 @@ class CM1(BaseModel):
         description="Item #1021",
     )
 
-    cm1_2: Optional[CE] = Field(
+    cm1_2: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm1_2",

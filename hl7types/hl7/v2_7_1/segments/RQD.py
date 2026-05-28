@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RQD
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -17,7 +17,7 @@ from ..datatypes.CX import CX
 class RQD(BaseModel):
     """HL7 v2 RQD segment."""
 
-    rqd_1: Optional[str] = Field(
+    rqd_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_1",
@@ -29,7 +29,7 @@ class RQD(BaseModel):
         description="Item #275",
     )
 
-    rqd_2: Optional[CWE] = Field(
+    rqd_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_2",
@@ -41,7 +41,7 @@ class RQD(BaseModel):
         description="Item #276 | Table HL79999",
     )
 
-    rqd_3: Optional[CWE] = Field(
+    rqd_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_3",
@@ -53,7 +53,7 @@ class RQD(BaseModel):
         description="Item #277 | Table HL79999",
     )
 
-    rqd_4: Optional[CWE] = Field(
+    rqd_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_4",
@@ -65,7 +65,7 @@ class RQD(BaseModel):
         description="Item #278 | Table HL79999",
     )
 
-    rqd_5: Optional[str] = Field(
+    rqd_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_5",
@@ -77,7 +77,7 @@ class RQD(BaseModel):
         description="Item #279",
     )
 
-    rqd_6: Optional[CWE] = Field(
+    rqd_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_6",
@@ -89,7 +89,7 @@ class RQD(BaseModel):
         description="Item #280 | Table HL79999",
     )
 
-    rqd_7: Optional[CX] = Field(
+    rqd_7: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_7",
@@ -101,7 +101,7 @@ class RQD(BaseModel):
         description="Item #281 | Table HL70319",
     )
 
-    rqd_8: Optional[CWE] = Field(
+    rqd_8: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_8",
@@ -113,7 +113,7 @@ class RQD(BaseModel):
         description="Item #282 | Table HL70320",
     )
 
-    rqd_9: Optional[CWE] = Field(
+    rqd_9: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_9",
@@ -125,7 +125,7 @@ class RQD(BaseModel):
         description="Item #283 | Table HL79999",
     )
 
-    rqd_10: Optional[str] = Field(
+    rqd_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rqd_10",

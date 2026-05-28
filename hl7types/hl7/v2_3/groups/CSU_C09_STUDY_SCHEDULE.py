@@ -5,13 +5,12 @@ Version: 2.3
 Class: CSU_C09.STUDY_SCHEDULE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CSS import CSS
-
 from .CSU_C09_STUDY_OBSERVATION import CSU_C09_STUDY_OBSERVATION
 from .CSU_C09_STUDY_PHARM import CSU_C09_STUDY_PHARM
 
@@ -29,19 +28,19 @@ class CSU_C09_STUDY_SCHEDULE(BaseModel):
         STUDY_PHARM (List[CSU_C09_STUDY_PHARM]): required
     """
 
-    CSS: Optional[_CSS] = Field(
+    CSS: _CSS | None = Field(
         default=None,
         title="CSS",
         description="Optional",
     )
 
-    STUDY_OBSERVATION: Optional[List[_CSU_C09_STUDY_OBSERVATION]] = Field(
+    STUDY_OBSERVATION: list[_CSU_C09_STUDY_OBSERVATION] | None = Field(
         default=None,
         title="STUDY_OBSERVATION",
         description="Optional, repeating",
     )
 
-    STUDY_PHARM: List[_CSU_C09_STUDY_PHARM] = Field(
+    STUDY_PHARM: list[_CSU_C09_STUDY_PHARM] = Field(
         default=...,
         title="STUDY_PHARM",
         description="Required, repeating",

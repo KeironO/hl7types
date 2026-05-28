@@ -5,16 +5,16 @@ Version: 2.4
 Class: FN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class FN(BaseModel):
     """HL7 v2 FN data type."""
 
-    fn_1: Optional[str] = Field(
+    fn_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fn_1",
@@ -25,7 +25,7 @@ class FN(BaseModel):
         title="surname",
     )
 
-    fn_2: Optional[str] = Field(
+    fn_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fn_2",
@@ -36,7 +36,7 @@ class FN(BaseModel):
         title="own surname prefix",
     )
 
-    fn_3: Optional[str] = Field(
+    fn_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fn_3",
@@ -47,7 +47,7 @@ class FN(BaseModel):
         title="own surname",
     )
 
-    fn_4: Optional[str] = Field(
+    fn_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fn_4",
@@ -58,7 +58,7 @@ class FN(BaseModel):
         title="surname prefix from partner/spouse",
     )
 
-    fn_5: Optional[str] = Field(
+    fn_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "fn_5",

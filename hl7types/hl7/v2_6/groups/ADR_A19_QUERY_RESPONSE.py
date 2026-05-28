@@ -5,9 +5,9 @@ Version: 2.6
 Class: ADR_A19.QUERY_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ACC import ACC
@@ -27,7 +27,6 @@ from ..segments.PV2 import PV2
 from ..segments.ROL import ROL
 from ..segments.UB1 import UB1
 from ..segments.UB2 import UB2
-
 from .ADR_A19_INSURANCE import ADR_A19_INSURANCE
 from .ADR_A19_PROCEDURE import ADR_A19_PROCEDURE
 
@@ -77,7 +76,7 @@ class ADR_A19_QUERY_RESPONSE(BaseModel):
         UB2 (Optional[UB2]): optional
     """
 
-    EVN: Optional[_EVN] = Field(
+    EVN: _EVN | None = Field(
         default=None,
         title="EVN",
         description="Optional",
@@ -89,25 +88,25 @@ class ADR_A19_QUERY_RESPONSE(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
@@ -119,73 +118,73 @@ class ADR_A19_QUERY_RESPONSE(BaseModel):
         description="Required",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    DB1: Optional[List[_DB1]] = Field(
+    DB1: list[_DB1] | None = Field(
         default=None,
         title="DB1",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[_DRG] = Field(
+    DRG: _DRG | None = Field(
         default=None,
         title="DRG",
         description="Optional",
     )
 
-    PROCEDURE: Optional[List[_ADR_A19_PROCEDURE]] = Field(
+    PROCEDURE: list[_ADR_A19_PROCEDURE] | None = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_ADR_A19_INSURANCE]] = Field(
+    INSURANCE: list[_ADR_A19_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    UB1: Optional[_UB1] = Field(
+    UB1: _UB1 | None = Field(
         default=None,
         title="UB1",
         description="Optional",
     )
 
-    UB2: Optional[_UB2] = Field(
+    UB2: _UB2 | None = Field(
         default=None,
         title="UB2",
         description="Optional",

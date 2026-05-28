@@ -5,14 +5,13 @@ Version: 2.8.2
 Class: RDS_O13.ORDER_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
 from ..segments.RXO import RXO
-
 from .RDS_O13_ORDER_DETAIL_SUPPLEMENT import RDS_O13_ORDER_DETAIL_SUPPLEMENT
 
 _PRT = PRT
@@ -35,13 +34,13 @@ class RDS_O13_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL_SUPPLEMENT: Optional[_RDS_O13_ORDER_DETAIL_SUPPLEMENT] = Field(
+    ORDER_DETAIL_SUPPLEMENT: _RDS_O13_ORDER_DETAIL_SUPPLEMENT | None = Field(
         default=None,
         title="ORDER_DETAIL_SUPPLEMENT",
         description="Optional",

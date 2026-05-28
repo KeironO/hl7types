@@ -5,17 +5,16 @@ Version: 2.8.2
 Class: MFN_M06
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M06_MF_CLIN_STUDY import MFN_M06_MF_CLIN_STUDY
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.MFN_M06_MF_CLIN_STUDY import MFN_M06_MF_CLIN_STUDY
 
 _MFI = MFI
 _MFN_M06_MF_CLIN_STUDY = MFN_M06_MF_CLIN_STUDY
@@ -41,13 +40,13 @@ class MFN_M06(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -59,7 +58,7 @@ class MFN_M06(BaseModel):
         description="Required",
     )
 
-    MF_CLIN_STUDY: List[_MFN_M06_MF_CLIN_STUDY] = Field(
+    MF_CLIN_STUDY: list[_MFN_M06_MF_CLIN_STUDY] = Field(
         default=...,
         title="MF_CLIN_STUDY",
         description="Required, repeating",

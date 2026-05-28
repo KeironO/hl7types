@@ -5,10 +5,10 @@ Version: 2.4
 Class: PPG_PCG.OBRRXO_SUPPGRP
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class PPG_PCG_OBRRXO_SUPPGRP(BaseModel):

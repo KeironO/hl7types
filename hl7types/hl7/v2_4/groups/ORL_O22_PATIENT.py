@@ -5,13 +5,12 @@ Version: 2.4
 Class: ORL_O22.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
-
 from .ORL_O22_GENERAL_ORDER import ORL_O22_GENERAL_ORDER
 
 _ORL_O22_GENERAL_ORDER = ORL_O22_GENERAL_ORDER
@@ -32,7 +31,7 @@ class ORL_O22_PATIENT(BaseModel):
         description="Required",
     )
 
-    GENERAL_ORDER: List[_ORL_O22_GENERAL_ORDER] = Field(
+    GENERAL_ORDER: list[_ORL_O22_GENERAL_ORDER] = Field(
         default=...,
         title="GENERAL_ORDER",
         description="Required, repeating",

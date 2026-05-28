@@ -4,19 +4,18 @@ from __future__ import annotations
 # gets model_dump_er7() and model_validate_er7() injected at class-definition time.
 # Scoped to hl7types.hl7.* to avoid polluting unrelated BaseModel subclasses.
 # hl7types must be imported before any hl7types.hl7.* imports for the hook to fire.
-
 from typing import Any
 
 from pydantic import BaseModel
 
+from hl7types.codecs.er7.decoder import _is_segment_cls, decode_er7, decode_er7_segment
 from hl7types.codecs.er7.encoder import (
     DEFAULT_ENCODING,
     EncodingChars,
+    _is_segment,
     encode_er7,
     encode_er7_segment,
-    _is_segment,
 )
-from hl7types.codecs.er7.decoder import decode_er7, decode_er7_segment, _is_segment_cls
 from hl7types.codecs.xml.encoder import encode_xml
 
 

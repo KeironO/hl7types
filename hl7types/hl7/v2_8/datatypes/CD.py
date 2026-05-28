@@ -5,9 +5,9 @@ Version: 2.8
 Class: CD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CCP import CCP
@@ -20,7 +20,7 @@ from .WVS import WVS
 class CD(BaseModel):
     """HL7 v2 CD data type."""
 
-    cd_1: Optional[WVI] = Field(
+    cd_1: WVI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_1",
@@ -31,7 +31,7 @@ class CD(BaseModel):
         title="Channel Identifier",
     )
 
-    cd_2: Optional[WVS] = Field(
+    cd_2: WVS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_2",
@@ -42,7 +42,7 @@ class CD(BaseModel):
         title="Waveform Source",
     )
 
-    cd_3: Optional[CSU] = Field(
+    cd_3: CSU | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_3",
@@ -53,7 +53,7 @@ class CD(BaseModel):
         title="Channel Sensitivity and Units",
     )
 
-    cd_4: Optional[CCP] = Field(
+    cd_4: CCP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_4",
@@ -64,7 +64,7 @@ class CD(BaseModel):
         title="Channel Calibration Parameters",
     )
 
-    cd_5: Optional[str] = Field(
+    cd_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_5",
@@ -75,7 +75,7 @@ class CD(BaseModel):
         title="Channel Sampling Frequency",
     )
 
-    cd_6: Optional[NR] = Field(
+    cd_6: NR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cd_6",

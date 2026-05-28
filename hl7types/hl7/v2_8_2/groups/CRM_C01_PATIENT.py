@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: CRM_C01.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ARV import ARV
@@ -15,7 +15,6 @@ from ..segments.CSP import CSP
 from ..segments.CSR import CSR
 from ..segments.PID import PID
 from ..segments.PRT import PRT
-
 from .CRM_C01_PATIENT_VISIT import CRM_C01_PATIENT_VISIT
 
 _ARV = ARV
@@ -44,19 +43,19 @@ class CRM_C01_PATIENT(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: Optional[_CRM_C01_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _CRM_C01_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
@@ -68,7 +67,7 @@ class CRM_C01_PATIENT(BaseModel):
         description="Required",
     )
 
-    CSP: Optional[List[_CSP]] = Field(
+    CSP: list[_CSP] | None = Field(
         default=None,
         title="CSP",
         description="Optional, repeating",

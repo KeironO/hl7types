@@ -5,17 +5,16 @@ Version: 2.6
 Class: MFN_M17
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M17_MF_DRG import MFN_M17_MF_DRG
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.MFN_M17_MF_DRG import MFN_M17_MF_DRG
 
 _MFI = MFI
 _MFN_M17_MF_DRG = MFN_M17_MF_DRG
@@ -41,13 +40,13 @@ class MFN_M17(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -59,7 +58,7 @@ class MFN_M17(BaseModel):
         description="Required",
     )
 
-    MF_DRG: List[_MFN_M17_MF_DRG] = Field(
+    MF_DRG: list[_MFN_M17_MF_DRG] = Field(
         default=...,
         title="MF_DRG",
         description="Required, repeating",

@@ -5,15 +5,14 @@ Version: 2.6
 Class: RAS_O17.ENCODING
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
-
 from .RAS_O17_TIMING_ENCODED import RAS_O17_TIMING_ENCODED
 
 _RAS_O17_TIMING_ENCODED = RAS_O17_TIMING_ENCODED
@@ -38,19 +37,19 @@ class RAS_O17_ENCODING(BaseModel):
         description="Required",
     )
 
-    TIMING_ENCODED: List[_RAS_O17_TIMING_ENCODED] = Field(
+    TIMING_ENCODED: list[_RAS_O17_TIMING_ENCODED] = Field(
         default=...,
         title="TIMING_ENCODED",
         description="Required, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

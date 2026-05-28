@@ -5,9 +5,9 @@ Version: 2.4
 Class: RSP_Z88.QUERY_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from .RSP_Z88_PATIENT import RSP_Z88_PATIENT
@@ -22,7 +22,7 @@ class RSP_Z88_QUERY_RESPONSE(BaseModel):
         PATIENT (Optional[RSP_Z88_PATIENT]): optional
     """
 
-    PATIENT: Optional[_RSP_Z88_PATIENT] = Field(
+    PATIENT: _RSP_Z88_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",

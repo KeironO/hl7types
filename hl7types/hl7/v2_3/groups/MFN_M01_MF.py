@@ -5,9 +5,9 @@ Version: 2.3
 Class: MFN_M01.MF
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE

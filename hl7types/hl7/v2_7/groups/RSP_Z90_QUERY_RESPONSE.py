@@ -5,9 +5,9 @@ Version: 2.7
 Class: RSP_Z90.QUERY_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .RSP_Z90_COMMON_ORDER import RSP_Z90_COMMON_ORDER
@@ -28,19 +28,19 @@ class RSP_Z90_QUERY_RESPONSE(BaseModel):
         SPECIMEN (Optional[List[RSP_Z90_SPECIMEN]]): optional
     """
 
-    PATIENT: Optional[_RSP_Z90_PATIENT] = Field(
+    PATIENT: _RSP_Z90_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    COMMON_ORDER: List[_RSP_Z90_COMMON_ORDER] = Field(
+    COMMON_ORDER: list[_RSP_Z90_COMMON_ORDER] = Field(
         default=...,
         title="COMMON_ORDER",
         description="Required, repeating",
     )
 
-    SPECIMEN: Optional[List[_RSP_Z90_SPECIMEN]] = Field(
+    SPECIMEN: list[_RSP_Z90_SPECIMEN] | None = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",

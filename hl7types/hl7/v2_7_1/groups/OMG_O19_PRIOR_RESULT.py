@@ -5,13 +5,12 @@ Version: 2.7.1
 Class: OMG_O19.PRIOR_RESULT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
-
 from .OMG_O19_ORDER_PRIOR import OMG_O19_ORDER_PRIOR
 from .OMG_O19_PATIENT_PRIOR import OMG_O19_PATIENT_PRIOR
 from .OMG_O19_PATIENT_VISIT_PRIOR import OMG_O19_PATIENT_VISIT_PRIOR
@@ -32,25 +31,25 @@ class OMG_O19_PRIOR_RESULT(BaseModel):
         ORDER_PRIOR (List[OMG_O19_ORDER_PRIOR]): required
     """
 
-    PATIENT_PRIOR: Optional[_OMG_O19_PATIENT_PRIOR] = Field(
+    PATIENT_PRIOR: _OMG_O19_PATIENT_PRIOR | None = Field(
         default=None,
         title="PATIENT_PRIOR",
         description="Optional",
     )
 
-    PATIENT_VISIT_PRIOR: Optional[_OMG_O19_PATIENT_VISIT_PRIOR] = Field(
+    PATIENT_VISIT_PRIOR: _OMG_O19_PATIENT_VISIT_PRIOR | None = Field(
         default=None,
         title="PATIENT_VISIT_PRIOR",
         description="Optional",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    ORDER_PRIOR: List[_OMG_O19_ORDER_PRIOR] = Field(
+    ORDER_PRIOR: list[_OMG_O19_ORDER_PRIOR] = Field(
         default=...,
         title="ORDER_PRIOR",
         description="Required, repeating",

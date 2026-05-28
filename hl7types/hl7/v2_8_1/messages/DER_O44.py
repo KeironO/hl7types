@@ -5,17 +5,16 @@ Version: 2.8.1
 Class: DER_O44
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.MSH import MSH
-from ..segments.SFT import SFT
-from ..segments.UAC import UAC
 
 from ..groups.DER_O44_DONATION_ORDER import DER_O44_DONATION_ORDER
 from ..groups.DER_O44_DONOR import DER_O44_DONOR
+from ..segments.MSH import MSH
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
 
 _DER_O44_DONATION_ORDER = DER_O44_DONATION_ORDER
 _DER_O44_DONOR = DER_O44_DONOR
@@ -41,25 +40,25 @@ class DER_O44(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    DONOR: Optional[_DER_O44_DONOR] = Field(
+    DONOR: _DER_O44_DONOR | None = Field(
         default=None,
         title="DONOR",
         description="Optional",
     )
 
-    DONATION_ORDER: List[_DER_O44_DONATION_ORDER] = Field(
+    DONATION_ORDER: list[_DER_O44_DONATION_ORDER] = Field(
         default=...,
         title="DONATION_ORDER",
         description="Required, repeating",

@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_ABS_RANGE
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_ABS_RANGE(BaseModel):
     """HL7 v2 CM_ABS_RANGE data type."""
 
-    cm_abs_range_1: Optional[str] = Field(
+    cm_abs_range_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_abs_range_1",
@@ -25,7 +25,7 @@ class CM_ABS_RANGE(BaseModel):
         title="Range",
     )
 
-    cm_abs_range_2: Optional[str] = Field(
+    cm_abs_range_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_abs_range_2",
@@ -36,7 +36,7 @@ class CM_ABS_RANGE(BaseModel):
         title="Numeric Change",
     )
 
-    cm_abs_range_3: Optional[str] = Field(
+    cm_abs_range_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_abs_range_3",
@@ -47,7 +47,7 @@ class CM_ABS_RANGE(BaseModel):
         title="Percent per Change",
     )
 
-    cm_abs_range_4: Optional[str] = Field(
+    cm_abs_range_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_abs_range_4",

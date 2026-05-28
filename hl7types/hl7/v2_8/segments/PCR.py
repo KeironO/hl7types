@@ -5,9 +5,9 @@ Version: 2.8
 Class: PCR
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -29,7 +29,7 @@ class PCR(BaseModel):
         description="Item #1098 | Table HL79999",
     )
 
-    pcr_2: Optional[str] = Field(
+    pcr_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_2",
@@ -41,7 +41,7 @@ class PCR(BaseModel):
         description="Item #1099 | Table HL70249",
     )
 
-    pcr_3: Optional[CWE] = Field(
+    pcr_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_3",
@@ -53,7 +53,7 @@ class PCR(BaseModel):
         description="Item #1100 | Table HL79999",
     )
 
-    pcr_4: Optional[CQ] = Field(
+    pcr_4: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_4",
@@ -65,7 +65,7 @@ class PCR(BaseModel):
         description="Item #1101",
     )
 
-    pcr_5: Optional[str] = Field(
+    pcr_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_5",
@@ -77,7 +77,7 @@ class PCR(BaseModel):
         description="Item #1102",
     )
 
-    pcr_6: Optional[str] = Field(
+    pcr_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_6",
@@ -89,7 +89,7 @@ class PCR(BaseModel):
         description="Item #1103",
     )
 
-    pcr_7: Optional[str] = Field(
+    pcr_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_7",
@@ -101,7 +101,7 @@ class PCR(BaseModel):
         description="Item #1104",
     )
 
-    pcr_8: Optional[str] = Field(
+    pcr_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_8",
@@ -113,7 +113,7 @@ class PCR(BaseModel):
         description="Item #1105",
     )
 
-    pcr_9: Optional[CWE] = Field(
+    pcr_9: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_9",
@@ -125,7 +125,7 @@ class PCR(BaseModel):
         description="Item #1106 | Table HL70244",
     )
 
-    pcr_10: Optional[CWE] = Field(
+    pcr_10: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_10",
@@ -137,7 +137,7 @@ class PCR(BaseModel):
         description="Item #1107 | Table HL79999",
     )
 
-    pcr_11: Optional[CWE] = Field(
+    pcr_11: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_11",
@@ -149,7 +149,7 @@ class PCR(BaseModel):
         description="Item #1108 | Table HL70245",
     )
 
-    pcr_12: Optional[List[str]] = Field(
+    pcr_12: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_12",
@@ -161,7 +161,7 @@ class PCR(BaseModel):
         description="Item #1109",
     )
 
-    pcr_13: Optional[CWE] = Field(
+    pcr_13: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_13",
@@ -173,7 +173,7 @@ class PCR(BaseModel):
         description="Item #1110 | Table HL70246",
     )
 
-    pcr_14: Optional[CWE] = Field(
+    pcr_14: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_14",
@@ -185,7 +185,7 @@ class PCR(BaseModel):
         description="Item #1111 | Table HL79999",
     )
 
-    pcr_15: Optional[CWE] = Field(
+    pcr_15: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_15",
@@ -197,7 +197,7 @@ class PCR(BaseModel):
         description="Item #1112 | Table HL70247",
     )
 
-    pcr_16: Optional[CWE] = Field(
+    pcr_16: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_16",
@@ -209,7 +209,7 @@ class PCR(BaseModel):
         description="Item #1113 | Table HL79999",
     )
 
-    pcr_17: Optional[str] = Field(
+    pcr_17: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_17",
@@ -221,7 +221,7 @@ class PCR(BaseModel):
         description="Item #1114 | Table HL70248",
     )
 
-    pcr_18: Optional[str] = Field(
+    pcr_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_18",
@@ -233,7 +233,7 @@ class PCR(BaseModel):
         description="Item #1115",
     )
 
-    pcr_19: Optional[str] = Field(
+    pcr_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_19",
@@ -245,7 +245,7 @@ class PCR(BaseModel):
         description="Item #1116 | Table HL70242",
     )
 
-    pcr_20: Optional[str] = Field(
+    pcr_20: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_20",
@@ -257,7 +257,7 @@ class PCR(BaseModel):
         description="Item #1117 | Table HL70250",
     )
 
-    pcr_21: Optional[List[str]] = Field(
+    pcr_21: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_21",
@@ -269,7 +269,7 @@ class PCR(BaseModel):
         description="Item #1118 | Table HL70251",
     )
 
-    pcr_22: Optional[List[str]] = Field(
+    pcr_22: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_22",
@@ -281,7 +281,7 @@ class PCR(BaseModel):
         description="Item #1119 | Table HL70252",
     )
 
-    pcr_23: Optional[List[str]] = Field(
+    pcr_23: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pcr_23",

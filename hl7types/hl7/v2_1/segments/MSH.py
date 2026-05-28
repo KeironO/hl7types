@@ -5,9 +5,9 @@ Version: 2.1
 Class: MSH
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -38,7 +38,7 @@ class MSH(BaseModel):
         description="Item #509",
     )
 
-    msh_3: Optional[str] = Field(
+    msh_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_3",
@@ -50,7 +50,7 @@ class MSH(BaseModel):
         description="Item #6",
     )
 
-    msh_4: Optional[str] = Field(
+    msh_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_4",
@@ -62,7 +62,7 @@ class MSH(BaseModel):
         description="Item #512",
     )
 
-    msh_5: Optional[str] = Field(
+    msh_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_5",
@@ -74,7 +74,7 @@ class MSH(BaseModel):
         description="Item #9",
     )
 
-    msh_6: Optional[str] = Field(
+    msh_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_6",
@@ -86,7 +86,7 @@ class MSH(BaseModel):
         description="Item #513",
     )
 
-    msh_7: Optional[str] = Field(
+    msh_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_7",
@@ -98,7 +98,7 @@ class MSH(BaseModel):
         description="Item #10",
     )
 
-    msh_8: Optional[str] = Field(
+    msh_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_8",
@@ -158,7 +158,7 @@ class MSH(BaseModel):
         description="Item #15 | Table HL70104",
     )
 
-    msh_13: Optional[str] = Field(
+    msh_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_13",
@@ -170,7 +170,7 @@ class MSH(BaseModel):
         description="Item #633",
     )
 
-    msh_14: Optional[str] = Field(
+    msh_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_14",

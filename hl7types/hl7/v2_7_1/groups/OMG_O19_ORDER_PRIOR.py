@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: OMG_O19.ORDER_PRIOR
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -15,7 +15,6 @@ from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .OMG_O19_OBSERVATION_PRIOR import OMG_O19_OBSERVATION_PRIOR
 from .OMG_O19_TIMING_PRIOR import OMG_O19_TIMING_PRIOR
 
@@ -53,31 +52,31 @@ class OMG_O19_ORDER_PRIOR(BaseModel):
         description="Required",
     )
 
-    TIMING_PRIOR: Optional[List[_OMG_O19_TIMING_PRIOR]] = Field(
+    TIMING_PRIOR: list[_OMG_O19_TIMING_PRIOR] | None = Field(
         default=None,
         title="TIMING_PRIOR",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    OBSERVATION_PRIOR: List[_OMG_O19_OBSERVATION_PRIOR] = Field(
+    OBSERVATION_PRIOR: list[_OMG_O19_OBSERVATION_PRIOR] = Field(
         default=...,
         title="OBSERVATION_PRIOR",
         description="Required, repeating",

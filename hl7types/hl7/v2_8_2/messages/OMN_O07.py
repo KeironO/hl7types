@@ -5,18 +5,17 @@ Version: 2.8.2
 Class: OMN_O07
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.OMN_O07_ORDER import OMN_O07_ORDER
+from ..groups.OMN_O07_PATIENT import OMN_O07_PATIENT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.OMN_O07_ORDER import OMN_O07_ORDER
-from ..groups.OMN_O07_PATIENT import OMN_O07_PATIENT
 
 _MSH = MSH
 _NTE = NTE
@@ -44,31 +43,31 @@ class OMN_O07(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[_OMN_O07_PATIENT] = Field(
+    PATIENT: _OMN_O07_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_OMN_O07_ORDER] = Field(
+    ORDER: list[_OMN_O07_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

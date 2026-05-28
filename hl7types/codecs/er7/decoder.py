@@ -9,10 +9,10 @@ from typing import Any, get_type_hints
 from pydantic import BaseModel
 
 from hl7types.codecs.er7.encoder import (
-    DEFAULT_ENCODING,
-    EncodingChars,
     _DELIM_DEF,
     _SEG_ALIAS_RE,
+    DEFAULT_ENCODING,
+    EncodingChars,
 )
 
 _UNESCAPE_MAP: dict[str, str] = {
@@ -83,9 +83,9 @@ def _build_pos_map(model_cls: type[BaseModel]) -> dict[int, tuple[str, Any, bool
         if not isinstance(alias, str):
             continue
         dot = alias.rfind(".")
-        if dot == -1 or not alias[dot + 1:].isdigit():
+        if dot == -1 or not alias[dot + 1 :].isdigit():
             continue
-        pos = int(alias[dot + 1:])
+        pos = int(alias[dot + 1 :])
         ann = hints.get(fname)
         if ann is None:
             continue

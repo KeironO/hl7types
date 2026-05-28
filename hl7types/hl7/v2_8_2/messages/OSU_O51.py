@@ -5,11 +5,12 @@ Version: 2.8.2
 Class: OSU_O51
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.OSU_O51_ORDER_STATUS import OSU_O51_ORDER_STATUS
 from ..segments.ARV import ARV
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -18,8 +19,6 @@ from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.OSU_O51_ORDER_STATUS import OSU_O51_ORDER_STATUS
 
 _ARV = ARV
 _ERR = ERR
@@ -59,43 +58,43 @@ class OSU_O51(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PID: Optional[_PID] = Field(
+    PID: _PID | None = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    ORDER_STATUS: List[_OSU_O51_ORDER_STATUS] = Field(
+    ORDER_STATUS: list[_OSU_O51_ORDER_STATUS] = Field(
         default=...,
         title="ORDER_STATUS",
         description="Required, repeating",

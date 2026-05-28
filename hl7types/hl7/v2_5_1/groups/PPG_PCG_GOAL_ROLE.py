@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: PPG_PCG.GOAL_ROLE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ROL import ROL
@@ -31,7 +31,7 @@ class PPG_PCG_GOAL_ROLE(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

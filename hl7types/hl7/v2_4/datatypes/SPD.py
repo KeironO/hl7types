@@ -5,16 +5,16 @@ Version: 2.4
 Class: SPD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class SPD(BaseModel):
     """HL7 v2 SPD data type."""
 
-    spd_1: Optional[str] = Field(
+    spd_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "spd_1",
@@ -25,7 +25,7 @@ class SPD(BaseModel):
         title="specialty name",
     )
 
-    spd_2: Optional[str] = Field(
+    spd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "spd_2",
@@ -36,7 +36,7 @@ class SPD(BaseModel):
         title="governing board",
     )
 
-    spd_3: Optional[str] = Field(
+    spd_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "spd_3",
@@ -47,7 +47,7 @@ class SPD(BaseModel):
         title="eligible or certified",
     )
 
-    spd_4: Optional[str] = Field(
+    spd_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "spd_4",

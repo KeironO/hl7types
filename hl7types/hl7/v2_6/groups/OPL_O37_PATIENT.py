@@ -5,16 +5,15 @@ Version: 2.6
 Class: OPL_O37.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
 from ..segments.OBX import OBX
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
-
 from .OPL_O37_INSURANCE import OPL_O37_INSURANCE
 
 _AL1 = AL1
@@ -41,25 +40,25 @@ class OPL_O37_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_OPL_O37_INSURANCE]] = Field(
+    INSURANCE: list[_OPL_O37_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",

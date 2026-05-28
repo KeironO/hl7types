@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_VR
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_VR(BaseModel):
     """HL7 v2 CM_VR data type."""
 
-    cm_vr_1: Optional[str] = Field(
+    cm_vr_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_vr_1",
@@ -25,7 +25,7 @@ class CM_VR(BaseModel):
         title="First data code value",
     )
 
-    cm_vr_2: Optional[str] = Field(
+    cm_vr_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_vr_2",

@@ -5,16 +5,16 @@ Version: 2.3.1
 Class: RDT
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class RDT(BaseModel):
     """HL7 v2 RDT segment."""
 
-    rdt_1: Optional[str] = Field(
+    rdt_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rdt_1",

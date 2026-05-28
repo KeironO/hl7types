@@ -5,15 +5,14 @@ Version: 2.8
 Class: MDM_T01.COMMON_ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .MDM_T01_TIMING import MDM_T01_TIMING
 
 _MDM_T01_TIMING = MDM_T01_TIMING
@@ -38,7 +37,7 @@ class MDM_T01_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_MDM_T01_TIMING]] = Field(
+    TIMING: list[_MDM_T01_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -50,7 +49,7 @@ class MDM_T01_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

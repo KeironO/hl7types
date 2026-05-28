@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: PES
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.EI import EI
@@ -21,7 +21,7 @@ from ..datatypes.XTN import XTN
 class PES(BaseModel):
     """HL7 v2 PES segment."""
 
-    pes_1: Optional[List[XON]] = Field(
+    pes_1: list[XON] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_1",
@@ -33,7 +33,7 @@ class PES(BaseModel):
         description="Item #1059",
     )
 
-    pes_2: Optional[List[XCN]] = Field(
+    pes_2: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_2",
@@ -45,7 +45,7 @@ class PES(BaseModel):
         description="Item #1060",
     )
 
-    pes_3: Optional[List[XAD]] = Field(
+    pes_3: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_3",
@@ -57,7 +57,7 @@ class PES(BaseModel):
         description="Item #1062",
     )
 
-    pes_4: Optional[List[XTN]] = Field(
+    pes_4: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_4",
@@ -69,7 +69,7 @@ class PES(BaseModel):
         description="Item #1063",
     )
 
-    pes_5: Optional[EI] = Field(
+    pes_5: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_5",
@@ -81,7 +81,7 @@ class PES(BaseModel):
         description="Item #1064",
     )
 
-    pes_6: Optional[str] = Field(
+    pes_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_6",
@@ -93,7 +93,7 @@ class PES(BaseModel):
         description="Item #1065",
     )
 
-    pes_7: Optional[List[FT]] = Field(
+    pes_7: list[FT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_7",
@@ -105,7 +105,7 @@ class PES(BaseModel):
         description="Item #1066",
     )
 
-    pes_8: Optional[FT] = Field(
+    pes_8: FT | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_8",
@@ -117,7 +117,7 @@ class PES(BaseModel):
         description="Item #1067",
     )
 
-    pes_9: Optional[str] = Field(
+    pes_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_9",
@@ -141,7 +141,7 @@ class PES(BaseModel):
         description="Item #1069",
     )
 
-    pes_11: Optional[List[str]] = Field(
+    pes_11: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_11",
@@ -153,7 +153,7 @@ class PES(BaseModel):
         description="Item #1070 | Table HL70234",
     )
 
-    pes_12: Optional[str] = Field(
+    pes_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_12",
@@ -165,7 +165,7 @@ class PES(BaseModel):
         description="Item #1071 | Table HL70235",
     )
 
-    pes_13: Optional[List[str]] = Field(
+    pes_13: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_13",

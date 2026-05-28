@@ -5,11 +5,13 @@ Version: 2.7
 Class: RCI_I05
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RCI_I05_OBSERVATION import RCI_I05_OBSERVATION
+from ..groups.RCI_I05_PROVIDER import RCI_I05_PROVIDER
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
 from ..segments.DRG import DRG
@@ -21,9 +23,6 @@ from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RCI_I05_OBSERVATION import RCI_I05_OBSERVATION
-from ..groups.RCI_I05_PROVIDER import RCI_I05_PROVIDER
 
 _AL1 = AL1
 _DG1 = DG1
@@ -65,13 +64,13 @@ class RCI_I05(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -89,13 +88,13 @@ class RCI_I05(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PROVIDER: List[_RCI_I05_PROVIDER] = Field(
+    PROVIDER: list[_RCI_I05_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -107,31 +106,31 @@ class RCI_I05(BaseModel):
         description="Required",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[List[_DRG]] = Field(
+    DRG: list[_DRG] | None = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[_RCI_I05_OBSERVATION] = Field(
+    OBSERVATION: _RCI_I05_OBSERVATION | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

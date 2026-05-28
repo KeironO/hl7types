@@ -5,9 +5,9 @@ Version: 2.2
 Class: ORF_R04.QUERY_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -37,19 +37,19 @@ class ORF_R04_QUERY_RESPONSE(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PID: Optional[_PID] = Field(
+    PID: _PID | None = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

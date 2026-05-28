@@ -5,11 +5,12 @@ Version: 2.6
 Class: RSP_Q11
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RSP_Q11_QUERY_RESULT_CLUSTER import RSP_Q11_QUERY_RESULT_CLUSTER
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -18,8 +19,6 @@ from ..segments.QAK import QAK
 from ..segments.QPD import QPD
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RSP_Q11_QUERY_RESULT_CLUSTER import RSP_Q11_QUERY_RESULT_CLUSTER
 
 _DSC = DSC
 _ERR = ERR
@@ -53,13 +52,13 @@ class RSP_Q11(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -71,7 +70,7 @@ class RSP_Q11(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
@@ -89,13 +88,13 @@ class RSP_Q11(BaseModel):
         description="Required",
     )
 
-    QUERY_RESULT_CLUSTER: Optional[_RSP_Q11_QUERY_RESULT_CLUSTER] = Field(
+    QUERY_RESULT_CLUSTER: _RSP_Q11_QUERY_RESULT_CLUSTER | None = Field(
         default=None,
         title="QUERY_RESULT_CLUSTER",
         description="Optional",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

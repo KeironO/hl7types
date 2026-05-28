@@ -5,9 +5,9 @@ Version: 2.5
 Class: BLG
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CCD import CCD
@@ -18,7 +18,7 @@ from ..datatypes.CX import CX
 class BLG(BaseModel):
     """HL7 v2 BLG segment."""
 
-    blg_1: Optional[CCD] = Field(
+    blg_1: CCD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "blg_1",
@@ -30,7 +30,7 @@ class BLG(BaseModel):
         description="Item #234 | Table HL70100",
     )
 
-    blg_2: Optional[str] = Field(
+    blg_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "blg_2",
@@ -42,7 +42,7 @@ class BLG(BaseModel):
         description="Item #235 | Table HL70122",
     )
 
-    blg_3: Optional[CX] = Field(
+    blg_3: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "blg_3",
@@ -54,7 +54,7 @@ class BLG(BaseModel):
         description="Item #236",
     )
 
-    blg_4: Optional[CWE] = Field(
+    blg_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "blg_4",

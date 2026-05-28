@@ -5,9 +5,9 @@ Version: 2.6
 Class: OUL_R22.VISIT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PV1 import PV1
@@ -31,7 +31,7 @@ class OUL_R22_VISIT(BaseModel):
         description="Required",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",

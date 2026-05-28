@@ -5,16 +5,15 @@ Version: 2.4
 Class: RSP_Z86.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
 from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
-
 from .RSP_Z86_COMMON_ORDER import RSP_Z86_COMMON_ORDER
 
 _AL1 = AL1
@@ -41,25 +40,25 @@ class RSP_Z86_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    COMMON_ORDER: List[_RSP_Z86_COMMON_ORDER] = Field(
+    COMMON_ORDER: list[_RSP_Z86_COMMON_ORDER] = Field(
         default=...,
         title="COMMON_ORDER",
         description="Required, repeating",

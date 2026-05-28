@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: RDY_K15
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -49,7 +49,7 @@ class RDY_K15(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -61,7 +61,7 @@ class RDY_K15(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -79,13 +79,13 @@ class RDY_K15(BaseModel):
         description="Required",
     )
 
-    DSP: Optional[List[_DSP]] = Field(
+    DSP: list[_DSP] | None = Field(
         default=None,
         title="DSP",
         description="Optional, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

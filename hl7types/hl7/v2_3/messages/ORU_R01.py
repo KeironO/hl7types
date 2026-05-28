@@ -5,15 +5,14 @@ Version: 2.3
 Class: ORU_R01
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ORU_R01_RESPONSE import ORU_R01_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
-
-from ..groups.ORU_R01_RESPONSE import ORU_R01_RESPONSE
 
 _DSC = DSC
 _MSH = MSH
@@ -35,13 +34,13 @@ class ORU_R01(BaseModel):
         description="Required",
     )
 
-    RESPONSE: List[_ORU_R01_RESPONSE] = Field(
+    RESPONSE: list[_ORU_R01_RESPONSE] = Field(
         default=...,
         title="RESPONSE",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

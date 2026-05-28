@@ -5,15 +5,14 @@ Version: 2.7
 Class: ORD_O04.ORDER_DIET
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.ODS import ODS
 from ..segments.ORC import ORC
-
 from .ORD_O04_TIMING_DIET import ORD_O04_TIMING_DIET
 
 _NTE = NTE
@@ -38,19 +37,19 @@ class ORD_O04_ORDER_DIET(BaseModel):
         description="Required",
     )
 
-    TIMING_DIET: Optional[List[_ORD_O04_TIMING_DIET]] = Field(
+    TIMING_DIET: list[_ORD_O04_TIMING_DIET] | None = Field(
         default=None,
         title="TIMING_DIET",
         description="Optional, repeating",
     )
 
-    ODS: Optional[List[_ODS]] = Field(
+    ODS: list[_ODS] | None = Field(
         default=None,
         title="ODS",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

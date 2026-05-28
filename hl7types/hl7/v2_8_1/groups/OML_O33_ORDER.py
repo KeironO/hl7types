@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OML_O33.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -15,7 +15,6 @@ from ..segments.CTI import CTI
 from ..segments.FT1 import FT1
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .OML_O33_OBSERVATION_REQUEST import OML_O33_OBSERVATION_REQUEST
 from .OML_O33_TIMING import OML_O33_TIMING
 
@@ -47,37 +46,37 @@ class OML_O33_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_OML_O33_TIMING]] = Field(
+    TIMING: list[_OML_O33_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    OBSERVATION_REQUEST: Optional[_OML_O33_OBSERVATION_REQUEST] = Field(
+    OBSERVATION_REQUEST: _OML_O33_OBSERVATION_REQUEST | None = Field(
         default=None,
         title="OBSERVATION_REQUEST",
         description="Optional",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

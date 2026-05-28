@@ -5,9 +5,9 @@ Version: 2.4
 Class: ERP_R09
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -49,7 +49,7 @@ class ERP_R09(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -67,7 +67,7 @@ class ERP_R09(BaseModel):
         description="Required",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

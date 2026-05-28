@@ -5,15 +5,14 @@ Version: 2.3.1
 Class: OSR_Q06.OBSERVATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
-
 from .OSR_Q06_CHOICE import OSR_Q06_CHOICE
 
 _CTI = CTI
@@ -44,13 +43,13 @@ class OSR_Q06_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

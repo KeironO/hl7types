@@ -5,13 +5,12 @@ Version: 2.8.1
 Class: MFN_M16.PURCHASING_VENDOR
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.VND import VND
-
 from .MFN_M16_PACKAGING import MFN_M16_PACKAGING
 
 _MFN_M16_PACKAGING = MFN_M16_PACKAGING
@@ -32,7 +31,7 @@ class MFN_M16_PURCHASING_VENDOR(BaseModel):
         description="Required",
     )
 
-    PACKAGING: Optional[List[_MFN_M16_PACKAGING]] = Field(
+    PACKAGING: list[_MFN_M16_PACKAGING] | None = Field(
         default=None,
         title="PACKAGING",
         description="Optional, repeating",

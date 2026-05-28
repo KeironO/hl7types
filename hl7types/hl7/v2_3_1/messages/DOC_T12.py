@@ -5,19 +5,18 @@ Version: 2.3.1
 Class: DOC_T12
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.DOC_T12_RESULT import DOC_T12_RESULT
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QAK import QAK
 from ..segments.QRD import QRD
-
-from ..groups.DOC_T12_RESULT import DOC_T12_RESULT
 
 _DOC_T12_RESULT = DOC_T12_RESULT
 _DSC = DSC
@@ -53,13 +52,13 @@ class DOC_T12(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    QAK: Optional[_QAK] = Field(
+    QAK: _QAK | None = Field(
         default=None,
         title="QAK",
         description="Optional",
@@ -71,13 +70,13 @@ class DOC_T12(BaseModel):
         description="Required",
     )
 
-    RESULT: List[_DOC_T12_RESULT] = Field(
+    RESULT: list[_DOC_T12_RESULT] = Field(
         default=...,
         title="RESULT",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

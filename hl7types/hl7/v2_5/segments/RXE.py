@@ -5,9 +5,9 @@ Version: 2.5
 Class: RXE
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -24,7 +24,7 @@ from ..datatypes.XCN import XCN
 class RXE(BaseModel):
     """HL7 v2 RXE segment."""
 
-    rxe_1: Optional[TQ] = Field(
+    rxe_1: TQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_1",
@@ -60,7 +60,7 @@ class RXE(BaseModel):
         description="Item #318",
     )
 
-    rxe_4: Optional[str] = Field(
+    rxe_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_4",
@@ -84,7 +84,7 @@ class RXE(BaseModel):
         description="Item #320",
     )
 
-    rxe_6: Optional[CE] = Field(
+    rxe_6: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_6",
@@ -96,7 +96,7 @@ class RXE(BaseModel):
         description="Item #321",
     )
 
-    rxe_7: Optional[List[CE]] = Field(
+    rxe_7: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_7",
@@ -108,7 +108,7 @@ class RXE(BaseModel):
         description="Item #298",
     )
 
-    rxe_8: Optional[LA1] = Field(
+    rxe_8: LA1 | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_8",
@@ -120,7 +120,7 @@ class RXE(BaseModel):
         description="Item #299",
     )
 
-    rxe_9: Optional[str] = Field(
+    rxe_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_9",
@@ -132,7 +132,7 @@ class RXE(BaseModel):
         description="Item #322 | Table HL70167",
     )
 
-    rxe_10: Optional[str] = Field(
+    rxe_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_10",
@@ -144,7 +144,7 @@ class RXE(BaseModel):
         description="Item #323",
     )
 
-    rxe_11: Optional[CE] = Field(
+    rxe_11: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_11",
@@ -156,7 +156,7 @@ class RXE(BaseModel):
         description="Item #324",
     )
 
-    rxe_12: Optional[str] = Field(
+    rxe_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_12",
@@ -168,7 +168,7 @@ class RXE(BaseModel):
         description="Item #304",
     )
 
-    rxe_13: Optional[List[XCN]] = Field(
+    rxe_13: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_13",
@@ -180,7 +180,7 @@ class RXE(BaseModel):
         description="Item #305",
     )
 
-    rxe_14: Optional[List[XCN]] = Field(
+    rxe_14: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_14",
@@ -192,7 +192,7 @@ class RXE(BaseModel):
         description="Item #306",
     )
 
-    rxe_15: Optional[str] = Field(
+    rxe_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_15",
@@ -204,7 +204,7 @@ class RXE(BaseModel):
         description="Item #325",
     )
 
-    rxe_16: Optional[str] = Field(
+    rxe_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_16",
@@ -216,7 +216,7 @@ class RXE(BaseModel):
         description="Item #326",
     )
 
-    rxe_17: Optional[str] = Field(
+    rxe_17: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_17",
@@ -228,7 +228,7 @@ class RXE(BaseModel):
         description="Item #327",
     )
 
-    rxe_18: Optional[TS] = Field(
+    rxe_18: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_18",
@@ -240,7 +240,7 @@ class RXE(BaseModel):
         description="Item #328",
     )
 
-    rxe_19: Optional[CQ] = Field(
+    rxe_19: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_19",
@@ -252,7 +252,7 @@ class RXE(BaseModel):
         description="Item #329",
     )
 
-    rxe_20: Optional[str] = Field(
+    rxe_20: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_20",
@@ -264,7 +264,7 @@ class RXE(BaseModel):
         description="Item #307 | Table HL70136",
     )
 
-    rxe_21: Optional[List[CE]] = Field(
+    rxe_21: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_21",
@@ -276,7 +276,7 @@ class RXE(BaseModel):
         description="Item #330",
     )
 
-    rxe_22: Optional[str] = Field(
+    rxe_22: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_22",
@@ -288,7 +288,7 @@ class RXE(BaseModel):
         description="Item #331",
     )
 
-    rxe_23: Optional[str] = Field(
+    rxe_23: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_23",
@@ -300,7 +300,7 @@ class RXE(BaseModel):
         description="Item #332",
     )
 
-    rxe_24: Optional[CE] = Field(
+    rxe_24: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_24",
@@ -312,7 +312,7 @@ class RXE(BaseModel):
         description="Item #333",
     )
 
-    rxe_25: Optional[str] = Field(
+    rxe_25: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_25",
@@ -324,7 +324,7 @@ class RXE(BaseModel):
         description="Item #1126",
     )
 
-    rxe_26: Optional[CE] = Field(
+    rxe_26: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_26",
@@ -336,7 +336,7 @@ class RXE(BaseModel):
         description="Item #1127",
     )
 
-    rxe_27: Optional[List[CE]] = Field(
+    rxe_27: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_27",
@@ -348,7 +348,7 @@ class RXE(BaseModel):
         description="Item #1128",
     )
 
-    rxe_28: Optional[str] = Field(
+    rxe_28: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_28",
@@ -360,7 +360,7 @@ class RXE(BaseModel):
         description="Item #1220",
     )
 
-    rxe_29: Optional[CE] = Field(
+    rxe_29: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_29",
@@ -372,7 +372,7 @@ class RXE(BaseModel):
         description="Item #1221",
     )
 
-    rxe_30: Optional[str] = Field(
+    rxe_30: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_30",
@@ -384,7 +384,7 @@ class RXE(BaseModel):
         description="Item #1222 | Table HL70321",
     )
 
-    rxe_31: Optional[List[CE]] = Field(
+    rxe_31: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_31",
@@ -396,7 +396,7 @@ class RXE(BaseModel):
         description="Item #1476",
     )
 
-    rxe_32: Optional[TS] = Field(
+    rxe_32: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_32",
@@ -408,7 +408,7 @@ class RXE(BaseModel):
         description="Item #1673",
     )
 
-    rxe_33: Optional[str] = Field(
+    rxe_33: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_33",
@@ -420,7 +420,7 @@ class RXE(BaseModel):
         description="Item #1674",
     )
 
-    rxe_34: Optional[CWE] = Field(
+    rxe_34: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_34",
@@ -432,7 +432,7 @@ class RXE(BaseModel):
         description="Item #1675",
     )
 
-    rxe_35: Optional[CWE] = Field(
+    rxe_35: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_35",
@@ -444,7 +444,7 @@ class RXE(BaseModel):
         description="Item #1676 | Table HL70477",
     )
 
-    rxe_36: Optional[str] = Field(
+    rxe_36: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_36",
@@ -456,7 +456,7 @@ class RXE(BaseModel):
         description="Item #1677 | Table HL70478",
     )
 
-    rxe_37: Optional[List[CWE]] = Field(
+    rxe_37: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_37",
@@ -468,7 +468,7 @@ class RXE(BaseModel):
         description="Item #1678",
     )
 
-    rxe_38: Optional[CWE] = Field(
+    rxe_38: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_38",
@@ -480,7 +480,7 @@ class RXE(BaseModel):
         description="Item #1679",
     )
 
-    rxe_39: Optional[str] = Field(
+    rxe_39: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_39",
@@ -492,7 +492,7 @@ class RXE(BaseModel):
         description="Item #1680",
     )
 
-    rxe_40: Optional[CWE] = Field(
+    rxe_40: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_40",
@@ -504,7 +504,7 @@ class RXE(BaseModel):
         description="Item #1681",
     )
 
-    rxe_41: Optional[XAD] = Field(
+    rxe_41: XAD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_41",
@@ -516,7 +516,7 @@ class RXE(BaseModel):
         description="Item #1682",
     )
 
-    rxe_42: Optional[PL] = Field(
+    rxe_42: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_42",
@@ -528,7 +528,7 @@ class RXE(BaseModel):
         description="Item #1683",
     )
 
-    rxe_43: Optional[XAD] = Field(
+    rxe_43: XAD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_43",
@@ -540,7 +540,7 @@ class RXE(BaseModel):
         description="Item #1684",
     )
 
-    rxe_44: Optional[str] = Field(
+    rxe_44: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxe_44",

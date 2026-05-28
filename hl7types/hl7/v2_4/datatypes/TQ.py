@@ -5,9 +5,9 @@ Version: 2.4
 Class: TQ
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -21,7 +21,7 @@ from .TX import TX
 class TQ(BaseModel):
     """HL7 v2 TQ data type."""
 
-    tq_1: Optional[CQ] = Field(
+    tq_1: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_1",
@@ -32,7 +32,7 @@ class TQ(BaseModel):
         title="quantity",
     )
 
-    tq_2: Optional[RI] = Field(
+    tq_2: RI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_2",
@@ -43,7 +43,7 @@ class TQ(BaseModel):
         title="interval",
     )
 
-    tq_3: Optional[str] = Field(
+    tq_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_3",
@@ -54,7 +54,7 @@ class TQ(BaseModel):
         title="duration",
     )
 
-    tq_4: Optional[TS] = Field(
+    tq_4: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_4",
@@ -65,7 +65,7 @@ class TQ(BaseModel):
         title="start date/time",
     )
 
-    tq_5: Optional[TS] = Field(
+    tq_5: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_5",
@@ -76,7 +76,7 @@ class TQ(BaseModel):
         title="end date/time",
     )
 
-    tq_6: Optional[str] = Field(
+    tq_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_6",
@@ -87,7 +87,7 @@ class TQ(BaseModel):
         title="priority",
     )
 
-    tq_7: Optional[str] = Field(
+    tq_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_7",
@@ -98,7 +98,7 @@ class TQ(BaseModel):
         title="condition",
     )
 
-    tq_8: Optional[TX] = Field(
+    tq_8: TX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_8",
@@ -109,7 +109,7 @@ class TQ(BaseModel):
         title="text (TX)",
     )
 
-    tq_9: Optional[str] = Field(
+    tq_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_9",
@@ -120,7 +120,7 @@ class TQ(BaseModel):
         title="conjunction component",
     )
 
-    tq_10: Optional[OSD] = Field(
+    tq_10: OSD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_10",
@@ -131,7 +131,7 @@ class TQ(BaseModel):
         title="order sequencing",
     )
 
-    tq_11: Optional[CE] = Field(
+    tq_11: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_11",
@@ -142,7 +142,7 @@ class TQ(BaseModel):
         title="occurrence duration",
     )
 
-    tq_12: Optional[str] = Field(
+    tq_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_12",

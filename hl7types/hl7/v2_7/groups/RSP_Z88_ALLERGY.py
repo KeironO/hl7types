@@ -5,13 +5,12 @@ Version: 2.7
 Class: RSP_Z88.ALLERGY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
-
 from .RSP_Z88_VISIT import RSP_Z88_VISIT
 
 _AL1 = AL1
@@ -26,13 +25,13 @@ class RSP_Z88_ALLERGY(BaseModel):
         VISIT (Optional[RSP_Z88_VISIT]): optional
     """
 
-    AL1: List[_AL1] = Field(
+    AL1: list[_AL1] = Field(
         default=...,
         title="AL1",
         description="Required, repeating",
     )
 
-    VISIT: Optional[_RSP_Z88_VISIT] = Field(
+    VISIT: _RSP_Z88_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",

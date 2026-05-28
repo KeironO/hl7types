@@ -5,9 +5,9 @@ Version: 2.4
 Class: MFN_M02.MF_STAFF
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
@@ -43,13 +43,13 @@ class MFN_M02_MF_STAFF(BaseModel):
         description="Required",
     )
 
-    PRA: Optional[_PRA] = Field(
+    PRA: _PRA | None = Field(
         default=None,
         title="PRA",
         description="Optional",
     )
 
-    ORG: Optional[_ORG] = Field(
+    ORG: _ORG | None = Field(
         default=None,
         title="ORG",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: NTE
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -18,7 +18,7 @@ from ..datatypes.XCN import XCN
 class NTE(BaseModel):
     """HL7 v2 NTE segment."""
 
-    nte_1: Optional[str] = Field(
+    nte_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_1",
@@ -30,7 +30,7 @@ class NTE(BaseModel):
         description="Item #96",
     )
 
-    nte_2: Optional[str] = Field(
+    nte_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_2",
@@ -42,7 +42,7 @@ class NTE(BaseModel):
         description="Item #97 | Table HL70105",
     )
 
-    nte_3: Optional[List[FT]] = Field(
+    nte_3: list[FT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_3",
@@ -54,7 +54,7 @@ class NTE(BaseModel):
         description="Item #98",
     )
 
-    nte_4: Optional[CWE] = Field(
+    nte_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_4",
@@ -66,7 +66,7 @@ class NTE(BaseModel):
         description="Item #1318 | Table HL70364",
     )
 
-    nte_5: Optional[XCN] = Field(
+    nte_5: XCN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_5",
@@ -78,7 +78,7 @@ class NTE(BaseModel):
         description="Item #224",
     )
 
-    nte_6: Optional[str] = Field(
+    nte_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_6",
@@ -90,7 +90,7 @@ class NTE(BaseModel):
         description="Item #661",
     )
 
-    nte_7: Optional[str] = Field(
+    nte_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_7",
@@ -102,7 +102,7 @@ class NTE(BaseModel):
         description="Item #1004",
     )
 
-    nte_8: Optional[str] = Field(
+    nte_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_8",

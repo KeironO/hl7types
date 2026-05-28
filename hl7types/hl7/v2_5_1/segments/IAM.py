@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: IAM
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -34,7 +34,7 @@ class IAM(BaseModel):
         description="Item #1612",
     )
 
-    iam_2: Optional[CE] = Field(
+    iam_2: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_2",
@@ -58,7 +58,7 @@ class IAM(BaseModel):
         description="Item #205",
     )
 
-    iam_4: Optional[CE] = Field(
+    iam_4: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_4",
@@ -70,7 +70,7 @@ class IAM(BaseModel):
         description="Item #206 | Table HL70128",
     )
 
-    iam_5: Optional[List[str]] = Field(
+    iam_5: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_5",
@@ -94,7 +94,7 @@ class IAM(BaseModel):
         description="Item #1551 | Table HL70323",
     )
 
-    iam_7: Optional[EI] = Field(
+    iam_7: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_7",
@@ -106,7 +106,7 @@ class IAM(BaseModel):
         description="Item #1552",
     )
 
-    iam_8: Optional[str] = Field(
+    iam_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_8",
@@ -118,7 +118,7 @@ class IAM(BaseModel):
         description="Item #1553",
     )
 
-    iam_9: Optional[CE] = Field(
+    iam_9: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_9",
@@ -130,7 +130,7 @@ class IAM(BaseModel):
         description="Item #1554 | Table HL70436",
     )
 
-    iam_10: Optional[CE] = Field(
+    iam_10: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_10",
@@ -142,7 +142,7 @@ class IAM(BaseModel):
         description="Item #1555",
     )
 
-    iam_11: Optional[str] = Field(
+    iam_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_11",
@@ -154,7 +154,7 @@ class IAM(BaseModel):
         description="Item #1556",
     )
 
-    iam_12: Optional[str] = Field(
+    iam_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_12",
@@ -166,7 +166,7 @@ class IAM(BaseModel):
         description="Item #1557",
     )
 
-    iam_13: Optional[TS] = Field(
+    iam_13: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_13",
@@ -178,7 +178,7 @@ class IAM(BaseModel):
         description="Item #1558",
     )
 
-    iam_14: Optional[XPN] = Field(
+    iam_14: XPN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_14",
@@ -190,7 +190,7 @@ class IAM(BaseModel):
         description="Item #1559",
     )
 
-    iam_15: Optional[CE] = Field(
+    iam_15: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_15",
@@ -202,7 +202,7 @@ class IAM(BaseModel):
         description="Item #1560 | Table HL70063",
     )
 
-    iam_16: Optional[CE] = Field(
+    iam_16: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_16",
@@ -214,7 +214,7 @@ class IAM(BaseModel):
         description="Item #1561 | Table HL70437",
     )
 
-    iam_17: Optional[CE] = Field(
+    iam_17: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_17",
@@ -226,7 +226,7 @@ class IAM(BaseModel):
         description="Item #1562 | Table HL70438",
     )
 
-    iam_18: Optional[XCN] = Field(
+    iam_18: XCN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_18",
@@ -238,7 +238,7 @@ class IAM(BaseModel):
         description="Item #1563",
     )
 
-    iam_19: Optional[XON] = Field(
+    iam_19: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_19",
@@ -250,7 +250,7 @@ class IAM(BaseModel):
         description="Item #1564",
     )
 
-    iam_20: Optional[TS] = Field(
+    iam_20: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "iam_20",

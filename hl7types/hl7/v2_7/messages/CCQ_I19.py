@@ -5,18 +5,17 @@ Version: 2.7
 Class: CCQ_I19
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.CCQ_I19_PROVIDER_CONTACT import CCQ_I19_PROVIDER_CONTACT
 from ..segments.MSH import MSH
 from ..segments.REL import REL
 from ..segments.RF1 import RF1
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.CCQ_I19_PROVIDER_CONTACT import CCQ_I19_PROVIDER_CONTACT
 
 _CCQ_I19_PROVIDER_CONTACT = CCQ_I19_PROVIDER_CONTACT
 _MSH = MSH
@@ -44,13 +43,13 @@ class CCQ_I19(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -62,13 +61,13 @@ class CCQ_I19(BaseModel):
         description="Required",
     )
 
-    PROVIDER_CONTACT: Optional[List[_CCQ_I19_PROVIDER_CONTACT]] = Field(
+    PROVIDER_CONTACT: list[_CCQ_I19_PROVIDER_CONTACT] | None = Field(
         default=None,
         title="PROVIDER_CONTACT",
         description="Optional, repeating",
     )
 
-    REL: Optional[List[_REL]] = Field(
+    REL: list[_REL] | None = Field(
         default=None,
         title="REL",
         description="Optional, repeating",

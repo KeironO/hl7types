@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: CSU_C09.STUDY_PHARM
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .CSU_C09_COMMON_ORDER import CSU_C09_COMMON_ORDER
@@ -25,13 +25,13 @@ class CSU_C09_STUDY_PHARM(BaseModel):
         RX_ADMIN (List[CSU_C09_RX_ADMIN]): required
     """
 
-    COMMON_ORDER: Optional[_CSU_C09_COMMON_ORDER] = Field(
+    COMMON_ORDER: _CSU_C09_COMMON_ORDER | None = Field(
         default=None,
         title="COMMON_ORDER",
         description="Optional",
     )
 
-    RX_ADMIN: List[_CSU_C09_RX_ADMIN] = Field(
+    RX_ADMIN: list[_CSU_C09_RX_ADMIN] = Field(
         default=...,
         title="RX_ADMIN",
         description="Required, repeating",

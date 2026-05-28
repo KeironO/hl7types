@@ -5,9 +5,9 @@ Version: 2.6
 Class: SQM_S25.LOCATION_RESOURCE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.AIL import AIL
@@ -31,7 +31,7 @@ class SQM_S25_LOCATION_RESOURCE(BaseModel):
         description="Required",
     )
 
-    APR: Optional[_APR] = Field(
+    APR: _APR | None = Field(
         default=None,
         title="APR",
         description="Optional",

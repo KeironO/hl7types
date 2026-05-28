@@ -5,16 +5,15 @@ Version: 2.3
 Class: RDE_O01
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.MSH import MSH
-from ..segments.NTE import NTE
 
 from ..groups.RDE_O01_ORDER import RDE_O01_ORDER
 from ..groups.RDE_O01_PATIENT import RDE_O01_PATIENT
+from ..segments.MSH import MSH
+from ..segments.NTE import NTE
 
 _MSH = MSH
 _NTE = NTE
@@ -38,19 +37,19 @@ class RDE_O01(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[_RDE_O01_PATIENT] = Field(
+    PATIENT: _RDE_O01_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_RDE_O01_ORDER] = Field(
+    ORDER: list[_RDE_O01_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

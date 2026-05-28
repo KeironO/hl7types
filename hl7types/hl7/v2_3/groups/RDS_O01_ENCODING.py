@@ -5,9 +5,9 @@ Version: 2.3
 Class: RDS_O01.ENCODING
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
@@ -34,13 +34,13 @@ class RDS_O01_ENCODING(BaseModel):
         description="Required",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

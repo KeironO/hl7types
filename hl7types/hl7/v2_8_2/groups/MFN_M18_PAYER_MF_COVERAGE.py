@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: MFN_M18.PAYER_MF_COVERAGE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DPS import DPS
@@ -31,7 +31,7 @@ class MFN_M18_PAYER_MF_COVERAGE(BaseModel):
         description="Required",
     )
 
-    DPS: Optional[List[_DPS]] = Field(
+    DPS: list[_DPS] | None = Field(
         default=None,
         title="DPS",
         description="Optional, repeating",

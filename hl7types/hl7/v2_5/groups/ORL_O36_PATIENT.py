@@ -5,13 +5,12 @@ Version: 2.5
 Class: ORL_O36.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
-
 from .ORL_O36_SPECIMEN import ORL_O36_SPECIMEN
 
 _ORL_O36_SPECIMEN = ORL_O36_SPECIMEN
@@ -32,7 +31,7 @@ class ORL_O36_PATIENT(BaseModel):
         description="Required",
     )
 
-    SPECIMEN: List[_ORL_O36_SPECIMEN] = Field(
+    SPECIMEN: list[_ORL_O36_SPECIMEN] = Field(
         default=...,
         title="SPECIMEN",
         description="Required, repeating",

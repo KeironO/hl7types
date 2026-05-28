@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: ORG
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -30,7 +30,7 @@ class ORG(BaseModel):
         description="Item #1459",
     )
 
-    org_2: Optional[CWE] = Field(
+    org_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_2",
@@ -42,7 +42,7 @@ class ORG(BaseModel):
         description="Item #1460 | Table HL70405",
     )
 
-    org_3: Optional[CWE] = Field(
+    org_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_3",
@@ -54,7 +54,7 @@ class ORG(BaseModel):
         description="Item #1625 | Table HL70474",
     )
 
-    org_4: Optional[str] = Field(
+    org_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_4",
@@ -66,7 +66,7 @@ class ORG(BaseModel):
         description="Item #1462 | Table HL70136",
     )
 
-    org_5: Optional[CX] = Field(
+    org_5: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_5",
@@ -78,7 +78,7 @@ class ORG(BaseModel):
         description="Item #1463",
     )
 
-    org_6: Optional[CWE] = Field(
+    org_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_6",
@@ -90,7 +90,7 @@ class ORG(BaseModel):
         description="Item #1464 | Table HL70452",
     )
 
-    org_7: Optional[CWE] = Field(
+    org_7: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_7",
@@ -102,7 +102,7 @@ class ORG(BaseModel):
         description="Item #1614 | Table HL70453",
     )
 
-    org_8: Optional[CWE] = Field(
+    org_8: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_8",
@@ -114,7 +114,7 @@ class ORG(BaseModel):
         description="Item #1615 | Table HL70454",
     )
 
-    org_9: Optional[DR] = Field(
+    org_9: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_9",
@@ -126,7 +126,7 @@ class ORG(BaseModel):
         description="Item #1465",
     )
 
-    org_10: Optional[CWE] = Field(
+    org_10: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_10",
@@ -138,7 +138,7 @@ class ORG(BaseModel):
         description="Item #1276 | Table HL70066",
     )
 
-    org_11: Optional[str] = Field(
+    org_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_11",
@@ -150,7 +150,7 @@ class ORG(BaseModel):
         description="Item #1467 | Table HL70136",
     )
 
-    org_12: Optional[str] = Field(
+    org_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_12",
@@ -162,7 +162,7 @@ class ORG(BaseModel):
         description="Item #1468 | Table HL70136",
     )
 
-    org_13: Optional[List[CWE]] = Field(
+    org_13: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "org_13",

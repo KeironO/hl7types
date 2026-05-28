@@ -5,9 +5,9 @@ Version: 2.4
 Class: OML_O21.ORDER_GENERAL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .OML_O21_CONTAINER_1 import OML_O21_CONTAINER_1
@@ -25,13 +25,13 @@ class OML_O21_ORDER_GENERAL(BaseModel):
         ORDER (List[OML_O21_ORDER]): required
     """
 
-    CONTAINER_1: Optional[_OML_O21_CONTAINER_1] = Field(
+    CONTAINER_1: _OML_O21_CONTAINER_1 | None = Field(
         default=None,
         title="CONTAINER_1",
         description="Optional",
     )
 
-    ORDER: List[_OML_O21_ORDER] = Field(
+    ORDER: list[_OML_O21_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.5
 Class: RCP
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -19,7 +19,7 @@ from ..datatypes.TS import TS
 class RCP(BaseModel):
     """HL7 v2 RCP segment."""
 
-    rcp_1: Optional[str] = Field(
+    rcp_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcp_1",
@@ -31,7 +31,7 @@ class RCP(BaseModel):
         description="Item #27 | Table HL70091",
     )
 
-    rcp_2: Optional[CQ] = Field(
+    rcp_2: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcp_2",
@@ -43,7 +43,7 @@ class RCP(BaseModel):
         description="Item #31 | Table HL70126",
     )
 
-    rcp_3: Optional[CE] = Field(
+    rcp_3: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcp_3",
@@ -55,7 +55,7 @@ class RCP(BaseModel):
         description="Item #1440 | Table HL70394",
     )
 
-    rcp_4: Optional[TS] = Field(
+    rcp_4: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcp_4",
@@ -67,7 +67,7 @@ class RCP(BaseModel):
         description="Item #1441",
     )
 
-    rcp_5: Optional[str] = Field(
+    rcp_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcp_5",
@@ -79,7 +79,7 @@ class RCP(BaseModel):
         description="Item #1443 | Table HL70395",
     )
 
-    rcp_6: Optional[List[SRT]] = Field(
+    rcp_6: list[SRT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcp_6",
@@ -91,7 +91,7 @@ class RCP(BaseModel):
         description="Item #1624",
     )
 
-    rcp_7: Optional[List[str]] = Field(
+    rcp_7: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcp_7",

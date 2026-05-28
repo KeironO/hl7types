@@ -5,9 +5,9 @@ Version: 2.4
 Class: CM1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE

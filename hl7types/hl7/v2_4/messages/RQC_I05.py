@@ -5,11 +5,12 @@ Version: 2.4
 Class: RQC_I05
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RQC_I05_PROVIDER import RQC_I05_PROVIDER
 from ..segments.GT1 import GT1
 from ..segments.MSH import MSH
 from ..segments.NK1 import NK1
@@ -17,8 +18,6 @@ from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
-
-from ..groups.RQC_I05_PROVIDER import RQC_I05_PROVIDER
 
 _GT1 = GT1
 _MSH = MSH
@@ -56,13 +55,13 @@ class RQC_I05(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PROVIDER: List[_RQC_I05_PROVIDER] = Field(
+    PROVIDER: list[_RQC_I05_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -74,19 +73,19 @@ class RQC_I05(BaseModel):
         description="Required",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

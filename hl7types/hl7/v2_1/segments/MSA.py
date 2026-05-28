@@ -5,9 +5,9 @@ Version: 2.1
 Class: MSA
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -38,7 +38,7 @@ class MSA(BaseModel):
         description="Item #3",
     )
 
-    msa_3: Optional[str] = Field(
+    msa_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msa_3",
@@ -50,7 +50,7 @@ class MSA(BaseModel):
         description="Item #4",
     )
 
-    msa_4: Optional[str] = Field(
+    msa_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msa_4",
@@ -62,7 +62,7 @@ class MSA(BaseModel):
         description="Item #598",
     )
 
-    msa_5: Optional[str] = Field(
+    msa_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msa_5",

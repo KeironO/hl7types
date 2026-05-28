@@ -5,16 +5,16 @@ Version: 2.1
 Class: ACC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class ACC(BaseModel):
     """HL7 v2 ACC segment."""
 
-    acc_1: Optional[str] = Field(
+    acc_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_1",
@@ -26,7 +26,7 @@ class ACC(BaseModel):
         description="Item #182",
     )
 
-    acc_2: Optional[str] = Field(
+    acc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_2",
@@ -38,7 +38,7 @@ class ACC(BaseModel):
         description="Item #184 | Table HL70050",
     )
 
-    acc_3: Optional[str] = Field(
+    acc_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_3",

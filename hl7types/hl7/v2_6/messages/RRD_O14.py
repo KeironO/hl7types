@@ -5,19 +5,18 @@ Version: 2.6
 Class: RRD_O14
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RRD_O14_RESPONSE import RRD_O14_RESPONSE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RRD_O14_RESPONSE import RRD_O14_RESPONSE
 
 _ERR = ERR
 _MSA = MSA
@@ -53,31 +52,31 @@ class RRD_O14(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESPONSE: Optional[_RRD_O14_RESPONSE] = Field(
+    RESPONSE: _RRD_O14_RESPONSE | None = Field(
         default=None,
         title="RESPONSE",
         description="Optional",

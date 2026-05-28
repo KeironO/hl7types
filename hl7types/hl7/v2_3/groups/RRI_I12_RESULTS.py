@@ -5,14 +5,13 @@ Version: 2.3
 Class: RRI_I12.RESULTS
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
-
 from .RRI_I12_OBSERVATION import RRI_I12_OBSERVATION
 
 _NTE = NTE
@@ -35,13 +34,13 @@ class RRI_I12_RESULTS(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_RRI_I12_OBSERVATION]] = Field(
+    OBSERVATION: list[_RRI_I12_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

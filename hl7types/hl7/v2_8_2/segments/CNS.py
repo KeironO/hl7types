@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: CNS
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class CNS(BaseModel):
     """HL7 v2 CNS segment."""
 
-    cns_1: Optional[str] = Field(
+    cns_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_1",
@@ -28,7 +28,7 @@ class CNS(BaseModel):
         description="Item #1402",
     )
 
-    cns_2: Optional[str] = Field(
+    cns_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_2",
@@ -40,7 +40,7 @@ class CNS(BaseModel):
         description="Item #1403",
     )
 
-    cns_3: Optional[str] = Field(
+    cns_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_3",
@@ -52,7 +52,7 @@ class CNS(BaseModel):
         description="Item #1404",
     )
 
-    cns_4: Optional[str] = Field(
+    cns_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_4",
@@ -64,7 +64,7 @@ class CNS(BaseModel):
         description="Item #1405",
     )
 
-    cns_5: Optional[CWE] = Field(
+    cns_5: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_5",
@@ -76,7 +76,7 @@ class CNS(BaseModel):
         description="Item #1406 | Table HL79999",
     )
 
-    cns_6: Optional[CWE] = Field(
+    cns_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cns_6",

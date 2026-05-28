@@ -5,15 +5,14 @@ Version: 2.5.1
 Class: BPS_O29.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BPO import BPO
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
-
 from .BPS_O29_PRODUCT import BPS_O29_PRODUCT
 from .BPS_O29_TIMING import BPS_O29_TIMING
 
@@ -41,7 +40,7 @@ class BPS_O29_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_BPS_O29_TIMING]] = Field(
+    TIMING: list[_BPS_O29_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -53,13 +52,13 @@ class BPS_O29_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRODUCT: Optional[List[_BPS_O29_PRODUCT]] = Field(
+    PRODUCT: list[_BPS_O29_PRODUCT] | None = Field(
         default=None,
         title="PRODUCT",
         description="Optional, repeating",

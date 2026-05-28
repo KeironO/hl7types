@@ -5,16 +5,15 @@ Version: 2.3
 Class: PGL_PC6
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.MSH import MSH
-from ..segments.PID import PID
 
 from ..groups.PGL_PC6_GOAL import PGL_PC6_GOAL
 from ..groups.PGL_PC6_PATIENT_VISIT import PGL_PC6_PATIENT_VISIT
+from ..segments.MSH import MSH
+from ..segments.PID import PID
 
 _MSH = MSH
 _PGL_PC6_GOAL = PGL_PC6_GOAL
@@ -44,13 +43,13 @@ class PGL_PC6(BaseModel):
         description="Required",
     )
 
-    PATIENT_VISIT: Optional[_PGL_PC6_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _PGL_PC6_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    GOAL: List[_PGL_PC6_GOAL] = Field(
+    GOAL: list[_PGL_PC6_GOAL] = Field(
         default=...,
         title="GOAL",
         description="Required, repeating",

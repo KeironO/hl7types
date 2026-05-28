@@ -5,11 +5,17 @@ Version: 2.3
 Class: RPA_I08
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RPA_I08_AUTHORIZATION import RPA_I08_AUTHORIZATION
+from ..groups.RPA_I08_INSURANCE import RPA_I08_INSURANCE
+from ..groups.RPA_I08_OBSERVATION import RPA_I08_OBSERVATION
+from ..groups.RPA_I08_PROCEDURE import RPA_I08_PROCEDURE
+from ..groups.RPA_I08_PROVIDER import RPA_I08_PROVIDER
+from ..groups.RPA_I08_VISIT import RPA_I08_VISIT
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
@@ -20,13 +26,6 @@ from ..segments.MSH import MSH
 from ..segments.NK1 import NK1
 from ..segments.PID import PID
 from ..segments.RF1 import RF1
-
-from ..groups.RPA_I08_AUTHORIZATION import RPA_I08_AUTHORIZATION
-from ..groups.RPA_I08_INSURANCE import RPA_I08_INSURANCE
-from ..groups.RPA_I08_OBSERVATION import RPA_I08_OBSERVATION
-from ..groups.RPA_I08_PROCEDURE import RPA_I08_PROCEDURE
-from ..groups.RPA_I08_PROVIDER import RPA_I08_PROVIDER
-from ..groups.RPA_I08_VISIT import RPA_I08_VISIT
 
 _ACC = ACC
 _AL1 = AL1
@@ -80,19 +79,19 @@ class RPA_I08(BaseModel):
         description="Required",
     )
 
-    RF1: Optional[_RF1] = Field(
+    RF1: _RF1 | None = Field(
         default=None,
         title="RF1",
         description="Optional",
     )
 
-    AUTHORIZATION: Optional[_RPA_I08_AUTHORIZATION] = Field(
+    AUTHORIZATION: _RPA_I08_AUTHORIZATION | None = Field(
         default=None,
         title="AUTHORIZATION",
         description="Optional",
     )
 
-    PROVIDER: List[_RPA_I08_PROVIDER] = Field(
+    PROVIDER: list[_RPA_I08_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -104,61 +103,61 @@ class RPA_I08(BaseModel):
         description="Required",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_RPA_I08_INSURANCE]] = Field(
+    INSURANCE: list[_RPA_I08_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[List[_DRG]] = Field(
+    DRG: list[_DRG] | None = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PROCEDURE: List[_RPA_I08_PROCEDURE] = Field(
+    PROCEDURE: list[_RPA_I08_PROCEDURE] = Field(
         default=...,
         title="PROCEDURE",
         description="Required, repeating",
     )
 
-    OBSERVATION: Optional[List[_RPA_I08_OBSERVATION]] = Field(
+    OBSERVATION: list[_RPA_I08_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    VISIT: Optional[_RPA_I08_VISIT] = Field(
+    VISIT: _RPA_I08_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",

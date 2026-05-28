@@ -5,9 +5,9 @@ Version: 2.6
 Class: RSP_Q11.MF_LOC_DEPT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.LCC import LCC
@@ -34,13 +34,13 @@ class RSP_Q11_MF_LOC_DEPT(BaseModel):
         description="Required",
     )
 
-    LCH: Optional[List[_LCH]] = Field(
+    LCH: list[_LCH] | None = Field(
         default=None,
         title="LCH",
         description="Optional, repeating",
     )
 
-    LCC: Optional[List[_LCC]] = Field(
+    LCC: list[_LCC] | None = Field(
         default=None,
         title="LCC",
         description="Optional, repeating",

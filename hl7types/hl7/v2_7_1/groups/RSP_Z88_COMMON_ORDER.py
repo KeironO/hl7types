@@ -5,16 +5,15 @@ Version: 2.7.1
 Class: RSP_Z88.COMMON_ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.RXC import RXC
 from ..segments.RXD import RXD
 from ..segments.RXR import RXR
-
 from .RSP_Z88_OBSERVATION import RSP_Z88_OBSERVATION
 from .RSP_Z88_ORDER_DETAIL import RSP_Z88_ORDER_DETAIL
 from .RSP_Z88_ORDER_ENCODED import RSP_Z88_ORDER_ENCODED
@@ -50,19 +49,19 @@ class RSP_Z88_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_RSP_Z88_TIMING]] = Field(
+    TIMING: list[_RSP_Z88_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL: Optional[_RSP_Z88_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _RSP_Z88_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    ORDER_ENCODED: Optional[_RSP_Z88_ORDER_ENCODED] = Field(
+    ORDER_ENCODED: _RSP_Z88_ORDER_ENCODED | None = Field(
         default=None,
         title="ORDER_ENCODED",
         description="Optional",
@@ -74,19 +73,19 @@ class RSP_Z88_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    OBSERVATION: List[_RSP_Z88_OBSERVATION] = Field(
+    OBSERVATION: list[_RSP_Z88_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

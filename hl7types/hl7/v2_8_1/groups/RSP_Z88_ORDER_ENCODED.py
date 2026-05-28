@@ -5,15 +5,14 @@ Version: 2.8.1
 Class: RSP_Z88.ORDER_ENCODED
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
-
 from .RSP_Z88_TIMING_ENCODED import RSP_Z88_TIMING_ENCODED
 
 _RSP_Z88_TIMING_ENCODED = RSP_Z88_TIMING_ENCODED
@@ -38,19 +37,19 @@ class RSP_Z88_ORDER_ENCODED(BaseModel):
         description="Required",
     )
 
-    TIMING_ENCODED: Optional[List[_RSP_Z88_TIMING_ENCODED]] = Field(
+    TIMING_ENCODED: list[_RSP_Z88_TIMING_ENCODED] | None = Field(
         default=None,
         title="TIMING_ENCODED",
         description="Optional, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

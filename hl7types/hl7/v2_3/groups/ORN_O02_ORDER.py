@@ -5,9 +5,9 @@ Version: 2.3
 Class: ORN_O02.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -43,13 +43,13 @@ class ORN_O02_ORDER(BaseModel):
         description="Required",
     )
 
-    RQ1: Optional[_RQ1] = Field(
+    RQ1: _RQ1 | None = Field(
         default=None,
         title="RQ1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

@@ -5,10 +5,10 @@ Version: 2.5
 Class: PPT_PCL.CHOICE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class PPT_PCL_CHOICE(BaseModel):

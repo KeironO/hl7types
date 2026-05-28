@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: DPR_O48.BLOOD_UNIT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BUI import BUI
@@ -25,13 +25,13 @@ class DPR_O48_BLOOD_UNIT(BaseModel):
         NTE (Optional[List[NTE]]): optional
     """
 
-    BUI: Optional[List[_BUI]] = Field(
+    BUI: list[_BUI] | None = Field(
         default=None,
         title="BUI",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

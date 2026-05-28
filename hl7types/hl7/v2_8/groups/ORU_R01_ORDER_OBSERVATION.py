@@ -5,9 +5,9 @@ Version: 2.8
 Class: ORU_R01.ORDER_OBSERVATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -16,7 +16,6 @@ from ..segments.FT1 import FT1
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.PRT import PRT
-
 from .ORU_R01_COMMON_ORDER import ORU_R01_COMMON_ORDER
 from .ORU_R01_OBSERVATION import ORU_R01_OBSERVATION
 from .ORU_R01_SPECIMEN import ORU_R01_SPECIMEN
@@ -50,7 +49,7 @@ class ORU_R01_ORDER_OBSERVATION(BaseModel):
         SPECIMEN (Optional[List[ORU_R01_SPECIMEN]]): optional
     """
 
-    COMMON_ORDER: Optional[_ORU_R01_COMMON_ORDER] = Field(
+    COMMON_ORDER: _ORU_R01_COMMON_ORDER | None = Field(
         default=None,
         title="COMMON_ORDER",
         description="Optional",
@@ -62,49 +61,49 @@ class ORU_R01_ORDER_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: Optional[List[_ORU_R01_TIMING_QTY]] = Field(
+    TIMING_QTY: list[_ORU_R01_TIMING_QTY] | None = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    OBSERVATION: Optional[List[_ORU_R01_OBSERVATION]] = Field(
+    OBSERVATION: list[_ORU_R01_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    SPECIMEN: Optional[List[_ORU_R01_SPECIMEN]] = Field(
+    SPECIMEN: list[_ORU_R01_SPECIMEN] | None = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",

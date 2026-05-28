@@ -5,9 +5,9 @@ Version: 2.3
 Class: CM_OCD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -16,7 +16,7 @@ from .CE import CE
 class CM_OCD(BaseModel):
     """HL7 v2 CM_OCD data type."""
 
-    cm_ocd_1: Optional[CE] = Field(
+    cm_ocd_1: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ocd_1",
@@ -27,7 +27,7 @@ class CM_OCD(BaseModel):
         title="occurrence code",
     )
 
-    cm_ocd_2: Optional[str] = Field(
+    cm_ocd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ocd_2",

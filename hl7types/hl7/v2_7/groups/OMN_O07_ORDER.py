@@ -5,9 +5,9 @@ Version: 2.7
 Class: OMN_O07.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -15,7 +15,6 @@ from ..segments.NTE import NTE
 from ..segments.ORC import ORC
 from ..segments.RQ1 import RQ1
 from ..segments.RQD import RQD
-
 from .OMN_O07_OBSERVATION import OMN_O07_OBSERVATION
 from .OMN_O07_TIMING import OMN_O07_TIMING
 
@@ -47,7 +46,7 @@ class OMN_O07_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_OMN_O07_TIMING]] = Field(
+    TIMING: list[_OMN_O07_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -59,25 +58,25 @@ class OMN_O07_ORDER(BaseModel):
         description="Required",
     )
 
-    RQ1: Optional[_RQ1] = Field(
+    RQ1: _RQ1 | None = Field(
         default=None,
         title="RQ1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMN_O07_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMN_O07_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

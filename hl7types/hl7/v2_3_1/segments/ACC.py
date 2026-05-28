@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: ACC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -17,7 +17,7 @@ from ..datatypes.TS import TS
 class ACC(BaseModel):
     """HL7 v2 ACC segment."""
 
-    acc_1: Optional[TS] = Field(
+    acc_1: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_1",
@@ -29,7 +29,7 @@ class ACC(BaseModel):
         description="Item #527",
     )
 
-    acc_2: Optional[CE] = Field(
+    acc_2: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_2",
@@ -41,7 +41,7 @@ class ACC(BaseModel):
         description="Item #528 | Table HL70050",
     )
 
-    acc_3: Optional[str] = Field(
+    acc_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_3",
@@ -53,7 +53,7 @@ class ACC(BaseModel):
         description="Item #529",
     )
 
-    acc_4: Optional[CE] = Field(
+    acc_4: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_4",
@@ -65,7 +65,7 @@ class ACC(BaseModel):
         description="Item #812 | Table HL70347",
     )
 
-    acc_5: Optional[str] = Field(
+    acc_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_5",
@@ -77,7 +77,7 @@ class ACC(BaseModel):
         description="Item #813 | Table HL70136",
     )
 
-    acc_6: Optional[str] = Field(
+    acc_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "acc_6",

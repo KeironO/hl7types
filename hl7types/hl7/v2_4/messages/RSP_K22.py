@@ -5,19 +5,18 @@ Version: 2.4
 Class: RSP_K22
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RSP_K22_QUERY_RESPONSE import RSP_K22_QUERY_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QAK import QAK
 from ..segments.QPD import QPD
-
-from ..groups.RSP_K22_QUERY_RESPONSE import RSP_K22_QUERY_RESPONSE
 
 _DSC = DSC
 _ERR = ERR
@@ -53,7 +52,7 @@ class RSP_K22(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -71,13 +70,13 @@ class RSP_K22(BaseModel):
         description="Required",
     )
 
-    QUERY_RESPONSE: Optional[List[_RSP_K22_QUERY_RESPONSE]] = Field(
+    QUERY_RESPONSE: list[_RSP_K22_QUERY_RESPONSE] | None = Field(
         default=None,
         title="QUERY_RESPONSE",
         description="Optional, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

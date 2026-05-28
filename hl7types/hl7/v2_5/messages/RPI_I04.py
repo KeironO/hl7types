@@ -5,20 +5,19 @@ Version: 2.5
 Class: RPI_I04
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RPI_I04_GUARANTOR_INSURANCE import RPI_I04_GUARANTOR_INSURANCE
+from ..groups.RPI_I04_PROVIDER import RPI_I04_PROVIDER
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NK1 import NK1
 from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.SFT import SFT
-
-from ..groups.RPI_I04_GUARANTOR_INSURANCE import RPI_I04_GUARANTOR_INSURANCE
-from ..groups.RPI_I04_PROVIDER import RPI_I04_PROVIDER
 
 _MSA = MSA
 _MSH = MSH
@@ -50,7 +49,7 @@ class RPI_I04(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -62,7 +61,7 @@ class RPI_I04(BaseModel):
         description="Required",
     )
 
-    PROVIDER: List[_RPI_I04_PROVIDER] = Field(
+    PROVIDER: list[_RPI_I04_PROVIDER] = Field(
         default=...,
         title="PROVIDER",
         description="Required, repeating",
@@ -74,19 +73,19 @@ class RPI_I04(BaseModel):
         description="Required",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    GUARANTOR_INSURANCE: Optional[_RPI_I04_GUARANTOR_INSURANCE] = Field(
+    GUARANTOR_INSURANCE: _RPI_I04_GUARANTOR_INSURANCE | None = Field(
         default=None,
         title="GUARANTOR_INSURANCE",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

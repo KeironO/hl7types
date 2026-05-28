@@ -5,16 +5,16 @@ Version: 2.3
 Class: CM_PLN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PLN(BaseModel):
     """HL7 v2 CM_PLN data type."""
 
-    cm_pln_1: Optional[str] = Field(
+    cm_pln_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pln_1",
@@ -25,7 +25,7 @@ class CM_PLN(BaseModel):
         title="ID number",
     )
 
-    cm_pln_2: Optional[str] = Field(
+    cm_pln_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pln_2",
@@ -36,7 +36,7 @@ class CM_PLN(BaseModel):
         title="type of ID number (IS)",
     )
 
-    cm_pln_3: Optional[str] = Field(
+    cm_pln_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pln_3",
@@ -47,7 +47,7 @@ class CM_PLN(BaseModel):
         title="state/other qualifying info",
     )
 
-    cm_pln_4: Optional[str] = Field(
+    cm_pln_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_pln_4",

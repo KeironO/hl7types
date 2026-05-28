@@ -5,16 +5,15 @@ Version: 2.5
 Class: OUL_R24.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .OUL_R24_RESULT import OUL_R24_RESULT
 from .OUL_R24_SPECIMEN import OUL_R24_SPECIMEN
 from .OUL_R24_TIMING_QTY import OUL_R24_TIMING_QTY
@@ -47,37 +46,37 @@ class OUL_R24_ORDER(BaseModel):
         description="Required",
     )
 
-    ORC: Optional[_ORC] = Field(
+    ORC: _ORC | None = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: Optional[List[_OUL_R24_TIMING_QTY]] = Field(
+    TIMING_QTY: list[_OUL_R24_TIMING_QTY] | None = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    SPECIMEN: Optional[List[_OUL_R24_SPECIMEN]] = Field(
+    SPECIMEN: list[_OUL_R24_SPECIMEN] | None = Field(
         default=None,
         title="SPECIMEN",
         description="Optional, repeating",
     )
 
-    RESULT: Optional[List[_OUL_R24_RESULT]] = Field(
+    RESULT: list[_OUL_R24_RESULT] | None = Field(
         default=None,
         title="RESULT",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

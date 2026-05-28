@@ -5,9 +5,9 @@ Version: 2.8
 Class: ODT
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -28,7 +28,7 @@ class ODT(BaseModel):
         description="Item #273 | Table HL70160",
     )
 
-    odt_2: Optional[List[CWE]] = Field(
+    odt_2: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "odt_2",
@@ -40,7 +40,7 @@ class ODT(BaseModel):
         description="Item #270 | Table HL79999",
     )
 
-    odt_3: Optional[str] = Field(
+    odt_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "odt_3",

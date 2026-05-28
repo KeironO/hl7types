@@ -5,15 +5,14 @@ Version: 2.7
 Class: RAS_O17.ADMINISTRATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
 from ..segments.RXA import RXA
 from ..segments.RXR import RXR
-
 from .RAS_O17_OBSERVATION import RAS_O17_OBSERVATION
 
 _PRT = PRT
@@ -32,13 +31,13 @@ class RAS_O17_ADMINISTRATION(BaseModel):
         OBSERVATION (Optional[List[RAS_O17_OBSERVATION]]): optional
     """
 
-    RXA: List[_RXA] = Field(
+    RXA: list[_RXA] = Field(
         default=...,
         title="RXA",
         description="Required, repeating",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
@@ -50,7 +49,7 @@ class RAS_O17_ADMINISTRATION(BaseModel):
         description="Required",
     )
 
-    OBSERVATION: Optional[List[_RAS_O17_OBSERVATION]] = Field(
+    OBSERVATION: list[_RAS_O17_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

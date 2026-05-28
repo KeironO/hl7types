@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: SQM_S25.SERVICE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.AIS import AIS
@@ -31,7 +31,7 @@ class SQM_S25_SERVICE(BaseModel):
         description="Required",
     )
 
-    APR: Optional[_APR] = Field(
+    APR: _APR | None = Field(
         default=None,
         title="APR",
         description="Optional",

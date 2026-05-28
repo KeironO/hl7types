@@ -5,17 +5,16 @@ Version: 2.4
 Class: RAR_RAR
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RAR_RAR_DEFINITION import RAR_RAR_DEFINITION
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
-
-from ..groups.RAR_RAR_DEFINITION import RAR_RAR_DEFINITION
 
 _DSC = DSC
 _ERR = ERR
@@ -47,19 +46,19 @@ class RAR_RAR(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    DEFINITION: List[_RAR_RAR_DEFINITION] = Field(
+    DEFINITION: list[_RAR_RAR_DEFINITION] = Field(
         default=...,
         title="DEFINITION",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

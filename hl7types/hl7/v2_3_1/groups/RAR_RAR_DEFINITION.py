@@ -5,14 +5,13 @@ Version: 2.3.1
 Class: RAR_RAR.DEFINITION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
-
 from .RAR_RAR_ORDER import RAR_RAR_ORDER
 from .RAR_RAR_PATIENT import RAR_RAR_PATIENT
 
@@ -38,19 +37,19 @@ class RAR_RAR_DEFINITION(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    PATIENT: Optional[_RAR_RAR_PATIENT] = Field(
+    PATIENT: _RAR_RAR_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_RAR_RAR_ORDER] = Field(
+    ORDER: list[_RAR_RAR_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

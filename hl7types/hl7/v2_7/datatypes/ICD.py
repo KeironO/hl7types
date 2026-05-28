@@ -5,9 +5,9 @@ Version: 2.7
 Class: ICD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -16,7 +16,7 @@ from .CWE import CWE
 class ICD(BaseModel):
     """HL7 v2 ICD data type."""
 
-    icd_1: Optional[CWE] = Field(
+    icd_1: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "icd_1",
@@ -38,7 +38,7 @@ class ICD(BaseModel):
         title="Certification Required",
     )
 
-    icd_3: Optional[str] = Field(
+    icd_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "icd_3",

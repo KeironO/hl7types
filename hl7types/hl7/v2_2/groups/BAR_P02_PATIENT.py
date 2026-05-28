@@ -5,9 +5,9 @@ Version: 2.2
 Class: BAR_P02.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
@@ -31,7 +31,7 @@ class BAR_P02_PATIENT(BaseModel):
         description="Required",
     )
 
-    PV1: Optional[_PV1] = Field(
+    PV1: _PV1 | None = Field(
         default=None,
         title="PV1",
         description="Optional",

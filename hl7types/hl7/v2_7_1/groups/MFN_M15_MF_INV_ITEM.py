@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: MFN_M15.MF_INV_ITEM
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.IIM import IIM

@@ -5,9 +5,9 @@ Version: 2.5
 Class: TCU_U10.TEST_CONFIGURATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SPM import SPM
@@ -25,13 +25,13 @@ class TCU_U10_TEST_CONFIGURATION(BaseModel):
         TCC (List[TCC]): required
     """
 
-    SPM: Optional[_SPM] = Field(
+    SPM: _SPM | None = Field(
         default=None,
         title="SPM",
         description="Optional",
     )
 
-    TCC: List[_TCC] = Field(
+    TCC: list[_TCC] = Field(
         default=...,
         title="TCC",
         description="Required, repeating",

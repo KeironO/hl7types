@@ -5,9 +5,9 @@ Version: 2.8
 Class: CSU_C09.RX_ADMIN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
@@ -40,7 +40,7 @@ class CSU_C09_RX_ADMIN(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

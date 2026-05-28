@@ -5,9 +5,9 @@ Version: 2.1
 Class: BAR_P01.VISIT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ACC import ACC
@@ -43,49 +43,49 @@ class BAR_P01_VISIT(BaseModel):
         UB1 (Optional[UB1]): optional
     """
 
-    PV1: Optional[_PV1] = Field(
+    PV1: _PV1 | None = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    PR1: Optional[List[_PR1]] = Field(
+    PR1: list[_PR1] | None = Field(
         default=None,
         title="PR1",
         description="Optional, repeating",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    IN1: Optional[List[_IN1]] = Field(
+    IN1: list[_IN1] | None = Field(
         default=None,
         title="IN1",
         description="Optional, repeating",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    UB1: Optional[_UB1] = Field(
+    UB1: _UB1 | None = Field(
         default=None,
         title="UB1",
         description="Optional",

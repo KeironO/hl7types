@@ -44,7 +44,7 @@ def _pos(key: str) -> int | None:
     dot = key.rfind(".")
     if dot == -1:
         return None
-    suffix = key[dot + 1:]
+    suffix = key[dot + 1 :]
     return int(suffix) if suffix.isdigit() else None
 
 

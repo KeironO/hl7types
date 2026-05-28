@@ -5,13 +5,12 @@ Version: 2.6
 Class: ORL_O34.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
-
 from .ORL_O34_SPECIMEN import ORL_O34_SPECIMEN
 
 _ORL_O34_SPECIMEN = ORL_O34_SPECIMEN
@@ -32,7 +31,7 @@ class ORL_O34_RESPONSE(BaseModel):
         description="Required",
     )
 
-    SPECIMEN: List[_ORL_O34_SPECIMEN] = Field(
+    SPECIMEN: list[_ORL_O34_SPECIMEN] = Field(
         default=...,
         title="SPECIMEN",
         description="Required, repeating",

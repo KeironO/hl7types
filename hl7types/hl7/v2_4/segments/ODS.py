@@ -5,9 +5,9 @@ Version: 2.4
 Class: ODS
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -28,7 +28,7 @@ class ODS(BaseModel):
         description="Item #269 | Table HL70159",
     )
 
-    ods_2: Optional[List[CE]] = Field(
+    ods_2: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ods_2",
@@ -40,7 +40,7 @@ class ODS(BaseModel):
         description="Item #270",
     )
 
-    ods_3: List[CE] = Field(
+    ods_3: list[CE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "ods_3",
@@ -52,7 +52,7 @@ class ODS(BaseModel):
         description="Item #271",
     )
 
-    ods_4: Optional[List[str]] = Field(
+    ods_4: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ods_4",

@@ -5,10 +5,10 @@ Version: 2.4
 Class: PPP_PCB.CHOICE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class PPP_PCB_CHOICE(BaseModel):

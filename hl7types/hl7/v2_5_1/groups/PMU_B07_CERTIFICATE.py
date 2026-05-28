@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: PMU_B07.CERTIFICATE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CER import CER
@@ -31,7 +31,7 @@ class PMU_B07_CERTIFICATE(BaseModel):
         description="Required",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",

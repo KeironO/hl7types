@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ERQ
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -17,7 +17,7 @@ from ..datatypes.QIP import QIP
 class ERQ(BaseModel):
     """HL7 v2 ERQ segment."""
 
-    erq_1: Optional[str] = Field(
+    erq_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "erq_1",
@@ -41,7 +41,7 @@ class ERQ(BaseModel):
         description="Item #706",
     )
 
-    erq_3: Optional[List[QIP]] = Field(
+    erq_3: list[QIP] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "erq_3",

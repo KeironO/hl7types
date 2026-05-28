@@ -5,11 +5,12 @@ Version: 2.5.1
 Class: RSP_K31
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RSP_K31_RESPONSE import RSP_K31_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -18,8 +19,6 @@ from ..segments.QAK import QAK
 from ..segments.QPD import QPD
 from ..segments.RCP import RCP
 from ..segments.SFT import SFT
-
-from ..groups.RSP_K31_RESPONSE import RSP_K31_RESPONSE
 
 _DSC = DSC
 _ERR = ERR
@@ -59,13 +58,13 @@ class RSP_K31(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -89,13 +88,13 @@ class RSP_K31(BaseModel):
         description="Required",
     )
 
-    RESPONSE: List[_RSP_K31_RESPONSE] = Field(
+    RESPONSE: list[_RSP_K31_RESPONSE] = Field(
         default=...,
         title="RESPONSE",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

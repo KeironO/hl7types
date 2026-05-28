@@ -5,9 +5,9 @@ Version: 2.4
 Class: QBP_Qnn
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -46,7 +46,7 @@ class QBP_Qnn(BaseModel):
         description="Required",
     )
 
-    RDF: Optional[_RDF] = Field(
+    RDF: _RDF | None = Field(
         default=None,
         title="RDF",
         description="Optional",
@@ -58,7 +58,7 @@ class QBP_Qnn(BaseModel):
         description="Required",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

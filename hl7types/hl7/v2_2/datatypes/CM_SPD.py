@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_SPD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_SPD(BaseModel):
     """HL7 v2 CM_SPD data type."""
 
-    cm_spd_1: Optional[str] = Field(
+    cm_spd_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_spd_1",
@@ -25,7 +25,7 @@ class CM_SPD(BaseModel):
         title="specialty name",
     )
 
-    cm_spd_2: Optional[str] = Field(
+    cm_spd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_spd_2",
@@ -36,7 +36,7 @@ class CM_SPD(BaseModel):
         title="governing board",
     )
 
-    cm_spd_3: Optional[str] = Field(
+    cm_spd_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_spd_3",
@@ -47,7 +47,7 @@ class CM_SPD(BaseModel):
         title="eligible or certified",
     )
 
-    cm_spd_4: Optional[str] = Field(
+    cm_spd_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_spd_4",

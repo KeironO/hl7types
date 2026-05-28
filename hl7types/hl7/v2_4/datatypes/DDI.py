@@ -5,16 +5,16 @@ Version: 2.4
 Class: DDI
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class DDI(BaseModel):
     """HL7 v2 DDI data type."""
 
-    ddi_1: Optional[str] = Field(
+    ddi_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ddi_1",
@@ -25,7 +25,7 @@ class DDI(BaseModel):
         title="delay days",
     )
 
-    ddi_2: Optional[str] = Field(
+    ddi_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ddi_2",
@@ -36,7 +36,7 @@ class DDI(BaseModel):
         title="amount",
     )
 
-    ddi_3: Optional[str] = Field(
+    ddi_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ddi_3",

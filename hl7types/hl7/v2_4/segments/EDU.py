@@ -5,9 +5,9 @@ Version: 2.4
 Class: EDU
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -31,7 +31,7 @@ class EDU(BaseModel):
         description="Item #1448",
     )
 
-    edu_2: Optional[str] = Field(
+    edu_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_2",
@@ -43,7 +43,7 @@ class EDU(BaseModel):
         description="Item #1449 | Table HL70360",
     )
 
-    edu_3: Optional[DR] = Field(
+    edu_3: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_3",
@@ -55,7 +55,7 @@ class EDU(BaseModel):
         description="Item #1597",
     )
 
-    edu_4: Optional[DR] = Field(
+    edu_4: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_4",
@@ -67,7 +67,7 @@ class EDU(BaseModel):
         description="Item #1450",
     )
 
-    edu_5: Optional[str] = Field(
+    edu_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_5",
@@ -79,7 +79,7 @@ class EDU(BaseModel):
         description="Item #1451",
     )
 
-    edu_6: Optional[XON] = Field(
+    edu_6: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_6",
@@ -91,7 +91,7 @@ class EDU(BaseModel):
         description="Item #1452",
     )
 
-    edu_7: Optional[CE] = Field(
+    edu_7: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_7",
@@ -103,7 +103,7 @@ class EDU(BaseModel):
         description="Item #1453 | Table HL70402",
     )
 
-    edu_8: Optional[XAD] = Field(
+    edu_8: XAD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "edu_8",

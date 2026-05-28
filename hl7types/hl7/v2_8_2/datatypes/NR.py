@@ -5,16 +5,16 @@ Version: 2.8.2
 Class: NR
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class NR(BaseModel):
     """HL7 v2 NR data type."""
 
-    nr_1: Optional[str] = Field(
+    nr_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nr_1",
@@ -25,7 +25,7 @@ class NR(BaseModel):
         title="Low Value",
     )
 
-    nr_2: Optional[str] = Field(
+    nr_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nr_2",

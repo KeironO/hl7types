@@ -5,16 +5,16 @@ Version: 2.8.2
 Class: OG
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class OG(BaseModel):
     """HL7 v2 OG data type."""
 
-    og_1: Optional[str] = Field(
+    og_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "og_1",
@@ -25,7 +25,7 @@ class OG(BaseModel):
         title="Original Sub-Identifier",
     )
 
-    og_2: Optional[str] = Field(
+    og_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "og_2",
@@ -36,7 +36,7 @@ class OG(BaseModel):
         title="Group",
     )
 
-    og_3: Optional[str] = Field(
+    og_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "og_3",
@@ -47,7 +47,7 @@ class OG(BaseModel):
         title="Sequence",
     )
 
-    og_4: Optional[str] = Field(
+    og_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "og_4",

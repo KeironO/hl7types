@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OM5
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class OM5(BaseModel):
     """HL7 v2 OM5 segment."""
 
-    om5_1: Optional[str] = Field(
+    om5_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "om5_1",
@@ -28,7 +28,7 @@ class OM5(BaseModel):
         description="Item #586",
     )
 
-    om5_2: Optional[List[CWE]] = Field(
+    om5_2: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "om5_2",
@@ -40,7 +40,7 @@ class OM5(BaseModel):
         description="Item #655 | Table HL79999",
     )
 
-    om5_3: Optional[str] = Field(
+    om5_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "om5_3",

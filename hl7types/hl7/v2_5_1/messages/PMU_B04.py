@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: PMU_B04
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EVN import EVN
@@ -43,7 +43,7 @@ class PMU_B04(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -61,13 +61,13 @@ class PMU_B04(BaseModel):
         description="Required",
     )
 
-    PRA: Optional[List[_PRA]] = Field(
+    PRA: list[_PRA] | None = Field(
         default=None,
         title="PRA",
         description="Optional, repeating",
     )
 
-    ORG: Optional[List[_ORG]] = Field(
+    ORG: list[_ORG] | None = Field(
         default=None,
         title="ORG",
         description="Optional, repeating",

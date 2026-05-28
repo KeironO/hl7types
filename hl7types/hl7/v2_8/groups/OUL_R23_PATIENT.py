@@ -5,9 +5,9 @@ Version: 2.8
 Class: OUL_R23.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ARV import ARV
@@ -15,7 +15,6 @@ from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.PRT import PRT
-
 from .OUL_R23_PATIENT_OBSERVATION import OUL_R23_PATIENT_OBSERVATION
 from .OUL_R23_VISIT import OUL_R23_VISIT
 
@@ -47,37 +46,37 @@ class OUL_R23_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT_OBSERVATION: Optional[List[_OUL_R23_PATIENT_OBSERVATION]] = Field(
+    PATIENT_OBSERVATION: list[_OUL_R23_PATIENT_OBSERVATION] | None = Field(
         default=None,
         title="PATIENT_OBSERVATION",
         description="Optional, repeating",
     )
 
-    VISIT: Optional[_OUL_R23_VISIT] = Field(
+    VISIT: _OUL_R23_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",

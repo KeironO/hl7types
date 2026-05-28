@@ -5,9 +5,9 @@ Version: 2.5
 Class: QBP_K13.ROW_DEFINITION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RDF import RDF
@@ -31,7 +31,7 @@ class QBP_K13_ROW_DEFINITION(BaseModel):
         description="Required",
     )
 
-    RDT: Optional[List[_RDT]] = Field(
+    RDT: list[_RDT] | None = Field(
         default=None,
         title="RDT",
         description="Optional, repeating",

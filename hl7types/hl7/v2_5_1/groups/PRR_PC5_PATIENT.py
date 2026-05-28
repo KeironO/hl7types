@@ -5,13 +5,12 @@ Version: 2.5.1
 Class: PRR_PC5.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
-
 from .PRR_PC5_PATIENT_VISIT import PRR_PC5_PATIENT_VISIT
 from .PRR_PC5_PROBLEM import PRR_PC5_PROBLEM
 
@@ -35,13 +34,13 @@ class PRR_PC5_PATIENT(BaseModel):
         description="Required",
     )
 
-    PATIENT_VISIT: Optional[_PRR_PC5_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _PRR_PC5_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    PROBLEM: List[_PRR_PC5_PROBLEM] = Field(
+    PROBLEM: list[_PRR_PC5_PROBLEM] = Field(
         default=...,
         title="PROBLEM",
         description="Required, repeating",

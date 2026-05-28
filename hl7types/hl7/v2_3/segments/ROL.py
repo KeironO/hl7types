@@ -5,9 +5,9 @@ Version: 2.3
 Class: ROL
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -43,7 +43,7 @@ class ROL(BaseModel):
         description="Item #816 | Table HL70287",
     )
 
-    rol_3: Optional[CE] = Field(
+    rol_3: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_3",
@@ -67,7 +67,7 @@ class ROL(BaseModel):
         description="Item #1198",
     )
 
-    rol_5: Optional[TS] = Field(
+    rol_5: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_5",
@@ -79,7 +79,7 @@ class ROL(BaseModel):
         description="Item #1199",
     )
 
-    rol_6: Optional[TS] = Field(
+    rol_6: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_6",
@@ -91,7 +91,7 @@ class ROL(BaseModel):
         description="Item #1200",
     )
 
-    rol_7: Optional[CE] = Field(
+    rol_7: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_7",
@@ -103,7 +103,7 @@ class ROL(BaseModel):
         description="Item #1201",
     )
 
-    rol_8: Optional[CE] = Field(
+    rol_8: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_8",

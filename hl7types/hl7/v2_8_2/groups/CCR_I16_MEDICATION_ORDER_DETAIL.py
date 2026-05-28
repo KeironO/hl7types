@@ -5,15 +5,14 @@ Version: 2.8.2
 Class: CCR_I16.MEDICATION_ORDER_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
 from ..segments.RXO import RXO
 from ..segments.RXR import RXR
-
 from .CCR_I16_MEDICATION_ORDER_OBSERVATION import CCR_I16_MEDICATION_ORDER_OBSERVATION
 
 _CCR_I16_MEDICATION_ORDER_OBSERVATION = CCR_I16_MEDICATION_ORDER_OBSERVATION
@@ -38,19 +37,19 @@ class CCR_I16_MEDICATION_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    MEDICATION_ORDER_OBSERVATION: Optional[List[_CCR_I16_MEDICATION_ORDER_OBSERVATION]] = Field(
+    MEDICATION_ORDER_OBSERVATION: list[_CCR_I16_MEDICATION_ORDER_OBSERVATION] | None = Field(
         default=None,
         title="MEDICATION_ORDER_OBSERVATION",
         description="Optional, repeating",

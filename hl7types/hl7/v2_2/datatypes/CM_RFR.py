@@ -5,9 +5,9 @@ Version: 2.2
 Class: CM_RFR
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -16,7 +16,7 @@ from .CE import CE
 class CM_RFR(BaseModel):
     """HL7 v2 CM_RFR data type."""
 
-    cm_rfr_1: Optional[CE] = Field(
+    cm_rfr_1: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_1",
@@ -27,7 +27,7 @@ class CM_RFR(BaseModel):
         title="Reference Range",
     )
 
-    cm_rfr_2: Optional[str] = Field(
+    cm_rfr_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_2",
@@ -38,7 +38,7 @@ class CM_RFR(BaseModel):
         title="Sex",
     )
 
-    cm_rfr_3: Optional[CE] = Field(
+    cm_rfr_3: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_3",
@@ -49,7 +49,7 @@ class CM_RFR(BaseModel):
         title="Age Range",
     )
 
-    cm_rfr_4: Optional[CE] = Field(
+    cm_rfr_4: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_4",
@@ -60,7 +60,7 @@ class CM_RFR(BaseModel):
         title="Gestational Age Range",
     )
 
-    cm_rfr_5: Optional[str] = Field(
+    cm_rfr_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_5",
@@ -71,7 +71,7 @@ class CM_RFR(BaseModel):
         title="Species",
     )
 
-    cm_rfr_6: Optional[str] = Field(
+    cm_rfr_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_6",
@@ -82,7 +82,7 @@ class CM_RFR(BaseModel):
         title="Race / Subspecies",
     )
 
-    cm_rfr_7: Optional[str] = Field(
+    cm_rfr_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_7",

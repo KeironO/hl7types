@@ -5,13 +5,12 @@ Version: 2.7
 Class: OMD_O03.ORDER_DIET
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
-
 from .OMD_O03_DIET import OMD_O03_DIET
 from .OMD_O03_TIMING_DIET import OMD_O03_TIMING_DIET
 
@@ -35,13 +34,13 @@ class OMD_O03_ORDER_DIET(BaseModel):
         description="Required",
     )
 
-    TIMING_DIET: Optional[List[_OMD_O03_TIMING_DIET]] = Field(
+    TIMING_DIET: list[_OMD_O03_TIMING_DIET] | None = Field(
         default=None,
         title="TIMING_DIET",
         description="Optional, repeating",
     )
 
-    DIET: Optional[_OMD_O03_DIET] = Field(
+    DIET: _OMD_O03_DIET | None = Field(
         default=None,
         title="DIET",
         description="Optional",

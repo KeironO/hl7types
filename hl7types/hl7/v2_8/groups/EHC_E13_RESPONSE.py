@@ -5,9 +5,9 @@ Version: 2.8
 Class: EHC_E13.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -34,13 +34,13 @@ class EHC_E13_RESPONSE(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[_NTE] = Field(
+    NTE: _NTE | None = Field(
         default=None,
         title="NTE",
         description="Optional",
     )
 
-    TXA: Optional[_TXA] = Field(
+    TXA: _TXA | None = Field(
         default=None,
         title="TXA",
         description="Optional",

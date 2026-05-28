@@ -5,16 +5,15 @@ Version: 2.6
 Class: ORN_O08.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
 from ..segments.RQ1 import RQ1
 from ..segments.RQD import RQD
-
 from .ORN_O08_TIMING import ORN_O08_TIMING
 
 _NTE = NTE
@@ -41,7 +40,7 @@ class ORN_O08_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_ORN_O08_TIMING]] = Field(
+    TIMING: list[_ORN_O08_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -53,13 +52,13 @@ class ORN_O08_ORDER(BaseModel):
         description="Required",
     )
 
-    RQ1: Optional[_RQ1] = Field(
+    RQ1: _RQ1 | None = Field(
         default=None,
         title="RQ1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

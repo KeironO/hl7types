@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ORL_O34.SPMSAC_SUPPGRP2
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
@@ -31,7 +31,7 @@ class ORL_O34_SPMSAC_SUPPGRP2(BaseModel):
         description="Required",
     )
 
-    SAC: Optional[List[_SAC]] = Field(
+    SAC: list[_SAC] | None = Field(
         default=None,
         title="SAC",
         description="Optional, repeating",

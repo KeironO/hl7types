@@ -5,9 +5,9 @@ Version: 2.5
 Class: TCC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -43,7 +43,7 @@ class TCC(BaseModel):
         description="Item #1408",
     )
 
-    tcc_3: Optional[SPS] = Field(
+    tcc_3: SPS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_3",
@@ -55,7 +55,7 @@ class TCC(BaseModel):
         description="Item #249",
     )
 
-    tcc_4: Optional[SN] = Field(
+    tcc_4: SN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_4",
@@ -67,7 +67,7 @@ class TCC(BaseModel):
         description="Item #1410",
     )
 
-    tcc_5: Optional[SN] = Field(
+    tcc_5: SN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_5",
@@ -79,7 +79,7 @@ class TCC(BaseModel):
         description="Item #1411",
     )
 
-    tcc_6: Optional[SN] = Field(
+    tcc_6: SN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_6",
@@ -91,7 +91,7 @@ class TCC(BaseModel):
         description="Item #1412",
     )
 
-    tcc_7: Optional[SN] = Field(
+    tcc_7: SN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_7",
@@ -103,7 +103,7 @@ class TCC(BaseModel):
         description="Item #1413",
     )
 
-    tcc_8: Optional[str] = Field(
+    tcc_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_8",
@@ -115,7 +115,7 @@ class TCC(BaseModel):
         description="Item #1414",
     )
 
-    tcc_9: Optional[str] = Field(
+    tcc_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_9",
@@ -127,7 +127,7 @@ class TCC(BaseModel):
         description="Item #1415 | Table HL70136",
     )
 
-    tcc_10: Optional[str] = Field(
+    tcc_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_10",
@@ -139,7 +139,7 @@ class TCC(BaseModel):
         description="Item #1416 | Table HL70136",
     )
 
-    tcc_11: Optional[str] = Field(
+    tcc_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_11",
@@ -151,7 +151,7 @@ class TCC(BaseModel):
         description="Item #1417 | Table HL70136",
     )
 
-    tcc_12: Optional[SN] = Field(
+    tcc_12: SN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_12",
@@ -163,7 +163,7 @@ class TCC(BaseModel):
         description="Item #1418",
     )
 
-    tcc_13: Optional[CE] = Field(
+    tcc_13: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_13",
@@ -175,7 +175,7 @@ class TCC(BaseModel):
         description="Item #574",
     )
 
-    tcc_14: Optional[CE] = Field(
+    tcc_14: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tcc_14",

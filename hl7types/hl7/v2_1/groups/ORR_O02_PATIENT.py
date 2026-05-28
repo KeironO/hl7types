@@ -5,14 +5,13 @@ Version: 2.1
 Class: ORR_O02.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PID import PID
-
 from .ORR_O02_ORDER import ORR_O02_ORDER
 
 _NTE = NTE
@@ -29,19 +28,19 @@ class ORR_O02_PATIENT(BaseModel):
         ORDER (List[ORR_O02_ORDER]): required
     """
 
-    PID: Optional[_PID] = Field(
+    PID: _PID | None = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    ORDER: List[_ORR_O02_ORDER] = Field(
+    ORDER: list[_ORR_O02_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

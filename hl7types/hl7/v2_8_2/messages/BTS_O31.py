@@ -5,18 +5,17 @@ Version: 2.8.2
 Class: BTS_O31
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.BTS_O31_ORDER import BTS_O31_ORDER
+from ..groups.BTS_O31_PATIENT import BTS_O31_PATIENT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.BTS_O31_ORDER import BTS_O31_ORDER
-from ..groups.BTS_O31_PATIENT import BTS_O31_PATIENT
 
 _BTS_O31_ORDER = BTS_O31_ORDER
 _BTS_O31_PATIENT = BTS_O31_PATIENT
@@ -44,31 +43,31 @@ class BTS_O31(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[_BTS_O31_PATIENT] = Field(
+    PATIENT: _BTS_O31_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_BTS_O31_ORDER] = Field(
+    ORDER: list[_BTS_O31_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

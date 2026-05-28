@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: ORF_R04.QUERY_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .ORF_R04_ORDER import ORF_R04_ORDER
@@ -25,13 +25,13 @@ class ORF_R04_QUERY_RESPONSE(BaseModel):
         ORDER (List[ORF_R04_ORDER]): required
     """
 
-    PATIENT: Optional[_ORF_R04_PATIENT] = Field(
+    PATIENT: _ORF_R04_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_ORF_R04_ORDER] = Field(
+    ORDER: list[_ORF_R04_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

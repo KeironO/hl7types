@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: GOL
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -68,7 +68,7 @@ class GOL(BaseModel):
         description="Item #819",
     )
 
-    gol_5: Optional[EI] = Field(
+    gol_5: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_5",
@@ -80,7 +80,7 @@ class GOL(BaseModel):
         description="Item #820",
     )
 
-    gol_6: Optional[str] = Field(
+    gol_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_6",
@@ -92,7 +92,7 @@ class GOL(BaseModel):
         description="Item #821",
     )
 
-    gol_7: Optional[TS] = Field(
+    gol_7: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_7",
@@ -104,7 +104,7 @@ class GOL(BaseModel):
         description="Item #822",
     )
 
-    gol_8: Optional[TS] = Field(
+    gol_8: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_8",
@@ -116,7 +116,7 @@ class GOL(BaseModel):
         description="Item #824",
     )
 
-    gol_9: Optional[CE] = Field(
+    gol_9: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_9",
@@ -128,7 +128,7 @@ class GOL(BaseModel):
         description="Item #825",
     )
 
-    gol_10: Optional[CE] = Field(
+    gol_10: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_10",
@@ -140,7 +140,7 @@ class GOL(BaseModel):
         description="Item #826",
     )
 
-    gol_11: Optional[CE] = Field(
+    gol_11: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_11",
@@ -152,7 +152,7 @@ class GOL(BaseModel):
         description="Item #827",
     )
 
-    gol_12: Optional[TS] = Field(
+    gol_12: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_12",
@@ -164,7 +164,7 @@ class GOL(BaseModel):
         description="Item #828",
     )
 
-    gol_13: Optional[TS] = Field(
+    gol_13: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_13",
@@ -176,7 +176,7 @@ class GOL(BaseModel):
         description="Item #829",
     )
 
-    gol_14: Optional[TS] = Field(
+    gol_14: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_14",
@@ -188,7 +188,7 @@ class GOL(BaseModel):
         description="Item #830",
     )
 
-    gol_15: Optional[TQ] = Field(
+    gol_15: TQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_15",
@@ -200,7 +200,7 @@ class GOL(BaseModel):
         description="Item #831",
     )
 
-    gol_16: Optional[CE] = Field(
+    gol_16: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_16",
@@ -212,7 +212,7 @@ class GOL(BaseModel):
         description="Item #832",
     )
 
-    gol_17: Optional[List[str]] = Field(
+    gol_17: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_17",
@@ -224,7 +224,7 @@ class GOL(BaseModel):
         description="Item #833",
     )
 
-    gol_18: Optional[CE] = Field(
+    gol_18: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_18",
@@ -236,7 +236,7 @@ class GOL(BaseModel):
         description="Item #834",
     )
 
-    gol_19: Optional[TS] = Field(
+    gol_19: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_19",
@@ -248,7 +248,7 @@ class GOL(BaseModel):
         description="Item #835",
     )
 
-    gol_20: Optional[List[CE]] = Field(
+    gol_20: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_20",
@@ -260,7 +260,7 @@ class GOL(BaseModel):
         description="Item #836",
     )
 
-    gol_21: Optional[List[XPN]] = Field(
+    gol_21: list[XPN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gol_21",

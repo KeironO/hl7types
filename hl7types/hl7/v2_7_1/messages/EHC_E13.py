@@ -5,11 +5,12 @@ Version: 2.7.1
 Class: EHC_E13
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.EHC_E13_REQUEST import EHC_E13_REQUEST
 from ..segments.CTD import CTD
 from ..segments.ERR import ERR
 from ..segments.IVC import IVC
@@ -22,8 +23,6 @@ from ..segments.PSS import PSS
 from ..segments.RFI import RFI
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.EHC_E13_REQUEST import EHC_E13_REQUEST
 
 _CTD = CTD
 _EHC_E13_REQUEST = EHC_E13_REQUEST
@@ -65,13 +64,13 @@ class EHC_E13(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[List[_UAC]] = Field(
+    UAC: list[_UAC] | None = Field(
         default=None,
         title="UAC",
         description="Optional, repeating",
@@ -83,7 +82,7 @@ class EHC_E13(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
@@ -95,7 +94,7 @@ class EHC_E13(BaseModel):
         description="Required",
     )
 
-    CTD: Optional[List[_CTD]] = Field(
+    CTD: list[_CTD] | None = Field(
         default=None,
         title="CTD",
         description="Optional, repeating",
@@ -119,19 +118,19 @@ class EHC_E13(BaseModel):
         description="Required",
     )
 
-    PID: Optional[_PID] = Field(
+    PID: _PID | None = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    PSL: Optional[_PSL] = Field(
+    PSL: _PSL | None = Field(
         default=None,
         title="PSL",
         description="Optional",
     )
 
-    REQUEST: List[_EHC_E13_REQUEST] = Field(
+    REQUEST: list[_EHC_E13_REQUEST] = Field(
         default=...,
         title="REQUEST",
         description="Required, repeating",

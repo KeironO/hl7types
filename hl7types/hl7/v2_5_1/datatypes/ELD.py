@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ELD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -16,7 +16,7 @@ from .CE import CE
 class ELD(BaseModel):
     """HL7 v2 ELD data type."""
 
-    eld_1: Optional[str] = Field(
+    eld_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "eld_1",
@@ -27,7 +27,7 @@ class ELD(BaseModel):
         title="Segment ID",
     )
 
-    eld_2: Optional[str] = Field(
+    eld_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "eld_2",
@@ -38,7 +38,7 @@ class ELD(BaseModel):
         title="Segment Sequence",
     )
 
-    eld_3: Optional[str] = Field(
+    eld_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "eld_3",
@@ -49,7 +49,7 @@ class ELD(BaseModel):
         title="Field Position",
     )
 
-    eld_4: Optional[CE] = Field(
+    eld_4: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "eld_4",

@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: PRD
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -22,7 +22,7 @@ from ..datatypes.XTN import XTN
 class PRD(BaseModel):
     """HL7 v2 PRD segment."""
 
-    prd_1: List[CWE] = Field(
+    prd_1: list[CWE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "prd_1",
@@ -34,7 +34,7 @@ class PRD(BaseModel):
         description="Item #1155 | Table HL70286",
     )
 
-    prd_2: Optional[List[XPN]] = Field(
+    prd_2: list[XPN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_2",
@@ -46,7 +46,7 @@ class PRD(BaseModel):
         description="Item #1156",
     )
 
-    prd_3: Optional[List[XAD]] = Field(
+    prd_3: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_3",
@@ -58,7 +58,7 @@ class PRD(BaseModel):
         description="Item #1157",
     )
 
-    prd_4: Optional[PL] = Field(
+    prd_4: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_4",
@@ -70,7 +70,7 @@ class PRD(BaseModel):
         description="Item #1158",
     )
 
-    prd_5: Optional[List[XTN]] = Field(
+    prd_5: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_5",
@@ -82,7 +82,7 @@ class PRD(BaseModel):
         description="Item #1159",
     )
 
-    prd_6: Optional[CWE] = Field(
+    prd_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_6",
@@ -94,7 +94,7 @@ class PRD(BaseModel):
         description="Item #684 | Table HL70185",
     )
 
-    prd_7: Optional[List[PLN]] = Field(
+    prd_7: list[PLN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_7",
@@ -106,7 +106,7 @@ class PRD(BaseModel):
         description="Item #1162 | Table HL70338",
     )
 
-    prd_8: Optional[str] = Field(
+    prd_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_8",
@@ -118,7 +118,7 @@ class PRD(BaseModel):
         description="Item #1163",
     )
 
-    prd_9: Optional[List[str]] = Field(
+    prd_9: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_9",
@@ -130,7 +130,7 @@ class PRD(BaseModel):
         description="Item #1164",
     )
 
-    prd_10: Optional[XON] = Field(
+    prd_10: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_10",
@@ -142,7 +142,7 @@ class PRD(BaseModel):
         description="Item #2256",
     )
 
-    prd_11: Optional[List[XAD]] = Field(
+    prd_11: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_11",
@@ -154,7 +154,7 @@ class PRD(BaseModel):
         description="Item #2257",
     )
 
-    prd_12: Optional[List[PL]] = Field(
+    prd_12: list[PL] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_12",
@@ -166,7 +166,7 @@ class PRD(BaseModel):
         description="Item #2258",
     )
 
-    prd_13: Optional[List[XTN]] = Field(
+    prd_13: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_13",
@@ -178,7 +178,7 @@ class PRD(BaseModel):
         description="Item #2259",
     )
 
-    prd_14: Optional[CWE] = Field(
+    prd_14: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prd_14",

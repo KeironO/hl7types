@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: MFN_M16.PACKAGING
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PCE import PCE
@@ -31,7 +31,7 @@ class MFN_M16_PACKAGING(BaseModel):
         description="Required",
     )
 
-    PCE: Optional[List[_PCE]] = Field(
+    PCE: list[_PCE] | None = Field(
         default=None,
         title="PCE",
         description="Optional, repeating",

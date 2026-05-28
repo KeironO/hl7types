@@ -5,9 +5,9 @@ Version: 2.2
 Class: PV2
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -16,7 +16,7 @@ from ..datatypes.CE import CE
 class PV2(BaseModel):
     """HL7 v2 PV2 segment."""
 
-    pv2_1: Optional[str] = Field(
+    pv2_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_1",
@@ -28,7 +28,7 @@ class PV2(BaseModel):
         description="Item #181",
     )
 
-    pv2_2: Optional[CE] = Field(
+    pv2_2: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_2",
@@ -40,7 +40,7 @@ class PV2(BaseModel):
         description="Item #182 | Table HL70129",
     )
 
-    pv2_3: Optional[CE] = Field(
+    pv2_3: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_3",
@@ -52,7 +52,7 @@ class PV2(BaseModel):
         description="Item #183",
     )
 
-    pv2_4: Optional[CE] = Field(
+    pv2_4: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_4",
@@ -64,7 +64,7 @@ class PV2(BaseModel):
         description="Item #184",
     )
 
-    pv2_5: Optional[List[str]] = Field(
+    pv2_5: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_5",
@@ -76,7 +76,7 @@ class PV2(BaseModel):
         description="Item #185",
     )
 
-    pv2_6: Optional[str] = Field(
+    pv2_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_6",
@@ -88,7 +88,7 @@ class PV2(BaseModel):
         description="Item #186",
     )
 
-    pv2_7: Optional[str] = Field(
+    pv2_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_7",
@@ -100,7 +100,7 @@ class PV2(BaseModel):
         description="Item #187 | Table HL70130",
     )
 
-    pv2_8: Optional[str] = Field(
+    pv2_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_8",
@@ -112,7 +112,7 @@ class PV2(BaseModel):
         description="Item #188",
     )
 
-    pv2_9: Optional[str] = Field(
+    pv2_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pv2_9",

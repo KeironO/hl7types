@@ -5,13 +5,13 @@ Version: 2.7.1
 Class: MFE
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
-from ..datatypes.XCN import XCN
 from ..datatypes.varies import varies
+from ..datatypes.XCN import XCN
 
 
 class MFE(BaseModel):
@@ -29,7 +29,7 @@ class MFE(BaseModel):
         description="Item #664 | Table HL70180",
     )
 
-    mfe_2: Optional[str] = Field(
+    mfe_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfe_2",
@@ -41,7 +41,7 @@ class MFE(BaseModel):
         description="Item #665",
     )
 
-    mfe_3: Optional[str] = Field(
+    mfe_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfe_3",
@@ -53,7 +53,7 @@ class MFE(BaseModel):
         description="Item #662",
     )
 
-    mfe_4: List[varies] = Field(
+    mfe_4: list[varies] = Field(
         default=...,
         validation_alias=AliasChoices(
             "mfe_4",
@@ -65,7 +65,7 @@ class MFE(BaseModel):
         description="Item #667 | Table HL79999",
     )
 
-    mfe_5: List[str] = Field(
+    mfe_5: list[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "mfe_5",
@@ -77,7 +77,7 @@ class MFE(BaseModel):
         description="Item #1319 | Table HL70355",
     )
 
-    mfe_6: Optional[str] = Field(
+    mfe_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfe_6",
@@ -89,7 +89,7 @@ class MFE(BaseModel):
         description="Item #661",
     )
 
-    mfe_7: Optional[XCN] = Field(
+    mfe_7: XCN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mfe_7",

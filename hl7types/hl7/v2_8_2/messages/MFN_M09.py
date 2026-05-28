@@ -5,17 +5,16 @@ Version: 2.8.2
 Class: MFN_M09
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M09_MF_TEST_CATEGORICAL import MFN_M09_MF_TEST_CATEGORICAL
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.MFN_M09_MF_TEST_CATEGORICAL import MFN_M09_MF_TEST_CATEGORICAL
 
 _MFI = MFI
 _MFN_M09_MF_TEST_CATEGORICAL = MFN_M09_MF_TEST_CATEGORICAL
@@ -41,13 +40,13 @@ class MFN_M09(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -59,7 +58,7 @@ class MFN_M09(BaseModel):
         description="Required",
     )
 
-    MF_TEST_CATEGORICAL: List[_MFN_M09_MF_TEST_CATEGORICAL] = Field(
+    MF_TEST_CATEGORICAL: list[_MFN_M09_MF_TEST_CATEGORICAL] = Field(
         default=...,
         title="MF_TEST_CATEGORICAL",
         description="Required, repeating",

@@ -5,15 +5,14 @@ Version: 2.8
 Class: MFN_M09.MF_TEST_CATEGORICAL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
 from ..segments.OM1 import OM1
 from ..segments.PRT import PRT
-
 from .MFN_M09_MF_TEST_CAT_DETAIL import MFN_M09_MF_TEST_CAT_DETAIL
 
 _MFE = MFE
@@ -44,13 +43,13 @@ class MFN_M09_MF_TEST_CATEGORICAL(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    MF_TEST_CAT_DETAIL: Optional[_MFN_M09_MF_TEST_CAT_DETAIL] = Field(
+    MF_TEST_CAT_DETAIL: _MFN_M09_MF_TEST_CAT_DETAIL | None = Field(
         default=None,
         title="MF_TEST_CAT_DETAIL",
         description="Optional",

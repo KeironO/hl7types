@@ -5,11 +5,12 @@ Version: 2.8
 Class: RSP_Z86
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RSP_Z86_QUERY_RESPONSE import RSP_Z86_QUERY_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -18,8 +19,6 @@ from ..segments.QAK import QAK
 from ..segments.QPD import QPD
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RSP_Z86_QUERY_RESPONSE import RSP_Z86_QUERY_RESPONSE
 
 _DSC = DSC
 _ERR = ERR
@@ -53,13 +52,13 @@ class RSP_Z86(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -71,7 +70,7 @@ class RSP_Z86(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -89,13 +88,13 @@ class RSP_Z86(BaseModel):
         description="Required",
     )
 
-    QUERY_RESPONSE: List[_RSP_Z86_QUERY_RESPONSE] = Field(
+    QUERY_RESPONSE: list[_RSP_Z86_QUERY_RESPONSE] = Field(
         default=...,
         title="QUERY_RESPONSE",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

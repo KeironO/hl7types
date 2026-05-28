@@ -5,9 +5,9 @@ Version: 2.7
 Class: EHC_E10.INVOICE_PROCESSING_RESULTS_INFO
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.IN1 import IN1
@@ -16,7 +16,6 @@ from ..segments.IPR import IPR
 from ..segments.IVC import IVC
 from ..segments.NTE import NTE
 from ..segments.PYE import PYE
-
 from .EHC_E10_PRODUCT_SERVICE_SECTION import EHC_E10_PRODUCT_SERVICE_SECTION
 
 _EHC_E10_PRODUCT_SERVICE_SECTION = EHC_E10_PRODUCT_SERVICE_SECTION
@@ -47,7 +46,7 @@ class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
@@ -65,7 +64,7 @@ class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(BaseModel):
         description="Required",
     )
 
-    IN2: Optional[_IN2] = Field(
+    IN2: _IN2 | None = Field(
         default=None,
         title="IN2",
         description="Optional",
@@ -77,7 +76,7 @@ class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(BaseModel):
         description="Required",
     )
 
-    PRODUCT_SERVICE_SECTION: List[_EHC_E10_PRODUCT_SERVICE_SECTION] = Field(
+    PRODUCT_SERVICE_SECTION: list[_EHC_E10_PRODUCT_SERVICE_SECTION] = Field(
         default=...,
         title="PRODUCT_SERVICE_SECTION",
         description="Required, repeating",

@@ -5,17 +5,16 @@ Version: 2.4
 Class: ORL_O22
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ORL_O22_RESPONSE import ORL_O22_RESPONSE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
-
-from ..groups.ORL_O22_RESPONSE import ORL_O22_RESPONSE
 
 _ERR = ERR
 _MSA = MSA
@@ -47,19 +46,19 @@ class ORL_O22(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RESPONSE: Optional[_ORL_O22_RESPONSE] = Field(
+    RESPONSE: _ORL_O22_RESPONSE | None = Field(
         default=None,
         title="RESPONSE",
         description="Optional",

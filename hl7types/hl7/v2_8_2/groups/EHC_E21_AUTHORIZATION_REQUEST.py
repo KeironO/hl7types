@@ -5,10 +5,10 @@ Version: 2.8.2
 Class: EHC_E21.AUTHORIZATION_REQUEST
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class EHC_E21_AUTHORIZATION_REQUEST(BaseModel):

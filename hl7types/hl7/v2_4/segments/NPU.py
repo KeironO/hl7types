@@ -5,9 +5,9 @@ Version: 2.4
 Class: NPU
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.PL import PL
@@ -28,7 +28,7 @@ class NPU(BaseModel):
         description="Item #209",
     )
 
-    npu_2: Optional[str] = Field(
+    npu_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "npu_2",

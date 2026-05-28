@@ -5,9 +5,9 @@ Version: 2.8
 Class: OUL_R24.ORDER_DOCUMENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
@@ -34,7 +34,7 @@ class OUL_R24_ORDER_DOCUMENT(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

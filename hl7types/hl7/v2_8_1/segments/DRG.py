@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: DRG
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -20,7 +20,7 @@ from ..datatypes.XPN import XPN
 class DRG(BaseModel):
     """HL7 v2 DRG segment."""
 
-    drg_1: Optional[CNE] = Field(
+    drg_1: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_1",
@@ -32,7 +32,7 @@ class DRG(BaseModel):
         description="Item #382 | Table HL70055",
     )
 
-    drg_2: Optional[str] = Field(
+    drg_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_2",
@@ -44,7 +44,7 @@ class DRG(BaseModel):
         description="Item #769",
     )
 
-    drg_3: Optional[str] = Field(
+    drg_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_3",
@@ -56,7 +56,7 @@ class DRG(BaseModel):
         description="Item #383 | Table HL70136",
     )
 
-    drg_4: Optional[CWE] = Field(
+    drg_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_4",
@@ -68,7 +68,7 @@ class DRG(BaseModel):
         description="Item #384 | Table HL70056",
     )
 
-    drg_5: Optional[CWE] = Field(
+    drg_5: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_5",
@@ -80,7 +80,7 @@ class DRG(BaseModel):
         description="Item #385 | Table HL70083",
     )
 
-    drg_6: Optional[str] = Field(
+    drg_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_6",
@@ -92,7 +92,7 @@ class DRG(BaseModel):
         description="Item #386",
     )
 
-    drg_7: Optional[CP] = Field(
+    drg_7: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_7",
@@ -104,7 +104,7 @@ class DRG(BaseModel):
         description="Item #387",
     )
 
-    drg_8: Optional[CWE] = Field(
+    drg_8: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_8",
@@ -116,7 +116,7 @@ class DRG(BaseModel):
         description="Item #770 | Table HL70229",
     )
 
-    drg_9: Optional[CP] = Field(
+    drg_9: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_9",
@@ -128,7 +128,7 @@ class DRG(BaseModel):
         description="Item #771",
     )
 
-    drg_10: Optional[str] = Field(
+    drg_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_10",
@@ -140,7 +140,7 @@ class DRG(BaseModel):
         description="Item #767 | Table HL70136",
     )
 
-    drg_11: Optional[CWE] = Field(
+    drg_11: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_11",
@@ -152,7 +152,7 @@ class DRG(BaseModel):
         description="Item #1500 | Table HL70415",
     )
 
-    drg_12: Optional[XPN] = Field(
+    drg_12: XPN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_12",
@@ -164,7 +164,7 @@ class DRG(BaseModel):
         description="Item #2156",
     )
 
-    drg_13: Optional[CWE] = Field(
+    drg_13: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_13",
@@ -176,7 +176,7 @@ class DRG(BaseModel):
         description="Item #2157 | Table HL70734",
     )
 
-    drg_14: Optional[CWE] = Field(
+    drg_14: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_14",
@@ -188,7 +188,7 @@ class DRG(BaseModel):
         description="Item #2158 | Table HL70728",
     )
 
-    drg_15: Optional[str] = Field(
+    drg_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_15",
@@ -200,7 +200,7 @@ class DRG(BaseModel):
         description="Item #2159",
     )
 
-    drg_16: Optional[MO] = Field(
+    drg_16: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_16",
@@ -212,7 +212,7 @@ class DRG(BaseModel):
         description="Item #2160",
     )
 
-    drg_17: Optional[CWE] = Field(
+    drg_17: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_17",
@@ -224,7 +224,7 @@ class DRG(BaseModel):
         description="Item #2161 | Table HL70739",
     )
 
-    drg_18: Optional[str] = Field(
+    drg_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_18",
@@ -236,7 +236,7 @@ class DRG(BaseModel):
         description="Item #2162",
     )
 
-    drg_19: Optional[str] = Field(
+    drg_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_19",
@@ -248,7 +248,7 @@ class DRG(BaseModel):
         description="Item #2282",
     )
 
-    drg_20: Optional[CWE] = Field(
+    drg_20: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_20",
@@ -260,7 +260,7 @@ class DRG(BaseModel):
         description="Item #2163 | Table HL70742",
     )
 
-    drg_21: Optional[MO] = Field(
+    drg_21: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_21",
@@ -272,7 +272,7 @@ class DRG(BaseModel):
         description="Item #2164",
     )
 
-    drg_22: Optional[MO] = Field(
+    drg_22: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_22",
@@ -284,7 +284,7 @@ class DRG(BaseModel):
         description="Item #2165",
     )
 
-    drg_23: Optional[MO] = Field(
+    drg_23: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_23",
@@ -296,7 +296,7 @@ class DRG(BaseModel):
         description="Item #2166",
     )
 
-    drg_24: Optional[MO] = Field(
+    drg_24: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_24",
@@ -308,7 +308,7 @@ class DRG(BaseModel):
         description="Item #2167",
     )
 
-    drg_25: Optional[str] = Field(
+    drg_25: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_25",
@@ -320,7 +320,7 @@ class DRG(BaseModel):
         description="Item #2168",
     )
 
-    drg_26: Optional[CWE] = Field(
+    drg_26: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_26",
@@ -332,7 +332,7 @@ class DRG(BaseModel):
         description="Item #2169 | Table HL70749",
     )
 
-    drg_27: Optional[CWE] = Field(
+    drg_27: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_27",
@@ -344,7 +344,7 @@ class DRG(BaseModel):
         description="Item #2170 | Table HL70749",
     )
 
-    drg_28: Optional[CWE] = Field(
+    drg_28: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_28",
@@ -356,7 +356,7 @@ class DRG(BaseModel):
         description="Item #2171 | Table HL70749",
     )
 
-    drg_29: Optional[CWE] = Field(
+    drg_29: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_29",
@@ -368,7 +368,7 @@ class DRG(BaseModel):
         description="Item #2172 | Table HL70749",
     )
 
-    drg_30: Optional[CWE] = Field(
+    drg_30: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_30",
@@ -380,7 +380,7 @@ class DRG(BaseModel):
         description="Item #2173 | Table HL70749",
     )
 
-    drg_31: Optional[CWE] = Field(
+    drg_31: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_31",
@@ -392,7 +392,7 @@ class DRG(BaseModel):
         description="Item #2174 | Table HL70755",
     )
 
-    drg_32: Optional[CWE] = Field(
+    drg_32: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_32",
@@ -404,7 +404,7 @@ class DRG(BaseModel):
         description="Item #2175 | Table HL70757",
     )
 
-    drg_33: Optional[CWE] = Field(
+    drg_33: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_33",

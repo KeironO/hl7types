@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: MFN_M09.MF_TEST_CAT_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OM3 import OM3
@@ -31,7 +31,7 @@ class MFN_M09_MF_TEST_CAT_DETAIL(BaseModel):
         description="Required",
     )
 
-    OM4: Optional[List[_OM4]] = Field(
+    OM4: list[_OM4] | None = Field(
         default=None,
         title="OM4",
         description="Optional, repeating",

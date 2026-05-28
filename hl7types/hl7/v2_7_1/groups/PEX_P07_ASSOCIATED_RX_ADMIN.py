@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: PEX_P07.ASSOCIATED_RX_ADMIN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
@@ -34,13 +34,13 @@ class PEX_P07_ASSOCIATED_RX_ADMIN(BaseModel):
         description="Required",
     )
 
-    RXR: Optional[_RXR] = Field(
+    RXR: _RXR | None = Field(
         default=None,
         title="RXR",
         description="Optional",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

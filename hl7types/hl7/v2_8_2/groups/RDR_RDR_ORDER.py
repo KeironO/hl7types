@@ -5,13 +5,12 @@ Version: 2.8.2
 Class: RDR_RDR.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
-
 from .RDR_RDR_DISPENSE import RDR_RDR_DISPENSE
 from .RDR_RDR_ENCODING import RDR_RDR_ENCODING
 from .RDR_RDR_TIMING import RDR_RDR_TIMING
@@ -38,19 +37,19 @@ class RDR_RDR_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_RDR_RDR_TIMING]] = Field(
+    TIMING: list[_RDR_RDR_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ENCODING: Optional[_RDR_RDR_ENCODING] = Field(
+    ENCODING: _RDR_RDR_ENCODING | None = Field(
         default=None,
         title="ENCODING",
         description="Optional",
     )
 
-    DISPENSE: List[_RDR_RDR_DISPENSE] = Field(
+    DISPENSE: list[_RDR_RDR_DISPENSE] = Field(
         default=...,
         title="DISPENSE",
         description="Required, repeating",

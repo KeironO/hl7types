@@ -5,13 +5,12 @@ Version: 2.8.1
 Class: OSM_R26.CONTAINER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
-
 from .OSM_R26_CONTAINER_OBSERVATION import OSM_R26_CONTAINER_OBSERVATION
 
 _OSM_R26_CONTAINER_OBSERVATION = OSM_R26_CONTAINER_OBSERVATION
@@ -32,7 +31,7 @@ class OSM_R26_CONTAINER(BaseModel):
         description="Required",
     )
 
-    CONTAINER_OBSERVATION: Optional[List[_OSM_R26_CONTAINER_OBSERVATION]] = Field(
+    CONTAINER_OBSERVATION: list[_OSM_R26_CONTAINER_OBSERVATION] | None = Field(
         default=None,
         title="CONTAINER_OBSERVATION",
         description="Optional, repeating",

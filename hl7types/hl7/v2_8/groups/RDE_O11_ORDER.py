@@ -5,9 +5,9 @@ Version: 2.8
 Class: RDE_O11.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -20,7 +20,6 @@ from ..segments.PRT import PRT
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
-
 from .RDE_O11_OBSERVATION import RDE_O11_OBSERVATION
 from .RDE_O11_ORDER_DETAIL import RDE_O11_ORDER_DETAIL
 from .RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER import RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER
@@ -71,19 +70,19 @@ class RDE_O11_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_RDE_O11_TIMING]] = Field(
+    TIMING: list[_RDE_O11_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL: Optional[_RDE_O11_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _RDE_O11_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
@@ -95,61 +94,63 @@ class RDE_O11_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_ENCODED: List[_RDE_O11_TIMING_ENCODED] = Field(
+    TIMING_ENCODED: list[_RDE_O11_TIMING_ENCODED] = Field(
         default=...,
         title="TIMING_ENCODED",
         description="Required, repeating",
     )
 
-    PHARMACY_TREATMENT_INFUSION_ORDER: Optional[List[_RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER]] = Field(
-        default=None,
-        title="PHARMACY_TREATMENT_INFUSION_ORDER",
-        description="Optional, repeating",
+    PHARMACY_TREATMENT_INFUSION_ORDER: list[_RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER] | None = (
+        Field(
+            default=None,
+            title="PHARMACY_TREATMENT_INFUSION_ORDER",
+            description="Optional, repeating",
+        )
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    CDO: Optional[List[_CDO]] = Field(
+    CDO: list[_CDO] | None = Field(
         default=None,
         title="CDO",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_RDE_O11_OBSERVATION]] = Field(
+    OBSERVATION: list[_RDE_O11_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

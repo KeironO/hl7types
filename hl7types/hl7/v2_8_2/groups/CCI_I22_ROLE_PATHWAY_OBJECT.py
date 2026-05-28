@@ -5,10 +5,10 @@ Version: 2.8.2
 Class: CCI_I22.ROLE_PATHWAY_OBJECT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class CCI_I22_ROLE_PATHWAY_OBJECT(BaseModel):

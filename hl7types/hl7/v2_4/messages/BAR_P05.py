@@ -5,18 +5,17 @@ Version: 2.4
 Class: BAR_P05
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.BAR_P05_VISIT import BAR_P05_VISIT
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.ROL import ROL
-
-from ..groups.BAR_P05_VISIT import BAR_P05_VISIT
 
 _BAR_P05_VISIT = BAR_P05_VISIT
 _EVN = EVN
@@ -56,19 +55,19 @@ class BAR_P05(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    VISIT: List[_BAR_P05_VISIT] = Field(
+    VISIT: list[_BAR_P05_VISIT] = Field(
         default=...,
         title="VISIT",
         description="Required, repeating",

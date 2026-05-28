@@ -5,13 +5,12 @@ Version: 2.7.1
 Class: CQU_I19.RESOURCES
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RGS import RGS
-
 from .CQU_I19_RESOURCE_DETAIL import CQU_I19_RESOURCE_DETAIL
 
 _CQU_I19_RESOURCE_DETAIL = CQU_I19_RESOURCE_DETAIL
@@ -32,7 +31,7 @@ class CQU_I19_RESOURCES(BaseModel):
         description="Required",
     )
 
-    RESOURCE_DETAIL: Optional[List[_CQU_I19_RESOURCE_DETAIL]] = Field(
+    RESOURCE_DETAIL: list[_CQU_I19_RESOURCE_DETAIL] | None = Field(
         default=None,
         title="RESOURCE_DETAIL",
         description="Optional, repeating",

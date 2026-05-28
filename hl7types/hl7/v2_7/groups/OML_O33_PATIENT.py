@@ -5,9 +5,9 @@ Version: 2.7
 Class: OML_O33.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AL1 import AL1
@@ -17,7 +17,6 @@ from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.PRT import PRT
-
 from .OML_O33_INSURANCE import OML_O33_INSURANCE
 from .OML_O33_PATIENT_VISIT import OML_O33_PATIENT_VISIT
 
@@ -53,49 +52,49 @@ class OML_O33_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: Optional[_OML_O33_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _OML_O33_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    INSURANCE: Optional[List[_OML_O33_INSURANCE]] = Field(
+    INSURANCE: list[_OML_O33_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    GT1: Optional[_GT1] = Field(
+    GT1: _GT1 | None = Field(
         default=None,
         title="GT1",
         description="Optional",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",

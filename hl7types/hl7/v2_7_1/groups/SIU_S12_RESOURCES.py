@@ -5,13 +5,12 @@ Version: 2.7.1
 Class: SIU_S12.RESOURCES
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RGS import RGS
-
 from .SIU_S12_GENERAL_RESOURCE import SIU_S12_GENERAL_RESOURCE
 from .SIU_S12_LOCATION_RESOURCE import SIU_S12_LOCATION_RESOURCE
 from .SIU_S12_PERSONNEL_RESOURCE import SIU_S12_PERSONNEL_RESOURCE
@@ -41,25 +40,25 @@ class SIU_S12_RESOURCES(BaseModel):
         description="Required",
     )
 
-    SERVICE: Optional[List[_SIU_S12_SERVICE]] = Field(
+    SERVICE: list[_SIU_S12_SERVICE] | None = Field(
         default=None,
         title="SERVICE",
         description="Optional, repeating",
     )
 
-    GENERAL_RESOURCE: Optional[List[_SIU_S12_GENERAL_RESOURCE]] = Field(
+    GENERAL_RESOURCE: list[_SIU_S12_GENERAL_RESOURCE] | None = Field(
         default=None,
         title="GENERAL_RESOURCE",
         description="Optional, repeating",
     )
 
-    LOCATION_RESOURCE: Optional[List[_SIU_S12_LOCATION_RESOURCE]] = Field(
+    LOCATION_RESOURCE: list[_SIU_S12_LOCATION_RESOURCE] | None = Field(
         default=None,
         title="LOCATION_RESOURCE",
         description="Optional, repeating",
     )
 
-    PERSONNEL_RESOURCE: Optional[List[_SIU_S12_PERSONNEL_RESOURCE]] = Field(
+    PERSONNEL_RESOURCE: list[_SIU_S12_PERSONNEL_RESOURCE] | None = Field(
         default=None,
         title="PERSONNEL_RESOURCE",
         description="Optional, repeating",

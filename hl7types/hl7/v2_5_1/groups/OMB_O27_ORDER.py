@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: OMB_O27.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -17,7 +17,6 @@ from ..segments.FT1 import FT1
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
 from ..segments.SPM import SPM
-
 from .OMB_O27_OBSERVATION import OMB_O27_OBSERVATION
 from .OMB_O27_TIMING import OMB_O27_TIMING
 
@@ -53,7 +52,7 @@ class OMB_O27_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_OMB_O27_TIMING]] = Field(
+    TIMING: list[_OMB_O27_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -65,37 +64,37 @@ class OMB_O27_ORDER(BaseModel):
         description="Required",
     )
 
-    SPM: Optional[_SPM] = Field(
+    SPM: _SPM | None = Field(
         default=None,
         title="SPM",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMB_O27_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMB_O27_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

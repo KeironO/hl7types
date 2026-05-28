@@ -5,9 +5,9 @@ Version: 2.8
 Class: OMS_O05.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -16,7 +16,6 @@ from ..segments.ORC import ORC
 from ..segments.PRT import PRT
 from ..segments.RQ1 import RQ1
 from ..segments.RQD import RQD
-
 from .OMS_O05_OBSERVATION import OMS_O05_OBSERVATION
 from .OMS_O05_TIMING import OMS_O05_TIMING
 
@@ -50,13 +49,13 @@ class OMS_O05_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_OMS_O05_TIMING]] = Field(
+    TIMING: list[_OMS_O05_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -68,25 +67,25 @@ class OMS_O05_ORDER(BaseModel):
         description="Required",
     )
 
-    RQ1: Optional[_RQ1] = Field(
+    RQ1: _RQ1 | None = Field(
         default=None,
         title="RQ1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMS_O05_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMS_O05_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

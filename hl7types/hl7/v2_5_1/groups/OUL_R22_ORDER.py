@@ -5,16 +5,15 @@ Version: 2.5.1
 Class: OUL_R22.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .OUL_R22_OBXTCDSIDNTE_SUPPGRP import OUL_R22_OBXTCDSIDNTE_SUPPGRP
 from .OUL_R22_TIMING_QTY import OUL_R22_TIMING_QTY
 
@@ -44,31 +43,31 @@ class OUL_R22_ORDER(BaseModel):
         description="Required",
     )
 
-    ORC: Optional[_ORC] = Field(
+    ORC: _ORC | None = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: Optional[List[_OUL_R22_TIMING_QTY]] = Field(
+    TIMING_QTY: list[_OUL_R22_TIMING_QTY] | None = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    OBXTCDSIDNTE_SUPPGRP: Optional[List[_OUL_R22_OBXTCDSIDNTE_SUPPGRP]] = Field(
+    OBXTCDSIDNTE_SUPPGRP: list[_OUL_R22_OBXTCDSIDNTE_SUPPGRP] | None = Field(
         default=None,
         title="OBXTCDSIDNTE_SUPPGRP",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

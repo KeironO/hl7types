@@ -5,13 +5,12 @@ Version: 2.8.1
 Class: RRA_O18.ADMINISTRATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXR import RXR
-
 from .RRA_O18_TREATMENT import RRA_O18_TREATMENT
 
 _RRA_O18_TREATMENT = RRA_O18_TREATMENT
@@ -26,7 +25,7 @@ class RRA_O18_ADMINISTRATION(BaseModel):
         RXR (RXR): required
     """
 
-    TREATMENT: List[_RRA_O18_TREATMENT] = Field(
+    TREATMENT: list[_RRA_O18_TREATMENT] = Field(
         default=...,
         title="TREATMENT",
         description="Required, repeating",

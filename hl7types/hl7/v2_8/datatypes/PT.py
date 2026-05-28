@@ -5,9 +5,9 @@ Version: 2.8
 Class: PT
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class PT(BaseModel):
         title="Processing ID",
     )
 
-    pt_2: Optional[str] = Field(
+    pt_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pt_2",

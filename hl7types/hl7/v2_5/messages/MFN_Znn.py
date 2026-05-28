@@ -5,16 +5,15 @@ Version: 2.5
 Class: MFN_Znn
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_Znn_MF_SITE_DEFINED import MFN_Znn_MF_SITE_DEFINED
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
-
-from ..groups.MFN_Znn_MF_SITE_DEFINED import MFN_Znn_MF_SITE_DEFINED
 
 _MFI = MFI
 _MFN_Znn_MF_SITE_DEFINED = MFN_Znn_MF_SITE_DEFINED
@@ -38,7 +37,7 @@ class MFN_Znn(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -50,7 +49,7 @@ class MFN_Znn(BaseModel):
         description="Required",
     )
 
-    MF_SITE_DEFINED: List[_MFN_Znn_MF_SITE_DEFINED] = Field(
+    MF_SITE_DEFINED: list[_MFN_Znn_MF_SITE_DEFINED] = Field(
         default=...,
         title="MF_SITE_DEFINED",
         description="Required, repeating",

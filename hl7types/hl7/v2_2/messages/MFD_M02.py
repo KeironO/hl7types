@@ -5,9 +5,9 @@ Version: 2.2
 Class: MFD_M02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MFA import MFA
@@ -40,7 +40,7 @@ class MFD_M02(BaseModel):
         description="Required",
     )
 
-    MFA: Optional[List[_MFA]] = Field(
+    MFA: list[_MFA] | None = Field(
         default=None,
         title="MFA",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: CCM_I21.RESOURCE_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .CCM_I21_RESOURCE_OBJECT import CCM_I21_RESOURCE_OBJECT
@@ -31,7 +31,7 @@ class CCM_I21_RESOURCE_DETAIL(BaseModel):
         description="Required",
     )
 
-    RESOURCE_OBSERVATION: Optional[List[_CCM_I21_RESOURCE_OBSERVATION]] = Field(
+    RESOURCE_OBSERVATION: list[_CCM_I21_RESOURCE_OBSERVATION] | None = Field(
         default=None,
         title="RESOURCE_OBSERVATION",
         description="Optional, repeating",

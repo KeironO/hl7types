@@ -5,16 +5,15 @@ Version: 2.8.2
 Class: DFT_P11.FINANCIAL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
 from ..segments.DRG import DRG
 from ..segments.FT1 import FT1
 from ..segments.GT1 import GT1
-
 from .DFT_P11_FINANCIAL_COMMON_ORDER import DFT_P11_FINANCIAL_COMMON_ORDER
 from .DFT_P11_FINANCIAL_INSURANCE import DFT_P11_FINANCIAL_INSURANCE
 from .DFT_P11_FINANCIAL_PROCEDURE import DFT_P11_FINANCIAL_PROCEDURE
@@ -47,37 +46,37 @@ class DFT_P11_FINANCIAL(BaseModel):
         description="Required",
     )
 
-    FINANCIAL_PROCEDURE: Optional[List[_DFT_P11_FINANCIAL_PROCEDURE]] = Field(
+    FINANCIAL_PROCEDURE: list[_DFT_P11_FINANCIAL_PROCEDURE] | None = Field(
         default=None,
         title="FINANCIAL_PROCEDURE",
         description="Optional, repeating",
     )
 
-    FINANCIAL_COMMON_ORDER: Optional[List[_DFT_P11_FINANCIAL_COMMON_ORDER]] = Field(
+    FINANCIAL_COMMON_ORDER: list[_DFT_P11_FINANCIAL_COMMON_ORDER] | None = Field(
         default=None,
         title="FINANCIAL_COMMON_ORDER",
         description="Optional, repeating",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[_DRG] = Field(
+    DRG: _DRG | None = Field(
         default=None,
         title="DRG",
         description="Optional",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    FINANCIAL_INSURANCE: Optional[List[_DFT_P11_FINANCIAL_INSURANCE]] = Field(
+    FINANCIAL_INSURANCE: list[_DFT_P11_FINANCIAL_INSURANCE] | None = Field(
         default=None,
         title="FINANCIAL_INSURANCE",
         description="Optional, repeating",

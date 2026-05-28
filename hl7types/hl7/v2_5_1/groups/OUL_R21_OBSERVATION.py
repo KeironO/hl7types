@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: OUL_R21.OBSERVATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -31,25 +31,25 @@ class OUL_R21_OBSERVATION(BaseModel):
         NTE (Optional[List[NTE]]): optional
     """
 
-    OBX: Optional[_OBX] = Field(
+    OBX: _OBX | None = Field(
         default=None,
         title="OBX",
         description="Optional",
     )
 
-    TCD: Optional[_TCD] = Field(
+    TCD: _TCD | None = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    SID: Optional[List[_SID]] = Field(
+    SID: list[_SID] | None = Field(
         default=None,
         title="SID",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

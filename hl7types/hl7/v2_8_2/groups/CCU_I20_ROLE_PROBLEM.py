@@ -5,13 +5,12 @@ Version: 2.8.2
 Class: CCU_I20.ROLE_PROBLEM
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.VAR import VAR
-
 from .CCU_I20_ROLE_PROBLEM_OBJECT import CCU_I20_ROLE_PROBLEM_OBJECT
 
 _CCU_I20_ROLE_PROBLEM_OBJECT = CCU_I20_ROLE_PROBLEM_OBJECT
@@ -32,7 +31,7 @@ class CCU_I20_ROLE_PROBLEM(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

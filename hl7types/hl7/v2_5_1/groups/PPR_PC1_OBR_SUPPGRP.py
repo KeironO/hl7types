@@ -5,10 +5,10 @@ Version: 2.5.1
 Class: PPR_PC1.OBR_SUPPGRP
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class PPR_PC1_OBR_SUPPGRP(BaseModel):

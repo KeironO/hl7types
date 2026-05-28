@@ -5,13 +5,12 @@ Version: 2.8.2
 Class: CSU_C09.STUDY_PHASE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CSP import CSP
-
 from .CSU_C09_STUDY_SCHEDULE import CSU_C09_STUDY_SCHEDULE
 
 _CSP = CSP
@@ -26,13 +25,13 @@ class CSU_C09_STUDY_PHASE(BaseModel):
         STUDY_SCHEDULE (List[CSU_C09_STUDY_SCHEDULE]): required
     """
 
-    CSP: Optional[_CSP] = Field(
+    CSP: _CSP | None = Field(
         default=None,
         title="CSP",
         description="Optional",
     )
 
-    STUDY_SCHEDULE: List[_CSU_C09_STUDY_SCHEDULE] = Field(
+    STUDY_SCHEDULE: list[_CSU_C09_STUDY_SCHEDULE] = Field(
         default=...,
         title="STUDY_SCHEDULE",
         description="Required, repeating",

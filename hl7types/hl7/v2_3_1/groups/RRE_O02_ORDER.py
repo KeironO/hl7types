@@ -5,13 +5,12 @@ Version: 2.3.1
 Class: RRE_O02.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
-
 from .RRE_O02_ENCODING import RRE_O02_ENCODING
 
 _ORC = ORC
@@ -32,7 +31,7 @@ class RRE_O02_ORDER(BaseModel):
         description="Required",
     )
 
-    ENCODING: Optional[_RRE_O02_ENCODING] = Field(
+    ENCODING: _RRE_O02_ENCODING | None = Field(
         default=None,
         title="ENCODING",
         description="Optional",

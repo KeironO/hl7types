@@ -5,9 +5,9 @@ Version: 2.5
 Class: CON
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -33,7 +33,7 @@ class CON(BaseModel):
         description="Item #1776",
     )
 
-    con_2: Optional[CWE] = Field(
+    con_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_2",
@@ -45,7 +45,7 @@ class CON(BaseModel):
         description="Item #1777 | Table HL70496",
     )
 
-    con_3: Optional[str] = Field(
+    con_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_3",
@@ -57,7 +57,7 @@ class CON(BaseModel):
         description="Item #1778",
     )
 
-    con_4: Optional[EI] = Field(
+    con_4: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_4",
@@ -69,7 +69,7 @@ class CON(BaseModel):
         description="Item #1779",
     )
 
-    con_5: Optional[List[FT]] = Field(
+    con_5: list[FT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_5",
@@ -81,7 +81,7 @@ class CON(BaseModel):
         description="Item #1780",
     )
 
-    con_6: Optional[List[FT]] = Field(
+    con_6: list[FT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_6",
@@ -93,7 +93,7 @@ class CON(BaseModel):
         description="Item #1781",
     )
 
-    con_7: Optional[List[FT]] = Field(
+    con_7: list[FT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_7",
@@ -105,7 +105,7 @@ class CON(BaseModel):
         description="Item #1782",
     )
 
-    con_8: Optional[List[FT]] = Field(
+    con_8: list[FT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_8",
@@ -117,7 +117,7 @@ class CON(BaseModel):
         description="Item #1783",
     )
 
-    con_9: Optional[List[FT]] = Field(
+    con_9: list[FT] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_9",
@@ -129,7 +129,7 @@ class CON(BaseModel):
         description="Item #1784",
     )
 
-    con_10: Optional[CNE] = Field(
+    con_10: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_10",
@@ -153,7 +153,7 @@ class CON(BaseModel):
         description="Item #1786 | Table HL70498",
     )
 
-    con_12: Optional[TS] = Field(
+    con_12: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_12",
@@ -165,7 +165,7 @@ class CON(BaseModel):
         description="Item #1787",
     )
 
-    con_13: Optional[TS] = Field(
+    con_13: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_13",
@@ -177,7 +177,7 @@ class CON(BaseModel):
         description="Item #1788",
     )
 
-    con_14: Optional[TS] = Field(
+    con_14: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_14",
@@ -189,7 +189,7 @@ class CON(BaseModel):
         description="Item #1789",
     )
 
-    con_15: Optional[TS] = Field(
+    con_15: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_15",
@@ -201,7 +201,7 @@ class CON(BaseModel):
         description="Item #1790",
     )
 
-    con_16: Optional[str] = Field(
+    con_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_16",
@@ -213,7 +213,7 @@ class CON(BaseModel):
         description="Item #1791 | Table HL70136",
     )
 
-    con_17: Optional[str] = Field(
+    con_17: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_17",
@@ -225,7 +225,7 @@ class CON(BaseModel):
         description="Item #1792 | Table HL70136",
     )
 
-    con_18: Optional[str] = Field(
+    con_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_18",
@@ -237,7 +237,7 @@ class CON(BaseModel):
         description="Item #1793 | Table HL70296",
     )
 
-    con_19: Optional[str] = Field(
+    con_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_19",
@@ -249,7 +249,7 @@ class CON(BaseModel):
         description="Item #1794 | Table HL70136",
     )
 
-    con_20: Optional[CWE] = Field(
+    con_20: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_20",
@@ -261,7 +261,7 @@ class CON(BaseModel):
         description="Item #1795 | Table HL70499",
     )
 
-    con_21: Optional[str] = Field(
+    con_21: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_21",
@@ -273,7 +273,7 @@ class CON(BaseModel):
         description="Item #1796 | Table HL70500",
     )
 
-    con_22: Optional[CWE] = Field(
+    con_22: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_22",
@@ -285,7 +285,7 @@ class CON(BaseModel):
         description="Item #1797 | Table HL70501",
     )
 
-    con_23: Optional[CWE] = Field(
+    con_23: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_23",
@@ -297,7 +297,7 @@ class CON(BaseModel):
         description="Item #1798 | Table HL70502",
     )
 
-    con_24: List[XPN] = Field(
+    con_24: list[XPN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "con_24",
@@ -309,7 +309,7 @@ class CON(BaseModel):
         description="Item #1909",
     )
 
-    con_25: List[str] = Field(
+    con_25: list[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "con_25",

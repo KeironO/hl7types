@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_UVC
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_UVC(BaseModel):
     """HL7 v2 CM_UVC data type."""
 
-    cm_uvc_1: Optional[str] = Field(
+    cm_uvc_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_uvc_1",
@@ -25,7 +25,7 @@ class CM_UVC(BaseModel):
         title="Value code",
     )
 
-    cm_uvc_2: Optional[str] = Field(
+    cm_uvc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_uvc_2",

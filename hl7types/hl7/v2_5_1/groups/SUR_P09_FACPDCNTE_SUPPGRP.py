@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: SUR_P09.FACPDCNTE_SUPPGRP
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.FAC import FAC

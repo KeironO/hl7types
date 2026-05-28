@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: QRD
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -68,7 +68,7 @@ class QRD(BaseModel):
         description="Item #28",
     )
 
-    qrd_5: Optional[str] = Field(
+    qrd_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrd_5",
@@ -80,7 +80,7 @@ class QRD(BaseModel):
         description="Item #29 | Table HL70107",
     )
 
-    qrd_6: Optional[TS] = Field(
+    qrd_6: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrd_6",
@@ -104,7 +104,7 @@ class QRD(BaseModel):
         description="Item #31 | Table HL70126",
     )
 
-    qrd_8: List[XCN] = Field(
+    qrd_8: list[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "qrd_8",
@@ -116,7 +116,7 @@ class QRD(BaseModel):
         description="Item #32",
     )
 
-    qrd_9: List[CE] = Field(
+    qrd_9: list[CE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "qrd_9",
@@ -128,7 +128,7 @@ class QRD(BaseModel):
         description="Item #33 | Table HL70048",
     )
 
-    qrd_10: List[CE] = Field(
+    qrd_10: list[CE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "qrd_10",
@@ -140,7 +140,7 @@ class QRD(BaseModel):
         description="Item #34",
     )
 
-    qrd_11: Optional[List[VR]] = Field(
+    qrd_11: list[VR] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrd_11",
@@ -152,7 +152,7 @@ class QRD(BaseModel):
         description="Item #35",
     )
 
-    qrd_12: Optional[str] = Field(
+    qrd_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qrd_12",

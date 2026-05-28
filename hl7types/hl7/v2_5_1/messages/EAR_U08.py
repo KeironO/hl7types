@@ -5,17 +5,16 @@ Version: 2.5.1
 Class: EAR_U08
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.EAR_U08_COMMAND_RESPONSE import EAR_U08_COMMAND_RESPONSE
 from ..segments.EQU import EQU
 from ..segments.MSH import MSH
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
-
-from ..groups.EAR_U08_COMMAND_RESPONSE import EAR_U08_COMMAND_RESPONSE
 
 _EAR_U08_COMMAND_RESPONSE = EAR_U08_COMMAND_RESPONSE
 _EQU = EQU
@@ -41,7 +40,7 @@ class EAR_U08(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -53,13 +52,13 @@ class EAR_U08(BaseModel):
         description="Required",
     )
 
-    COMMAND_RESPONSE: List[_EAR_U08_COMMAND_RESPONSE] = Field(
+    COMMAND_RESPONSE: list[_EAR_U08_COMMAND_RESPONSE] = Field(
         default=...,
         title="COMMAND_RESPONSE",
         description="Required, repeating",
     )
 
-    ROL: Optional[_ROL] = Field(
+    ROL: _ROL | None = Field(
         default=None,
         title="ROL",
         description="Optional",

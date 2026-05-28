@@ -5,13 +5,12 @@ Version: 2.4
 Class: OMD_O03.ORDER_DIET
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
-
 from .OMD_O03_DIET import OMD_O03_DIET
 
 _OMD_O03_DIET = OMD_O03_DIET
@@ -32,7 +31,7 @@ class OMD_O03_ORDER_DIET(BaseModel):
         description="Required",
     )
 
-    DIET: Optional[_OMD_O03_DIET] = Field(
+    DIET: _OMD_O03_DIET | None = Field(
         default=None,
         title="DIET",
         description="Optional",

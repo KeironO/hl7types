@@ -5,16 +5,15 @@ Version: 2.5.1
 Class: MFN_M01
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M01_MF import MFN_M01_MF
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
-
-from ..groups.MFN_M01_MF import MFN_M01_MF
 
 _MFI = MFI
 _MFN_M01_MF = MFN_M01_MF
@@ -38,7 +37,7 @@ class MFN_M01(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -50,7 +49,7 @@ class MFN_M01(BaseModel):
         description="Required",
     )
 
-    MF: List[_MFN_M01_MF] = Field(
+    MF: list[_MFN_M01_MF] = Field(
         default=...,
         title="MF",
         description="Required, repeating",

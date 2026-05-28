@@ -5,16 +5,15 @@ Version: 2.5.1
 Class: MFN_M08
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M08_MF_TEST_NUMERIC import MFN_M08_MF_TEST_NUMERIC
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
-
-from ..groups.MFN_M08_MF_TEST_NUMERIC import MFN_M08_MF_TEST_NUMERIC
 
 _MFI = MFI
 _MFN_M08_MF_TEST_NUMERIC = MFN_M08_MF_TEST_NUMERIC
@@ -38,7 +37,7 @@ class MFN_M08(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -50,7 +49,7 @@ class MFN_M08(BaseModel):
         description="Required",
     )
 
-    MF_TEST_NUMERIC: List[_MFN_M08_MF_TEST_NUMERIC] = Field(
+    MF_TEST_NUMERIC: list[_MFN_M08_MF_TEST_NUMERIC] = Field(
         default=...,
         title="MF_TEST_NUMERIC",
         description="Required, repeating",

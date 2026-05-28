@@ -5,14 +5,13 @@ Version: 2.8.2
 Class: CCR_I16.MEDICATION_HISTORY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
-
 from .CCR_I16_MEDICATION_ADMINISTRATION_DETAIL import CCR_I16_MEDICATION_ADMINISTRATION_DETAIL
 from .CCR_I16_MEDICATION_ENCODING_DETAIL import CCR_I16_MEDICATION_ENCODING_DETAIL
 from .CCR_I16_MEDICATION_ORDER_DETAIL import CCR_I16_MEDICATION_ORDER_DETAIL
@@ -41,25 +40,27 @@ class CCR_I16_MEDICATION_HISTORY(BaseModel):
         description="Required",
     )
 
-    MEDICATION_ORDER_DETAIL: Optional[_CCR_I16_MEDICATION_ORDER_DETAIL] = Field(
+    MEDICATION_ORDER_DETAIL: _CCR_I16_MEDICATION_ORDER_DETAIL | None = Field(
         default=None,
         title="MEDICATION_ORDER_DETAIL",
         description="Optional",
     )
 
-    MEDICATION_ENCODING_DETAIL: Optional[_CCR_I16_MEDICATION_ENCODING_DETAIL] = Field(
+    MEDICATION_ENCODING_DETAIL: _CCR_I16_MEDICATION_ENCODING_DETAIL | None = Field(
         default=None,
         title="MEDICATION_ENCODING_DETAIL",
         description="Optional",
     )
 
-    MEDICATION_ADMINISTRATION_DETAIL: Optional[List[_CCR_I16_MEDICATION_ADMINISTRATION_DETAIL]] = Field(
-        default=None,
-        title="MEDICATION_ADMINISTRATION_DETAIL",
-        description="Optional, repeating",
+    MEDICATION_ADMINISTRATION_DETAIL: list[_CCR_I16_MEDICATION_ADMINISTRATION_DETAIL] | None = (
+        Field(
+            default=None,
+            title="MEDICATION_ADMINISTRATION_DETAIL",
+            description="Optional, repeating",
+        )
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

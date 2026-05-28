@@ -5,9 +5,9 @@ Version: 2.5
 Class: NMD_N02.CLOCK_AND_STATS_WITH_NOTES
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from .NMD_N02_APP_STATS import NMD_N02_APP_STATS
@@ -28,19 +28,19 @@ class NMD_N02_CLOCK_AND_STATS_WITH_NOTES(BaseModel):
         APP_STATUS (Optional[NMD_N02_APP_STATUS]): optional
     """
 
-    CLOCK: Optional[_NMD_N02_CLOCK] = Field(
+    CLOCK: _NMD_N02_CLOCK | None = Field(
         default=None,
         title="CLOCK",
         description="Optional",
     )
 
-    APP_STATS: Optional[_NMD_N02_APP_STATS] = Field(
+    APP_STATS: _NMD_N02_APP_STATS | None = Field(
         default=None,
         title="APP_STATS",
         description="Optional",
     )
 
-    APP_STATUS: Optional[_NMD_N02_APP_STATUS] = Field(
+    APP_STATUS: _NMD_N02_APP_STATUS | None = Field(
         default=None,
         title="APP_STATUS",
         description="Optional",

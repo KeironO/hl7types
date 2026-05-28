@@ -5,9 +5,9 @@ Version: 2.7
 Class: SFT
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TX import TX
@@ -65,7 +65,7 @@ class SFT(BaseModel):
         description="Item #1837",
     )
 
-    sft_5: Optional[TX] = Field(
+    sft_5: TX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sft_5",
@@ -77,7 +77,7 @@ class SFT(BaseModel):
         description="Item #1838",
     )
 
-    sft_6: Optional[str] = Field(
+    sft_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sft_6",

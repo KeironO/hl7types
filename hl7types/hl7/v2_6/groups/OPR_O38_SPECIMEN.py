@@ -5,15 +5,14 @@ Version: 2.6
 Class: OPR_O38.SPECIMEN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.SAC import SAC
 from ..segments.SPM import SPM
-
 from .OPR_O38_OBSERVATION_REQUEST import OPR_O38_OBSERVATION_REQUEST
 from .OPR_O38_TIMING import OPR_O38_TIMING
 
@@ -41,25 +40,25 @@ class OPR_O38_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    SAC: Optional[List[_SAC]] = Field(
+    SAC: list[_SAC] | None = Field(
         default=None,
         title="SAC",
         description="Optional, repeating",
     )
 
-    OBSERVATION_REQUEST: Optional[List[_OPR_O38_OBSERVATION_REQUEST]] = Field(
+    OBSERVATION_REQUEST: list[_OPR_O38_OBSERVATION_REQUEST] | None = Field(
         default=None,
         title="OBSERVATION_REQUEST",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_OPR_O38_TIMING]] = Field(
+    TIMING: list[_OPR_O38_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",

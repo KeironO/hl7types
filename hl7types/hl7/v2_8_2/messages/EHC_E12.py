@@ -5,11 +5,12 @@ Version: 2.8.2
 Class: EHC_E12
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.EHC_E12_REQUEST import EHC_E12_REQUEST
 from ..segments.CTD import CTD
 from ..segments.IVC import IVC
 from ..segments.MSH import MSH
@@ -20,8 +21,6 @@ from ..segments.PSS import PSS
 from ..segments.RFI import RFI
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.EHC_E12_REQUEST import EHC_E12_REQUEST
 
 _CTD = CTD
 _EHC_E12_REQUEST = EHC_E12_REQUEST
@@ -59,13 +58,13 @@ class EHC_E12(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[List[_UAC]] = Field(
+    UAC: list[_UAC] | None = Field(
         default=None,
         title="UAC",
         description="Optional, repeating",
@@ -77,7 +76,7 @@ class EHC_E12(BaseModel):
         description="Required",
     )
 
-    CTD: Optional[List[_CTD]] = Field(
+    CTD: list[_CTD] | None = Field(
         default=None,
         title="CTD",
         description="Optional, repeating",
@@ -101,19 +100,19 @@ class EHC_E12(BaseModel):
         description="Required",
     )
 
-    PID: Optional[_PID] = Field(
+    PID: _PID | None = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    PSL: Optional[List[_PSL]] = Field(
+    PSL: list[_PSL] | None = Field(
         default=None,
         title="PSL",
         description="Optional, repeating",
     )
 
-    REQUEST: List[_EHC_E12_REQUEST] = Field(
+    REQUEST: list[_EHC_E12_REQUEST] = Field(
         default=...,
         title="REQUEST",
         description="Required, repeating",

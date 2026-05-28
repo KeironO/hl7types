@@ -5,9 +5,9 @@ Version: 2.2
 Class: GT1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.AD import AD
@@ -29,7 +29,7 @@ class GT1(BaseModel):
         description="Item #405",
     )
 
-    gt1_2: Optional[str] = Field(
+    gt1_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_2",
@@ -53,7 +53,7 @@ class GT1(BaseModel):
         description="Item #407",
     )
 
-    gt1_4: Optional[PN] = Field(
+    gt1_4: PN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_4",
@@ -65,7 +65,7 @@ class GT1(BaseModel):
         description="Item #408",
     )
 
-    gt1_5: Optional[AD] = Field(
+    gt1_5: AD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_5",
@@ -77,7 +77,7 @@ class GT1(BaseModel):
         description="Item #409",
     )
 
-    gt1_6: Optional[List[str]] = Field(
+    gt1_6: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_6",
@@ -89,7 +89,7 @@ class GT1(BaseModel):
         description="Item #410",
     )
 
-    gt1_7: Optional[List[str]] = Field(
+    gt1_7: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_7",
@@ -101,7 +101,7 @@ class GT1(BaseModel):
         description="Item #411",
     )
 
-    gt1_8: Optional[str] = Field(
+    gt1_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_8",
@@ -113,7 +113,7 @@ class GT1(BaseModel):
         description="Item #412",
     )
 
-    gt1_9: Optional[str] = Field(
+    gt1_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_9",
@@ -125,7 +125,7 @@ class GT1(BaseModel):
         description="Item #413 | Table HL70001",
     )
 
-    gt1_10: Optional[str] = Field(
+    gt1_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_10",
@@ -137,7 +137,7 @@ class GT1(BaseModel):
         description="Item #414 | Table HL70068",
     )
 
-    gt1_11: Optional[str] = Field(
+    gt1_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_11",
@@ -149,7 +149,7 @@ class GT1(BaseModel):
         description="Item #415 | Table HL70063",
     )
 
-    gt1_12: Optional[str] = Field(
+    gt1_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_12",
@@ -161,7 +161,7 @@ class GT1(BaseModel):
         description="Item #416",
     )
 
-    gt1_13: Optional[str] = Field(
+    gt1_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_13",
@@ -173,7 +173,7 @@ class GT1(BaseModel):
         description="Item #417",
     )
 
-    gt1_14: Optional[str] = Field(
+    gt1_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_14",
@@ -185,7 +185,7 @@ class GT1(BaseModel):
         description="Item #418",
     )
 
-    gt1_15: Optional[str] = Field(
+    gt1_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_15",
@@ -197,7 +197,7 @@ class GT1(BaseModel):
         description="Item #419",
     )
 
-    gt1_16: Optional[str] = Field(
+    gt1_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_16",
@@ -209,7 +209,7 @@ class GT1(BaseModel):
         description="Item #420",
     )
 
-    gt1_17: Optional[AD] = Field(
+    gt1_17: AD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_17",
@@ -221,7 +221,7 @@ class GT1(BaseModel):
         description="Item #421",
     )
 
-    gt1_18: Optional[List[str]] = Field(
+    gt1_18: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_18",
@@ -233,7 +233,7 @@ class GT1(BaseModel):
         description="Item #422",
     )
 
-    gt1_19: Optional[str] = Field(
+    gt1_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_19",
@@ -245,7 +245,7 @@ class GT1(BaseModel):
         description="Item #423",
     )
 
-    gt1_20: Optional[str] = Field(
+    gt1_20: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_20",
@@ -257,7 +257,7 @@ class GT1(BaseModel):
         description="Item #424 | Table HL70066",
     )
 
-    gt1_21: Optional[str] = Field(
+    gt1_21: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_21",

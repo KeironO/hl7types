@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: GT1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -36,7 +36,7 @@ class GT1(BaseModel):
         description="Item #405",
     )
 
-    gt1_2: Optional[List[CX]] = Field(
+    gt1_2: list[CX] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_2",
@@ -48,7 +48,7 @@ class GT1(BaseModel):
         description="Item #406",
     )
 
-    gt1_3: List[XPN] = Field(
+    gt1_3: list[XPN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "gt1_3",
@@ -60,7 +60,7 @@ class GT1(BaseModel):
         description="Item #407",
     )
 
-    gt1_4: Optional[List[XPN]] = Field(
+    gt1_4: list[XPN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_4",
@@ -72,7 +72,7 @@ class GT1(BaseModel):
         description="Item #408",
     )
 
-    gt1_5: Optional[List[XAD]] = Field(
+    gt1_5: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_5",
@@ -84,7 +84,7 @@ class GT1(BaseModel):
         description="Item #409",
     )
 
-    gt1_6: Optional[List[XTN]] = Field(
+    gt1_6: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_6",
@@ -96,7 +96,7 @@ class GT1(BaseModel):
         description="Item #410",
     )
 
-    gt1_7: Optional[List[XTN]] = Field(
+    gt1_7: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_7",
@@ -108,7 +108,7 @@ class GT1(BaseModel):
         description="Item #411",
     )
 
-    gt1_8: Optional[str] = Field(
+    gt1_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_8",
@@ -120,7 +120,7 @@ class GT1(BaseModel):
         description="Item #412",
     )
 
-    gt1_9: Optional[CWE] = Field(
+    gt1_9: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_9",
@@ -132,7 +132,7 @@ class GT1(BaseModel):
         description="Item #413 | Table HL70001",
     )
 
-    gt1_10: Optional[CWE] = Field(
+    gt1_10: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_10",
@@ -144,7 +144,7 @@ class GT1(BaseModel):
         description="Item #414 | Table HL70068",
     )
 
-    gt1_11: Optional[CWE] = Field(
+    gt1_11: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_11",
@@ -156,7 +156,7 @@ class GT1(BaseModel):
         description="Item #415 | Table HL70063",
     )
 
-    gt1_12: Optional[str] = Field(
+    gt1_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_12",
@@ -168,7 +168,7 @@ class GT1(BaseModel):
         description="Item #416",
     )
 
-    gt1_13: Optional[str] = Field(
+    gt1_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_13",
@@ -180,7 +180,7 @@ class GT1(BaseModel):
         description="Item #417",
     )
 
-    gt1_14: Optional[str] = Field(
+    gt1_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_14",
@@ -192,7 +192,7 @@ class GT1(BaseModel):
         description="Item #418",
     )
 
-    gt1_15: Optional[str] = Field(
+    gt1_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_15",
@@ -204,7 +204,7 @@ class GT1(BaseModel):
         description="Item #419",
     )
 
-    gt1_16: Optional[List[XPN]] = Field(
+    gt1_16: list[XPN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_16",
@@ -216,7 +216,7 @@ class GT1(BaseModel):
         description="Item #420",
     )
 
-    gt1_17: Optional[List[XAD]] = Field(
+    gt1_17: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_17",
@@ -228,7 +228,7 @@ class GT1(BaseModel):
         description="Item #421",
     )
 
-    gt1_18: Optional[List[XTN]] = Field(
+    gt1_18: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_18",
@@ -240,7 +240,7 @@ class GT1(BaseModel):
         description="Item #422",
     )
 
-    gt1_19: Optional[List[CX]] = Field(
+    gt1_19: list[CX] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_19",
@@ -252,7 +252,7 @@ class GT1(BaseModel):
         description="Item #423",
     )
 
-    gt1_20: Optional[CWE] = Field(
+    gt1_20: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_20",
@@ -264,7 +264,7 @@ class GT1(BaseModel):
         description="Item #424 | Table HL70066",
     )
 
-    gt1_21: Optional[List[XON]] = Field(
+    gt1_21: list[XON] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_21",
@@ -276,7 +276,7 @@ class GT1(BaseModel):
         description="Item #425",
     )
 
-    gt1_22: Optional[str] = Field(
+    gt1_22: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_22",
@@ -288,7 +288,7 @@ class GT1(BaseModel):
         description="Item #773 | Table HL70136",
     )
 
-    gt1_23: Optional[CWE] = Field(
+    gt1_23: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_23",
@@ -300,7 +300,7 @@ class GT1(BaseModel):
         description="Item #774 | Table HL70341",
     )
 
-    gt1_24: Optional[str] = Field(
+    gt1_24: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_24",
@@ -312,7 +312,7 @@ class GT1(BaseModel):
         description="Item #775",
     )
 
-    gt1_25: Optional[str] = Field(
+    gt1_25: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_25",
@@ -324,7 +324,7 @@ class GT1(BaseModel):
         description="Item #776 | Table HL70136",
     )
 
-    gt1_26: Optional[CWE] = Field(
+    gt1_26: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_26",
@@ -336,7 +336,7 @@ class GT1(BaseModel):
         description="Item #777 | Table HL70218",
     )
 
-    gt1_27: Optional[CP] = Field(
+    gt1_27: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_27",
@@ -348,7 +348,7 @@ class GT1(BaseModel):
         description="Item #778",
     )
 
-    gt1_28: Optional[str] = Field(
+    gt1_28: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_28",
@@ -360,7 +360,7 @@ class GT1(BaseModel):
         description="Item #779",
     )
 
-    gt1_29: Optional[List[CX]] = Field(
+    gt1_29: list[CX] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_29",
@@ -372,7 +372,7 @@ class GT1(BaseModel):
         description="Item #780",
     )
 
-    gt1_30: Optional[CWE] = Field(
+    gt1_30: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_30",
@@ -384,7 +384,7 @@ class GT1(BaseModel):
         description="Item #781 | Table HL70002",
     )
 
-    gt1_31: Optional[str] = Field(
+    gt1_31: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_31",
@@ -396,7 +396,7 @@ class GT1(BaseModel):
         description="Item #782",
     )
 
-    gt1_32: Optional[str] = Field(
+    gt1_32: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_32",
@@ -408,7 +408,7 @@ class GT1(BaseModel):
         description="Item #783",
     )
 
-    gt1_33: Optional[CWE] = Field(
+    gt1_33: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_33",
@@ -420,7 +420,7 @@ class GT1(BaseModel):
         description="Item #755 | Table HL70223",
     )
 
-    gt1_34: Optional[List[CWE]] = Field(
+    gt1_34: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_34",
@@ -432,7 +432,7 @@ class GT1(BaseModel):
         description="Item #145 | Table HL70009",
     )
 
-    gt1_35: Optional[List[CWE]] = Field(
+    gt1_35: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_35",
@@ -444,7 +444,7 @@ class GT1(BaseModel):
         description="Item #129 | Table HL70171",
     )
 
-    gt1_36: Optional[CWE] = Field(
+    gt1_36: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_36",
@@ -456,7 +456,7 @@ class GT1(BaseModel):
         description="Item #118 | Table HL70296",
     )
 
-    gt1_37: Optional[CWE] = Field(
+    gt1_37: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_37",
@@ -468,7 +468,7 @@ class GT1(BaseModel):
         description="Item #742 | Table HL70220",
     )
 
-    gt1_38: Optional[CWE] = Field(
+    gt1_38: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_38",
@@ -480,7 +480,7 @@ class GT1(BaseModel):
         description="Item #743 | Table HL70215",
     )
 
-    gt1_39: Optional[str] = Field(
+    gt1_39: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_39",
@@ -492,7 +492,7 @@ class GT1(BaseModel):
         description="Item #744 | Table HL70136",
     )
 
-    gt1_40: Optional[CWE] = Field(
+    gt1_40: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_40",
@@ -504,7 +504,7 @@ class GT1(BaseModel):
         description="Item #745 | Table HL70231",
     )
 
-    gt1_41: Optional[CWE] = Field(
+    gt1_41: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_41",
@@ -516,7 +516,7 @@ class GT1(BaseModel):
         description="Item #120 | Table HL70006",
     )
 
-    gt1_42: Optional[List[XPN]] = Field(
+    gt1_42: list[XPN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_42",
@@ -528,7 +528,7 @@ class GT1(BaseModel):
         description="Item #109",
     )
 
-    gt1_43: Optional[CWE] = Field(
+    gt1_43: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_43",
@@ -540,7 +540,7 @@ class GT1(BaseModel):
         description="Item #739 | Table HL70212",
     )
 
-    gt1_44: Optional[List[CWE]] = Field(
+    gt1_44: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_44",
@@ -552,7 +552,7 @@ class GT1(BaseModel):
         description="Item #125 | Table HL70189",
     )
 
-    gt1_45: Optional[List[XPN]] = Field(
+    gt1_45: list[XPN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_45",
@@ -564,7 +564,7 @@ class GT1(BaseModel):
         description="Item #748",
     )
 
-    gt1_46: Optional[List[XTN]] = Field(
+    gt1_46: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_46",
@@ -576,7 +576,7 @@ class GT1(BaseModel):
         description="Item #749",
     )
 
-    gt1_47: Optional[CWE] = Field(
+    gt1_47: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_47",
@@ -588,7 +588,7 @@ class GT1(BaseModel):
         description="Item #747 | Table HL70222",
     )
 
-    gt1_48: Optional[CWE] = Field(
+    gt1_48: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_48",
@@ -600,7 +600,7 @@ class GT1(BaseModel):
         description="Item #784 | Table HL70063",
     )
 
-    gt1_49: Optional[str] = Field(
+    gt1_49: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_49",
@@ -612,7 +612,7 @@ class GT1(BaseModel):
         description="Item #785",
     )
 
-    gt1_50: Optional[JCC] = Field(
+    gt1_50: JCC | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_50",
@@ -624,7 +624,7 @@ class GT1(BaseModel):
         description="Item #786",
     )
 
-    gt1_51: Optional[List[XON]] = Field(
+    gt1_51: list[XON] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_51",
@@ -636,7 +636,7 @@ class GT1(BaseModel):
         description="Item #1299",
     )
 
-    gt1_52: Optional[CWE] = Field(
+    gt1_52: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_52",
@@ -648,7 +648,7 @@ class GT1(BaseModel):
         description="Item #753 | Table HL70295",
     )
 
-    gt1_53: Optional[CWE] = Field(
+    gt1_53: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_53",
@@ -660,7 +660,7 @@ class GT1(BaseModel):
         description="Item #752 | Table HL70311",
     )
 
-    gt1_54: Optional[FC] = Field(
+    gt1_54: FC | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_54",
@@ -672,7 +672,7 @@ class GT1(BaseModel):
         description="Item #1231",
     )
 
-    gt1_55: Optional[List[CWE]] = Field(
+    gt1_55: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_55",
@@ -684,7 +684,7 @@ class GT1(BaseModel):
         description="Item #1291 | Table HL70005",
     )
 
-    gt1_56: Optional[str] = Field(
+    gt1_56: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_56",
@@ -696,7 +696,7 @@ class GT1(BaseModel):
         description="Item #1851",
     )
 
-    gt1_57: Optional[CWE] = Field(
+    gt1_57: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "gt1_57",

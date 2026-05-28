@@ -5,15 +5,14 @@ Version: 2.8.2
 Class: PGL_PC6.GOAL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GOL import GOL
 from ..segments.NTE import NTE
 from ..segments.VAR import VAR
-
 from .PGL_PC6_GOAL_ROLE import PGL_PC6_GOAL_ROLE
 from .PGL_PC6_OBSERVATION import PGL_PC6_OBSERVATION
 from .PGL_PC6_ORDER import PGL_PC6_ORDER
@@ -50,43 +49,43 @@ class PGL_PC6_GOAL(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    GOAL_ROLE: Optional[List[_PGL_PC6_GOAL_ROLE]] = Field(
+    GOAL_ROLE: list[_PGL_PC6_GOAL_ROLE] | None = Field(
         default=None,
         title="GOAL_ROLE",
         description="Optional, repeating",
     )
 
-    PATHWAY: Optional[List[_PGL_PC6_PATHWAY]] = Field(
+    PATHWAY: list[_PGL_PC6_PATHWAY] | None = Field(
         default=None,
         title="PATHWAY",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_PGL_PC6_OBSERVATION]] = Field(
+    OBSERVATION: list[_PGL_PC6_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PROBLEM: Optional[List[_PGL_PC6_PROBLEM]] = Field(
+    PROBLEM: list[_PGL_PC6_PROBLEM] | None = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_PGL_PC6_ORDER]] = Field(
+    ORDER: list[_PGL_PC6_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

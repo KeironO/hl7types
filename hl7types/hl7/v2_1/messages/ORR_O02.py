@@ -5,16 +5,15 @@ Version: 2.1
 Class: ORR_O02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ORR_O02_PATIENT import ORR_O02_PATIENT
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
-
-from ..groups.ORR_O02_PATIENT import ORR_O02_PATIENT
 
 _MSA = MSA
 _MSH = MSH
@@ -44,13 +43,13 @@ class ORR_O02(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[_ORR_O02_PATIENT] = Field(
+    PATIENT: _ORR_O02_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",

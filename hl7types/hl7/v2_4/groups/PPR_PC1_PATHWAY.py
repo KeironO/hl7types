@@ -5,9 +5,9 @@ Version: 2.4
 Class: PPR_PC1.PATHWAY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PTH import PTH
@@ -31,7 +31,7 @@ class PPR_PC1_PATHWAY(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

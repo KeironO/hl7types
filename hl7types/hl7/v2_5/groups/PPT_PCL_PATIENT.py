@@ -5,13 +5,12 @@ Version: 2.5
 Class: PPT_PCL.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
-
 from .PPT_PCL_PATHWAY import PPT_PCL_PATHWAY
 from .PPT_PCL_PATIENT_VISIT import PPT_PCL_PATIENT_VISIT
 
@@ -35,13 +34,13 @@ class PPT_PCL_PATIENT(BaseModel):
         description="Required",
     )
 
-    PATIENT_VISIT: Optional[_PPT_PCL_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _PPT_PCL_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    PATHWAY: List[_PPT_PCL_PATHWAY] = Field(
+    PATHWAY: list[_PPT_PCL_PATHWAY] = Field(
         default=...,
         title="PATHWAY",
         description="Required, repeating",

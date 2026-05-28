@@ -5,9 +5,9 @@ Version: 2.6
 Class: SID
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class SID(BaseModel):
     """HL7 v2 SID segment."""
 
-    sid_1: Optional[CWE] = Field(
+    sid_1: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sid_1",
@@ -28,7 +28,7 @@ class SID(BaseModel):
         description="Item #1426 | Table HL79999",
     )
 
-    sid_2: Optional[str] = Field(
+    sid_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sid_2",
@@ -40,7 +40,7 @@ class SID(BaseModel):
         description="Item #1129",
     )
 
-    sid_3: Optional[str] = Field(
+    sid_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sid_3",
@@ -52,7 +52,7 @@ class SID(BaseModel):
         description="Item #1428",
     )
 
-    sid_4: Optional[CWE] = Field(
+    sid_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sid_4",

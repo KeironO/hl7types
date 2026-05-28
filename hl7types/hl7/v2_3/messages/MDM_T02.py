@@ -5,9 +5,9 @@ Version: 2.3
 Class: MDM_T02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EVN import EVN
@@ -67,7 +67,7 @@ class MDM_T02(BaseModel):
         description="Required",
     )
 
-    OBX: List[_OBX] = Field(
+    OBX: list[_OBX] = Field(
         default=...,
         title="OBX",
         description="Required, repeating",

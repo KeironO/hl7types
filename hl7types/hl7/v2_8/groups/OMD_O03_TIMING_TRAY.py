@@ -5,9 +5,9 @@ Version: 2.8
 Class: OMD_O03.TIMING_TRAY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.TQ1 import TQ1
@@ -31,7 +31,7 @@ class OMD_O03_TIMING_TRAY(BaseModel):
         description="Required",
     )
 
-    TQ2: Optional[List[_TQ2]] = Field(
+    TQ2: list[_TQ2] | None = Field(
         default=None,
         title="TQ2",
         description="Optional, repeating",

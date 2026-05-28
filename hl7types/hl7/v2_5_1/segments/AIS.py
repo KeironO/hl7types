@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: AIS
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -29,7 +29,7 @@ class AIS(BaseModel):
         description="Item #890",
     )
 
-    ais_2: Optional[str] = Field(
+    ais_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_2",
@@ -53,7 +53,7 @@ class AIS(BaseModel):
         description="Item #238",
     )
 
-    ais_4: Optional[TS] = Field(
+    ais_4: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_4",
@@ -65,7 +65,7 @@ class AIS(BaseModel):
         description="Item #1202",
     )
 
-    ais_5: Optional[str] = Field(
+    ais_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_5",
@@ -77,7 +77,7 @@ class AIS(BaseModel):
         description="Item #891",
     )
 
-    ais_6: Optional[CE] = Field(
+    ais_6: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_6",
@@ -89,7 +89,7 @@ class AIS(BaseModel):
         description="Item #892",
     )
 
-    ais_7: Optional[str] = Field(
+    ais_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_7",
@@ -101,7 +101,7 @@ class AIS(BaseModel):
         description="Item #893",
     )
 
-    ais_8: Optional[CE] = Field(
+    ais_8: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_8",
@@ -113,7 +113,7 @@ class AIS(BaseModel):
         description="Item #894",
     )
 
-    ais_9: Optional[str] = Field(
+    ais_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_9",
@@ -125,7 +125,7 @@ class AIS(BaseModel):
         description="Item #895 | Table HL70279",
     )
 
-    ais_10: Optional[CE] = Field(
+    ais_10: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_10",
@@ -137,7 +137,7 @@ class AIS(BaseModel):
         description="Item #889 | Table HL70278",
     )
 
-    ais_11: Optional[List[CE]] = Field(
+    ais_11: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_11",
@@ -149,7 +149,7 @@ class AIS(BaseModel):
         description="Item #1474 | Table HL70411",
     )
 
-    ais_12: Optional[List[CE]] = Field(
+    ais_12: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ais_12",

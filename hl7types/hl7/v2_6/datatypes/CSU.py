@@ -5,9 +5,9 @@ Version: 2.6
 Class: CSU
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class CSU(BaseModel):
         title="Channel Sensitivity",
     )
 
-    csu_2: Optional[str] = Field(
+    csu_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_2",
@@ -36,7 +36,7 @@ class CSU(BaseModel):
         title="Unit of Measure Identifier",
     )
 
-    csu_3: Optional[str] = Field(
+    csu_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_3",
@@ -47,7 +47,7 @@ class CSU(BaseModel):
         title="Unit of Measure Description",
     )
 
-    csu_4: Optional[str] = Field(
+    csu_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_4",
@@ -58,7 +58,7 @@ class CSU(BaseModel):
         title="Unit of Measure Coding System",
     )
 
-    csu_5: Optional[str] = Field(
+    csu_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_5",
@@ -69,7 +69,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Identifier",
     )
 
-    csu_6: Optional[str] = Field(
+    csu_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_6",
@@ -80,7 +80,7 @@ class CSU(BaseModel):
         title="Alternate Unit of Measure Description",
     )
 
-    csu_7: Optional[str] = Field(
+    csu_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "csu_7",

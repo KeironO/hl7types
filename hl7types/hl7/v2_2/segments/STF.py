@@ -5,9 +5,9 @@ Version: 2.2
 Class: STF
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.AD import AD
@@ -31,7 +31,7 @@ class STF(BaseModel):
         description="Item #671",
     )
 
-    stf_2: Optional[List[CE]] = Field(
+    stf_2: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_2",
@@ -43,7 +43,7 @@ class STF(BaseModel):
         description="Item #672",
     )
 
-    stf_3: Optional[PN] = Field(
+    stf_3: PN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_3",
@@ -55,7 +55,7 @@ class STF(BaseModel):
         description="Item #673",
     )
 
-    stf_4: Optional[List[str]] = Field(
+    stf_4: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_4",
@@ -67,7 +67,7 @@ class STF(BaseModel):
         description="Item #674 | Table HL70182",
     )
 
-    stf_5: Optional[str] = Field(
+    stf_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_5",
@@ -79,7 +79,7 @@ class STF(BaseModel):
         description="Item #111 | Table HL70001",
     )
 
-    stf_6: Optional[TS] = Field(
+    stf_6: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_6",
@@ -91,7 +91,7 @@ class STF(BaseModel):
         description="Item #110",
     )
 
-    stf_7: Optional[str] = Field(
+    stf_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_7",
@@ -103,7 +103,7 @@ class STF(BaseModel):
         description="Item #675 | Table HL70183",
     )
 
-    stf_8: Optional[List[CE]] = Field(
+    stf_8: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_8",
@@ -115,7 +115,7 @@ class STF(BaseModel):
         description="Item #676 | Table HL70184",
     )
 
-    stf_9: Optional[List[CE]] = Field(
+    stf_9: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_9",
@@ -127,7 +127,7 @@ class STF(BaseModel):
         description="Item #677",
     )
 
-    stf_10: Optional[List[str]] = Field(
+    stf_10: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_10",
@@ -139,7 +139,7 @@ class STF(BaseModel):
         description="Item #678",
     )
 
-    stf_11: Optional[List[AD]] = Field(
+    stf_11: list[AD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_11",
@@ -151,7 +151,7 @@ class STF(BaseModel):
         description="Item #679",
     )
 
-    stf_12: Optional[List[str]] = Field(
+    stf_12: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_12",
@@ -163,7 +163,7 @@ class STF(BaseModel):
         description="Item #680",
     )
 
-    stf_13: Optional[List[str]] = Field(
+    stf_13: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_13",
@@ -175,7 +175,7 @@ class STF(BaseModel):
         description="Item #681",
     )
 
-    stf_14: Optional[List[CE]] = Field(
+    stf_14: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_14",
@@ -187,7 +187,7 @@ class STF(BaseModel):
         description="Item #682",
     )
 
-    stf_15: Optional[List[str]] = Field(
+    stf_15: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_15",
@@ -199,7 +199,7 @@ class STF(BaseModel):
         description="Item #683",
     )
 
-    stf_16: Optional[str] = Field(
+    stf_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stf_16",

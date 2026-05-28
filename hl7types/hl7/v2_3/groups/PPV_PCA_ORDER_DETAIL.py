@@ -5,15 +5,14 @@ Version: 2.3
 Class: PPV_PCA.ORDER_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.VAR import VAR
-
 from .PPV_PCA_ORDER_OBSERVATION import PPV_PCA_ORDER_OBSERVATION
 
 _NTE = NTE
@@ -38,19 +37,19 @@ class PPV_PCA_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ORDER_OBSERVATION: Optional[List[_PPV_PCA_ORDER_OBSERVATION]] = Field(
+    ORDER_OBSERVATION: list[_PPV_PCA_ORDER_OBSERVATION] | None = Field(
         default=None,
         title="ORDER_OBSERVATION",
         description="Optional, repeating",

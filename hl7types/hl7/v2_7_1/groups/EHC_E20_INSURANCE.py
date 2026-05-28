@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: EHC_E20.INSURANCE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.IN1 import IN1
@@ -31,7 +31,7 @@ class EHC_E20_INSURANCE(BaseModel):
         description="Required",
     )
 
-    IN2: Optional[_IN2] = Field(
+    IN2: _IN2 | None = Field(
         default=None,
         title="IN2",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: ADJ
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -68,7 +68,7 @@ class ADJ(BaseModel):
         description="Item #2006 | Table HL70564",
     )
 
-    adj_5: Optional[List[CP]] = Field(
+    adj_5: list[CP] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_5",
@@ -80,7 +80,7 @@ class ADJ(BaseModel):
         description="Item #2007",
     )
 
-    adj_6: Optional[CQ] = Field(
+    adj_6: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_6",
@@ -92,7 +92,7 @@ class ADJ(BaseModel):
         description="Item #2008 | Table HL70560",
     )
 
-    adj_7: Optional[CWE] = Field(
+    adj_7: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_7",
@@ -104,7 +104,7 @@ class ADJ(BaseModel):
         description="Item #2009 | Table HL70565",
     )
 
-    adj_8: Optional[str] = Field(
+    adj_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_8",
@@ -116,7 +116,7 @@ class ADJ(BaseModel):
         description="Item #2010",
     )
 
-    adj_9: Optional[str] = Field(
+    adj_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_9",
@@ -128,7 +128,7 @@ class ADJ(BaseModel):
         description="Item #2011",
     )
 
-    adj_10: Optional[str] = Field(
+    adj_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_10",
@@ -140,7 +140,7 @@ class ADJ(BaseModel):
         description="Item #2012",
     )
 
-    adj_11: Optional[CWE] = Field(
+    adj_11: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_11",
@@ -152,7 +152,7 @@ class ADJ(BaseModel):
         description="Item #2013 | Table HL70569",
     )
 
-    adj_12: Optional[EI] = Field(
+    adj_12: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_12",
@@ -164,7 +164,7 @@ class ADJ(BaseModel):
         description="Item #2014",
     )
 
-    adj_13: Optional[EI] = Field(
+    adj_13: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_13",
@@ -188,7 +188,7 @@ class ADJ(BaseModel):
         description="Item #2016",
     )
 
-    adj_15: Optional[XON] = Field(
+    adj_15: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "adj_15",

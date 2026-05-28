@@ -5,11 +5,14 @@ Version: 2.3
 Class: VXR_V03
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.VXR_V03_INSURANCE import VXR_V03_INSURANCE
+from ..groups.VXR_V03_ORDER import VXR_V03_ORDER
+from ..groups.VXR_V03_PATIENT_VISIT import VXR_V03_PATIENT_VISIT
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.NK1 import NK1
@@ -17,10 +20,6 @@ from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
-
-from ..groups.VXR_V03_INSURANCE import VXR_V03_INSURANCE
-from ..groups.VXR_V03_ORDER import VXR_V03_ORDER
-from ..groups.VXR_V03_PATIENT_VISIT import VXR_V03_PATIENT_VISIT
 
 _MSA = MSA
 _MSH = MSH
@@ -68,7 +67,7 @@ class VXR_V03(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
@@ -80,31 +79,31 @@ class VXR_V03(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: Optional[_VXR_V03_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _VXR_V03_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    INSURANCE: Optional[List[_VXR_V03_INSURANCE]] = Field(
+    INSURANCE: list[_VXR_V03_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_VXR_V03_ORDER]] = Field(
+    ORDER: list[_VXR_V03_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

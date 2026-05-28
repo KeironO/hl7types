@@ -5,9 +5,9 @@ Version: 2.4
 Class: RGV_O15.COMPONENTS
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -25,13 +25,13 @@ class RGV_O15_COMPONENTS(BaseModel):
         NTE (Optional[List[NTE]]): optional
     """
 
-    RXC: List[_RXC] = Field(
+    RXC: list[_RXC] = Field(
         default=...,
         title="RXC",
         description="Required, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

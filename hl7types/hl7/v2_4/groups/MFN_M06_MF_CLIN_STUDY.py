@@ -5,14 +5,13 @@ Version: 2.4
 Class: MFN_M06.MF_CLIN_STUDY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CM0 import CM0
 from ..segments.MFE import MFE
-
 from .MFN_M06_MF_PHASE_SCHED_DETAIL import MFN_M06_MF_PHASE_SCHED_DETAIL
 
 _CM0 = CM0
@@ -41,7 +40,7 @@ class MFN_M06_MF_CLIN_STUDY(BaseModel):
         description="Required",
     )
 
-    MF_PHASE_SCHED_DETAIL: Optional[List[_MFN_M06_MF_PHASE_SCHED_DETAIL]] = Field(
+    MF_PHASE_SCHED_DETAIL: list[_MFN_M06_MF_PHASE_SCHED_DETAIL] | None = Field(
         default=None,
         title="MF_PHASE_SCHED_DETAIL",
         description="Optional, repeating",

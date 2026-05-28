@@ -5,9 +5,9 @@ Version: 2.5
 Class: ORL_O36.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from .ORL_O36_PATIENT import ORL_O36_PATIENT
@@ -22,7 +22,7 @@ class ORL_O36_RESPONSE(BaseModel):
         PATIENT (Optional[ORL_O36_PATIENT]): optional
     """
 
-    PATIENT: Optional[_ORL_O36_PATIENT] = Field(
+    PATIENT: _ORL_O36_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",

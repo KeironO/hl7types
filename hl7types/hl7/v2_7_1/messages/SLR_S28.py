@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: SLR_S28
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MSH import MSH
@@ -37,19 +37,19 @@ class SLR_S28(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    SLT: List[_SLT] = Field(
+    SLT: list[_SLT] = Field(
         default=...,
         title="SLT",
         description="Required, repeating",

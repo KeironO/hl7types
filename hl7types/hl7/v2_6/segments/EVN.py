@@ -5,9 +5,9 @@ Version: 2.6
 Class: EVN
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.HD import HD
@@ -17,7 +17,7 @@ from ..datatypes.XCN import XCN
 class EVN(BaseModel):
     """HL7 v2 EVN segment."""
 
-    evn_1: Optional[str] = Field(
+    evn_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_1",
@@ -41,7 +41,7 @@ class EVN(BaseModel):
         description="Item #100",
     )
 
-    evn_3: Optional[str] = Field(
+    evn_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_3",
@@ -53,7 +53,7 @@ class EVN(BaseModel):
         description="Item #101",
     )
 
-    evn_4: Optional[str] = Field(
+    evn_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_4",
@@ -65,7 +65,7 @@ class EVN(BaseModel):
         description="Item #102 | Table HL70062",
     )
 
-    evn_5: Optional[List[XCN]] = Field(
+    evn_5: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_5",
@@ -77,7 +77,7 @@ class EVN(BaseModel):
         description="Item #103 | Table HL70188",
     )
 
-    evn_6: Optional[str] = Field(
+    evn_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_6",
@@ -89,7 +89,7 @@ class EVN(BaseModel):
         description="Item #1278",
     )
 
-    evn_7: Optional[HD] = Field(
+    evn_7: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "evn_7",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: EHC_E24.PAYER_ADJUSTMENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ADJ import ADJ

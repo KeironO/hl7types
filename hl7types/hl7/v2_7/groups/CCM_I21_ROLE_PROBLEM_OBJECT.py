@@ -5,10 +5,10 @@ Version: 2.7
 Class: CCM_I21.ROLE_PROBLEM_OBJECT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class CCM_I21_ROLE_PROBLEM_OBJECT(BaseModel):

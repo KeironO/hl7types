@@ -5,14 +5,13 @@ Version: 2.6
 Class: RSP_E22.AUTHORIZATION_INFO
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.IVC import IVC
 from ..segments.PSG import PSG
-
 from .RSP_E22_PSL_ITEM_INFO import RSP_E22_PSL_ITEM_INFO
 
 _IVC = IVC
@@ -41,7 +40,7 @@ class RSP_E22_AUTHORIZATION_INFO(BaseModel):
         description="Required",
     )
 
-    PSL_ITEM_INFO: List[_RSP_E22_PSL_ITEM_INFO] = Field(
+    PSL_ITEM_INFO: list[_RSP_E22_PSL_ITEM_INFO] = Field(
         default=...,
         title="PSL_ITEM_INFO",
         description="Required, repeating",

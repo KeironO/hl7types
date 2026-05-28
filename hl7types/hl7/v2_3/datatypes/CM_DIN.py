@@ -5,9 +5,9 @@ Version: 2.3
 Class: CM_DIN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -17,7 +17,7 @@ from .TS import TS
 class CM_DIN(BaseModel):
     """HL7 v2 CM_DIN data type."""
 
-    cm_din_1: Optional[TS] = Field(
+    cm_din_1: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_din_1",
@@ -28,7 +28,7 @@ class CM_DIN(BaseModel):
         title="date",
     )
 
-    cm_din_2: Optional[CE] = Field(
+    cm_din_2: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_din_2",

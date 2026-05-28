@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: RSP_Z88.COMPONENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -25,13 +25,13 @@ class RSP_Z88_COMPONENT(BaseModel):
         NTE (Optional[List[NTE]]): optional
     """
 
-    RXC: List[_RXC] = Field(
+    RXC: list[_RXC] = Field(
         default=...,
         title="RXC",
         description="Required, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

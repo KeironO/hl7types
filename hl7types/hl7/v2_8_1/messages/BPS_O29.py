@@ -5,18 +5,17 @@ Version: 2.8.1
 Class: BPS_O29
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.BPS_O29_ORDER import BPS_O29_ORDER
+from ..groups.BPS_O29_PATIENT import BPS_O29_PATIENT
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.BPS_O29_ORDER import BPS_O29_ORDER
-from ..groups.BPS_O29_PATIENT import BPS_O29_PATIENT
 
 _BPS_O29_ORDER = BPS_O29_ORDER
 _BPS_O29_PATIENT = BPS_O29_PATIENT
@@ -44,31 +43,31 @@ class BPS_O29(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[_BPS_O29_PATIENT] = Field(
+    PATIENT: _BPS_O29_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_BPS_O29_ORDER] = Field(
+    ORDER: list[_BPS_O29_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

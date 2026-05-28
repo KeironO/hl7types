@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_INTERNAL_LOCATION
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_INTERNAL_LOCATION(BaseModel):
     """HL7 v2 CM_INTERNAL_LOCATION data type."""
 
-    cm_internal_location_1: Optional[str] = Field(
+    cm_internal_location_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_1",
@@ -25,7 +25,7 @@ class CM_INTERNAL_LOCATION(BaseModel):
         title="nurse unit (Station)",
     )
 
-    cm_internal_location_2: Optional[str] = Field(
+    cm_internal_location_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_2",
@@ -36,7 +36,7 @@ class CM_INTERNAL_LOCATION(BaseModel):
         title="Room",
     )
 
-    cm_internal_location_3: Optional[str] = Field(
+    cm_internal_location_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_3",
@@ -47,7 +47,7 @@ class CM_INTERNAL_LOCATION(BaseModel):
         title="Bed",
     )
 
-    cm_internal_location_4: Optional[str] = Field(
+    cm_internal_location_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_4",
@@ -58,7 +58,7 @@ class CM_INTERNAL_LOCATION(BaseModel):
         title="Facility ID",
     )
 
-    cm_internal_location_5: Optional[str] = Field(
+    cm_internal_location_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_5",
@@ -69,7 +69,7 @@ class CM_INTERNAL_LOCATION(BaseModel):
         title="Bed Status",
     )
 
-    cm_internal_location_6: Optional[str] = Field(
+    cm_internal_location_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_6",
@@ -80,7 +80,7 @@ class CM_INTERNAL_LOCATION(BaseModel):
         title="Etage",
     )
 
-    cm_internal_location_7: Optional[str] = Field(
+    cm_internal_location_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_7",
@@ -91,7 +91,7 @@ class CM_INTERNAL_LOCATION(BaseModel):
         title="Klinik",
     )
 
-    cm_internal_location_8: Optional[str] = Field(
+    cm_internal_location_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_internal_location_8",

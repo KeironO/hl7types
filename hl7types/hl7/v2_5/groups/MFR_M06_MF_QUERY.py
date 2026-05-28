@@ -5,9 +5,9 @@ Version: 2.5
 Class: MFR_M06.MF_QUERY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CM0 import CM0
@@ -43,13 +43,13 @@ class MFR_M06_MF_QUERY(BaseModel):
         description="Required",
     )
 
-    CM1: Optional[List[_CM1]] = Field(
+    CM1: list[_CM1] | None = Field(
         default=None,
         title="CM1",
         description="Optional, repeating",
     )
 
-    CM2: Optional[List[_CM2]] = Field(
+    CM2: list[_CM2] | None = Field(
         default=None,
         title="CM2",
         description="Optional, repeating",

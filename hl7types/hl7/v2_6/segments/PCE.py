@@ -5,9 +5,9 @@ Version: 2.6
 Class: PCE
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -29,7 +29,7 @@ class PCE(BaseModel):
         description="Item #2228",
     )
 
-    pce_2: Optional[str] = Field(
+    pce_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pce_2",
@@ -41,7 +41,7 @@ class PCE(BaseModel):
         description="Item #281 | Table HL70319",
     )
 
-    pce_3: Optional[CWE] = Field(
+    pce_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pce_3",
@@ -53,7 +53,7 @@ class PCE(BaseModel):
         description="Item #361 | Table HL70132",
     )
 
-    pce_4: Optional[CP] = Field(
+    pce_4: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pce_4",

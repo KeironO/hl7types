@@ -5,9 +5,9 @@ Version: 2.6
 Class: DLN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class DLN(BaseModel):
         title="License Number",
     )
 
-    dln_2: Optional[str] = Field(
+    dln_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dln_2",
@@ -36,7 +36,7 @@ class DLN(BaseModel):
         title="Issuing State, Province, Country",
     )
 
-    dln_3: Optional[str] = Field(
+    dln_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dln_3",

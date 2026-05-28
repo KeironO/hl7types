@@ -5,9 +5,9 @@ Version: 2.6
 Class: PMT
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -92,7 +92,7 @@ class PMT(BaseModel):
         description="Item #2023",
     )
 
-    pmt_7: Optional[EI] = Field(
+    pmt_7: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pmt_7",
@@ -104,7 +104,7 @@ class PMT(BaseModel):
         description="Item #2024",
     )
 
-    pmt_8: Optional[XON] = Field(
+    pmt_8: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pmt_8",
@@ -116,7 +116,7 @@ class PMT(BaseModel):
         description="Item #2025",
     )
 
-    pmt_9: Optional[str] = Field(
+    pmt_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pmt_9",
@@ -128,7 +128,7 @@ class PMT(BaseModel):
         description="Item #2026",
     )
 
-    pmt_10: Optional[CX] = Field(
+    pmt_10: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pmt_10",
@@ -152,7 +152,7 @@ class PMT(BaseModel):
         description="Item #2028",
     )
 
-    pmt_12: Optional[str] = Field(
+    pmt_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pmt_12",

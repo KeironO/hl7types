@@ -5,15 +5,14 @@ Version: 2.4
 Class: MFN_M10
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M10_MF_TEST_BATTERIES import MFN_M10_MF_TEST_BATTERIES
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
-
-from ..groups.MFN_M10_MF_TEST_BATTERIES import MFN_M10_MF_TEST_BATTERIES
 
 _MFI = MFI
 _MFN_M10_MF_TEST_BATTERIES = MFN_M10_MF_TEST_BATTERIES
@@ -41,7 +40,7 @@ class MFN_M10(BaseModel):
         description="Required",
     )
 
-    MF_TEST_BATTERIES: List[_MFN_M10_MF_TEST_BATTERIES] = Field(
+    MF_TEST_BATTERIES: list[_MFN_M10_MF_TEST_BATTERIES] = Field(
         default=...,
         title="MF_TEST_BATTERIES",
         description="Required, repeating",

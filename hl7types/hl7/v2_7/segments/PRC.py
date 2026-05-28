@@ -5,9 +5,9 @@ Version: 2.7
 Class: PRC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -30,7 +30,7 @@ class PRC(BaseModel):
         description="Item #982 | Table HL70132",
     )
 
-    prc_2: Optional[List[CWE]] = Field(
+    prc_2: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_2",
@@ -42,7 +42,7 @@ class PRC(BaseModel):
         description="Item #995 | Table HL70464",
     )
 
-    prc_3: Optional[List[CWE]] = Field(
+    prc_3: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_3",
@@ -54,7 +54,7 @@ class PRC(BaseModel):
         description="Item #676 | Table HL70184",
     )
 
-    prc_4: Optional[List[CWE]] = Field(
+    prc_4: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_4",
@@ -66,7 +66,7 @@ class PRC(BaseModel):
         description="Item #967 | Table HL70004",
     )
 
-    prc_5: Optional[List[CP]] = Field(
+    prc_5: list[CP] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_5",
@@ -78,7 +78,7 @@ class PRC(BaseModel):
         description="Item #998",
     )
 
-    prc_6: Optional[List[str]] = Field(
+    prc_6: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_6",
@@ -90,7 +90,7 @@ class PRC(BaseModel):
         description="Item #999",
     )
 
-    prc_7: Optional[str] = Field(
+    prc_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_7",
@@ -102,7 +102,7 @@ class PRC(BaseModel):
         description="Item #1000",
     )
 
-    prc_8: Optional[str] = Field(
+    prc_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_8",
@@ -114,7 +114,7 @@ class PRC(BaseModel):
         description="Item #1001",
     )
 
-    prc_9: Optional[MO] = Field(
+    prc_9: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_9",
@@ -126,7 +126,7 @@ class PRC(BaseModel):
         description="Item #1002",
     )
 
-    prc_10: Optional[MO] = Field(
+    prc_10: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_10",
@@ -138,7 +138,7 @@ class PRC(BaseModel):
         description="Item #1003",
     )
 
-    prc_11: Optional[str] = Field(
+    prc_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_11",
@@ -150,7 +150,7 @@ class PRC(BaseModel):
         description="Item #1004",
     )
 
-    prc_12: Optional[str] = Field(
+    prc_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_12",
@@ -162,7 +162,7 @@ class PRC(BaseModel):
         description="Item #1005",
     )
 
-    prc_13: Optional[CWE] = Field(
+    prc_13: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_13",
@@ -174,7 +174,7 @@ class PRC(BaseModel):
         description="Item #1006 | Table HL70268",
     )
 
-    prc_14: Optional[List[CWE]] = Field(
+    prc_14: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_14",
@@ -186,7 +186,7 @@ class PRC(BaseModel):
         description="Item #1007 | Table HL70293",
     )
 
-    prc_15: Optional[str] = Field(
+    prc_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_15",
@@ -198,7 +198,7 @@ class PRC(BaseModel):
         description="Item #1008 | Table HL70136",
     )
 
-    prc_16: Optional[str] = Field(
+    prc_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_16",
@@ -210,7 +210,7 @@ class PRC(BaseModel):
         description="Item #675 | Table HL70183",
     )
 
-    prc_17: Optional[MO] = Field(
+    prc_17: MO | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_17",
@@ -222,7 +222,7 @@ class PRC(BaseModel):
         description="Item #989",
     )
 
-    prc_18: Optional[CWE] = Field(
+    prc_18: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "prc_18",

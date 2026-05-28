@@ -5,15 +5,14 @@ Version: 2.5.1
 Class: PPG_PCG.PROBLEM
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PRB import PRB
 from ..segments.VAR import VAR
-
 from .PPG_PCG_PROBLEM_OBSERVATION import PPG_PCG_PROBLEM_OBSERVATION
 from .PPG_PCG_PROBLEM_ROLE import PPG_PCG_PROBLEM_ROLE
 
@@ -41,25 +40,25 @@ class PPG_PCG_PROBLEM(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PROBLEM_ROLE: Optional[List[_PPG_PCG_PROBLEM_ROLE]] = Field(
+    PROBLEM_ROLE: list[_PPG_PCG_PROBLEM_ROLE] | None = Field(
         default=None,
         title="PROBLEM_ROLE",
         description="Optional, repeating",
     )
 
-    PROBLEM_OBSERVATION: Optional[List[_PPG_PCG_PROBLEM_OBSERVATION]] = Field(
+    PROBLEM_OBSERVATION: list[_PPG_PCG_PROBLEM_OBSERVATION] | None = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
         description="Optional, repeating",

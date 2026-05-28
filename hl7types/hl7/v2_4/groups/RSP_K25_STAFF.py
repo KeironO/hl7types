@@ -5,9 +5,9 @@ Version: 2.4
 Class: RSP_K25.STAFF
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AFF import AFF
@@ -43,31 +43,31 @@ class RSP_K25_STAFF(BaseModel):
         description="Required",
     )
 
-    PRA: Optional[_PRA] = Field(
+    PRA: _PRA | None = Field(
         default=None,
         title="PRA",
         description="Optional",
     )
 
-    ORG: Optional[List[_ORG]] = Field(
+    ORG: list[_ORG] | None = Field(
         default=None,
         title="ORG",
         description="Optional, repeating",
     )
 
-    AFF: Optional[List[_AFF]] = Field(
+    AFF: list[_AFF] | None = Field(
         default=None,
         title="AFF",
         description="Optional, repeating",
     )
 
-    LAN: Optional[List[_LAN]] = Field(
+    LAN: list[_LAN] | None = Field(
         default=None,
         title="LAN",
         description="Optional, repeating",
     )
 
-    EDU: Optional[List[_EDU]] = Field(
+    EDU: list[_EDU] | None = Field(
         default=None,
         title="EDU",
         description="Optional, repeating",

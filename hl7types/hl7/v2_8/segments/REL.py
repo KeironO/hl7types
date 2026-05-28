@@ -5,9 +5,9 @@ Version: 2.8
 Class: REL
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -22,7 +22,7 @@ from ..datatypes.XTN import XTN
 class REL(BaseModel):
     """HL7 v2 REL segment."""
 
-    rel_1: Optional[str] = Field(
+    rel_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_1",
@@ -82,7 +82,7 @@ class REL(BaseModel):
         description="Item #2244",
     )
 
-    rel_6: Optional[EI] = Field(
+    rel_6: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_6",
@@ -94,7 +94,7 @@ class REL(BaseModel):
         description="Item #2245",
     )
 
-    rel_7: Optional[XCN] = Field(
+    rel_7: XCN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_7",
@@ -106,7 +106,7 @@ class REL(BaseModel):
         description="Item #2246",
     )
 
-    rel_8: Optional[XON] = Field(
+    rel_8: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_8",
@@ -118,7 +118,7 @@ class REL(BaseModel):
         description="Item #2247",
     )
 
-    rel_9: Optional[XAD] = Field(
+    rel_9: XAD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_9",
@@ -130,7 +130,7 @@ class REL(BaseModel):
         description="Item #2248",
     )
 
-    rel_10: Optional[XTN] = Field(
+    rel_10: XTN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_10",
@@ -142,7 +142,7 @@ class REL(BaseModel):
         description="Item #2249",
     )
 
-    rel_11: Optional[DR] = Field(
+    rel_11: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_11",
@@ -154,7 +154,7 @@ class REL(BaseModel):
         description="Item #2250",
     )
 
-    rel_12: Optional[str] = Field(
+    rel_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_12",
@@ -166,7 +166,7 @@ class REL(BaseModel):
         description="Item #2251 | Table HL70136",
     )
 
-    rel_13: Optional[CWE] = Field(
+    rel_13: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_13",
@@ -178,7 +178,7 @@ class REL(BaseModel):
         description="Item #2252",
     )
 
-    rel_14: Optional[str] = Field(
+    rel_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_14",
@@ -190,7 +190,7 @@ class REL(BaseModel):
         description="Item #2253",
     )
 
-    rel_15: Optional[str] = Field(
+    rel_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_15",
@@ -202,7 +202,7 @@ class REL(BaseModel):
         description="Item #2254",
     )
 
-    rel_16: Optional[str] = Field(
+    rel_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rel_16",

@@ -5,10 +5,10 @@ Version: 2.8.1
 Class: CCU_I20.CLINICAL_HISTORY_OBJECT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class CCU_I20_CLINICAL_HISTORY_OBJECT(BaseModel):

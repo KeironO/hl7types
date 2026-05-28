@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: NDL
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CNN import CNN
@@ -17,7 +17,7 @@ from .HD import HD
 class NDL(BaseModel):
     """HL7 v2 NDL data type."""
 
-    ndl_1: Optional[CNN] = Field(
+    ndl_1: CNN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_1",
@@ -28,7 +28,7 @@ class NDL(BaseModel):
         title="Name",
     )
 
-    ndl_2: Optional[str] = Field(
+    ndl_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_2",
@@ -39,7 +39,7 @@ class NDL(BaseModel):
         title="Start Date/time",
     )
 
-    ndl_3: Optional[str] = Field(
+    ndl_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_3",
@@ -50,7 +50,7 @@ class NDL(BaseModel):
         title="End Date/time",
     )
 
-    ndl_4: Optional[str] = Field(
+    ndl_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_4",
@@ -61,7 +61,7 @@ class NDL(BaseModel):
         title="Point of Care",
     )
 
-    ndl_5: Optional[str] = Field(
+    ndl_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_5",
@@ -72,7 +72,7 @@ class NDL(BaseModel):
         title="Room",
     )
 
-    ndl_6: Optional[str] = Field(
+    ndl_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_6",
@@ -83,7 +83,7 @@ class NDL(BaseModel):
         title="Bed",
     )
 
-    ndl_7: Optional[HD] = Field(
+    ndl_7: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_7",
@@ -94,7 +94,7 @@ class NDL(BaseModel):
         title="Facility",
     )
 
-    ndl_8: Optional[str] = Field(
+    ndl_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_8",
@@ -105,7 +105,7 @@ class NDL(BaseModel):
         title="Location Status",
     )
 
-    ndl_9: Optional[str] = Field(
+    ndl_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_9",
@@ -116,7 +116,7 @@ class NDL(BaseModel):
         title="Patient Location Type",
     )
 
-    ndl_10: Optional[str] = Field(
+    ndl_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_10",
@@ -127,7 +127,7 @@ class NDL(BaseModel):
         title="Building",
     )
 
-    ndl_11: Optional[str] = Field(
+    ndl_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ndl_11",

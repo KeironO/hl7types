@@ -5,11 +5,13 @@ Version: 2.3
 Class: DFT_P03
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.DFT_P03_FINANCIAL import DFT_P03_FINANCIAL
+from ..groups.DFT_P03_INSURANCE import DFT_P03_INSURANCE
 from ..segments.ACC import ACC
 from ..segments.DB1 import DB1
 from ..segments.DG1 import DG1
@@ -22,9 +24,6 @@ from ..segments.PD1 import PD1
 from ..segments.PID import PID
 from ..segments.PV1 import PV1
 from ..segments.PV2 import PV2
-
-from ..groups.DFT_P03_FINANCIAL import DFT_P03_FINANCIAL
-from ..groups.DFT_P03_INSURANCE import DFT_P03_INSURANCE
 
 _ACC = ACC
 _DB1 = DB1
@@ -80,67 +79,67 @@ class DFT_P03(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    PV1: Optional[_PV1] = Field(
+    PV1: _PV1 | None = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    DB1: Optional[List[_DB1]] = Field(
+    DB1: list[_DB1] | None = Field(
         default=None,
         title="DB1",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    FINANCIAL: List[_DFT_P03_FINANCIAL] = Field(
+    FINANCIAL: list[_DFT_P03_FINANCIAL] = Field(
         default=...,
         title="FINANCIAL",
         description="Required, repeating",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[_DRG] = Field(
+    DRG: _DRG | None = Field(
         default=None,
         title="DRG",
         description="Optional",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_DFT_P03_INSURANCE]] = Field(
+    INSURANCE: list[_DFT_P03_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",

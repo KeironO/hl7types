@@ -5,9 +5,9 @@ Version: 2.6
 Class: MFN_M11.MF_TEST_CALC_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.OM2 import OM2

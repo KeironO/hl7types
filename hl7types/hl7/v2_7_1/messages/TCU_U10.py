@@ -5,18 +5,17 @@ Version: 2.7.1
 Class: TCU_U10
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.TCU_U10_TEST_CONFIGURATION import TCU_U10_TEST_CONFIGURATION
 from ..segments.EQU import EQU
 from ..segments.MSH import MSH
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.TCU_U10_TEST_CONFIGURATION import TCU_U10_TEST_CONFIGURATION
 
 _EQU = EQU
 _MSH = MSH
@@ -44,13 +43,13 @@ class TCU_U10(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -62,13 +61,13 @@ class TCU_U10(BaseModel):
         description="Required",
     )
 
-    TEST_CONFIGURATION: List[_TCU_U10_TEST_CONFIGURATION] = Field(
+    TEST_CONFIGURATION: list[_TCU_U10_TEST_CONFIGURATION] = Field(
         default=...,
         title="TEST_CONFIGURATION",
         description="Required, repeating",
     )
 
-    ROL: Optional[_ROL] = Field(
+    ROL: _ROL | None = Field(
         default=None,
         title="ROL",
         description="Optional",

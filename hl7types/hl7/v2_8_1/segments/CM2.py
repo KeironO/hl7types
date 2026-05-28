@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: CM2
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class CM2(BaseModel):
     """HL7 v2 CM2 segment."""
 
-    cm2_1: Optional[str] = Field(
+    cm2_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm2_1",
@@ -40,7 +40,7 @@ class CM2(BaseModel):
         description="Item #1025",
     )
 
-    cm2_3: Optional[str] = Field(
+    cm2_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm2_3",
@@ -52,7 +52,7 @@ class CM2(BaseModel):
         description="Item #1026",
     )
 
-    cm2_4: List[CWE] = Field(
+    cm2_4: list[CWE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "cm2_4",

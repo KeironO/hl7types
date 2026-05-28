@@ -5,16 +5,16 @@ Version: 2.4
 Class: RCD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class RCD(BaseModel):
     """HL7 v2 RCD data type."""
 
-    rcd_1: Optional[str] = Field(
+    rcd_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcd_1",
@@ -25,7 +25,7 @@ class RCD(BaseModel):
         title="segment field name",
     )
 
-    rcd_2: Optional[str] = Field(
+    rcd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcd_2",
@@ -36,7 +36,7 @@ class RCD(BaseModel):
         title="HL7 date type",
     )
 
-    rcd_3: Optional[str] = Field(
+    rcd_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rcd_3",

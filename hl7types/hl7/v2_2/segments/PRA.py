@@ -5,9 +5,9 @@ Version: 2.2
 Class: PRA
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -28,7 +28,7 @@ class PRA(BaseModel):
         description="Item #685",
     )
 
-    pra_2: Optional[List[CE]] = Field(
+    pra_2: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_2",
@@ -40,7 +40,7 @@ class PRA(BaseModel):
         description="Item #686",
     )
 
-    pra_3: Optional[List[str]] = Field(
+    pra_3: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_3",
@@ -52,7 +52,7 @@ class PRA(BaseModel):
         description="Item #687 | Table HL70186",
     )
 
-    pra_4: Optional[str] = Field(
+    pra_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_4",
@@ -64,7 +64,7 @@ class PRA(BaseModel):
         description="Item #688 | Table HL70187",
     )
 
-    pra_5: Optional[List[str]] = Field(
+    pra_5: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_5",
@@ -76,7 +76,7 @@ class PRA(BaseModel):
         description="Item #689",
     )
 
-    pra_6: Optional[List[str]] = Field(
+    pra_6: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_6",
@@ -88,7 +88,7 @@ class PRA(BaseModel):
         description="Item #690",
     )
 
-    pra_7: Optional[List[str]] = Field(
+    pra_7: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pra_7",

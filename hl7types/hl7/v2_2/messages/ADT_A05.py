@@ -5,11 +5,12 @@ Version: 2.2
 Class: ADT_A05
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ADT_A05_INSURANCE import ADT_A05_INSURANCE
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
@@ -24,8 +25,6 @@ from ..segments.PV1 import PV1
 from ..segments.PV2 import PV2
 from ..segments.UB1 import UB1
 from ..segments.UB2 import UB2
-
-from ..groups.ADT_A05_INSURANCE import ADT_A05_INSURANCE
 
 _ACC = ACC
 _ADT_A05_INSURANCE = ADT_A05_INSURANCE
@@ -83,7 +82,7 @@ class ADT_A05(BaseModel):
         description="Required",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
@@ -95,61 +94,61 @@ class ADT_A05(BaseModel):
         description="Required",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    PR1: Optional[List[_PR1]] = Field(
+    PR1: list[_PR1] | None = Field(
         default=None,
         title="PR1",
         description="Optional, repeating",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_ADT_A05_INSURANCE]] = Field(
+    INSURANCE: list[_ADT_A05_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    UB1: Optional[_UB1] = Field(
+    UB1: _UB1 | None = Field(
         default=None,
         title="UB1",
         description="Optional",
     )
 
-    UB2: Optional[_UB2] = Field(
+    UB2: _UB2 | None = Field(
         default=None,
         title="UB2",
         description="Optional",

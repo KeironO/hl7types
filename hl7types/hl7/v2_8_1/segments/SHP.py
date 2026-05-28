@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: SHP
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -30,7 +30,7 @@ class SHP(BaseModel):
         description="Item #2317",
     )
 
-    shp_2: Optional[List[EI]] = Field(
+    shp_2: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_2",
@@ -42,7 +42,7 @@ class SHP(BaseModel):
         description="Item #2318",
     )
 
-    shp_3: Optional[CWE] = Field(
+    shp_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_3",
@@ -66,7 +66,7 @@ class SHP(BaseModel):
         description="Item #2320",
     )
 
-    shp_5: Optional[TX] = Field(
+    shp_5: TX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_5",
@@ -78,7 +78,7 @@ class SHP(BaseModel):
         description="Item #2321",
     )
 
-    shp_6: Optional[CWE] = Field(
+    shp_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_6",
@@ -90,7 +90,7 @@ class SHP(BaseModel):
         description="Item #2322 | Table HL70906",
     )
 
-    shp_7: Optional[List[CWE]] = Field(
+    shp_7: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_7",
@@ -102,7 +102,7 @@ class SHP(BaseModel):
         description="Item #2323 | Table HL70907",
     )
 
-    shp_8: Optional[str] = Field(
+    shp_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_8",
@@ -114,7 +114,7 @@ class SHP(BaseModel):
         description="Item #2324",
     )
 
-    shp_9: Optional[List[CWE]] = Field(
+    shp_9: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_9",
@@ -126,7 +126,7 @@ class SHP(BaseModel):
         description="Item #2325 | Table HL70544",
     )
 
-    shp_10: Optional[List[CWE]] = Field(
+    shp_10: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_10",
@@ -138,7 +138,7 @@ class SHP(BaseModel):
         description="Item #2326 | Table HL70376",
     )
 
-    shp_11: Optional[List[CWE]] = Field(
+    shp_11: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_11",

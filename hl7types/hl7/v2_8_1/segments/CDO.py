@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: CDO
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -16,7 +16,7 @@ from ..datatypes.CQ import CQ
 class CDO(BaseModel):
     """HL7 v2 CDO segment."""
 
-    cdo_1: Optional[str] = Field(
+    cdo_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdo_1",
@@ -28,7 +28,7 @@ class CDO(BaseModel):
         description="Item #3430",
     )
 
-    cdo_2: Optional[str] = Field(
+    cdo_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdo_2",
@@ -40,7 +40,7 @@ class CDO(BaseModel):
         description="Item #816 | Table HL70206",
     )
 
-    cdo_3: Optional[CQ] = Field(
+    cdo_3: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdo_3",
@@ -52,7 +52,7 @@ class CDO(BaseModel):
         description="Item #3397",
     )
 
-    cdo_4: Optional[CQ] = Field(
+    cdo_4: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cdo_4",

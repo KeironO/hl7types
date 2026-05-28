@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_LICENSE_NO
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_LICENSE_NO(BaseModel):
     """HL7 v2 CM_LICENSE_NO data type."""
 
-    cm_license_no_1: Optional[str] = Field(
+    cm_license_no_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_license_no_1",
@@ -25,7 +25,7 @@ class CM_LICENSE_NO(BaseModel):
         title="License Number",
     )
 
-    cm_license_no_2: Optional[str] = Field(
+    cm_license_no_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_license_no_2",

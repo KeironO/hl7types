@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_RI
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_RI(BaseModel):
     """HL7 v2 CM_RI data type."""
 
-    cm_ri_1: Optional[str] = Field(
+    cm_ri_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ri_1",
@@ -25,7 +25,7 @@ class CM_RI(BaseModel):
         title="repeat pattern",
     )
 
-    cm_ri_2: Optional[str] = Field(
+    cm_ri_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_ri_2",

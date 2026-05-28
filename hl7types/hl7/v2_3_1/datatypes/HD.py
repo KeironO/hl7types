@@ -5,16 +5,16 @@ Version: 2.3.1
 Class: HD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class HD(BaseModel):
     """HL7 v2 HD data type."""
 
-    hd_1: Optional[str] = Field(
+    hd_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "hd_1",
@@ -25,7 +25,7 @@ class HD(BaseModel):
         title="namespace ID",
     )
 
-    hd_2: Optional[str] = Field(
+    hd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "hd_2",
@@ -36,7 +36,7 @@ class HD(BaseModel):
         title="universal ID",
     )
 
-    hd_3: Optional[str] = Field(
+    hd_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "hd_3",

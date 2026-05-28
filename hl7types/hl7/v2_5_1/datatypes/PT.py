@@ -5,16 +5,16 @@ Version: 2.5.1
 Class: PT
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class PT(BaseModel):
     """HL7 v2 PT data type."""
 
-    pt_1: Optional[str] = Field(
+    pt_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pt_1",
@@ -25,7 +25,7 @@ class PT(BaseModel):
         title="Processing ID",
     )
 
-    pt_2: Optional[str] = Field(
+    pt_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pt_2",

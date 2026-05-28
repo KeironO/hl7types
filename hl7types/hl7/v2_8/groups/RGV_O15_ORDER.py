@@ -5,14 +5,13 @@ Version: 2.8
 Class: RGV_O15.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .RGV_O15_ENCODING import RGV_O15_ENCODING
 from .RGV_O15_GIVE import RGV_O15_GIVE
 from .RGV_O15_ORDER_DETAIL import RGV_O15_ORDER_DETAIL
@@ -44,31 +43,31 @@ class RGV_O15_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_RGV_O15_TIMING]] = Field(
+    TIMING: list[_RGV_O15_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL: Optional[_RGV_O15_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _RGV_O15_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    ENCODING: Optional[_RGV_O15_ENCODING] = Field(
+    ENCODING: _RGV_O15_ENCODING | None = Field(
         default=None,
         title="ENCODING",
         description="Optional",
     )
 
-    GIVE: List[_RGV_O15_GIVE] = Field(
+    GIVE: list[_RGV_O15_GIVE] = Field(
         default=...,
         title="GIVE",
         description="Required, repeating",

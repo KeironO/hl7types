@@ -5,9 +5,9 @@ Version: 2.6
 Class: PTA
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .MOP import MOP
@@ -27,7 +27,7 @@ class PTA(BaseModel):
         title="Policy Type",
     )
 
-    pta_2: Optional[str] = Field(
+    pta_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pta_2",
@@ -38,7 +38,7 @@ class PTA(BaseModel):
         title="Amount Class",
     )
 
-    pta_3: Optional[str] = Field(
+    pta_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pta_3",

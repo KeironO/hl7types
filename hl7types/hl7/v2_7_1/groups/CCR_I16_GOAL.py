@@ -5,15 +5,14 @@ Version: 2.7.1
 Class: CCR_I16.GOAL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GOL import GOL
 from ..segments.OBX import OBX
 from ..segments.VAR import VAR
-
 from .CCR_I16_ROLE_GOAL import CCR_I16_ROLE_GOAL
 
 _CCR_I16_ROLE_GOAL = CCR_I16_ROLE_GOAL
@@ -38,19 +37,19 @@ class CCR_I16_GOAL(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_GOAL: Optional[List[_CCR_I16_ROLE_GOAL]] = Field(
+    ROLE_GOAL: list[_CCR_I16_ROLE_GOAL] | None = Field(
         default=None,
         title="ROLE_GOAL",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

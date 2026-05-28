@@ -5,16 +5,16 @@ Version: 2.3.1
 Class: VH
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class VH(BaseModel):
     """HL7 v2 VH data type."""
 
-    vh_1: Optional[str] = Field(
+    vh_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vh_1",
@@ -25,7 +25,7 @@ class VH(BaseModel):
         title="start day range",
     )
 
-    vh_2: Optional[str] = Field(
+    vh_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vh_2",
@@ -36,7 +36,7 @@ class VH(BaseModel):
         title="end day range",
     )
 
-    vh_3: Optional[str] = Field(
+    vh_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vh_3",
@@ -47,7 +47,7 @@ class VH(BaseModel):
         title="start hour range",
     )
 
-    vh_4: Optional[str] = Field(
+    vh_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vh_4",

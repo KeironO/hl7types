@@ -5,15 +5,14 @@ Version: 2.5
 Class: PTR_PCF.PATHWAY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.PTH import PTH
 from ..segments.VAR import VAR
-
 from .PTR_PCF_PATHWAY_ROLE import PTR_PCF_PATHWAY_ROLE
 from .PTR_PCF_PROBLEM import PTR_PCF_PROBLEM
 
@@ -41,25 +40,25 @@ class PTR_PCF_PATHWAY(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    PATHWAY_ROLE: Optional[List[_PTR_PCF_PATHWAY_ROLE]] = Field(
+    PATHWAY_ROLE: list[_PTR_PCF_PATHWAY_ROLE] | None = Field(
         default=None,
         title="PATHWAY_ROLE",
         description="Optional, repeating",
     )
 
-    PROBLEM: Optional[List[_PTR_PCF_PROBLEM]] = Field(
+    PROBLEM: list[_PTR_PCF_PROBLEM] | None = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",

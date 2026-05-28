@@ -5,14 +5,13 @@ Version: 2.7.1
 Class: ORP_O10.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .ORP_O10_ORDER_DETAIL import ORP_O10_ORDER_DETAIL
 from .ORP_O10_TIMING import ORP_O10_TIMING
 
@@ -38,19 +37,19 @@ class ORP_O10_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_ORP_O10_TIMING]] = Field(
+    TIMING: list[_ORP_O10_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL: Optional[_ORP_O10_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _ORP_O10_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",

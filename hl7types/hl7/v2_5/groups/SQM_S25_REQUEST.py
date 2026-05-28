@@ -5,15 +5,14 @@ Version: 2.5
 Class: SQM_S25.REQUEST
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.APR import APR
 from ..segments.ARQ import ARQ
 from ..segments.PID import PID
-
 from .SQM_S25_RESOURCES import SQM_S25_RESOURCES
 
 _APR = APR
@@ -38,19 +37,19 @@ class SQM_S25_REQUEST(BaseModel):
         description="Required",
     )
 
-    APR: Optional[_APR] = Field(
+    APR: _APR | None = Field(
         default=None,
         title="APR",
         description="Optional",
     )
 
-    PID: Optional[_PID] = Field(
+    PID: _PID | None = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    RESOURCES: List[_SQM_S25_RESOURCES] = Field(
+    RESOURCES: list[_SQM_S25_RESOURCES] = Field(
         default=...,
         title="RESOURCES",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: OMG_O19.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -18,7 +18,6 @@ from ..segments.FT1 import FT1
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .OMG_O19_OBSERVATION import OMG_O19_OBSERVATION
 from .OMG_O19_PRIOR_RESULT import OMG_O19_PRIOR_RESULT
 
@@ -62,49 +61,49 @@ class OMG_O19_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMG_O19_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMG_O19_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PRIOR_RESULT: Optional[List[_OMG_O19_PRIOR_RESULT]] = Field(
+    PRIOR_RESULT: list[_OMG_O19_PRIOR_RESULT] | None = Field(
         default=None,
         title="PRIOR_RESULT",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

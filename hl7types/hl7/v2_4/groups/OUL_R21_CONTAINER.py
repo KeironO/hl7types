@@ -5,9 +5,9 @@ Version: 2.4
 Class: OUL_R21.CONTAINER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
@@ -34,13 +34,13 @@ class OUL_R21_CONTAINER(BaseModel):
         description="Required",
     )
 
-    SID: Optional[_SID] = Field(
+    SID: _SID | None = Field(
         default=None,
         title="SID",
         description="Optional",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

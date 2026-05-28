@@ -5,9 +5,9 @@ Version: 2.5
 Class: URD
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -18,7 +18,7 @@ from ..datatypes.XCN import XCN
 class URD(BaseModel):
     """HL7 v2 URD segment."""
 
-    urd_1: Optional[TS] = Field(
+    urd_1: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urd_1",
@@ -30,7 +30,7 @@ class URD(BaseModel):
         description="Item #45",
     )
 
-    urd_2: Optional[str] = Field(
+    urd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urd_2",
@@ -42,7 +42,7 @@ class URD(BaseModel):
         description="Item #46 | Table HL70109",
     )
 
-    urd_3: List[XCN] = Field(
+    urd_3: list[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "urd_3",
@@ -54,7 +54,7 @@ class URD(BaseModel):
         description="Item #47",
     )
 
-    urd_4: Optional[List[CE]] = Field(
+    urd_4: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urd_4",
@@ -66,7 +66,7 @@ class URD(BaseModel):
         description="Item #48 | Table HL70048",
     )
 
-    urd_5: Optional[List[CE]] = Field(
+    urd_5: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urd_5",
@@ -78,7 +78,7 @@ class URD(BaseModel):
         description="Item #49",
     )
 
-    urd_6: Optional[List[str]] = Field(
+    urd_6: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urd_6",
@@ -90,7 +90,7 @@ class URD(BaseModel):
         description="Item #50",
     )
 
-    urd_7: Optional[str] = Field(
+    urd_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "urd_7",

@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: SPD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -25,7 +25,7 @@ class SPD(BaseModel):
         title="Specialty Name",
     )
 
-    spd_2: Optional[str] = Field(
+    spd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "spd_2",
@@ -36,7 +36,7 @@ class SPD(BaseModel):
         title="Governing Board",
     )
 
-    spd_3: Optional[str] = Field(
+    spd_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "spd_3",
@@ -47,7 +47,7 @@ class SPD(BaseModel):
         title="Eligible or Certified",
     )
 
-    spd_4: Optional[str] = Field(
+    spd_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "spd_4",

@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: PTH
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -66,7 +66,7 @@ class PTH(BaseModel):
         description="Item #1209",
     )
 
-    pth_5: Optional[CE] = Field(
+    pth_5: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pth_5",
@@ -78,7 +78,7 @@ class PTH(BaseModel):
         description="Item #1210",
     )
 
-    pth_6: Optional[TS] = Field(
+    pth_6: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pth_6",

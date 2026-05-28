@@ -5,9 +5,9 @@ Version: 2.6
 Class: CTI
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -29,7 +29,7 @@ class CTI(BaseModel):
         description="Item #1011",
     )
 
-    cti_2: Optional[CWE] = Field(
+    cti_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cti_2",
@@ -41,7 +41,7 @@ class CTI(BaseModel):
         description="Item #1022",
     )
 
-    cti_3: Optional[CWE] = Field(
+    cti_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cti_3",

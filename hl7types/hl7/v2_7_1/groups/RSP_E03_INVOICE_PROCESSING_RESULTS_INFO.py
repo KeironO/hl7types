@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: RSP_E03.INVOICE_PROCESSING_RESULTS_INFO
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.IPR import IPR

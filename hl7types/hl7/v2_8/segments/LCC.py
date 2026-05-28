@@ -5,9 +5,9 @@ Version: 2.8
 Class: LCC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -41,7 +41,7 @@ class LCC(BaseModel):
         description="Item #964 | Table HL70264",
     )
 
-    lcc_3: Optional[List[CWE]] = Field(
+    lcc_3: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "lcc_3",
@@ -53,7 +53,7 @@ class LCC(BaseModel):
         description="Item #980 | Table HL70129",
     )
 
-    lcc_4: List[CWE] = Field(
+    lcc_4: list[CWE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "lcc_4",

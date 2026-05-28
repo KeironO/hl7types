@@ -5,9 +5,9 @@ Version: 2.3
 Class: NCK
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TS import TS
@@ -16,7 +16,7 @@ from ..datatypes.TS import TS
 class NCK(BaseModel):
     """HL7 v2 NCK segment."""
 
-    nck_1: Optional[TS] = Field(
+    nck_1: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nck_1",

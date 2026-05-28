@@ -5,15 +5,14 @@ Version: 2.7
 Class: MFN_M16.MATERIAL_ITEM_RECORD
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ITM import ITM
 from ..segments.MFE import MFE
 from ..segments.NTE import NTE
-
 from .MFN_M16_MATERIAL_LOCATION import MFN_M16_MATERIAL_LOCATION
 from .MFN_M16_PURCHASING_VENDOR import MFN_M16_PURCHASING_VENDOR
 from .MFN_M16_STERILIZATION import MFN_M16_STERILIZATION
@@ -50,25 +49,25 @@ class MFN_M16_MATERIAL_ITEM_RECORD(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    STERILIZATION: Optional[List[_MFN_M16_STERILIZATION]] = Field(
+    STERILIZATION: list[_MFN_M16_STERILIZATION] | None = Field(
         default=None,
         title="STERILIZATION",
         description="Optional, repeating",
     )
 
-    PURCHASING_VENDOR: Optional[List[_MFN_M16_PURCHASING_VENDOR]] = Field(
+    PURCHASING_VENDOR: list[_MFN_M16_PURCHASING_VENDOR] | None = Field(
         default=None,
         title="PURCHASING_VENDOR",
         description="Optional, repeating",
     )
 
-    MATERIAL_LOCATION: Optional[List[_MFN_M16_MATERIAL_LOCATION]] = Field(
+    MATERIAL_LOCATION: list[_MFN_M16_MATERIAL_LOCATION] | None = Field(
         default=None,
         title="MATERIAL_LOCATION",
         description="Optional, repeating",

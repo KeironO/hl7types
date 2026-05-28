@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: ORD_O04.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .ORD_O04_ORDER_DIET import ORD_O04_ORDER_DIET
@@ -28,19 +28,19 @@ class ORD_O04_RESPONSE(BaseModel):
         ORDER_TRAY (Optional[List[ORD_O04_ORDER_TRAY]]): optional
     """
 
-    PATIENT: Optional[_ORD_O04_PATIENT] = Field(
+    PATIENT: _ORD_O04_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER_DIET: List[_ORD_O04_ORDER_DIET] = Field(
+    ORDER_DIET: list[_ORD_O04_ORDER_DIET] = Field(
         default=...,
         title="ORDER_DIET",
         description="Required, repeating",
     )
 
-    ORDER_TRAY: Optional[List[_ORD_O04_ORDER_TRAY]] = Field(
+    ORDER_TRAY: list[_ORD_O04_ORDER_TRAY] | None = Field(
         default=None,
         title="ORDER_TRAY",
         description="Optional, repeating",

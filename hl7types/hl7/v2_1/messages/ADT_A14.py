@@ -5,9 +5,11 @@ Version: 2.1
 Class: ADT_A14
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, Any
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
@@ -70,7 +72,7 @@ class ADT_A14(BaseModel):
         description="Required",
     )
 
-    DG1: Optional[_DG1] = Field(
+    DG1: _DG1 | None = Field(
         default=None,
         title="DG1",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: STC_S33
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MSH import MSH
@@ -37,19 +37,19 @@ class STC_S33(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    SCP: List[_SCP] = Field(
+    SCP: list[_SCP] = Field(
         default=...,
         title="SCP",
         description="Required, repeating",

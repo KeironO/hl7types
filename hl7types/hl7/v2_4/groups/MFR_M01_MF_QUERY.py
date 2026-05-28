@@ -5,9 +5,11 @@ Version: 2.4
 Class: MFR_M01.MF_QUERY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, Any
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
@@ -29,6 +31,6 @@ class MFR_M01_MF_QUERY(BaseModel):
         description="Required",
     )
 
-    anyzsegment: Optional[Any] = None
+    anyzsegment: Any | None = None
 
     model_config = {"populate_by_name": True}

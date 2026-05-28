@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: ORD_O04.TIMING_DIET
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.TQ1 import TQ1
@@ -31,7 +31,7 @@ class ORD_O04_TIMING_DIET(BaseModel):
         description="Required",
     )
 
-    TQ2: Optional[List[_TQ2]] = Field(
+    TQ2: list[_TQ2] | None = Field(
         default=None,
         title="TQ2",
         description="Optional, repeating",

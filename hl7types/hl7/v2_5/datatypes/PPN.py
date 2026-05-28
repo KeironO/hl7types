@@ -5,9 +5,9 @@ Version: 2.5
 Class: PPN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -21,7 +21,7 @@ from .TS import TS
 class PPN(BaseModel):
     """HL7 v2 PPN data type."""
 
-    ppn_1: Optional[str] = Field(
+    ppn_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_1",
@@ -32,7 +32,7 @@ class PPN(BaseModel):
         title="ID Number",
     )
 
-    ppn_2: Optional[FN] = Field(
+    ppn_2: FN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_2",
@@ -43,7 +43,7 @@ class PPN(BaseModel):
         title="Family Name",
     )
 
-    ppn_3: Optional[str] = Field(
+    ppn_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_3",
@@ -54,7 +54,7 @@ class PPN(BaseModel):
         title="Given Name",
     )
 
-    ppn_4: Optional[str] = Field(
+    ppn_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_4",
@@ -65,7 +65,7 @@ class PPN(BaseModel):
         title="Second and Further Given Names or Initials Thereof",
     )
 
-    ppn_5: Optional[str] = Field(
+    ppn_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_5",
@@ -76,7 +76,7 @@ class PPN(BaseModel):
         title="Suffix (e.g., JR or III)",
     )
 
-    ppn_6: Optional[str] = Field(
+    ppn_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_6",
@@ -87,7 +87,7 @@ class PPN(BaseModel):
         title="Prefix (e.g., DR)",
     )
 
-    ppn_7: Optional[str] = Field(
+    ppn_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_7",
@@ -98,7 +98,7 @@ class PPN(BaseModel):
         title="Degree (e.g., MD)",
     )
 
-    ppn_8: Optional[str] = Field(
+    ppn_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_8",
@@ -109,7 +109,7 @@ class PPN(BaseModel):
         title="Source Table",
     )
 
-    ppn_9: Optional[HD] = Field(
+    ppn_9: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_9",
@@ -120,7 +120,7 @@ class PPN(BaseModel):
         title="Assigning Authority",
     )
 
-    ppn_10: Optional[str] = Field(
+    ppn_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_10",
@@ -131,7 +131,7 @@ class PPN(BaseModel):
         title="Name Type Code",
     )
 
-    ppn_11: Optional[str] = Field(
+    ppn_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_11",
@@ -142,7 +142,7 @@ class PPN(BaseModel):
         title="Identifier Check Digit",
     )
 
-    ppn_12: Optional[str] = Field(
+    ppn_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_12",
@@ -153,7 +153,7 @@ class PPN(BaseModel):
         title="Check Digit Scheme",
     )
 
-    ppn_13: Optional[str] = Field(
+    ppn_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_13",
@@ -164,7 +164,7 @@ class PPN(BaseModel):
         title="Identifier Type Code",
     )
 
-    ppn_14: Optional[HD] = Field(
+    ppn_14: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_14",
@@ -175,7 +175,7 @@ class PPN(BaseModel):
         title="Assigning Facility",
     )
 
-    ppn_15: Optional[TS] = Field(
+    ppn_15: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_15",
@@ -186,7 +186,7 @@ class PPN(BaseModel):
         title="Date/Time Action Performed",
     )
 
-    ppn_16: Optional[str] = Field(
+    ppn_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_16",
@@ -197,7 +197,7 @@ class PPN(BaseModel):
         title="Name Representation Code",
     )
 
-    ppn_17: Optional[CE] = Field(
+    ppn_17: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_17",
@@ -208,7 +208,7 @@ class PPN(BaseModel):
         title="Name Context",
     )
 
-    ppn_18: Optional[DR] = Field(
+    ppn_18: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_18",
@@ -219,7 +219,7 @@ class PPN(BaseModel):
         title="Name Validity Range",
     )
 
-    ppn_19: Optional[str] = Field(
+    ppn_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_19",
@@ -230,7 +230,7 @@ class PPN(BaseModel):
         title="Name Assembly Order",
     )
 
-    ppn_20: Optional[TS] = Field(
+    ppn_20: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_20",
@@ -241,7 +241,7 @@ class PPN(BaseModel):
         title="Effective Date",
     )
 
-    ppn_21: Optional[TS] = Field(
+    ppn_21: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_21",
@@ -252,7 +252,7 @@ class PPN(BaseModel):
         title="Expiration Date",
     )
 
-    ppn_22: Optional[str] = Field(
+    ppn_22: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_22",
@@ -263,7 +263,7 @@ class PPN(BaseModel):
         title="Professional Suffix",
     )
 
-    ppn_23: Optional[CWE] = Field(
+    ppn_23: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_23",
@@ -274,7 +274,7 @@ class PPN(BaseModel):
         title="Assigning Jurisdiction",
     )
 
-    ppn_24: Optional[CWE] = Field(
+    ppn_24: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ppn_24",

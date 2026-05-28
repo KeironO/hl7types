@@ -5,15 +5,14 @@ Version: 2.3
 Class: PPG_PCG.GOAL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GOL import GOL
 from ..segments.NTE import NTE
 from ..segments.VAR import VAR
-
 from .PPG_PCG_GOAL_OBSERVATION import PPG_PCG_GOAL_OBSERVATION
 from .PPG_PCG_GOAL_ROLE import PPG_PCG_GOAL_ROLE
 from .PPG_PCG_ORDER import PPG_PCG_ORDER
@@ -47,37 +46,37 @@ class PPG_PCG_GOAL(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    GOAL_ROLE: Optional[List[_PPG_PCG_GOAL_ROLE]] = Field(
+    GOAL_ROLE: list[_PPG_PCG_GOAL_ROLE] | None = Field(
         default=None,
         title="GOAL_ROLE",
         description="Optional, repeating",
     )
 
-    GOAL_OBSERVATION: Optional[List[_PPG_PCG_GOAL_OBSERVATION]] = Field(
+    GOAL_OBSERVATION: list[_PPG_PCG_GOAL_OBSERVATION] | None = Field(
         default=None,
         title="GOAL_OBSERVATION",
         description="Optional, repeating",
     )
 
-    PROBLEM: Optional[List[_PPG_PCG_PROBLEM]] = Field(
+    PROBLEM: list[_PPG_PCG_PROBLEM] | None = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_PPG_PCG_ORDER]] = Field(
+    ORDER: list[_PPG_PCG_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

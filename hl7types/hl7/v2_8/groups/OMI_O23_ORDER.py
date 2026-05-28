@@ -5,9 +5,9 @@ Version: 2.8
 Class: OMI_O23.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -17,7 +17,6 @@ from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .OMI_O23_OBSERVATION import OMI_O23_OBSERVATION
 from .OMI_O23_TIMING import OMI_O23_TIMING
 
@@ -53,13 +52,13 @@ class OMI_O23_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_OMI_O23_TIMING]] = Field(
+    TIMING: list[_OMI_O23_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -71,31 +70,31 @@ class OMI_O23_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMI_O23_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMI_O23_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    IPC: List[_IPC] = Field(
+    IPC: list[_IPC] = Field(
         default=...,
         title="IPC",
         description="Required, repeating",

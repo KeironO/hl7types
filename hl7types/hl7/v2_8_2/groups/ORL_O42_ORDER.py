@@ -5,14 +5,13 @@ Version: 2.8.2
 Class: ORL_O42.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .ORL_O42_OBSERVATION_REQUEST import ORL_O42_OBSERVATION_REQUEST
 from .ORL_O42_TIMING import ORL_O42_TIMING
 
@@ -38,19 +37,19 @@ class ORL_O42_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_ORL_O42_TIMING]] = Field(
+    TIMING: list[_ORL_O42_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    OBSERVATION_REQUEST: Optional[_ORL_O42_OBSERVATION_REQUEST] = Field(
+    OBSERVATION_REQUEST: _ORL_O42_OBSERVATION_REQUEST | None = Field(
         default=None,
         title="OBSERVATION_REQUEST",
         description="Optional",

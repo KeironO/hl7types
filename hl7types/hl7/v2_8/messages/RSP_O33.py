@@ -5,11 +5,12 @@ Version: 2.8
 Class: RSP_O33
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RSP_O33_DONOR import RSP_O33_DONOR
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
@@ -17,8 +18,6 @@ from ..segments.QAK import QAK
 from ..segments.QPD import QPD
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RSP_O33_DONOR import RSP_O33_DONOR
 
 _ERR = ERR
 _MSA = MSA
@@ -50,13 +49,13 @@ class RSP_O33(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -68,7 +67,7 @@ class RSP_O33(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -86,7 +85,7 @@ class RSP_O33(BaseModel):
         description="Required",
     )
 
-    DONOR: Optional[_RSP_O33_DONOR] = Field(
+    DONOR: _RSP_O33_DONOR | None = Field(
         default=None,
         title="DONOR",
         description="Optional",

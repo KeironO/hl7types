@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OMP_O09.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -18,7 +18,6 @@ from ..segments.ORC import ORC
 from ..segments.PRT import PRT
 from ..segments.RXO import RXO
 from ..segments.RXR import RXR
-
 from .OMP_O09_COMPONENT import OMP_O09_COMPONENT
 from .OMP_O09_OBSERVATION import OMP_O09_OBSERVATION
 from .OMP_O09_TIMING import OMP_O09_TIMING
@@ -59,7 +58,7 @@ class OMP_O09_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_OMP_O09_TIMING]] = Field(
+    TIMING: list[_OMP_O09_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
@@ -71,49 +70,49 @@ class OMP_O09_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENT: Optional[List[_OMP_O09_COMPONENT]] = Field(
+    COMPONENT: list[_OMP_O09_COMPONENT] | None = Field(
         default=None,
         title="COMPONENT",
         description="Optional, repeating",
     )
 
-    CDO: Optional[List[_CDO]] = Field(
+    CDO: list[_CDO] | None = Field(
         default=None,
         title="CDO",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OMP_O09_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMP_O09_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

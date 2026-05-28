@@ -5,14 +5,13 @@ Version: 2.3
 Class: SUR_P09
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..segments.MSH import MSH
-
 from ..groups.SUR_P09_FACILITY import SUR_P09_FACILITY
+from ..segments.MSH import MSH
 
 _MSH = MSH
 _SUR_P09_FACILITY = SUR_P09_FACILITY
@@ -32,7 +31,7 @@ class SUR_P09(BaseModel):
         description="Required",
     )
 
-    FACILITY: List[_SUR_P09_FACILITY] = Field(
+    FACILITY: list[_SUR_P09_FACILITY] = Field(
         default=...,
         title="FACILITY",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: CCU_I20.CLINICAL_HISTORY_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .CCU_I20_CLINICAL_HISTORY_OBJECT import CCU_I20_CLINICAL_HISTORY_OBJECT
@@ -31,7 +31,7 @@ class CCU_I20_CLINICAL_HISTORY_DETAIL(BaseModel):
         description="Required",
     )
 
-    CLINICAL_HISTORY_OBSERVATION: Optional[List[_CCU_I20_CLINICAL_HISTORY_OBSERVATION]] = Field(
+    CLINICAL_HISTORY_OBSERVATION: list[_CCU_I20_CLINICAL_HISTORY_OBSERVATION] | None = Field(
         default=None,
         title="CLINICAL_HISTORY_OBSERVATION",
         description="Optional, repeating",

@@ -5,9 +5,9 @@ Version: 2.7
 Class: PL
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .EI import EI
@@ -17,7 +17,7 @@ from .HD import HD
 class PL(BaseModel):
     """HL7 v2 PL data type."""
 
-    pl_1: Optional[HD] = Field(
+    pl_1: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_1",
@@ -28,7 +28,7 @@ class PL(BaseModel):
         title="Point of Care",
     )
 
-    pl_2: Optional[HD] = Field(
+    pl_2: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_2",
@@ -39,7 +39,7 @@ class PL(BaseModel):
         title="Room",
     )
 
-    pl_3: Optional[HD] = Field(
+    pl_3: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_3",
@@ -50,7 +50,7 @@ class PL(BaseModel):
         title="Bed",
     )
 
-    pl_4: Optional[HD] = Field(
+    pl_4: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_4",
@@ -61,7 +61,7 @@ class PL(BaseModel):
         title="Facility",
     )
 
-    pl_5: Optional[str] = Field(
+    pl_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_5",
@@ -72,7 +72,7 @@ class PL(BaseModel):
         title="Location Status",
     )
 
-    pl_6: Optional[str] = Field(
+    pl_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_6",
@@ -83,7 +83,7 @@ class PL(BaseModel):
         title="Person Location Type",
     )
 
-    pl_7: Optional[HD] = Field(
+    pl_7: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_7",
@@ -94,7 +94,7 @@ class PL(BaseModel):
         title="Building",
     )
 
-    pl_8: Optional[HD] = Field(
+    pl_8: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_8",
@@ -105,7 +105,7 @@ class PL(BaseModel):
         title="Floor",
     )
 
-    pl_9: Optional[str] = Field(
+    pl_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_9",
@@ -116,7 +116,7 @@ class PL(BaseModel):
         title="Location Description",
     )
 
-    pl_10: Optional[EI] = Field(
+    pl_10: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_10",
@@ -127,7 +127,7 @@ class PL(BaseModel):
         title="Comprehensive Location Identifier",
     )
 
-    pl_11: Optional[HD] = Field(
+    pl_11: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pl_11",

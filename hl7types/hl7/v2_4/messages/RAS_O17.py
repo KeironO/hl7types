@@ -5,16 +5,15 @@ Version: 2.4
 Class: RAS_O17
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.MSH import MSH
-from ..segments.NTE import NTE
 
 from ..groups.RAS_O17_ORDER import RAS_O17_ORDER
 from ..groups.RAS_O17_PATIENT import RAS_O17_PATIENT
+from ..segments.MSH import MSH
+from ..segments.NTE import NTE
 
 _MSH = MSH
 _NTE = NTE
@@ -38,19 +37,19 @@ class RAS_O17(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[_RAS_O17_PATIENT] = Field(
+    PATIENT: _RAS_O17_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_RAS_O17_ORDER] = Field(
+    ORDER: list[_RAS_O17_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

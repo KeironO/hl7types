@@ -5,15 +5,14 @@ Version: 2.4
 Class: RSP_Z88.ORDER_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RXO import RXO
 from ..segments.RXR import RXR
-
 from .RSP_Z88_COMPONENT import RSP_Z88_COMPONENT
 
 _NTE = NTE
@@ -38,19 +37,19 @@ class RSP_Z88_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENT: Optional[_RSP_Z88_COMPONENT] = Field(
+    COMPONENT: _RSP_Z88_COMPONENT | None = Field(
         default=None,
         title="COMPONENT",
         description="Optional",

@@ -5,9 +5,9 @@ Version: 2.7
 Class: RQ1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class RQ1(BaseModel):
     """HL7 v2 RQ1 segment."""
 
-    rq1_1: Optional[str] = Field(
+    rq1_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rq1_1",
@@ -28,7 +28,7 @@ class RQ1(BaseModel):
         description="Item #285",
     )
 
-    rq1_2: Optional[CWE] = Field(
+    rq1_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rq1_2",
@@ -40,7 +40,7 @@ class RQ1(BaseModel):
         description="Item #286 | Table HL70385",
     )
 
-    rq1_3: Optional[str] = Field(
+    rq1_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rq1_3",
@@ -52,7 +52,7 @@ class RQ1(BaseModel):
         description="Item #287",
     )
 
-    rq1_4: Optional[CWE] = Field(
+    rq1_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rq1_4",
@@ -64,7 +64,7 @@ class RQ1(BaseModel):
         description="Item #288 | Table HL79999",
     )
 
-    rq1_5: Optional[str] = Field(
+    rq1_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rq1_5",
@@ -76,7 +76,7 @@ class RQ1(BaseModel):
         description="Item #289",
     )
 
-    rq1_6: Optional[str] = Field(
+    rq1_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rq1_6",
@@ -88,7 +88,7 @@ class RQ1(BaseModel):
         description="Item #290 | Table HL70136",
     )
 
-    rq1_7: Optional[str] = Field(
+    rq1_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rq1_7",

@@ -5,10 +5,10 @@ Version: 2.3.1
 Class: PPV_PCA.CHOICE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class PPV_PCA_CHOICE(BaseModel):

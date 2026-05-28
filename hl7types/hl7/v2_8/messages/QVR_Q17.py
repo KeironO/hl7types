@@ -5,19 +5,18 @@ Version: 2.8
 Class: QVR_Q17
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.QVR_Q17_QBP import QVR_Q17_QBP
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
 from ..segments.QPD import QPD
 from ..segments.RCP import RCP
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.QVR_Q17_QBP import QVR_Q17_QBP
 
 _DSC = DSC
 _MSH = MSH
@@ -47,13 +46,13 @@ class QVR_Q17(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -65,7 +64,7 @@ class QVR_Q17(BaseModel):
         description="Required",
     )
 
-    QBP: Optional[_QVR_Q17_QBP] = Field(
+    QBP: _QVR_Q17_QBP | None = Field(
         default=None,
         title="QBP",
         description="Optional",
@@ -77,7 +76,7 @@ class QVR_Q17(BaseModel):
         description="Required",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

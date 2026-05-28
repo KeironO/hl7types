@@ -5,14 +5,13 @@ Version: 2.8
 Class: OUL_R23.COMMON_ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .OUL_R23_ORDER_DOCUMENT import OUL_R23_ORDER_DOCUMENT
 
 _ORC = ORC
@@ -35,13 +34,13 @@ class OUL_R23_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ORDER_DOCUMENT: Optional[_OUL_R23_ORDER_DOCUMENT] = Field(
+    ORDER_DOCUMENT: _OUL_R23_ORDER_DOCUMENT | None = Field(
         default=None,
         title="ORDER_DOCUMENT",
         description="Optional",

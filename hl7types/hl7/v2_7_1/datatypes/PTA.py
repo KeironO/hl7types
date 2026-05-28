@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: PTA
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -28,7 +28,7 @@ class PTA(BaseModel):
         title="Policy Type",
     )
 
-    pta_2: Optional[CWE] = Field(
+    pta_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pta_2",

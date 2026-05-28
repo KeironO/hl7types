@@ -5,11 +5,17 @@ Version: 2.5
 Class: REF_I12
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.REF_I12_AUTHORIZATION_CONTACT import REF_I12_AUTHORIZATION_CONTACT
+from ..groups.REF_I12_INSURANCE import REF_I12_INSURANCE
+from ..groups.REF_I12_OBSERVATION import REF_I12_OBSERVATION
+from ..groups.REF_I12_PATIENT_VISIT import REF_I12_PATIENT_VISIT
+from ..groups.REF_I12_PROCEDURE import REF_I12_PROCEDURE
+from ..groups.REF_I12_PROVIDER_CONTACT import REF_I12_PROVIDER_CONTACT
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
@@ -21,13 +27,6 @@ from ..segments.NTE import NTE
 from ..segments.PID import PID
 from ..segments.RF1 import RF1
 from ..segments.SFT import SFT
-
-from ..groups.REF_I12_AUTHORIZATION_CONTACT import REF_I12_AUTHORIZATION_CONTACT
-from ..groups.REF_I12_INSURANCE import REF_I12_INSURANCE
-from ..groups.REF_I12_OBSERVATION import REF_I12_OBSERVATION
-from ..groups.REF_I12_PATIENT_VISIT import REF_I12_PATIENT_VISIT
-from ..groups.REF_I12_PROCEDURE import REF_I12_PROCEDURE
-from ..groups.REF_I12_PROVIDER_CONTACT import REF_I12_PROVIDER_CONTACT
 
 _ACC = ACC
 _AL1 = AL1
@@ -77,25 +76,25 @@ class REF_I12(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    RF1: Optional[_RF1] = Field(
+    RF1: _RF1 | None = Field(
         default=None,
         title="RF1",
         description="Optional",
     )
 
-    AUTHORIZATION_CONTACT: Optional[_REF_I12_AUTHORIZATION_CONTACT] = Field(
+    AUTHORIZATION_CONTACT: _REF_I12_AUTHORIZATION_CONTACT | None = Field(
         default=None,
         title="AUTHORIZATION_CONTACT",
         description="Optional",
     )
 
-    PROVIDER_CONTACT: List[_REF_I12_PROVIDER_CONTACT] = Field(
+    PROVIDER_CONTACT: list[_REF_I12_PROVIDER_CONTACT] = Field(
         default=...,
         title="PROVIDER_CONTACT",
         description="Required, repeating",
@@ -107,67 +106,67 @@ class REF_I12(BaseModel):
         description="Required",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_REF_I12_INSURANCE]] = Field(
+    INSURANCE: list[_REF_I12_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[List[_DRG]] = Field(
+    DRG: list[_DRG] | None = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PROCEDURE: Optional[List[_REF_I12_PROCEDURE]] = Field(
+    PROCEDURE: list[_REF_I12_PROCEDURE] | None = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_REF_I12_OBSERVATION]] = Field(
+    OBSERVATION: list[_REF_I12_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: Optional[_REF_I12_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _REF_I12_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

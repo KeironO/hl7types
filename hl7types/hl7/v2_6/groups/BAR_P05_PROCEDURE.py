@@ -5,9 +5,9 @@ Version: 2.6
 Class: BAR_P05.PROCEDURE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PR1 import PR1
@@ -31,7 +31,7 @@ class BAR_P05_PROCEDURE(BaseModel):
         description="Required",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",

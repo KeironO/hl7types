@@ -5,9 +5,9 @@ Version: 2.6
 Class: SRM_S01.GENERAL_RESOURCE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.AIG import AIG
@@ -34,13 +34,13 @@ class SRM_S01_GENERAL_RESOURCE(BaseModel):
         description="Required",
     )
 
-    APR: Optional[_APR] = Field(
+    APR: _APR | None = Field(
         default=None,
         title="APR",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

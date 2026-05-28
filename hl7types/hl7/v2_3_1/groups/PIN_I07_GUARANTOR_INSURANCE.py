@@ -5,13 +5,12 @@ Version: 2.3.1
 Class: PIN_I07.GUARANTOR_INSURANCE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.GT1 import GT1
-
 from .PIN_I07_INSURANCE import PIN_I07_INSURANCE
 
 _GT1 = GT1
@@ -26,13 +25,13 @@ class PIN_I07_GUARANTOR_INSURANCE(BaseModel):
         INSURANCE (List[PIN_I07_INSURANCE]): required
     """
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: List[_PIN_I07_INSURANCE] = Field(
+    INSURANCE: list[_PIN_I07_INSURANCE] = Field(
         default=...,
         title="INSURANCE",
         description="Required, repeating",

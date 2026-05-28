@@ -5,15 +5,14 @@ Version: 2.1
 Class: ADT_A17
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ADT_A17_PATIENT import ADT_A17_PATIENT
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
-
-from ..groups.ADT_A17_PATIENT import ADT_A17_PATIENT
 
 _ADT_A17_PATIENT = ADT_A17_PATIENT
 _EVN = EVN
@@ -41,7 +40,7 @@ class ADT_A17(BaseModel):
         description="Required",
     )
 
-    PATIENT: List[_ADT_A17_PATIENT] = Field(
+    PATIENT: list[_ADT_A17_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

@@ -5,16 +5,15 @@ Version: 2.6
 Class: OUL_R23.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
-
 from .OUL_R23_VISIT import OUL_R23_VISIT
 
 _NTE = NTE
@@ -41,25 +40,25 @@ class OUL_R23_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    VISIT: Optional[_OUL_R23_VISIT] = Field(
+    VISIT: _OUL_R23_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",

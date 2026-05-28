@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: EQP
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -30,7 +30,7 @@ class EQP(BaseModel):
         description="Item #1430 | Table HL70450",
     )
 
-    eqp_2: Optional[str] = Field(
+    eqp_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "eqp_2",
@@ -54,7 +54,7 @@ class EQP(BaseModel):
         description="Item #1202",
     )
 
-    eqp_4: Optional[TS] = Field(
+    eqp_4: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "eqp_4",

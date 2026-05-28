@@ -5,9 +5,9 @@ Version: 2.6
 Class: XAD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -19,7 +19,7 @@ from .SAD import SAD
 class XAD(BaseModel):
     """HL7 v2 XAD data type."""
 
-    xad_1: Optional[SAD] = Field(
+    xad_1: SAD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_1",
@@ -30,7 +30,7 @@ class XAD(BaseModel):
         title="Street Address",
     )
 
-    xad_2: Optional[str] = Field(
+    xad_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_2",
@@ -41,7 +41,7 @@ class XAD(BaseModel):
         title="Other Designation",
     )
 
-    xad_3: Optional[str] = Field(
+    xad_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_3",
@@ -52,7 +52,7 @@ class XAD(BaseModel):
         title="City",
     )
 
-    xad_4: Optional[str] = Field(
+    xad_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_4",
@@ -63,7 +63,7 @@ class XAD(BaseModel):
         title="State or Province",
     )
 
-    xad_5: Optional[str] = Field(
+    xad_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_5",
@@ -74,7 +74,7 @@ class XAD(BaseModel):
         title="Zip or Postal Code",
     )
 
-    xad_6: Optional[str] = Field(
+    xad_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_6",
@@ -85,7 +85,7 @@ class XAD(BaseModel):
         title="Country",
     )
 
-    xad_7: Optional[str] = Field(
+    xad_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_7",
@@ -96,7 +96,7 @@ class XAD(BaseModel):
         title="Address Type",
     )
 
-    xad_8: Optional[str] = Field(
+    xad_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_8",
@@ -107,7 +107,7 @@ class XAD(BaseModel):
         title="Other Geographic Designation",
     )
 
-    xad_9: Optional[str] = Field(
+    xad_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_9",
@@ -118,7 +118,7 @@ class XAD(BaseModel):
         title="County/Parish Code",
     )
 
-    xad_10: Optional[str] = Field(
+    xad_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_10",
@@ -129,7 +129,7 @@ class XAD(BaseModel):
         title="Census Tract",
     )
 
-    xad_11: Optional[str] = Field(
+    xad_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_11",
@@ -140,7 +140,7 @@ class XAD(BaseModel):
         title="Address Representation Code",
     )
 
-    xad_12: Optional[DR] = Field(
+    xad_12: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_12",
@@ -151,7 +151,7 @@ class XAD(BaseModel):
         title="Address Validity Range",
     )
 
-    xad_13: Optional[str] = Field(
+    xad_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_13",
@@ -162,7 +162,7 @@ class XAD(BaseModel):
         title="Effective Date",
     )
 
-    xad_14: Optional[str] = Field(
+    xad_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_14",
@@ -173,7 +173,7 @@ class XAD(BaseModel):
         title="Expiration Date",
     )
 
-    xad_15: Optional[CWE] = Field(
+    xad_15: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_15",
@@ -184,7 +184,7 @@ class XAD(BaseModel):
         title="Expiration Reason",
     )
 
-    xad_16: Optional[str] = Field(
+    xad_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_16",
@@ -195,7 +195,7 @@ class XAD(BaseModel):
         title="Temporary Indicator",
     )
 
-    xad_17: Optional[str] = Field(
+    xad_17: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_17",
@@ -206,7 +206,7 @@ class XAD(BaseModel):
         title="Bad Address Indicator",
     )
 
-    xad_18: Optional[str] = Field(
+    xad_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_18",
@@ -217,7 +217,7 @@ class XAD(BaseModel):
         title="Address Usage",
     )
 
-    xad_19: Optional[str] = Field(
+    xad_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_19",
@@ -228,7 +228,7 @@ class XAD(BaseModel):
         title="Addressee",
     )
 
-    xad_20: Optional[str] = Field(
+    xad_20: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_20",
@@ -239,7 +239,7 @@ class XAD(BaseModel):
         title="Comment",
     )
 
-    xad_21: Optional[str] = Field(
+    xad_21: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_21",
@@ -250,7 +250,7 @@ class XAD(BaseModel):
         title="Preference Order",
     )
 
-    xad_22: Optional[CWE] = Field(
+    xad_22: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_22",
@@ -261,7 +261,7 @@ class XAD(BaseModel):
         title="Protection Code",
     )
 
-    xad_23: Optional[EI] = Field(
+    xad_23: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xad_23",

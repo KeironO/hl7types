@@ -5,18 +5,17 @@ Version: 2.5.1
 Class: PMU_B07
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.PMU_B07_CERTIFICATE import PMU_B07_CERTIFICATE
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
 from ..segments.PRA import PRA
 from ..segments.SFT import SFT
 from ..segments.STF import STF
-
-from ..groups.PMU_B07_CERTIFICATE import PMU_B07_CERTIFICATE
 
 _EVN = EVN
 _MSH = MSH
@@ -44,7 +43,7 @@ class PMU_B07(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -62,13 +61,13 @@ class PMU_B07(BaseModel):
         description="Required",
     )
 
-    PRA: Optional[_PRA] = Field(
+    PRA: _PRA | None = Field(
         default=None,
         title="PRA",
         description="Optional",
     )
 
-    CERTIFICATE: Optional[List[_PMU_B07_CERTIFICATE]] = Field(
+    CERTIFICATE: list[_PMU_B07_CERTIFICATE] | None = Field(
         default=None,
         title="CERTIFICATE",
         description="Optional, repeating",

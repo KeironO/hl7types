@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: MSH
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -46,7 +46,7 @@ class MSH(BaseModel):
         description="Item #2",
     )
 
-    msh_3: Optional[HD] = Field(
+    msh_3: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_3",
@@ -58,7 +58,7 @@ class MSH(BaseModel):
         description="Item #3 | Table HL70361",
     )
 
-    msh_4: Optional[HD] = Field(
+    msh_4: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_4",
@@ -70,7 +70,7 @@ class MSH(BaseModel):
         description="Item #4 | Table HL70362",
     )
 
-    msh_5: Optional[HD] = Field(
+    msh_5: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_5",
@@ -82,7 +82,7 @@ class MSH(BaseModel):
         description="Item #5 | Table HL70361",
     )
 
-    msh_6: Optional[HD] = Field(
+    msh_6: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_6",
@@ -106,7 +106,7 @@ class MSH(BaseModel):
         description="Item #7",
     )
 
-    msh_8: Optional[str] = Field(
+    msh_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_8",
@@ -166,7 +166,7 @@ class MSH(BaseModel):
         description="Item #12",
     )
 
-    msh_13: Optional[str] = Field(
+    msh_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_13",
@@ -178,7 +178,7 @@ class MSH(BaseModel):
         description="Item #13",
     )
 
-    msh_14: Optional[str] = Field(
+    msh_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_14",
@@ -190,7 +190,7 @@ class MSH(BaseModel):
         description="Item #14",
     )
 
-    msh_15: Optional[str] = Field(
+    msh_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_15",
@@ -202,7 +202,7 @@ class MSH(BaseModel):
         description="Item #15 | Table HL70155",
     )
 
-    msh_16: Optional[str] = Field(
+    msh_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_16",
@@ -214,7 +214,7 @@ class MSH(BaseModel):
         description="Item #16 | Table HL70155",
     )
 
-    msh_17: Optional[str] = Field(
+    msh_17: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_17",
@@ -226,7 +226,7 @@ class MSH(BaseModel):
         description="Item #17 | Table HL70399",
     )
 
-    msh_18: Optional[List[str]] = Field(
+    msh_18: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_18",
@@ -238,7 +238,7 @@ class MSH(BaseModel):
         description="Item #692 | Table HL70211",
     )
 
-    msh_19: Optional[CWE] = Field(
+    msh_19: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_19",
@@ -250,7 +250,7 @@ class MSH(BaseModel):
         description="Item #693",
     )
 
-    msh_20: Optional[str] = Field(
+    msh_20: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_20",
@@ -262,7 +262,7 @@ class MSH(BaseModel):
         description="Item #1317 | Table HL70356",
     )
 
-    msh_21: Optional[List[EI]] = Field(
+    msh_21: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_21",
@@ -274,7 +274,7 @@ class MSH(BaseModel):
         description="Item #1598",
     )
 
-    msh_22: Optional[XON] = Field(
+    msh_22: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_22",
@@ -286,7 +286,7 @@ class MSH(BaseModel):
         description="Item #1823",
     )
 
-    msh_23: Optional[XON] = Field(
+    msh_23: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_23",
@@ -298,7 +298,7 @@ class MSH(BaseModel):
         description="Item #1824",
     )
 
-    msh_24: Optional[HD] = Field(
+    msh_24: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_24",
@@ -310,7 +310,7 @@ class MSH(BaseModel):
         description="Item #1825",
     )
 
-    msh_25: Optional[HD] = Field(
+    msh_25: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msh_25",

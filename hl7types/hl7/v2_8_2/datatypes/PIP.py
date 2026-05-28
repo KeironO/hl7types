@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: PIP
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -28,7 +28,7 @@ class PIP(BaseModel):
         title="Privilege",
     )
 
-    pip_2: Optional[CWE] = Field(
+    pip_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pip_2",
@@ -39,7 +39,7 @@ class PIP(BaseModel):
         title="Privilege Class",
     )
 
-    pip_3: Optional[str] = Field(
+    pip_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pip_3",
@@ -50,7 +50,7 @@ class PIP(BaseModel):
         title="Expiration Date",
     )
 
-    pip_4: Optional[str] = Field(
+    pip_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pip_4",
@@ -61,7 +61,7 @@ class PIP(BaseModel):
         title="Activation Date",
     )
 
-    pip_5: Optional[EI] = Field(
+    pip_5: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pip_5",

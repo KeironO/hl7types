@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: XPN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .FN import FN
@@ -16,7 +16,7 @@ from .FN import FN
 class XPN(BaseModel):
     """HL7 v2 XPN data type."""
 
-    xpn_1: Optional[FN] = Field(
+    xpn_1: FN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_1",
@@ -27,7 +27,7 @@ class XPN(BaseModel):
         title="family+last name",
     )
 
-    xpn_2: Optional[str] = Field(
+    xpn_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_2",
@@ -38,7 +38,7 @@ class XPN(BaseModel):
         title="given name",
     )
 
-    xpn_3: Optional[str] = Field(
+    xpn_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_3",
@@ -49,7 +49,7 @@ class XPN(BaseModel):
         title="middle initial or name",
     )
 
-    xpn_4: Optional[str] = Field(
+    xpn_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_4",
@@ -60,7 +60,7 @@ class XPN(BaseModel):
         title="suffix (e.g., JR or III)",
     )
 
-    xpn_5: Optional[str] = Field(
+    xpn_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_5",
@@ -71,7 +71,7 @@ class XPN(BaseModel):
         title="prefix (e.g., DR)",
     )
 
-    xpn_6: Optional[str] = Field(
+    xpn_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_6",
@@ -82,7 +82,7 @@ class XPN(BaseModel):
         title="degree (e.g., MD)",
     )
 
-    xpn_7: Optional[str] = Field(
+    xpn_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_7",
@@ -93,7 +93,7 @@ class XPN(BaseModel):
         title="name type code",
     )
 
-    xpn_8: Optional[str] = Field(
+    xpn_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xpn_8",

@@ -5,9 +5,9 @@ Version: 2.5
 Class: ESR_U02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EQU import EQU
@@ -37,7 +37,7 @@ class ESR_U02(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -49,7 +49,7 @@ class ESR_U02(BaseModel):
         description="Required",
     )
 
-    ROL: Optional[_ROL] = Field(
+    ROL: _ROL | None = Field(
         default=None,
         title="ROL",
         description="Optional",

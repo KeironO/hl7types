@@ -5,16 +5,16 @@ Version: 2.4
 Class: PTA
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class PTA(BaseModel):
     """HL7 v2 PTA data type."""
 
-    pta_1: Optional[str] = Field(
+    pta_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pta_1",
@@ -25,7 +25,7 @@ class PTA(BaseModel):
         title="policy type",
     )
 
-    pta_2: Optional[str] = Field(
+    pta_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pta_2",
@@ -36,7 +36,7 @@ class PTA(BaseModel):
         title="amount class",
     )
 
-    pta_3: Optional[str] = Field(
+    pta_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "pta_3",

@@ -5,16 +5,16 @@ Version: 2.4
 Class: SRT
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class SRT(BaseModel):
     """HL7 v2 SRT data type."""
 
-    srt_1: Optional[str] = Field(
+    srt_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "srt_1",
@@ -25,7 +25,7 @@ class SRT(BaseModel):
         title="sort-by field",
     )
 
-    srt_2: Optional[str] = Field(
+    srt_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "srt_2",

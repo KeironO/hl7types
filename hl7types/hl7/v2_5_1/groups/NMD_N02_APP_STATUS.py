@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: NMD_N02.APP_STATUS
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NSC import NSC
@@ -31,7 +31,7 @@ class NMD_N02_APP_STATUS(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

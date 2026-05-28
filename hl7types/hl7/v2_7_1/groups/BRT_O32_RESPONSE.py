@@ -5,13 +5,12 @@ Version: 2.7.1
 Class: BRT_O32.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
-
 from .BRT_O32_ORDER import BRT_O32_ORDER
 
 _BRT_O32_ORDER = BRT_O32_ORDER
@@ -26,13 +25,13 @@ class BRT_O32_RESPONSE(BaseModel):
         ORDER (Optional[List[BRT_O32_ORDER]]): optional
     """
 
-    PID: Optional[_PID] = Field(
+    PID: _PID | None = Field(
         default=None,
         title="PID",
         description="Optional",
     )
 
-    ORDER: Optional[List[_BRT_O32_ORDER]] = Field(
+    ORDER: list[_BRT_O32_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

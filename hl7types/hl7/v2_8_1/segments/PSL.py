@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: PSL
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CP import CP
@@ -34,7 +34,7 @@ class PSL(BaseModel):
         description="Item #1955",
     )
 
-    psl_2: Optional[EI] = Field(
+    psl_2: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_2",
@@ -58,7 +58,7 @@ class PSL(BaseModel):
         description="Item #1957",
     )
 
-    psl_4: Optional[EI] = Field(
+    psl_4: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_4",
@@ -70,7 +70,7 @@ class PSL(BaseModel):
         description="Item #1958",
     )
 
-    psl_5: Optional[EI] = Field(
+    psl_5: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_5",
@@ -106,7 +106,7 @@ class PSL(BaseModel):
         description="Item #1961 | Table HL70879",
     )
 
-    psl_8: Optional[List[CWE]] = Field(
+    psl_8: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_8",
@@ -118,7 +118,7 @@ class PSL(BaseModel):
         description="Item #1962 | Table HL70880",
     )
 
-    psl_9: Optional[str] = Field(
+    psl_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_9",
@@ -130,7 +130,7 @@ class PSL(BaseModel):
         description="Item #1963",
     )
 
-    psl_10: Optional[str] = Field(
+    psl_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_10",
@@ -142,7 +142,7 @@ class PSL(BaseModel):
         description="Item #1964",
     )
 
-    psl_11: Optional[str] = Field(
+    psl_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_11",
@@ -154,7 +154,7 @@ class PSL(BaseModel):
         description="Item #1965",
     )
 
-    psl_12: Optional[CQ] = Field(
+    psl_12: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_12",
@@ -166,7 +166,7 @@ class PSL(BaseModel):
         description="Item #1966 | Table HL70560",
     )
 
-    psl_13: Optional[CP] = Field(
+    psl_13: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_13",
@@ -178,7 +178,7 @@ class PSL(BaseModel):
         description="Item #1967",
     )
 
-    psl_14: Optional[str] = Field(
+    psl_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_14",
@@ -190,7 +190,7 @@ class PSL(BaseModel):
         description="Item #1968",
     )
 
-    psl_15: Optional[CP] = Field(
+    psl_15: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_15",
@@ -202,7 +202,7 @@ class PSL(BaseModel):
         description="Item #1969",
     )
 
-    psl_16: Optional[CP] = Field(
+    psl_16: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_16",
@@ -214,7 +214,7 @@ class PSL(BaseModel):
         description="Item #1970",
     )
 
-    psl_17: Optional[List[CWE]] = Field(
+    psl_17: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_17",
@@ -226,7 +226,7 @@ class PSL(BaseModel):
         description="Item #1971 | Table HL70561",
     )
 
-    psl_18: Optional[List[str]] = Field(
+    psl_18: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_18",
@@ -238,7 +238,7 @@ class PSL(BaseModel):
         description="Item #1972",
     )
 
-    psl_19: Optional[List[EI]] = Field(
+    psl_19: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_19",
@@ -250,7 +250,7 @@ class PSL(BaseModel):
         description="Item #1973",
     )
 
-    psl_20: Optional[List[CWE]] = Field(
+    psl_20: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_20",
@@ -274,7 +274,7 @@ class PSL(BaseModel):
         description="Item #1975 | Table HL70532",
     )
 
-    psl_22: Optional[CWE] = Field(
+    psl_22: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_22",
@@ -286,7 +286,7 @@ class PSL(BaseModel):
         description="Item #1976 | Table HL70879",
     )
 
-    psl_23: Optional[CP] = Field(
+    psl_23: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_23",
@@ -298,7 +298,7 @@ class PSL(BaseModel):
         description="Item #1977",
     )
 
-    psl_24: Optional[str] = Field(
+    psl_24: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_24",
@@ -310,7 +310,7 @@ class PSL(BaseModel):
         description="Item #1978",
     )
 
-    psl_25: Optional[CX] = Field(
+    psl_25: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_25",
@@ -322,7 +322,7 @@ class PSL(BaseModel):
         description="Item #1933",
     )
 
-    psl_26: Optional[DR] = Field(
+    psl_26: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_26",
@@ -334,7 +334,7 @@ class PSL(BaseModel):
         description="Item #1980",
     )
 
-    psl_27: Optional[str] = Field(
+    psl_27: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_27",
@@ -346,7 +346,7 @@ class PSL(BaseModel):
         description="Item #1981",
     )
 
-    psl_28: Optional[str] = Field(
+    psl_28: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_28",
@@ -358,7 +358,7 @@ class PSL(BaseModel):
         description="Item #1982",
     )
 
-    psl_29: Optional[XCN] = Field(
+    psl_29: XCN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_29",
@@ -370,7 +370,7 @@ class PSL(BaseModel):
         description="Item #1983",
     )
 
-    psl_30: Optional[XCN] = Field(
+    psl_30: XCN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_30",
@@ -382,7 +382,7 @@ class PSL(BaseModel):
         description="Item #1984",
     )
 
-    psl_31: Optional[CWE] = Field(
+    psl_31: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_31",
@@ -394,7 +394,7 @@ class PSL(BaseModel):
         description="Item #1985 | Table HL70881",
     )
 
-    psl_32: Optional[CWE] = Field(
+    psl_32: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_32",
@@ -406,7 +406,7 @@ class PSL(BaseModel):
         description="Item #1986 | Table HL70882",
     )
 
-    psl_33: Optional[CWE] = Field(
+    psl_33: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_33",
@@ -418,7 +418,7 @@ class PSL(BaseModel):
         description="Item #1987 | Table HL70894",
     )
 
-    psl_34: Optional[str] = Field(
+    psl_34: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_34",
@@ -430,7 +430,7 @@ class PSL(BaseModel):
         description="Item #1988",
     )
 
-    psl_35: Optional[CP] = Field(
+    psl_35: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_35",
@@ -442,7 +442,7 @@ class PSL(BaseModel):
         description="Item #1989",
     )
 
-    psl_36: Optional[str] = Field(
+    psl_36: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_36",
@@ -454,7 +454,7 @@ class PSL(BaseModel):
         description="Item #1990",
     )
 
-    psl_37: Optional[str] = Field(
+    psl_37: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_37",
@@ -466,7 +466,7 @@ class PSL(BaseModel):
         description="Item #1991",
     )
 
-    psl_38: Optional[CP] = Field(
+    psl_38: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_38",
@@ -478,7 +478,7 @@ class PSL(BaseModel):
         description="Item #1992",
     )
 
-    psl_39: Optional[str] = Field(
+    psl_39: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_39",
@@ -490,7 +490,7 @@ class PSL(BaseModel):
         description="Item #1993",
     )
 
-    psl_40: Optional[CP] = Field(
+    psl_40: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_40",
@@ -502,7 +502,7 @@ class PSL(BaseModel):
         description="Item #1994",
     )
 
-    psl_41: Optional[str] = Field(
+    psl_41: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_41",
@@ -514,7 +514,7 @@ class PSL(BaseModel):
         description="Item #1995",
     )
 
-    psl_42: Optional[str] = Field(
+    psl_42: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_42",
@@ -526,7 +526,7 @@ class PSL(BaseModel):
         description="Item #1996",
     )
 
-    psl_43: Optional[CP] = Field(
+    psl_43: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_43",
@@ -538,7 +538,7 @@ class PSL(BaseModel):
         description="Item #1997",
     )
 
-    psl_44: Optional[CP] = Field(
+    psl_44: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_44",
@@ -550,7 +550,7 @@ class PSL(BaseModel):
         description="Item #1998",
     )
 
-    psl_45: Optional[str] = Field(
+    psl_45: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_45",
@@ -562,7 +562,7 @@ class PSL(BaseModel):
         description="Item #1999",
     )
 
-    psl_46: Optional[str] = Field(
+    psl_46: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_46",
@@ -574,7 +574,7 @@ class PSL(BaseModel):
         description="Item #2000",
     )
 
-    psl_47: Optional[str] = Field(
+    psl_47: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_47",
@@ -586,7 +586,7 @@ class PSL(BaseModel):
         description="Item #2001 | Table HL70136",
     )
 
-    psl_48: Optional[str] = Field(
+    psl_48: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "psl_48",

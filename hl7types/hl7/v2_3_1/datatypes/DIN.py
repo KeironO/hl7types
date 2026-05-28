@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: DIN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CE import CE
@@ -17,7 +17,7 @@ from .TS import TS
 class DIN(BaseModel):
     """HL7 v2 DIN data type."""
 
-    din_1: Optional[TS] = Field(
+    din_1: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "din_1",
@@ -28,7 +28,7 @@ class DIN(BaseModel):
         title="date",
     )
 
-    din_2: Optional[CE] = Field(
+    din_2: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "din_2",

@@ -5,9 +5,9 @@ Version: 2.4
 Class: TX_CHALLENGE
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TX import TX
@@ -16,7 +16,7 @@ from .TX import TX
 class TX_CHALLENGE(BaseModel):
     """HL7 v2 TX_CHALLENGE data type."""
 
-    tx_challenge_1: Optional[TX] = Field(
+    tx_challenge_1: TX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tx_challenge_1",
@@ -27,7 +27,7 @@ class TX_CHALLENGE(BaseModel):
         title="???????????",
     )
 
-    tx_challenge_2: Optional[TX] = Field(
+    tx_challenge_2: TX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tx_challenge_2",

@@ -5,9 +5,9 @@ Version: 2.3
 Class: RRD_O02.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .RRD_O02_ORDER import RRD_O02_ORDER
@@ -25,13 +25,13 @@ class RRD_O02_PATIENT(BaseModel):
         ORDER (List[RRD_O02_ORDER]): required
     """
 
-    RESPONSE: Optional[_RRD_O02_RESPONSE] = Field(
+    RESPONSE: _RRD_O02_RESPONSE | None = Field(
         default=None,
         title="RESPONSE",
         description="Optional",
     )
 
-    ORDER: List[_RRD_O02_ORDER] = Field(
+    ORDER: list[_RRD_O02_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

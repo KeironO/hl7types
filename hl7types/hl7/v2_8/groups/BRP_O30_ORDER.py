@@ -5,16 +5,15 @@ Version: 2.8
 Class: BRP_O30.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BPO import BPO
 from ..segments.BPX import BPX
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
-
 from .BRP_O30_TIMING import BRP_O30_TIMING
 
 _BPO = BPO
@@ -41,25 +40,25 @@ class BRP_O30_ORDER(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    TIMING: Optional[List[_BRP_O30_TIMING]] = Field(
+    TIMING: list[_BRP_O30_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    BPO: Optional[_BPO] = Field(
+    BPO: _BPO | None = Field(
         default=None,
         title="BPO",
         description="Optional",
     )
 
-    BPX: Optional[List[_BPX]] = Field(
+    BPX: list[_BPX] | None = Field(
         default=None,
         title="BPX",
         description="Optional, repeating",

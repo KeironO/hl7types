@@ -5,9 +5,9 @@ Version: 2.7
 Class: RDS_O13.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.FT1 import FT1
@@ -17,7 +17,6 @@ from ..segments.PRT import PRT
 from ..segments.RXC import RXC
 from ..segments.RXD import RXD
 from ..segments.RXR import RXR
-
 from .RDS_O13_ENCODING import RDS_O13_ENCODING
 from .RDS_O13_OBSERVATION import RDS_O13_OBSERVATION
 from .RDS_O13_ORDER_DETAIL import RDS_O13_ORDER_DETAIL
@@ -59,25 +58,25 @@ class RDS_O13_ORDER(BaseModel):
         description="Required",
     )
 
-    TIMING: Optional[List[_RDS_O13_TIMING]] = Field(
+    TIMING: list[_RDS_O13_TIMING] | None = Field(
         default=None,
         title="TIMING",
         description="Optional, repeating",
     )
 
-    ORDER_DETAIL: Optional[_RDS_O13_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _RDS_O13_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ENCODING: Optional[_RDS_O13_ENCODING] = Field(
+    ENCODING: _RDS_O13_ENCODING | None = Field(
         default=None,
         title="ENCODING",
         description="Optional",
@@ -89,31 +88,31 @@ class RDS_O13_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_RDS_O13_OBSERVATION]] = Field(
+    OBSERVATION: list[_RDS_O13_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",

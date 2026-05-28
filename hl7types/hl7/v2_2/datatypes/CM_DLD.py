@@ -5,9 +5,9 @@ Version: 2.2
 Class: CM_DLD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .TS import TS
@@ -16,7 +16,7 @@ from .TS import TS
 class CM_DLD(BaseModel):
     """HL7 v2 CM_DLD data type."""
 
-    cm_dld_1: Optional[str] = Field(
+    cm_dld_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_dld_1",
@@ -27,7 +27,7 @@ class CM_DLD(BaseModel):
         title="discharge location",
     )
 
-    cm_dld_2: Optional[TS] = Field(
+    cm_dld_2: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_dld_2",

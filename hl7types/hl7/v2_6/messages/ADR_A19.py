@@ -5,11 +5,12 @@ Version: 2.6
 Class: ADR_A19
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ADR_A19_QUERY_RESPONSE import ADR_A19_QUERY_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -19,8 +20,6 @@ from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.ADR_A19_QUERY_RESPONSE import ADR_A19_QUERY_RESPONSE
 
 _ADR_A19_QUERY_RESPONSE = ADR_A19_QUERY_RESPONSE
 _DSC = DSC
@@ -56,13 +55,13 @@ class ADR_A19(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -74,13 +73,13 @@ class ADR_A19(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
     )
 
-    QAK: Optional[_QAK] = Field(
+    QAK: _QAK | None = Field(
         default=None,
         title="QAK",
         description="Optional",
@@ -92,19 +91,19 @@ class ADR_A19(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    QUERY_RESPONSE: List[_ADR_A19_QUERY_RESPONSE] = Field(
+    QUERY_RESPONSE: list[_ADR_A19_QUERY_RESPONSE] = Field(
         default=...,
         title="QUERY_RESPONSE",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

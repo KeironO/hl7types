@@ -5,9 +5,9 @@ Version: 2.6
 Class: EHC_E04.PRODUCT_SERVICE_GROUP
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PSG import PSG
@@ -31,7 +31,7 @@ class EHC_E04_PRODUCT_SERVICE_GROUP(BaseModel):
         description="Required",
     )
 
-    PSL: Optional[List[_PSL]] = Field(
+    PSL: list[_PSL] | None = Field(
         default=None,
         title="PSL",
         description="Optional, repeating",

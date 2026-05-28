@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: OCD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CNE import CNE
@@ -16,7 +16,7 @@ from .CNE import CNE
 class OCD(BaseModel):
     """HL7 v2 OCD data type."""
 
-    ocd_1: Optional[CNE] = Field(
+    ocd_1: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ocd_1",
@@ -27,7 +27,7 @@ class OCD(BaseModel):
         title="Occurrence Code",
     )
 
-    ocd_2: Optional[str] = Field(
+    ocd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ocd_2",

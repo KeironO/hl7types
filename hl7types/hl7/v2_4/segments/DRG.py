@@ -5,9 +5,9 @@ Version: 2.4
 Class: DRG
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -18,7 +18,7 @@ from ..datatypes.TS import TS
 class DRG(BaseModel):
     """HL7 v2 DRG segment."""
 
-    drg_1: Optional[CE] = Field(
+    drg_1: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_1",
@@ -30,7 +30,7 @@ class DRG(BaseModel):
         description="Item #382 | Table HL70055",
     )
 
-    drg_2: Optional[TS] = Field(
+    drg_2: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_2",
@@ -42,7 +42,7 @@ class DRG(BaseModel):
         description="Item #769",
     )
 
-    drg_3: Optional[str] = Field(
+    drg_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_3",
@@ -54,7 +54,7 @@ class DRG(BaseModel):
         description="Item #383 | Table HL70136",
     )
 
-    drg_4: Optional[str] = Field(
+    drg_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_4",
@@ -66,7 +66,7 @@ class DRG(BaseModel):
         description="Item #384 | Table HL70056",
     )
 
-    drg_5: Optional[CE] = Field(
+    drg_5: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_5",
@@ -78,7 +78,7 @@ class DRG(BaseModel):
         description="Item #385 | Table HL70083",
     )
 
-    drg_6: Optional[str] = Field(
+    drg_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_6",
@@ -90,7 +90,7 @@ class DRG(BaseModel):
         description="Item #386",
     )
 
-    drg_7: Optional[CP] = Field(
+    drg_7: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_7",
@@ -102,7 +102,7 @@ class DRG(BaseModel):
         description="Item #387",
     )
 
-    drg_8: Optional[str] = Field(
+    drg_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_8",
@@ -114,7 +114,7 @@ class DRG(BaseModel):
         description="Item #770 | Table HL70229",
     )
 
-    drg_9: Optional[CP] = Field(
+    drg_9: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_9",
@@ -126,7 +126,7 @@ class DRG(BaseModel):
         description="Item #771",
     )
 
-    drg_10: Optional[str] = Field(
+    drg_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_10",
@@ -138,7 +138,7 @@ class DRG(BaseModel):
         description="Item #767 | Table HL70136",
     )
 
-    drg_11: Optional[str] = Field(
+    drg_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "drg_11",

@@ -5,17 +5,16 @@ Version: 2.5
 Class: SSR_U04
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.SSR_U04_SPECIMEN_CONTAINER import SSR_U04_SPECIMEN_CONTAINER
 from ..segments.EQU import EQU
 from ..segments.MSH import MSH
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
-
-from ..groups.SSR_U04_SPECIMEN_CONTAINER import SSR_U04_SPECIMEN_CONTAINER
 
 _EQU = EQU
 _MSH = MSH
@@ -41,7 +40,7 @@ class SSR_U04(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -53,13 +52,13 @@ class SSR_U04(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_CONTAINER: List[_SSR_U04_SPECIMEN_CONTAINER] = Field(
+    SPECIMEN_CONTAINER: list[_SSR_U04_SPECIMEN_CONTAINER] = Field(
         default=...,
         title="SPECIMEN_CONTAINER",
         description="Required, repeating",
     )
 
-    ROL: Optional[_ROL] = Field(
+    ROL: _ROL | None = Field(
         default=None,
         title="ROL",
         description="Optional",

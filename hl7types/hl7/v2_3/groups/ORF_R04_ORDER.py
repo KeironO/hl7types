@@ -5,16 +5,15 @@ Version: 2.3
 Class: ORF_R04.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .ORF_R04_OBSERVATION import ORF_R04_OBSERVATION
 
 _CTI = CTI
@@ -35,7 +34,7 @@ class ORF_R04_ORDER(BaseModel):
         CTI (Optional[List[CTI]]): optional
     """
 
-    ORC: Optional[_ORC] = Field(
+    ORC: _ORC | None = Field(
         default=None,
         title="ORC",
         description="Optional",
@@ -47,19 +46,19 @@ class ORF_R04_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: List[_ORF_R04_OBSERVATION] = Field(
+    OBSERVATION: list[_ORF_R04_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

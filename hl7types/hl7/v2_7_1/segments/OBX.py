@@ -5,24 +5,24 @@ Version: 2.7.1
 Class: OBX
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
+from ..datatypes.varies import varies
 from ..datatypes.XAD import XAD
 from ..datatypes.XCN import XCN
 from ..datatypes.XON import XON
-from ..datatypes.varies import varies
 
 
 class OBX(BaseModel):
     """HL7 v2 OBX segment."""
 
-    obx_1: Optional[str] = Field(
+    obx_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_1",
@@ -70,7 +70,7 @@ class OBX(BaseModel):
         description="Item #572",
     )
 
-    obx_5: Optional[List[varies]] = Field(
+    obx_5: list[varies] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_5",
@@ -82,7 +82,7 @@ class OBX(BaseModel):
         description="Item #573",
     )
 
-    obx_6: Optional[CWE] = Field(
+    obx_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_6",
@@ -94,7 +94,7 @@ class OBX(BaseModel):
         description="Item #574 | Table HL79999",
     )
 
-    obx_7: Optional[str] = Field(
+    obx_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_7",
@@ -106,7 +106,7 @@ class OBX(BaseModel):
         description="Item #575",
     )
 
-    obx_8: Optional[List[CWE]] = Field(
+    obx_8: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_8",
@@ -118,7 +118,7 @@ class OBX(BaseModel):
         description="Item #576 | Table HL70078",
     )
 
-    obx_9: Optional[str] = Field(
+    obx_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_9",
@@ -130,7 +130,7 @@ class OBX(BaseModel):
         description="Item #577",
     )
 
-    obx_10: Optional[List[str]] = Field(
+    obx_10: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_10",
@@ -154,7 +154,7 @@ class OBX(BaseModel):
         description="Item #579 | Table HL70085",
     )
 
-    obx_12: Optional[str] = Field(
+    obx_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_12",
@@ -166,7 +166,7 @@ class OBX(BaseModel):
         description="Item #580",
     )
 
-    obx_13: Optional[str] = Field(
+    obx_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_13",
@@ -178,7 +178,7 @@ class OBX(BaseModel):
         description="Item #581",
     )
 
-    obx_14: Optional[str] = Field(
+    obx_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_14",
@@ -190,7 +190,7 @@ class OBX(BaseModel):
         description="Item #582",
     )
 
-    obx_15: Optional[CWE] = Field(
+    obx_15: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_15",
@@ -202,7 +202,7 @@ class OBX(BaseModel):
         description="Item #583 | Table HL79999",
     )
 
-    obx_16: Optional[List[XCN]] = Field(
+    obx_16: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_16",
@@ -214,7 +214,7 @@ class OBX(BaseModel):
         description="Item #584",
     )
 
-    obx_17: Optional[List[CWE]] = Field(
+    obx_17: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_17",
@@ -226,7 +226,7 @@ class OBX(BaseModel):
         description="Item #936 | Table HL79999",
     )
 
-    obx_18: Optional[List[EI]] = Field(
+    obx_18: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_18",
@@ -238,7 +238,7 @@ class OBX(BaseModel):
         description="Item #1479",
     )
 
-    obx_19: Optional[str] = Field(
+    obx_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_19",
@@ -250,7 +250,7 @@ class OBX(BaseModel):
         description="Item #1480",
     )
 
-    obx_20: Optional[List[CWE]] = Field(
+    obx_20: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_20",
@@ -262,7 +262,7 @@ class OBX(BaseModel):
         description="Item #2179 | Table HL70163",
     )
 
-    obx_21: Optional[EI] = Field(
+    obx_21: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_21",
@@ -274,7 +274,7 @@ class OBX(BaseModel):
         description="Item #2180",
     )
 
-    obx_22: Optional[CNE] = Field(
+    obx_22: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_22",
@@ -286,7 +286,7 @@ class OBX(BaseModel):
         description="Item #2182 | Table HL70725",
     )
 
-    obx_23: Optional[XON] = Field(
+    obx_23: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_23",
@@ -298,7 +298,7 @@ class OBX(BaseModel):
         description="Item #2283",
     )
 
-    obx_24: Optional[XAD] = Field(
+    obx_24: XAD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_24",
@@ -310,7 +310,7 @@ class OBX(BaseModel):
         description="Item #2284",
     )
 
-    obx_25: Optional[XCN] = Field(
+    obx_25: XCN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_25",
@@ -322,7 +322,7 @@ class OBX(BaseModel):
         description="Item #2285",
     )
 
-    obx_26: Optional[str] = Field(
+    obx_26: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "obx_26",

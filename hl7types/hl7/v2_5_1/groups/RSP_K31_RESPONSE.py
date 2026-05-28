@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: RSP_K31.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .RSP_K31_ORDER import RSP_K31_ORDER
@@ -25,13 +25,13 @@ class RSP_K31_RESPONSE(BaseModel):
         ORDER (List[RSP_K31_ORDER]): required
     """
 
-    PATIENT: Optional[_RSP_K31_PATIENT] = Field(
+    PATIENT: _RSP_K31_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    ORDER: List[_RSP_K31_ORDER] = Field(
+    ORDER: list[_RSP_K31_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.8
 Class: APR
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.SCV import SCV
@@ -16,7 +16,7 @@ from ..datatypes.SCV import SCV
 class APR(BaseModel):
     """HL7 v2 APR segment."""
 
-    apr_1: Optional[List[SCV]] = Field(
+    apr_1: list[SCV] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "apr_1",
@@ -28,7 +28,7 @@ class APR(BaseModel):
         description="Item #908 | Table HL70294",
     )
 
-    apr_2: Optional[List[SCV]] = Field(
+    apr_2: list[SCV] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "apr_2",
@@ -40,7 +40,7 @@ class APR(BaseModel):
         description="Item #909 | Table HL70294",
     )
 
-    apr_3: Optional[List[SCV]] = Field(
+    apr_3: list[SCV] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "apr_3",
@@ -52,7 +52,7 @@ class APR(BaseModel):
         description="Item #910 | Table HL70294",
     )
 
-    apr_4: Optional[str] = Field(
+    apr_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "apr_4",
@@ -64,7 +64,7 @@ class APR(BaseModel):
         description="Item #911",
     )
 
-    apr_5: Optional[List[SCV]] = Field(
+    apr_5: list[SCV] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "apr_5",

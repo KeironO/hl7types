@@ -5,14 +5,13 @@ Version: 2.3.1
 Class: OMD_O01.DIET
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.ODS import ODS
-
 from .OMD_O01_OBSERVATION import OMD_O01_OBSERVATION
 
 _NTE = NTE
@@ -29,19 +28,19 @@ class OMD_O01_DIET(BaseModel):
         OBSERVATION (List[OMD_O01_OBSERVATION]): required
     """
 
-    ODS: List[_ODS] = Field(
+    ODS: list[_ODS] = Field(
         default=...,
         title="ODS",
         description="Required, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: List[_OMD_O01_OBSERVATION] = Field(
+    OBSERVATION: list[_OMD_O01_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

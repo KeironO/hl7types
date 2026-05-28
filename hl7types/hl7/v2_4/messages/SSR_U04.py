@@ -5,9 +5,9 @@ Version: 2.4
 Class: SSR_U04
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EQU import EQU
@@ -43,13 +43,13 @@ class SSR_U04(BaseModel):
         description="Required",
     )
 
-    SAC: List[_SAC] = Field(
+    SAC: list[_SAC] = Field(
         default=...,
         title="SAC",
         description="Required, repeating",
     )
 
-    ROL: Optional[_ROL] = Field(
+    ROL: _ROL | None = Field(
         default=None,
         title="ROL",
         description="Optional",

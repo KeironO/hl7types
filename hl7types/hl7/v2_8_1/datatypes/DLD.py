@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: DLD
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -27,7 +27,7 @@ class DLD(BaseModel):
         title="Discharge to Location",
     )
 
-    dld_2: Optional[str] = Field(
+    dld_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dld_2",

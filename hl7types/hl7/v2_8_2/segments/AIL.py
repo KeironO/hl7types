@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: AIL
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -30,7 +30,7 @@ class AIL(BaseModel):
         description="Item #902",
     )
 
-    ail_2: Optional[str] = Field(
+    ail_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_2",
@@ -42,7 +42,7 @@ class AIL(BaseModel):
         description="Item #763 | Table HL70206",
     )
 
-    ail_3: Optional[List[PL]] = Field(
+    ail_3: list[PL] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_3",
@@ -54,7 +54,7 @@ class AIL(BaseModel):
         description="Item #903",
     )
 
-    ail_4: Optional[CWE] = Field(
+    ail_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_4",
@@ -66,7 +66,7 @@ class AIL(BaseModel):
         description="Item #904 | Table HL70305",
     )
 
-    ail_5: Optional[CWE] = Field(
+    ail_5: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_5",
@@ -78,7 +78,7 @@ class AIL(BaseModel):
         description="Item #905",
     )
 
-    ail_6: Optional[str] = Field(
+    ail_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_6",
@@ -90,7 +90,7 @@ class AIL(BaseModel):
         description="Item #1202",
     )
 
-    ail_7: Optional[str] = Field(
+    ail_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_7",
@@ -102,7 +102,7 @@ class AIL(BaseModel):
         description="Item #891",
     )
 
-    ail_8: Optional[CNE] = Field(
+    ail_8: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_8",
@@ -114,7 +114,7 @@ class AIL(BaseModel):
         description="Item #892",
     )
 
-    ail_9: Optional[str] = Field(
+    ail_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_9",
@@ -126,7 +126,7 @@ class AIL(BaseModel):
         description="Item #893",
     )
 
-    ail_10: Optional[CNE] = Field(
+    ail_10: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_10",
@@ -138,7 +138,7 @@ class AIL(BaseModel):
         description="Item #894",
     )
 
-    ail_11: Optional[CWE] = Field(
+    ail_11: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_11",
@@ -150,7 +150,7 @@ class AIL(BaseModel):
         description="Item #895 | Table HL70279",
     )
 
-    ail_12: Optional[CWE] = Field(
+    ail_12: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ail_12",

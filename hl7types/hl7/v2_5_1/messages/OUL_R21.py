@@ -5,19 +5,18 @@ Version: 2.5.1
 Class: OUL_R21
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.DSC import DSC
-from ..segments.MSH import MSH
-from ..segments.NTE import NTE
-from ..segments.SFT import SFT
 
 from ..groups.OUL_R21_ORDER_OBSERVATION import OUL_R21_ORDER_OBSERVATION
 from ..groups.OUL_R21_PATIENT import OUL_R21_PATIENT
 from ..groups.OUL_R21_VISIT import OUL_R21_VISIT
+from ..segments.DSC import DSC
+from ..segments.MSH import MSH
+from ..segments.NTE import NTE
+from ..segments.SFT import SFT
 
 _DSC = DSC
 _MSH = MSH
@@ -47,37 +46,37 @@ class OUL_R21(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[_NTE] = Field(
+    NTE: _NTE | None = Field(
         default=None,
         title="NTE",
         description="Optional",
     )
 
-    PATIENT: Optional[_OUL_R21_PATIENT] = Field(
+    PATIENT: _OUL_R21_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    VISIT: Optional[_OUL_R21_VISIT] = Field(
+    VISIT: _OUL_R21_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",
     )
 
-    ORDER_OBSERVATION: List[_OUL_R21_ORDER_OBSERVATION] = Field(
+    ORDER_OBSERVATION: list[_OUL_R21_ORDER_OBSERVATION] = Field(
         default=...,
         title="ORDER_OBSERVATION",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

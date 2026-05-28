@@ -5,9 +5,9 @@ Version: 2.8
 Class: XON
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -17,7 +17,7 @@ from .HD import HD
 class XON(BaseModel):
     """HL7 v2 XON data type."""
 
-    xon_1: Optional[str] = Field(
+    xon_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xon_1",
@@ -28,7 +28,7 @@ class XON(BaseModel):
         title="Organization Name",
     )
 
-    xon_2: Optional[CWE] = Field(
+    xon_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xon_2",
@@ -39,7 +39,7 @@ class XON(BaseModel):
         title="Organization Name Type Code",
     )
 
-    xon_6: Optional[HD] = Field(
+    xon_6: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xon_6",
@@ -50,7 +50,7 @@ class XON(BaseModel):
         title="Assigning Authority",
     )
 
-    xon_7: Optional[str] = Field(
+    xon_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xon_7",
@@ -61,7 +61,7 @@ class XON(BaseModel):
         title="Identifier Type Code",
     )
 
-    xon_8: Optional[HD] = Field(
+    xon_8: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xon_8",
@@ -72,7 +72,7 @@ class XON(BaseModel):
         title="Assigning Facility",
     )
 
-    xon_9: Optional[str] = Field(
+    xon_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xon_9",
@@ -83,7 +83,7 @@ class XON(BaseModel):
         title="Name Representation Code",
     )
 
-    xon_10: Optional[str] = Field(
+    xon_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xon_10",

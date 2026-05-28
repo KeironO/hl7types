@@ -5,13 +5,12 @@ Version: 2.8
 Class: SRR_S01.RESOURCES
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RGS import RGS
-
 from .SRR_S01_GENERAL_RESOURCE import SRR_S01_GENERAL_RESOURCE
 from .SRR_S01_LOCATION_RESOURCE import SRR_S01_LOCATION_RESOURCE
 from .SRR_S01_PERSONNEL_RESOURCE import SRR_S01_PERSONNEL_RESOURCE
@@ -41,25 +40,25 @@ class SRR_S01_RESOURCES(BaseModel):
         description="Required",
     )
 
-    SERVICE: Optional[List[_SRR_S01_SERVICE]] = Field(
+    SERVICE: list[_SRR_S01_SERVICE] | None = Field(
         default=None,
         title="SERVICE",
         description="Optional, repeating",
     )
 
-    GENERAL_RESOURCE: Optional[List[_SRR_S01_GENERAL_RESOURCE]] = Field(
+    GENERAL_RESOURCE: list[_SRR_S01_GENERAL_RESOURCE] | None = Field(
         default=None,
         title="GENERAL_RESOURCE",
         description="Optional, repeating",
     )
 
-    LOCATION_RESOURCE: Optional[List[_SRR_S01_LOCATION_RESOURCE]] = Field(
+    LOCATION_RESOURCE: list[_SRR_S01_LOCATION_RESOURCE] | None = Field(
         default=None,
         title="LOCATION_RESOURCE",
         description="Optional, repeating",
     )
 
-    PERSONNEL_RESOURCE: Optional[List[_SRR_S01_PERSONNEL_RESOURCE]] = Field(
+    PERSONNEL_RESOURCE: list[_SRR_S01_PERSONNEL_RESOURCE] | None = Field(
         default=None,
         title="PERSONNEL_RESOURCE",
         description="Optional, repeating",

@@ -5,11 +5,15 @@ Version: 2.8
 Class: ORU_R30
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.ORU_R30_OBSERVATION import ORU_R30_OBSERVATION
+from ..groups.ORU_R30_PATIENT_OBSERVATION import ORU_R30_PATIENT_OBSERVATION
+from ..groups.ORU_R30_TIMING_QTY import ORU_R30_TIMING_QTY
+from ..groups.ORU_R30_VISIT import ORU_R30_VISIT
 from ..segments.ARV import ARV
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
@@ -20,11 +24,6 @@ from ..segments.PID import PID
 from ..segments.PRT import PRT
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.ORU_R30_OBSERVATION import ORU_R30_OBSERVATION
-from ..groups.ORU_R30_PATIENT_OBSERVATION import ORU_R30_PATIENT_OBSERVATION
-from ..groups.ORU_R30_TIMING_QTY import ORU_R30_TIMING_QTY
-from ..groups.ORU_R30_VISIT import ORU_R30_VISIT
 
 _ARV = ARV
 _MSH = MSH
@@ -68,13 +67,13 @@ class ORU_R30(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -86,31 +85,31 @@ class ORU_R30(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    PATIENT_OBSERVATION: Optional[List[_ORU_R30_PATIENT_OBSERVATION]] = Field(
+    PATIENT_OBSERVATION: list[_ORU_R30_PATIENT_OBSERVATION] | None = Field(
         default=None,
         title="PATIENT_OBSERVATION",
         description="Optional, repeating",
     )
 
-    VISIT: Optional[_ORU_R30_VISIT] = Field(
+    VISIT: _ORU_R30_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",
@@ -128,19 +127,19 @@ class ORU_R30(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_QTY: Optional[List[_ORU_R30_TIMING_QTY]] = Field(
+    TIMING_QTY: list[_ORU_R30_TIMING_QTY] | None = Field(
         default=None,
         title="TIMING_QTY",
         description="Optional, repeating",
     )
 
-    OBSERVATION: List[_ORU_R30_OBSERVATION] = Field(
+    OBSERVATION: list[_ORU_R30_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

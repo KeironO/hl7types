@@ -5,13 +5,12 @@ Version: 2.4
 Class: RSP_Z86.COMMON_ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
-
 from .RSP_Z86_ADMINISTRATION import RSP_Z86_ADMINISTRATION
 from .RSP_Z86_DISPENSE import RSP_Z86_DISPENSE
 from .RSP_Z86_ENCODED_ORDER import RSP_Z86_ENCODED_ORDER
@@ -47,37 +46,37 @@ class RSP_Z86_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: Optional[_RSP_Z86_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _RSP_Z86_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    ENCODED_ORDER: Optional[_RSP_Z86_ENCODED_ORDER] = Field(
+    ENCODED_ORDER: _RSP_Z86_ENCODED_ORDER | None = Field(
         default=None,
         title="ENCODED_ORDER",
         description="Optional",
     )
 
-    DISPENSE: Optional[_RSP_Z86_DISPENSE] = Field(
+    DISPENSE: _RSP_Z86_DISPENSE | None = Field(
         default=None,
         title="DISPENSE",
         description="Optional",
     )
 
-    GIVE: Optional[_RSP_Z86_GIVE] = Field(
+    GIVE: _RSP_Z86_GIVE | None = Field(
         default=None,
         title="GIVE",
         description="Optional",
     )
 
-    ADMINISTRATION: Optional[_RSP_Z86_ADMINISTRATION] = Field(
+    ADMINISTRATION: _RSP_Z86_ADMINISTRATION | None = Field(
         default=None,
         title="ADMINISTRATION",
         description="Optional",
     )
 
-    OBSERVATION: List[_RSP_Z86_OBSERVATION] = Field(
+    OBSERVATION: list[_RSP_Z86_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

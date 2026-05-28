@@ -5,9 +5,9 @@ Version: 2.8
 Class: CRM_C01.PATIENT_VISIT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
@@ -31,7 +31,7 @@ class CRM_C01_PATIENT_VISIT(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",

@@ -5,17 +5,16 @@ Version: 2.8.2
 Class: MFN_M18
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MFN_M18_MF_PAYER import MFN_M18_MF_PAYER
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.MFN_M18_MF_PAYER import MFN_M18_MF_PAYER
 
 _MFI = MFI
 _MFN_M18_MF_PAYER = MFN_M18_MF_PAYER
@@ -41,13 +40,13 @@ class MFN_M18(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -59,7 +58,7 @@ class MFN_M18(BaseModel):
         description="Required",
     )
 
-    MF_PAYER: List[_MFN_M18_MF_PAYER] = Field(
+    MF_PAYER: list[_MFN_M18_MF_PAYER] = Field(
         default=...,
         title="MF_PAYER",
         description="Required, repeating",

@@ -5,16 +5,15 @@ Version: 2.8
 Class: RGV_O15.GIVE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CDO import CDO
 from ..segments.RXC import RXC
 from ..segments.RXG import RXG
 from ..segments.RXR import RXR
-
 from .RGV_O15_OBSERVATION import RGV_O15_OBSERVATION
 from .RGV_O15_TIMING_GIVE import RGV_O15_TIMING_GIVE
 
@@ -44,31 +43,31 @@ class RGV_O15_GIVE(BaseModel):
         description="Required",
     )
 
-    TIMING_GIVE: List[_RGV_O15_TIMING_GIVE] = Field(
+    TIMING_GIVE: list[_RGV_O15_TIMING_GIVE] = Field(
         default=...,
         title="TIMING_GIVE",
         description="Required, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    CDO: Optional[List[_CDO]] = Field(
+    CDO: list[_CDO] | None = Field(
         default=None,
         title="CDO",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_RGV_O15_OBSERVATION]] = Field(
+    OBSERVATION: list[_RGV_O15_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

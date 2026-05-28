@@ -5,9 +5,11 @@ Version: 2.5
 Class: QBP_Q15
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List, Any
+from typing import Any
+
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -41,7 +43,7 @@ class QBP_Q15(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -53,7 +55,7 @@ class QBP_Q15(BaseModel):
         description="Required",
     )
 
-    anyhl7segment: Optional[Any] = None
+    anyhl7segment: Any | None = None
 
     RCP: _RCP = Field(
         default=...,
@@ -61,7 +63,7 @@ class QBP_Q15(BaseModel):
         description="Required",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

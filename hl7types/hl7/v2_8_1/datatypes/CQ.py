@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: CQ
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -16,7 +16,7 @@ from .CWE import CWE
 class CQ(BaseModel):
     """HL7 v2 CQ data type."""
 
-    cq_1: Optional[str] = Field(
+    cq_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cq_1",
@@ -27,7 +27,7 @@ class CQ(BaseModel):
         title="Quantity",
     )
 
-    cq_2: Optional[CWE] = Field(
+    cq_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cq_2",

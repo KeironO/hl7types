@@ -5,17 +5,10 @@ Version: 2.7
 Class: CCU_I20
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.MSH import MSH
-from ..segments.NK1 import NK1
-from ..segments.REL import REL
-from ..segments.RF1 import RF1
-from ..segments.SFT import SFT
-from ..segments.UAC import UAC
 
 from ..groups.CCU_I20_APPOINTMENT_HISTORY import CCU_I20_APPOINTMENT_HISTORY
 from ..groups.CCU_I20_CLINICAL_HISTORY import CCU_I20_CLINICAL_HISTORY
@@ -27,6 +20,12 @@ from ..groups.CCU_I20_PATIENT import CCU_I20_PATIENT
 from ..groups.CCU_I20_PATIENT_VISITS import CCU_I20_PATIENT_VISITS
 from ..groups.CCU_I20_PROBLEM import CCU_I20_PROBLEM
 from ..groups.CCU_I20_PROVIDER_CONTACT import CCU_I20_PROVIDER_CONTACT
+from ..segments.MSH import MSH
+from ..segments.NK1 import NK1
+from ..segments.REL import REL
+from ..segments.RF1 import RF1
+from ..segments.SFT import SFT
+from ..segments.UAC import UAC
 
 _CCU_I20_APPOINTMENT_HISTORY = CCU_I20_APPOINTMENT_HISTORY
 _CCU_I20_CLINICAL_HISTORY = CCU_I20_CLINICAL_HISTORY
@@ -74,13 +73,13 @@ class CCU_I20(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -92,73 +91,73 @@ class CCU_I20(BaseModel):
         description="Required",
     )
 
-    PROVIDER_CONTACT: Optional[List[_CCU_I20_PROVIDER_CONTACT]] = Field(
+    PROVIDER_CONTACT: list[_CCU_I20_PROVIDER_CONTACT] | None = Field(
         default=None,
         title="PROVIDER_CONTACT",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[List[_CCU_I20_PATIENT]] = Field(
+    PATIENT: list[_CCU_I20_PATIENT] | None = Field(
         default=None,
         title="PATIENT",
         description="Optional, repeating",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_CCU_I20_INSURANCE]] = Field(
+    INSURANCE: list[_CCU_I20_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    APPOINTMENT_HISTORY: Optional[List[_CCU_I20_APPOINTMENT_HISTORY]] = Field(
+    APPOINTMENT_HISTORY: list[_CCU_I20_APPOINTMENT_HISTORY] | None = Field(
         default=None,
         title="APPOINTMENT_HISTORY",
         description="Optional, repeating",
     )
 
-    CLINICAL_HISTORY: Optional[List[_CCU_I20_CLINICAL_HISTORY]] = Field(
+    CLINICAL_HISTORY: list[_CCU_I20_CLINICAL_HISTORY] | None = Field(
         default=None,
         title="CLINICAL_HISTORY",
         description="Optional, repeating",
     )
 
-    PATIENT_VISITS: List[_CCU_I20_PATIENT_VISITS] = Field(
+    PATIENT_VISITS: list[_CCU_I20_PATIENT_VISITS] = Field(
         default=...,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )
 
-    MEDICATION_HISTORY: Optional[List[_CCU_I20_MEDICATION_HISTORY]] = Field(
+    MEDICATION_HISTORY: list[_CCU_I20_MEDICATION_HISTORY] | None = Field(
         default=None,
         title="MEDICATION_HISTORY",
         description="Optional, repeating",
     )
 
-    PROBLEM: Optional[List[_CCU_I20_PROBLEM]] = Field(
+    PROBLEM: list[_CCU_I20_PROBLEM] | None = Field(
         default=None,
         title="PROBLEM",
         description="Optional, repeating",
     )
 
-    GOAL: Optional[List[_CCU_I20_GOAL]] = Field(
+    GOAL: list[_CCU_I20_GOAL] | None = Field(
         default=None,
         title="GOAL",
         description="Optional, repeating",
     )
 
-    PATHWAY: Optional[List[_CCU_I20_PATHWAY]] = Field(
+    PATHWAY: list[_CCU_I20_PATHWAY] | None = Field(
         default=None,
         title="PATHWAY",
         description="Optional, repeating",
     )
 
-    REL: Optional[List[_REL]] = Field(
+    REL: list[_REL] | None = Field(
         default=None,
         title="REL",
         description="Optional, repeating",

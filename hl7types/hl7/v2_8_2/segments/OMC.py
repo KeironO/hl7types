@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: OMC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -18,7 +18,7 @@ from ..datatypes.varies import varies
 class OMC(BaseModel):
     """HL7 v2 OMC segment."""
 
-    omc_1: Optional[str] = Field(
+    omc_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_1",
@@ -30,7 +30,7 @@ class OMC(BaseModel):
         description="Item #586",
     )
 
-    omc_2: Optional[str] = Field(
+    omc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_2",
@@ -42,7 +42,7 @@ class OMC(BaseModel):
         description="Item #763 | Table HL70206",
     )
 
-    omc_3: Optional[EI] = Field(
+    omc_3: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_3",
@@ -66,7 +66,7 @@ class OMC(BaseModel):
         description="Item #3444 | Table HL79999",
     )
 
-    omc_5: List[CWE] = Field(
+    omc_5: list[CWE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "omc_5",
@@ -90,7 +90,7 @@ class OMC(BaseModel):
         description="Item #3446 | Table HL70939",
     )
 
-    omc_7: Optional[str] = Field(
+    omc_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_7",
@@ -102,7 +102,7 @@ class OMC(BaseModel):
         description="Item #3447 | Table HL70136",
     )
 
-    omc_8: Optional[str] = Field(
+    omc_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_8",
@@ -114,7 +114,7 @@ class OMC(BaseModel):
         description="Item #3448",
     )
 
-    omc_9: Optional[varies] = Field(
+    omc_9: varies | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_9",
@@ -126,7 +126,7 @@ class OMC(BaseModel):
         description="Item #3449 | Table HL70125",
     )
 
-    omc_10: Optional[str] = Field(
+    omc_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_10",
@@ -138,7 +138,7 @@ class OMC(BaseModel):
         description="Item #3450 | Table HL70136",
     )
 
-    omc_11: Optional[List[CWE]] = Field(
+    omc_11: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_11",
@@ -150,7 +150,7 @@ class OMC(BaseModel):
         description="Item #3451 | Table HL79999",
     )
 
-    omc_12: Optional[str] = Field(
+    omc_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_12",
@@ -162,7 +162,7 @@ class OMC(BaseModel):
         description="Item #3452",
     )
 
-    omc_13: Optional[str] = Field(
+    omc_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "omc_13",

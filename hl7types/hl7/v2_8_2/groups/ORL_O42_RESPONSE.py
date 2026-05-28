@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: ORL_O42.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .ORL_O42_PATIENT import ORL_O42_PATIENT
@@ -25,13 +25,13 @@ class ORL_O42_RESPONSE(BaseModel):
         SPECIMEN (List[ORL_O42_SPECIMEN]): required
     """
 
-    PATIENT: Optional[_ORL_O42_PATIENT] = Field(
+    PATIENT: _ORL_O42_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    SPECIMEN: List[_ORL_O42_SPECIMEN] = Field(
+    SPECIMEN: list[_ORL_O42_SPECIMEN] = Field(
         default=...,
         title="SPECIMEN",
         description="Required, repeating",

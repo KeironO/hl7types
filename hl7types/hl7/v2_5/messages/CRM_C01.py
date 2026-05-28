@@ -5,15 +5,14 @@ Version: 2.5
 Class: CRM_C01
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.CRM_C01_PATIENT import CRM_C01_PATIENT
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
-
-from ..groups.CRM_C01_PATIENT import CRM_C01_PATIENT
 
 _CRM_C01_PATIENT = CRM_C01_PATIENT
 _MSH = MSH
@@ -35,13 +34,13 @@ class CRM_C01(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    PATIENT: List[_CRM_C01_PATIENT] = Field(
+    PATIENT: list[_CRM_C01_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: OML_O21.OBSERVATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -34,13 +34,13 @@ class OML_O21_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    TCD: Optional[_TCD] = Field(
+    TCD: _TCD | None = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

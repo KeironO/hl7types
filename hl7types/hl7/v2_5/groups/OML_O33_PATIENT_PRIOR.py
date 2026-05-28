@@ -5,9 +5,9 @@ Version: 2.5
 Class: OML_O33.PATIENT_PRIOR
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.PD1 import PD1
@@ -31,7 +31,7 @@ class OML_O33_PATIENT_PRIOR(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",

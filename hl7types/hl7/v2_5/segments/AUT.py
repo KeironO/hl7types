@@ -5,9 +5,9 @@ Version: 2.5
 Class: AUT
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -19,7 +19,7 @@ from ..datatypes.TS import TS
 class AUT(BaseModel):
     """HL7 v2 AUT segment."""
 
-    aut_1: Optional[CE] = Field(
+    aut_1: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_1",
@@ -43,7 +43,7 @@ class AUT(BaseModel):
         description="Item #1147 | Table HL70285",
     )
 
-    aut_3: Optional[str] = Field(
+    aut_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_3",
@@ -55,7 +55,7 @@ class AUT(BaseModel):
         description="Item #1148",
     )
 
-    aut_4: Optional[TS] = Field(
+    aut_4: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_4",
@@ -67,7 +67,7 @@ class AUT(BaseModel):
         description="Item #1149",
     )
 
-    aut_5: Optional[TS] = Field(
+    aut_5: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_5",
@@ -79,7 +79,7 @@ class AUT(BaseModel):
         description="Item #1150",
     )
 
-    aut_6: Optional[EI] = Field(
+    aut_6: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_6",
@@ -91,7 +91,7 @@ class AUT(BaseModel):
         description="Item #1151",
     )
 
-    aut_7: Optional[CP] = Field(
+    aut_7: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_7",
@@ -103,7 +103,7 @@ class AUT(BaseModel):
         description="Item #1152",
     )
 
-    aut_8: Optional[str] = Field(
+    aut_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_8",
@@ -115,7 +115,7 @@ class AUT(BaseModel):
         description="Item #1153",
     )
 
-    aut_9: Optional[str] = Field(
+    aut_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_9",
@@ -127,7 +127,7 @@ class AUT(BaseModel):
         description="Item #1154",
     )
 
-    aut_10: Optional[TS] = Field(
+    aut_10: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aut_10",

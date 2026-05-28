@@ -5,16 +5,15 @@ Version: 2.3.1
 Class: RDS_O01.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ORC import ORC
 from ..segments.RXC import RXC
 from ..segments.RXD import RXD
 from ..segments.RXR import RXR
-
 from .RDS_O01_ENCODING import RDS_O01_ENCODING
 from .RDS_O01_OBSERVATION import RDS_O01_OBSERVATION
 from .RDS_O01_ORDER_DETAIL import RDS_O01_ORDER_DETAIL
@@ -47,13 +46,13 @@ class RDS_O01_ORDER(BaseModel):
         description="Required",
     )
 
-    ORDER_DETAIL: Optional[_RDS_O01_ORDER_DETAIL] = Field(
+    ORDER_DETAIL: _RDS_O01_ORDER_DETAIL | None = Field(
         default=None,
         title="ORDER_DETAIL",
         description="Optional",
     )
 
-    ENCODING: Optional[_RDS_O01_ENCODING] = Field(
+    ENCODING: _RDS_O01_ENCODING | None = Field(
         default=None,
         title="ENCODING",
         description="Optional",
@@ -65,19 +64,19 @@ class RDS_O01_ORDER(BaseModel):
         description="Required",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_RDS_O01_OBSERVATION]] = Field(
+    OBSERVATION: list[_RDS_O01_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",

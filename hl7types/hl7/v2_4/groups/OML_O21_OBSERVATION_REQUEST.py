@@ -5,16 +5,15 @@ Version: 2.4
 Class: OML_O21.OBSERVATION_REQUEST
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DG1 import DG1
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.TCD import TCD
-
 from .OML_O21_CONTAINER_2 import OML_O21_CONTAINER_2
 from .OML_O21_OBSERVATION import OML_O21_OBSERVATION
 from .OML_O21_PRIOR_RESULT import OML_O21_PRIOR_RESULT
@@ -47,37 +46,37 @@ class OML_O21_OBSERVATION_REQUEST(BaseModel):
         description="Required",
     )
 
-    CONTAINER_2: Optional[List[_OML_O21_CONTAINER_2]] = Field(
+    CONTAINER_2: list[_OML_O21_CONTAINER_2] | None = Field(
         default=None,
         title="CONTAINER_2",
         description="Optional, repeating",
     )
 
-    TCD: Optional[_TCD] = Field(
+    TCD: _TCD | None = Field(
         default=None,
         title="TCD",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_OML_O21_OBSERVATION]] = Field(
+    OBSERVATION: list[_OML_O21_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PRIOR_RESULT: Optional[List[_OML_O21_PRIOR_RESULT]] = Field(
+    PRIOR_RESULT: list[_OML_O21_PRIOR_RESULT] | None = Field(
         default=None,
         title="PRIOR_RESULT",
         description="Optional, repeating",

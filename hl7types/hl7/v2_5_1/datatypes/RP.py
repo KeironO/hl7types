@@ -5,9 +5,9 @@ Version: 2.5.1
 Class: RP
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .HD import HD
@@ -16,7 +16,7 @@ from .HD import HD
 class RP(BaseModel):
     """HL7 v2 RP data type."""
 
-    rp_1: Optional[str] = Field(
+    rp_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rp_1",
@@ -27,7 +27,7 @@ class RP(BaseModel):
         title="Pointer",
     )
 
-    rp_2: Optional[HD] = Field(
+    rp_2: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rp_2",
@@ -38,7 +38,7 @@ class RP(BaseModel):
         title="Application ID",
     )
 
-    rp_3: Optional[str] = Field(
+    rp_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rp_3",
@@ -49,7 +49,7 @@ class RP(BaseModel):
         title="Type of Data",
     )
 
-    rp_4: Optional[str] = Field(
+    rp_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rp_4",

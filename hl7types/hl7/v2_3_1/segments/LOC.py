@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: LOC
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -32,7 +32,7 @@ class LOC(BaseModel):
         description="Item #1307",
     )
 
-    loc_2: Optional[str] = Field(
+    loc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "loc_2",
@@ -44,7 +44,7 @@ class LOC(BaseModel):
         description="Item #944",
     )
 
-    loc_3: List[str] = Field(
+    loc_3: list[str] = Field(
         default=...,
         validation_alias=AliasChoices(
             "loc_3",
@@ -56,7 +56,7 @@ class LOC(BaseModel):
         description="Item #945 | Table HL70260",
     )
 
-    loc_4: Optional[List[XON]] = Field(
+    loc_4: list[XON] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "loc_4",
@@ -68,7 +68,7 @@ class LOC(BaseModel):
         description="Item #947",
     )
 
-    loc_5: Optional[List[XAD]] = Field(
+    loc_5: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "loc_5",
@@ -80,7 +80,7 @@ class LOC(BaseModel):
         description="Item #948",
     )
 
-    loc_6: Optional[List[XTN]] = Field(
+    loc_6: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "loc_6",
@@ -92,7 +92,7 @@ class LOC(BaseModel):
         description="Item #949",
     )
 
-    loc_7: Optional[List[CE]] = Field(
+    loc_7: list[CE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "loc_7",
@@ -104,7 +104,7 @@ class LOC(BaseModel):
         description="Item #951",
     )
 
-    loc_8: Optional[List[str]] = Field(
+    loc_8: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "loc_8",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: ORU_R01.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
@@ -15,7 +15,6 @@ from ..segments.NTE import NTE
 from ..segments.OBX import OBX
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
-
 from .ORU_R01_VISIT import ORU_R01_VISIT
 
 _NK1 = NK1
@@ -44,31 +43,31 @@ class ORU_R01_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    VISIT: Optional[_ORU_R01_VISIT] = Field(
+    VISIT: _ORU_R01_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",

@@ -50,7 +50,7 @@ def _field_pos(key: str) -> int:
     dot = key.rfind(".")
     if dot == -1:
         return 0
-    suffix = key[dot + 1:]
+    suffix = key[dot + 1 :]
     return int(suffix) if suffix.isdigit() else 0
 
 
@@ -76,7 +76,7 @@ def _group_xml_tag(cls: type) -> str:
     """ADT_A01_PROCEDURE to ADT_A01.PROCEDURE (last underscore becomes a dot)."""
     name = cls.__name__
     idx = name.rfind("_")
-    return f"{name[:idx]}.{name[idx + 1:]}" if idx != -1 else name
+    return f"{name[:idx]}.{name[idx + 1 :]}" if idx != -1 else name
 
 
 def _append_model(model: BaseModel, parent: ET.Element) -> None:

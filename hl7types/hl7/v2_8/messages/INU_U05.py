@@ -5,9 +5,9 @@ Version: 2.8
 Class: INU_U05
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EQU import EQU
@@ -40,13 +40,13 @@ class INU_U05(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -58,7 +58,7 @@ class INU_U05(BaseModel):
         description="Required",
     )
 
-    INV: List[_INV] = Field(
+    INV: list[_INV] = Field(
         default=...,
         title="INV",
         description="Required, repeating",

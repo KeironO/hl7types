@@ -5,16 +5,16 @@ Version: 2.5
 Class: MSG
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class MSG(BaseModel):
     """HL7 v2 MSG data type."""
 
-    msg_1: Optional[str] = Field(
+    msg_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msg_1",
@@ -25,7 +25,7 @@ class MSG(BaseModel):
         title="Message Code",
     )
 
-    msg_2: Optional[str] = Field(
+    msg_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msg_2",
@@ -36,7 +36,7 @@ class MSG(BaseModel):
         title="Trigger Event",
     )
 
-    msg_3: Optional[str] = Field(
+    msg_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "msg_3",

@@ -5,13 +5,12 @@ Version: 2.7.1
 Class: CCI_I22.ROLE_PATHWAY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.VAR import VAR
-
 from .CCI_I22_ROLE_PATHWAY_OBJECT import CCI_I22_ROLE_PATHWAY_OBJECT
 
 _CCI_I22_ROLE_PATHWAY_OBJECT = CCI_I22_ROLE_PATHWAY_OBJECT
@@ -32,7 +31,7 @@ class CCI_I22_ROLE_PATHWAY(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

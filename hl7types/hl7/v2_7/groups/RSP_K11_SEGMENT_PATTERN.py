@@ -5,10 +5,12 @@ Version: 2.7
 Class: RSP_K11.SEGMENT_PATTERN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, Any
-from pydantic import BaseModel, Field
+from typing import Any
+
+from pydantic import BaseModel
 
 
 class RSP_K11_SEGMENT_PATTERN(BaseModel):

@@ -5,9 +5,9 @@ Version: 2.5
 Class: SSR_U04.SPECIMEN_CONTAINER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SAC import SAC
@@ -31,7 +31,7 @@ class SSR_U04_SPECIMEN_CONTAINER(BaseModel):
         description="Required",
     )
 
-    SPM: Optional[List[_SPM]] = Field(
+    SPM: list[_SPM] | None = Field(
         default=None,
         title="SPM",
         description="Optional, repeating",

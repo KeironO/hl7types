@@ -5,9 +5,9 @@ Version: 2.3
 Class: OSR_Q06.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
@@ -37,19 +37,19 @@ class OSR_Q06_ORDER(BaseModel):
         description="Required",
     )
 
-    OBR: Optional[_OBR] = Field(
+    OBR: _OBR | None = Field(
         default=None,
         title="OBR",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

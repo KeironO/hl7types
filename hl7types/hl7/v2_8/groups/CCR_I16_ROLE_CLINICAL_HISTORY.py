@@ -5,13 +5,12 @@ Version: 2.8
 Class: CCR_I16.ROLE_CLINICAL_HISTORY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.VAR import VAR
-
 from .CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT import CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT
 
 _CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT = CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT
@@ -32,7 +31,7 @@ class CCR_I16_ROLE_CLINICAL_HISTORY(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

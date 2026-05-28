@@ -5,9 +5,9 @@ Version: 2.1
 Class: DSR_Q03
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.DSC import DSC
@@ -46,13 +46,13 @@ class DSR_Q03(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
     )
 
-    DSP: List[_DSP] = Field(
+    DSP: list[_DSP] = Field(
         default=...,
         title="DSP",
         description="Required, repeating",

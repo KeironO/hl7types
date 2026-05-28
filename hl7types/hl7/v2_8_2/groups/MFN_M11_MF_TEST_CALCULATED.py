@@ -5,16 +5,15 @@ Version: 2.8.2
 Class: MFN_M11.MF_TEST_CALCULATED
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.MFE import MFE
 from ..segments.OM1 import OM1
 from ..segments.OMC import OMC
 from ..segments.PRT import PRT
-
 from .MFN_M11_MF_TEST_CALC_DETAIL import MFN_M11_MF_TEST_CALC_DETAIL
 
 _MFE = MFE
@@ -47,19 +46,19 @@ class MFN_M11_MF_TEST_CALCULATED(BaseModel):
         description="Required",
     )
 
-    OMC: Optional[List[_OMC]] = Field(
+    OMC: list[_OMC] | None = Field(
         default=None,
         title="OMC",
         description="Optional, repeating",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    MF_TEST_CALC_DETAIL: Optional[_MFN_M11_MF_TEST_CALC_DETAIL] = Field(
+    MF_TEST_CALC_DETAIL: _MFN_M11_MF_TEST_CALC_DETAIL | None = Field(
         default=None,
         title="MF_TEST_CALC_DETAIL",
         description="Optional",

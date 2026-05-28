@@ -5,15 +5,14 @@ Version: 2.5
 Class: ORL_O34.SPECIMEN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.SAC import SAC
 from ..segments.SPM import SPM
-
 from .ORL_O34_ORDER import ORL_O34_ORDER
 
 _OBX = OBX
@@ -38,19 +37,19 @@ class ORL_O34_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    SAC: Optional[List[_SAC]] = Field(
+    SAC: list[_SAC] | None = Field(
         default=None,
         title="SAC",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_ORL_O34_ORDER]] = Field(
+    ORDER: list[_ORL_O34_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

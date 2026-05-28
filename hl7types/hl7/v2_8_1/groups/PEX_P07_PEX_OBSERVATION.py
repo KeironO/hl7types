@@ -5,13 +5,12 @@ Version: 2.8.1
 Class: PEX_P07.PEX_OBSERVATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PEO import PEO
-
 from .PEX_P07_PEX_CAUSE import PEX_P07_PEX_CAUSE
 
 _PEO = PEO
@@ -32,7 +31,7 @@ class PEX_P07_PEX_OBSERVATION(BaseModel):
         description="Required",
     )
 
-    PEX_CAUSE: List[_PEX_P07_PEX_CAUSE] = Field(
+    PEX_CAUSE: list[_PEX_P07_PEX_CAUSE] = Field(
         default=...,
         title="PEX_CAUSE",
         description="Required, repeating",

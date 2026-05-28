@@ -5,9 +5,9 @@ Version: 2.1
 Class: NTE
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TX import TX
@@ -16,7 +16,7 @@ from ..datatypes.TX import TX
 class NTE(BaseModel):
     """HL7 v2 NTE segment."""
 
-    nte_1: Optional[str] = Field(
+    nte_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_1",
@@ -28,7 +28,7 @@ class NTE(BaseModel):
         description="Item #573",
     )
 
-    nte_2: Optional[str] = Field(
+    nte_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_2",
@@ -40,7 +40,7 @@ class NTE(BaseModel):
         description="Item #574 | Table HL70105",
     )
 
-    nte_3: List[TX] = Field(
+    nte_3: list[TX] = Field(
         default=...,
         validation_alias=AliasChoices(
             "nte_3",

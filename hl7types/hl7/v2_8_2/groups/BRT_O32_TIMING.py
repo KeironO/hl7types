@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: BRT_O32.TIMING
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.TQ1 import TQ1
@@ -31,7 +31,7 @@ class BRT_O32_TIMING(BaseModel):
         description="Required",
     )
 
-    TQ2: Optional[List[_TQ2]] = Field(
+    TQ2: list[_TQ2] | None = Field(
         default=None,
         title="TQ2",
         description="Optional, repeating",

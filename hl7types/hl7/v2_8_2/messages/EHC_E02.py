@@ -5,16 +5,15 @@ Version: 2.8.2
 Class: EHC_E02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.EHC_E02_INVOICE_INFORMATION_CANCEL import EHC_E02_INVOICE_INFORMATION_CANCEL
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.EHC_E02_INVOICE_INFORMATION_CANCEL import EHC_E02_INVOICE_INFORMATION_CANCEL
 
 _EHC_E02_INVOICE_INFORMATION_CANCEL = EHC_E02_INVOICE_INFORMATION_CANCEL
 _MSH = MSH
@@ -38,13 +37,13 @@ class EHC_E02(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[List[_UAC]] = Field(
+    UAC: list[_UAC] | None = Field(
         default=None,
         title="UAC",
         description="Optional, repeating",

@@ -5,19 +5,18 @@ Version: 2.8.1
 Class: RDR_RDR
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RDR_RDR_DEFINITION import RDR_RDR_DEFINITION
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RDR_RDR_DEFINITION import RDR_RDR_DEFINITION
 
 _DSC = DSC
 _ERR = ERR
@@ -53,31 +52,31 @@ class RDR_RDR(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SFT: Optional[_SFT] = Field(
+    SFT: _SFT | None = Field(
         default=None,
         title="SFT",
         description="Optional",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    DEFINITION: List[_RDR_RDR_DEFINITION] = Field(
+    DEFINITION: list[_RDR_RDR_DEFINITION] = Field(
         default=...,
         title="DEFINITION",
         description="Required, repeating",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

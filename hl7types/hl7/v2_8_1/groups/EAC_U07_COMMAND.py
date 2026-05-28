@@ -5,15 +5,14 @@ Version: 2.8.1
 Class: EAC_U07.COMMAND
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.CNS import CNS
 from ..segments.ECD import ECD
 from ..segments.TQ1 import TQ1
-
 from .EAC_U07_SPECIMEN_CONTAINER import EAC_U07_SPECIMEN_CONTAINER
 
 _CNS = CNS
@@ -38,19 +37,19 @@ class EAC_U07_COMMAND(BaseModel):
         description="Required",
     )
 
-    TQ1: Optional[_TQ1] = Field(
+    TQ1: _TQ1 | None = Field(
         default=None,
         title="TQ1",
         description="Optional",
     )
 
-    SPECIMEN_CONTAINER: Optional[_EAC_U07_SPECIMEN_CONTAINER] = Field(
+    SPECIMEN_CONTAINER: _EAC_U07_SPECIMEN_CONTAINER | None = Field(
         default=None,
         title="SPECIMEN_CONTAINER",
         description="Optional",
     )
 
-    CNS: Optional[_CNS] = Field(
+    CNS: _CNS | None = Field(
         default=None,
         title="CNS",
         description="Optional",

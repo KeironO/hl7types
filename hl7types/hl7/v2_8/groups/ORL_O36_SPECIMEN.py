@@ -5,14 +5,13 @@ Version: 2.8
 Class: ORL_O36.SPECIMEN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.SPM import SPM
-
 from .ORL_O36_SPECIMEN_CONTAINER import ORL_O36_SPECIMEN_CONTAINER
 from .ORL_O36_SPECIMEN_OBSERVATION import ORL_O36_SPECIMEN_OBSERVATION
 
@@ -38,19 +37,19 @@ class ORL_O36_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_OBSERVATION: Optional[List[_ORL_O36_SPECIMEN_OBSERVATION]] = Field(
+    SPECIMEN_OBSERVATION: list[_ORL_O36_SPECIMEN_OBSERVATION] | None = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    SPECIMEN_CONTAINER: List[_ORL_O36_SPECIMEN_CONTAINER] = Field(
+    SPECIMEN_CONTAINER: list[_ORL_O36_SPECIMEN_CONTAINER] = Field(
         default=...,
         title="SPECIMEN_CONTAINER",
         description="Required, repeating",

@@ -5,9 +5,9 @@ Version: 2.6
 Class: FT1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -23,7 +23,7 @@ from ..datatypes.XCN import XCN
 class FT1(BaseModel):
     """HL7 v2 FT1 segment."""
 
-    ft1_1: Optional[str] = Field(
+    ft1_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_1",
@@ -35,7 +35,7 @@ class FT1(BaseModel):
         description="Item #355",
     )
 
-    ft1_2: Optional[str] = Field(
+    ft1_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_2",
@@ -47,7 +47,7 @@ class FT1(BaseModel):
         description="Item #356",
     )
 
-    ft1_3: Optional[str] = Field(
+    ft1_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_3",
@@ -71,7 +71,7 @@ class FT1(BaseModel):
         description="Item #358",
     )
 
-    ft1_5: Optional[str] = Field(
+    ft1_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_5",
@@ -107,7 +107,7 @@ class FT1(BaseModel):
         description="Item #361 | Table HL70132",
     )
 
-    ft1_10: Optional[str] = Field(
+    ft1_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_10",
@@ -119,7 +119,7 @@ class FT1(BaseModel):
         description="Item #364",
     )
 
-    ft1_11: Optional[CP] = Field(
+    ft1_11: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_11",
@@ -131,7 +131,7 @@ class FT1(BaseModel):
         description="Item #365",
     )
 
-    ft1_12: Optional[CP] = Field(
+    ft1_12: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_12",
@@ -143,7 +143,7 @@ class FT1(BaseModel):
         description="Item #366",
     )
 
-    ft1_13: Optional[CWE] = Field(
+    ft1_13: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_13",
@@ -155,7 +155,7 @@ class FT1(BaseModel):
         description="Item #367 | Table HL70049",
     )
 
-    ft1_14: Optional[CWE] = Field(
+    ft1_14: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_14",
@@ -167,7 +167,7 @@ class FT1(BaseModel):
         description="Item #368 | Table HL70072",
     )
 
-    ft1_15: Optional[CP] = Field(
+    ft1_15: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_15",
@@ -179,7 +179,7 @@ class FT1(BaseModel):
         description="Item #369",
     )
 
-    ft1_16: Optional[PL] = Field(
+    ft1_16: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_16",
@@ -191,7 +191,7 @@ class FT1(BaseModel):
         description="Item #133",
     )
 
-    ft1_17: Optional[str] = Field(
+    ft1_17: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_17",
@@ -203,7 +203,7 @@ class FT1(BaseModel):
         description="Item #370 | Table HL70024",
     )
 
-    ft1_18: Optional[str] = Field(
+    ft1_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_18",
@@ -215,7 +215,7 @@ class FT1(BaseModel):
         description="Item #148 | Table HL70018",
     )
 
-    ft1_19: Optional[List[CWE]] = Field(
+    ft1_19: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_19",
@@ -227,7 +227,7 @@ class FT1(BaseModel):
         description="Item #371 | Table HL70051",
     )
 
-    ft1_20: Optional[List[XCN]] = Field(
+    ft1_20: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_20",
@@ -239,7 +239,7 @@ class FT1(BaseModel):
         description="Item #372 | Table HL70084",
     )
 
-    ft1_21: Optional[List[XCN]] = Field(
+    ft1_21: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_21",
@@ -251,7 +251,7 @@ class FT1(BaseModel):
         description="Item #373",
     )
 
-    ft1_22: Optional[CP] = Field(
+    ft1_22: CP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_22",
@@ -263,7 +263,7 @@ class FT1(BaseModel):
         description="Item #374",
     )
 
-    ft1_23: Optional[EI] = Field(
+    ft1_23: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_23",
@@ -275,7 +275,7 @@ class FT1(BaseModel):
         description="Item #217",
     )
 
-    ft1_24: Optional[List[XCN]] = Field(
+    ft1_24: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_24",
@@ -287,7 +287,7 @@ class FT1(BaseModel):
         description="Item #765",
     )
 
-    ft1_25: Optional[CNE] = Field(
+    ft1_25: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_25",
@@ -299,7 +299,7 @@ class FT1(BaseModel):
         description="Item #393 | Table HL70088",
     )
 
-    ft1_26: Optional[List[CNE]] = Field(
+    ft1_26: list[CNE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_26",
@@ -311,7 +311,7 @@ class FT1(BaseModel):
         description="Item #1316 | Table HL70340",
     )
 
-    ft1_27: Optional[CWE] = Field(
+    ft1_27: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_27",
@@ -323,7 +323,7 @@ class FT1(BaseModel):
         description="Item #1310 | Table HL70339",
     )
 
-    ft1_28: Optional[CWE] = Field(
+    ft1_28: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_28",
@@ -335,7 +335,7 @@ class FT1(BaseModel):
         description="Item #1646 | Table HL70476",
     )
 
-    ft1_29: Optional[CWE] = Field(
+    ft1_29: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_29",
@@ -347,7 +347,7 @@ class FT1(BaseModel):
         description="Item #1845 | Table HL70549",
     )
 
-    ft1_30: Optional[CX] = Field(
+    ft1_30: CX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_30",
@@ -359,7 +359,7 @@ class FT1(BaseModel):
         description="Item #1846",
     )
 
-    ft1_31: Optional[List[str]] = Field(
+    ft1_31: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ft1_31",

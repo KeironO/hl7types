@@ -5,9 +5,9 @@ Version: 2.3
 Class: LRL
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -31,7 +31,7 @@ class LRL(BaseModel):
         description="Item #943",
     )
 
-    lrl_2: Optional[str] = Field(
+    lrl_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "lrl_2",
@@ -43,7 +43,7 @@ class LRL(BaseModel):
         description="Item #763 | Table HL70206",
     )
 
-    lrl_3: Optional[EI] = Field(
+    lrl_3: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "lrl_3",
@@ -55,7 +55,7 @@ class LRL(BaseModel):
         description="Item #764",
     )
 
-    lrl_4: Optional[CE] = Field(
+    lrl_4: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "lrl_4",
@@ -67,7 +67,7 @@ class LRL(BaseModel):
         description="Item #1227 | Table HL70325",
     )
 
-    lrl_5: Optional[XON] = Field(
+    lrl_5: XON | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "lrl_5",
@@ -79,7 +79,7 @@ class LRL(BaseModel):
         description="Item #1301",
     )
 
-    lrl_6: Optional[PL] = Field(
+    lrl_6: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "lrl_6",

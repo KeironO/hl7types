@@ -5,10 +5,10 @@ Version: 2.7
 Class: EHC_E02.INVOICE_INFORMATION
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import BaseModel
 
 
 class EHC_E02_INVOICE_INFORMATION(BaseModel):

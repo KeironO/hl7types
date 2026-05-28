@@ -5,16 +5,15 @@ Version: 2.4
 Class: RSP_Z90.COMMON_ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .RSP_Z90_OBSERVATION import RSP_Z90_OBSERVATION
 
 _CTD = CTD
@@ -47,19 +46,19 @@ class RSP_Z90_COMMON_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    OBSERVATION: List[_RSP_Z90_OBSERVATION] = Field(
+    OBSERVATION: list[_RSP_Z90_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

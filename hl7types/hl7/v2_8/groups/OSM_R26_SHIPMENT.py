@@ -5,14 +5,13 @@ Version: 2.8
 Class: OSM_R26.SHIPMENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PRT import PRT
 from ..segments.SHP import SHP
-
 from .OSM_R26_PACKAGE import OSM_R26_PACKAGE
 from .OSM_R26_SHIPPING_OBSERVATION import OSM_R26_SHIPPING_OBSERVATION
 
@@ -38,19 +37,19 @@ class OSM_R26_SHIPMENT(BaseModel):
         description="Required",
     )
 
-    PRT: List[_PRT] = Field(
+    PRT: list[_PRT] = Field(
         default=...,
         title="PRT",
         description="Required, repeating",
     )
 
-    SHIPPING_OBSERVATION: Optional[List[_OSM_R26_SHIPPING_OBSERVATION]] = Field(
+    SHIPPING_OBSERVATION: list[_OSM_R26_SHIPPING_OBSERVATION] | None = Field(
         default=None,
         title="SHIPPING_OBSERVATION",
         description="Optional, repeating",
     )
 
-    PACKAGE: List[_OSM_R26_PACKAGE] = Field(
+    PACKAGE: list[_OSM_R26_PACKAGE] = Field(
         default=...,
         title="PACKAGE",
         description="Required, repeating",

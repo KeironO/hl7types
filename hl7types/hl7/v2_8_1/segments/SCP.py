@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: SCP
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -17,7 +17,7 @@ from ..datatypes.EI import EI
 class SCP(BaseModel):
     """HL7 v2 SCP segment."""
 
-    scp_1: Optional[str] = Field(
+    scp_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_1",
@@ -29,7 +29,7 @@ class SCP(BaseModel):
         description="Item #2087",
     )
 
-    scp_2: Optional[CWE] = Field(
+    scp_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_2",
@@ -41,7 +41,7 @@ class SCP(BaseModel):
         description="Item #2088 | Table HL70651",
     )
 
-    scp_3: Optional[CWE] = Field(
+    scp_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_3",
@@ -53,7 +53,7 @@ class SCP(BaseModel):
         description="Item #2089 | Table HL70653",
     )
 
-    scp_4: Optional[EI] = Field(
+    scp_4: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_4",
@@ -65,7 +65,7 @@ class SCP(BaseModel):
         description="Item #2090",
     )
 
-    scp_5: Optional[str] = Field(
+    scp_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_5",
@@ -77,7 +77,7 @@ class SCP(BaseModel):
         description="Item #2279",
     )
 
-    scp_6: Optional[str] = Field(
+    scp_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_6",
@@ -89,7 +89,7 @@ class SCP(BaseModel):
         description="Item #2091",
     )
 
-    scp_7: Optional[CWE] = Field(
+    scp_7: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_7",
@@ -101,7 +101,7 @@ class SCP(BaseModel):
         description="Item #2092 | Table HL70657",
     )
 
-    scp_8: Optional[CWE] = Field(
+    scp_8: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scp_8",

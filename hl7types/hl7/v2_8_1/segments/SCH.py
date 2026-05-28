@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: SCH
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -23,7 +23,7 @@ from ..datatypes.XTN import XTN
 class SCH(BaseModel):
     """HL7 v2 SCH segment."""
 
-    sch_1: Optional[EI] = Field(
+    sch_1: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_1",
@@ -35,7 +35,7 @@ class SCH(BaseModel):
         description="Item #860",
     )
 
-    sch_2: Optional[EI] = Field(
+    sch_2: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_2",
@@ -47,7 +47,7 @@ class SCH(BaseModel):
         description="Item #861",
     )
 
-    sch_3: Optional[str] = Field(
+    sch_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_3",
@@ -59,7 +59,7 @@ class SCH(BaseModel):
         description="Item #862",
     )
 
-    sch_4: Optional[EIP] = Field(
+    sch_4: EIP | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_4",
@@ -71,7 +71,7 @@ class SCH(BaseModel):
         description="Item #218",
     )
 
-    sch_5: Optional[CWE] = Field(
+    sch_5: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_5",
@@ -95,7 +95,7 @@ class SCH(BaseModel):
         description="Item #883",
     )
 
-    sch_7: Optional[CWE] = Field(
+    sch_7: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_7",
@@ -107,7 +107,7 @@ class SCH(BaseModel):
         description="Item #866 | Table HL70276",
     )
 
-    sch_8: Optional[CWE] = Field(
+    sch_8: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_8",
@@ -119,7 +119,7 @@ class SCH(BaseModel):
         description="Item #867 | Table HL70277",
     )
 
-    sch_10: Optional[CNE] = Field(
+    sch_10: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_10",
@@ -131,7 +131,7 @@ class SCH(BaseModel):
         description="Item #869",
     )
 
-    sch_12: Optional[List[XCN]] = Field(
+    sch_12: list[XCN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_12",
@@ -143,7 +143,7 @@ class SCH(BaseModel):
         description="Item #874",
     )
 
-    sch_13: Optional[XTN] = Field(
+    sch_13: XTN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_13",
@@ -155,7 +155,7 @@ class SCH(BaseModel):
         description="Item #875",
     )
 
-    sch_14: Optional[List[XAD]] = Field(
+    sch_14: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_14",
@@ -167,7 +167,7 @@ class SCH(BaseModel):
         description="Item #876",
     )
 
-    sch_15: Optional[PL] = Field(
+    sch_15: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_15",
@@ -179,7 +179,7 @@ class SCH(BaseModel):
         description="Item #877",
     )
 
-    sch_16: List[XCN] = Field(
+    sch_16: list[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "sch_16",
@@ -191,7 +191,7 @@ class SCH(BaseModel):
         description="Item #885",
     )
 
-    sch_17: Optional[XTN] = Field(
+    sch_17: XTN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_17",
@@ -203,7 +203,7 @@ class SCH(BaseModel):
         description="Item #886",
     )
 
-    sch_18: Optional[List[XAD]] = Field(
+    sch_18: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_18",
@@ -215,7 +215,7 @@ class SCH(BaseModel):
         description="Item #887",
     )
 
-    sch_19: Optional[PL] = Field(
+    sch_19: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_19",
@@ -227,7 +227,7 @@ class SCH(BaseModel):
         description="Item #888",
     )
 
-    sch_20: List[XCN] = Field(
+    sch_20: list[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "sch_20",
@@ -239,7 +239,7 @@ class SCH(BaseModel):
         description="Item #878",
     )
 
-    sch_21: Optional[List[XTN]] = Field(
+    sch_21: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_21",
@@ -251,7 +251,7 @@ class SCH(BaseModel):
         description="Item #879",
     )
 
-    sch_22: Optional[PL] = Field(
+    sch_22: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_22",
@@ -263,7 +263,7 @@ class SCH(BaseModel):
         description="Item #880",
     )
 
-    sch_23: Optional[EI] = Field(
+    sch_23: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_23",
@@ -275,7 +275,7 @@ class SCH(BaseModel):
         description="Item #881",
     )
 
-    sch_24: Optional[EI] = Field(
+    sch_24: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_24",
@@ -287,7 +287,7 @@ class SCH(BaseModel):
         description="Item #882",
     )
 
-    sch_25: Optional[CWE] = Field(
+    sch_25: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_25",
@@ -299,7 +299,7 @@ class SCH(BaseModel):
         description="Item #889 | Table HL70278",
     )
 
-    sch_26: Optional[List[EI]] = Field(
+    sch_26: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_26",
@@ -311,7 +311,7 @@ class SCH(BaseModel):
         description="Item #216",
     )
 
-    sch_27: Optional[List[EI]] = Field(
+    sch_27: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "sch_27",

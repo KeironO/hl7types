@@ -5,9 +5,9 @@ Version: 2.8
 Class: VND
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -41,7 +41,7 @@ class VND(BaseModel):
         description="Item #2218",
     )
 
-    vnd_3: Optional[str] = Field(
+    vnd_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vnd_3",
@@ -53,7 +53,7 @@ class VND(BaseModel):
         description="Item #2276",
     )
 
-    vnd_4: Optional[EI] = Field(
+    vnd_4: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vnd_4",
@@ -65,7 +65,7 @@ class VND(BaseModel):
         description="Item #2219",
     )
 
-    vnd_5: Optional[CNE] = Field(
+    vnd_5: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "vnd_5",

@@ -5,19 +5,18 @@ Version: 2.4
 Class: QBP_K13
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
+from ..groups.QBP_K13_ROW_DEFINITION import QBP_K13_ROW_DEFINITION
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QAK import QAK
 from ..segments.QPD import QPD
-
-from ..groups.QBP_K13_ROW_DEFINITION import QBP_K13_ROW_DEFINITION
 
 _DSC = DSC
 _ERR = ERR
@@ -53,7 +52,7 @@ class QBP_K13(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -71,13 +70,13 @@ class QBP_K13(BaseModel):
         description="Required",
     )
 
-    ROW_DEFINITION: Optional[_QBP_K13_ROW_DEFINITION] = Field(
+    ROW_DEFINITION: _QBP_K13_ROW_DEFINITION | None = Field(
         default=None,
         title="ROW_DEFINITION",
         description="Optional",
     )
 
-    DSC: Optional[_DSC] = Field(
+    DSC: _DSC | None = Field(
         default=None,
         title="DSC",
         description="Optional",

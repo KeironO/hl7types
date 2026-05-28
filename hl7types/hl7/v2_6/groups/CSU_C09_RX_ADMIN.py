@@ -5,9 +5,9 @@ Version: 2.6
 Class: CSU_C09.RX_ADMIN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.RXA import RXA

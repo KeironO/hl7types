@@ -5,14 +5,13 @@ Version: 2.5.1
 Class: SUR_P09
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
-from ..segments.MSH import MSH
-
 from ..groups.SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP import SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP
+from ..segments.MSH import MSH
 
 _MSH = MSH
 _SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP = SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP
@@ -32,7 +31,7 @@ class SUR_P09(BaseModel):
         description="Required",
     )
 
-    FACPSHPDCPSHFACPDCNTEED_SUPPGRP: List[_SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP] = Field(
+    FACPSHPDCPSHFACPDCNTEED_SUPPGRP: list[_SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP] = Field(
         default=...,
         title="FACPSHPDCPSHFACPDCNTEED_SUPPGRP",
         description="Required, repeating",

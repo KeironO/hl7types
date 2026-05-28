@@ -5,16 +5,15 @@ Version: 2.3
 Class: PEX_P07.PEX_CAUSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
 from ..segments.PCR import PCR
 from ..segments.PRB import PRB
-
 from .PEX_P07_ASSOCIATED_PERSON import PEX_P07_ASSOCIATED_PERSON
 from .PEX_P07_RX_ADMINISTRATION import PEX_P07_RX_ADMINISTRATION
 from .PEX_P07_RX_ORDER import PEX_P07_RX_ORDER
@@ -50,43 +49,43 @@ class PEX_P07_PEX_CAUSE(BaseModel):
         description="Required",
     )
 
-    RX_ORDER: Optional[_PEX_P07_RX_ORDER] = Field(
+    RX_ORDER: _PEX_P07_RX_ORDER | None = Field(
         default=None,
         title="RX_ORDER",
         description="Optional",
     )
 
-    RX_ADMINISTRATION: Optional[List[_PEX_P07_RX_ADMINISTRATION]] = Field(
+    RX_ADMINISTRATION: list[_PEX_P07_RX_ADMINISTRATION] | None = Field(
         default=None,
         title="RX_ADMINISTRATION",
         description="Optional, repeating",
     )
 
-    PRB: Optional[List[_PRB]] = Field(
+    PRB: list[_PRB] | None = Field(
         default=None,
         title="PRB",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    ASSOCIATED_PERSON: Optional[_PEX_P07_ASSOCIATED_PERSON] = Field(
+    ASSOCIATED_PERSON: _PEX_P07_ASSOCIATED_PERSON | None = Field(
         default=None,
         title="ASSOCIATED_PERSON",
         description="Optional",
     )
 
-    STUDY: Optional[List[_PEX_P07_STUDY]] = Field(
+    STUDY: list[_PEX_P07_STUDY] | None = Field(
         default=None,
         title="STUDY",
         description="Optional, repeating",

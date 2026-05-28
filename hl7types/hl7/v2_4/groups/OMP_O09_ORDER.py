@@ -5,9 +5,9 @@ Version: 2.4
 Class: OMP_O09.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.BLG import BLG
@@ -16,7 +16,6 @@ from ..segments.NTE import NTE
 from ..segments.ORC import ORC
 from ..segments.RXO import RXO
 from ..segments.RXR import RXR
-
 from .OMP_O09_COMPONENT import OMP_O09_COMPONENT
 from .OMP_O09_OBSERVATION import OMP_O09_OBSERVATION
 
@@ -56,37 +55,37 @@ class OMP_O09_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENT: Optional[_OMP_O09_COMPONENT] = Field(
+    COMPONENT: _OMP_O09_COMPONENT | None = Field(
         default=None,
         title="COMPONENT",
         description="Optional",
     )
 
-    OBSERVATION: Optional[List[_OMP_O09_OBSERVATION]] = Field(
+    OBSERVATION: list[_OMP_O09_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    FT1: Optional[List[_FT1]] = Field(
+    FT1: list[_FT1] | None = Field(
         default=None,
         title="FT1",
         description="Optional, repeating",
     )
 
-    BLG: Optional[_BLG] = Field(
+    BLG: _BLG | None = Field(
         default=None,
         title="BLG",
         description="Optional",

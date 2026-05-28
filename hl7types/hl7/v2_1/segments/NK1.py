@@ -5,9 +5,9 @@ Version: 2.1
 Class: NK1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 
@@ -26,7 +26,7 @@ class NK1(BaseModel):
         description="Item #712",
     )
 
-    nk1_2: Optional[str] = Field(
+    nk1_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_2",
@@ -38,7 +38,7 @@ class NK1(BaseModel):
         description="Item #48",
     )
 
-    nk1_3: Optional[str] = Field(
+    nk1_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_3",
@@ -50,7 +50,7 @@ class NK1(BaseModel):
         description="Item #47 | Table HL70063",
     )
 
-    nk1_4: Optional[str] = Field(
+    nk1_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_4",
@@ -62,7 +62,7 @@ class NK1(BaseModel):
         description="Item #225",
     )
 
-    nk1_5: Optional[List[str]] = Field(
+    nk1_5: list[str] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "nk1_5",

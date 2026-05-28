@@ -5,16 +5,16 @@ Version: 2.3
 Class: CM_RMC
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_RMC(BaseModel):
     """HL7 v2 CM_RMC data type."""
 
-    cm_rmc_1: Optional[str] = Field(
+    cm_rmc_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rmc_1",
@@ -25,7 +25,7 @@ class CM_RMC(BaseModel):
         title="room type",
     )
 
-    cm_rmc_2: Optional[str] = Field(
+    cm_rmc_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rmc_2",
@@ -36,7 +36,7 @@ class CM_RMC(BaseModel):
         title="amount type",
     )
 
-    cm_rmc_3: Optional[str] = Field(
+    cm_rmc_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rmc_3",

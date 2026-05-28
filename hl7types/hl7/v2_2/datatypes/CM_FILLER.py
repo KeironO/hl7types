@@ -5,16 +5,16 @@ Version: 2.2
 Class: CM_FILLER
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_FILLER(BaseModel):
     """HL7 v2 CM_FILLER data type."""
 
-    cm_filler_1: Optional[str] = Field(
+    cm_filler_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_filler_1",
@@ -25,7 +25,7 @@ class CM_FILLER(BaseModel):
         title="unique filler id",
     )
 
-    cm_filler_2: Optional[str] = Field(
+    cm_filler_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_filler_2",

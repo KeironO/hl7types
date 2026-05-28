@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: OPR_O38.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from .OPR_O38_ORDER import OPR_O38_ORDER
@@ -22,7 +22,7 @@ class OPR_O38_RESPONSE(BaseModel):
         ORDER (List[OPR_O38_ORDER]): required
     """
 
-    ORDER: List[_OPR_O38_ORDER] = Field(
+    ORDER: list[_OPR_O38_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

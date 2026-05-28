@@ -5,9 +5,9 @@ Version: 2.6
 Class: ROL
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -21,7 +21,7 @@ from ..datatypes.XTN import XTN
 class ROL(BaseModel):
     """HL7 v2 ROL segment."""
 
-    rol_1: Optional[EI] = Field(
+    rol_1: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_1",
@@ -57,7 +57,7 @@ class ROL(BaseModel):
         description="Item #1197 | Table HL70443",
     )
 
-    rol_4: List[XCN] = Field(
+    rol_4: list[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "rol_4",
@@ -69,7 +69,7 @@ class ROL(BaseModel):
         description="Item #1198",
     )
 
-    rol_5: Optional[str] = Field(
+    rol_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_5",
@@ -81,7 +81,7 @@ class ROL(BaseModel):
         description="Item #1199",
     )
 
-    rol_6: Optional[str] = Field(
+    rol_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_6",
@@ -93,7 +93,7 @@ class ROL(BaseModel):
         description="Item #1200",
     )
 
-    rol_7: Optional[CWE] = Field(
+    rol_7: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_7",
@@ -105,7 +105,7 @@ class ROL(BaseModel):
         description="Item #1201",
     )
 
-    rol_8: Optional[CWE] = Field(
+    rol_8: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_8",
@@ -117,7 +117,7 @@ class ROL(BaseModel):
         description="Item #1205",
     )
 
-    rol_9: Optional[List[CWE]] = Field(
+    rol_9: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_9",
@@ -129,7 +129,7 @@ class ROL(BaseModel):
         description="Item #1510",
     )
 
-    rol_10: Optional[CWE] = Field(
+    rol_10: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_10",
@@ -141,7 +141,7 @@ class ROL(BaseModel):
         description="Item #1461 | Table HL70406",
     )
 
-    rol_11: Optional[List[XAD]] = Field(
+    rol_11: list[XAD] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_11",
@@ -153,7 +153,7 @@ class ROL(BaseModel):
         description="Item #679",
     )
 
-    rol_12: Optional[List[XTN]] = Field(
+    rol_12: list[XTN] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_12",
@@ -165,7 +165,7 @@ class ROL(BaseModel):
         description="Item #678",
     )
 
-    rol_13: Optional[PL] = Field(
+    rol_13: PL | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rol_13",

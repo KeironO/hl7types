@@ -5,11 +5,13 @@ Version: 2.8.2
 Class: OPU_R25
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.OPU_R25_ACCESSION_DETAIL import OPU_R25_ACCESSION_DETAIL
+from ..groups.OPU_R25_PATIENT_VISIT_OBSERVATION import OPU_R25_PATIENT_VISIT_OBSERVATION
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
 from ..segments.PRT import PRT
@@ -17,9 +19,6 @@ from ..segments.PV1 import PV1
 from ..segments.PV2 import PV2
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.OPU_R25_ACCESSION_DETAIL import OPU_R25_ACCESSION_DETAIL
-from ..groups.OPU_R25_PATIENT_VISIT_OBSERVATION import OPU_R25_PATIENT_VISIT_OBSERVATION
 
 _MSH = MSH
 _NTE = NTE
@@ -53,19 +52,19 @@ class OPU_R25(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    NTE: Optional[_NTE] = Field(
+    NTE: _NTE | None = Field(
         default=None,
         title="NTE",
         description="Optional",
@@ -77,25 +76,25 @@ class OPU_R25(BaseModel):
         description="Required",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT_OBSERVATION: Optional[List[_OPU_R25_PATIENT_VISIT_OBSERVATION]] = Field(
+    PATIENT_VISIT_OBSERVATION: list[_OPU_R25_PATIENT_VISIT_OBSERVATION] | None = Field(
         default=None,
         title="PATIENT_VISIT_OBSERVATION",
         description="Optional, repeating",
     )
 
-    ACCESSION_DETAIL: List[_OPU_R25_ACCESSION_DETAIL] = Field(
+    ACCESSION_DETAIL: list[_OPU_R25_ACCESSION_DETAIL] = Field(
         default=...,
         title="ACCESSION_DETAIL",
         description="Required, repeating",

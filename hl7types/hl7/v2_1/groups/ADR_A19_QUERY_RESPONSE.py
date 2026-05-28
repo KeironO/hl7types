@@ -5,9 +5,9 @@ Version: 2.1
 Class: ADR_A19.QUERY_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.EVN import EVN
@@ -28,7 +28,7 @@ class ADR_A19_QUERY_RESPONSE(BaseModel):
         PV1 (PV1): required
     """
 
-    EVN: Optional[_EVN] = Field(
+    EVN: _EVN | None = Field(
         default=None,
         title="EVN",
         description="Optional",

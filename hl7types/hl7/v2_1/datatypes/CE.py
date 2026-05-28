@@ -5,16 +5,16 @@ Version: 2.1
 Class: CE
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CE(BaseModel):
     """HL7 v2 CE data type."""
 
-    ce_1: Optional[str] = Field(
+    ce_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ce_1",
@@ -25,7 +25,7 @@ class CE(BaseModel):
         title="identifier",
     )
 
-    ce_2: Optional[str] = Field(
+    ce_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ce_2",
@@ -36,7 +36,7 @@ class CE(BaseModel):
         title="text",
     )
 
-    ce_3: Optional[str] = Field(
+    ce_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ce_3",
@@ -47,7 +47,7 @@ class CE(BaseModel):
         title="name of coding system",
     )
 
-    ce_4: Optional[str] = Field(
+    ce_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ce_4",
@@ -58,7 +58,7 @@ class CE(BaseModel):
         title="alternate identifier",
     )
 
-    ce_5: Optional[str] = Field(
+    ce_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ce_5",
@@ -69,7 +69,7 @@ class CE(BaseModel):
         title="alternate text",
     )
 
-    ce_6: Optional[str] = Field(
+    ce_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "ce_6",

@@ -5,16 +5,16 @@ Version: 2.8.2
 Class: CWE
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CWE(BaseModel):
     """HL7 v2 CWE data type."""
 
-    cwe_1: Optional[str] = Field(
+    cwe_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_1",
@@ -25,7 +25,7 @@ class CWE(BaseModel):
         title="Identifier",
     )
 
-    cwe_2: Optional[str] = Field(
+    cwe_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_2",
@@ -36,7 +36,7 @@ class CWE(BaseModel):
         title="Text",
     )
 
-    cwe_3: Optional[str] = Field(
+    cwe_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_3",
@@ -47,7 +47,7 @@ class CWE(BaseModel):
         title="Name of Coding System",
     )
 
-    cwe_4: Optional[str] = Field(
+    cwe_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_4",
@@ -58,7 +58,7 @@ class CWE(BaseModel):
         title="Alternate Identifier",
     )
 
-    cwe_5: Optional[str] = Field(
+    cwe_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_5",
@@ -69,7 +69,7 @@ class CWE(BaseModel):
         title="Alternate Text",
     )
 
-    cwe_6: Optional[str] = Field(
+    cwe_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_6",
@@ -80,7 +80,7 @@ class CWE(BaseModel):
         title="Name of Alternate Coding System",
     )
 
-    cwe_7: Optional[str] = Field(
+    cwe_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_7",
@@ -91,7 +91,7 @@ class CWE(BaseModel):
         title="Coding System Version ID",
     )
 
-    cwe_8: Optional[str] = Field(
+    cwe_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_8",
@@ -102,7 +102,7 @@ class CWE(BaseModel):
         title="Alternate Coding System Version ID",
     )
 
-    cwe_9: Optional[str] = Field(
+    cwe_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_9",
@@ -113,7 +113,7 @@ class CWE(BaseModel):
         title="Original Text",
     )
 
-    cwe_10: Optional[str] = Field(
+    cwe_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_10",
@@ -124,7 +124,7 @@ class CWE(BaseModel):
         title="Second Alternate Identifier",
     )
 
-    cwe_11: Optional[str] = Field(
+    cwe_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_11",
@@ -135,7 +135,7 @@ class CWE(BaseModel):
         title="Second Alternate Text",
     )
 
-    cwe_12: Optional[str] = Field(
+    cwe_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_12",
@@ -146,7 +146,7 @@ class CWE(BaseModel):
         title="Name of Second Alternate Coding System",
     )
 
-    cwe_13: Optional[str] = Field(
+    cwe_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_13",
@@ -157,7 +157,7 @@ class CWE(BaseModel):
         title="Second Alternate Coding System Version ID",
     )
 
-    cwe_14: Optional[str] = Field(
+    cwe_14: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_14",
@@ -168,7 +168,7 @@ class CWE(BaseModel):
         title="Coding System OID",
     )
 
-    cwe_15: Optional[str] = Field(
+    cwe_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_15",
@@ -179,7 +179,7 @@ class CWE(BaseModel):
         title="Value Set OID",
     )
 
-    cwe_16: Optional[str] = Field(
+    cwe_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_16",
@@ -190,7 +190,7 @@ class CWE(BaseModel):
         title="Value Set Version ID",
     )
 
-    cwe_17: Optional[str] = Field(
+    cwe_17: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_17",
@@ -201,7 +201,7 @@ class CWE(BaseModel):
         title="Alternate Coding System OID",
     )
 
-    cwe_18: Optional[str] = Field(
+    cwe_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_18",
@@ -212,7 +212,7 @@ class CWE(BaseModel):
         title="Alternate Value Set OID",
     )
 
-    cwe_19: Optional[str] = Field(
+    cwe_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_19",
@@ -223,7 +223,7 @@ class CWE(BaseModel):
         title="Alternate Value Set Version ID",
     )
 
-    cwe_20: Optional[str] = Field(
+    cwe_20: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_20",
@@ -234,7 +234,7 @@ class CWE(BaseModel):
         title="Second Alternate Coding System OID",
     )
 
-    cwe_21: Optional[str] = Field(
+    cwe_21: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_21",
@@ -245,7 +245,7 @@ class CWE(BaseModel):
         title="Second Alternate Value Set OID",
     )
 
-    cwe_22: Optional[str] = Field(
+    cwe_22: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cwe_22",

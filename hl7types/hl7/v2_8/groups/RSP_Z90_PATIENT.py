@@ -5,16 +5,15 @@ Version: 2.8
 Class: RSP_Z90.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
 from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
-
 from .RSP_Z90_VISIT import RSP_Z90_VISIT
 
 _NK1 = NK1
@@ -41,25 +40,25 @@ class RSP_Z90_PATIENT(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    VISIT: Optional[_RSP_Z90_VISIT] = Field(
+    VISIT: _RSP_Z90_VISIT | None = Field(
         default=None,
         title="VISIT",
         description="Optional",

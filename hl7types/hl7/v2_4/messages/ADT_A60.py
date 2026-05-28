@@ -5,9 +5,9 @@ Version: 2.4
 Class: ADT_A60
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EVN import EVN
@@ -55,19 +55,19 @@ class ADT_A60(BaseModel):
         description="Required",
     )
 
-    PV1: Optional[_PV1] = Field(
+    PV1: _PV1 | None = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    IAM: Optional[List[_IAM]] = Field(
+    IAM: list[_IAM] | None = Field(
         default=None,
         title="IAM",
         description="Optional, repeating",

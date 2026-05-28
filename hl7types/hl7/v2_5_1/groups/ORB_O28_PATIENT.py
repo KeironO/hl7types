@@ -5,13 +5,12 @@ Version: 2.5.1
 Class: ORB_O28.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PID import PID
-
 from .ORB_O28_ORDER import ORB_O28_ORDER
 
 _ORB_O28_ORDER = ORB_O28_ORDER
@@ -32,7 +31,7 @@ class ORB_O28_PATIENT(BaseModel):
         description="Required",
     )
 
-    ORDER: Optional[List[_ORB_O28_ORDER]] = Field(
+    ORDER: list[_ORB_O28_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

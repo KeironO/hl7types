@@ -5,11 +5,13 @@ Version: 2.7
 Class: MDM_T02
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.MDM_T02_COMMON_ORDER import MDM_T02_COMMON_ORDER
+from ..groups.MDM_T02_OBSERVATION import MDM_T02_OBSERVATION
 from ..segments.CON import CON
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
@@ -18,9 +20,6 @@ from ..segments.PV1 import PV1
 from ..segments.SFT import SFT
 from ..segments.TXA import TXA
 from ..segments.UAC import UAC
-
-from ..groups.MDM_T02_COMMON_ORDER import MDM_T02_COMMON_ORDER
-from ..groups.MDM_T02_OBSERVATION import MDM_T02_OBSERVATION
 
 _CON = CON
 _EVN = EVN
@@ -56,13 +55,13 @@ class MDM_T02(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -86,7 +85,7 @@ class MDM_T02(BaseModel):
         description="Required",
     )
 
-    COMMON_ORDER: Optional[List[_MDM_T02_COMMON_ORDER]] = Field(
+    COMMON_ORDER: list[_MDM_T02_COMMON_ORDER] | None = Field(
         default=None,
         title="COMMON_ORDER",
         description="Optional, repeating",
@@ -98,13 +97,13 @@ class MDM_T02(BaseModel):
         description="Required",
     )
 
-    CON: Optional[List[_CON]] = Field(
+    CON: list[_CON] | None = Field(
         default=None,
         title="CON",
         description="Optional, repeating",
     )
 
-    OBSERVATION: List[_MDM_T02_OBSERVATION] = Field(
+    OBSERVATION: list[_MDM_T02_OBSERVATION] = Field(
         default=...,
         title="OBSERVATION",
         description="Required, repeating",

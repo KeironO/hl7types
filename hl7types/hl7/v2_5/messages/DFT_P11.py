@@ -5,11 +5,14 @@ Version: 2.5
 Class: DFT_P11
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.DFT_P11_COMMON_ORDER import DFT_P11_COMMON_ORDER
+from ..groups.DFT_P11_FINANCIAL import DFT_P11_FINANCIAL
+from ..groups.DFT_P11_INSURANCE import DFT_P11_INSURANCE
 from ..segments.ACC import ACC
 from ..segments.DB1 import DB1
 from ..segments.DG1 import DG1
@@ -23,10 +26,6 @@ from ..segments.PV1 import PV1
 from ..segments.PV2 import PV2
 from ..segments.ROL import ROL
 from ..segments.SFT import SFT
-
-from ..groups.DFT_P11_COMMON_ORDER import DFT_P11_COMMON_ORDER
-from ..groups.DFT_P11_FINANCIAL import DFT_P11_FINANCIAL
-from ..groups.DFT_P11_INSURANCE import DFT_P11_INSURANCE
 
 _ACC = ACC
 _DB1 = DB1
@@ -74,7 +73,7 @@ class DFT_P11(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -92,73 +91,73 @@ class DFT_P11(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    ROL: Optional[List[_ROL]] = Field(
+    ROL: list[_ROL] | None = Field(
         default=None,
         title="ROL",
         description="Optional, repeating",
     )
 
-    PV1: Optional[_PV1] = Field(
+    PV1: _PV1 | None = Field(
         default=None,
         title="PV1",
         description="Optional",
     )
 
-    PV2: Optional[_PV2] = Field(
+    PV2: _PV2 | None = Field(
         default=None,
         title="PV2",
         description="Optional",
     )
 
-    DB1: Optional[List[_DB1]] = Field(
+    DB1: list[_DB1] | None = Field(
         default=None,
         title="DB1",
         description="Optional, repeating",
     )
 
-    COMMON_ORDER: Optional[List[_DFT_P11_COMMON_ORDER]] = Field(
+    COMMON_ORDER: list[_DFT_P11_COMMON_ORDER] | None = Field(
         default=None,
         title="COMMON_ORDER",
         description="Optional, repeating",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[_DRG] = Field(
+    DRG: _DRG | None = Field(
         default=None,
         title="DRG",
         description="Optional",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_DFT_P11_INSURANCE]] = Field(
+    INSURANCE: list[_DFT_P11_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    FINANCIAL: List[_DFT_P11_FINANCIAL] = Field(
+    FINANCIAL: list[_DFT_P11_FINANCIAL] = Field(
         default=...,
         title="FINANCIAL",
         description="Required, repeating",

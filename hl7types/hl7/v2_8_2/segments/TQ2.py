@@ -5,9 +5,9 @@ Version: 2.8.2
 Class: TQ2
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -17,7 +17,7 @@ from ..datatypes.EI import EI
 class TQ2(BaseModel):
     """HL7 v2 TQ2 segment."""
 
-    tq2_1: Optional[str] = Field(
+    tq2_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_1",
@@ -29,7 +29,7 @@ class TQ2(BaseModel):
         description="Item #1648",
     )
 
-    tq2_2: Optional[str] = Field(
+    tq2_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_2",
@@ -41,7 +41,7 @@ class TQ2(BaseModel):
         description="Item #1649 | Table HL70503",
     )
 
-    tq2_3: Optional[List[EI]] = Field(
+    tq2_3: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_3",
@@ -53,7 +53,7 @@ class TQ2(BaseModel):
         description="Item #1650",
     )
 
-    tq2_4: Optional[List[EI]] = Field(
+    tq2_4: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_4",
@@ -65,7 +65,7 @@ class TQ2(BaseModel):
         description="Item #1651",
     )
 
-    tq2_5: Optional[List[EI]] = Field(
+    tq2_5: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_5",
@@ -77,7 +77,7 @@ class TQ2(BaseModel):
         description="Item #1652",
     )
 
-    tq2_6: Optional[str] = Field(
+    tq2_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_6",
@@ -89,7 +89,7 @@ class TQ2(BaseModel):
         description="Item #1653 | Table HL70504",
     )
 
-    tq2_7: Optional[str] = Field(
+    tq2_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_7",
@@ -101,7 +101,7 @@ class TQ2(BaseModel):
         description="Item #1654 | Table HL70505",
     )
 
-    tq2_8: Optional[CQ] = Field(
+    tq2_8: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_8",
@@ -113,7 +113,7 @@ class TQ2(BaseModel):
         description="Item #1655",
     )
 
-    tq2_9: Optional[str] = Field(
+    tq2_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_9",
@@ -125,7 +125,7 @@ class TQ2(BaseModel):
         description="Item #1656",
     )
 
-    tq2_10: Optional[str] = Field(
+    tq2_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq2_10",

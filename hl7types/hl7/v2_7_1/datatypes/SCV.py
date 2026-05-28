@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: SCV
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -16,7 +16,7 @@ from .CWE import CWE
 class SCV(BaseModel):
     """HL7 v2 SCV data type."""
 
-    scv_1: Optional[CWE] = Field(
+    scv_1: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scv_1",
@@ -27,7 +27,7 @@ class SCV(BaseModel):
         title="Parameter Class",
     )
 
-    scv_2: Optional[str] = Field(
+    scv_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "scv_2",

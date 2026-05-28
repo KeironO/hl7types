@@ -5,17 +5,16 @@ Version: 2.3
 Class: PTR_PCF
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.PTR_PCF_PATIENT import PTR_PCF_PATIENT
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
-
-from ..groups.PTR_PCF_PATIENT import PTR_PCF_PATIENT
 
 _ERR = ERR
 _MSA = MSA
@@ -47,7 +46,7 @@ class PTR_PCF(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -59,7 +58,7 @@ class PTR_PCF(BaseModel):
         description="Required",
     )
 
-    PATIENT: List[_PTR_PCF_PATIENT] = Field(
+    PATIENT: list[_PTR_PCF_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

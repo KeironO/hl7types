@@ -5,17 +5,16 @@ Version: 2.5
 Class: OML_O33
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
-
-from ..segments.MSH import MSH
-from ..segments.NTE import NTE
-from ..segments.SFT import SFT
 
 from ..groups.OML_O33_PATIENT import OML_O33_PATIENT
 from ..groups.OML_O33_SPECIMEN import OML_O33_SPECIMEN
+from ..segments.MSH import MSH
+from ..segments.NTE import NTE
+from ..segments.SFT import SFT
 
 _MSH = MSH
 _NTE = NTE
@@ -41,25 +40,25 @@ class OML_O33(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    PATIENT: Optional[_OML_O33_PATIENT] = Field(
+    PATIENT: _OML_O33_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",
     )
 
-    SPECIMEN: List[_OML_O33_SPECIMEN] = Field(
+    SPECIMEN: list[_OML_O33_SPECIMEN] = Field(
         default=...,
         title="SPECIMEN",
         description="Required, repeating",

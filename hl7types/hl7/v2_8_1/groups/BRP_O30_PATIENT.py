@@ -5,15 +5,14 @@ Version: 2.8.1
 Class: BRP_O30.PATIENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.ARV import ARV
 from ..segments.PID import PID
 from ..segments.PRT import PRT
-
 from .BRP_O30_ORDER import BRP_O30_ORDER
 
 _ARV = ARV
@@ -38,19 +37,19 @@ class BRP_O30_PATIENT(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    ARV: Optional[List[_ARV]] = Field(
+    ARV: list[_ARV] | None = Field(
         default=None,
         title="ARV",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_BRP_O30_ORDER]] = Field(
+    ORDER: list[_BRP_O30_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

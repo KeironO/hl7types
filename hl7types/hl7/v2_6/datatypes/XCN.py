@@ -5,9 +5,9 @@ Version: 2.6
 Class: XCN
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .CWE import CWE
@@ -19,7 +19,7 @@ from .HD import HD
 class XCN(BaseModel):
     """HL7 v2 XCN data type."""
 
-    xcn_1: Optional[str] = Field(
+    xcn_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_1",
@@ -30,7 +30,7 @@ class XCN(BaseModel):
         title="ID Number",
     )
 
-    xcn_2: Optional[FN] = Field(
+    xcn_2: FN | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_2",
@@ -41,7 +41,7 @@ class XCN(BaseModel):
         title="Family Name",
     )
 
-    xcn_3: Optional[str] = Field(
+    xcn_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_3",
@@ -52,7 +52,7 @@ class XCN(BaseModel):
         title="Given Name",
     )
 
-    xcn_4: Optional[str] = Field(
+    xcn_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_4",
@@ -63,7 +63,7 @@ class XCN(BaseModel):
         title="Second and Further Given Names or Initials Thereof",
     )
 
-    xcn_5: Optional[str] = Field(
+    xcn_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_5",
@@ -74,7 +74,7 @@ class XCN(BaseModel):
         title="Suffix (e.g., JR or III)",
     )
 
-    xcn_6: Optional[str] = Field(
+    xcn_6: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_6",
@@ -85,7 +85,7 @@ class XCN(BaseModel):
         title="Prefix (e.g., DR)",
     )
 
-    xcn_7: Optional[str] = Field(
+    xcn_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_7",
@@ -96,7 +96,7 @@ class XCN(BaseModel):
         title="Degree (e.g., MD)",
     )
 
-    xcn_8: Optional[str] = Field(
+    xcn_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_8",
@@ -107,7 +107,7 @@ class XCN(BaseModel):
         title="Source Table",
     )
 
-    xcn_9: Optional[HD] = Field(
+    xcn_9: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_9",
@@ -118,7 +118,7 @@ class XCN(BaseModel):
         title="Assigning Authority",
     )
 
-    xcn_10: Optional[str] = Field(
+    xcn_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_10",
@@ -129,7 +129,7 @@ class XCN(BaseModel):
         title="Name Type Code",
     )
 
-    xcn_11: Optional[str] = Field(
+    xcn_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_11",
@@ -140,7 +140,7 @@ class XCN(BaseModel):
         title="Identifier Check Digit",
     )
 
-    xcn_12: Optional[str] = Field(
+    xcn_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_12",
@@ -151,7 +151,7 @@ class XCN(BaseModel):
         title="Check Digit Scheme",
     )
 
-    xcn_13: Optional[str] = Field(
+    xcn_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_13",
@@ -162,7 +162,7 @@ class XCN(BaseModel):
         title="Identifier Type Code",
     )
 
-    xcn_14: Optional[HD] = Field(
+    xcn_14: HD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_14",
@@ -173,7 +173,7 @@ class XCN(BaseModel):
         title="Assigning Facility",
     )
 
-    xcn_15: Optional[str] = Field(
+    xcn_15: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_15",
@@ -184,7 +184,7 @@ class XCN(BaseModel):
         title="Name Representation Code",
     )
 
-    xcn_16: Optional[CWE] = Field(
+    xcn_16: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_16",
@@ -195,7 +195,7 @@ class XCN(BaseModel):
         title="Name Context",
     )
 
-    xcn_17: Optional[DR] = Field(
+    xcn_17: DR | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_17",
@@ -206,7 +206,7 @@ class XCN(BaseModel):
         title="Name Validity Range",
     )
 
-    xcn_18: Optional[str] = Field(
+    xcn_18: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_18",
@@ -217,7 +217,7 @@ class XCN(BaseModel):
         title="Name Assembly Order",
     )
 
-    xcn_19: Optional[str] = Field(
+    xcn_19: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_19",
@@ -228,7 +228,7 @@ class XCN(BaseModel):
         title="Effective Date",
     )
 
-    xcn_20: Optional[str] = Field(
+    xcn_20: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_20",
@@ -239,7 +239,7 @@ class XCN(BaseModel):
         title="Expiration Date",
     )
 
-    xcn_21: Optional[str] = Field(
+    xcn_21: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_21",
@@ -250,7 +250,7 @@ class XCN(BaseModel):
         title="Professional Suffix",
     )
 
-    xcn_22: Optional[CWE] = Field(
+    xcn_22: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_22",
@@ -261,7 +261,7 @@ class XCN(BaseModel):
         title="Assigning Jurisdiction",
     )
 
-    xcn_23: Optional[CWE] = Field(
+    xcn_23: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "xcn_23",

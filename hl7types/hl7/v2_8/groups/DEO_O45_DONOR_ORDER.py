@@ -5,14 +5,13 @@ Version: 2.8
 Class: DEO_O45.DONOR_ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
-
 from .DEO_O45_DONOR_OBSERVATION import DEO_O45_DONOR_OBSERVATION
 
 _DEO_O45_DONOR_OBSERVATION = DEO_O45_DONOR_OBSERVATION
@@ -35,13 +34,13 @@ class DEO_O45_DONOR_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    DONOR_OBSERVATION: Optional[List[_DEO_O45_DONOR_OBSERVATION]] = Field(
+    DONOR_OBSERVATION: list[_DEO_O45_DONOR_OBSERVATION] | None = Field(
         default=None,
         title="DONOR_OBSERVATION",
         description="Optional, repeating",

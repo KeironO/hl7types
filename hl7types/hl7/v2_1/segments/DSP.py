@@ -5,9 +5,9 @@ Version: 2.1
 Class: DSP
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.TX import TX
@@ -16,7 +16,7 @@ from ..datatypes.TX import TX
 class DSP(BaseModel):
     """HL7 v2 DSP segment."""
 
-    dsp_1: Optional[str] = Field(
+    dsp_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dsp_1",
@@ -28,7 +28,7 @@ class DSP(BaseModel):
         description="Item #570",
     )
 
-    dsp_2: Optional[str] = Field(
+    dsp_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dsp_2",
@@ -52,7 +52,7 @@ class DSP(BaseModel):
         description="Item #153",
     )
 
-    dsp_4: Optional[str] = Field(
+    dsp_4: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dsp_4",
@@ -64,7 +64,7 @@ class DSP(BaseModel):
         description="Item #154",
     )
 
-    dsp_5: Optional[TX] = Field(
+    dsp_5: TX | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "dsp_5",

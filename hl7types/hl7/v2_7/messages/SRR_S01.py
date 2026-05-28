@@ -5,16 +5,15 @@ Version: 2.7
 Class: SRR_S01
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.SRR_S01_SCHEDULE import SRR_S01_SCHEDULE
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
-
-from ..groups.SRR_S01_SCHEDULE import SRR_S01_SCHEDULE
 
 _ERR = ERR
 _MSA = MSA
@@ -44,13 +43,13 @@ class SRR_S01(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    SCHEDULE: Optional[_SRR_S01_SCHEDULE] = Field(
+    SCHEDULE: _SRR_S01_SCHEDULE | None = Field(
         default=None,
         title="SCHEDULE",
         description="Optional",

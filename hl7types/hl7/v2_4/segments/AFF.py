@@ -5,9 +5,9 @@ Version: 2.4
 Class: AFF
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.DR import DR
@@ -42,7 +42,7 @@ class AFF(BaseModel):
         description="Item #1444",
     )
 
-    aff_3: Optional[XAD] = Field(
+    aff_3: XAD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aff_3",
@@ -54,7 +54,7 @@ class AFF(BaseModel):
         description="Item #1445",
     )
 
-    aff_4: Optional[List[DR]] = Field(
+    aff_4: list[DR] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aff_4",
@@ -66,7 +66,7 @@ class AFF(BaseModel):
         description="Item #1446",
     )
 
-    aff_5: Optional[str] = Field(
+    aff_5: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "aff_5",

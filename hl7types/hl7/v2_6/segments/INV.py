@@ -5,9 +5,9 @@ Version: 2.6
 Class: INV
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CQ import CQ
@@ -30,7 +30,7 @@ class INV(BaseModel):
         description="Item #1372 | Table HL70451",
     )
 
-    inv_2: List[CWE] = Field(
+    inv_2: list[CWE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "inv_2",
@@ -42,7 +42,7 @@ class INV(BaseModel):
         description="Item #1373 | Table HL70383",
     )
 
-    inv_3: Optional[CWE] = Field(
+    inv_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_3",
@@ -54,7 +54,7 @@ class INV(BaseModel):
         description="Item #1374 | Table HL70384",
     )
 
-    inv_4: Optional[CWE] = Field(
+    inv_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_4",
@@ -66,7 +66,7 @@ class INV(BaseModel):
         description="Item #1532 | Table HL79999",
     )
 
-    inv_5: Optional[CWE] = Field(
+    inv_5: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_5",
@@ -78,7 +78,7 @@ class INV(BaseModel):
         description="Item #1376 | Table HL79999",
     )
 
-    inv_6: Optional[CWE] = Field(
+    inv_6: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_6",
@@ -90,7 +90,7 @@ class INV(BaseModel):
         description="Item #1377 | Table HL79999",
     )
 
-    inv_7: Optional[str] = Field(
+    inv_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_7",
@@ -102,7 +102,7 @@ class INV(BaseModel):
         description="Item #1378",
     )
 
-    inv_8: Optional[str] = Field(
+    inv_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_8",
@@ -114,7 +114,7 @@ class INV(BaseModel):
         description="Item #1379",
     )
 
-    inv_9: Optional[str] = Field(
+    inv_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_9",
@@ -126,7 +126,7 @@ class INV(BaseModel):
         description="Item #1380",
     )
 
-    inv_10: Optional[str] = Field(
+    inv_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_10",
@@ -138,7 +138,7 @@ class INV(BaseModel):
         description="Item #1381",
     )
 
-    inv_11: Optional[CWE] = Field(
+    inv_11: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_11",
@@ -150,7 +150,7 @@ class INV(BaseModel):
         description="Item #1382 | Table HL79999",
     )
 
-    inv_12: Optional[str] = Field(
+    inv_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_12",
@@ -162,7 +162,7 @@ class INV(BaseModel):
         description="Item #1383",
     )
 
-    inv_13: Optional[str] = Field(
+    inv_13: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_13",
@@ -174,7 +174,7 @@ class INV(BaseModel):
         description="Item #1384",
     )
 
-    inv_14: Optional[TQ] = Field(
+    inv_14: TQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_14",
@@ -186,7 +186,7 @@ class INV(BaseModel):
         description="Item #1385",
     )
 
-    inv_15: Optional[List[CWE]] = Field(
+    inv_15: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_15",
@@ -198,7 +198,7 @@ class INV(BaseModel):
         description="Item #1386 | Table HL79999",
     )
 
-    inv_16: Optional[str] = Field(
+    inv_16: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_16",
@@ -210,7 +210,7 @@ class INV(BaseModel):
         description="Item #1387",
     )
 
-    inv_17: Optional[CWE] = Field(
+    inv_17: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_17",
@@ -222,7 +222,7 @@ class INV(BaseModel):
         description="Item #286 | Table HL70385",
     )
 
-    inv_18: Optional[CWE] = Field(
+    inv_18: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_18",
@@ -234,7 +234,7 @@ class INV(BaseModel):
         description="Item #1389 | Table HL70386",
     )
 
-    inv_19: Optional[CQ] = Field(
+    inv_19: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_19",
@@ -246,7 +246,7 @@ class INV(BaseModel):
         description="Item #1626",
     )
 
-    inv_20: Optional[CQ] = Field(
+    inv_20: CQ | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "inv_20",

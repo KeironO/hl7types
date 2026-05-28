@@ -5,9 +5,9 @@ Version: 2.6
 Class: RSP_K22.QUERY_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NK1 import NK1
@@ -37,19 +37,19 @@ class RSP_K22_QUERY_RESPONSE(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    QRI: Optional[_QRI] = Field(
+    QRI: _QRI | None = Field(
         default=None,
         title="QRI",
         description="Optional",

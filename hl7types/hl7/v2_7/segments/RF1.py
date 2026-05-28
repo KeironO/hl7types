@@ -5,9 +5,9 @@ Version: 2.7
 Class: RF1
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -17,7 +17,7 @@ from ..datatypes.EI import EI
 class RF1(BaseModel):
     """HL7 v2 RF1 segment."""
 
-    rf1_1: Optional[CWE] = Field(
+    rf1_1: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_1",
@@ -29,7 +29,7 @@ class RF1(BaseModel):
         description="Item #1137 | Table HL70283",
     )
 
-    rf1_2: Optional[CWE] = Field(
+    rf1_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_2",
@@ -41,7 +41,7 @@ class RF1(BaseModel):
         description="Item #1138 | Table HL70280",
     )
 
-    rf1_3: Optional[CWE] = Field(
+    rf1_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_3",
@@ -53,7 +53,7 @@ class RF1(BaseModel):
         description="Item #1139 | Table HL70281",
     )
 
-    rf1_4: Optional[List[CWE]] = Field(
+    rf1_4: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_4",
@@ -65,7 +65,7 @@ class RF1(BaseModel):
         description="Item #1140 | Table HL70282",
     )
 
-    rf1_5: Optional[CWE] = Field(
+    rf1_5: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_5",
@@ -89,7 +89,7 @@ class RF1(BaseModel):
         description="Item #1142",
     )
 
-    rf1_7: Optional[str] = Field(
+    rf1_7: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_7",
@@ -101,7 +101,7 @@ class RF1(BaseModel):
         description="Item #1143",
     )
 
-    rf1_8: Optional[str] = Field(
+    rf1_8: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_8",
@@ -113,7 +113,7 @@ class RF1(BaseModel):
         description="Item #1144",
     )
 
-    rf1_9: Optional[str] = Field(
+    rf1_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_9",
@@ -125,7 +125,7 @@ class RF1(BaseModel):
         description="Item #1145",
     )
 
-    rf1_10: Optional[List[CWE]] = Field(
+    rf1_10: list[CWE] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_10",
@@ -137,7 +137,7 @@ class RF1(BaseModel):
         description="Item #1228 | Table HL70336",
     )
 
-    rf1_11: Optional[List[EI]] = Field(
+    rf1_11: list[EI] | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_11",
@@ -149,7 +149,7 @@ class RF1(BaseModel):
         description="Item #1300",
     )
 
-    rf1_12: Optional[CWE] = Field(
+    rf1_12: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rf1_12",

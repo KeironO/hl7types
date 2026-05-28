@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: BRP_O30.RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from .BRP_O30_PATIENT import BRP_O30_PATIENT
@@ -22,7 +22,7 @@ class BRP_O30_RESPONSE(BaseModel):
         PATIENT (Optional[BRP_O30_PATIENT]): optional
     """
 
-    PATIENT: Optional[_BRP_O30_PATIENT] = Field(
+    PATIENT: _BRP_O30_PATIENT | None = Field(
         default=None,
         title="PATIENT",
         description="Optional",

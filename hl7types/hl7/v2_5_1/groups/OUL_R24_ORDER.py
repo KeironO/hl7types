@@ -5,16 +5,15 @@ Version: 2.5.1
 Class: OUL_R24.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .OUL_R24_OBXTCDSIDNTE_SUPPGRP import OUL_R24_OBXTCDSIDNTE_SUPPGRP
 from .OUL_R24_SPMOBXSACINV_SUPPGRP import OUL_R24_SPMOBXSACINV_SUPPGRP
 from .OUL_R24_TQ1TQ2_SUPPGRP import OUL_R24_TQ1TQ2_SUPPGRP
@@ -47,37 +46,37 @@ class OUL_R24_ORDER(BaseModel):
         description="Required",
     )
 
-    ORC: Optional[_ORC] = Field(
+    ORC: _ORC | None = Field(
         default=None,
         title="ORC",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TQ1TQ2_SUPPGRP: Optional[List[_OUL_R24_TQ1TQ2_SUPPGRP]] = Field(
+    TQ1TQ2_SUPPGRP: list[_OUL_R24_TQ1TQ2_SUPPGRP] | None = Field(
         default=None,
         title="TQ1TQ2_SUPPGRP",
         description="Optional, repeating",
     )
 
-    SPMOBXSACINV_SUPPGRP: Optional[List[_OUL_R24_SPMOBXSACINV_SUPPGRP]] = Field(
+    SPMOBXSACINV_SUPPGRP: list[_OUL_R24_SPMOBXSACINV_SUPPGRP] | None = Field(
         default=None,
         title="SPMOBXSACINV_SUPPGRP",
         description="Optional, repeating",
     )
 
-    OBXTCDSIDNTE_SUPPGRP: Optional[List[_OUL_R24_OBXTCDSIDNTE_SUPPGRP]] = Field(
+    OBXTCDSIDNTE_SUPPGRP: list[_OUL_R24_OBXTCDSIDNTE_SUPPGRP] | None = Field(
         default=None,
         title="OBXTCDSIDNTE_SUPPGRP",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

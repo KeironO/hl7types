@@ -5,9 +5,9 @@ Version: 2.3.1
 Class: DOC_T12.RESULT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.EVN import EVN
@@ -34,7 +34,7 @@ class DOC_T12_RESULT(BaseModel):
         OBX (Optional[List[OBX]]): optional
     """
 
-    EVN: Optional[_EVN] = Field(
+    EVN: _EVN | None = Field(
         default=None,
         title="EVN",
         description="Optional",
@@ -58,7 +58,7 @@ class DOC_T12_RESULT(BaseModel):
         description="Required",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

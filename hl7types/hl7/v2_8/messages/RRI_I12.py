@@ -5,11 +5,16 @@ Version: 2.8
 Class: RRI_I12
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RRI_I12_AUTHORIZATION_CONTACT2 import RRI_I12_AUTHORIZATION_CONTACT2
+from ..groups.RRI_I12_OBSERVATION import RRI_I12_OBSERVATION
+from ..groups.RRI_I12_PATIENT_VISIT import RRI_I12_PATIENT_VISIT
+from ..groups.RRI_I12_PROCEDURE import RRI_I12_PROCEDURE
+from ..groups.RRI_I12_PROVIDER_CONTACT import RRI_I12_PROVIDER_CONTACT
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
 from ..segments.DG1 import DG1
@@ -21,12 +26,6 @@ from ..segments.PID import PID
 from ..segments.RF1 import RF1
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.RRI_I12_AUTHORIZATION_CONTACT2 import RRI_I12_AUTHORIZATION_CONTACT2
-from ..groups.RRI_I12_OBSERVATION import RRI_I12_OBSERVATION
-from ..groups.RRI_I12_PATIENT_VISIT import RRI_I12_PATIENT_VISIT
-from ..groups.RRI_I12_PROCEDURE import RRI_I12_PROCEDURE
-from ..groups.RRI_I12_PROVIDER_CONTACT import RRI_I12_PROVIDER_CONTACT
 
 _ACC = ACC
 _AL1 = AL1
@@ -74,37 +73,37 @@ class RRI_I12(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
     )
 
-    MSA: Optional[_MSA] = Field(
+    MSA: _MSA | None = Field(
         default=None,
         title="MSA",
         description="Optional",
     )
 
-    RF1: Optional[_RF1] = Field(
+    RF1: _RF1 | None = Field(
         default=None,
         title="RF1",
         description="Optional",
     )
 
-    AUTHORIZATION_CONTACT2: Optional[_RRI_I12_AUTHORIZATION_CONTACT2] = Field(
+    AUTHORIZATION_CONTACT2: _RRI_I12_AUTHORIZATION_CONTACT2 | None = Field(
         default=None,
         title="AUTHORIZATION_CONTACT2",
         description="Optional",
     )
 
-    PROVIDER_CONTACT: List[_RRI_I12_PROVIDER_CONTACT] = Field(
+    PROVIDER_CONTACT: list[_RRI_I12_PROVIDER_CONTACT] = Field(
         default=...,
         title="PROVIDER_CONTACT",
         description="Required, repeating",
@@ -116,49 +115,49 @@ class RRI_I12(BaseModel):
         description="Required",
     )
 
-    ACC: Optional[_ACC] = Field(
+    ACC: _ACC | None = Field(
         default=None,
         title="ACC",
         description="Optional",
     )
 
-    DG1: Optional[List[_DG1]] = Field(
+    DG1: list[_DG1] | None = Field(
         default=None,
         title="DG1",
         description="Optional, repeating",
     )
 
-    DRG: Optional[List[_DRG]] = Field(
+    DRG: list[_DRG] | None = Field(
         default=None,
         title="DRG",
         description="Optional, repeating",
     )
 
-    AL1: Optional[List[_AL1]] = Field(
+    AL1: list[_AL1] | None = Field(
         default=None,
         title="AL1",
         description="Optional, repeating",
     )
 
-    PROCEDURE: Optional[List[_RRI_I12_PROCEDURE]] = Field(
+    PROCEDURE: list[_RRI_I12_PROCEDURE] | None = Field(
         default=None,
         title="PROCEDURE",
         description="Optional, repeating",
     )
 
-    OBSERVATION: Optional[List[_RRI_I12_OBSERVATION]] = Field(
+    OBSERVATION: list[_RRI_I12_OBSERVATION] | None = Field(
         default=None,
         title="OBSERVATION",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: Optional[_RRI_I12_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _RRI_I12_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",

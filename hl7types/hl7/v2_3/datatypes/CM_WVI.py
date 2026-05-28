@@ -5,16 +5,16 @@ Version: 2.3
 Class: CM_WVI
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_WVI(BaseModel):
     """HL7 v2 CM_WVI data type."""
 
-    cm_wvi_1: Optional[str] = Field(
+    cm_wvi_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_wvi_1",
@@ -25,7 +25,7 @@ class CM_WVI(BaseModel):
         title="Channel Number",
     )
 
-    cm_wvi_2: Optional[str] = Field(
+    cm_wvi_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_wvi_2",

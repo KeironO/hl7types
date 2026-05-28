@@ -5,16 +5,16 @@ Version: 2.5
 Class: MOP
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 
 class MOP(BaseModel):
     """HL7 v2 MOP data type."""
 
-    mop_1: Optional[str] = Field(
+    mop_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mop_1",
@@ -25,7 +25,7 @@ class MOP(BaseModel):
         title="Money or Percentage Indicator",
     )
 
-    mop_2: Optional[str] = Field(
+    mop_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mop_2",
@@ -36,7 +36,7 @@ class MOP(BaseModel):
         title="Money or Percentage Quantity",
     )
 
-    mop_3: Optional[str] = Field(
+    mop_3: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "mop_3",

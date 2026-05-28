@@ -5,9 +5,9 @@ Version: 2.5
 Class: PPV_PCA.GOAL_PATHWAY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.PTH import PTH
@@ -31,7 +31,7 @@ class PPV_PCA_GOAL_PATHWAY(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",

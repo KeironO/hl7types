@@ -5,11 +5,12 @@ Version: 2.5
 Class: RSP_Z88
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.RSP_Z88_QUERY_RESPONSE import RSP_Z88_QUERY_RESPONSE
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -18,8 +19,6 @@ from ..segments.QAK import QAK
 from ..segments.QPD import QPD
 from ..segments.RCP import RCP
 from ..segments.SFT import SFT
-
-from ..groups.RSP_Z88_QUERY_RESPONSE import RSP_Z88_QUERY_RESPONSE
 
 _DSC = DSC
 _ERR = ERR
@@ -53,7 +52,7 @@ class RSP_Z88(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
@@ -65,7 +64,7 @@ class RSP_Z88(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[_ERR] = Field(
+    ERR: _ERR | None = Field(
         default=None,
         title="ERR",
         description="Optional",
@@ -89,7 +88,7 @@ class RSP_Z88(BaseModel):
         description="Required",
     )
 
-    QUERY_RESPONSE: List[_RSP_Z88_QUERY_RESPONSE] = Field(
+    QUERY_RESPONSE: list[_RSP_Z88_QUERY_RESPONSE] = Field(
         default=...,
         title="QUERY_RESPONSE",
         description="Required, repeating",

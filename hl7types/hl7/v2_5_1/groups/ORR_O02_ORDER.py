@@ -5,15 +5,14 @@ Version: 2.5.1
 Class: ORR_O02.ORDER
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
 from ..segments.ORC import ORC
-
 from .ORR_O02_OBRRQDRQ1RXOODSODT_SUPPGRP import ORR_O02_OBRRQDRQ1RXOODSODT_SUPPGRP
 
 _CTI = CTI
@@ -44,13 +43,13 @@ class ORR_O02_ORDER(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTI: Optional[List[_CTI]] = Field(
+    CTI: list[_CTI] | None = Field(
         default=None,
         title="CTI",
         description="Optional, repeating",

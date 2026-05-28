@@ -5,9 +5,9 @@ Version: 2.5
 Class: RMI
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -17,7 +17,7 @@ from ..datatypes.TS import TS
 class RMI(BaseModel):
     """HL7 v2 RMI segment."""
 
-    rmi_1: Optional[CE] = Field(
+    rmi_1: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmi_1",
@@ -29,7 +29,7 @@ class RMI(BaseModel):
         description="Item #1530 | Table HL70427",
     )
 
-    rmi_2: Optional[TS] = Field(
+    rmi_2: TS | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmi_2",
@@ -41,7 +41,7 @@ class RMI(BaseModel):
         description="Item #1531",
     )
 
-    rmi_3: Optional[CE] = Field(
+    rmi_3: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rmi_3",

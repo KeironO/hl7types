@@ -5,9 +5,9 @@ Version: 2.2
 Class: RXA
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CE import CE
@@ -89,7 +89,7 @@ class RXA(BaseModel):
         description="Item #348",
     )
 
-    rxa_7: Optional[CE] = Field(
+    rxa_7: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_7",
@@ -101,7 +101,7 @@ class RXA(BaseModel):
         description="Item #349",
     )
 
-    rxa_8: Optional[CE] = Field(
+    rxa_8: CE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_8",
@@ -113,7 +113,7 @@ class RXA(BaseModel):
         description="Item #350",
     )
 
-    rxa_9: Optional[str] = Field(
+    rxa_9: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_9",
@@ -125,7 +125,7 @@ class RXA(BaseModel):
         description="Item #351",
     )
 
-    rxa_10: Optional[str] = Field(
+    rxa_10: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_10",
@@ -137,7 +137,7 @@ class RXA(BaseModel):
         description="Item #352",
     )
 
-    rxa_11: Optional[str] = Field(
+    rxa_11: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_11",
@@ -149,7 +149,7 @@ class RXA(BaseModel):
         description="Item #353",
     )
 
-    rxa_12: Optional[str] = Field(
+    rxa_12: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "rxa_12",

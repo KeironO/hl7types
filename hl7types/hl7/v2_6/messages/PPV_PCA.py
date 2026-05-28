@@ -5,11 +5,12 @@ Version: 2.6
 Class: PPV_PCA
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.PPV_PCA_PATIENT import PPV_PCA_PATIENT
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
@@ -17,8 +18,6 @@ from ..segments.QAK import QAK
 from ..segments.QRD import QRD
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.PPV_PCA_PATIENT import PPV_PCA_PATIENT
 
 _ERR = ERR
 _MSA = MSA
@@ -50,13 +49,13 @@ class PPV_PCA(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -68,13 +67,13 @@ class PPV_PCA(BaseModel):
         description="Required",
     )
 
-    ERR: Optional[List[_ERR]] = Field(
+    ERR: list[_ERR] | None = Field(
         default=None,
         title="ERR",
         description="Optional, repeating",
     )
 
-    QAK: Optional[_QAK] = Field(
+    QAK: _QAK | None = Field(
         default=None,
         title="QAK",
         description="Optional",
@@ -86,7 +85,7 @@ class PPV_PCA(BaseModel):
         description="Required",
     )
 
-    PATIENT: List[_PPV_PCA_PATIENT] = Field(
+    PATIENT: list[_PPV_PCA_PATIENT] = Field(
         default=...,
         title="PATIENT",
         description="Required, repeating",

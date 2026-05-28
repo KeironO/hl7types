@@ -5,9 +5,9 @@ Version: 2.2
 Class: CM_LA1
 Type: Datatype
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from .AD import AD
@@ -16,7 +16,7 @@ from .AD import AD
 class CM_LA1(BaseModel):
     """HL7 v2 CM_LA1 data type."""
 
-    cm_la1_1: Optional[str] = Field(
+    cm_la1_1: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_1",
@@ -27,7 +27,7 @@ class CM_LA1(BaseModel):
         title="Dispense / Deliver to Location",
     )
 
-    cm_la1_2: Optional[AD] = Field(
+    cm_la1_2: AD | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_la1_2",

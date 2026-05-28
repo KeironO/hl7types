@@ -5,16 +5,15 @@ Version: 2.4
 Class: OMG_O19.ORDER_PRIOR
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
 from ..segments.ORC import ORC
-
 from .OMG_O19_OBSERVATION_PRIOR import OMG_O19_OBSERVATION_PRIOR
 
 _CTD = CTD
@@ -35,7 +34,7 @@ class OMG_O19_ORDER_PRIOR(BaseModel):
         OBSERVATION_PRIOR (List[OMG_O19_OBSERVATION_PRIOR]): required
     """
 
-    ORC: Optional[_ORC] = Field(
+    ORC: _ORC | None = Field(
         default=None,
         title="ORC",
         description="Optional",
@@ -47,19 +46,19 @@ class OMG_O19_ORDER_PRIOR(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
     )
 
-    OBSERVATION_PRIOR: List[_OMG_O19_OBSERVATION_PRIOR] = Field(
+    OBSERVATION_PRIOR: list[_OMG_O19_OBSERVATION_PRIOR] = Field(
         default=...,
         title="OBSERVATION_PRIOR",
         description="Required, repeating",

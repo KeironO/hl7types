@@ -5,9 +5,9 @@ Version: 2.8.1
 Class: RSP_K31.ENCODING
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
@@ -15,7 +15,6 @@ from ..segments.PRT import PRT
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
-
 from .RSP_K31_TIMING_ENCODED import RSP_K31_TIMING_ENCODED
 
 _NTE = NTE
@@ -44,31 +43,31 @@ class RSP_K31_ENCODING(BaseModel):
         description="Required",
     )
 
-    PRT: Optional[List[_PRT]] = Field(
+    PRT: list[_PRT] | None = Field(
         default=None,
         title="PRT",
         description="Optional, repeating",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    TIMING_ENCODED: List[_RSP_K31_TIMING_ENCODED] = Field(
+    TIMING_ENCODED: list[_RSP_K31_TIMING_ENCODED] = Field(
         default=...,
         title="TIMING_ENCODED",
         description="Required, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",

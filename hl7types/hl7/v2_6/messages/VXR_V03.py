@@ -5,11 +5,14 @@ Version: 2.6
 Class: VXR_V03
 Type: Message
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
+from ..groups.VXR_V03_INSURANCE import VXR_V03_INSURANCE
+from ..groups.VXR_V03_ORDER import VXR_V03_ORDER
+from ..groups.VXR_V03_PATIENT_VISIT import VXR_V03_PATIENT_VISIT
 from ..segments.GT1 import GT1
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
@@ -20,10 +23,6 @@ from ..segments.QRD import QRD
 from ..segments.QRF import QRF
 from ..segments.SFT import SFT
 from ..segments.UAC import UAC
-
-from ..groups.VXR_V03_INSURANCE import VXR_V03_INSURANCE
-from ..groups.VXR_V03_ORDER import VXR_V03_ORDER
-from ..groups.VXR_V03_PATIENT_VISIT import VXR_V03_PATIENT_VISIT
 
 _GT1 = GT1
 _MSA = MSA
@@ -71,13 +70,13 @@ class VXR_V03(BaseModel):
         description="Required",
     )
 
-    SFT: Optional[List[_SFT]] = Field(
+    SFT: list[_SFT] | None = Field(
         default=None,
         title="SFT",
         description="Optional, repeating",
     )
 
-    UAC: Optional[_UAC] = Field(
+    UAC: _UAC | None = Field(
         default=None,
         title="UAC",
         description="Optional",
@@ -89,7 +88,7 @@ class VXR_V03(BaseModel):
         description="Required",
     )
 
-    QRF: Optional[_QRF] = Field(
+    QRF: _QRF | None = Field(
         default=None,
         title="QRF",
         description="Optional",
@@ -101,37 +100,37 @@ class VXR_V03(BaseModel):
         description="Required",
     )
 
-    PD1: Optional[_PD1] = Field(
+    PD1: _PD1 | None = Field(
         default=None,
         title="PD1",
         description="Optional",
     )
 
-    NK1: Optional[List[_NK1]] = Field(
+    NK1: list[_NK1] | None = Field(
         default=None,
         title="NK1",
         description="Optional, repeating",
     )
 
-    PATIENT_VISIT: Optional[_VXR_V03_PATIENT_VISIT] = Field(
+    PATIENT_VISIT: _VXR_V03_PATIENT_VISIT | None = Field(
         default=None,
         title="PATIENT_VISIT",
         description="Optional",
     )
 
-    GT1: Optional[List[_GT1]] = Field(
+    GT1: list[_GT1] | None = Field(
         default=None,
         title="GT1",
         description="Optional, repeating",
     )
 
-    INSURANCE: Optional[List[_VXR_V03_INSURANCE]] = Field(
+    INSURANCE: list[_VXR_V03_INSURANCE] | None = Field(
         default=None,
         title="INSURANCE",
         description="Optional, repeating",
     )
 
-    ORDER: Optional[List[_VXR_V03_ORDER]] = Field(
+    ORDER: list[_VXR_V03_ORDER] | None = Field(
         default=None,
         title="ORDER",
         description="Optional, repeating",

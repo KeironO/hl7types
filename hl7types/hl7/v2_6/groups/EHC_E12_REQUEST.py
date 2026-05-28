@@ -5,9 +5,9 @@ Version: 2.6
 Class: EHC_E12.REQUEST
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.CTD import CTD
@@ -31,7 +31,7 @@ class EHC_E12_REQUEST(BaseModel):
         OBX (Optional[List[OBX]]): optional
     """
 
-    CTD: Optional[_CTD] = Field(
+    CTD: _CTD | None = Field(
         default=None,
         title="CTD",
         description="Optional",
@@ -43,13 +43,13 @@ class EHC_E12_REQUEST(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[_NTE] = Field(
+    NTE: _NTE | None = Field(
         default=None,
         title="NTE",
         description="Optional",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

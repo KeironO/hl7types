@@ -5,14 +5,13 @@ Version: 2.8
 Class: EAR_U08.COMMAND_RESPONSE
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.ECD import ECD
 from ..segments.ECR import ECR
-
 from .EAR_U08_SPECIMEN_CONTAINER import EAR_U08_SPECIMEN_CONTAINER
 
 _EAR_U08_SPECIMEN_CONTAINER = EAR_U08_SPECIMEN_CONTAINER
@@ -35,7 +34,7 @@ class EAR_U08_COMMAND_RESPONSE(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_CONTAINER: Optional[_EAR_U08_SPECIMEN_CONTAINER] = Field(
+    SPECIMEN_CONTAINER: _EAR_U08_SPECIMEN_CONTAINER | None = Field(
         default=None,
         title="SPECIMEN_CONTAINER",
         description="Optional",

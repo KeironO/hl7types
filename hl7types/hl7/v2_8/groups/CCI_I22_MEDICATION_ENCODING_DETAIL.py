@@ -5,15 +5,14 @@ Version: 2.8
 Class: CCI_I22.MEDICATION_ENCODING_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.RXC import RXC
 from ..segments.RXE import RXE
 from ..segments.RXR import RXR
-
 from .CCI_I22_MEDICATION_ENCODING_OBSERVATION import CCI_I22_MEDICATION_ENCODING_OBSERVATION
 
 _CCI_I22_MEDICATION_ENCODING_OBSERVATION = CCI_I22_MEDICATION_ENCODING_OBSERVATION
@@ -38,19 +37,19 @@ class CCI_I22_MEDICATION_ENCODING_DETAIL(BaseModel):
         description="Required",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    RXC: Optional[List[_RXC]] = Field(
+    RXC: list[_RXC] | None = Field(
         default=None,
         title="RXC",
         description="Optional, repeating",
     )
 
-    MEDICATION_ENCODING_OBSERVATION: Optional[List[_CCI_I22_MEDICATION_ENCODING_OBSERVATION]] = Field(
+    MEDICATION_ENCODING_OBSERVATION: list[_CCI_I22_MEDICATION_ENCODING_OBSERVATION] | None = Field(
         default=None,
         title="MEDICATION_ENCODING_OBSERVATION",
         description="Optional, repeating",

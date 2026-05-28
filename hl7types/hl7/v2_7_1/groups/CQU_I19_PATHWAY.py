@@ -5,15 +5,14 @@ Version: 2.7.1
 Class: CQU_I19.PATHWAY
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.OBX import OBX
 from ..segments.PTH import PTH
 from ..segments.VAR import VAR
-
 from .CQU_I19_ROLE_PATHWAY import CQU_I19_ROLE_PATHWAY
 
 _CQU_I19_ROLE_PATHWAY = CQU_I19_ROLE_PATHWAY
@@ -38,19 +37,19 @@ class CQU_I19_PATHWAY(BaseModel):
         description="Required",
     )
 
-    VAR: Optional[List[_VAR]] = Field(
+    VAR: list[_VAR] | None = Field(
         default=None,
         title="VAR",
         description="Optional, repeating",
     )
 
-    ROLE_PATHWAY: Optional[List[_CQU_I19_ROLE_PATHWAY]] = Field(
+    ROLE_PATHWAY: list[_CQU_I19_ROLE_PATHWAY] | None = Field(
         default=None,
         title="ROLE_PATHWAY",
         description="Optional, repeating",
     )
 
-    OBX: Optional[List[_OBX]] = Field(
+    OBX: list[_OBX] | None = Field(
         default=None,
         title="OBX",
         description="Optional, repeating",

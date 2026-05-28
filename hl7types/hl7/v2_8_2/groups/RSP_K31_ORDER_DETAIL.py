@@ -5,15 +5,14 @@ Version: 2.8.2
 Class: RSP_K31.ORDER_DETAIL
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RXO import RXO
 from ..segments.RXR import RXR
-
 from .RSP_K31_COMPONENTS import RSP_K31_COMPONENTS
 
 _NTE = NTE
@@ -38,19 +37,19 @@ class RSP_K31_ORDER_DETAIL(BaseModel):
         description="Required",
     )
 
-    NTE: Optional[List[_NTE]] = Field(
+    NTE: list[_NTE] | None = Field(
         default=None,
         title="NTE",
         description="Optional, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENTS: Optional[List[_RSP_K31_COMPONENTS]] = Field(
+    COMPONENTS: list[_RSP_K31_COMPONENTS] | None = Field(
         default=None,
         title="COMPONENTS",
         description="Optional, repeating",

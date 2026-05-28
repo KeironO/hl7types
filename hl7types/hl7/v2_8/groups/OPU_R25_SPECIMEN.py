@@ -5,13 +5,12 @@ Version: 2.8
 Class: OPU_R25.SPECIMEN
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.SPM import SPM
-
 from .OPU_R25_CONTAINER import OPU_R25_CONTAINER
 from .OPU_R25_ORDER import OPU_R25_ORDER
 from .OPU_R25_SPECIMEN_OBSERVATION import OPU_R25_SPECIMEN_OBSERVATION
@@ -38,19 +37,19 @@ class OPU_R25_SPECIMEN(BaseModel):
         description="Required",
     )
 
-    SPECIMEN_OBSERVATION: Optional[List[_OPU_R25_SPECIMEN_OBSERVATION]] = Field(
+    SPECIMEN_OBSERVATION: list[_OPU_R25_SPECIMEN_OBSERVATION] | None = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
         description="Optional, repeating",
     )
 
-    CONTAINER: Optional[List[_OPU_R25_CONTAINER]] = Field(
+    CONTAINER: list[_OPU_R25_CONTAINER] | None = Field(
         default=None,
         title="CONTAINER",
         description="Optional, repeating",
     )
 
-    ORDER: List[_OPU_R25_ORDER] = Field(
+    ORDER: list[_OPU_R25_ORDER] = Field(
         default=...,
         title="ORDER",
         description="Required, repeating",

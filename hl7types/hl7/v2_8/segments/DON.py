@@ -5,9 +5,9 @@ Version: 2.8
 Class: DON
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CNE import CNE
@@ -20,7 +20,7 @@ from ..datatypes.XPN import XPN
 class DON(BaseModel):
     """HL7 v2 DON segment."""
 
-    don_1: Optional[EI] = Field(
+    don_1: EI | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "don_1",
@@ -32,7 +32,7 @@ class DON(BaseModel):
         description="Item #3340",
     )
 
-    don_2: Optional[CNE] = Field(
+    don_2: CNE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "don_2",
@@ -92,7 +92,7 @@ class DON(BaseModel):
         description="Item #3345 | Table HL70932",
     )
 
-    don_7: List[CNE] = Field(
+    don_7: list[CNE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "don_7",
@@ -104,7 +104,7 @@ class DON(BaseModel):
         description="Item #3346 | Table HL70933",
     )
 
-    don_8: List[CNE] = Field(
+    don_8: list[CNE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "don_8",
@@ -128,7 +128,7 @@ class DON(BaseModel):
         description="Item #3348 | Table HL70136",
     )
 
-    don_10: List[CNE] = Field(
+    don_10: list[CNE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "don_10",
@@ -176,7 +176,7 @@ class DON(BaseModel):
         description="Item #3352 | Table HL70935",
     )
 
-    don_14: List[CNE] = Field(
+    don_14: list[CNE] = Field(
         default=...,
         validation_alias=AliasChoices(
             "don_14",
@@ -380,7 +380,7 @@ class DON(BaseModel):
         description="Item #3369",
     )
 
-    don_31: List[EI] = Field(
+    don_31: list[EI] = Field(
         default=...,
         validation_alias=AliasChoices(
             "don_31",
@@ -404,7 +404,7 @@ class DON(BaseModel):
         description="Item #3371",
     )
 
-    don_33: List[XCN] = Field(
+    don_33: list[XCN] = Field(
         default=...,
         validation_alias=AliasChoices(
             "don_33",

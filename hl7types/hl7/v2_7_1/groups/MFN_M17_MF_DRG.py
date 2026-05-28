@@ -5,9 +5,9 @@ Version: 2.7.1
 Class: MFN_M17.MF_DRG
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import BaseModel, Field
 
 from ..segments.DMI import DMI

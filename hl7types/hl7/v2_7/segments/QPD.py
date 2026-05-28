@@ -5,9 +5,9 @@ Version: 2.7
 Class: QPD
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -29,7 +29,7 @@ class QPD(BaseModel):
         description="Item #1375 | Table HL70471",
     )
 
-    qpd_2: Optional[str] = Field(
+    qpd_2: str | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qpd_2",
@@ -41,7 +41,7 @@ class QPD(BaseModel):
         description="Item #696",
     )
 
-    qpd_3: Optional[varies] = Field(
+    qpd_3: varies | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "qpd_3",

@@ -5,14 +5,13 @@ Version: 2.7.1
 Class: RDS_O13.ORDER_DETAIL_SUPPLEMENT
 Type: Group
 """
+
 from __future__ import annotations
 
-from typing import Optional, List
 from pydantic import BaseModel, Field
 
 from ..segments.NTE import NTE
 from ..segments.RXR import RXR
-
 from .RDS_O13_COMPONENT import RDS_O13_COMPONENT
 
 _NTE = NTE
@@ -29,19 +28,19 @@ class RDS_O13_ORDER_DETAIL_SUPPLEMENT(BaseModel):
         COMPONENT (Optional[List[RDS_O13_COMPONENT]]): optional
     """
 
-    NTE: List[_NTE] = Field(
+    NTE: list[_NTE] = Field(
         default=...,
         title="NTE",
         description="Required, repeating",
     )
 
-    RXR: List[_RXR] = Field(
+    RXR: list[_RXR] = Field(
         default=...,
         title="RXR",
         description="Required, repeating",
     )
 
-    COMPONENT: Optional[List[_RDS_O13_COMPONENT]] = Field(
+    COMPONENT: list[_RDS_O13_COMPONENT] | None = Field(
         default=None,
         title="COMPONENT",
         description="Optional, repeating",

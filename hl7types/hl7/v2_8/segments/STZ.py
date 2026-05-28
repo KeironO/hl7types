@@ -5,9 +5,9 @@ Version: 2.8
 Class: STZ
 Type: Segment
 """
+
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, BaseModel, Field
 
 from ..datatypes.CWE import CWE
@@ -16,7 +16,7 @@ from ..datatypes.CWE import CWE
 class STZ(BaseModel):
     """HL7 v2 STZ segment."""
 
-    stz_1: Optional[CWE] = Field(
+    stz_1: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stz_1",
@@ -28,7 +28,7 @@ class STZ(BaseModel):
         description="Item #2213 | Table HL70806",
     )
 
-    stz_2: Optional[CWE] = Field(
+    stz_2: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stz_2",
@@ -40,7 +40,7 @@ class STZ(BaseModel):
         description="Item #2214 | Table HL70702",
     )
 
-    stz_3: Optional[CWE] = Field(
+    stz_3: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stz_3",
@@ -52,7 +52,7 @@ class STZ(BaseModel):
         description="Item #2215 | Table HL70809",
     )
 
-    stz_4: Optional[CWE] = Field(
+    stz_4: CWE | None = Field(
         default=None,
         validation_alias=AliasChoices(
             "stz_4",
