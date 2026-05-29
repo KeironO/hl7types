@@ -12,7 +12,28 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CD(BaseModel):
-    """HL7 v2 CD data type."""
+    """HL7 v2 CD data type.
+
+    Attributes
+    ----------
+    cd_1 : str | None
+        CD.1 (opt) - channel identifier (CM)
+
+    cd_2 : str | None
+        CD.2 (opt) - electrode names (CM)
+
+    cd_3 : str | None
+        CD.3 (opt) - channel sensitivity/units (CM)
+
+    cd_4 : str | None
+        CD.4 (opt) - calibration parameters (CM)
+
+    cd_5 : str | None
+        CD.5 (opt) - sampling frequency (NM)
+
+    cd_6 : str | None
+        CD.6 (opt) - minimum/maximum data values (CM)
+    """
 
     cd_1: Optional[str] = Field(
         default=None,

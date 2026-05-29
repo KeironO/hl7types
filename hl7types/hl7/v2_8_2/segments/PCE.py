@@ -16,7 +16,22 @@ from ..datatypes.CX import CX
 
 
 class PCE(BaseModel):
-    """HL7 v2 PCE segment."""
+    """HL7 v2 PCE segment.
+
+    Attributes
+    ----------
+    pce_1 : str
+        PCE.1 (req) - Set ID - PCE (SI)
+
+    pce_2 : CX | None
+        PCE.2 (opt) - Cost Center Account Number (CX)
+
+    pce_3 : CWE | None
+        PCE.3 (opt) - Transaction Code (CWE)
+
+    pce_4 : CP | None
+        PCE.4 (opt) - Transaction amount - unit (CP)
+    """
 
     pce_1: str = Field(
         default=...,

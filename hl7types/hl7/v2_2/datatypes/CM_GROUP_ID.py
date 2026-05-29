@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_GROUP_ID(BaseModel):
-    """HL7 v2 CM_GROUP_ID data type."""
+    """HL7 v2 CM_GROUP_ID data type.
+
+    Attributes
+    ----------
+    cm_group_id_1 : str | None
+        CM_GROUP_ID.1 (opt) - unique group id (ID)
+
+    cm_group_id_2 : str | None
+        CM_GROUP_ID.2 (opt) - placer application id (ID)
+    """
 
     cm_group_id_1: Optional[str] = Field(
         default=None,

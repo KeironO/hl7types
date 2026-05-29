@@ -20,7 +20,49 @@ from ..datatypes.XTN import XTN
 
 
 class PES(BaseModel):
-    """HL7 v2 PES segment."""
+    """HL7 v2 PES segment.
+
+    Attributes
+    ----------
+    pes_1 : XON | None
+        PES.1 (opt) - Sender Organization Name (XON)
+
+    pes_2 : list[XCN] | None
+        PES.2 (opt, rep) - Sender Individual Name (XCN)
+
+    pes_3 : list[XAD] | None
+        PES.3 (opt, rep) - Sender Address (XAD)
+
+    pes_4 : list[XTN] | None
+        PES.4 (opt, rep) - Sender Telephone (XTN)
+
+    pes_5 : EI | None
+        PES.5 (opt) - Sender Event Identifier (EI)
+
+    pes_6 : str | None
+        PES.6 (opt) - Sender Sequence Number (NM)
+
+    pes_7 : list[FT] | None
+        PES.7 (opt, rep) - Sender Event Description (FT)
+
+    pes_8 : FT | None
+        PES.8 (opt) - Sender Comment (FT)
+
+    pes_9 : TS | None
+        PES.9 (opt) - Sender Aware Date/Time (TS)
+
+    pes_10 : TS
+        PES.10 (req) - Event Report Date (TS)
+
+    pes_11 : list[str] | None
+        PES.11 (opt, rep) - Event Report Timing/Type (ID)
+
+    pes_12 : str | None
+        PES.12 (opt) - Event Report Source (ID)
+
+    pes_13 : list[str] | None
+        PES.13 (opt, rep) - Event Reported To (ID)
+    """
 
     pes_1: Optional[XON] = Field(
         default=None,

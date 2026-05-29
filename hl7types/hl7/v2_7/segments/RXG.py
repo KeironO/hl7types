@@ -17,7 +17,97 @@ from ..datatypes.XAD import XAD
 
 
 class RXG(BaseModel):
-    """HL7 v2 RXG segment."""
+    """HL7 v2 RXG segment.
+
+    Attributes
+    ----------
+    rxg_1 : str
+        RXG.1 (req) - Give Sub-ID Counter (NM)
+
+    rxg_2 : str | None
+        RXG.2 (opt) - Dispense Sub-ID Counter (NM)
+
+    rxg_4 : CWE
+        RXG.4 (req) - Give Code (CWE)
+
+    rxg_5 : str
+        RXG.5 (req) - Give Amount - Minimum (NM)
+
+    rxg_6 : str | None
+        RXG.6 (opt) - Give Amount - Maximum (NM)
+
+    rxg_7 : CWE
+        RXG.7 (req) - Give Units (CWE)
+
+    rxg_8 : CWE | None
+        RXG.8 (opt) - Give Dosage Form (CWE)
+
+    rxg_9 : list[CWE] | None
+        RXG.9 (opt, rep) - Administration Notes (CWE)
+
+    rxg_10 : str | None
+        RXG.10 (opt) - Substitution Status (ID)
+
+    rxg_11 : LA2 | None
+        RXG.11 (opt) - Dispense-to Location (LA2)
+
+    rxg_12 : str | None
+        RXG.12 (opt) - Needs Human Review (ID)
+
+    rxg_13 : list[CWE] | None
+        RXG.13 (opt, rep) - Pharmacy/Treatment Supplier's Special Administration Instructions (CWE)
+
+    rxg_14 : str | None
+        RXG.14 (opt) - Give Per (Time Unit) (ST)
+
+    rxg_15 : str | None
+        RXG.15 (opt) - Give Rate Amount (ST)
+
+    rxg_16 : CWE | None
+        RXG.16 (opt) - Give Rate Units (CWE)
+
+    rxg_17 : str | None
+        RXG.17 (opt) - Give Strength (NM)
+
+    rxg_18 : CWE | None
+        RXG.18 (opt) - Give Strength Units (CWE)
+
+    rxg_19 : list[str] | None
+        RXG.19 (opt, rep) - Substance Lot Number (ST)
+
+    rxg_20 : list[str] | None
+        RXG.20 (opt, rep) - Substance Expiration Date (DTM)
+
+    rxg_21 : list[CWE] | None
+        RXG.21 (opt, rep) - Substance Manufacturer Name (CWE)
+
+    rxg_22 : list[CWE] | None
+        RXG.22 (opt, rep) - Indication (CWE)
+
+    rxg_23 : str | None
+        RXG.23 (opt) - Give Drug Strength Volume (NM)
+
+    rxg_24 : CWE | None
+        RXG.24 (opt) - Give Drug Strength Volume Units (CWE)
+
+    rxg_25 : CWE | None
+        RXG.25 (opt) - Give Barcode Identifier (CWE)
+
+    rxg_26 : str | None
+        RXG.26 (opt) - Pharmacy Order Type (ID)
+
+    rxg_27 : CWE | None
+        RXG.27 (opt) - Dispense to Pharmacy (CWE)
+
+    rxg_28 : XAD | None
+        RXG.28 (opt) - Dispense to Pharmacy Address (XAD)
+
+    rxg_29 : PL | None
+        RXG.29 (opt) - Deliver-to Patient Location (PL)
+
+    rxg_30 : XAD | None
+        RXG.30 (opt) - Deliver-to Address (XAD)
+    """
 
     rxg_1: str = Field(
         default=...,

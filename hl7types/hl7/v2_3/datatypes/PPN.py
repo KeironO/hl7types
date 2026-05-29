@@ -15,7 +15,55 @@ from .TS import TS
 
 
 class PPN(BaseModel):
-    """HL7 v2 PPN data type."""
+    """HL7 v2 PPN data type.
+
+    Attributes
+    ----------
+    ppn_1 : str | None
+        PPN.1 (opt) - ID number (ST)
+
+    ppn_2 : str | None
+        PPN.2 (opt) - family name (ST)
+
+    ppn_3 : str | None
+        PPN.3 (opt) - given name (ST)
+
+    ppn_4 : str | None
+        PPN.4 (opt) - middle initial or name (ST)
+
+    ppn_5 : str | None
+        PPN.5 (opt) - suffix (e.g., JR or III) (ST)
+
+    ppn_6 : str | None
+        PPN.6 (opt) - prefix (e.g., DR) (ST)
+
+    ppn_7 : str | None
+        PPN.7 (opt) - degree (e.g., MD) (ST)
+
+    ppn_8 : str | None
+        PPN.8 (opt) - source table (ID)
+
+    ppn_9 : HD | None
+        PPN.9 (opt) - assigning authority (HD)
+
+    ppn_10 : str | None
+        PPN.10 (opt) - name type code (ID)
+
+    ppn_11 : str | None
+        PPN.11 (opt) - identifier check digit (ST)
+
+    ppn_12 : str | None
+        PPN.12 (opt) - code identifying the check digit scheme employed (ID)
+
+    ppn_13 : str | None
+        PPN.13 (opt) - identifier type code (IS)
+
+    ppn_14 : HD | None
+        PPN.14 (opt) - assigning facility (HD)
+
+    ppn_15 : TS | None
+        PPN.15 (opt) - Date/Time Action Performed (TS)
+    """
 
     ppn_1: Optional[str] = Field(
         default=None,

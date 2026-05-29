@@ -18,7 +18,109 @@ from ..datatypes.XPN import XPN
 
 
 class DRG(BaseModel):
-    """HL7 v2 DRG segment."""
+    """HL7 v2 DRG segment.
+
+    Attributes
+    ----------
+    drg_1 : CNE | None
+        DRG.1 (opt) - Diagnostic Related Group (CNE)
+
+    drg_2 : str | None
+        DRG.2 (opt) - DRG Assigned Date/Time (DTM)
+
+    drg_3 : str | None
+        DRG.3 (opt) - DRG Approval Indicator (ID)
+
+    drg_4 : str | None
+        DRG.4 (opt) - DRG Grouper Review Code (IS)
+
+    drg_5 : CWE | None
+        DRG.5 (opt) - Outlier Type (CWE)
+
+    drg_6 : str | None
+        DRG.6 (opt) - Outlier Days (NM)
+
+    drg_7 : CP | None
+        DRG.7 (opt) - Outlier Cost (CP)
+
+    drg_8 : str | None
+        DRG.8 (opt) - DRG Payor (IS)
+
+    drg_9 : CP | None
+        DRG.9 (opt) - Outlier Reimbursement (CP)
+
+    drg_10 : str | None
+        DRG.10 (opt) - Confidential Indicator (ID)
+
+    drg_11 : str | None
+        DRG.11 (opt) - DRG Transfer Type (IS)
+
+    drg_12 : XPN | None
+        DRG.12 (opt) - Name of Coder (XPN)
+
+    drg_13 : CWE | None
+        DRG.13 (opt) - Grouper Status (CWE)
+
+    drg_14 : CWE | None
+        DRG.14 (opt) - PCCL Value Code (CWE)
+
+    drg_15 : str | None
+        DRG.15 (opt) - Effective Weight (NM)
+
+    drg_16 : MO | None
+        DRG.16 (opt) - Monetary Amount (MO)
+
+    drg_17 : str | None
+        DRG.17 (opt) - Status Patient (IS)
+
+    drg_18 : str | None
+        DRG.18 (opt) - Grouper Software Name (ST)
+
+    drg_19 : str | None
+        DRG.19 (opt) - Grouper Software Version (ST)
+
+    drg_20 : str | None
+        DRG.20 (opt) - Status Financial Calculation (IS)
+
+    drg_21 : MO | None
+        DRG.21 (opt) - Relative Discount/Surcharge (MO)
+
+    drg_22 : MO | None
+        DRG.22 (opt) - Basic Charge (MO)
+
+    drg_23 : MO | None
+        DRG.23 (opt) - Total Charge (MO)
+
+    drg_24 : MO | None
+        DRG.24 (opt) - Discount/Surcharge (MO)
+
+    drg_25 : str | None
+        DRG.25 (opt) - Calculated Days (NM)
+
+    drg_26 : str | None
+        DRG.26 (opt) - Status Gender (IS)
+
+    drg_27 : str | None
+        DRG.27 (opt) - Status Age (IS)
+
+    drg_28 : str | None
+        DRG.28 (opt) - Status Length of Stay (IS)
+
+    drg_29 : str | None
+        DRG.29 (opt) - Status Same Day Flag (IS)
+
+    drg_30 : str | None
+        DRG.30 (opt) - Status Separation Mode (IS)
+
+    drg_31 : str | None
+        DRG.31 (opt) - Status Weight at Birth (IS)
+
+    drg_32 : str | None
+        DRG.32 (opt) - Status Respiration Minutes (IS)
+
+    drg_33 : str | None
+        DRG.33 (opt) - Status Admission (IS)
+    """
 
     drg_1: Optional[CNE] = Field(
         default=None,

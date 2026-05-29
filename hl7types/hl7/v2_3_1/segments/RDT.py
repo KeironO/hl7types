@@ -12,7 +12,13 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class RDT(BaseModel):
-    """HL7 v2 RDT segment."""
+    """HL7 v2 RDT segment.
+
+    Attributes
+    ----------
+    rdt_1 : str | None
+        RDT.1 (opt) - Column Value (*)
+    """
 
     rdt_1: Optional[str] = Field(
         default=None,

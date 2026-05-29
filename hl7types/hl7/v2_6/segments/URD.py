@@ -15,7 +15,31 @@ from ..datatypes.XCN import XCN
 
 
 class URD(BaseModel):
-    """HL7 v2 URD segment."""
+    """HL7 v2 URD segment.
+
+    Attributes
+    ----------
+    urd_1 : str | None
+        URD.1 (opt) - R/U Date/Time (DTM)
+
+    urd_2 : str | None
+        URD.2 (opt) - Report Priority (ID)
+
+    urd_3 : list[XCN]
+        URD.3 (req, rep) - R/U Who Subject Definition (XCN)
+
+    urd_4 : list[CWE] | None
+        URD.4 (opt, rep) - R/U What Subject Definition (CWE)
+
+    urd_5 : list[CWE] | None
+        URD.5 (opt, rep) - R/U What Department Code (CWE)
+
+    urd_6 : list[str] | None
+        URD.6 (opt, rep) - R/U Display/Print Locations (ST)
+
+    urd_7 : str | None
+        URD.7 (opt) - R/U Results Level (ID)
+    """
 
     urd_1: Optional[str] = Field(
         default=None,

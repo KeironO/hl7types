@@ -15,7 +15,28 @@ from ..datatypes.HD import HD
 
 
 class MFI(BaseModel):
-    """HL7 v2 MFI segment."""
+    """HL7 v2 MFI segment.
+
+    Attributes
+    ----------
+    mfi_1 : CWE
+        MFI.1 (req) - Master File Identifier (CWE)
+
+    mfi_2 : list[HD] | None
+        MFI.2 (opt, rep) - Master File Application Identifier (HD)
+
+    mfi_3 : str
+        MFI.3 (req) - File-Level Event Code (ID)
+
+    mfi_4 : str | None
+        MFI.4 (opt) - Entered Date/Time (DTM)
+
+    mfi_5 : str | None
+        MFI.5 (opt) - Effective Date/Time (DTM)
+
+    mfi_6 : str
+        MFI.6 (req) - Response Level Code (ID)
+    """
 
     mfi_1: CWE = Field(
         default=...,

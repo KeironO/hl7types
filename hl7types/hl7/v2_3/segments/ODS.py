@@ -14,7 +14,22 @@ from ..datatypes.CE import CE
 
 
 class ODS(BaseModel):
-    """HL7 v2 ODS segment."""
+    """HL7 v2 ODS segment.
+
+    Attributes
+    ----------
+    ods_1 : str
+        ODS.1 (req) - Type (ID)
+
+    ods_2 : list[CE] | None
+        ODS.2 (opt, rep) - Service Period (CE)
+
+    ods_3 : list[CE]
+        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CE)
+
+    ods_4 : str | None
+        ODS.4 (opt) - Text Instruction (ST)
+    """
 
     ods_1: str = Field(
         default=...,

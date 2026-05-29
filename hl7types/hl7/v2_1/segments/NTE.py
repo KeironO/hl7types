@@ -14,7 +14,19 @@ from ..datatypes.TX import TX
 
 
 class NTE(BaseModel):
-    """HL7 v2 NTE segment."""
+    """HL7 v2 NTE segment.
+
+    Attributes
+    ----------
+    nte_1 : str | None
+        NTE.1 (opt) - SET ID - NOTES AND COMMENTS (SI)
+
+    nte_2 : str | None
+        NTE.2 (opt) - SOURCE OF COMMENT (ID)
+
+    nte_3 : list[TX]
+        NTE.3 (req, rep) - COMMENT (TX)
+    """
 
     nte_1: Optional[str] = Field(
         default=None,

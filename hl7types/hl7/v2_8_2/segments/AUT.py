@@ -21,7 +21,97 @@ from ..datatypes.XTN import XTN
 
 
 class AUT(BaseModel):
-    """HL7 v2 AUT segment."""
+    """HL7 v2 AUT segment.
+
+    Attributes
+    ----------
+    aut_1 : CWE | None
+        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE)
+
+    aut_2 : CWE
+        AUT.2 (req) - Authorizing Payor, Company ID (CWE)
+
+    aut_3 : str | None
+        AUT.3 (opt) - Authorizing Payor, Company Name (ST)
+
+    aut_4 : str | None
+        AUT.4 (opt) - Authorization Effective Date (DTM)
+
+    aut_5 : str | None
+        AUT.5 (opt) - Authorization Expiration Date (DTM)
+
+    aut_6 : EI | None
+        AUT.6 (opt) - Authorization Identifier (EI)
+
+    aut_7 : CP | None
+        AUT.7 (opt) - Reimbursement Limit (CP)
+
+    aut_8 : CQ | None
+        AUT.8 (opt) - Requested Number of Treatments (CQ)
+
+    aut_9 : CQ | None
+        AUT.9 (opt) - Authorized Number of Treatments (CQ)
+
+    aut_10 : str | None
+        AUT.10 (opt) - Process Date (DTM)
+
+    aut_11 : list[CWE] | None
+        AUT.11 (opt, rep) - Requested Discipline(s) (CWE)
+
+    aut_12 : list[CWE] | None
+        AUT.12 (opt, rep) - Authorized Discipline(s) (CWE)
+
+    aut_13 : CWE
+        AUT.13 (req) - Authorization Referral Type (CWE)
+
+    aut_14 : CWE | None
+        AUT.14 (opt) - Approval Status (CWE)
+
+    aut_15 : str | None
+        AUT.15 (opt) - Planned Treatment Stop Date (DTM)
+
+    aut_16 : CWE | None
+        AUT.16 (opt) - Clinical Service (CWE)
+
+    aut_17 : str | None
+        AUT.17 (opt) - Reason Text (ST)
+
+    aut_18 : CQ | None
+        AUT.18 (opt) - Number of Authorized Treatments/Units (CQ)
+
+    aut_19 : CQ | None
+        AUT.19 (opt) - Number of Used Treatments/Units (CQ)
+
+    aut_20 : CQ | None
+        AUT.20 (opt) - Number of Schedule Treatments/Units (CQ)
+
+    aut_21 : CWE | None
+        AUT.21 (opt) - Encounter Type (CWE)
+
+    aut_22 : MO | None
+        AUT.22 (opt) - Remaining Benefit Amount (MO)
+
+    aut_23 : XON | None
+        AUT.23 (opt) - Authorized Provider (XON)
+
+    aut_24 : XCN | None
+        AUT.24 (opt) - Authorized Health Professional (XCN)
+
+    aut_25 : str | None
+        AUT.25 (opt) - Source Text (ST)
+
+    aut_26 : str | None
+        AUT.26 (opt) - Source Date (DTM)
+
+    aut_27 : XTN | None
+        AUT.27 (opt) - Source Phone (XTN)
+
+    aut_28 : str | None
+        AUT.28 (opt) - Comment (ST)
+
+    aut_29 : str | None
+        AUT.29 (opt) - Action Code (ID)
+    """
 
     aut_1: Optional[CWE] = Field(
         default=None,

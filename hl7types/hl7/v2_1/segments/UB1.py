@@ -12,7 +12,79 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class UB1(BaseModel):
-    """HL7 v2 UB1 segment."""
+    """HL7 v2 UB1 segment.
+
+    Attributes
+    ----------
+    ub1_1 : str | None
+        UB1.1 (opt) - SET ID - UB82 (SI)
+
+    ub1_2 : str | None
+        UB1.2 (opt) - BLOOD DEDUCTIBLE (ST)
+
+    ub1_3 : str | None
+        UB1.3 (opt) - BLOOD FURN.-PINTS OF (40) (ST)
+
+    ub1_4 : str | None
+        UB1.4 (opt) - BLOOD REPLACED-PINTS (41) (ST)
+
+    ub1_5 : str | None
+        UB1.5 (opt) - BLOOD NOT RPLCD-PINTS(42) (ST)
+
+    ub1_6 : str | None
+        UB1.6 (opt) - CO-INSURANCE DAYS (25) (ST)
+
+    ub1_7 : list[str] | None
+        UB1.7 (opt, rep) - CONDITION CODE (ID)
+
+    ub1_8 : str | None
+        UB1.8 (opt) - COVERED DAYS - (23) (ST)
+
+    ub1_9 : str | None
+        UB1.9 (opt) - NON COVERED DAYS - (24) (ST)
+
+    ub1_10 : list[str] | None
+        UB1.10 (opt, rep) - VALUE AMOUNT & CODE (CM)
+
+    ub1_11 : str | None
+        UB1.11 (opt) - NUMBER OF GRACE DAYS (90) (ST)
+
+    ub1_12 : str | None
+        UB1.12 (opt) - SPEC. PROG. INDICATOR(44) (ID)
+
+    ub1_13 : str | None
+        UB1.13 (opt) - PSRO/UR APPROVAL IND. (87) (ID)
+
+    ub1_14 : str | None
+        UB1.14 (opt) - PSRO/UR APRVD STAY-FM(88) (DT)
+
+    ub1_15 : str | None
+        UB1.15 (opt) - PSRO/UR APRVD STAY-TO(89) (DT)
+
+    ub1_16 : list[str] | None
+        UB1.16 (opt, rep) - OCCURRENCE (28-32) (ID)
+
+    ub1_17 : str | None
+        UB1.17 (opt) - OCCURRENCE SPAN (33) (ID)
+
+    ub1_18 : str | None
+        UB1.18 (opt) - OCCURRENCE SPAN START DATE(33) (DT)
+
+    ub1_19 : str | None
+        UB1.19 (opt) - OCCUR. SPAN END DATE (33) (DT)
+
+    ub1_20 : str | None
+        UB1.20 (opt) - UB-82 LOCATOR 2 (ST)
+
+    ub1_21 : str | None
+        UB1.21 (opt) - UB-82 LOCATOR 9 (ST)
+
+    ub1_22 : str | None
+        UB1.22 (opt) - UB-82 LOCATOR 27 (ST)
+
+    ub1_23 : str | None
+        UB1.23 (opt) - UB-82 LOCATOR 45 (ST)
+    """
 
     ub1_1: Optional[str] = Field(
         default=None,

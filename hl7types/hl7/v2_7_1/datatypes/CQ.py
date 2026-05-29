@@ -14,7 +14,16 @@ from .CWE import CWE
 
 
 class CQ(BaseModel):
-    """HL7 v2 CQ data type."""
+    """HL7 v2 CQ data type.
+
+    Attributes
+    ----------
+    cq_1 : str | None
+        CQ.1 (opt) - Quantity (NM)
+
+    cq_2 : CWE | None
+        CQ.2 (opt) - Units (CWE)
+    """
 
     cq_1: Optional[str] = Field(
         default=None,

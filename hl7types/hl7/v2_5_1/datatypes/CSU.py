@@ -12,7 +12,31 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CSU(BaseModel):
-    """HL7 v2 CSU data type."""
+    """HL7 v2 CSU data type.
+
+    Attributes
+    ----------
+    csu_1 : str | None
+        CSU.1 (opt) - Channel Sensitivity (NM)
+
+    csu_2 : str | None
+        CSU.2 (opt) - Unit of Measure Identifier (ST)
+
+    csu_3 : str | None
+        CSU.3 (opt) - Unit of Measure Description (ST)
+
+    csu_4 : str | None
+        CSU.4 (opt) - Unit of Measure Coding System (ID)
+
+    csu_5 : str | None
+        CSU.5 (opt) - Alternate Unit of Measure Identifier (ST)
+
+    csu_6 : str | None
+        CSU.6 (opt) - Alternate Unit of Measure Description (ST)
+
+    csu_7 : str | None
+        CSU.7 (opt) - Alternate Unit of Measure Coding System (ID)
+    """
 
     csu_1: Optional[str] = Field(
         default=None,

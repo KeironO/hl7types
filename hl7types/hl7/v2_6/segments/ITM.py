@@ -19,7 +19,97 @@ from ..datatypes.XON import XON
 
 
 class ITM(BaseModel):
-    """HL7 v2 ITM segment."""
+    """HL7 v2 ITM segment.
+
+    Attributes
+    ----------
+    itm_1 : EI
+        ITM.1 (req) - Item Identifier (EI)
+
+    itm_2 : str | None
+        ITM.2 (opt) - Item Description (ST)
+
+    itm_3 : CWE | None
+        ITM.3 (opt) - Item Status (CWE)
+
+    itm_4 : CWE | None
+        ITM.4 (opt) - Item Type (CWE)
+
+    itm_5 : CWE | None
+        ITM.5 (opt) - Item Category (CWE)
+
+    itm_6 : CNE | None
+        ITM.6 (opt) - Subject to Expiration Indicator (CNE)
+
+    itm_7 : EI | None
+        ITM.7 (opt) - Manufacturer Identifier (EI)
+
+    itm_8 : str | None
+        ITM.8 (opt) - Manufacturer Name (ST)
+
+    itm_9 : str | None
+        ITM.9 (opt) - Manufacturer Catalog Number (ST)
+
+    itm_10 : CWE | None
+        ITM.10 (opt) - Manufacturer Labeler Identification Code (CWE)
+
+    itm_11 : CNE | None
+        ITM.11 (opt) - Patient Chargeable Indicator (CNE)
+
+    itm_12 : CWE | None
+        ITM.12 (opt) - Transaction Code (CWE)
+
+    itm_13 : CP | None
+        ITM.13 (opt) - Transaction amount - unit (CP)
+
+    itm_14 : CNE | None
+        ITM.14 (opt) - Stocked Item Indicator (CNE)
+
+    itm_15 : CWE | None
+        ITM.15 (opt) - Supply Risk Codes (CWE)
+
+    itm_16 : list[XON] | None
+        ITM.16 (opt, rep) - Approving Regulatory Agency (XON)
+
+    itm_17 : CNE | None
+        ITM.17 (opt) - Latex Indicator (CNE)
+
+    itm_18 : list[CWE] | None
+        ITM.18 (opt, rep) - Ruling Act (CWE)
+
+    itm_19 : str | None
+        ITM.19 (opt) - Item Natural Account Code (IS)
+
+    itm_20 : str | None
+        ITM.20 (opt) - Approved To Buy Quantity (NM)
+
+    itm_21 : MO | None
+        ITM.21 (opt) - Approved To Buy Price (MO)
+
+    itm_22 : CNE | None
+        ITM.22 (opt) - Taxable Item Indicator (CNE)
+
+    itm_23 : CNE | None
+        ITM.23 (opt) - Freight Charge Indicator (CNE)
+
+    itm_24 : CNE | None
+        ITM.24 (opt) - Item Set Indicator (CNE)
+
+    itm_25 : EI | None
+        ITM.25 (opt) - Item Set Identifier (EI)
+
+    itm_26 : CNE | None
+        ITM.26 (opt) - Track Department Usage Indicator (CNE)
+
+    itm_27 : CNE | None
+        ITM.27 (opt) - Procedure Code (CNE)
+
+    itm_28 : list[CNE] | None
+        ITM.28 (opt, rep) - Procedure Code Modifier (CNE)
+
+    itm_29 : CWE | None
+        ITM.29 (opt) - Special Handling Code (CWE)
+    """
 
     itm_1: EI = Field(
         default=...,

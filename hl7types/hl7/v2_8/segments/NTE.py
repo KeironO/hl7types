@@ -16,7 +16,34 @@ from ..datatypes.XCN import XCN
 
 
 class NTE(BaseModel):
-    """HL7 v2 NTE segment."""
+    """HL7 v2 NTE segment.
+
+    Attributes
+    ----------
+    nte_1 : str | None
+        NTE.1 (opt) - Set ID - NTE (SI)
+
+    nte_2 : str | None
+        NTE.2 (opt) - Source of Comment (ID)
+
+    nte_3 : list[FT] | None
+        NTE.3 (opt, rep) - Comment (FT)
+
+    nte_4 : CWE | None
+        NTE.4 (opt) - Comment Type (CWE)
+
+    nte_5 : XCN | None
+        NTE.5 (opt) - Entered By (XCN)
+
+    nte_6 : str | None
+        NTE.6 (opt) - Entered Date/Time (DTM)
+
+    nte_7 : str | None
+        NTE.7 (opt) - Effective Start Date (DTM)
+
+    nte_8 : str | None
+        NTE.8 (opt) - Expiration Date (DTM)
+    """
 
     nte_1: Optional[str] = Field(
         default=None,

@@ -23,7 +23,226 @@ from ..datatypes.XTN import XTN
 
 
 class IN2(BaseModel):
-    """HL7 v2 IN2 segment."""
+    """HL7 v2 IN2 segment.
+
+    Attributes
+    ----------
+    in2_1 : list[CX] | None
+        IN2.1 (opt, rep) - Insured's Employee ID (CX)
+
+    in2_2 : str | None
+        IN2.2 (opt) - Insured's Social Security Number (ST)
+
+    in2_3 : list[XCN] | None
+        IN2.3 (opt, rep) - Insured's Employer's Name and ID (XCN)
+
+    in2_4 : CWE | None
+        IN2.4 (opt) - Employer Information Data (CWE)
+
+    in2_5 : list[CWE] | None
+        IN2.5 (opt, rep) - Mail Claim Party (CWE)
+
+    in2_6 : str | None
+        IN2.6 (opt) - Medicare Health Ins Card Number (ST)
+
+    in2_7 : list[XPN] | None
+        IN2.7 (opt, rep) - Medicaid Case Name (XPN)
+
+    in2_8 : str | None
+        IN2.8 (opt) - Medicaid Case Number (ST)
+
+    in2_9 : list[XPN] | None
+        IN2.9 (opt, rep) - Military Sponsor Name (XPN)
+
+    in2_10 : str | None
+        IN2.10 (opt) - Military ID Number (ST)
+
+    in2_11 : CWE | None
+        IN2.11 (opt) - Dependent Of Military Recipient (CWE)
+
+    in2_12 : str | None
+        IN2.12 (opt) - Military Organization (ST)
+
+    in2_13 : str | None
+        IN2.13 (opt) - Military Station (ST)
+
+    in2_14 : CWE | None
+        IN2.14 (opt) - Military Service (CWE)
+
+    in2_15 : CWE | None
+        IN2.15 (opt) - Military Rank/Grade (CWE)
+
+    in2_16 : CWE | None
+        IN2.16 (opt) - Military Status (CWE)
+
+    in2_17 : str | None
+        IN2.17 (opt) - Military Retire Date (DT)
+
+    in2_18 : str | None
+        IN2.18 (opt) - Military Non-Avail Cert On File (ID)
+
+    in2_19 : str | None
+        IN2.19 (opt) - Baby Coverage (ID)
+
+    in2_20 : str | None
+        IN2.20 (opt) - Combine Baby Bill (ID)
+
+    in2_21 : str | None
+        IN2.21 (opt) - Blood Deductible (ST)
+
+    in2_22 : list[XPN] | None
+        IN2.22 (opt, rep) - Special Coverage Approval Name (XPN)
+
+    in2_23 : str | None
+        IN2.23 (opt) - Special Coverage Approval Title (ST)
+
+    in2_24 : list[CWE] | None
+        IN2.24 (opt, rep) - Non-Covered Insurance Code (CWE)
+
+    in2_25 : list[CX] | None
+        IN2.25 (opt, rep) - Payor ID (CX)
+
+    in2_26 : list[CX] | None
+        IN2.26 (opt, rep) - Payor Subscriber ID (CX)
+
+    in2_27 : CWE | None
+        IN2.27 (opt) - Eligibility Source (CWE)
+
+    in2_28 : list[RMC] | None
+        IN2.28 (opt, rep) - Room Coverage Type/Amount (RMC)
+
+    in2_29 : list[PTA] | None
+        IN2.29 (opt, rep) - Policy Type/Amount (PTA)
+
+    in2_30 : DDI | None
+        IN2.30 (opt) - Daily Deductible (DDI)
+
+    in2_31 : CWE | None
+        IN2.31 (opt) - Living Dependency (CWE)
+
+    in2_32 : list[CWE] | None
+        IN2.32 (opt, rep) - Ambulatory Status (CWE)
+
+    in2_33 : list[CWE] | None
+        IN2.33 (opt, rep) - Citizenship (CWE)
+
+    in2_34 : CWE | None
+        IN2.34 (opt) - Primary Language (CWE)
+
+    in2_35 : CWE | None
+        IN2.35 (opt) - Living Arrangement (CWE)
+
+    in2_36 : CWE | None
+        IN2.36 (opt) - Publicity Code (CWE)
+
+    in2_37 : str | None
+        IN2.37 (opt) - Protection Indicator (ID)
+
+    in2_38 : CWE | None
+        IN2.38 (opt) - Student Indicator (CWE)
+
+    in2_39 : CWE | None
+        IN2.39 (opt) - Religion (CWE)
+
+    in2_40 : list[XPN] | None
+        IN2.40 (opt, rep) - Mother's Maiden Name (XPN)
+
+    in2_41 : CWE | None
+        IN2.41 (opt) - Nationality (CWE)
+
+    in2_42 : list[CWE] | None
+        IN2.42 (opt, rep) - Ethnic Group (CWE)
+
+    in2_43 : list[CWE] | None
+        IN2.43 (opt, rep) - Marital Status (CWE)
+
+    in2_44 : str | None
+        IN2.44 (opt) - Insured's Employment Start Date (DT)
+
+    in2_45 : str | None
+        IN2.45 (opt) - Employment Stop Date (DT)
+
+    in2_46 : str | None
+        IN2.46 (opt) - Job Title (ST)
+
+    in2_47 : JCC | None
+        IN2.47 (opt) - Job Code/Class (JCC)
+
+    in2_48 : CWE | None
+        IN2.48 (opt) - Job Status (CWE)
+
+    in2_49 : list[XPN] | None
+        IN2.49 (opt, rep) - Employer Contact Person Name (XPN)
+
+    in2_50 : list[XTN] | None
+        IN2.50 (opt, rep) - Employer Contact Person Phone Number (XTN)
+
+    in2_51 : CWE | None
+        IN2.51 (opt) - Employer Contact Reason (CWE)
+
+    in2_52 : list[XPN] | None
+        IN2.52 (opt, rep) - Insured's Contact Person's Name (XPN)
+
+    in2_53 : list[XTN] | None
+        IN2.53 (opt, rep) - Insured's Contact Person Phone Number (XTN)
+
+    in2_54 : list[CWE] | None
+        IN2.54 (opt, rep) - Insured's Contact Person Reason (CWE)
+
+    in2_55 : str | None
+        IN2.55 (opt) - Relationship to the Patient Start Date (DT)
+
+    in2_56 : list[str] | None
+        IN2.56 (opt, rep) - Relationship to the Patient Stop Date (DT)
+
+    in2_57 : CWE | None
+        IN2.57 (opt) - Insurance Co Contact Reason (CWE)
+
+    in2_58 : list[XTN] | None
+        IN2.58 (opt, rep) - Insurance Co Contact Phone Number (XTN)
+
+    in2_59 : CWE | None
+        IN2.59 (opt) - Policy Scope (CWE)
+
+    in2_60 : CWE | None
+        IN2.60 (opt) - Policy Source (CWE)
+
+    in2_61 : CX | None
+        IN2.61 (opt) - Patient Member Number (CX)
+
+    in2_62 : CWE | None
+        IN2.62 (opt) - Guarantor's Relationship to Insured (CWE)
+
+    in2_63 : list[XTN] | None
+        IN2.63 (opt, rep) - Insured's Phone Number - Home (XTN)
+
+    in2_64 : list[XTN] | None
+        IN2.64 (opt, rep) - Insured's Employer Phone Number (XTN)
+
+    in2_65 : CWE | None
+        IN2.65 (opt) - Military Handicapped Program (CWE)
+
+    in2_66 : str | None
+        IN2.66 (opt) - Suspend Flag (ID)
+
+    in2_67 : str | None
+        IN2.67 (opt) - Copay Limit Flag (ID)
+
+    in2_68 : str | None
+        IN2.68 (opt) - Stoploss Limit Flag (ID)
+
+    in2_69 : list[XON] | None
+        IN2.69 (opt, rep) - Insured Organization Name and ID (XON)
+
+    in2_70 : list[XON] | None
+        IN2.70 (opt, rep) - Insured Employer Organization Name and ID (XON)
+
+    in2_71 : list[CWE] | None
+        IN2.71 (opt, rep) - Race (CWE)
+
+    in2_72 : CWE | None
+        IN2.72 (opt) - Patient's Relationship to Insured (CWE)
+    """
 
     in2_1: Optional[List[CX]] = Field(
         default=None,

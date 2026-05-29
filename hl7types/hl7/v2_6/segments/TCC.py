@@ -17,7 +17,52 @@ from ..datatypes.SPS import SPS
 
 
 class TCC(BaseModel):
-    """HL7 v2 TCC segment."""
+    """HL7 v2 TCC segment.
+
+    Attributes
+    ----------
+    tcc_1 : CWE
+        TCC.1 (req) - Universal Service Identifier (CWE)
+
+    tcc_2 : EI
+        TCC.2 (req) - Equipment Test Application Identifier (EI)
+
+    tcc_3 : SPS | None
+        TCC.3 (opt) - Specimen Source (SPS)
+
+    tcc_4 : SN | None
+        TCC.4 (opt) - Auto-Dilution Factor Default (SN)
+
+    tcc_5 : SN | None
+        TCC.5 (opt) - Rerun Dilution Factor Default (SN)
+
+    tcc_6 : SN | None
+        TCC.6 (opt) - Pre-Dilution Factor Default (SN)
+
+    tcc_7 : SN | None
+        TCC.7 (opt) - Endogenous Content of Pre-Dilution Diluent (SN)
+
+    tcc_8 : str | None
+        TCC.8 (opt) - Inventory Limits Warning Level (NM)
+
+    tcc_9 : str | None
+        TCC.9 (opt) - Automatic Rerun Allowed (ID)
+
+    tcc_10 : str | None
+        TCC.10 (opt) - Automatic Repeat Allowed (ID)
+
+    tcc_11 : str | None
+        TCC.11 (opt) - Automatic Reflex Allowed (ID)
+
+    tcc_12 : SN | None
+        TCC.12 (opt) - Equipment Dynamic Range (SN)
+
+    tcc_13 : CWE | None
+        TCC.13 (opt) - Units (CWE)
+
+    tcc_14 : CWE | None
+        TCC.14 (opt) - Processing Type (CWE)
+    """
 
     tcc_1: CWE = Field(
         default=...,

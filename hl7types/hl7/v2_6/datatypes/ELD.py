@@ -14,7 +14,22 @@ from .CWE import CWE
 
 
 class ELD(BaseModel):
-    """HL7 v2 ELD data type."""
+    """HL7 v2 ELD data type.
+
+    Attributes
+    ----------
+    eld_1 : str | None
+        ELD.1 (opt) - Segment ID (ST)
+
+    eld_2 : str | None
+        ELD.2 (opt) - Segment Sequence (NM)
+
+    eld_3 : str | None
+        ELD.3 (opt) - Field Position (NM)
+
+    eld_4 : CWE | None
+        ELD.4 (opt) - Code Identifying Error (CWE)
+    """
 
     eld_1: Optional[str] = Field(
         default=None,

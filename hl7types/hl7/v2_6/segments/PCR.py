@@ -15,7 +15,79 @@ from ..datatypes.CWE import CWE
 
 
 class PCR(BaseModel):
-    """HL7 v2 PCR segment."""
+    """HL7 v2 PCR segment.
+
+    Attributes
+    ----------
+    pcr_1 : CWE
+        PCR.1 (req) - Implicated Product (CWE)
+
+    pcr_2 : str | None
+        PCR.2 (opt) - Generic Product (IS)
+
+    pcr_3 : CWE | None
+        PCR.3 (opt) - Product Class (CWE)
+
+    pcr_4 : CQ | None
+        PCR.4 (opt) - Total Duration Of Therapy (CQ)
+
+    pcr_5 : str | None
+        PCR.5 (opt) - Product Manufacture Date (DTM)
+
+    pcr_6 : str | None
+        PCR.6 (opt) - Product Expiration Date (DTM)
+
+    pcr_7 : str | None
+        PCR.7 (opt) - Product Implantation Date (DTM)
+
+    pcr_8 : str | None
+        PCR.8 (opt) - Product Explantation Date (DTM)
+
+    pcr_9 : str | None
+        PCR.9 (opt) - Single Use Device (IS)
+
+    pcr_10 : CWE | None
+        PCR.10 (opt) - Indication For Product Use (CWE)
+
+    pcr_11 : str | None
+        PCR.11 (opt) - Product Problem (IS)
+
+    pcr_12 : list[str] | None
+        PCR.12 (opt, rep) - Product Serial/Lot Number (ST)
+
+    pcr_13 : str | None
+        PCR.13 (opt) - Product Available For Inspection (IS)
+
+    pcr_14 : CWE | None
+        PCR.14 (opt) - Product Evaluation Performed (CWE)
+
+    pcr_15 : CWE | None
+        PCR.15 (opt) - Product Evaluation Status (CWE)
+
+    pcr_16 : CWE | None
+        PCR.16 (opt) - Product Evaluation Results (CWE)
+
+    pcr_17 : str | None
+        PCR.17 (opt) - Evaluated Product Source (ID)
+
+    pcr_18 : str | None
+        PCR.18 (opt) - Date Product Returned To Manufacturer (DTM)
+
+    pcr_19 : str | None
+        PCR.19 (opt) - Device Operator Qualifications (ID)
+
+    pcr_20 : str | None
+        PCR.20 (opt) - Relatedness Assessment (ID)
+
+    pcr_21 : list[str] | None
+        PCR.21 (opt, rep) - Action Taken In Response To The Event (ID)
+
+    pcr_22 : list[str] | None
+        PCR.22 (opt, rep) - Event Causality Observations (ID)
+
+    pcr_23 : list[str] | None
+        PCR.23 (opt, rep) - Indirect Exposure Mechanism (ID)
+    """
 
     pcr_1: CWE = Field(
         default=...,

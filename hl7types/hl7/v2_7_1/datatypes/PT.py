@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class PT(BaseModel):
-    """HL7 v2 PT data type."""
+    """HL7 v2 PT data type.
+
+    Attributes
+    ----------
+    pt_1 : str
+        PT.1 (req) - Processing ID (ID)
+
+    pt_2 : str | None
+        PT.2 (opt) - Processing Mode (ID)
+    """
 
     pt_1: str = Field(
         default=...,

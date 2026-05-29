@@ -14,7 +14,31 @@ from ..datatypes.CE import CE
 
 
 class RXC(BaseModel):
-    """HL7 v2 RXC segment."""
+    """HL7 v2 RXC segment.
+
+    Attributes
+    ----------
+    rxc_1 : str
+        RXC.1 (req) - RX Component Type (ID)
+
+    rxc_2 : CE
+        RXC.2 (req) - Component Code (CE)
+
+    rxc_3 : str
+        RXC.3 (req) - Component Amount (NM)
+
+    rxc_4 : CE
+        RXC.4 (req) - Component Units (CE)
+
+    rxc_5 : str | None
+        RXC.5 (opt) - Component Strength (NM)
+
+    rxc_6 : CE | None
+        RXC.6 (opt) - Component Strength Units (CE)
+
+    rxc_7 : list[CE] | None
+        RXC.7 (opt, rep) - Supplementary Code (CE)
+    """
 
     rxc_1: str = Field(
         default=...,

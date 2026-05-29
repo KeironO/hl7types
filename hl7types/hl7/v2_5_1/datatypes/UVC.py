@@ -15,7 +15,16 @@ from .MO import MO
 
 
 class UVC(BaseModel):
-    """HL7 v2 UVC data type."""
+    """HL7 v2 UVC data type.
+
+    Attributes
+    ----------
+    uvc_1 : CNE | None
+        UVC.1 (opt) - Value Code (CNE)
+
+    uvc_2 : MO | None
+        UVC.2 (opt) - Value Amount (MO)
+    """
 
     uvc_1: Optional[CNE] = Field(
         default=None,

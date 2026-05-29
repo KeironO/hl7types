@@ -20,7 +20,85 @@ from ..datatypes.varies import varies
 
 
 class OBX(BaseModel):
-    """HL7 v2 OBX segment."""
+    """HL7 v2 OBX segment.
+
+    Attributes
+    ----------
+    obx_1 : str | None
+        OBX.1 (opt) - Set ID - OBX (SI)
+
+    obx_2 : str | None
+        OBX.2 (opt) - Value Type (ID)
+
+    obx_3 : CWE
+        OBX.3 (req) - Observation Identifier (CWE)
+
+    obx_4 : str | None
+        OBX.4 (opt) - Observation Sub-ID (ST)
+
+    obx_5 : list[varies] | None
+        OBX.5 (opt, rep) - Observation Value (varies)
+
+    obx_6 : CWE | None
+        OBX.6 (opt) - Units (CWE)
+
+    obx_7 : str | None
+        OBX.7 (opt) - References Range (ST)
+
+    obx_8 : list[str] | None
+        OBX.8 (opt, rep) - Abnormal Flags (IS)
+
+    obx_9 : str | None
+        OBX.9 (opt) - Probability (NM)
+
+    obx_10 : list[str] | None
+        OBX.10 (opt, rep) - Nature of Abnormal Test (ID)
+
+    obx_11 : str
+        OBX.11 (req) - Observation Result Status (ID)
+
+    obx_12 : str | None
+        OBX.12 (opt) - Effective Date of Reference Range (DTM)
+
+    obx_13 : str | None
+        OBX.13 (opt) - User Defined Access Checks (ST)
+
+    obx_14 : str | None
+        OBX.14 (opt) - Date/Time of the Observation (DTM)
+
+    obx_15 : CWE | None
+        OBX.15 (opt) - Producer's ID (CWE)
+
+    obx_16 : list[XCN] | None
+        OBX.16 (opt, rep) - Responsible Observer (XCN)
+
+    obx_17 : list[CWE] | None
+        OBX.17 (opt, rep) - Observation Method (CWE)
+
+    obx_18 : list[EI] | None
+        OBX.18 (opt, rep) - Equipment Instance Identifier (EI)
+
+    obx_19 : str | None
+        OBX.19 (opt) - Date/Time of the Analysis (DTM)
+
+    obx_20 : list[CWE] | None
+        OBX.20 (opt, rep) - Observation Site (CWE)
+
+    obx_21 : EI | None
+        OBX.21 (opt) - Observation Instance Identifier (EI)
+
+    obx_22 : CNE | None
+        OBX.22 (opt) - Mood Code (CNE)
+
+    obx_23 : XON | None
+        OBX.23 (opt) - Performing Organization Name (XON)
+
+    obx_24 : XAD | None
+        OBX.24 (opt) - Performing Organization Address (XAD)
+
+    obx_25 : XCN | None
+        OBX.25 (opt) - Performing Organization Medical Director (XCN)
+    """
 
     obx_1: Optional[str] = Field(
         default=None,

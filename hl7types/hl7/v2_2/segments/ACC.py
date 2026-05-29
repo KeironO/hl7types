@@ -14,7 +14,19 @@ from ..datatypes.TS import TS
 
 
 class ACC(BaseModel):
-    """HL7 v2 ACC segment."""
+    """HL7 v2 ACC segment.
+
+    Attributes
+    ----------
+    acc_1 : TS | None
+        ACC.1 (opt) - Accident date / time (TS)
+
+    acc_2 : str | None
+        ACC.2 (opt) - Accident code (ID)
+
+    acc_3 : str | None
+        ACC.3 (opt) - Accident location (ST)
+    """
 
     acc_1: Optional[TS] = Field(
         default=None,

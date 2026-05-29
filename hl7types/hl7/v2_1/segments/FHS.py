@@ -12,7 +12,46 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class FHS(BaseModel):
-    """HL7 v2 FHS segment."""
+    """HL7 v2 FHS segment.
+
+    Attributes
+    ----------
+    fhs_1 : str
+        FHS.1 (req) - FILE FIELD SEPARATOR (ST)
+
+    fhs_2 : str
+        FHS.2 (req) - FILE ENCODING CHARACTERS (ST)
+
+    fhs_3 : str | None
+        FHS.3 (opt) - FILE SENDING APPLICATION (ST)
+
+    fhs_4 : str | None
+        FHS.4 (opt) - FILE SENDING FACILITY (ST)
+
+    fhs_5 : str | None
+        FHS.5 (opt) - FILE RECEIVING APPLICATION (ST)
+
+    fhs_6 : str | None
+        FHS.6 (opt) - FILE RECEIVING FACILITY (ST)
+
+    fhs_7 : str | None
+        FHS.7 (opt) - DATE/TIME OF FILE CREATION (TS)
+
+    fhs_8 : str | None
+        FHS.8 (opt) - FILE SECURITY (ST)
+
+    fhs_9 : str | None
+        FHS.9 (opt) - FILE NAME/ID (ST)
+
+    fhs_10 : str | None
+        FHS.10 (opt) - FILE HEADER COMMENT (ST)
+
+    fhs_11 : str | None
+        FHS.11 (opt) - FILE CONTROL ID (ST)
+
+    fhs_12 : str | None
+        FHS.12 (opt) - REFERENCE FILE CONTROL ID (ST)
+    """
 
     fhs_1: str = Field(
         default="|",

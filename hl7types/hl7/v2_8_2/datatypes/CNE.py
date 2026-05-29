@@ -12,7 +12,76 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CNE(BaseModel):
-    """HL7 v2 CNE data type."""
+    """HL7 v2 CNE data type.
+
+    Attributes
+    ----------
+    cne_1 : str
+        CNE.1 (req) - Identifier (ST)
+
+    cne_2 : str | None
+        CNE.2 (opt) - Text (ST)
+
+    cne_3 : str | None
+        CNE.3 (opt) - Name of Coding System (ID)
+
+    cne_4 : str | None
+        CNE.4 (opt) - Alternate Identifier (ST)
+
+    cne_5 : str | None
+        CNE.5 (opt) - Alternate Text (ST)
+
+    cne_6 : str | None
+        CNE.6 (opt) - Name of Alternate Coding System (ID)
+
+    cne_7 : str | None
+        CNE.7 (opt) - Coding System Version ID (ST)
+
+    cne_8 : str | None
+        CNE.8 (opt) - Alternate Coding System Version ID (ST)
+
+    cne_9 : str | None
+        CNE.9 (opt) - Original Text (ST)
+
+    cne_10 : str | None
+        CNE.10 (opt) - Second Alternate Identifier (ST)
+
+    cne_11 : str | None
+        CNE.11 (opt) - Second Alternate Text (ST)
+
+    cne_12 : str | None
+        CNE.12 (opt) - Name of Second Alternate Coding System (ID)
+
+    cne_13 : str | None
+        CNE.13 (opt) - Second Alternate Coding System Version ID (ST)
+
+    cne_14 : str | None
+        CNE.14 (opt) - Coding System OID (ST)
+
+    cne_15 : str | None
+        CNE.15 (opt) - Value Set OID (ST)
+
+    cne_16 : str | None
+        CNE.16 (opt) - Value Set Version ID (DTM)
+
+    cne_17 : str | None
+        CNE.17 (opt) - Alternate Coding System OID (ST)
+
+    cne_18 : str | None
+        CNE.18 (opt) - Alternate Value Set OID (ST)
+
+    cne_19 : str | None
+        CNE.19 (opt) - Alternate Value Set Version ID (DTM)
+
+    cne_20 : str | None
+        CNE.20 (opt) - Second Alternate Coding System OID (ST)
+
+    cne_21 : str | None
+        CNE.21 (opt) - Second Alternate Value Set OID (ST)
+
+    cne_22 : str | None
+        CNE.22 (opt) - Second Alternate Value Set Version ID (DTM)
+    """
 
     cne_1: str = Field(
         default=...,

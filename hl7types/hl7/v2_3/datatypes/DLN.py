@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class DLN(BaseModel):
-    """HL7 v2 DLN data type."""
+    """HL7 v2 DLN data type.
+
+    Attributes
+    ----------
+    dln_1 : str | None
+        DLN.1 (opt) - Driver´s License Number (ST)
+
+    dln_2 : str | None
+        DLN.2 (opt) - Issuing State, province, country (IS)
+
+    dln_3 : str | None
+        DLN.3 (opt) - expiration date (DT)
+    """
 
     dln_1: Optional[str] = Field(
         default=None,

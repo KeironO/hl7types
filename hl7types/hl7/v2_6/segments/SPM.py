@@ -17,7 +17,97 @@ from ..datatypes.EIP import EIP
 
 
 class SPM(BaseModel):
-    """HL7 v2 SPM segment."""
+    """HL7 v2 SPM segment.
+
+    Attributes
+    ----------
+    spm_1 : str | None
+        SPM.1 (opt) - Set ID - SPM (SI)
+
+    spm_2 : EIP | None
+        SPM.2 (opt) - Specimen ID (EIP)
+
+    spm_3 : list[EIP] | None
+        SPM.3 (opt, rep) - Specimen Parent IDs (EIP)
+
+    spm_4 : CWE
+        SPM.4 (req) - Specimen Type (CWE)
+
+    spm_5 : list[CWE] | None
+        SPM.5 (opt, rep) - Specimen Type Modifier (CWE)
+
+    spm_6 : list[CWE] | None
+        SPM.6 (opt, rep) - Specimen Additives (CWE)
+
+    spm_7 : CWE | None
+        SPM.7 (opt) - Specimen Collection Method (CWE)
+
+    spm_8 : CWE | None
+        SPM.8 (opt) - Specimen Source Site (CWE)
+
+    spm_9 : list[CWE] | None
+        SPM.9 (opt, rep) - Specimen Source Site Modifier (CWE)
+
+    spm_10 : CWE | None
+        SPM.10 (opt) - Specimen Collection Site (CWE)
+
+    spm_11 : list[CWE] | None
+        SPM.11 (opt, rep) - Specimen Role (CWE)
+
+    spm_12 : CQ | None
+        SPM.12 (opt) - Specimen Collection Amount (CQ)
+
+    spm_13 : str | None
+        SPM.13 (opt) - Grouped Specimen Count (NM)
+
+    spm_14 : list[str] | None
+        SPM.14 (opt, rep) - Specimen Description (ST)
+
+    spm_15 : list[CWE] | None
+        SPM.15 (opt, rep) - Specimen Handling Code (CWE)
+
+    spm_16 : list[CWE] | None
+        SPM.16 (opt, rep) - Specimen Risk Code (CWE)
+
+    spm_17 : DR | None
+        SPM.17 (opt) - Specimen Collection Date/Time (DR)
+
+    spm_18 : str | None
+        SPM.18 (opt) - Specimen Received Date/Time (DTM)
+
+    spm_19 : str | None
+        SPM.19 (opt) - Specimen Expiration Date/Time (DTM)
+
+    spm_20 : str | None
+        SPM.20 (opt) - Specimen Availability (ID)
+
+    spm_21 : list[CWE] | None
+        SPM.21 (opt, rep) - Specimen Reject Reason (CWE)
+
+    spm_22 : CWE | None
+        SPM.22 (opt) - Specimen Quality (CWE)
+
+    spm_23 : CWE | None
+        SPM.23 (opt) - Specimen Appropriateness (CWE)
+
+    spm_24 : list[CWE] | None
+        SPM.24 (opt, rep) - Specimen Condition (CWE)
+
+    spm_25 : CQ | None
+        SPM.25 (opt) - Specimen Current Quantity (CQ)
+
+    spm_26 : str | None
+        SPM.26 (opt) - Number of Specimen Containers (NM)
+
+    spm_27 : CWE | None
+        SPM.27 (opt) - Container Type (CWE)
+
+    spm_28 : CWE | None
+        SPM.28 (opt) - Container Condition (CWE)
+
+    spm_29 : CWE | None
+        SPM.29 (opt) - Specimen Child Role (CWE)
+    """
 
     spm_1: Optional[str] = Field(
         default=None,

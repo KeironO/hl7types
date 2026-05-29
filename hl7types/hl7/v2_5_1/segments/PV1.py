@@ -20,7 +20,166 @@ from ..datatypes.XCN import XCN
 
 
 class PV1(BaseModel):
-    """HL7 v2 PV1 segment."""
+    """HL7 v2 PV1 segment.
+
+    Attributes
+    ----------
+    pv1_1 : str | None
+        PV1.1 (opt) - Set ID - PV1 (SI)
+
+    pv1_2 : str
+        PV1.2 (req) - Patient Class (IS)
+
+    pv1_3 : PL | None
+        PV1.3 (opt) - Assigned Patient Location (PL)
+
+    pv1_4 : str | None
+        PV1.4 (opt) - Admission Type (IS)
+
+    pv1_5 : CX | None
+        PV1.5 (opt) - Preadmit Number (CX)
+
+    pv1_6 : PL | None
+        PV1.6 (opt) - Prior Patient Location (PL)
+
+    pv1_7 : list[XCN] | None
+        PV1.7 (opt, rep) - Attending Doctor (XCN)
+
+    pv1_8 : list[XCN] | None
+        PV1.8 (opt, rep) - Referring Doctor (XCN)
+
+    pv1_9 : list[XCN] | None
+        PV1.9 (opt, rep) - Consulting Doctor (XCN)
+
+    pv1_10 : str | None
+        PV1.10 (opt) - Hospital Service (IS)
+
+    pv1_11 : PL | None
+        PV1.11 (opt) - Temporary Location (PL)
+
+    pv1_12 : str | None
+        PV1.12 (opt) - Preadmit Test Indicator (IS)
+
+    pv1_13 : str | None
+        PV1.13 (opt) - Re-admission Indicator (IS)
+
+    pv1_14 : str | None
+        PV1.14 (opt) - Admit Source (IS)
+
+    pv1_15 : list[str] | None
+        PV1.15 (opt, rep) - Ambulatory Status (IS)
+
+    pv1_16 : str | None
+        PV1.16 (opt) - VIP Indicator (IS)
+
+    pv1_17 : list[XCN] | None
+        PV1.17 (opt, rep) - Admitting Doctor (XCN)
+
+    pv1_18 : str | None
+        PV1.18 (opt) - Patient Type (IS)
+
+    pv1_19 : CX | None
+        PV1.19 (opt) - Visit Number (CX)
+
+    pv1_20 : list[FC] | None
+        PV1.20 (opt, rep) - Financial Class (FC)
+
+    pv1_21 : str | None
+        PV1.21 (opt) - Charge Price Indicator (IS)
+
+    pv1_22 : str | None
+        PV1.22 (opt) - Courtesy Code (IS)
+
+    pv1_23 : str | None
+        PV1.23 (opt) - Credit Rating (IS)
+
+    pv1_24 : list[str] | None
+        PV1.24 (opt, rep) - Contract Code (IS)
+
+    pv1_25 : list[str] | None
+        PV1.25 (opt, rep) - Contract Effective Date (DT)
+
+    pv1_26 : list[str] | None
+        PV1.26 (opt, rep) - Contract Amount (NM)
+
+    pv1_27 : list[str] | None
+        PV1.27 (opt, rep) - Contract Period (NM)
+
+    pv1_28 : str | None
+        PV1.28 (opt) - Interest Code (IS)
+
+    pv1_29 : str | None
+        PV1.29 (opt) - Transfer to Bad Debt Code (IS)
+
+    pv1_30 : str | None
+        PV1.30 (opt) - Transfer to Bad Debt Date (DT)
+
+    pv1_31 : str | None
+        PV1.31 (opt) - Bad Debt Agency Code (IS)
+
+    pv1_32 : str | None
+        PV1.32 (opt) - Bad Debt Transfer Amount (NM)
+
+    pv1_33 : str | None
+        PV1.33 (opt) - Bad Debt Recovery Amount (NM)
+
+    pv1_34 : str | None
+        PV1.34 (opt) - Delete Account Indicator (IS)
+
+    pv1_35 : str | None
+        PV1.35 (opt) - Delete Account Date (DT)
+
+    pv1_36 : str | None
+        PV1.36 (opt) - Discharge Disposition (IS)
+
+    pv1_37 : DLD | None
+        PV1.37 (opt) - Discharged to Location (DLD)
+
+    pv1_38 : CE | None
+        PV1.38 (opt) - Diet Type (CE)
+
+    pv1_39 : str | None
+        PV1.39 (opt) - Servicing Facility (IS)
+
+    pv1_40 : str | None
+        PV1.40 (opt) - Bed Status (IS)
+
+    pv1_41 : str | None
+        PV1.41 (opt) - Account Status (IS)
+
+    pv1_42 : PL | None
+        PV1.42 (opt) - Pending Location (PL)
+
+    pv1_43 : PL | None
+        PV1.43 (opt) - Prior Temporary Location (PL)
+
+    pv1_44 : TS | None
+        PV1.44 (opt) - Admit Date/Time (TS)
+
+    pv1_45 : list[TS] | None
+        PV1.45 (opt, rep) - Discharge Date/Time (TS)
+
+    pv1_46 : str | None
+        PV1.46 (opt) - Current Patient Balance (NM)
+
+    pv1_47 : str | None
+        PV1.47 (opt) - Total Charges (NM)
+
+    pv1_48 : str | None
+        PV1.48 (opt) - Total Adjustments (NM)
+
+    pv1_49 : str | None
+        PV1.49 (opt) - Total Payments (NM)
+
+    pv1_50 : CX | None
+        PV1.50 (opt) - Alternate Visit ID (CX)
+
+    pv1_51 : str | None
+        PV1.51 (opt) - Visit Indicator (IS)
+
+    pv1_52 : list[XCN] | None
+        PV1.52 (opt, rep) - Other Healthcare Provider (XCN)
+    """
 
     pv1_1: Optional[str] = Field(
         default=None,

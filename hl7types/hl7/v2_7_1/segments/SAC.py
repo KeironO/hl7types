@@ -17,7 +17,139 @@ from ..datatypes.SN import SN
 
 
 class SAC(BaseModel):
-    """HL7 v2 SAC segment."""
+    """HL7 v2 SAC segment.
+
+    Attributes
+    ----------
+    sac_1 : EI | None
+        SAC.1 (opt) - External Accession Identifier (EI)
+
+    sac_2 : EI | None
+        SAC.2 (opt) - Accession Identifier (EI)
+
+    sac_3 : EI | None
+        SAC.3 (opt) - Container Identifier (EI)
+
+    sac_4 : EI | None
+        SAC.4 (opt) - Primary (Parent) Container Identifier (EI)
+
+    sac_5 : EI | None
+        SAC.5 (opt) - Equipment Container Identifier (EI)
+
+    sac_7 : str | None
+        SAC.7 (opt) - Registration Date/Time (DTM)
+
+    sac_8 : CWE | None
+        SAC.8 (opt) - Container Status (CWE)
+
+    sac_9 : CWE | None
+        SAC.9 (opt) - Carrier Type (CWE)
+
+    sac_10 : EI | None
+        SAC.10 (opt) - Carrier Identifier (EI)
+
+    sac_11 : NA | None
+        SAC.11 (opt) - Position in Carrier (NA)
+
+    sac_12 : CWE | None
+        SAC.12 (opt) - Tray Type - SAC (CWE)
+
+    sac_13 : EI | None
+        SAC.13 (opt) - Tray Identifier (EI)
+
+    sac_14 : NA | None
+        SAC.14 (opt) - Position in Tray (NA)
+
+    sac_15 : list[CWE] | None
+        SAC.15 (opt, rep) - Location (CWE)
+
+    sac_16 : str | None
+        SAC.16 (opt) - Container Height (NM)
+
+    sac_17 : str | None
+        SAC.17 (opt) - Container Diameter (NM)
+
+    sac_18 : str | None
+        SAC.18 (opt) - Barrier Delta (NM)
+
+    sac_19 : str | None
+        SAC.19 (opt) - Bottom Delta (NM)
+
+    sac_20 : CWE | None
+        SAC.20 (opt) - Container Height/Diameter/Delta Units (CWE)
+
+    sac_21 : str | None
+        SAC.21 (opt) - Container Volume (NM)
+
+    sac_22 : str | None
+        SAC.22 (opt) - Available Specimen Volume (NM)
+
+    sac_23 : str | None
+        SAC.23 (opt) - Initial Specimen Volume (NM)
+
+    sac_24 : CWE | None
+        SAC.24 (opt) - Volume Units (CWE)
+
+    sac_25 : CWE | None
+        SAC.25 (opt) - Separator Type (CWE)
+
+    sac_26 : CWE | None
+        SAC.26 (opt) - Cap Type (CWE)
+
+    sac_27 : list[CWE] | None
+        SAC.27 (opt, rep) - Additive (CWE)
+
+    sac_28 : CWE | None
+        SAC.28 (opt) - Specimen Component (CWE)
+
+    sac_29 : SN | None
+        SAC.29 (opt) - Dilution Factor (SN)
+
+    sac_30 : CWE | None
+        SAC.30 (opt) - Treatment (CWE)
+
+    sac_31 : SN | None
+        SAC.31 (opt) - Temperature (SN)
+
+    sac_32 : str | None
+        SAC.32 (opt) - Hemolysis Index (NM)
+
+    sac_33 : CWE | None
+        SAC.33 (opt) - Hemolysis Index Units (CWE)
+
+    sac_34 : str | None
+        SAC.34 (opt) - Lipemia Index (NM)
+
+    sac_35 : CWE | None
+        SAC.35 (opt) - Lipemia Index Units (CWE)
+
+    sac_36 : str | None
+        SAC.36 (opt) - Icterus Index (NM)
+
+    sac_37 : CWE | None
+        SAC.37 (opt) - Icterus Index Units (CWE)
+
+    sac_38 : str | None
+        SAC.38 (opt) - Fibrin Index (NM)
+
+    sac_39 : CWE | None
+        SAC.39 (opt) - Fibrin Index Units (CWE)
+
+    sac_40 : list[CWE] | None
+        SAC.40 (opt, rep) - System Induced Contaminants (CWE)
+
+    sac_41 : list[CWE] | None
+        SAC.41 (opt, rep) - Drug Interference (CWE)
+
+    sac_42 : CWE | None
+        SAC.42 (opt) - Artificial Blood (CWE)
+
+    sac_43 : list[CWE] | None
+        SAC.43 (opt, rep) - Special Handling Code (CWE)
+
+    sac_44 : list[CWE] | None
+        SAC.44 (opt, rep) - Other Environmental Factors (CWE)
+    """
 
     sac_1: Optional[EI] = Field(
         default=None,

@@ -14,7 +14,22 @@ from .HD import HD
 
 
 class CK(BaseModel):
-    """HL7 v2 CK data type."""
+    """HL7 v2 CK data type.
+
+    Attributes
+    ----------
+    ck_1 : str | None
+        CK.1 (opt) - ID number (NM) (NM)
+
+    ck_2 : str | None
+        CK.2 (opt) - check digit (ST)
+
+    ck_3 : str | None
+        CK.3 (opt) - code identifying the check digit scheme employed (ID)
+
+    ck_4 : HD | None
+        CK.4 (opt) - assigning authority (HD)
+    """
 
     ck_1: Optional[str] = Field(
         default=None,

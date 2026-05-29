@@ -20,7 +20,58 @@ from ..datatypes.XTN import XTN
 
 
 class REL(BaseModel):
-    """HL7 v2 REL segment."""
+    """HL7 v2 REL segment.
+
+    Attributes
+    ----------
+    rel_1 : str | None
+        REL.1 (opt) - Set ID -REL (SI)
+
+    rel_2 : CWE
+        REL.2 (req) - Relationship Type (CWE)
+
+    rel_3 : EI
+        REL.3 (req) - This Relationship Instance Identifier (EI)
+
+    rel_4 : EI
+        REL.4 (req) - Source Information Instance Identifier (EI)
+
+    rel_5 : EI
+        REL.5 (req) - Target Information Instance Identifier (EI)
+
+    rel_6 : EI | None
+        REL.6 (opt) - Asserting Entity Instance ID (EI)
+
+    rel_7 : XCN | None
+        REL.7 (opt) - Asserting Person (XCN)
+
+    rel_8 : XON | None
+        REL.8 (opt) - Asserting Organization (XON)
+
+    rel_9 : XAD | None
+        REL.9 (opt) - Assertor Address (XAD)
+
+    rel_10 : XTN | None
+        REL.10 (opt) - Assertor Contact (XTN)
+
+    rel_11 : DR | None
+        REL.11 (opt) - Assertion Date Range (DR)
+
+    rel_12 : str | None
+        REL.12 (opt) - Negation Indicator (ID)
+
+    rel_13 : CWE | None
+        REL.13 (opt) - Certainty of Relationship (CWE)
+
+    rel_14 : str | None
+        REL.14 (opt) - Priority No (NM)
+
+    rel_15 : str | None
+        REL.15 (opt) - Priority  Sequence No (rel preference for consideration) (NM)
+
+    rel_16 : str | None
+        REL.16 (opt) - Separability Indicator (ID)
+    """
 
     rel_1: Optional[str] = Field(
         default=None,

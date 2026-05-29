@@ -12,7 +12,70 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class GT1(BaseModel):
-    """HL7 v2 GT1 segment."""
+    """HL7 v2 GT1 segment.
+
+    Attributes
+    ----------
+    gt1_1 : str
+        GT1.1 (req) - SET ID - GUARANTOR (SI)
+
+    gt1_2 : str | None
+        GT1.2 (opt) - GUARANTOR NUMBER (ID)
+
+    gt1_3 : str
+        GT1.3 (req) - GUARANTOR NAME (PN)
+
+    gt1_4 : str | None
+        GT1.4 (opt) - GUARANTOR SPOUSE NAME (PN)
+
+    gt1_5 : str | None
+        GT1.5 (opt) - GUARANTOR ADDRESS (AD)
+
+    gt1_6 : str | None
+        GT1.6 (opt) - GUARANTOR PH. NUM.- HOME (TN)
+
+    gt1_7 : str | None
+        GT1.7 (opt) - GUARANTOR PH. NUM-BUSINESS (TN)
+
+    gt1_8 : str | None
+        GT1.8 (opt) - GUARANTOR DATE OF BIRTH (DT)
+
+    gt1_9 : str | None
+        GT1.9 (opt) - GUARANTOR SEX (ID)
+
+    gt1_10 : str | None
+        GT1.10 (opt) - GUARANTOR TYPE (ID)
+
+    gt1_11 : str | None
+        GT1.11 (opt) - GUARANTOR RELATIONSHIP (ID)
+
+    gt1_12 : str | None
+        GT1.12 (opt) - GUARANTOR SSN (ST)
+
+    gt1_13 : str | None
+        GT1.13 (opt) - GUARANTOR DATE - BEGIN (DT)
+
+    gt1_14 : str | None
+        GT1.14 (opt) - GUARANTOR DATE - END (DT)
+
+    gt1_15 : str | None
+        GT1.15 (opt) - GUARANTOR PRIORITY (NM)
+
+    gt1_16 : str | None
+        GT1.16 (opt) - GUARANTOR EMPLOYER NAME (ST)
+
+    gt1_17 : str | None
+        GT1.17 (opt) - GUARANTOR EMPLOYER ADDRESS (AD)
+
+    gt1_18 : str | None
+        GT1.18 (opt) - GUARANTOR EMPLOY PHONE # (TN)
+
+    gt1_19 : str | None
+        GT1.19 (opt) - GUARANTOR EMPLOYEE ID NUM (ST)
+
+    gt1_20 : str | None
+        GT1.20 (opt) - GUARANTOR EMPLOYMENT STATUS (ID)
+    """
 
     gt1_1: str = Field(
         default=...,

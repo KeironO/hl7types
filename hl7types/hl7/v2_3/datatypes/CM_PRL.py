@@ -15,7 +15,19 @@ from .TX import TX
 
 
 class CM_PRL(BaseModel):
-    """HL7 v2 CM_PRL data type."""
+    """HL7 v2 CM_PRL data type.
+
+    Attributes
+    ----------
+    cm_prl_1 : CE | None
+        CM_PRL.1 (opt) - OBX-3 observation identifier of parent result (CE)
+
+    cm_prl_2 : str | None
+        CM_PRL.2 (opt) - OBX-4 sub-ID of parent result (ST)
+
+    cm_prl_3 : TX | None
+        CM_PRL.3 (opt) - part of OBX-5 observation result from parent (TX)
+    """
 
     cm_prl_1: Optional[CE] = Field(
         default=None,

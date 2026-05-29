@@ -14,7 +14,19 @@ from ..datatypes.CE import CE
 
 
 class ODT(BaseModel):
-    """HL7 v2 ODT segment."""
+    """HL7 v2 ODT segment.
+
+    Attributes
+    ----------
+    odt_1 : CE
+        ODT.1 (req) - Tray Type (CE)
+
+    odt_2 : list[CE] | None
+        ODT.2 (opt, rep) - Service Period (CE)
+
+    odt_3 : str | None
+        ODT.3 (opt) - Text Instruction (ST)
+    """
 
     odt_1: CE = Field(
         default=...,

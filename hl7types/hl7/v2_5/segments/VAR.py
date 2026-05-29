@@ -17,7 +17,28 @@ from ..datatypes.XCN import XCN
 
 
 class VAR(BaseModel):
-    """HL7 v2 VAR segment."""
+    """HL7 v2 VAR segment.
+
+    Attributes
+    ----------
+    var_1 : EI
+        VAR.1 (req) - Variance Instance ID (EI)
+
+    var_2 : TS
+        VAR.2 (req) - Documented Date/Time (TS)
+
+    var_3 : TS | None
+        VAR.3 (opt) - Stated Variance Date/Time (TS)
+
+    var_4 : list[XCN] | None
+        VAR.4 (opt, rep) - Variance Originator (XCN)
+
+    var_5 : CE | None
+        VAR.5 (opt) - Variance Classification (CE)
+
+    var_6 : list[str] | None
+        VAR.6 (opt, rep) - Variance Description (ST)
+    """
 
     var_1: EI = Field(
         default=...,

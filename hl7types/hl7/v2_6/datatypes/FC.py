@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class FC(BaseModel):
-    """HL7 v2 FC data type."""
+    """HL7 v2 FC data type.
+
+    Attributes
+    ----------
+    fc_1 : str
+        FC.1 (req) - Financial Class Code (IS)
+
+    fc_2 : str | None
+        FC.2 (opt) - Effective Date (DTM)
+    """
 
     fc_1: str = Field(
         default=...,

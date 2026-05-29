@@ -12,7 +12,25 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class MSA(BaseModel):
-    """HL7 v2 MSA segment."""
+    """HL7 v2 MSA segment.
+
+    Attributes
+    ----------
+    msa_1 : str
+        MSA.1 (req) - ACKNOWLEDGMENT CODE (ID)
+
+    msa_2 : str
+        MSA.2 (req) - MESSAGE CONTROL ID (ST)
+
+    msa_3 : str | None
+        MSA.3 (opt) - TEXT MESSAGE (ST)
+
+    msa_4 : str | None
+        MSA.4 (opt) - EXPECTED SEQUENCE NUMBER (NM)
+
+    msa_5 : str | None
+        MSA.5 (opt) - DELAYED ACKNOWLEDGMENT TYPE (ID)
+    """
 
     msa_1: str = Field(
         default=...,

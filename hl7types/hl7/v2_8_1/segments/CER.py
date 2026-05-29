@@ -18,7 +18,103 @@ from ..datatypes.XON import XON
 
 
 class CER(BaseModel):
-    """HL7 v2 CER segment."""
+    """HL7 v2 CER segment.
+
+    Attributes
+    ----------
+    cer_1 : str
+        CER.1 (req) - Set ID - CER (SI)
+
+    cer_2 : str | None
+        CER.2 (opt) - Serial Number (ST)
+
+    cer_3 : str | None
+        CER.3 (opt) - Version (ST)
+
+    cer_4 : XON | None
+        CER.4 (opt) - Granting Authority (XON)
+
+    cer_5 : XCN | None
+        CER.5 (opt) - Issuing Authority (XCN)
+
+    cer_6 : ED | None
+        CER.6 (opt) - Signature (ED)
+
+    cer_7 : str | None
+        CER.7 (opt) - Granting Country (ID)
+
+    cer_8 : CWE | None
+        CER.8 (opt) - Granting State/Province (CWE)
+
+    cer_9 : CWE | None
+        CER.9 (opt) - Granting County/Parish (CWE)
+
+    cer_10 : CWE | None
+        CER.10 (opt) - Certificate Type (CWE)
+
+    cer_11 : CWE | None
+        CER.11 (opt) - Certificate Domain (CWE)
+
+    cer_12 : EI | None
+        CER.12 (opt) - Subject ID (EI)
+
+    cer_13 : str
+        CER.13 (req) - Subject Name (ST)
+
+    cer_14 : list[CWE] | None
+        CER.14 (opt, rep) - Subject Directory Attribute Extension (CWE)
+
+    cer_15 : CWE | None
+        CER.15 (opt) - Subject Public Key Info (CWE)
+
+    cer_16 : CWE | None
+        CER.16 (opt) - Authority Key Identifier (CWE)
+
+    cer_17 : str | None
+        CER.17 (opt) - Basic Constraint (ID)
+
+    cer_18 : list[CWE] | None
+        CER.18 (opt, rep) - CRL Distribution Point (CWE)
+
+    cer_19 : str | None
+        CER.19 (opt) - Jurisdiction Country (ID)
+
+    cer_20 : CWE | None
+        CER.20 (opt) - Jurisdiction State/Province (CWE)
+
+    cer_21 : CWE | None
+        CER.21 (opt) - Jurisdiction County/Parish (CWE)
+
+    cer_22 : list[CWE] | None
+        CER.22 (opt, rep) - Jurisdiction Breadth (CWE)
+
+    cer_23 : str | None
+        CER.23 (opt) - Granting Date (DTM)
+
+    cer_24 : str | None
+        CER.24 (opt) - Issuing Date (DTM)
+
+    cer_25 : str | None
+        CER.25 (opt) - Activation Date (DTM)
+
+    cer_26 : str | None
+        CER.26 (opt) - Inactivation Date (DTM)
+
+    cer_27 : str | None
+        CER.27 (opt) - Expiration Date (DTM)
+
+    cer_28 : str | None
+        CER.28 (opt) - Renewal Date (DTM)
+
+    cer_29 : str | None
+        CER.29 (opt) - Revocation Date (DTM)
+
+    cer_30 : CWE | None
+        CER.30 (opt) - Revocation Reason Code (CWE)
+
+    cer_31 : CWE | None
+        CER.31 (opt) - Certificate Status Code (CWE)
+    """
 
     cer_1: str = Field(
         default=...,

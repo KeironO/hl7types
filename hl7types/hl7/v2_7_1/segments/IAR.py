@@ -14,7 +14,22 @@ from ..datatypes.CWE import CWE
 
 
 class IAR(BaseModel):
-    """HL7 v2 IAR segment."""
+    """HL7 v2 IAR segment.
+
+    Attributes
+    ----------
+    iar_1 : CWE
+        IAR.1 (req) - Allergy Reaction Code (CWE)
+
+    iar_2 : CWE
+        IAR.2 (req) - Allergy Severity Code (CWE)
+
+    iar_3 : CWE | None
+        IAR.3 (opt) - Sensitivity to Causative Agent Code (CWE)
+
+    iar_4 : str | None
+        IAR.4 (opt) - Management (ST)
+    """
 
     iar_1: CWE = Field(
         default=...,

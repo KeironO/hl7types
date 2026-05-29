@@ -14,7 +14,16 @@ from .TS import TS
 
 
 class CM_FINANCE(BaseModel):
-    """HL7 v2 CM_FINANCE data type."""
+    """HL7 v2 CM_FINANCE data type.
+
+    Attributes
+    ----------
+    cm_finance_1 : str | None
+        CM_FINANCE.1 (opt) - financial class ID (ID)
+
+    cm_finance_2 : TS | None
+        CM_FINANCE.2 (opt) - effective date (TS)
+    """
 
     cm_finance_1: Optional[str] = Field(
         default=None,

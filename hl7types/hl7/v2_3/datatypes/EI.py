@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class EI(BaseModel):
-    """HL7 v2 EI data type."""
+    """HL7 v2 EI data type.
+
+    Attributes
+    ----------
+    ei_1 : str | None
+        EI.1 (opt) - entity identifier (ST)
+
+    ei_2 : str | None
+        EI.2 (opt) - namespace ID (IS)
+
+    ei_3 : str | None
+        EI.3 (opt) - universal ID (ST)
+
+    ei_4 : str | None
+        EI.4 (opt) - universal ID type (ID)
+    """
 
     ei_1: Optional[str] = Field(
         default=None,

@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_RI(BaseModel):
-    """HL7 v2 CM_RI data type."""
+    """HL7 v2 CM_RI data type.
+
+    Attributes
+    ----------
+    cm_ri_1 : str | None
+        CM_RI.1 (opt) - repeat pattern (ST)
+
+    cm_ri_2 : str | None
+        CM_RI.2 (opt) - explicit time intevall (ST)
+    """
 
     cm_ri_1: Optional[str] = Field(
         default=None,

@@ -16,7 +16,43 @@ from ..datatypes.TS import TS
 
 
 class DRG(BaseModel):
-    """HL7 v2 DRG segment."""
+    """HL7 v2 DRG segment.
+
+    Attributes
+    ----------
+    drg_1 : CE | None
+        DRG.1 (opt) - Diagnostic Related Group (CE)
+
+    drg_2 : TS | None
+        DRG.2 (opt) - DRG Assigned Date/Time (TS)
+
+    drg_3 : str | None
+        DRG.3 (opt) - DRG Approval Indicator (ID)
+
+    drg_4 : str | None
+        DRG.4 (opt) - DRG Grouper Review Code (IS)
+
+    drg_5 : CE | None
+        DRG.5 (opt) - Outlier Type (CE)
+
+    drg_6 : str | None
+        DRG.6 (opt) - Outlier Days (NM)
+
+    drg_7 : CP | None
+        DRG.7 (opt) - Outlier Cost (CP)
+
+    drg_8 : str | None
+        DRG.8 (opt) - DRG Payor (IS)
+
+    drg_9 : CP | None
+        DRG.9 (opt) - Outlier Reimbursement (CP)
+
+    drg_10 : str | None
+        DRG.10 (opt) - Confidential Indicator (ID)
+
+    drg_11 : str | None
+        DRG.11 (opt) - DRG Transfer Type (IS)
+    """
 
     drg_1: Optional[CE] = Field(
         default=None,

@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class ACC(BaseModel):
-    """HL7 v2 ACC segment."""
+    """HL7 v2 ACC segment.
+
+    Attributes
+    ----------
+    acc_1 : str | None
+        ACC.1 (opt) - ACCIDENT DATE/TIME (TS)
+
+    acc_2 : str | None
+        ACC.2 (opt) - ACCIDENT CODE (ID)
+
+    acc_3 : str | None
+        ACC.3 (opt) - ACCIDENT LOCATION (ST)
+    """
 
     acc_1: Optional[str] = Field(
         default=None,

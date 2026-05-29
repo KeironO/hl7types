@@ -18,7 +18,109 @@ from ..datatypes.XPN import XPN
 
 
 class DON(BaseModel):
-    """HL7 v2 DON segment."""
+    """HL7 v2 DON segment.
+
+    Attributes
+    ----------
+    don_1 : EI | None
+        DON.1 (opt) - Donation Identification Number - DIN (EI)
+
+    don_2 : CNE | None
+        DON.2 (opt) - Donation Type (CNE)
+
+    don_3 : str
+        DON.3 (req) - Phlebotomy Start Date/Time (DTM)
+
+    don_4 : str
+        DON.4 (req) - Phlebotomy End Date/Time (DTM)
+
+    don_5 : str
+        DON.5 (req) - Donation Duration (NM)
+
+    don_6 : CNE
+        DON.6 (req) - Donation Duration Units (CNE)
+
+    don_7 : list[CNE]
+        DON.7 (req, rep) - Intended Procedure Type (CNE)
+
+    don_8 : list[CNE]
+        DON.8 (req, rep) - Actual Procedure Type (CNE)
+
+    don_9 : str
+        DON.9 (req) - Donor Eligibility Flag (ID)
+
+    don_10 : list[CNE]
+        DON.10 (req, rep) - Donor Eligibility Procedure Type (CNE)
+
+    don_11 : str
+        DON.11 (req) - Donor Eligibility Date (DTM)
+
+    don_12 : CNE
+        DON.12 (req) - Process Interruption (CNE)
+
+    don_13 : CNE
+        DON.13 (req) - Process Interruption Reason (CNE)
+
+    don_14 : list[CNE]
+        DON.14 (req, rep) - Phlebotomy Issue (CNE)
+
+    don_15 : str
+        DON.15 (req) - Intended Recipient Blood Relative (ID)
+
+    don_16 : XPN
+        DON.16 (req) - Intended Recipient Name (XPN)
+
+    don_17 : str
+        DON.17 (req) - Intended Recipient DOB (DTM)
+
+    don_18 : XON
+        DON.18 (req) - Intended Recipient Facility (XON)
+
+    don_19 : str
+        DON.19 (req) - Intended Recipient Procedure Date (DTM)
+
+    don_20 : XPN
+        DON.20 (req) - Intended Recipient Ordering Provider (XPN)
+
+    don_21 : CNE
+        DON.21 (req) - Phlebotomy Status (CNE)
+
+    don_22 : CNE
+        DON.22 (req) - Arm Stick (CNE)
+
+    don_23 : XPN
+        DON.23 (req) - Bleed Start Phlebotomist (XPN)
+
+    don_24 : XPN
+        DON.24 (req) - Bleed End Phlebotomist (XPN)
+
+    don_25 : str
+        DON.25 (req) - Aphaeresis Type Machine (ST)
+
+    don_26 : str
+        DON.26 (req) - Aphaeresis Machine Serial Number (ST)
+
+    don_27 : str
+        DON.27 (req) - Donor Reaction (ID)
+
+    don_28 : XPN
+        DON.28 (req) - Final Review Staff ID (XPN)
+
+    don_29 : str
+        DON.29 (req) - Final Review Date/Time (DTM)
+
+    don_30 : str
+        DON.30 (req) - Number of Tubes Collected (NM)
+
+    don_31 : list[EI]
+        DON.31 (req, rep) - Donation Sample Identifier (EI)
+
+    don_32 : XCN
+        DON.32 (req) - Donation Accept Staff (XCN)
+
+    don_33 : list[XCN]
+        DON.33 (req, rep) - Donation Material Review Staff (XCN)
+    """
 
     don_1: Optional[EI] = Field(
         default=None,

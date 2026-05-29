@@ -15,7 +15,25 @@ from ..datatypes.XPN import XPN
 
 
 class MRG(BaseModel):
-    """HL7 v2 MRG segment."""
+    """HL7 v2 MRG segment.
+
+    Attributes
+    ----------
+    mrg_1 : list[CX]
+        MRG.1 (req, rep) - Prior Patient Identifier List (CX)
+
+    mrg_3 : CX | None
+        MRG.3 (opt) - Prior Patient Account Number (CX)
+
+    mrg_5 : CX | None
+        MRG.5 (opt) - Prior Visit Number (CX)
+
+    mrg_6 : CX | None
+        MRG.6 (opt) - Prior Alternate Visit ID (CX)
+
+    mrg_7 : list[XPN] | None
+        MRG.7 (opt, rep) - Prior Patient Name (XPN)
+    """
 
     mrg_1: List[CX] = Field(
         default=...,

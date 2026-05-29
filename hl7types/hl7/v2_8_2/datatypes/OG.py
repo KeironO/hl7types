@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class OG(BaseModel):
-    """HL7 v2 OG data type."""
+    """HL7 v2 OG data type.
+
+    Attributes
+    ----------
+    og_1 : str | None
+        OG.1 (opt) - Original Sub-Identifier (ST)
+
+    og_2 : str | None
+        OG.2 (opt) - Group (NM)
+
+    og_3 : str | None
+        OG.3 (opt) - Sequence (NM)
+
+    og_4 : str | None
+        OG.4 (opt) - Identifier (ST)
+    """
 
     og_1: Optional[str] = Field(
         default=None,

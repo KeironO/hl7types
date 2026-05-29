@@ -14,7 +14,19 @@ from ..datatypes.CWE import CWE
 
 
 class OM5(BaseModel):
-    """HL7 v2 OM5 segment."""
+    """HL7 v2 OM5 segment.
+
+    Attributes
+    ----------
+    om5_1 : str | None
+        OM5.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+
+    om5_2 : list[CWE] | None
+        OM5.2 (opt, rep) - Test/Observations Included Within an Ordered Test Battery (CWE)
+
+    om5_3 : str | None
+        OM5.3 (opt) - Observation ID Suffixes (ST)
+    """
 
     om5_1: Optional[str] = Field(
         default=None,

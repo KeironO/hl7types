@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_JOB_CODE(BaseModel):
-    """HL7 v2 CM_JOB_CODE data type."""
+    """HL7 v2 CM_JOB_CODE data type.
+
+    Attributes
+    ----------
+    cm_job_code_1 : str | None
+        CM_JOB_CODE.1 (opt) - job code (ID)
+
+    cm_job_code_2 : str | None
+        CM_JOB_CODE.2 (opt) - employee classification (ID)
+    """
 
     cm_job_code_1: Optional[str] = Field(
         default=None,

@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PTA(BaseModel):
-    """HL7 v2 CM_PTA data type."""
+    """HL7 v2 CM_PTA data type.
+
+    Attributes
+    ----------
+    cm_pta_1 : str | None
+        CM_PTA.1 (opt) - policy type (IS)
+
+    cm_pta_2 : str | None
+        CM_PTA.2 (opt) - amount class (IS)
+
+    cm_pta_3 : str | None
+        CM_PTA.3 (opt) - amount (NM)
+    """
 
     cm_pta_1: Optional[str] = Field(
         default=None,

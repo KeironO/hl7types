@@ -12,7 +12,25 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class FN(BaseModel):
-    """HL7 v2 FN data type."""
+    """HL7 v2 FN data type.
+
+    Attributes
+    ----------
+    fn_1 : str
+        FN.1 (req) - Surname (ST)
+
+    fn_2 : str | None
+        FN.2 (opt) - Own Surname Prefix (ST)
+
+    fn_3 : str | None
+        FN.3 (opt) - Own Surname (ST)
+
+    fn_4 : str | None
+        FN.4 (opt) - Surname Prefix from Partner/Spouse (ST)
+
+    fn_5 : str | None
+        FN.5 (opt) - Surname from Partner/Spouse (ST)
+    """
 
     fn_1: str = Field(
         default=...,

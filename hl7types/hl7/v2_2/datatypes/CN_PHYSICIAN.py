@@ -14,7 +14,49 @@ from .AD import AD
 
 
 class CN_PHYSICIAN(BaseModel):
-    """HL7 v2 CN_PHYSICIAN data type."""
+    """HL7 v2 CN_PHYSICIAN data type.
+
+    Attributes
+    ----------
+    cn_physician_1 : str | None
+        CN_PHYSICIAN.1 (opt) - physician ID (ID)
+
+    cn_physician_2 : str | None
+        CN_PHYSICIAN.2 (opt) - familiy name (ST)
+
+    cn_physician_3 : str | None
+        CN_PHYSICIAN.3 (opt) - given name (ST)
+
+    cn_physician_4 : str | None
+        CN_PHYSICIAN.4 (opt) - middle initial or name (ST)
+
+    cn_physician_5 : str | None
+        CN_PHYSICIAN.5 (opt) - suffix (e.g. JR or III) (ST)
+
+    cn_physician_6 : str | None
+        CN_PHYSICIAN.6 (opt) - prefix (e.g. DR) (ST)
+
+    cn_physician_7 : str | None
+        CN_PHYSICIAN.7 (opt) - degree (e.g. MD) (ST)
+
+    cn_physician_8 : str | None
+        CN_PHYSICIAN.8 (opt) - source table id (ID)
+
+    cn_physician_9 : AD | None
+        CN_PHYSICIAN.9 (opt) - Adresse (AD)
+
+    cn_physician_10 : str | None
+        CN_PHYSICIAN.10 (opt) - Telefon (TN)
+
+    cn_physician_11 : str | None
+        CN_PHYSICIAN.11 (opt) - Faxnummer (TN)
+
+    cn_physician_12 : str | None
+        CN_PHYSICIAN.12 (opt) - Online-Nummer (TN)
+
+    cn_physician_13 : str | None
+        CN_PHYSICIAN.13 (opt) - E-Mail (ST)
+    """
 
     cn_physician_1: Optional[str] = Field(
         default=None,

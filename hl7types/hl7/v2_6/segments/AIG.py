@@ -15,7 +15,52 @@ from ..datatypes.CWE import CWE
 
 
 class AIG(BaseModel):
-    """HL7 v2 AIG segment."""
+    """HL7 v2 AIG segment.
+
+    Attributes
+    ----------
+    aig_1 : str
+        AIG.1 (req) - Set ID - AIG (SI)
+
+    aig_2 : str | None
+        AIG.2 (opt) - Segment Action Code (ID)
+
+    aig_3 : CWE | None
+        AIG.3 (opt) - Resource ID (CWE)
+
+    aig_4 : CWE
+        AIG.4 (req) - Resource Type (CWE)
+
+    aig_5 : list[CWE] | None
+        AIG.5 (opt, rep) - Resource Group (CWE)
+
+    aig_6 : str | None
+        AIG.6 (opt) - Resource Quantity (NM)
+
+    aig_7 : CNE | None
+        AIG.7 (opt) - Resource Quantity Units (CNE)
+
+    aig_8 : str | None
+        AIG.8 (opt) - Start Date/Time (DTM)
+
+    aig_9 : str | None
+        AIG.9 (opt) - Start Date/Time Offset (NM)
+
+    aig_10 : CNE | None
+        AIG.10 (opt) - Start Date/Time Offset Units (CNE)
+
+    aig_11 : str | None
+        AIG.11 (opt) - Duration (NM)
+
+    aig_12 : CNE | None
+        AIG.12 (opt) - Duration Units (CNE)
+
+    aig_13 : str | None
+        AIG.13 (opt) - Allow Substitution Code (IS)
+
+    aig_14 : CWE | None
+        AIG.14 (opt) - Filler Status Code (CWE)
+    """
 
     aig_1: str = Field(
         default=...,

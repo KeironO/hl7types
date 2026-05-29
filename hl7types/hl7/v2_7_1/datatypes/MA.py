@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class MA(BaseModel):
-    """HL7 v2 MA data type."""
+    """HL7 v2 MA data type.
+
+    Attributes
+    ----------
+    ma_1 : str | None
+        MA.1 (opt) - Sample Y From Channel 1 (NM)
+
+    ma_2 : str | None
+        MA.2 (opt) - Sample Y From Channel 2 (NM)
+
+    ma_3 : str | None
+        MA.3 (opt) - Sample Y From Channel 3 (NM)
+
+    ma_4 : str | None
+        MA.4 (opt) - Sample Y From Channel 4 (NM)
+    """
 
     ma_1: Optional[str] = Field(
         default=None,

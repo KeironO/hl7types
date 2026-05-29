@@ -22,7 +22,88 @@ from ..datatypes.XTN import XTN
 
 
 class STF(BaseModel):
-    """HL7 v2 STF segment."""
+    """HL7 v2 STF segment.
+
+    Attributes
+    ----------
+    stf_1 : CE
+        STF.1 (req) - Primary Key Value - STF (CE)
+
+    stf_2 : list[CX] | None
+        STF.2 (opt, rep) - Staff ID Code (CX)
+
+    stf_3 : list[XPN] | None
+        STF.3 (opt, rep) - Staff Name (XPN)
+
+    stf_4 : list[str] | None
+        STF.4 (opt, rep) - Staff Type (IS)
+
+    stf_5 : str | None
+        STF.5 (opt) - Sex (IS)
+
+    stf_6 : TS | None
+        STF.6 (opt) - Date/Time Of Birth (TS)
+
+    stf_7 : str | None
+        STF.7 (opt) - Active/Inactive Flag (ID)
+
+    stf_8 : list[CE] | None
+        STF.8 (opt, rep) - Department (CE)
+
+    stf_9 : list[CE] | None
+        STF.9 (opt, rep) - Hospital Service (CE)
+
+    stf_10 : list[XTN] | None
+        STF.10 (opt, rep) - Phone (XTN)
+
+    stf_11 : list[XAD] | None
+        STF.11 (opt, rep) - Office/Home Address (XAD)
+
+    stf_12 : list[DIN] | None
+        STF.12 (opt, rep) - Institution Activation Date (DIN)
+
+    stf_13 : list[DIN] | None
+        STF.13 (opt, rep) - Institution Inactivation Date (DIN)
+
+    stf_14 : list[CE] | None
+        STF.14 (opt, rep) - Backup Person ID (CE)
+
+    stf_15 : list[str] | None
+        STF.15 (opt, rep) - E-Mail Address (ST)
+
+    stf_16 : CE | None
+        STF.16 (opt) - Preferred Method Of Contact (CE)
+
+    stf_17 : CE | None
+        STF.17 (opt) - Marital Status (CE)
+
+    stf_18 : str | None
+        STF.18 (opt) - Job Title (ST)
+
+    stf_19 : JCC | None
+        STF.19 (opt) - Job Code/Class (JCC)
+
+    stf_20 : str | None
+        STF.20 (opt) - Employment Status (IS)
+
+    stf_21 : str | None
+        STF.21 (opt) - Additional Insured on  Auto (ID)
+
+    stf_22 : DLN | None
+        STF.22 (opt) - Driver’s License Number - Staff (DLN)
+
+    stf_23 : str | None
+        STF.23 (opt) - Copy  Auto Ins (ID)
+
+    stf_24 : str | None
+        STF.24 (opt) - Auto Ins. Expires (DT)
+
+    stf_25 : str | None
+        STF.25 (opt) - Date Last DMV Review (DT)
+
+    stf_26 : str | None
+        STF.26 (opt) - Date Next DMV Review (DT)
+    """
 
     stf_1: CE = Field(
         default=...,

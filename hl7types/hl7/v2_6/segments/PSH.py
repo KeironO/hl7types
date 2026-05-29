@@ -15,7 +15,52 @@ from ..datatypes.FT import FT
 
 
 class PSH(BaseModel):
-    """HL7 v2 PSH segment."""
+    """HL7 v2 PSH segment.
+
+    Attributes
+    ----------
+    psh_1 : str
+        PSH.1 (req) - Report Type (ST)
+
+    psh_2 : str | None
+        PSH.2 (opt) - Report Form Identifier (ST)
+
+    psh_3 : str
+        PSH.3 (req) - Report Date (DTM)
+
+    psh_4 : str | None
+        PSH.4 (opt) - Report Interval Start Date (DTM)
+
+    psh_5 : str | None
+        PSH.5 (opt) - Report Interval End Date (DTM)
+
+    psh_6 : CQ | None
+        PSH.6 (opt) - Quantity Manufactured (CQ)
+
+    psh_7 : CQ | None
+        PSH.7 (opt) - Quantity Distributed (CQ)
+
+    psh_8 : str | None
+        PSH.8 (opt) - Quantity Distributed Method (ID)
+
+    psh_9 : FT | None
+        PSH.9 (opt) - Quantity Distributed Comment (FT)
+
+    psh_10 : CQ | None
+        PSH.10 (opt) - Quantity in Use (CQ)
+
+    psh_11 : str | None
+        PSH.11 (opt) - Quantity in Use Method (ID)
+
+    psh_12 : FT | None
+        PSH.12 (opt) - Quantity in Use Comment (FT)
+
+    psh_13 : list[str] | None
+        PSH.13 (opt, rep) - Number of Product Experience Reports Filed by Facility (NM)
+
+    psh_14 : list[str] | None
+        PSH.14 (opt, rep) - Number of Product Experience Reports Filed by Distributor (NM)
+    """
 
     psh_1: str = Field(
         default=...,

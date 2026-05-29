@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class MO(BaseModel):
-    """HL7 v2 MO data type."""
+    """HL7 v2 MO data type.
+
+    Attributes
+    ----------
+    mo_1 : str | None
+        MO.1 (opt) - Quantity (NM)
+
+    mo_2 : str | None
+        MO.2 (opt) - Denomination (ID)
+    """
 
     mo_1: Optional[str] = Field(
         default=None,

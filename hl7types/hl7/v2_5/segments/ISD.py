@@ -14,7 +14,19 @@ from ..datatypes.CE import CE
 
 
 class ISD(BaseModel):
-    """HL7 v2 ISD segment."""
+    """HL7 v2 ISD segment.
+
+    Attributes
+    ----------
+    isd_1 : str
+        ISD.1 (req) - Reference Interaction Number (unique identifier) (NM)
+
+    isd_2 : CE | None
+        ISD.2 (opt) - Interaction Type Identifier (CE)
+
+    isd_3 : CE
+        ISD.3 (req) - Interaction Active State (CE)
+    """
 
     isd_1: str = Field(
         default=...,

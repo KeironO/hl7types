@@ -14,7 +14,22 @@ from .HD import HD
 
 
 class RP(BaseModel):
-    """HL7 v2 RP data type."""
+    """HL7 v2 RP data type.
+
+    Attributes
+    ----------
+    rp_1 : str | None
+        RP.1 (opt) - pointer (ST)
+
+    rp_2 : HD | None
+        RP.2 (opt) - application ID (HD)
+
+    rp_3 : str | None
+        RP.3 (opt) - type of data (ID)
+
+    rp_4 : str | None
+        RP.4 (opt) - subtype (ID)
+    """
 
     rp_1: Optional[str] = Field(
         default=None,

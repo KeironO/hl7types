@@ -14,7 +14,19 @@ from ..datatypes.CE import CE
 
 
 class RGS(BaseModel):
-    """HL7 v2 RGS segment."""
+    """HL7 v2 RGS segment.
+
+    Attributes
+    ----------
+    rgs_1 : str
+        RGS.1 (req) - Set ID - RGS (SI)
+
+    rgs_2 : str | None
+        RGS.2 (opt) - Segment Action Code (ID)
+
+    rgs_3 : CE | None
+        RGS.3 (opt) - Resource Group ID (CE)
+    """
 
     rgs_1: str = Field(
         default=...,

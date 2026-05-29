@@ -14,7 +14,31 @@ from ..datatypes.TS import TS
 
 
 class URD(BaseModel):
-    """HL7 v2 URD segment."""
+    """HL7 v2 URD segment.
+
+    Attributes
+    ----------
+    urd_1 : TS | None
+        URD.1 (opt) - R/U date / time (TS)
+
+    urd_2 : str | None
+        URD.2 (opt) - Report Priority (ID)
+
+    urd_3 : list[str]
+        URD.3 (req, rep) - R/U Who Subject Definition (ST)
+
+    urd_4 : list[str] | None
+        URD.4 (opt, rep) - R/U What Subject Definition (ID)
+
+    urd_5 : list[str] | None
+        URD.5 (opt, rep) - R/U What Department Code (ST)
+
+    urd_6 : list[str] | None
+        URD.6 (opt, rep) - R/U display / print locations (ST)
+
+    urd_7 : str | None
+        URD.7 (opt) - R/U Results Level (ID)
+    """
 
     urd_1: Optional[TS] = Field(
         default=None,

@@ -15,7 +15,73 @@ from ..datatypes.PN import PN
 
 
 class GT1(BaseModel):
-    """HL7 v2 GT1 segment."""
+    """HL7 v2 GT1 segment.
+
+    Attributes
+    ----------
+    gt1_1 : str
+        GT1.1 (req) - Set ID - guarantor (SI)
+
+    gt1_2 : str | None
+        GT1.2 (opt) - Guarantor number (CK)
+
+    gt1_3 : PN
+        GT1.3 (req) - Guarantor name (PN)
+
+    gt1_4 : PN | None
+        GT1.4 (opt) - Guarantor spouse name (PN)
+
+    gt1_5 : AD | None
+        GT1.5 (opt) - Guarantor address (AD)
+
+    gt1_6 : list[str] | None
+        GT1.6 (opt, rep) - Guarantor phone number - home (TN)
+
+    gt1_7 : list[str] | None
+        GT1.7 (opt, rep) - Guarantor phone number - business (TN)
+
+    gt1_8 : str | None
+        GT1.8 (opt) - Guarantor date of birth (DT)
+
+    gt1_9 : str | None
+        GT1.9 (opt) - Guarantor sex (ID)
+
+    gt1_10 : str | None
+        GT1.10 (opt) - Guarantor type (ID)
+
+    gt1_11 : str | None
+        GT1.11 (opt) - Guarantor relationship (ID)
+
+    gt1_12 : str | None
+        GT1.12 (opt) - Guarantor social security number (ST)
+
+    gt1_13 : str | None
+        GT1.13 (opt) - Guarantor date - begin (DT)
+
+    gt1_14 : str | None
+        GT1.14 (opt) - Guarantor date - end (DT)
+
+    gt1_15 : str | None
+        GT1.15 (opt) - Guarantor priority (NM)
+
+    gt1_16 : str | None
+        GT1.16 (opt) - Guarantor employer name (ST)
+
+    gt1_17 : AD | None
+        GT1.17 (opt) - Guarantor employer address (AD)
+
+    gt1_18 : list[str] | None
+        GT1.18 (opt, rep) - Guarantor employ phone number (TN)
+
+    gt1_19 : str | None
+        GT1.19 (opt) - Guarantor employee ID number (ST)
+
+    gt1_20 : str | None
+        GT1.20 (opt) - Guarantor employment status (ID)
+
+    gt1_21 : str | None
+        GT1.21 (opt) - Guarantor organization (ST)
+    """
 
     gt1_1: str = Field(
         default=...,

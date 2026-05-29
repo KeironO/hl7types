@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class ICD(BaseModel):
-    """HL7 v2 ICD data type."""
+    """HL7 v2 ICD data type.
+
+    Attributes
+    ----------
+    icd_1 : str | None
+        ICD.1 (opt) - Certification Patient Type (IS)
+
+    icd_2 : str
+        ICD.2 (req) - Certification Required (ID)
+
+    icd_3 : str | None
+        ICD.3 (opt) - Date/Time Certification Required (DTM)
+    """
 
     icd_1: Optional[str] = Field(
         default=None,

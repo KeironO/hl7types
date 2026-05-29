@@ -15,7 +15,16 @@ from .MO import MO
 
 
 class MOC(BaseModel):
-    """HL7 v2 MOC data type."""
+    """HL7 v2 MOC data type.
+
+    Attributes
+    ----------
+    moc_1 : MO | None
+        MOC.1 (opt) - Monetary Amount (MO)
+
+    moc_2 : CWE | None
+        MOC.2 (opt) - Charge Code (CWE)
+    """
 
     moc_1: Optional[MO] = Field(
         default=None,

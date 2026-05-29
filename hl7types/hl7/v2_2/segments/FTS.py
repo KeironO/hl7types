@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class FTS(BaseModel):
-    """HL7 v2 FTS segment."""
+    """HL7 v2 FTS segment.
+
+    Attributes
+    ----------
+    fts_1 : str | None
+        FTS.1 (opt) - File Batch Count (NM)
+
+    fts_2 : str | None
+        FTS.2 (opt) - File Trailer Comment (ST)
+    """
 
     fts_1: Optional[str] = Field(
         default=None,

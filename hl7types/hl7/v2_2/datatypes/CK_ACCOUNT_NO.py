@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CK_ACCOUNT_NO(BaseModel):
-    """HL7 v2 CK_ACCOUNT_NO data type."""
+    """HL7 v2 CK_ACCOUNT_NO data type.
+
+    Attributes
+    ----------
+    ck_account_no_1 : str | None
+        CK_ACCOUNT_NO.1 (opt) - account number (NM)
+
+    ck_account_no_2 : str | None
+        CK_ACCOUNT_NO.2 (opt) - Check digit (NM)
+
+    ck_account_no_3 : str | None
+        CK_ACCOUNT_NO.3 (opt) - Check digit scheme (ID)
+
+    ck_account_no_4 : str | None
+        CK_ACCOUNT_NO.4 (opt) - Facility ID (ID)
+    """
 
     ck_account_no_1: Optional[str] = Field(
         default=None,

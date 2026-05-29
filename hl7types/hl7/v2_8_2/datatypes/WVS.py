@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class WVS(BaseModel):
-    """HL7 v2 WVS data type."""
+    """HL7 v2 WVS data type.
+
+    Attributes
+    ----------
+    wvs_1 : str
+        WVS.1 (req) - Source One Name (ST)
+
+    wvs_2 : str | None
+        WVS.2 (opt) - Source Two Name (ST)
+    """
 
     wvs_1: str = Field(
         default=...,

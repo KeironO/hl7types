@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PLACER(BaseModel):
-    """HL7 v2 CM_PLACER data type."""
+    """HL7 v2 CM_PLACER data type.
+
+    Attributes
+    ----------
+    cm_placer_1 : str | None
+        CM_PLACER.1 (opt) - unique placer id (ID)
+
+    cm_placer_2 : str | None
+        CM_PLACER.2 (opt) - placer application (ID)
+    """
 
     cm_placer_1: Optional[str] = Field(
         default=None,

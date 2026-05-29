@@ -15,7 +15,25 @@ from ..datatypes.EI import EI
 
 
 class PSS(BaseModel):
-    """HL7 v2 PSS segment."""
+    """HL7 v2 PSS segment.
+
+    Attributes
+    ----------
+    pss_1 : EI
+        PSS.1 (req) - Provider Product/Service Section Number (EI)
+
+    pss_2 : EI | None
+        PSS.2 (opt) - Payer Product/Service Section Number (EI)
+
+    pss_3 : str
+        PSS.3 (req) - Product/Service Section Sequence Number (SI)
+
+    pss_4 : CP
+        PSS.4 (req) - Billed Amount (CP)
+
+    pss_5 : str
+        PSS.5 (req) - Section Description or Heading (ST)
+    """
 
     pss_1: EI = Field(
         default=...,

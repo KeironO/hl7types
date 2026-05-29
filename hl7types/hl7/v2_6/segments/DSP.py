@@ -14,7 +14,25 @@ from ..datatypes.TX import TX
 
 
 class DSP(BaseModel):
-    """HL7 v2 DSP segment."""
+    """HL7 v2 DSP segment.
+
+    Attributes
+    ----------
+    dsp_1 : str | None
+        DSP.1 (opt) - Set ID - DSP (SI)
+
+    dsp_2 : str | None
+        DSP.2 (opt) - Display Level (SI)
+
+    dsp_3 : TX
+        DSP.3 (req) - Data Line (TX)
+
+    dsp_4 : str | None
+        DSP.4 (opt) - Logical Break Point (ST)
+
+    dsp_5 : TX | None
+        DSP.5 (opt) - Result ID (TX)
+    """
 
     dsp_1: Optional[str] = Field(
         default=None,

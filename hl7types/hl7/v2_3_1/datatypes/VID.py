@@ -14,7 +14,19 @@ from .CE import CE
 
 
 class VID(BaseModel):
-    """HL7 v2 VID data type."""
+    """HL7 v2 VID data type.
+
+    Attributes
+    ----------
+    vid_1 : str | None
+        VID.1 (opt) - version ID (ID)
+
+    vid_2 : CE | None
+        VID.2 (opt) - internationalization code (CE)
+
+    vid_3 : CE | None
+        VID.3 (opt) - international version ID (CE)
+    """
 
     vid_1: Optional[str] = Field(
         default=None,

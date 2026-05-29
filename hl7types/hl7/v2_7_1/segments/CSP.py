@@ -14,7 +14,22 @@ from ..datatypes.CWE import CWE
 
 
 class CSP(BaseModel):
-    """HL7 v2 CSP segment."""
+    """HL7 v2 CSP segment.
+
+    Attributes
+    ----------
+    csp_1 : CWE
+        CSP.1 (req) - Study Phase Identifier (CWE)
+
+    csp_2 : str
+        CSP.2 (req) - Date/time Study Phase Began (DTM)
+
+    csp_3 : str | None
+        CSP.3 (opt) - Date/time Study Phase Ended (DTM)
+
+    csp_4 : CWE | None
+        CSP.4 (opt) - Study Phase Evaluability (CWE)
+    """
 
     csp_1: CWE = Field(
         default=...,

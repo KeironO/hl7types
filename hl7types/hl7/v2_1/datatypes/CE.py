@@ -12,7 +12,28 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CE(BaseModel):
-    """HL7 v2 CE data type."""
+    """HL7 v2 CE data type.
+
+    Attributes
+    ----------
+    ce_1 : str | None
+        CE.1 (opt) - identifier (ID)
+
+    ce_2 : str | None
+        CE.2 (opt) - text (ST)
+
+    ce_3 : str | None
+        CE.3 (opt) - name of coding system (ST)
+
+    ce_4 : str | None
+        CE.4 (opt) - alternate identifier (ST)
+
+    ce_5 : str | None
+        CE.5 (opt) - alternate text (ST)
+
+    ce_6 : str | None
+        CE.6 (opt) - name of alternate coding system (ST)
+    """
 
     ce_1: Optional[str] = Field(
         default=None,

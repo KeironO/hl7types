@@ -12,7 +12,157 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class PV1(BaseModel):
-    """HL7 v2 PV1 segment."""
+    """HL7 v2 PV1 segment.
+
+    Attributes
+    ----------
+    pv1_1 : str | None
+        PV1.1 (opt) - SET ID - PATIENT VISIT (SI)
+
+    pv1_2 : str
+        PV1.2 (req) - PATIENT CLASS (ID)
+
+    pv1_3 : str
+        PV1.3 (req) - ASSIGNED PATIENT LOCATION (ID)
+
+    pv1_4 : str | None
+        PV1.4 (opt) - ADMISSION TYPE (ID)
+
+    pv1_5 : str | None
+        PV1.5 (opt) - PRE-ADMIT NUMBER (ST)
+
+    pv1_6 : str | None
+        PV1.6 (opt) - PRIOR PATIENT LOCATION (ID)
+
+    pv1_7 : str | None
+        PV1.7 (opt) - ATTENDING DOCTOR (CN)
+
+    pv1_8 : str | None
+        PV1.8 (opt) - REFERRING DOCTOR (CN)
+
+    pv1_9 : list[str] | None
+        PV1.9 (opt, rep) - CONSULTING DOCTOR (CN)
+
+    pv1_10 : str | None
+        PV1.10 (opt) - HOSPITAL SERVICE (ID)
+
+    pv1_11 : str | None
+        PV1.11 (opt) - TEMPORARY LOCATION (ID)
+
+    pv1_12 : str | None
+        PV1.12 (opt) - PRE-ADMIT TEST INDICATOR (ID)
+
+    pv1_13 : str | None
+        PV1.13 (opt) - RE-ADMISSION INDICATOR (ID)
+
+    pv1_14 : str | None
+        PV1.14 (opt) - ADMIT SOURCE (ID)
+
+    pv1_15 : str | None
+        PV1.15 (opt) - AMBULATORY STATUS (ID)
+
+    pv1_16 : str | None
+        PV1.16 (opt) - VIP INDICATOR (ID)
+
+    pv1_17 : str | None
+        PV1.17 (opt) - ADMITTING DOCTOR (CN)
+
+    pv1_18 : str | None
+        PV1.18 (opt) - PATIENT TYPE (ID)
+
+    pv1_19 : str | None
+        PV1.19 (opt) - VISIT NUMBER (NM)
+
+    pv1_20 : list[str] | None
+        PV1.20 (opt, rep) - FINANCIAL CLASS (ID)
+
+    pv1_21 : str | None
+        PV1.21 (opt) - CHARGE PRICE INDICATOR (ID)
+
+    pv1_22 : str | None
+        PV1.22 (opt) - COURTESY CODE (ID)
+
+    pv1_23 : str | None
+        PV1.23 (opt) - CREDIT RATING (ID)
+
+    pv1_24 : list[str] | None
+        PV1.24 (opt, rep) - CONTRACT CODE (ID)
+
+    pv1_25 : list[str] | None
+        PV1.25 (opt, rep) - CONTRACT EFFECTIVE DATE (DT)
+
+    pv1_26 : list[str] | None
+        PV1.26 (opt, rep) - CONTRACT AMOUNT (NM)
+
+    pv1_27 : list[str] | None
+        PV1.27 (opt, rep) - CONTRACT PERIOD (NM)
+
+    pv1_28 : str | None
+        PV1.28 (opt) - INTEREST CODE (ID)
+
+    pv1_29 : str | None
+        PV1.29 (opt) - TRANSFER TO BAD DEBT CODE (ID)
+
+    pv1_30 : str | None
+        PV1.30 (opt) - TRANSFER TO BAD DEBT DATE (DT)
+
+    pv1_31 : str | None
+        PV1.31 (opt) - BAD DEBT AGENCY CODE (ST)
+
+    pv1_32 : str | None
+        PV1.32 (opt) - BAD DEBT TRANSFER AMOUNT (NM)
+
+    pv1_33 : str | None
+        PV1.33 (opt) - BAD DEBT RECOVERY AMOUNT (NM)
+
+    pv1_34 : str | None
+        PV1.34 (opt) - DELETE ACCOUNT INDICATOR (ID)
+
+    pv1_35 : str | None
+        PV1.35 (opt) - DELETE ACCOUNT DATE (DT)
+
+    pv1_36 : str | None
+        PV1.36 (opt) - DISCHARGE DISPOSITION (ID)
+
+    pv1_37 : str | None
+        PV1.37 (opt) - DISCHARGED TO LOCATION (ID)
+
+    pv1_38 : str | None
+        PV1.38 (opt) - DIET TYPE (ID)
+
+    pv1_39 : str | None
+        PV1.39 (opt) - SERVICING FACILITY (ID)
+
+    pv1_40 : str | None
+        PV1.40 (opt) - BED STATUS (ID)
+
+    pv1_41 : str | None
+        PV1.41 (opt) - ACCOUNT STATUS (ID)
+
+    pv1_42 : str | None
+        PV1.42 (opt) - PENDING LOCATION (ID)
+
+    pv1_43 : str | None
+        PV1.43 (opt) - PRIOR TEMPORARY LOCATION (ID)
+
+    pv1_44 : str | None
+        PV1.44 (opt) - ADMIT DATE/TIME (TS)
+
+    pv1_45 : str | None
+        PV1.45 (opt) - DISCHARGE DATE/TIME (TS)
+
+    pv1_46 : str | None
+        PV1.46 (opt) - CURRENT PATIENT BALANCE (NM)
+
+    pv1_47 : str | None
+        PV1.47 (opt) - TOTAL CHARGES (NM)
+
+    pv1_48 : str | None
+        PV1.48 (opt) - TOTAL ADJUSTMENTS (NM)
+
+    pv1_49 : str | None
+        PV1.49 (opt) - TOTAL PAYMENTS (NM)
+    """
 
     pv1_1: Optional[str] = Field(
         default=None,

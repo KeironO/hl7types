@@ -23,7 +23,133 @@ from ..datatypes.XTN import XTN
 
 
 class STF(BaseModel):
-    """HL7 v2 STF segment."""
+    """HL7 v2 STF segment.
+
+    Attributes
+    ----------
+    stf_1 : CWE | None
+        STF.1 (opt) - Primary Key Value - STF (CWE)
+
+    stf_2 : list[CX] | None
+        STF.2 (opt, rep) - Staff Identifier List (CX)
+
+    stf_3 : list[XPN] | None
+        STF.3 (opt, rep) - Staff Name (XPN)
+
+    stf_4 : list[CWE] | None
+        STF.4 (opt, rep) - Staff Type (CWE)
+
+    stf_5 : CWE | None
+        STF.5 (opt) - Administrative Sex (CWE)
+
+    stf_6 : str | None
+        STF.6 (opt) - Date/Time of Birth (DTM)
+
+    stf_7 : str | None
+        STF.7 (opt) - Active/Inactive Flag (ID)
+
+    stf_8 : list[CWE] | None
+        STF.8 (opt, rep) - Department (CWE)
+
+    stf_9 : list[CWE] | None
+        STF.9 (opt, rep) - Hospital Service - STF (CWE)
+
+    stf_10 : list[XTN] | None
+        STF.10 (opt, rep) - Phone (XTN)
+
+    stf_11 : list[XAD] | None
+        STF.11 (opt, rep) - Office/Home Address/Birthplace (XAD)
+
+    stf_12 : list[DIN] | None
+        STF.12 (opt, rep) - Institution Activation Date (DIN)
+
+    stf_13 : list[DIN] | None
+        STF.13 (opt, rep) - Institution Inactivation Date (DIN)
+
+    stf_14 : list[CWE] | None
+        STF.14 (opt, rep) - Backup Person ID (CWE)
+
+    stf_15 : list[str] | None
+        STF.15 (opt, rep) - E-Mail Address (ST)
+
+    stf_16 : CWE | None
+        STF.16 (opt) - Preferred Method of Contact (CWE)
+
+    stf_17 : CWE | None
+        STF.17 (opt) - Marital Status (CWE)
+
+    stf_18 : str | None
+        STF.18 (opt) - Job Title (ST)
+
+    stf_19 : JCC | None
+        STF.19 (opt) - Job Code/Class (JCC)
+
+    stf_20 : CWE | None
+        STF.20 (opt) - Employment Status Code (CWE)
+
+    stf_21 : str | None
+        STF.21 (opt) - Additional Insured on Auto (ID)
+
+    stf_22 : DLN | None
+        STF.22 (opt) - Driver's License Number - Staff (DLN)
+
+    stf_23 : str | None
+        STF.23 (opt) - Copy Auto Ins (ID)
+
+    stf_24 : str | None
+        STF.24 (opt) - Auto Ins Expires (DT)
+
+    stf_25 : str | None
+        STF.25 (opt) - Date Last DMV Review (DT)
+
+    stf_26 : str | None
+        STF.26 (opt) - Date Next DMV Review (DT)
+
+    stf_27 : CWE | None
+        STF.27 (opt) - Race (CWE)
+
+    stf_28 : CWE | None
+        STF.28 (opt) - Ethnic Group (CWE)
+
+    stf_29 : str | None
+        STF.29 (opt) - Re-activation Approval Indicator (ID)
+
+    stf_30 : list[CWE] | None
+        STF.30 (opt, rep) - Citizenship (CWE)
+
+    stf_31 : str | None
+        STF.31 (opt) - Date/Time of Death (DTM)
+
+    stf_32 : str | None
+        STF.32 (opt) - Death Indicator (ID)
+
+    stf_33 : CWE | None
+        STF.33 (opt) - Institution Relationship Type Code (CWE)
+
+    stf_34 : DR | None
+        STF.34 (opt) - Institution Relationship Period (DR)
+
+    stf_35 : str | None
+        STF.35 (opt) - Expected Return Date (DT)
+
+    stf_36 : list[CWE] | None
+        STF.36 (opt, rep) - Cost Center Code (CWE)
+
+    stf_37 : str | None
+        STF.37 (opt) - Generic Classification Indicator (ID)
+
+    stf_38 : CWE | None
+        STF.38 (opt) - Inactive Reason Code (CWE)
+
+    stf_39 : list[CWE] | None
+        STF.39 (opt, rep) - Generic resource type or category (CWE)
+
+    stf_40 : CWE | None
+        STF.40 (opt) - Religion (CWE)
+
+    stf_41 : ED | None
+        STF.41 (opt) - Signature (ED)
+    """
 
     stf_1: Optional[CWE] = Field(
         default=None,

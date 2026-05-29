@@ -20,7 +20,70 @@ from ..datatypes.XPN import XPN
 
 
 class IAM(BaseModel):
-    """HL7 v2 IAM segment."""
+    """HL7 v2 IAM segment.
+
+    Attributes
+    ----------
+    iam_1 : str
+        IAM.1 (req) - Set ID - IAM (SI)
+
+    iam_2 : CE | None
+        IAM.2 (opt) - Allergen Type Code (CE)
+
+    iam_3 : CE
+        IAM.3 (req) - Allergen Code/Mnemonic/Description (CE)
+
+    iam_4 : CE | None
+        IAM.4 (opt) - Allergy Severity Code (CE)
+
+    iam_5 : list[str] | None
+        IAM.5 (opt, rep) - Allergy Reaction Code (ST)
+
+    iam_6 : CNE
+        IAM.6 (req) - Allergy Action Code (CNE)
+
+    iam_7 : EI
+        IAM.7 (req) - Allergy Unique Identifier (EI)
+
+    iam_8 : str | None
+        IAM.8 (opt) - Action Reason (ST)
+
+    iam_9 : CE | None
+        IAM.9 (opt) - Sensitivity to Causative Agent Code (CE)
+
+    iam_10 : CE | None
+        IAM.10 (opt) - Allergen Group Code/Mnemonic/Description (CE)
+
+    iam_11 : str | None
+        IAM.11 (opt) - Onset Date (DT)
+
+    iam_12 : str | None
+        IAM.12 (opt) - Onset Date Text (ST)
+
+    iam_13 : TS | None
+        IAM.13 (opt) - Reported Date/Time (TS)
+
+    iam_14 : XPN | None
+        IAM.14 (opt) - Reported By (XPN)
+
+    iam_15 : CE | None
+        IAM.15 (opt) - Relationship to Patient Code (CE)
+
+    iam_16 : CE | None
+        IAM.16 (opt) - Alert Device Code (CE)
+
+    iam_17 : CE | None
+        IAM.17 (opt) - Allergy Clinical Status Code (CE)
+
+    iam_18 : XCN | None
+        IAM.18 (opt) - Statused by Person (XCN)
+
+    iam_19 : XON | None
+        IAM.19 (opt) - Statused by Organization (XON)
+
+    iam_20 : TS | None
+        IAM.20 (opt) - Statused at Date/Time (TS)
+    """
 
     iam_1: str = Field(
         default=...,

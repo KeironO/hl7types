@@ -15,7 +15,22 @@ from .MO import MO
 
 
 class UVC(BaseModel):
-    """HL7 v2 UVC data type."""
+    """HL7 v2 UVC data type.
+
+    Attributes
+    ----------
+    uvc_1 : CWE
+        UVC.1 (req) - Value Code (CWE)
+
+    uvc_2 : MO | None
+        UVC.2 (opt) - Value Amount (MO)
+
+    uvc_3 : str | None
+        UVC.3 (opt) - Non-Monetary Value Amount / Quantity (NM)
+
+    uvc_4 : CWE | None
+        UVC.4 (opt) - Non-Monetary Value Amount / Units (CWE)
+    """
 
     uvc_1: CWE = Field(
         default=...,

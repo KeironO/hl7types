@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_ABS_RANGE(BaseModel):
-    """HL7 v2 CM_ABS_RANGE data type."""
+    """HL7 v2 CM_ABS_RANGE data type.
+
+    Attributes
+    ----------
+    cm_abs_range_1 : str | None
+        CM_ABS_RANGE.1 (opt) - Range (CM)
+
+    cm_abs_range_2 : str | None
+        CM_ABS_RANGE.2 (opt) - Numeric Change (NM)
+
+    cm_abs_range_3 : str | None
+        CM_ABS_RANGE.3 (opt) - Percent per Change (NM)
+
+    cm_abs_range_4 : str | None
+        CM_ABS_RANGE.4 (opt) - Days (NM)
+    """
 
     cm_abs_range_1: Optional[str] = Field(
         default=None,

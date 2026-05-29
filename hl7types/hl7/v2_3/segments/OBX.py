@@ -16,7 +16,61 @@ from ..datatypes.XCN import XCN
 
 
 class OBX(BaseModel):
-    """HL7 v2 OBX segment."""
+    """HL7 v2 OBX segment.
+
+    Attributes
+    ----------
+    obx_1 : str | None
+        OBX.1 (opt) - Set ID - OBX (SI)
+
+    obx_2 : str
+        OBX.2 (req) - Value Type (ID)
+
+    obx_3 : CE
+        OBX.3 (req) - Observation Identifier (CE)
+
+    obx_4 : str | None
+        OBX.4 (opt) - Observation Sub-ID (ST)
+
+    obx_5 : list[str] | None
+        OBX.5 (opt, rep) - Observation Value (*)
+
+    obx_6 : CE | None
+        OBX.6 (opt) - Units (CE)
+
+    obx_7 : str | None
+        OBX.7 (opt) - References Range (ST)
+
+    obx_8 : list[str] | None
+        OBX.8 (opt, rep) - Abnormal Flags (ID)
+
+    obx_9 : str | None
+        OBX.9 (opt) - Probability (NM)
+
+    obx_10 : str | None
+        OBX.10 (opt) - Nature of Abnormal Test (ID)
+
+    obx_11 : str
+        OBX.11 (req) - Observ Result Status (ID)
+
+    obx_12 : TS | None
+        OBX.12 (opt) - Date Last Obs Normal Values (TS)
+
+    obx_13 : str | None
+        OBX.13 (opt) - User Defined Access Checks (ST)
+
+    obx_14 : TS | None
+        OBX.14 (opt) - Date/Time of the Observation (TS)
+
+    obx_15 : CE | None
+        OBX.15 (opt) - Producer's ID (CE)
+
+    obx_16 : XCN | None
+        OBX.16 (opt) - Responsible Observer (XCN)
+
+    obx_17 : list[CE] | None
+        OBX.17 (opt, rep) - Observation Method (CE)
+    """
 
     obx_1: Optional[str] = Field(
         default=None,

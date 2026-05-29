@@ -17,7 +17,73 @@ from ..datatypes.XON import XON
 
 
 class PD1(BaseModel):
-    """HL7 v2 PD1 segment."""
+    """HL7 v2 PD1 segment.
+
+    Attributes
+    ----------
+    pd1_1 : list[str] | None
+        PD1.1 (opt, rep) - Living Dependency (IS)
+
+    pd1_2 : str | None
+        PD1.2 (opt) - Living Arrangement (IS)
+
+    pd1_3 : list[XON] | None
+        PD1.3 (opt, rep) - Patient Primary Facility (XON)
+
+    pd1_4 : list[XCN] | None
+        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN)
+
+    pd1_5 : str | None
+        PD1.5 (opt) - Student Indicator (IS)
+
+    pd1_6 : str | None
+        PD1.6 (opt) - Handicap (IS)
+
+    pd1_7 : str | None
+        PD1.7 (opt) - Living Will Code (IS)
+
+    pd1_8 : str | None
+        PD1.8 (opt) - Organ Donor Code (IS)
+
+    pd1_9 : str | None
+        PD1.9 (opt) - Separate Bill (ID)
+
+    pd1_10 : list[CX] | None
+        PD1.10 (opt, rep) - Duplicate Patient (CX)
+
+    pd1_11 : CE | None
+        PD1.11 (opt) - Publicity Code (CE)
+
+    pd1_12 : str | None
+        PD1.12 (opt) - Protection Indicator (ID)
+
+    pd1_13 : str | None
+        PD1.13 (opt) - Protection Indicator Effective Date (DT)
+
+    pd1_14 : list[XON] | None
+        PD1.14 (opt, rep) - Place of Worship (XON)
+
+    pd1_15 : list[CE] | None
+        PD1.15 (opt, rep) - Advance Directive Code (CE)
+
+    pd1_16 : str | None
+        PD1.16 (opt) - Immunization Registry Status (IS)
+
+    pd1_17 : str | None
+        PD1.17 (opt) - Immunization Registry Status Effective Date (DT)
+
+    pd1_18 : str | None
+        PD1.18 (opt) - Publicity Code Effective Date (DT)
+
+    pd1_19 : str | None
+        PD1.19 (opt) - Military Branch (IS)
+
+    pd1_20 : str | None
+        PD1.20 (opt) - Military Rank/Grade (IS)
+
+    pd1_21 : str | None
+        PD1.21 (opt) - Military Status (IS)
+    """
 
     pd1_1: Optional[List[str]] = Field(
         default=None,

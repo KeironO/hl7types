@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class HD(BaseModel):
-    """HL7 v2 HD data type."""
+    """HL7 v2 HD data type.
+
+    Attributes
+    ----------
+    hd_1 : str | None
+        HD.1 (opt) - Namespace ID (IS)
+
+    hd_2 : str | None
+        HD.2 (opt) - Universal ID (ST)
+
+    hd_3 : str | None
+        HD.3 (opt) - Universal ID Type (ID)
+    """
 
     hd_1: Optional[str] = Field(
         default=None,

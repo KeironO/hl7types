@@ -14,7 +14,16 @@ from .AD import AD
 
 
 class CM_LA1(BaseModel):
-    """HL7 v2 CM_LA1 data type."""
+    """HL7 v2 CM_LA1 data type.
+
+    Attributes
+    ----------
+    cm_la1_1 : str | None
+        CM_LA1.1 (opt) - Dispense / Deliver to Location (CM)
+
+    cm_la1_2 : AD | None
+        CM_LA1.2 (opt) - location (AD)
+    """
 
     cm_la1_1: Optional[str] = Field(
         default=None,

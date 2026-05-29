@@ -12,7 +12,25 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PAT_ID_0192(BaseModel):
-    """HL7 v2 CM_PAT_ID_0192 data type."""
+    """HL7 v2 CM_PAT_ID_0192 data type.
+
+    Attributes
+    ----------
+    cm_pat_id_0192_1 : str | None
+        CM_PAT_ID_0192.1 (opt) - Patient ID (ST)
+
+    cm_pat_id_0192_2 : str | None
+        CM_PAT_ID_0192.2 (opt) - Check digit (NM)
+
+    cm_pat_id_0192_3 : str | None
+        CM_PAT_ID_0192.3 (opt) - Check digit scheme (ID)
+
+    cm_pat_id_0192_4 : str | None
+        CM_PAT_ID_0192.4 (opt) - Facility ID (ID)
+
+    cm_pat_id_0192_5 : str | None
+        CM_PAT_ID_0192.5 (opt) - type (ID)
+    """
 
     cm_pat_id_0192_1: Optional[str] = Field(
         default=None,

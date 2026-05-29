@@ -18,7 +18,55 @@ from ..datatypes.XON import XON
 
 
 class ADJ(BaseModel):
-    """HL7 v2 ADJ segment."""
+    """HL7 v2 ADJ segment.
+
+    Attributes
+    ----------
+    adj_1 : EI
+        ADJ.1 (req) - Provider Adjustment Number (EI)
+
+    adj_2 : EI
+        ADJ.2 (req) - Payer Adjustment Number (EI)
+
+    adj_3 : str
+        ADJ.3 (req) - Adjustment Sequence Number (SI)
+
+    adj_4 : CWE
+        ADJ.4 (req) - Adjustment Category (CWE)
+
+    adj_5 : list[CP] | None
+        ADJ.5 (opt, rep) - Adjustment Amount (CP)
+
+    adj_6 : CQ | None
+        ADJ.6 (opt) - Adjustment Quantity (CQ)
+
+    adj_7 : CWE | None
+        ADJ.7 (opt) - Adjustment Reason PA (CWE)
+
+    adj_8 : str | None
+        ADJ.8 (opt) - Adjustment Description (ST)
+
+    adj_9 : str | None
+        ADJ.9 (opt) - Original Value (NM)
+
+    adj_10 : str | None
+        ADJ.10 (opt) - Substitute Value (NM)
+
+    adj_11 : CWE | None
+        ADJ.11 (opt) - Adjustment Action (CWE)
+
+    adj_12 : EI | None
+        ADJ.12 (opt) - Provider Adjustment Number Cross Reference (EI)
+
+    adj_13 : EI | None
+        ADJ.13 (opt) - Provider Product/Service Line Item Number Cross Reference (EI)
+
+    adj_14 : str
+        ADJ.14 (req) - Adjustment Date (DTM)
+
+    adj_15 : XON | None
+        ADJ.15 (opt) - Responsible Organization (XON)
+    """
 
     adj_1: EI = Field(
         default=...,

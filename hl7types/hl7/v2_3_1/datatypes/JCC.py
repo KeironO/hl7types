@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class JCC(BaseModel):
-    """HL7 v2 JCC data type."""
+    """HL7 v2 JCC data type.
+
+    Attributes
+    ----------
+    jcc_1 : str | None
+        JCC.1 (opt) - job code (IS)
+
+    jcc_2 : str | None
+        JCC.2 (opt) - job class (IS)
+    """
 
     jcc_1: Optional[str] = Field(
         default=None,

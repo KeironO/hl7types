@@ -14,7 +14,19 @@ from ..datatypes.CWE import CWE
 
 
 class QRI(BaseModel):
-    """HL7 v2 QRI segment."""
+    """HL7 v2 QRI segment.
+
+    Attributes
+    ----------
+    qri_1 : str | None
+        QRI.1 (opt) - Candidate Confidence (NM)
+
+    qri_2 : list[str] | None
+        QRI.2 (opt, rep) - Match Reason Code (IS)
+
+    qri_3 : CWE | None
+        QRI.3 (opt) - Algorithm Descriptor (CWE)
+    """
 
     qri_1: Optional[str] = Field(
         default=None,

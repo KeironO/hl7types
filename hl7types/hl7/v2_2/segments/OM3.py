@@ -14,7 +14,34 @@ from ..datatypes.CE import CE
 
 
 class OM3(BaseModel):
-    """HL7 v2 OM3 segment."""
+    """HL7 v2 OM3 segment.
+
+    Attributes
+    ----------
+    om3_1 : str | None
+        OM3.1 (opt) - Segment Type ID (ST)
+
+    om3_2 : str | None
+        OM3.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+
+    om3_3 : str | None
+        OM3.3 (opt) - Preferred Coding System (ID)
+
+    om3_4 : list[CE] | None
+        OM3.4 (opt, rep) - Valid coded answers (CE)
+
+    om3_5 : list[CE] | None
+        OM3.5 (opt, rep) - Normal test codes for categorical observations (CE)
+
+    om3_6 : CE | None
+        OM3.6 (opt) - Abnormal test codes for categorical observations (CE)
+
+    om3_7 : CE | None
+        OM3.7 (opt) - Critical test codes for categorical observations (CE)
+
+    om3_8 : str | None
+        OM3.8 (opt) - Data Type (ID)
+    """
 
     om3_1: Optional[str] = Field(
         default=None,

@@ -15,7 +15,19 @@ from ..datatypes.TS import TS
 
 
 class RMI(BaseModel):
-    """HL7 v2 RMI segment."""
+    """HL7 v2 RMI segment.
+
+    Attributes
+    ----------
+    rmi_1 : CE | None
+        RMI.1 (opt) - Risk Management Incident Code (CE)
+
+    rmi_2 : TS | None
+        RMI.2 (opt) - Date/Time Incident (TS)
+
+    rmi_3 : CE | None
+        RMI.3 (opt) - Incident Type Code (CE)
+    """
 
     rmi_1: Optional[CE] = Field(
         default=None,

@@ -15,7 +15,52 @@ from ..datatypes.XCN import XCN
 
 
 class ABS(BaseModel):
-    """HL7 v2 ABS segment."""
+    """HL7 v2 ABS segment.
+
+    Attributes
+    ----------
+    abs_1 : XCN | None
+        ABS.1 (opt) - Discharge Care Provider (XCN)
+
+    abs_2 : CWE | None
+        ABS.2 (opt) - Transfer Medical Service Code (CWE)
+
+    abs_3 : CWE | None
+        ABS.3 (opt) - Severity of Illness Code (CWE)
+
+    abs_4 : str | None
+        ABS.4 (opt) - Date/Time of Attestation (DTM)
+
+    abs_5 : XCN | None
+        ABS.5 (opt) - Attested By (XCN)
+
+    abs_6 : CWE | None
+        ABS.6 (opt) - Triage Code (CWE)
+
+    abs_7 : str | None
+        ABS.7 (opt) - Abstract Completion Date/Time (DTM)
+
+    abs_8 : XCN | None
+        ABS.8 (opt) - Abstracted By (XCN)
+
+    abs_9 : CWE | None
+        ABS.9 (opt) - Case Category Code (CWE)
+
+    abs_10 : str | None
+        ABS.10 (opt) - Caesarian Section Indicator (ID)
+
+    abs_11 : CWE | None
+        ABS.11 (opt) - Gestation Category Code (CWE)
+
+    abs_12 : str | None
+        ABS.12 (opt) - Gestation Period - Weeks (NM)
+
+    abs_13 : CWE | None
+        ABS.13 (opt) - Newborn Code (CWE)
+
+    abs_14 : str | None
+        ABS.14 (opt) - Stillborn Indicator (ID)
+    """
 
     abs_1: Optional[XCN] = Field(
         default=None,

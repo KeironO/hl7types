@@ -18,7 +18,100 @@ from ..datatypes.TS import TS
 
 
 class RXE(BaseModel):
-    """HL7 v2 RXE segment."""
+    """HL7 v2 RXE segment.
+
+    Attributes
+    ----------
+    rxe_1 : TQ
+        RXE.1 (req) - Quantity/Timing (TQ)
+
+    rxe_2 : CE
+        RXE.2 (req) - Give Code (CE)
+
+    rxe_3 : str
+        RXE.3 (req) - Give Amount - Minimum (NM)
+
+    rxe_4 : str | None
+        RXE.4 (opt) - Give Amount - Maximum (NM)
+
+    rxe_5 : CE
+        RXE.5 (req) - Give Units (CE)
+
+    rxe_6 : CE | None
+        RXE.6 (opt) - Give Dosage Form (CE)
+
+    rxe_7 : list[CE] | None
+        RXE.7 (opt, rep) - Provider's Administration Instructions (CE)
+
+    rxe_8 : str | None
+        RXE.8 (opt) - Deliver To Location (CM)
+
+    rxe_9 : str | None
+        RXE.9 (opt) - Substitution Status (ID)
+
+    rxe_10 : str | None
+        RXE.10 (opt) - Dispense Amount (NM)
+
+    rxe_11 : CE | None
+        RXE.11 (opt) - Dispense Units (CE)
+
+    rxe_12 : str | None
+        RXE.12 (opt) - Number of Refills (NM)
+
+    rxe_13 : CN | None
+        RXE.13 (opt) - Ordering Provider's DEA Number (CN)
+
+    rxe_14 : CN | None
+        RXE.14 (opt) - Pharmacist/Treatment Supplier's Verifier ID (CN)
+
+    rxe_15 : str | None
+        RXE.15 (opt) - Prescription Number (ST)
+
+    rxe_16 : str | None
+        RXE.16 (opt) - Number of Refills Remaining (NM)
+
+    rxe_17 : str | None
+        RXE.17 (opt) - Number of Refills/Doses Dispensed (NM)
+
+    rxe_18 : TS | None
+        RXE.18 (opt) - Date / time of most recent refill or dose dispensed (TS)
+
+    rxe_19 : CQ | None
+        RXE.19 (opt) - Total Daily Dose (CQ)
+
+    rxe_20 : str | None
+        RXE.20 (opt) - Needs Human Review (ID)
+
+    rxe_21 : list[CE] | None
+        RXE.21 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CE)
+
+    rxe_22 : str | None
+        RXE.22 (opt) - Give Per (Time Unit) (ST)
+
+    rxe_23 : str | None
+        RXE.23 (opt) - Give Rate Amount (ST)
+
+    rxe_24 : CE | None
+        RXE.24 (opt) - Give Rate Units (CE)
+
+    rxe_25 : str | None
+        RXE.25 (opt) - Give Strength (NM)
+
+    rxe_26 : CE | None
+        RXE.26 (opt) - Give Strength Units (CE)
+
+    rxe_27 : CE | None
+        RXE.27 (opt) - Give Indication (CE)
+
+    rxe_28 : str | None
+        RXE.28 (opt) - Dispense Package Size (NM)
+
+    rxe_29 : CE | None
+        RXE.29 (opt) - Dispense Package Size Unit (CE)
+
+    rxe_30 : str | None
+        RXE.30 (opt) - Dispense Package Method (ID)
+    """
 
     rxe_1: TQ = Field(
         default=...,

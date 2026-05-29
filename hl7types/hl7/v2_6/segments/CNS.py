@@ -14,7 +14,28 @@ from ..datatypes.CWE import CWE
 
 
 class CNS(BaseModel):
-    """HL7 v2 CNS segment."""
+    """HL7 v2 CNS segment.
+
+    Attributes
+    ----------
+    cns_1 : str | None
+        CNS.1 (opt) - Starting Notification Reference Number (NM)
+
+    cns_2 : str | None
+        CNS.2 (opt) - Ending Notification Reference Number (NM)
+
+    cns_3 : str | None
+        CNS.3 (opt) - Starting Notification Date/Time (DTM)
+
+    cns_4 : str | None
+        CNS.4 (opt) - Ending Notification Date/Time (DTM)
+
+    cns_5 : CWE | None
+        CNS.5 (opt) - Starting Notification Code (CWE)
+
+    cns_6 : CWE | None
+        CNS.6 (opt) - Ending Notification Code (CWE)
+    """
 
     cns_1: Optional[str] = Field(
         default=None,

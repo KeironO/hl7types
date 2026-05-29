@@ -14,7 +14,37 @@ from .HD import HD
 
 
 class PL(BaseModel):
-    """HL7 v2 PL data type."""
+    """HL7 v2 PL data type.
+
+    Attributes
+    ----------
+    pl_1 : str | None
+        PL.1 (opt) - point of care (ID) (ID)
+
+    pl_2 : str | None
+        PL.2 (opt) - room (IS)
+
+    pl_3 : str | None
+        PL.3 (opt) - bed (IS)
+
+    pl_4 : HD | None
+        PL.4 (opt) - facility (HD) (HD)
+
+    pl_5 : str | None
+        PL.5 (opt) - location status (IS)
+
+    pl_6 : str | None
+        PL.6 (opt) - person location type (IS)
+
+    pl_7 : str | None
+        PL.7 (opt) - building (IS)
+
+    pl_8 : str | None
+        PL.8 (opt) - floor (ST)
+
+    pl_9 : str | None
+        PL.9 (opt) - Location type (ST)
+    """
 
     pl_1: Optional[str] = Field(
         default=None,

@@ -18,7 +18,46 @@ from ..datatypes.XON import XON
 
 
 class PMT(BaseModel):
-    """HL7 v2 PMT segment."""
+    """HL7 v2 PMT segment.
+
+    Attributes
+    ----------
+    pmt_1 : EI
+        PMT.1 (req) - Payment/Remittance Advice Number (EI)
+
+    pmt_2 : str
+        PMT.2 (req) - Payment/Remittance Effective Date/Time (DTM)
+
+    pmt_3 : str
+        PMT.3 (req) - Payment/Remittance Expiration Date/Time (DTM)
+
+    pmt_4 : CWE
+        PMT.4 (req) - Payment Method (CWE)
+
+    pmt_5 : str
+        PMT.5 (req) - Payment/Remittance Date/Time (DTM)
+
+    pmt_6 : CP
+        PMT.6 (req) - Payment/Remittance Amount (CP)
+
+    pmt_7 : EI | None
+        PMT.7 (opt) - Check Number (EI)
+
+    pmt_8 : XON | None
+        PMT.8 (opt) - Payee Bank Identification (XON)
+
+    pmt_9 : str | None
+        PMT.9 (opt) - Payee Transit Number (ST)
+
+    pmt_10 : CX | None
+        PMT.10 (opt) - Payee Bank Account ID (CX)
+
+    pmt_11 : XON
+        PMT.11 (req) - Payment Organization (XON)
+
+    pmt_12 : str | None
+        PMT.12 (opt) - ESR-Code-Line (ST)
+    """
 
     pmt_1: EI = Field(
         default=...,

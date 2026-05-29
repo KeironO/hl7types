@@ -14,7 +14,25 @@ from ..datatypes.CP import CP
 
 
 class GP1(BaseModel):
-    """HL7 v2 GP1 segment."""
+    """HL7 v2 GP1 segment.
+
+    Attributes
+    ----------
+    gp1_1 : str
+        GP1.1 (req) - Type of Bill Code (IS)
+
+    gp1_2 : list[str] | None
+        GP1.2 (opt, rep) - Revenue Code (IS)
+
+    gp1_3 : str | None
+        GP1.3 (opt) - Overall Claim Disposition Code (IS)
+
+    gp1_4 : list[str] | None
+        GP1.4 (opt, rep) - OCE Edits per Visit Code (IS)
+
+    gp1_5 : CP | None
+        GP1.5 (opt) - Outlier Cost (CP)
+    """
 
     gp1_1: str = Field(
         default=...,

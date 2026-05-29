@@ -19,7 +19,100 @@ from ..datatypes.XON import XON
 
 
 class IVC(BaseModel):
-    """HL7 v2 IVC segment."""
+    """HL7 v2 IVC segment.
+
+    Attributes
+    ----------
+    ivc_1 : EI
+        IVC.1 (req) - Provider Invoice Number (EI)
+
+    ivc_2 : EI | None
+        IVC.2 (opt) - Payer Invoice Number (EI)
+
+    ivc_3 : EI | None
+        IVC.3 (opt) - Contract/Agreement Number (EI)
+
+    ivc_4 : CWE
+        IVC.4 (req) - Invoice Control (CWE)
+
+    ivc_5 : CWE
+        IVC.5 (req) - Invoice Reason (CWE)
+
+    ivc_6 : CWE
+        IVC.6 (req) - Invoice Type (CWE)
+
+    ivc_7 : str
+        IVC.7 (req) - Invoice Date/Time (DTM)
+
+    ivc_8 : CP
+        IVC.8 (req) - Invoice Amount (CP)
+
+    ivc_9 : str | None
+        IVC.9 (opt) - Payment Terms (ST)
+
+    ivc_10 : XON
+        IVC.10 (req) - Provider Organization (XON)
+
+    ivc_11 : XON
+        IVC.11 (req) - Payer Organization (XON)
+
+    ivc_12 : XCN | None
+        IVC.12 (opt) - Attention (XCN)
+
+    ivc_13 : str | None
+        IVC.13 (opt) - Last Invoice Indicator (ID)
+
+    ivc_14 : str | None
+        IVC.14 (opt) - Invoice Booking Period (DTM)
+
+    ivc_15 : str | None
+        IVC.15 (opt) - Origin (ST)
+
+    ivc_16 : CP | None
+        IVC.16 (opt) - Invoice Fixed Amount (CP)
+
+    ivc_17 : CP | None
+        IVC.17 (opt) - Special Costs (CP)
+
+    ivc_18 : CP | None
+        IVC.18 (opt) - Amount for Doctors Treatment (CP)
+
+    ivc_19 : XCN | None
+        IVC.19 (opt) - Responsible Physician (XCN)
+
+    ivc_20 : CX | None
+        IVC.20 (opt) - Cost Center (CX)
+
+    ivc_21 : CP | None
+        IVC.21 (opt) - Invoice Prepaid Amount (CP)
+
+    ivc_22 : CP | None
+        IVC.22 (opt) - Total Invoice Amount without Prepaid Amount (CP)
+
+    ivc_23 : CP | None
+        IVC.23 (opt) - Total-Amount of VAT (CP)
+
+    ivc_24 : list[str] | None
+        IVC.24 (opt, rep) - VAT-Rates applied (NM)
+
+    ivc_25 : CWE
+        IVC.25 (req) - Benefit Group (CWE)
+
+    ivc_26 : str | None
+        IVC.26 (opt) - Provider Tax ID (ST)
+
+    ivc_27 : str | None
+        IVC.27 (opt) - Payer Tax ID (ST)
+
+    ivc_28 : CWE | None
+        IVC.28 (opt) - Provider Tax Status (CWE)
+
+    ivc_29 : CWE | None
+        IVC.29 (opt) - Payer Tax Status (CWE)
+
+    ivc_30 : str | None
+        IVC.30 (opt) - Sales Tax ID (ST)
+    """
 
     ivc_1: EI = Field(
         default=...,

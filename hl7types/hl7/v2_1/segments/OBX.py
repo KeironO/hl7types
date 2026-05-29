@@ -14,7 +14,46 @@ from ..datatypes.CE import CE
 
 
 class OBX(BaseModel):
-    """HL7 v2 OBX segment."""
+    """HL7 v2 OBX segment.
+
+    Attributes
+    ----------
+    obx_1 : str | None
+        OBX.1 (opt) - SET ID - OBSERVATION SIMPLE (SI)
+
+    obx_2 : str | None
+        OBX.2 (opt) - VALUE TYPE (ID)
+
+    obx_3 : CE
+        OBX.3 (req) - OBSERVATION IDENTIFIER (CE)
+
+    obx_4 : str | None
+        OBX.4 (opt) - OBSERVATION SUB-ID (NM)
+
+    obx_5 : str
+        OBX.5 (req) - OBSERVATION RESULTS (ST)
+
+    obx_6 : str | None
+        OBX.6 (opt) - UNITS (ID)
+
+    obx_7 : str | None
+        OBX.7 (opt) - REFERENCES RANGE (ST)
+
+    obx_8 : list[str] | None
+        OBX.8 (opt, rep) - ABNORMAL FLAGS (ST)
+
+    obx_9 : str | None
+        OBX.9 (opt) - PROBABILITY (NM)
+
+    obx_10 : str | None
+        OBX.10 (opt) - NATURE OF ABNORMAL TEST (ID)
+
+    obx_11 : str | None
+        OBX.11 (opt) - OBSERV RESULT STATUS (ID)
+
+    obx_12 : str | None
+        OBX.12 (opt) - DATE LAST OBS NORMAL VALUES (TS)
+    """
 
     obx_1: Optional[str] = Field(
         default=None,

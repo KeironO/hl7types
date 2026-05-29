@@ -15,7 +15,46 @@ from ..datatypes.CWE import CWE
 
 
 class AIS(BaseModel):
-    """HL7 v2 AIS segment."""
+    """HL7 v2 AIS segment.
+
+    Attributes
+    ----------
+    ais_1 : str
+        AIS.1 (req) - Set ID - AIS (SI)
+
+    ais_2 : str | None
+        AIS.2 (opt) - Segment Action Code (ID)
+
+    ais_3 : CWE
+        AIS.3 (req) - Universal Service Identifier (CWE)
+
+    ais_4 : str | None
+        AIS.4 (opt) - Start Date/Time (DTM)
+
+    ais_5 : str | None
+        AIS.5 (opt) - Start Date/Time Offset (NM)
+
+    ais_6 : CNE | None
+        AIS.6 (opt) - Start Date/Time Offset Units (CNE)
+
+    ais_7 : str | None
+        AIS.7 (opt) - Duration (NM)
+
+    ais_8 : CNE | None
+        AIS.8 (opt) - Duration Units (CNE)
+
+    ais_9 : str | None
+        AIS.9 (opt) - Allow Substitution Code (IS)
+
+    ais_10 : CWE | None
+        AIS.10 (opt) - Filler Status Code (CWE)
+
+    ais_11 : list[CWE] | None
+        AIS.11 (opt, rep) - Placer Supplemental Service Information (CWE)
+
+    ais_12 : list[CWE] | None
+        AIS.12 (opt, rep) - Filler Supplemental Service Information (CWE)
+    """
 
     ais_1: str = Field(
         default=...,

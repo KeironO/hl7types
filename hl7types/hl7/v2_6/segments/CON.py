@@ -18,7 +18,85 @@ from ..datatypes.XPN import XPN
 
 
 class CON(BaseModel):
-    """HL7 v2 CON segment."""
+    """HL7 v2 CON segment.
+
+    Attributes
+    ----------
+    con_1 : str
+        CON.1 (req) - Set ID - CON (SI)
+
+    con_2 : CWE | None
+        CON.2 (opt) - Consent Type (CWE)
+
+    con_3 : str | None
+        CON.3 (opt) - Consent Form ID and Version (ST)
+
+    con_4 : EI | None
+        CON.4 (opt) - Consent Form Number (EI)
+
+    con_5 : list[FT] | None
+        CON.5 (opt, rep) - Consent Text (FT)
+
+    con_6 : list[FT] | None
+        CON.6 (opt, rep) - Subject-specific Consent Text (FT)
+
+    con_7 : list[FT] | None
+        CON.7 (opt, rep) - Consent Background Information (FT)
+
+    con_8 : list[FT] | None
+        CON.8 (opt, rep) - Subject-specific Consent Background Text (FT)
+
+    con_9 : list[FT] | None
+        CON.9 (opt, rep) - Consenter-imposed limitations (FT)
+
+    con_10 : CNE | None
+        CON.10 (opt) - Consent Mode (CNE)
+
+    con_11 : CNE
+        CON.11 (req) - Consent Status (CNE)
+
+    con_12 : str | None
+        CON.12 (opt) - Consent Discussion Date/Time (DTM)
+
+    con_13 : str | None
+        CON.13 (opt) - Consent Decision Date/Time (DTM)
+
+    con_14 : str | None
+        CON.14 (opt) - Consent Effective Date/Time (DTM)
+
+    con_15 : str | None
+        CON.15 (opt) - Consent End Date/Time (DTM)
+
+    con_16 : str | None
+        CON.16 (opt) - Subject Competence Indicator (ID)
+
+    con_17 : str | None
+        CON.17 (opt) - Translator Assistance Indicator (ID)
+
+    con_18 : CWE | None
+        CON.18 (opt) - Language Translated To (CWE)
+
+    con_19 : str | None
+        CON.19 (opt) - Informational Material Supplied Indicator (ID)
+
+    con_20 : CWE | None
+        CON.20 (opt) - Consent Bypass Reason (CWE)
+
+    con_21 : str | None
+        CON.21 (opt) - Consent Disclosure Level (ID)
+
+    con_22 : CWE | None
+        CON.22 (opt) - Consent Non-disclosure Reason (CWE)
+
+    con_23 : CWE | None
+        CON.23 (opt) - Non-subject Consenter Reason (CWE)
+
+    con_24 : list[XPN]
+        CON.24 (req, rep) - Consenter ID (XPN)
+
+    con_25 : list[str]
+        CON.25 (req, rep) - Relationship to Subject (IS)
+    """
 
     con_1: str = Field(
         default=...,

@@ -15,7 +15,16 @@ from ..datatypes.CWE import CWE
 
 
 class BLC(BaseModel):
-    """HL7 v2 BLC segment."""
+    """HL7 v2 BLC segment.
+
+    Attributes
+    ----------
+    blc_1 : CWE | None
+        BLC.1 (opt) - Blood Product Code (CWE)
+
+    blc_2 : CQ | None
+        BLC.2 (opt) - Blood Amount (CQ)
+    """
 
     blc_1: Optional[CWE] = Field(
         default=None,

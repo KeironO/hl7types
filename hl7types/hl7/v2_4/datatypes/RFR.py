@@ -15,7 +15,31 @@ from .TX import TX
 
 
 class RFR(BaseModel):
-    """HL7 v2 RFR data type."""
+    """HL7 v2 RFR data type.
+
+    Attributes
+    ----------
+    rfr_1 : NR | None
+        RFR.1 (opt) - numeric range (NR)
+
+    rfr_2 : str | None
+        RFR.2 (opt) - administrative sex (IS)
+
+    rfr_3 : NR | None
+        RFR.3 (opt) - age range (NR)
+
+    rfr_4 : NR | None
+        RFR.4 (opt) - gestational range (NR)
+
+    rfr_5 : TX | None
+        RFR.5 (opt) - species (TX)
+
+    rfr_6 : str | None
+        RFR.6 (opt) - race/subspecies (ST)
+
+    rfr_7 : TX | None
+        RFR.7 (opt) - conditions (TX)
+    """
 
     rfr_1: Optional[NR] = Field(
         default=None,

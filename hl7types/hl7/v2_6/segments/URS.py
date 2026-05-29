@@ -14,7 +14,37 @@ from ..datatypes.TQ import TQ
 
 
 class URS(BaseModel):
-    """HL7 v2 URS segment."""
+    """HL7 v2 URS segment.
+
+    Attributes
+    ----------
+    urs_1 : list[str]
+        URS.1 (req, rep) - R/U Where Subject Definition (ST)
+
+    urs_2 : str | None
+        URS.2 (opt) - R/U When Data Start Date/Time (DTM)
+
+    urs_3 : str | None
+        URS.3 (opt) - R/U When Data End Date/Time (DTM)
+
+    urs_4 : list[str] | None
+        URS.4 (opt, rep) - R/U What User Qualifier (ST)
+
+    urs_5 : list[str] | None
+        URS.5 (opt, rep) - R/U Other Results Subject Definition (ST)
+
+    urs_6 : list[str] | None
+        URS.6 (opt, rep) - R/U Which Date/Time Qualifier (ID)
+
+    urs_7 : list[str] | None
+        URS.7 (opt, rep) - R/U Which Date/Time Status Qualifier (ID)
+
+    urs_8 : list[str] | None
+        URS.8 (opt, rep) - R/U Date/Time Selection Qualifier (ID)
+
+    urs_9 : TQ | None
+        URS.9 (opt) - R/U Quantity/Timing Qualifier (TQ)
+    """
 
     urs_1: List[str] = Field(
         default=...,

@@ -19,7 +19,73 @@ from ..datatypes.VID import VID
 
 
 class MSH(BaseModel):
-    """HL7 v2 MSH segment."""
+    """HL7 v2 MSH segment.
+
+    Attributes
+    ----------
+    msh_1 : str
+        MSH.1 (req) - Field Separator (ST)
+
+    msh_2 : str
+        MSH.2 (req) - Encoding Characters (ST)
+
+    msh_3 : HD | None
+        MSH.3 (opt) - Sending Application (HD)
+
+    msh_4 : HD | None
+        MSH.4 (opt) - Sending Facility (HD)
+
+    msh_5 : HD | None
+        MSH.5 (opt) - Receiving Application (HD)
+
+    msh_6 : HD | None
+        MSH.6 (opt) - Receiving Facility (HD)
+
+    msh_7 : TS
+        MSH.7 (req) - Date/Time Of Message (TS)
+
+    msh_8 : str | None
+        MSH.8 (opt) - Security (ST)
+
+    msh_9 : MSG
+        MSH.9 (req) - Message Type (MSG)
+
+    msh_10 : str
+        MSH.10 (req) - Message Control ID (ST)
+
+    msh_11 : PT
+        MSH.11 (req) - Processing ID (PT)
+
+    msh_12 : VID
+        MSH.12 (req) - Version ID (VID)
+
+    msh_13 : str | None
+        MSH.13 (opt) - Sequence Number (NM)
+
+    msh_14 : str | None
+        MSH.14 (opt) - Continuation Pointer (ST)
+
+    msh_15 : str | None
+        MSH.15 (opt) - Accept Acknowledgment Type (ID)
+
+    msh_16 : str | None
+        MSH.16 (opt) - Application Acknowledgment Type (ID)
+
+    msh_17 : str | None
+        MSH.17 (opt) - Country Code (ID)
+
+    msh_18 : list[str] | None
+        MSH.18 (opt, rep) - Character Set (ID)
+
+    msh_19 : CE | None
+        MSH.19 (opt) - Principal Language Of Message (CE)
+
+    msh_20 : str | None
+        MSH.20 (opt) - Alternate Character Set Handling Scheme (ID)
+
+    msh_21 : list[str] | None
+        MSH.21 (opt, rep) - Conformance Statement ID (ID)
+    """
 
     msh_1: str = Field(
         default="|",

@@ -15,7 +15,22 @@ from ..datatypes.PL import PL
 
 
 class LCC(BaseModel):
-    """HL7 v2 LCC segment."""
+    """HL7 v2 LCC segment.
+
+    Attributes
+    ----------
+    lcc_1 : PL
+        LCC.1 (req) - Primary Key Value - LCC (PL)
+
+    lcc_2 : CWE
+        LCC.2 (req) - Location Department (CWE)
+
+    lcc_3 : list[CWE] | None
+        LCC.3 (opt, rep) - Accommodation Type (CWE)
+
+    lcc_4 : list[CWE]
+        LCC.4 (req, rep) - Charge Code (CWE)
+    """
 
     lcc_1: PL = Field(
         default=...,

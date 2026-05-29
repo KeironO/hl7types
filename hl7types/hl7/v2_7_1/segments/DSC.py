@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class DSC(BaseModel):
-    """HL7 v2 DSC segment."""
+    """HL7 v2 DSC segment.
+
+    Attributes
+    ----------
+    dsc_1 : str | None
+        DSC.1 (opt) - Continuation Pointer (ST)
+
+    dsc_2 : str | None
+        DSC.2 (opt) - Continuation Style (ID)
+    """
 
     dsc_1: Optional[str] = Field(
         default=None,

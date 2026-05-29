@@ -14,7 +14,79 @@ from ..datatypes.CE import CE
 
 
 class FT1(BaseModel):
-    """HL7 v2 FT1 segment."""
+    """HL7 v2 FT1 segment.
+
+    Attributes
+    ----------
+    ft1_1 : str | None
+        FT1.1 (opt) - Set ID - financial transaction (SI)
+
+    ft1_2 : str | None
+        FT1.2 (opt) - Transaction ID (ST)
+
+    ft1_3 : str | None
+        FT1.3 (opt) - Transaction batch ID (ST)
+
+    ft1_4 : str
+        FT1.4 (req) - Transaction date (DT)
+
+    ft1_5 : str | None
+        FT1.5 (opt) - Transaction posting date (DT)
+
+    ft1_6 : str
+        FT1.6 (req) - Transaction type (ID)
+
+    ft1_7 : CE
+        FT1.7 (req) - Transaction code (CE)
+
+    ft1_8 : str | None
+        FT1.8 (opt) - Transaction description (ST)
+
+    ft1_9 : str | None
+        FT1.9 (opt) - Transaction description - alternate (ST)
+
+    ft1_10 : str | None
+        FT1.10 (opt) - Transaction quantity (NM)
+
+    ft1_11 : str | None
+        FT1.11 (opt) - Transaction amount - extended (NM)
+
+    ft1_12 : str | None
+        FT1.12 (opt) - Transaction amount - unit (NM)
+
+    ft1_13 : CE | None
+        FT1.13 (opt) - Department code (CE)
+
+    ft1_14 : str
+        FT1.14 (req) - Insurance plan ID (ID)
+
+    ft1_15 : str | None
+        FT1.15 (opt) - Insurance amount (NM)
+
+    ft1_16 : str | None
+        FT1.16 (opt) - Assigned Patient Location (CM)
+
+    ft1_17 : str | None
+        FT1.17 (opt) - Fee schedule (ID)
+
+    ft1_18 : str | None
+        FT1.18 (opt) - Patient type (ID)
+
+    ft1_19 : list[CE] | None
+        FT1.19 (opt, rep) - Diagnosis code (CE)
+
+    ft1_20 : str | None
+        FT1.20 (opt) - Performed by code (CN)
+
+    ft1_21 : str | None
+        FT1.21 (opt) - Ordered by code (CN)
+
+    ft1_22 : str | None
+        FT1.22 (opt) - Unit cost (NM)
+
+    ft1_23 : str | None
+        FT1.23 (opt) - Filler Order Number (CM)
+    """
 
     ft1_1: Optional[str] = Field(
         default=None,

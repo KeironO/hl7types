@@ -15,7 +15,37 @@ from .HD import HD
 
 
 class CN(BaseModel):
-    """HL7 v2 CN data type."""
+    """HL7 v2 CN data type.
+
+    Attributes
+    ----------
+    cn_1 : str | None
+        CN.1 (opt) - ID number (ST) (ST)
+
+    cn_2 : FN | None
+        CN.2 (opt) - family name (FN)
+
+    cn_3 : str | None
+        CN.3 (opt) - given name (ST)
+
+    cn_4 : str | None
+        CN.4 (opt) - second and further given names or initials thereof (ST)
+
+    cn_5 : str | None
+        CN.5 (opt) - suffix (e.g., JR or III) (ST)
+
+    cn_6 : str | None
+        CN.6 (opt) - prefix (e.g., DR) (ST)
+
+    cn_7 : str | None
+        CN.7 (opt) - degree (e.g., MD) (IS)
+
+    cn_8 : str | None
+        CN.8 (opt) - source table (IS)
+
+    cn_9 : HD | None
+        CN.9 (opt) - assigning authority (HD)
+    """
 
     cn_1: Optional[str] = Field(
         default=None,

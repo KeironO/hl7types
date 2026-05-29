@@ -18,7 +18,88 @@ from ..datatypes.TS import TS
 
 
 class RXG(BaseModel):
-    """HL7 v2 RXG segment."""
+    """HL7 v2 RXG segment.
+
+    Attributes
+    ----------
+    rxg_1 : str
+        RXG.1 (req) - Give Sub-ID Counter (NM)
+
+    rxg_2 : str | None
+        RXG.2 (opt) - Dispense Sub-ID Counter (NM)
+
+    rxg_3 : TQ | None
+        RXG.3 (opt) - Quantity/Timing (TQ)
+
+    rxg_4 : CE
+        RXG.4 (req) - Give Code (CE)
+
+    rxg_5 : str
+        RXG.5 (req) - Give Amount - Minimum (NM)
+
+    rxg_6 : str | None
+        RXG.6 (opt) - Give Amount - Maximum (NM)
+
+    rxg_7 : CE
+        RXG.7 (req) - Give Units (CE)
+
+    rxg_8 : CE | None
+        RXG.8 (opt) - Give Dosage Form (CE)
+
+    rxg_9 : list[CE] | None
+        RXG.9 (opt, rep) - Administration Notes (CE)
+
+    rxg_10 : str | None
+        RXG.10 (opt) - Substitution Status (ID)
+
+    rxg_11 : LA2 | None
+        RXG.11 (opt) - Dispense-to Location (LA2)
+
+    rxg_12 : str | None
+        RXG.12 (opt) - Needs Human Review (ID)
+
+    rxg_13 : list[CE] | None
+        RXG.13 (opt, rep) - Pharmacy/Treatment Supplier's Special Administration Instructions (CE)
+
+    rxg_14 : str | None
+        RXG.14 (opt) - Give Per (Time Unit) (ST)
+
+    rxg_15 : str | None
+        RXG.15 (opt) - Give Rate Amount (ST)
+
+    rxg_16 : CE | None
+        RXG.16 (opt) - Give Rate Units (CE)
+
+    rxg_17 : str | None
+        RXG.17 (opt) - Give Strength (NM)
+
+    rxg_18 : CE | None
+        RXG.18 (opt) - Give Strength Units (CE)
+
+    rxg_19 : list[str] | None
+        RXG.19 (opt, rep) - Substance Lot Number (ST)
+
+    rxg_20 : list[TS] | None
+        RXG.20 (opt, rep) - Substance Expiration Date (TS)
+
+    rxg_21 : list[CE] | None
+        RXG.21 (opt, rep) - Substance Manufacturer Name (CE)
+
+    rxg_22 : list[CE] | None
+        RXG.22 (opt, rep) - Indication (CE)
+
+    rxg_23 : str | None
+        RXG.23 (opt) - Give Drug Strength Volume (NM)
+
+    rxg_24 : CWE | None
+        RXG.24 (opt) - Give Drug Strength Volume Units (CWE)
+
+    rxg_25 : CWE | None
+        RXG.25 (opt) - Give Barcode Identifier (CWE)
+
+    rxg_26 : str | None
+        RXG.26 (opt) - Pharmacy Order Type (ID)
+    """
 
     rxg_1: str = Field(
         default=...,

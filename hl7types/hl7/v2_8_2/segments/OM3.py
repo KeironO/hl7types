@@ -14,7 +14,31 @@ from ..datatypes.CWE import CWE
 
 
 class OM3(BaseModel):
-    """HL7 v2 OM3 segment."""
+    """HL7 v2 OM3 segment.
+
+    Attributes
+    ----------
+    om3_1 : str | None
+        OM3.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+
+    om3_2 : CWE | None
+        OM3.2 (opt) - Preferred Coding System (CWE)
+
+    om3_3 : list[CWE] | None
+        OM3.3 (opt, rep) - Valid Coded "Answers" (CWE)
+
+    om3_4 : list[CWE] | None
+        OM3.4 (opt, rep) - Normal Text/Codes for Categorical Observations (CWE)
+
+    om3_5 : list[CWE] | None
+        OM3.5 (opt, rep) - Abnormal Text/Codes for Categorical Observations (CWE)
+
+    om3_6 : list[CWE] | None
+        OM3.6 (opt, rep) - Critical Text/Codes for Categorical Observations (CWE)
+
+    om3_7 : str | None
+        OM3.7 (opt) - Value Type (ID)
+    """
 
     om3_1: Optional[str] = Field(
         default=None,

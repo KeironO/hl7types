@@ -15,7 +15,58 @@ from ..datatypes.TQ import TQ
 
 
 class RXG(BaseModel):
-    """HL7 v2 RXG segment."""
+    """HL7 v2 RXG segment.
+
+    Attributes
+    ----------
+    rxg_1 : str
+        RXG.1 (req) - Give Sub-ID Counter (NM)
+
+    rxg_2 : str | None
+        RXG.2 (opt) - Dispense Sub-ID Counter (NM)
+
+    rxg_3 : list[TQ] | None
+        RXG.3 (opt, rep) - Quantity / timing (TQ)
+
+    rxg_4 : CE
+        RXG.4 (req) - Give Code (CE)
+
+    rxg_5 : str
+        RXG.5 (req) - Give Amount - Minimum (NM)
+
+    rxg_6 : str | None
+        RXG.6 (opt) - Give Amount - Maximum (NM)
+
+    rxg_7 : CE
+        RXG.7 (req) - Give Units (CE)
+
+    rxg_8 : CE | None
+        RXG.8 (opt) - Give Dosage Form (CE)
+
+    rxg_9 : str | None
+        RXG.9 (opt) - Administration Notes (ST)
+
+    rxg_10 : str | None
+        RXG.10 (opt) - Substitution Status (ID)
+
+    rxg_11 : str | None
+        RXG.11 (opt) - Deliver-to location (CM)
+
+    rxg_12 : str | None
+        RXG.12 (opt) - Needs Human Review (ID)
+
+    rxg_13 : list[CE] | None
+        RXG.13 (opt, rep) - Pharmacy Special Administration Instructions (CE)
+
+    rxg_14 : str | None
+        RXG.14 (opt) - Give Per (Time Unit) (ST)
+
+    rxg_15 : CE | None
+        RXG.15 (opt) - Give Rate Amount (CE)
+
+    rxg_16 : CE | None
+        RXG.16 (opt) - Give Rate Units (CE)
+    """
 
     rxg_1: str = Field(
         default=...,

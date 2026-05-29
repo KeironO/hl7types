@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class PI(BaseModel):
-    """HL7 v2 PI data type."""
+    """HL7 v2 PI data type.
+
+    Attributes
+    ----------
+    pi_1 : str | None
+        PI.1 (opt) - ID number (ST) (ST)
+
+    pi_2 : str | None
+        PI.2 (opt) - type of ID number (IS) (IS)
+
+    pi_3 : str | None
+        PI.3 (opt) - other qualifying info (ST)
+    """
 
     pi_1: Optional[str] = Field(
         default=None,

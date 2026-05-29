@@ -16,7 +16,64 @@ from ..datatypes.MO import MO
 
 
 class PRC(BaseModel):
-    """HL7 v2 PRC segment."""
+    """HL7 v2 PRC segment.
+
+    Attributes
+    ----------
+    prc_1 : CWE
+        PRC.1 (req) - Primary Key Value-PRC (CWE)
+
+    prc_2 : list[CWE] | None
+        PRC.2 (opt, rep) - Facility ID-PRC (CWE)
+
+    prc_3 : list[CWE] | None
+        PRC.3 (opt, rep) - Department (CWE)
+
+    prc_4 : list[str] | None
+        PRC.4 (opt, rep) - Valid Patient Classes (IS)
+
+    prc_5 : list[CP] | None
+        PRC.5 (opt, rep) - Price (CP)
+
+    prc_6 : list[str] | None
+        PRC.6 (opt, rep) - Formula (ST)
+
+    prc_7 : str | None
+        PRC.7 (opt) - Minimum Quantity (NM)
+
+    prc_8 : str | None
+        PRC.8 (opt) - Maximum Quantity (NM)
+
+    prc_9 : MO | None
+        PRC.9 (opt) - Minimum Price (MO)
+
+    prc_10 : MO | None
+        PRC.10 (opt) - Maximum Price (MO)
+
+    prc_11 : str | None
+        PRC.11 (opt) - Effective Start Date (DTM)
+
+    prc_12 : str | None
+        PRC.12 (opt) - Effective End Date (DTM)
+
+    prc_13 : str | None
+        PRC.13 (opt) - Price Override Flag (IS)
+
+    prc_14 : list[CWE] | None
+        PRC.14 (opt, rep) - Billing Category (CWE)
+
+    prc_15 : str | None
+        PRC.15 (opt) - Chargeable Flag (ID)
+
+    prc_16 : str | None
+        PRC.16 (opt) - Active/Inactive Flag (ID)
+
+    prc_17 : MO | None
+        PRC.17 (opt) - Cost (MO)
+
+    prc_18 : str | None
+        PRC.18 (opt) - Charge on Indicator (IS)
+    """
 
     prc_1: CWE = Field(
         default=...,

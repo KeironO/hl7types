@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_VR(BaseModel):
-    """HL7 v2 CM_VR data type."""
+    """HL7 v2 CM_VR data type.
+
+    Attributes
+    ----------
+    cm_vr_1 : str | None
+        CM_VR.1 (opt) - First data code value (ST)
+
+    cm_vr_2 : str | None
+        CM_VR.2 (opt) - Last data code calue (ST)
+    """
 
     cm_vr_1: Optional[str] = Field(
         default=None,

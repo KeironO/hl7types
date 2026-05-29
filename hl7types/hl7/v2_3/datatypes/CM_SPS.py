@@ -15,7 +15,28 @@ from .TX import TX
 
 
 class CM_SPS(BaseModel):
-    """HL7 v2 CM_SPS data type."""
+    """HL7 v2 CM_SPS data type.
+
+    Attributes
+    ----------
+    cm_sps_1 : CE | None
+        CM_SPS.1 (opt) - specimen source name or code (CE)
+
+    cm_sps_2 : TX | None
+        CM_SPS.2 (opt) - additives (TX)
+
+    cm_sps_3 : TX | None
+        CM_SPS.3 (opt) - freetext (TX)
+
+    cm_sps_4 : CE | None
+        CM_SPS.4 (opt) - body site (CE)
+
+    cm_sps_5 : CE | None
+        CM_SPS.5 (opt) - site modifier (CE)
+
+    cm_sps_6 : CE | None
+        CM_SPS.6 (opt) - collection modifier method code (CE)
+    """
 
     cm_sps_1: Optional[CE] = Field(
         default=None,

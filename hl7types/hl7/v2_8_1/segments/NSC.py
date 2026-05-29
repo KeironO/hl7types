@@ -15,7 +15,37 @@ from ..datatypes.HD import HD
 
 
 class NSC(BaseModel):
-    """HL7 v2 NSC segment."""
+    """HL7 v2 NSC segment.
+
+    Attributes
+    ----------
+    nsc_1 : CWE
+        NSC.1 (req) - Application Change Type (CWE)
+
+    nsc_2 : str | None
+        NSC.2 (opt) - Current CPU (ST)
+
+    nsc_3 : str | None
+        NSC.3 (opt) - Current Fileserver (ST)
+
+    nsc_4 : HD | None
+        NSC.4 (opt) - Current Application (HD)
+
+    nsc_5 : HD | None
+        NSC.5 (opt) - Current Facility (HD)
+
+    nsc_6 : str | None
+        NSC.6 (opt) - New CPU (ST)
+
+    nsc_7 : str | None
+        NSC.7 (opt) - New Fileserver (ST)
+
+    nsc_8 : HD | None
+        NSC.8 (opt) - New Application (HD)
+
+    nsc_9 : HD | None
+        NSC.9 (opt) - New Facility (HD)
+    """
 
     nsc_1: CWE = Field(
         default=...,

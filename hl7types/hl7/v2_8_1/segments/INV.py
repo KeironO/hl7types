@@ -15,7 +15,67 @@ from ..datatypes.CWE import CWE
 
 
 class INV(BaseModel):
-    """HL7 v2 INV segment."""
+    """HL7 v2 INV segment.
+
+    Attributes
+    ----------
+    inv_1 : CWE
+        INV.1 (req) - Substance Identifier (CWE)
+
+    inv_2 : list[CWE]
+        INV.2 (req, rep) - Substance Status (CWE)
+
+    inv_3 : CWE | None
+        INV.3 (opt) - Substance Type (CWE)
+
+    inv_4 : CWE | None
+        INV.4 (opt) - Inventory Container Identifier (CWE)
+
+    inv_5 : CWE | None
+        INV.5 (opt) - Container Carrier Identifier (CWE)
+
+    inv_6 : CWE | None
+        INV.6 (opt) - Position on Carrier (CWE)
+
+    inv_7 : str | None
+        INV.7 (opt) - Initial Quantity (NM)
+
+    inv_8 : str | None
+        INV.8 (opt) - Current Quantity (NM)
+
+    inv_9 : str | None
+        INV.9 (opt) - Available Quantity (NM)
+
+    inv_10 : str | None
+        INV.10 (opt) - Consumption Quantity (NM)
+
+    inv_11 : CWE | None
+        INV.11 (opt) - Quantity Units (CWE)
+
+    inv_12 : str | None
+        INV.12 (opt) - Expiration Date/Time (DTM)
+
+    inv_13 : str | None
+        INV.13 (opt) - First Used Date/Time (DTM)
+
+    inv_15 : list[CWE] | None
+        INV.15 (opt, rep) - Test/Fluid Identifier(s) (CWE)
+
+    inv_16 : str | None
+        INV.16 (opt) - Manufacturer Lot Number (ST)
+
+    inv_17 : CWE | None
+        INV.17 (opt) - Manufacturer Identifier (CWE)
+
+    inv_18 : CWE | None
+        INV.18 (opt) - Supplier Identifier (CWE)
+
+    inv_19 : CQ | None
+        INV.19 (opt) - On Board Stability Time (CQ)
+
+    inv_20 : CQ | None
+        INV.20 (opt) - Target Value (CQ)
+    """
 
     inv_1: CWE = Field(
         default=...,

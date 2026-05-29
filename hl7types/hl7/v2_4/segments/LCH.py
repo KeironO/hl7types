@@ -16,7 +16,25 @@ from ..datatypes.PL import PL
 
 
 class LCH(BaseModel):
-    """HL7 v2 LCH segment."""
+    """HL7 v2 LCH segment.
+
+    Attributes
+    ----------
+    lch_1 : PL
+        LCH.1 (req) - Primary Key Value - LCH (PL)
+
+    lch_2 : str | None
+        LCH.2 (opt) - Segment Action Code (ID)
+
+    lch_3 : EI | None
+        LCH.3 (opt) - Segment Unique Key (EI)
+
+    lch_4 : CE
+        LCH.4 (req) - Location Characteristic ID (CE)
+
+    lch_5 : CE
+        LCH.5 (req) - Location Characteristic Value-LCH (CE)
+    """
 
     lch_1: PL = Field(
         default=...,

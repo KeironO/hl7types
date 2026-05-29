@@ -14,7 +14,61 @@ from ..datatypes.TS import TS
 
 
 class MSH(BaseModel):
-    """HL7 v2 MSH segment."""
+    """HL7 v2 MSH segment.
+
+    Attributes
+    ----------
+    msh_1 : str
+        MSH.1 (req) - Field separator (ST)
+
+    msh_2 : str
+        MSH.2 (req) - Encoding characters (ST)
+
+    msh_3 : str | None
+        MSH.3 (opt) - Sending application (ST)
+
+    msh_4 : str | None
+        MSH.4 (opt) - Sending facility (ST)
+
+    msh_5 : str | None
+        MSH.5 (opt) - Receiving application (ST)
+
+    msh_6 : str | None
+        MSH.6 (opt) - Receiving facility (ST)
+
+    msh_7 : TS | None
+        MSH.7 (opt) - Date / Time of message (TS)
+
+    msh_8 : str | None
+        MSH.8 (opt) - Security (ST)
+
+    msh_9 : str
+        MSH.9 (req) - Message type (CM)
+
+    msh_10 : str
+        MSH.10 (req) - Message Control ID (ST)
+
+    msh_11 : str
+        MSH.11 (req) - Processing ID (ID)
+
+    msh_12 : str
+        MSH.12 (req) - Version ID (ID)
+
+    msh_13 : str | None
+        MSH.13 (opt) - Sequence number (NM)
+
+    msh_14 : str | None
+        MSH.14 (opt) - Continuation pointer (ST)
+
+    msh_15 : str | None
+        MSH.15 (opt) - Accept acknowledgement type (ID)
+
+    msh_16 : str | None
+        MSH.16 (opt) - Application acknowledgement type (ID)
+
+    msh_17 : str | None
+        MSH.17 (opt) - Country code (ID)
+    """
 
     msh_1: str = Field(
         default="|",

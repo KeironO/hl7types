@@ -18,7 +18,67 @@ from .TS import TS
 
 
 class PPN(BaseModel):
-    """HL7 v2 PPN data type."""
+    """HL7 v2 PPN data type.
+
+    Attributes
+    ----------
+    ppn_1 : str | None
+        PPN.1 (opt) - ID number (ST) (ST)
+
+    ppn_2 : FN | None
+        PPN.2 (opt) - family name (FN)
+
+    ppn_3 : str | None
+        PPN.3 (opt) - given name (ST)
+
+    ppn_4 : str | None
+        PPN.4 (opt) - second and further given names or initials thereof (ST)
+
+    ppn_5 : str | None
+        PPN.5 (opt) - suffix (e.g., JR or III) (ST)
+
+    ppn_6 : str | None
+        PPN.6 (opt) - prefix (e.g., DR) (ST)
+
+    ppn_7 : str | None
+        PPN.7 (opt) - degree (e.g., MD) (IS)
+
+    ppn_8 : str | None
+        PPN.8 (opt) - source table (IS)
+
+    ppn_9 : HD | None
+        PPN.9 (opt) - assigning authority (HD)
+
+    ppn_10 : str | None
+        PPN.10 (opt) - name type code (ID)
+
+    ppn_11 : str | None
+        PPN.11 (opt) - identifier check digit (ST)
+
+    ppn_12 : str | None
+        PPN.12 (opt) - code identifying the check digit scheme employed (ID)
+
+    ppn_13 : str | None
+        PPN.13 (opt) - identifier type code (IS) (IS)
+
+    ppn_14 : HD | None
+        PPN.14 (opt) - assigning facility (HD)
+
+    ppn_15 : TS | None
+        PPN.15 (opt) - Date/Time Action Performed (TS)
+
+    ppn_16 : str | None
+        PPN.16 (opt) - Name Representation code (ID)
+
+    ppn_17 : CE | None
+        PPN.17 (opt) - name context (CE)
+
+    ppn_18 : DR | None
+        PPN.18 (opt) - name validity range (DR)
+
+    ppn_19 : str | None
+        PPN.19 (opt) - name assembly order (ID)
+    """
 
     ppn_1: Optional[str] = Field(
         default=None,

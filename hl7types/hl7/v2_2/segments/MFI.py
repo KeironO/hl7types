@@ -15,7 +15,28 @@ from ..datatypes.TS import TS
 
 
 class MFI(BaseModel):
-    """HL7 v2 MFI segment."""
+    """HL7 v2 MFI segment.
+
+    Attributes
+    ----------
+    mfi_1 : CE
+        MFI.1 (req) - Master file identifier (CE)
+
+    mfi_2 : str | None
+        MFI.2 (opt) - Master file application identifier (ID)
+
+    mfi_3 : str
+        MFI.3 (req) - File-level event code (ID)
+
+    mfi_4 : TS | None
+        MFI.4 (opt) - Entered date / time (TS)
+
+    mfi_5 : TS | None
+        MFI.5 (opt) - Effective date / time (TS)
+
+    mfi_6 : str
+        MFI.6 (req) - Response level code (ID)
+    """
 
     mfi_1: CE = Field(
         default=...,

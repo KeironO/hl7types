@@ -15,7 +15,19 @@ from .TX import TX
 
 
 class JCC(BaseModel):
-    """HL7 v2 JCC data type."""
+    """HL7 v2 JCC data type.
+
+    Attributes
+    ----------
+    jcc_1 : CWE | None
+        JCC.1 (opt) - Job Code (CWE)
+
+    jcc_2 : CWE | None
+        JCC.2 (opt) - Job Class (CWE)
+
+    jcc_3 : TX | None
+        JCC.3 (opt) - Job Description Text (TX)
+    """
 
     jcc_1: Optional[CWE] = Field(
         default=None,

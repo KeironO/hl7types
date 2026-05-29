@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_MSG(BaseModel):
-    """HL7 v2 CM_MSG data type."""
+    """HL7 v2 CM_MSG data type.
+
+    Attributes
+    ----------
+    cm_msg_1 : str | None
+        CM_MSG.1 (opt) - message type (ID)
+
+    cm_msg_2 : str | None
+        CM_MSG.2 (opt) - trigger event (ID)
+    """
 
     cm_msg_1: Optional[str] = Field(
         default=None,

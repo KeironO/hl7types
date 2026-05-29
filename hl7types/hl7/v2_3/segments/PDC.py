@@ -17,7 +17,55 @@ from ..datatypes.XON import XON
 
 
 class PDC(BaseModel):
-    """HL7 v2 PDC segment."""
+    """HL7 v2 PDC segment.
+
+    Attributes
+    ----------
+    pdc_1 : XON
+        PDC.1 (req) - Manufacturer/Distributor (XON)
+
+    pdc_2 : CE
+        PDC.2 (req) - Country (CE)
+
+    pdc_3 : str
+        PDC.3 (req) - Brand Name (ST)
+
+    pdc_4 : str | None
+        PDC.4 (opt) - Device Family Name (ST)
+
+    pdc_5 : CE | None
+        PDC.5 (opt) - Generic Name (CE)
+
+    pdc_6 : list[str] | None
+        PDC.6 (opt, rep) - Model Identifier (ST)
+
+    pdc_7 : str | None
+        PDC.7 (opt) - Catalogue Identifier (ST)
+
+    pdc_8 : list[str] | None
+        PDC.8 (opt, rep) - Other Identifier (ST)
+
+    pdc_9 : CE | None
+        PDC.9 (opt) - Product Code (CE)
+
+    pdc_10 : str | None
+        PDC.10 (opt) - Marketing Basis (ID)
+
+    pdc_11 : str | None
+        PDC.11 (opt) - Marketing Approval Identifier (ST)
+
+    pdc_12 : CQ | None
+        PDC.12 (opt) - Labeled Shelf Life (CQ)
+
+    pdc_13 : CQ | None
+        PDC.13 (opt) - Expected Shelf Life (CQ)
+
+    pdc_14 : TS | None
+        PDC.14 (opt) - Date First Marked (TS)
+
+    pdc_15 : TS | None
+        PDC.15 (opt) - Date Last Marked (TS)
+    """
 
     pdc_1: XON = Field(
         default=...,

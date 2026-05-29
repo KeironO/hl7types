@@ -18,7 +18,85 @@ from ..datatypes.XTN import XTN
 
 
 class PEO(BaseModel):
-    """HL7 v2 PEO segment."""
+    """HL7 v2 PEO segment.
+
+    Attributes
+    ----------
+    peo_1 : list[CWE] | None
+        PEO.1 (opt, rep) - Event Identifiers Used (CWE)
+
+    peo_2 : list[CWE] | None
+        PEO.2 (opt, rep) - Event Symptom/Diagnosis Code (CWE)
+
+    peo_3 : str
+        PEO.3 (req) - Event Onset Date/Time (DTM)
+
+    peo_4 : str | None
+        PEO.4 (opt) - Event Exacerbation Date/Time (DTM)
+
+    peo_5 : str | None
+        PEO.5 (opt) - Event Improved Date/Time (DTM)
+
+    peo_6 : str | None
+        PEO.6 (opt) - Event Ended Data/Time (DTM)
+
+    peo_7 : list[XAD] | None
+        PEO.7 (opt, rep) - Event Location Occurred Address (XAD)
+
+    peo_8 : list[str] | None
+        PEO.8 (opt, rep) - Event Qualification (ID)
+
+    peo_9 : str | None
+        PEO.9 (opt) - Event Serious (ID)
+
+    peo_10 : str | None
+        PEO.10 (opt) - Event Expected (ID)
+
+    peo_11 : list[str] | None
+        PEO.11 (opt, rep) - Event Outcome (ID)
+
+    peo_12 : str | None
+        PEO.12 (opt) - Patient Outcome (ID)
+
+    peo_13 : list[FT] | None
+        PEO.13 (opt, rep) - Event Description from Others (FT)
+
+    peo_14 : list[FT] | None
+        PEO.14 (opt, rep) - Event Description from Original Reporter (FT)
+
+    peo_15 : list[FT] | None
+        PEO.15 (opt, rep) - Event Description from Patient (FT)
+
+    peo_16 : list[FT] | None
+        PEO.16 (opt, rep) - Event Description from Practitioner (FT)
+
+    peo_17 : list[FT] | None
+        PEO.17 (opt, rep) - Event Description from Autopsy (FT)
+
+    peo_18 : list[CWE] | None
+        PEO.18 (opt, rep) - Cause Of Death (CWE)
+
+    peo_19 : list[XPN] | None
+        PEO.19 (opt, rep) - Primary Observer Name (XPN)
+
+    peo_20 : list[XAD] | None
+        PEO.20 (opt, rep) - Primary Observer Address (XAD)
+
+    peo_21 : list[XTN] | None
+        PEO.21 (opt, rep) - Primary Observer Telephone (XTN)
+
+    peo_22 : str | None
+        PEO.22 (opt) - Primary Observer's Qualification (ID)
+
+    peo_23 : str | None
+        PEO.23 (opt) - Confirmation Provided By (ID)
+
+    peo_24 : str | None
+        PEO.24 (opt) - Primary Observer Aware Date/Time (DTM)
+
+    peo_25 : str | None
+        PEO.25 (opt) - Primary Observer's identity May Be Divulged (ID)
+    """
 
     peo_1: Optional[List[CWE]] = Field(
         default=None,

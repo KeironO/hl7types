@@ -19,7 +19,121 @@ from ..datatypes.XCN import XCN
 
 
 class SCD(BaseModel):
-    """HL7 v2 SCD segment."""
+    """HL7 v2 SCD segment.
+
+    Attributes
+    ----------
+    scd_1 : str | None
+        SCD.1 (opt) - Cycle Start Time (TM)
+
+    scd_2 : str | None
+        SCD.2 (opt) - Cycle Count (NM)
+
+    scd_3 : CQ | None
+        SCD.3 (opt) - Temp Max (CQ)
+
+    scd_4 : CQ | None
+        SCD.4 (opt) - Temp Min (CQ)
+
+    scd_5 : str | None
+        SCD.5 (opt) - Load Number (NM)
+
+    scd_6 : CQ | None
+        SCD.6 (opt) - Condition Time (CQ)
+
+    scd_7 : CQ | None
+        SCD.7 (opt) - Sterilize Time (CQ)
+
+    scd_8 : CQ | None
+        SCD.8 (opt) - Exhaust Time (CQ)
+
+    scd_9 : CQ | None
+        SCD.9 (opt) - Total Cycle Time (CQ)
+
+    scd_10 : CWE | None
+        SCD.10 (opt) - Device Status (CWE)
+
+    scd_11 : str | None
+        SCD.11 (opt) - Cycle Start Date/Time (DTM)
+
+    scd_12 : CQ | None
+        SCD.12 (opt) - Dry Time (CQ)
+
+    scd_13 : CQ | None
+        SCD.13 (opt) - Leak Rate (CQ)
+
+    scd_14 : CQ | None
+        SCD.14 (opt) - Control Temperature (CQ)
+
+    scd_15 : CQ | None
+        SCD.15 (opt) - Sterilizer Temperature (CQ)
+
+    scd_16 : str | None
+        SCD.16 (opt) - Cycle Complete Time (TM)
+
+    scd_17 : CQ | None
+        SCD.17 (opt) - Under Temperature (CQ)
+
+    scd_18 : CQ | None
+        SCD.18 (opt) - Over Temperature (CQ)
+
+    scd_19 : CNE | None
+        SCD.19 (opt) - Abort Cycle (CNE)
+
+    scd_20 : CNE | None
+        SCD.20 (opt) - Alarm (CNE)
+
+    scd_21 : CNE | None
+        SCD.21 (opt) - Long in Charge Phase (CNE)
+
+    scd_22 : CNE | None
+        SCD.22 (opt) - Long in Exhaust Phase (CNE)
+
+    scd_23 : CNE | None
+        SCD.23 (opt) - Long in Fast Exhaust Phase (CNE)
+
+    scd_24 : CNE | None
+        SCD.24 (opt) - Reset (CNE)
+
+    scd_25 : XCN | None
+        SCD.25 (opt) - Operator - Unload (XCN)
+
+    scd_26 : CNE | None
+        SCD.26 (opt) - Door Open (CNE)
+
+    scd_27 : CNE | None
+        SCD.27 (opt) - Reading Failure (CNE)
+
+    scd_28 : CWE | None
+        SCD.28 (opt) - Cycle Type (CWE)
+
+    scd_29 : CQ | None
+        SCD.29 (opt) - Thermal Rinse Time (CQ)
+
+    scd_30 : CQ | None
+        SCD.30 (opt) - Wash Time (CQ)
+
+    scd_31 : CQ | None
+        SCD.31 (opt) - Injection Rate (CQ)
+
+    scd_32 : CNE | None
+        SCD.32 (opt) - Procedure Code (CNE)
+
+    scd_33 : list[CX] | None
+        SCD.33 (opt, rep) - Patient Identifier List (CX)
+
+    scd_34 : XCN | None
+        SCD.34 (opt) - Attending Doctor (XCN)
+
+    scd_35 : SN | None
+        SCD.35 (opt) - Dilution Factor (SN)
+
+    scd_36 : CQ | None
+        SCD.36 (opt) - Fill Time (CQ)
+
+    scd_37 : CQ | None
+        SCD.37 (opt) - Inlet Temperature (CQ)
+    """
 
     scd_1: Optional[str] = Field(
         default=None,

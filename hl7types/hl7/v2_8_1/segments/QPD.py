@@ -15,7 +15,19 @@ from ..datatypes.varies import varies
 
 
 class QPD(BaseModel):
-    """HL7 v2 QPD segment."""
+    """HL7 v2 QPD segment.
+
+    Attributes
+    ----------
+    qpd_1 : CWE
+        QPD.1 (req) - Message Query Name (CWE)
+
+    qpd_2 : str | None
+        QPD.2 (opt) - Query Tag (ST)
+
+    qpd_3 : varies | None
+        QPD.3 (opt) - User Parameters (in successive fields) (varies)
+    """
 
     qpd_1: CWE = Field(
         default=...,

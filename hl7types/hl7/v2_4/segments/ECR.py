@@ -15,7 +15,19 @@ from ..datatypes.TS import TS
 
 
 class ECR(BaseModel):
-    """HL7 v2 ECR segment."""
+    """HL7 v2 ECR segment.
+
+    Attributes
+    ----------
+    ecr_1 : CE
+        ECR.1 (req) - Command Response (CE)
+
+    ecr_2 : TS
+        ECR.2 (req) - Date/Time Completed (TS)
+
+    ecr_3 : list[str] | None
+        ECR.3 (opt, rep) - Command Response Parameters (ST)
+    """
 
     ecr_1: CE = Field(
         default=...,

@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class SN(BaseModel):
-    """HL7 v2 SN data type."""
+    """HL7 v2 SN data type.
+
+    Attributes
+    ----------
+    sn_1 : str | None
+        SN.1 (opt) - Comparator (ST)
+
+    sn_2 : str | None
+        SN.2 (opt) - Num1 (NM)
+
+    sn_3 : str | None
+        SN.3 (opt) - Separator/Suffix (ST)
+
+    sn_4 : str | None
+        SN.4 (opt) - Num2 (NM)
+    """
 
     sn_1: Optional[str] = Field(
         default=None,

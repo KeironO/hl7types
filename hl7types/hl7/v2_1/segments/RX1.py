@@ -15,7 +15,100 @@ from ..datatypes.TX import TX
 
 
 class RX1(BaseModel):
-    """HL7 v2 RX1 segment."""
+    """HL7 v2 RX1 segment.
+
+    Attributes
+    ----------
+    rx1_1 : str | None
+        RX1.1 (opt) - UNUSED (ST)
+
+    rx1_2 : str | None
+        RX1.2 (opt) - UNUSED (ST)
+
+    rx1_3 : str | None
+        RX1.3 (opt) - ROUTE (ST)
+
+    rx1_4 : str | None
+        RX1.4 (opt) - SITE ADMINISTERED (ST)
+
+    rx1_5 : str | None
+        RX1.5 (opt) - IV SOLUTION RATE (CQ)
+
+    rx1_6 : str | None
+        RX1.6 (opt) - DRUG STRENGTH (CQ)
+
+    rx1_7 : str | None
+        RX1.7 (opt) - FINAL CONCENTRATION (NM)
+
+    rx1_8 : str | None
+        RX1.8 (opt) - FINAL VOLUME IN ML. (NM)
+
+    rx1_9 : str | None
+        RX1.9 (opt) - DRUG DOSE (CM)
+
+    rx1_10 : str | None
+        RX1.10 (opt) - DRUG ROLE (ID)
+
+    rx1_11 : str | None
+        RX1.11 (opt) - PRESCRIPTION SEQUENCE # (NM)
+
+    rx1_12 : str | None
+        RX1.12 (opt) - QUANTITY DISPENSED (CQ)
+
+    rx1_13 : str | None
+        RX1.13 (opt) - UNUSED (ST)
+
+    rx1_14 : CE | None
+        RX1.14 (opt) - DRUG ID (CE)
+
+    rx1_15 : list[str] | None
+        RX1.15 (opt, rep) - COMPONENT DRUG IDS (ID)
+
+    rx1_16 : str | None
+        RX1.16 (opt) - PRESCRIPTION TYPE (ID)
+
+    rx1_17 : str | None
+        RX1.17 (opt) - SUBSTITUTION STATUS (ID)
+
+    rx1_18 : str | None
+        RX1.18 (opt) - RX ORDER STATUS (ID)
+
+    rx1_19 : str | None
+        RX1.19 (opt) - NUMBER OF REFILLS (NM)
+
+    rx1_20 : str | None
+        RX1.20 (opt) - UNUSED (ST)
+
+    rx1_21 : str | None
+        RX1.21 (opt) - REFILLS REMAINING (NM)
+
+    rx1_22 : str | None
+        RX1.22 (opt) - DEA CLASS (ID)
+
+    rx1_23 : str | None
+        RX1.23 (opt) - ORDERING MD'S DEA NUMBER (NM)
+
+    rx1_24 : str | None
+        RX1.24 (opt) - UNUSED (ST)
+
+    rx1_25 : str | None
+        RX1.25 (opt) - LAST REFILL DATE/TIME (TS)
+
+    rx1_26 : str | None
+        RX1.26 (opt) - RX NUMBER (ST)
+
+    rx1_27 : str | None
+        RX1.27 (opt) - PRN STATUS (ID)
+
+    rx1_28 : list[TX] | None
+        RX1.28 (opt, rep) - PHARMACY INSTRUCTIONS (TX)
+
+    rx1_29 : list[TX] | None
+        RX1.29 (opt, rep) - PATIENT INSTRUCTIONS (TX)
+
+    rx1_30 : list[TX] | None
+        RX1.30 (opt, rep) - INSTRUCTIONS (SIG) (TX)
+    """
 
     rx1_1: Optional[str] = Field(
         default=None,

@@ -15,7 +15,46 @@ from ..datatypes.TS import TS
 
 
 class RXA(BaseModel):
-    """HL7 v2 RXA segment."""
+    """HL7 v2 RXA segment.
+
+    Attributes
+    ----------
+    rxa_1 : str
+        RXA.1 (req) - Give Sub-ID Counter (NM)
+
+    rxa_2 : str
+        RXA.2 (req) - Administration Sub-ID Counter (NM)
+
+    rxa_3 : TS
+        RXA.3 (req) - Date / time start of administration (TS)
+
+    rxa_4 : TS
+        RXA.4 (req) - Date / time end of administration (TS)
+
+    rxa_5 : CE
+        RXA.5 (req) - Administered Code (CE)
+
+    rxa_6 : str
+        RXA.6 (req) - Administered Amount (NM)
+
+    rxa_7 : CE | None
+        RXA.7 (opt) - Administered Units (CE)
+
+    rxa_8 : CE | None
+        RXA.8 (opt) - Administered Dosage Form (CE)
+
+    rxa_9 : str | None
+        RXA.9 (opt) - Administration Notes (ST)
+
+    rxa_10 : str | None
+        RXA.10 (opt) - Administering Provider (CN)
+
+    rxa_11 : str | None
+        RXA.11 (opt) - Administered-at Location (CM)
+
+    rxa_12 : str | None
+        RXA.12 (opt) - Administered Per (Time Unit) (ST)
+    """
 
     rxa_1: str = Field(
         default=...,

@@ -14,7 +14,34 @@ from ..datatypes.TS import TS
 
 
 class URS(BaseModel):
-    """HL7 v2 URS segment."""
+    """HL7 v2 URS segment.
+
+    Attributes
+    ----------
+    urs_1 : list[str]
+        URS.1 (req, rep) - R/U Where Subject Definition (ST)
+
+    urs_2 : TS | None
+        URS.2 (opt) - R/U when data start date / time (TS)
+
+    urs_3 : TS | None
+        URS.3 (opt) - R/U when data end date / time (TS)
+
+    urs_4 : list[str] | None
+        URS.4 (opt, rep) - R/U What User Qualifier (ST)
+
+    urs_5 : list[str] | None
+        URS.5 (opt, rep) - R/U Other Results Subject Definition (ST)
+
+    urs_6 : list[str] | None
+        URS.6 (opt, rep) - R/U which date / time qualifier (ID)
+
+    urs_7 : list[str] | None
+        URS.7 (opt, rep) - R/U which date / time status qualifier (ID)
+
+    urs_8 : list[str] | None
+        URS.8 (opt, rep) - R/U date / time selection qualifier (ID)
+    """
 
     urs_1: List[str] = Field(
         default=...,

@@ -12,7 +12,13 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class ADD(BaseModel):
-    """HL7 v2 ADD segment."""
+    """HL7 v2 ADD segment.
+
+    Attributes
+    ----------
+    add_1 : str | None
+        ADD.1 (opt) - Addendum Continuation Pointer (ST)
+    """
 
     add_1: Optional[str] = Field(
         default=None,

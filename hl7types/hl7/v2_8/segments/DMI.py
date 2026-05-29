@@ -15,7 +15,25 @@ from ..datatypes.NR import NR
 
 
 class DMI(BaseModel):
-    """HL7 v2 DMI segment."""
+    """HL7 v2 DMI segment.
+
+    Attributes
+    ----------
+    dmi_1 : CNE | None
+        DMI.1 (opt) - Diagnostic Related Group (CNE)
+
+    dmi_2 : CNE | None
+        DMI.2 (opt) - Major Diagnostic Category (CNE)
+
+    dmi_3 : NR | None
+        DMI.3 (opt) - Lower and Upper Trim Points (NR)
+
+    dmi_4 : str | None
+        DMI.4 (opt) - Average Length of Stay (NM)
+
+    dmi_5 : str | None
+        DMI.5 (opt) - Relative Weight (NM)
+    """
 
     dmi_1: Optional[CNE] = Field(
         default=None,

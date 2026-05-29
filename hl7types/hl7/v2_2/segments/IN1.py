@@ -17,7 +17,148 @@ from ..datatypes.TS import TS
 
 
 class IN1(BaseModel):
-    """HL7 v2 IN1 segment."""
+    """HL7 v2 IN1 segment.
+
+    Attributes
+    ----------
+    in1_1 : str
+        IN1.1 (req) - Set ID - insurance (SI)
+
+    in1_2 : str
+        IN1.2 (req) - Insurance plan ID (ID)
+
+    in1_3 : str
+        IN1.3 (req) - Insurance company ID (ST)
+
+    in1_4 : str | None
+        IN1.4 (opt) - Insurance company name (ST)
+
+    in1_5 : AD | None
+        IN1.5 (opt) - Insurance company address (AD)
+
+    in1_6 : PN | None
+        IN1.6 (opt) - Insurance company contact pers (PN)
+
+    in1_7 : list[str] | None
+        IN1.7 (opt, rep) - Insurance company phone number (TN)
+
+    in1_8 : str | None
+        IN1.8 (opt) - Group number (ST)
+
+    in1_9 : str | None
+        IN1.9 (opt) - Group name (ST)
+
+    in1_10 : str | None
+        IN1.10 (opt) - Insured's group employer ID (ST)
+
+    in1_11 : str | None
+        IN1.11 (opt) - Insured's group employer name (ST)
+
+    in1_12 : str | None
+        IN1.12 (opt) - Plan effective date (DT)
+
+    in1_13 : str | None
+        IN1.13 (opt) - Plan expiration date (DT)
+
+    in1_14 : str | None
+        IN1.14 (opt) - Authorization information (CM)
+
+    in1_15 : str | None
+        IN1.15 (opt) - Plan type (ID)
+
+    in1_16 : PN | None
+        IN1.16 (opt) - Name of insured (PN)
+
+    in1_17 : str | None
+        IN1.17 (opt) - Insured's relationship to patient (ID)
+
+    in1_18 : str | None
+        IN1.18 (opt) - Insured's date of birth (DT)
+
+    in1_19 : AD | None
+        IN1.19 (opt) - Insured's address (AD)
+
+    in1_20 : str | None
+        IN1.20 (opt) - Assignment of benefits (ID)
+
+    in1_21 : str | None
+        IN1.21 (opt) - Coordination of benefits (ID)
+
+    in1_22 : str | None
+        IN1.22 (opt) - Coordination of benefits - priority (ST)
+
+    in1_23 : str | None
+        IN1.23 (opt) - Notice of admission code (ID)
+
+    in1_24 : str | None
+        IN1.24 (opt) - Notice of admission date (DT)
+
+    in1_25 : str | None
+        IN1.25 (opt) - Report of eligibility code (ID)
+
+    in1_26 : str | None
+        IN1.26 (opt) - Report of eligibility date (DT)
+
+    in1_27 : str | None
+        IN1.27 (opt) - Release information code (ID)
+
+    in1_28 : str | None
+        IN1.28 (opt) - Pre-admit certification (PAC) (ST)
+
+    in1_29 : TS | None
+        IN1.29 (opt) - Verification date / time (TS)
+
+    in1_30 : str | None
+        IN1.30 (opt) - Verification by (CN)
+
+    in1_31 : str | None
+        IN1.31 (opt) - Type of agreement code (ID)
+
+    in1_32 : str | None
+        IN1.32 (opt) - Billing status (ID)
+
+    in1_33 : str | None
+        IN1.33 (opt) - Lifetime reserve days (NM)
+
+    in1_34 : str | None
+        IN1.34 (opt) - Delay before lifetime reserve days (NM)
+
+    in1_35 : str | None
+        IN1.35 (opt) - Company plan code (ID)
+
+    in1_36 : str | None
+        IN1.36 (opt) - Policy number (ST)
+
+    in1_37 : str | None
+        IN1.37 (opt) - Policy deductible (NM)
+
+    in1_38 : str | None
+        IN1.38 (opt) - Policy limit - amount (NM)
+
+    in1_39 : str | None
+        IN1.39 (opt) - Policy limit - days (NM)
+
+    in1_40 : str | None
+        IN1.40 (opt) - Room rate - semi-private (NM)
+
+    in1_41 : str | None
+        IN1.41 (opt) - Room rate - private (NM)
+
+    in1_42 : CE | None
+        IN1.42 (opt) - Insured's employment status (CE)
+
+    in1_43 : str | None
+        IN1.43 (opt) - Insured's sex (ID)
+
+    in1_44 : AD | None
+        IN1.44 (opt) - Insured's employer address (AD)
+
+    in1_45 : str | None
+        IN1.45 (opt) - Verification status (ST)
+
+    in1_46 : str | None
+        IN1.46 (opt) - Prior insurance plan ID (ID)
+    """
 
     in1_1: str = Field(
         default=...,

@@ -14,7 +14,19 @@ from ..datatypes.CWE import CWE
 
 
 class RMI(BaseModel):
-    """HL7 v2 RMI segment."""
+    """HL7 v2 RMI segment.
+
+    Attributes
+    ----------
+    rmi_1 : CWE | None
+        RMI.1 (opt) - Risk Management Incident Code (CWE)
+
+    rmi_2 : str | None
+        RMI.2 (opt) - Date/Time Incident (DTM)
+
+    rmi_3 : CWE | None
+        RMI.3 (opt) - Incident Type Code (CWE)
+    """
 
     rmi_1: Optional[CWE] = Field(
         default=None,

@@ -20,7 +20,85 @@ from ..datatypes.XTN import XTN
 
 
 class SCH(BaseModel):
-    """HL7 v2 SCH segment."""
+    """HL7 v2 SCH segment.
+
+    Attributes
+    ----------
+    sch_1 : EI
+        SCH.1 (req) - Placer Appointment ID (EI)
+
+    sch_2 : EI | None
+        SCH.2 (opt) - Filler Appointment ID (EI)
+
+    sch_3 : str | None
+        SCH.3 (opt) - Occurrence Number (NM)
+
+    sch_4 : EI | None
+        SCH.4 (opt) - Placer Group Number (EI)
+
+    sch_5 : CE | None
+        SCH.5 (opt) - Schedule ID (CE)
+
+    sch_6 : CE
+        SCH.6 (req) - Event Reason (CE)
+
+    sch_7 : CE | None
+        SCH.7 (opt) - Appointment Reason (CE)
+
+    sch_8 : CE | None
+        SCH.8 (opt) - Appointment Type (CE)
+
+    sch_9 : str | None
+        SCH.9 (opt) - Appointment Duration (NM)
+
+    sch_10 : CE | None
+        SCH.10 (opt) - Appointment Duration Units (CE)
+
+    sch_11 : list[TQ]
+        SCH.11 (req, rep) - Appointment Timing Quantity (TQ)
+
+    sch_12 : XCN | None
+        SCH.12 (opt) - Placer Contact Person (XCN)
+
+    sch_13 : XTN | None
+        SCH.13 (opt) - Placer Contact Phone Number (XTN)
+
+    sch_14 : XAD | None
+        SCH.14 (opt) - Placer Contact Address (XAD)
+
+    sch_15 : PL | None
+        SCH.15 (opt) - Placer Contact Location (PL)
+
+    sch_16 : XCN
+        SCH.16 (req) - Filler Contact Person (XCN)
+
+    sch_17 : XTN | None
+        SCH.17 (opt) - Filler Contact Phone Number (XTN)
+
+    sch_18 : XAD | None
+        SCH.18 (opt) - Filler Contact Address (XAD)
+
+    sch_19 : PL | None
+        SCH.19 (opt) - Filler Contact Location (PL)
+
+    sch_20 : XCN
+        SCH.20 (req) - Entered By Person (XCN)
+
+    sch_21 : list[XTN] | None
+        SCH.21 (opt, rep) - Entered By Phone Number (XTN)
+
+    sch_22 : PL | None
+        SCH.22 (opt) - Entered By Location (PL)
+
+    sch_23 : EI | None
+        SCH.23 (opt) - Parent Placer Appointment ID (EI)
+
+    sch_24 : EI | None
+        SCH.24 (opt) - Parent Filler Appointment ID (EI)
+
+    sch_25 : CE | None
+        SCH.25 (opt) - Filler Status Code (CE)
+    """
 
     sch_1: EI = Field(
         default=...,

@@ -12,7 +12,70 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class PID(BaseModel):
-    """HL7 v2 PID segment."""
+    """HL7 v2 PID segment.
+
+    Attributes
+    ----------
+    pid_1 : str | None
+        PID.1 (opt) - SET ID - PATIENT ID (SI)
+
+    pid_2 : str | None
+        PID.2 (opt) - PATIENT ID EXTERNAL (EXTERNAL ID) (CK)
+
+    pid_3 : str
+        PID.3 (req) - PATIENT ID INTERNAL (INTERNAL ID) (CK)
+
+    pid_4 : str | None
+        PID.4 (opt) - ALTERNATE PATIENT ID (ST)
+
+    pid_5 : str
+        PID.5 (req) - PATIENT NAME (PN)
+
+    pid_6 : str | None
+        PID.6 (opt) - MOTHER'S MAIDEN NAME (ST)
+
+    pid_7 : str | None
+        PID.7 (opt) - DATE OF BIRTH (DT)
+
+    pid_8 : str | None
+        PID.8 (opt) - SEX (ID)
+
+    pid_9 : list[str] | None
+        PID.9 (opt, rep) - PATIENT ALIAS (PN)
+
+    pid_10 : str | None
+        PID.10 (opt) - ETHNIC GROUP (ID)
+
+    pid_11 : str | None
+        PID.11 (opt) - PATIENT ADDRESS (AD)
+
+    pid_12 : str | None
+        PID.12 (opt) - COUNTY CODE (ID)
+
+    pid_13 : list[str] | None
+        PID.13 (opt, rep) - PHONE NUMBER - HOME (TN)
+
+    pid_14 : list[str] | None
+        PID.14 (opt, rep) - PHONE NUMBER - BUSINESS (TN)
+
+    pid_15 : str | None
+        PID.15 (opt) - LANGUAGE - PATIENT (ST)
+
+    pid_16 : str | None
+        PID.16 (opt) - MARITAL STATUS (ID)
+
+    pid_17 : str | None
+        PID.17 (opt) - RELIGION (ID)
+
+    pid_18 : str | None
+        PID.18 (opt) - PATIENT ACCOUNT NUMBER (CK)
+
+    pid_19 : str | None
+        PID.19 (opt) - SSN NUMBER - PATIENT (ST)
+
+    pid_20 : str | None
+        PID.20 (opt) - DRIVER'S LIC NUM - PATIENT (CM)
+    """
 
     pid_1: Optional[str] = Field(
         default=None,

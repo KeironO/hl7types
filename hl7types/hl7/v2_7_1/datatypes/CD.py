@@ -18,7 +18,28 @@ from .WVS import WVS
 
 
 class CD(BaseModel):
-    """HL7 v2 CD data type."""
+    """HL7 v2 CD data type.
+
+    Attributes
+    ----------
+    cd_1 : WVI | None
+        CD.1 (opt) - Channel Identifier (WVI)
+
+    cd_2 : WVS | None
+        CD.2 (opt) - Waveform Source (WVS)
+
+    cd_3 : CSU | None
+        CD.3 (opt) - Channel Sensitivity and Units (CSU)
+
+    cd_4 : CCP | None
+        CD.4 (opt) - Channel Calibration Parameters (CCP)
+
+    cd_5 : str | None
+        CD.5 (opt) - Channel Sampling Frequency (NM)
+
+    cd_6 : NR | None
+        CD.6 (opt) - Minimum and Maximum Data Values (NR)
+    """
 
     cd_1: Optional[WVI] = Field(
         default=None,

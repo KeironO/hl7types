@@ -17,7 +17,88 @@ from ..datatypes.XCN import XCN
 
 
 class TXA(BaseModel):
-    """HL7 v2 TXA segment."""
+    """HL7 v2 TXA segment.
+
+    Attributes
+    ----------
+    txa_1 : str
+        TXA.1 (req) - Set ID- TXA (SI)
+
+    txa_2 : CWE
+        TXA.2 (req) - Document Type (CWE)
+
+    txa_3 : str | None
+        TXA.3 (opt) - Document Content Presentation (ID)
+
+    txa_4 : str | None
+        TXA.4 (opt) - Activity Date/Time (DTM)
+
+    txa_5 : list[XCN] | None
+        TXA.5 (opt, rep) - Primary Activity Provider Code/Name (XCN)
+
+    txa_6 : str | None
+        TXA.6 (opt) - Origination Date/Time (DTM)
+
+    txa_7 : str | None
+        TXA.7 (opt) - Transcription Date/Time (DTM)
+
+    txa_8 : list[str] | None
+        TXA.8 (opt, rep) - Edit Date/Time (DTM)
+
+    txa_9 : list[XCN] | None
+        TXA.9 (opt, rep) - Originator Code/Name (XCN)
+
+    txa_10 : list[XCN] | None
+        TXA.10 (opt, rep) - Assigned Document Authenticator (XCN)
+
+    txa_11 : list[XCN] | None
+        TXA.11 (opt, rep) - Transcriptionist Code/Name (XCN)
+
+    txa_12 : EI
+        TXA.12 (req) - Unique Document Number (EI)
+
+    txa_13 : EI | None
+        TXA.13 (opt) - Parent Document Number (EI)
+
+    txa_14 : list[EI] | None
+        TXA.14 (opt, rep) - Placer Order Number (EI)
+
+    txa_15 : EI | None
+        TXA.15 (opt) - Filler Order Number (EI)
+
+    txa_16 : str | None
+        TXA.16 (opt) - Unique Document File Name (ST)
+
+    txa_17 : str
+        TXA.17 (req) - Document Completion Status (ID)
+
+    txa_18 : str | None
+        TXA.18 (opt) - Document Confidentiality Status (ID)
+
+    txa_19 : str | None
+        TXA.19 (opt) - Document Availability Status (ID)
+
+    txa_20 : str | None
+        TXA.20 (opt) - Document Storage Status (ID)
+
+    txa_21 : str | None
+        TXA.21 (opt) - Document Change Reason (ST)
+
+    txa_22 : list[PPN] | None
+        TXA.22 (opt, rep) - Authentication Person, Time Stamp (set) (PPN)
+
+    txa_23 : list[XCN] | None
+        TXA.23 (opt, rep) - Distributed Copies (Code and Name of Recipient(s) ) (XCN)
+
+    txa_24 : list[CWE] | None
+        TXA.24 (opt, rep) - Folder Assignment (CWE)
+
+    txa_25 : list[str] | None
+        TXA.25 (opt, rep) - Document Title (ST)
+
+    txa_26 : str | None
+        TXA.26 (opt) - Agreed Due Date/Time (DTM)
+    """
 
     txa_1: str = Field(
         default=...,

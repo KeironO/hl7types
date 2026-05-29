@@ -16,7 +16,31 @@ from ..datatypes.EI import EI
 
 
 class PTH(BaseModel):
-    """HL7 v2 PTH segment."""
+    """HL7 v2 PTH segment.
+
+    Attributes
+    ----------
+    pth_1 : str
+        PTH.1 (req) - Action Code (ID)
+
+    pth_2 : CWE
+        PTH.2 (req) - Pathway ID (CWE)
+
+    pth_3 : EI
+        PTH.3 (req) - Pathway Instance ID (EI)
+
+    pth_4 : str
+        PTH.4 (req) - Pathway Established Date/Time (DTM)
+
+    pth_5 : CWE | None
+        PTH.5 (opt) - Pathway Life Cycle Status (CWE)
+
+    pth_6 : str | None
+        PTH.6 (opt) - Change Pathway Life Cycle Status Date/Time (DTM)
+
+    pth_7 : CNE | None
+        PTH.7 (opt) - Mood Code (CNE)
+    """
 
     pth_1: str = Field(
         default=...,

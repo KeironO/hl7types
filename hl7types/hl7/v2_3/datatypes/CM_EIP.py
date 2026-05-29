@@ -14,7 +14,16 @@ from .EI import EI
 
 
 class CM_EIP(BaseModel):
-    """HL7 v2 CM_EIP data type."""
+    """HL7 v2 CM_EIP data type.
+
+    Attributes
+    ----------
+    cm_eip_1 : EI | None
+        CM_EIP.1 (opt) - parent´s placer order number (EI)
+
+    cm_eip_2 : EI | None
+        CM_EIP.2 (opt) - parent´s filler order number (EI)
+    """
 
     cm_eip_1: Optional[EI] = Field(
         default=None,

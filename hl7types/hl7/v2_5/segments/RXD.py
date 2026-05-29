@@ -20,7 +20,109 @@ from ..datatypes.XCN import XCN
 
 
 class RXD(BaseModel):
-    """HL7 v2 RXD segment."""
+    """HL7 v2 RXD segment.
+
+    Attributes
+    ----------
+    rxd_1 : str
+        RXD.1 (req) - Dispense Sub-ID Counter (NM)
+
+    rxd_2 : CE
+        RXD.2 (req) - Dispense/Give Code (CE)
+
+    rxd_3 : TS
+        RXD.3 (req) - Date/Time Dispensed (TS)
+
+    rxd_4 : str
+        RXD.4 (req) - Actual Dispense Amount (NM)
+
+    rxd_5 : CE | None
+        RXD.5 (opt) - Actual Dispense Units (CE)
+
+    rxd_6 : CE | None
+        RXD.6 (opt) - Actual Dosage Form (CE)
+
+    rxd_7 : str
+        RXD.7 (req) - Prescription Number (ST)
+
+    rxd_8 : str | None
+        RXD.8 (opt) - Number of Refills Remaining (NM)
+
+    rxd_9 : list[str] | None
+        RXD.9 (opt, rep) - Dispense Notes (ST)
+
+    rxd_10 : list[XCN] | None
+        RXD.10 (opt, rep) - Dispensing Provider (XCN)
+
+    rxd_11 : str | None
+        RXD.11 (opt) - Substitution Status (ID)
+
+    rxd_12 : CQ | None
+        RXD.12 (opt) - Total Daily Dose (CQ)
+
+    rxd_13 : LA2 | None
+        RXD.13 (opt) - Dispense-to Location (LA2)
+
+    rxd_14 : str | None
+        RXD.14 (opt) - Needs Human Review (ID)
+
+    rxd_15 : list[CE] | None
+        RXD.15 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CE)
+
+    rxd_16 : str | None
+        RXD.16 (opt) - Actual Strength (NM)
+
+    rxd_17 : CE | None
+        RXD.17 (opt) - Actual Strength Unit (CE)
+
+    rxd_18 : list[str] | None
+        RXD.18 (opt, rep) - Substance Lot Number (ST)
+
+    rxd_19 : list[TS] | None
+        RXD.19 (opt, rep) - Substance Expiration Date (TS)
+
+    rxd_20 : list[CE] | None
+        RXD.20 (opt, rep) - Substance Manufacturer Name (CE)
+
+    rxd_21 : list[CE] | None
+        RXD.21 (opt, rep) - Indication (CE)
+
+    rxd_22 : str | None
+        RXD.22 (opt) - Dispense Package Size (NM)
+
+    rxd_23 : CE | None
+        RXD.23 (opt) - Dispense Package Size Unit (CE)
+
+    rxd_24 : str | None
+        RXD.24 (opt) - Dispense Package Method (ID)
+
+    rxd_25 : list[CE] | None
+        RXD.25 (opt, rep) - Supplementary Code (CE)
+
+    rxd_26 : CE | None
+        RXD.26 (opt) - Initiating Location (CE)
+
+    rxd_27 : CE | None
+        RXD.27 (opt) - Packaging/Assembly Location (CE)
+
+    rxd_28 : str | None
+        RXD.28 (opt) - Actual Drug Strength Volume (NM)
+
+    rxd_29 : CWE | None
+        RXD.29 (opt) - Actual Drug Strength Volume Units (CWE)
+
+    rxd_30 : CWE | None
+        RXD.30 (opt) - Dispense to Pharmacy (CWE)
+
+    rxd_31 : XAD | None
+        RXD.31 (opt) - Dispense to Pharmacy Address (XAD)
+
+    rxd_32 : str | None
+        RXD.32 (opt) - Pharmacy Order Type (ID)
+
+    rxd_33 : CWE | None
+        RXD.33 (opt) - Dispense Type (CWE)
+    """
 
     rxd_1: str = Field(
         default=...,

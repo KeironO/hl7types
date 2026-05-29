@@ -14,7 +14,31 @@ from ..datatypes.CNE import CNE
 
 
 class MSA(BaseModel):
-    """HL7 v2 MSA segment."""
+    """HL7 v2 MSA segment.
+
+    Attributes
+    ----------
+    msa_1 : str
+        MSA.1 (req) - Acknowledgment Code (ID)
+
+    msa_2 : str
+        MSA.2 (req) - Message Control ID (ST)
+
+    msa_3 : str | None
+        MSA.3 (opt) - Text Message (ST)
+
+    msa_4 : str | None
+        MSA.4 (opt) - Expected Sequence Number (NM)
+
+    msa_6 : CNE | None
+        MSA.6 (opt) - Error Condition (CNE)
+
+    msa_7 : str | None
+        MSA.7 (opt) - Message Waiting Number (NM)
+
+    msa_8 : str | None
+        MSA.8 (opt) - Message Waiting Priority (ID)
+    """
 
     msa_1: str = Field(
         default=...,

@@ -18,7 +18,157 @@ from ..datatypes.XON import XON
 
 
 class PV2(BaseModel):
-    """HL7 v2 PV2 segment."""
+    """HL7 v2 PV2 segment.
+
+    Attributes
+    ----------
+    pv2_1 : PL | None
+        PV2.1 (opt) - Prior Pending Location (PL)
+
+    pv2_2 : CE | None
+        PV2.2 (opt) - Accommodation Code (CE)
+
+    pv2_3 : CE | None
+        PV2.3 (opt) - Admit Reason (CE)
+
+    pv2_4 : CE | None
+        PV2.4 (opt) - Transfer Reason (CE)
+
+    pv2_5 : list[str] | None
+        PV2.5 (opt, rep) - Patient Valuables (ST)
+
+    pv2_6 : str | None
+        PV2.6 (opt) - Patient Valuables Location (ST)
+
+    pv2_7 : list[str] | None
+        PV2.7 (opt, rep) - Visit User Code (IS)
+
+    pv2_8 : TS | None
+        PV2.8 (opt) - Expected Admit Date/Time (TS)
+
+    pv2_9 : TS | None
+        PV2.9 (opt) - Expected Discharge Date/Time (TS)
+
+    pv2_10 : str | None
+        PV2.10 (opt) - Estimated Length of Inpatient Stay (NM)
+
+    pv2_11 : str | None
+        PV2.11 (opt) - Actual Length of Inpatient Stay (NM)
+
+    pv2_12 : str | None
+        PV2.12 (opt) - Visit Description (ST)
+
+    pv2_13 : list[XCN] | None
+        PV2.13 (opt, rep) - Referral Source Code (XCN)
+
+    pv2_14 : str | None
+        PV2.14 (opt) - Previous Service Date (DT)
+
+    pv2_15 : str | None
+        PV2.15 (opt) - Employment Illness Related Indicator (ID)
+
+    pv2_16 : str | None
+        PV2.16 (opt) - Purge Status Code (IS)
+
+    pv2_17 : str | None
+        PV2.17 (opt) - Purge Status Date (DT)
+
+    pv2_18 : str | None
+        PV2.18 (opt) - Special Program Code (IS)
+
+    pv2_19 : str | None
+        PV2.19 (opt) - Retention Indicator (ID)
+
+    pv2_20 : str | None
+        PV2.20 (opt) - Expected Number of Insurance Plans (NM)
+
+    pv2_21 : str | None
+        PV2.21 (opt) - Visit Publicity Code (IS)
+
+    pv2_22 : str | None
+        PV2.22 (opt) - Visit Protection Indicator (ID)
+
+    pv2_23 : list[XON] | None
+        PV2.23 (opt, rep) - Clinic Organization Name (XON)
+
+    pv2_24 : str | None
+        PV2.24 (opt) - Patient Status Code (IS)
+
+    pv2_25 : str | None
+        PV2.25 (opt) - Visit Priority Code (IS)
+
+    pv2_26 : str | None
+        PV2.26 (opt) - Previous Treatment Date (DT)
+
+    pv2_27 : str | None
+        PV2.27 (opt) - Expected Discharge Disposition (IS)
+
+    pv2_28 : str | None
+        PV2.28 (opt) - Signature on File Date (DT)
+
+    pv2_29 : str | None
+        PV2.29 (opt) - First Similar Illness Date (DT)
+
+    pv2_30 : CE | None
+        PV2.30 (opt) - Patient Charge Adjustment Code (CE)
+
+    pv2_31 : str | None
+        PV2.31 (opt) - Recurring Service Code (IS)
+
+    pv2_32 : str | None
+        PV2.32 (opt) - Billing Media Code (ID)
+
+    pv2_33 : TS | None
+        PV2.33 (opt) - Expected Surgery Date and Time (TS)
+
+    pv2_34 : str | None
+        PV2.34 (opt) - Military Partnership Code (ID)
+
+    pv2_35 : str | None
+        PV2.35 (opt) - Military Non-Availability Code (ID)
+
+    pv2_36 : str | None
+        PV2.36 (opt) - Newborn Baby Indicator (ID)
+
+    pv2_37 : str | None
+        PV2.37 (opt) - Baby Detained Indicator (ID)
+
+    pv2_38 : CE | None
+        PV2.38 (opt) - Mode of Arrival Code (CE)
+
+    pv2_39 : list[CE] | None
+        PV2.39 (opt, rep) - Recreational Drug Use Code (CE)
+
+    pv2_40 : CE | None
+        PV2.40 (opt) - Admission Level of Care Code (CE)
+
+    pv2_41 : list[CE] | None
+        PV2.41 (opt, rep) - Precaution Code (CE)
+
+    pv2_42 : CE | None
+        PV2.42 (opt) - Patient Condition Code (CE)
+
+    pv2_43 : str | None
+        PV2.43 (opt) - Living Will Code (IS)
+
+    pv2_44 : str | None
+        PV2.44 (opt) - Organ Donor Code (IS)
+
+    pv2_45 : list[CE] | None
+        PV2.45 (opt, rep) - Advance Directive Code (CE)
+
+    pv2_46 : str | None
+        PV2.46 (opt) - Patient Status Effective Date (DT)
+
+    pv2_47 : TS | None
+        PV2.47 (opt) - Expected LOA Return Date/Time (TS)
+
+    pv2_48 : TS | None
+        PV2.48 (opt) - Expected Pre-admission Testing Date/Time (TS)
+
+    pv2_49 : list[str] | None
+        PV2.49 (opt, rep) - Notify Clergy Code (IS)
+    """
 
     pv2_1: Optional[PL] = Field(
         default=None,

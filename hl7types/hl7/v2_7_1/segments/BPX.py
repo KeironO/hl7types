@@ -20,7 +20,73 @@ from ..datatypes.XON import XON
 
 
 class BPX(BaseModel):
-    """HL7 v2 BPX segment."""
+    """HL7 v2 BPX segment.
+
+    Attributes
+    ----------
+    bpx_1 : str
+        BPX.1 (req) - Set ID - BPX (SI)
+
+    bpx_2 : CWE
+        BPX.2 (req) - BP Dispense Status (CWE)
+
+    bpx_3 : str
+        BPX.3 (req) - BP Status (ID)
+
+    bpx_4 : str
+        BPX.4 (req) - BP Date/Time of Status (DTM)
+
+    bpx_5 : EI | None
+        BPX.5 (opt) - BC Donation ID (EI)
+
+    bpx_6 : CNE | None
+        BPX.6 (opt) - BC Component (CNE)
+
+    bpx_7 : CNE | None
+        BPX.7 (opt) - BC Donation Type / Intended Use (CNE)
+
+    bpx_8 : CWE | None
+        BPX.8 (opt) - CP Commercial Product (CWE)
+
+    bpx_9 : XON | None
+        BPX.9 (opt) - CP Manufacturer (XON)
+
+    bpx_10 : EI | None
+        BPX.10 (opt) - CP Lot Number (EI)
+
+    bpx_11 : CNE | None
+        BPX.11 (opt) - BP Blood Group (CNE)
+
+    bpx_12 : list[CNE] | None
+        BPX.12 (opt, rep) - BC Special Testing (CNE)
+
+    bpx_13 : str | None
+        BPX.13 (opt) - BP Expiration Date/Time (DTM)
+
+    bpx_14 : str
+        BPX.14 (req) - BP Quantity (NM)
+
+    bpx_15 : str | None
+        BPX.15 (opt) - BP Amount (NM)
+
+    bpx_16 : CWE | None
+        BPX.16 (opt) - BP Units (CWE)
+
+    bpx_17 : EI | None
+        BPX.17 (opt) - BP Unique ID (EI)
+
+    bpx_18 : PL | None
+        BPX.18 (opt) - BP Actual Dispensed To Location (PL)
+
+    bpx_19 : XAD | None
+        BPX.19 (opt) - BP Actual Dispensed To Address (XAD)
+
+    bpx_20 : XCN | None
+        BPX.20 (opt) - BP Dispensed to Receiver (XCN)
+
+    bpx_21 : XCN | None
+        BPX.21 (opt) - BP Dispensing Individual (XCN)
+    """
 
     bpx_1: str = Field(
         default=...,

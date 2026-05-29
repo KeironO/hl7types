@@ -14,7 +14,28 @@ from .FT import FT
 
 
 class CF(BaseModel):
-    """HL7 v2 CF data type."""
+    """HL7 v2 CF data type.
+
+    Attributes
+    ----------
+    cf_1 : str | None
+        CF.1 (opt) - Identifier (ST)
+
+    cf_2 : FT | None
+        CF.2 (opt) - Formatted Text (FT)
+
+    cf_3 : str | None
+        CF.3 (opt) - Name of Coding System (ID)
+
+    cf_4 : str | None
+        CF.4 (opt) - Alternate Identifier (ST)
+
+    cf_5 : FT | None
+        CF.5 (opt) - Alternate Formatted Text (FT)
+
+    cf_6 : str | None
+        CF.6 (opt) - Name of Alternate Coding System (ID)
+    """
 
     cf_1: Optional[str] = Field(
         default=None,

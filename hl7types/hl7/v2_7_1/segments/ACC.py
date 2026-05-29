@@ -16,7 +16,46 @@ from ..datatypes.XCN import XCN
 
 
 class ACC(BaseModel):
-    """HL7 v2 ACC segment."""
+    """HL7 v2 ACC segment.
+
+    Attributes
+    ----------
+    acc_1 : str | None
+        ACC.1 (opt) - Accident Date/Time (DTM)
+
+    acc_2 : CWE | None
+        ACC.2 (opt) - Accident Code (CWE)
+
+    acc_3 : str | None
+        ACC.3 (opt) - Accident Location (ST)
+
+    acc_4 : CWE | None
+        ACC.4 (opt) - Auto Accident State (CWE)
+
+    acc_5 : str | None
+        ACC.5 (opt) - Accident Job Related Indicator (ID)
+
+    acc_6 : str | None
+        ACC.6 (opt) - Accident Death Indicator (ID)
+
+    acc_7 : XCN | None
+        ACC.7 (opt) - Entered By (XCN)
+
+    acc_8 : str | None
+        ACC.8 (opt) - Accident Description (ST)
+
+    acc_9 : str | None
+        ACC.9 (opt) - Brought In By (ST)
+
+    acc_10 : str | None
+        ACC.10 (opt) - Police Notified Indicator (ID)
+
+    acc_11 : XAD | None
+        ACC.11 (opt) - Accident Address (XAD)
+
+    acc_12 : str | None
+        ACC.12 (opt) - Degree of patient liability (NM)
+    """
 
     acc_1: Optional[str] = Field(
         default=None,

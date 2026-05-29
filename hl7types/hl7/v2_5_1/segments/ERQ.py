@@ -15,7 +15,19 @@ from ..datatypes.QIP import QIP
 
 
 class ERQ(BaseModel):
-    """HL7 v2 ERQ segment."""
+    """HL7 v2 ERQ segment.
+
+    Attributes
+    ----------
+    erq_1 : str | None
+        ERQ.1 (opt) - Query Tag (ST)
+
+    erq_2 : CE
+        ERQ.2 (req) - Event Identifier (CE)
+
+    erq_3 : list[QIP] | None
+        ERQ.3 (opt, rep) - Input Parameter List (QIP)
+    """
 
     erq_1: Optional[str] = Field(
         default=None,

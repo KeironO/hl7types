@@ -16,7 +16,31 @@ from ..datatypes.SRT import SRT
 
 
 class RCP(BaseModel):
-    """HL7 v2 RCP segment."""
+    """HL7 v2 RCP segment.
+
+    Attributes
+    ----------
+    rcp_1 : str | None
+        RCP.1 (opt) - Query Priority (ID)
+
+    rcp_2 : CQ | None
+        RCP.2 (opt) - Quantity Limited Request (CQ)
+
+    rcp_3 : CNE | None
+        RCP.3 (opt) - Response Modality (CNE)
+
+    rcp_4 : str | None
+        RCP.4 (opt) - Execution and Delivery Time (DTM)
+
+    rcp_5 : str | None
+        RCP.5 (opt) - Modify Indicator (ID)
+
+    rcp_6 : list[SRT] | None
+        RCP.6 (opt, rep) - Sort-by Field (SRT)
+
+    rcp_7 : list[str] | None
+        RCP.7 (opt, rep) - Segment group inclusion (ID)
+    """
 
     rcp_1: Optional[str] = Field(
         default=None,

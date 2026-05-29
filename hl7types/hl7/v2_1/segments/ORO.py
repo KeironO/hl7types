@@ -14,7 +14,22 @@ from ..datatypes.CE import CE
 
 
 class ORO(BaseModel):
-    """HL7 v2 ORO segment."""
+    """HL7 v2 ORO segment.
+
+    Attributes
+    ----------
+    oro_1 : CE | None
+        ORO.1 (opt) - ORDER ITEM ID (CE)
+
+    oro_2 : str | None
+        ORO.2 (opt) - SUBSTITUTE ALLOWED (ID)
+
+    oro_3 : list[str] | None
+        ORO.3 (opt, rep) - RESULTS COPIES TO (CN)
+
+    oro_4 : str | None
+        ORO.4 (opt) - STOCK LOCATION (ID)
+    """
 
     oro_1: Optional[CE] = Field(
         default=None,

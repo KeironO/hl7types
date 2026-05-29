@@ -12,7 +12,31 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class URD(BaseModel):
-    """HL7 v2 URD segment."""
+    """HL7 v2 URD segment.
+
+    Attributes
+    ----------
+    urd_1 : str | None
+        URD.1 (opt) - R/U DATE/TIME (TS)
+
+    urd_2 : str | None
+        URD.2 (opt) - REPORT PRIORITY (ID)
+
+    urd_3 : list[str]
+        URD.3 (req, rep) - R/U WHO SUBJECT DEFINITION (ST)
+
+    urd_4 : list[str] | None
+        URD.4 (opt, rep) - R/U WHAT SUBJECT DEFINITION (ID)
+
+    urd_5 : list[str] | None
+        URD.5 (opt, rep) - R/U WHAT DEPARTMENT CODE (ST)
+
+    urd_6 : list[str] | None
+        URD.6 (opt, rep) - R/U DISPLAY/PRINT LOCATIONS (ST)
+
+    urd_7 : str | None
+        URD.7 (opt) - R/U RESULTS LEVEL (ID)
+    """
 
     urd_1: Optional[str] = Field(
         default=None,

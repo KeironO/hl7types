@@ -20,7 +20,127 @@ from ..datatypes.XTN import XTN
 
 
 class NK1(BaseModel):
-    """HL7 v2 NK1 segment."""
+    """HL7 v2 NK1 segment.
+
+    Attributes
+    ----------
+    nk1_1 : str
+        NK1.1 (req) - Set ID - NK1 (SI)
+
+    nk1_2 : list[XPN] | None
+        NK1.2 (opt, rep) - Name (XPN)
+
+    nk1_3 : CWE | None
+        NK1.3 (opt) - Relationship (CWE)
+
+    nk1_4 : list[XAD] | None
+        NK1.4 (opt, rep) - Address (XAD)
+
+    nk1_5 : list[XTN] | None
+        NK1.5 (opt, rep) - Phone Number (XTN)
+
+    nk1_6 : list[XTN] | None
+        NK1.6 (opt, rep) - Business Phone Number (XTN)
+
+    nk1_7 : CWE | None
+        NK1.7 (opt) - Contact Role (CWE)
+
+    nk1_8 : str | None
+        NK1.8 (opt) - Start Date (DT)
+
+    nk1_9 : str | None
+        NK1.9 (opt) - End Date (DT)
+
+    nk1_10 : str | None
+        NK1.10 (opt) - Next of Kin / Associated Parties Job Title (ST)
+
+    nk1_11 : JCC | None
+        NK1.11 (opt) - Next of Kin / Associated Parties Job Code/Class (JCC)
+
+    nk1_12 : CX | None
+        NK1.12 (opt) - Next of Kin / Associated Parties Employee Number (CX)
+
+    nk1_13 : list[XON] | None
+        NK1.13 (opt, rep) - Organization Name - NK1 (XON)
+
+    nk1_14 : CWE | None
+        NK1.14 (opt) - Marital Status (CWE)
+
+    nk1_15 : str | None
+        NK1.15 (opt) - Administrative Sex (IS)
+
+    nk1_16 : str | None
+        NK1.16 (opt) - Date/Time of Birth (DTM)
+
+    nk1_17 : list[str] | None
+        NK1.17 (opt, rep) - Living Dependency (IS)
+
+    nk1_18 : list[str] | None
+        NK1.18 (opt, rep) - Ambulatory Status (IS)
+
+    nk1_19 : list[CWE] | None
+        NK1.19 (opt, rep) - Citizenship (CWE)
+
+    nk1_20 : CWE | None
+        NK1.20 (opt) - Primary Language (CWE)
+
+    nk1_21 : str | None
+        NK1.21 (opt) - Living Arrangement (IS)
+
+    nk1_22 : CWE | None
+        NK1.22 (opt) - Publicity Code (CWE)
+
+    nk1_23 : str | None
+        NK1.23 (opt) - Protection Indicator (ID)
+
+    nk1_24 : str | None
+        NK1.24 (opt) - Student Indicator (IS)
+
+    nk1_25 : CWE | None
+        NK1.25 (opt) - Religion (CWE)
+
+    nk1_26 : list[XPN] | None
+        NK1.26 (opt, rep) - Mother's Maiden Name (XPN)
+
+    nk1_27 : CWE | None
+        NK1.27 (opt) - Nationality (CWE)
+
+    nk1_28 : list[CWE] | None
+        NK1.28 (opt, rep) - Ethnic Group (CWE)
+
+    nk1_29 : list[CWE] | None
+        NK1.29 (opt, rep) - Contact Reason (CWE)
+
+    nk1_30 : list[XPN] | None
+        NK1.30 (opt, rep) - Contact Person's Name (XPN)
+
+    nk1_31 : list[XTN] | None
+        NK1.31 (opt, rep) - Contact Person's Telephone Number (XTN)
+
+    nk1_32 : list[XAD] | None
+        NK1.32 (opt, rep) - Contact Person's Address (XAD)
+
+    nk1_33 : list[CX] | None
+        NK1.33 (opt, rep) - Next of Kin/Associated Party's Identifiers (CX)
+
+    nk1_34 : str | None
+        NK1.34 (opt) - Job Status (IS)
+
+    nk1_35 : list[CWE] | None
+        NK1.35 (opt, rep) - Race (CWE)
+
+    nk1_36 : str | None
+        NK1.36 (opt) - Handicap (IS)
+
+    nk1_37 : str | None
+        NK1.37 (opt) - Contact Person Social Security Number (ST)
+
+    nk1_38 : str | None
+        NK1.38 (opt) - Next of Kin Birth Place (ST)
+
+    nk1_39 : str | None
+        NK1.39 (opt) - VIP Indicator (IS)
+    """
 
     nk1_1: str = Field(
         default=...,

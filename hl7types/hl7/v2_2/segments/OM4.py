@@ -15,7 +15,55 @@ from ..datatypes.TX import TX
 
 
 class OM4(BaseModel):
-    """HL7 v2 OM4 segment."""
+    """HL7 v2 OM4 segment.
+
+    Attributes
+    ----------
+    om4_1 : str | None
+        OM4.1 (opt) - Segment Type ID (ST)
+
+    om4_2 : str | None
+        OM4.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+
+    om4_3 : str | None
+        OM4.3 (opt) - Derived Specimen (ID)
+
+    om4_4 : TX | None
+        OM4.4 (opt) - Container Description (TX)
+
+    om4_5 : str | None
+        OM4.5 (opt) - Container Volume (NM)
+
+    om4_6 : CE | None
+        OM4.6 (opt) - Container Units (CE)
+
+    om4_7 : CE | None
+        OM4.7 (opt) - Specimen (CE)
+
+    om4_8 : CE | None
+        OM4.8 (opt) - Additive (CE)
+
+    om4_9 : TX | None
+        OM4.9 (opt) - Preparation (TX)
+
+    om4_10 : TX | None
+        OM4.10 (opt) - Special Handling Requirements (TX)
+
+    om4_11 : str | None
+        OM4.11 (opt) - Normal Collection Volume (CQ)
+
+    om4_12 : str | None
+        OM4.12 (opt) - Minimum Collection Volume (CQ)
+
+    om4_13 : TX | None
+        OM4.13 (opt) - Specimen Requirements (TX)
+
+    om4_14 : list[str] | None
+        OM4.14 (opt, rep) - Specimen Priorities (ID)
+
+    om4_15 : str | None
+        OM4.15 (opt) - Specimen Retention Time (CQ)
+    """
 
     om4_1: Optional[str] = Field(
         default=None,

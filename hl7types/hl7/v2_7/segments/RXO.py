@@ -22,7 +22,118 @@ from ..datatypes.XTN import XTN
 
 
 class RXO(BaseModel):
-    """HL7 v2 RXO segment."""
+    """HL7 v2 RXO segment.
+
+    Attributes
+    ----------
+    rxo_1 : CWE | None
+        RXO.1 (opt) - Requested Give Code (CWE)
+
+    rxo_2 : str | None
+        RXO.2 (opt) - Requested Give Amount - Minimum (NM)
+
+    rxo_3 : str | None
+        RXO.3 (opt) - Requested Give Amount - Maximum (NM)
+
+    rxo_4 : CWE | None
+        RXO.4 (opt) - Requested Give Units (CWE)
+
+    rxo_5 : CWE | None
+        RXO.5 (opt) - Requested Dosage Form (CWE)
+
+    rxo_6 : list[CWE] | None
+        RXO.6 (opt, rep) - Provider's Pharmacy/Treatment Instructions (CWE)
+
+    rxo_7 : list[CWE] | None
+        RXO.7 (opt, rep) - Provider's Administration Instructions (CWE)
+
+    rxo_8 : LA1 | None
+        RXO.8 (opt) - Deliver-to Location (LA1)
+
+    rxo_9 : str | None
+        RXO.9 (opt) - Allow Substitutions (ID)
+
+    rxo_10 : CWE | None
+        RXO.10 (opt) - Requested Dispense Code (CWE)
+
+    rxo_11 : str | None
+        RXO.11 (opt) - Requested Dispense Amount (NM)
+
+    rxo_12 : CWE | None
+        RXO.12 (opt) - Requested Dispense Units (CWE)
+
+    rxo_13 : str | None
+        RXO.13 (opt) - Number Of Refills (NM)
+
+    rxo_14 : list[XCN] | None
+        RXO.14 (opt, rep) - Ordering Provider's DEA Number (XCN)
+
+    rxo_15 : list[XCN] | None
+        RXO.15 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN)
+
+    rxo_16 : str | None
+        RXO.16 (opt) - Needs Human Review (ID)
+
+    rxo_17 : str | None
+        RXO.17 (opt) - Requested Give Per (Time Unit) (ST)
+
+    rxo_18 : str | None
+        RXO.18 (opt) - Requested Give Strength (NM)
+
+    rxo_19 : CWE | None
+        RXO.19 (opt) - Requested Give Strength Units (CWE)
+
+    rxo_20 : list[CWE] | None
+        RXO.20 (opt, rep) - Indication (CWE)
+
+    rxo_21 : str | None
+        RXO.21 (opt) - Requested Give Rate Amount (ST)
+
+    rxo_22 : CWE | None
+        RXO.22 (opt) - Requested Give Rate Units (CWE)
+
+    rxo_23 : CQ | None
+        RXO.23 (opt) - Total Daily Dose (CQ)
+
+    rxo_24 : list[CWE] | None
+        RXO.24 (opt, rep) - Supplementary Code (CWE)
+
+    rxo_25 : str | None
+        RXO.25 (opt) - Requested Drug Strength Volume (NM)
+
+    rxo_26 : CWE | None
+        RXO.26 (opt) - Requested Drug Strength Volume Units (CWE)
+
+    rxo_27 : str | None
+        RXO.27 (opt) - Pharmacy Order Type (ID)
+
+    rxo_28 : str | None
+        RXO.28 (opt) - Dispensing Interval (NM)
+
+    rxo_29 : EI | None
+        RXO.29 (opt) - Medication Instance Identifier (EI)
+
+    rxo_30 : EI | None
+        RXO.30 (opt) - Segment Instance Identifier (EI)
+
+    rxo_31 : CNE | None
+        RXO.31 (opt) - Mood Code (CNE)
+
+    rxo_32 : CWE | None
+        RXO.32 (opt) - Dispensing Pharmacy (CWE)
+
+    rxo_33 : XAD | None
+        RXO.33 (opt) - Dispensing Pharmacy Address (XAD)
+
+    rxo_34 : PL | None
+        RXO.34 (opt) - Deliver-to Patient Location (PL)
+
+    rxo_35 : XAD | None
+        RXO.35 (opt) - Deliver-to Address (XAD)
+
+    rxo_36 : list[XTN] | None
+        RXO.36 (opt, rep) - Pharmacy Phone Number (XTN)
+    """
 
     rxo_1: Optional[CWE] = Field(
         default=None,

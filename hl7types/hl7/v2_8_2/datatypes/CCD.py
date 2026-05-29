@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CCD(BaseModel):
-    """HL7 v2 CCD data type."""
+    """HL7 v2 CCD data type.
+
+    Attributes
+    ----------
+    ccd_1 : str
+        CCD.1 (req) - Invocation Event (ID)
+
+    ccd_2 : str | None
+        CCD.2 (opt) - Date/time (DTM)
+    """
 
     ccd_1: str = Field(
         default=...,

@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class DDI(BaseModel):
-    """HL7 v2 DDI data type."""
+    """HL7 v2 DDI data type.
+
+    Attributes
+    ----------
+    ddi_1 : str | None
+        DDI.1 (opt) - delay days (NM)
+
+    ddi_2 : str | None
+        DDI.2 (opt) - amount (NM)
+
+    ddi_3 : str | None
+        DDI.3 (opt) - number of days (NM)
+    """
 
     ddi_1: Optional[str] = Field(
         default=None,

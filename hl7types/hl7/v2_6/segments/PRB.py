@@ -16,7 +16,94 @@ from ..datatypes.EI import EI
 
 
 class PRB(BaseModel):
-    """HL7 v2 PRB segment."""
+    """HL7 v2 PRB segment.
+
+    Attributes
+    ----------
+    prb_1 : str
+        PRB.1 (req) - Action Code (ID)
+
+    prb_2 : str
+        PRB.2 (req) - Action Date/Time (DTM)
+
+    prb_3 : CWE
+        PRB.3 (req) - Problem ID (CWE)
+
+    prb_4 : EI
+        PRB.4 (req) - Problem Instance ID (EI)
+
+    prb_5 : EI | None
+        PRB.5 (opt) - Episode of Care ID (EI)
+
+    prb_6 : str | None
+        PRB.6 (opt) - Problem List Priority (NM)
+
+    prb_7 : str | None
+        PRB.7 (opt) - Problem Established Date/Time (DTM)
+
+    prb_8 : str | None
+        PRB.8 (opt) - Anticipated Problem Resolution Date/Time (DTM)
+
+    prb_9 : str | None
+        PRB.9 (opt) - Actual Problem Resolution Date/Time (DTM)
+
+    prb_10 : CWE | None
+        PRB.10 (opt) - Problem Classification (CWE)
+
+    prb_11 : list[CWE] | None
+        PRB.11 (opt, rep) - Problem Management Discipline (CWE)
+
+    prb_12 : CWE | None
+        PRB.12 (opt) - Problem Persistence (CWE)
+
+    prb_13 : CWE | None
+        PRB.13 (opt) - Problem Confirmation Status (CWE)
+
+    prb_14 : CWE | None
+        PRB.14 (opt) - Problem Life Cycle Status (CWE)
+
+    prb_15 : str | None
+        PRB.15 (opt) - Problem Life Cycle Status Date/Time (DTM)
+
+    prb_16 : str | None
+        PRB.16 (opt) - Problem Date of Onset (DTM)
+
+    prb_17 : str | None
+        PRB.17 (opt) - Problem Onset Text (ST)
+
+    prb_18 : CWE | None
+        PRB.18 (opt) - Problem Ranking (CWE)
+
+    prb_19 : CWE | None
+        PRB.19 (opt) - Certainty of Problem (CWE)
+
+    prb_20 : str | None
+        PRB.20 (opt) - Probability of Problem (0-1) (NM)
+
+    prb_21 : CWE | None
+        PRB.21 (opt) - Individual Awareness of Problem (CWE)
+
+    prb_22 : CWE | None
+        PRB.22 (opt) - Problem Prognosis (CWE)
+
+    prb_23 : CWE | None
+        PRB.23 (opt) - Individual Awareness of Prognosis (CWE)
+
+    prb_24 : str | None
+        PRB.24 (opt) - Family/Significant Other Awareness of Problem/Prognosis (ST)
+
+    prb_25 : CWE | None
+        PRB.25 (opt) - Security/Sensitivity (CWE)
+
+    prb_26 : CWE | None
+        PRB.26 (opt) - Problem Severity (CWE)
+
+    prb_27 : CWE | None
+        PRB.27 (opt) - Problem Perspective (CWE)
+
+    prb_28 : CNE | None
+        PRB.28 (opt) - Mood Code (CNE)
+    """
 
     prb_1: str = Field(
         default=...,

@@ -12,7 +12,13 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class ERR(BaseModel):
-    """HL7 v2 ERR segment."""
+    """HL7 v2 ERR segment.
+
+    Attributes
+    ----------
+    err_1 : list[str]
+        ERR.1 (req, rep) - ERROR CODE AND LOCATION (ID)
+    """
 
     err_1: List[str] = Field(
         default=...,

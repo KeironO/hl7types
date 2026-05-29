@@ -15,7 +15,61 @@ from .EI import EI
 
 
 class XTN(BaseModel):
-    """HL7 v2 XTN data type."""
+    """HL7 v2 XTN data type.
+
+    Attributes
+    ----------
+    xtn_2 : str | None
+        XTN.2 (opt) - Telecommunication Use Code (ID)
+
+    xtn_3 : str
+        XTN.3 (req) - Telecommunication Equipment Type (ID)
+
+    xtn_4 : str | None
+        XTN.4 (opt) - Communication Address (ST)
+
+    xtn_5 : str | None
+        XTN.5 (opt) - Country Code (SNM)
+
+    xtn_6 : str | None
+        XTN.6 (opt) - Area/City Code (SNM)
+
+    xtn_7 : str | None
+        XTN.7 (opt) - Local Number (SNM)
+
+    xtn_8 : str | None
+        XTN.8 (opt) - Extension (SNM)
+
+    xtn_9 : str | None
+        XTN.9 (opt) - Any Text (ST)
+
+    xtn_10 : str | None
+        XTN.10 (opt) - Extension Prefix (ST)
+
+    xtn_11 : str | None
+        XTN.11 (opt) - Speed Dial Code (ST)
+
+    xtn_12 : str | None
+        XTN.12 (opt) - Unformatted Telephone number (ST)
+
+    xtn_13 : str | None
+        XTN.13 (opt) - Effective Start Date (DTM)
+
+    xtn_14 : str | None
+        XTN.14 (opt) - Expiration Date (DTM)
+
+    xtn_15 : CWE | None
+        XTN.15 (opt) - Expiration Reason (CWE)
+
+    xtn_16 : CWE | None
+        XTN.16 (opt) - Protection Code (CWE)
+
+    xtn_17 : EI | None
+        XTN.17 (opt) - Shared Telecommunication Identifier (EI)
+
+    xtn_18 : str | None
+        XTN.18 (opt) - Preference Order (NM)
+    """
 
     xtn_2: Optional[str] = Field(
         default=None,

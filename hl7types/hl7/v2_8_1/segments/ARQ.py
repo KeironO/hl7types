@@ -23,7 +23,85 @@ from ..datatypes.XTN import XTN
 
 
 class ARQ(BaseModel):
-    """HL7 v2 ARQ segment."""
+    """HL7 v2 ARQ segment.
+
+    Attributes
+    ----------
+    arq_1 : EI
+        ARQ.1 (req) - Placer Appointment ID (EI)
+
+    arq_2 : EI | None
+        ARQ.2 (opt) - Filler Appointment ID (EI)
+
+    arq_3 : str | None
+        ARQ.3 (opt) - Occurrence Number (NM)
+
+    arq_4 : EIP | None
+        ARQ.4 (opt) - Placer Group Number (EIP)
+
+    arq_5 : CWE | None
+        ARQ.5 (opt) - Schedule ID (CWE)
+
+    arq_6 : CWE | None
+        ARQ.6 (opt) - Request Event Reason (CWE)
+
+    arq_7 : CWE | None
+        ARQ.7 (opt) - Appointment Reason (CWE)
+
+    arq_8 : CWE | None
+        ARQ.8 (opt) - Appointment Type (CWE)
+
+    arq_9 : str | None
+        ARQ.9 (opt) - Appointment Duration (NM)
+
+    arq_10 : CNE | None
+        ARQ.10 (opt) - Appointment Duration Units (CNE)
+
+    arq_11 : list[DR] | None
+        ARQ.11 (opt, rep) - Requested Start Date/Time Range (DR)
+
+    arq_12 : str | None
+        ARQ.12 (opt) - Priority-ARQ (ST)
+
+    arq_13 : RI | None
+        ARQ.13 (opt) - Repeating Interval (RI)
+
+    arq_14 : str | None
+        ARQ.14 (opt) - Repeating Interval Duration (ST)
+
+    arq_15 : list[XCN]
+        ARQ.15 (req, rep) - Placer Contact Person (XCN)
+
+    arq_16 : list[XTN] | None
+        ARQ.16 (opt, rep) - Placer Contact Phone Number (XTN)
+
+    arq_17 : list[XAD] | None
+        ARQ.17 (opt, rep) - Placer Contact Address (XAD)
+
+    arq_18 : PL | None
+        ARQ.18 (opt) - Placer Contact Location (PL)
+
+    arq_19 : list[XCN]
+        ARQ.19 (req, rep) - Entered By Person (XCN)
+
+    arq_20 : list[XTN] | None
+        ARQ.20 (opt, rep) - Entered By Phone Number (XTN)
+
+    arq_21 : PL | None
+        ARQ.21 (opt) - Entered By Location (PL)
+
+    arq_22 : EI | None
+        ARQ.22 (opt) - Parent Placer Appointment ID (EI)
+
+    arq_23 : EI | None
+        ARQ.23 (opt) - Parent Filler Appointment ID (EI)
+
+    arq_24 : list[EI] | None
+        ARQ.24 (opt, rep) - Placer Order Number (EI)
+
+    arq_25 : list[EI] | None
+        ARQ.25 (opt, rep) - Filler Order Number (EI)
+    """
 
     arq_1: EI = Field(
         default=...,

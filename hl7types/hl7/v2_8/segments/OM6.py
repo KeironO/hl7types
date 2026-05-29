@@ -14,7 +14,16 @@ from ..datatypes.TX import TX
 
 
 class OM6(BaseModel):
-    """HL7 v2 OM6 segment."""
+    """HL7 v2 OM6 segment.
+
+    Attributes
+    ----------
+    om6_1 : str | None
+        OM6.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+
+    om6_2 : TX | None
+        OM6.2 (opt) - Derivation Rule (TX)
+    """
 
     om6_1: Optional[str] = Field(
         default=None,

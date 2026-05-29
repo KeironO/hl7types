@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class DR(BaseModel):
-    """HL7 v2 DR data type."""
+    """HL7 v2 DR data type.
+
+    Attributes
+    ----------
+    dr_1 : str | None
+        DR.1 (opt) - Range Start Date/Time (DTM)
+
+    dr_2 : str | None
+        DR.2 (opt) - Range End Date/Time (DTM)
+    """
 
     dr_1: Optional[str] = Field(
         default=None,

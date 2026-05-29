@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_MOC(BaseModel):
-    """HL7 v2 CM_MOC data type."""
+    """HL7 v2 CM_MOC data type.
+
+    Attributes
+    ----------
+    cm_moc_1 : str | None
+        CM_MOC.1 (opt) - dollar amount (ST)
+
+    cm_moc_2 : str | None
+        CM_MOC.2 (opt) - charge code (ST)
+    """
 
     cm_moc_1: Optional[str] = Field(
         default=None,

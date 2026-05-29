@@ -18,7 +18,43 @@ from ..datatypes.XTN import XTN
 
 
 class LDP(BaseModel):
-    """HL7 v2 LDP segment."""
+    """HL7 v2 LDP segment.
+
+    Attributes
+    ----------
+    ldp_1 : PL
+        LDP.1 (req) - Primary Key Value - LDP (PL)
+
+    ldp_2 : str
+        LDP.2 (req) - Location Department (IS)
+
+    ldp_3 : list[str] | None
+        LDP.3 (opt, rep) - Location Service (IS)
+
+    ldp_4 : list[CE] | None
+        LDP.4 (opt, rep) - Specialty Type (CE)
+
+    ldp_5 : list[str] | None
+        LDP.5 (opt, rep) - Valid Patient Classes (IS)
+
+    ldp_6 : str | None
+        LDP.6 (opt) - Active/Inactive Flag (ID)
+
+    ldp_7 : TS | None
+        LDP.7 (opt) - Activation Date  LDP (TS)
+
+    ldp_8 : TS | None
+        LDP.8 (opt) - Inactivation Date - LDP (TS)
+
+    ldp_9 : str | None
+        LDP.9 (opt) - Inactivated Reason (ST)
+
+    ldp_10 : list[VH] | None
+        LDP.10 (opt, rep) - Visiting Hours (VH)
+
+    ldp_11 : XTN | None
+        LDP.11 (opt) - Contact Phone (XTN)
+    """
 
     ldp_1: PL = Field(
         default=...,

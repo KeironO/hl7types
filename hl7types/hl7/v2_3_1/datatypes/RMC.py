@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class RMC(BaseModel):
-    """HL7 v2 RMC data type."""
+    """HL7 v2 RMC data type.
+
+    Attributes
+    ----------
+    rmc_1 : str | None
+        RMC.1 (opt) - room type (IS)
+
+    rmc_2 : str | None
+        RMC.2 (opt) - amount type (IS)
+
+    rmc_3 : str | None
+        RMC.3 (opt) - coverage amount (NM)
+    """
 
     rmc_1: Optional[str] = Field(
         default=None,

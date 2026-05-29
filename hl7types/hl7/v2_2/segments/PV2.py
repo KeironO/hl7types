@@ -14,7 +14,37 @@ from ..datatypes.CE import CE
 
 
 class PV2(BaseModel):
-    """HL7 v2 PV2 segment."""
+    """HL7 v2 PV2 segment.
+
+    Attributes
+    ----------
+    pv2_1 : str | None
+        PV2.1 (opt) - Prior Pending Location (CM)
+
+    pv2_2 : CE | None
+        PV2.2 (opt) - Accommodation Code (CE)
+
+    pv2_3 : CE | None
+        PV2.3 (opt) - Admit Reason (CE)
+
+    pv2_4 : CE | None
+        PV2.4 (opt) - Transfer Reason (CE)
+
+    pv2_5 : list[str] | None
+        PV2.5 (opt, rep) - Patient Valuables (ST)
+
+    pv2_6 : str | None
+        PV2.6 (opt) - Patient Valuables Location (ST)
+
+    pv2_7 : str | None
+        PV2.7 (opt) - Visit User Code (ID)
+
+    pv2_8 : str | None
+        PV2.8 (opt) - Expected Admit Date (DT)
+
+    pv2_9 : str | None
+        PV2.9 (opt) - Expected Discharge Date (DT)
+    """
 
     pv2_1: Optional[str] = Field(
         default=None,

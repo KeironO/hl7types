@@ -12,7 +12,43 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CNN(BaseModel):
-    """HL7 v2 CNN data type."""
+    """HL7 v2 CNN data type.
+
+    Attributes
+    ----------
+    cnn_1 : str | None
+        CNN.1 (opt) - ID number (ST) (ST)
+
+    cnn_2 : str | None
+        CNN.2 (opt) - family name (ST)
+
+    cnn_3 : str | None
+        CNN.3 (opt) - given name (ST)
+
+    cnn_4 : str | None
+        CNN.4 (opt) - second and further given names or initials thereof (ST)
+
+    cnn_5 : str | None
+        CNN.5 (opt) - suffix (e.g., JR or III) (ST)
+
+    cnn_6 : str | None
+        CNN.6 (opt) - prefix (e.g., DR) (ST)
+
+    cnn_7 : str | None
+        CNN.7 (opt) - degree (e.g., MD) (IS)
+
+    cnn_8 : str | None
+        CNN.8 (opt) - source table (IS)
+
+    cnn_9 : str | None
+        CNN.9 (opt) - assigning authority namespace ID (IS)
+
+    cnn_10 : str | None
+        CNN.10 (opt) - assigning authority universal ID (ST)
+
+    cnn_11 : str | None
+        CNN.11 (opt) - assigning authority universal ID type (ID)
+    """
 
     cnn_1: Optional[str] = Field(
         default=None,

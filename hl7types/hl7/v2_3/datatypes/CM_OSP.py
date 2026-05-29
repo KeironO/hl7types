@@ -14,7 +14,19 @@ from .CE import CE
 
 
 class CM_OSP(BaseModel):
-    """HL7 v2 CM_OSP data type."""
+    """HL7 v2 CM_OSP data type.
+
+    Attributes
+    ----------
+    cm_osp_1 : CE | None
+        CM_OSP.1 (opt) - occurrence span code (CE)
+
+    cm_osp_2 : str | None
+        CM_OSP.2 (opt) - occurrence span start date (DT)
+
+    cm_osp_3 : str | None
+        CM_OSP.3 (opt) - occurrence span stop date (DT)
+    """
 
     cm_osp_1: Optional[CE] = Field(
         default=None,

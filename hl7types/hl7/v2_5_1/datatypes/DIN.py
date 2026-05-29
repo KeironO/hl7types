@@ -15,7 +15,16 @@ from .TS import TS
 
 
 class DIN(BaseModel):
-    """HL7 v2 DIN data type."""
+    """HL7 v2 DIN data type.
+
+    Attributes
+    ----------
+    din_1 : TS | None
+        DIN.1 (opt) - Date (TS)
+
+    din_2 : CE | None
+        DIN.2 (opt) - Institution Name (CE)
+    """
 
     din_1: Optional[TS] = Field(
         default=None,

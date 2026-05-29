@@ -21,7 +21,157 @@ from ..datatypes.XTN import XTN
 
 
 class IN1(BaseModel):
-    """HL7 v2 IN1 segment."""
+    """HL7 v2 IN1 segment.
+
+    Attributes
+    ----------
+    in1_1 : str
+        IN1.1 (req) - Set ID - Insurance (SI)
+
+    in1_2 : CE | None
+        IN1.2 (opt) - Insurance Plan ID (CE)
+
+    in1_3 : CX
+        IN1.3 (req) - Insurance Company ID (CX)
+
+    in1_4 : XON | None
+        IN1.4 (opt) - Insurance Company Name (XON)
+
+    in1_5 : XAD | None
+        IN1.5 (opt) - Insurance Company Address (XAD)
+
+    in1_6 : XPN | None
+        IN1.6 (opt) - Insurance Co. Contact Ppers (XPN)
+
+    in1_7 : list[XTN] | None
+        IN1.7 (opt, rep) - Insurance Co Phone Number (XTN)
+
+    in1_8 : str | None
+        IN1.8 (opt) - Group Number (ST)
+
+    in1_9 : XON | None
+        IN1.9 (opt) - Group Name (XON)
+
+    in1_10 : CX | None
+        IN1.10 (opt) - Insured's group employer ID (CX)
+
+    in1_11 : XON | None
+        IN1.11 (opt) - Insured's Group Emp Name (XON)
+
+    in1_12 : str | None
+        IN1.12 (opt) - Plan Effective Date (DT)
+
+    in1_13 : str | None
+        IN1.13 (opt) - Plan Expiration Date (DT)
+
+    in1_14 : str | None
+        IN1.14 (opt) - Authorization Information (CM)
+
+    in1_15 : str | None
+        IN1.15 (opt) - Plan Type (IS)
+
+    in1_16 : XPN | None
+        IN1.16 (opt) - Name of Insured (XPN)
+
+    in1_17 : str | None
+        IN1.17 (opt) - Insured's Relationship to Patient (IS)
+
+    in1_18 : TS | None
+        IN1.18 (opt) - Insured's Date of Birth (TS)
+
+    in1_19 : XAD | None
+        IN1.19 (opt) - Insured's Address (XAD)
+
+    in1_20 : str | None
+        IN1.20 (opt) - Assignment of Benefits (IS)
+
+    in1_21 : str | None
+        IN1.21 (opt) - Coordination of Benefits (IS)
+
+    in1_22 : str | None
+        IN1.22 (opt) - Coord of Ben. Priority (ST)
+
+    in1_23 : str | None
+        IN1.23 (opt) - Notice of Admission Code (ID)
+
+    in1_24 : str | None
+        IN1.24 (opt) - Notice of Admission Date (DT)
+
+    in1_25 : str | None
+        IN1.25 (opt) - Rpt of Eigibility Code (ID)
+
+    in1_26 : str | None
+        IN1.26 (opt) - Rpt of Eligibility Date (DT)
+
+    in1_27 : str | None
+        IN1.27 (opt) - Release Information Code (IS)
+
+    in1_28 : str | None
+        IN1.28 (opt) - Pre-Admit Cert (PAC) (ST)
+
+    in1_29 : TS | None
+        IN1.29 (opt) - Verification Date/Time (TS)
+
+    in1_30 : XPN | None
+        IN1.30 (opt) - Verification By (XPN)
+
+    in1_31 : str | None
+        IN1.31 (opt) - Type of Agreement Code (IS)
+
+    in1_32 : str | None
+        IN1.32 (opt) - Billing Status (IS)
+
+    in1_33 : str | None
+        IN1.33 (opt) - Lifetime Reserve Days (NM)
+
+    in1_34 : str | None
+        IN1.34 (opt) - Delay before lifetime reserve days (NM)
+
+    in1_35 : str | None
+        IN1.35 (opt) - Company Plan Code (IS)
+
+    in1_36 : str | None
+        IN1.36 (opt) - Policy Number (ST)
+
+    in1_37 : CP | None
+        IN1.37 (opt) - Policy Deductible (CP)
+
+    in1_38 : CP | None
+        IN1.38 (opt) - Policy Limit - Amount (CP)
+
+    in1_39 : str | None
+        IN1.39 (opt) - Policy Limit - Days (NM)
+
+    in1_40 : CP | None
+        IN1.40 (opt) - Room Rate - Semi-Private (CP)
+
+    in1_41 : CP | None
+        IN1.41 (opt) - Room Rate - Private (CP)
+
+    in1_42 : CE | None
+        IN1.42 (opt) - Insured's Employment Status (CE)
+
+    in1_43 : str | None
+        IN1.43 (opt) - Insured's Sex (IS)
+
+    in1_44 : XAD | None
+        IN1.44 (opt) - Insured's Employer Address (XAD)
+
+    in1_45 : str | None
+        IN1.45 (opt) - Verification Status (ST)
+
+    in1_46 : str | None
+        IN1.46 (opt) - Prior Insurance Plan ID (IS)
+
+    in1_47 : str | None
+        IN1.47 (opt) - Coverage Type (IS)
+
+    in1_48 : str | None
+        IN1.48 (opt) - Handicap (IS)
+
+    in1_49 : CX | None
+        IN1.49 (opt) - Insured's ID Number (CX)
+    """
 
     in1_1: str = Field(
         default=...,

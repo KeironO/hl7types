@@ -14,7 +14,22 @@ from ..datatypes.CWE import CWE
 
 
 class LAN(BaseModel):
-    """HL7 v2 LAN segment."""
+    """HL7 v2 LAN segment.
+
+    Attributes
+    ----------
+    lan_1 : str
+        LAN.1 (req) - Set ID - LAN (SI)
+
+    lan_2 : CWE
+        LAN.2 (req) - Language Code (CWE)
+
+    lan_3 : list[CWE] | None
+        LAN.3 (opt, rep) - Language Ability Code (CWE)
+
+    lan_4 : CWE | None
+        LAN.4 (opt) - Language Proficiency Code (CWE)
+    """
 
     lan_1: str = Field(
         default=...,

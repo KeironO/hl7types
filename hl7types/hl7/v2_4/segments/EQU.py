@@ -16,7 +16,25 @@ from ..datatypes.TS import TS
 
 
 class EQU(BaseModel):
-    """HL7 v2 EQU segment."""
+    """HL7 v2 EQU segment.
+
+    Attributes
+    ----------
+    equ_1 : EI
+        EQU.1 (req) - Equipment Instance Identifier (EI)
+
+    equ_2 : TS
+        EQU.2 (req) - Event Date/Time (TS)
+
+    equ_3 : CE | None
+        EQU.3 (opt) - Equipment State (CE)
+
+    equ_4 : CE | None
+        EQU.4 (opt) - Local/Remote Control State (CE)
+
+    equ_5 : CE | None
+        EQU.5 (opt) - Alert Level (CE)
+    """
 
     equ_1: EI = Field(
         default=...,

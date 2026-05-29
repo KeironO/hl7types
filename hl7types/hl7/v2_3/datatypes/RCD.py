@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class RCD(BaseModel):
-    """HL7 v2 RCD data type."""
+    """HL7 v2 RCD data type.
+
+    Attributes
+    ----------
+    rcd_1 : str | None
+        RCD.1 (opt) - HL7 item number (ST)
+
+    rcd_2 : str | None
+        RCD.2 (opt) - HL7 date type (ST)
+
+    rcd_3 : str | None
+        RCD.3 (opt) - maximum column width (NM)
+    """
 
     rcd_1: Optional[str] = Field(
         default=None,

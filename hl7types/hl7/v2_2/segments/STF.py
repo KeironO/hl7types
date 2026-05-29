@@ -17,7 +17,58 @@ from ..datatypes.TS import TS
 
 
 class STF(BaseModel):
-    """HL7 v2 STF segment."""
+    """HL7 v2 STF segment.
+
+    Attributes
+    ----------
+    stf_1 : CE
+        STF.1 (req) - STF - primary key value (CE)
+
+    stf_2 : list[CE] | None
+        STF.2 (opt, rep) - Staff ID Code (CE)
+
+    stf_3 : PN | None
+        STF.3 (opt) - Staff Name (PN)
+
+    stf_4 : list[str] | None
+        STF.4 (opt, rep) - Staff Type (ID)
+
+    stf_5 : str | None
+        STF.5 (opt) - Sex (ID)
+
+    stf_6 : TS | None
+        STF.6 (opt) - Date of Birth (TS)
+
+    stf_7 : str | None
+        STF.7 (opt) - Active / inactive (ID)
+
+    stf_8 : list[CE] | None
+        STF.8 (opt, rep) - Department (CE)
+
+    stf_9 : list[CE] | None
+        STF.9 (opt, rep) - Service (CE)
+
+    stf_10 : list[str] | None
+        STF.10 (opt, rep) - Phone (TN)
+
+    stf_11 : list[AD] | None
+        STF.11 (opt, rep) - Office / home address (AD)
+
+    stf_12 : list[str] | None
+        STF.12 (opt, rep) - Activation Date (CM)
+
+    stf_13 : list[str] | None
+        STF.13 (opt, rep) - Inactivation Date (CM)
+
+    stf_14 : list[CE] | None
+        STF.14 (opt, rep) - Backup Person ID (CE)
+
+    stf_15 : list[str] | None
+        STF.15 (opt, rep) - E-mail Address (ST)
+
+    stf_16 : str | None
+        STF.16 (opt) - Preferred method of Contact (ID)
+    """
 
     stf_1: CE = Field(
         default=...,

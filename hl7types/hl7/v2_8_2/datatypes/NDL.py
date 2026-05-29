@@ -15,7 +15,43 @@ from .HD import HD
 
 
 class NDL(BaseModel):
-    """HL7 v2 NDL data type."""
+    """HL7 v2 NDL data type.
+
+    Attributes
+    ----------
+    ndl_1 : CNN | None
+        NDL.1 (opt) - Name (CNN)
+
+    ndl_2 : str | None
+        NDL.2 (opt) - Start Date/time (DTM)
+
+    ndl_3 : str | None
+        NDL.3 (opt) - End Date/time (DTM)
+
+    ndl_4 : str | None
+        NDL.4 (opt) - Point of Care (IS)
+
+    ndl_5 : str | None
+        NDL.5 (opt) - Room (IS)
+
+    ndl_6 : str | None
+        NDL.6 (opt) - Bed (IS)
+
+    ndl_7 : HD | None
+        NDL.7 (opt) - Facility (HD)
+
+    ndl_8 : str | None
+        NDL.8 (opt) - Location Status (IS)
+
+    ndl_9 : str | None
+        NDL.9 (opt) - Patient Location Type (IS)
+
+    ndl_10 : str | None
+        NDL.10 (opt) - Building (IS)
+
+    ndl_11 : str | None
+        NDL.11 (opt) - Floor (IS)
+    """
 
     ndl_1: Optional[CNN] = Field(
         default=None,

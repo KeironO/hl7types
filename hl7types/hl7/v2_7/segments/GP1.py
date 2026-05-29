@@ -15,7 +15,25 @@ from ..datatypes.CWE import CWE
 
 
 class GP1(BaseModel):
-    """HL7 v2 GP1 segment."""
+    """HL7 v2 GP1 segment.
+
+    Attributes
+    ----------
+    gp1_1 : CWE
+        GP1.1 (req) - Type of Bill Code (CWE)
+
+    gp1_2 : list[CWE] | None
+        GP1.2 (opt, rep) - Revenue Code (CWE)
+
+    gp1_3 : CWE | None
+        GP1.3 (opt) - Overall Claim Disposition Code (CWE)
+
+    gp1_4 : list[CWE] | None
+        GP1.4 (opt, rep) - OCE Edits per Visit Code (CWE)
+
+    gp1_5 : CP | None
+        GP1.5 (opt) - Outlier Cost (CP)
+    """
 
     gp1_1: CWE = Field(
         default=...,

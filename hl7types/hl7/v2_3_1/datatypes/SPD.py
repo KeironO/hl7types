@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class SPD(BaseModel):
-    """HL7 v2 SPD data type."""
+    """HL7 v2 SPD data type.
+
+    Attributes
+    ----------
+    spd_1 : str | None
+        SPD.1 (opt) - specialty name (ST)
+
+    spd_2 : str | None
+        SPD.2 (opt) - governing board (ST)
+
+    spd_3 : str | None
+        SPD.3 (opt) - eligible or certified (ID)
+
+    spd_4 : str | None
+        SPD.4 (opt) - date of certification (DT)
+    """
 
     spd_1: Optional[str] = Field(
         default=None,

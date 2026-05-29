@@ -15,7 +15,28 @@ from ..datatypes.TS import TS
 
 
 class EVN(BaseModel):
-    """HL7 v2 EVN segment."""
+    """HL7 v2 EVN segment.
+
+    Attributes
+    ----------
+    evn_1 : str
+        EVN.1 (req) - Event Type Code (ID)
+
+    evn_2 : TS | None
+        EVN.2 (opt) - Recorded Date/Time (TS)
+
+    evn_3 : TS | None
+        EVN.3 (opt) - Date/Time Planned Event (TS)
+
+    evn_4 : str | None
+        EVN.4 (opt) - Event Reason Code (ID)
+
+    evn_5 : CN | None
+        EVN.5 (opt) - Operator ID (CN)
+
+    evn_6 : TS | None
+        EVN.6 (opt) - Event occured (TS)
+    """
 
     evn_1: str = Field(
         default=...,

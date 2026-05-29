@@ -14,7 +14,16 @@ from .TS import TS
 
 
 class CCD(BaseModel):
-    """HL7 v2 CCD data type."""
+    """HL7 v2 CCD data type.
+
+    Attributes
+    ----------
+    ccd_1 : str | None
+        CCD.1 (opt) - when to charge code (ID)
+
+    ccd_2 : TS | None
+        CCD.2 (opt) - date/time (TS)
+    """
 
     ccd_1: Optional[str] = Field(
         default=None,

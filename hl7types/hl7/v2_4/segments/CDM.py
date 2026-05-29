@@ -16,7 +16,49 @@ from ..datatypes.XON import XON
 
 
 class CDM(BaseModel):
-    """HL7 v2 CDM segment."""
+    """HL7 v2 CDM segment.
+
+    Attributes
+    ----------
+    cdm_1 : CE
+        CDM.1 (req) - Primary Key Value - CDM (CE)
+
+    cdm_2 : list[CE] | None
+        CDM.2 (opt, rep) - Charge Code Alias (CE)
+
+    cdm_3 : str
+        CDM.3 (req) - Charge Description Short (ST)
+
+    cdm_4 : str | None
+        CDM.4 (opt) - Charge Description Long (ST)
+
+    cdm_5 : str | None
+        CDM.5 (opt) - Description Override Indicator (IS)
+
+    cdm_6 : list[CE] | None
+        CDM.6 (opt, rep) - Exploding Charges (CE)
+
+    cdm_7 : list[CE] | None
+        CDM.7 (opt, rep) - Procedure Code (CE)
+
+    cdm_8 : str | None
+        CDM.8 (opt) - Active/Inactive Flag (ID)
+
+    cdm_9 : list[CE] | None
+        CDM.9 (opt, rep) - Inventory Number (CE)
+
+    cdm_10 : str | None
+        CDM.10 (opt) - Resource Load (NM)
+
+    cdm_11 : list[CK] | None
+        CDM.11 (opt, rep) - Contract Number (CK)
+
+    cdm_12 : list[XON] | None
+        CDM.12 (opt, rep) - Contract Organization (XON)
+
+    cdm_13 : str | None
+        CDM.13 (opt) - Room Fee Indicator (ID)
+    """
 
     cdm_1: CE = Field(
         default=...,

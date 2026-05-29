@@ -14,7 +14,22 @@ from ..datatypes.CE import CE
 
 
 class OM5(BaseModel):
-    """HL7 v2 OM5 segment."""
+    """HL7 v2 OM5 segment.
+
+    Attributes
+    ----------
+    om5_1 : str | None
+        OM5.1 (opt) - Segment Type ID (ST)
+
+    om5_2 : str | None
+        OM5.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+
+    om5_3 : list[CE] | None
+        OM5.3 (opt, rep) - Tests / observations included within an ordered test battery (CE)
+
+    om5_4 : str | None
+        OM5.4 (opt) - Observation ID Suffixes (ST)
+    """
 
     om5_1: Optional[str] = Field(
         default=None,

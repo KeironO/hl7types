@@ -16,7 +16,28 @@ from ..datatypes.DR import DR
 
 
 class ARV(BaseModel):
-    """HL7 v2 ARV segment."""
+    """HL7 v2 ARV segment.
+
+    Attributes
+    ----------
+    arv_1 : str | None
+        ARV.1 (opt) - Set ID (SI)
+
+    arv_2 : CNE
+        ARV.2 (req) - Access Restriction Action Code (CNE)
+
+    arv_3 : CWE
+        ARV.3 (req) - Access Restriction Value (CWE)
+
+    arv_4 : list[CWE] | None
+        ARV.4 (opt, rep) - Access Restriction Reason (CWE)
+
+    arv_5 : list[str] | None
+        ARV.5 (opt, rep) - Special Access Restriction Instructions (ST)
+
+    arv_6 : DR | None
+        ARV.6 (opt) - Access Restriction Date Range (DR)
+    """
 
     arv_1: Optional[str] = Field(
         default=None,

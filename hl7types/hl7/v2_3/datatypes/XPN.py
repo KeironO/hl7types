@@ -12,7 +12,34 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class XPN(BaseModel):
-    """HL7 v2 XPN data type."""
+    """HL7 v2 XPN data type.
+
+    Attributes
+    ----------
+    xpn_1 : str | None
+        XPN.1 (opt) - family name (ST)
+
+    xpn_2 : str | None
+        XPN.2 (opt) - given name (ST)
+
+    xpn_3 : str | None
+        XPN.3 (opt) - middle initial or name (ST)
+
+    xpn_4 : str | None
+        XPN.4 (opt) - suffix (e.g., JR or III) (ST)
+
+    xpn_5 : str | None
+        XPN.5 (opt) - prefix (e.g., DR) (ST)
+
+    xpn_6 : str | None
+        XPN.6 (opt) - degree (e.g., MD) (ST)
+
+    xpn_7 : str | None
+        XPN.7 (opt) - name type code (ID)
+
+    xpn_8 : str | None
+        XPN.8 (opt) - Name Representation code (ID)
+    """
 
     xpn_1: Optional[str] = Field(
         default=None,

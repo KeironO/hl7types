@@ -23,7 +23,109 @@ from ..datatypes.XTN import XTN
 
 
 class ORC(BaseModel):
-    """HL7 v2 ORC segment."""
+    """HL7 v2 ORC segment.
+
+    Attributes
+    ----------
+    orc_1 : str
+        ORC.1 (req) - Order Control (ID)
+
+    orc_2 : EI | None
+        ORC.2 (opt) - Placer Order Number (EI)
+
+    orc_3 : EI | None
+        ORC.3 (opt) - Filler Order Number (EI)
+
+    orc_4 : EIP | None
+        ORC.4 (opt) - Placer Group Number (EIP)
+
+    orc_5 : str | None
+        ORC.5 (opt) - Order Status (ID)
+
+    orc_6 : str | None
+        ORC.6 (opt) - Response Flag (ID)
+
+    orc_8 : EIP | None
+        ORC.8 (opt) - Parent Order (EIP)
+
+    orc_9 : str | None
+        ORC.9 (opt) - Date/Time of Transaction (DTM)
+
+    orc_10 : list[XCN] | None
+        ORC.10 (opt, rep) - Entered By (XCN)
+
+    orc_11 : list[XCN] | None
+        ORC.11 (opt, rep) - Verified By (XCN)
+
+    orc_12 : list[XCN] | None
+        ORC.12 (opt, rep) - Ordering Provider (XCN)
+
+    orc_13 : PL | None
+        ORC.13 (opt) - Enterer's Location (PL)
+
+    orc_14 : list[XTN] | None
+        ORC.14 (opt, rep) - Call Back Phone Number (XTN)
+
+    orc_15 : str | None
+        ORC.15 (opt) - Order Effective Date/Time (DTM)
+
+    orc_16 : CWE | None
+        ORC.16 (opt) - Order Control Code Reason (CWE)
+
+    orc_17 : CWE | None
+        ORC.17 (opt) - Entering Organization (CWE)
+
+    orc_18 : CWE | None
+        ORC.18 (opt) - Entering Device (CWE)
+
+    orc_19 : list[XCN] | None
+        ORC.19 (opt, rep) - Action By (XCN)
+
+    orc_20 : CWE | None
+        ORC.20 (opt) - Advanced Beneficiary Notice Code (CWE)
+
+    orc_21 : list[XON] | None
+        ORC.21 (opt, rep) - Ordering Facility Name (XON)
+
+    orc_22 : list[XAD] | None
+        ORC.22 (opt, rep) - Ordering Facility Address (XAD)
+
+    orc_23 : list[XTN] | None
+        ORC.23 (opt, rep) - Ordering Facility Phone Number (XTN)
+
+    orc_24 : list[XAD] | None
+        ORC.24 (opt, rep) - Ordering Provider Address (XAD)
+
+    orc_25 : CWE | None
+        ORC.25 (opt) - Order Status Modifier (CWE)
+
+    orc_26 : CWE | None
+        ORC.26 (opt) - Advanced Beneficiary Notice Override Reason (CWE)
+
+    orc_27 : str | None
+        ORC.27 (opt) - Filler's Expected Availability Date/Time (DTM)
+
+    orc_28 : CWE | None
+        ORC.28 (opt) - Confidentiality Code (CWE)
+
+    orc_29 : CWE | None
+        ORC.29 (opt) - Order Type (CWE)
+
+    orc_30 : CNE | None
+        ORC.30 (opt) - Enterer Authorization Mode (CNE)
+
+    orc_31 : CWE | None
+        ORC.31 (opt) - Parent Universal Service Identifier (CWE)
+
+    orc_32 : str | None
+        ORC.32 (opt) - Advanced Beneficiary Notice Date (DT)
+
+    orc_33 : list[CX] | None
+        ORC.33 (opt, rep) - Alternate Placer Order Number (CX)
+
+    orc_34 : list[CWE] | None
+        ORC.34 (opt, rep) - Order Workflow Profile (CWE)
+    """
 
     orc_1: str = Field(
         default=...,

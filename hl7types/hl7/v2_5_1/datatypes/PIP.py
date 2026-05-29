@@ -15,7 +15,25 @@ from .EI import EI
 
 
 class PIP(BaseModel):
-    """HL7 v2 PIP data type."""
+    """HL7 v2 PIP data type.
+
+    Attributes
+    ----------
+    pip_1 : CE | None
+        PIP.1 (opt) - Privilege (CE)
+
+    pip_2 : CE | None
+        PIP.2 (opt) - Privilege Class (CE)
+
+    pip_3 : str | None
+        PIP.3 (opt) - Expiration Date (DT)
+
+    pip_4 : str | None
+        PIP.4 (opt) - Activation Date (DT)
+
+    pip_5 : EI | None
+        PIP.5 (opt) - Facility (EI)
+    """
 
     pip_1: Optional[CE] = Field(
         default=None,

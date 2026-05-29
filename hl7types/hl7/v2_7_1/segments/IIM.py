@@ -16,7 +16,55 @@ from ..datatypes.MO import MO
 
 
 class IIM(BaseModel):
-    """HL7 v2 IIM segment."""
+    """HL7 v2 IIM segment.
+
+    Attributes
+    ----------
+    iim_1 : CWE
+        IIM.1 (req) - Primary Key Value - IIM (CWE)
+
+    iim_2 : CWE
+        IIM.2 (req) - Service Item Code (CWE)
+
+    iim_3 : str | None
+        IIM.3 (opt) - Inventory Lot Number (ST)
+
+    iim_4 : str | None
+        IIM.4 (opt) - Inventory Expiration Date (DTM)
+
+    iim_5 : CWE | None
+        IIM.5 (opt) - Inventory Manufacturer Name (CWE)
+
+    iim_6 : CWE | None
+        IIM.6 (opt) - Inventory Location (CWE)
+
+    iim_7 : str | None
+        IIM.7 (opt) - Inventory Received Date (DTM)
+
+    iim_8 : str | None
+        IIM.8 (opt) - Inventory Received Quantity (NM)
+
+    iim_9 : CWE | None
+        IIM.9 (opt) - Inventory Received Quantity Unit (CWE)
+
+    iim_10 : MO | None
+        IIM.10 (opt) - Inventory Received Item Cost (MO)
+
+    iim_11 : str | None
+        IIM.11 (opt) - Inventory On Hand Date (DTM)
+
+    iim_12 : str | None
+        IIM.12 (opt) - Inventory On Hand Quantity (NM)
+
+    iim_13 : CWE | None
+        IIM.13 (opt) - Inventory On Hand Quantity Unit (CWE)
+
+    iim_14 : CNE | None
+        IIM.14 (opt) - Procedure Code (CNE)
+
+    iim_15 : list[CNE] | None
+        IIM.15 (opt, rep) - Procedure Code Modifier (CNE)
+    """
 
     iim_1: CWE = Field(
         default=...,

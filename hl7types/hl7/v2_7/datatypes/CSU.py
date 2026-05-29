@@ -12,7 +12,79 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CSU(BaseModel):
-    """HL7 v2 CSU data type."""
+    """HL7 v2 CSU data type.
+
+    Attributes
+    ----------
+    csu_1 : str
+        CSU.1 (req) - Channel Sensitivity (NM)
+
+    csu_2 : str | None
+        CSU.2 (opt) - Unit of Measure Identifier (ST)
+
+    csu_3 : str | None
+        CSU.3 (opt) - Unit of Measure Description (ST)
+
+    csu_4 : str | None
+        CSU.4 (opt) - Unit of Measure Coding System (ID)
+
+    csu_5 : str | None
+        CSU.5 (opt) - Alternate Unit of Measure Identifier (ST)
+
+    csu_6 : str | None
+        CSU.6 (opt) - Alternate Unit of Measure Description (ST)
+
+    csu_7 : str | None
+        CSU.7 (opt) - Alternate Unit of Measure Coding System (ID)
+
+    csu_8 : str | None
+        CSU.8 (opt) - Unit of Measure Coding System Version ID (ST)
+
+    csu_9 : str | None
+        CSU.9 (opt) - Alternate Unit of Measure Coding System Version ID (ST)
+
+    csu_10 : str | None
+        CSU.10 (opt) - Original Text (ST)
+
+    csu_11 : str | None
+        CSU.11 (opt) - Second Alternate Unit of Measure Identifier (ST)
+
+    csu_12 : str | None
+        CSU.12 (opt) - Second Alternate Unit of Measure Text (ST)
+
+    csu_13 : str | None
+        CSU.13 (opt) - Name of Second Alternate Unit of Measure Coding Sy (ID)
+
+    csu_14 : str | None
+        CSU.14 (opt) - Second Alternate Unit of Measure Coding System Ver (ST)
+
+    csu_15 : str | None
+        CSU.15 (opt) - Unit of Measure Coding System OID (ST)
+
+    csu_16 : str | None
+        CSU.16 (opt) - Unit of Measure Value Set OID (ST)
+
+    csu_17 : str | None
+        CSU.17 (opt) - Unit of Measure Value Set Version ID (DTM)
+
+    csu_18 : str | None
+        CSU.18 (opt) - Alternate Unit of Measure Coding System OID (ST)
+
+    csu_19 : str | None
+        CSU.19 (opt) - Alternate Unit of Measure Value Set OID (ST)
+
+    csu_20 : str | None
+        CSU.20 (opt) - Alternate Unit of Measure Value Set Version ID (DTM)
+
+    csu_21 : str | None
+        CSU.21 (opt) - Alternate Unit of Measure Coding System OID (ST)
+
+    csu_22 : str | None
+        CSU.22 (opt) - Alternate Unit of Measure Value Set OID (ST)
+
+    csu_23 : str | None
+        CSU.23 (opt) - Alternate Unit of Measure Value Set Version ID (ST)
+    """
 
     csu_1: str = Field(
         default=...,

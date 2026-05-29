@@ -21,7 +21,85 @@ from ..datatypes.XTN import XTN
 
 
 class SCH(BaseModel):
-    """HL7 v2 SCH segment."""
+    """HL7 v2 SCH segment.
+
+    Attributes
+    ----------
+    sch_1 : EI | None
+        SCH.1 (opt) - Placer Appointment ID (EI)
+
+    sch_2 : EI | None
+        SCH.2 (opt) - Filler Appointment ID (EI)
+
+    sch_3 : str | None
+        SCH.3 (opt) - Occurrence Number (NM)
+
+    sch_4 : EIP | None
+        SCH.4 (opt) - Placer Group Number (EIP)
+
+    sch_5 : CWE | None
+        SCH.5 (opt) - Schedule ID (CWE)
+
+    sch_6 : CWE
+        SCH.6 (req) - Event Reason (CWE)
+
+    sch_7 : CWE | None
+        SCH.7 (opt) - Appointment Reason (CWE)
+
+    sch_8 : CWE | None
+        SCH.8 (opt) - Appointment Type (CWE)
+
+    sch_10 : CNE | None
+        SCH.10 (opt) - Appointment Duration Units (CNE)
+
+    sch_12 : list[XCN] | None
+        SCH.12 (opt, rep) - Placer Contact Person (XCN)
+
+    sch_13 : XTN | None
+        SCH.13 (opt) - Placer Contact Phone Number (XTN)
+
+    sch_14 : list[XAD] | None
+        SCH.14 (opt, rep) - Placer Contact Address (XAD)
+
+    sch_15 : PL | None
+        SCH.15 (opt) - Placer Contact Location (PL)
+
+    sch_16 : list[XCN]
+        SCH.16 (req, rep) - Filler Contact Person (XCN)
+
+    sch_17 : XTN | None
+        SCH.17 (opt) - Filler Contact Phone Number (XTN)
+
+    sch_18 : list[XAD] | None
+        SCH.18 (opt, rep) - Filler Contact Address (XAD)
+
+    sch_19 : PL | None
+        SCH.19 (opt) - Filler Contact Location (PL)
+
+    sch_20 : list[XCN]
+        SCH.20 (req, rep) - Entered By Person (XCN)
+
+    sch_21 : list[XTN] | None
+        SCH.21 (opt, rep) - Entered By Phone Number (XTN)
+
+    sch_22 : PL | None
+        SCH.22 (opt) - Entered By Location (PL)
+
+    sch_23 : EI | None
+        SCH.23 (opt) - Parent Placer Appointment ID (EI)
+
+    sch_24 : EI | None
+        SCH.24 (opt) - Parent Filler Appointment ID (EI)
+
+    sch_25 : CWE | None
+        SCH.25 (opt) - Filler Status Code (CWE)
+
+    sch_26 : list[EI] | None
+        SCH.26 (opt, rep) - Placer Order Number (EI)
+
+    sch_27 : list[EI] | None
+        SCH.27 (opt, rep) - Filler Order Number (EI)
+    """
 
     sch_1: Optional[EI] = Field(
         default=None,

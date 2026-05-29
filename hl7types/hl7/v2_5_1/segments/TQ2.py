@@ -15,7 +15,40 @@ from ..datatypes.EI import EI
 
 
 class TQ2(BaseModel):
-    """HL7 v2 TQ2 segment."""
+    """HL7 v2 TQ2 segment.
+
+    Attributes
+    ----------
+    tq2_1 : str | None
+        TQ2.1 (opt) - Set ID - TQ2 (SI)
+
+    tq2_2 : str | None
+        TQ2.2 (opt) - Sequence/Results Flag (ID)
+
+    tq2_3 : list[EI] | None
+        TQ2.3 (opt, rep) - Related Placer Number (EI)
+
+    tq2_4 : list[EI] | None
+        TQ2.4 (opt, rep) - Related Filler Number (EI)
+
+    tq2_5 : list[EI] | None
+        TQ2.5 (opt, rep) - Related Placer Group Number (EI)
+
+    tq2_6 : str | None
+        TQ2.6 (opt) - Sequence Condition Code (ID)
+
+    tq2_7 : str | None
+        TQ2.7 (opt) - Cyclic Entry/Exit Indicator (ID)
+
+    tq2_8 : CQ | None
+        TQ2.8 (opt) - Sequence Condition Time Interval (CQ)
+
+    tq2_9 : str | None
+        TQ2.9 (opt) - Cyclic Group Maximum Number of Repeats (NM)
+
+    tq2_10 : str | None
+        TQ2.10 (opt) - Special Service Request Relationship (ID)
+    """
 
     tq2_1: Optional[str] = Field(
         default=None,

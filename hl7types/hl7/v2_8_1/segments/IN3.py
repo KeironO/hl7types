@@ -20,7 +20,91 @@ from ..datatypes.XTN import XTN
 
 
 class IN3(BaseModel):
-    """HL7 v2 IN3 segment."""
+    """HL7 v2 IN3 segment.
+
+    Attributes
+    ----------
+    in3_1 : str
+        IN3.1 (req) - Set ID - IN3 (SI)
+
+    in3_2 : CX | None
+        IN3.2 (opt) - Certification Number (CX)
+
+    in3_3 : list[XCN] | None
+        IN3.3 (opt, rep) - Certified By (XCN)
+
+    in3_4 : str | None
+        IN3.4 (opt) - Certification Required (ID)
+
+    in3_5 : MOP | None
+        IN3.5 (opt) - Penalty (MOP)
+
+    in3_6 : str | None
+        IN3.6 (opt) - Certification Date/Time (DTM)
+
+    in3_7 : str | None
+        IN3.7 (opt) - Certification Modify Date/Time (DTM)
+
+    in3_8 : list[XCN] | None
+        IN3.8 (opt, rep) - Operator (XCN)
+
+    in3_9 : str | None
+        IN3.9 (opt) - Certification Begin Date (DT)
+
+    in3_10 : str | None
+        IN3.10 (opt) - Certification End Date (DT)
+
+    in3_11 : DTN | None
+        IN3.11 (opt) - Days (DTN)
+
+    in3_12 : CWE | None
+        IN3.12 (opt) - Non-Concur Code/Description (CWE)
+
+    in3_13 : str | None
+        IN3.13 (opt) - Non-Concur Effective Date/Time (DTM)
+
+    in3_14 : list[XCN] | None
+        IN3.14 (opt, rep) - Physician Reviewer (XCN)
+
+    in3_15 : str | None
+        IN3.15 (opt) - Certification Contact (ST)
+
+    in3_16 : list[XTN] | None
+        IN3.16 (opt, rep) - Certification Contact Phone Number (XTN)
+
+    in3_17 : CWE | None
+        IN3.17 (opt) - Appeal Reason (CWE)
+
+    in3_18 : CWE | None
+        IN3.18 (opt) - Certification Agency (CWE)
+
+    in3_19 : list[XTN] | None
+        IN3.19 (opt, rep) - Certification Agency Phone Number (XTN)
+
+    in3_20 : list[ICD] | None
+        IN3.20 (opt, rep) - Pre-Certification Requirement (ICD)
+
+    in3_21 : str | None
+        IN3.21 (opt) - Case Manager (ST)
+
+    in3_22 : str | None
+        IN3.22 (opt) - Second Opinion Date (DT)
+
+    in3_23 : CWE | None
+        IN3.23 (opt) - Second Opinion Status (CWE)
+
+    in3_24 : list[CWE] | None
+        IN3.24 (opt, rep) - Second Opinion Documentation Received (CWE)
+
+    in3_25 : list[XCN] | None
+        IN3.25 (opt, rep) - Second Opinion Physician (XCN)
+
+    in3_26 : CWE | None
+        IN3.26 (opt) - Certification Type (CWE)
+
+    in3_27 : CWE | None
+        IN3.27 (opt) - Certification Category (CWE)
+    """
 
     in3_1: str = Field(
         default=...,

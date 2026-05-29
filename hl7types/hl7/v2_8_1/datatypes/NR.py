@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NR(BaseModel):
-    """HL7 v2 NR data type."""
+    """HL7 v2 NR data type.
+
+    Attributes
+    ----------
+    nr_1 : str | None
+        NR.1 (opt) - Low Value (NM)
+
+    nr_2 : str | None
+        NR.2 (opt) - High Value (NM)
+    """
 
     nr_1: Optional[str] = Field(
         default=None,

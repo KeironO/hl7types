@@ -15,7 +15,85 @@ from ..datatypes.TS import TS
 
 
 class IN3(BaseModel):
-    """HL7 v2 IN3 segment."""
+    """HL7 v2 IN3 segment.
+
+    Attributes
+    ----------
+    in3_1 : str
+        IN3.1 (req) - Set ID - insurance certification (SI)
+
+    in3_2 : str | None
+        IN3.2 (opt) - Certification number (ST)
+
+    in3_3 : str | None
+        IN3.3 (opt) - Certified by (CN)
+
+    in3_4 : str | None
+        IN3.4 (opt) - Certification required (ID)
+
+    in3_5 : str | None
+        IN3.5 (opt) - Penalty (CM)
+
+    in3_6 : TS | None
+        IN3.6 (opt) - Certification date / time (TS)
+
+    in3_7 : TS | None
+        IN3.7 (opt) - Certification modify date / time (TS)
+
+    in3_8 : str | None
+        IN3.8 (opt) - Operator (CN)
+
+    in3_9 : str | None
+        IN3.9 (opt) - Certification begin date (DT)
+
+    in3_10 : str | None
+        IN3.10 (opt) - Certification end date (DT)
+
+    in3_11 : str | None
+        IN3.11 (opt) - Days (CM)
+
+    in3_12 : CE | None
+        IN3.12 (opt) - Non-concur code / description (CE)
+
+    in3_13 : TS | None
+        IN3.13 (opt) - Non-concur effective date / time (TS)
+
+    in3_14 : str | None
+        IN3.14 (opt) - Physician reviewer (CN)
+
+    in3_15 : str | None
+        IN3.15 (opt) - Certification contact (ST)
+
+    in3_16 : list[str] | None
+        IN3.16 (opt, rep) - Certification contact phone number (TN)
+
+    in3_17 : CE | None
+        IN3.17 (opt) - Appeal reason (CE)
+
+    in3_18 : CE | None
+        IN3.18 (opt) - Certification agency (CE)
+
+    in3_19 : list[str] | None
+        IN3.19 (opt, rep) - Certification agency phone number (TN)
+
+    in3_20 : list[str] | None
+        IN3.20 (opt, rep) - Pre-certification required / window (CM)
+
+    in3_21 : str | None
+        IN3.21 (opt) - Case manager (ST)
+
+    in3_22 : str | None
+        IN3.22 (opt) - Second opinion date (DT)
+
+    in3_23 : str | None
+        IN3.23 (opt) - Second opinion status (ID)
+
+    in3_24 : str | None
+        IN3.24 (opt) - Second opinion documentation received (ID)
+
+    in3_25 : str | None
+        IN3.25 (opt) - Second opinion practitioner (CN)
+    """
 
     in3_1: str = Field(
         default=...,

@@ -14,7 +14,31 @@ from ..datatypes.EI import EI
 
 
 class SDD(BaseModel):
-    """HL7 v2 SDD segment."""
+    """HL7 v2 SDD segment.
+
+    Attributes
+    ----------
+    sdd_1 : EI | None
+        SDD.1 (opt) - Lot Number (EI)
+
+    sdd_2 : EI | None
+        SDD.2 (opt) - Device Number (EI)
+
+    sdd_3 : str | None
+        SDD.3 (opt) - Device Name (ST)
+
+    sdd_4 : str | None
+        SDD.4 (opt) - Device Data State (IS)
+
+    sdd_5 : str | None
+        SDD.5 (opt) - Load Status (IS)
+
+    sdd_6 : str | None
+        SDD.6 (opt) - Control Code (NM)
+
+    sdd_7 : str | None
+        SDD.7 (opt) - Operator Name (ST)
+    """
 
     sdd_1: Optional[EI] = Field(
         default=None,

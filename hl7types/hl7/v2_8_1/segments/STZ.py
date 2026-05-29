@@ -14,7 +14,22 @@ from ..datatypes.CWE import CWE
 
 
 class STZ(BaseModel):
-    """HL7 v2 STZ segment."""
+    """HL7 v2 STZ segment.
+
+    Attributes
+    ----------
+    stz_1 : CWE | None
+        STZ.1 (opt) - Sterilization Type (CWE)
+
+    stz_2 : CWE | None
+        STZ.2 (opt) - Sterilization Cycle (CWE)
+
+    stz_3 : CWE | None
+        STZ.3 (opt) - Maintenance Cycle (CWE)
+
+    stz_4 : CWE | None
+        STZ.4 (opt) - Maintenance Type (CWE)
+    """
 
     stz_1: Optional[CWE] = Field(
         default=None,

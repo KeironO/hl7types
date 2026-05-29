@@ -14,7 +14,16 @@ from .CWE import CWE
 
 
 class DLD(BaseModel):
-    """HL7 v2 DLD data type."""
+    """HL7 v2 DLD data type.
+
+    Attributes
+    ----------
+    dld_1 : CWE
+        DLD.1 (req) - Discharge to Location (CWE)
+
+    dld_2 : str | None
+        DLD.2 (opt) - Effective Date (DTM)
+    """
 
     dld_1: CWE = Field(
         default=...,

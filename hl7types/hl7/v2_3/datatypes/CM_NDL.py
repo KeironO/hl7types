@@ -16,7 +16,43 @@ from .TS import TS
 
 
 class CM_NDL(BaseModel):
-    """HL7 v2 CM_NDL data type."""
+    """HL7 v2 CM_NDL data type.
+
+    Attributes
+    ----------
+    cm_ndl_1 : CN | None
+        CM_NDL.1 (opt) - name (CN)
+
+    cm_ndl_2 : TS | None
+        CM_NDL.2 (opt) - start date/time (TS)
+
+    cm_ndl_3 : TS | None
+        CM_NDL.3 (opt) - end date/time (TS)
+
+    cm_ndl_4 : str | None
+        CM_NDL.4 (opt) - point of care (IS) (IS)
+
+    cm_ndl_5 : str | None
+        CM_NDL.5 (opt) - room (IS)
+
+    cm_ndl_6 : str | None
+        CM_NDL.6 (opt) - bed (IS)
+
+    cm_ndl_7 : HD | None
+        CM_NDL.7 (opt) - facility (HD) (HD)
+
+    cm_ndl_8 : str | None
+        CM_NDL.8 (opt) - location status (IS)
+
+    cm_ndl_9 : str | None
+        CM_NDL.9 (opt) - person location type (IS)
+
+    cm_ndl_10 : str | None
+        CM_NDL.10 (opt) - building (IS)
+
+    cm_ndl_11 : str | None
+        CM_NDL.11 (opt) - floor (ST)
+    """
 
     cm_ndl_1: Optional[CN] = Field(
         default=None,

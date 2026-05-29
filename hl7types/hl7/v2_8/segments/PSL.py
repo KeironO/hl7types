@@ -20,7 +20,154 @@ from ..datatypes.XCN import XCN
 
 
 class PSL(BaseModel):
-    """HL7 v2 PSL segment."""
+    """HL7 v2 PSL segment.
+
+    Attributes
+    ----------
+    psl_1 : EI
+        PSL.1 (req) - Provider Product/Service Line Item Number (EI)
+
+    psl_2 : EI | None
+        PSL.2 (opt) - Payer Product/Service Line Item Number (EI)
+
+    psl_3 : str
+        PSL.3 (req) - Product/Service Line Item Sequence Number (SI)
+
+    psl_4 : EI | None
+        PSL.4 (opt) - Provider Tracking ID (EI)
+
+    psl_5 : EI | None
+        PSL.5 (opt) - Payer Tracking ID (EI)
+
+    psl_6 : CWE
+        PSL.6 (req) - Product/Service Line Item Status (CWE)
+
+    psl_7 : CWE
+        PSL.7 (req) - Product/Service Code (CWE)
+
+    psl_8 : list[CWE] | None
+        PSL.8 (opt, rep) - Product/Service Code Modifier (CWE)
+
+    psl_9 : str | None
+        PSL.9 (opt) - Product/Service Code Description (ST)
+
+    psl_10 : str | None
+        PSL.10 (opt) - Product/Service Effective Date (DTM)
+
+    psl_11 : str | None
+        PSL.11 (opt) - Product/Service Expiration Date (DTM)
+
+    psl_12 : CQ | None
+        PSL.12 (opt) - Product/Service Quantity (CQ)
+
+    psl_13 : CP | None
+        PSL.13 (opt) - Product/Service Unit Cost (CP)
+
+    psl_14 : str | None
+        PSL.14 (opt) - Number of Items per Unit (NM)
+
+    psl_15 : CP | None
+        PSL.15 (opt) - Product/Service Gross Amount (CP)
+
+    psl_16 : CP | None
+        PSL.16 (opt) - Product/Service Billed Amount (CP)
+
+    psl_17 : list[CWE] | None
+        PSL.17 (opt, rep) - Product/Service Clarification Code Type (CWE)
+
+    psl_18 : list[str] | None
+        PSL.18 (opt, rep) - Product/Service Clarification Code Value (ST)
+
+    psl_19 : list[EI] | None
+        PSL.19 (opt, rep) - Health Document Reference Identifier (EI)
+
+    psl_20 : list[CWE] | None
+        PSL.20 (opt, rep) - Processing Consideration Code (CWE)
+
+    psl_21 : str
+        PSL.21 (req) - Restricted Disclosure Indicator (ID)
+
+    psl_22 : CWE | None
+        PSL.22 (opt) - Related Product/Service Code Indicator (CWE)
+
+    psl_23 : CP | None
+        PSL.23 (opt) - Product/Service Amount for Physician (CP)
+
+    psl_24 : str | None
+        PSL.24 (opt) - Product/Service Cost Factor (NM)
+
+    psl_25 : CX | None
+        PSL.25 (opt) - Cost Center (CX)
+
+    psl_26 : DR | None
+        PSL.26 (opt) - Billing Period (DR)
+
+    psl_27 : str | None
+        PSL.27 (opt) - Days without Billing (NM)
+
+    psl_28 : str | None
+        PSL.28 (opt) - Session-No (NM)
+
+    psl_29 : XCN | None
+        PSL.29 (opt) - Executing Physician ID (XCN)
+
+    psl_30 : XCN | None
+        PSL.30 (opt) - Responsible Physician ID (XCN)
+
+    psl_31 : CWE | None
+        PSL.31 (opt) - Role Executing Physician (CWE)
+
+    psl_32 : CWE | None
+        PSL.32 (opt) - Medical Role Executing Physician (CWE)
+
+    psl_33 : CWE | None
+        PSL.33 (opt) - Side of body (CWE)
+
+    psl_34 : str | None
+        PSL.34 (opt) - Number of TP's PP (NM)
+
+    psl_35 : CP | None
+        PSL.35 (opt) - TP-Value PP (CP)
+
+    psl_36 : str | None
+        PSL.36 (opt) - Internal Scaling Factor PP (NM)
+
+    psl_37 : str | None
+        PSL.37 (opt) - External Scaling Factor PP (NM)
+
+    psl_38 : CP | None
+        PSL.38 (opt) - Amount PP (CP)
+
+    psl_39 : str | None
+        PSL.39 (opt) - Number of TP's Technical Part (NM)
+
+    psl_40 : CP | None
+        PSL.40 (opt) - TP-Value Technical Part (CP)
+
+    psl_41 : str | None
+        PSL.41 (opt) - Internal Scaling Factor Technical Part (NM)
+
+    psl_42 : str | None
+        PSL.42 (opt) - External Scaling Factor Technical Part (NM)
+
+    psl_43 : CP | None
+        PSL.43 (opt) - Amount Technical Part (CP)
+
+    psl_44 : CP | None
+        PSL.44 (opt) - Total Amount Professional Part + Technical Part (CP)
+
+    psl_45 : str | None
+        PSL.45 (opt) - VAT-Rate (NM)
+
+    psl_46 : str | None
+        PSL.46 (opt) - Main-Service (ID)
+
+    psl_47 : str | None
+        PSL.47 (opt) - Validation (ID)
+
+    psl_48 : str | None
+        PSL.48 (opt) - Comment (ST)
+    """
 
     psl_1: EI = Field(
         default=...,

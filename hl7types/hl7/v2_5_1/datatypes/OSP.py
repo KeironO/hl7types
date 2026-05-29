@@ -14,7 +14,19 @@ from .CNE import CNE
 
 
 class OSP(BaseModel):
-    """HL7 v2 OSP data type."""
+    """HL7 v2 OSP data type.
+
+    Attributes
+    ----------
+    osp_1 : CNE | None
+        OSP.1 (opt) - Occurrence Span Code (CNE)
+
+    osp_2 : str | None
+        OSP.2 (opt) - Occurrence Span Start Date (DT)
+
+    osp_3 : str | None
+        OSP.3 (opt) - Occurrence Span Stop Date (DT)
+    """
 
     osp_1: Optional[CNE] = Field(
         default=None,

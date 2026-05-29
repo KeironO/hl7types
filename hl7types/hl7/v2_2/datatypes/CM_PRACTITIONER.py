@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PRACTITIONER(BaseModel):
-    """HL7 v2 CM_PRACTITIONER data type."""
+    """HL7 v2 CM_PRACTITIONER data type.
+
+    Attributes
+    ----------
+    cm_practitioner_1 : str | None
+        CM_PRACTITIONER.1 (opt) - Procedure Practitioner  ID (CN)
+
+    cm_practitioner_2 : str | None
+        CM_PRACTITIONER.2 (opt) - procedure practitioner type (ID)
+    """
 
     cm_practitioner_1: Optional[str] = Field(
         default=None,

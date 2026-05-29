@@ -16,7 +16,46 @@ from ..datatypes.XCN import XCN
 
 
 class AIP(BaseModel):
-    """HL7 v2 AIP segment."""
+    """HL7 v2 AIP segment.
+
+    Attributes
+    ----------
+    aip_1 : str
+        AIP.1 (req) - Set ID - AIP (SI)
+
+    aip_2 : str | None
+        AIP.2 (opt) - Segment Action Code (ID)
+
+    aip_3 : list[XCN] | None
+        AIP.3 (opt, rep) - Personnel Resource ID (XCN)
+
+    aip_4 : CE
+        AIP.4 (req) - Resource Role (CE)
+
+    aip_5 : CE | None
+        AIP.5 (opt) - Resource Group (CE)
+
+    aip_6 : TS | None
+        AIP.6 (opt) - Start Date/Time (TS)
+
+    aip_7 : str | None
+        AIP.7 (opt) - Start Date/Time Offset (NM)
+
+    aip_8 : CE | None
+        AIP.8 (opt) - Start Date/Time Offset Units (CE)
+
+    aip_9 : str | None
+        AIP.9 (opt) - Duration (NM)
+
+    aip_10 : CE | None
+        AIP.10 (opt) - Duration Units (CE)
+
+    aip_11 : str | None
+        AIP.11 (opt) - Allow Substitution Code (IS)
+
+    aip_12 : CE | None
+        AIP.12 (opt) - Filler Status Code (CE)
+    """
 
     aip_1: str = Field(
         default=...,
