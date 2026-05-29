@@ -16,7 +16,55 @@ from ..datatypes.XCN import XCN
 
 
 class PR1(BaseModel):
-    """HL7 v2 PR1 segment."""
+    """HL7 v2 PR1 segment.
+
+    Attributes
+    ----------
+    pr1_1 : str
+        PR1.1 (req) - Set ID - Procedure (SI)
+
+    pr1_2 : str
+        PR1.2 (req) - Procedure Coding Method (IS)
+
+    pr1_3 : CE | None
+        PR1.3 (opt) - Procedure Code (CE)
+
+    pr1_4 : str | None
+        PR1.4 (opt) - Procedure Description (ST)
+
+    pr1_5 : TS | None
+        PR1.5 (opt) - Procedure Date/Time (TS)
+
+    pr1_6 : str
+        PR1.6 (req) - Procedure Type (ID)
+
+    pr1_7 : str | None
+        PR1.7 (opt) - Procedure Minutes (NM)
+
+    pr1_8 : list[XCN] | None
+        PR1.8 (opt, rep) - Anesthesiologist (XCN)
+
+    pr1_9 : str | None
+        PR1.9 (opt) - Anesthesia Code (IS)
+
+    pr1_10 : str | None
+        PR1.10 (opt) - Anesthesia Minutes (NM)
+
+    pr1_11 : list[XCN] | None
+        PR1.11 (opt, rep) - Surgeon (XCN)
+
+    pr1_12 : list[XCN] | None
+        PR1.12 (opt, rep) - Procedure Practitioner (XCN)
+
+    pr1_13 : CE | None
+        PR1.13 (opt) - Consent Code (CE)
+
+    pr1_14 : str | None
+        PR1.14 (opt) - Procedure Priority (NM)
+
+    pr1_15 : CE | None
+        PR1.15 (opt) - Associated Diagnosis Code (CE)
+    """
 
     pr1_1: str = Field(
         default=...,

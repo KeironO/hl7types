@@ -16,7 +16,91 @@ from ..datatypes.TS import TS
 
 
 class PID(BaseModel):
-    """HL7 v2 PID segment."""
+    """HL7 v2 PID segment.
+
+    Attributes
+    ----------
+    pid_1 : str | None
+        PID.1 (opt) - Set ID - Patient ID (SI)
+
+    pid_2 : str | None
+        PID.2 (opt) - Patient ID (External ID) (CK)
+
+    pid_3 : list[str]
+        PID.3 (req, rep) - Patient ID (Internal ID) (CM)
+
+    pid_4 : str | None
+        PID.4 (opt) - Alternate Patient ID (ST)
+
+    pid_5 : PN
+        PID.5 (req) - Patient Name (PN)
+
+    pid_6 : str | None
+        PID.6 (opt) - Mother's Maiden Name (ST)
+
+    pid_7 : TS | None
+        PID.7 (opt) - Date of Birth (TS)
+
+    pid_8 : str | None
+        PID.8 (opt) - Sex (ID)
+
+    pid_9 : list[PN] | None
+        PID.9 (opt, rep) - Patient Alias (PN)
+
+    pid_10 : str | None
+        PID.10 (opt) - Race (ID)
+
+    pid_11 : list[AD] | None
+        PID.11 (opt, rep) - Patient Address (AD)
+
+    pid_12 : str | None
+        PID.12 (opt) - County code (ID)
+
+    pid_13 : list[str] | None
+        PID.13 (opt, rep) - Phone Number - Home (TN)
+
+    pid_14 : list[str] | None
+        PID.14 (opt, rep) - Phone Number - Business (TN)
+
+    pid_15 : str | None
+        PID.15 (opt) - Language - Patient (ST)
+
+    pid_16 : str | None
+        PID.16 (opt) - Marital Status (ID)
+
+    pid_17 : str | None
+        PID.17 (opt) - Religion (ID)
+
+    pid_18 : str | None
+        PID.18 (opt) - Patient Account Number (CK)
+
+    pid_19 : str | None
+        PID.19 (opt) - Social security number - patient (ST)
+
+    pid_20 : str | None
+        PID.20 (opt) - Driver's license number - patient (CM)
+
+    pid_21 : str | None
+        PID.21 (opt) - Mother's Identifier (CK)
+
+    pid_22 : str | None
+        PID.22 (opt) - Ethnic Group (ID)
+
+    pid_23 : str | None
+        PID.23 (opt) - Birth Place (ST)
+
+    pid_24 : str | None
+        PID.24 (opt) - Multiple Birth Indicator (ID)
+
+    pid_25 : str | None
+        PID.25 (opt) - Birth Order (NM)
+
+    pid_26 : list[str] | None
+        PID.26 (opt, rep) - Citizenship (ID)
+
+    pid_27 : str | None
+        PID.27 (opt) - Veterans Military Status (ST)
+    """
 
     pid_1: Optional[str] = Field(
         default=None,

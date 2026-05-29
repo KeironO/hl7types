@@ -18,7 +18,67 @@ from ..datatypes.XON import XON
 
 
 class BTX(BaseModel):
-    """HL7 v2 BTX segment."""
+    """HL7 v2 BTX segment.
+
+    Attributes
+    ----------
+    btx_1 : str
+        BTX.1 (req) - Set ID - BTX (SI)
+
+    btx_2 : EI | None
+        BTX.2 (opt) - BC Donation ID (EI)
+
+    btx_3 : CNE | None
+        BTX.3 (opt) - BC Component (CNE)
+
+    btx_4 : CNE | None
+        BTX.4 (opt) - BC Blood Group (CNE)
+
+    btx_5 : CWE | None
+        BTX.5 (opt) - CP Commercial Product (CWE)
+
+    btx_6 : XON | None
+        BTX.6 (opt) - CP Manufacturer (XON)
+
+    btx_7 : EI | None
+        BTX.7 (opt) - CP Lot Number (EI)
+
+    btx_8 : str
+        BTX.8 (req) - BP Quantity (NM)
+
+    btx_9 : str | None
+        BTX.9 (opt) - BP Amount (NM)
+
+    btx_10 : CWE | None
+        BTX.10 (opt) - BP Units (CWE)
+
+    btx_11 : CWE
+        BTX.11 (req) - BP Transfusion/Disposition Status (CWE)
+
+    btx_12 : str
+        BTX.12 (req) - BP Message Status (ID)
+
+    btx_13 : str
+        BTX.13 (req) - BP Date/Time of Status (DTM)
+
+    btx_14 : XCN | None
+        BTX.14 (opt) - BP Transfusion Administrator (XCN)
+
+    btx_15 : XCN | None
+        BTX.15 (opt) - BP Transfusion Verifier (XCN)
+
+    btx_16 : str | None
+        BTX.16 (opt) - BP Transfusion Start Date/Time of Status (DTM)
+
+    btx_17 : str | None
+        BTX.17 (opt) - BP Transfusion End Date/Time of Status (DTM)
+
+    btx_18 : list[CWE] | None
+        BTX.18 (opt, rep) - BP Adverse Reaction Type (CWE)
+
+    btx_19 : CWE | None
+        BTX.19 (opt) - BP Transfusion Interrupted Reason (CWE)
+    """
 
     btx_1: str = Field(
         default=...,

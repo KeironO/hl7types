@@ -17,7 +17,46 @@ from ..datatypes.EI import EI
 
 
 class AUT(BaseModel):
-    """HL7 v2 AUT segment."""
+    """HL7 v2 AUT segment.
+
+    Attributes
+    ----------
+    aut_1 : CWE | None
+        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE)
+
+    aut_2 : CWE
+        AUT.2 (req) - Authorizing Payor, Company ID (CWE)
+
+    aut_3 : str | None
+        AUT.3 (opt) - Authorizing Payor, Company Name (ST)
+
+    aut_4 : str | None
+        AUT.4 (opt) - Authorization Effective Date (DTM)
+
+    aut_5 : str | None
+        AUT.5 (opt) - Authorization Expiration Date (DTM)
+
+    aut_6 : EI | None
+        AUT.6 (opt) - Authorization Identifier (EI)
+
+    aut_7 : CP | None
+        AUT.7 (opt) - Reimbursement Limit (CP)
+
+    aut_8 : CQ | None
+        AUT.8 (opt) - Requested Number of Treatments (CQ)
+
+    aut_9 : CQ | None
+        AUT.9 (opt) - Authorized Number of Treatments (CQ)
+
+    aut_10 : str | None
+        AUT.10 (opt) - Process Date (DTM)
+
+    aut_11 : list[CWE] | None
+        AUT.11 (opt, rep) - Requested Discipline(s) (CWE)
+
+    aut_12 : list[CWE] | None
+        AUT.12 (opt, rep) - Authorized Discipline(s) (CWE)
+    """
 
     aut_1: Optional[CWE] = Field(
         default=None,

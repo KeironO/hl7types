@@ -15,7 +15,40 @@ from .HD import HD
 
 
 class CX(BaseModel):
-    """HL7 v2 CX data type."""
+    """HL7 v2 CX data type.
+
+    Attributes
+    ----------
+    cx_1 : str
+        CX.1 (req) - ID Number (ST)
+
+    cx_2 : str | None
+        CX.2 (opt) - Identifier Check Digit (ST)
+
+    cx_3 : str | None
+        CX.3 (opt) - Check Digit Scheme (ID)
+
+    cx_4 : HD | None
+        CX.4 (opt) - Assigning Authority (HD)
+
+    cx_5 : str | None
+        CX.5 (opt) - Identifier Type Code (ID)
+
+    cx_6 : HD | None
+        CX.6 (opt) - Assigning Facility (HD)
+
+    cx_7 : str | None
+        CX.7 (opt) - Effective Date (DT)
+
+    cx_8 : str | None
+        CX.8 (opt) - Expiration Date (DT)
+
+    cx_9 : CWE | None
+        CX.9 (opt) - Assigning Jurisdiction (CWE)
+
+    cx_10 : CWE | None
+        CX.10 (opt) - Assigning Agency or Department (CWE)
+    """
 
     cx_1: str = Field(
         default=...,

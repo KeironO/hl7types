@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_WVI(BaseModel):
-    """HL7 v2 CM_WVI data type."""
+    """HL7 v2 CM_WVI data type.
+
+    Attributes
+    ----------
+    cm_wvi_1 : str | None
+        CM_WVI.1 (opt) - Channel Number (NM)
+
+    cm_wvi_2 : str | None
+        CM_WVI.2 (opt) - Channel Name (ST)
+    """
 
     cm_wvi_1: Optional[str] = Field(
         default=None,

@@ -14,7 +14,13 @@ from ..datatypes.TS import TS
 
 
 class NCK(BaseModel):
-    """HL7 v2 NCK segment."""
+    """HL7 v2 NCK segment.
+
+    Attributes
+    ----------
+    nck_1 : TS | None
+        NCK.1 (opt) - System Date/Time (TS)
+    """
 
     nck_1: Optional[TS] = Field(
         default=None,

@@ -15,7 +15,31 @@ from ..datatypes.varies import varies
 
 
 class MFE(BaseModel):
-    """HL7 v2 MFE segment."""
+    """HL7 v2 MFE segment.
+
+    Attributes
+    ----------
+    mfe_1 : str
+        MFE.1 (req) - Record-Level Event Code (ID)
+
+    mfe_2 : str | None
+        MFE.2 (opt) - MFN Control ID (ST)
+
+    mfe_3 : str | None
+        MFE.3 (opt) - Effective Date/Time (DTM)
+
+    mfe_4 : list[varies]
+        MFE.4 (req, rep) - Primary Key Value - MFE (varies)
+
+    mfe_5 : list[str]
+        MFE.5 (req, rep) - Primary Key Value Type (ID)
+
+    mfe_6 : str | None
+        MFE.6 (opt) - Entered Date/Time (DTM)
+
+    mfe_7 : XCN | None
+        MFE.7 (opt) - Entered By (XCN)
+    """
 
     mfe_1: str = Field(
         default=...,

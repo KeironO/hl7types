@@ -14,7 +14,28 @@ from ..datatypes.CE import CE
 
 
 class AL1(BaseModel):
-    """HL7 v2 AL1 segment."""
+    """HL7 v2 AL1 segment.
+
+    Attributes
+    ----------
+    al1_1 : str
+        AL1.1 (req) - Set ID - AL1 (SI)
+
+    al1_2 : str | None
+        AL1.2 (opt) - Allergy Type (IS)
+
+    al1_3 : CE
+        AL1.3 (req) - Allergy Code/Mnemonic/Description (CE)
+
+    al1_4 : str | None
+        AL1.4 (opt) - Allergy Severity (IS)
+
+    al1_5 : list[str] | None
+        AL1.5 (opt, rep) - Allergy Reaction (ST)
+
+    al1_6 : str | None
+        AL1.6 (opt) - Identification Date (DT)
+    """
 
     al1_1: str = Field(
         default=...,

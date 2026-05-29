@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_DLT(BaseModel):
-    """HL7 v2 CM_DLT data type."""
+    """HL7 v2 CM_DLT data type.
+
+    Attributes
+    ----------
+    cm_dlt_1 : str | None
+        CM_DLT.1 (opt) - Range (CM)
+
+    cm_dlt_2 : str | None
+        CM_DLT.2 (opt) - numeric threshold (NM)
+
+    cm_dlt_3 : str | None
+        CM_DLT.3 (opt) - change (ST)
+
+    cm_dlt_4 : str | None
+        CM_DLT.4 (opt) - length of time-days (NM)
+    """
 
     cm_dlt_1: Optional[str] = Field(
         default=None,

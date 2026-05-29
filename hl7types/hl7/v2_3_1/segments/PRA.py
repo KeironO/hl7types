@@ -17,7 +17,34 @@ from ..datatypes.SPD import SPD
 
 
 class PRA(BaseModel):
-    """HL7 v2 PRA segment."""
+    """HL7 v2 PRA segment.
+
+    Attributes
+    ----------
+    pra_1 : CE
+        PRA.1 (req) - Primary Key Value - PRA (CE)
+
+    pra_2 : list[CE] | None
+        PRA.2 (opt, rep) - Practitioner Group (CE)
+
+    pra_3 : list[str] | None
+        PRA.3 (opt, rep) - Practitioner Category (IS)
+
+    pra_4 : str | None
+        PRA.4 (opt) - Provider Billing (ID)
+
+    pra_5 : list[SPD] | None
+        PRA.5 (opt, rep) - Specialty (SPD)
+
+    pra_6 : list[PLN] | None
+        PRA.6 (opt, rep) - Practitioner ID Numbers (PLN)
+
+    pra_7 : list[PIP] | None
+        PRA.7 (opt, rep) - Privileges (PIP)
+
+    pra_8 : str | None
+        PRA.8 (opt) - Date Entered Practice (DT)
+    """
 
     pra_1: CE = Field(
         default=...,

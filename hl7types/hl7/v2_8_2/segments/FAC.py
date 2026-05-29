@@ -17,7 +17,46 @@ from ..datatypes.XTN import XTN
 
 
 class FAC(BaseModel):
-    """HL7 v2 FAC segment."""
+    """HL7 v2 FAC segment.
+
+    Attributes
+    ----------
+    fac_1 : EI
+        FAC.1 (req) - Facility ID-FAC (EI)
+
+    fac_2 : str | None
+        FAC.2 (opt) - Facility Type (ID)
+
+    fac_3 : list[XAD]
+        FAC.3 (req, rep) - Facility Address (XAD)
+
+    fac_4 : XTN
+        FAC.4 (req) - Facility Telecommunication (XTN)
+
+    fac_5 : list[XCN] | None
+        FAC.5 (opt, rep) - Contact Person (XCN)
+
+    fac_6 : list[str] | None
+        FAC.6 (opt, rep) - Contact Title (ST)
+
+    fac_7 : list[XAD] | None
+        FAC.7 (opt, rep) - Contact Address (XAD)
+
+    fac_8 : list[XTN] | None
+        FAC.8 (opt, rep) - Contact Telecommunication (XTN)
+
+    fac_9 : list[XCN]
+        FAC.9 (req, rep) - Signature Authority (XCN)
+
+    fac_10 : str | None
+        FAC.10 (opt) - Signature Authority Title (ST)
+
+    fac_11 : list[XAD] | None
+        FAC.11 (opt, rep) - Signature Authority Address (XAD)
+
+    fac_12 : XTN | None
+        FAC.12 (opt) - Signature Authority Telecommunication (XTN)
+    """
 
     fac_1: EI = Field(
         default=...,

@@ -15,7 +15,46 @@ from ..datatypes.EI import EI
 
 
 class RF1(BaseModel):
-    """HL7 v2 RF1 segment."""
+    """HL7 v2 RF1 segment.
+
+    Attributes
+    ----------
+    rf1_1 : CWE | None
+        RF1.1 (opt) - Referral Status (CWE)
+
+    rf1_2 : CWE | None
+        RF1.2 (opt) - Referral Priority (CWE)
+
+    rf1_3 : CWE | None
+        RF1.3 (opt) - Referral Type (CWE)
+
+    rf1_4 : list[CWE] | None
+        RF1.4 (opt, rep) - Referral Disposition (CWE)
+
+    rf1_5 : CWE | None
+        RF1.5 (opt) - Referral Category (CWE)
+
+    rf1_6 : EI
+        RF1.6 (req) - Originating Referral Identifier (EI)
+
+    rf1_7 : str | None
+        RF1.7 (opt) - Effective Date (DTM)
+
+    rf1_8 : str | None
+        RF1.8 (opt) - Expiration Date (DTM)
+
+    rf1_9 : str | None
+        RF1.9 (opt) - Process Date (DTM)
+
+    rf1_10 : list[CWE] | None
+        RF1.10 (opt, rep) - Referral Reason (CWE)
+
+    rf1_11 : list[EI] | None
+        RF1.11 (opt, rep) - External Referral Identifier (EI)
+
+    rf1_12 : CWE | None
+        RF1.12 (opt) - Referral Documentation Completion Status (CWE)
+    """
 
     rf1_1: Optional[CWE] = Field(
         default=None,

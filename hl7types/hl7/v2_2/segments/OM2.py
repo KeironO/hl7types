@@ -15,7 +15,43 @@ from ..datatypes.TX import TX
 
 
 class OM2(BaseModel):
-    """HL7 v2 OM2 segment."""
+    """HL7 v2 OM2 segment.
+
+    Attributes
+    ----------
+    om2_1 : str | None
+        OM2.1 (opt) - Segment Type ID (ST)
+
+    om2_2 : str | None
+        OM2.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+
+    om2_3 : CE | None
+        OM2.3 (opt) - Units of Measure (CE)
+
+    om2_4 : str | None
+        OM2.4 (opt) - Range of Decimal Precision (NM)
+
+    om2_5 : CE | None
+        OM2.5 (opt) - Corresponding SI Units of Measure (CE)
+
+    om2_6 : list[TX]
+        OM2.6 (req, rep) - SI Conversion Factor (TX)
+
+    om2_7 : list[str] | None
+        OM2.7 (opt, rep) - Reference (normal) range - ordinal & continuous observations (CM)
+
+    om2_8 : str | None
+        OM2.8 (opt) - Critical range for ordinal and continuous observations (CM)
+
+    om2_9 : str | None
+        OM2.9 (opt) - Absolute range for ordinal and continuous observations (CM)
+
+    om2_10 : list[str] | None
+        OM2.10 (opt, rep) - Delta Check Criteria (CM)
+
+    om2_11 : str | None
+        OM2.11 (opt) - Minimum Meaningful Increments (NM)
+    """
 
     om2_1: Optional[str] = Field(
         default=None,

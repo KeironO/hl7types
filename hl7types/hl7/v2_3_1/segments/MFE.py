@@ -14,7 +14,25 @@ from ..datatypes.TS import TS
 
 
 class MFE(BaseModel):
-    """HL7 v2 MFE segment."""
+    """HL7 v2 MFE segment.
+
+    Attributes
+    ----------
+    mfe_1 : str
+        MFE.1 (req) - Record-Level Event Code (ID)
+
+    mfe_2 : str | None
+        MFE.2 (opt) - MFN Control ID (ST)
+
+    mfe_3 : TS | None
+        MFE.3 (opt) - Effective Date/Time (TS)
+
+    mfe_4 : list[str]
+        MFE.4 (req, rep) - Primary Key Value - MFE (*)
+
+    mfe_5 : list[str]
+        MFE.5 (req, rep) - Primary Key Value Type (ID)
+    """
 
     mfe_1: str = Field(
         default=...,

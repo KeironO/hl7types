@@ -12,7 +12,52 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class MSH(BaseModel):
-    """HL7 v2 MSH segment."""
+    """HL7 v2 MSH segment.
+
+    Attributes
+    ----------
+    msh_1 : str
+        MSH.1 (req) - FIELD SEPARATOR (ST)
+
+    msh_2 : str
+        MSH.2 (req) - ENCODING CHARACTERS (ST)
+
+    msh_3 : str | None
+        MSH.3 (opt) - SENDING APPLICATION (ST)
+
+    msh_4 : str | None
+        MSH.4 (opt) - SENDING FACILITY (ST)
+
+    msh_5 : str | None
+        MSH.5 (opt) - RECEIVING APPLICATION (ST)
+
+    msh_6 : str | None
+        MSH.6 (opt) - RECEIVING FACILITY (ST)
+
+    msh_7 : str | None
+        MSH.7 (opt) - DATE/TIME OF MESSAGE (TS)
+
+    msh_8 : str | None
+        MSH.8 (opt) - Security (ST)
+
+    msh_9 : str
+        MSH.9 (req) - MESSAGE TYPE (ID)
+
+    msh_10 : str
+        MSH.10 (req) - MESSAGE CONTROL ID (ST)
+
+    msh_11 : str
+        MSH.11 (req) - PROCESSING ID (ID)
+
+    msh_12 : str
+        MSH.12 (req) - VERSION ID (NM)
+
+    msh_13 : str | None
+        MSH.13 (opt) - SEQUENCE NUMBER (NM)
+
+    msh_14 : str | None
+        MSH.14 (opt) - CONTINUATION POINTER (ST)
+    """
 
     msh_1: str = Field(
         default="|",

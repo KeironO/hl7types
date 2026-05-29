@@ -15,7 +15,16 @@ from ..datatypes.CQ import CQ
 
 
 class BLC(BaseModel):
-    """HL7 v2 BLC segment."""
+    """HL7 v2 BLC segment.
+
+    Attributes
+    ----------
+    blc_1 : CE | None
+        BLC.1 (opt) - Blood Product Code (CE)
+
+    blc_2 : CQ | None
+        BLC.2 (opt) - Blood Amount (CQ)
+    """
 
     blc_1: Optional[CE] = Field(
         default=None,

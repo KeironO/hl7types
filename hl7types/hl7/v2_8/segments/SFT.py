@@ -15,7 +15,28 @@ from ..datatypes.XON import XON
 
 
 class SFT(BaseModel):
-    """HL7 v2 SFT segment."""
+    """HL7 v2 SFT segment.
+
+    Attributes
+    ----------
+    sft_1 : XON
+        SFT.1 (req) - Software Vendor Organization (XON)
+
+    sft_2 : str
+        SFT.2 (req) - Software Certified Version or Release Number (ST)
+
+    sft_3 : str
+        SFT.3 (req) - Software Product Name (ST)
+
+    sft_4 : str
+        SFT.4 (req) - Software Binary ID (ST)
+
+    sft_5 : TX | None
+        SFT.5 (opt) - Software Product Information (TX)
+
+    sft_6 : str | None
+        SFT.6 (opt) - Software Install Date (DTM)
+    """
 
     sft_1: XON = Field(
         default=...,

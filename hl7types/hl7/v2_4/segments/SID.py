@@ -14,7 +14,22 @@ from ..datatypes.CE import CE
 
 
 class SID(BaseModel):
-    """HL7 v2 SID segment."""
+    """HL7 v2 SID segment.
+
+    Attributes
+    ----------
+    sid_1 : CE | None
+        SID.1 (opt) - Application / Method Identifier (CE)
+
+    sid_2 : str | None
+        SID.2 (opt) - Substance Lot Number (ST)
+
+    sid_3 : str | None
+        SID.3 (opt) - Substance Container Identifier (ST)
+
+    sid_4 : CE | None
+        SID.4 (opt) - Substance Manufacturer Identifier (CE)
+    """
 
     sid_1: Optional[CE] = Field(
         default=None,

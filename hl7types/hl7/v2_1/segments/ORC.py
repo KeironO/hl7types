@@ -12,7 +12,52 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class ORC(BaseModel):
-    """HL7 v2 ORC segment."""
+    """HL7 v2 ORC segment.
+
+    Attributes
+    ----------
+    orc_1 : str
+        ORC.1 (req) - ORDER CONTROL (ST)
+
+    orc_2 : str | None
+        ORC.2 (opt) - PLACER ORDER # (CM)
+
+    orc_3 : str | None
+        ORC.3 (opt) - FILLER ORDER # (CM)
+
+    orc_4 : str | None
+        ORC.4 (opt) - PLACER GROUP # (CM)
+
+    orc_5 : str | None
+        ORC.5 (opt) - ORDER STATUS (ST)
+
+    orc_6 : str | None
+        ORC.6 (opt) - RESPONSE FLAG (ST)
+
+    orc_7 : str | None
+        ORC.7 (opt) - TIMING/QUANTITY (CM)
+
+    orc_8 : str | None
+        ORC.8 (opt) - PARENT (CM)
+
+    orc_9 : str | None
+        ORC.9 (opt) - DATE/TIME OF TRANSACTION (TS)
+
+    orc_10 : str | None
+        ORC.10 (opt) - ENTERED BY (CN)
+
+    orc_11 : str | None
+        ORC.11 (opt) - VERIFIED BY (CN)
+
+    orc_12 : str | None
+        ORC.12 (opt) - ORDERING PROVIDER (CN)
+
+    orc_13 : str | None
+        ORC.13 (opt) - ENTERER'S LOCATION (CM)
+
+    orc_14 : list[str] | None
+        ORC.14 (opt, rep) - CALL BACK PHONE NUMBER (TN)
+    """
 
     orc_1: str = Field(
         default=...,

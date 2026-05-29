@@ -15,7 +15,22 @@ from ..datatypes.CWE import CWE
 
 
 class PCE(BaseModel):
-    """HL7 v2 PCE segment."""
+    """HL7 v2 PCE segment.
+
+    Attributes
+    ----------
+    pce_1 : str
+        PCE.1 (req) - Set ID - PCE (SI)
+
+    pce_2 : str | None
+        PCE.2 (opt) - Cost Center Account Number (IS)
+
+    pce_3 : CWE | None
+        PCE.3 (opt) - Transaction Code (CWE)
+
+    pce_4 : CP | None
+        PCE.4 (opt) - Transaction amount - unit (CP)
+    """
 
     pce_1: str = Field(
         default=...,

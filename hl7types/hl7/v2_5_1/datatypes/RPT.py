@@ -14,7 +14,43 @@ from .CWE import CWE
 
 
 class RPT(BaseModel):
-    """HL7 v2 RPT data type."""
+    """HL7 v2 RPT data type.
+
+    Attributes
+    ----------
+    rpt_1 : CWE | None
+        RPT.1 (opt) - Repeat Pattern Code (CWE)
+
+    rpt_2 : str | None
+        RPT.2 (opt) - Calendar Alignment (ID)
+
+    rpt_3 : str | None
+        RPT.3 (opt) - Phase Range Begin Value (NM)
+
+    rpt_4 : str | None
+        RPT.4 (opt) - Phase Range End Value (NM)
+
+    rpt_5 : str | None
+        RPT.5 (opt) - Period Quantity (NM)
+
+    rpt_6 : str | None
+        RPT.6 (opt) - Period Units (IS)
+
+    rpt_7 : str | None
+        RPT.7 (opt) - Institution Specified Time (ID)
+
+    rpt_8 : str | None
+        RPT.8 (opt) - Event (ID)
+
+    rpt_9 : str | None
+        RPT.9 (opt) - Event Offset Quantity (NM)
+
+    rpt_10 : str | None
+        RPT.10 (opt) - Event Offset Units (IS)
+
+    rpt_11 : str | None
+        RPT.11 (opt) - General Timing Specification (GTS)
+    """
 
     rpt_1: Optional[CWE] = Field(
         default=None,

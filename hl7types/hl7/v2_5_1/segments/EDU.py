@@ -18,7 +18,37 @@ from ..datatypes.XON import XON
 
 
 class EDU(BaseModel):
-    """HL7 v2 EDU segment."""
+    """HL7 v2 EDU segment.
+
+    Attributes
+    ----------
+    edu_1 : str
+        EDU.1 (req) - Set ID - EDU (SI)
+
+    edu_2 : str | None
+        EDU.2 (opt) - Academic Degree (IS)
+
+    edu_3 : DR | None
+        EDU.3 (opt) - Academic Degree Program Date Range (DR)
+
+    edu_4 : DR | None
+        EDU.4 (opt) - Academic Degree Program Participation Date Range (DR)
+
+    edu_5 : str | None
+        EDU.5 (opt) - Academic Degree Granted Date (DT)
+
+    edu_6 : XON | None
+        EDU.6 (opt) - School (XON)
+
+    edu_7 : CE | None
+        EDU.7 (opt) - School Type Code (CE)
+
+    edu_8 : XAD | None
+        EDU.8 (opt) - School Address (XAD)
+
+    edu_9 : list[CWE] | None
+        EDU.9 (opt, rep) - Major Field of Study (CWE)
+    """
 
     edu_1: str = Field(
         default=...,

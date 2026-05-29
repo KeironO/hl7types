@@ -15,7 +15,22 @@ from ..datatypes.QIP import QIP
 
 
 class SPR(BaseModel):
-    """HL7 v2 SPR segment."""
+    """HL7 v2 SPR segment.
+
+    Attributes
+    ----------
+    spr_1 : str | None
+        SPR.1 (opt) - Query Tag (ST)
+
+    spr_2 : str
+        SPR.2 (req) - Query/ Response Format Code (ID)
+
+    spr_3 : CE
+        SPR.3 (req) - Stored Procedure Name (CE)
+
+    spr_4 : list[QIP] | None
+        SPR.4 (opt, rep) - Input Parameter List (QIP)
+    """
 
     spr_1: Optional[str] = Field(
         default=None,

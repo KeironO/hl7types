@@ -14,7 +14,52 @@ from ..datatypes.TS import TS
 
 
 class PR1(BaseModel):
-    """HL7 v2 PR1 segment."""
+    """HL7 v2 PR1 segment.
+
+    Attributes
+    ----------
+    pr1_1 : str
+        PR1.1 (req) - Set ID - procedure (SI)
+
+    pr1_2 : list[str]
+        PR1.2 (req, rep) - Procedure coding method (ID)
+
+    pr1_3 : list[str]
+        PR1.3 (req, rep) - Procedure code (ID)
+
+    pr1_4 : list[str] | None
+        PR1.4 (opt, rep) - Procedure description (ST)
+
+    pr1_5 : TS
+        PR1.5 (req) - Procedure date / time (TS)
+
+    pr1_6 : str
+        PR1.6 (req) - Procedure type (ID)
+
+    pr1_7 : str | None
+        PR1.7 (opt) - Procedure minutes (NM)
+
+    pr1_8 : str | None
+        PR1.8 (opt) - Anesthesiologist (CN)
+
+    pr1_9 : str | None
+        PR1.9 (opt) - Anesthesia code (ID)
+
+    pr1_10 : str | None
+        PR1.10 (opt) - Anesthesia minutes (NM)
+
+    pr1_11 : str | None
+        PR1.11 (opt) - Surgeon (CN)
+
+    pr1_12 : list[str] | None
+        PR1.12 (opt, rep) - Procedure Practitioner (CM)
+
+    pr1_13 : str | None
+        PR1.13 (opt) - Consent code (ID)
+
+    pr1_14 : str | None
+        PR1.14 (opt) - Procedure priority (NM)
+    """
 
     pr1_1: str = Field(
         default=...,

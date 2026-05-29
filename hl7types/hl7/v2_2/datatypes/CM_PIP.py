@@ -14,7 +14,22 @@ from .CE import CE
 
 
 class CM_PIP(BaseModel):
-    """HL7 v2 CM_PIP data type."""
+    """HL7 v2 CM_PIP data type.
+
+    Attributes
+    ----------
+    cm_pip_1 : CE | None
+        CM_PIP.1 (opt) - Privilege (CE)
+
+    cm_pip_2 : CE | None
+        CM_PIP.2 (opt) - privilege class (CE)
+
+    cm_pip_3 : str | None
+        CM_PIP.3 (opt) - expiration date (DT)
+
+    cm_pip_4 : str | None
+        CM_PIP.4 (opt) - activation date (DT)
+    """
 
     cm_pip_1: Optional[CE] = Field(
         default=None,

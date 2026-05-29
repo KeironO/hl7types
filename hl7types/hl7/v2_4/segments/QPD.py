@@ -14,7 +14,19 @@ from ..datatypes.CE import CE
 
 
 class QPD(BaseModel):
-    """HL7 v2 QPD segment."""
+    """HL7 v2 QPD segment.
+
+    Attributes
+    ----------
+    qpd_1 : CE
+        QPD.1 (req) - Message Query Name (CE)
+
+    qpd_2 : str | None
+        QPD.2 (opt) - Query Tag (ST)
+
+    qpd_3 : str | None
+        QPD.3 (opt) - User Parameters (in successive fields) (*)
+    """
 
     qpd_1: CE = Field(
         default=...,

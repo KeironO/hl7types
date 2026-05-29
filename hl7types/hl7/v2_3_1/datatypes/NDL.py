@@ -16,7 +16,43 @@ from .TS import TS
 
 
 class NDL(BaseModel):
-    """HL7 v2 NDL data type."""
+    """HL7 v2 NDL data type.
+
+    Attributes
+    ----------
+    ndl_1 : CN | None
+        NDL.1 (opt) - name (CN)
+
+    ndl_2 : TS | None
+        NDL.2 (opt) - start date/time (TS)
+
+    ndl_3 : TS | None
+        NDL.3 (opt) - end date/time (TS)
+
+    ndl_4 : str | None
+        NDL.4 (opt) - point of care (IS) (IS)
+
+    ndl_5 : str | None
+        NDL.5 (opt) - room (IS)
+
+    ndl_6 : str | None
+        NDL.6 (opt) - bed (IS)
+
+    ndl_7 : HD | None
+        NDL.7 (opt) - facility (HD) (HD)
+
+    ndl_8 : str | None
+        NDL.8 (opt) - location status (IS)
+
+    ndl_9 : str | None
+        NDL.9 (opt) - person location type (IS)
+
+    ndl_10 : str | None
+        NDL.10 (opt) - building (IS)
+
+    ndl_11 : str | None
+        NDL.11 (opt) - floor (IS)
+    """
 
     ndl_1: Optional[CN] = Field(
         default=None,

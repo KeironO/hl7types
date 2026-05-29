@@ -15,7 +15,58 @@ from ..datatypes.TS import TS
 
 
 class DG1(BaseModel):
-    """HL7 v2 DG1 segment."""
+    """HL7 v2 DG1 segment.
+
+    Attributes
+    ----------
+    dg1_1 : str
+        DG1.1 (req) - Set ID - diagnosis (SI)
+
+    dg1_2 : str
+        DG1.2 (req) - Diagnosis coding method (ID)
+
+    dg1_3 : str | None
+        DG1.3 (opt) - Diagnosis code (ID)
+
+    dg1_4 : str | None
+        DG1.4 (opt) - Diagnosis description (ST)
+
+    dg1_5 : TS | None
+        DG1.5 (opt) - Diagnosis date / time (TS)
+
+    dg1_6 : str
+        DG1.6 (req) - Diagnosis / DRG type (ID)
+
+    dg1_7 : CE | None
+        DG1.7 (opt) - Major diagnostic category (CE)
+
+    dg1_8 : str | None
+        DG1.8 (opt) - Diagnostic related group (ID)
+
+    dg1_9 : str | None
+        DG1.9 (opt) - DRG approval indicator (ID)
+
+    dg1_10 : str | None
+        DG1.10 (opt) - DRG grouper review code (ID)
+
+    dg1_11 : str | None
+        DG1.11 (opt) - Outlier type (ID)
+
+    dg1_12 : str | None
+        DG1.12 (opt) - Outlier days (NM)
+
+    dg1_13 : str | None
+        DG1.13 (opt) - Outlier cost (NM)
+
+    dg1_14 : str | None
+        DG1.14 (opt) - Grouper version and type (ST)
+
+    dg1_15 : str | None
+        DG1.15 (opt) - Diagnosis / DRG priority (NM)
+
+    dg1_16 : str | None
+        DG1.16 (opt) - Diagnosing clinician (CN)
+    """
 
     dg1_1: str = Field(
         default=...,

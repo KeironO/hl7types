@@ -15,7 +15,28 @@ from ..datatypes.varies import varies
 
 
 class MFA(BaseModel):
-    """HL7 v2 MFA segment."""
+    """HL7 v2 MFA segment.
+
+    Attributes
+    ----------
+    mfa_1 : str
+        MFA.1 (req) - Record-Level Event Code (ID)
+
+    mfa_2 : str | None
+        MFA.2 (opt) - MFN Control ID (ST)
+
+    mfa_3 : str | None
+        MFA.3 (opt) - Event Completion Date/Time (DTM)
+
+    mfa_4 : CWE
+        MFA.4 (req) - MFN Record Level Error Return (CWE)
+
+    mfa_5 : list[varies]
+        MFA.5 (req, rep) - Primary Key Value - MFA (varies)
+
+    mfa_6 : list[str]
+        MFA.6 (req, rep) - Primary Key Value Type - MFA (ID)
+    """
 
     mfa_1: str = Field(
         default=...,

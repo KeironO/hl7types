@@ -14,7 +14,16 @@ from .CWE import CWE
 
 
 class DIN(BaseModel):
-    """HL7 v2 DIN data type."""
+    """HL7 v2 DIN data type.
+
+    Attributes
+    ----------
+    din_1 : str
+        DIN.1 (req) - Date (DTM)
+
+    din_2 : CWE
+        DIN.2 (req) - Institution Name (CWE)
+    """
 
     din_1: str = Field(
         default=...,

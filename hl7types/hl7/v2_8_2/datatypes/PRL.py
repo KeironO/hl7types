@@ -16,7 +16,19 @@ from .TX import TX
 
 
 class PRL(BaseModel):
-    """HL7 v2 PRL data type."""
+    """HL7 v2 PRL data type.
+
+    Attributes
+    ----------
+    prl_1 : CWE
+        PRL.1 (req) - Parent Observation Identifier (CWE)
+
+    prl_2 : OG | None
+        PRL.2 (opt) - Parent Observation Sub-identifier (OG)
+
+    prl_3 : TX | None
+        PRL.3 (opt) - Parent Observation Value Descriptor (TX)
+    """
 
     prl_1: CWE = Field(
         default=...,

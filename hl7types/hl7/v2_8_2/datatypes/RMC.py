@@ -15,7 +15,19 @@ from .MOP import MOP
 
 
 class RMC(BaseModel):
-    """HL7 v2 RMC data type."""
+    """HL7 v2 RMC data type.
+
+    Attributes
+    ----------
+    rmc_1 : CWE
+        RMC.1 (req) - Room Type (CWE)
+
+    rmc_2 : CWE | None
+        RMC.2 (opt) - Amount Type (CWE)
+
+    rmc_4 : MOP
+        RMC.4 (req) - Money or Percentage (MOP)
+    """
 
     rmc_1: CWE = Field(
         default=...,

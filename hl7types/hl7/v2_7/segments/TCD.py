@@ -15,7 +15,34 @@ from ..datatypes.SN import SN
 
 
 class TCD(BaseModel):
-    """HL7 v2 TCD segment."""
+    """HL7 v2 TCD segment.
+
+    Attributes
+    ----------
+    tcd_1 : CWE
+        TCD.1 (req) - Universal Service Identifier (CWE)
+
+    tcd_2 : SN | None
+        TCD.2 (opt) - Auto-Dilution Factor (SN)
+
+    tcd_3 : SN | None
+        TCD.3 (opt) - Rerun Dilution Factor (SN)
+
+    tcd_4 : SN | None
+        TCD.4 (opt) - Pre-Dilution Factor (SN)
+
+    tcd_5 : SN | None
+        TCD.5 (opt) - Endogenous Content of Pre-Dilution Diluent (SN)
+
+    tcd_6 : str | None
+        TCD.6 (opt) - Automatic Repeat Allowed (ID)
+
+    tcd_7 : str | None
+        TCD.7 (opt) - Reflex Allowed (ID)
+
+    tcd_8 : CWE | None
+        TCD.8 (opt) - Analyte Repeat Status (CWE)
+    """
 
     tcd_1: CWE = Field(
         default=...,

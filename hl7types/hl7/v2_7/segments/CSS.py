@@ -14,7 +14,19 @@ from ..datatypes.CWE import CWE
 
 
 class CSS(BaseModel):
-    """HL7 v2 CSS segment."""
+    """HL7 v2 CSS segment.
+
+    Attributes
+    ----------
+    css_1 : CWE
+        CSS.1 (req) - Study Scheduled Time Point (CWE)
+
+    css_2 : str | None
+        CSS.2 (opt) - Study Scheduled Patient Time Point (DTM)
+
+    css_3 : list[CWE] | None
+        CSS.3 (opt, rep) - Study Quality Control Codes (CWE)
+    """
 
     css_1: CWE = Field(
         default=...,

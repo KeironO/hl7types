@@ -20,7 +20,85 @@ from ..datatypes.XTN import XTN
 
 
 class RF1(BaseModel):
-    """HL7 v2 RF1 segment."""
+    """HL7 v2 RF1 segment.
+
+    Attributes
+    ----------
+    rf1_1 : CWE | None
+        RF1.1 (opt) - Referral Status (CWE)
+
+    rf1_2 : CWE | None
+        RF1.2 (opt) - Referral Priority (CWE)
+
+    rf1_3 : CWE | None
+        RF1.3 (opt) - Referral Type (CWE)
+
+    rf1_4 : list[CWE] | None
+        RF1.4 (opt, rep) - Referral Disposition (CWE)
+
+    rf1_5 : CWE | None
+        RF1.5 (opt) - Referral Category (CWE)
+
+    rf1_6 : EI
+        RF1.6 (req) - Originating Referral Identifier (EI)
+
+    rf1_7 : str | None
+        RF1.7 (opt) - Effective Date (DTM)
+
+    rf1_8 : str | None
+        RF1.8 (opt) - Expiration Date (DTM)
+
+    rf1_9 : str | None
+        RF1.9 (opt) - Process Date (DTM)
+
+    rf1_10 : list[CWE] | None
+        RF1.10 (opt, rep) - Referral Reason (CWE)
+
+    rf1_11 : list[EI] | None
+        RF1.11 (opt, rep) - External Referral Identifier (EI)
+
+    rf1_12 : CWE | None
+        RF1.12 (opt) - Referral Documentation Completion Status (CWE)
+
+    rf1_13 : str | None
+        RF1.13 (opt) - Planned Treatment Stop Date (DTM)
+
+    rf1_14 : str | None
+        RF1.14 (opt) - Referral Reason Text (ST)
+
+    rf1_15 : CQ | None
+        RF1.15 (opt) - Number of Authorized Treatments/Units (CQ)
+
+    rf1_16 : CQ | None
+        RF1.16 (opt) - Number of Used Treatments/Units (CQ)
+
+    rf1_17 : CQ | None
+        RF1.17 (opt) - Number of Schedule Treatments/Units (CQ)
+
+    rf1_18 : MO | None
+        RF1.18 (opt) - Remaining Benefit Amount (MO)
+
+    rf1_19 : XON | None
+        RF1.19 (opt) - Authorized Provider (XON)
+
+    rf1_20 : XCN | None
+        RF1.20 (opt) - Authorized Health Professional (XCN)
+
+    rf1_21 : str | None
+        RF1.21 (opt) - Source Text (ST)
+
+    rf1_22 : str | None
+        RF1.22 (opt) - Source Date (DTM)
+
+    rf1_23 : XTN | None
+        RF1.23 (opt) - Source Phone (XTN)
+
+    rf1_24 : str | None
+        RF1.24 (opt) - Comment (ST)
+
+    rf1_25 : str | None
+        RF1.25 (opt) - Action Code (ID)
+    """
 
     rf1_1: Optional[CWE] = Field(
         default=None,

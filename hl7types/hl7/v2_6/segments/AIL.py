@@ -16,7 +16,46 @@ from ..datatypes.PL import PL
 
 
 class AIL(BaseModel):
-    """HL7 v2 AIL segment."""
+    """HL7 v2 AIL segment.
+
+    Attributes
+    ----------
+    ail_1 : str
+        AIL.1 (req) - Set ID - AIL (SI)
+
+    ail_2 : str | None
+        AIL.2 (opt) - Segment Action Code (ID)
+
+    ail_3 : list[PL] | None
+        AIL.3 (opt, rep) - Location Resource ID (PL)
+
+    ail_4 : CWE | None
+        AIL.4 (opt) - Location Type - AIL (CWE)
+
+    ail_5 : CWE | None
+        AIL.5 (opt) - Location Group (CWE)
+
+    ail_6 : str | None
+        AIL.6 (opt) - Start Date/Time (DTM)
+
+    ail_7 : str | None
+        AIL.7 (opt) - Start Date/Time Offset (NM)
+
+    ail_8 : CNE | None
+        AIL.8 (opt) - Start Date/Time Offset Units (CNE)
+
+    ail_9 : str | None
+        AIL.9 (opt) - Duration (NM)
+
+    ail_10 : CNE | None
+        AIL.10 (opt) - Duration Units (CNE)
+
+    ail_11 : str | None
+        AIL.11 (opt) - Allow Substitution Code (IS)
+
+    ail_12 : CWE | None
+        AIL.12 (opt) - Filler Status Code (CWE)
+    """
 
     ail_1: str = Field(
         default=...,

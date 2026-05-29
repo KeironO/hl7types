@@ -14,7 +14,22 @@ from .TS import TS
 
 
 class CM_NDL(BaseModel):
-    """HL7 v2 CM_NDL data type."""
+    """HL7 v2 CM_NDL data type.
+
+    Attributes
+    ----------
+    cm_ndl_1 : str | None
+        CM_NDL.1 (opt) - interpreter / technician (CN)
+
+    cm_ndl_2 : TS | None
+        CM_NDL.2 (opt) - start date/time (TS)
+
+    cm_ndl_3 : TS | None
+        CM_NDL.3 (opt) - end date/time (TS)
+
+    cm_ndl_4 : str | None
+        CM_NDL.4 (opt) - location (CM)
+    """
 
     cm_ndl_1: Optional[str] = Field(
         default=None,

@@ -12,7 +12,37 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CNE(BaseModel):
-    """HL7 v2 CNE data type."""
+    """HL7 v2 CNE data type.
+
+    Attributes
+    ----------
+    cne_1 : str | None
+        CNE.1 (opt) - Identifier (ST)
+
+    cne_2 : str | None
+        CNE.2 (opt) - Text (ST)
+
+    cne_3 : str | None
+        CNE.3 (opt) - Name of Coding System (ID)
+
+    cne_4 : str | None
+        CNE.4 (opt) - Alternate Identifier (ST)
+
+    cne_5 : str | None
+        CNE.5 (opt) - Alternate Text (ST)
+
+    cne_6 : str | None
+        CNE.6 (opt) - Name of Alternate Coding System (ID)
+
+    cne_7 : str | None
+        CNE.7 (opt) - Coding System Version ID (ST)
+
+    cne_8 : str | None
+        CNE.8 (opt) - Alternate Coding System Version ID (ST)
+
+    cne_9 : str | None
+        CNE.9 (opt) - Original Text (ST)
+    """
 
     cne_1: Optional[str] = Field(
         default=None,

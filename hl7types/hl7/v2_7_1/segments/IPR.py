@@ -16,7 +16,34 @@ from ..datatypes.EI import EI
 
 
 class IPR(BaseModel):
-    """HL7 v2 IPR segment."""
+    """HL7 v2 IPR segment.
+
+    Attributes
+    ----------
+    ipr_1 : EI
+        IPR.1 (req) - IPR Identifier (EI)
+
+    ipr_2 : EI
+        IPR.2 (req) - Provider Cross Reference Identifier (EI)
+
+    ipr_3 : EI
+        IPR.3 (req) - Payer Cross Reference Identifier (EI)
+
+    ipr_4 : CWE
+        IPR.4 (req) - IPR Status (CWE)
+
+    ipr_5 : str
+        IPR.5 (req) - IPR Date/Time (DTM)
+
+    ipr_6 : CP | None
+        IPR.6 (opt) - Adjudicated/Paid Amount (CP)
+
+    ipr_7 : str | None
+        IPR.7 (opt) - Expected Payment Date/Time (DTM)
+
+    ipr_8 : str
+        IPR.8 (req) - IPR Checksum (ST)
+    """
 
     ipr_1: EI = Field(
         default=...,

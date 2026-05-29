@@ -14,7 +14,16 @@ from .TS import TS
 
 
 class DLD(BaseModel):
-    """HL7 v2 DLD data type."""
+    """HL7 v2 DLD data type.
+
+    Attributes
+    ----------
+    dld_1 : str | None
+        DLD.1 (opt) - Discharge Location (IS)
+
+    dld_2 : TS | None
+        DLD.2 (opt) - Effective Date (TS)
+    """
 
     dld_1: Optional[str] = Field(
         default=None,

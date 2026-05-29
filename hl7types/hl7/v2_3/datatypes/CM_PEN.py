@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_PEN(BaseModel):
-    """HL7 v2 CM_PEN data type."""
+    """HL7 v2 CM_PEN data type.
+
+    Attributes
+    ----------
+    cm_pen_1 : str | None
+        CM_PEN.1 (opt) - penalty type (IS)
+
+    cm_pen_2 : str | None
+        CM_PEN.2 (opt) - penalty amount (NM)
+    """
 
     cm_pen_1: Optional[str] = Field(
         default=None,

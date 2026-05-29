@@ -19,7 +19,79 @@ from .TS import TS
 
 
 class XCN(BaseModel):
-    """HL7 v2 XCN data type."""
+    """HL7 v2 XCN data type.
+
+    Attributes
+    ----------
+    xcn_1 : str | None
+        XCN.1 (opt) - ID Number (ST)
+
+    xcn_2 : FN | None
+        XCN.2 (opt) - Family Name (FN)
+
+    xcn_3 : str | None
+        XCN.3 (opt) - Given Name (ST)
+
+    xcn_4 : str | None
+        XCN.4 (opt) - Second and Further Given Names or Initials Thereof (ST)
+
+    xcn_5 : str | None
+        XCN.5 (opt) - Suffix (e.g., JR or III) (ST)
+
+    xcn_6 : str | None
+        XCN.6 (opt) - Prefix (e.g., DR) (ST)
+
+    xcn_7 : str | None
+        XCN.7 (opt) - Degree (e.g., MD) (IS)
+
+    xcn_8 : str | None
+        XCN.8 (opt) - Source Table (IS)
+
+    xcn_9 : HD | None
+        XCN.9 (opt) - Assigning Authority (HD)
+
+    xcn_10 : str | None
+        XCN.10 (opt) - Name Type Code (ID)
+
+    xcn_11 : str | None
+        XCN.11 (opt) - Identifier Check Digit (ST)
+
+    xcn_12 : str | None
+        XCN.12 (opt) - Check Digit Scheme (ID)
+
+    xcn_13 : str | None
+        XCN.13 (opt) - Identifier Type Code (ID)
+
+    xcn_14 : HD | None
+        XCN.14 (opt) - Assigning Facility (HD)
+
+    xcn_15 : str | None
+        XCN.15 (opt) - Name Representation Code (ID)
+
+    xcn_16 : CE | None
+        XCN.16 (opt) - Name Context (CE)
+
+    xcn_17 : DR | None
+        XCN.17 (opt) - Name Validity Range (DR)
+
+    xcn_18 : str | None
+        XCN.18 (opt) - Name Assembly Order (ID)
+
+    xcn_19 : TS | None
+        XCN.19 (opt) - Effective Date (TS)
+
+    xcn_20 : TS | None
+        XCN.20 (opt) - Expiration Date (TS)
+
+    xcn_21 : str | None
+        XCN.21 (opt) - Professional Suffix (ST)
+
+    xcn_22 : CWE | None
+        XCN.22 (opt) - Assigning Jurisdiction (CWE)
+
+    xcn_23 : CWE | None
+        XCN.23 (opt) - Assigning Agency or Department (CWE)
+    """
 
     xcn_1: Optional[str] = Field(
         default=None,

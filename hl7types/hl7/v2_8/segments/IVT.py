@@ -17,7 +17,88 @@ from ..datatypes.EI import EI
 
 
 class IVT(BaseModel):
-    """HL7 v2 IVT segment."""
+    """HL7 v2 IVT segment.
+
+    Attributes
+    ----------
+    ivt_1 : str
+        IVT.1 (req) - Set Id - IVT (SI)
+
+    ivt_2 : EI
+        IVT.2 (req) - Inventory Location Identifier (EI)
+
+    ivt_3 : str | None
+        IVT.3 (opt) - Inventory Location Name (ST)
+
+    ivt_4 : EI | None
+        IVT.4 (opt) - Source Location Identifier (EI)
+
+    ivt_5 : str | None
+        IVT.5 (opt) - Source Location Name (ST)
+
+    ivt_6 : CWE | None
+        IVT.6 (opt) - Item Status (CWE)
+
+    ivt_7 : list[EI] | None
+        IVT.7 (opt, rep) - Bin Location Identifier (EI)
+
+    ivt_8 : CWE | None
+        IVT.8 (opt) - Order Packaging (CWE)
+
+    ivt_9 : CWE | None
+        IVT.9 (opt) - Issue Packaging (CWE)
+
+    ivt_10 : EI | None
+        IVT.10 (opt) - Default Inventory Asset Account (EI)
+
+    ivt_11 : CNE | None
+        IVT.11 (opt) - Patient Chargeable Indicator (CNE)
+
+    ivt_12 : CWE | None
+        IVT.12 (opt) - Transaction Code (CWE)
+
+    ivt_13 : CP | None
+        IVT.13 (opt) - Transaction amount - unit (CP)
+
+    ivt_14 : CWE | None
+        IVT.14 (opt) - Item Importance Code (CWE)
+
+    ivt_15 : CNE | None
+        IVT.15 (opt) - Stocked Item Indicator (CNE)
+
+    ivt_16 : CNE | None
+        IVT.16 (opt) - Consignment Item Indicator (CNE)
+
+    ivt_17 : CNE | None
+        IVT.17 (opt) - Reusable Item Indicator (CNE)
+
+    ivt_18 : CP | None
+        IVT.18 (opt) - Reusable Cost (CP)
+
+    ivt_19 : list[EI] | None
+        IVT.19 (opt, rep) - Substitute Item Identifier (EI)
+
+    ivt_20 : EI | None
+        IVT.20 (opt) - Latex-Free Substitute Item Identifier (EI)
+
+    ivt_21 : CWE | None
+        IVT.21 (opt) - Recommended Reorder Theory (CWE)
+
+    ivt_22 : str | None
+        IVT.22 (opt) - Recommended Safety Stock Days (NM)
+
+    ivt_23 : str | None
+        IVT.23 (opt) - Recommended Maximum Days Inventory (NM)
+
+    ivt_24 : str | None
+        IVT.24 (opt) - Recommended Order Point (NM)
+
+    ivt_25 : str | None
+        IVT.25 (opt) - Recommended Order Amount (NM)
+
+    ivt_26 : CNE | None
+        IVT.26 (opt) - Operating Room Par Level Indicator (CNE)
+    """
 
     ivt_1: str = Field(
         default=...,

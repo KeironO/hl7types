@@ -15,7 +15,28 @@ from ..datatypes.TS import TS
 
 
 class CNS(BaseModel):
-    """HL7 v2 CNS segment."""
+    """HL7 v2 CNS segment.
+
+    Attributes
+    ----------
+    cns_1 : str | None
+        CNS.1 (opt) - Starting Notification Reference Number (NM)
+
+    cns_2 : str | None
+        CNS.2 (opt) - Ending Notification Reference Number (NM)
+
+    cns_3 : TS | None
+        CNS.3 (opt) - Starting Notification Date/Time (TS)
+
+    cns_4 : TS | None
+        CNS.4 (opt) - Ending Notification Date/Time (TS)
+
+    cns_5 : CE | None
+        CNS.5 (opt) - Starting Notification Code (CE)
+
+    cns_6 : CE | None
+        CNS.6 (opt) - Ending Notification Code (CE)
+    """
 
     cns_1: Optional[str] = Field(
         default=None,

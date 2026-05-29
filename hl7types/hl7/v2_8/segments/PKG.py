@@ -16,7 +16,34 @@ from ..datatypes.CWE import CWE
 
 
 class PKG(BaseModel):
-    """HL7 v2 PKG segment."""
+    """HL7 v2 PKG segment.
+
+    Attributes
+    ----------
+    pkg_1 : str
+        PKG.1 (req) - Set Id - PKG (SI)
+
+    pkg_2 : CWE | None
+        PKG.2 (opt) - Packaging Units (CWE)
+
+    pkg_3 : CNE | None
+        PKG.3 (opt) - Default Order Unit Of Measure Indicator (CNE)
+
+    pkg_4 : str | None
+        PKG.4 (opt) - Package Quantity (NM)
+
+    pkg_5 : CP | None
+        PKG.5 (opt) - Price (CP)
+
+    pkg_6 : CP | None
+        PKG.6 (opt) - Future Item Price (CP)
+
+    pkg_7 : str | None
+        PKG.7 (opt) - Future Item Price Effective Date (DTM)
+
+    pkg_8 : CWE | None
+        PKG.8 (opt) - Global Trade Item Number (CWE)
+    """
 
     pkg_1: str = Field(
         default=...,

@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class RFI(BaseModel):
-    """HL7 v2 RFI segment."""
+    """HL7 v2 RFI segment.
+
+    Attributes
+    ----------
+    rfi_1 : str
+        RFI.1 (req) - Request Date (DTM)
+
+    rfi_2 : str
+        RFI.2 (req) - Response Due Date (DTM)
+
+    rfi_3 : str | None
+        RFI.3 (opt) - Patient Consent (ID)
+
+    rfi_4 : str | None
+        RFI.4 (opt) - Date Additional Information was submitted (DTM)
+    """
 
     rfi_1: str = Field(
         default=...,

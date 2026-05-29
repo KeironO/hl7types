@@ -14,7 +14,25 @@ from .HD import HD
 
 
 class ED(BaseModel):
-    """HL7 v2 ED data type."""
+    """HL7 v2 ED data type.
+
+    Attributes
+    ----------
+    ed_1 : HD | None
+        ED.1 (opt) - source application (HD)
+
+    ed_2 : str | None
+        ED.2 (opt) - type of data (ID)
+
+    ed_3 : str | None
+        ED.3 (opt) - data (ID)
+
+    ed_4 : str | None
+        ED.4 (opt) - encoding (ID)
+
+    ed_5 : str | None
+        ED.5 (opt) - data (ST)
+    """
 
     ed_1: Optional[HD] = Field(
         default=None,

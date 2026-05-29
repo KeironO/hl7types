@@ -17,7 +17,46 @@ from ..datatypes.XCN import XCN
 
 
 class QRD(BaseModel):
-    """HL7 v2 QRD segment."""
+    """HL7 v2 QRD segment.
+
+    Attributes
+    ----------
+    qrd_1 : TS | None
+        QRD.1 (opt) - Query Date/Time (TS)
+
+    qrd_2 : str
+        QRD.2 (req) - Query Format Code (ID)
+
+    qrd_3 : str
+        QRD.3 (req) - Query Priority (ID)
+
+    qrd_4 : str
+        QRD.4 (req) - Query ID (ST)
+
+    qrd_5 : str | None
+        QRD.5 (opt) - Deferred Response Type (ID)
+
+    qrd_6 : TS | None
+        QRD.6 (opt) - Deferred Response Date/Time (TS)
+
+    qrd_7 : CQ
+        QRD.7 (req) - Quantity Limited Request (CQ)
+
+    qrd_8 : list[XCN]
+        QRD.8 (req, rep) - Who Subject Filter (XCN)
+
+    qrd_9 : list[CE]
+        QRD.9 (req, rep) - What Subject Filter (CE)
+
+    qrd_10 : list[CE]
+        QRD.10 (req, rep) - What Department Data Code (CE)
+
+    qrd_11 : list[str] | None
+        QRD.11 (opt, rep) - What Data Code Value Qualifier (CM)
+
+    qrd_12 : str | None
+        QRD.12 (opt) - Query Results Level (ID)
+    """
 
     qrd_1: Optional[TS] = Field(
         default=None,

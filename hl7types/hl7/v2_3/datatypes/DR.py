@@ -14,7 +14,16 @@ from .TS import TS
 
 
 class DR(BaseModel):
-    """HL7 v2 DR data type."""
+    """HL7 v2 DR data type.
+
+    Attributes
+    ----------
+    dr_1 : TS | None
+        DR.1 (opt) - range start date/time (TS)
+
+    dr_2 : TS | None
+        DR.2 (opt) - range end date/time (TS)
+    """
 
     dr_1: Optional[TS] = Field(
         default=None,

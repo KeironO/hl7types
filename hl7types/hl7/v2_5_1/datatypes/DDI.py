@@ -14,7 +14,19 @@ from .MO import MO
 
 
 class DDI(BaseModel):
-    """HL7 v2 DDI data type."""
+    """HL7 v2 DDI data type.
+
+    Attributes
+    ----------
+    ddi_1 : str | None
+        DDI.1 (opt) - Delay Days (NM)
+
+    ddi_2 : MO | None
+        DDI.2 (opt) - Monetary Amount (MO)
+
+    ddi_3 : str | None
+        DDI.3 (opt) - Number of Days (NM)
+    """
 
     ddi_1: Optional[str] = Field(
         default=None,

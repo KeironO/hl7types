@@ -14,7 +14,34 @@ from ..datatypes.CX import CX
 
 
 class DB1(BaseModel):
-    """HL7 v2 DB1 segment."""
+    """HL7 v2 DB1 segment.
+
+    Attributes
+    ----------
+    db1_1 : str
+        DB1.1 (req) - Set ID - DB1 (SI)
+
+    db1_2 : str | None
+        DB1.2 (opt) - Disabled person code (IS)
+
+    db1_3 : list[CX] | None
+        DB1.3 (opt, rep) - Disabled person identifier (CX)
+
+    db1_4 : str | None
+        DB1.4 (opt) - Disabled Indicator (ID)
+
+    db1_5 : str | None
+        DB1.5 (opt) - Disability start date (DT)
+
+    db1_6 : str | None
+        DB1.6 (opt) - Disability end date (DT)
+
+    db1_7 : str | None
+        DB1.7 (opt) - Disability return to work date (DT)
+
+    db1_8 : str | None
+        DB1.8 (opt) - Disability unable to work date (DT)
+    """
 
     db1_1: str = Field(
         default=...,

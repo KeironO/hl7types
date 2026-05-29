@@ -16,7 +16,25 @@ from ..datatypes.XON import XON
 
 
 class AFF(BaseModel):
-    """HL7 v2 AFF segment."""
+    """HL7 v2 AFF segment.
+
+    Attributes
+    ----------
+    aff_1 : str
+        AFF.1 (req) - Set ID _ AFF (SI)
+
+    aff_2 : XON
+        AFF.2 (req) - Professional Organization (XON)
+
+    aff_3 : XAD | None
+        AFF.3 (opt) - Professional Organization Address (XAD)
+
+    aff_4 : list[DR] | None
+        AFF.4 (opt, rep) - Professional Organization Affiliation Date Range (DR)
+
+    aff_5 : str | None
+        AFF.5 (opt) - Professional Affiliation Additional Information (ST)
+    """
 
     aff_1: str = Field(
         default=...,

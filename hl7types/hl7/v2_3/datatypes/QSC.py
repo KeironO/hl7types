@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class QSC(BaseModel):
-    """HL7 v2 QSC data type."""
+    """HL7 v2 QSC data type.
+
+    Attributes
+    ----------
+    qsc_1 : str | None
+        QSC.1 (opt) - name of field (ST)
+
+    qsc_2 : str | None
+        QSC.2 (opt) - relational operator (ID)
+
+    qsc_3 : str | None
+        QSC.3 (opt) - Value (ST)
+
+    qsc_4 : str | None
+        QSC.4 (opt) - relational conjunction (ID)
+    """
 
     qsc_1: Optional[str] = Field(
         default=None,

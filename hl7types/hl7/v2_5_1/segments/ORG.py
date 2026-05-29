@@ -16,7 +16,46 @@ from ..datatypes.DR import DR
 
 
 class ORG(BaseModel):
-    """HL7 v2 ORG segment."""
+    """HL7 v2 ORG segment.
+
+    Attributes
+    ----------
+    org_1 : str
+        ORG.1 (req) - Set ID - ORG (SI)
+
+    org_2 : CE | None
+        ORG.2 (opt) - Organization Unit Code (CE)
+
+    org_3 : CE | None
+        ORG.3 (opt) - Organization Unit Type Code (CE)
+
+    org_4 : str | None
+        ORG.4 (opt) - Primary Org Unit Indicator (ID)
+
+    org_5 : CX | None
+        ORG.5 (opt) - Practitioner Org Unit Identifier (CX)
+
+    org_6 : CE | None
+        ORG.6 (opt) - Health Care Provider Type Code (CE)
+
+    org_7 : CE | None
+        ORG.7 (opt) - Health Care Provider Classification Code (CE)
+
+    org_8 : CE | None
+        ORG.8 (opt) - Health Care Provider Area of Specialization Code (CE)
+
+    org_9 : DR | None
+        ORG.9 (opt) - Effective Date Range (DR)
+
+    org_10 : CE | None
+        ORG.10 (opt) - Employment Status Code (CE)
+
+    org_11 : str | None
+        ORG.11 (opt) - Board Approval Indicator (ID)
+
+    org_12 : str | None
+        ORG.12 (opt) - Primary Care Physician Indicator (ID)
+    """
 
     org_1: str = Field(
         default=...,

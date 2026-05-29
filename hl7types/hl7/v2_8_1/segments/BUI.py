@@ -18,7 +18,46 @@ from ..datatypes.XON import XON
 
 
 class BUI(BaseModel):
-    """HL7 v2 BUI segment."""
+    """HL7 v2 BUI segment.
+
+    Attributes
+    ----------
+    bui_1 : str | None
+        BUI.1 (opt) - Set ID - BUI (SI)
+
+    bui_2 : EI
+        BUI.2 (req) - Blood Unit Identifier (EI)
+
+    bui_3 : CWE
+        BUI.3 (req) - Blood Unit Type (CWE)
+
+    bui_4 : str
+        BUI.4 (req) - Blood Unit Weight (NM)
+
+    bui_5 : CNE
+        BUI.5 (req) - Weight Units (CNE)
+
+    bui_6 : str
+        BUI.6 (req) - Blood Unit Volume (NM)
+
+    bui_7 : CNE
+        BUI.7 (req) - Volume Units (CNE)
+
+    bui_8 : str
+        BUI.8 (req) - Container Catalog Number (ST)
+
+    bui_9 : str
+        BUI.9 (req) - Container Lot Number (ST)
+
+    bui_10 : XON
+        BUI.10 (req) - Container Manufacturer (XON)
+
+    bui_11 : NR
+        BUI.11 (req) - Transport Temperature (NR)
+
+    bui_12 : CNE
+        BUI.12 (req) - Transport Temperature Units (CNE)
+    """
 
     bui_1: Optional[str] = Field(
         default=None,

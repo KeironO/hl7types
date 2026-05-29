@@ -16,7 +16,28 @@ from ..datatypes.TS import TS
 
 
 class PTH(BaseModel):
-    """HL7 v2 PTH segment."""
+    """HL7 v2 PTH segment.
+
+    Attributes
+    ----------
+    pth_1 : str
+        PTH.1 (req) - Action Code (ID)
+
+    pth_2 : CE
+        PTH.2 (req) - Pathway ID (CE)
+
+    pth_3 : EI
+        PTH.3 (req) - Pathway Instance ID (EI)
+
+    pth_4 : TS
+        PTH.4 (req) - Pathway Established Date/Time (TS)
+
+    pth_5 : CE | None
+        PTH.5 (opt) - Pathway Lifecycle Status (CE)
+
+    pth_6 : TS | None
+        PTH.6 (opt) - Change Pathway Lifecycle Status Date/Time (TS)
+    """
 
     pth_1: str = Field(
         default=...,

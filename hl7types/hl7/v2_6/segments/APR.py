@@ -14,7 +14,25 @@ from ..datatypes.SCV import SCV
 
 
 class APR(BaseModel):
-    """HL7 v2 APR segment."""
+    """HL7 v2 APR segment.
+
+    Attributes
+    ----------
+    apr_1 : list[SCV] | None
+        APR.1 (opt, rep) - Time Selection Criteria (SCV)
+
+    apr_2 : list[SCV] | None
+        APR.2 (opt, rep) - Resource Selection Criteria (SCV)
+
+    apr_3 : list[SCV] | None
+        APR.3 (opt, rep) - Location Selection Criteria (SCV)
+
+    apr_4 : str | None
+        APR.4 (opt) - Slot Spacing Criteria (NM)
+
+    apr_5 : list[SCV] | None
+        APR.5 (opt, rep) - Filler Override Criteria (SCV)
+    """
 
     apr_1: Optional[List[SCV]] = Field(
         default=None,

@@ -14,7 +14,16 @@ from ..datatypes.PL import PL
 
 
 class NPU(BaseModel):
-    """HL7 v2 NPU segment."""
+    """HL7 v2 NPU segment.
+
+    Attributes
+    ----------
+    npu_1 : PL
+        NPU.1 (req) - Bed Location (PL)
+
+    npu_2 : str | None
+        NPU.2 (opt) - Bed Status (IS)
+    """
 
     npu_1: PL = Field(
         default=...,

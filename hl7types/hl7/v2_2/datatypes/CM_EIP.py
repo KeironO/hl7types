@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_EIP(BaseModel):
-    """HL7 v2 CM_EIP data type."""
+    """HL7 v2 CM_EIP data type.
+
+    Attributes
+    ----------
+    cm_eip_1 : str | None
+        CM_EIP.1 (opt) - parent´s placer order number (ST)
+
+    cm_eip_2 : str | None
+        CM_EIP.2 (opt) - parent´s filler order number (ST)
+    """
 
     cm_eip_1: Optional[str] = Field(
         default=None,

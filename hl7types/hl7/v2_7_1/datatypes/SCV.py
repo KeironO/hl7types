@@ -14,7 +14,16 @@ from .CWE import CWE
 
 
 class SCV(BaseModel):
-    """HL7 v2 SCV data type."""
+    """HL7 v2 SCV data type.
+
+    Attributes
+    ----------
+    scv_1 : CWE | None
+        SCV.1 (opt) - Parameter Class (CWE)
+
+    scv_2 : str | None
+        SCV.2 (opt) - Parameter Value (ST)
+    """
 
     scv_1: Optional[CWE] = Field(
         default=None,

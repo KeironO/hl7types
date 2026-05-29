@@ -19,7 +19,109 @@ from ..datatypes.XTN import XTN
 
 
 class PID(BaseModel):
-    """HL7 v2 PID segment."""
+    """HL7 v2 PID segment.
+
+    Attributes
+    ----------
+    pid_1 : str | None
+        PID.1 (opt) - Set ID - PID (SI)
+
+    pid_3 : list[CX]
+        PID.3 (req, rep) - Patient Identifier List (CX)
+
+    pid_5 : list[XPN]
+        PID.5 (req, rep) - Patient Name (XPN)
+
+    pid_6 : list[XPN] | None
+        PID.6 (opt, rep) - Mother's Maiden Name (XPN)
+
+    pid_7 : str | None
+        PID.7 (opt) - Date/Time of Birth (DTM)
+
+    pid_8 : CWE | None
+        PID.8 (opt) - Administrative Sex (CWE)
+
+    pid_10 : list[CWE] | None
+        PID.10 (opt, rep) - Race (CWE)
+
+    pid_11 : list[XAD] | None
+        PID.11 (opt, rep) - Patient Address (XAD)
+
+    pid_13 : list[XTN] | None
+        PID.13 (opt, rep) - Phone Number - Home (XTN)
+
+    pid_14 : list[XTN] | None
+        PID.14 (opt, rep) - Phone Number - Business (XTN)
+
+    pid_15 : CWE | None
+        PID.15 (opt) - Primary Language (CWE)
+
+    pid_16 : CWE | None
+        PID.16 (opt) - Marital Status (CWE)
+
+    pid_17 : CWE | None
+        PID.17 (opt) - Religion (CWE)
+
+    pid_18 : CX | None
+        PID.18 (opt) - Patient Account Number (CX)
+
+    pid_21 : list[CX] | None
+        PID.21 (opt, rep) - Mother's Identifier (CX)
+
+    pid_22 : list[CWE] | None
+        PID.22 (opt, rep) - Ethnic Group (CWE)
+
+    pid_23 : str | None
+        PID.23 (opt) - Birth Place (ST)
+
+    pid_24 : str | None
+        PID.24 (opt) - Multiple Birth Indicator (ID)
+
+    pid_25 : str | None
+        PID.25 (opt) - Birth Order (NM)
+
+    pid_26 : list[CWE] | None
+        PID.26 (opt, rep) - Citizenship (CWE)
+
+    pid_27 : CWE | None
+        PID.27 (opt) - Veterans Military Status (CWE)
+
+    pid_29 : str | None
+        PID.29 (opt) - Patient Death Date and Time (DTM)
+
+    pid_30 : str | None
+        PID.30 (opt) - Patient Death Indicator (ID)
+
+    pid_31 : str | None
+        PID.31 (opt) - Identity Unknown Indicator (ID)
+
+    pid_32 : list[CWE] | None
+        PID.32 (opt, rep) - Identity Reliability Code (CWE)
+
+    pid_33 : str | None
+        PID.33 (opt) - Last Update Date/Time (DTM)
+
+    pid_34 : HD | None
+        PID.34 (opt) - Last Update Facility (HD)
+
+    pid_35 : CWE | None
+        PID.35 (opt) - Taxonomic Classification Code (CWE)
+
+    pid_36 : CWE | None
+        PID.36 (opt) - Breed Code (CWE)
+
+    pid_37 : str | None
+        PID.37 (opt) - Strain (ST)
+
+    pid_38 : list[CWE] | None
+        PID.38 (opt, rep) - Production Class Code (CWE)
+
+    pid_39 : list[CWE] | None
+        PID.39 (opt, rep) - Tribal Citizenship (CWE)
+
+    pid_40 : list[XTN] | None
+        PID.40 (opt, rep) - Patient Telecommunication Information (XTN)
+    """
 
     pid_1: Optional[str] = Field(
         default=None,

@@ -18,7 +18,46 @@ from ..datatypes.XTN import XTN
 
 
 class ERR(BaseModel):
-    """HL7 v2 ERR segment."""
+    """HL7 v2 ERR segment.
+
+    Attributes
+    ----------
+    err_1 : list[ELD] | None
+        ERR.1 (opt, rep) - Error Code and Location (ELD)
+
+    err_2 : list[ERL] | None
+        ERR.2 (opt, rep) - Error Location (ERL)
+
+    err_3 : CWE
+        ERR.3 (req) - HL7 Error Code (CWE)
+
+    err_4 : str
+        ERR.4 (req) - Severity (ID)
+
+    err_5 : CWE | None
+        ERR.5 (opt) - Application Error Code (CWE)
+
+    err_6 : list[str] | None
+        ERR.6 (opt, rep) - Application Error Parameter (ST)
+
+    err_7 : TX | None
+        ERR.7 (opt) - Diagnostic Information (TX)
+
+    err_8 : TX | None
+        ERR.8 (opt) - User Message (TX)
+
+    err_9 : list[str] | None
+        ERR.9 (opt, rep) - Inform Person Indicator (IS)
+
+    err_10 : CWE | None
+        ERR.10 (opt) - Override Type (CWE)
+
+    err_11 : list[CWE] | None
+        ERR.11 (opt, rep) - Override Reason Code (CWE)
+
+    err_12 : list[XTN] | None
+        ERR.12 (opt, rep) - Help Desk Contact Point (XTN)
+    """
 
     err_1: Optional[List[ELD]] = Field(
         default=None,

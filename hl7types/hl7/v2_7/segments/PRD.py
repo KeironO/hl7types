@@ -20,7 +20,52 @@ from ..datatypes.XTN import XTN
 
 
 class PRD(BaseModel):
-    """HL7 v2 PRD segment."""
+    """HL7 v2 PRD segment.
+
+    Attributes
+    ----------
+    prd_1 : list[CWE]
+        PRD.1 (req, rep) - Provider Role (CWE)
+
+    prd_2 : list[XPN] | None
+        PRD.2 (opt, rep) - Provider Name (XPN)
+
+    prd_3 : list[XAD] | None
+        PRD.3 (opt, rep) - Provider Address (XAD)
+
+    prd_4 : PL | None
+        PRD.4 (opt) - Provider Location (PL)
+
+    prd_5 : list[XTN] | None
+        PRD.5 (opt, rep) - Provider Communication Information (XTN)
+
+    prd_6 : CWE | None
+        PRD.6 (opt) - Preferred Method of Contact (CWE)
+
+    prd_7 : list[PLN] | None
+        PRD.7 (opt, rep) - Provider Identifiers (PLN)
+
+    prd_8 : str | None
+        PRD.8 (opt) - Effective Start Date of Provider Role (DTM)
+
+    prd_9 : list[str] | None
+        PRD.9 (opt, rep) - Effective End Date of Provider Role (DTM)
+
+    prd_10 : XON | None
+        PRD.10 (opt) - Provider Organization Name and Identifier (XON)
+
+    prd_11 : list[XAD] | None
+        PRD.11 (opt, rep) - Provider Organization Address (XAD)
+
+    prd_12 : list[PL] | None
+        PRD.12 (opt, rep) - Provider Organization Location Information (PL)
+
+    prd_13 : list[XTN] | None
+        PRD.13 (opt, rep) - Provider Organization Communication Information (XTN)
+
+    prd_14 : CWE | None
+        PRD.14 (opt) - Provider Organization Method of Contact (CWE)
+    """
 
     prd_1: List[CWE] = Field(
         default=...,

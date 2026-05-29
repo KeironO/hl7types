@@ -12,7 +12,52 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class DG1(BaseModel):
-    """HL7 v2 DG1 segment."""
+    """HL7 v2 DG1 segment.
+
+    Attributes
+    ----------
+    dg1_1 : str
+        DG1.1 (req) - SET ID - DIAGNOSIS (SI)
+
+    dg1_2 : str
+        DG1.2 (req) - DIAGNOSIS CODING METHOD (ID)
+
+    dg1_3 : str | None
+        DG1.3 (opt) - DIAGNOSIS CODE (ID)
+
+    dg1_4 : str | None
+        DG1.4 (opt) - DIAGNOSIS DESCRIPTION (ST)
+
+    dg1_5 : str | None
+        DG1.5 (opt) - DIAGNOSIS DATE/TIME (TS)
+
+    dg1_6 : str
+        DG1.6 (req) - DIAGNOSIS/DRG TYPE (ID)
+
+    dg1_7 : str | None
+        DG1.7 (opt) - MAJOR DIAGNOSTIC CATEGORY (ST)
+
+    dg1_8 : str | None
+        DG1.8 (opt) - DIAGNOSTIC RELATED GROUP (ID)
+
+    dg1_9 : str | None
+        DG1.9 (opt) - DRG APPROVAL INDICATOR (ID)
+
+    dg1_10 : str | None
+        DG1.10 (opt) - DRG GROUPER REVIEW CODE (ID)
+
+    dg1_11 : str | None
+        DG1.11 (opt) - OUTLIER TYPE (ID)
+
+    dg1_12 : str | None
+        DG1.12 (opt) - OUTLIER DAYS (NM)
+
+    dg1_13 : str | None
+        DG1.13 (opt) - OUTLIER COST (NM)
+
+    dg1_14 : str | None
+        DG1.14 (opt) - GROUPER VERSION AND TYPE (ST)
+    """
 
     dg1_1: str = Field(
         default=...,

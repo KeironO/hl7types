@@ -15,7 +15,19 @@ from ..datatypes.EI import EI
 
 
 class CTI(BaseModel):
-    """HL7 v2 CTI segment."""
+    """HL7 v2 CTI segment.
+
+    Attributes
+    ----------
+    cti_1 : EI
+        CTI.1 (req) - Sponsor Study ID (EI)
+
+    cti_2 : CE | None
+        CTI.2 (opt) - Study Phase Identifier (CE)
+
+    cti_3 : CE | None
+        CTI.3 (opt) - Study Scheduled Time Point (CE)
+    """
 
     cti_1: EI = Field(
         default=...,

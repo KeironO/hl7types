@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class BTS(BaseModel):
-    """HL7 v2 BTS segment."""
+    """HL7 v2 BTS segment.
+
+    Attributes
+    ----------
+    bts_1 : str | None
+        BTS.1 (opt) - Batch Message Count (ST)
+
+    bts_2 : str | None
+        BTS.2 (opt) - Batch Comment (ST)
+
+    bts_3 : list[str] | None
+        BTS.3 (opt, rep) - Batch Totals (CM)
+    """
 
     bts_1: Optional[str] = Field(
         default=None,

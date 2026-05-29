@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class MRG(BaseModel):
-    """HL7 v2 MRG segment."""
+    """HL7 v2 MRG segment.
+
+    Attributes
+    ----------
+    mrg_1 : str
+        MRG.1 (req) - Prior Patient ID - Internal (CM)
+
+    mrg_2 : str | None
+        MRG.2 (opt) - Prior Alternate Patient ID (CM)
+
+    mrg_3 : str | None
+        MRG.3 (opt) - Prior Patient Account Number (CK)
+
+    mrg_4 : str | None
+        MRG.4 (opt) - Prior Patient ID - External (CK)
+    """
 
     mrg_1: str = Field(
         default=...,

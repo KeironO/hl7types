@@ -16,7 +16,49 @@ from ..datatypes.varies import varies
 
 
 class OMC(BaseModel):
-    """HL7 v2 OMC segment."""
+    """HL7 v2 OMC segment.
+
+    Attributes
+    ----------
+    omc_1 : str | None
+        OMC.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+
+    omc_2 : str | None
+        OMC.2 (opt) - Segment Action Code (ID)
+
+    omc_3 : EI | None
+        OMC.3 (opt) - Segment Unique Key (EI)
+
+    omc_4 : CWE
+        OMC.4 (req) - Clinical Information Request (CWE)
+
+    omc_5 : list[CWE]
+        OMC.5 (req, rep) - Collection Event/Process Step (CWE)
+
+    omc_6 : CWE
+        OMC.6 (req) - Communication Location (CWE)
+
+    omc_7 : str | None
+        OMC.7 (opt) - Answer Required (ID)
+
+    omc_8 : str | None
+        OMC.8 (opt) - Hint/Help Text (ST)
+
+    omc_9 : varies | None
+        OMC.9 (opt) - Type of Answer (varies)
+
+    omc_10 : str | None
+        OMC.10 (opt) - Multiple Answers Allowed (ID)
+
+    omc_11 : list[CWE] | None
+        OMC.11 (opt, rep) - Answer Choices (CWE)
+
+    omc_12 : str | None
+        OMC.12 (opt) - Character Limit (NM)
+
+    omc_13 : str | None
+        OMC.13 (opt) - Number of Decimals (NM)
+    """
 
     omc_1: Optional[str] = Field(
         default=None,

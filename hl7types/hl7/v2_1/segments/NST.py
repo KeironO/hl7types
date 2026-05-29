@@ -12,7 +12,55 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NST(BaseModel):
-    """HL7 v2 NST segment."""
+    """HL7 v2 NST segment.
+
+    Attributes
+    ----------
+    nst_1 : str
+        NST.1 (req) - STATISTICS AVAILABLE (ID)
+
+    nst_2 : str | None
+        NST.2 (opt) - SOURCE IDENTIFIER (ST)
+
+    nst_3 : str | None
+        NST.3 (opt) - SOURCE TYPE (ID)
+
+    nst_4 : str | None
+        NST.4 (opt) - STATISTICS START (TS)
+
+    nst_5 : str | None
+        NST.5 (opt) - STATISTICS END (TS)
+
+    nst_6 : str | None
+        NST.6 (opt) - RECEIVE CHARACTER COUNT (NM)
+
+    nst_7 : str | None
+        NST.7 (opt) - SEND CHARACTER COUNT (NM)
+
+    nst_8 : str | None
+        NST.8 (opt) - MESSAGES RECEIVED (NM)
+
+    nst_9 : str | None
+        NST.9 (opt) - MESSAGES SENT (NM)
+
+    nst_10 : str | None
+        NST.10 (opt) - CHECKSUM ERRORS RECEIVED (NM)
+
+    nst_11 : str | None
+        NST.11 (opt) - LENGTH ERRORS RECEIVED (NM)
+
+    nst_12 : str | None
+        NST.12 (opt) - OTHER ERRORS RECEIVED (NM)
+
+    nst_13 : str | None
+        NST.13 (opt) - CONNECT TIMEOUTS (NM)
+
+    nst_14 : str | None
+        NST.14 (opt) - RECEIVE TIMEOUTS (NM)
+
+    nst_15 : str | None
+        NST.15 (opt) - NETWORK ERRORS (NM)
+    """
 
     nst_1: str = Field(
         default=...,

@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_UVC(BaseModel):
-    """HL7 v2 CM_UVC data type."""
+    """HL7 v2 CM_UVC data type.
+
+    Attributes
+    ----------
+    cm_uvc_1 : str | None
+        CM_UVC.1 (opt) - Value code (ID)
+
+    cm_uvc_2 : str | None
+        CM_UVC.2 (opt) - value amount (NM)
+    """
 
     cm_uvc_1: Optional[str] = Field(
         default=None,

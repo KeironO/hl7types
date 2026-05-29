@@ -14,7 +14,76 @@ from .FT import FT
 
 
 class CF(BaseModel):
-    """HL7 v2 CF data type."""
+    """HL7 v2 CF data type.
+
+    Attributes
+    ----------
+    cf_1 : str | None
+        CF.1 (opt) - Identifier (ST)
+
+    cf_2 : FT | None
+        CF.2 (opt) - Formatted Text (FT)
+
+    cf_3 : str | None
+        CF.3 (opt) - Name of Coding System (ID)
+
+    cf_4 : str | None
+        CF.4 (opt) - Alternate Identifier (ST)
+
+    cf_5 : FT | None
+        CF.5 (opt) - Alternate Formatted Text (FT)
+
+    cf_6 : str | None
+        CF.6 (opt) - Name of Alternate Coding System (ID)
+
+    cf_7 : str | None
+        CF.7 (opt) - Coding System Version ID (ST)
+
+    cf_8 : str | None
+        CF.8 (opt) - Alternate Coding System Version ID (ST)
+
+    cf_9 : str | None
+        CF.9 (opt) - Original Text (ST)
+
+    cf_10 : str | None
+        CF.10 (opt) - Second Alternate Identifier (ST)
+
+    cf_11 : FT | None
+        CF.11 (opt) - Second Alternate Formatted Text (FT)
+
+    cf_12 : str | None
+        CF.12 (opt) - Name of Second Alternate Coding System (ID)
+
+    cf_13 : str | None
+        CF.13 (opt) - Second Alternate Coding System Version ID (ST)
+
+    cf_14 : str | None
+        CF.14 (opt) - Coding System OID (ST)
+
+    cf_15 : str | None
+        CF.15 (opt) - Value Set OID (ST)
+
+    cf_16 : str | None
+        CF.16 (opt) - Value Set Version ID (DTM)
+
+    cf_17 : str | None
+        CF.17 (opt) - Alternate Coding System OID (ST)
+
+    cf_18 : str | None
+        CF.18 (opt) - Alternate Value Set OID (ST)
+
+    cf_19 : str | None
+        CF.19 (opt) - Alternate Value Set Version ID (DTM)
+
+    cf_20 : str | None
+        CF.20 (opt) - Second Alternate Coding System OID (ST)
+
+    cf_21 : str | None
+        CF.21 (opt) - Second Alternate Value Set OID (ST)
+
+    cf_22 : str | None
+        CF.22 (opt) - Second Alternate Value Set Version ID (DTM)
+    """
 
     cf_1: Optional[str] = Field(
         default=None,

@@ -14,7 +14,22 @@ from ..datatypes.CE import CE
 
 
 class EQL(BaseModel):
-    """HL7 v2 EQL segment."""
+    """HL7 v2 EQL segment.
+
+    Attributes
+    ----------
+    eql_1 : str | None
+        EQL.1 (opt) - Query Tag (ST)
+
+    eql_2 : str
+        EQL.2 (req) - Query/Response Format Code (ID)
+
+    eql_3 : CE
+        EQL.3 (req) - EQL Query Name (CE)
+
+    eql_4 : str
+        EQL.4 (req) - EQL Query Statement (ST)
+    """
 
     eql_1: Optional[str] = Field(
         default=None,

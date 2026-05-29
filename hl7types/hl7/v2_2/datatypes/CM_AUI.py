@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_AUI(BaseModel):
-    """HL7 v2 CM_AUI data type."""
+    """HL7 v2 CM_AUI data type.
+
+    Attributes
+    ----------
+    cm_aui_1 : str | None
+        CM_AUI.1 (opt) - authorization number (ST)
+
+    cm_aui_2 : str | None
+        CM_AUI.2 (opt) - date (DT)
+
+    cm_aui_3 : str | None
+        CM_AUI.3 (opt) - source (ST)
+    """
 
     cm_aui_1: Optional[str] = Field(
         default=None,

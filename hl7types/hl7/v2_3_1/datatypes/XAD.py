@@ -12,7 +12,43 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class XAD(BaseModel):
-    """HL7 v2 XAD data type."""
+    """HL7 v2 XAD data type.
+
+    Attributes
+    ----------
+    xad_1 : str | None
+        XAD.1 (opt) - street address (ST)
+
+    xad_2 : str | None
+        XAD.2 (opt) - other designation (ST)
+
+    xad_3 : str | None
+        XAD.3 (opt) - city (ST)
+
+    xad_4 : str | None
+        XAD.4 (opt) - state or province (ST)
+
+    xad_5 : str | None
+        XAD.5 (opt) - zip or postal code (ST)
+
+    xad_6 : str | None
+        XAD.6 (opt) - country (ID)
+
+    xad_7 : str | None
+        XAD.7 (opt) - address type (ID)
+
+    xad_8 : str | None
+        XAD.8 (opt) - other geographic designation (ST)
+
+    xad_9 : str | None
+        XAD.9 (opt) - county/parish code (IS)
+
+    xad_10 : str | None
+        XAD.10 (opt) - census tract (IS)
+
+    xad_11 : str | None
+        XAD.11 (opt) - address representation code (ID)
+    """
 
     xad_1: Optional[str] = Field(
         default=None,

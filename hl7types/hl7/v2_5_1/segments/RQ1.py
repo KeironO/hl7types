@@ -14,7 +14,31 @@ from ..datatypes.CE import CE
 
 
 class RQ1(BaseModel):
-    """HL7 v2 RQ1 segment."""
+    """HL7 v2 RQ1 segment.
+
+    Attributes
+    ----------
+    rq1_1 : str | None
+        RQ1.1 (opt) - Anticipated Price (ST)
+
+    rq1_2 : CE | None
+        RQ1.2 (opt) - Manufacturer Identifier (CE)
+
+    rq1_3 : str | None
+        RQ1.3 (opt) - Manufacturer's Catalog (ST)
+
+    rq1_4 : CE | None
+        RQ1.4 (opt) - Vendor ID (CE)
+
+    rq1_5 : str | None
+        RQ1.5 (opt) - Vendor Catalog (ST)
+
+    rq1_6 : str | None
+        RQ1.6 (opt) - Taxable (ID)
+
+    rq1_7 : str | None
+        RQ1.7 (opt) - Substitute Allowed (ID)
+    """
 
     rq1_1: Optional[str] = Field(
         default=None,

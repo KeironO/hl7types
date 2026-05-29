@@ -14,7 +14,28 @@ from .FN import FN
 
 
 class PN(BaseModel):
-    """HL7 v2 PN data type."""
+    """HL7 v2 PN data type.
+
+    Attributes
+    ----------
+    pn_1 : FN | None
+        PN.1 (opt) - family+last name (FN)
+
+    pn_2 : str | None
+        PN.2 (opt) - given name (ST)
+
+    pn_3 : str | None
+        PN.3 (opt) - middle initial or name (ST)
+
+    pn_4 : str | None
+        PN.4 (opt) - suffix (e.g., JR or III) (ST)
+
+    pn_5 : str | None
+        PN.5 (opt) - prefix (e.g., DR) (ST)
+
+    pn_6 : str | None
+        PN.6 (opt) - degree (e.g., MD) (IS)
+    """
 
     pn_1: Optional[FN] = Field(
         default=None,

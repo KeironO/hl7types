@@ -14,7 +14,16 @@ from .TS import TS
 
 
 class CM_CCD(BaseModel):
-    """HL7 v2 CM_CCD data type."""
+    """HL7 v2 CM_CCD data type.
+
+    Attributes
+    ----------
+    cm_ccd_1 : str | None
+        CM_CCD.1 (opt) - When to Charge (ID)
+
+    cm_ccd_2 : TS | None
+        CM_CCD.2 (opt) - date/time (TS)
+    """
 
     cm_ccd_1: Optional[str] = Field(
         default=None,

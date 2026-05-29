@@ -12,7 +12,58 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class UB2(BaseModel):
-    """HL7 v2 UB2 segment."""
+    """HL7 v2 UB2 segment.
+
+    Attributes
+    ----------
+    ub2_1 : str | None
+        UB2.1 (opt) - Set ID - UB92 (SI)
+
+    ub2_2 : str | None
+        UB2.2 (opt) - Co-insurance days (9) (ST)
+
+    ub2_3 : list[str] | None
+        UB2.3 (opt, rep) - Condition code (24-30) (ID)
+
+    ub2_4 : str | None
+        UB2.4 (opt) - Covered days (7) (ST)
+
+    ub2_5 : str | None
+        UB2.5 (opt) - Non-covered days (8) (ST)
+
+    ub2_6 : list[str] | None
+        UB2.6 (opt, rep) - Value amount and code (39-41) (CM)
+
+    ub2_7 : list[str] | None
+        UB2.7 (opt, rep) - Occurrence code and date (32-35) (CM)
+
+    ub2_8 : list[str] | None
+        UB2.8 (opt, rep) - Occurrence span code / dates (36) (CM)
+
+    ub2_9 : list[str] | None
+        UB2.9 (opt, rep) - UB92 locator 2 (state) (ST)
+
+    ub2_10 : list[str] | None
+        UB2.10 (opt, rep) - UB92 locator 11 (state) (ST)
+
+    ub2_11 : str | None
+        UB2.11 (opt) - UB92 locator 31 (national) (ST)
+
+    ub2_12 : list[str] | None
+        UB2.12 (opt, rep) - Document control number (37) (ST)
+
+    ub2_13 : list[str] | None
+        UB2.13 (opt, rep) - UB92 locator 49 (national) (ST)
+
+    ub2_14 : list[str] | None
+        UB2.14 (opt, rep) - UB92 locator 56 (state) (ST)
+
+    ub2_15 : str | None
+        UB2.15 (opt) - UB92 locator 57 (national) (ST)
+
+    ub2_16 : list[str] | None
+        UB2.16 (opt, rep) - UB92 Locator 78 (state) (ST)
+    """
 
     ub2_1: Optional[str] = Field(
         default=None,

@@ -14,7 +14,58 @@ from .HD import HD
 
 
 class CM_LA1(BaseModel):
-    """HL7 v2 CM_LA1 data type."""
+    """HL7 v2 CM_LA1 data type.
+
+    Attributes
+    ----------
+    cm_la1_1 : str | None
+        CM_LA1.1 (opt) - point of care (ST) (ST)
+
+    cm_la1_2 : str | None
+        CM_LA1.2 (opt) - room (IS)
+
+    cm_la1_3 : str | None
+        CM_LA1.3 (opt) - bed (IS)
+
+    cm_la1_4 : HD | None
+        CM_LA1.4 (opt) - facility (HD) (HD)
+
+    cm_la1_5 : str | None
+        CM_LA1.5 (opt) - location status (IS)
+
+    cm_la1_6 : str | None
+        CM_LA1.6 (opt) - person location type (IS)
+
+    cm_la1_7 : str | None
+        CM_LA1.7 (opt) - building (IS)
+
+    cm_la1_8 : str | None
+        CM_LA1.8 (opt) - floor (ST)
+
+    cm_la1_9 : str | None
+        CM_LA1.9 (opt) - street address (ST)
+
+    cm_la1_10 : str | None
+        CM_LA1.10 (opt) - other designation (ST)
+
+    cm_la1_11 : str | None
+        CM_LA1.11 (opt) - city (ST)
+
+    cm_la1_12 : str | None
+        CM_LA1.12 (opt) - state or province (ST)
+
+    cm_la1_13 : str | None
+        CM_LA1.13 (opt) - zip or postal code (ST)
+
+    cm_la1_14 : str | None
+        CM_LA1.14 (opt) - country (ID)
+
+    cm_la1_15 : str | None
+        CM_LA1.15 (opt) - address type (ID)
+
+    cm_la1_16 : str | None
+        CM_LA1.16 (opt) - other geographic designation (ST)
+    """
 
     cm_la1_1: Optional[str] = Field(
         default=None,

@@ -12,7 +12,34 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class AD(BaseModel):
-    """HL7 v2 AD data type."""
+    """HL7 v2 AD data type.
+
+    Attributes
+    ----------
+    ad_1 : str | None
+        AD.1 (opt) - street address (ST)
+
+    ad_2 : str | None
+        AD.2 (opt) - other designation (ST)
+
+    ad_3 : str | None
+        AD.3 (opt) - city (ST)
+
+    ad_4 : str | None
+        AD.4 (opt) - state or province (ST)
+
+    ad_5 : str | None
+        AD.5 (opt) - zip or postal code (ID)
+
+    ad_6 : str | None
+        AD.6 (opt) - country (ID)
+
+    ad_7 : str | None
+        AD.7 (opt) - type (ID)
+
+    ad_8 : str | None
+        AD.8 (opt) - other geographic designation (ST)
+    """
 
     ad_1: Optional[str] = Field(
         default=None,

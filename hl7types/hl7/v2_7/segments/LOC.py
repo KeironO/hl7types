@@ -18,7 +18,37 @@ from ..datatypes.XTN import XTN
 
 
 class LOC(BaseModel):
-    """HL7 v2 LOC segment."""
+    """HL7 v2 LOC segment.
+
+    Attributes
+    ----------
+    loc_1 : PL
+        LOC.1 (req) - Primary Key Value - LOC (PL)
+
+    loc_2 : str | None
+        LOC.2 (opt) - Location Description (ST)
+
+    loc_3 : list[CWE]
+        LOC.3 (req, rep) - Location Type - LOC (CWE)
+
+    loc_4 : list[XON] | None
+        LOC.4 (opt, rep) - Organization Name - LOC (XON)
+
+    loc_5 : list[XAD] | None
+        LOC.5 (opt, rep) - Location Address (XAD)
+
+    loc_6 : list[XTN] | None
+        LOC.6 (opt, rep) - Location Phone (XTN)
+
+    loc_7 : list[CWE] | None
+        LOC.7 (opt, rep) - License Number (CWE)
+
+    loc_8 : list[CWE] | None
+        LOC.8 (opt, rep) - Location Equipment (CWE)
+
+    loc_9 : CWE | None
+        LOC.9 (opt) - Location Service Code (CWE)
+    """
 
     loc_1: PL = Field(
         default=...,

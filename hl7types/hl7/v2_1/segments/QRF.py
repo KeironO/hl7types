@@ -12,7 +12,25 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class QRF(BaseModel):
-    """HL7 v2 QRF segment."""
+    """HL7 v2 QRF segment.
+
+    Attributes
+    ----------
+    qrf_1 : list[str]
+        QRF.1 (req, rep) - WHERE SUBJECT FILTER (ST)
+
+    qrf_2 : str | None
+        QRF.2 (opt) - WHEN DATA START DATE/TIME (TS)
+
+    qrf_3 : str | None
+        QRF.3 (opt) - WHEN DATA END DATE/TIME (TS)
+
+    qrf_4 : list[str] | None
+        QRF.4 (opt, rep) - WHAT USER QUALIFIER (ST)
+
+    qrf_5 : list[str] | None
+        QRF.5 (opt, rep) - OTHER QRY SUBJECT FILTER (ST)
+    """
 
     qrf_1: List[str] = Field(
         default=...,

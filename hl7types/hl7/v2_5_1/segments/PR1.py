@@ -17,7 +17,70 @@ from ..datatypes.XCN import XCN
 
 
 class PR1(BaseModel):
-    """HL7 v2 PR1 segment."""
+    """HL7 v2 PR1 segment.
+
+    Attributes
+    ----------
+    pr1_1 : str
+        PR1.1 (req) - Set ID - PR1 (SI)
+
+    pr1_2 : str | None
+        PR1.2 (opt) - Procedure Coding Method (IS)
+
+    pr1_3 : CE
+        PR1.3 (req) - Procedure Code (CE)
+
+    pr1_4 : str | None
+        PR1.4 (opt) - Procedure Description (ST)
+
+    pr1_5 : TS
+        PR1.5 (req) - Procedure Date/Time (TS)
+
+    pr1_6 : str | None
+        PR1.6 (opt) - Procedure Functional Type (IS)
+
+    pr1_7 : str | None
+        PR1.7 (opt) - Procedure Minutes (NM)
+
+    pr1_8 : list[XCN] | None
+        PR1.8 (opt, rep) - Anesthesiologist (XCN)
+
+    pr1_9 : str | None
+        PR1.9 (opt) - Anesthesia Code (IS)
+
+    pr1_10 : str | None
+        PR1.10 (opt) - Anesthesia Minutes (NM)
+
+    pr1_11 : list[XCN] | None
+        PR1.11 (opt, rep) - Surgeon (XCN)
+
+    pr1_12 : list[XCN] | None
+        PR1.12 (opt, rep) - Procedure Practitioner (XCN)
+
+    pr1_13 : CE | None
+        PR1.13 (opt) - Consent Code (CE)
+
+    pr1_14 : str | None
+        PR1.14 (opt) - Procedure Priority (ID)
+
+    pr1_15 : CE | None
+        PR1.15 (opt) - Associated Diagnosis Code (CE)
+
+    pr1_16 : list[CE] | None
+        PR1.16 (opt, rep) - Procedure Code Modifier (CE)
+
+    pr1_17 : str | None
+        PR1.17 (opt) - Procedure DRG Type (IS)
+
+    pr1_18 : list[CE] | None
+        PR1.18 (opt, rep) - Tissue Type Code (CE)
+
+    pr1_19 : EI | None
+        PR1.19 (opt) - Procedure Identifier (EI)
+
+    pr1_20 : str | None
+        PR1.20 (opt) - Procedure Action Code (ID)
+    """
 
     pr1_1: str = Field(
         default=...,

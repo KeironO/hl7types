@@ -21,7 +21,97 @@ from ..datatypes.XCN import XCN
 
 
 class FT1(BaseModel):
-    """HL7 v2 FT1 segment."""
+    """HL7 v2 FT1 segment.
+
+    Attributes
+    ----------
+    ft1_1 : str | None
+        FT1.1 (opt) - Set ID - FT1 (SI)
+
+    ft1_2 : str | None
+        FT1.2 (opt) - Transaction ID (ST)
+
+    ft1_3 : str | None
+        FT1.3 (opt) - Transaction Batch ID (ST)
+
+    ft1_4 : DR
+        FT1.4 (req) - Transaction Date (DR)
+
+    ft1_5 : str | None
+        FT1.5 (opt) - Transaction Posting Date (DTM)
+
+    ft1_6 : str
+        FT1.6 (req) - Transaction Type (IS)
+
+    ft1_7 : CWE
+        FT1.7 (req) - Transaction Code (CWE)
+
+    ft1_10 : str | None
+        FT1.10 (opt) - Transaction Quantity (NM)
+
+    ft1_11 : CP | None
+        FT1.11 (opt) - Transaction Amount - Extended (CP)
+
+    ft1_12 : CP | None
+        FT1.12 (opt) - Transaction amount - unit (CP)
+
+    ft1_13 : CWE | None
+        FT1.13 (opt) - Department Code (CWE)
+
+    ft1_14 : CWE | None
+        FT1.14 (opt) - Insurance Plan ID (CWE)
+
+    ft1_15 : CP | None
+        FT1.15 (opt) - Insurance Amount (CP)
+
+    ft1_16 : PL | None
+        FT1.16 (opt) - Assigned Patient Location (PL)
+
+    ft1_17 : str | None
+        FT1.17 (opt) - Fee Schedule (IS)
+
+    ft1_18 : str | None
+        FT1.18 (opt) - Patient Type (IS)
+
+    ft1_19 : list[CWE] | None
+        FT1.19 (opt, rep) - Diagnosis Code - FT1 (CWE)
+
+    ft1_20 : list[XCN] | None
+        FT1.20 (opt, rep) - Performed By Code (XCN)
+
+    ft1_21 : list[XCN] | None
+        FT1.21 (opt, rep) - Ordered By Code (XCN)
+
+    ft1_22 : CP | None
+        FT1.22 (opt) - Unit Cost (CP)
+
+    ft1_23 : EI | None
+        FT1.23 (opt) - Filler Order Number (EI)
+
+    ft1_24 : list[XCN] | None
+        FT1.24 (opt, rep) - Entered By Code (XCN)
+
+    ft1_25 : CNE | None
+        FT1.25 (opt) - Procedure Code (CNE)
+
+    ft1_26 : list[CNE] | None
+        FT1.26 (opt, rep) - Procedure Code Modifier (CNE)
+
+    ft1_27 : CWE | None
+        FT1.27 (opt) - Advanced Beneficiary Notice Code (CWE)
+
+    ft1_28 : CWE | None
+        FT1.28 (opt) - Medically Necessary Duplicate Procedure Reason (CWE)
+
+    ft1_29 : CWE | None
+        FT1.29 (opt) - NDC Code (CWE)
+
+    ft1_30 : CX | None
+        FT1.30 (opt) - Payment Reference ID (CX)
+
+    ft1_31 : list[str] | None
+        FT1.31 (opt, rep) - Transaction Reference Key (SI)
+    """
 
     ft1_1: Optional[str] = Field(
         default=None,

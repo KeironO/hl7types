@@ -12,7 +12,46 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class XTN(BaseModel):
-    """HL7 v2 XTN data type."""
+    """HL7 v2 XTN data type.
+
+    Attributes
+    ----------
+    xtn_1 : str | None
+        XTN.1 (opt) - Telephone Number (ST)
+
+    xtn_2 : str | None
+        XTN.2 (opt) - Telecommunication Use Code (ID)
+
+    xtn_3 : str | None
+        XTN.3 (opt) - Telecommunication Equipment Type (ID)
+
+    xtn_4 : str | None
+        XTN.4 (opt) - Email Address (ST)
+
+    xtn_5 : str | None
+        XTN.5 (opt) - Country Code (NM)
+
+    xtn_6 : str | None
+        XTN.6 (opt) - Area/City Code (NM)
+
+    xtn_7 : str | None
+        XTN.7 (opt) - Local Number (NM)
+
+    xtn_8 : str | None
+        XTN.8 (opt) - Extension (NM)
+
+    xtn_9 : str | None
+        XTN.9 (opt) - Any Text (ST)
+
+    xtn_10 : str | None
+        XTN.10 (opt) - Extension Prefix (ST)
+
+    xtn_11 : str | None
+        XTN.11 (opt) - Speed Dial Code (ST)
+
+    xtn_12 : str | None
+        XTN.12 (opt) - Unformatted Telephone number (ST)
+    """
 
     xtn_1: Optional[str] = Field(
         default=None,

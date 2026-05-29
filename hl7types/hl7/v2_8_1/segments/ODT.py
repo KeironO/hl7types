@@ -14,7 +14,19 @@ from ..datatypes.CWE import CWE
 
 
 class ODT(BaseModel):
-    """HL7 v2 ODT segment."""
+    """HL7 v2 ODT segment.
+
+    Attributes
+    ----------
+    odt_1 : CWE
+        ODT.1 (req) - Tray Type (CWE)
+
+    odt_2 : list[CWE] | None
+        ODT.2 (opt, rep) - Service Period (CWE)
+
+    odt_3 : str | None
+        ODT.3 (opt) - Text Instruction (ST)
+    """
 
     odt_1: CWE = Field(
         default=...,

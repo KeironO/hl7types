@@ -14,7 +14,16 @@ from .EI import EI
 
 
 class EIP(BaseModel):
-    """HL7 v2 EIP data type."""
+    """HL7 v2 EIP data type.
+
+    Attributes
+    ----------
+    eip_1 : EI | None
+        EIP.1 (opt) - parent´s placer order number (EI)
+
+    eip_2 : EI | None
+        EIP.2 (opt) - parent´s filler order number (EI)
+    """
 
     eip_1: Optional[EI] = Field(
         default=None,

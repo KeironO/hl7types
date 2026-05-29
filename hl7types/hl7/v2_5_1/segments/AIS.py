@@ -15,7 +15,46 @@ from ..datatypes.TS import TS
 
 
 class AIS(BaseModel):
-    """HL7 v2 AIS segment."""
+    """HL7 v2 AIS segment.
+
+    Attributes
+    ----------
+    ais_1 : str
+        AIS.1 (req) - Set ID - AIS (SI)
+
+    ais_2 : str | None
+        AIS.2 (opt) - Segment Action Code (ID)
+
+    ais_3 : CE
+        AIS.3 (req) - Universal Service Identifier (CE)
+
+    ais_4 : TS | None
+        AIS.4 (opt) - Start Date/Time (TS)
+
+    ais_5 : str | None
+        AIS.5 (opt) - Start Date/Time Offset (NM)
+
+    ais_6 : CE | None
+        AIS.6 (opt) - Start Date/Time Offset Units (CE)
+
+    ais_7 : str | None
+        AIS.7 (opt) - Duration (NM)
+
+    ais_8 : CE | None
+        AIS.8 (opt) - Duration Units (CE)
+
+    ais_9 : str | None
+        AIS.9 (opt) - Allow Substitution Code (IS)
+
+    ais_10 : CE | None
+        AIS.10 (opt) - Filler Status Code (CE)
+
+    ais_11 : list[CE] | None
+        AIS.11 (opt, rep) - Placer Supplemental Service Information (CE)
+
+    ais_12 : list[CE] | None
+        AIS.12 (opt, rep) - Filler Supplemental Service Information (CE)
+    """
 
     ais_1: str = Field(
         default=...,

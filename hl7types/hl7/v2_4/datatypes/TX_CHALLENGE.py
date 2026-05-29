@@ -14,7 +14,16 @@ from .TX import TX
 
 
 class TX_CHALLENGE(BaseModel):
-    """HL7 v2 TX_CHALLENGE data type."""
+    """HL7 v2 TX_CHALLENGE data type.
+
+    Attributes
+    ----------
+    tx_challenge_1 : TX | None
+        TX_CHALLENGE.1 (opt) - ??????????? (TX)
+
+    tx_challenge_2 : TX | None
+        TX_CHALLENGE.2 (opt) - ??????????? (TX)
+    """
 
     tx_challenge_1: Optional[TX] = Field(
         default=None,

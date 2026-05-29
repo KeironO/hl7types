@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NA(BaseModel):
-    """HL7 v2 NA data type."""
+    """HL7 v2 NA data type.
+
+    Attributes
+    ----------
+    na_1 : str
+        NA.1 (req) - Value1 (NM)
+
+    na_2 : str | None
+        NA.2 (opt) - Value2 (NM)
+
+    na_3 : str | None
+        NA.3 (opt) - Value3 (NM)
+
+    na_4 : str | None
+        NA.4 (opt) - Value4 (NM)
+    """
 
     na_1: str = Field(
         default=...,

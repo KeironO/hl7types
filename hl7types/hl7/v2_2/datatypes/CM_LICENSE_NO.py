@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_LICENSE_NO(BaseModel):
-    """HL7 v2 CM_LICENSE_NO data type."""
+    """HL7 v2 CM_LICENSE_NO data type.
+
+    Attributes
+    ----------
+    cm_license_no_1 : str | None
+        CM_LICENSE_NO.1 (opt) - License Number (ST)
+
+    cm_license_no_2 : str | None
+        CM_LICENSE_NO.2 (opt) - issuing state,province,country (ST)
+    """
 
     cm_license_no_1: Optional[str] = Field(
         default=None,

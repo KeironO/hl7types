@@ -16,7 +16,55 @@ from ..datatypes.XON import XON
 
 
 class PDC(BaseModel):
-    """HL7 v2 PDC segment."""
+    """HL7 v2 PDC segment.
+
+    Attributes
+    ----------
+    pdc_1 : list[XON]
+        PDC.1 (req, rep) - Manufacturer/Distributor (XON)
+
+    pdc_2 : CWE
+        PDC.2 (req) - Country (CWE)
+
+    pdc_3 : str
+        PDC.3 (req) - Brand Name (ST)
+
+    pdc_4 : str | None
+        PDC.4 (opt) - Device Family Name (ST)
+
+    pdc_5 : CWE | None
+        PDC.5 (opt) - Generic Name (CWE)
+
+    pdc_6 : list[str] | None
+        PDC.6 (opt, rep) - Model Identifier (ST)
+
+    pdc_7 : str | None
+        PDC.7 (opt) - Catalogue Identifier (ST)
+
+    pdc_8 : list[str] | None
+        PDC.8 (opt, rep) - Other Identifier (ST)
+
+    pdc_9 : CWE | None
+        PDC.9 (opt) - Product Code (CWE)
+
+    pdc_10 : str | None
+        PDC.10 (opt) - Marketing Basis (ID)
+
+    pdc_11 : str | None
+        PDC.11 (opt) - Marketing Approval ID (ST)
+
+    pdc_12 : CQ | None
+        PDC.12 (opt) - Labeled Shelf Life (CQ)
+
+    pdc_13 : CQ | None
+        PDC.13 (opt) - Expected Shelf Life (CQ)
+
+    pdc_14 : str | None
+        PDC.14 (opt) - Date First Marketed (DTM)
+
+    pdc_15 : str | None
+        PDC.15 (opt) - Date Last Marketed (DTM)
+    """
 
     pdc_1: List[XON] = Field(
         default=...,

@@ -15,7 +15,49 @@ from .FN import FN
 
 
 class XPN(BaseModel):
-    """HL7 v2 XPN data type."""
+    """HL7 v2 XPN data type.
+
+    Attributes
+    ----------
+    xpn_1 : FN | None
+        XPN.1 (opt) - Family Name (FN)
+
+    xpn_2 : str | None
+        XPN.2 (opt) - Given Name (ST)
+
+    xpn_3 : str | None
+        XPN.3 (opt) - Second and Further Given Names or Initials Thereof (ST)
+
+    xpn_4 : str | None
+        XPN.4 (opt) - Suffix (e.g., JR or III) (ST)
+
+    xpn_5 : str | None
+        XPN.5 (opt) - Prefix (e.g., DR) (ST)
+
+    xpn_7 : str | None
+        XPN.7 (opt) - Name Type Code (ID)
+
+    xpn_8 : str | None
+        XPN.8 (opt) - Name Representation Code (ID)
+
+    xpn_9 : CWE | None
+        XPN.9 (opt) - Name Context (CWE)
+
+    xpn_11 : str | None
+        XPN.11 (opt) - Name Assembly Order (ID)
+
+    xpn_12 : str | None
+        XPN.12 (opt) - Effective Date (DTM)
+
+    xpn_13 : str | None
+        XPN.13 (opt) - Expiration Date (DTM)
+
+    xpn_14 : str | None
+        XPN.14 (opt) - Professional Suffix (ST)
+
+    xpn_15 : str | None
+        XPN.15 (opt) - Called By (ST)
+    """
 
     xpn_1: Optional[FN] = Field(
         default=None,

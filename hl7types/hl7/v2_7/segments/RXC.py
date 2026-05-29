@@ -14,7 +14,37 @@ from ..datatypes.CWE import CWE
 
 
 class RXC(BaseModel):
-    """HL7 v2 RXC segment."""
+    """HL7 v2 RXC segment.
+
+    Attributes
+    ----------
+    rxc_1 : str
+        RXC.1 (req) - RX Component Type (ID)
+
+    rxc_2 : CWE
+        RXC.2 (req) - Component Code (CWE)
+
+    rxc_3 : str
+        RXC.3 (req) - Component Amount (NM)
+
+    rxc_4 : CWE
+        RXC.4 (req) - Component Units (CWE)
+
+    rxc_5 : str | None
+        RXC.5 (opt) - Component Strength (NM)
+
+    rxc_6 : CWE | None
+        RXC.6 (opt) - Component Strength Units (CWE)
+
+    rxc_7 : list[CWE] | None
+        RXC.7 (opt, rep) - Supplementary Code (CWE)
+
+    rxc_8 : str | None
+        RXC.8 (opt) - Component Drug Strength Volume (NM)
+
+    rxc_9 : CWE | None
+        RXC.9 (opt) - Component Drug Strength Volume Units (CWE)
+    """
 
     rxc_1: str = Field(
         default=...,

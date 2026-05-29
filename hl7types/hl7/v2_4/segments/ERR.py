@@ -14,7 +14,13 @@ from ..datatypes.ELD import ELD
 
 
 class ERR(BaseModel):
-    """HL7 v2 ERR segment."""
+    """HL7 v2 ERR segment.
+
+    Attributes
+    ----------
+    err_1 : list[ELD]
+        ERR.1 (req, rep) - Error Code and Location (ELD)
+    """
 
     err_1: List[ELD] = Field(
         default=...,

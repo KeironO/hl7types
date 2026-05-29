@@ -14,7 +14,16 @@ from .CE import CE
 
 
 class CQ(BaseModel):
-    """HL7 v2 CQ data type."""
+    """HL7 v2 CQ data type.
+
+    Attributes
+    ----------
+    cq_1 : str | None
+        CQ.1 (opt) - quantity (NM)
+
+    cq_2 : CE | None
+        CQ.2 (opt) - units (CE)
+    """
 
     cq_1: Optional[str] = Field(
         default=None,

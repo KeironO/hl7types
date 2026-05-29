@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_FILLER(BaseModel):
-    """HL7 v2 CM_FILLER data type."""
+    """HL7 v2 CM_FILLER data type.
+
+    Attributes
+    ----------
+    cm_filler_1 : str | None
+        CM_FILLER.1 (opt) - unique filler id (ID)
+
+    cm_filler_2 : str | None
+        CM_FILLER.2 (opt) - filler application ID (ID)
+    """
 
     cm_filler_1: Optional[str] = Field(
         default=None,

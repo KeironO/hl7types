@@ -17,7 +17,70 @@ from ..datatypes.PL import PL
 
 
 class PR1(BaseModel):
-    """HL7 v2 PR1 segment."""
+    """HL7 v2 PR1 segment.
+
+    Attributes
+    ----------
+    pr1_1 : str
+        PR1.1 (req) - Set ID - PR1 (SI)
+
+    pr1_3 : CNE
+        PR1.3 (req) - Procedure Code (CNE)
+
+    pr1_5 : str
+        PR1.5 (req) - Procedure Date/Time (DTM)
+
+    pr1_6 : CWE | None
+        PR1.6 (opt) - Procedure Functional Type (CWE)
+
+    pr1_7 : str | None
+        PR1.7 (opt) - Procedure Minutes (NM)
+
+    pr1_9 : CWE | None
+        PR1.9 (opt) - Anesthesia Code (CWE)
+
+    pr1_10 : str | None
+        PR1.10 (opt) - Anesthesia Minutes (NM)
+
+    pr1_13 : CWE | None
+        PR1.13 (opt) - Consent Code (CWE)
+
+    pr1_14 : str | None
+        PR1.14 (opt) - Procedure Priority (NM)
+
+    pr1_15 : CWE | None
+        PR1.15 (opt) - Associated Diagnosis Code (CWE)
+
+    pr1_16 : list[CNE] | None
+        PR1.16 (opt, rep) - Procedure Code Modifier (CNE)
+
+    pr1_17 : CWE | None
+        PR1.17 (opt) - Procedure DRG Type (CWE)
+
+    pr1_18 : list[CWE] | None
+        PR1.18 (opt, rep) - Tissue Type Code (CWE)
+
+    pr1_19 : EI | None
+        PR1.19 (opt) - Procedure Identifier (EI)
+
+    pr1_20 : str | None
+        PR1.20 (opt) - Procedure Action Code (ID)
+
+    pr1_21 : CWE | None
+        PR1.21 (opt) - DRG Procedure Determination Status (CWE)
+
+    pr1_22 : CWE | None
+        PR1.22 (opt) - DRG Procedure Relevance (CWE)
+
+    pr1_23 : list[PL] | None
+        PR1.23 (opt, rep) - Treating Organizational Unit (PL)
+
+    pr1_24 : str | None
+        PR1.24 (opt) - Respiratory Within Surgery (ID)
+
+    pr1_25 : EI | None
+        PR1.25 (opt) - Parent Procedure ID (EI)
+    """
 
     pr1_1: str = Field(
         default=...,

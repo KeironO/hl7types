@@ -14,7 +14,40 @@ from ..datatypes.CE import CE
 
 
 class RQD(BaseModel):
-    """HL7 v2 RQD segment."""
+    """HL7 v2 RQD segment.
+
+    Attributes
+    ----------
+    rqd_1 : str | None
+        RQD.1 (opt) - Requisition Line Number (SI)
+
+    rqd_2 : CE | None
+        RQD.2 (opt) - Item Code - Internal (CE)
+
+    rqd_3 : CE | None
+        RQD.3 (opt) - Item Code - External (CE)
+
+    rqd_4 : CE | None
+        RQD.4 (opt) - Hospital Item Code (CE)
+
+    rqd_5 : str | None
+        RQD.5 (opt) - Requisition Quantity (NM)
+
+    rqd_6 : CE | None
+        RQD.6 (opt) - Requisition Unit of measure (CE)
+
+    rqd_7 : str | None
+        RQD.7 (opt) - Department cost center (ID)
+
+    rqd_8 : str | None
+        RQD.8 (opt) - Item Natural Account Code (ID)
+
+    rqd_9 : CE | None
+        RQD.9 (opt) - Deliver-to ID (CE)
+
+    rqd_10 : str | None
+        RQD.10 (opt) - Date Needed (DT)
+    """
 
     rqd_1: Optional[str] = Field(
         default=None,

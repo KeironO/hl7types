@@ -15,7 +15,76 @@ from ..datatypes.CN import CN
 
 
 class RXO(BaseModel):
-    """HL7 v2 RXO segment."""
+    """HL7 v2 RXO segment.
+
+    Attributes
+    ----------
+    rxo_1 : CE
+        RXO.1 (req) - Requested Give Code (CE)
+
+    rxo_2 : str
+        RXO.2 (req) - Requested Give Amount - Minimum (NM)
+
+    rxo_3 : str | None
+        RXO.3 (opt) - Requested Give Amount - Maximum (NM)
+
+    rxo_4 : CE
+        RXO.4 (req) - Requested Give Units (CE)
+
+    rxo_5 : CE | None
+        RXO.5 (opt) - Requested Dosage Form (CE)
+
+    rxo_6 : list[CE] | None
+        RXO.6 (opt, rep) - Provider's Pharmacy Instructions (CE)
+
+    rxo_7 : list[CE] | None
+        RXO.7 (opt, rep) - Provider's Administration Instructions (CE)
+
+    rxo_8 : str | None
+        RXO.8 (opt) - Deliver To Location (CM)
+
+    rxo_9 : str | None
+        RXO.9 (opt) - Allow Substitutions (ID)
+
+    rxo_10 : CE | None
+        RXO.10 (opt) - Requested Dispense Code (CE)
+
+    rxo_11 : str | None
+        RXO.11 (opt) - Requested Dispense Amount (NM)
+
+    rxo_12 : CE | None
+        RXO.12 (opt) - Requested Dispense Units (CE)
+
+    rxo_13 : str | None
+        RXO.13 (opt) - Number of Refills (NM)
+
+    rxo_14 : CN | None
+        RXO.14 (opt) - Ordering Provider's DEA Number (CN)
+
+    rxo_15 : CN | None
+        RXO.15 (opt) - Pharmacist/Treatment Supplier's Verifier ID (CN)
+
+    rxo_16 : str | None
+        RXO.16 (opt) - Needs Human Review (ID)
+
+    rxo_17 : str | None
+        RXO.17 (opt) - Requested Give Per (Time Unit) (ST)
+
+    rxo_18 : str | None
+        RXO.18 (opt) - Requested Give Strength (NM)
+
+    rxo_19 : CE | None
+        RXO.19 (opt) - Requested Give Strength Units (CE)
+
+    rxo_20 : CE | None
+        RXO.20 (opt) - Indication (CE)
+
+    rxo_21 : str | None
+        RXO.21 (opt) - Requested Give Rate Amount (ST)
+
+    rxo_22 : CE | None
+        RXO.22 (opt) - Requested Give Rate Units (CE)
+    """
 
     rxo_1: CE = Field(
         default=...,

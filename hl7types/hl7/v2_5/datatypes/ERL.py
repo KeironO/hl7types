@@ -12,7 +12,28 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class ERL(BaseModel):
-    """HL7 v2 ERL data type."""
+    """HL7 v2 ERL data type.
+
+    Attributes
+    ----------
+    erl_1 : str | None
+        ERL.1 (opt) - Segment ID (ST)
+
+    erl_2 : str | None
+        ERL.2 (opt) - Segment Sequence (NM)
+
+    erl_3 : str | None
+        ERL.3 (opt) - Field Position (NM)
+
+    erl_4 : str | None
+        ERL.4 (opt) - Field Repetition (NM)
+
+    erl_5 : str | None
+        ERL.5 (opt) - Component Number (NM)
+
+    erl_6 : str | None
+        ERL.6 (opt) - Sub-Component Number (NM)
+    """
 
     erl_1: Optional[str] = Field(
         default=None,

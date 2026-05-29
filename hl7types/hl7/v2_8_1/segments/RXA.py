@@ -18,7 +18,94 @@ from ..datatypes.XCN import XCN
 
 
 class RXA(BaseModel):
-    """HL7 v2 RXA segment."""
+    """HL7 v2 RXA segment.
+
+    Attributes
+    ----------
+    rxa_1 : str
+        RXA.1 (req) - Give Sub-ID Counter (NM)
+
+    rxa_2 : str
+        RXA.2 (req) - Administration Sub-ID Counter (NM)
+
+    rxa_3 : str
+        RXA.3 (req) - Date/Time Start of Administration (DTM)
+
+    rxa_4 : str
+        RXA.4 (req) - Date/Time End of Administration (DTM)
+
+    rxa_5 : CWE
+        RXA.5 (req) - Administered Code (CWE)
+
+    rxa_6 : str
+        RXA.6 (req) - Administered Amount (NM)
+
+    rxa_7 : CWE | None
+        RXA.7 (opt) - Administered Units (CWE)
+
+    rxa_8 : CWE | None
+        RXA.8 (opt) - Administered Dosage Form (CWE)
+
+    rxa_9 : list[CWE] | None
+        RXA.9 (opt, rep) - Administration Notes (CWE)
+
+    rxa_10 : list[XCN] | None
+        RXA.10 (opt, rep) - Administering Provider (XCN)
+
+    rxa_12 : str | None
+        RXA.12 (opt) - Administered Per (Time Unit) (ST)
+
+    rxa_13 : str | None
+        RXA.13 (opt) - Administered Strength (NM)
+
+    rxa_14 : CWE | None
+        RXA.14 (opt) - Administered Strength Units (CWE)
+
+    rxa_15 : list[str] | None
+        RXA.15 (opt, rep) - Substance Lot Number (ST)
+
+    rxa_16 : list[str] | None
+        RXA.16 (opt, rep) - Substance Expiration Date (DTM)
+
+    rxa_17 : list[CWE] | None
+        RXA.17 (opt, rep) - Substance Manufacturer Name (CWE)
+
+    rxa_18 : list[CWE] | None
+        RXA.18 (opt, rep) - Substance/Treatment Refusal Reason (CWE)
+
+    rxa_19 : list[CWE] | None
+        RXA.19 (opt, rep) - Indication (CWE)
+
+    rxa_20 : str | None
+        RXA.20 (opt) - Completion Status (ID)
+
+    rxa_21 : str | None
+        RXA.21 (opt) - Action Code - RXA (ID)
+
+    rxa_22 : str | None
+        RXA.22 (opt) - System Entry Date/Time (DTM)
+
+    rxa_23 : str | None
+        RXA.23 (opt) - Administered Drug Strength Volume (NM)
+
+    rxa_24 : CWE | None
+        RXA.24 (opt) - Administered Drug Strength Volume Units (CWE)
+
+    rxa_25 : CWE | None
+        RXA.25 (opt) - Administered Barcode Identifier (CWE)
+
+    rxa_26 : str | None
+        RXA.26 (opt) - Pharmacy Order Type (ID)
+
+    rxa_27 : PL | None
+        RXA.27 (opt) - Administer-at (PL)
+
+    rxa_28 : XAD | None
+        RXA.28 (opt) - Administered-at Address (XAD)
+
+    rxa_29 : list[EI] | None
+        RXA.29 (opt, rep) - Administered Tag Identifier (EI)
+    """
 
     rxa_1: str = Field(
         default=...,

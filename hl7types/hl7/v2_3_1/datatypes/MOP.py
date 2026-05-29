@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class MOP(BaseModel):
-    """HL7 v2 MOP data type."""
+    """HL7 v2 MOP data type.
+
+    Attributes
+    ----------
+    mop_1 : str | None
+        MOP.1 (opt) - money or percentage indicator (IS)
+
+    mop_2 : str | None
+        MOP.2 (opt) - money or percentage quantity (NM)
+    """
 
     mop_1: Optional[str] = Field(
         default=None,

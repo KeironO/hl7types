@@ -12,7 +12,37 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CWE(BaseModel):
-    """HL7 v2 CWE data type."""
+    """HL7 v2 CWE data type.
+
+    Attributes
+    ----------
+    cwe_1 : str | None
+        CWE.1 (opt) - identifier (ST) (ST)
+
+    cwe_2 : str | None
+        CWE.2 (opt) - text (ST)
+
+    cwe_3 : str | None
+        CWE.3 (opt) - name of coding system (IS)
+
+    cwe_4 : str | None
+        CWE.4 (opt) - alternate identifier (ST) (ST)
+
+    cwe_5 : str | None
+        CWE.5 (opt) - alternate text (ST)
+
+    cwe_6 : str | None
+        CWE.6 (opt) - name of alternate coding system (IS)
+
+    cwe_7 : str | None
+        CWE.7 (opt) - coding system version ID (ST)
+
+    cwe_8 : str | None
+        CWE.8 (opt) - alternate coding system version ID (ST)
+
+    cwe_9 : str | None
+        CWE.9 (opt) - original text (ST)
+    """
 
     cwe_1: Optional[str] = Field(
         default=None,

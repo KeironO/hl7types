@@ -16,7 +16,67 @@ from ..datatypes.TS import TS
 
 
 class ORC(BaseModel):
-    """HL7 v2 ORC segment."""
+    """HL7 v2 ORC segment.
+
+    Attributes
+    ----------
+    orc_1 : str
+        ORC.1 (req) - Order Control (ID)
+
+    orc_2 : str | None
+        ORC.2 (opt) - Placer Order Number (CM)
+
+    orc_3 : str | None
+        ORC.3 (opt) - Filler Order Number (CM)
+
+    orc_4 : str | None
+        ORC.4 (opt) - Placer Group Number (CM)
+
+    orc_5 : str | None
+        ORC.5 (opt) - Order Status (ID)
+
+    orc_6 : str | None
+        ORC.6 (opt) - Response Flag (ID)
+
+    orc_7 : list[TQ] | None
+        ORC.7 (opt, rep) - Quantity / timing (TQ)
+
+    orc_8 : str | None
+        ORC.8 (opt) - Parent (CM)
+
+    orc_9 : TS | None
+        ORC.9 (opt) - Date / time of transaction (TS)
+
+    orc_10 : str | None
+        ORC.10 (opt) - Entered By (CN)
+
+    orc_11 : str | None
+        ORC.11 (opt) - Verified By (CN)
+
+    orc_12 : str | None
+        ORC.12 (opt) - Ordering Provider (CN)
+
+    orc_13 : str | None
+        ORC.13 (opt) - Enterer's Location (CM)
+
+    orc_14 : list[str] | None
+        ORC.14 (opt, rep) - Call Back Phone Number (TN)
+
+    orc_15 : TS | None
+        ORC.15 (opt) - Order effective date / time (TS)
+
+    orc_16 : CE | None
+        ORC.16 (opt) - Order Control Code Reason (CE)
+
+    orc_17 : CE | None
+        ORC.17 (opt) - Entering Organization (CE)
+
+    orc_18 : CE | None
+        ORC.18 (opt) - Entering Device (CE)
+
+    orc_19 : str | None
+        ORC.19 (opt) - Action by (CN)
+    """
 
     orc_1: str = Field(
         default=...,

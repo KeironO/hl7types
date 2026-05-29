@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class SRT(BaseModel):
-    """HL7 v2 SRT data type."""
+    """HL7 v2 SRT data type.
+
+    Attributes
+    ----------
+    srt_1 : str | None
+        SRT.1 (opt) - Sort-by Field (ST)
+
+    srt_2 : str | None
+        SRT.2 (opt) - Sequencing (ID)
+    """
 
     srt_1: Optional[str] = Field(
         default=None,

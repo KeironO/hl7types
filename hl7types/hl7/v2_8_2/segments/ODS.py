@@ -14,7 +14,22 @@ from ..datatypes.CWE import CWE
 
 
 class ODS(BaseModel):
-    """HL7 v2 ODS segment."""
+    """HL7 v2 ODS segment.
+
+    Attributes
+    ----------
+    ods_1 : str
+        ODS.1 (req) - Type (ID)
+
+    ods_2 : list[CWE] | None
+        ODS.2 (opt, rep) - Service Period (CWE)
+
+    ods_3 : list[CWE]
+        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CWE)
+
+    ods_4 : list[str] | None
+        ODS.4 (opt, rep) - Text Instruction (ST)
+    """
 
     ods_1: str = Field(
         default=...,

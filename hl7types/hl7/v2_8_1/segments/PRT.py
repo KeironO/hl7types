@@ -20,7 +20,55 @@ from ..datatypes.XTN import XTN
 
 
 class PRT(BaseModel):
-    """HL7 v2 PRT segment."""
+    """HL7 v2 PRT segment.
+
+    Attributes
+    ----------
+    prt_1 : EI | None
+        PRT.1 (opt) - Participation Instance ID (EI)
+
+    prt_2 : str
+        PRT.2 (req) - Action Code (ID)
+
+    prt_3 : CWE | None
+        PRT.3 (opt) - Action Reason (CWE)
+
+    prt_4 : CWE
+        PRT.4 (req) - Participation (CWE)
+
+    prt_5 : list[XCN] | None
+        PRT.5 (opt, rep) - Participation Person (XCN)
+
+    prt_6 : CWE | None
+        PRT.6 (opt) - Participation Person Provider Type (CWE)
+
+    prt_7 : CWE | None
+        PRT.7 (opt) - Participant Organization Unit Type (CWE)
+
+    prt_8 : list[XON] | None
+        PRT.8 (opt, rep) - Participation Organization (XON)
+
+    prt_9 : list[PL] | None
+        PRT.9 (opt, rep) - Participant Location (PL)
+
+    prt_10 : list[EI] | None
+        PRT.10 (opt, rep) - Participation Device (EI)
+
+    prt_11 : str | None
+        PRT.11 (opt) - Participation Begin Date/Time (arrival time) (DTM)
+
+    prt_12 : str | None
+        PRT.12 (opt) - Participation End Date/Time (departure time) (DTM)
+
+    prt_13 : CWE | None
+        PRT.13 (opt) - Participation Qualitative Duration (CWE)
+
+    prt_14 : list[XAD] | None
+        PRT.14 (opt, rep) - Participation Address (XAD)
+
+    prt_15 : list[XTN] | None
+        PRT.15 (opt, rep) - Participant Telecommunication Address (XTN)
+    """
 
     prt_1: Optional[EI] = Field(
         default=None,

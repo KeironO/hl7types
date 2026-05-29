@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class SAD(BaseModel):
-    """HL7 v2 SAD data type."""
+    """HL7 v2 SAD data type.
+
+    Attributes
+    ----------
+    sad_1 : str | None
+        SAD.1 (opt) - street or mailing address (ST)
+
+    sad_2 : str | None
+        SAD.2 (opt) - street name (ST)
+
+    sad_3 : str | None
+        SAD.3 (opt) - dwelling number (ST)
+    """
 
     sad_1: Optional[str] = Field(
         default=None,

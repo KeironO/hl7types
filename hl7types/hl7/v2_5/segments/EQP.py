@@ -16,7 +16,25 @@ from ..datatypes.TS import TS
 
 
 class EQP(BaseModel):
-    """HL7 v2 EQP segment."""
+    """HL7 v2 EQP segment.
+
+    Attributes
+    ----------
+    eqp_1 : CE
+        EQP.1 (req) - Event type (CE)
+
+    eqp_2 : str | None
+        EQP.2 (opt) - File Name (ST)
+
+    eqp_3 : TS
+        EQP.3 (req) - Start Date/Time (TS)
+
+    eqp_4 : TS | None
+        EQP.4 (opt) - End Date/Time (TS)
+
+    eqp_5 : FT
+        EQP.5 (req) - Transaction Data (FT)
+    """
 
     eqp_1: CE = Field(
         default=...,

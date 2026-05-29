@@ -14,7 +14,25 @@ from ..datatypes.EI import EI
 
 
 class SLT(BaseModel):
-    """HL7 v2 SLT segment."""
+    """HL7 v2 SLT segment.
+
+    Attributes
+    ----------
+    slt_1 : EI | None
+        SLT.1 (opt) - Device Number (EI)
+
+    slt_2 : str | None
+        SLT.2 (opt) - Device Name (ST)
+
+    slt_3 : EI | None
+        SLT.3 (opt) - Lot Number (EI)
+
+    slt_4 : EI | None
+        SLT.4 (opt) - Item Identifier (EI)
+
+    slt_5 : str | None
+        SLT.5 (opt) - Bar Code (ST)
+    """
 
     slt_1: Optional[EI] = Field(
         default=None,

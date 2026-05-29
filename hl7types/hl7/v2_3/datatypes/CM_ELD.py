@@ -14,7 +14,22 @@ from .CE import CE
 
 
 class CM_ELD(BaseModel):
-    """HL7 v2 CM_ELD data type."""
+    """HL7 v2 CM_ELD data type.
+
+    Attributes
+    ----------
+    cm_eld_1 : str | None
+        CM_ELD.1 (opt) - segment ID (ST)
+
+    cm_eld_2 : str | None
+        CM_ELD.2 (opt) - sequence (NM)
+
+    cm_eld_3 : str | None
+        CM_ELD.3 (opt) - field position (NM)
+
+    cm_eld_4 : CE | None
+        CM_ELD.4 (opt) - code identifying error (CE)
+    """
 
     cm_eld_1: Optional[str] = Field(
         default=None,

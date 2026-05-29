@@ -16,7 +16,76 @@ from ..datatypes.TS import TS
 
 
 class RXG(BaseModel):
-    """HL7 v2 RXG segment."""
+    """HL7 v2 RXG segment.
+
+    Attributes
+    ----------
+    rxg_1 : str | None
+        RXG.1 (opt) - Give Sub-ID Counter (ID)
+
+    rxg_2 : str
+        RXG.2 (req) - Dispense Sub-ID Counter (NM)
+
+    rxg_3 : TQ
+        RXG.3 (req) - Quantity/Timing (TQ)
+
+    rxg_4 : CE
+        RXG.4 (req) - Give Code (CE)
+
+    rxg_5 : str
+        RXG.5 (req) - Give Amount - Minimum (NM)
+
+    rxg_6 : str | None
+        RXG.6 (opt) - Give Amount - Maximum (NM)
+
+    rxg_7 : CE
+        RXG.7 (req) - Give Units (CE)
+
+    rxg_8 : CE | None
+        RXG.8 (opt) - Give Dosage Form (CE)
+
+    rxg_9 : list[CE] | None
+        RXG.9 (opt, rep) - Administration Notes (CE)
+
+    rxg_10 : str | None
+        RXG.10 (opt) - Substitution Status (ID)
+
+    rxg_11 : str | None
+        RXG.11 (opt) - Dispense-To Location (CM)
+
+    rxg_12 : str | None
+        RXG.12 (opt) - Needs Human Review (ID)
+
+    rxg_13 : CE | None
+        RXG.13 (opt) - Pharmacy Special Administration Instructions (CE)
+
+    rxg_14 : str | None
+        RXG.14 (opt) - Give Per (Time Unit) (ST)
+
+    rxg_15 : str | None
+        RXG.15 (opt) - Give Rate Amount (ST)
+
+    rxg_16 : CE | None
+        RXG.16 (opt) - Give Rate Units (CE)
+
+    rxg_17 : str | None
+        RXG.17 (opt) - Give Strength (NM)
+
+    rxg_18 : CE | None
+        RXG.18 (opt) - Give Strength Units (CE)
+
+    rxg_19 : list[str] | None
+        RXG.19 (opt, rep) - Substance Lot Number (ST)
+
+    rxg_20 : list[TS] | None
+        RXG.20 (opt, rep) - Substance Expiration Date (TS)
+
+    rxg_21 : list[CE] | None
+        RXG.21 (opt, rep) - Substance Manufacturer Name (CE)
+
+    rxg_22 : CE | None
+        RXG.22 (opt) - Indication (CE)
+    """
 
     rxg_1: Optional[str] = Field(
         default=None,

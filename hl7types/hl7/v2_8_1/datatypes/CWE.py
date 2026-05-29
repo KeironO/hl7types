@@ -12,7 +12,76 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CWE(BaseModel):
-    """HL7 v2 CWE data type."""
+    """HL7 v2 CWE data type.
+
+    Attributes
+    ----------
+    cwe_1 : str | None
+        CWE.1 (opt) - Identifier (ST)
+
+    cwe_2 : str | None
+        CWE.2 (opt) - Text (ST)
+
+    cwe_3 : str | None
+        CWE.3 (opt) - Name of Coding System (ID)
+
+    cwe_4 : str | None
+        CWE.4 (opt) - Alternate Identifier (ST)
+
+    cwe_5 : str | None
+        CWE.5 (opt) - Alternate Text (ST)
+
+    cwe_6 : str | None
+        CWE.6 (opt) - Name of Alternate Coding System (ID)
+
+    cwe_7 : str | None
+        CWE.7 (opt) - Coding System Version ID (ST)
+
+    cwe_8 : str | None
+        CWE.8 (opt) - Alternate Coding System Version ID (ST)
+
+    cwe_9 : str | None
+        CWE.9 (opt) - Original Text (ST)
+
+    cwe_10 : str | None
+        CWE.10 (opt) - Second Alternate Identifier (ST)
+
+    cwe_11 : str | None
+        CWE.11 (opt) - Second Alternate Text (ST)
+
+    cwe_12 : str | None
+        CWE.12 (opt) - Name of Second Alternate Coding System (ID)
+
+    cwe_13 : str | None
+        CWE.13 (opt) - Second Alternate Coding System Version ID (ST)
+
+    cwe_14 : str | None
+        CWE.14 (opt) - Coding System OID (ST)
+
+    cwe_15 : str | None
+        CWE.15 (opt) - Value Set OID (ST)
+
+    cwe_16 : str | None
+        CWE.16 (opt) - Value Set Version ID (DTM)
+
+    cwe_17 : str | None
+        CWE.17 (opt) - Alternate Coding System OID (ST)
+
+    cwe_18 : str | None
+        CWE.18 (opt) - Alternate Value Set OID (ST)
+
+    cwe_19 : str | None
+        CWE.19 (opt) - Alternate Value Set Version ID (DTM)
+
+    cwe_20 : str | None
+        CWE.20 (opt) - Second Alternate Coding System OID (ST)
+
+    cwe_21 : str | None
+        CWE.21 (opt) - Second Alternate Value Set OID (ST)
+
+    cwe_22 : str | None
+        CWE.22 (opt) - Second Alternate Value Set Version ID (DTM)
+    """
 
     cwe_1: Optional[str] = Field(
         default=None,

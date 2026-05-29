@@ -14,7 +14,16 @@ from .CNE import CNE
 
 
 class OCD(BaseModel):
-    """HL7 v2 OCD data type."""
+    """HL7 v2 OCD data type.
+
+    Attributes
+    ----------
+    ocd_1 : CNE | None
+        OCD.1 (opt) - Occurrence Code (CNE)
+
+    ocd_2 : str | None
+        OCD.2 (opt) - Occurrence Date (DT)
+    """
 
     ocd_1: Optional[CNE] = Field(
         default=None,

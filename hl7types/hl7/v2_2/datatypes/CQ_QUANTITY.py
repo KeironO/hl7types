@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CQ_QUANTITY(BaseModel):
-    """HL7 v2 CQ_QUANTITY data type."""
+    """HL7 v2 CQ_QUANTITY data type.
+
+    Attributes
+    ----------
+    cq_quantity_1 : str | None
+        CQ_QUANTITY.1 (opt) - quantity (ST)
+
+    cq_quantity_2 : str | None
+        CQ_QUANTITY.2 (opt) - units (ST)
+    """
 
     cq_quantity_1: Optional[str] = Field(
         default=None,

@@ -14,7 +14,31 @@ from .CE import CE
 
 
 class CM_RFR(BaseModel):
-    """HL7 v2 CM_RFR data type."""
+    """HL7 v2 CM_RFR data type.
+
+    Attributes
+    ----------
+    cm_rfr_1 : CE | None
+        CM_RFR.1 (opt) - Reference Range (CE)
+
+    cm_rfr_2 : str | None
+        CM_RFR.2 (opt) - Sex (ID)
+
+    cm_rfr_3 : CE | None
+        CM_RFR.3 (opt) - Age Range (CE)
+
+    cm_rfr_4 : CE | None
+        CM_RFR.4 (opt) - Gestational Age Range (CE)
+
+    cm_rfr_5 : str | None
+        CM_RFR.5 (opt) - Species (ST)
+
+    cm_rfr_6 : str | None
+        CM_RFR.6 (opt) - Race / Subspecies (ID)
+
+    cm_rfr_7 : str | None
+        CM_RFR.7 (opt) - Text Condition (ST)
+    """
 
     cm_rfr_1: Optional[CE] = Field(
         default=None,

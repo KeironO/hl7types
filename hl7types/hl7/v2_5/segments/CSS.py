@@ -15,7 +15,19 @@ from ..datatypes.TS import TS
 
 
 class CSS(BaseModel):
-    """HL7 v2 CSS segment."""
+    """HL7 v2 CSS segment.
+
+    Attributes
+    ----------
+    css_1 : CE
+        CSS.1 (req) - Study Scheduled Time Point (CE)
+
+    css_2 : TS | None
+        CSS.2 (opt) - Study Scheduled Patient Time Point (TS)
+
+    css_3 : list[CE] | None
+        CSS.3 (opt, rep) - Study Quality Control Codes (CE)
+    """
 
     css_1: CE = Field(
         default=...,

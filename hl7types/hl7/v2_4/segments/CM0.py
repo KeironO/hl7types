@@ -17,7 +17,43 @@ from ..datatypes.XTN import XTN
 
 
 class CM0(BaseModel):
-    """HL7 v2 CM0 segment."""
+    """HL7 v2 CM0 segment.
+
+    Attributes
+    ----------
+    cm0_1 : str | None
+        CM0.1 (opt) - Set ID - CM0 (SI)
+
+    cm0_2 : EI
+        CM0.2 (req) - Sponsor Study ID (EI)
+
+    cm0_3 : list[EI] | None
+        CM0.3 (opt, rep) - Alternate Study ID (EI)
+
+    cm0_4 : str
+        CM0.4 (req) - Title of Study (ST)
+
+    cm0_5 : list[XCN] | None
+        CM0.5 (opt, rep) - Chairman of Study (XCN)
+
+    cm0_6 : str | None
+        CM0.6 (opt) - Last IRB Approval Date (DT)
+
+    cm0_7 : str | None
+        CM0.7 (opt) - Total Accrual to Date (NM)
+
+    cm0_8 : str | None
+        CM0.8 (opt) - Last Accrual Date (DT)
+
+    cm0_9 : list[XCN] | None
+        CM0.9 (opt, rep) - Contact for Study (XCN)
+
+    cm0_10 : XTN | None
+        CM0.10 (opt) - Contact's Telephone Number (XTN)
+
+    cm0_11 : list[XAD] | None
+        CM0.11 (opt, rep) - Contact's Address (XAD)
+    """
 
     cm0_1: Optional[str] = Field(
         default=None,

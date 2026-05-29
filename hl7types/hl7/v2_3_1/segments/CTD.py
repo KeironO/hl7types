@@ -19,7 +19,31 @@ from ..datatypes.XTN import XTN
 
 
 class CTD(BaseModel):
-    """HL7 v2 CTD segment."""
+    """HL7 v2 CTD segment.
+
+    Attributes
+    ----------
+    ctd_1 : list[CE] | None
+        CTD.1 (opt, rep) - Contact Role (CE)
+
+    ctd_2 : list[XPN] | None
+        CTD.2 (opt, rep) - Contact Name (XPN)
+
+    ctd_3 : list[XAD] | None
+        CTD.3 (opt, rep) - Contact Address (XAD)
+
+    ctd_4 : PL | None
+        CTD.4 (opt) - Contact Location (PL)
+
+    ctd_5 : list[XTN] | None
+        CTD.5 (opt, rep) - Contact Communication Information (XTN)
+
+    ctd_6 : CE | None
+        CTD.6 (opt) - Preferred Method Of Contact (CE)
+
+    ctd_7 : list[PI] | None
+        CTD.7 (opt, rep) - Contact Identifiers (PI)
+    """
 
     ctd_1: Optional[List[CE]] = Field(
         default=None,

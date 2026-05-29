@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class DTN(BaseModel):
-    """HL7 v2 DTN data type."""
+    """HL7 v2 DTN data type.
+
+    Attributes
+    ----------
+    dtn_1 : str
+        DTN.1 (req) - Day Type (IS)
+
+    dtn_2 : str
+        DTN.2 (req) - Number of Days (NM)
+    """
 
     dtn_1: str = Field(
         default=...,

@@ -17,7 +17,34 @@ from ..datatypes.XCN import XCN
 
 
 class ROL(BaseModel):
-    """HL7 v2 ROL segment."""
+    """HL7 v2 ROL segment.
+
+    Attributes
+    ----------
+    rol_1 : EI
+        ROL.1 (req) - Role Instance ID (EI)
+
+    rol_2 : str
+        ROL.2 (req) - Action Code (ID)
+
+    rol_3 : CE | None
+        ROL.3 (opt) - Role (CE)
+
+    rol_4 : XCN
+        ROL.4 (req) - Role Person (XCN)
+
+    rol_5 : TS | None
+        ROL.5 (opt) - Role Begin Date/Time (TS)
+
+    rol_6 : TS | None
+        ROL.6 (opt) - Role End Date/Time (TS)
+
+    rol_7 : CE | None
+        ROL.7 (opt) - Role Duration (CE)
+
+    rol_8 : CE | None
+        ROL.8 (opt) - Role Action (Assumption) Reason (CE)
+    """
 
     rol_1: EI = Field(
         default=...,

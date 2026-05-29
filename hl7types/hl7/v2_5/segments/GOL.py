@@ -18,7 +18,73 @@ from ..datatypes.XPN import XPN
 
 
 class GOL(BaseModel):
-    """HL7 v2 GOL segment."""
+    """HL7 v2 GOL segment.
+
+    Attributes
+    ----------
+    gol_1 : str
+        GOL.1 (req) - Action Code (ID)
+
+    gol_2 : TS
+        GOL.2 (req) - Action Date/Time (TS)
+
+    gol_3 : CE
+        GOL.3 (req) - Goal ID (CE)
+
+    gol_4 : EI
+        GOL.4 (req) - Goal Instance ID (EI)
+
+    gol_5 : EI | None
+        GOL.5 (opt) - Episode of Care ID (EI)
+
+    gol_6 : str | None
+        GOL.6 (opt) - Goal List Priority (NM)
+
+    gol_7 : TS | None
+        GOL.7 (opt) - Goal Established Date/Time (TS)
+
+    gol_8 : TS | None
+        GOL.8 (opt) - Expected Goal Achieve Date/Time (TS)
+
+    gol_9 : CE | None
+        GOL.9 (opt) - Goal Classification (CE)
+
+    gol_10 : CE | None
+        GOL.10 (opt) - Goal Management Discipline (CE)
+
+    gol_11 : CE | None
+        GOL.11 (opt) - Current Goal Review Status (CE)
+
+    gol_12 : TS | None
+        GOL.12 (opt) - Current Goal Review Date/Time (TS)
+
+    gol_13 : TS | None
+        GOL.13 (opt) - Next Goal Review Date/Time (TS)
+
+    gol_14 : TS | None
+        GOL.14 (opt) - Previous Goal Review Date/Time (TS)
+
+    gol_15 : TQ | None
+        GOL.15 (opt) - Goal Review Interval (TQ)
+
+    gol_16 : CE | None
+        GOL.16 (opt) - Goal Evaluation (CE)
+
+    gol_17 : list[str] | None
+        GOL.17 (opt, rep) - Goal Evaluation Comment (ST)
+
+    gol_18 : CE | None
+        GOL.18 (opt) - Goal Life Cycle Status (CE)
+
+    gol_19 : TS | None
+        GOL.19 (opt) - Goal Life Cycle Status Date/Time (TS)
+
+    gol_20 : list[CE] | None
+        GOL.20 (opt, rep) - Goal Target Type (CE)
+
+    gol_21 : list[XPN] | None
+        GOL.21 (opt, rep) - Goal Target Name (XPN)
+    """
 
     gol_1: str = Field(
         default=...,

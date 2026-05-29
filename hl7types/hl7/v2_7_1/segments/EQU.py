@@ -15,7 +15,25 @@ from ..datatypes.EI import EI
 
 
 class EQU(BaseModel):
-    """HL7 v2 EQU segment."""
+    """HL7 v2 EQU segment.
+
+    Attributes
+    ----------
+    equ_1 : EI
+        EQU.1 (req) - Equipment Instance Identifier (EI)
+
+    equ_2 : str
+        EQU.2 (req) - Event Date/Time (DTM)
+
+    equ_3 : CWE | None
+        EQU.3 (opt) - Equipment State (CWE)
+
+    equ_4 : CWE | None
+        EQU.4 (opt) - Local/Remote Control State (CWE)
+
+    equ_5 : CWE | None
+        EQU.5 (opt) - Alert Level (CWE)
+    """
 
     equ_1: EI = Field(
         default=...,

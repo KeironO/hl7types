@@ -12,7 +12,34 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NSC(BaseModel):
-    """HL7 v2 NSC segment."""
+    """HL7 v2 NSC segment.
+
+    Attributes
+    ----------
+    nsc_1 : str | None
+        NSC.1 (opt) - Network Change Type (ID)
+
+    nsc_2 : str | None
+        NSC.2 (opt) - Current CPU (ST)
+
+    nsc_3 : str | None
+        NSC.3 (opt) - Current Fileserver (ST)
+
+    nsc_4 : str | None
+        NSC.4 (opt) - Current Application (ST)
+
+    nsc_5 : str | None
+        NSC.5 (opt) - Current Facility (ST)
+
+    nsc_6 : str | None
+        NSC.6 (opt) - New CPU (ST)
+
+    nsc_7 : str | None
+        NSC.7 (opt) - New Fileserver (ST)
+
+    nsc_8 : str | None
+        NSC.8 (opt) - New Application (ST)
+    """
 
     nsc_1: Optional[str] = Field(
         default=None,

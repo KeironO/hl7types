@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class QAK(BaseModel):
-    """HL7 v2 QAK segment."""
+    """HL7 v2 QAK segment.
+
+    Attributes
+    ----------
+    qak_1 : str | None
+        QAK.1 (opt) - Query Tag (ST)
+
+    qak_2 : str | None
+        QAK.2 (opt) - Query Response Status (ID)
+    """
 
     qak_1: Optional[str] = Field(
         default=None,

@@ -14,7 +14,22 @@ from .NR import NR
 
 
 class DLT(BaseModel):
-    """HL7 v2 DLT data type."""
+    """HL7 v2 DLT data type.
+
+    Attributes
+    ----------
+    dlt_1 : NR | None
+        DLT.1 (opt) - Normal Range (NR)
+
+    dlt_2 : str | None
+        DLT.2 (opt) - Numeric Threshold (NM)
+
+    dlt_3 : str | None
+        DLT.3 (opt) - Change Computation (ID)
+
+    dlt_4 : str | None
+        DLT.4 (opt) - Days Retained (NM)
+    """
 
     dlt_1: Optional[NR] = Field(
         default=None,

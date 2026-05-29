@@ -16,7 +16,31 @@ from ..datatypes.XPN import XPN
 
 
 class PYE(BaseModel):
-    """HL7 v2 PYE segment."""
+    """HL7 v2 PYE segment.
+
+    Attributes
+    ----------
+    pye_1 : str
+        PYE.1 (req) - Set ID - PYE (SI)
+
+    pye_2 : str
+        PYE.2 (req) - Payee Type (IS)
+
+    pye_3 : str | None
+        PYE.3 (opt) - Payee Relationship to Invoice (Patient) (IS)
+
+    pye_4 : list[XON] | None
+        PYE.4 (opt, rep) - Payee Identification List (XON)
+
+    pye_5 : list[XPN] | None
+        PYE.5 (opt, rep) - Payee Person Name (XPN)
+
+    pye_6 : list[XAD] | None
+        PYE.6 (opt, rep) - Payee Address (XAD)
+
+    pye_7 : str | None
+        PYE.7 (opt) - Payment Method (IS)
+    """
 
     pye_1: str = Field(
         default=...,

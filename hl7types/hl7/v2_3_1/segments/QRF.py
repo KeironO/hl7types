@@ -15,7 +15,37 @@ from ..datatypes.TS import TS
 
 
 class QRF(BaseModel):
-    """HL7 v2 QRF segment."""
+    """HL7 v2 QRF segment.
+
+    Attributes
+    ----------
+    qrf_1 : list[str]
+        QRF.1 (req, rep) - Where Subject Filter (ST)
+
+    qrf_2 : TS | None
+        QRF.2 (opt) - When Data Start Date/Time (TS)
+
+    qrf_3 : TS | None
+        QRF.3 (opt) - When Data End Date/Time (TS)
+
+    qrf_4 : list[str] | None
+        QRF.4 (opt, rep) - What User Qualifier (ST)
+
+    qrf_5 : list[str] | None
+        QRF.5 (opt, rep) - Other QRY Subject Filter (ST)
+
+    qrf_6 : list[str] | None
+        QRF.6 (opt, rep) - Which Date/Time Qualifier (ID)
+
+    qrf_7 : list[str] | None
+        QRF.7 (opt, rep) - Which Date/Time Status Qualifier (ID)
+
+    qrf_8 : list[str] | None
+        QRF.8 (opt, rep) - Date/Time Selection Qualifier (ID)
+
+    qrf_9 : TQ | None
+        QRF.9 (opt) - When Quantity/Timing Qualifier (TQ)
+    """
 
     qrf_1: List[str] = Field(
         default=...,

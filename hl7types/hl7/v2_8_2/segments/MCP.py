@@ -15,7 +15,25 @@ from ..datatypes.MO import MO
 
 
 class MCP(BaseModel):
-    """HL7 v2 MCP segment."""
+    """HL7 v2 MCP segment.
+
+    Attributes
+    ----------
+    mcp_1 : str
+        MCP.1 (req) - Set ID - MCP (SI)
+
+    mcp_2 : CWE
+        MCP.2 (req) - Producer's Service/Test/Observation ID (CWE)
+
+    mcp_3 : MO | None
+        MCP.3 (opt) - Universal Service Price Range - Low Value (MO)
+
+    mcp_4 : MO | None
+        MCP.4 (opt) - Universal Service Price Range - High Value (MO)
+
+    mcp_5 : str | None
+        MCP.5 (opt) - Reason for Universal Service Cost Range (ST)
+    """
 
     mcp_1: str = Field(
         default=...,

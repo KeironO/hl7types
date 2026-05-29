@@ -16,7 +16,58 @@ from ..datatypes.XCN import XCN
 
 
 class DG1(BaseModel):
-    """HL7 v2 DG1 segment."""
+    """HL7 v2 DG1 segment.
+
+    Attributes
+    ----------
+    dg1_1 : str
+        DG1.1 (req) - Set ID - DG1 (SI)
+
+    dg1_3 : CWE
+        DG1.3 (req) - Diagnosis Code - DG1 (CWE)
+
+    dg1_5 : str | None
+        DG1.5 (opt) - Diagnosis Date/Time (DTM)
+
+    dg1_6 : str
+        DG1.6 (req) - Diagnosis Type (IS)
+
+    dg1_15 : str | None
+        DG1.15 (opt) - Diagnosis Priority (ID)
+
+    dg1_16 : list[XCN] | None
+        DG1.16 (opt, rep) - Diagnosing Clinician (XCN)
+
+    dg1_17 : str | None
+        DG1.17 (opt) - Diagnosis Classification (IS)
+
+    dg1_18 : str | None
+        DG1.18 (opt) - Confidential Indicator (ID)
+
+    dg1_19 : str | None
+        DG1.19 (opt) - Attestation Date/Time (DTM)
+
+    dg1_20 : EI | None
+        DG1.20 (opt) - Diagnosis Identifier (EI)
+
+    dg1_21 : str | None
+        DG1.21 (opt) - Diagnosis Action Code (ID)
+
+    dg1_22 : EI | None
+        DG1.22 (opt) - Parent Diagnosis (EI)
+
+    dg1_23 : CWE | None
+        DG1.23 (opt) - DRG CCL Value Code (CWE)
+
+    dg1_24 : str | None
+        DG1.24 (opt) - DRG Grouping Usage (ID)
+
+    dg1_25 : str | None
+        DG1.25 (opt) - DRG Diagnosis Determination Status (IS)
+
+    dg1_26 : str | None
+        DG1.26 (opt) - Present On Admission (POA) Indicator (IS)
+    """
 
     dg1_1: str = Field(
         default=...,

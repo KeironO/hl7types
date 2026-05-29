@@ -12,7 +12,34 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_INTERNAL_LOCATION(BaseModel):
-    """HL7 v2 CM_INTERNAL_LOCATION data type."""
+    """HL7 v2 CM_INTERNAL_LOCATION data type.
+
+    Attributes
+    ----------
+    cm_internal_location_1 : str | None
+        CM_INTERNAL_LOCATION.1 (opt) - nurse unit (Station) (ID)
+
+    cm_internal_location_2 : str | None
+        CM_INTERNAL_LOCATION.2 (opt) - Room (ID)
+
+    cm_internal_location_3 : str | None
+        CM_INTERNAL_LOCATION.3 (opt) - Bed (ID)
+
+    cm_internal_location_4 : str | None
+        CM_INTERNAL_LOCATION.4 (opt) - Facility ID (ID)
+
+    cm_internal_location_5 : str | None
+        CM_INTERNAL_LOCATION.5 (opt) - Bed Status (ID)
+
+    cm_internal_location_6 : str | None
+        CM_INTERNAL_LOCATION.6 (opt) - Etage (ID)
+
+    cm_internal_location_7 : str | None
+        CM_INTERNAL_LOCATION.7 (opt) - Klinik (ID)
+
+    cm_internal_location_8 : str | None
+        CM_INTERNAL_LOCATION.8 (opt) - Zentrum (ID)
+    """
 
     cm_internal_location_1: Optional[str] = Field(
         default=None,

@@ -14,7 +14,16 @@ from .TS import TS
 
 
 class FC(BaseModel):
-    """HL7 v2 FC data type."""
+    """HL7 v2 FC data type.
+
+    Attributes
+    ----------
+    fc_1 : str | None
+        FC.1 (opt) - Financial Class (IS)
+
+    fc_2 : TS | None
+        FC.2 (opt) - Effective Date (TS) (TS)
+    """
 
     fc_1: Optional[str] = Field(
         default=None,

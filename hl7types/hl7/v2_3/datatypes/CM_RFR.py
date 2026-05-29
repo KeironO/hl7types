@@ -14,7 +14,31 @@ from .TX import TX
 
 
 class CM_RFR(BaseModel):
-    """HL7 v2 CM_RFR data type."""
+    """HL7 v2 CM_RFR data type.
+
+    Attributes
+    ----------
+    cm_rfr_1 : str | None
+        CM_RFR.1 (opt) - reference range (CM)
+
+    cm_rfr_2 : str | None
+        CM_RFR.2 (opt) - sex (IS)
+
+    cm_rfr_3 : str | None
+        CM_RFR.3 (opt) - age range (CM)
+
+    cm_rfr_4 : str | None
+        CM_RFR.4 (opt) - age gestation (CM)
+
+    cm_rfr_5 : TX | None
+        CM_RFR.5 (opt) - species (TX)
+
+    cm_rfr_6 : str | None
+        CM_RFR.6 (opt) - race/subspecies (ST)
+
+    cm_rfr_7 : TX | None
+        CM_RFR.7 (opt) - conditions (TX)
+    """
 
     cm_rfr_1: Optional[str] = Field(
         default=None,

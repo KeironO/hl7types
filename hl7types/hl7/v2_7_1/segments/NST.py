@@ -12,7 +12,55 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NST(BaseModel):
-    """HL7 v2 NST segment."""
+    """HL7 v2 NST segment.
+
+    Attributes
+    ----------
+    nst_1 : str
+        NST.1 (req) - Statistics Available (ID)
+
+    nst_2 : str | None
+        NST.2 (opt) - Source Identifier (ST)
+
+    nst_3 : str | None
+        NST.3 (opt) - Source Type (ID)
+
+    nst_4 : str | None
+        NST.4 (opt) - Statistics Start (DTM)
+
+    nst_5 : str | None
+        NST.5 (opt) - Statistics End (DTM)
+
+    nst_6 : str | None
+        NST.6 (opt) - Receive Character Count (NM)
+
+    nst_7 : str | None
+        NST.7 (opt) - Send Character Count (NM)
+
+    nst_8 : str | None
+        NST.8 (opt) - Messages Received (NM)
+
+    nst_9 : str | None
+        NST.9 (opt) - Messages Sent (NM)
+
+    nst_10 : str | None
+        NST.10 (opt) - Checksum Errors Received (NM)
+
+    nst_11 : str | None
+        NST.11 (opt) - Length Errors Received (NM)
+
+    nst_12 : str | None
+        NST.12 (opt) - Other Errors Received (NM)
+
+    nst_13 : str | None
+        NST.13 (opt) - Connect Timeouts (NM)
+
+    nst_14 : str | None
+        NST.14 (opt) - Receive Timeouts (NM)
+
+    nst_15 : str | None
+        NST.15 (opt) - Application control-level Errors (NM)
+    """
 
     nst_1: str = Field(
         default=...,

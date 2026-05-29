@@ -16,7 +16,79 @@ from ..datatypes.TS import TS
 
 
 class PCR(BaseModel):
-    """HL7 v2 PCR segment."""
+    """HL7 v2 PCR segment.
+
+    Attributes
+    ----------
+    pcr_1 : CE
+        PCR.1 (req) - Implicated Product (CE)
+
+    pcr_2 : str | None
+        PCR.2 (opt) - Generic Product (IS)
+
+    pcr_3 : CE | None
+        PCR.3 (opt) - Product Class (CE)
+
+    pcr_4 : CQ | None
+        PCR.4 (opt) - Total Duration Of Therapy (CQ)
+
+    pcr_5 : TS | None
+        PCR.5 (opt) - Product Manufacture Date (TS)
+
+    pcr_6 : TS | None
+        PCR.6 (opt) - Product Expiration Date (TS)
+
+    pcr_7 : TS | None
+        PCR.7 (opt) - Product Implantation Date (TS)
+
+    pcr_8 : TS | None
+        PCR.8 (opt) - Product Explantation Date (TS)
+
+    pcr_9 : str | None
+        PCR.9 (opt) - Single Use Device (IS)
+
+    pcr_10 : CE | None
+        PCR.10 (opt) - Indication For Product Use (CE)
+
+    pcr_11 : str | None
+        PCR.11 (opt) - Product Problem (IS)
+
+    pcr_12 : list[str] | None
+        PCR.12 (opt, rep) - Product Serial/Lot Number (ST)
+
+    pcr_13 : str | None
+        PCR.13 (opt) - Product Available For Inspection (IS)
+
+    pcr_14 : CE | None
+        PCR.14 (opt) - Product Evaluation Performed (CE)
+
+    pcr_15 : CE | None
+        PCR.15 (opt) - Product Evaluation Status (CE)
+
+    pcr_16 : CE | None
+        PCR.16 (opt) - Product Evaluation Results (CE)
+
+    pcr_17 : str | None
+        PCR.17 (opt) - Evaluated Product Source (ID)
+
+    pcr_18 : TS | None
+        PCR.18 (opt) - Date Product Returned To Manufacturer (TS)
+
+    pcr_19 : str | None
+        PCR.19 (opt) - Device Operator Qualifications (ID)
+
+    pcr_20 : str | None
+        PCR.20 (opt) - Relatedness Assessment (ID)
+
+    pcr_21 : list[str] | None
+        PCR.21 (opt, rep) - Action Taken In Response To The Event (ID)
+
+    pcr_22 : list[str] | None
+        PCR.22 (opt, rep) - Event Causality Observations (ID)
+
+    pcr_23 : list[str] | None
+        PCR.23 (opt, rep) - Indirect Exposure Mechanism (ID)
+    """
 
     pcr_1: CE = Field(
         default=...,

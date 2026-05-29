@@ -14,7 +14,19 @@ from .CWE import CWE
 
 
 class DLN(BaseModel):
-    """HL7 v2 DLN data type."""
+    """HL7 v2 DLN data type.
+
+    Attributes
+    ----------
+    dln_1 : str
+        DLN.1 (req) - License Number (ST)
+
+    dln_2 : CWE | None
+        DLN.2 (opt) - Issuing State, Province, Country (CWE)
+
+    dln_3 : str | None
+        DLN.3 (opt) - Expiration Date (DT)
+    """
 
     dln_1: str = Field(
         default=...,

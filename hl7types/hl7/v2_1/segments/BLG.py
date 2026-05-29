@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class BLG(BaseModel):
-    """HL7 v2 BLG segment."""
+    """HL7 v2 BLG segment.
+
+    Attributes
+    ----------
+    blg_1 : str | None
+        BLG.1 (opt) - WHEN TO CHARGE (CM)
+
+    blg_2 : str | None
+        BLG.2 (opt) - CHARGE TYPE (ID)
+
+    blg_3 : str | None
+        BLG.3 (opt) - ACCOUNT ID (CM)
+    """
 
     blg_1: Optional[str] = Field(
         default=None,

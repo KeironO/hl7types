@@ -15,7 +15,25 @@ from .TX import TX
 
 
 class ED(BaseModel):
-    """HL7 v2 ED data type."""
+    """HL7 v2 ED data type.
+
+    Attributes
+    ----------
+    ed_1 : HD | None
+        ED.1 (opt) - Source Application (HD)
+
+    ed_2 : str | None
+        ED.2 (opt) - Type of Data (ID)
+
+    ed_3 : str | None
+        ED.3 (opt) - Data Subtype (ID)
+
+    ed_4 : str | None
+        ED.4 (opt) - Encoding (ID)
+
+    ed_5 : TX | None
+        ED.5 (opt) - Data (TX)
+    """
 
     ed_1: Optional[HD] = Field(
         default=None,

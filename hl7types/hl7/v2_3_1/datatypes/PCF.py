@@ -14,7 +14,19 @@ from .TS import TS
 
 
 class PCF(BaseModel):
-    """HL7 v2 PCF data type."""
+    """HL7 v2 PCF data type.
+
+    Attributes
+    ----------
+    pcf_1 : str | None
+        PCF.1 (opt) - pre-certification patient type (IS)
+
+    pcf_2 : str | None
+        PCF.2 (opt) - pre-certification required (ID)
+
+    pcf_3 : TS | None
+        PCF.3 (opt) - pre-certification window (TS)
+    """
 
     pcf_1: Optional[str] = Field(
         default=None,

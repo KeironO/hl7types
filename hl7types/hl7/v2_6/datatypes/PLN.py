@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class PLN(BaseModel):
-    """HL7 v2 PLN data type."""
+    """HL7 v2 PLN data type.
+
+    Attributes
+    ----------
+    pln_1 : str
+        PLN.1 (req) - ID Number (ST)
+
+    pln_2 : str
+        PLN.2 (req) - Type of ID Number (IS)
+
+    pln_3 : str | None
+        PLN.3 (opt) - State/other Qualifying Information (ST)
+
+    pln_4 : str | None
+        PLN.4 (opt) - Expiration Date (DT)
+    """
 
     pln_1: str = Field(
         default=...,

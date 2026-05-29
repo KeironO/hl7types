@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CCP(BaseModel):
-    """HL7 v2 CCP data type."""
+    """HL7 v2 CCP data type.
+
+    Attributes
+    ----------
+    ccp_1 : str | None
+        CCP.1 (opt) - Channel Calibration Sensitivity Correction Factor (NM)
+
+    ccp_2 : str | None
+        CCP.2 (opt) - Channel Calibration Baseline (NM)
+
+    ccp_3 : str | None
+        CCP.3 (opt) - Channel Calibration Time Skew (NM)
+    """
 
     ccp_1: Optional[str] = Field(
         default=None,

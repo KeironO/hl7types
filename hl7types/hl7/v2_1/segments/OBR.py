@@ -14,7 +14,118 @@ from ..datatypes.CE import CE
 
 
 class OBR(BaseModel):
-    """HL7 v2 OBR segment."""
+    """HL7 v2 OBR segment.
+
+    Attributes
+    ----------
+    obr_1 : str | None
+        OBR.1 (opt) - SET ID - OBSERVATION REQUEST (SI)
+
+    obr_2 : str | None
+        OBR.2 (opt) - PLACER ORDER # (CM)
+
+    obr_3 : str | None
+        OBR.3 (opt) - FILLER ORDER # (CM)
+
+    obr_4 : CE
+        OBR.4 (req) - UNIVERSAL SERVICE IDENT. (CE)
+
+    obr_5 : str | None
+        OBR.5 (opt) - PRIORITY (ST)
+
+    obr_6 : str | None
+        OBR.6 (opt) - REQUESTED DATE-TIME (TS)
+
+    obr_7 : str
+        OBR.7 (req) - OBSERVATION DATE/TIME (TS)
+
+    obr_8 : str
+        OBR.8 (req) - OBSERVATION END DATE/TIME (TS)
+
+    obr_9 : str
+        OBR.9 (req) - COLLECTION VOLUME (CQ)
+
+    obr_10 : list[str] | None
+        OBR.10 (opt, rep) - COLLECTOR IDENTIFIER (CN)
+
+    obr_11 : str | None
+        OBR.11 (opt) - SPECIMEN ACTION CODE (ST)
+
+    obr_12 : str | None
+        OBR.12 (opt) - DANGER CODE (CM)
+
+    obr_13 : str | None
+        OBR.13 (opt) - RELEVANT CLINICAL INFO. (ST)
+
+    obr_14 : str
+        OBR.14 (req) - SPECIMEN RECEIVED DATE/TIME (TS)
+
+    obr_15 : str | None
+        OBR.15 (opt) - SPECIMEN SOURCE (CM)
+
+    obr_16 : list[str] | None
+        OBR.16 (opt, rep) - ORDERING PROVIDER (CN)
+
+    obr_17 : list[str] | None
+        OBR.17 (opt, rep) - ORDER CALL-BACK PHONE NUM (TN)
+
+    obr_18 : str | None
+        OBR.18 (opt) - PLACERS FIELD #1 (ST)
+
+    obr_19 : str | None
+        OBR.19 (opt) - PLACERS FIELD #2 (ST)
+
+    obr_20 : str | None
+        OBR.20 (opt) - FILLERS FIELD #1 (ST)
+
+    obr_21 : str | None
+        OBR.21 (opt) - FILLERS FIELD #2 (ST)
+
+    obr_22 : str
+        OBR.22 (req) - RESULTS RPT/STATUS CHNG - DATE/T (TS)
+
+    obr_23 : str | None
+        OBR.23 (opt) - CHARGE TO PRACTICE (CM)
+
+    obr_24 : str | None
+        OBR.24 (opt) - DIAGNOSTIC SERV SECT ID (ID)
+
+    obr_25 : str | None
+        OBR.25 (opt) - RESULT STATUS (ID)
+
+    obr_26 : CE | None
+        OBR.26 (opt) - LINKED RESULTS (CE)
+
+    obr_27 : list[str] | None
+        OBR.27 (opt, rep) - QUANTITY/TIMING (CM)
+
+    obr_28 : list[str] | None
+        OBR.28 (opt, rep) - RESULT COPIES TO (CN)
+
+    obr_29 : str | None
+        OBR.29 (opt) - PARENT ACCESSION # (CM)
+
+    obr_30 : str | None
+        OBR.30 (opt) - TRANSPORTATION MODE (ID)
+
+    obr_31 : list[CE] | None
+        OBR.31 (opt, rep) - REASON FOR STUDY (CE)
+
+    obr_32 : str | None
+        OBR.32 (opt) - PRINCIPAL RESULT INTERPRETER (CN)
+
+    obr_33 : str | None
+        OBR.33 (opt) - ASSISTANT RESULT INTERPRETER (CN)
+
+    obr_34 : str | None
+        OBR.34 (opt) - TECHNICIAN (CN)
+
+    obr_35 : str | None
+        OBR.35 (opt) - TRANSCRIPTIONIST (CN)
+
+    obr_36 : str | None
+        OBR.36 (opt) - SCHEDULED - DATE/TIME (TS)
+    """
 
     obr_1: Optional[str] = Field(
         default=None,

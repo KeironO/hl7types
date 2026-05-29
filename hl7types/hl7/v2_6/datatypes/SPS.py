@@ -15,7 +15,31 @@ from .TX import TX
 
 
 class SPS(BaseModel):
-    """HL7 v2 SPS data type."""
+    """HL7 v2 SPS data type.
+
+    Attributes
+    ----------
+    sps_1 : CWE | None
+        SPS.1 (opt) - Specimen Source Name or Code (CWE)
+
+    sps_2 : CWE | None
+        SPS.2 (opt) - Additives (CWE)
+
+    sps_3 : TX | None
+        SPS.3 (opt) - Specimen Collection Method (TX)
+
+    sps_4 : CWE | None
+        SPS.4 (opt) - Body Site (CWE)
+
+    sps_5 : CWE | None
+        SPS.5 (opt) - Site Modifier (CWE)
+
+    sps_6 : CWE | None
+        SPS.6 (opt) - Collection Method Modifier Code (CWE)
+
+    sps_7 : CWE | None
+        SPS.7 (opt) - Specimen Role (CWE)
+    """
 
     sps_1: Optional[CWE] = Field(
         default=None,

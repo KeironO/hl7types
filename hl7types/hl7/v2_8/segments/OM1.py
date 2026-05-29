@@ -17,7 +17,163 @@ from ..datatypes.XTN import XTN
 
 
 class OM1(BaseModel):
-    """HL7 v2 OM1 segment."""
+    """HL7 v2 OM1 segment.
+
+    Attributes
+    ----------
+    om1_1 : str
+        OM1.1 (req) - Sequence Number - Test/Observation Master File (NM)
+
+    om1_2 : CWE
+        OM1.2 (req) - Producer's Service/Test/Observation ID (CWE)
+
+    om1_3 : list[str] | None
+        OM1.3 (opt, rep) - Permitted Data Types (ID)
+
+    om1_4 : str
+        OM1.4 (req) - Specimen Required (ID)
+
+    om1_5 : CWE
+        OM1.5 (req) - Producer ID (CWE)
+
+    om1_6 : TX | None
+        OM1.6 (opt) - Observation Description (TX)
+
+    om1_7 : list[CWE] | None
+        OM1.7 (opt, rep) - Other Service/Test/Observation IDs for the Observation (CWE)
+
+    om1_8 : list[str] | None
+        OM1.8 (opt, rep) - Other Names (ST)
+
+    om1_9 : str | None
+        OM1.9 (opt) - Preferred Report Name for the Observation (ST)
+
+    om1_10 : str | None
+        OM1.10 (opt) - Preferred Short Name or Mnemonic for the Observation (ST)
+
+    om1_11 : str | None
+        OM1.11 (opt) - Preferred Long Name for the Observation (ST)
+
+    om1_12 : str | None
+        OM1.12 (opt) - Orderability (ID)
+
+    om1_13 : list[CWE] | None
+        OM1.13 (opt, rep) - Identity of Instrument Used to Perform this Study (CWE)
+
+    om1_14 : list[CWE] | None
+        OM1.14 (opt, rep) - Coded Representation of Method (CWE)
+
+    om1_15 : str | None
+        OM1.15 (opt) - Portable Device Indicator (ID)
+
+    om1_16 : list[CWE] | None
+        OM1.16 (opt, rep) - Observation Producing Department/Section (CWE)
+
+    om1_17 : XTN | None
+        OM1.17 (opt) - Telephone Number of Section (XTN)
+
+    om1_18 : CWE
+        OM1.18 (req) - Nature of Service/Test/Observation (CWE)
+
+    om1_19 : CWE | None
+        OM1.19 (opt) - Report Subheader (CWE)
+
+    om1_20 : str | None
+        OM1.20 (opt) - Report Display Order (ST)
+
+    om1_21 : str | None
+        OM1.21 (opt) - Date/Time Stamp for Any Change in Definition for the Observation (DTM)
+
+    om1_22 : str | None
+        OM1.22 (opt) - Effective Date/Time of Change (DTM)
+
+    om1_23 : str | None
+        OM1.23 (opt) - Typical Turn-Around Time (NM)
+
+    om1_24 : str | None
+        OM1.24 (opt) - Processing Time (NM)
+
+    om1_25 : list[str] | None
+        OM1.25 (opt, rep) - Processing Priority (ID)
+
+    om1_26 : str | None
+        OM1.26 (opt) - Reporting Priority (ID)
+
+    om1_27 : list[CWE] | None
+        OM1.27 (opt, rep) - Outside Site(s) Where Observation May Be Performed (CWE)
+
+    om1_28 : list[XAD] | None
+        OM1.28 (opt, rep) - Address of Outside Site(s) (XAD)
+
+    om1_29 : XTN | None
+        OM1.29 (opt) - Phone Number of Outside Site (XTN)
+
+    om1_30 : CWE | None
+        OM1.30 (opt) - Confidentiality Code (CWE)
+
+    om1_31 : list[CWE] | None
+        OM1.31 (opt, rep) - Observations Required to Interpret this Observation (CWE)
+
+    om1_32 : TX | None
+        OM1.32 (opt) - Interpretation of Observations (TX)
+
+    om1_33 : list[CWE] | None
+        OM1.33 (opt, rep) - Contraindications to Observations (CWE)
+
+    om1_34 : list[CWE] | None
+        OM1.34 (opt, rep) - Reflex Tests/Observations (CWE)
+
+    om1_35 : list[TX] | None
+        OM1.35 (opt, rep) - Rules that Trigger Reflex Testing (TX)
+
+    om1_36 : list[CWE] | None
+        OM1.36 (opt, rep) - Fixed Canned Message (CWE)
+
+    om1_37 : list[TX] | None
+        OM1.37 (opt, rep) - Patient Preparation (TX)
+
+    om1_38 : CWE | None
+        OM1.38 (opt) - Procedure Medication (CWE)
+
+    om1_39 : TX | None
+        OM1.39 (opt) - Factors that may Affect the Observation (TX)
+
+    om1_40 : list[str] | None
+        OM1.40 (opt, rep) - Service/Test/Observation Performance Schedule (ST)
+
+    om1_41 : TX | None
+        OM1.41 (opt) - Description of Test Methods (TX)
+
+    om1_42 : CWE | None
+        OM1.42 (opt) - Kind of Quantity Observed (CWE)
+
+    om1_43 : CWE | None
+        OM1.43 (opt) - Point Versus Interval (CWE)
+
+    om1_44 : TX | None
+        OM1.44 (opt) - Challenge Information (TX)
+
+    om1_45 : CWE | None
+        OM1.45 (opt) - Relationship Modifier (CWE)
+
+    om1_46 : CWE | None
+        OM1.46 (opt) - Target Anatomic Site Of Test (CWE)
+
+    om1_47 : CWE | None
+        OM1.47 (opt) - Modality of Imaging Measurement (CWE)
+
+    om1_48 : str | None
+        OM1.48 (opt) - Exclusive Test (ID)
+
+    om1_49 : str | None
+        OM1.49 (opt) - Diagnostic Serv Sect ID (ID)
+
+    om1_50 : CWE | None
+        OM1.50 (opt) - Taxonomic Classification Code (CWE)
+
+    om1_51 : list[str] | None
+        OM1.51 (opt, rep) - Other Names (ST)
+    """
 
     om1_1: str = Field(
         default=...,

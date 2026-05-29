@@ -15,7 +15,19 @@ from .MOP import MOP
 
 
 class PTA(BaseModel):
-    """HL7 v2 PTA data type."""
+    """HL7 v2 PTA data type.
+
+    Attributes
+    ----------
+    pta_1 : CWE
+        PTA.1 (req) - Policy Type (CWE)
+
+    pta_2 : CWE | None
+        PTA.2 (opt) - Amount Class (CWE)
+
+    pta_4 : MOP
+        PTA.4 (req) - Money or Percentage (MOP)
+    """
 
     pta_1: CWE = Field(
         default=...,

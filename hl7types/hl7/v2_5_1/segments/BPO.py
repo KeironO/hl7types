@@ -18,7 +18,52 @@ from ..datatypes.XAD import XAD
 
 
 class BPO(BaseModel):
-    """HL7 v2 BPO segment."""
+    """HL7 v2 BPO segment.
+
+    Attributes
+    ----------
+    bpo_1 : str
+        BPO.1 (req) - Set ID - BPO (SI)
+
+    bpo_2 : CWE
+        BPO.2 (req) - BP Universal Service ID (CWE)
+
+    bpo_3 : list[CWE] | None
+        BPO.3 (opt, rep) - BP  Processing Requirements (CWE)
+
+    bpo_4 : str
+        BPO.4 (req) - BP Quantity (NM)
+
+    bpo_5 : str | None
+        BPO.5 (opt) - BP Amount (NM)
+
+    bpo_6 : CE | None
+        BPO.6 (opt) - BP Units (CE)
+
+    bpo_7 : TS | None
+        BPO.7 (opt) - BP Intended Use Date/Time (TS)
+
+    bpo_8 : PL | None
+        BPO.8 (opt) - BP Intended Dispense From Location (PL)
+
+    bpo_9 : XAD | None
+        BPO.9 (opt) - BP Intended Dispense From Address (XAD)
+
+    bpo_10 : TS | None
+        BPO.10 (opt) - BP Requested Dispense Date/Time (TS)
+
+    bpo_11 : PL | None
+        BPO.11 (opt) - BP Requested Dispense To Location (PL)
+
+    bpo_12 : XAD | None
+        BPO.12 (opt) - BP Requested Dispense To Address (XAD)
+
+    bpo_13 : list[CWE] | None
+        BPO.13 (opt, rep) - BP Indication for Use (CWE)
+
+    bpo_14 : str | None
+        BPO.14 (opt) - BP Informed Consent Indicator (ID)
+    """
 
     bpo_1: str = Field(
         default=...,

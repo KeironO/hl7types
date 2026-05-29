@@ -15,7 +15,22 @@ from ..datatypes.FT import FT
 
 
 class NTE(BaseModel):
-    """HL7 v2 NTE segment."""
+    """HL7 v2 NTE segment.
+
+    Attributes
+    ----------
+    nte_1 : str | None
+        NTE.1 (opt) - Set ID - NTE (SI)
+
+    nte_2 : str | None
+        NTE.2 (opt) - Source of Comment (ID)
+
+    nte_3 : list[FT] | None
+        NTE.3 (opt, rep) - Comment (FT)
+
+    nte_4 : CE | None
+        NTE.4 (opt) - Comment Type (CE)
+    """
 
     nte_1: Optional[str] = Field(
         default=None,

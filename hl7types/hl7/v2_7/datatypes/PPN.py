@@ -16,7 +16,82 @@ from .HD import HD
 
 
 class PPN(BaseModel):
-    """HL7 v2 PPN data type."""
+    """HL7 v2 PPN data type.
+
+    Attributes
+    ----------
+    ppn_1 : str | None
+        PPN.1 (opt) - Person Identifier (ST)
+
+    ppn_2 : FN | None
+        PPN.2 (opt) - Family Name (FN)
+
+    ppn_3 : str | None
+        PPN.3 (opt) - Given Name (ST)
+
+    ppn_4 : str | None
+        PPN.4 (opt) - Second and Further Given Names or Initials Thereof (ST)
+
+    ppn_5 : str | None
+        PPN.5 (opt) - Suffix (e.g., JR or III) (ST)
+
+    ppn_6 : str | None
+        PPN.6 (opt) - Prefix (e.g., DR) (ST)
+
+    ppn_8 : CWE | None
+        PPN.8 (opt) - Source Table (CWE)
+
+    ppn_9 : HD | None
+        PPN.9 (opt) - Assigning Authority (HD)
+
+    ppn_10 : str | None
+        PPN.10 (opt) - Name Type Code (ID)
+
+    ppn_11 : str | None
+        PPN.11 (opt) - Identifier Check Digit (ST)
+
+    ppn_12 : str | None
+        PPN.12 (opt) - Check Digit Scheme (ID)
+
+    ppn_13 : str | None
+        PPN.13 (opt) - Identifier Type Code (ID)
+
+    ppn_14 : HD | None
+        PPN.14 (opt) - Assigning Facility (HD)
+
+    ppn_15 : str | None
+        PPN.15 (opt) - Date/Time Action Performed (DTM)
+
+    ppn_16 : str | None
+        PPN.16 (opt) - Name Representation Code (ID)
+
+    ppn_17 : CWE | None
+        PPN.17 (opt) - Name Context (CWE)
+
+    ppn_19 : str | None
+        PPN.19 (opt) - Name Assembly Order (ID)
+
+    ppn_20 : str | None
+        PPN.20 (opt) - Effective Date (DTM)
+
+    ppn_21 : str | None
+        PPN.21 (opt) - Expiration Date (DTM)
+
+    ppn_22 : str | None
+        PPN.22 (opt) - Professional Suffix (ST)
+
+    ppn_23 : CWE | None
+        PPN.23 (opt) - Assigning Jurisdiction (CWE)
+
+    ppn_24 : CWE | None
+        PPN.24 (opt) - Assigning Agency or Department (CWE)
+
+    ppn_25 : str | None
+        PPN.25 (opt) - Security Check (ST)
+
+    ppn_26 : str | None
+        PPN.26 (opt) - Security Check Scheme (ID)
+    """
 
     ppn_1: Optional[str] = Field(
         default=None,

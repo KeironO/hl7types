@@ -18,7 +18,73 @@ from ..datatypes.XCN import XCN
 
 
 class DG1(BaseModel):
-    """HL7 v2 DG1 segment."""
+    """HL7 v2 DG1 segment.
+
+    Attributes
+    ----------
+    dg1_1 : str
+        DG1.1 (req) - Set ID - DG1 (SI)
+
+    dg1_2 : str | None
+        DG1.2 (opt) - Diagnosis Coding Method (ID)
+
+    dg1_3 : CE | None
+        DG1.3 (opt) - Diagnosis Code - DG1 (CE)
+
+    dg1_4 : str | None
+        DG1.4 (opt) - Diagnosis Description (ST)
+
+    dg1_5 : TS | None
+        DG1.5 (opt) - Diagnosis Date/Time (TS)
+
+    dg1_6 : str
+        DG1.6 (req) - Diagnosis Type (IS)
+
+    dg1_7 : CE | None
+        DG1.7 (opt) - Major Diagnostic Category (CE)
+
+    dg1_8 : CE | None
+        DG1.8 (opt) - Diagnostic Related Group (CE)
+
+    dg1_9 : str | None
+        DG1.9 (opt) - DRG Approval Indicator (ID)
+
+    dg1_10 : str | None
+        DG1.10 (opt) - DRG Grouper Review Code (IS)
+
+    dg1_11 : CE | None
+        DG1.11 (opt) - Outlier Type (CE)
+
+    dg1_12 : str | None
+        DG1.12 (opt) - Outlier Days (NM)
+
+    dg1_13 : CP | None
+        DG1.13 (opt) - Outlier Cost (CP)
+
+    dg1_14 : str | None
+        DG1.14 (opt) - Grouper Version And Type (ST)
+
+    dg1_15 : str | None
+        DG1.15 (opt) - Diagnosis Priority (ID)
+
+    dg1_16 : list[XCN] | None
+        DG1.16 (opt, rep) - Diagnosing Clinician (XCN)
+
+    dg1_17 : str | None
+        DG1.17 (opt) - Diagnosis Classification (IS)
+
+    dg1_18 : str | None
+        DG1.18 (opt) - Confidential Indicator (ID)
+
+    dg1_19 : TS | None
+        DG1.19 (opt) - Attestation Date/Time (TS)
+
+    dg1_20 : EI | None
+        DG1.20 (opt) - Diagnosis Identifier (EI)
+
+    dg1_21 : str | None
+        DG1.21 (opt) - Diagnosis Action Code (ID)
+    """
 
     dg1_1: str = Field(
         default=...,

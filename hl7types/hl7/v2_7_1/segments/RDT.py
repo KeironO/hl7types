@@ -14,7 +14,13 @@ from ..datatypes.varies import varies
 
 
 class RDT(BaseModel):
-    """HL7 v2 RDT segment."""
+    """HL7 v2 RDT segment.
+
+    Attributes
+    ----------
+    rdt_1 : varies
+        RDT.1 (req) - Column Value (varies)
+    """
 
     rdt_1: varies = Field(
         default=...,

@@ -19,7 +19,82 @@ from .TS import TS
 
 
 class PPN(BaseModel):
-    """HL7 v2 PPN data type."""
+    """HL7 v2 PPN data type.
+
+    Attributes
+    ----------
+    ppn_1 : str | None
+        PPN.1 (opt) - ID Number (ST)
+
+    ppn_2 : FN | None
+        PPN.2 (opt) - Family Name (FN)
+
+    ppn_3 : str | None
+        PPN.3 (opt) - Given Name (ST)
+
+    ppn_4 : str | None
+        PPN.4 (opt) - Second and Further Given Names or Initials Thereof (ST)
+
+    ppn_5 : str | None
+        PPN.5 (opt) - Suffix (e.g., JR or III) (ST)
+
+    ppn_6 : str | None
+        PPN.6 (opt) - Prefix (e.g., DR) (ST)
+
+    ppn_7 : str | None
+        PPN.7 (opt) - Degree (e.g., MD) (IS)
+
+    ppn_8 : str | None
+        PPN.8 (opt) - Source Table (IS)
+
+    ppn_9 : HD | None
+        PPN.9 (opt) - Assigning Authority (HD)
+
+    ppn_10 : str | None
+        PPN.10 (opt) - Name Type Code (ID)
+
+    ppn_11 : str | None
+        PPN.11 (opt) - Identifier Check Digit (ST)
+
+    ppn_12 : str | None
+        PPN.12 (opt) - Check Digit Scheme (ID)
+
+    ppn_13 : str | None
+        PPN.13 (opt) - Identifier Type Code (ID)
+
+    ppn_14 : HD | None
+        PPN.14 (opt) - Assigning Facility (HD)
+
+    ppn_15 : TS | None
+        PPN.15 (opt) - Date/Time Action Performed (TS)
+
+    ppn_16 : str | None
+        PPN.16 (opt) - Name Representation Code (ID)
+
+    ppn_17 : CE | None
+        PPN.17 (opt) - Name Context (CE)
+
+    ppn_18 : DR | None
+        PPN.18 (opt) - Name Validity Range (DR)
+
+    ppn_19 : str | None
+        PPN.19 (opt) - Name Assembly Order (ID)
+
+    ppn_20 : TS | None
+        PPN.20 (opt) - Effective Date (TS)
+
+    ppn_21 : TS | None
+        PPN.21 (opt) - Expiration Date (TS)
+
+    ppn_22 : str | None
+        PPN.22 (opt) - Professional Suffix (ST)
+
+    ppn_23 : CWE | None
+        PPN.23 (opt) - Assigning Jurisdiction (CWE)
+
+    ppn_24 : CWE | None
+        PPN.24 (opt) - Assigning Agency or Department (CWE)
+    """
 
     ppn_1: Optional[str] = Field(
         default=None,

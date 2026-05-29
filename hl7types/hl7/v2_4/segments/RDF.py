@@ -14,7 +14,16 @@ from ..datatypes.RCD import RCD
 
 
 class RDF(BaseModel):
-    """HL7 v2 RDF segment."""
+    """HL7 v2 RDF segment.
+
+    Attributes
+    ----------
+    rdf_1 : str
+        RDF.1 (req) - Number of Columns per Row (NM)
+
+    rdf_2 : list[RCD]
+        RDF.2 (req, rep) - Column Description (RCD)
+    """
 
     rdf_1: str = Field(
         default=...,

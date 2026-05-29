@@ -14,7 +14,31 @@ from ..datatypes.CWE import CWE
 
 
 class RQ1(BaseModel):
-    """HL7 v2 RQ1 segment."""
+    """HL7 v2 RQ1 segment.
+
+    Attributes
+    ----------
+    rq1_1 : str | None
+        RQ1.1 (opt) - Anticipated Price (ST)
+
+    rq1_2 : CWE | None
+        RQ1.2 (opt) - Manufacturer Identifier (CWE)
+
+    rq1_3 : str | None
+        RQ1.3 (opt) - Manufacturer's Catalog (ST)
+
+    rq1_4 : CWE | None
+        RQ1.4 (opt) - Vendor ID (CWE)
+
+    rq1_5 : str | None
+        RQ1.5 (opt) - Vendor Catalog (ST)
+
+    rq1_6 : str | None
+        RQ1.6 (opt) - Taxable (ID)
+
+    rq1_7 : str | None
+        RQ1.7 (opt) - Substitute Allowed (ID)
+    """
 
     rq1_1: Optional[str] = Field(
         default=None,

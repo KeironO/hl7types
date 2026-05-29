@@ -14,7 +14,16 @@ from .CE import CE
 
 
 class CM_RANGE(BaseModel):
-    """HL7 v2 CM_RANGE data type."""
+    """HL7 v2 CM_RANGE data type.
+
+    Attributes
+    ----------
+    cm_range_1 : CE | None
+        CM_RANGE.1 (opt) - Low Value (CE)
+
+    cm_range_2 : CE | None
+        CM_RANGE.2 (opt) - High Value (CE)
+    """
 
     cm_range_1: Optional[CE] = Field(
         default=None,

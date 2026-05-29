@@ -17,7 +17,136 @@ from ..datatypes.TX import TX
 
 
 class OM1(BaseModel):
-    """HL7 v2 OM1 segment."""
+    """HL7 v2 OM1 segment.
+
+    Attributes
+    ----------
+    om1_1 : str | None
+        OM1.1 (opt) - Segment Type ID (ST)
+
+    om1_2 : str | None
+        OM1.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+
+    om1_3 : CE
+        OM1.3 (req) - Producer's test / observation ID (CE)
+
+    om1_4 : list[str] | None
+        OM1.4 (opt, rep) - Permitted Data Types (ID)
+
+    om1_5 : str
+        OM1.5 (req) - Specimen Required (ID)
+
+    om1_6 : CE
+        OM1.6 (req) - Producer ID (CE)
+
+    om1_7 : TX | None
+        OM1.7 (opt) - Observation Description (TX)
+
+    om1_8 : CE | None
+        OM1.8 (opt) - Other test / observation IDs for the observation (CE)
+
+    om1_9 : list[str]
+        OM1.9 (req, rep) - Other Names (ST)
+
+    om1_10 : str | None
+        OM1.10 (opt) - Preferred Report Name for the Observation (ST)
+
+    om1_11 : str | None
+        OM1.11 (opt) - Preferred Short Name or Mnemonic for Observation (ST)
+
+    om1_12 : str | None
+        OM1.12 (opt) - Preferred Long Name for the Observation (ST)
+
+    om1_13 : str | None
+        OM1.13 (opt) - Orderability (ID)
+
+    om1_14 : list[CE] | None
+        OM1.14 (opt, rep) - Identity of instrument used to perform this study (CE)
+
+    om1_15 : list[CE] | None
+        OM1.15 (opt, rep) - Coded Representation of Method (CE)
+
+    om1_16 : str | None
+        OM1.16 (opt) - Portable (ID)
+
+    om1_17 : list[str] | None
+        OM1.17 (opt, rep) - Observation producing department / section (ID)
+
+    om1_18 : str | None
+        OM1.18 (opt) - Telephone Number of Section (TN)
+
+    om1_19 : str
+        OM1.19 (req) - Nature of test / observation (ID)
+
+    om1_20 : CE | None
+        OM1.20 (opt) - Report Subheader (CE)
+
+    om1_21 : str | None
+        OM1.21 (opt) - Report Display Order (ST)
+
+    om1_22 : TS
+        OM1.22 (req) - Date / time stamp for any change in definition for obs (TS)
+
+    om1_23 : TS | None
+        OM1.23 (opt) - Effective date / time of change (TS)
+
+    om1_24 : str | None
+        OM1.24 (opt) - Typical Turn-around Time (NM)
+
+    om1_25 : str | None
+        OM1.25 (opt) - Processing Time (NM)
+
+    om1_26 : list[str] | None
+        OM1.26 (opt, rep) - Processing Priority (ID)
+
+    om1_27 : str | None
+        OM1.27 (opt) - Reporting Priority (ID)
+
+    om1_28 : list[CE] | None
+        OM1.28 (opt, rep) - Outside Site(s) Where Observation may be Performed (CE)
+
+    om1_29 : list[AD] | None
+        OM1.29 (opt, rep) - Address of Outside Site(s) (AD)
+
+    om1_30 : list[str] | None
+        OM1.30 (opt, rep) - Phone Number of Outside Site (TN)
+
+    om1_31 : str | None
+        OM1.31 (opt) - Confidentiality Code (ID)
+
+    om1_32 : list[CE] | None
+        OM1.32 (opt, rep) - Observations required to interpret the observation (CE)
+
+    om1_33 : TX | None
+        OM1.33 (opt) - Interpretation of Observations (TX)
+
+    om1_34 : list[CE] | None
+        OM1.34 (opt, rep) - Contraindications to Observations (CE)
+
+    om1_35 : list[CE] | None
+        OM1.35 (opt, rep) - Reflex tests / observations (CE)
+
+    om1_36 : str | None
+        OM1.36 (opt) - Rules that Trigger Reflex Testing (ST)
+
+    om1_37 : list[CE] | None
+        OM1.37 (opt, rep) - Fixed Canned Message (CE)
+
+    om1_38 : TX | None
+        OM1.38 (opt) - Patient Preparation (TX)
+
+    om1_39 : CE | None
+        OM1.39 (opt) - Procedure Medication (CE)
+
+    om1_40 : TX | None
+        OM1.40 (opt) - Factors that may affect the observation (TX)
+
+    om1_41 : list[str] | None
+        OM1.41 (opt, rep) - Test / observation performance schedule (ST)
+
+    om1_42 : TX | None
+        OM1.42 (opt) - Description of Test Methods (TX)
+    """
 
     om1_1: Optional[str] = Field(
         default=None,

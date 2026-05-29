@@ -16,7 +16,76 @@ from ..datatypes.UVC import UVC
 
 
 class UB1(BaseModel):
-    """HL7 v2 UB1 segment."""
+    """HL7 v2 UB1 segment.
+
+    Attributes
+    ----------
+    ub1_1 : str | None
+        UB1.1 (opt) - Set ID - UB1 (SI)
+
+    ub1_3 : str | None
+        UB1.3 (opt) - Blood Furnished-Pints (NM)
+
+    ub1_4 : str | None
+        UB1.4 (opt) - Blood Replaced-Pints (NM)
+
+    ub1_5 : str | None
+        UB1.5 (opt) - Blood Not Replaced-Pints (NM)
+
+    ub1_6 : str | None
+        UB1.6 (opt) - Co-Insurance Days (NM)
+
+    ub1_7 : list[str] | None
+        UB1.7 (opt, rep) - Condition Code (IS)
+
+    ub1_8 : str | None
+        UB1.8 (opt) - Covered Days (NM)
+
+    ub1_9 : str | None
+        UB1.9 (opt) - Non Covered Days (NM)
+
+    ub1_10 : list[UVC] | None
+        UB1.10 (opt, rep) - Value Amount & Code (UVC)
+
+    ub1_11 : str | None
+        UB1.11 (opt) - Number Of Grace Days (NM)
+
+    ub1_12 : CWE | None
+        UB1.12 (opt) - Special Program Indicator (CWE)
+
+    ub1_13 : CWE | None
+        UB1.13 (opt) - PSRO/UR Approval Indicator (CWE)
+
+    ub1_14 : str | None
+        UB1.14 (opt) - PSRO/UR Approved Stay-Fm (DT)
+
+    ub1_15 : str | None
+        UB1.15 (opt) - PSRO/UR Approved Stay-To (DT)
+
+    ub1_16 : list[OCD] | None
+        UB1.16 (opt, rep) - Occurrence (OCD)
+
+    ub1_17 : CWE | None
+        UB1.17 (opt) - Occurrence Span (CWE)
+
+    ub1_18 : str | None
+        UB1.18 (opt) - Occur Span Start Date (DT)
+
+    ub1_19 : str | None
+        UB1.19 (opt) - Occur Span End Date (DT)
+
+    ub1_20 : str | None
+        UB1.20 (opt) - UB-82 Locator 2 (ST)
+
+    ub1_21 : str | None
+        UB1.21 (opt) - UB-82 Locator 9 (ST)
+
+    ub1_22 : str | None
+        UB1.22 (opt) - UB-82 Locator 27 (ST)
+
+    ub1_23 : str | None
+        UB1.23 (opt) - UB-82 Locator 45 (ST)
+    """
 
     ub1_1: Optional[str] = Field(
         default=None,

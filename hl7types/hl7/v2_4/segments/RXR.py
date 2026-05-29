@@ -14,7 +14,25 @@ from ..datatypes.CE import CE
 
 
 class RXR(BaseModel):
-    """HL7 v2 RXR segment."""
+    """HL7 v2 RXR segment.
+
+    Attributes
+    ----------
+    rxr_1 : CE
+        RXR.1 (req) - Route (CE)
+
+    rxr_2 : CE | None
+        RXR.2 (opt) - Administration Site (CE)
+
+    rxr_3 : CE | None
+        RXR.3 (opt) - Administration Device (CE)
+
+    rxr_4 : CE | None
+        RXR.4 (opt) - Administration Method (CE)
+
+    rxr_5 : CE | None
+        RXR.5 (opt) - Routing Instruction (CE)
+    """
 
     rxr_1: CE = Field(
         default=...,

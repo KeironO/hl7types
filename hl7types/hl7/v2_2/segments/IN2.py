@@ -14,7 +14,100 @@ from ..datatypes.PN import PN
 
 
 class IN2(BaseModel):
-    """HL7 v2 IN2 segment."""
+    """HL7 v2 IN2 segment.
+
+    Attributes
+    ----------
+    in2_1 : str | None
+        IN2.1 (opt) - Insured's employee ID (ST)
+
+    in2_2 : str | None
+        IN2.2 (opt) - Insured's social security number (ST)
+
+    in2_3 : str | None
+        IN2.3 (opt) - Insured's employer name (CN)
+
+    in2_4 : str | None
+        IN2.4 (opt) - Employer information data (ID)
+
+    in2_5 : str | None
+        IN2.5 (opt) - Mail claim party (ID)
+
+    in2_6 : str | None
+        IN2.6 (opt) - Medicare health insurance card number (NM)
+
+    in2_7 : PN | None
+        IN2.7 (opt) - Medicaid case name (PN)
+
+    in2_8 : str | None
+        IN2.8 (opt) - Medicaid case number (NM)
+
+    in2_9 : PN | None
+        IN2.9 (opt) - Champus sponsor name (PN)
+
+    in2_10 : str | None
+        IN2.10 (opt) - Champus ID number (NM)
+
+    in2_11 : str | None
+        IN2.11 (opt) - Dependent of champus recipient (ID)
+
+    in2_12 : str | None
+        IN2.12 (opt) - Champus organization (ST)
+
+    in2_13 : str | None
+        IN2.13 (opt) - Champus station (ST)
+
+    in2_14 : str | None
+        IN2.14 (opt) - Champus service (ID)
+
+    in2_15 : str | None
+        IN2.15 (opt) - Champus rank / grade (ID)
+
+    in2_16 : str | None
+        IN2.16 (opt) - Champus status (ID)
+
+    in2_17 : str | None
+        IN2.17 (opt) - Champus retire date (DT)
+
+    in2_18 : str | None
+        IN2.18 (opt) - Champus non-availability certification on file (ID)
+
+    in2_19 : str | None
+        IN2.19 (opt) - Baby coverage (ID)
+
+    in2_20 : str | None
+        IN2.20 (opt) - Combine baby bill (ID)
+
+    in2_21 : str | None
+        IN2.21 (opt) - Blood deductible (NM)
+
+    in2_22 : PN | None
+        IN2.22 (opt) - Special coverage approval name (PN)
+
+    in2_23 : str | None
+        IN2.23 (opt) - Special coverage approval title (ST)
+
+    in2_24 : list[str] | None
+        IN2.24 (opt, rep) - Non-covered insurance code (ID)
+
+    in2_25 : str | None
+        IN2.25 (opt) - Payor ID (ST)
+
+    in2_26 : str | None
+        IN2.26 (opt) - Payor subscriber ID (ST)
+
+    in2_27 : str | None
+        IN2.27 (opt) - Eligibility source (ID)
+
+    in2_28 : list[str] | None
+        IN2.28 (opt, rep) - Room coverage type / amount (CM)
+
+    in2_29 : list[str] | None
+        IN2.29 (opt, rep) - Policy type / amount (CM)
+
+    in2_30 : str | None
+        IN2.30 (opt) - Daily deductible (CM)
+    """
 
     in2_1: Optional[str] = Field(
         default=None,

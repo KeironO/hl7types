@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class SGH(BaseModel):
-    """HL7 v2 SGH segment."""
+    """HL7 v2 SGH segment.
+
+    Attributes
+    ----------
+    sgh_1 : str
+        SGH.1 (req) - Set ID - SGH (SI)
+
+    sgh_2 : str | None
+        SGH.2 (opt) - Segment Group Name (ST)
+    """
 
     sgh_1: str = Field(
         default=...,

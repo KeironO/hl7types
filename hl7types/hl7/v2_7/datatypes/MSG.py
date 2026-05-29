@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class MSG(BaseModel):
-    """HL7 v2 MSG data type."""
+    """HL7 v2 MSG data type.
+
+    Attributes
+    ----------
+    msg_1 : str
+        MSG.1 (req) - Message Code (ID)
+
+    msg_2 : str
+        MSG.2 (req) - Trigger Event (ID)
+
+    msg_3 : str
+        MSG.3 (req) - Message Structure (ID)
+    """
 
     msg_1: str = Field(
         default=...,

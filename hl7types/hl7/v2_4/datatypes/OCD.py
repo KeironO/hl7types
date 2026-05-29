@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class OCD(BaseModel):
-    """HL7 v2 OCD data type."""
+    """HL7 v2 OCD data type.
+
+    Attributes
+    ----------
+    ocd_1 : str | None
+        OCD.1 (opt) - occurrence code (IS)
+
+    ocd_2 : str | None
+        OCD.2 (opt) - occurrence date (DT)
+    """
 
     ocd_1: Optional[str] = Field(
         default=None,

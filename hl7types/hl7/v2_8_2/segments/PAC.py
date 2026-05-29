@@ -16,7 +16,34 @@ from ..datatypes.NA import NA
 
 
 class PAC(BaseModel):
-    """HL7 v2 PAC segment."""
+    """HL7 v2 PAC segment.
+
+    Attributes
+    ----------
+    pac_1 : str
+        PAC.1 (req) - Set Id - PAC (SI)
+
+    pac_2 : EI | None
+        PAC.2 (opt) - Package ID (EI)
+
+    pac_3 : EI | None
+        PAC.3 (opt) - Parent Package ID (EI)
+
+    pac_4 : NA | None
+        PAC.4 (opt) - Position in Parent Package (NA)
+
+    pac_5 : CWE
+        PAC.5 (req) - Package Type (CWE)
+
+    pac_6 : list[CWE] | None
+        PAC.6 (opt, rep) - Package Condition (CWE)
+
+    pac_7 : list[CWE] | None
+        PAC.7 (opt, rep) - Package Handling Code (CWE)
+
+    pac_8 : list[CWE] | None
+        PAC.8 (opt, rep) - Package Risk Code (CWE)
+    """
 
     pac_1: str = Field(
         default=...,

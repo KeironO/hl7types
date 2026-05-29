@@ -12,7 +12,34 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CN_PERSON(BaseModel):
-    """HL7 v2 CN_PERSON data type."""
+    """HL7 v2 CN_PERSON data type.
+
+    Attributes
+    ----------
+    cn_person_1 : str | None
+        CN_PERSON.1 (opt) - ID number (ID)
+
+    cn_person_2 : str | None
+        CN_PERSON.2 (opt) - familiy name (ST)
+
+    cn_person_3 : str | None
+        CN_PERSON.3 (opt) - given name (ST)
+
+    cn_person_4 : str | None
+        CN_PERSON.4 (opt) - middle initial or name (ST)
+
+    cn_person_5 : str | None
+        CN_PERSON.5 (opt) - suffix (e.g. JR or III) (ST)
+
+    cn_person_6 : str | None
+        CN_PERSON.6 (opt) - prefix (e.g. DR) (ST)
+
+    cn_person_7 : str | None
+        CN_PERSON.7 (opt) - degree (e.g. MD) (ST)
+
+    cn_person_8 : str | None
+        CN_PERSON.8 (opt) - source table id (ID)
+    """
 
     cn_person_1: Optional[str] = Field(
         default=None,

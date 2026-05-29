@@ -14,7 +14,19 @@ from .TS import TS
 
 
 class AUI(BaseModel):
-    """HL7 v2 AUI data type."""
+    """HL7 v2 AUI data type.
+
+    Attributes
+    ----------
+    aui_1 : str | None
+        AUI.1 (opt) - authorization number (ST)
+
+    aui_2 : TS | None
+        AUI.2 (opt) - date (TS)
+
+    aui_3 : str | None
+        AUI.3 (opt) - source (ST)
+    """
 
     aui_1: Optional[str] = Field(
         default=None,

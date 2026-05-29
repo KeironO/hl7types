@@ -16,7 +16,49 @@ from ..datatypes.PN import PN
 
 
 class NK1(BaseModel):
-    """HL7 v2 NK1 segment."""
+    """HL7 v2 NK1 segment.
+
+    Attributes
+    ----------
+    nk1_1 : str
+        NK1.1 (req) - Set ID - Next of Kin (SI)
+
+    nk1_2 : PN | None
+        NK1.2 (opt) - Name (PN)
+
+    nk1_3 : CE | None
+        NK1.3 (opt) - Relationship (CE)
+
+    nk1_4 : AD | None
+        NK1.4 (opt) - Address (AD)
+
+    nk1_5 : list[str] | None
+        NK1.5 (opt, rep) - Phone Number (TN)
+
+    nk1_6 : str | None
+        NK1.6 (opt) - Business Phone Number (TN)
+
+    nk1_7 : CE | None
+        NK1.7 (opt) - Contact Role (CE)
+
+    nk1_8 : str | None
+        NK1.8 (opt) - Start Date (DT)
+
+    nk1_9 : str | None
+        NK1.9 (opt) - End Date (DT)
+
+    nk1_10 : str | None
+        NK1.10 (opt) - Next of Kin (ST)
+
+    nk1_11 : str | None
+        NK1.11 (opt) - Next of kin job code / class (CM)
+
+    nk1_12 : str | None
+        NK1.12 (opt) - Next of Kin Employee Number (ST)
+
+    nk1_13 : str | None
+        NK1.13 (opt) - Organization Name (ST)
+    """
 
     nk1_1: str = Field(
         default=...,

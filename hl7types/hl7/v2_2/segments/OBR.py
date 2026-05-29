@@ -16,7 +16,118 @@ from ..datatypes.TS import TS
 
 
 class OBR(BaseModel):
-    """HL7 v2 OBR segment."""
+    """HL7 v2 OBR segment.
+
+    Attributes
+    ----------
+    obr_1 : str | None
+        OBR.1 (opt) - Set ID - Observation Request (SI)
+
+    obr_2 : str | None
+        OBR.2 (opt) - Placer Order Number (CM)
+
+    obr_3 : str | None
+        OBR.3 (opt) - Filler Order Number (CM)
+
+    obr_4 : CE
+        OBR.4 (req) - Universal Service ID (CE)
+
+    obr_5 : str | None
+        OBR.5 (opt) - Priority (not used) (ID)
+
+    obr_6 : TS | None
+        OBR.6 (opt) - Requested date / time (not used) (TS)
+
+    obr_7 : TS | None
+        OBR.7 (opt) - Observation date / time (TS)
+
+    obr_8 : TS | None
+        OBR.8 (opt) - Observation end date / time (TS)
+
+    obr_9 : str | None
+        OBR.9 (opt) - Collection Volume (CQ)
+
+    obr_10 : list[str] | None
+        OBR.10 (opt, rep) - Collector Identifier (CN)
+
+    obr_11 : str | None
+        OBR.11 (opt) - Specimen action code (ID)
+
+    obr_12 : CE | None
+        OBR.12 (opt) - Danger Code (CE)
+
+    obr_13 : str | None
+        OBR.13 (opt) - Relevant clinical information (ST)
+
+    obr_14 : TS | None
+        OBR.14 (opt) - Specimen received date / time (TS)
+
+    obr_15 : str | None
+        OBR.15 (opt) - Specimen source (CM)
+
+    obr_16 : str | None
+        OBR.16 (opt) - Ordering Provider (CN)
+
+    obr_17 : list[str] | None
+        OBR.17 (opt, rep) - Order Callback Phone Number (TN)
+
+    obr_18 : str | None
+        OBR.18 (opt) - Placer field 1 (ST)
+
+    obr_19 : str | None
+        OBR.19 (opt) - Placer field 2 (ST)
+
+    obr_20 : str | None
+        OBR.20 (opt) - Filler Field 1 (ST)
+
+    obr_21 : str | None
+        OBR.21 (opt) - Filler Field 2 (ST)
+
+    obr_22 : TS | None
+        OBR.22 (opt) - Results report / status change - date / time (TS)
+
+    obr_23 : str | None
+        OBR.23 (opt) - Charge to Practice (CM)
+
+    obr_24 : str | None
+        OBR.24 (opt) - Diagnostic service section ID (ID)
+
+    obr_25 : str | None
+        OBR.25 (opt) - Result Status (ID)
+
+    obr_26 : str | None
+        OBR.26 (opt) - Parent Result (CM)
+
+    obr_27 : list[TQ] | None
+        OBR.27 (opt, rep) - Quantity / timing (TQ)
+
+    obr_28 : list[str] | None
+        OBR.28 (opt, rep) - Result Copies To (CN)
+
+    obr_29 : str | None
+        OBR.29 (opt) - Parent Number (CM)
+
+    obr_30 : str | None
+        OBR.30 (opt) - Transportation Mode (ID)
+
+    obr_31 : list[CE] | None
+        OBR.31 (opt, rep) - Reason for Study (CE)
+
+    obr_32 : str | None
+        OBR.32 (opt) - Principal Result Interpreter (CM)
+
+    obr_33 : list[str] | None
+        OBR.33 (opt, rep) - Assistant Result Interpreter (CM)
+
+    obr_34 : list[str] | None
+        OBR.34 (opt, rep) - Technician (CM)
+
+    obr_35 : list[str] | None
+        OBR.35 (opt, rep) - Transcriptionist (CM)
+
+    obr_36 : TS | None
+        OBR.36 (opt) - Scheduled date / time (TS)
+    """
 
     obr_1: Optional[str] = Field(
         default=None,

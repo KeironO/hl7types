@@ -15,7 +15,16 @@ from .TS import TS
 
 
 class CM_DIN(BaseModel):
-    """HL7 v2 CM_DIN data type."""
+    """HL7 v2 CM_DIN data type.
+
+    Attributes
+    ----------
+    cm_din_1 : TS | None
+        CM_DIN.1 (opt) - Date (TS)
+
+    cm_din_2 : CE | None
+        CM_DIN.2 (opt) - institution name (CE)
+    """
 
     cm_din_1: Optional[TS] = Field(
         default=None,

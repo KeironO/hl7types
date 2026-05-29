@@ -15,7 +15,22 @@ from ..datatypes.TX import TX
 
 
 class ECD(BaseModel):
-    """HL7 v2 ECD segment."""
+    """HL7 v2 ECD segment.
+
+    Attributes
+    ----------
+    ecd_1 : str
+        ECD.1 (req) - Reference Command Number (NM)
+
+    ecd_2 : CWE
+        ECD.2 (req) - Remote Control Command (CWE)
+
+    ecd_3 : str | None
+        ECD.3 (opt) - Response Required (ID)
+
+    ecd_5 : list[TX] | None
+        ECD.5 (opt, rep) - Parameters (TX)
+    """
 
     ecd_1: str = Field(
         default=...,

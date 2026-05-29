@@ -16,7 +16,64 @@ from ..datatypes.TX import TX
 
 
 class OM4(BaseModel):
-    """HL7 v2 OM4 segment."""
+    """HL7 v2 OM4 segment.
+
+    Attributes
+    ----------
+    om4_1 : str | None
+        OM4.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+
+    om4_2 : str | None
+        OM4.2 (opt) - Derived Specimen (ID)
+
+    om4_3 : list[TX] | None
+        OM4.3 (opt, rep) - Container Description (TX)
+
+    om4_4 : list[str] | None
+        OM4.4 (opt, rep) - Container Volume (NM)
+
+    om4_5 : list[CWE] | None
+        OM4.5 (opt, rep) - Container Units (CWE)
+
+    om4_6 : CWE | None
+        OM4.6 (opt) - Specimen (CWE)
+
+    om4_7 : CWE | None
+        OM4.7 (opt) - Additive (CWE)
+
+    om4_8 : TX | None
+        OM4.8 (opt) - Preparation (TX)
+
+    om4_9 : TX | None
+        OM4.9 (opt) - Special Handling Requirements (TX)
+
+    om4_10 : CQ | None
+        OM4.10 (opt) - Normal Collection Volume (CQ)
+
+    om4_11 : CQ | None
+        OM4.11 (opt) - Minimum Collection Volume (CQ)
+
+    om4_12 : TX | None
+        OM4.12 (opt) - Specimen Requirements (TX)
+
+    om4_13 : list[str] | None
+        OM4.13 (opt, rep) - Specimen Priorities (ID)
+
+    om4_14 : CQ | None
+        OM4.14 (opt) - Specimen Retention Time (CQ)
+
+    om4_15 : list[CWE] | None
+        OM4.15 (opt, rep) - Specimen Handling Code (CWE)
+
+    om4_16 : str | None
+        OM4.16 (opt) - Specimen Preference (ID)
+
+    om4_17 : str | None
+        OM4.17 (opt) - Preferred Specimen/Attribture Sequence ID (NM)
+
+    om4_18 : list[CWE] | None
+        OM4.18 (opt, rep) - Taxonomic Classification Code (CWE)
+    """
 
     om4_1: Optional[str] = Field(
         default=None,

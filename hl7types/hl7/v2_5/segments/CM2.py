@@ -14,7 +14,22 @@ from ..datatypes.CE import CE
 
 
 class CM2(BaseModel):
-    """HL7 v2 CM2 segment."""
+    """HL7 v2 CM2 segment.
+
+    Attributes
+    ----------
+    cm2_1 : str | None
+        CM2.1 (opt) - Set ID- CM2 (SI)
+
+    cm2_2 : CE
+        CM2.2 (req) - Scheduled Time Point (CE)
+
+    cm2_3 : str | None
+        CM2.3 (opt) - Description of Time Point (ST)
+
+    cm2_4 : list[CE]
+        CM2.4 (req, rep) - Events Scheduled This Time Point (CE)
+    """
 
     cm2_1: Optional[str] = Field(
         default=None,

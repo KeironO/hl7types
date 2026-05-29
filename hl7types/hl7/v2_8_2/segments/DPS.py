@@ -15,7 +15,25 @@ from ..datatypes.CWE import CWE
 
 
 class DPS(BaseModel):
-    """HL7 v2 DPS segment."""
+    """HL7 v2 DPS segment.
+
+    Attributes
+    ----------
+    dps_1 : CWE
+        DPS.1 (req) - Diagnosis Code - MCP (CWE)
+
+    dps_2 : list[CWE]
+        DPS.2 (req, rep) - Procedure Code (CWE)
+
+    dps_3 : str | None
+        DPS.3 (opt) - Effective Date/Time (DTM)
+
+    dps_4 : str | None
+        DPS.4 (opt) - Expiration Date/Time (DTM)
+
+    dps_5 : CNE | None
+        DPS.5 (opt) - Type of Limitation (CNE)
+    """
 
     dps_1: CWE = Field(
         default=...,

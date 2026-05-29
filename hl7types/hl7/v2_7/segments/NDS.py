@@ -14,7 +14,22 @@ from ..datatypes.CWE import CWE
 
 
 class NDS(BaseModel):
-    """HL7 v2 NDS segment."""
+    """HL7 v2 NDS segment.
+
+    Attributes
+    ----------
+    nds_1 : str
+        NDS.1 (req) - Notification Reference Number (NM)
+
+    nds_2 : str
+        NDS.2 (req) - Notification Date/Time (DTM)
+
+    nds_3 : CWE
+        NDS.3 (req) - Notification Alert Severity (CWE)
+
+    nds_4 : CWE
+        NDS.4 (req) - Notification Code (CWE)
+    """
 
     nds_1: str = Field(
         default=...,

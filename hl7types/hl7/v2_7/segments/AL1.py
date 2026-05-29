@@ -14,7 +14,25 @@ from ..datatypes.CWE import CWE
 
 
 class AL1(BaseModel):
-    """HL7 v2 AL1 segment."""
+    """HL7 v2 AL1 segment.
+
+    Attributes
+    ----------
+    al1_1 : str
+        AL1.1 (req) - Set ID - AL1 (SI)
+
+    al1_2 : CWE | None
+        AL1.2 (opt) - Allergen Type Code (CWE)
+
+    al1_3 : CWE
+        AL1.3 (req) - Allergen Code/Mnemonic/Description (CWE)
+
+    al1_4 : CWE | None
+        AL1.4 (opt) - Allergy Severity Code (CWE)
+
+    al1_5 : list[str] | None
+        AL1.5 (opt, rep) - Allergy Reaction Code (ST)
+    """
 
     al1_1: str = Field(
         default=...,

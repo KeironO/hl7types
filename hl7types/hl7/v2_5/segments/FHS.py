@@ -15,7 +15,46 @@ from ..datatypes.TS import TS
 
 
 class FHS(BaseModel):
-    """HL7 v2 FHS segment."""
+    """HL7 v2 FHS segment.
+
+    Attributes
+    ----------
+    fhs_1 : str
+        FHS.1 (req) - File Field Separator (ST)
+
+    fhs_2 : str
+        FHS.2 (req) - File Encoding Characters (ST)
+
+    fhs_3 : HD | None
+        FHS.3 (opt) - File Sending Application (HD)
+
+    fhs_4 : HD | None
+        FHS.4 (opt) - File Sending Facility (HD)
+
+    fhs_5 : HD | None
+        FHS.5 (opt) - File Receiving Application (HD)
+
+    fhs_6 : HD | None
+        FHS.6 (opt) - File Receiving Facility (HD)
+
+    fhs_7 : TS | None
+        FHS.7 (opt) - File Creation Date/Time (TS)
+
+    fhs_8 : str | None
+        FHS.8 (opt) - File Security (ST)
+
+    fhs_9 : str | None
+        FHS.9 (opt) - File Name/ID (ST)
+
+    fhs_10 : str | None
+        FHS.10 (opt) - File Header Comment (ST)
+
+    fhs_11 : str | None
+        FHS.11 (opt) - File Control ID (ST)
+
+    fhs_12 : str | None
+        FHS.12 (opt) - Reference File Control ID (ST)
+    """
 
     fhs_1: str = Field(
         default="|",

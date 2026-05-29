@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class SCV(BaseModel):
-    """HL7 v2 SCV data type."""
+    """HL7 v2 SCV data type.
+
+    Attributes
+    ----------
+    scv_1 : str | None
+        SCV.1 (opt) - parameter class (IS)
+
+    scv_2 : str | None
+        SCV.2 (opt) - parameter value (ST)
+    """
 
     scv_1: Optional[str] = Field(
         default=None,

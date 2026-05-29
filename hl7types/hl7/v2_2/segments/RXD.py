@@ -15,7 +15,55 @@ from ..datatypes.TS import TS
 
 
 class RXD(BaseModel):
-    """HL7 v2 RXD segment."""
+    """HL7 v2 RXD segment.
+
+    Attributes
+    ----------
+    rxd_1 : str | None
+        RXD.1 (opt) - Dispense Sub-ID Counter (NM)
+
+    rxd_2 : CE
+        RXD.2 (req) - Dispense / give code (CE)
+
+    rxd_3 : TS | None
+        RXD.3 (opt) - Date / time dispensed (TS)
+
+    rxd_4 : str
+        RXD.4 (req) - Actual Dispense Amount (NM)
+
+    rxd_5 : CE | None
+        RXD.5 (opt) - Actual Dispense Units (CE)
+
+    rxd_6 : CE | None
+        RXD.6 (opt) - Actual Dosage Form (CE)
+
+    rxd_7 : str
+        RXD.7 (req) - Prescription Number (ST)
+
+    rxd_8 : str | None
+        RXD.8 (opt) - Number of Refills Remaining (NM)
+
+    rxd_9 : list[str] | None
+        RXD.9 (opt, rep) - Dispense Notes (ST)
+
+    rxd_10 : str | None
+        RXD.10 (opt) - Dispensing Provider (CN)
+
+    rxd_11 : str | None
+        RXD.11 (opt) - Substitution Status (ID)
+
+    rxd_12 : str | None
+        RXD.12 (opt) - Total Daily Dose (CQ)
+
+    rxd_13 : str | None
+        RXD.13 (opt) - Deliver-to location (CM)
+
+    rxd_14 : str | None
+        RXD.14 (opt) - Needs Human Review (ID)
+
+    rxd_15 : CE | None
+        RXD.15 (opt) - Pharmacy Special Dispensing Instructions (CE)
+    """
 
     rxd_1: Optional[str] = Field(
         default=None,

@@ -15,7 +15,76 @@ from ..datatypes.CWE import CWE
 
 
 class RXV(BaseModel):
-    """HL7 v2 RXV segment."""
+    """HL7 v2 RXV segment.
+
+    Attributes
+    ----------
+    rxv_1 : str | None
+        RXV.1 (opt) - Set ID - RXV (SI)
+
+    rxv_2 : str
+        RXV.2 (req) - Bolus Type (ID)
+
+    rxv_3 : str | None
+        RXV.3 (opt) - Bolus Dose Amount (NM)
+
+    rxv_4 : CWE | None
+        RXV.4 (opt) - Bolus Dose Amount Units (CWE)
+
+    rxv_5 : str | None
+        RXV.5 (opt) - Bolus Dose Volume (NM)
+
+    rxv_6 : CWE | None
+        RXV.6 (opt) - Bolus Dose Volume Units (CWE)
+
+    rxv_7 : str
+        RXV.7 (req) - PCA Type (ID)
+
+    rxv_8 : str | None
+        RXV.8 (opt) - PCA Dose Amount (NM)
+
+    rxv_9 : CWE | None
+        RXV.9 (opt) - PCA Dose Amount Units (CWE)
+
+    rxv_10 : str | None
+        RXV.10 (opt) - PCA Dose Amount Volume (NM)
+
+    rxv_11 : CWE | None
+        RXV.11 (opt) - PCA Dose Amount Volume Units (CWE)
+
+    rxv_12 : str | None
+        RXV.12 (opt) - Max Dose Amount (NM)
+
+    rxv_13 : CWE | None
+        RXV.13 (opt) - Max Dose Amount Units (CWE)
+
+    rxv_14 : str | None
+        RXV.14 (opt) - Max Dose Amount Volume (NM)
+
+    rxv_15 : CWE | None
+        RXV.15 (opt) - Max Dose Amount Volume Units (CWE)
+
+    rxv_16 : CQ
+        RXV.16 (req) - Max Dose per Time (CQ)
+
+    rxv_17 : CQ | None
+        RXV.17 (opt) - Lockout Interval (CQ)
+
+    rxv_18 : CWE | None
+        RXV.18 (opt) - Syringe Manufacturer (CWE)
+
+    rxv_19 : CWE | None
+        RXV.19 (opt) - Syringe Model Number (CWE)
+
+    rxv_20 : str | None
+        RXV.20 (opt) - Syringe Size (NM)
+
+    rxv_21 : CWE | None
+        RXV.21 (opt) - Syringe Size Units (CWE)
+
+    rxv_22 : str | None
+        RXV.22 (opt) - Action Code (ID)
+    """
 
     rxv_1: Optional[str] = Field(
         default=None,

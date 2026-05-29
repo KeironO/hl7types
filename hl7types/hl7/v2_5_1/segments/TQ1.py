@@ -18,7 +18,52 @@ from ..datatypes.TX import TX
 
 
 class TQ1(BaseModel):
-    """HL7 v2 TQ1 segment."""
+    """HL7 v2 TQ1 segment.
+
+    Attributes
+    ----------
+    tq1_1 : str | None
+        TQ1.1 (opt) - Set ID - TQ1 (SI)
+
+    tq1_2 : CQ | None
+        TQ1.2 (opt) - Quantity (CQ)
+
+    tq1_3 : list[RPT] | None
+        TQ1.3 (opt, rep) - Repeat Pattern (RPT)
+
+    tq1_4 : list[str] | None
+        TQ1.4 (opt, rep) - Explicit Time (TM)
+
+    tq1_5 : list[CQ] | None
+        TQ1.5 (opt, rep) - Relative Time and Units (CQ)
+
+    tq1_6 : CQ | None
+        TQ1.6 (opt) - Service Duration (CQ)
+
+    tq1_7 : TS | None
+        TQ1.7 (opt) - Start date/time (TS)
+
+    tq1_8 : TS | None
+        TQ1.8 (opt) - End date/time (TS)
+
+    tq1_9 : list[CWE] | None
+        TQ1.9 (opt, rep) - Priority (CWE)
+
+    tq1_10 : TX | None
+        TQ1.10 (opt) - Condition text (TX)
+
+    tq1_11 : TX | None
+        TQ1.11 (opt) - Text instruction (TX)
+
+    tq1_12 : str | None
+        TQ1.12 (opt) - Conjunction (ID)
+
+    tq1_13 : CQ | None
+        TQ1.13 (opt) - Occurrence duration (CQ)
+
+    tq1_14 : str | None
+        TQ1.14 (opt) - Total occurrence's (NM)
+    """
 
     tq1_1: Optional[str] = Field(
         default=None,

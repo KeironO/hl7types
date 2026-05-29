@@ -19,7 +19,139 @@ from ..datatypes.XTN import XTN
 
 
 class RXE(BaseModel):
-    """HL7 v2 RXE segment."""
+    """HL7 v2 RXE segment.
+
+    Attributes
+    ----------
+    rxe_2 : CWE
+        RXE.2 (req) - Give Code (CWE)
+
+    rxe_3 : str
+        RXE.3 (req) - Give Amount - Minimum (NM)
+
+    rxe_4 : str | None
+        RXE.4 (opt) - Give Amount - Maximum (NM)
+
+    rxe_5 : CWE
+        RXE.5 (req) - Give Units (CWE)
+
+    rxe_6 : CWE | None
+        RXE.6 (opt) - Give Dosage Form (CWE)
+
+    rxe_7 : list[CWE] | None
+        RXE.7 (opt, rep) - Provider's Administration Instructions (CWE)
+
+    rxe_9 : str | None
+        RXE.9 (opt) - Substitution Status (ID)
+
+    rxe_10 : str | None
+        RXE.10 (opt) - Dispense Amount (NM)
+
+    rxe_11 : CWE | None
+        RXE.11 (opt) - Dispense Units (CWE)
+
+    rxe_12 : str | None
+        RXE.12 (opt) - Number Of Refills (NM)
+
+    rxe_13 : list[XCN] | None
+        RXE.13 (opt, rep) - Ordering Provider's DEA Number (XCN)
+
+    rxe_14 : list[XCN] | None
+        RXE.14 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN)
+
+    rxe_15 : str | None
+        RXE.15 (opt) - Prescription Number (ST)
+
+    rxe_16 : str | None
+        RXE.16 (opt) - Number of Refills Remaining (NM)
+
+    rxe_17 : str | None
+        RXE.17 (opt) - Number of Refills/Doses Dispensed (NM)
+
+    rxe_18 : str | None
+        RXE.18 (opt) - D/T of Most Recent Refill or Dose Dispensed (DTM)
+
+    rxe_19 : CQ | None
+        RXE.19 (opt) - Total Daily Dose (CQ)
+
+    rxe_20 : str | None
+        RXE.20 (opt) - Needs Human Review (ID)
+
+    rxe_21 : list[CWE] | None
+        RXE.21 (opt, rep) - Special Dispensing Instructions (CWE)
+
+    rxe_22 : str | None
+        RXE.22 (opt) - Give Per (Time Unit) (ST)
+
+    rxe_23 : str | None
+        RXE.23 (opt) - Give Rate Amount (ST)
+
+    rxe_24 : CWE | None
+        RXE.24 (opt) - Give Rate Units (CWE)
+
+    rxe_25 : str | None
+        RXE.25 (opt) - Give Strength (NM)
+
+    rxe_26 : CWE | None
+        RXE.26 (opt) - Give Strength Units (CWE)
+
+    rxe_27 : list[CWE] | None
+        RXE.27 (opt, rep) - Give Indication (CWE)
+
+    rxe_28 : str | None
+        RXE.28 (opt) - Dispense Package Size (NM)
+
+    rxe_29 : CWE | None
+        RXE.29 (opt) - Dispense Package Size Unit (CWE)
+
+    rxe_30 : str | None
+        RXE.30 (opt) - Dispense Package Method (ID)
+
+    rxe_31 : list[CWE] | None
+        RXE.31 (opt, rep) - Supplementary Code (CWE)
+
+    rxe_32 : str | None
+        RXE.32 (opt) - Original Order Date/Time (DTM)
+
+    rxe_33 : str | None
+        RXE.33 (opt) - Give Drug Strength Volume (NM)
+
+    rxe_34 : CWE | None
+        RXE.34 (opt) - Give Drug Strength Volume Units (CWE)
+
+    rxe_35 : CWE | None
+        RXE.35 (opt) - Controlled Substance Schedule (CWE)
+
+    rxe_36 : str | None
+        RXE.36 (opt) - Formulary Status (ID)
+
+    rxe_37 : list[CWE] | None
+        RXE.37 (opt, rep) - Pharmaceutical Substance Alternative (CWE)
+
+    rxe_38 : CWE | None
+        RXE.38 (opt) - Pharmacy of Most Recent Fill (CWE)
+
+    rxe_39 : str | None
+        RXE.39 (opt) - Initial Dispense Amount (NM)
+
+    rxe_40 : CWE | None
+        RXE.40 (opt) - Dispensing Pharmacy (CWE)
+
+    rxe_41 : XAD | None
+        RXE.41 (opt) - Dispensing Pharmacy Address (XAD)
+
+    rxe_42 : PL | None
+        RXE.42 (opt) - Deliver-to Patient Location (PL)
+
+    rxe_43 : XAD | None
+        RXE.43 (opt) - Deliver-to Address (XAD)
+
+    rxe_44 : str | None
+        RXE.44 (opt) - Pharmacy Order Type (ID)
+
+    rxe_45 : list[XTN] | None
+        RXE.45 (opt, rep) - Pharmacy Phone Number (XTN)
+    """
 
     rxe_2: CWE = Field(
         default=...,

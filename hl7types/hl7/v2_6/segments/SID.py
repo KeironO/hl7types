@@ -14,7 +14,22 @@ from ..datatypes.CWE import CWE
 
 
 class SID(BaseModel):
-    """HL7 v2 SID segment."""
+    """HL7 v2 SID segment.
+
+    Attributes
+    ----------
+    sid_1 : CWE | None
+        SID.1 (opt) - Application/Method Identifier (CWE)
+
+    sid_2 : str | None
+        SID.2 (opt) - Substance Lot Number (ST)
+
+    sid_3 : str | None
+        SID.3 (opt) - Substance Container Identifier (ST)
+
+    sid_4 : CWE | None
+        SID.4 (opt) - Substance Manufacturer Identifier (CWE)
+    """
 
     sid_1: Optional[CWE] = Field(
         default=None,

@@ -20,7 +20,100 @@ from ..datatypes.XTN import XTN
 
 
 class PID(BaseModel):
-    """HL7 v2 PID segment."""
+    """HL7 v2 PID segment.
+
+    Attributes
+    ----------
+    pid_1 : str | None
+        PID.1 (opt) - Set ID - PID (SI)
+
+    pid_2 : CX | None
+        PID.2 (opt) - Patient ID (CX)
+
+    pid_3 : list[CX]
+        PID.3 (req, rep) - Patient Identifier List (CX)
+
+    pid_4 : list[CX] | None
+        PID.4 (opt, rep) - Alternate Patient ID - PID (CX)
+
+    pid_5 : list[XPN]
+        PID.5 (req, rep) - Patient Name (XPN)
+
+    pid_6 : list[XPN] | None
+        PID.6 (opt, rep) - Mother’s Maiden Name (XPN)
+
+    pid_7 : TS | None
+        PID.7 (opt) - Date/Time Of Birth (TS)
+
+    pid_8 : str | None
+        PID.8 (opt) - Sex (IS)
+
+    pid_9 : list[XPN] | None
+        PID.9 (opt, rep) - Patient Alias (XPN)
+
+    pid_10 : list[CE] | None
+        PID.10 (opt, rep) - Race (CE)
+
+    pid_11 : list[XAD] | None
+        PID.11 (opt, rep) - Patient Address (XAD)
+
+    pid_12 : str | None
+        PID.12 (opt) - County Code (IS)
+
+    pid_13 : list[XTN] | None
+        PID.13 (opt, rep) - Phone Number - Home (XTN)
+
+    pid_14 : list[XTN] | None
+        PID.14 (opt, rep) - Phone Number - Business (XTN)
+
+    pid_15 : CE | None
+        PID.15 (opt) - Primary Language (CE)
+
+    pid_16 : CE | None
+        PID.16 (opt) - Marital Status (CE)
+
+    pid_17 : CE | None
+        PID.17 (opt) - Religion (CE)
+
+    pid_18 : CX | None
+        PID.18 (opt) - Patient Account Number (CX)
+
+    pid_19 : str | None
+        PID.19 (opt) - SSN Number - Patient (ST)
+
+    pid_20 : DLN | None
+        PID.20 (opt) - Driver's License Number - Patient (DLN)
+
+    pid_21 : list[CX] | None
+        PID.21 (opt, rep) - Mother's Identifier (CX)
+
+    pid_22 : list[CE] | None
+        PID.22 (opt, rep) - Ethnic Group (CE)
+
+    pid_23 : str | None
+        PID.23 (opt) - Birth Place (ST)
+
+    pid_24 : str | None
+        PID.24 (opt) - Multiple Birth Indicator (ID)
+
+    pid_25 : str | None
+        PID.25 (opt) - Birth Order (NM)
+
+    pid_26 : list[CE] | None
+        PID.26 (opt, rep) - Citizenship (CE)
+
+    pid_27 : CE | None
+        PID.27 (opt) - Veterans Military Status (CE)
+
+    pid_28 : CE | None
+        PID.28 (opt) - Nationality (CE)
+
+    pid_29 : TS | None
+        PID.29 (opt) - Patient Death Date and Time (TS)
+
+    pid_30 : str | None
+        PID.30 (opt) - Patient Death Indicator (ID)
+    """
 
     pid_1: Optional[str] = Field(
         default=None,

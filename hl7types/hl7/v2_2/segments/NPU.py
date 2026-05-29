@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NPU(BaseModel):
-    """HL7 v2 NPU segment."""
+    """HL7 v2 NPU segment.
+
+    Attributes
+    ----------
+    npu_1 : str
+        NPU.1 (req) - Bed Location (CM)
+
+    npu_2 : str | None
+        NPU.2 (opt) - Bed Status (ID)
+    """
 
     npu_1: str = Field(
         default=...,

@@ -14,7 +14,19 @@ from ..datatypes.CE import CE
 
 
 class CM1(BaseModel):
-    """HL7 v2 CM1 segment."""
+    """HL7 v2 CM1 segment.
+
+    Attributes
+    ----------
+    cm1_1 : str
+        CM1.1 (req) - Set ID - CM1 (SI)
+
+    cm1_2 : CE
+        CM1.2 (req) - Study Phase Identifier (CE)
+
+    cm1_3 : str
+        CM1.3 (req) - Description of Study Phase (ST)
+    """
 
     cm1_1: str = Field(
         default=...,

@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class VH(BaseModel):
-    """HL7 v2 VH data type."""
+    """HL7 v2 VH data type.
+
+    Attributes
+    ----------
+    vh_1 : str | None
+        VH.1 (opt) - Start Day Range (ID)
+
+    vh_2 : str | None
+        VH.2 (opt) - End Day Range (ID)
+
+    vh_3 : str | None
+        VH.3 (opt) - Start Hour Range (TM)
+
+    vh_4 : str | None
+        VH.4 (opt) - End Hour Range (TM)
+    """
 
     vh_1: Optional[str] = Field(
         default=None,

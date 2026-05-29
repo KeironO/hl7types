@@ -14,7 +14,31 @@ from ..datatypes.CX import CX
 
 
 class MRG(BaseModel):
-    """HL7 v2 MRG segment."""
+    """HL7 v2 MRG segment.
+
+    Attributes
+    ----------
+    mrg_1 : list[CX]
+        MRG.1 (req, rep) - Prior Patient ID - Internal (CX)
+
+    mrg_2 : list[CX] | None
+        MRG.2 (opt, rep) - Prior Alternate Patient ID (CX)
+
+    mrg_3 : CX | None
+        MRG.3 (opt) - Prior Patient Account Number (CX)
+
+    mrg_4 : CX | None
+        MRG.4 (opt) - Prior Patient ID - External (CX)
+
+    mrg_5 : CX | None
+        MRG.5 (opt) - Prior Visit Number (CX)
+
+    mrg_6 : CX | None
+        MRG.6 (opt) - Prior Alternate Visit ID (CX)
+
+    mrg_7 : CX | None
+        MRG.7 (opt) - Prior Patient Name (CX)
+    """
 
     mrg_1: List[CX] = Field(
         default=...,

@@ -15,7 +15,46 @@ from ..datatypes.TS import TS
 
 
 class BHS(BaseModel):
-    """HL7 v2 BHS segment."""
+    """HL7 v2 BHS segment.
+
+    Attributes
+    ----------
+    bhs_1 : str
+        BHS.1 (req) - Batch Field Separator (ST)
+
+    bhs_2 : str
+        BHS.2 (req) - Batch Encoding Characters (ST)
+
+    bhs_3 : HD | None
+        BHS.3 (opt) - Batch Sending Application (HD)
+
+    bhs_4 : HD | None
+        BHS.4 (opt) - Batch Sending Facility (HD)
+
+    bhs_5 : HD | None
+        BHS.5 (opt) - Batch Receiving Application (HD)
+
+    bhs_6 : HD | None
+        BHS.6 (opt) - Batch Receiving Facility (HD)
+
+    bhs_7 : TS | None
+        BHS.7 (opt) - Batch Creation Date/Time (TS)
+
+    bhs_8 : str | None
+        BHS.8 (opt) - Batch Security (ST)
+
+    bhs_9 : str | None
+        BHS.9 (opt) - Batch Name/ID/Type (ST)
+
+    bhs_10 : str | None
+        BHS.10 (opt) - Batch Comment (ST)
+
+    bhs_11 : str | None
+        BHS.11 (opt) - Batch Control ID (ST)
+
+    bhs_12 : str | None
+        BHS.12 (opt) - Reference Batch Control ID (ST)
+    """
 
     bhs_1: str = Field(
         default="|",

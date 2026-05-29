@@ -14,7 +14,34 @@ from .HD import HD
 
 
 class XON(BaseModel):
-    """HL7 v2 XON data type."""
+    """HL7 v2 XON data type.
+
+    Attributes
+    ----------
+    xon_1 : str | None
+        XON.1 (opt) - organization name (ST)
+
+    xon_2 : str | None
+        XON.2 (opt) - organization name type code (IS)
+
+    xon_3 : str | None
+        XON.3 (opt) - ID number (NM) (NM)
+
+    xon_4 : str | None
+        XON.4 (opt) - check digit (ST)
+
+    xon_5 : str | None
+        XON.5 (opt) - code identifying the check digit scheme employed (ID)
+
+    xon_6 : HD | None
+        XON.6 (opt) - assigning authority (HD)
+
+    xon_7 : str | None
+        XON.7 (opt) - identifier type code (IS)
+
+    xon_8 : HD | None
+        XON.8 (opt) - assigning facility ID (HD)
+    """
 
     xon_1: Optional[str] = Field(
         default=None,

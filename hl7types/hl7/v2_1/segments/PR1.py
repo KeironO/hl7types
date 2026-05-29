@@ -12,7 +12,49 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class PR1(BaseModel):
-    """HL7 v2 PR1 segment."""
+    """HL7 v2 PR1 segment.
+
+    Attributes
+    ----------
+    pr1_1 : list[str]
+        PR1.1 (req, rep) - SET ID - PROCEDURE (SI)
+
+    pr1_2 : str
+        PR1.2 (req) - PROCEDURE CODING METHOD. (ID)
+
+    pr1_3 : str
+        PR1.3 (req) - PROCEDURE CODE (ID)
+
+    pr1_4 : str | None
+        PR1.4 (opt) - PROCEDURE DESCRIPTION (ST)
+
+    pr1_5 : str
+        PR1.5 (req) - PROCEDURE DATE/TIME (TS)
+
+    pr1_6 : str
+        PR1.6 (req) - PROCEDURE TYPE (ID)
+
+    pr1_7 : str | None
+        PR1.7 (opt) - PROCEDURE MINUTES (NM)
+
+    pr1_8 : str | None
+        PR1.8 (opt) - ANESTHESIOLOGIST (CN)
+
+    pr1_9 : str | None
+        PR1.9 (opt) - ANESTHESIA CODE (ID)
+
+    pr1_10 : str | None
+        PR1.10 (opt) - ANESTHESIA MINUTES (NM)
+
+    pr1_11 : str | None
+        PR1.11 (opt) - SURGEON (CN)
+
+    pr1_12 : str | None
+        PR1.12 (opt) - RESIDENT CODE (CN)
+
+    pr1_13 : str | None
+        PR1.13 (opt) - CONSENT CODE (ID)
+    """
 
     pr1_1: List[str] = Field(
         default=...,

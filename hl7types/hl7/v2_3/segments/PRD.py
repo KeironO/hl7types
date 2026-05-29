@@ -19,7 +19,37 @@ from ..datatypes.XTN import XTN
 
 
 class PRD(BaseModel):
-    """HL7 v2 PRD segment."""
+    """HL7 v2 PRD segment.
+
+    Attributes
+    ----------
+    prd_1 : list[CE]
+        PRD.1 (req, rep) - Role (CE)
+
+    prd_2 : list[XPN] | None
+        PRD.2 (opt, rep) - Provider Name (XPN)
+
+    prd_3 : XAD | None
+        PRD.3 (opt) - Provider Address (XAD)
+
+    prd_4 : PL | None
+        PRD.4 (opt) - Provider Location (PL)
+
+    prd_5 : list[XTN] | None
+        PRD.5 (opt, rep) - Provider Communication Information (XTN)
+
+    prd_6 : CE | None
+        PRD.6 (opt) - Preferred Method of Contact (CE)
+
+    prd_7 : list[str] | None
+        PRD.7 (opt, rep) - Provider Identifiers (CM)
+
+    prd_8 : TS | None
+        PRD.8 (opt) - Effective Start Date of Role (TS)
+
+    prd_9 : TS | None
+        PRD.9 (opt) - Effective End Date of Role (TS)
+    """
 
     prd_1: List[CE] = Field(
         default=...,

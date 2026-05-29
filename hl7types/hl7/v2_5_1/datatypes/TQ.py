@@ -19,7 +19,46 @@ from .TX import TX
 
 
 class TQ(BaseModel):
-    """HL7 v2 TQ data type."""
+    """HL7 v2 TQ data type.
+
+    Attributes
+    ----------
+    tq_1 : CQ | None
+        TQ.1 (opt) - Quantity (CQ)
+
+    tq_2 : RI | None
+        TQ.2 (opt) - Interval (RI)
+
+    tq_3 : str | None
+        TQ.3 (opt) - Duration (ST)
+
+    tq_4 : TS | None
+        TQ.4 (opt) - Start Date/Time (TS)
+
+    tq_5 : TS | None
+        TQ.5 (opt) - End Date/Time (TS)
+
+    tq_6 : str | None
+        TQ.6 (opt) - Priority (ST)
+
+    tq_7 : str | None
+        TQ.7 (opt) - Condition (ST)
+
+    tq_8 : TX | None
+        TQ.8 (opt) - Text (TX)
+
+    tq_9 : str | None
+        TQ.9 (opt) - Conjunction (ID)
+
+    tq_10 : OSD | None
+        TQ.10 (opt) - Order Sequencing (OSD)
+
+    tq_11 : CE | None
+        TQ.11 (opt) - Occurrence Duration (CE)
+
+    tq_12 : str | None
+        TQ.12 (opt) - Total Occurrences (NM)
+    """
 
     tq_1: Optional[CQ] = Field(
         default=None,

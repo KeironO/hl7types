@@ -15,7 +15,52 @@ from ..datatypes.CWE import CWE
 
 
 class GP2(BaseModel):
-    """HL7 v2 GP2 segment."""
+    """HL7 v2 GP2 segment.
+
+    Attributes
+    ----------
+    gp2_1 : str | None
+        GP2.1 (opt) - Revenue Code (IS)
+
+    gp2_2 : str | None
+        GP2.2 (opt) - Number of Service Units (NM)
+
+    gp2_3 : CP | None
+        GP2.3 (opt) - Charge (CP)
+
+    gp2_4 : str | None
+        GP2.4 (opt) - Reimbursement Action Code (IS)
+
+    gp2_5 : str | None
+        GP2.5 (opt) - Denial or Rejection Code (IS)
+
+    gp2_6 : list[str] | None
+        GP2.6 (opt, rep) - OCE Edit Code (IS)
+
+    gp2_7 : CWE | None
+        GP2.7 (opt) - Ambulatory Payment Classification Code (CWE)
+
+    gp2_8 : list[str] | None
+        GP2.8 (opt, rep) - Modifier Edit Code (IS)
+
+    gp2_9 : str | None
+        GP2.9 (opt) - Payment Adjustment Code (IS)
+
+    gp2_10 : str | None
+        GP2.10 (opt) - Packaging Status Code (IS)
+
+    gp2_11 : CP | None
+        GP2.11 (opt) - Expected CMS Payment Amount (CP)
+
+    gp2_12 : str | None
+        GP2.12 (opt) - Reimbursement Type Code (IS)
+
+    gp2_13 : CP | None
+        GP2.13 (opt) - Co-Pay Amount (CP)
+
+    gp2_14 : str | None
+        GP2.14 (opt) - Pay Rate per Service Unit (NM)
+    """
 
     gp2_1: Optional[str] = Field(
         default=None,

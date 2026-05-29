@@ -15,7 +15,25 @@ from ..datatypes.QSC import QSC
 
 
 class VTQ(BaseModel):
-    """HL7 v2 VTQ segment."""
+    """HL7 v2 VTQ segment.
+
+    Attributes
+    ----------
+    vtq_1 : str | None
+        VTQ.1 (opt) - Query Tag (ST)
+
+    vtq_2 : str
+        VTQ.2 (req) - Query/Response Format Code (ID)
+
+    vtq_3 : CE
+        VTQ.3 (req) - VT Query Name (CE)
+
+    vtq_4 : CE
+        VTQ.4 (req) - Virtual Table Name (CE)
+
+    vtq_5 : list[QSC] | None
+        VTQ.5 (opt, rep) - Selection Criteria (QSC)
+    """
 
     vtq_1: Optional[str] = Field(
         default=None,

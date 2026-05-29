@@ -14,7 +14,22 @@ from ..datatypes.CQ import CQ
 
 
 class CDO(BaseModel):
-    """HL7 v2 CDO segment."""
+    """HL7 v2 CDO segment.
+
+    Attributes
+    ----------
+    cdo_1 : str | None
+        CDO.1 (opt) - Set ID - CDO (SI)
+
+    cdo_2 : str | None
+        CDO.2 (opt) - Action Code (ID)
+
+    cdo_3 : CQ | None
+        CDO.3 (opt) - Cumulative Dosage Limit (CQ)
+
+    cdo_4 : CQ | None
+        CDO.4 (opt) - Cumulative Dosage Limit Time Interval (CQ)
+    """
 
     cdo_1: Optional[str] = Field(
         default=None,

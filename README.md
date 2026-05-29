@@ -152,7 +152,40 @@ pid_5
 
 ---
 
-**Example 7:** Encode to XML:
+**Example 7:** By default, decoding is lenient. Required segments absent from the wire produce an empty placeholder rather than raising an error. Pass `strict=True` to enforce the spec instead:
+
+```python
+>>> from hl7types import decode_er7
+>>> from hl7types.hl7.v2_5_1.messages import ACK
+>>> from pydantic import ValidationError
+>>>
+>>> # ACK wire with MSA omitted
+>>> wire = "MSH|^~\\&|SEND|FAC|RECV|FAC|20240101120000||ACK|MSG001|P|2.5.1\r"
+>>>
+>>> # Lenient (default): succeeds, msg.MSA is an empty placeholder
+>>> msg = decode_er7(wire, msg_cls=ACK)
+>>> msg.MSA.model_fields_set
+set()
+>>>
+>>> # Strict: raises if a required segment is missing
+>>> try:
+...     decode_er7(wire, msg_cls=ACK, strict=True)
+... except ValidationError as e:
+...     print(e)
+1 validation error for ACK
+MSA
+  Field required [type=missing, ...]
+```
+
+`strict=True` is also accepted by `model_validate_er7`:
+
+```python
+>>> ACK.model_validate_er7(wire, strict=True)  # raises ValidationError
+```
+
+---
+
+**Example 8:** Encode to XML:
 
 ```python
 >>> print(msg.model_dump_xml())

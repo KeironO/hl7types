@@ -15,7 +15,25 @@ from ..datatypes.TS import TS
 
 
 class MFA(BaseModel):
-    """HL7 v2 MFA segment."""
+    """HL7 v2 MFA segment.
+
+    Attributes
+    ----------
+    mfa_1 : str
+        MFA.1 (req) - Record-level event code (ID)
+
+    mfa_2 : str | None
+        MFA.2 (opt) - MFN control ID (ST)
+
+    mfa_3 : TS | None
+        MFA.3 (opt) - Event completion date / time (TS)
+
+    mfa_4 : CE
+        MFA.4 (req) - Error return code and/or text (CE)
+
+    mfa_5 : list[CE]
+        MFA.5 (req, rep) - Primary key value (CE)
+    """
 
     mfa_1: str = Field(
         default=...,

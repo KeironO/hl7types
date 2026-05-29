@@ -12,7 +12,13 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NCK(BaseModel):
-    """HL7 v2 NCK segment."""
+    """HL7 v2 NCK segment.
+
+    Attributes
+    ----------
+    nck_1 : str
+        NCK.1 (req) - SYSTEM DATE/TIME (TS)
+    """
 
     nck_1: str = Field(
         default=...,

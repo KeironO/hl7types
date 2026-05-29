@@ -15,7 +15,34 @@ from ..datatypes.EI import EI
 
 
 class SCP(BaseModel):
-    """HL7 v2 SCP segment."""
+    """HL7 v2 SCP segment.
+
+    Attributes
+    ----------
+    scp_1 : str | None
+        SCP.1 (opt) - Number Of Decontamination/Sterilization Devices (NM)
+
+    scp_2 : CWE | None
+        SCP.2 (opt) - Labor Calculation Type (CWE)
+
+    scp_3 : CWE | None
+        SCP.3 (opt) - Date Format (CWE)
+
+    scp_4 : EI | None
+        SCP.4 (opt) - Device Number (EI)
+
+    scp_5 : str | None
+        SCP.5 (opt) - Device Name (ST)
+
+    scp_6 : str | None
+        SCP.6 (opt) - Device Model Name (ST)
+
+    scp_7 : CWE | None
+        SCP.7 (opt) - Device Type (CWE)
+
+    scp_8 : CWE | None
+        SCP.8 (opt) - Lot Control (CWE)
+    """
 
     scp_1: Optional[str] = Field(
         default=None,

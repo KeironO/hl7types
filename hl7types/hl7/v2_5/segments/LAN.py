@@ -14,7 +14,22 @@ from ..datatypes.CE import CE
 
 
 class LAN(BaseModel):
-    """HL7 v2 LAN segment."""
+    """HL7 v2 LAN segment.
+
+    Attributes
+    ----------
+    lan_1 : str
+        LAN.1 (req) - Set ID _ LAN (SI)
+
+    lan_2 : CE
+        LAN.2 (req) - Language Code (CE)
+
+    lan_3 : list[CE] | None
+        LAN.3 (opt, rep) - Language Ability Code (CE)
+
+    lan_4 : CE | None
+        LAN.4 (opt) - Language Proficiency Code (CE)
+    """
 
     lan_1: str = Field(
         default=...,

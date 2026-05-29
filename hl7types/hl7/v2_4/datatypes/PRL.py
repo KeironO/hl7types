@@ -15,7 +15,19 @@ from .TX import TX
 
 
 class PRL(BaseModel):
-    """HL7 v2 PRL data type."""
+    """HL7 v2 PRL data type.
+
+    Attributes
+    ----------
+    prl_1 : CE | None
+        PRL.1 (opt) - OBX-3 observation identifier of parent result (CE)
+
+    prl_2 : str | None
+        PRL.2 (opt) - OBX-4 sub-ID of parent result (ST)
+
+    prl_3 : TX | None
+        PRL.3 (opt) - part of OBX-5 observation result from parent (TX)
+    """
 
     prl_1: Optional[CE] = Field(
         default=None,

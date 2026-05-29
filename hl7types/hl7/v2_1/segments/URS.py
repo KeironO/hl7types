@@ -12,7 +12,25 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class URS(BaseModel):
-    """HL7 v2 URS segment."""
+    """HL7 v2 URS segment.
+
+    Attributes
+    ----------
+    urs_1 : list[str]
+        URS.1 (req, rep) - R/U WHERE SUBJECT DEFINITION (ST)
+
+    urs_2 : str | None
+        URS.2 (opt) - R/U WHEN DATA START DATE/TIME (TS)
+
+    urs_3 : str | None
+        URS.3 (opt) - R/U WHEN DATA END DATE/TIME (TS)
+
+    urs_4 : list[str] | None
+        URS.4 (opt, rep) - R/U WHAT USER QUALIFIER (ST)
+
+    urs_5 : list[str] | None
+        URS.5 (opt, rep) - R/U OTHER RESULTS SUBJECT DEFINI (ST)
+    """
 
     urs_1: List[str] = Field(
         default=...,

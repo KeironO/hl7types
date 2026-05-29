@@ -16,7 +16,43 @@ from ..datatypes.TX import TX
 
 
 class SHP(BaseModel):
-    """HL7 v2 SHP segment."""
+    """HL7 v2 SHP segment.
+
+    Attributes
+    ----------
+    shp_1 : EI
+        SHP.1 (req) - Shipment ID (EI)
+
+    shp_2 : list[EI] | None
+        SHP.2 (opt, rep) - Internal Shipment ID (EI)
+
+    shp_3 : CWE | None
+        SHP.3 (opt) - Shipment Status (CWE)
+
+    shp_4 : str
+        SHP.4 (req) - Shipment Status Date/Time (DTM)
+
+    shp_5 : TX | None
+        SHP.5 (opt) - Shipment Status Reason (TX)
+
+    shp_6 : CWE | None
+        SHP.6 (opt) - Shipment Priority (CWE)
+
+    shp_7 : list[CWE] | None
+        SHP.7 (opt, rep) - Shipment Confidentiality (CWE)
+
+    shp_8 : str | None
+        SHP.8 (opt) - Number of Packages in Shipment (NM)
+
+    shp_9 : list[CWE] | None
+        SHP.9 (opt, rep) - Shipment Condition (CWE)
+
+    shp_10 : list[CWE] | None
+        SHP.10 (opt, rep) - Shipment Handling Code (CWE)
+
+    shp_11 : list[CWE] | None
+        SHP.11 (opt, rep) - Shipment Risk Code (CWE)
+    """
 
     shp_1: EI = Field(
         default=...,

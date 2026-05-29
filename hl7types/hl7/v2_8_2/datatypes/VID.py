@@ -14,7 +14,19 @@ from .CWE import CWE
 
 
 class VID(BaseModel):
-    """HL7 v2 VID data type."""
+    """HL7 v2 VID data type.
+
+    Attributes
+    ----------
+    vid_1 : str
+        VID.1 (req) - Version ID (ID)
+
+    vid_2 : CWE | None
+        VID.2 (opt) - Internationalization Code (CWE)
+
+    vid_3 : CWE | None
+        VID.3 (opt) - International Version ID (CWE)
+    """
 
     vid_1: str = Field(
         default=...,

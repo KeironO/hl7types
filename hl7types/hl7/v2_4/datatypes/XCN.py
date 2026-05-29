@@ -17,7 +17,64 @@ from .HD import HD
 
 
 class XCN(BaseModel):
-    """HL7 v2 XCN data type."""
+    """HL7 v2 XCN data type.
+
+    Attributes
+    ----------
+    xcn_1 : str | None
+        XCN.1 (opt) - ID number (ST) (ST)
+
+    xcn_2 : FN | None
+        XCN.2 (opt) - family name (FN)
+
+    xcn_3 : str | None
+        XCN.3 (opt) - given name (ST)
+
+    xcn_4 : str | None
+        XCN.4 (opt) - second and further given names or initials thereof (ST)
+
+    xcn_5 : str | None
+        XCN.5 (opt) - suffix (e.g., JR or III) (ST)
+
+    xcn_6 : str | None
+        XCN.6 (opt) - prefix (e.g., DR) (ST)
+
+    xcn_7 : str | None
+        XCN.7 (opt) - degree (e.g., MD) (IS)
+
+    xcn_8 : str | None
+        XCN.8 (opt) - source table (IS)
+
+    xcn_9 : HD | None
+        XCN.9 (opt) - assigning authority (HD)
+
+    xcn_10 : str | None
+        XCN.10 (opt) - name type code (ID)
+
+    xcn_11 : str | None
+        XCN.11 (opt) - identifier check digit (ST)
+
+    xcn_12 : str | None
+        XCN.12 (opt) - code identifying the check digit scheme employed (ID)
+
+    xcn_13 : str | None
+        XCN.13 (opt) - identifier type code (IS) (IS)
+
+    xcn_14 : HD | None
+        XCN.14 (opt) - assigning facility (HD)
+
+    xcn_15 : str | None
+        XCN.15 (opt) - Name Representation code (ID)
+
+    xcn_16 : CE | None
+        XCN.16 (opt) - name context (CE)
+
+    xcn_17 : DR | None
+        XCN.17 (opt) - name validity range (DR)
+
+    xcn_18 : str | None
+        XCN.18 (opt) - name assembly order (ID)
+    """
 
     xcn_1: Optional[str] = Field(
         default=None,

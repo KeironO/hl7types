@@ -14,7 +14,19 @@ from ..datatypes.CWE import CWE
 
 
 class ISD(BaseModel):
-    """HL7 v2 ISD segment."""
+    """HL7 v2 ISD segment.
+
+    Attributes
+    ----------
+    isd_1 : str
+        ISD.1 (req) - Reference Interaction Number (NM)
+
+    isd_2 : CWE | None
+        ISD.2 (opt) - Interaction Type Identifier (CWE)
+
+    isd_3 : CWE
+        ISD.3 (req) - Interaction Active State (CWE)
+    """
 
     isd_1: str = Field(
         default=...,

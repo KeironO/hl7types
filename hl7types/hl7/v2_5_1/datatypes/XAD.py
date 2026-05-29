@@ -16,7 +16,52 @@ from .TS import TS
 
 
 class XAD(BaseModel):
-    """HL7 v2 XAD data type."""
+    """HL7 v2 XAD data type.
+
+    Attributes
+    ----------
+    xad_1 : SAD | None
+        XAD.1 (opt) - Street Address (SAD)
+
+    xad_2 : str | None
+        XAD.2 (opt) - Other Designation (ST)
+
+    xad_3 : str | None
+        XAD.3 (opt) - City (ST)
+
+    xad_4 : str | None
+        XAD.4 (opt) - State or Province (ST)
+
+    xad_5 : str | None
+        XAD.5 (opt) - Zip or Postal Code (ST)
+
+    xad_6 : str | None
+        XAD.6 (opt) - Country (ID)
+
+    xad_7 : str | None
+        XAD.7 (opt) - Address Type (ID)
+
+    xad_8 : str | None
+        XAD.8 (opt) - Other Geographic Designation (ST)
+
+    xad_9 : str | None
+        XAD.9 (opt) - County/Parish Code (IS)
+
+    xad_10 : str | None
+        XAD.10 (opt) - Census Tract (IS)
+
+    xad_11 : str | None
+        XAD.11 (opt) - Address Representation Code (ID)
+
+    xad_12 : DR | None
+        XAD.12 (opt) - Address Validity Range (DR)
+
+    xad_13 : TS | None
+        XAD.13 (opt) - Effective Date (TS)
+
+    xad_14 : TS | None
+        XAD.14 (opt) - Expiration Date (TS)
+    """
 
     xad_1: Optional[SAD] = Field(
         default=None,

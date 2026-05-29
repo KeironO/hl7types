@@ -12,7 +12,16 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class QIP(BaseModel):
-    """HL7 v2 QIP data type."""
+    """HL7 v2 QIP data type.
+
+    Attributes
+    ----------
+    qip_1 : str | None
+        QIP.1 (opt) - Segment Field Name (ST)
+
+    qip_2 : str | None
+        QIP.2 (opt) - Values (ST)
+    """
 
     qip_1: Optional[str] = Field(
         default=None,

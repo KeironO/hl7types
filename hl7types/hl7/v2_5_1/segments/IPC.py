@@ -15,7 +15,37 @@ from ..datatypes.EI import EI
 
 
 class IPC(BaseModel):
-    """HL7 v2 IPC segment."""
+    """HL7 v2 IPC segment.
+
+    Attributes
+    ----------
+    ipc_1 : EI
+        IPC.1 (req) - Accession Identifier (EI)
+
+    ipc_2 : EI
+        IPC.2 (req) - Requested Procedure ID (EI)
+
+    ipc_3 : EI
+        IPC.3 (req) - Study Instance UID (EI)
+
+    ipc_4 : EI
+        IPC.4 (req) - Scheduled Procedure Step ID (EI)
+
+    ipc_5 : CE | None
+        IPC.5 (opt) - Modality (CE)
+
+    ipc_6 : list[CE] | None
+        IPC.6 (opt, rep) - Protocol Code (CE)
+
+    ipc_7 : EI | None
+        IPC.7 (opt) - Scheduled Station Name (EI)
+
+    ipc_8 : list[CE] | None
+        IPC.8 (opt, rep) - Scheduled Procedure Step Location (CE)
+
+    ipc_9 : str | None
+        IPC.9 (opt) - Scheduled AE Title (ST)
+    """
 
     ipc_1: EI = Field(
         default=...,

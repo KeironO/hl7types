@@ -14,7 +14,160 @@ from ..datatypes.TS import TS
 
 
 class PV1(BaseModel):
-    """HL7 v2 PV1 segment."""
+    """HL7 v2 PV1 segment.
+
+    Attributes
+    ----------
+    pv1_1 : str | None
+        PV1.1 (opt) - Set ID - Patient Visit (SI)
+
+    pv1_2 : str
+        PV1.2 (req) - Patient Class (ID)
+
+    pv1_3 : str | None
+        PV1.3 (opt) - Assigned Patient Location (CM)
+
+    pv1_4 : str | None
+        PV1.4 (opt) - Admission Type (ID)
+
+    pv1_5 : str | None
+        PV1.5 (opt) - Preadmit Number (ST)
+
+    pv1_6 : str | None
+        PV1.6 (opt) - Prior Patient Location (CM)
+
+    pv1_7 : str | None
+        PV1.7 (opt) - Attending Doctor (CN)
+
+    pv1_8 : str | None
+        PV1.8 (opt) - Referring Doctor (CN)
+
+    pv1_9 : list[str] | None
+        PV1.9 (opt, rep) - Consulting Doctor (CN)
+
+    pv1_10 : str | None
+        PV1.10 (opt) - Hospital Service (ID)
+
+    pv1_11 : str | None
+        PV1.11 (opt) - Temporary Location (CM)
+
+    pv1_12 : str | None
+        PV1.12 (opt) - Preadmit Test Indicator (ID)
+
+    pv1_13 : str | None
+        PV1.13 (opt) - Readmission indicator (ID)
+
+    pv1_14 : str | None
+        PV1.14 (opt) - Admit Source (ID)
+
+    pv1_15 : list[str] | None
+        PV1.15 (opt, rep) - Ambulatory Status (ID)
+
+    pv1_16 : str | None
+        PV1.16 (opt) - VIP Indicator (ID)
+
+    pv1_17 : str | None
+        PV1.17 (opt) - Admitting Doctor (CN)
+
+    pv1_18 : str | None
+        PV1.18 (opt) - Patient type (ID)
+
+    pv1_19 : str | None
+        PV1.19 (opt) - Visit Number (CM)
+
+    pv1_20 : list[str] | None
+        PV1.20 (opt, rep) - Financial Class (CM)
+
+    pv1_21 : str | None
+        PV1.21 (opt) - Charge Price Indicator (ID)
+
+    pv1_22 : str | None
+        PV1.22 (opt) - Courtesy Code (ID)
+
+    pv1_23 : str | None
+        PV1.23 (opt) - Credit Rating (ID)
+
+    pv1_24 : list[str] | None
+        PV1.24 (opt, rep) - Contract Code (ID)
+
+    pv1_25 : list[str] | None
+        PV1.25 (opt, rep) - Contract Effective Date (DT)
+
+    pv1_26 : list[str] | None
+        PV1.26 (opt, rep) - Contract Amount (NM)
+
+    pv1_27 : list[str] | None
+        PV1.27 (opt, rep) - Contract Period (NM)
+
+    pv1_28 : str | None
+        PV1.28 (opt) - Interest Code (ID)
+
+    pv1_29 : str | None
+        PV1.29 (opt) - Transfer to bad debt - code (ID)
+
+    pv1_30 : str | None
+        PV1.30 (opt) - Transfer to bad debt - date (DT)
+
+    pv1_31 : str | None
+        PV1.31 (opt) - Bad Debt Agency Code (ID)
+
+    pv1_32 : str | None
+        PV1.32 (opt) - Bad Debt Transfer Amount (NM)
+
+    pv1_33 : str | None
+        PV1.33 (opt) - Bad Debt Recovery Amount (NM)
+
+    pv1_34 : str | None
+        PV1.34 (opt) - Delete Account Indicator (ID)
+
+    pv1_35 : str | None
+        PV1.35 (opt) - Delete Account Date (DT)
+
+    pv1_36 : str | None
+        PV1.36 (opt) - Discharge Disposition (ID)
+
+    pv1_37 : str | None
+        PV1.37 (opt) - Discharged to Location (CM)
+
+    pv1_38 : str | None
+        PV1.38 (opt) - Diet Type (ID)
+
+    pv1_39 : str | None
+        PV1.39 (opt) - Servicing Facility (ID)
+
+    pv1_40 : str | None
+        PV1.40 (opt) - Bed Status (ID)
+
+    pv1_41 : str | None
+        PV1.41 (opt) - Account Status (ID)
+
+    pv1_42 : str | None
+        PV1.42 (opt) - Pending Location (CM)
+
+    pv1_43 : str | None
+        PV1.43 (opt) - Prior Temporary Location (CM)
+
+    pv1_44 : TS | None
+        PV1.44 (opt) - Admit date / time (TS)
+
+    pv1_45 : TS | None
+        PV1.45 (opt) - Discharge date / time (TS)
+
+    pv1_46 : str | None
+        PV1.46 (opt) - Current Patient Balance (NM)
+
+    pv1_47 : str | None
+        PV1.47 (opt) - Total Charges (NM)
+
+    pv1_48 : str | None
+        PV1.48 (opt) - Total Adjustments (NM)
+
+    pv1_49 : str | None
+        PV1.49 (opt) - Total Payments (NM)
+
+    pv1_50 : str | None
+        PV1.50 (opt) - Alternate Visit ID (CM)
+    """
 
     pv1_1: Optional[str] = Field(
         default=None,

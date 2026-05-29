@@ -17,7 +17,46 @@ from ..datatypes.XON import XON
 
 
 class PD1(BaseModel):
-    """HL7 v2 PD1 segment."""
+    """HL7 v2 PD1 segment.
+
+    Attributes
+    ----------
+    pd1_1 : str | None
+        PD1.1 (opt) - Living Dependency (IS)
+
+    pd1_2 : str | None
+        PD1.2 (opt) - Living Arrangement (IS)
+
+    pd1_3 : list[XON] | None
+        PD1.3 (opt, rep) - Patient Primary Facility (XON)
+
+    pd1_4 : list[XCN] | None
+        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN)
+
+    pd1_5 : str | None
+        PD1.5 (opt) - Student Indicator (IS)
+
+    pd1_6 : str | None
+        PD1.6 (opt) - Handicap (IS)
+
+    pd1_7 : str | None
+        PD1.7 (opt) - Living Will (IS)
+
+    pd1_8 : str | None
+        PD1.8 (opt) - Organ Donor (IS)
+
+    pd1_9 : str | None
+        PD1.9 (opt) - Separate Bill (ID)
+
+    pd1_10 : list[CX] | None
+        PD1.10 (opt, rep) - Duplicate Patient (CX)
+
+    pd1_11 : CE | None
+        PD1.11 (opt) - Publicity Indicator (CE)
+
+    pd1_12 : str | None
+        PD1.12 (opt) - Protection Indicator (ID)
+    """
 
     pd1_1: Optional[str] = Field(
         default=None,

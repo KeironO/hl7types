@@ -19,7 +19,82 @@ from ..datatypes.XTN import XTN
 
 
 class PM1(BaseModel):
-    """HL7 v2 PM1 segment."""
+    """HL7 v2 PM1 segment.
+
+    Attributes
+    ----------
+    pm1_1 : CWE
+        PM1.1 (req) - Health Plan ID (CWE)
+
+    pm1_2 : list[CX]
+        PM1.2 (req, rep) - Insurance Company ID (CX)
+
+    pm1_3 : list[XON] | None
+        PM1.3 (opt, rep) - Insurance Company Name (XON)
+
+    pm1_4 : list[XAD] | None
+        PM1.4 (opt, rep) - Insurance Company Address (XAD)
+
+    pm1_5 : list[XPN] | None
+        PM1.5 (opt, rep) - Insurance Co Contact Person (XPN)
+
+    pm1_6 : list[XTN] | None
+        PM1.6 (opt, rep) - Insurance Co Phone Number (XTN)
+
+    pm1_7 : str | None
+        PM1.7 (opt) - Group Number (ST)
+
+    pm1_8 : list[XON] | None
+        PM1.8 (opt, rep) - Group Name (XON)
+
+    pm1_9 : str | None
+        PM1.9 (opt) - Plan Effective Date (DT)
+
+    pm1_10 : str | None
+        PM1.10 (opt) - Plan Expiration Date (DT)
+
+    pm1_11 : str | None
+        PM1.11 (opt) - Patient DOB Required (ID)
+
+    pm1_12 : str | None
+        PM1.12 (opt) - Patient Gender Required (ID)
+
+    pm1_13 : str | None
+        PM1.13 (opt) - Patient Relationship Required (ID)
+
+    pm1_14 : str | None
+        PM1.14 (opt) - Patient Signature Required (ID)
+
+    pm1_15 : str | None
+        PM1.15 (opt) - Diagnosis Required (ID)
+
+    pm1_16 : str | None
+        PM1.16 (opt) - Service Required (ID)
+
+    pm1_17 : str | None
+        PM1.17 (opt) - Patient Name Required (ID)
+
+    pm1_18 : str | None
+        PM1.18 (opt) - Patient Address Required (ID)
+
+    pm1_19 : str | None
+        PM1.19 (opt) - Subscribers Name Required (ID)
+
+    pm1_20 : str | None
+        PM1.20 (opt) - Workman's Comp Indicator (ID)
+
+    pm1_21 : str | None
+        PM1.21 (opt) - Bill Type Required (ID)
+
+    pm1_22 : str | None
+        PM1.22 (opt) - Commercial Carrier Name and Address Required (ID)
+
+    pm1_23 : str | None
+        PM1.23 (opt) - Policy Number Pattern (ST)
+
+    pm1_24 : str | None
+        PM1.24 (opt) - Group Number Pattern (ST)
+    """
 
     pm1_1: CWE = Field(
         default=...,

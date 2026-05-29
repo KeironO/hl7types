@@ -19,7 +19,49 @@ from ..datatypes.XTN import XTN
 
 
 class ROL(BaseModel):
-    """HL7 v2 ROL segment."""
+    """HL7 v2 ROL segment.
+
+    Attributes
+    ----------
+    rol_1 : EI | None
+        ROL.1 (opt) - Role Instance ID (EI)
+
+    rol_2 : str
+        ROL.2 (req) - Action Code (ID)
+
+    rol_3 : CWE
+        ROL.3 (req) - Role-ROL (CWE)
+
+    rol_4 : list[XCN]
+        ROL.4 (req, rep) - Role Person (XCN)
+
+    rol_5 : str | None
+        ROL.5 (opt) - Role Begin Date/Time (DTM)
+
+    rol_6 : str | None
+        ROL.6 (opt) - Role End Date/Time (DTM)
+
+    rol_7 : CWE | None
+        ROL.7 (opt) - Role Duration (CWE)
+
+    rol_8 : CWE | None
+        ROL.8 (opt) - Role Action Reason (CWE)
+
+    rol_9 : list[CWE] | None
+        ROL.9 (opt, rep) - Provider Type (CWE)
+
+    rol_10 : CWE | None
+        ROL.10 (opt) - Organization Unit Type (CWE)
+
+    rol_11 : list[XAD] | None
+        ROL.11 (opt, rep) - Office/Home Address/Birthplace (XAD)
+
+    rol_12 : list[XTN] | None
+        ROL.12 (opt, rep) - Phone (XTN)
+
+    rol_13 : PL | None
+        ROL.13 (opt) - Person's Location (PL)
+    """
 
     rol_1: Optional[EI] = Field(
         default=None,

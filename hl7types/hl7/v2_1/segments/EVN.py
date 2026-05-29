@@ -12,7 +12,22 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class EVN(BaseModel):
-    """HL7 v2 EVN segment."""
+    """HL7 v2 EVN segment.
+
+    Attributes
+    ----------
+    evn_1 : str
+        EVN.1 (req) - EVENT TYPE CODE (ID)
+
+    evn_2 : str
+        EVN.2 (req) - DATE/TIME OF EVENT (TS)
+
+    evn_3 : str | None
+        EVN.3 (opt) - DATE/TIME PLANNED EVENT (TS)
+
+    evn_4 : str | None
+        EVN.4 (opt) - EVENT REASON CODE (ID)
+    """
 
     evn_1: str = Field(
         default=...,

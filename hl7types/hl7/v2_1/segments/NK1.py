@@ -12,7 +12,25 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class NK1(BaseModel):
-    """HL7 v2 NK1 segment."""
+    """HL7 v2 NK1 segment.
+
+    Attributes
+    ----------
+    nk1_1 : str
+        NK1.1 (req) - SET ID - NEXT OF KIN (SI)
+
+    nk1_2 : str | None
+        NK1.2 (opt) - NEXT OF KIN NAME (PN)
+
+    nk1_3 : str | None
+        NK1.3 (opt) - NEXT OF KIN RELATIONSHIP (ST)
+
+    nk1_4 : str | None
+        NK1.4 (opt) - NEXT OF KIN - ADDRESS (AD)
+
+    nk1_5 : list[str] | None
+        NK1.5 (opt, rep) - NEXT OF KIN - PHONE NUMBER (TN)
+    """
 
     nk1_1: str = Field(
         default=...,

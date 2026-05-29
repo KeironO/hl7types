@@ -15,7 +15,25 @@ from ..datatypes.EI import EI
 
 
 class VND(BaseModel):
-    """HL7 v2 VND segment."""
+    """HL7 v2 VND segment.
+
+    Attributes
+    ----------
+    vnd_1 : str
+        VND.1 (req) - Set Id - VND (SI)
+
+    vnd_2 : EI
+        VND.2 (req) - Vendor Identifier (EI)
+
+    vnd_3 : str | None
+        VND.3 (opt) - Vendor Name (ST)
+
+    vnd_4 : EI | None
+        VND.4 (opt) - Vendor Catalog Number (EI)
+
+    vnd_5 : CNE | None
+        VND.5 (opt) - Primary Vendor Indicator (CNE)
+    """
 
     vnd_1: str = Field(
         default=...,

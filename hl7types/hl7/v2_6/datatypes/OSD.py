@@ -12,7 +12,43 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class OSD(BaseModel):
-    """HL7 v2 OSD data type."""
+    """HL7 v2 OSD data type.
+
+    Attributes
+    ----------
+    osd_1 : str
+        OSD.1 (req) - Sequence/Results Flag (ID)
+
+    osd_2 : str
+        OSD.2 (req) - Placer Order Number: Entity Identifier (ST)
+
+    osd_3 : str | None
+        OSD.3 (opt) - Placer Order Number: Namespace ID (IS)
+
+    osd_4 : str
+        OSD.4 (req) - Filler Order Number: Entity Identifier (ST)
+
+    osd_5 : str | None
+        OSD.5 (opt) - Filler Order Number: Namespace ID (IS)
+
+    osd_6 : str | None
+        OSD.6 (opt) - Sequence Condition Value (ST)
+
+    osd_7 : str | None
+        OSD.7 (opt) - Maximum Number of Repeats (NM)
+
+    osd_8 : str
+        OSD.8 (req) - Placer Order Number: Universal ID (ST)
+
+    osd_9 : str | None
+        OSD.9 (opt) - Placer Order Number: Universal ID Type (ID)
+
+    osd_10 : str
+        OSD.10 (req) - Filler Order Number: Universal ID (ST)
+
+    osd_11 : str | None
+        OSD.11 (opt) - Filler Order Number: Universal ID Type (ID)
+    """
 
     osd_1: str = Field(
         default=...,

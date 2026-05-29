@@ -14,7 +14,19 @@ from ..datatypes.CK import CK
 
 
 class BLG(BaseModel):
-    """HL7 v2 BLG segment."""
+    """HL7 v2 BLG segment.
+
+    Attributes
+    ----------
+    blg_1 : str | None
+        BLG.1 (opt) - When to Charge (CM)
+
+    blg_2 : str | None
+        BLG.2 (opt) - Charge Type (ID)
+
+    blg_3 : CK | None
+        BLG.3 (opt) - Account ID (CK)
+    """
 
     blg_1: Optional[str] = Field(
         default=None,

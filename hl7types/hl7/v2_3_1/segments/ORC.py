@@ -23,7 +23,82 @@ from ..datatypes.XTN import XTN
 
 
 class ORC(BaseModel):
-    """HL7 v2 ORC segment."""
+    """HL7 v2 ORC segment.
+
+    Attributes
+    ----------
+    orc_1 : str | None
+        ORC.1 (opt) - Order Control (ID)
+
+    orc_2 : EI | None
+        ORC.2 (opt) - Placer Order Number (EI)
+
+    orc_3 : EI | None
+        ORC.3 (opt) - Filler Order Number (EI)
+
+    orc_4 : EI | None
+        ORC.4 (opt) - Placer Group Number (EI)
+
+    orc_5 : str | None
+        ORC.5 (opt) - Order Status (ID)
+
+    orc_6 : str | None
+        ORC.6 (opt) - Response Flag (ID)
+
+    orc_7 : TQ | None
+        ORC.7 (opt) - Quantity/Timing (TQ)
+
+    orc_8 : EIP | None
+        ORC.8 (opt) - Parent (EIP)
+
+    orc_9 : TS | None
+        ORC.9 (opt) - Date/Time of Transaction (TS)
+
+    orc_10 : list[XCN] | None
+        ORC.10 (opt, rep) - Entered By (XCN)
+
+    orc_11 : list[XCN] | None
+        ORC.11 (opt, rep) - Verified By (XCN)
+
+    orc_12 : list[XCN] | None
+        ORC.12 (opt, rep) - Ordering Provider (XCN)
+
+    orc_13 : PL | None
+        ORC.13 (opt) - Enterer’s Location (PL)
+
+    orc_14 : list[XTN] | None
+        ORC.14 (opt, rep) - Call Back Phone Number (XTN)
+
+    orc_15 : TS | None
+        ORC.15 (opt) - Order Effective Date/Time (TS)
+
+    orc_16 : CE | None
+        ORC.16 (opt) - Order Control Code Reason (CE)
+
+    orc_17 : CE | None
+        ORC.17 (opt) - Entering Organization (CE)
+
+    orc_18 : CE | None
+        ORC.18 (opt) - Entering Device (CE)
+
+    orc_19 : list[XCN] | None
+        ORC.19 (opt, rep) - Action By (XCN)
+
+    orc_20 : CE | None
+        ORC.20 (opt) - Advanced Beneficiary Notice Code (CE)
+
+    orc_21 : list[XON] | None
+        ORC.21 (opt, rep) - Ordering Facility Name (XON)
+
+    orc_22 : list[XAD] | None
+        ORC.22 (opt, rep) - Ordering Facility Address (XAD)
+
+    orc_23 : list[XTN] | None
+        ORC.23 (opt, rep) - Ordering Facility Phone Number (XTN)
+
+    orc_24 : list[XAD] | None
+        ORC.24 (opt, rep) - Ordering Provider Address (XAD)
+    """
 
     orc_1: Optional[str] = Field(
         default=None,

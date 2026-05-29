@@ -16,7 +16,43 @@ from ..datatypes.TS import TS
 
 
 class RF1(BaseModel):
-    """HL7 v2 RF1 segment."""
+    """HL7 v2 RF1 segment.
+
+    Attributes
+    ----------
+    rf1_1 : CE | None
+        RF1.1 (opt) - Referral Status (CE)
+
+    rf1_2 : CE | None
+        RF1.2 (opt) - Referral Priority (CE)
+
+    rf1_3 : CE | None
+        RF1.3 (opt) - Referral Type (CE)
+
+    rf1_4 : list[CE] | None
+        RF1.4 (opt, rep) - Referral Disposition (CE)
+
+    rf1_5 : CE | None
+        RF1.5 (opt) - Referral Category (CE)
+
+    rf1_6 : EI
+        RF1.6 (req) - Originating Referral Identifier (EI)
+
+    rf1_7 : TS | None
+        RF1.7 (opt) - Effective Date (TS)
+
+    rf1_8 : TS | None
+        RF1.8 (opt) - Expiration Date (TS)
+
+    rf1_9 : TS | None
+        RF1.9 (opt) - Process Date (TS)
+
+    rf1_10 : list[CE] | None
+        RF1.10 (opt, rep) - Referral Reason (CE)
+
+    rf1_11 : list[EI] | None
+        RF1.11 (opt, rep) - External Referral Identifier (EI)
+    """
 
     rf1_1: Optional[CE] = Field(
         default=None,

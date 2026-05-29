@@ -18,7 +18,37 @@ from ..datatypes.XCN import XCN
 
 
 class PDA(BaseModel):
-    """HL7 v2 PDA segment."""
+    """HL7 v2 PDA segment.
+
+    Attributes
+    ----------
+    pda_1 : list[CE] | None
+        PDA.1 (opt, rep) - Death Cause Code (CE)
+
+    pda_2 : PL | None
+        PDA.2 (opt) - Death Location (PL)
+
+    pda_3 : str | None
+        PDA.3 (opt) - Death Certified Indicator (ID)
+
+    pda_4 : TS | None
+        PDA.4 (opt) - Death Certificate Signed Date/Time (TS)
+
+    pda_5 : XCN | None
+        PDA.5 (opt) - Death Certified By (XCN)
+
+    pda_6 : str | None
+        PDA.6 (opt) - Autopsy Indicator (ID)
+
+    pda_7 : DR | None
+        PDA.7 (opt) - Autopsy Start and End Date/Time (DR)
+
+    pda_8 : XCN | None
+        PDA.8 (opt) - Autopsy Performed By (XCN)
+
+    pda_9 : str | None
+        PDA.9 (opt) - Coroner Indicator (ID)
+    """
 
     pda_1: Optional[List[CE]] = Field(
         default=None,

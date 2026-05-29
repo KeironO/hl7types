@@ -12,7 +12,19 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class CM_POSITION(BaseModel):
-    """HL7 v2 CM_POSITION data type."""
+    """HL7 v2 CM_POSITION data type.
+
+    Attributes
+    ----------
+    cm_position_1 : str | None
+        CM_POSITION.1 (opt) - Saal (ST)
+
+    cm_position_2 : str | None
+        CM_POSITION.2 (opt) - Tisch (ST)
+
+    cm_position_3 : str | None
+        CM_POSITION.3 (opt) - Stuhl (ST)
+    """
 
     cm_position_1: Optional[str] = Field(
         default=None,

@@ -14,7 +14,58 @@ from .HD import HD
 
 
 class LA2(BaseModel):
-    """HL7 v2 LA2 data type."""
+    """HL7 v2 LA2 data type.
+
+    Attributes
+    ----------
+    la2_1 : str | None
+        LA2.1 (opt) - point of care (IS) (IS)
+
+    la2_2 : str | None
+        LA2.2 (opt) - room (IS)
+
+    la2_3 : str | None
+        LA2.3 (opt) - bed (IS)
+
+    la2_4 : HD | None
+        LA2.4 (opt) - facility (HD) (HD)
+
+    la2_5 : str | None
+        LA2.5 (opt) - location status (IS)
+
+    la2_6 : str | None
+        LA2.6 (opt) - person location type (IS)
+
+    la2_7 : str | None
+        LA2.7 (opt) - building (IS)
+
+    la2_8 : str | None
+        LA2.8 (opt) - floor (IS)
+
+    la2_9 : str | None
+        LA2.9 (opt) - street address (ST) (ST)
+
+    la2_10 : str | None
+        LA2.10 (opt) - other designation (ST)
+
+    la2_11 : str | None
+        LA2.11 (opt) - city (ST)
+
+    la2_12 : str | None
+        LA2.12 (opt) - state or province (ST)
+
+    la2_13 : str | None
+        LA2.13 (opt) - zip or postal code (ST)
+
+    la2_14 : str | None
+        LA2.14 (opt) - country (ID)
+
+    la2_15 : str | None
+        LA2.15 (opt) - address type (ID)
+
+    la2_16 : str | None
+        LA2.16 (opt) - other geographic designation (ST)
+    """
 
     la2_1: Optional[str] = Field(
         default=None,

@@ -15,7 +15,28 @@ from ..datatypes.XCN import XCN
 
 
 class EVN(BaseModel):
-    """HL7 v2 EVN segment."""
+    """HL7 v2 EVN segment.
+
+    Attributes
+    ----------
+    evn_1 : str | None
+        EVN.1 (opt) - Event Type Code (ID)
+
+    evn_2 : TS
+        EVN.2 (req) - Recorded Date/Time (TS)
+
+    evn_3 : TS | None
+        EVN.3 (opt) - Date/Time Planned Event (TS)
+
+    evn_4 : str | None
+        EVN.4 (opt) - Event Reason Code (IS)
+
+    evn_5 : list[XCN] | None
+        EVN.5 (opt, rep) - Operator ID (XCN)
+
+    evn_6 : TS | None
+        EVN.6 (opt) - Event Occurred (TS)
+    """
 
     evn_1: Optional[str] = Field(
         default=None,

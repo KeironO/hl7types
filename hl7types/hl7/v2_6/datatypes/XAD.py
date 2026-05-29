@@ -17,7 +17,79 @@ from .SAD import SAD
 
 
 class XAD(BaseModel):
-    """HL7 v2 XAD data type."""
+    """HL7 v2 XAD data type.
+
+    Attributes
+    ----------
+    xad_1 : SAD | None
+        XAD.1 (opt) - Street Address (SAD)
+
+    xad_2 : str | None
+        XAD.2 (opt) - Other Designation (ST)
+
+    xad_3 : str | None
+        XAD.3 (opt) - City (ST)
+
+    xad_4 : str | None
+        XAD.4 (opt) - State or Province (ST)
+
+    xad_5 : str | None
+        XAD.5 (opt) - Zip or Postal Code (ST)
+
+    xad_6 : str | None
+        XAD.6 (opt) - Country (ID)
+
+    xad_7 : str | None
+        XAD.7 (opt) - Address Type (ID)
+
+    xad_8 : str | None
+        XAD.8 (opt) - Other Geographic Designation (ST)
+
+    xad_9 : str | None
+        XAD.9 (opt) - County/Parish Code (IS)
+
+    xad_10 : str | None
+        XAD.10 (opt) - Census Tract (IS)
+
+    xad_11 : str | None
+        XAD.11 (opt) - Address Representation Code (ID)
+
+    xad_12 : DR | None
+        XAD.12 (opt) - Address Validity Range (DR)
+
+    xad_13 : str | None
+        XAD.13 (opt) - Effective Date (DTM)
+
+    xad_14 : str | None
+        XAD.14 (opt) - Expiration Date (DTM)
+
+    xad_15 : CWE | None
+        XAD.15 (opt) - Expiration Reason (CWE)
+
+    xad_16 : str | None
+        XAD.16 (opt) - Temporary Indicator (ID)
+
+    xad_17 : str | None
+        XAD.17 (opt) - Bad Address Indicator (ID)
+
+    xad_18 : str | None
+        XAD.18 (opt) - Address Usage (ID)
+
+    xad_19 : str | None
+        XAD.19 (opt) - Addressee (ST)
+
+    xad_20 : str | None
+        XAD.20 (opt) - Comment (ST)
+
+    xad_21 : str | None
+        XAD.21 (opt) - Preference Order (NM)
+
+    xad_22 : CWE | None
+        XAD.22 (opt) - Protection Code (CWE)
+
+    xad_23 : EI | None
+        XAD.23 (opt) - Address Identifier (EI)
+    """
 
     xad_1: Optional[SAD] = Field(
         default=None,

@@ -14,7 +14,31 @@ from ..datatypes.CE import CE
 
 
 class PRA(BaseModel):
-    """HL7 v2 PRA segment."""
+    """HL7 v2 PRA segment.
+
+    Attributes
+    ----------
+    pra_1 : str
+        PRA.1 (req) - PRA - primary key value (ST)
+
+    pra_2 : list[CE] | None
+        PRA.2 (opt, rep) - Practitioner group (CE)
+
+    pra_3 : list[str] | None
+        PRA.3 (opt, rep) - Practitioner Category (ID)
+
+    pra_4 : str | None
+        PRA.4 (opt) - Provider Billing (ID)
+
+    pra_5 : list[str] | None
+        PRA.5 (opt, rep) - Specialty (CM)
+
+    pra_6 : list[str] | None
+        PRA.6 (opt, rep) - Practitioner ID Numbers (CM)
+
+    pra_7 : list[str] | None
+        PRA.7 (opt, rep) - Privileges (CM)
+    """
 
     pra_1: str = Field(
         default=...,

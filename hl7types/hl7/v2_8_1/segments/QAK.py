@@ -14,7 +14,28 @@ from ..datatypes.CWE import CWE
 
 
 class QAK(BaseModel):
-    """HL7 v2 QAK segment."""
+    """HL7 v2 QAK segment.
+
+    Attributes
+    ----------
+    qak_1 : str | None
+        QAK.1 (opt) - Query Tag (ST)
+
+    qak_2 : str | None
+        QAK.2 (opt) - Query Response Status (ID)
+
+    qak_3 : CWE | None
+        QAK.3 (opt) - Message Query Name (CWE)
+
+    qak_4 : str | None
+        QAK.4 (opt) - Hit Count Total (NM)
+
+    qak_5 : str | None
+        QAK.5 (opt) - This payload (NM)
+
+    qak_6 : str | None
+        QAK.6 (opt) - Hits remaining (NM)
+    """
 
     qak_1: Optional[str] = Field(
         default=None,

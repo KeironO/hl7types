@@ -15,7 +15,37 @@ from .HD import HD
 
 
 class LA1(BaseModel):
-    """HL7 v2 LA1 data type."""
+    """HL7 v2 LA1 data type.
+
+    Attributes
+    ----------
+    la1_1 : str | None
+        LA1.1 (opt) - point of care (IS) (IS)
+
+    la1_2 : str | None
+        LA1.2 (opt) - room (IS)
+
+    la1_3 : str | None
+        LA1.3 (opt) - bed (IS)
+
+    la1_4 : HD | None
+        LA1.4 (opt) - facility (HD) (HD)
+
+    la1_5 : str | None
+        LA1.5 (opt) - location status (IS)
+
+    la1_6 : str | None
+        LA1.6 (opt) - person location type (IS)
+
+    la1_7 : str | None
+        LA1.7 (opt) - building (IS)
+
+    la1_8 : str | None
+        LA1.8 (opt) - floor (IS)
+
+    la1_9 : AD | None
+        LA1.9 (opt) - address (AD)
+    """
 
     la1_1: Optional[str] = Field(
         default=None,

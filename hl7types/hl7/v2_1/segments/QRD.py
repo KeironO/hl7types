@@ -12,7 +12,46 @@ from pydantic import AliasChoices, BaseModel, Field
 
 
 class QRD(BaseModel):
-    """HL7 v2 QRD segment."""
+    """HL7 v2 QRD segment.
+
+    Attributes
+    ----------
+    qrd_1 : str
+        QRD.1 (req) - QUERY DATE/TIME (TS)
+
+    qrd_2 : str
+        QRD.2 (req) - QUERY FORMAT CODE (ID)
+
+    qrd_3 : str
+        QRD.3 (req) - QUERY PRIORITY (ID)
+
+    qrd_4 : str
+        QRD.4 (req) - QUERY ID (ST)
+
+    qrd_5 : str | None
+        QRD.5 (opt) - DEFERRED RESPONSE TYPE (ID)
+
+    qrd_6 : str | None
+        QRD.6 (opt) - DEFERRED RESPONSE DATE/TIME (TS)
+
+    qrd_7 : str
+        QRD.7 (req) - QUANTITY LIMITED REQUEST (CQ)
+
+    qrd_8 : list[str]
+        QRD.8 (req, rep) - WHO SUBJECT FILTER (ST)
+
+    qrd_9 : list[str]
+        QRD.9 (req, rep) - WHAT SUBJECT FILTER (ID)
+
+    qrd_10 : list[str]
+        QRD.10 (req, rep) - WHAT DEPARTMENT DATA CODE (ST)
+
+    qrd_11 : list[str] | None
+        QRD.11 (opt, rep) - WHAT DATA CODE VALUE QUAL. (ST)
+
+    qrd_12 : str | None
+        QRD.12 (opt) - QUERY RESULTS LEVEL (ID)
+    """
 
     qrd_1: str = Field(
         default=...,

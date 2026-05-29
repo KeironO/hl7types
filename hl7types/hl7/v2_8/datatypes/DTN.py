@@ -14,7 +14,16 @@ from .CWE import CWE
 
 
 class DTN(BaseModel):
-    """HL7 v2 DTN data type."""
+    """HL7 v2 DTN data type.
+
+    Attributes
+    ----------
+    dtn_1 : CWE
+        DTN.1 (req) - Day Type (CWE)
+
+    dtn_2 : str
+        DTN.2 (req) - Number of Days (NM)
+    """
 
     dtn_1: CWE = Field(
         default=...,

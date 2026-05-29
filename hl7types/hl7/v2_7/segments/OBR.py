@@ -24,7 +24,154 @@ from ..datatypes.XTN import XTN
 
 
 class OBR(BaseModel):
-    """HL7 v2 OBR segment."""
+    """HL7 v2 OBR segment.
+
+    Attributes
+    ----------
+    obr_1 : str | None
+        OBR.1 (opt) - Set ID - OBR (SI)
+
+    obr_2 : EI | None
+        OBR.2 (opt) - Placer Order Number (EI)
+
+    obr_3 : EI | None
+        OBR.3 (opt) - Filler Order Number (EI)
+
+    obr_4 : CWE
+        OBR.4 (req) - Universal Service Identifier (CWE)
+
+    obr_7 : str | None
+        OBR.7 (opt) - Observation Date/Time # (DTM)
+
+    obr_8 : str | None
+        OBR.8 (opt) - Observation End Date/Time # (DTM)
+
+    obr_9 : CQ | None
+        OBR.9 (opt) - Collection Volume * (CQ)
+
+    obr_10 : list[XCN] | None
+        OBR.10 (opt, rep) - Collector Identifier * (XCN)
+
+    obr_11 : str | None
+        OBR.11 (opt) - Specimen Action Code * (ID)
+
+    obr_12 : CWE | None
+        OBR.12 (opt) - Danger Code (CWE)
+
+    obr_13 : str | None
+        OBR.13 (opt) - Relevant Clinical Information (ST)
+
+    obr_16 : list[XCN] | None
+        OBR.16 (opt, rep) - Ordering Provider (XCN)
+
+    obr_17 : list[XTN] | None
+        OBR.17 (opt, rep) - Order Callback Phone Number (XTN)
+
+    obr_18 : str | None
+        OBR.18 (opt) - Placer Field 1 (ST)
+
+    obr_19 : str | None
+        OBR.19 (opt) - Placer Field 2 (ST)
+
+    obr_20 : str | None
+        OBR.20 (opt) - Filler Field 1 + (ST)
+
+    obr_21 : str | None
+        OBR.21 (opt) - Filler Field 2 + (ST)
+
+    obr_22 : str | None
+        OBR.22 (opt) - Results Rpt/Status Chng - Date/Time + (DTM)
+
+    obr_23 : MOC | None
+        OBR.23 (opt) - Charge to Practice + (MOC)
+
+    obr_24 : str | None
+        OBR.24 (opt) - Diagnostic Serv Sect ID (ID)
+
+    obr_25 : str | None
+        OBR.25 (opt) - Result Status + (ID)
+
+    obr_26 : PRL | None
+        OBR.26 (opt) - Parent Result + (PRL)
+
+    obr_28 : list[XCN] | None
+        OBR.28 (opt, rep) - Result Copies To (XCN)
+
+    obr_29 : EIP | None
+        OBR.29 (opt) - Parent (EIP)
+
+    obr_30 : str | None
+        OBR.30 (opt) - Transportation Mode (ID)
+
+    obr_31 : list[CWE] | None
+        OBR.31 (opt, rep) - Reason for Study (CWE)
+
+    obr_32 : NDL | None
+        OBR.32 (opt) - Principal Result Interpreter + (NDL)
+
+    obr_33 : list[NDL] | None
+        OBR.33 (opt, rep) - Assistant Result Interpreter + (NDL)
+
+    obr_34 : list[NDL] | None
+        OBR.34 (opt, rep) - Technician + (NDL)
+
+    obr_35 : list[NDL] | None
+        OBR.35 (opt, rep) - Transcriptionist + (NDL)
+
+    obr_36 : str | None
+        OBR.36 (opt) - Scheduled Date/Time + (DTM)
+
+    obr_37 : str | None
+        OBR.37 (opt) - Number of Sample Containers * (NM)
+
+    obr_38 : list[CWE] | None
+        OBR.38 (opt, rep) - Transport Logistics of Collected Sample * (CWE)
+
+    obr_39 : list[CWE] | None
+        OBR.39 (opt, rep) - Collector's Comment * (CWE)
+
+    obr_40 : CWE | None
+        OBR.40 (opt) - Transport Arrangement Responsibility (CWE)
+
+    obr_41 : str | None
+        OBR.41 (opt) - Transport Arranged (ID)
+
+    obr_42 : str | None
+        OBR.42 (opt) - Escort Required (ID)
+
+    obr_43 : list[CWE] | None
+        OBR.43 (opt, rep) - Planned Patient Transport Comment (CWE)
+
+    obr_44 : CNE | None
+        OBR.44 (opt) - Procedure Code (CNE)
+
+    obr_45 : list[CNE] | None
+        OBR.45 (opt, rep) - Procedure Code Modifier (CNE)
+
+    obr_46 : list[CWE] | None
+        OBR.46 (opt, rep) - Placer Supplemental Service Information (CWE)
+
+    obr_47 : list[CWE] | None
+        OBR.47 (opt, rep) - Filler Supplemental Service Information (CWE)
+
+    obr_48 : CWE | None
+        OBR.48 (opt) - Medically Necessary Duplicate Procedure Reason (CWE)
+
+    obr_49 : CWE | None
+        OBR.49 (opt) - Result Handling (CWE)
+
+    obr_50 : CWE | None
+        OBR.50 (opt) - Parent Universal Service Identifier (CWE)
+
+    obr_51 : EI | None
+        OBR.51 (opt) - Observation Group ID (EI)
+
+    obr_52 : EI | None
+        OBR.52 (opt) - Parent Observation Group ID (EI)
+
+    obr_53 : list[CX] | None
+        OBR.53 (opt, rep) - Alternate Placer Order Number (CX)
+    """
 
     obr_1: Optional[str] = Field(
         default=None,

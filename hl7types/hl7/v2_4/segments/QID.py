@@ -14,7 +14,16 @@ from ..datatypes.CE import CE
 
 
 class QID(BaseModel):
-    """HL7 v2 QID segment."""
+    """HL7 v2 QID segment.
+
+    Attributes
+    ----------
+    qid_1 : str
+        QID.1 (req) - Query Tag (ST)
+
+    qid_2 : CE
+        QID.2 (req) - Message Query Name (CE)
+    """
 
     qid_1: str = Field(
         default=...,

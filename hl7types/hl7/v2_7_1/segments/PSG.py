@@ -15,7 +15,28 @@ from ..datatypes.EI import EI
 
 
 class PSG(BaseModel):
-    """HL7 v2 PSG segment."""
+    """HL7 v2 PSG segment.
+
+    Attributes
+    ----------
+    psg_1 : EI
+        PSG.1 (req) - Provider Product/Service Group Number (EI)
+
+    psg_2 : EI | None
+        PSG.2 (opt) - Payer Product/Service Group Number (EI)
+
+    psg_3 : str
+        PSG.3 (req) - Product/Service Group Sequence Number (SI)
+
+    psg_4 : str
+        PSG.4 (req) - Adjudicate as Group (ID)
+
+    psg_5 : CP
+        PSG.5 (req) - Product/Service Group Billed Amount (CP)
+
+    psg_6 : str
+        PSG.6 (req) - Product/Service Group Description (ST)
+    """
 
     psg_1: EI = Field(
         default=...,

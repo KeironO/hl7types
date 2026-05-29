@@ -15,7 +15,28 @@ from .MO import MO
 
 
 class CP(BaseModel):
-    """HL7 v2 CP data type."""
+    """HL7 v2 CP data type.
+
+    Attributes
+    ----------
+    cp_1 : MO | None
+        CP.1 (opt) - price (MO)
+
+    cp_2 : str | None
+        CP.2 (opt) - price type (ID)
+
+    cp_3 : str | None
+        CP.3 (opt) - from value (NM)
+
+    cp_4 : str | None
+        CP.4 (opt) - to value (NM)
+
+    cp_5 : CE | None
+        CP.5 (opt) - range units (CE)
+
+    cp_6 : str | None
+        CP.6 (opt) - range type (ID)
+    """
 
     cp_1: Optional[MO] = Field(
         default=None,

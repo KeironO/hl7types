@@ -15,7 +15,40 @@ from ..datatypes.MO import MO
 
 
 class ILT(BaseModel):
-    """HL7 v2 ILT segment."""
+    """HL7 v2 ILT segment.
+
+    Attributes
+    ----------
+    ilt_1 : str
+        ILT.1 (req) - Set Id - ILT (SI)
+
+    ilt_2 : str
+        ILT.2 (req) - Inventory Lot Number (ST)
+
+    ilt_3 : str | None
+        ILT.3 (opt) - Inventory Expiration Date (DTM)
+
+    ilt_4 : str | None
+        ILT.4 (opt) - Inventory Received Date (DTM)
+
+    ilt_5 : str | None
+        ILT.5 (opt) - Inventory Received Quantity (NM)
+
+    ilt_6 : CWE | None
+        ILT.6 (opt) - Inventory Received Quantity Unit (CWE)
+
+    ilt_7 : MO | None
+        ILT.7 (opt) - Inventory Received Item Cost (MO)
+
+    ilt_8 : str | None
+        ILT.8 (opt) - Inventory On Hand Date (DTM)
+
+    ilt_9 : str | None
+        ILT.9 (opt) - Inventory On Hand Quantity (NM)
+
+    ilt_10 : CWE | None
+        ILT.10 (opt) - Inventory On Hand Quantity Unit (CWE)
+    """
 
     ilt_1: str = Field(
         default=...,
