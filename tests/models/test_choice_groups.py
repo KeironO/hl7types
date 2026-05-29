@@ -29,5 +29,5 @@ def test_orm_o01_choice_with_obr() -> None:
         "OBR|1|||SPEC-001|PANEL|||20260101090000|||||||CSF||||||||||||1^^^20260101120000\r"
     )
 
-    msg = decode_er7(msg_text)
+    msg = decode_er7(msg_text, strict=True)
     assert isinstance(msg, ORM_O01)

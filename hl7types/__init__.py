@@ -35,11 +35,13 @@ def _validate_er7(
     wire: str,
     segment_separator: str = "\r",
     enc: EncodingChars | None = None,
+    *,
+    strict: bool = False,
 ) -> BaseModel:
     effective_enc = enc if enc is not None else DEFAULT_ENCODING
     if _is_segment_cls(cls):
-        return decode_er7_segment(wire, cls, effective_enc)
-    return decode_er7(wire, msg_cls=cls, segment_separator=segment_separator)
+        return decode_er7_segment(wire, cls, effective_enc, strict=strict)
+    return decode_er7(wire, msg_cls=cls, segment_separator=segment_separator, strict=strict)
 
 
 def _dump_xml(

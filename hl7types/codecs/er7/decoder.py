@@ -146,6 +146,8 @@ def decode_er7_segment(
     seg_str: str,
     seg_cls: type[BaseModel],
     enc: EncodingChars = DEFAULT_ENCODING,
+    *,
+    strict: bool = False,
 ) -> BaseModel:
     seg_name = seg_cls.__name__
 
@@ -200,24 +202,25 @@ def decode_er7_segment(
             if val is not None:
                 data[alias] = val
 
-    # Real-world messages routinely omit fields that the XSD marks as required.
-    # Inject safe empty defaults so model_validate doesn't raise on missing keys:
-    # composite fields get an empty dict (all their sub-fields are optional so
-    # Pydantic constructs a zero-value instance), lists get [], scalars get "".
-    for pos, (fname, base_type, is_list) in pm.items():
-        fi = seg_cls.model_fields[fname]
-        fi_alias = fi.serialization_alias
-        assert fi_alias is not None
-        if fi_alias in data:
-            continue
-        if not fi.is_required():
-            continue
-        if is_list:
-            data[fi_alias] = []
-        elif _is_model(base_type):
-            data[fi_alias] = {}
-        else:
-            data[fi_alias] = ""
+    if not strict:
+        # Real-world messages routinely omit fields that the XSD marks as required.
+        # Inject safe empty defaults so model_validate doesn't raise on missing keys:
+        # composite fields get an empty dict (all their sub-fields are optional so
+        # Pydantic constructs a zero-value instance), lists get [], scalars get "".
+        for pos, (fname, base_type, is_list) in pm.items():
+            fi = seg_cls.model_fields[fname]
+            fi_alias = fi.serialization_alias
+            assert fi_alias is not None
+            if fi_alias in data:
+                continue
+            if not fi.is_required():
+                continue
+            if is_list:
+                data[fi_alias] = []
+            elif _is_model(base_type):
+                data[fi_alias] = {}
+            else:
+                data[fi_alias] = ""
 
     return seg_cls.model_validate(data)
 
@@ -227,11 +230,13 @@ def _decode_struct(
     idx: int,
     model_cls: type[BaseModel],
     enc: EncodingChars,
+    *,
+    strict: bool = False,
 ) -> tuple[int, BaseModel | None]:
     if _is_segment_cls(model_cls):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
             return idx, None
-        return idx + 1, decode_er7_segment(segs[idx][1], model_cls, enc)
+        return idx + 1, decode_er7_segment(segs[idx][1], model_cls, enc, strict=strict)
 
     hints = get_type_hints(model_cls)
     data: dict[str, Any] = {}
@@ -247,7 +252,7 @@ def _decode_struct(
         if is_list:
             items: list[Any] = []
             while idx < len(segs):
-                new_idx, item = _decode_struct(segs, idx, base_type, enc)
+                new_idx, item = _decode_struct(segs, idx, base_type, enc, strict=strict)
                 if item is None:
                     break
                 items.append(item)
@@ -255,7 +260,7 @@ def _decode_struct(
             if items:
                 data[fname] = items
         else:
-            new_idx, item = _decode_struct(segs, idx, base_type, enc)
+            new_idx, item = _decode_struct(segs, idx, base_type, enc, strict=strict)
             if item is not None:
                 data[fname] = item
                 idx = new_idx
@@ -263,22 +268,23 @@ def _decode_struct(
     if not data:
         return idx, None
 
-    # A required segment or group may be absent from the wire (sender omitted it).
-    # model_validate would raise on a missing required key, so we inject a
-    # model_construct() placeholder — a bare instance with no field validation —
-    # for any required model-type field that wasn't found in the segment stream.
-    # Scalar required fields on message/group models are not handled here because
-    # those are owned by segments, which are covered in decode_er7_segment above.
-    for fname, fi in model_cls.model_fields.items():
-        if fname in data or not fi.is_required():
-            continue
-        ann = hints.get(fname)
-        if ann is None:
-            continue
-        base_type, is_list = _unwrap(ann)
-        if not _is_model(base_type):
-            continue
-        data[fname] = [] if is_list else base_type.model_construct()
+    if not strict:
+        # A required segment or group may be absent from the wire (sender omitted it).
+        # model_validate would raise on a missing required key, so we inject a
+        # model_construct() placeholder — a bare instance with no field validation —
+        # for any required model-type field that wasn't found in the segment stream.
+        # Scalar required fields on message/group models are not handled here because
+        # those are owned by segments, which are covered in decode_er7_segment above.
+        for fname, fi in model_cls.model_fields.items():
+            if fname in data or not fi.is_required():
+                continue
+            ann = hints.get(fname)
+            if ann is None:
+                continue
+            base_type, is_list = _unwrap(ann)
+            if not _is_model(base_type):
+                continue
+            data[fname] = [] if is_list else base_type.model_construct()
 
     return idx, model_cls.model_validate(data)
 
@@ -328,6 +334,8 @@ def decode_er7(
     wire: str,
     msg_cls: type[BaseModel] | None = None,
     segment_separator: str = "\r",
+    *,
+    strict: bool = False,
 ) -> BaseModel:
     seg_strings = [s for s in re.split(r"\r\n|\r|\n", wire) if s]
     if not seg_strings:
@@ -354,7 +362,7 @@ def decode_er7(
             break
 
     segs = [(ss[:3], ss) for ss in seg_strings]
-    _, result = _decode_struct(segs, 0, msg_cls, enc)
+    _, result = _decode_struct(segs, 0, msg_cls, enc, strict=strict)
     if result is None:
         raise ValueError(f"Could not decode wire string as {msg_cls.__name__}")
     return result
