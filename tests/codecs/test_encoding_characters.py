@@ -11,7 +11,7 @@ from hl7types import decode_er7
 from hl7types.codecs.er7.encoder import EncodingChars
 
 # Wire string taken verbatim from EncodingCharactersTest.testValidateMSH2.
-# MSH.2 is "~\&" — only 3 chars instead of the required 4.
+# MSH.2 is "~\&" only 3 chars instead of the required 4.
 INVALID_MSH2_WIRE = (
     "MSH|~\\&|PHCN_ULTRA|2220|HSIE|2220|201106161233||ORU^R01|72313573|T|2.4|||AL|AL|AU\r\n"
     "PV1||I|^DIS^DIS^2220|||||0129296H^BRAUN^GARY|7MPH^MPH-HL7-RESULT FEED|||||||||I|^^^2220\r\n"

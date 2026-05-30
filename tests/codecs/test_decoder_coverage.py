@@ -27,7 +27,7 @@ def test_decode_er7_raises_when_msh12_empty() -> None:
 
 
 def test_decode_er7_msh9_single_component_fallback() -> None:
-    # MSH.9 with no caret — single-component path, no matching module exists
+    # MSH.9 with no caret single-component path, no matching module exists
     with pytest.raises((ModuleNotFoundError, AttributeError)):
         decode_er7("MSH|^~\\&|A|B|C|D|20010101||UNKNOWN|CTRL|P|2.3\r")
 
@@ -48,7 +48,7 @@ def test_decode_er7_segment_non_standard_field_sep() -> None:
 
 
 def test_empty_repetition_skipped() -> None:
-    # Trailing repetition separator — the empty rep should be dropped
+    # Trailing repetition separator the empty rep should be dropped
     msg = decode_er7(
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CC|20010101000000||ADT^A01|Q1|P|2.3\r"
         "EVN|A01|20010101000000\r"

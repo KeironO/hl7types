@@ -200,6 +200,77 @@ MSA
             ...
 ```
 
+## Custom segments and the registry
+
+Real-world HL7 deployments frequently extend the standard with vendor-specific Z-segments (e.g. `ZWCC`, `ZPID`). The `HL7Registry` lets you register custom segment and message models so they are recognised during encoding and decoding without touching the generated code.
+
+**Example 9:** Define a custom Z-segment and encode a message that includes it:
+
+```python
+>>> from typing import Optional
+>>> from pydantic import Field
+>>> from hl7types import HL7Registry
+>>> from hl7types.hl7 import HL7Model
+>>> from hl7types.hl7.v2_5_1.segments import MSA, MSH
+>>> from hl7types.hl7.v2_5_1.datatypes import HD, MSG, PT, TS, VID
+>>>
+>>> class ZWCC(HL7Model):
+...     zwcc_1: Optional[str] = Field(None, serialization_alias="ZWCC.1")
+...     zwcc_2: Optional[str] = Field(None, serialization_alias="ZWCC.2")
+...
+>>> _ZWCC = ZWCC
+>>>
+>>> class WCCACKMessage(HL7Model):
+...     MSH: MSH
+...     MSA: MSA
+...     ZWCC: Optional[_ZWCC] = None
+...
+>>> msh = MSH(
+...     msh_3=HD(hd_1="WPAS"), msh_5=HD(hd_1="SEND"),
+...     msh_7=TS(ts_1="20260101120000"), msh_9=MSG(msg_1="ACK"),
+...     msh_10="MSG000002", msh_11=PT(pt_1="P"), msh_12=VID(vid_1="2.5.1"),
+... )
+>>> msg = WCCACKMessage(MSH=msh, MSA=MSA(msa_1="AA", msa_2="MSG000001"), ZWCC=ZWCC(zwcc_1="WPAS", zwcc_2="20260101120000"))
+>>> for segment in msg.model_dump_er7().split("\r"):
+...     print(segment)
+MSH|^~\&|WPAS||SEND||20260101120000||ACK|MSG000002|P|2.5.1
+MSA|AA|MSG000001
+ZWCC|WPAS|20260101120000
+```
+
+---
+
+**Example 10:** Decode a wire string containing a custom segment by registering the message class:
+
+```python
+>>> from hl7types import decode_er7
+>>>
+>>> wire = (
+...     "MSH|^~\\&|WPAS||SEND||20260101120000||ACK|MSG000002|P|2.5.1\r"
+...     "MSA|AA|MSG000001\r"
+...     "ZWCC|WPAS|20260101120000\r"
+... )
+>>>
+>>> registry = HL7Registry()
+>>> registry.register_segment("ZWCC", ZWCC)
+>>> registry.register_message("2.5.1", "ACK", WCCACKMessage)
+>>>
+>>> msg = decode_er7(wire, registry=registry)
+>>> msg.ZWCC.zwcc_1
+'WPAS'
+```
+
+`MSH`, `FHS`, and `BHS` cannot be overridden — the decoder relies on them internally to detect encoding characters and message type. Attempting to register them raises immediately:
+
+```python
+>>> registry.register_segment("MSH", ZWCC)
+ValueError: 'MSH' is a delimiter-definition segment and cannot be overridden
+```
+
+Each `HL7Registry` instance is independent, so concurrent pipelines with different vendor extensions can each hold their own registry without shared state.
+
+---
+
 ## License
 
 Proudly licensed under the MIT License. See [LICENSE](LICENSE) for details.

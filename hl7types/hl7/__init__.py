@@ -8,7 +8,7 @@ if sys.version_info >= (3, 11):
 else:
     from typing_extensions import Self
 
-from pydantic import BaseModel
+from pydantic import BaseModel, ConfigDict
 
 from hl7types.codecs.er7.decoder import is_segment_cls, decode_er7, decode_er7_segment
 from hl7types.codecs.er7.encoder import (
@@ -22,6 +22,8 @@ from hl7types.codecs.xml.encoder import encode_xml
 
 
 class HL7Model(BaseModel):
+    model_config = ConfigDict(populate_by_name=True, validate_by_alias=True)
+
     def model_dump_er7(
         self,
         segment_separator: str = "\r",
