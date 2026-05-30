@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
@@ -50,7 +51,7 @@ _RPA_I08_VISIT = RPA_I08_VISIT
 _SFT = SFT
 
 
-class RPA_I08(BaseModel):
+class RPA_I08(HL7Model):
     """HL7 v2 RPA_I08 message.
 
     Attributes:

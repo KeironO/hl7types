@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.GOL import GOL
 from ..segments.VAR import VAR
@@ -22,7 +23,7 @@ _GOL = GOL
 _VAR = VAR
 
 
-class CCM_I21_GOAL(BaseModel):
+class CCM_I21_GOAL(HL7Model):
     """HL7 v2 CCM_I21.GOAL group.
 
     Attributes:

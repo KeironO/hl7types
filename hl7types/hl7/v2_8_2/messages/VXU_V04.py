@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ARV import ARV
 from ..segments.GT1 import GT1
@@ -38,7 +39,7 @@ _VXU_V04_PATIENT_VISIT = VXU_V04_PATIENT_VISIT
 _VXU_V04_PERSON_OBSERVATION = VXU_V04_PERSON_OBSERVATION
 
 
-class VXU_V04(BaseModel):
+class VXU_V04(HL7Model):
     """HL7 v2 VXU_V04 message.
 
     Attributes:

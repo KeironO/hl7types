@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.EQL import EQL
@@ -19,7 +20,7 @@ _EQL = EQL
 _MSH = MSH
 
 
-class EQQ_Q01(BaseModel):
+class EQQ_Q01(HL7Model):
     """HL7 v2 EQQ_Q01 message.
 
     Attributes:

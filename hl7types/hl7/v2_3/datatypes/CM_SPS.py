@@ -8,13 +8,14 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .CE import CE
 from .TX import TX
 
 
-class CM_SPS(BaseModel):
+class CM_SPS(HL7Model):
     """HL7 v2 CM_SPS data type.
 
     Attributes

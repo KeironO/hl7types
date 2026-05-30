@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OBX import OBX
 from ..segments.SPM import SPM
@@ -20,7 +21,7 @@ _OUL_R24_CONTAINER = OUL_R24_CONTAINER
 _SPM = SPM
 
 
-class OUL_R24_SPMOBXSACINV_SUPPGRP(BaseModel):
+class OUL_R24_SPMOBXSACINV_SUPPGRP(HL7Model):
     """HL7 v2 OUL_R24.SPMOBXSACINV_SUPPGRP group.
 
     Attributes:

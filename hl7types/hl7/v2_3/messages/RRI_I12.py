@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
@@ -42,7 +43,7 @@ _RRI_I12_RESULTS = RRI_I12_RESULTS
 _RRI_I12_VISIT = RRI_I12_VISIT
 
 
-class RRI_I12(BaseModel):
+class RRI_I12(HL7Model):
     """HL7 v2 RRI_I12 message.
 
     Attributes:

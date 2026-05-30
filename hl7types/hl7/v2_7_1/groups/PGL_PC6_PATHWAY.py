@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PTH import PTH
 from ..segments.VAR import VAR
@@ -17,7 +18,7 @@ _PTH = PTH
 _VAR = VAR
 
 
-class PGL_PC6_PATHWAY(BaseModel):
+class PGL_PC6_PATHWAY(HL7Model):
     """HL7 v2 PGL_PC6.PATHWAY group.
 
     Attributes:

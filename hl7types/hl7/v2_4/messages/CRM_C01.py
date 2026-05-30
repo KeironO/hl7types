@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 
@@ -18,7 +19,7 @@ _CRM_C01_PATIENT = CRM_C01_PATIENT
 _MSH = MSH
 
 
-class CRM_C01(BaseModel):
+class CRM_C01(HL7Model):
     """HL7 v2 CRM_C01 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ARV import ARV
 from ..segments.PD1 import PD1
@@ -19,7 +20,7 @@ _PD1 = PD1
 _PRT = PRT
 
 
-class RDS_O13_ADDITIONAL_DEMOGRAPHICS(BaseModel):
+class RDS_O13_ADDITIONAL_DEMOGRAPHICS(HL7Model):
     """HL7 v2 RDS_O13.ADDITIONAL_DEMOGRAPHICS group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.LCH import LCH
 from ..segments.LOC import LOC
@@ -24,7 +25,7 @@ _MFE = MFE
 _MFN_M05_MF_LOC_DEPT = MFN_M05_MF_LOC_DEPT
 
 
-class MFN_M05_MF_LOCATION(BaseModel):
+class MFN_M05_MF_LOCATION(HL7Model):
     """HL7 v2 MFN_M05.MF_LOCATION group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AIS import AIS
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _AIS = AIS
 _NTE = NTE
 
 
-class SIU_S12_SERVICE(BaseModel):
+class SIU_S12_SERVICE(HL7Model):
     """HL7 v2 SIU_S12.SERVICE group.
 
     Attributes:

@@ -8,13 +8,14 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .CNN import CNN
 from .HD import HD
 
 
-class NDL(BaseModel):
+class NDL(HL7Model):
     """HL7 v2 NDL data type.
 
     Attributes

@@ -8,12 +8,13 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .TS import TS
 
 
-class CM_AUI(BaseModel):
+class CM_AUI(HL7Model):
     """HL7 v2 CM_AUI data type.
 
     Attributes

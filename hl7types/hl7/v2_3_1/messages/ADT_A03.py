@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DB1 import DB1
 from ..segments.DG1 import DG1
@@ -36,7 +37,7 @@ _PV1 = PV1
 _PV2 = PV2
 
 
-class ADT_A03(BaseModel):
+class ADT_A03(HL7Model):
     """HL7 v2 ADT_A03 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
@@ -20,7 +21,7 @@ _OBR = OBR
 _RQA_I08_RESULTS = RQA_I08_RESULTS
 
 
-class RQA_I08_OBSERVATION(BaseModel):
+class RQA_I08_OBSERVATION(HL7Model):
     """HL7 v2 RQA_I08.OBSERVATION group.
 
     Attributes:

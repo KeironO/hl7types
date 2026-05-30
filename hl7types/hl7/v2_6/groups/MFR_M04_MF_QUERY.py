@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CDM import CDM
 from ..segments.MFE import MFE
@@ -19,7 +20,7 @@ _MFE = MFE
 _PRC = PRC
 
 
-class MFR_M04_MF_QUERY(BaseModel):
+class MFR_M04_MF_QUERY(HL7Model):
     """HL7 v2 MFR_M04.MF_QUERY group.
 
     Attributes:

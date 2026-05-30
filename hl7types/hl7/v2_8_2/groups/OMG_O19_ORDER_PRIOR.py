@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
 from ..segments.NTE import NTE
@@ -28,7 +29,7 @@ _ORC = ORC
 _PRT = PRT
 
 
-class OMG_O19_ORDER_PRIOR(BaseModel):
+class OMG_O19_ORDER_PRIOR(HL7Model):
     """HL7 v2 OMG_O19.ORDER_PRIOR group.
 
     Attributes:

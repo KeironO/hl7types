@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
@@ -22,7 +23,7 @@ _OMS_O05_ORDER = OMS_O05_ORDER
 _OMS_O05_PATIENT = OMS_O05_PATIENT
 
 
-class OMS_O05(BaseModel):
+class OMS_O05(HL7Model):
     """HL7 v2 OMS_O05 message.
 
     Attributes:

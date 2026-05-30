@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 
@@ -20,7 +21,7 @@ _DFT_P11_ORDER = DFT_P11_ORDER
 _ORC = ORC
 
 
-class DFT_P11_COMMON_ORDER(BaseModel):
+class DFT_P11_COMMON_ORDER(HL7Model):
     """HL7 v2 DFT_P11.COMMON_ORDER group.
 
     Attributes:

@@ -8,13 +8,14 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .CWE import CWE
 from .MOP import MOP
 
 
-class RMC(BaseModel):
+class RMC(HL7Model):
     """HL7 v2 RMC data type.
 
     Attributes

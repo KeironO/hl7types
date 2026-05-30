@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
@@ -30,7 +31,7 @@ _RSP_Q11_QUERY_RESULT_CLUSTER = RSP_Q11_QUERY_RESULT_CLUSTER
 _SFT = SFT
 
 
-class RSP_Q11(BaseModel):
+class RSP_Q11(HL7Model):
     """HL7 v2 RSP_Q11 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NK1 import NK1
 from ..segments.PID import PID
@@ -20,7 +21,7 @@ _OPR_O38_SPECIMEN = OPR_O38_SPECIMEN
 _PID = PID
 
 
-class OPR_O38_ORDER(BaseModel):
+class OPR_O38_ORDER(HL7Model):
     """HL7 v2 OPR_O38.ORDER group.
 
     Attributes:

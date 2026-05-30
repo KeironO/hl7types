@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .NMD_N02_APP_STATS import NMD_N02_APP_STATS
 from .NMD_N02_APP_STATUS import NMD_N02_APP_STATUS
@@ -19,7 +20,7 @@ _NMD_N02_APP_STATUS = NMD_N02_APP_STATUS
 _NMD_N02_CLOCK = NMD_N02_CLOCK
 
 
-class NMD_N02_CLOCK_AND_STATS_WITH_NOTES(BaseModel):
+class NMD_N02_CLOCK_AND_STATS_WITH_NOTES(HL7Model):
     """HL7 v2 NMD_N02.CLOCK_AND_STATS_WITH_NOTES group.
 
     Attributes:

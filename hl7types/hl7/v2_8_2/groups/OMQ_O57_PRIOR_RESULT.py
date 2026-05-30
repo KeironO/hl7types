@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AL1 import AL1
 
@@ -22,7 +23,7 @@ _OMQ_O57_PATIENT_PRIOR = OMQ_O57_PATIENT_PRIOR
 _OMQ_O57_PATIENT_VISIT_PRIOR = OMQ_O57_PATIENT_VISIT_PRIOR
 
 
-class OMQ_O57_PRIOR_RESULT(BaseModel):
+class OMQ_O57_PRIOR_RESULT(HL7Model):
     """HL7 v2 OMQ_O57.PRIOR_RESULT group.
 
     Attributes:

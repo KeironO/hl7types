@@ -1,39 +1,18 @@
-from .ACK import ACK
-from .ADR_A19 import ADR_A19
-from .ADT_A01 import ADT_A01
-from .ADT_A02 import ADT_A02
-from .ADT_A03 import ADT_A03
-from .ADT_A04 import ADT_A04
-from .ADT_A05 import ADT_A05
-from .ADT_A06 import ADT_A06
-from .ADT_A07 import ADT_A07
-from .ADT_A08 import ADT_A08
-from .ADT_A09 import ADT_A09
-from .ADT_A10 import ADT_A10
-from .ADT_A11 import ADT_A11
-from .ADT_A12 import ADT_A12
-from .ADT_A13 import ADT_A13
-from .ADT_A14 import ADT_A14
-from .ADT_A15 import ADT_A15
-from .ADT_A16 import ADT_A16
-from .ADT_A17 import ADT_A17
-from .ADT_A18 import ADT_A18
-from .ADT_A20 import ADT_A20
-from .ADT_A21 import ADT_A21
-from .ADT_A22 import ADT_A22
-from .ADT_A23 import ADT_A23
-from .ADT_A24 import ADT_A24
-from .BAR_P01 import BAR_P01
-from .BAR_P02 import BAR_P02
-from .DFT_P03 import DFT_P03
-from .DSR_Q01 import DSR_Q01
-from .DSR_Q03 import DSR_Q03
-from .MCF_Q02 import MCF_Q02
-from .ORM_O01 import ORM_O01
-from .ORR_O02 import ORR_O02
-from .ORU_R01 import ORU_R01
-from .ORU_R03 import ORU_R03
-from .QRY_A19 import QRY_A19
-from .QRY_Q01 import QRY_Q01
-from .QRY_Q02 import QRY_Q02
-from .UDM_Q05 import UDM_Q05
+import importlib
+
+_NAMES = {
+    'ACK', 'ADR_A19', 'ADT_A01', 'ADT_A02', 'ADT_A03', 'ADT_A04', 'ADT_A05',
+    'ADT_A06', 'ADT_A07', 'ADT_A08', 'ADT_A09', 'ADT_A10', 'ADT_A11',
+    'ADT_A12', 'ADT_A13', 'ADT_A14', 'ADT_A15', 'ADT_A16', 'ADT_A17',
+    'ADT_A18', 'ADT_A20', 'ADT_A21', 'ADT_A22', 'ADT_A23', 'ADT_A24',
+    'BAR_P01', 'BAR_P02', 'DFT_P03', 'DSR_Q01', 'DSR_Q03', 'MCF_Q02',
+    'ORM_O01', 'ORR_O02', 'ORU_R01', 'ORU_R03', 'QRY_A19', 'QRY_Q01',
+    'QRY_Q02', 'UDM_Q05'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

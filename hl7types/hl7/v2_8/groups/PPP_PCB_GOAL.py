@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.GOL import GOL
 from ..segments.NTE import NTE
@@ -24,7 +25,7 @@ _PPP_PCB_GOAL_ROLE = PPP_PCB_GOAL_ROLE
 _VAR = VAR
 
 
-class PPP_PCB_GOAL(BaseModel):
+class PPP_PCB_GOAL(HL7Model):
     """HL7 v2 PPP_PCB.GOAL group.
 
     Attributes:

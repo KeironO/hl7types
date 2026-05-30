@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PD1 import PD1
 from ..segments.PID import PID
@@ -19,7 +20,7 @@ _PID = PID
 _QRI = QRI
 
 
-class RSP_K22_QUERY_RESPONSE(BaseModel):
+class RSP_K22_QUERY_RESPONSE(HL7Model):
     """HL7 v2 RSP_K22.QUERY_RESPONSE group.
 
     Attributes:

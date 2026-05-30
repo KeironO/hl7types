@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MFE import MFE
 
@@ -18,7 +19,7 @@ _MFE = MFE
 _MFN_M18_PAYER_MF_ENTRY = MFN_M18_PAYER_MF_ENTRY
 
 
-class MFN_M18_MF_PAYER(BaseModel):
+class MFN_M18_MF_PAYER(HL7Model):
     """HL7 v2 MFN_M18.MF_PAYER group.
 
     Attributes:

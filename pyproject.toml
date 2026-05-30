@@ -1,6 +1,6 @@
 [project]
 name = "hl7types"
-version = "0.1.4"
+version = "0.2.0"
 description = "Typed, Pydantic-powered HL7 v2 models with built-in ER7 and XML serialisation"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -70,10 +70,9 @@ select = ["E", "F", "I", "UP"]
 ignore = ["E501"]
 
 [tool.pyright]
-include = ["hl7types/codecs", "hl7types/__init__.py"]
+include = ["hl7types/codecs", "hl7types/__init__.py", "hl7types/hl7/__init__.py"]
 pythonVersion = "3.10"
-typeCheckingMode = "basic"
-reportMissingImports = true
+typeCheckingMode = "strict"
 
 [build-system]
 requires = ["hatchling"]

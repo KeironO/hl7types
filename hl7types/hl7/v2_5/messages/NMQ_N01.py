@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 from ..segments.SFT import SFT
@@ -22,7 +23,7 @@ _NMQ_N01_QRY_WITH_DETAIL = NMQ_N01_QRY_WITH_DETAIL
 _SFT = SFT
 
 
-class NMQ_N01(BaseModel):
+class NMQ_N01(HL7Model):
     """HL7 v2 NMQ_N01 message.
 
     Attributes:

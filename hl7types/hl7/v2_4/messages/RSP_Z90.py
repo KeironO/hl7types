@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
@@ -30,7 +31,7 @@ _RCP = RCP
 _RSP_Z90_QUERY_RESPONSE = RSP_Z90_QUERY_RESPONSE
 
 
-class RSP_Z90(BaseModel):
+class RSP_Z90(HL7Model):
     """HL7 v2 RSP_Z90 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 from ..segments.QRD import QRD
@@ -19,7 +20,7 @@ _QRD = QRD
 _QRF = QRF
 
 
-class VXQ_V01(BaseModel):
+class VXQ_V01(HL7Model):
     """HL7 v2 VXQ_V01 message.
 
     Attributes:

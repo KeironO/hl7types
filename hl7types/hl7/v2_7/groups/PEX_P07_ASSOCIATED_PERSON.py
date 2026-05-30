@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NK1 import NK1
 from ..segments.PRB import PRB
@@ -24,7 +25,7 @@ _PEX_P07_ASSOCIATED_RX_ORDER = PEX_P07_ASSOCIATED_RX_ORDER
 _PRB = PRB
 
 
-class PEX_P07_ASSOCIATED_PERSON(BaseModel):
+class PEX_P07_ASSOCIATED_PERSON(HL7Model):
     """HL7 v2 PEX_P07.ASSOCIATED_PERSON group.
 
     Attributes:

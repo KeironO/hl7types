@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OBX import OBX
 from ..segments.RXC import RXC
@@ -21,7 +22,7 @@ _RXE = RXE
 _RXR = RXR
 
 
-class CCI_I22_MEDICATION_ENCODING_DETAIL(BaseModel):
+class CCI_I22_MEDICATION_ENCODING_DETAIL(HL7Model):
     """HL7 v2 CCI_I22.MEDICATION_ENCODING_DETAIL group.
 
     Attributes:

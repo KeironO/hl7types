@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.SPM import SPM
 
@@ -20,7 +21,7 @@ _OML_O21_SPECIMEN_OBSERVATION = OML_O21_SPECIMEN_OBSERVATION
 _SPM = SPM
 
 
-class OML_O21_SPECIMEN(BaseModel):
+class OML_O21_SPECIMEN(HL7Model):
     """HL7 v2 OML_O21.SPECIMEN group.
 
     Attributes:

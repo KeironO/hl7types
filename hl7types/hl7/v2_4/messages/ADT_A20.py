@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.EVN import EVN
 from ..segments.MSH import MSH
@@ -19,7 +20,7 @@ _MSH = MSH
 _NPU = NPU
 
 
-class ADT_A20(BaseModel):
+class ADT_A20(HL7Model):
     """HL7 v2 ADT_A20 message.
 
     Attributes:

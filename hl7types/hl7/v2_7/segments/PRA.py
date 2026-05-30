@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
 from ..datatypes.PIP import PIP
@@ -16,7 +17,7 @@ from ..datatypes.PLN import PLN
 from ..datatypes.SPD import SPD
 
 
-class PRA(BaseModel):
+class PRA(HL7Model):
     """HL7 v2 PRA segment.
 
     Attributes

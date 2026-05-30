@@ -1,174 +1,29 @@
-from .ABS import ABS
-from .ACC import ACC
-from .ADD import ADD
-from .ADJ import ADJ
-from .AFF import AFF
-from .AIG import AIG
-from .AIL import AIL
-from .AIP import AIP
-from .AIS import AIS
-from .AL1 import AL1
-from .APR import APR
-from .ARQ import ARQ
-from .ARV import ARV
-from .AUT import AUT
-from .BHS import BHS
-from .BLC import BLC
-from .BLG import BLG
-from .BPO import BPO
-from .BPX import BPX
-from .BTS import BTS
-from .BTX import BTX
-from .CDM import CDM
-from .CER import CER
-from .CM0 import CM0
-from .CM1 import CM1
-from .CM2 import CM2
-from .CNS import CNS
-from .CON import CON
-from .CSP import CSP
-from .CSR import CSR
-from .CSS import CSS
-from .CTD import CTD
-from .CTI import CTI
-from .DB1 import DB1
-from .DG1 import DG1
-from .DMI import DMI
-from .DRG import DRG
-from .DSC import DSC
-from .DSP import DSP
-from .ECD import ECD
-from .ECR import ECR
-from .ED import ED
-from .EDU import EDU
-from .EQP import EQP
-from .EQU import EQU
-from .ERR import ERR
-from .EVN import EVN
-from .FAC import FAC
-from .FHS import FHS
-from .FT1 import FT1
-from .FTS import FTS
-from .GOL import GOL
-from .GP1 import GP1
-from .GP2 import GP2
-from .GT1 import GT1
-from .Hxx import Hxx
-from .IAM import IAM
-from .IIM import IIM
-from .ILT import ILT
-from .IN1 import IN1
-from .IN2 import IN2
-from .IN3 import IN3
-from .INV import INV
-from .IPC import IPC
-from .IPR import IPR
-from .ISD import ISD
-from .ITM import ITM
-from .IVC import IVC
-from .IVT import IVT
-from .LAN import LAN
-from .LCC import LCC
-from .LCH import LCH
-from .LDP import LDP
-from .LOC import LOC
-from .LRL import LRL
-from .MFA import MFA
-from .MFE import MFE
-from .MFI import MFI
-from .MRG import MRG
-from .MSA import MSA
-from .MSH import MSH
-from .NCK import NCK
-from .NDS import NDS
-from .NK1 import NK1
-from .NPU import NPU
-from .NSC import NSC
-from .NST import NST
-from .NTE import NTE
-from .OBR import OBR
-from .OBX import OBX
-from .ODS import ODS
-from .ODT import ODT
-from .OM1 import OM1
-from .OM2 import OM2
-from .OM3 import OM3
-from .OM4 import OM4
-from .OM5 import OM5
-from .OM6 import OM6
-from .OM7 import OM7
-from .ORC import ORC
-from .ORG import ORG
-from .OVR import OVR
-from .PCE import PCE
-from .PCR import PCR
-from .PD1 import PD1
-from .PDA import PDA
-from .PDC import PDC
-from .PEO import PEO
-from .PES import PES
-from .PID import PID
-from .PKG import PKG
-from .PMT import PMT
-from .PR1 import PR1
-from .PRA import PRA
-from .PRB import PRB
-from .PRC import PRC
-from .PRD import PRD
-from .PSG import PSG
-from .PSH import PSH
-from .PSL import PSL
-from .PSS import PSS
-from .PTH import PTH
-from .PV1 import PV1
-from .PV2 import PV2
-from .PYE import PYE
-from .QAK import QAK
-from .QID import QID
-from .QPD import QPD
-from .QRD import QRD
-from .QRF import QRF
-from .QRI import QRI
-from .RCP import RCP
-from .RDF import RDF
-from .RDT import RDT
-from .REL import REL
-from .RF1 import RF1
-from .RFI import RFI
-from .RGS import RGS
-from .RMI import RMI
-from .ROL import ROL
-from .RQ1 import RQ1
-from .RQD import RQD
-from .RXA import RXA
-from .RXC import RXC
-from .RXD import RXD
-from .RXE import RXE
-from .RXG import RXG
-from .RXO import RXO
-from .RXR import RXR
-from .SAC import SAC
-from .SCD import SCD
-from .SCH import SCH
-from .SCP import SCP
-from .SDD import SDD
-from .SFT import SFT
-from .SID import SID
-from .SLT import SLT
-from .SPM import SPM
-from .STF import STF
-from .STZ import STZ
-from .TCC import TCC
-from .TCD import TCD
-from .TQ1 import TQ1
-from .TQ2 import TQ2
-from .TXA import TXA
-from .UAC import UAC
-from .UB1 import UB1
-from .UB2 import UB2
-from .URD import URD
-from .URS import URS
-from .VAR import VAR
-from .VND import VND
-from .ZL7 import ZL7
-from .Zxx import Zxx
+import importlib
+
+_NAMES = {
+    'ABS', 'ACC', 'ADD', 'ADJ', 'AFF', 'AIG', 'AIL', 'AIP', 'AIS', 'AL1',
+    'APR', 'ARQ', 'ARV', 'AUT', 'BHS', 'BLC', 'BLG', 'BPO', 'BPX', 'BTS',
+    'BTX', 'CDM', 'CER', 'CM0', 'CM1', 'CM2', 'CNS', 'CON', 'CSP', 'CSR',
+    'CSS', 'CTD', 'CTI', 'DB1', 'DG1', 'DMI', 'DRG', 'DSC', 'DSP', 'ECD',
+    'ECR', 'ED', 'EDU', 'EQP', 'EQU', 'ERR', 'EVN', 'FAC', 'FHS', 'FT1', 'FTS',
+    'GOL', 'GP1', 'GP2', 'GT1', 'Hxx', 'IAM', 'IIM', 'ILT', 'IN1', 'IN2',
+    'IN3', 'INV', 'IPC', 'IPR', 'ISD', 'ITM', 'IVC', 'IVT', 'LAN', 'LCC',
+    'LCH', 'LDP', 'LOC', 'LRL', 'MFA', 'MFE', 'MFI', 'MRG', 'MSA', 'MSH',
+    'NCK', 'NDS', 'NK1', 'NPU', 'NSC', 'NST', 'NTE', 'OBR', 'OBX', 'ODS',
+    'ODT', 'OM1', 'OM2', 'OM3', 'OM4', 'OM5', 'OM6', 'OM7', 'ORC', 'ORG',
+    'OVR', 'PCE', 'PCR', 'PD1', 'PDA', 'PDC', 'PEO', 'PES', 'PID', 'PKG',
+    'PMT', 'PR1', 'PRA', 'PRB', 'PRC', 'PRD', 'PSG', 'PSH', 'PSL', 'PSS',
+    'PTH', 'PV1', 'PV2', 'PYE', 'QAK', 'QID', 'QPD', 'QRD', 'QRF', 'QRI',
+    'RCP', 'RDF', 'RDT', 'REL', 'RF1', 'RFI', 'RGS', 'RMI', 'ROL', 'RQ1',
+    'RQD', 'RXA', 'RXC', 'RXD', 'RXE', 'RXG', 'RXO', 'RXR', 'SAC', 'SCD',
+    'SCH', 'SCP', 'SDD', 'SFT', 'SID', 'SLT', 'SPM', 'STF', 'STZ', 'TCC',
+    'TCD', 'TQ1', 'TQ2', 'TXA', 'UAC', 'UB1', 'UB2', 'URD', 'URS', 'VAR',
+    'VND', 'ZL7', 'Zxx'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

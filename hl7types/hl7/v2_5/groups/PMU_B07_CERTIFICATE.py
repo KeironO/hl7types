@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CER import CER
 from ..segments.ROL import ROL
@@ -17,7 +18,7 @@ _CER = CER
 _ROL = ROL
 
 
-class PMU_B07_CERTIFICATE(BaseModel):
+class PMU_B07_CERTIFICATE(HL7Model):
     """HL7 v2 PMU_B07.CERTIFICATE group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .CWE import CWE
 from .DR import DR
@@ -16,7 +17,7 @@ from .FN import FN
 from .HD import HD
 
 
-class XCN(BaseModel):
+class XCN(HL7Model):
     """HL7 v2 XCN data type.
 
     Attributes

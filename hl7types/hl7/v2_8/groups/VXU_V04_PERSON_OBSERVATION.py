@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
@@ -19,7 +20,7 @@ _OBX = OBX
 _PRT = PRT
 
 
-class VXU_V04_PERSON_OBSERVATION(BaseModel):
+class VXU_V04_PERSON_OBSERVATION(HL7Model):
     """HL7 v2 VXU_V04.PERSON_OBSERVATION group.
 
     Attributes:

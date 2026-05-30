@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -24,7 +25,7 @@ _PRR_PC5_PATIENT = PRR_PC5_PATIENT
 _QRD = QRD
 
 
-class PRR_PC5(BaseModel):
+class PRR_PC5(HL7Model):
     """HL7 v2 PRR_PC5 message.
 
     Attributes:

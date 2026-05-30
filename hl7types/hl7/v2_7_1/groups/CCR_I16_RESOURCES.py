@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.RGS import RGS
 
@@ -18,7 +19,7 @@ _CCR_I16_RESOURCE_DETAIL = CCR_I16_RESOURCE_DETAIL
 _RGS = RGS
 
 
-class CCR_I16_RESOURCES(BaseModel):
+class CCR_I16_RESOURCES(HL7Model):
     """HL7 v2 CCR_I16.RESOURCES group.
 
     Attributes:

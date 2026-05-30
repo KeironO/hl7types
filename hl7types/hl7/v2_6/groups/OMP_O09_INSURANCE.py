@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.IN1 import IN1
 from ..segments.IN2 import IN2
@@ -19,7 +20,7 @@ _IN2 = IN2
 _IN3 = IN3
 
 
-class OMP_O09_INSURANCE(BaseModel):
+class OMP_O09_INSURANCE(HL7Model):
     """HL7 v2 OMP_O09.INSURANCE group.
 
     Attributes:

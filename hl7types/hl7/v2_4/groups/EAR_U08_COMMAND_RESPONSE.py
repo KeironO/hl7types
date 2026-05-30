@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ECD import ECD
 from ..segments.ECR import ECR
@@ -19,7 +20,7 @@ _ECR = ECR
 _SAC = SAC
 
 
-class EAR_U08_COMMAND_RESPONSE(BaseModel):
+class EAR_U08_COMMAND_RESPONSE(HL7Model):
     """HL7 v2 EAR_U08.COMMAND_RESPONSE group.
 
     Attributes:

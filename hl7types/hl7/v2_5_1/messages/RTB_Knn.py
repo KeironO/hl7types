@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List, Any
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
@@ -27,7 +28,7 @@ _QPD = QPD
 _SFT = SFT
 
 
-class RTB_Knn(BaseModel):
+class RTB_Knn(HL7Model):
     """HL7 v2 RTB_Knn message.
 
     Attributes:

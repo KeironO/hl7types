@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PR1 import PR1
 from ..segments.PRT import PRT
@@ -19,7 +20,7 @@ _PRT = PRT
 _ROL = ROL
 
 
-class DFT_P11_FINANCIAL_PROCEDURE(BaseModel):
+class DFT_P11_FINANCIAL_PROCEDURE(HL7Model):
     """HL7 v2 DFT_P11.FINANCIAL_PROCEDURE group.
 
     Attributes:

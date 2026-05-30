@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
@@ -20,7 +21,7 @@ _OUL_R22_ORDER_DOCUMENT = OUL_R22_ORDER_DOCUMENT
 _PRT = PRT
 
 
-class OUL_R22_COMMON_ORDER(BaseModel):
+class OUL_R22_COMMON_ORDER(HL7Model):
     """HL7 v2 OUL_R22.COMMON_ORDER group.
 
     Attributes:

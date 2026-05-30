@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.DSP import DSP
@@ -26,7 +27,7 @@ _NTE = NTE
 _RPL_I02_PROVIDER = RPL_I02_PROVIDER
 
 
-class RPL_I02(BaseModel):
+class RPL_I02(HL7Model):
     """HL7 v2 RPL_I02 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AIS import AIS
 from ..segments.APR import APR
@@ -19,7 +20,7 @@ _APR = APR
 _NTE = NTE
 
 
-class SRM_S01_SERVICE(BaseModel):
+class SRM_S01_SERVICE(HL7Model):
     """HL7 v2 SRM_S01.SERVICE group.
 
     Attributes:

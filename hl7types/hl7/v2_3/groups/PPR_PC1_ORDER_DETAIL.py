@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
@@ -22,7 +23,7 @@ _PPR_PC1_ORDER_OBSERVATION = PPR_PC1_ORDER_OBSERVATION
 _VAR = VAR
 
 
-class PPR_PC1_ORDER_DETAIL(BaseModel):
+class PPR_PC1_ORDER_DETAIL(HL7Model):
     """HL7 v2 PPR_PC1.ORDER_DETAIL group.
 
     Attributes:

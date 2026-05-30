@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 from ..segments.RXA import RXA
@@ -22,7 +23,7 @@ _RXR = RXR
 _VXU_V04_OBSERVATION = VXU_V04_OBSERVATION
 
 
-class VXU_V04_ORDER(BaseModel):
+class VXU_V04_ORDER(HL7Model):
     """HL7 v2 VXU_V04.ORDER group.
 
     Attributes:

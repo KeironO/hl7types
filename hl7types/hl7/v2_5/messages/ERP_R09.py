@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.ERQ import ERQ
@@ -27,7 +28,7 @@ _QAK = QAK
 _SFT = SFT
 
 
-class ERP_R09(BaseModel):
+class ERP_R09(HL7Model):
     """HL7 v2 ERP_R09 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
@@ -17,7 +18,7 @@ _NTE = NTE
 _OBX = OBX
 
 
-class PTR_PCF_GOAL_OBSERVATION(BaseModel):
+class PTR_PCF_GOAL_OBSERVATION(HL7Model):
     """HL7 v2 PTR_PCF.GOAL_OBSERVATION group.
 
     Attributes:

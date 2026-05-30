@@ -8,14 +8,15 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .DR import DR
 from .SAD import SAD
 from .TS import TS
 
 
-class XAD(BaseModel):
+class XAD(HL7Model):
     """HL7 v2 XAD data type.
 
     Attributes

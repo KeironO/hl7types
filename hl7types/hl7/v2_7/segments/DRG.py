@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CP import CP
@@ -17,7 +18,7 @@ from ..datatypes.MO import MO
 from ..datatypes.XPN import XPN
 
 
-class DRG(BaseModel):
+class DRG(HL7Model):
     """HL7 v2 DRG segment.
 
     Attributes

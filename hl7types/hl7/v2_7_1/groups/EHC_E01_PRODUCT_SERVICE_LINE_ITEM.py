@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ADJ import ADJ
 from ..segments.AUT import AUT
@@ -25,7 +26,7 @@ _PSL = PSL
 _ROL = ROL
 
 
-class EHC_E01_PRODUCT_SERVICE_LINE_ITEM(BaseModel):
+class EHC_E01_PRODUCT_SERVICE_LINE_ITEM(HL7Model):
     """HL7 v2 EHC_E01.PRODUCT_SERVICE_LINE_ITEM group.
 
     Attributes:

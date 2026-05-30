@@ -1,200 +1,44 @@
-from .ACK import ACK
-from .ADR_A19 import ADR_A19
-from .ADT_A01 import ADT_A01
-from .ADT_A02 import ADT_A02
-from .ADT_A03 import ADT_A03
-from .ADT_A05 import ADT_A05
-from .ADT_A06 import ADT_A06
-from .ADT_A09 import ADT_A09
-from .ADT_A12 import ADT_A12
-from .ADT_A15 import ADT_A15
-from .ADT_A16 import ADT_A16
-from .ADT_A17 import ADT_A17
-from .ADT_A18 import ADT_A18
-from .ADT_A20 import ADT_A20
-from .ADT_A21 import ADT_A21
-from .ADT_A24 import ADT_A24
-from .ADT_A30 import ADT_A30
-from .ADT_A37 import ADT_A37
-from .ADT_A38 import ADT_A38
-from .ADT_A39 import ADT_A39
-from .ADT_A43 import ADT_A43
-from .ADT_A45 import ADT_A45
-from .ADT_A50 import ADT_A50
-from .ADT_A52 import ADT_A52
-from .ADT_A54 import ADT_A54
-from .ADT_A60 import ADT_A60
-from .ADT_A61 import ADT_A61
-from .BAR_P01 import BAR_P01
-from .BAR_P02 import BAR_P02
-from .BAR_P05 import BAR_P05
-from .BAR_P06 import BAR_P06
-from .BAR_P10 import BAR_P10
-from .BAR_P12 import BAR_P12
-from .BPS_O29 import BPS_O29
-from .BRP_O30 import BRP_O30
-from .BRT_O32 import BRT_O32
-from .BTS_O31 import BTS_O31
-from .CRM_C01 import CRM_C01
-from .CSU_C09 import CSU_C09
-from .DFT_P03 import DFT_P03
-from .DFT_P11 import DFT_P11
-from .DOC_T12 import DOC_T12
-from .DSR_Q01 import DSR_Q01
-from .DSR_Q03 import DSR_Q03
-from .EAC_U07 import EAC_U07
-from .EAN_U09 import EAN_U09
-from .EAR_U08 import EAR_U08
-from .EDR_R07 import EDR_R07
-from .EQQ_Q04 import EQQ_Q04
-from .ERP_R09 import ERP_R09
-from .ESR_U02 import ESR_U02
-from .ESU_U01 import ESU_U01
-from .INR_U06 import INR_U06
-from .INU_U05 import INU_U05
-from .LSU_U12 import LSU_U12
-from .MDM_T01 import MDM_T01
-from .MDM_T02 import MDM_T02
-from .MFK_M01 import MFK_M01
-from .MFN_M01 import MFN_M01
-from .MFN_M02 import MFN_M02
-from .MFN_M03 import MFN_M03
-from .MFN_M04 import MFN_M04
-from .MFN_M05 import MFN_M05
-from .MFN_M06 import MFN_M06
-from .MFN_M07 import MFN_M07
-from .MFN_M08 import MFN_M08
-from .MFN_M09 import MFN_M09
-from .MFN_M10 import MFN_M10
-from .MFN_M11 import MFN_M11
-from .MFN_M12 import MFN_M12
-from .MFN_M13 import MFN_M13
-from .MFN_M15 import MFN_M15
-from .MFN_Znn import MFN_Znn
-from .MFQ_M01 import MFQ_M01
-from .MFR_M01 import MFR_M01
-from .MFR_M04 import MFR_M04
-from .MFR_M05 import MFR_M05
-from .MFR_M06 import MFR_M06
-from .MFR_M07 import MFR_M07
-from .NMD_N02 import NMD_N02
-from .NMQ_N01 import NMQ_N01
-from .NMR_N01 import NMR_N01
-from .OMB_O27 import OMB_O27
-from .OMD_O03 import OMD_O03
-from .OMG_O19 import OMG_O19
-from .OMI_O23 import OMI_O23
-from .OML_O21 import OML_O21
-from .OML_O33 import OML_O33
-from .OML_O35 import OML_O35
-from .OMN_O07 import OMN_O07
-from .OMP_O09 import OMP_O09
-from .OMS_O05 import OMS_O05
-from .ORB_O28 import ORB_O28
-from .ORD_O04 import ORD_O04
-from .ORF_R04 import ORF_R04
-from .ORG_O20 import ORG_O20
-from .ORI_O24 import ORI_O24
-from .ORL_O22 import ORL_O22
-from .ORL_O34 import ORL_O34
-from .ORL_O36 import ORL_O36
-from .ORM_O01 import ORM_O01
-from .ORN_O08 import ORN_O08
-from .ORP_O10 import ORP_O10
-from .ORR_O02 import ORR_O02
-from .ORS_O06 import ORS_O06
-from .ORU_R01 import ORU_R01
-from .ORU_R30 import ORU_R30
-from .OSQ_Q06 import OSQ_Q06
-from .OSR_Q06 import OSR_Q06
-from .OUL_R21 import OUL_R21
-from .OUL_R22 import OUL_R22
-from .OUL_R23 import OUL_R23
-from .OUL_R24 import OUL_R24
-from .PEX_P07 import PEX_P07
-from .PGL_PC6 import PGL_PC6
-from .PMU_B01 import PMU_B01
-from .PMU_B03 import PMU_B03
-from .PMU_B04 import PMU_B04
-from .PMU_B07 import PMU_B07
-from .PMU_B08 import PMU_B08
-from .PPG_PCG import PPG_PCG
-from .PPP_PCB import PPP_PCB
-from .PPR_PC1 import PPR_PC1
-from .PPT_PCL import PPT_PCL
-from .PPV_PCA import PPV_PCA
-from .PRR_PC5 import PRR_PC5
-from .PTR_PCF import PTR_PCF
-from .QBP_Q11 import QBP_Q11
-from .QBP_Q13 import QBP_Q13
-from .QBP_Q15 import QBP_Q15
-from .QBP_Q21 import QBP_Q21
-from .QBP_Qnn import QBP_Qnn
-from .QBP_Z73 import QBP_Z73
-from .QCK_Q02 import QCK_Q02
-from .QCN_J01 import QCN_J01
-from .QRY import QRY
-from .QRY_A19 import QRY_A19
-from .QRY_PC4 import QRY_PC4
-from .QRY_Q01 import QRY_Q01
-from .QRY_R02 import QRY_R02
-from .QSB_Q16 import QSB_Q16
-from .QVR_Q17 import QVR_Q17
-from .RAR_RAR import RAR_RAR
-from .RAS_O17 import RAS_O17
-from .RCI_I05 import RCI_I05
-from .RCL_I06 import RCL_I06
-from .RDE_O11 import RDE_O11
-from .RDR_RDR import RDR_RDR
-from .RDS_O13 import RDS_O13
-from .RDY_K15 import RDY_K15
-from .REF_I12 import REF_I12
-from .RER_RER import RER_RER
-from .RGR_RGR import RGR_RGR
-from .RGV_O15 import RGV_O15
-from .ROR_ROR import ROR_ROR
-from .RPA_I08 import RPA_I08
-from .RPI_I01 import RPI_I01
-from .RPI_I04 import RPI_I04
-from .RPL_I02 import RPL_I02
-from .RPR_I03 import RPR_I03
-from .RQA_I08 import RQA_I08
-from .RQC_I05 import RQC_I05
-from .RQI_I01 import RQI_I01
-from .RQP_I04 import RQP_I04
-from .RQQ_Q09 import RQQ_Q09
-from .RRA_O18 import RRA_O18
-from .RRD_O14 import RRD_O14
-from .RRE_O12 import RRE_O12
-from .RRG_O16 import RRG_O16
-from .RRI_I12 import RRI_I12
-from .RSP_K11 import RSP_K11
-from .RSP_K21 import RSP_K21
-from .RSP_K23 import RSP_K23
-from .RSP_K25 import RSP_K25
-from .RSP_K31 import RSP_K31
-from .RSP_Q11 import RSP_Q11
-from .RSP_Z82 import RSP_Z82
-from .RSP_Z86 import RSP_Z86
-from .RSP_Z88 import RSP_Z88
-from .RSP_Z90 import RSP_Z90
-from .RTB_K13 import RTB_K13
-from .RTB_Knn import RTB_Knn
-from .RTB_Z74 import RTB_Z74
-from .SIU_S12 import SIU_S12
-from .SPQ_Q08 import SPQ_Q08
-from .SQM_S25 import SQM_S25
-from .SQR_S25 import SQR_S25
-from .SRM_S01 import SRM_S01
-from .SRR_S01 import SRR_S01
-from .SSR_U04 import SSR_U04
-from .SSU_U03 import SSU_U03
-from .SUR_P09 import SUR_P09
-from .TBR_R08 import TBR_R08
-from .TCU_U10 import TCU_U10
-from .UDM_Q05 import UDM_Q05
-from .VQQ_Q07 import VQQ_Q07
-from .VXQ_V01 import VXQ_V01
-from .VXR_V03 import VXR_V03
-from .VXU_V04 import VXU_V04
-from .VXX_V02 import VXX_V02
+import importlib
+
+_NAMES = {
+    'ACK', 'ADR_A19', 'ADT_A01', 'ADT_A02', 'ADT_A03', 'ADT_A05', 'ADT_A06',
+    'ADT_A09', 'ADT_A12', 'ADT_A15', 'ADT_A16', 'ADT_A17', 'ADT_A18',
+    'ADT_A20', 'ADT_A21', 'ADT_A24', 'ADT_A30', 'ADT_A37', 'ADT_A38',
+    'ADT_A39', 'ADT_A43', 'ADT_A45', 'ADT_A50', 'ADT_A52', 'ADT_A54',
+    'ADT_A60', 'ADT_A61', 'BAR_P01', 'BAR_P02', 'BAR_P05', 'BAR_P06',
+    'BAR_P10', 'BAR_P12', 'BPS_O29', 'BRP_O30', 'BRT_O32', 'BTS_O31',
+    'CRM_C01', 'CSU_C09', 'DFT_P03', 'DFT_P11', 'DOC_T12', 'DSR_Q01',
+    'DSR_Q03', 'EAC_U07', 'EAN_U09', 'EAR_U08', 'EDR_R07', 'EQQ_Q04',
+    'ERP_R09', 'ESR_U02', 'ESU_U01', 'INR_U06', 'INU_U05', 'LSU_U12',
+    'MDM_T01', 'MDM_T02', 'MFK_M01', 'MFN_M01', 'MFN_M02', 'MFN_M03',
+    'MFN_M04', 'MFN_M05', 'MFN_M06', 'MFN_M07', 'MFN_M08', 'MFN_M09',
+    'MFN_M10', 'MFN_M11', 'MFN_M12', 'MFN_M13', 'MFN_M15', 'MFN_Znn',
+    'MFQ_M01', 'MFR_M01', 'MFR_M04', 'MFR_M05', 'MFR_M06', 'MFR_M07',
+    'NMD_N02', 'NMQ_N01', 'NMR_N01', 'OMB_O27', 'OMD_O03', 'OMG_O19',
+    'OMI_O23', 'OML_O21', 'OML_O33', 'OML_O35', 'OMN_O07', 'OMP_O09',
+    'OMS_O05', 'ORB_O28', 'ORD_O04', 'ORF_R04', 'ORG_O20', 'ORI_O24',
+    'ORL_O22', 'ORL_O34', 'ORL_O36', 'ORM_O01', 'ORN_O08', 'ORP_O10',
+    'ORR_O02', 'ORS_O06', 'ORU_R01', 'ORU_R30', 'OSQ_Q06', 'OSR_Q06',
+    'OUL_R21', 'OUL_R22', 'OUL_R23', 'OUL_R24', 'PEX_P07', 'PGL_PC6',
+    'PMU_B01', 'PMU_B03', 'PMU_B04', 'PMU_B07', 'PMU_B08', 'PPG_PCG',
+    'PPP_PCB', 'PPR_PC1', 'PPT_PCL', 'PPV_PCA', 'PRR_PC5', 'PTR_PCF',
+    'QBP_Q11', 'QBP_Q13', 'QBP_Q15', 'QBP_Q21', 'QBP_Qnn', 'QBP_Z73',
+    'QCK_Q02', 'QCN_J01', 'QRY', 'QRY_A19', 'QRY_PC4', 'QRY_Q01', 'QRY_R02',
+    'QSB_Q16', 'QVR_Q17', 'RAR_RAR', 'RAS_O17', 'RCI_I05', 'RCL_I06',
+    'RDE_O11', 'RDR_RDR', 'RDS_O13', 'RDY_K15', 'REF_I12', 'RER_RER',
+    'RGR_RGR', 'RGV_O15', 'ROR_ROR', 'RPA_I08', 'RPI_I01', 'RPI_I04',
+    'RPL_I02', 'RPR_I03', 'RQA_I08', 'RQC_I05', 'RQI_I01', 'RQP_I04',
+    'RQQ_Q09', 'RRA_O18', 'RRD_O14', 'RRE_O12', 'RRG_O16', 'RRI_I12',
+    'RSP_K11', 'RSP_K21', 'RSP_K23', 'RSP_K25', 'RSP_K31', 'RSP_Q11',
+    'RSP_Z82', 'RSP_Z86', 'RSP_Z88', 'RSP_Z90', 'RTB_K13', 'RTB_Knn',
+    'RTB_Z74', 'SIU_S12', 'SPQ_Q08', 'SQM_S25', 'SQR_S25', 'SRM_S01',
+    'SRR_S01', 'SSR_U04', 'SSU_U03', 'SUR_P09', 'TBR_R08', 'TCU_U10',
+    'UDM_Q05', 'VQQ_Q07', 'VXQ_V01', 'VXR_V03', 'VXU_V04', 'VXX_V02'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

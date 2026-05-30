@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.SAC import SAC
 from ..segments.SPM import SPM
@@ -17,7 +18,7 @@ _SAC = SAC
 _SPM = SPM
 
 
-class ORL_O34_SPMSAC_SUPPGRP2(BaseModel):
+class ORL_O34_SPMSAC_SUPPGRP2(HL7Model):
     """HL7 v2 ORL_O34.SPMSAC_SUPPGRP2 group.
 
     Attributes:

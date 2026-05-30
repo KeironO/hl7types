@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
 from ..segments.CTI import CTI
@@ -28,7 +29,7 @@ _ORC = ORC
 _ORU_R01_OBSERVATION = ORU_R01_OBSERVATION
 
 
-class ORU_R01_ORDER_OBSERVATION(BaseModel):
+class ORU_R01_ORDER_OBSERVATION(HL7Model):
     """HL7 v2 ORU_R01.ORDER_OBSERVATION group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
 from ..segments.NTE import NTE
@@ -22,7 +23,7 @@ _NTE = NTE
 _OBR = OBR
 
 
-class EHC_E13_REQUEST(BaseModel):
+class EHC_E13_REQUEST(HL7Model):
     """HL7 v2 EHC_E13.REQUEST group.
 
     Attributes:

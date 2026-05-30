@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OBX import OBX
 from ..segments.PRT import PRT
@@ -19,7 +20,7 @@ _PRT = PRT
 _TXA = TXA
 
 
-class ORU_R01_ORDER_DOCUMENT(BaseModel):
+class ORU_R01_ORDER_DOCUMENT(HL7Model):
     """HL7 v2 ORU_R01.ORDER_DOCUMENT group.
 
     Attributes:

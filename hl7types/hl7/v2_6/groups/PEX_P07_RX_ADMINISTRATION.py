@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.RXA import RXA
 from ..segments.RXR import RXR
@@ -17,7 +18,7 @@ _RXA = RXA
 _RXR = RXR
 
 
-class PEX_P07_RX_ADMINISTRATION(BaseModel):
+class PEX_P07_RX_ADMINISTRATION(HL7Model):
     """HL7 v2 PEX_P07.RX_ADMINISTRATION group.
 
     Attributes:

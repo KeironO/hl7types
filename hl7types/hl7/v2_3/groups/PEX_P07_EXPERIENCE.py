@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PES import PES
 
@@ -18,7 +19,7 @@ _PES = PES
 _PEX_P07_PEX_OBSERVATION = PEX_P07_PEX_OBSERVATION
 
 
-class PEX_P07_EXPERIENCE(BaseModel):
+class PEX_P07_EXPERIENCE(HL7Model):
     """HL7 v2 PEX_P07.EXPERIENCE group.
 
     Attributes:

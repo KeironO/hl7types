@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PTH import PTH
@@ -24,7 +25,7 @@ _PTR_PCF_PROBLEM = PTR_PCF_PROBLEM
 _VAR = VAR
 
 
-class PTR_PCF_PATHWAY(BaseModel):
+class PTR_PCF_PATHWAY(HL7Model):
     """HL7 v2 PTR_PCF.PATHWAY group.
 
     Attributes:

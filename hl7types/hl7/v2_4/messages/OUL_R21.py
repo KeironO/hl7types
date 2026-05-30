@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.MSH import MSH
@@ -26,7 +27,7 @@ _OUL_R21_PATIENT = OUL_R21_PATIENT
 _OUL_R21_VISIT = OUL_R21_VISIT
 
 
-class OUL_R21(BaseModel):
+class OUL_R21(HL7Model):
     """HL7 v2 OUL_R21 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CM0 import CM0
 from ..segments.MFE import MFE
@@ -20,7 +21,7 @@ _MFE = MFE
 _MFN_M06_MF_PHASE_SCHED_DETAIL = MFN_M06_MF_PHASE_SCHED_DETAIL
 
 
-class MFN_M06_MF_CLIN_STUDY(BaseModel):
+class MFN_M06_MF_CLIN_STUDY(HL7Model):
     """HL7 v2 MFN_M06.MF_CLIN_STUDY group.
 
     Attributes:

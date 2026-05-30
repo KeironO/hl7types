@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ABS import ABS
 from ..segments.ACC import ACC
@@ -50,7 +51,7 @@ _UB1 = UB1
 _UB2 = UB2
 
 
-class BAR_P05_VISIT(BaseModel):
+class BAR_P05_VISIT(HL7Model):
     """HL7 v2 BAR_P05.VISIT group.
 
     Attributes:

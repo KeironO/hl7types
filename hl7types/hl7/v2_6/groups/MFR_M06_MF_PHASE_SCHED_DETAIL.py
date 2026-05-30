@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CM1 import CM1
 from ..segments.CM2 import CM2
@@ -17,7 +18,7 @@ _CM1 = CM1
 _CM2 = CM2
 
 
-class MFR_M06_MF_PHASE_SCHED_DETAIL(BaseModel):
+class MFR_M06_MF_PHASE_SCHED_DETAIL(HL7Model):
     """HL7 v2 MFR_M06.MF_PHASE_SCHED_DETAIL group.
 
     Attributes:

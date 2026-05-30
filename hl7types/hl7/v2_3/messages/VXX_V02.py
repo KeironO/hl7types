@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
@@ -24,7 +25,7 @@ _QRF = QRF
 _VXX_V02_PATIENT = VXX_V02_PATIENT
 
 
-class VXX_V02(BaseModel):
+class VXX_V02(HL7Model):
     """HL7 v2 VXX_V02 message.
 
     Attributes:

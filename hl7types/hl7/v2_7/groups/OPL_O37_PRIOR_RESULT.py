@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AL1 import AL1
 from ..segments.NK1 import NK1
@@ -24,7 +25,7 @@ _OPL_O37_PATIENT_PRIOR = OPL_O37_PATIENT_PRIOR
 _OPL_O37_PATIENT_VISIT_PRIOR = OPL_O37_PATIENT_VISIT_PRIOR
 
 
-class OPL_O37_PRIOR_RESULT(BaseModel):
+class OPL_O37_PRIOR_RESULT(HL7Model):
     """HL7 v2 OPL_O37.PRIOR_RESULT group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AL1 import AL1
 from ..segments.GT1 import GT1
@@ -28,7 +29,7 @@ _RDE_O01_INSURANCE = RDE_O01_INSURANCE
 _RDE_O01_PATIENT_VISIT = RDE_O01_PATIENT_VISIT
 
 
-class RDE_O01_PATIENT(BaseModel):
+class RDE_O01_PATIENT(HL7Model):
     """HL7 v2 RDE_O01.PATIENT group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AFF import AFF
 from ..segments.EDU import EDU
@@ -25,7 +26,7 @@ _PRA = PRA
 _STF = STF
 
 
-class RSP_K25_STAFF(BaseModel):
+class RSP_K25_STAFF(HL7Model):
     """HL7 v2 RSP_K25.STAFF group.
 
     Attributes:

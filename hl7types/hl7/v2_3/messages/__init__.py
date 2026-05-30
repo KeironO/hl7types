@@ -1,114 +1,30 @@
-from .ACK import ACK
-from .ADT_A01 import ADT_A01
-from .ADT_A02 import ADT_A02
-from .ADT_A03 import ADT_A03
-from .ADT_A06 import ADT_A06
-from .ADT_A09 import ADT_A09
-from .ADT_A12 import ADT_A12
-from .ADT_A16 import ADT_A16
-from .ADT_A17 import ADT_A17
-from .ADT_A18 import ADT_A18
-from .ADT_A20 import ADT_A20
-from .ADT_A24 import ADT_A24
-from .ADT_A30 import ADT_A30
-from .ADT_A38 import ADT_A38
-from .ADT_A39 import ADT_A39
-from .ADT_A43 import ADT_A43
-from .ADT_A45 import ADT_A45
-from .ADT_A50 import ADT_A50
-from .ARD_A19 import ARD_A19
-from .BAR_P01 import BAR_P01
-from .BAR_P02 import BAR_P02
-from .BAR_P06 import BAR_P06
-from .CRM_C01 import CRM_C01
-from .CSU_C09 import CSU_C09
-from .DFT_P03 import DFT_P03
-from .DOC_T12 import DOC_T12
-from .DSR_Q01 import DSR_Q01
-from .DSR_Q03 import DSR_Q03
-from .EDR_Q01 import EDR_Q01
-from .EQQ_Q01 import EQQ_Q01
-from .ERP_Q01 import ERP_Q01
-from .MDM_T01 import MDM_T01
-from .MDM_T02 import MDM_T02
-from .MFK_M01 import MFK_M01
-from .MFK_M02 import MFK_M02
-from .MFN_M01 import MFN_M01
-from .MFN_M02 import MFN_M02
-from .MFN_M03 import MFN_M03
-from .MFN_M05 import MFN_M05
-from .MFN_M06 import MFN_M06
-from .MFN_M07 import MFN_M07
-from .MFN_M08 import MFN_M08
-from .MFN_M09 import MFN_M09
-from .MFN_M10 import MFN_M10
-from .MFN_M11 import MFN_M11
-from .OMD_O01 import OMD_O01
-from .OMN_O01 import OMN_O01
-from .OMS_O01 import OMS_O01
-from .ORD_O02 import ORD_O02
-from .ORF_R04 import ORF_R04
-from .ORM_O01 import ORM_O01
-from .ORN_O02 import ORN_O02
-from .ORR_O02 import ORR_O02
-from .ORU_R01 import ORU_R01
-from .OSQ_Q06 import OSQ_Q06
-from .OSR_Q06 import OSR_Q06
-from .PEX_P07 import PEX_P07
-from .PGL_PC6 import PGL_PC6
-from .PIN_I07 import PIN_I07
-from .PPG_PCG import PPG_PCG
-from .PPP_PCB import PPP_PCB
-from .PPR_PC1 import PPR_PC1
-from .PPT_PCL import PPT_PCL
-from .PPV_PCA import PPV_PCA
-from .PRR_PC5 import PRR_PC5
-from .PTR_PCF import PTR_PCF
-from .QCK_Q02 import QCK_Q02
-from .QRY_A19 import QRY_A19
-from .QRY_PC4 import QRY_PC4
-from .QRY_Q01 import QRY_Q01
-from .QRY_Q02 import QRY_Q02
-from .QRY_R02 import QRY_R02
-from .QRY_T12 import QRY_T12
-from .RAR_RAR import RAR_RAR
-from .RAS_O01 import RAS_O01
-from .RCI_I05 import RCI_I05
-from .RCL_I06 import RCL_I06
-from .RDE_O01 import RDE_O01
-from .RDO_O01 import RDO_O01
-from .RDR_RDR import RDR_RDR
-from .RDS_O01 import RDS_O01
-from .REF_I12 import REF_I12
-from .RER_RER import RER_RER
-from .RGR_RGR import RGR_RGR
-from .RGV_O01 import RGV_O01
-from .ROR_ROR import ROR_ROR
-from .RPA_I08 import RPA_I08
-from .RPI_I01 import RPI_I01
-from .RPL_I02 import RPL_I02
-from .RQA_I08 import RQA_I08
-from .RQC_I05 import RQC_I05
-from .RQC_I06 import RQC_I06
-from .RQI_I01 import RQI_I01
-from .RQP_I04 import RQP_I04
-from .RQQ_Q01 import RQQ_Q01
-from .RRA_O02 import RRA_O02
-from .RRD_O02 import RRD_O02
-from .RRG_O02 import RRG_O02
-from .RRI_I12 import RRI_I12
-from .RRO_O02 import RRO_O02
-from .SIU_S12 import SIU_S12
-from .SPQ_Q01 import SPQ_Q01
-from .SQM_S25 import SQM_S25
-from .SQR_S25 import SQR_S25
-from .SRM_S01 import SRM_S01
-from .SRR_S01 import SRR_S01
-from .SUR_P09 import SUR_P09
-from .TBR_Q01 import TBR_Q01
-from .UDM_Q05 import UDM_Q05
-from .VQQ_Q01 import VQQ_Q01
-from .VXQ_V01 import VXQ_V01
-from .VXR_V03 import VXR_V03
-from .VXU_V04 import VXU_V04
-from .VXX_V02 import VXX_V02
+import importlib
+
+_NAMES = {
+    'ACK', 'ADT_A01', 'ADT_A02', 'ADT_A03', 'ADT_A06', 'ADT_A09', 'ADT_A12',
+    'ADT_A16', 'ADT_A17', 'ADT_A18', 'ADT_A20', 'ADT_A24', 'ADT_A30',
+    'ADT_A38', 'ADT_A39', 'ADT_A43', 'ADT_A45', 'ADT_A50', 'ARD_A19',
+    'BAR_P01', 'BAR_P02', 'BAR_P06', 'CRM_C01', 'CSU_C09', 'DFT_P03',
+    'DOC_T12', 'DSR_Q01', 'DSR_Q03', 'EDR_Q01', 'EQQ_Q01', 'ERP_Q01',
+    'MDM_T01', 'MDM_T02', 'MFK_M01', 'MFK_M02', 'MFN_M01', 'MFN_M02',
+    'MFN_M03', 'MFN_M05', 'MFN_M06', 'MFN_M07', 'MFN_M08', 'MFN_M09',
+    'MFN_M10', 'MFN_M11', 'OMD_O01', 'OMN_O01', 'OMS_O01', 'ORD_O02',
+    'ORF_R04', 'ORM_O01', 'ORN_O02', 'ORR_O02', 'ORU_R01', 'OSQ_Q06',
+    'OSR_Q06', 'PEX_P07', 'PGL_PC6', 'PIN_I07', 'PPG_PCG', 'PPP_PCB',
+    'PPR_PC1', 'PPT_PCL', 'PPV_PCA', 'PRR_PC5', 'PTR_PCF', 'QCK_Q02',
+    'QRY_A19', 'QRY_PC4', 'QRY_Q01', 'QRY_Q02', 'QRY_R02', 'QRY_T12',
+    'RAR_RAR', 'RAS_O01', 'RCI_I05', 'RCL_I06', 'RDE_O01', 'RDO_O01',
+    'RDR_RDR', 'RDS_O01', 'REF_I12', 'RER_RER', 'RGR_RGR', 'RGV_O01',
+    'ROR_ROR', 'RPA_I08', 'RPI_I01', 'RPL_I02', 'RQA_I08', 'RQC_I05',
+    'RQC_I06', 'RQI_I01', 'RQP_I04', 'RQQ_Q01', 'RRA_O02', 'RRD_O02',
+    'RRG_O02', 'RRI_I12', 'RRO_O02', 'SIU_S12', 'SPQ_Q01', 'SQM_S25',
+    'SQR_S25', 'SRM_S01', 'SRR_S01', 'SUR_P09', 'TBR_Q01', 'UDM_Q05',
+    'VQQ_Q01', 'VXQ_V01', 'VXR_V03', 'VXU_V04', 'VXX_V02'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

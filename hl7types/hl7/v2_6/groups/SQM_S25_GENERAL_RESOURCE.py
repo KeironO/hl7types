@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AIG import AIG
 from ..segments.APR import APR
@@ -17,7 +18,7 @@ _AIG = AIG
 _APR = APR
 
 
-class SQM_S25_GENERAL_RESOURCE(BaseModel):
+class SQM_S25_GENERAL_RESOURCE(HL7Model):
     """HL7 v2 SQM_S25.GENERAL_RESOURCE group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
@@ -22,7 +23,7 @@ _CTI = CTI
 _ORC = ORC
 
 
-class CQU_I19_CLINICAL_HISTORY(BaseModel):
+class CQU_I19_CLINICAL_HISTORY(HL7Model):
     """HL7 v2 CQU_I19.CLINICAL_HISTORY group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -30,7 +31,7 @@ _SFT = SFT
 _UAC = UAC
 
 
-class PPV_PCA(BaseModel):
+class PPV_PCA(HL7Model):
     """HL7 v2 PPV_PCA message.
 
     Attributes:

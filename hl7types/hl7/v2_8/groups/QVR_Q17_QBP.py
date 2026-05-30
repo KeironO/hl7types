@@ -8,10 +8,11 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, Any
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 
-class QVR_Q17_QBP(BaseModel):
+class QVR_Q17_QBP(HL7Model):
     """HL7 v2 QVR_Q17.QBP group.
 
     Attributes:

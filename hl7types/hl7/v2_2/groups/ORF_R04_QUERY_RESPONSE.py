@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PID import PID
@@ -21,7 +22,7 @@ _QRD = QRD
 _QRF = QRF
 
 
-class ORF_R04_QUERY_RESPONSE(BaseModel):
+class ORF_R04_QUERY_RESPONSE(HL7Model):
     """HL7 v2 ORF_R04.QUERY_RESPONSE group.
 
     Attributes:

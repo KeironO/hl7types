@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DG1 import DG1
 from ..segments.NTE import NTE
@@ -22,7 +23,7 @@ _ORM_O01_CHOICE = ORM_O01_CHOICE
 _ORM_O01_OBSERVATION = ORM_O01_OBSERVATION
 
 
-class ORM_O01_ORDER_DETAIL(BaseModel):
+class ORM_O01_ORDER_DETAIL(HL7Model):
     """HL7 v2 ORM_O01.ORDER_DETAIL group.
 
     Attributes:

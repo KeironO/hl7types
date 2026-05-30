@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CP import CP
@@ -16,7 +17,7 @@ from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
 
 
-class IVT(BaseModel):
+class IVT(HL7Model):
     """HL7 v2 IVT segment.
 
     Attributes

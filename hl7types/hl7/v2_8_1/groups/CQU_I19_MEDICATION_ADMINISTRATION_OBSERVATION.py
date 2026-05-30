@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OBX import OBX
 from ..segments.PRT import PRT
@@ -17,7 +18,7 @@ _OBX = OBX
 _PRT = PRT
 
 
-class CQU_I19_MEDICATION_ADMINISTRATION_OBSERVATION(BaseModel):
+class CQU_I19_MEDICATION_ADMINISTRATION_OBSERVATION(HL7Model):
     """HL7 v2 CQU_I19.MEDICATION_ADMINISTRATION_OBSERVATION group.
 
     Attributes:

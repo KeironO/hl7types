@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PV1 import PV1
@@ -19,7 +20,7 @@ _PV1 = PV1
 _PV2 = PV2
 
 
-class RPA_I08_VISIT(BaseModel):
+class RPA_I08_VISIT(HL7Model):
     """HL7 v2 RPA_I08.VISIT group.
 
     Attributes:

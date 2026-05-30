@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
@@ -32,7 +33,7 @@ _SFT = SFT
 _UAC = UAC
 
 
-class RPI_I04(BaseModel):
+class RPI_I04(HL7Model):
     """HL7 v2 RPI_I04 message.
 
     Attributes:

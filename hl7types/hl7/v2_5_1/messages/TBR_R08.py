@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
@@ -29,7 +30,7 @@ _RDT = RDT
 _SFT = SFT
 
 
-class TBR_R08(BaseModel):
+class TBR_R08(HL7Model):
     """HL7 v2 TBR_R08 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NK1 import NK1
 
@@ -20,7 +21,7 @@ _OPU_R25_PATIENT = OPU_R25_PATIENT
 _OPU_R25_SPECIMEN = OPU_R25_SPECIMEN
 
 
-class OPU_R25_ACCESSION_DETAIL(BaseModel):
+class OPU_R25_ACCESSION_DETAIL(HL7Model):
     """HL7 v2 OPU_R25.ACCESSION_DETAIL group.
 
     Attributes:

@@ -8,14 +8,15 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
 from ..datatypes.CK import CK
 from ..datatypes.XON import XON
 
 
-class CDM(BaseModel):
+class CDM(HL7Model):
     """HL7 v2 CDM segment.
 
     Attributes

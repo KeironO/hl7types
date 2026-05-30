@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DG1 import DG1
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _DG1 = DG1
 _NTE = NTE
 
 
-class EHC_E20_DIAGNOSIS(BaseModel):
+class EHC_E20_DIAGNOSIS(HL7Model):
     """HL7 v2 EHC_E20.DIAGNOSIS group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ARV import ARV
 from ..segments.PID import PID
@@ -20,7 +21,7 @@ _BRT_O32_ORDER = BRT_O32_ORDER
 _PID = PID
 
 
-class BRT_O32_RESPONSE(BaseModel):
+class BRT_O32_RESPONSE(HL7Model):
     """HL7 v2 BRT_O32.RESPONSE group.
 
     Attributes:

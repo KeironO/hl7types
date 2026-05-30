@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -26,7 +27,7 @@ _ORB_O28_RESPONSE = ORB_O28_RESPONSE
 _SFT = SFT
 
 
-class ORB_O28(BaseModel):
+class ORB_O28(HL7Model):
     """HL7 v2 ORB_O28 message.
 
     Attributes:

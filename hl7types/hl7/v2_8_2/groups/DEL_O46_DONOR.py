@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AL1 import AL1
 from ..segments.ARV import ARV
@@ -28,7 +29,7 @@ _PD1 = PD1
 _PID = PID
 
 
-class DEL_O46_DONOR(BaseModel):
+class DEL_O46_DONOR(HL7Model):
     """HL7 v2 DEL_O46.DONOR group.
 
     Attributes:

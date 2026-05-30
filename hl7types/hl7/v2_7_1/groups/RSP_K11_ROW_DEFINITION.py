@@ -8,10 +8,11 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, Any
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 
-class RSP_K11_ROW_DEFINITION(BaseModel):
+class RSP_K11_ROW_DEFINITION(HL7Model):
     """HL7 v2 RSP_K11.ROW_DEFINITION group.
 
     Attributes:

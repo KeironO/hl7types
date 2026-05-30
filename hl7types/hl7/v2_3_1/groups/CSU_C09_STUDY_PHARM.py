@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 
@@ -18,7 +19,7 @@ _CSU_C09_RX_ADMIN = CSU_C09_RX_ADMIN
 _ORC = ORC
 
 
-class CSU_C09_STUDY_PHARM(BaseModel):
+class CSU_C09_STUDY_PHARM(HL7Model):
     """HL7 v2 CSU_C09.STUDY_PHARM group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.EQP import EQP
 from ..segments.EQU import EQU
@@ -23,7 +24,7 @@ _ROL = ROL
 _SFT = SFT
 
 
-class LSU_U12(BaseModel):
+class LSU_U12(HL7Model):
     """HL7 v2 LSU_U12 message.
 
     Attributes:

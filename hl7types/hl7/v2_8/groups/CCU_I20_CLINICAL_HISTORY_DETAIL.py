@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .CCU_I20_CLINICAL_HISTORY_OBJECT import CCU_I20_CLINICAL_HISTORY_OBJECT
 from .CCU_I20_CLINICAL_HISTORY_OBSERVATION import CCU_I20_CLINICAL_HISTORY_OBSERVATION
@@ -17,7 +18,7 @@ _CCU_I20_CLINICAL_HISTORY_OBJECT = CCU_I20_CLINICAL_HISTORY_OBJECT
 _CCU_I20_CLINICAL_HISTORY_OBSERVATION = CCU_I20_CLINICAL_HISTORY_OBSERVATION
 
 
-class CCU_I20_CLINICAL_HISTORY_DETAIL(BaseModel):
+class CCU_I20_CLINICAL_HISTORY_DETAIL(HL7Model):
     """HL7 v2 CCU_I20.CLINICAL_HISTORY_DETAIL group.
 
     Attributes:

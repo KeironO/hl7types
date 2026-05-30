@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
@@ -21,7 +22,7 @@ _PRT = PRT
 _TXA = TXA
 
 
-class ORX_O58_ORDER(BaseModel):
+class ORX_O58_ORDER(HL7Model):
     """HL7 v2 ORX_O58.ORDER group.
 
     Attributes:

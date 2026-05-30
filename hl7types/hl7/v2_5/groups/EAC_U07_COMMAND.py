@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CNS import CNS
 from ..segments.ECD import ECD
@@ -22,7 +23,7 @@ _ECD = ECD
 _TQ1 = TQ1
 
 
-class EAC_U07_COMMAND(BaseModel):
+class EAC_U07_COMMAND(HL7Model):
     """HL7 v2 EAC_U07.COMMAND group.
 
     Attributes:

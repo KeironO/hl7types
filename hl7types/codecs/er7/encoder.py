@@ -2,12 +2,12 @@ from __future__ import annotations
 
 import re
 from dataclasses import dataclass
-from typing import Any
+from typing import Any, cast
 
 from pydantic import BaseModel
 
-_DELIM_DEF = frozenset({"MSH", "FHS", "BHS"})
-_SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,2}\.\d+$")
+DELIM_DEF = frozenset({"MSH", "FHS", "BHS"})
+SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,2}\.\d+$")
 
 
 @dataclass(frozen=True)
@@ -64,7 +64,7 @@ def _escape(value: str, enc: EncodingChars) -> str:
     # Split on existing escape sequences (\XXXX\) so they are preserved verbatim.
     # Even-indexed parts are literal text; odd-indexed parts are captured sequences.
     parts = re.split(f"({e}[^{e}]+{e})", value)
-    out = []
+    out: list[str] = []
     for i, part in enumerate(parts):
         if i % 2 == 1:
             out.append(part)
@@ -82,7 +82,7 @@ def _encode_subcomposite(d: dict[str, Any], enc: EncodingChars) -> str:
     pm = _pos_map(d)
     if not pm:
         return ""
-    parts = []
+    parts: list[str] = []
     for i in range(1, max(pm) + 1):
         val = pm.get(i)
         parts.append(_escape(val, enc) if isinstance(val, str) else "")
@@ -93,7 +93,7 @@ def _encode_composite(d: dict[str, Any], enc: EncodingChars, skip_escape: bool =
     pm = _pos_map(d)
     if not pm:
         return ""
-    parts = []
+    parts: list[str] = []
     for i in range(1, max(pm) + 1):
         val = pm.get(i)
         if val is None:
@@ -102,7 +102,7 @@ def _encode_composite(d: dict[str, Any], enc: EncodingChars, skip_escape: bool =
             # Skip escaping for MSH-9 message type field
             parts.append(val if skip_escape else _escape(val, enc))
         elif isinstance(val, dict):
-            parts.append(_encode_subcomposite(val, enc))
+            parts.append(_encode_subcomposite(cast(dict[str, Any], val), enc))
         else:
             parts.append("")
     return _strip_trailing(enc.component.join(parts), enc.component)
@@ -114,17 +114,17 @@ def _encode_value(val: Any, enc: EncodingChars) -> str:
     if isinstance(val, str):
         return _escape(val, enc)
     if isinstance(val, list):
-        reps = [_encode_value(item, enc) for item in val]
+        reps = [_encode_value(item, enc) for item in cast(list[Any], val)]
         return _strip_trailing(enc.repetition.join(reps), enc.repetition)
     if isinstance(val, dict):
-        return _encode_composite(val, enc)
+        return _encode_composite(cast(dict[str, Any], val), enc)
     return _escape(str(val), enc)
 
 
-def _is_segment(model: BaseModel) -> bool:
+def is_segment(model: BaseModel) -> bool:
     for fi in type(model).model_fields.values():
         alias = fi.serialization_alias
-        if isinstance(alias, str) and _SEG_ALIAS_RE.match(alias):
+        if isinstance(alias, str) and SEG_ALIAS_RE.match(alias):
             return True
     return False
 
@@ -135,11 +135,11 @@ def _collect_segments(obj: BaseModel) -> list[BaseModel]:
         value = getattr(obj, fname)
         if value is None:
             continue
-        items = value if isinstance(value, list) else [value]
+        items: list[Any] = cast(list[Any], value) if isinstance(value, list) else [value]
         for item in items:
             if not isinstance(item, BaseModel):
                 continue
-            if _is_segment(item):
+            if is_segment(item):
                 segs.append(item)
             else:
                 segs.extend(_collect_segments(item))
@@ -155,15 +155,15 @@ def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) ->
 
     max_pos = max(pm)
 
-    if seg_name in _DELIM_DEF:
+    if seg_name in DELIM_DEF:
         enc_chars_literal = str(pm.get(2, "^~\\&") or "^~\\&")
-        parts = [enc_chars_literal]
+        parts: list[str] = [enc_chars_literal]
         for i in range(3, max_pos + 1):
             val = pm.get(i)
             # MSH-9 contains composite separators literally; never escape them
             if seg_name == "MSH" and i == 9:
                 if isinstance(val, dict):
-                    parts.append(_encode_composite(val, enc))
+                    parts.append(_encode_composite(cast(dict[str, Any], val), enc))
                 elif isinstance(val, str):
                     parts.append(val)
                 else:
@@ -171,7 +171,7 @@ def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) ->
             else:
                 parts.append(_encode_value(val, enc) if val is not None else "")
     else:
-        parts = []
+        parts: list[str] = []
         for i in range(1, max_pos + 1):
             val = pm.get(i)
             parts.append(_encode_value(val, enc) if val is not None else "")
@@ -181,7 +181,7 @@ def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) ->
 
 
 def encode_er7(model: BaseModel, segment_separator: str = "\r") -> str:
-    if _is_segment(model):
+    if is_segment(model):
         return encode_er7_segment(model)
 
     segments = _collect_segments(model)
@@ -190,7 +190,7 @@ def encode_er7(model: BaseModel, segment_separator: str = "\r") -> str:
 
     enc = DEFAULT_ENCODING
     for seg in segments:
-        if type(seg).__name__ in _DELIM_DEF:
+        if type(seg).__name__ in DELIM_DEF:
             d = seg.model_dump(by_alias=True)
             msh1 = d.get("MSH.1") or d.get("FHS.1") or d.get("BHS.1")
             msh2 = d.get("MSH.2") or d.get("FHS.2") or d.get("BHS.2")

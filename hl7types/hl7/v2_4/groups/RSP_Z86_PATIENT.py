@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AL1 import AL1
 from ..segments.NTE import NTE
@@ -24,7 +25,7 @@ _PID = PID
 _RSP_Z86_COMMON_ORDER = RSP_Z86_COMMON_ORDER
 
 
-class RSP_Z86_PATIENT(BaseModel):
+class RSP_Z86_PATIENT(HL7Model):
     """HL7 v2 RSP_Z86.PATIENT group.
 
     Attributes:

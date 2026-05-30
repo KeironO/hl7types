@@ -8,14 +8,15 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ADJ import ADJ
 
 _ADJ = ADJ
 
 
-class EHC_E24_PAYER_ADJUSTMENT(BaseModel):
+class EHC_E24_PAYER_ADJUSTMENT(HL7Model):
     """HL7 v2 EHC_E24.PAYER_ADJUSTMENT group.
 
     Attributes:

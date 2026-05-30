@@ -8,14 +8,15 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.IPR import IPR
 
 _IPR = IPR
 
 
-class RSP_E03_INVOICE_PROCESSING_RESULTS_INFO(BaseModel):
+class RSP_E03_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     """HL7 v2 RSP_E03.INVOICE_PROCESSING_RESULTS_INFO group.
 
     Attributes:

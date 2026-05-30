@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MFI import MFI
 from ..segments.MSH import MSH
@@ -20,7 +21,7 @@ _MFN_M05_MF_LOCATION = MFN_M05_MF_LOCATION
 _MSH = MSH
 
 
-class MFN_M05(BaseModel):
+class MFN_M05(HL7Model):
     """HL7 v2 MFN_M05 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CNS import CNS
 from ..segments.ECD import ECD
@@ -25,7 +26,7 @@ _ROL = ROL
 _SAC = SAC
 
 
-class EAC_U07(BaseModel):
+class EAC_U07(HL7Model):
     """HL7 v2 EAC_U07 message.
 
     Attributes:

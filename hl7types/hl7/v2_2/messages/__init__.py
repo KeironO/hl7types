@@ -1,73 +1,23 @@
-from .ACK import ACK
-from .ADR_A19 import ADR_A19
-from .ADT_A01 import ADT_A01
-from .ADT_A02 import ADT_A02
-from .ADT_A03 import ADT_A03
-from .ADT_A04 import ADT_A04
-from .ADT_A05 import ADT_A05
-from .ADT_A06 import ADT_A06
-from .ADT_A07 import ADT_A07
-from .ADT_A08 import ADT_A08
-from .ADT_A09 import ADT_A09
-from .ADT_A10 import ADT_A10
-from .ADT_A11 import ADT_A11
-from .ADT_A12 import ADT_A12
-from .ADT_A13 import ADT_A13
-from .ADT_A14 import ADT_A14
-from .ADT_A15 import ADT_A15
-from .ADT_A16 import ADT_A16
-from .ADT_A17 import ADT_A17
-from .ADT_A18 import ADT_A18
-from .ADT_A20 import ADT_A20
-from .ADT_A21 import ADT_A21
-from .ADT_A22 import ADT_A22
-from .ADT_A23 import ADT_A23
-from .ADT_A24 import ADT_A24
-from .ADT_A25 import ADT_A25
-from .ADT_A26 import ADT_A26
-from .ADT_A27 import ADT_A27
-from .ADT_A28 import ADT_A28
-from .ADT_A29 import ADT_A29
-from .ADT_A30 import ADT_A30
-from .ADT_A31 import ADT_A31
-from .ADT_A32 import ADT_A32
-from .ADT_A33 import ADT_A33
-from .ADT_A34 import ADT_A34
-from .ADT_A35 import ADT_A35
-from .ADT_A36 import ADT_A36
-from .ADT_A37 import ADT_A37
-from .BAR_P01 import BAR_P01
-from .BAR_P02 import BAR_P02
-from .DFT_P03 import DFT_P03
-from .DSR_P04 import DSR_P04
-from .DSR_Q01 import DSR_Q01
-from .DSR_Q03 import DSR_Q03
-from .DSR_R03 import DSR_R03
-from .MFD_M01 import MFD_M01
-from .MFD_M02 import MFD_M02
-from .MFD_M03 import MFD_M03
-from .MFK_M01 import MFK_M01
-from .MFK_M02 import MFK_M02
-from .MFK_M03 import MFK_M03
-from .MFN_M01 import MFN_M01
-from .MFN_M02 import MFN_M02
-from .MFN_M03 import MFN_M03
-from .MFQ_M01 import MFQ_M01
-from .MFQ_M02 import MFQ_M02
-from .MFQ_M03 import MFQ_M03
-from .MFR_M01 import MFR_M01
-from .MFR_M02 import MFR_M02
-from .MFR_M03 import MFR_M03
-from .NMD_N01 import NMD_N01
-from .NMQ_N02 import NMQ_N02
-from .NMR_N02 import NMR_N02
-from .ORF_R04 import ORF_R04
-from .ORM_O01 import ORM_O01
-from .ORR_O02 import ORR_O02
-from .ORU_R01 import ORU_R01
-from .QRY_A19 import QRY_A19
-from .QRY_P04 import QRY_P04
-from .QRY_Q01 import QRY_Q01
-from .QRY_Q02 import QRY_Q02
-from .QRY_R02 import QRY_R02
-from .UDM_Q05 import UDM_Q05
+import importlib
+
+_NAMES = {
+    'ACK', 'ADR_A19', 'ADT_A01', 'ADT_A02', 'ADT_A03', 'ADT_A04', 'ADT_A05',
+    'ADT_A06', 'ADT_A07', 'ADT_A08', 'ADT_A09', 'ADT_A10', 'ADT_A11',
+    'ADT_A12', 'ADT_A13', 'ADT_A14', 'ADT_A15', 'ADT_A16', 'ADT_A17',
+    'ADT_A18', 'ADT_A20', 'ADT_A21', 'ADT_A22', 'ADT_A23', 'ADT_A24',
+    'ADT_A25', 'ADT_A26', 'ADT_A27', 'ADT_A28', 'ADT_A29', 'ADT_A30',
+    'ADT_A31', 'ADT_A32', 'ADT_A33', 'ADT_A34', 'ADT_A35', 'ADT_A36',
+    'ADT_A37', 'BAR_P01', 'BAR_P02', 'DFT_P03', 'DSR_P04', 'DSR_Q01',
+    'DSR_Q03', 'DSR_R03', 'MFD_M01', 'MFD_M02', 'MFD_M03', 'MFK_M01',
+    'MFK_M02', 'MFK_M03', 'MFN_M01', 'MFN_M02', 'MFN_M03', 'MFQ_M01',
+    'MFQ_M02', 'MFQ_M03', 'MFR_M01', 'MFR_M02', 'MFR_M03', 'NMD_N01',
+    'NMQ_N02', 'NMR_N02', 'ORF_R04', 'ORM_O01', 'ORR_O02', 'ORU_R01',
+    'QRY_A19', 'QRY_P04', 'QRY_Q01', 'QRY_Q02', 'QRY_R02', 'UDM_Q05'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

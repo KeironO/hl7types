@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DON import DON
 from ..segments.NTE import NTE
@@ -19,7 +20,7 @@ _NTE = NTE
 _OBX = OBX
 
 
-class RSP_O34_DONATION(BaseModel):
+class RSP_O34_DONATION(HL7Model):
     """HL7 v2 RSP_O34.DONATION group.
 
     Attributes:

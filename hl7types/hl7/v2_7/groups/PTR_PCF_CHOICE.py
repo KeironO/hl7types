@@ -8,10 +8,11 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 
-class PTR_PCF_CHOICE(BaseModel):
+class PTR_PCF_CHOICE(HL7Model):
     """HL7 v2 PTR_PCF.CHOICE group."""
 
     pass

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.SAC import SAC
 
@@ -18,7 +19,7 @@ _OML_O21_CONTAINER_OBSERVATION = OML_O21_CONTAINER_OBSERVATION
 _SAC = SAC
 
 
-class OML_O21_CONTAINER(BaseModel):
+class OML_O21_CONTAINER(HL7Model):
     """HL7 v2 OML_O21.CONTAINER group.
 
     Attributes:

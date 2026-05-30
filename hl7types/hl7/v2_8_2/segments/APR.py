@@ -8,12 +8,13 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.SCV import SCV
 
 
-class APR(BaseModel):
+class APR(HL7Model):
     """HL7 v2 APR segment.
 
     Attributes

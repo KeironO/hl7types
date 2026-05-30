@@ -8,14 +8,15 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, Any
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MFE import MFE
 
 _MFE = MFE
 
 
-class MFR_M02_MF_STAFF(BaseModel):
+class MFR_M02_MF_STAFF(HL7Model):
     """HL7 v2 MFR_M02.MF_STAFF group.
 
     Attributes:

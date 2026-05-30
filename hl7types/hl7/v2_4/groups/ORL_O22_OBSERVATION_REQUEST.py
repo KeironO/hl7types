@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OBR import OBR
 from ..segments.SAC import SAC
@@ -17,7 +18,7 @@ _OBR = OBR
 _SAC = SAC
 
 
-class ORL_O22_OBSERVATION_REQUEST(BaseModel):
+class ORL_O22_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 ORL_O22.OBSERVATION_REQUEST group.
 
     Attributes:

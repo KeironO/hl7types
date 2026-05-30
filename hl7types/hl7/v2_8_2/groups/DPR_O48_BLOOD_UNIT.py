@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.BUI import BUI
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _BUI = BUI
 _NTE = NTE
 
 
-class DPR_O48_BLOOD_UNIT(BaseModel):
+class DPR_O48_BLOOD_UNIT(HL7Model):
     """HL7 v2 DPR_O48.BLOOD_UNIT group.
 
     Attributes:

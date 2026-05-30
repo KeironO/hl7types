@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
@@ -22,7 +23,7 @@ _OBR = OBR
 _ORC = ORC
 
 
-class MDM_T02_COMMON_ORDER(BaseModel):
+class MDM_T02_COMMON_ORDER(HL7Model):
     """HL7 v2 MDM_T02.COMMON_ORDER group.
 
     Attributes:

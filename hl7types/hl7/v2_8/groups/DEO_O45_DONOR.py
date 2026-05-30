@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ARV import ARV
 from ..segments.NTE import NTE
@@ -24,7 +25,7 @@ _OBX = OBX
 _PID = PID
 
 
-class DEO_O45_DONOR(BaseModel):
+class DEO_O45_DONOR(HL7Model):
     """HL7 v2 DEO_O45.DONOR group.
 
     Attributes:
