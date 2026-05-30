@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NSC import NSC
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _NSC = NSC
 _NTE = NTE
 
 
-class NMR_N01_APP_STATUS(BaseModel):
+class NMR_N01_APP_STATUS(HL7Model):
     """HL7 v2 NMR_N01.APP_STATUS group.
 
     Attributes:

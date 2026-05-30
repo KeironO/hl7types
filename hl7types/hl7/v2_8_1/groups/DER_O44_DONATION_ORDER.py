@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBR import OBR
@@ -17,7 +18,7 @@ _NTE = NTE
 _OBR = OBR
 
 
-class DER_O44_DONATION_ORDER(BaseModel):
+class DER_O44_DONATION_ORDER(HL7Model):
     """HL7 v2 DER_O44.DONATION_ORDER group.
 
     Attributes:

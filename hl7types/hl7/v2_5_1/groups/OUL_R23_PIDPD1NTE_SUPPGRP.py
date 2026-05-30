@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PD1 import PD1
@@ -19,7 +20,7 @@ _PD1 = PD1
 _PID = PID
 
 
-class OUL_R23_PIDPD1NTE_SUPPGRP(BaseModel):
+class OUL_R23_PIDPD1NTE_SUPPGRP(HL7Model):
     """HL7 v2 OUL_R23.PIDPD1NTE_SUPPGRP group.
 
     Attributes:

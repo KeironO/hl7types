@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OM7 import OM7
 from ..segments.PRT import PRT
@@ -17,7 +18,7 @@ _OM7 = OM7
 _PRT = PRT
 
 
-class MFN_M12_MF_OBS_OTHER_ATTRIBUTES(BaseModel):
+class MFN_M12_MF_OBS_OTHER_ATTRIBUTES(HL7Model):
     """HL7 v2 MFN_M12.MF_OBS_OTHER_ATTRIBUTES group.
 
     Attributes:

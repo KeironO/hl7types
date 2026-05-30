@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AL1 import AL1
 from ..segments.PD1 import PD1
@@ -26,7 +27,7 @@ _PID = PID
 _PRT = PRT
 
 
-class OPL_O37_PATIENT(BaseModel):
+class OPL_O37_PATIENT(HL7Model):
     """HL7 v2 OPL_O37.PATIENT group.
 
     Attributes:

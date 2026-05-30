@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -24,7 +25,7 @@ _NTE = NTE
 _RRD_O14_RESPONSE = RRD_O14_RESPONSE
 
 
-class RRD_O14(BaseModel):
+class RRD_O14(HL7Model):
     """HL7 v2 RRD_O14 message.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.IN1 import IN1
 from ..segments.IN2 import IN2
@@ -23,7 +24,7 @@ _PRT = PRT
 _ROL = ROL
 
 
-class BAR_P01_INSURANCE(BaseModel):
+class BAR_P01_INSURANCE(HL7Model):
     """HL7 v2 BAR_P01.INSURANCE group.
 
     Attributes:

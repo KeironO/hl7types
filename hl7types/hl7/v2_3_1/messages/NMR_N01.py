@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -24,7 +25,7 @@ _NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT = NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT
 _QRD = QRD
 
 
-class NMR_N01(BaseModel):
+class NMR_N01(HL7Model):
     """HL7 v2 NMR_N01 message.
 
     Attributes:

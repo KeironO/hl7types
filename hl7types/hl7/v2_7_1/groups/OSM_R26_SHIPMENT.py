@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PRT import PRT
 from ..segments.SHP import SHP
@@ -22,7 +23,7 @@ _PRT = PRT
 _SHP = SHP
 
 
-class OSM_R26_SHIPMENT(BaseModel):
+class OSM_R26_SHIPMENT(HL7Model):
     """HL7 v2 OSM_R26.SHIPMENT group.
 
     Attributes:

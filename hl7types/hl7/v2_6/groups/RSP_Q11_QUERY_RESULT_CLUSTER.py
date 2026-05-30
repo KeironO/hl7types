@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.LCH import LCH
 from ..segments.LOC import LOC
@@ -24,7 +25,7 @@ _MFE = MFE
 _RSP_Q11_MF_LOC_DEPT = RSP_Q11_MF_LOC_DEPT
 
 
-class RSP_Q11_QUERY_RESULT_CLUSTER(BaseModel):
+class RSP_Q11_QUERY_RESULT_CLUSTER(HL7Model):
     """HL7 v2 RSP_Q11.QUERY_RESULT_CLUSTER group.
 
     Attributes:

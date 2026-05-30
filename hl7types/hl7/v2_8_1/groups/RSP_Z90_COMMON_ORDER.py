@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
 from ..segments.NTE import NTE
@@ -26,7 +27,7 @@ _RSP_Z90_OBSERVATION = RSP_Z90_OBSERVATION
 _RSP_Z90_TIMING = RSP_Z90_TIMING
 
 
-class RSP_Z90_COMMON_ORDER(BaseModel):
+class RSP_Z90_COMMON_ORDER(HL7Model):
     """HL7 v2 RSP_Z90.COMMON_ORDER group.
 
     Attributes:

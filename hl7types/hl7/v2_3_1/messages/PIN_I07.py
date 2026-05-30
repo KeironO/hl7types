@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 from ..segments.NK1 import NK1
@@ -26,7 +27,7 @@ _PIN_I07_GUARANTOR_INSURANCE = PIN_I07_GUARANTOR_INSURANCE
 _PIN_I07_PROVIDER = PIN_I07_PROVIDER
 
 
-class PIN_I07(BaseModel):
+class PIN_I07(HL7Model):
     """HL7 v2 PIN_I07 message.
 
     Attributes:

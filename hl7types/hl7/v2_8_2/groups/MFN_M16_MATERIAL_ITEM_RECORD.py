@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ITM import ITM
 from ..segments.MFE import MFE
@@ -26,7 +27,7 @@ _MFN_M16_STERILIZATION = MFN_M16_STERILIZATION
 _NTE = NTE
 
 
-class MFN_M16_MATERIAL_ITEM_RECORD(BaseModel):
+class MFN_M16_MATERIAL_ITEM_RECORD(HL7Model):
     """HL7 v2 MFN_M16.MATERIAL_ITEM_RECORD group.
 
     Attributes:

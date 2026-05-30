@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CSP import CSP
 
@@ -18,7 +19,7 @@ _CSP = CSP
 _CSU_C09_STUDY_SCHEDULE = CSU_C09_STUDY_SCHEDULE
 
 
-class CSU_C09_STUDY_PHASE(BaseModel):
+class CSU_C09_STUDY_PHASE(HL7Model):
     """HL7 v2 CSU_C09.STUDY_PHASE group.
 
     Attributes:

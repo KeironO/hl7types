@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
@@ -19,7 +20,7 @@ _OBX = OBX
 _VAR = VAR
 
 
-class PRR_PC5_ORDER_OBSERVATION(BaseModel):
+class PRR_PC5_ORDER_OBSERVATION(HL7Model):
     """HL7 v2 PRR_PC5.ORDER_OBSERVATION group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .CCP import CCP
 from .CSU import CSU
@@ -17,7 +18,7 @@ from .WVI import WVI
 from .WVS import WVS
 
 
-class CD(BaseModel):
+class CD(HL7Model):
     """HL7 v2 CD data type.
 
     Attributes

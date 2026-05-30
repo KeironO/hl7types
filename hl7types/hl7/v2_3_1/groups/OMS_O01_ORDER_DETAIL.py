@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.RQD import RQD
@@ -20,7 +21,7 @@ _OMS_O01_OBSERVATION = OMS_O01_OBSERVATION
 _RQD = RQD
 
 
-class OMS_O01_ORDER_DETAIL(BaseModel):
+class OMS_O01_ORDER_DETAIL(HL7Model):
     """HL7 v2 OMS_O01.ORDER_DETAIL group.
 
     Attributes:

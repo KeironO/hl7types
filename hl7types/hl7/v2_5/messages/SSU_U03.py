@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.EQU import EQU
 from ..segments.MSH import MSH
@@ -24,7 +25,7 @@ _SFT = SFT
 _SSU_U03_SPECIMEN_CONTAINER = SSU_U03_SPECIMEN_CONTAINER
 
 
-class SSU_U03(BaseModel):
+class SSU_U03(HL7Model):
     """HL7 v2 SSU_U03 message.
 
     Attributes:

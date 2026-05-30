@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
 from ..datatypes.DR import DR
@@ -19,7 +20,7 @@ from ..datatypes.XON import XON
 from ..datatypes.XTN import XTN
 
 
-class REL(BaseModel):
+class REL(HL7Model):
     """HL7 v2 REL segment.
 
     Attributes

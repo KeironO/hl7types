@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PR1 import PR1
 
@@ -18,7 +19,7 @@ _PR1 = PR1
 _RRI_I12_AUTHORIZATION_CONTACT2 = RRI_I12_AUTHORIZATION_CONTACT2
 
 
-class RRI_I12_PROCEDURE(BaseModel):
+class RRI_I12_PROCEDURE(HL7Model):
     """HL7 v2 RRI_I12.PROCEDURE group.
 
     Attributes:

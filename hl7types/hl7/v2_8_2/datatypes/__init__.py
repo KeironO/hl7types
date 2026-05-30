@@ -1,74 +1,18 @@
-from .AD import AD
-from .AUI import AUI
-from .CCD import CCD
-from .CCP import CCP
-from .CD import CD
-from .CF import CF
-from .CNE import CNE
-from .CNN import CNN
-from .CP import CP
-from .CQ import CQ
-from .CSU import CSU
-from .CWE import CWE
-from .CX import CX
-from .DDI import DDI
-from .DIN import DIN
-from .DLD import DLD
-from .DLN import DLN
-from .DLT import DLT
-from .DR import DR
-from .DTN import DTN
-from .ED import ED
-from .EI import EI
-from .EIP import EIP
-from .ERL import ERL
-from .FC import FC
-from .FN import FN
-from .FT import FT
-from .HD import HD
-from .ICD import ICD
-from .JCC import JCC
-from .MA import MA
-from .MO import MO
-from .MOC import MOC
-from .MOP import MOP
-from .MSG import MSG
-from .NA import NA
-from .NDL import NDL
-from .NR import NR
-from .OCD import OCD
-from .OG import OG
-from .OSP import OSP
-from .PIP import PIP
-from .PL import PL
-from .PLN import PLN
-from .PPN import PPN
-from .PRL import PRL
-from .PT import PT
-from .PTA import PTA
-from .QIP import QIP
-from .QSC import QSC
-from .RCD import RCD
-from .RFR import RFR
-from .RI import RI
-from .RMC import RMC
-from .RP import RP
-from .RPT import RPT
-from .SAD import SAD
-from .SCV import SCV
-from .SN import SN
-from .SPD import SPD
-from .SRT import SRT
-from .TX import TX
-from .UVC import UVC
-from .VH import VH
-from .VID import VID
-from .VR import VR
-from .WVI import WVI
-from .WVS import WVS
-from .XAD import XAD
-from .XCN import XCN
-from .XON import XON
-from .XPN import XPN
-from .XTN import XTN
-from .varies import varies
+import importlib
+
+_NAMES = {
+    'AD', 'AUI', 'CCD', 'CCP', 'CD', 'CF', 'CNE', 'CNN', 'CP', 'CQ', 'CSU',
+    'CWE', 'CX', 'DDI', 'DIN', 'DLD', 'DLN', 'DLT', 'DR', 'DTN', 'ED', 'EI',
+    'EIP', 'ERL', 'FC', 'FN', 'FT', 'HD', 'ICD', 'JCC', 'MA', 'MO', 'MOC',
+    'MOP', 'MSG', 'NA', 'NDL', 'NR', 'OCD', 'OG', 'OSP', 'PIP', 'PL', 'PLN',
+    'PPN', 'PRL', 'PT', 'PTA', 'QIP', 'QSC', 'RCD', 'RFR', 'RI', 'RMC', 'RP',
+    'RPT', 'SAD', 'SCV', 'SN', 'SPD', 'SRT', 'TX', 'UVC', 'VH', 'VID', 'VR',
+    'WVI', 'WVS', 'XAD', 'XCN', 'XON', 'XPN', 'XTN', 'varies'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

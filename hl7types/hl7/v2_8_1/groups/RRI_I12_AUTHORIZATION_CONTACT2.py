@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AUT import AUT
 from ..segments.CTD import CTD
@@ -17,7 +18,7 @@ _AUT = AUT
 _CTD = CTD
 
 
-class RRI_I12_AUTHORIZATION_CONTACT2(BaseModel):
+class RRI_I12_AUTHORIZATION_CONTACT2(HL7Model):
     """HL7 v2 RRI_I12.AUTHORIZATION_CONTACT2 group.
 
     Attributes:

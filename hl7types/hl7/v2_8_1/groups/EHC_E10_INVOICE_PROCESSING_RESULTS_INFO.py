@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.IN1 import IN1
 from ..segments.IN2 import IN2
@@ -28,7 +29,7 @@ _NTE = NTE
 _PYE = PYE
 
 
-class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(BaseModel):
+class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     """HL7 v2 EHC_E10.INVOICE_PROCESSING_RESULTS_INFO group.
 
     Attributes:

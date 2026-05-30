@@ -8,10 +8,11 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 
-class SN(BaseModel):
+class SN(HL7Model):
     """HL7 v2 SN data type.
 
     Attributes

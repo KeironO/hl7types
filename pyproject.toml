@@ -70,10 +70,9 @@ select = ["E", "F", "I", "UP"]
 ignore = ["E501"]
 
 [tool.pyright]
-include = ["hl7types/codecs", "hl7types/__init__.py"]
+include = ["hl7types/codecs", "hl7types/__init__.py", "hl7types/hl7/__init__.py"]
 pythonVersion = "3.10"
-typeCheckingMode = "basic"
-reportMissingImports = true
+typeCheckingMode = "strict"
 
 [build-system]
 requires = ["hatchling"]

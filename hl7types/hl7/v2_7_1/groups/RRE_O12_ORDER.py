@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
@@ -22,7 +23,7 @@ _RRE_O12_ENCODING = RRE_O12_ENCODING
 _RRE_O12_TIMING = RRE_O12_TIMING
 
 
-class RRE_O12_ORDER(BaseModel):
+class RRE_O12_ORDER(HL7Model):
     """HL7 v2 RRE_O12.ORDER group.
 
     Attributes:

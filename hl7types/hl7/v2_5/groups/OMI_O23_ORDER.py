@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
 from ..segments.DG1 import DG1
@@ -30,7 +31,7 @@ _OMI_O23_TIMING = OMI_O23_TIMING
 _ORC = ORC
 
 
-class OMI_O23_ORDER(BaseModel):
+class OMI_O23_ORDER(HL7Model):
     """HL7 v2 OMI_O23.ORDER group.
 
     Attributes:

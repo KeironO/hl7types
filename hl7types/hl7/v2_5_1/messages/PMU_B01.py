@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AFF import AFF
 from ..segments.CER import CER
@@ -33,7 +34,7 @@ _SFT = SFT
 _STF = STF
 
 
-class PMU_B01(BaseModel):
+class PMU_B01(HL7Model):
     """HL7 v2 PMU_B01 message.
 
     Attributes:

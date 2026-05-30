@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
@@ -21,7 +22,7 @@ _PRT = PRT
 _TCD = TCD
 
 
-class OML_O35_OBSERVATION(BaseModel):
+class OML_O35_OBSERVATION(HL7Model):
     """HL7 v2 OML_O35.OBSERVATION group.
 
     Attributes:

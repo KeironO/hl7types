@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
@@ -22,7 +23,7 @@ _RER_RER_ORDER = RER_RER_ORDER
 _RER_RER_PATIENT = RER_RER_PATIENT
 
 
-class RER_RER_DEFINITION(BaseModel):
+class RER_RER_DEFINITION(HL7Model):
     """HL7 v2 RER_RER.DEFINITION group.
 
     Attributes:

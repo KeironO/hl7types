@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
 from ..segments.PRD import PRD
@@ -17,7 +18,7 @@ _CTD = CTD
 _PRD = PRD
 
 
-class REF_I12_PROVIDER_CONTACT(BaseModel):
+class REF_I12_PROVIDER_CONTACT(HL7Model):
     """HL7 v2 REF_I12.PROVIDER_CONTACT group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.RDF import RDF
 from ..segments.RDT import RDT
@@ -17,7 +18,7 @@ _RDF = RDF
 _RDT = RDT
 
 
-class RTB_Q13_ROW_DEFINITION(BaseModel):
+class RTB_Q13_ROW_DEFINITION(HL7Model):
     """HL7 v2 RTB_Q13.ROW_DEFINITION group.
 
     Attributes:

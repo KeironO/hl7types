@@ -8,13 +8,14 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .AD import AD
 from .HD import HD
 
 
-class LA1(BaseModel):
+class LA1(HL7Model):
     """HL7 v2 LA1 data type.
 
     Attributes

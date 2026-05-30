@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 from ..segments.PRT import PRT
@@ -17,7 +18,7 @@ _ORC = ORC
 _PRT = PRT
 
 
-class OSU_O51_ORDER_STATUS(BaseModel):
+class OSU_O51_ORDER_STATUS(HL7Model):
     """HL7 v2 OSU_O51.ORDER_STATUS group.
 
     Attributes:

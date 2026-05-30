@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CDO import CDO
 from ..segments.ORC import ORC
@@ -34,7 +35,7 @@ _RXD = RXD
 _RXR = RXR
 
 
-class RSP_K31_ORDER(BaseModel):
+class RSP_K31_ORDER(HL7Model):
     """HL7 v2 RSP_K31.ORDER group.
 
     Attributes:

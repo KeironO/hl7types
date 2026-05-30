@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 
@@ -22,7 +23,7 @@ _RGV_O01_GIVE = RGV_O01_GIVE
 _RGV_O01_ORDER_DETAIL = RGV_O01_ORDER_DETAIL
 
 
-class RGV_O01_ORDER(BaseModel):
+class RGV_O01_ORDER(HL7Model):
     """HL7 v2 RGV_O01.ORDER group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PRT import PRT
@@ -22,7 +23,7 @@ _RDE_O11_TIMING_ENCODED = RDE_O11_TIMING_ENCODED
 _RXV = RXV
 
 
-class RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER(BaseModel):
+class RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER(HL7Model):
     """HL7 v2 RDE_O11.PHARMACY_TREATMENT_INFUSION_ORDER group.
 
     Attributes:

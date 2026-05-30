@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AIP import AIP
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _AIP = AIP
 _NTE = NTE
 
 
-class SRR_S01_PERSONNEL_RESOURCE(BaseModel):
+class SRR_S01_PERSONNEL_RESOURCE(HL7Model):
     """HL7 v2 SRR_S01.PERSONNEL_RESOURCE group.
 
     Attributes:

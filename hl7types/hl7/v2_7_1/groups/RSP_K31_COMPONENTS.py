@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.RXC import RXC
@@ -17,7 +18,7 @@ _NTE = NTE
 _RXC = RXC
 
 
-class RSP_K31_COMPONENTS(BaseModel):
+class RSP_K31_COMPONENTS(HL7Model):
     """HL7 v2 RSP_K31.COMPONENTS group.
 
     Attributes:

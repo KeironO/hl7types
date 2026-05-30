@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MFE import MFE
 from ..segments.MFI import MFI
@@ -23,7 +24,7 @@ _SFT = SFT
 _UAC = UAC
 
 
-class MFN_M13(BaseModel):
+class MFN_M13(HL7Model):
     """HL7 v2 MFN_M13 message.
 
     Attributes:

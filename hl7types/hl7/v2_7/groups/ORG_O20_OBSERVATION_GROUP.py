@@ -8,14 +8,15 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OBR import OBR
 
 _OBR = OBR
 
 
-class ORG_O20_OBSERVATION_GROUP(BaseModel):
+class ORG_O20_OBSERVATION_GROUP(HL7Model):
     """HL7 v2 ORG_O20.OBSERVATION_GROUP group.
 
     Attributes:

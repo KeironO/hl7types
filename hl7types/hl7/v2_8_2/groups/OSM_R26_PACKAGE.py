@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PAC import PAC
 from ..segments.PRT import PRT
@@ -20,7 +21,7 @@ _PAC = PAC
 _PRT = PRT
 
 
-class OSM_R26_PACKAGE(BaseModel):
+class OSM_R26_PACKAGE(HL7Model):
     """HL7 v2 OSM_R26.PACKAGE group.
 
     Attributes:

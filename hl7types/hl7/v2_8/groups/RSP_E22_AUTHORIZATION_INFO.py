@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.IVC import IVC
 from ..segments.PSG import PSG
@@ -20,7 +21,7 @@ _PSG = PSG
 _RSP_E22_PSL_ITEM_INFO = RSP_E22_PSL_ITEM_INFO
 
 
-class RSP_E22_AUTHORIZATION_INFO(BaseModel):
+class RSP_E22_AUTHORIZATION_INFO(HL7Model):
     """HL7 v2 RSP_E22.AUTHORIZATION_INFO group.
 
     Attributes:

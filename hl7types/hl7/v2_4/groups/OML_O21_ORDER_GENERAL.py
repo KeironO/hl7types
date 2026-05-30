@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .OML_O21_CONTAINER_1 import OML_O21_CONTAINER_1
 from .OML_O21_ORDER import OML_O21_ORDER
@@ -17,7 +18,7 @@ _OML_O21_CONTAINER_1 = OML_O21_CONTAINER_1
 _OML_O21_ORDER = OML_O21_ORDER
 
 
-class OML_O21_ORDER_GENERAL(BaseModel):
+class OML_O21_ORDER_GENERAL(HL7Model):
     """HL7 v2 OML_O21.ORDER_GENERAL group.
 
     Attributes:

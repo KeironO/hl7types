@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MFE import MFE
 from ..segments.OM1 import OM1
@@ -23,7 +24,7 @@ _OM3 = OM3
 _OM4 = OM4
 
 
-class MFN_M08_MF_TEST_NUMERIC(BaseModel):
+class MFN_M08_MF_TEST_NUMERIC(HL7Model):
     """HL7 v2 MFN_M08.MF_TEST_NUMERIC group.
 
     Attributes:

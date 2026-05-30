@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 
@@ -18,7 +19,7 @@ _MSH = MSH
 _SUR_P09_FACILITY = SUR_P09_FACILITY
 
 
-class SUR_P09(BaseModel):
+class SUR_P09(HL7Model):
     """HL7 v2 SUR_P09 message.
 
     Attributes:

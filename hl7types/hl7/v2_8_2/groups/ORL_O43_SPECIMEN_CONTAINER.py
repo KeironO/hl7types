@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.SAC import SAC
 
@@ -18,7 +19,7 @@ _ORL_O43_ORDER = ORL_O43_ORDER
 _SAC = SAC
 
 
-class ORL_O43_SPECIMEN_CONTAINER(BaseModel):
+class ORL_O43_SPECIMEN_CONTAINER(HL7Model):
     """HL7 v2 ORL_O43.SPECIMEN_CONTAINER group.
 
     Attributes:

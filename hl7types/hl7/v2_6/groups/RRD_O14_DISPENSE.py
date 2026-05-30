@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.RXC import RXC
@@ -21,7 +22,7 @@ _RXD = RXD
 _RXR = RXR
 
 
-class RRD_O14_DISPENSE(BaseModel):
+class RRD_O14_DISPENSE(HL7Model):
     """HL7 v2 RRD_O14.DISPENSE group.
 
     Attributes:

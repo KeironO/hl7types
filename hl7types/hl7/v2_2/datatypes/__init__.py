@@ -1,54 +1,20 @@
-from .AD import AD
-from .CE import CE
-from .CK_ACCOUNT_NO import CK_ACCOUNT_NO
-from .CK_PAT_ID import CK_PAT_ID
-from .CM_ABS_RANGE import CM_ABS_RANGE
-from .CM_AUI import CM_AUI
-from .CM_BATCH_TOTAL import CM_BATCH_TOTAL
-from .CM_CCD import CM_CCD
-from .CM_DDI import CM_DDI
-from .CM_DIN import CM_DIN
-from .CM_DLD import CM_DLD
-from .CM_DLT import CM_DLT
-from .CM_DTN import CM_DTN
-from .CM_EIP import CM_EIP
-from .CM_ELD import CM_ELD
-from .CM_FILLER import CM_FILLER
-from .CM_FINANCE import CM_FINANCE
-from .CM_GROUP_ID import CM_GROUP_ID
-from .CM_INTERNAL_LOCATION import CM_INTERNAL_LOCATION
-from .CM_JOB_CODE import CM_JOB_CODE
-from .CM_LA1 import CM_LA1
-from .CM_LICENSE_NO import CM_LICENSE_NO
-from .CM_MOC import CM_MOC
-from .CM_MSG import CM_MSG
-from .CM_NDL import CM_NDL
-from .CM_OCD import CM_OCD
-from .CM_OSP import CM_OSP
-from .CM_PAT_ID import CM_PAT_ID
-from .CM_PAT_ID_0192 import CM_PAT_ID_0192
-from .CM_PCF import CM_PCF
-from .CM_PEN import CM_PEN
-from .CM_PIP import CM_PIP
-from .CM_PLACER import CM_PLACER
-from .CM_PLN import CM_PLN
-from .CM_POSITION import CM_POSITION
-from .CM_PRACTITIONER import CM_PRACTITIONER
-from .CM_PTA import CM_PTA
-from .CM_RANGE import CM_RANGE
-from .CM_RFR import CM_RFR
-from .CM_RI import CM_RI
-from .CM_RMC import CM_RMC
-from .CM_SPD import CM_SPD
-from .CM_SPS import CM_SPS
-from .CM_UVC import CM_UVC
-from .CM_VR import CM_VR
-from .CN_PERSON import CN_PERSON
-from .CN_PHYSICIAN import CN_PHYSICIAN
-from .CQ_QUANTITY import CQ_QUANTITY
-from .FT import FT
-from .PN import PN
-from .TQ import TQ
-from .TS import TS
-from .TX import TX
-from .varies import varies
+import importlib
+
+_NAMES = {
+    'AD', 'CE', 'CK_ACCOUNT_NO', 'CK_PAT_ID', 'CM_ABS_RANGE', 'CM_AUI',
+    'CM_BATCH_TOTAL', 'CM_CCD', 'CM_DDI', 'CM_DIN', 'CM_DLD', 'CM_DLT',
+    'CM_DTN', 'CM_EIP', 'CM_ELD', 'CM_FILLER', 'CM_FINANCE', 'CM_GROUP_ID',
+    'CM_INTERNAL_LOCATION', 'CM_JOB_CODE', 'CM_LA1', 'CM_LICENSE_NO', 'CM_MOC',
+    'CM_MSG', 'CM_NDL', 'CM_OCD', 'CM_OSP', 'CM_PAT_ID', 'CM_PAT_ID_0192',
+    'CM_PCF', 'CM_PEN', 'CM_PIP', 'CM_PLACER', 'CM_PLN', 'CM_POSITION',
+    'CM_PRACTITIONER', 'CM_PTA', 'CM_RANGE', 'CM_RFR', 'CM_RI', 'CM_RMC',
+    'CM_SPD', 'CM_SPS', 'CM_UVC', 'CM_VR', 'CN_PERSON', 'CN_PHYSICIAN',
+    'CQ_QUANTITY', 'FT', 'PN', 'TQ', 'TS', 'TX', 'varies'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

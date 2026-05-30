@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.ODS import ODS
@@ -20,7 +21,7 @@ _ODS = ODS
 _OMD_O01_OBSERVATION = OMD_O01_OBSERVATION
 
 
-class OMD_O01_DIET(BaseModel):
+class OMD_O01_DIET(HL7Model):
     """HL7 v2 OMD_O01.DIET group.
 
     Attributes:

@@ -1,37 +1,15 @@
-from .ACC import ACC
-from .ADD import ADD
-from .BHS import BHS
-from .BLG import BLG
-from .BTS import BTS
-from .DG1 import DG1
-from .DSC import DSC
-from .DSP import DSP
-from .ERR import ERR
-from .EVN import EVN
-from .FHS import FHS
-from .FT1 import FT1
-from .FTS import FTS
-from .GT1 import GT1
-from .IN1 import IN1
-from .MRG import MRG
-from .MSA import MSA
-from .MSH import MSH
-from .NCK import NCK
-from .NK1 import NK1
-from .NPU import NPU
-from .NSC import NSC
-from .NST import NST
-from .NTE import NTE
-from .OBR import OBR
-from .OBX import OBX
-from .ORC import ORC
-from .ORO import ORO
-from .PID import PID
-from .PR1 import PR1
-from .PV1 import PV1
-from .QRD import QRD
-from .QRF import QRF
-from .RX1 import RX1
-from .UB1 import UB1
-from .URD import URD
-from .URS import URS
+import importlib
+
+_NAMES = {
+    'ACC', 'ADD', 'BHS', 'BLG', 'BTS', 'DG1', 'DSC', 'DSP', 'ERR', 'EVN',
+    'FHS', 'FT1', 'FTS', 'GT1', 'IN1', 'MRG', 'MSA', 'MSH', 'NCK', 'NK1',
+    'NPU', 'NSC', 'NST', 'NTE', 'OBR', 'OBX', 'ORC', 'ORO', 'PID', 'PR1',
+    'PV1', 'QRD', 'QRF', 'RX1', 'UB1', 'URD', 'URS'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

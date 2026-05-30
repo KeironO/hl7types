@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.OBX import OBX
 from ..segments.PTH import PTH
@@ -22,7 +23,7 @@ _PTH = PTH
 _VAR = VAR
 
 
-class CCU_I20_PATHWAY(BaseModel):
+class CCU_I20_PATHWAY(HL7Model):
     """HL7 v2 CCU_I20.PATHWAY group.
 
     Attributes:

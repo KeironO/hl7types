@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
@@ -46,7 +47,7 @@ _REF_I12_PROVIDER_CONTACT = REF_I12_PROVIDER_CONTACT
 _RF1 = RF1
 
 
-class REF_I12(BaseModel):
+class REF_I12(HL7Model):
     """HL7 v2 REF_I12 message.
 
     Attributes:

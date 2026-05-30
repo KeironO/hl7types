@@ -8,10 +8,11 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 
-class EHC_E01_INVOICE_INFORMATION(BaseModel):
+class EHC_E01_INVOICE_INFORMATION(HL7Model):
     """HL7 v2 EHC_E01.INVOICE_INFORMATION group."""
 
     pass

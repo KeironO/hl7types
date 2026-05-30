@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.ODT import ODT
@@ -24,7 +25,7 @@ _ORC = ORC
 _PRT = PRT
 
 
-class OMD_O03_ORDER_TRAY(BaseModel):
+class OMD_O03_ORDER_TRAY(HL7Model):
     """HL7 v2 OMD_O03.ORDER_TRAY group.
 
     Attributes:

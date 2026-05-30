@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .RSP_K31_ORDER import RSP_K31_ORDER
 from .RSP_K31_PATIENT import RSP_K31_PATIENT
@@ -17,7 +18,7 @@ _RSP_K31_ORDER = RSP_K31_ORDER
 _RSP_K31_PATIENT = RSP_K31_PATIENT
 
 
-class RSP_K31_RESPONSE(BaseModel):
+class RSP_K31_RESPONSE(HL7Model):
     """HL7 v2 RSP_K31.RESPONSE group.
 
     Attributes:

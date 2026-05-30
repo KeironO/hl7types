@@ -1,62 +1,18 @@
-from .ACC import ACC
-from .ADD import ADD
-from .AL1 import AL1
-from .BHS import BHS
-from .BLG import BLG
-from .BTS import BTS
-from .DG1 import DG1
-from .DSC import DSC
-from .DSP import DSP
-from .ERR import ERR
-from .EVN import EVN
-from .FHS import FHS
-from .FT1 import FT1
-from .FTS import FTS
-from .GT1 import GT1
-from .IN1 import IN1
-from .IN2 import IN2
-from .IN3 import IN3
-from .MFA import MFA
-from .MFE import MFE
-from .MFI import MFI
-from .MRG import MRG
-from .MSA import MSA
-from .MSH import MSH
-from .NCK import NCK
-from .NK1 import NK1
-from .NPU import NPU
-from .NSC import NSC
-from .NST import NST
-from .NTE import NTE
-from .OBR import OBR
-from .OBX import OBX
-from .ODS import ODS
-from .ODT import ODT
-from .OM1 import OM1
-from .OM2 import OM2
-from .OM3 import OM3
-from .OM4 import OM4
-from .OM5 import OM5
-from .OM6 import OM6
-from .ORC import ORC
-from .PID import PID
-from .PR1 import PR1
-from .PRA import PRA
-from .PV1 import PV1
-from .PV2 import PV2
-from .QRD import QRD
-from .QRF import QRF
-from .RQ1 import RQ1
-from .RQD import RQD
-from .RXA import RXA
-from .RXC import RXC
-from .RXD import RXD
-from .RXE import RXE
-from .RXG import RXG
-from .RXO import RXO
-from .RXR import RXR
-from .STF import STF
-from .UB1 import UB1
-from .UB2 import UB2
-from .URD import URD
-from .URS import URS
+import importlib
+
+_NAMES = {
+    'ACC', 'ADD', 'AL1', 'BHS', 'BLG', 'BTS', 'DG1', 'DSC', 'DSP', 'ERR',
+    'EVN', 'FHS', 'FT1', 'FTS', 'GT1', 'IN1', 'IN2', 'IN3', 'MFA', 'MFE',
+    'MFI', 'MRG', 'MSA', 'MSH', 'NCK', 'NK1', 'NPU', 'NSC', 'NST', 'NTE',
+    'OBR', 'OBX', 'ODS', 'ODT', 'OM1', 'OM2', 'OM3', 'OM4', 'OM5', 'OM6',
+    'ORC', 'PID', 'PR1', 'PRA', 'PV1', 'PV2', 'QRD', 'QRF', 'RQ1', 'RQD',
+    'RXA', 'RXC', 'RXD', 'RXE', 'RXG', 'RXO', 'RXR', 'STF', 'UB1', 'UB2',
+    'URD', 'URS'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.VAR import VAR
 
@@ -18,7 +19,7 @@ _CQU_I19_ROLE_PROBLEM_OBJECT = CQU_I19_ROLE_PROBLEM_OBJECT
 _VAR = VAR
 
 
-class CQU_I19_ROLE_PROBLEM(BaseModel):
+class CQU_I19_ROLE_PROBLEM(HL7Model):
     """HL7 v2 CQU_I19.ROLE_PROBLEM group.
 
     Attributes:

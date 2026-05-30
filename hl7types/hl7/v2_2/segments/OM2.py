@@ -8,13 +8,14 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
 from ..datatypes.TX import TX
 
 
-class OM2(BaseModel):
+class OM2(HL7Model):
     """HL7 v2 OM2 segment.
 
     Attributes

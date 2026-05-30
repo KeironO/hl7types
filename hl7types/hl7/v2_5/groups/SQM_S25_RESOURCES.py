@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.RGS import RGS
 
@@ -24,7 +25,7 @@ _SQM_S25_PERSONNEL_RESOURCE = SQM_S25_PERSONNEL_RESOURCE
 _SQM_S25_SERVICE = SQM_S25_SERVICE
 
 
-class SQM_S25_RESOURCES(BaseModel):
+class SQM_S25_RESOURCES(HL7Model):
     """HL7 v2 SQM_S25.RESOURCES group.
 
     Attributes:

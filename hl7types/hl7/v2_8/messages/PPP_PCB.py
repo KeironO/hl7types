@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 from ..segments.PID import PID
@@ -26,7 +27,7 @@ _SFT = SFT
 _UAC = UAC
 
 
-class PPP_PCB(BaseModel):
+class PPP_PCB(HL7Model):
     """HL7 v2 PPP_PCB message.
 
     Attributes:

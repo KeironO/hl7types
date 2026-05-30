@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.SPM import SPM
 
@@ -18,7 +19,7 @@ _ORL_O44_SPECIMEN_CONTAINER_IN_PACKAGE = ORL_O44_SPECIMEN_CONTAINER_IN_PACKAGE
 _SPM = SPM
 
 
-class ORL_O44_SPECIMEN_IN_PACKAGE(BaseModel):
+class ORL_O44_SPECIMEN_IN_PACKAGE(HL7Model):
     """HL7 v2 ORL_O44.SPECIMEN_IN_PACKAGE group.
 
     Attributes:

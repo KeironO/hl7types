@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.AD import AD
 from ..datatypes.CE import CE
@@ -16,7 +17,7 @@ from ..datatypes.PN import PN
 from ..datatypes.TS import TS
 
 
-class IN1(BaseModel):
+class IN1(HL7Model):
     """HL7 v2 IN1 segment.
 
     Attributes

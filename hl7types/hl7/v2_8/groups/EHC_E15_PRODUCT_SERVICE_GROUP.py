@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PSG import PSG
 
@@ -18,7 +19,7 @@ _EHC_E15_PSL_ITEM_INFO = EHC_E15_PSL_ITEM_INFO
 _PSG = PSG
 
 
-class EHC_E15_PRODUCT_SERVICE_GROUP(BaseModel):
+class EHC_E15_PRODUCT_SERVICE_GROUP(HL7Model):
     """HL7 v2 EHC_E15.PRODUCT_SERVICE_GROUP group.
 
     Attributes:

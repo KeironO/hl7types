@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ACC import ACC
 from ..segments.AL1 import AL1
@@ -44,7 +45,7 @@ _UB1 = UB1
 _UB2 = UB2
 
 
-class ADT_A08(BaseModel):
+class ADT_A08(HL7Model):
     """HL7 v2 ADT_A08 message.
 
     Attributes:

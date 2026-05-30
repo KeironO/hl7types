@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NDS import NDS
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _NDS = NDS
 _NTE = NTE
 
 
-class EAN_U09_NOTIFICATION(BaseModel):
+class EAN_U09_NOTIFICATION(HL7Model):
     """HL7 v2 EAN_U09.NOTIFICATION group.
 
     Attributes:

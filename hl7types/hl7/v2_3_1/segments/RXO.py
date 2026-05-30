@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
 from ..datatypes.CQ import CQ
@@ -16,7 +17,7 @@ from ..datatypes.LA1 import LA1
 from ..datatypes.XCN import XCN
 
 
-class RXO(BaseModel):
+class RXO(HL7Model):
     """HL7 v2 RXO segment.
 
     Attributes

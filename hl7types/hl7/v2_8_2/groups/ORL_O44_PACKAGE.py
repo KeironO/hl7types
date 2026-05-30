@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PAC import PAC
 
@@ -18,7 +19,7 @@ _ORL_O44_SPECIMEN_IN_PACKAGE = ORL_O44_SPECIMEN_IN_PACKAGE
 _PAC = PAC
 
 
-class ORL_O44_PACKAGE(BaseModel):
+class ORL_O44_PACKAGE(HL7Model):
     """HL7 v2 ORL_O44.PACKAGE group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .ORS_O06_ORDER import ORS_O06_ORDER
 from .ORS_O06_PATIENT import ORS_O06_PATIENT
@@ -17,7 +18,7 @@ _ORS_O06_ORDER = ORS_O06_ORDER
 _ORS_O06_PATIENT = ORS_O06_PATIENT
 
 
-class ORS_O06_RESPONSE(BaseModel):
+class ORS_O06_RESPONSE(HL7Model):
     """HL7 v2 ORS_O06.RESPONSE group.
 
     Attributes:

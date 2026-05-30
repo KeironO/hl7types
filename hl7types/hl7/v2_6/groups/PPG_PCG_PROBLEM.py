@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PRB import PRB
@@ -24,7 +25,7 @@ _PRB = PRB
 _VAR = VAR
 
 
-class PPG_PCG_PROBLEM(BaseModel):
+class PPG_PCG_PROBLEM(HL7Model):
     """HL7 v2 PPG_PCG.PROBLEM group.
 
     Attributes:

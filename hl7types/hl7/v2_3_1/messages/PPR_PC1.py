@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 from ..segments.PID import PID
@@ -22,7 +23,7 @@ _PPR_PC1_PATIENT_VISIT = PPR_PC1_PATIENT_VISIT
 _PPR_PC1_PROBLEM = PPR_PC1_PROBLEM
 
 
-class PPR_PC1(BaseModel):
+class PPR_PC1(HL7Model):
     """HL7 v2 PPR_PC1 message.
 
     Attributes:

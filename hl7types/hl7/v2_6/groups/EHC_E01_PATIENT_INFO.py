@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ACC import ACC
 from ..segments.OBX import OBX
@@ -28,7 +29,7 @@ _PV1 = PV1
 _PV2 = PV2
 
 
-class EHC_E01_PATIENT_INFO(BaseModel):
+class EHC_E01_PATIENT_INFO(HL7Model):
     """HL7 v2 EHC_E01.PATIENT_INFO group.
 
     Attributes:

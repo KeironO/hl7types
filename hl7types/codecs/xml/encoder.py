@@ -1,12 +1,12 @@
 from __future__ import annotations
 
 import typing
-from typing import Any, get_type_hints
+from typing import Any, cast, get_type_hints
 from xml.etree import ElementTree as ET
 
 from pydantic import BaseModel
 
-from hl7types.codecs.er7.encoder import _SEG_ALIAS_RE
+from hl7types.codecs.er7.encoder import SEG_ALIAS_RE
 
 _HL7_XML_NS = "urn:hl7-org:v2xml"
 
@@ -21,7 +21,7 @@ def _is_model(cls: Any) -> bool:
 def _is_segment_cls(model: BaseModel) -> bool:
     for fi in type(model).model_fields.values():
         alias = fi.serialization_alias
-        if isinstance(alias, str) and _SEG_ALIAS_RE.match(alias):
+        if isinstance(alias, str) and SEG_ALIAS_RE.match(alias):
             return True
     return False
 
@@ -57,15 +57,15 @@ def _field_pos(key: str) -> int:
 def _dict_to_children(d: dict[str, Any], parent: ET.Element) -> None:
     for key, val in sorted(d.items(), key=lambda kv: _field_pos(kv[0])):
         if isinstance(val, list):
-            for item in val:
+            for item in cast(list[Any], val):
                 child = ET.SubElement(parent, key)
                 if isinstance(item, dict):
-                    _dict_to_children(item, child)
+                    _dict_to_children(cast(dict[str, Any], item), child)
                 elif item is not None:
                     child.text = str(item)
         elif isinstance(val, dict):
             child = ET.SubElement(parent, key)
-            _dict_to_children(val, child)
+            _dict_to_children(cast(dict[str, Any], val), child)
         else:
             child = ET.SubElement(parent, key)
             if val is not None:

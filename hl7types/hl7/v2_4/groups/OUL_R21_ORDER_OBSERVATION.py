@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
@@ -26,7 +27,7 @@ _OUL_R21_CONTAINER = OUL_R21_CONTAINER
 _OUL_R21_OBSERVATION = OUL_R21_OBSERVATION
 
 
-class OUL_R21_ORDER_OBSERVATION(BaseModel):
+class OUL_R21_ORDER_OBSERVATION(HL7Model):
     """HL7 v2 OUL_R21.ORDER_OBSERVATION group.
 
     Attributes:

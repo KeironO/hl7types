@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MFE import MFE
 from ..segments.ORG import ORG
@@ -21,7 +22,7 @@ _PRA = PRA
 _STF = STF
 
 
-class MFN_M02_MF_STAFF(BaseModel):
+class MFN_M02_MF_STAFF(HL7Model):
     """HL7 v2 MFN_M02.MF_STAFF group.
 
     Attributes:

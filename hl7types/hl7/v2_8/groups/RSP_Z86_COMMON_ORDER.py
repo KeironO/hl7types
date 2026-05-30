@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ORC import ORC
 
@@ -30,7 +31,7 @@ _RSP_Z86_ORDER_DETAIL = RSP_Z86_ORDER_DETAIL
 _RSP_Z86_TIMING = RSP_Z86_TIMING
 
 
-class RSP_Z86_COMMON_ORDER(BaseModel):
+class RSP_Z86_COMMON_ORDER(HL7Model):
     """HL7 v2 RSP_Z86.COMMON_ORDER group.
 
     Attributes:

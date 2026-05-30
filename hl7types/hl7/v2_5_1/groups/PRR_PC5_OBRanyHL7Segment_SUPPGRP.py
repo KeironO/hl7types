@@ -8,10 +8,11 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 
-class PRR_PC5_OBRanyHL7Segment_SUPPGRP(BaseModel):
+class PRR_PC5_OBRanyHL7Segment_SUPPGRP(HL7Model):
     """HL7 v2 PRR_PC5.OBRanyHL7Segment_SUPPGRP group."""
 
     pass

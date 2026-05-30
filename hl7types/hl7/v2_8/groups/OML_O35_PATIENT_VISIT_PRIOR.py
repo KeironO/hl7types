@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PRT import PRT
 from ..segments.PV1 import PV1
@@ -19,7 +20,7 @@ _PV1 = PV1
 _PV2 = PV2
 
 
-class OML_O35_PATIENT_VISIT_PRIOR(BaseModel):
+class OML_O35_PATIENT_VISIT_PRIOR(HL7Model):
     """HL7 v2 OML_O35.PATIENT_VISIT_PRIOR group.
 
     Attributes:

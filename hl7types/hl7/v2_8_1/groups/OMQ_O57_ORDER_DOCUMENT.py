@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.OBX import OBX
@@ -25,7 +26,7 @@ _SGT = SGT
 _TXA = TXA
 
 
-class OMQ_O57_ORDER_DOCUMENT(BaseModel):
+class OMQ_O57_ORDER_DOCUMENT(HL7Model):
     """HL7 v2 OMQ_O57.ORDER_DOCUMENT group.
 
     Attributes:

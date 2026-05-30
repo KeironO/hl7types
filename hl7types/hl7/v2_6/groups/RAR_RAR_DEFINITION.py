@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.QRD import QRD
 from ..segments.QRF import QRF
@@ -22,7 +23,7 @@ _RAR_RAR_ORDER = RAR_RAR_ORDER
 _RAR_RAR_PATIENT = RAR_RAR_PATIENT
 
 
-class RAR_RAR_DEFINITION(BaseModel):
+class RAR_RAR_DEFINITION(HL7Model):
     """HL7 v2 RAR_RAR.DEFINITION group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.VND import VND
 
@@ -18,7 +19,7 @@ _MFN_M16_PACKAGING = MFN_M16_PACKAGING
 _VND = VND
 
 
-class MFN_M16_PURCHASING_VENDOR(BaseModel):
+class MFN_M16_PURCHASING_VENDOR(HL7Model):
     """HL7 v2 MFN_M16.PURCHASING_VENDOR group.
 
     Attributes:

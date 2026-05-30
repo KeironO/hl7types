@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.GT1 import GT1
 
@@ -18,7 +19,7 @@ _GT1 = GT1
 _RQI_I01_INSURANCE = RQI_I01_INSURANCE
 
 
-class RQI_I01_GUARANTOR_INSURANCE(BaseModel):
+class RQI_I01_GUARANTOR_INSURANCE(HL7Model):
     """HL7 v2 RQI_I01.GUARANTOR_INSURANCE group.
 
     Attributes:

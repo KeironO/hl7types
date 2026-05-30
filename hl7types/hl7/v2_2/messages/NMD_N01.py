@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 
@@ -18,7 +19,7 @@ _MSH = MSH
 _NMD_N01_CLOCK_AND_STATS_WITH_NOTES = NMD_N01_CLOCK_AND_STATS_WITH_NOTES
 
 
-class NMD_N01(BaseModel):
+class NMD_N01(HL7Model):
     """HL7 v2 NMD_N01 message.
 
     Attributes:

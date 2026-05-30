@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.RGS import RGS
 
@@ -24,7 +25,7 @@ _SIU_S12_PERSONNEL_RESOURCE = SIU_S12_PERSONNEL_RESOURCE
 _SIU_S12_SERVICE = SIU_S12_SERVICE
 
 
-class SIU_S12_RESOURCES(BaseModel):
+class SIU_S12_RESOURCES(HL7Model):
     """HL7 v2 SIU_S12.RESOURCES group.
 
     Attributes:

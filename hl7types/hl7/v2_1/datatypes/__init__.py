@@ -1,3 +1,12 @@
-from .CE import CE
-from .FT import FT
-from .TX import TX
+import importlib
+
+_NAMES = {
+    'CE', 'FT', 'TX'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

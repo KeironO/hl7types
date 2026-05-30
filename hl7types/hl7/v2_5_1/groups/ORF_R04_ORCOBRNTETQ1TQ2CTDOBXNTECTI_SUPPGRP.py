@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
 from ..segments.CTI import CTI
@@ -28,7 +29,7 @@ _ORF_R04_OBXNTE_SUPPGRP = ORF_R04_OBXNTE_SUPPGRP
 _ORF_R04_TQ1TQ2_SUPPGRP = ORF_R04_TQ1TQ2_SUPPGRP
 
 
-class ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(BaseModel):
+class ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(HL7Model):
     """HL7 v2 ORF_R04.ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP group.
 
     Attributes:

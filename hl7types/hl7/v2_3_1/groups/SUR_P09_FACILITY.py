@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.FAC import FAC
 from ..segments.PSH import PSH
@@ -22,7 +23,7 @@ _SUR_P09_FACILITY_DETAIL = SUR_P09_FACILITY_DETAIL
 _SUR_P09_PRODUCT = SUR_P09_PRODUCT
 
 
-class SUR_P09_FACILITY(BaseModel):
+class SUR_P09_FACILITY(HL7Model):
     """HL7 v2 SUR_P09.FACILITY group.
 
     Attributes:

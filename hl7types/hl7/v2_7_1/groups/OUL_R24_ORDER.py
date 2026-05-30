@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTI import CTI
 from ..segments.NTE import NTE
@@ -30,7 +31,7 @@ _OUL_R24_TIMING_QTY = OUL_R24_TIMING_QTY
 _PRT = PRT
 
 
-class OUL_R24_ORDER(BaseModel):
+class OUL_R24_ORDER(HL7Model):
     """HL7 v2 OUL_R24.ORDER group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PID import PID
@@ -17,7 +18,7 @@ _NTE = NTE
 _PID = PID
 
 
-class RRE_O12_PATIENT(BaseModel):
+class RRE_O12_PATIENT(HL7Model):
     """HL7 v2 RRE_O12.PATIENT group.
 
     Attributes:

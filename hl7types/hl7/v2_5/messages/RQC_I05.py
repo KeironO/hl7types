@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.GT1 import GT1
 from ..segments.MSH import MSH
@@ -32,7 +33,7 @@ _RQC_I05_PROVIDER = RQC_I05_PROVIDER
 _SFT = SFT
 
 
-class RQC_I05(BaseModel):
+class RQC_I05(HL7Model):
     """HL7 v2 RQC_I05 message.
 
     Attributes:

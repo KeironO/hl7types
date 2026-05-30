@@ -9,9 +9,9 @@ from typing import Any, get_type_hints
 from pydantic import BaseModel
 
 from hl7types.codecs.er7.encoder import (
-    _DELIM_DEF,
-    _SEG_ALIAS_RE,
     DEFAULT_ENCODING,
+    DELIM_DEF,
+    SEG_ALIAS_RE,
     EncodingChars,
 )
 
@@ -64,12 +64,12 @@ def _is_model(cls: Any) -> bool:
         return False
 
 
-def _is_segment_cls(cls: Any) -> bool:
+def is_segment_cls(cls: Any) -> bool:
     if not _is_model(cls):
         return False
     for fi in cls.model_fields.values():
         alias = fi.serialization_alias
-        if isinstance(alias, str) and _SEG_ALIAS_RE.match(alias):
+        if isinstance(alias, str) and SEG_ALIAS_RE.match(alias):
             return True
     return False
 
@@ -151,7 +151,7 @@ def decode_er7_segment(
 ) -> BaseModel:
     seg_name = seg_cls.__name__
 
-    if seg_name in _DELIM_DEF and len(seg_str) > 3:
+    if seg_name in DELIM_DEF and len(seg_str) > 3:
         field_sep = seg_str[3]
         if field_sep != enc.field:
             rest = seg_str[4:]
@@ -170,7 +170,7 @@ def decode_er7_segment(
     pm = _build_pos_map(seg_cls)
     data: dict[str, Any] = {}
 
-    if seg_name in _DELIM_DEF:
+    if seg_name in DELIM_DEF:
         if 1 in pm:
             alias1 = seg_cls.model_fields[pm[1][0]].serialization_alias
             assert alias1 is not None
@@ -207,7 +207,7 @@ def decode_er7_segment(
         # Inject safe empty defaults so model_validate doesn't raise on missing keys:
         # composite fields get an empty dict (all their sub-fields are optional so
         # Pydantic constructs a zero-value instance), lists get [], scalars get "".
-        for pos, (fname, base_type, is_list) in pm.items():
+        for _, (fname, base_type, is_list) in pm.items():
             fi = seg_cls.model_fields[fname]
             fi_alias = fi.serialization_alias
             assert fi_alias is not None
@@ -233,7 +233,7 @@ def _decode_struct(
     *,
     strict: bool = False,
 ) -> tuple[int, BaseModel | None]:
-    if _is_segment_cls(model_cls):
+    if is_segment_cls(model_cls):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
             return idx, None
         return idx + 1, decode_er7_segment(segs[idx][1], model_cls, enc, strict=strict)
@@ -346,7 +346,7 @@ def decode_er7(
 
     enc = DEFAULT_ENCODING
     for ss in seg_strings:
-        if ss[:3] in _DELIM_DEF and len(ss) > 3:
+        if ss[:3] in DELIM_DEF and len(ss) > 3:
             field_sep = ss[3]
             rest = ss[4:]
             msh2_end = rest.find(field_sep)

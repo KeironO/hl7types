@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
 from ..datatypes.CX import CX
@@ -19,7 +20,7 @@ from ..datatypes.XPN import XPN
 from ..datatypes.XTN import XTN
 
 
-class PID(BaseModel):
+class PID(HL7Model):
     """HL7 v2 PID segment.
 
     Attributes

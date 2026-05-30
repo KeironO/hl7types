@@ -1,72 +1,19 @@
-from .AD import AD
-from .CD import CD
-from .CE import CE
-from .CF import CF
-from .CK import CK
-from .CM_ABS_RANGE import CM_ABS_RANGE
-from .CM_AUI import CM_AUI
-from .CM_CCD import CM_CCD
-from .CM_DDI import CM_DDI
-from .CM_DIN import CM_DIN
-from .CM_DLD import CM_DLD
-from .CM_DLT import CM_DLT
-from .CM_DTN import CM_DTN
-from .CM_EIP import CM_EIP
-from .CM_ELD import CM_ELD
-from .CM_LA1 import CM_LA1
-from .CM_MOC import CM_MOC
-from .CM_MSG import CM_MSG
-from .CM_NDL import CM_NDL
-from .CM_OCD import CM_OCD
-from .CM_OSP import CM_OSP
-from .CM_PCF import CM_PCF
-from .CM_PEN import CM_PEN
-from .CM_PI import CM_PI
-from .CM_PIP import CM_PIP
-from .CM_PLN import CM_PLN
-from .CM_PRL import CM_PRL
-from .CM_PTA import CM_PTA
-from .CM_RANGE import CM_RANGE
-from .CM_RFR import CM_RFR
-from .CM_RI import CM_RI
-from .CM_RMC import CM_RMC
-from .CM_SPD import CM_SPD
-from .CM_SPS import CM_SPS
-from .CM_UVC import CM_UVC
-from .CM_VR import CM_VR
-from .CM_WVI import CM_WVI
-from .CN import CN
-from .CP import CP
-from .CQ import CQ
-from .CX import CX
-from .DLN import DLN
-from .DR import DR
-from .ED import ED
-from .EI import EI
-from .FC import FC
-from .FT import FT
-from .HD import HD
-from .JCC import JCC
-from .MA import MA
-from .MO import MO
-from .NA import NA
-from .PL import PL
-from .PPN import PPN
-from .PT import PT
-from .QIP import QIP
-from .QSC import QSC
-from .RCD import RCD
-from .RI import RI
-from .RP import RP
-from .SCV import SCV
-from .SN import SN
-from .TQ import TQ
-from .TS import TS
-from .TX import TX
-from .VH import VH
-from .XAD import XAD
-from .XCN import XCN
-from .XON import XON
-from .XPN import XPN
-from .XTN import XTN
-from .varies import varies
+import importlib
+
+_NAMES = {
+    'AD', 'CD', 'CE', 'CF', 'CK', 'CM_ABS_RANGE', 'CM_AUI', 'CM_CCD', 'CM_DDI',
+    'CM_DIN', 'CM_DLD', 'CM_DLT', 'CM_DTN', 'CM_EIP', 'CM_ELD', 'CM_LA1',
+    'CM_MOC', 'CM_MSG', 'CM_NDL', 'CM_OCD', 'CM_OSP', 'CM_PCF', 'CM_PEN',
+    'CM_PI', 'CM_PIP', 'CM_PLN', 'CM_PRL', 'CM_PTA', 'CM_RANGE', 'CM_RFR',
+    'CM_RI', 'CM_RMC', 'CM_SPD', 'CM_SPS', 'CM_UVC', 'CM_VR', 'CM_WVI', 'CN',
+    'CP', 'CQ', 'CX', 'DLN', 'DR', 'ED', 'EI', 'FC', 'FT', 'HD', 'JCC', 'MA',
+    'MO', 'NA', 'PL', 'PPN', 'PT', 'QIP', 'QSC', 'RCD', 'RI', 'RP', 'SCV',
+    'SN', 'TQ', 'TS', 'TX', 'VH', 'XAD', 'XCN', 'XON', 'XPN', 'XTN', 'varies'
+}
+
+
+def __getattr__(name: str):  # type: ignore[misc]
+    if name not in _NAMES:
+        raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
+    mod = importlib.import_module(f'.{name}', __name__)
+    return getattr(mod, name)

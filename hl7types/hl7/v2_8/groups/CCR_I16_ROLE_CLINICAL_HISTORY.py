@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.VAR import VAR
 
@@ -18,7 +19,7 @@ _CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT = CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT
 _VAR = VAR
 
 
-class CCR_I16_ROLE_CLINICAL_HISTORY(BaseModel):
+class CCR_I16_ROLE_CLINICAL_HISTORY(HL7Model):
     """HL7 v2 CCR_I16.ROLE_CLINICAL_HISTORY group.
 
     Attributes:

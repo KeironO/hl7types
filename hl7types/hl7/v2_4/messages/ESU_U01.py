@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.EQU import EQU
 from ..segments.ISD import ISD
@@ -21,7 +22,7 @@ _MSH = MSH
 _ROL = ROL
 
 
-class ESU_U01(BaseModel):
+class ESU_U01(HL7Model):
     """HL7 v2 ESU_U01 message.
 
     Attributes:

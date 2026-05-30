@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NCK import NCK
 from ..segments.NSC import NSC
@@ -19,7 +20,7 @@ _NSC = NSC
 _NST = NST
 
 
-class NMQ_N02_CLOCK_AND_STATISTICS(BaseModel):
+class NMQ_N02_CLOCK_AND_STATISTICS(HL7Model):
     """HL7 v2 NMQ_N02.CLOCK_AND_STATISTICS group.
 
     Attributes:

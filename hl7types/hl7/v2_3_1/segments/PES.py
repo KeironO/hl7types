@@ -8,7 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from ..datatypes.EI import EI
 from ..datatypes.FT import FT
@@ -19,7 +20,7 @@ from ..datatypes.XON import XON
 from ..datatypes.XTN import XTN
 
 
-class PES(BaseModel):
+class PES(HL7Model):
     """HL7 v2 PES segment.
 
     Attributes

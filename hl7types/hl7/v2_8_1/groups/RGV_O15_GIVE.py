@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CDO import CDO
 from ..segments.RXC import RXC
@@ -26,7 +27,7 @@ _RXG = RXG
 _RXR = RXR
 
 
-class RGV_O15_GIVE(BaseModel):
+class RGV_O15_GIVE(HL7Model):
     """HL7 v2 RGV_O15.GIVE group.
 
     Attributes:

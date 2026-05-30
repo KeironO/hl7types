@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.CTI import CTI
 from ..segments.ORC import ORC
@@ -26,7 +27,7 @@ _RAS_O17_ORDER_DETAIL = RAS_O17_ORDER_DETAIL
 _RAS_O17_TIMING = RAS_O17_TIMING
 
 
-class RAS_O17_ORDER(BaseModel):
+class RAS_O17_ORDER(HL7Model):
     """HL7 v2 RAS_O17.ORDER group.
 
     Attributes:

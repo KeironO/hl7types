@@ -8,14 +8,15 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .ORR_O02_CHOICE import ORR_O02_CHOICE
 
 _ORR_O02_CHOICE = ORR_O02_CHOICE
 
 
-class ORR_O02_ORDER_DETAIL(BaseModel):
+class ORR_O02_ORDER_DETAIL(HL7Model):
     """HL7 v2 ORR_O02.ORDER_DETAIL group.
 
     Attributes:

@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSA import MSA
 from ..segments.MSH import MSH
@@ -28,7 +29,7 @@ _RPI_I01_GUARANTOR_INSURANCE = RPI_I01_GUARANTOR_INSURANCE
 _RPI_I01_PROVIDER = RPI_I01_PROVIDER
 
 
-class RPI_I01(BaseModel):
+class RPI_I01(HL7Model):
     """HL7 v2 RPI_I01 message.
 
     Attributes:

@@ -8,10 +8,11 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 
-class QAK(BaseModel):
+class QAK(HL7Model):
     """HL7 v2 QAK segment.
 
     Attributes

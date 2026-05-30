@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.PID import PID
@@ -20,7 +21,7 @@ _ORR_O02_ORDER = ORR_O02_ORDER
 _PID = PID
 
 
-class ORR_O02_PATIENT(BaseModel):
+class ORR_O02_PATIENT(HL7Model):
     """HL7 v2 ORR_O02.PATIENT group.
 
     Attributes:

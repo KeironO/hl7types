@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.PDC import PDC
 from ..segments.PSH import PSH
@@ -17,7 +18,7 @@ _PDC = PDC
 _PSH = PSH
 
 
-class SUR_P09_PSHPDC_SUPPGRP(BaseModel):
+class SUR_P09_PSHPDC_SUPPGRP(HL7Model):
     """HL7 v2 SUR_P09.PSHPDC_SUPPGRP group.
 
     Attributes:

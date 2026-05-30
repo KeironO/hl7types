@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.AIL import AIL
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _AIL = AIL
 _NTE = NTE
 
 
-class SQR_S25_LOCATION_RESOURCE(BaseModel):
+class SQR_S25_LOCATION_RESOURCE(HL7Model):
     """HL7 v2 SQR_S25.LOCATION_RESOURCE group.
 
     Attributes:

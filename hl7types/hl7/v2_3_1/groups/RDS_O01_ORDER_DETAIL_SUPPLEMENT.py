@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.NTE import NTE
 from ..segments.RXR import RXR
@@ -20,7 +21,7 @@ _RDS_O01_COMPONENT = RDS_O01_COMPONENT
 _RXR = RXR
 
 
-class RDS_O01_ORDER_DETAIL_SUPPLEMENT(BaseModel):
+class RDS_O01_ORDER_DETAIL_SUPPLEMENT(HL7Model):
     """HL7 v2 RDS_O01.ORDER_DETAIL_SUPPLEMENT group.
 
     Attributes:

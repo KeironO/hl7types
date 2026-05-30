@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.RXO import RXO
 
@@ -18,7 +19,7 @@ _RAS_O01_ORDER_DETAIL_SUPPLEMENT = RAS_O01_ORDER_DETAIL_SUPPLEMENT
 _RXO = RXO
 
 
-class RAS_O01_ORDER_DETAIL(BaseModel):
+class RAS_O01_ORDER_DETAIL(HL7Model):
     """HL7 v2 RAS_O01.ORDER_DETAIL group.
 
     Attributes:

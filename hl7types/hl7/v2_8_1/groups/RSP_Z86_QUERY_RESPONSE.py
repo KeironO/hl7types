@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .RSP_Z86_COMMON_ORDER import RSP_Z86_COMMON_ORDER
 from .RSP_Z86_PATIENT import RSP_Z86_PATIENT
@@ -17,7 +18,7 @@ _RSP_Z86_COMMON_ORDER = RSP_Z86_COMMON_ORDER
 _RSP_Z86_PATIENT = RSP_Z86_PATIENT
 
 
-class RSP_Z86_QUERY_RESPONSE(BaseModel):
+class RSP_Z86_QUERY_RESPONSE(HL7Model):
     """HL7 v2 RSP_Z86.QUERY_RESPONSE group.
 
     Attributes:

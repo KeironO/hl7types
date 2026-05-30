@@ -8,12 +8,13 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 from .AD import AD
 
 
-class CN_PHYSICIAN(BaseModel):
+class CN_PHYSICIAN(HL7Model):
     """HL7 v2 CN_PHYSICIAN data type.
 
     Attributes

@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
@@ -34,7 +35,7 @@ _QRF = QRF
 _SFT = SFT
 
 
-class MFR_M05(BaseModel):
+class MFR_M05(HL7Model):
     """HL7 v2 MFR_M05 message.
 
     Attributes:

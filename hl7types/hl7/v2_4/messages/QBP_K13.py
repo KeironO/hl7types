@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.DSC import DSC
 from ..segments.ERR import ERR
@@ -28,7 +29,7 @@ _QBP_K13_ROW_DEFINITION = QBP_K13_ROW_DEFINITION
 _QPD = QPD
 
 
-class QBP_K13(BaseModel):
+class QBP_K13(HL7Model):
     """HL7 v2 QBP_K13 message.
 
     Attributes:

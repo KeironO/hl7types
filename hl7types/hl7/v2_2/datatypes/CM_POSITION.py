@@ -8,10 +8,11 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, BaseModel, Field
+from pydantic import AliasChoices, Field
+from hl7types.hl7 import HL7Model
 
 
-class CM_POSITION(BaseModel):
+class CM_POSITION(HL7Model):
     """HL7 v2 CM_POSITION data type.
 
     Attributes

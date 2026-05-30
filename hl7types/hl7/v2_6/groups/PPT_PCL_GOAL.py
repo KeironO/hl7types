@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.GOL import GOL
 from ..segments.NTE import NTE
@@ -28,7 +29,7 @@ _PPT_PCL_PROBLEM = PPT_PCL_PROBLEM
 _VAR = VAR
 
 
-class PPT_PCL_GOAL(BaseModel):
+class PPT_PCL_GOAL(HL7Model):
     """HL7 v2 PPT_PCL.GOAL group.
 
     Attributes:

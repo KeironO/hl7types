@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ARV import ARV
 from ..segments.PID import PID
@@ -22,7 +23,7 @@ _PID = PID
 _PRT = PRT
 
 
-class ORL_O36_RESPONSE(BaseModel):
+class ORL_O36_RESPONSE(HL7Model):
     """HL7 v2 ORL_O36.RESPONSE group.
 
     Attributes:

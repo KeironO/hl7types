@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ACC import ACC
 from ..segments.OBX import OBX
@@ -24,7 +25,7 @@ _OBX = OBX
 _PID = PID
 
 
-class EHC_E20_PAT_INFO(BaseModel):
+class EHC_E20_PAT_INFO(HL7Model):
     """HL7 v2 EHC_E20.PAT_INFO group.
 
     Attributes:

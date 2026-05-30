@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.TQ1 import TQ1
 from ..segments.TQ2 import TQ2
@@ -17,7 +18,7 @@ _TQ1 = TQ1
 _TQ2 = TQ2
 
 
-class CSU_C09_TIMING_QTY(BaseModel):
+class CSU_C09_TIMING_QTY(HL7Model):
     """HL7 v2 CSU_C09.TIMING_QTY group.
 
     Attributes:

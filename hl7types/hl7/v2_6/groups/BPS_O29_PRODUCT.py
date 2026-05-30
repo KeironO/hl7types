@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.BPX import BPX
 from ..segments.NTE import NTE
@@ -17,7 +18,7 @@ _BPX = BPX
 _NTE = NTE
 
 
-class BPS_O29_PRODUCT(BaseModel):
+class BPS_O29_PRODUCT(HL7Model):
     """HL7 v2 BPS_O29.PRODUCT group.
 
     Attributes:

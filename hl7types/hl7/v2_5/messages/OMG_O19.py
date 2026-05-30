@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
 from ..segments.NTE import NTE
@@ -24,7 +25,7 @@ _OMG_O19_PATIENT = OMG_O19_PATIENT
 _SFT = SFT
 
 
-class OMG_O19(BaseModel):
+class OMG_O19(HL7Model):
     """HL7 v2 OMG_O19 message.
 
     Attributes:

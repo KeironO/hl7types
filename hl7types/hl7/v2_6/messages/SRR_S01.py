@@ -8,7 +8,8 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from ..segments.ERR import ERR
 from ..segments.MSA import MSA
@@ -22,7 +23,7 @@ _MSH = MSH
 _SRR_S01_SCHEDULE = SRR_S01_SCHEDULE
 
 
-class SRR_S01(BaseModel):
+class SRR_S01(HL7Model):
     """HL7 v2 SRR_S01 message.
 
     Attributes:

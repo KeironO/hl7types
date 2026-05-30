@@ -8,7 +8,8 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import BaseModel, Field
+from pydantic import Field
+from hl7types.hl7 import HL7Model
 
 from .CCM_I21_RESOURCE_OBJECT import CCM_I21_RESOURCE_OBJECT
 from .CCM_I21_RESOURCE_OBSERVATION import CCM_I21_RESOURCE_OBSERVATION
@@ -17,7 +18,7 @@ _CCM_I21_RESOURCE_OBJECT = CCM_I21_RESOURCE_OBJECT
 _CCM_I21_RESOURCE_OBSERVATION = CCM_I21_RESOURCE_OBSERVATION
 
 
-class CCM_I21_RESOURCE_DETAIL(BaseModel):
+class CCM_I21_RESOURCE_DETAIL(HL7Model):
     """HL7 v2 CCM_I21.RESOURCE_DETAIL group.
 
     Attributes:
