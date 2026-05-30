@@ -40,6 +40,7 @@ dependencies = [
 [project.urls]
 Repository = "https://github.com/KeironO/hl7types"
 Issues = "https://github.com/KeironO/hl7types/issues"
+Documentation = "https://hl7types.readthedocs.io"
 
 [dependency-groups]
 dev = [
@@ -49,6 +50,12 @@ dev = [
     "pytest>=8.0",
     "pytest-cov>=6.0",
     "ruff>=0.15.15",
+]
+docs = [
+    "furo>=2025.12.19",
+    "myst-parser>=4.0.1",
+    "sphinx>=8.1.3",
+    "sphinx-autodoc-typehints>=3.0.1",
 ]
 
 [tool.pytest.ini_options]

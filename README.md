@@ -1,5 +1,7 @@
 # hl7types
 
+[![Documentation](https://readthedocs.org/projects/hl7types/badge/?version=latest)](https://hl7types.readthedocs.io)
+
 HL7 v2 (Health Level Seven Version 2) is the most widely deployed healthcare messaging standard in the world, used to exchange clinical and administrative data between hospital systems, laboratories, pharmacies, and other healthcare applications. It defines a pipe-delimited wire format (ER7) for encoding messages such as patient admissions, lab results, and order requests, and is the backbone of interoperability in the majority of existing healthcare infrastructure globally.
 
 `hl7types` provides typed, Pydantic-powered Python models for HL7 v2 messages, segments, and datatypes, with built-in ER7 and XML serialisation. Models are generated directly from the HL7 specification, giving you full type safety, IDE autocompletion, and validation out of the box.
