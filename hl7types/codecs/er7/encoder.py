@@ -7,7 +7,7 @@ from typing import Any, cast
 from pydantic import BaseModel
 
 DELIM_DEF = frozenset({"MSH", "FHS", "BHS"})
-SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,2}\.\d+$")
+SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,3}\.\d+$")
 
 
 @dataclass(frozen=True)

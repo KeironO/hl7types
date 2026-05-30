@@ -125,7 +125,7 @@ def test_components_subcomponent_parsing() -> None:
 
 
 
-# testUnescapeComponents — \T\ in address decodes to &
+# testUnescapeComponents \T\ in address decodes to &
 
 
 UNESCAPE_COMPONENTS_WIRE = (
@@ -198,7 +198,7 @@ def test_unknown_version_raises() -> None:
 
 
 
-# testEarlyNonStandard — Z-segment near start silently skipped
+# testEarlyNonStandard Z-segment near start silently skipped
 
 
 EARLY_Z_SEGMENT_WIRE = (

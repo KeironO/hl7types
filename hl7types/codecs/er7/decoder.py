@@ -14,6 +14,7 @@ from hl7types.codecs.er7.encoder import (
     SEG_ALIAS_RE,
     EncodingChars,
 )
+from hl7types.registry import HL7Registry
 
 _UNESCAPE_MAP: dict[str, str] = {
     "F": "|",
@@ -112,7 +113,6 @@ def _parse_rep(raw: str, field_type: Any, enc: EncodingChars) -> Any:
         raw_comp = components[pos - 1]
         if not raw_comp:
             continue
-        alias = field_type.model_fields[fname].serialization_alias
         if _is_model(sub_type):
             sub_pm = _build_pos_map(sub_type)
             sub_parts = raw_comp.split(enc.subcomponent)
@@ -122,12 +122,11 @@ def _parse_rep(raw: str, field_type: Any, enc: EncodingChars) -> Any:
                     continue
                 raw_sub = sub_parts[spos - 1]
                 if raw_sub:
-                    salias = sub_type.model_fields[sfname].serialization_alias
-                    sub_result[salias] = _unescape(raw_sub, enc)
+                    sub_result[sfname] = _unescape(raw_sub, enc)
             if sub_result:
-                result[alias] = sub_result
+                result[fname] = sub_result
         else:
-            result[alias] = _unescape(raw_comp, enc)
+            result[fname] = _unescape(raw_comp, enc)
 
     return result or None
 
@@ -172,35 +171,27 @@ def decode_er7_segment(
 
     if seg_name in DELIM_DEF:
         if 1 in pm:
-            alias1 = seg_cls.model_fields[pm[1][0]].serialization_alias
-            assert alias1 is not None
-            data[alias1] = enc.field
+            data[pm[1][0]] = enc.field
         for i, token in enumerate(tokens[1:], start=2):
             if i not in pm:
                 continue
             if i == 2:
-                alias2 = seg_cls.model_fields[pm[2][0]].serialization_alias
-                assert alias2 is not None
-                data[alias2] = token
+                data[pm[2][0]] = token
                 continue
             if not token:
                 continue
             fname, base_type, is_list = pm[i]
-            alias = seg_cls.model_fields[fname].serialization_alias
-            assert alias is not None
             val = _parse_field(token, base_type, is_list, enc)
             if val is not None:
-                data[alias] = val
+                data[fname] = val
     else:
         for i, token in enumerate(tokens[1:], start=1):
             if not token or i not in pm:
                 continue
             fname, base_type, is_list = pm[i]
-            alias = seg_cls.model_fields[fname].serialization_alias
-            assert alias is not None
             val = _parse_field(token, base_type, is_list, enc)
             if val is not None:
-                data[alias] = val
+                data[fname] = val
 
     if not strict:
         # Real-world messages routinely omit fields that the XSD marks as required.
@@ -208,19 +199,16 @@ def decode_er7_segment(
         # composite fields get an empty dict (all their sub-fields are optional so
         # Pydantic constructs a zero-value instance), lists get [], scalars get "".
         for _, (fname, base_type, is_list) in pm.items():
-            fi = seg_cls.model_fields[fname]
-            fi_alias = fi.serialization_alias
-            assert fi_alias is not None
-            if fi_alias in data:
+            if fname in data:
                 continue
-            if not fi.is_required():
+            if not seg_cls.model_fields[fname].is_required():
                 continue
             if is_list:
-                data[fi_alias] = []
+                data[fname] = []
             elif _is_model(base_type):
-                data[fi_alias] = {}
+                data[fname] = {}
             else:
-                data[fi_alias] = ""
+                data[fname] = ""
 
     return seg_cls.model_validate(data)
 
@@ -232,6 +220,7 @@ def _decode_struct(
     enc: EncodingChars,
     *,
     strict: bool = False,
+    registry: HL7Registry | None = None,
 ) -> tuple[int, BaseModel | None]:
     if is_segment_cls(model_cls):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
@@ -249,10 +238,15 @@ def _decode_struct(
         if not _is_model(base_type):
             continue
 
+        seg_name = base_type.__name__
+        resolved_type = (registry.get_segment(seg_name) if registry else None) or base_type
+
         if is_list:
             items: list[Any] = []
             while idx < len(segs):
-                new_idx, item = _decode_struct(segs, idx, base_type, enc, strict=strict)
+                new_idx, item = _decode_struct(
+                    segs, idx, resolved_type, enc, strict=strict, registry=registry
+                )
                 if item is None:
                     break
                 items.append(item)
@@ -260,7 +254,9 @@ def _decode_struct(
             if items:
                 data[fname] = items
         else:
-            new_idx, item = _decode_struct(segs, idx, base_type, enc, strict=strict)
+            new_idx, item = _decode_struct(
+                segs, idx, resolved_type, enc, strict=strict, registry=registry
+            )
             if item is not None:
                 data[fname] = item
                 idx = new_idx
@@ -271,7 +267,7 @@ def _decode_struct(
     if not strict:
         # A required segment or group may be absent from the wire (sender omitted it).
         # model_validate would raise on a missing required key, so we inject a
-        # model_construct() placeholder — a bare instance with no field validation —
+        # model_construct() placeholder, a bare instance with no field validation
         # for any required model-type field that wasn't found in the segment stream.
         # Scalar required fields on message/group models are not handled here because
         # those are owned by segments, which are covered in decode_er7_segment above.
@@ -289,17 +285,26 @@ def _decode_struct(
     return idx, model_cls.model_validate(data)
 
 
+def _seg_name(seg_str: str, field_sep: str = "|") -> str:
+    idx = seg_str.find(field_sep)
+    return seg_str[:idx] if idx != -1 else seg_str
+
+
 def _version_to_module(version: str) -> str:
     return "v" + version.replace(".", "_")
 
 
-def _resolve_msg_cls(wire: str, segment_separator: str) -> type[BaseModel]:
+def _resolve_msg_cls(
+    wire: str,
+    segment_separator: str,
+    registry: HL7Registry | None = None,
+) -> type[BaseModel]:
     msh_str = next(
         (s for s in wire.split(segment_separator) if s[:3] == "MSH"),
         None,
     )
     if not msh_str:
-        raise ValueError("No MSH segment found — cannot auto-detect message type")
+        raise ValueError("No MSH segment found, cannot auto-detect message type")
 
     if len(msh_str) < 4:
         raise ValueError(f"MSH segment too short to contain a field separator: {msh_str!r}")
@@ -313,9 +318,9 @@ def _resolve_msg_cls(wire: str, segment_separator: str) -> type[BaseModel]:
     msh12 = tokens[11] if len(tokens) > 11 else ""
 
     if not msh9:
-        raise ValueError("MSH.9 is empty — cannot auto-detect message type")
+        raise ValueError("MSH.9 is empty. Unable to auto-detect message type")
     if not msh12:
-        raise ValueError("MSH.12 is empty — cannot auto-detect HL7 version")
+        raise ValueError("MSH.12 is empty. Unable to auto-detect HL7 version")
 
     parts = msh9.split(comp_sep)
     if len(parts) >= 3 and parts[2]:
@@ -325,7 +330,14 @@ def _resolve_msg_cls(wire: str, segment_separator: str) -> type[BaseModel]:
     else:
         structure = parts[0]
 
-    mod_name = _version_to_module(msh12.split(comp_sep)[0])
+    version = msh12.split(comp_sep)[0]
+
+    if registry:
+        cls = registry.get_message(version, structure)
+        if cls is not None:
+            return cls
+
+    mod_name = _version_to_module(version)
     module = importlib.import_module(f"hl7types.hl7.{mod_name}.messages.{structure}")
     return getattr(module, structure)
 
@@ -336,13 +348,14 @@ def decode_er7(
     segment_separator: str = "\r",
     *,
     strict: bool = False,
+    registry: HL7Registry | None = None,
 ) -> BaseModel:
     seg_strings = [s for s in re.split(r"\r\n|\r|\n", wire) if s]
     if not seg_strings:
         raise ValueError("Empty wire string")
 
     if msg_cls is None:
-        msg_cls = _resolve_msg_cls(wire, segment_separator)
+        msg_cls = _resolve_msg_cls(wire, segment_separator, registry=registry)
 
     enc = DEFAULT_ENCODING
     for ss in seg_strings:
@@ -361,8 +374,8 @@ def decode_er7(
             )
             break
 
-    segs = [(ss[:3], ss) for ss in seg_strings]
-    _, result = _decode_struct(segs, 0, msg_cls, enc, strict=strict)
+    segs = [(_seg_name(ss, enc.field), ss) for ss in seg_strings]
+    _, result = _decode_struct(segs, 0, msg_cls, enc, strict=strict, registry=registry)
     if result is None:
         raise ValueError(f"Could not decode wire string as {msg_cls.__name__}")
     return result
