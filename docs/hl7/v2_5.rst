@@ -1,0 +1,10 @@
+HL7 v2.5
+========
+
+.. toctree::
+   :maxdepth: 1
+
+   v2_5_messages
+   v2_5_segments
+   v2_5_datatypes
+   v2_5_groups

@@ -41,9 +41,18 @@ def test_from_msh2_raises_on_short_string() -> None:
         EncodingChars.from_msh2("~\\&")
 
 
+def test_from_msh2_raises_on_long_string() -> None:
+    with pytest.raises(ValueError):
+        EncodingChars.from_msh2("^~\\&&")
+
+
 def test_crlf_line_endings_accepted() -> None:
     """\\r\\n line endings (common in real-world systems) must parse without error."""
     from hl7types.hl7.v2_4.messages.ORU_R01 import ORU_R01
 
     msg = decode_er7(VALID_CRLF_WIRE)
     assert isinstance(msg, ORU_R01)
+    assert msg.MSH.msh_10 == "72313573"  # type: ignore[union-attr]
+    pr = msg.PATIENT_RESULT  # type: ignore[union-attr]
+    assert pr is not None and len(pr) == 1
+    assert pr[0].PATIENT.PID.pid_5[0].xpn_1.fn_1 == "Smith"  # type: ignore[union-attr]

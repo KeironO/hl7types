@@ -24,3 +24,14 @@ Registry
    :members:
    :undoc-members:
    :show-inheritance:
+
+Codecs
+------
+
+.. automodule:: hl7types.codecs.er7.encoder
+   :members:
+   :undoc-members:
+
+.. automodule:: hl7types.codecs.er7.decoder
+   :members:
+   :undoc-members:
