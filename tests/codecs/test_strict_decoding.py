@@ -31,7 +31,7 @@ def test_lenient_decode_complete_ack() -> None:
 
 def test_lenient_decode_missing_msa_succeeds() -> None:
     """ACK without MSA decodes without error in lenient mode (default)."""
-    msg = decode_er7(ACK_MISSING_MSA_WIRE, msg_cls=ACK)
+    msg = decode_er7(ACK_MISSING_MSA_WIRE, strict=False)
     assert isinstance(msg, ACK)
     assert msg.MSA.model_fields_set == set()
 

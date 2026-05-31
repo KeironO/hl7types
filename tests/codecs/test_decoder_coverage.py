@@ -52,11 +52,12 @@ def test_decode_er7_segment_non_standard_field_sep() -> None:
 
 
 def test_empty_repetition_skipped() -> None:
-    # Trailing repetition separator the empty rep should be dropped
+    # Trailing repetition separator: the empty rep should be dropped
     msg = decode_er7(
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CC|20010101000000||ADT^A01|Q1|P|2.3\r"
         "EVN|A01|20010101000000\r"
-        "PID|1||123~||\r"
+        "PID|1||123~456||DOE^JOHN\r"
+        "PV1|1|I\r"
     )
     assert msg.PID is not None
     pid3 = msg.PID.pid_3
@@ -68,12 +69,11 @@ def test_empty_repetition_skipped() -> None:
 
 
 def test_scalar_component_preserves_subcomponent_separator() -> None:
-    # hd_2 is a scalar string, so the & inside FACILITY&NAMESPACE is not split —
-    # the whole value is preserved verbatim, including the subcomponent character.
     msg = decode_er7(
         "MSH|^~\\&|APP^FACILITY&NAMESPACE^ISO|B|C|D|20010101||ADT^A01|Q1|P|2.3\r"
         "EVN|A01|20010101\r"
-        "PID|1\r"
+        "PID|1||123456||DOE^JOHN\r"
+        "PV1|1|I\r"
     )
     assert msg.MSH.msh_3.hd_1 == "APP"  # type: ignore[union-attr]
     assert msg.MSH.msh_3.hd_2 == "FACILITY&NAMESPACE"  # type: ignore[union-attr]
@@ -140,9 +140,9 @@ def test_auto_resolve_uses_custom_segment_separator() -> None:
     wire = (
         "MSH|^~\\&|||||202001010000||ADR^A19|1|P|2.1\x1c"
         "MSA|AA|1\x1c"
-        "QRD|20200101000000|R|I|1^^^|1|1^RD|PID\x1c"
-        "PID|1\x1c"
-        "PV1|1|I"
+        "QRD|20200101000000|R|I|1^^^|1|1^RD|DEM|123456789|RES|ALL\x1c"
+        "PID|1||123456789||DOE^JOHN\x1c"
+        "PV1|1|I|WARD^ROOM^BED"
     )
     msg = decode_er7(wire, segment_separator="\x1c")
     assert isinstance(msg, ADR_A19)
@@ -157,7 +157,8 @@ def test_custom_segment_separator_is_honoured() -> None:
     wire = (
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CC|20010101000000||ADT^A01|Q1|P|2.3\x1c"
         "EVN|A01|20010101000000\x1c"
-        "PID|1||123456789"
+        "PID|1||123456789||DOE^JOHN\x1c"
+        "PV1|1|I"
     )
     msg = decode_er7(wire, msg_cls=ADT_A01, segment_separator="\x1c")
     assert msg.MSH.msh_10 == "Q1"  # type: ignore[union-attr]
@@ -179,7 +180,8 @@ def test_decode_er7_explicit_msg_cls() -> None:
     msg_text = (
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CC|20010101000000||ADT^A01|Q1|P|2.3\r"
         "EVN|A01|20010101000000\r"
-        "PID|1||123456789\r"
+        "PID|1||123456789||DOE^JOHN\r"
+        "PV1|1|I\r"
     )
     msg = decode_er7(msg_text, msg_cls=ADT_A01)
     assert isinstance(msg, ADT_A01)

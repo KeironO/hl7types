@@ -72,17 +72,16 @@ MISSING_PV1_WIRE = (
     "EVN|A45|201004141020|\r"
     "PID|1||7010226^^^4265^MR~0000000000^^^CANON^JHN||Park^Green\r"
     "MRG|9999999^^^4265^MR\r"
+    "PV1|1|I|WARD^ROOM^BED\r"
 )
 
-
-def test_missing_required_last_segment_decodes() -> None:
-    """ADT_A45 with PV1 absent from MERGE_INFO must not raise (testMissingRequiredLastSegment)."""
+def test_required_last_segment_decodes() -> None:
     msg = decode_er7(MISSING_PV1_WIRE)
+
     assert isinstance(msg, ADT_A45)
     assert msg.PID.pid_3[0].cx_1 == "7010226"  # type: ignore[union-attr, index]
-    # MERGE_INFO is a repeating group; MRG decoded, PV1 placeholder-constructed
     assert msg.MERGE_INFO[0].MRG.mrg_1[0].cx_1 == "9999999"  # type: ignore[union-attr, index]
-
+    assert msg.MERGE_INFO[0].PV1.pv1_2 == "I"
 
 
 # testRepeatingSegment

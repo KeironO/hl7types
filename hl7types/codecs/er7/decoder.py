@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib
 import re
 import typing
+import warnings
 from functools import lru_cache
 from typing import Any, get_type_hints
 
@@ -200,17 +201,33 @@ def decode_er7_segment(
         # Inject safe empty defaults so model_validate doesn't raise on missing keys:
         # composite fields get an empty dict (all their sub-fields are optional so
         # Pydantic constructs a zero-value instance), lists get [], scalars get "".
+        skipped_fields: list[str] = []
+
         for _, (fname, base_type, is_list) in pm.items():
             if fname in data:
                 continue
             if not seg_cls.model_fields[fname].is_required():
                 continue
+
+            skipped_fields.append(fname)
+
             if is_list:
                 data[fname] = []
             elif _is_model(base_type):
                 data[fname] = {}
             else:
                 data[fname] = ""
+
+        if skipped_fields:
+            warnings.warn(
+                (
+                    f"Lenient ER7 decoding skipped missing required field(s) "
+                    f"on segment {seg_name}: {', '.join(skipped_fields)}. "
+                    "Placeholder values were injected because strict=False."
+                ),
+                UserWarning,
+                stacklevel=2,
+            )
 
     return seg_cls.model_validate(data)
 
@@ -277,6 +294,8 @@ def _decode_struct(
         # for any required model-type field that wasn't found in the segment stream.
         # Scalar required fields on message/group models are not handled here because
         # those are owned by segments, which are covered in decode_er7_segment above.
+        skipped_fields: list[str] = []
+
         for fname, fi in model_cls.model_fields.items():
             if fname in data or not fi.is_required():
                 continue
@@ -286,7 +305,20 @@ def _decode_struct(
             base_type, is_list = _unwrap(ann)
             if not _is_model(base_type):
                 continue
+
+            skipped_fields.append(fname)
             data[fname] = [] if is_list else base_type.model_construct()
+
+        if skipped_fields:
+            warnings.warn(
+                (
+                    f"Lenient ER7 decoding skipped missing required segment/group "
+                    f"field(s) on {model_cls.__name__}: {', '.join(skipped_fields)}. "
+                    "Placeholder values were injected because strict=False."
+                ),
+                UserWarning,
+                stacklevel=2,
+            )
 
     return idx, model_cls.model_validate(data)
 
@@ -358,7 +390,7 @@ def decode_er7(
     msg_cls: type[BaseModel] | None = None,
     segment_separator: str = "\r",
     *,
-    strict: bool = False,
+    strict: bool = True,
     registry: HL7Registry | None = None,
 ) -> BaseModel:
     seg_strings = _split_segments(wire, segment_separator)

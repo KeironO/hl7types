@@ -32,7 +32,7 @@ AMPERSAND_WIRE = (
     "MSH|^~\\&|OADD||DADD||20090511130702||ORU^R01|91310000023|P|2.3\n"
     "PID|||2278111^^^6||CSCXBOB^LAB^||19480205|M|^^||^^, ^^|||||||||\n"
     "PV1||O|CSC^||||2499^LAST^^FIRST I MD|^||||||||||OP|35848990||||||||||||||||||||6|||||200904130000|200904140000|\n"
-    "ORC|RE|59761179|M3541|||||||||2499^LAST^^FIRST I MD||||^|\n"
+    "ORC|RE|59761179|M3541||||^^^200905110800|||||2499^LAST^^FIRST I MD||||^|\n"
     "OBR|1|59761179|M3541^OADD|CR^Cell study|||200905110800||||||||^|2499^LAST^^FIRST I MD||||||||H|F||^^^^^R|^||||^^|^^||\n"
     "OBX|1|ST|CR^Cell study|1|(note)||||||F|||200905111306|MMC^Tacoma General H|7^LASTNAME^FIRSTNAME|\n"
     "OBX|2|ST|CR^Cell study|1|WBCS: Adequate in number & normal in appearance||||||F|||200905111306|MMC^Tacoma General H|7^LASTNAME^FIRSTNAME|\n"
