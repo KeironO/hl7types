@@ -20,8 +20,9 @@ def test_parse_and_encode_roundtrip_v22() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.2\r"
+        "EVN|A01|19951002185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
-        "PV1|||NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
     )
 
     msg = decode_er7(msg_text)
@@ -44,8 +45,9 @@ def test_parse_sets_message_fields_v22() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.2\r"
+        "EVN|A01|19951002185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
-        "PV1|||NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
     )
 
     msg = decode_er7(msg_text)
@@ -69,8 +71,9 @@ def test_parse_sets_message_fields_v24() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||20010602185200||ADT^A01|LABGL1200106021852632|P|2.4\r"
+        "EVN|A01|20010602185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
-        "PV1|||NER|||||||GSU||||||||E||||||||||||||||||||||||||20010602174900|20010606\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||20010602174900|20010606\r"
     )
 
     msg = decode_er7(msg_text)
@@ -86,6 +89,7 @@ def test_parse_sets_message_fields_v24() -> None:
     assert msg.PID.pid_8 == "M"
 
     # PV1 fields
+    assert msg.PV1.pv1_2 == "I"
     assert msg.PV1.pv1_3.pl_1 == "NER"
 
 
@@ -96,8 +100,9 @@ def test_message_version_v22() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.2\r"
+        "EVN|A01|19951002185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
-        "PV1|||NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
     )
 
     msg = decode_er7(msg_text)
@@ -111,8 +116,9 @@ def test_message_version_v24() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||20010602185200||ADT^A01|LABGL1200106021852632|P|2.4\r"
+        "EVN|A01|20010602185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
-        "PV1|||NER|||||||GSU||||||||E||||||||||||||||||||||||||20010602174900|20010606\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||20010602174900|20010606\r"
     )
 
     msg = decode_er7(msg_text)

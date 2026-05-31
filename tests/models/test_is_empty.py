@@ -18,7 +18,9 @@ def test_primitive_field_empty_when_not_provided() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.3\r"
+        "EVN|A01|19951002185200\r"
         "PID|1||708010^^^MRN^MR||SURNAME^GIVEN^^^MRS^^L||19381216|F\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -35,7 +37,9 @@ def test_primitive_field_populated_with_value() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.3\r"
+        "EVN|A01|19951002185200\r"
         "PID|1||708010^^^MRN^MR||SURNAME^GIVEN^^^MRS^^L||19381216|F||||||||||||||\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -53,7 +57,9 @@ def test_composite_field_empty_when_all_components_missing() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.3\r"
+        "EVN|A01|19951002185200\r"
         "PID|1||708010^^^MRN^MR||SURNAME^GIVEN^^^MRS^^L||19381216|F|||||^^^^^||||||\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -73,7 +79,9 @@ def test_composite_field_populated_with_component_values() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.3\r"
+        "EVN|A01|19951002185200\r"
         "PID|1||708010^^^MRN^MR|PENSION NO^^^DSS^PE|SURNAME^GIVEN^^^MRS^^L||19381216|F\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -92,7 +100,9 @@ def test_repeating_field_empty_when_not_provided() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.3\r"
+        "EVN|A01|19951002185200\r"
         "PID|1||708010^^^MRN^MR||SURNAME^GIVEN^^^MRS^^L||19381216|F\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -111,6 +121,7 @@ def test_segment_present_when_in_message() -> None:
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.3\r"
         "EVN|A01|20130923023038|\r"
         "PID|1||708010^^^MRN^MR||SURNAME^GIVEN^^^MRS^^L||19381216|F\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -119,24 +130,23 @@ def test_segment_present_when_in_message() -> None:
     assert msg.MSH is not None
     assert msg.EVN is not None
     assert msg.PID is not None
+    assert msg.PV1 is not None
 
 
 def test_optional_segment_unpopulated_when_not_in_message() -> None:
     """Optional segments not in the wire have unpopulated fields.
 
-    When an optional segment is not included in the ER7 wire, the
-    segment exists in the model but its fields are unpopulated (None).
+    Under strict decoding, ADT_A01 requires EVN and PV1, so this test uses an
+    optional NK1 segment rather than omitting a required structural segment.
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.3\r"
+        "EVN|A01|19951002185200\r"
         "PID|1||708010^^^MRN^MR||SURNAME^GIVEN^^^MRS^^L||19381216|F\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
 
-    # EVN is not in the message but is accessible as a segment
-    # with unpopulated fields
-    assert msg.EVN is not None
-    # All its fields should be empty/None
-    assert msg.EVN.evn_2 is None
-    assert msg.EVN.evn_3 is None
+    # NK1 is optional and not present in the message.
+    assert msg.NK1 is None or msg.NK1 == []

@@ -21,8 +21,9 @@ def test_parse_and_roundtrip() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.2\r"
+        "EVN|A01|19951002185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
-        "PV1|||NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
     )
 
     msg = decode_er7(msg_text)
@@ -47,8 +48,9 @@ def test_segment_field_access() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.2\r"
+        "EVN|A01|19951002185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
-        "PV1|||NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
     )
 
     msg = decode_er7(msg_text)
@@ -63,6 +65,7 @@ def test_segment_field_access() -> None:
 
     # PV1 segment fields
     assert msg.PV1 is not None
+    assert msg.PV1.pv1_2 == "I"
 
 
 def test_msh_encoding_characters() -> None:
@@ -73,7 +76,9 @@ def test_msh_encoding_characters() -> None:
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.2\r"
+        "EVN|A01|19951002185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
     )
 
     msg = decode_er7(msg_text)
@@ -84,17 +89,20 @@ def test_msh_encoding_characters() -> None:
 
 
 def test_parse_segment_only() -> None:
-    """A minimal message with only required segments should parse.
+    """A minimal strict ADT_A01 message should parse.
 
-    A message with just MSH and one other segment should be parseable.
+    Under strict decoding, ADT_A01 requires MSH, EVN, PID, and PV1.
     """
     msg_text = (
         "MSH|^~\\&|LABGL1||DMCRES||19951002185200||ADT^A01|LABGL1199510021852632|P|2.2\r"
+        "EVN|A01|19951002185200\r"
         "PID|||T12345||TEST^PATIENT^P||19601002|M||||||||||123456\r"
+        "PV1||I|NER|||||||GSU||||||||E||||||||||||||||||||||||||19951002174900|19951006\r"
     )
 
     msg = decode_er7(msg_text)
 
     assert msg.MSH is not None
     assert msg.PID is not None
+    assert msg.PV1 is not None
     assert msg.PID.pid_3[0] == "T12345"

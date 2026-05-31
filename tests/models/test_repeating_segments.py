@@ -10,8 +10,9 @@ _MSG = (
     "NK1|1|BROS^LUIGI^^^^|BRO^Brother\r"
     "NK1|2|TOAD^TOADSTOOL^^^^|FND^Friend\r"
     "NK1|3|PEACH^PRINCESS^^^^|FND^Friend\r"
-    "DG1|1|I10|J06.9^Acute upper respiratory infection^ICD10\r"
-    "DG1|2|I10|Z87.39^Personal history^ICD10\r"
+    "PV1|1|I|WARD^ROOM^BED\r"
+    "DG1|1|I10|J06.9^Acute upper respiratory infection^ICD10|||A\r"
+    "DG1|2|I10|Z87.39^Personal history^ICD10|||A\r"
 )
 
 

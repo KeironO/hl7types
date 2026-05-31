@@ -12,19 +12,23 @@ from hl7types import decode_er7
 def test_parse_adt_a01_message() -> None:
     """ADT^A01 messages should parse correctly.
 
-    A typical ADT^A01 (patient admission) message should parse and
+    A typical ADT^A01 patient admission message should parse and
     be accessible.
     """
     msg_text = (
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CORNERCUBICLE|20010101000000||ADT^A01|Q123456789T123456789X123456|P|2.3\r"
+        "EVN|A01|20010101000000\r"
         "PID|1||123456789|0123456789^AA^^JP|BROS^MARIO^^^^||19850101000000|M|||123 FAKE STREET^MARIO^^TOADSTOOL KINGDOM^NES^A1B2C3^JP^HOME^^1234|1234|(555)555-0123^HOME^JP:1234567|||S|MSH|12345678|||||||0|||||N\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
 
     # Message should parse successfully
     assert msg.MSH is not None
+    assert msg.EVN is not None
     assert msg.PID is not None
+    assert msg.PV1 is not None
     assert msg.MSH.msh_9 == "ADT^A01" or "ADT" in str(msg.MSH.msh_9)
 
 
@@ -38,6 +42,7 @@ def test_parse_adu_a01_message_with_multiple_segments() -> None:
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CORNERCUBICLE|20010101000000||ADT^A01|Q123456789T123456789X123456|P|2.3\r"
         "EVN|A01|20010101000000|||^KOOPA^BOWSER^^^^^^^CURRENT\r"
         "PID|1||123456789|0123456789^AA^^JP|BROS^MARIO^^^^||19850101000000|M|||123 FAKE STREET^MARIO^^TOADSTOOL KINGDOM^NES^A1B2C3^JP^HOME^^1234|1234|(555)555-0123^HOME^JP:1234567|||S|MSH|12345678|||||||0|||||N\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -46,6 +51,7 @@ def test_parse_adu_a01_message_with_multiple_segments() -> None:
     assert msg.MSH is not None
     assert msg.EVN is not None
     assert msg.PID is not None
+    assert msg.PV1 is not None
 
 
 def test_roundtrip_message_encoding() -> None:
@@ -56,7 +62,9 @@ def test_roundtrip_message_encoding() -> None:
     """
     msg_text = (
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CORNERCUBICLE|20010101000000||ADT^A01|Q123456789T123456789X123456|P|2.3\r"
+        "EVN|A01|20010101000000\r"
         "PID|1||123456789|0123456789^AA^^JP|BROS^MARIO^^^^||19850101000000|M|||123 FAKE STREET^MARIO^^TOADSTOOL KINGDOM^NES^A1B2C3^JP^HOME^^1234|1234|(555)555-0123^HOME^JP:1234567|||S|MSH|12345678|||||||0|||||N\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
@@ -66,7 +74,9 @@ def test_roundtrip_message_encoding() -> None:
 
     # Should contain key segments
     assert "MSH|" in encoded
+    assert "EVN|" in encoded
     assert "PID|" in encoded
+    assert "PV1|" in encoded
 
 
 def test_message_field_preservation() -> None:
@@ -77,7 +87,9 @@ def test_message_field_preservation() -> None:
     """
     msg_text = (
         "MSH|^~\\&|NES|NINTENDO|AGNEW|CORNERCUBICLE|20010101000000||ADT^A01|Q123456789T123456789X123456|P|2.3\r"
+        "EVN|A01|20010101000000\r"
         "PID|1||123456789|0123456789^AA^^JP|BROS^MARIO^^^^||19850101000000|M||||||||||||||||||N\r"
+        "PV1|1|I|WARD^ROOM^BED\r"
     )
 
     msg = decode_er7(msg_text)
