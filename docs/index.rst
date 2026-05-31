@@ -10,4 +10,4 @@ hl7types
    :hidden:
 
    api
-   reference/hl7types.hl7
+   hl7_reference

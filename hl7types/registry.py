@@ -18,6 +18,9 @@ class HL7Registry:
     def get_segment(self, name: str) -> type[BaseModel] | None:
         return self._segments.get(name)
 
+    def has_segment_class(self, cls: type[BaseModel]) -> bool:
+        return cls in self._segments.values()
+
     def register_message(self, version: str, name: str, cls: type[BaseModel]) -> None:
         self._messages[(version, name)] = cls
 

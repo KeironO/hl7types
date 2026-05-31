@@ -11,7 +11,6 @@ from pydantic import BaseModel
 from hl7types.codecs.er7.encoder import (
     DEFAULT_ENCODING,
     DELIM_DEF,
-    SEG_ALIAS_RE,
     EncodingChars,
 )
 from hl7types.registry import HL7Registry
@@ -28,7 +27,7 @@ _UNESCAPE_MAP: dict[str, str] = {
 def _unescape(value: str, enc: EncodingChars) -> str:
     e = re.escape(enc.escape)
     return re.sub(
-        f"{e}([FSTRET]){e}",
+        f"{e}([FSTRE]){e}",
         lambda m: _UNESCAPE_MAP.get(m.group(1), m.group(0)),
         value,
     )
@@ -65,13 +64,16 @@ def _is_model(cls: Any) -> bool:
         return False
 
 
-def is_segment_cls(cls: Any) -> bool:
+def is_segment_cls(cls: Any, registry: HL7Registry | None = None) -> bool:
     if not _is_model(cls):
         return False
-    for fi in cls.model_fields.values():
-        alias = fi.serialization_alias
-        if isinstance(alias, str) and SEG_ALIAS_RE.match(alias):
-            return True
+
+    if ".segments." in getattr(cls, "__module__", ""):
+        return True
+
+    if registry is not None and registry.get_segment(cls.__name__) is cls:
+        return True
+
     return False
 
 
@@ -222,7 +224,7 @@ def _decode_struct(
     strict: bool = False,
     registry: HL7Registry | None = None,
 ) -> tuple[int, BaseModel | None]:
-    if is_segment_cls(model_cls):
+    if is_segment_cls(model_cls, registry):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
             return idx, None
         return idx + 1, decode_er7_segment(segs[idx][1], model_cls, enc, strict=strict)
@@ -239,7 +241,11 @@ def _decode_struct(
             continue
 
         seg_name = base_type.__name__
-        resolved_type = (registry.get_segment(seg_name) if registry else None) or base_type
+        resolved_type = (
+            registry.get_segment(seg_name)
+            if registry and is_segment_cls(base_type, registry)
+            else None
+        ) or base_type
 
         if is_list:
             items: list[Any] = []
@@ -295,12 +301,11 @@ def _version_to_module(version: str) -> str:
 
 
 def _resolve_msg_cls(
-    wire: str,
-    segment_separator: str,
+    seg_strings: list[str],
     registry: HL7Registry | None = None,
 ) -> type[BaseModel]:
     msh_str = next(
-        (s for s in wire.split(segment_separator) if s[:3] == "MSH"),
+        (s for s in seg_strings if s[:3] == "MSH"),
         None,
     )
     if not msh_str:
@@ -342,6 +347,12 @@ def _resolve_msg_cls(
     return getattr(module, structure)
 
 
+def _split_segments(wire: str, segment_separator: str) -> list[str]:
+    if segment_separator in ("\r", "\n", "\r\n"):
+        return [s for s in re.split(r"\r\n|\r|\n", wire) if s]
+    return [s for s in wire.split(segment_separator) if s]
+
+
 def decode_er7(
     wire: str,
     msg_cls: type[BaseModel] | None = None,
@@ -350,12 +361,12 @@ def decode_er7(
     strict: bool = False,
     registry: HL7Registry | None = None,
 ) -> BaseModel:
-    seg_strings = [s for s in re.split(r"\r\n|\r|\n", wire) if s]
+    seg_strings = _split_segments(wire, segment_separator)
     if not seg_strings:
         raise ValueError("Empty wire string")
 
     if msg_cls is None:
-        msg_cls = _resolve_msg_cls(wire, segment_separator, registry=registry)
+        msg_cls = _resolve_msg_cls(seg_strings, registry=registry)
 
     enc = DEFAULT_ENCODING
     for ss in seg_strings:

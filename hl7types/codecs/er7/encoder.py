@@ -20,7 +20,7 @@ class EncodingChars:
 
     @classmethod
     def from_msh2(cls, msh2: str) -> EncodingChars:
-        if len(msh2) < 4:
+        if len(msh2) != 4:
             raise ValueError(
                 f"MSH.2 must be exactly 4 encoding characters, got {len(msh2)!r}: {msh2!r}"
             )

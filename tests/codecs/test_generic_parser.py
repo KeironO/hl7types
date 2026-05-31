@@ -12,8 +12,11 @@ Notes:
 from __future__ import annotations
 
 from hl7types import decode_er7
-from hl7types.codecs.er7.encoder import _escape, DEFAULT_ENCODING as ENC
+from hl7types.codecs.er7.decoder import _unescape
+from hl7types.codecs.er7.encoder import DEFAULT_ENCODING, _escape
 from hl7types.hl7.v2_5.messages.ADT_A05 import ADT_A05
+
+ENC = DEFAULT_ENCODING
 
 # Wire taken verbatim from testMessageSetAppropriatelyForParse.
 # ADT^A31 uses the ADT_A05 structure in v2.5.
@@ -26,7 +29,7 @@ ADT_A31_WIRE = (
 # Wire taken verbatim from testAmpersandCorrectlyParsed (Java println to \n line endings).
 # OBX.5 contains a literal & which must be escaped to \T\ on re-encode.
 AMPERSAND_WIRE = (
-    "MSH|^~\\&|OADD||DADD||20090511130702||ORU^R01|91310000023|P|2.3||||\n"
+    "MSH|^~\\&|OADD||DADD||20090511130702||ORU^R01|91310000023|P|2.3\n"
     "PID|||2278111^^^6||CSCXBOB^LAB^||19480205|M|^^||^^, ^^|||||||||\n"
     "PV1||O|CSC^||||2499^LAST^^FIRST I MD|^||||||||||OP|35848990||||||||||||||||||||6|||||200904130000|200904140000|\n"
     "ORC|RE|59761179|M3541|||||||||2499^LAST^^FIRST I MD||||^|\n"
@@ -37,7 +40,7 @@ AMPERSAND_WIRE = (
 )
 
 
-def test_parse_adt_a31_decodes() -> None:
+def test_adt_a31_decodes_using_adt_a05_structure() -> None:
     """ER7 decode of an ADT A31 wire must succeed (testMessageSetAppropriatelyForParse)."""
     msg = ADT_A05.model_validate_er7(ADT_A31_WIRE)
     assert isinstance(msg, ADT_A05)
@@ -60,9 +63,18 @@ def test_ampersand_escaped_in_encode() -> None:
     )
 
 
+def test_ampersand_escape_decodes_to_literal_ampersand() -> None:
+    """\\T\\ in wire data must decode to a literal & in the model value."""
+    assert _unescape(r"number \T\ normal", DEFAULT_ENCODING) == "number & normal"
+
+
 def test_ampersand_roundtrip() -> None:
     """& in OBX.5 survives decode to re-encode as \\T\\ (testAmpersandCorrectlyParsed, @Ignore in HAPI)."""
     msg = decode_er7(AMPERSAND_WIRE)
+    # v2.3 ORU_R01 group path: RESPONSE > ORDER_OBSERVATION > OBSERVATION
+    obx2 = msg.RESPONSE[0].ORDER_OBSERVATION[0].OBSERVATION[1].OBX  # type: ignore[index, union-attr]
+    assert obx2.obx_5[0] == "WBCS: Adequate in number & normal in appearance"  # type: ignore[index, union-attr]
+
     encoded = msg.model_dump_er7()
     assert "\\T\\ normal in appearance" in encoded
     assert "number & normal" not in encoded

@@ -35,6 +35,7 @@ def test_parse_repeating_obx5_non_empty_reps() -> None:
     """OBX.5 with ~ repetitions decodes each non-empty value (testParseRepeatingObx5)."""
     msg = ORU_R01_v24.model_validate_er7(REPEATING_OBX5_WIRE)
     obx5 = msg.PATIENT_RESULT[0].ORDER_OBSERVATION[0].OBSERVATION[0].OBX.obx_5  # type: ignore[index, union-attr]
+    assert len(obx5) == 4  # trailing empty reps dropped; only the four non-empty values survive
     assert obx5[0] == "This"
     assert obx5[1] == "Is"
     assert obx5[2] == "A"
@@ -57,7 +58,7 @@ def test_parse_repeating_obx5_non_empty_reps() -> None:
 ])
 def test_invalid_short_messages_raise(wire: str) -> None:
     """Truncated or empty wires must raise rather than produce a partial result (testInvalidShortMessages)."""
-    with pytest.raises((ValueError, Exception)):
+    with pytest.raises(ValueError):
         decode_er7(wire)
 
 
@@ -79,6 +80,8 @@ def test_missing_required_last_segment_decodes() -> None:
     msg = decode_er7(MISSING_PV1_WIRE)
     assert isinstance(msg, ADT_A45)
     assert msg.PID.pid_3[0].cx_1 == "7010226"  # type: ignore[union-attr, index]
+    # MERGE_INFO is a repeating group; MRG decoded, PV1 placeholder-constructed
+    assert msg.MERGE_INFO[0].MRG.mrg_1[0].cx_1 == "9999999"  # type: ignore[union-attr, index]
 
 
 
@@ -193,7 +196,7 @@ def test_unknown_version_raises() -> None:
         "MSH|^~\\&|^QueryServices||||20021011161756.297-0500||ORU^R01|1|D|2.999\r"
         "OBX|1|NM|Z049107^Chol^L||2.30|mmol/L|||||F\r"
     )
-    with pytest.raises(Exception):
+    with pytest.raises(ModuleNotFoundError):
         decode_er7(wire)
 
 
@@ -210,12 +213,15 @@ EARLY_Z_SEGMENT_WIRE = (
 )
 
 
-def test_early_nonstandard_segment_is_skipped() -> None:
+def test_early_nonstandard_segment_does_not_crash() -> None:
     """A Z-segment before PID must not crash the decoder (testEarlyNonStandard).
 
-    Note: hl7types does not currently advance past unknown segments, so PID data
-    after the ZZZ is not accessible. The key assertion is that decoding completes
-    without raising.
+    Current limitation: the decoder stops consuming the known group when it
+    encounters ZZZ, so PID data after the Z-segment is not accessible. pid_3
+    is empty because the parser never reached the PID segment.
     """
     msg = ADT_A03_v25.model_validate_er7(EARLY_Z_SEGMENT_WIRE)
     assert isinstance(msg, ADT_A03_v25)
+    # The decoder stops at ZZZ and never reaches the PID segment; PID is a
+    # model_construct() placeholder so only the segment name is known, not field values.
+    assert msg.PID is not None  # type: ignore[union-attr]
