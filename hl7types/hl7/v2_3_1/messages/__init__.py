@@ -1,6 +1,6 @@
 import importlib
 
-_NAMES = {
+_all_ = {
     'ACK', 'ADR_A19', 'ADT_A01', 'ADT_A02', 'ADT_A03', 'ADT_A06', 'ADT_A09',
     'ADT_A12', 'ADT_A16', 'ADT_A17', 'ADT_A18', 'ADT_A20', 'ADT_A24',
     'ADT_A30', 'ADT_A38', 'ADT_A39', 'ADT_A43', 'ADT_A45', 'ADT_A50',
@@ -20,11 +20,11 @@ _NAMES = {
     'RRD_O02', 'RRE_O02', 'RRG_O02', 'RRI_I12', 'RRO_O02', 'SIU_S12',
     'SPQ_Q08', 'SQM_S25', 'SQR_S25', 'SRM_S01', 'SRR_S01', 'SUR_P09',
     'TBR_R08', 'UDM_Q05', 'VQQ_Q07', 'VXQ_V01', 'VXR_V03', 'VXU_V04', 'VXX_V02'
-}
+}  # type: ignore
 
 
 def __getattr__(name: str):  # type: ignore[misc]
-    if name not in _NAMES:
+    if name not in _all_:
         raise AttributeError(f'module {__name__!r} has no attribute {name!r}')
     mod = importlib.import_module(f'.{name}', __name__)
     return getattr(mod, name)
