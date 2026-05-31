@@ -108,6 +108,7 @@ class CWE(HL7Model):
 
     cwe_3: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "cwe_3",
             "name_of_coding_system",
@@ -141,6 +142,7 @@ class CWE(HL7Model):
 
     cwe_6: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "cwe_6",
             "name_of_alternate_coding_system",
@@ -207,6 +209,7 @@ class CWE(HL7Model):
 
     cwe_12: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "cwe_12",
             "name_of_second_alternate_coding_system",

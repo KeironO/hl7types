@@ -47,6 +47,7 @@ class CWE(HL7Model):
 
     cwe_1: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cwe_1",
             "identifier",
@@ -58,6 +59,7 @@ class CWE(HL7Model):
 
     cwe_2: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "cwe_2",
             "text",
@@ -69,6 +71,7 @@ class CWE(HL7Model):
 
     cwe_3: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cwe_3",
             "name_of_coding_system",
@@ -80,6 +83,7 @@ class CWE(HL7Model):
 
     cwe_4: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cwe_4",
             "alternate_identifier",
@@ -91,6 +95,7 @@ class CWE(HL7Model):
 
     cwe_5: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "cwe_5",
             "alternate_text",
@@ -102,6 +107,7 @@ class CWE(HL7Model):
 
     cwe_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cwe_6",
             "name_of_alternate_coding_system",
@@ -113,6 +119,7 @@ class CWE(HL7Model):
 
     cwe_7: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "cwe_7",
             "coding_system_version_id",
@@ -124,6 +131,7 @@ class CWE(HL7Model):
 
     cwe_8: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "cwe_8",
             "alternate_coding_system_version_id",
@@ -135,6 +143,7 @@ class CWE(HL7Model):
 
     cwe_9: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "cwe_9",
             "original_text",

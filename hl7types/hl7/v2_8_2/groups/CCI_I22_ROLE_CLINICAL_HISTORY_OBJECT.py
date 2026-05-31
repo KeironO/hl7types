@@ -11,10 +11,31 @@ from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
+from ..segments.PRD import PRD
+from ..segments.ROL import ROL
+
+_PRD = PRD
+_ROL = ROL
+
 
 class CCI_I22_ROLE_CLINICAL_HISTORY_OBJECT(HL7Model):
-    """HL7 v2 CCI_I22.ROLE_CLINICAL_HISTORY_OBJECT group."""
+    """HL7 v2 CCI_I22.ROLE_CLINICAL_HISTORY_OBJECT group.
 
-    pass
+    Attributes:
+        ROL (Optional[ROL]): optional
+        PRD (Optional[PRD]): optional
+    """
+
+    ROL: Optional[_ROL] = Field(
+        default=None,
+        title="ROL",
+        description="Optional",
+    )
+
+    PRD: Optional[_PRD] = Field(
+        default=None,
+        title="PRD",
+        description="Optional",
+    )
 
     model_config = {"populate_by_name": True}

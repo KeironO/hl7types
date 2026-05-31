@@ -32,6 +32,7 @@ class MA(HL7Model):
 
     ma_1: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "ma_1",
             "sample_y_from_channel_1",
@@ -43,6 +44,7 @@ class MA(HL7Model):
 
     ma_2: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "ma_2",
             "sample_y_from_channel_2",
@@ -54,6 +56,7 @@ class MA(HL7Model):
 
     ma_3: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "ma_3",
             "sample_y_from_channel_3",
@@ -65,6 +68,7 @@ class MA(HL7Model):
 
     ma_4: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "ma_4",
             "sample_y_from_channel_4",

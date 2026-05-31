@@ -122,6 +122,7 @@ class CSU(HL7Model):
 
     csu_4: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "csu_4",
             "unit_of_measure_coding_system",
@@ -155,6 +156,7 @@ class CSU(HL7Model):
 
     csu_7: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "csu_7",
             "alternate_unit_of_measure_coding_system",
@@ -221,6 +223,7 @@ class CSU(HL7Model):
 
     csu_13: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "csu_13",
             "name_of_second_alternate_unit_of_measure_coding_sy",

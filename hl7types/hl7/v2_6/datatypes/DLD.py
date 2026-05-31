@@ -39,6 +39,7 @@ class DLD(HL7Model):
 
     dld_2: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "dld_2",
             "effective_date",

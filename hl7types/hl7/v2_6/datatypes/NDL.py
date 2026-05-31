@@ -67,6 +67,7 @@ class NDL(HL7Model):
 
     ndl_2: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "ndl_2",
             "start_date_time",
@@ -78,6 +79,7 @@ class NDL(HL7Model):
 
     ndl_3: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "ndl_3",
             "end_date_time",
@@ -89,6 +91,7 @@ class NDL(HL7Model):
 
     ndl_4: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ndl_4",
             "point_of_care",
@@ -100,6 +103,7 @@ class NDL(HL7Model):
 
     ndl_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ndl_5",
             "room",
@@ -111,6 +115,7 @@ class NDL(HL7Model):
 
     ndl_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ndl_6",
             "bed",
@@ -133,6 +138,7 @@ class NDL(HL7Model):
 
     ndl_8: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ndl_8",
             "location_status",
@@ -144,6 +150,7 @@ class NDL(HL7Model):
 
     ndl_9: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ndl_9",
             "patient_location_type",
@@ -155,6 +162,7 @@ class NDL(HL7Model):
 
     ndl_10: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ndl_10",
             "building",
@@ -166,6 +174,7 @@ class NDL(HL7Model):
 
     ndl_11: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ndl_11",
             "floor",

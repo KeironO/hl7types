@@ -66,6 +66,7 @@ class RPT(HL7Model):
 
     rpt_2: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "rpt_2",
             "calendar_alignment",
@@ -77,6 +78,7 @@ class RPT(HL7Model):
 
     rpt_3: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "rpt_3",
             "phase_range_begin_value",
@@ -88,6 +90,7 @@ class RPT(HL7Model):
 
     rpt_4: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "rpt_4",
             "phase_range_end_value",
@@ -99,6 +102,7 @@ class RPT(HL7Model):
 
     rpt_5: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "rpt_5",
             "period_quantity",
@@ -110,6 +114,7 @@ class RPT(HL7Model):
 
     rpt_6: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "rpt_6",
             "period_units",
@@ -121,6 +126,7 @@ class RPT(HL7Model):
 
     rpt_7: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "rpt_7",
             "institution_specified_time",
@@ -132,6 +138,7 @@ class RPT(HL7Model):
 
     rpt_8: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "rpt_8",
             "event",
@@ -143,6 +150,7 @@ class RPT(HL7Model):
 
     rpt_9: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "rpt_9",
             "event_offset_quantity",
@@ -154,6 +162,7 @@ class RPT(HL7Model):
 
     rpt_10: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "rpt_10",
             "event_offset_units",
@@ -165,6 +174,7 @@ class RPT(HL7Model):
 
     rpt_11: Optional[str] = Field(
         default=None,
+        max_length=200,
         validation_alias=AliasChoices(
             "rpt_11",
             "general_timing_specification",

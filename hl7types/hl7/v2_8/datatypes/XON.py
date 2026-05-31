@@ -77,6 +77,7 @@ class XON(HL7Model):
 
     xon_7: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "xon_7",
             "identifier_type_code",
@@ -99,6 +100,7 @@ class XON(HL7Model):
 
     xon_9: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xon_9",
             "name_representation_code",

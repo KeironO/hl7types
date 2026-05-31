@@ -26,6 +26,7 @@ class DTN(HL7Model):
 
     dtn_1: str = Field(
         default=...,
+        max_length=2,
         validation_alias=AliasChoices(
             "dtn_1",
             "day_type",
@@ -37,6 +38,7 @@ class DTN(HL7Model):
 
     dtn_2: str = Field(
         default=...,
+        max_length=3,
         validation_alias=AliasChoices(
             "dtn_2",
             "number_of_days",

@@ -38,6 +38,7 @@ class ERL(HL7Model):
 
     erl_1: str = Field(
         default=...,
+        max_length=3,
         validation_alias=AliasChoices(
             "erl_1",
             "segment_id",

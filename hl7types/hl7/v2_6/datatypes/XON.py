@@ -52,6 +52,7 @@ class XON(HL7Model):
 
     xon_1: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "xon_1",
             "organization_name",
@@ -63,6 +64,7 @@ class XON(HL7Model):
 
     xon_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "xon_2",
             "organization_name_type_code",
@@ -74,6 +76,7 @@ class XON(HL7Model):
 
     xon_3: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "xon_3",
             "id_number",
@@ -85,6 +88,7 @@ class XON(HL7Model):
 
     xon_4: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "xon_4",
             "identifier_check_digit",
@@ -96,6 +100,7 @@ class XON(HL7Model):
 
     xon_5: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xon_5",
             "check_digit_scheme",
@@ -118,6 +123,7 @@ class XON(HL7Model):
 
     xon_7: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "xon_7",
             "identifier_type_code",
@@ -140,6 +146,7 @@ class XON(HL7Model):
 
     xon_9: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xon_9",
             "name_representation_code",
@@ -151,6 +158,7 @@ class XON(HL7Model):
 
     xon_10: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "xon_10",
             "organization_identifier",

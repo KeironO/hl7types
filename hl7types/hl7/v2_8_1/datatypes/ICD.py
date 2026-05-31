@@ -42,6 +42,7 @@ class ICD(HL7Model):
 
     icd_2: str = Field(
         default=...,
+        max_length=1,
         validation_alias=AliasChoices(
             "icd_2",
             "certification_required",

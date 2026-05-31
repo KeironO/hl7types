@@ -184,6 +184,7 @@ class PPN(HL7Model):
 
     ppn_10: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "ppn_10",
             "name_type_code",
@@ -206,6 +207,7 @@ class PPN(HL7Model):
 
     ppn_12: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "ppn_12",
             "check_digit_scheme",
@@ -217,6 +219,7 @@ class PPN(HL7Model):
 
     ppn_13: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "ppn_13",
             "identifier_type_code",
@@ -250,6 +253,7 @@ class PPN(HL7Model):
 
     ppn_16: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "ppn_16",
             "name_representation_code",
@@ -272,6 +276,7 @@ class PPN(HL7Model):
 
     ppn_19: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "ppn_19",
             "name_assembly_order",
@@ -349,6 +354,7 @@ class PPN(HL7Model):
 
     ppn_26: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "ppn_26",
             "security_check_scheme",

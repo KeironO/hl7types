@@ -42,6 +42,7 @@ class OSP(HL7Model):
 
     osp_2: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "osp_2",
             "occurrence_span_start_date",
@@ -53,6 +54,7 @@ class OSP(HL7Model):
 
     osp_3: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "osp_3",
             "occurrence_span_stop_date",

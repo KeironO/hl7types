@@ -53,6 +53,7 @@ class CX(HL7Model):
 
     cx_1: str = Field(
         default=...,
+        max_length=15,
         validation_alias=AliasChoices(
             "cx_1",
             "id_number",
@@ -64,6 +65,7 @@ class CX(HL7Model):
 
     cx_2: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "cx_2",
             "identifier_check_digit",
@@ -75,6 +77,7 @@ class CX(HL7Model):
 
     cx_3: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "cx_3",
             "check_digit_scheme",
@@ -97,6 +100,7 @@ class CX(HL7Model):
 
     cx_5: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "cx_5",
             "identifier_type_code",
@@ -119,6 +123,7 @@ class CX(HL7Model):
 
     cx_7: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "cx_7",
             "effective_date",
@@ -130,6 +135,7 @@ class CX(HL7Model):
 
     cx_8: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "cx_8",
             "expiration_date",

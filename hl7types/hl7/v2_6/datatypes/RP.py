@@ -34,6 +34,7 @@ class RP(HL7Model):
 
     rp_1: Optional[str] = Field(
         default=None,
+        max_length=999,
         validation_alias=AliasChoices(
             "rp_1",
             "pointer",
@@ -56,6 +57,7 @@ class RP(HL7Model):
 
     rp_3: Optional[str] = Field(
         default=None,
+        max_length=11,
         validation_alias=AliasChoices(
             "rp_3",
             "type_of_data",
@@ -67,6 +69,7 @@ class RP(HL7Model):
 
     rp_4: Optional[str] = Field(
         default=None,
+        max_length=32,
         validation_alias=AliasChoices(
             "rp_4",
             "subtype",

@@ -74,6 +74,7 @@ class XTN(HL7Model):
 
     xtn_2: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xtn_2",
             "telecommunication_use_code",
@@ -85,6 +86,7 @@ class XTN(HL7Model):
 
     xtn_3: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "xtn_3",
             "telecommunication_equipment_type",
@@ -96,6 +98,7 @@ class XTN(HL7Model):
 
     xtn_4: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "xtn_4",
             "communication_address",
@@ -107,6 +110,7 @@ class XTN(HL7Model):
 
     xtn_5: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xtn_5",
             "country_code",
@@ -118,6 +122,7 @@ class XTN(HL7Model):
 
     xtn_6: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "xtn_6",
             "area_city_code",
@@ -129,6 +134,7 @@ class XTN(HL7Model):
 
     xtn_7: Optional[str] = Field(
         default=None,
+        max_length=9,
         validation_alias=AliasChoices(
             "xtn_7",
             "local_number",
@@ -140,6 +146,7 @@ class XTN(HL7Model):
 
     xtn_8: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "xtn_8",
             "extension",
@@ -151,6 +158,7 @@ class XTN(HL7Model):
 
     xtn_9: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "xtn_9",
             "any_text",
@@ -162,6 +170,7 @@ class XTN(HL7Model):
 
     xtn_10: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "xtn_10",
             "extension_prefix",
@@ -173,6 +182,7 @@ class XTN(HL7Model):
 
     xtn_11: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "xtn_11",
             "speed_dial_code",
@@ -184,6 +194,7 @@ class XTN(HL7Model):
 
     xtn_12: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "xtn_12",
             "unformatted_telephone_number",
@@ -195,6 +206,7 @@ class XTN(HL7Model):
 
     xtn_13: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "xtn_13",
             "effective_start_date",
@@ -206,6 +218,7 @@ class XTN(HL7Model):
 
     xtn_14: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "xtn_14",
             "expiration_date",
@@ -250,6 +263,7 @@ class XTN(HL7Model):
 
     xtn_18: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "xtn_18",
             "preference_order",

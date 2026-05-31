@@ -99,6 +99,7 @@ class AD(HL7Model):
 
     ad_6: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "ad_6",
             "country",
@@ -110,6 +111,7 @@ class AD(HL7Model):
 
     ad_7: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "ad_7",
             "address_type",

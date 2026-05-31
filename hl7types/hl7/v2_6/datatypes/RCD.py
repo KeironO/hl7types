@@ -29,6 +29,7 @@ class RCD(HL7Model):
 
     rcd_1: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "rcd_1",
             "segment_field_name",
@@ -40,6 +41,7 @@ class RCD(HL7Model):
 
     rcd_2: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "rcd_2",
             "hl7_data_type",
@@ -51,6 +53,7 @@ class RCD(HL7Model):
 
     rcd_3: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "rcd_3",
             "maximum_column_width",

@@ -77,6 +77,7 @@ class XPN(HL7Model):
 
     xpn_2: Optional[str] = Field(
         default=None,
+        max_length=30,
         validation_alias=AliasChoices(
             "xpn_2",
             "given_name",
@@ -88,6 +89,7 @@ class XPN(HL7Model):
 
     xpn_3: Optional[str] = Field(
         default=None,
+        max_length=30,
         validation_alias=AliasChoices(
             "xpn_3",
             "second_and_further_given_names_or_initials_thereof",
@@ -99,6 +101,7 @@ class XPN(HL7Model):
 
     xpn_4: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "xpn_4",
             "suffix_e_g_jr_or_iii",
@@ -110,6 +113,7 @@ class XPN(HL7Model):
 
     xpn_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "xpn_5",
             "prefix_e_g_dr",
@@ -121,6 +125,7 @@ class XPN(HL7Model):
 
     xpn_6: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "xpn_6",
             "degree_e_g_md",
@@ -132,6 +137,7 @@ class XPN(HL7Model):
 
     xpn_7: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xpn_7",
             "name_type_code",
@@ -143,6 +149,7 @@ class XPN(HL7Model):
 
     xpn_8: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xpn_8",
             "name_representation_code",
@@ -176,6 +183,7 @@ class XPN(HL7Model):
 
     xpn_11: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xpn_11",
             "name_assembly_order",
@@ -187,6 +195,7 @@ class XPN(HL7Model):
 
     xpn_12: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "xpn_12",
             "effective_date",
@@ -198,6 +207,7 @@ class XPN(HL7Model):
 
     xpn_13: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "xpn_13",
             "expiration_date",
@@ -209,6 +219,7 @@ class XPN(HL7Model):
 
     xpn_14: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "xpn_14",
             "professional_suffix",

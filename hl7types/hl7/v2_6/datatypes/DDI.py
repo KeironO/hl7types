@@ -31,6 +31,7 @@ class DDI(HL7Model):
 
     ddi_1: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "ddi_1",
             "delay_days",
@@ -53,6 +54,7 @@ class DDI(HL7Model):
 
     ddi_3: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "ddi_3",
             "number_of_days",

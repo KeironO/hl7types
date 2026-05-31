@@ -26,6 +26,7 @@ class VR(HL7Model):
 
     vr_1: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "vr_1",
             "first_data_code_value",
@@ -37,6 +38,7 @@ class VR(HL7Model):
 
     vr_2: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "vr_2",
             "last_data_code_value",

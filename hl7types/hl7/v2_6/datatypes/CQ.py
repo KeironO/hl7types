@@ -28,6 +28,7 @@ class CQ(HL7Model):
 
     cq_1: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "cq_1",
             "quantity",

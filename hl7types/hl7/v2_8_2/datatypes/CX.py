@@ -81,6 +81,7 @@ class CX(HL7Model):
 
     cx_3: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "cx_3",
             "check_digit_scheme",
@@ -103,6 +104,7 @@ class CX(HL7Model):
 
     cx_5: str = Field(
         default=...,
+        max_length=5,
         validation_alias=AliasChoices(
             "cx_5",
             "identifier_type_code",
@@ -180,6 +182,7 @@ class CX(HL7Model):
 
     cx_12: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "cx_12",
             "security_check_scheme",

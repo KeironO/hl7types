@@ -181,6 +181,7 @@ class XCN(HL7Model):
 
     xcn_10: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "xcn_10",
             "name_type_code",
@@ -192,6 +193,7 @@ class XCN(HL7Model):
 
     xcn_11: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "xcn_11",
             "identifier_check_digit",
@@ -203,6 +205,7 @@ class XCN(HL7Model):
 
     xcn_12: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xcn_12",
             "check_digit_scheme",
@@ -214,6 +217,7 @@ class XCN(HL7Model):
 
     xcn_13: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "xcn_13",
             "identifier_type_code",
@@ -236,6 +240,7 @@ class XCN(HL7Model):
 
     xcn_15: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xcn_15",
             "name_representation_code",
@@ -258,6 +263,7 @@ class XCN(HL7Model):
 
     xcn_18: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xcn_18",
             "name_assembly_order",
@@ -335,6 +341,7 @@ class XCN(HL7Model):
 
     xcn_25: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xcn_25",
             "security_check_scheme",

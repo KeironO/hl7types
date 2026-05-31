@@ -26,6 +26,7 @@ class PT(HL7Model):
 
     pt_1: str = Field(
         default=...,
+        max_length=1,
         validation_alias=AliasChoices(
             "pt_1",
             "processing_id",
@@ -37,6 +38,7 @@ class PT(HL7Model):
 
     pt_2: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "pt_2",
             "processing_mode",

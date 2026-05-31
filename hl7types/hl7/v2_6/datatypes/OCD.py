@@ -39,6 +39,7 @@ class OCD(HL7Model):
 
     ocd_2: str = Field(
         default=...,
+        max_length=8,
         validation_alias=AliasChoices(
             "ocd_2",
             "occurrence_date",

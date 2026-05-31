@@ -29,6 +29,7 @@ class AUI(HL7Model):
 
     aui_1: Optional[str] = Field(
         default=None,
+        max_length=30,
         validation_alias=AliasChoices(
             "aui_1",
             "authorization_number",
@@ -40,6 +41,7 @@ class AUI(HL7Model):
 
     aui_2: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "aui_2",
             "date",
@@ -51,6 +53,7 @@ class AUI(HL7Model):
 
     aui_3: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "aui_3",
             "source",

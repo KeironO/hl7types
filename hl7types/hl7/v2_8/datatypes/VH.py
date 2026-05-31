@@ -32,6 +32,7 @@ class VH(HL7Model):
 
     vh_1: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "vh_1",
             "start_day_range",
@@ -43,6 +44,7 @@ class VH(HL7Model):
 
     vh_2: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "vh_2",
             "end_day_range",

@@ -35,6 +35,7 @@ class FN(HL7Model):
 
     fn_1: str = Field(
         default=...,
+        max_length=50,
         validation_alias=AliasChoices(
             "fn_1",
             "surname",
@@ -46,6 +47,7 @@ class FN(HL7Model):
 
     fn_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "fn_2",
             "own_surname_prefix",
@@ -57,6 +59,7 @@ class FN(HL7Model):
 
     fn_3: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "fn_3",
             "own_surname",
@@ -68,6 +71,7 @@ class FN(HL7Model):
 
     fn_4: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "fn_4",
             "surname_prefix_from_partner_spouse",
@@ -79,6 +83,7 @@ class FN(HL7Model):
 
     fn_5: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "fn_5",
             "surname_from_partner_spouse",

@@ -56,6 +56,7 @@ class RP(HL7Model):
 
     rp_3: Optional[str] = Field(
         default=None,
+        max_length=11,
         validation_alias=AliasChoices(
             "rp_3",
             "type_of_data",

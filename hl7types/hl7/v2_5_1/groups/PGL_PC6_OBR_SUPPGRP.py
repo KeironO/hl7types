@@ -11,10 +11,22 @@ from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
+from ..segments.OBR import OBR
+
+_OBR = OBR
+
 
 class PGL_PC6_OBR_SUPPGRP(HL7Model):
-    """HL7 v2 PGL_PC6.OBR_SUPPGRP group."""
+    """HL7 v2 PGL_PC6.OBR_SUPPGRP group.
 
-    pass
+    Attributes:
+        OBR (Optional[OBR]): optional
+    """
+
+    OBR: Optional[_OBR] = Field(
+        default=None,
+        title="OBR",
+        description="Optional",
+    )
 
     model_config = {"populate_by_name": True}

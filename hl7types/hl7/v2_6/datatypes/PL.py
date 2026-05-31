@@ -56,6 +56,7 @@ class PL(HL7Model):
 
     pl_1: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "pl_1",
             "point_of_care",
@@ -67,6 +68,7 @@ class PL(HL7Model):
 
     pl_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "pl_2",
             "room",
@@ -78,6 +80,7 @@ class PL(HL7Model):
 
     pl_3: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "pl_3",
             "bed",
@@ -100,6 +103,7 @@ class PL(HL7Model):
 
     pl_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "pl_5",
             "location_status",
@@ -111,6 +115,7 @@ class PL(HL7Model):
 
     pl_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "pl_6",
             "person_location_type",
@@ -122,6 +127,7 @@ class PL(HL7Model):
 
     pl_7: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "pl_7",
             "building",
@@ -133,6 +139,7 @@ class PL(HL7Model):
 
     pl_8: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "pl_8",
             "floor",
@@ -144,6 +151,7 @@ class PL(HL7Model):
 
     pl_9: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "pl_9",
             "location_description",
