@@ -26,6 +26,7 @@ class DR(HL7Model):
 
     dr_1: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "dr_1",
             "range_start_date_time",
@@ -37,6 +38,7 @@ class DR(HL7Model):
 
     dr_2: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "dr_2",
             "range_end_date_time",

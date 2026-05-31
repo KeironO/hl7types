@@ -31,6 +31,7 @@ class JCC(HL7Model):
 
     jcc_1: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "jcc_1",
             "job_code",
@@ -42,6 +43,7 @@ class JCC(HL7Model):
 
     jcc_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "jcc_2",
             "job_class",

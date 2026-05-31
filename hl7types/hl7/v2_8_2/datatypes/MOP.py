@@ -51,6 +51,7 @@ class MOP(HL7Model):
 
     mop_3: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "mop_3",
             "monetary_denomination",

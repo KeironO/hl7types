@@ -39,6 +39,7 @@ class SCV(HL7Model):
 
     scv_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "scv_2",
             "parameter_value",

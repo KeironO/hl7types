@@ -70,6 +70,7 @@ class LA2(HL7Model):
 
     la2_1: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la2_1",
             "point_of_care",
@@ -81,6 +82,7 @@ class LA2(HL7Model):
 
     la2_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la2_2",
             "room",
@@ -92,6 +94,7 @@ class LA2(HL7Model):
 
     la2_3: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la2_3",
             "bed",
@@ -114,6 +117,7 @@ class LA2(HL7Model):
 
     la2_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la2_5",
             "location_status",
@@ -125,6 +129,7 @@ class LA2(HL7Model):
 
     la2_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la2_6",
             "patient_location_type",
@@ -136,6 +141,7 @@ class LA2(HL7Model):
 
     la2_7: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la2_7",
             "building",
@@ -147,6 +153,7 @@ class LA2(HL7Model):
 
     la2_8: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la2_8",
             "floor",
@@ -158,6 +165,7 @@ class LA2(HL7Model):
 
     la2_9: Optional[str] = Field(
         default=None,
+        max_length=120,
         validation_alias=AliasChoices(
             "la2_9",
             "street_address",
@@ -169,6 +177,7 @@ class LA2(HL7Model):
 
     la2_10: Optional[str] = Field(
         default=None,
+        max_length=120,
         validation_alias=AliasChoices(
             "la2_10",
             "other_designation",
@@ -180,6 +189,7 @@ class LA2(HL7Model):
 
     la2_11: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "la2_11",
             "city",
@@ -191,6 +201,7 @@ class LA2(HL7Model):
 
     la2_12: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "la2_12",
             "state_or_province",
@@ -202,6 +213,7 @@ class LA2(HL7Model):
 
     la2_13: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "la2_13",
             "zip_or_postal_code",
@@ -213,6 +225,7 @@ class LA2(HL7Model):
 
     la2_14: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "la2_14",
             "country",
@@ -224,6 +237,7 @@ class LA2(HL7Model):
 
     la2_15: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "la2_15",
             "address_type",
@@ -235,6 +249,7 @@ class LA2(HL7Model):
 
     la2_16: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "la2_16",
             "other_geographic_designation",

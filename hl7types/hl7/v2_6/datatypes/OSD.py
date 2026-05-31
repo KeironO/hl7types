@@ -53,6 +53,7 @@ class OSD(HL7Model):
 
     osd_1: str = Field(
         default=...,
+        max_length=1,
         validation_alias=AliasChoices(
             "osd_1",
             "sequence_results_flag",
@@ -64,6 +65,7 @@ class OSD(HL7Model):
 
     osd_2: str = Field(
         default=...,
+        max_length=15,
         validation_alias=AliasChoices(
             "osd_2",
             "placer_order_number_entity_identifier",
@@ -75,6 +77,7 @@ class OSD(HL7Model):
 
     osd_3: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "osd_3",
             "placer_order_number_namespace_id",
@@ -86,6 +89,7 @@ class OSD(HL7Model):
 
     osd_4: str = Field(
         default=...,
+        max_length=15,
         validation_alias=AliasChoices(
             "osd_4",
             "filler_order_number_entity_identifier",
@@ -97,6 +101,7 @@ class OSD(HL7Model):
 
     osd_5: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "osd_5",
             "filler_order_number_namespace_id",
@@ -108,6 +113,7 @@ class OSD(HL7Model):
 
     osd_6: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "osd_6",
             "sequence_condition_value",
@@ -119,6 +125,7 @@ class OSD(HL7Model):
 
     osd_7: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "osd_7",
             "maximum_number_of_repeats",
@@ -130,6 +137,7 @@ class OSD(HL7Model):
 
     osd_8: str = Field(
         default=...,
+        max_length=15,
         validation_alias=AliasChoices(
             "osd_8",
             "placer_order_number_universal_id",
@@ -141,6 +149,7 @@ class OSD(HL7Model):
 
     osd_9: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "osd_9",
             "placer_order_number_universal_id_type",
@@ -152,6 +161,7 @@ class OSD(HL7Model):
 
     osd_10: str = Field(
         default=...,
+        max_length=15,
         validation_alias=AliasChoices(
             "osd_10",
             "filler_order_number_universal_id",
@@ -163,6 +173,7 @@ class OSD(HL7Model):
 
     osd_11: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "osd_11",
             "filler_order_number_universal_id_type",

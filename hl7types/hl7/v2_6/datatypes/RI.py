@@ -26,6 +26,7 @@ class RI(HL7Model):
 
     ri_1: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "ri_1",
             "repeat_pattern",
@@ -37,6 +38,7 @@ class RI(HL7Model):
 
     ri_2: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "ri_2",
             "explicit_time_interval",

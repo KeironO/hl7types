@@ -163,6 +163,7 @@ class CNN(HL7Model):
 
     cnn_11: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "cnn_11",
             "assigning_authority_universal_id_type",

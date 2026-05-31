@@ -74,6 +74,7 @@ class XTN(HL7Model):
 
     xtn_2: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xtn_2",
             "telecommunication_use_code",
@@ -85,6 +86,7 @@ class XTN(HL7Model):
 
     xtn_3: str = Field(
         default=...,
+        max_length=8,
         validation_alias=AliasChoices(
             "xtn_3",
             "telecommunication_equipment_type",

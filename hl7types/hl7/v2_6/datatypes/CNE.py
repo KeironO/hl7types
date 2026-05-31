@@ -47,6 +47,7 @@ class CNE(HL7Model):
 
     cne_1: str = Field(
         default=...,
+        max_length=20,
         validation_alias=AliasChoices(
             "cne_1",
             "identifier",
@@ -58,6 +59,7 @@ class CNE(HL7Model):
 
     cne_2: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "cne_2",
             "text",
@@ -69,6 +71,7 @@ class CNE(HL7Model):
 
     cne_3: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cne_3",
             "name_of_coding_system",
@@ -80,6 +83,7 @@ class CNE(HL7Model):
 
     cne_4: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cne_4",
             "alternate_identifier",
@@ -91,6 +95,7 @@ class CNE(HL7Model):
 
     cne_5: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "cne_5",
             "alternate_text",
@@ -102,6 +107,7 @@ class CNE(HL7Model):
 
     cne_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cne_6",
             "name_of_alternate_coding_system",
@@ -113,6 +119,7 @@ class CNE(HL7Model):
 
     cne_7: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "cne_7",
             "coding_system_version_id",
@@ -124,6 +131,7 @@ class CNE(HL7Model):
 
     cne_8: Optional[str] = Field(
         default=None,
+        max_length=10,
         validation_alias=AliasChoices(
             "cne_8",
             "alternate_coding_system_version_id",
@@ -135,6 +143,7 @@ class CNE(HL7Model):
 
     cne_9: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "cne_9",
             "original_text",

@@ -26,6 +26,7 @@ class WVS(HL7Model):
 
     wvs_1: str = Field(
         default=...,
+        max_length=8,
         validation_alias=AliasChoices(
             "wvs_1",
             "source_one_name",
@@ -37,6 +38,7 @@ class WVS(HL7Model):
 
     wvs_2: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "wvs_2",
             "source_two_name",

@@ -53,6 +53,7 @@ class CNN(HL7Model):
 
     cnn_1: Optional[str] = Field(
         default=None,
+        max_length=15,
         validation_alias=AliasChoices(
             "cnn_1",
             "id_number",
@@ -64,6 +65,7 @@ class CNN(HL7Model):
 
     cnn_2: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "cnn_2",
             "family_name",
@@ -75,6 +77,7 @@ class CNN(HL7Model):
 
     cnn_3: Optional[str] = Field(
         default=None,
+        max_length=30,
         validation_alias=AliasChoices(
             "cnn_3",
             "given_name",
@@ -86,6 +89,7 @@ class CNN(HL7Model):
 
     cnn_4: Optional[str] = Field(
         default=None,
+        max_length=30,
         validation_alias=AliasChoices(
             "cnn_4",
             "second_and_further_given_names_or_initials_thereof",
@@ -97,6 +101,7 @@ class CNN(HL7Model):
 
     cnn_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cnn_5",
             "suffix_e_g_jr_or_iii",
@@ -108,6 +113,7 @@ class CNN(HL7Model):
 
     cnn_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cnn_6",
             "prefix_e_g_dr",
@@ -119,6 +125,7 @@ class CNN(HL7Model):
 
     cnn_7: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "cnn_7",
             "degree_e_g_md",
@@ -130,6 +137,7 @@ class CNN(HL7Model):
 
     cnn_8: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "cnn_8",
             "source_table",
@@ -141,6 +149,7 @@ class CNN(HL7Model):
 
     cnn_9: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cnn_9",
             "assigning_authority_namespace_id",
@@ -152,6 +161,7 @@ class CNN(HL7Model):
 
     cnn_10: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "cnn_10",
             "assigning_authority_universal_id",
@@ -163,6 +173,7 @@ class CNN(HL7Model):
 
     cnn_11: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "cnn_11",
             "assigning_authority_universal_id_type",

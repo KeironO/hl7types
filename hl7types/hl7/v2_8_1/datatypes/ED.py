@@ -49,6 +49,7 @@ class ED(HL7Model):
 
     ed_2: str = Field(
         default=...,
+        max_length=11,
         validation_alias=AliasChoices(
             "ed_2",
             "type_of_data",
@@ -71,6 +72,7 @@ class ED(HL7Model):
 
     ed_4: str = Field(
         default=...,
+        max_length=6,
         validation_alias=AliasChoices(
             "ed_4",
             "encoding",

@@ -28,6 +28,7 @@ class DIN(HL7Model):
 
     din_1: str = Field(
         default=...,
+        max_length=24,
         validation_alias=AliasChoices(
             "din_1",
             "date",

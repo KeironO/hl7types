@@ -44,6 +44,7 @@ class AD(HL7Model):
 
     ad_1: Optional[str] = Field(
         default=None,
+        max_length=120,
         validation_alias=AliasChoices(
             "ad_1",
             "street_address",
@@ -55,6 +56,7 @@ class AD(HL7Model):
 
     ad_2: Optional[str] = Field(
         default=None,
+        max_length=120,
         validation_alias=AliasChoices(
             "ad_2",
             "other_designation",
@@ -66,6 +68,7 @@ class AD(HL7Model):
 
     ad_3: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "ad_3",
             "city",
@@ -77,6 +80,7 @@ class AD(HL7Model):
 
     ad_4: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "ad_4",
             "state_or_province",
@@ -88,6 +92,7 @@ class AD(HL7Model):
 
     ad_5: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "ad_5",
             "zip_or_postal_code",
@@ -99,6 +104,7 @@ class AD(HL7Model):
 
     ad_6: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "ad_6",
             "country",
@@ -110,6 +116,7 @@ class AD(HL7Model):
 
     ad_7: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "ad_7",
             "address_type",
@@ -121,6 +128,7 @@ class AD(HL7Model):
 
     ad_8: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "ad_8",
             "other_geographic_designation",

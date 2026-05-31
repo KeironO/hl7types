@@ -26,6 +26,7 @@ class CCD(HL7Model):
 
     ccd_1: str = Field(
         default=...,
+        max_length=1,
         validation_alias=AliasChoices(
             "ccd_1",
             "invocation_event",
@@ -37,6 +38,7 @@ class CCD(HL7Model):
 
     ccd_2: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "ccd_2",
             "date_time",

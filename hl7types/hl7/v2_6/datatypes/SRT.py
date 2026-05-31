@@ -26,6 +26,7 @@ class SRT(HL7Model):
 
     srt_1: str = Field(
         default=...,
+        max_length=12,
         validation_alias=AliasChoices(
             "srt_1",
             "sort_by_field",
@@ -37,6 +38,7 @@ class SRT(HL7Model):
 
     srt_2: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "srt_2",
             "sequencing",

@@ -34,6 +34,7 @@ class RMC(HL7Model):
 
     rmc_1: str = Field(
         default=...,
+        max_length=20,
         validation_alias=AliasChoices(
             "rmc_1",
             "room_type",
@@ -45,6 +46,7 @@ class RMC(HL7Model):
 
     rmc_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "rmc_2",
             "amount_type",
@@ -56,6 +58,7 @@ class RMC(HL7Model):
 
     rmc_3: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "rmc_3",
             "coverage_amount",

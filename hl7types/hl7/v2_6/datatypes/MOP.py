@@ -29,6 +29,7 @@ class MOP(HL7Model):
 
     mop_1: str = Field(
         default=...,
+        max_length=2,
         validation_alias=AliasChoices(
             "mop_1",
             "money_or_percentage_indicator",
@@ -40,6 +41,7 @@ class MOP(HL7Model):
 
     mop_2: str = Field(
         default=...,
+        max_length=16,
         validation_alias=AliasChoices(
             "mop_2",
             "money_or_percentage_quantity",
@@ -51,6 +53,7 @@ class MOP(HL7Model):
 
     mop_3: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "mop_3",
             "currency_denomination",

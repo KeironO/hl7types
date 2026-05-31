@@ -31,6 +31,7 @@ class VID(HL7Model):
 
     vid_1: Optional[str] = Field(
         default=None,
+        max_length=5,
         validation_alias=AliasChoices(
             "vid_1",
             "version_id",

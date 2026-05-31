@@ -29,6 +29,7 @@ class ICD(HL7Model):
 
     icd_1: Optional[str] = Field(
         default=None,
+        max_length=11,
         validation_alias=AliasChoices(
             "icd_1",
             "certification_patient_type",
@@ -40,6 +41,7 @@ class ICD(HL7Model):
 
     icd_2: str = Field(
         default=...,
+        max_length=1,
         validation_alias=AliasChoices(
             "icd_2",
             "certification_required",
@@ -51,6 +53,7 @@ class ICD(HL7Model):
 
     icd_3: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "icd_3",
             "date_time_certification_required",

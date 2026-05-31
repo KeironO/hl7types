@@ -19,21 +19,25 @@ ADR_A19_QUERY_RESPONSE
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``EVN``
      -
      - Optional[:ref:`EVN <hl7-v2_1-EVN>`]
      - optional
+     -
      - EVN: Optional
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
      - required
+     -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
+     -
      - PV1: Required
 
 .. _hl7-v2_1-ADT_A17_PATIENT:
@@ -54,16 +58,19 @@ ADT_A17_PATIENT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
      - required
+     -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
+     -
      - PV1: Required
 
 .. _hl7-v2_1-BAR_P01_VISIT:
@@ -84,46 +91,55 @@ BAR_P01_VISIT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PV1``
      -
      - Optional[:ref:`PV1 <hl7-v2_1-PV1>`]
      - optional
+     -
      - PV1: Optional
    * - ``DG1``
      -
      - Optional[List[:ref:`DG1 <hl7-v2_1-DG1>`]]
      - optional
+     -
      - DG1: Optional, repeating
    * - ``PR1``
      -
      - Optional[List[:ref:`PR1 <hl7-v2_1-PR1>`]]
      - optional
+     -
      - PR1: Optional, repeating
    * - ``GT1``
      -
      - Optional[List[:ref:`GT1 <hl7-v2_1-GT1>`]]
      - optional
+     -
      - GT1: Optional, repeating
    * - ``NK1``
      -
      - Optional[List[:ref:`NK1 <hl7-v2_1-NK1>`]]
      - optional
+     -
      - NK1: Optional, repeating
    * - ``IN1``
      -
      - Optional[List[:ref:`IN1 <hl7-v2_1-IN1>`]]
      - optional
+     -
      - IN1: Optional, repeating
    * - ``ACC``
      -
      - Optional[:ref:`ACC <hl7-v2_1-ACC>`]
      - optional
+     -
      - ACC: Optional
    * - ``UB1``
      -
      - Optional[:ref:`UB1 <hl7-v2_1-UB1>`]
      - optional
+     -
      - UB1: Optional
 
 .. _hl7-v2_1-BAR_P02_PATIENT:
@@ -144,17 +160,59 @@ BAR_P02_PATIENT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
      - required
+     -
      - PID: Required
    * - ``PV1``
      -
      - Optional[:ref:`PV1 <hl7-v2_1-PV1>`]
      - optional
+     -
      - PV1: Optional
+
+.. _hl7-v2_1-ORM_O01_CHOICE:
+
+.. py:class:: hl7types.hl7.v2_1.groups.ORM_O01_CHOICE.ORM_O01_CHOICE
+   :noindex:
+
+   HL7 v2 ORM_O01.CHOICE group.
+
+ORM_O01_CHOICE
+~~~~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - HL7
+     - Type
+     - Required
+     - Max Length
+     - Description
+   * - ``OBR``
+     -
+     - Optional[:ref:`OBR <hl7-v2_1-OBR>`]
+     - optional
+     -
+     - OBR: Optional
+   * - ``ORO``
+     -
+     - Optional[:ref:`ORO <hl7-v2_1-ORO>`]
+     - optional
+     -
+     - ORO: Optional
+   * - ``RX1``
+     -
+     - Optional[:ref:`RX1 <hl7-v2_1-RX1>`]
+     - optional
+     -
+     - RX1: Optional
 
 .. _hl7-v2_1-ORM_O01_ORDER:
 
@@ -174,21 +232,25 @@ ORM_O01_ORDER
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_1-ORC>`
      - required
+     -
      - ORC: Required
    * - ``ORDER_DETAIL``
      -
      - Optional[:ref:`ORM_O01_ORDER_DETAIL <hl7-v2_1-ORM_O01_ORDER_DETAIL>`]
      - optional
+     -
      - ORDER_DETAIL: Optional
    * - ``BLG``
      -
      - Optional[:ref:`BLG <hl7-v2_1-BLG>`]
      - optional
+     -
      - BLG: Optional
 
 .. _hl7-v2_1-ORM_O01_ORDER_DETAIL:
@@ -209,21 +271,25 @@ ORM_O01_ORDER_DETAIL
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``CHOICE``
      -
      - :ref:`ORM_O01_CHOICE <hl7-v2_1-ORM_O01_CHOICE>`
      - required
+     -
      - CHOICE: Required
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
    * - ``OBX``
      -
      - Optional[List[:ref:`OBX <hl7-v2_1-OBX>`]]
      - optional
+     -
      - OBX: Optional, repeating
 
 .. _hl7-v2_1-ORM_O01_PATIENT:
@@ -244,22 +310,65 @@ ORM_O01_PATIENT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
      - required
+     -
      - PID: Required
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
    * - ``PV1``
      -
      - Optional[:ref:`PV1 <hl7-v2_1-PV1>`]
      - optional
+     -
      - PV1: Optional
+
+.. _hl7-v2_1-ORR_O02_CHOICE:
+
+.. py:class:: hl7types.hl7.v2_1.groups.ORR_O02_CHOICE.ORR_O02_CHOICE
+   :noindex:
+
+   HL7 v2 ORR_O02.CHOICE group.
+
+ORR_O02_CHOICE
+~~~~~~~~~~~~~~
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - HL7
+     - Type
+     - Required
+     - Max Length
+     - Description
+   * - ``OBR``
+     -
+     - Optional[:ref:`OBR <hl7-v2_1-OBR>`]
+     - optional
+     -
+     - OBR: Optional
+   * - ``ORO``
+     -
+     - Optional[:ref:`ORO <hl7-v2_1-ORO>`]
+     - optional
+     -
+     - ORO: Optional
+   * - ``RX1``
+     -
+     - Optional[:ref:`RX1 <hl7-v2_1-RX1>`]
+     - optional
+     -
+     - RX1: Optional
 
 .. _hl7-v2_1-ORR_O02_ORDER:
 
@@ -279,21 +388,25 @@ ORR_O02_ORDER
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_1-ORC>`
      - required
+     -
      - ORC: Required
    * - ``ORDER_DETAIL``
      -
      - Optional[:ref:`ORR_O02_ORDER_DETAIL <hl7-v2_1-ORR_O02_ORDER_DETAIL>`]
      - optional
+     -
      - ORDER_DETAIL: Optional
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
 
 .. _hl7-v2_1-ORR_O02_ORDER_DETAIL:
@@ -314,11 +427,13 @@ ORR_O02_ORDER_DETAIL
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``CHOICE``
      -
      - :ref:`ORR_O02_CHOICE <hl7-v2_1-ORR_O02_CHOICE>`
      - required
+     -
      - CHOICE: Required
 
 .. _hl7-v2_1-ORR_O02_PATIENT:
@@ -339,21 +454,25 @@ ORR_O02_PATIENT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PID``
      -
      - Optional[:ref:`PID <hl7-v2_1-PID>`]
      - optional
+     -
      - PID: Optional
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
    * - ``ORDER``
      -
      - List[:ref:`ORR_O02_ORDER <hl7-v2_1-ORR_O02_ORDER>`]
      - required
+     -
      - ORDER: Required, repeating
 
 .. _hl7-v2_1-ORU_R01_OBSERVATION:
@@ -374,16 +493,19 @@ ORU_R01_OBSERVATION
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``OBX``
      -
      - Optional[:ref:`OBX <hl7-v2_1-OBX>`]
      - optional
+     -
      - OBX: Optional
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
 
 .. _hl7-v2_1-ORU_R01_ORDER_OBSERVATION:
@@ -404,26 +526,31 @@ ORU_R01_ORDER_OBSERVATION
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``ORC``
      -
      - Optional[:ref:`ORC <hl7-v2_1-ORC>`]
      - optional
+     -
      - ORC: Optional
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_1-OBR>`
      - required
+     -
      - OBR: Required
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
    * - ``OBSERVATION``
      -
      - List[:ref:`ORU_R01_OBSERVATION <hl7-v2_1-ORU_R01_OBSERVATION>`]
      - required
+     -
      - OBSERVATION: Required, repeating
 
 .. _hl7-v2_1-ORU_R01_PATIENT:
@@ -444,21 +571,25 @@ ORU_R01_PATIENT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
      - required
+     -
      - PID: Required
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
    * - ``PV1``
      -
      - Optional[:ref:`PV1 <hl7-v2_1-PV1>`]
      - optional
+     -
      - PV1: Optional
 
 .. _hl7-v2_1-ORU_R01_PATIENT_RESULT:
@@ -479,16 +610,19 @@ ORU_R01_PATIENT_RESULT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PATIENT``
      -
      - Optional[:ref:`ORU_R01_PATIENT <hl7-v2_1-ORU_R01_PATIENT>`]
      - optional
+     -
      - PATIENT: Optional
    * - ``ORDER_OBSERVATION``
      -
      - List[:ref:`ORU_R01_ORDER_OBSERVATION <hl7-v2_1-ORU_R01_ORDER_OBSERVATION>`]
      - required
+     -
      - ORDER_OBSERVATION: Required, repeating
 
 .. _hl7-v2_1-ORU_R03_OBSERVATION:
@@ -509,16 +643,19 @@ ORU_R03_OBSERVATION
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``OBX``
      -
      - Optional[:ref:`OBX <hl7-v2_1-OBX>`]
      - optional
+     -
      - OBX: Optional
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
 
 .. _hl7-v2_1-ORU_R03_ORDER_OBSERVATION:
@@ -539,26 +676,31 @@ ORU_R03_ORDER_OBSERVATION
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``ORC``
      -
      - Optional[:ref:`ORC <hl7-v2_1-ORC>`]
      - optional
+     -
      - ORC: Optional
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_1-OBR>`
      - required
+     -
      - OBR: Required
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
    * - ``OBSERVATION``
      -
      - List[:ref:`ORU_R03_OBSERVATION <hl7-v2_1-ORU_R03_OBSERVATION>`]
      - required
+     -
      - OBSERVATION: Required, repeating
 
 .. _hl7-v2_1-ORU_R03_PATIENT:
@@ -579,21 +721,25 @@ ORU_R03_PATIENT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
      - required
+     -
      - PID: Required
    * - ``NTE``
      -
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
+     -
      - NTE: Optional, repeating
    * - ``PV1``
      -
      - Optional[:ref:`PV1 <hl7-v2_1-PV1>`]
      - optional
+     -
      - PV1: Optional
 
 .. _hl7-v2_1-ORU_R03_PATIENT_RESULT:
@@ -614,14 +760,17 @@ ORU_R03_PATIENT_RESULT
      - HL7
      - Type
      - Required
+     - Max Length
      - Description
    * - ``PATIENT``
      -
      - Optional[:ref:`ORU_R03_PATIENT <hl7-v2_1-ORU_R03_PATIENT>`]
      - optional
+     -
      - PATIENT: Optional
    * - ``ORDER_OBSERVATION``
      -
      - List[:ref:`ORU_R03_ORDER_OBSERVATION <hl7-v2_1-ORU_R03_ORDER_OBSERVATION>`]
      - required
+     -
      - ORDER_OBSERVATION: Required, repeating

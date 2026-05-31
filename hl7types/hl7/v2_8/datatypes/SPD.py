@@ -54,6 +54,7 @@ class SPD(HL7Model):
 
     spd_3: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "spd_3",
             "eligible_or_certified",

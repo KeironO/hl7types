@@ -26,6 +26,7 @@ class NR(HL7Model):
 
     nr_1: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "nr_1",
             "low_value",
@@ -37,6 +38,7 @@ class NR(HL7Model):
 
     nr_2: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "nr_2",
             "high_value",

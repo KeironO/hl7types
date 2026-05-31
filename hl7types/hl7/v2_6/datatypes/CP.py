@@ -52,6 +52,7 @@ class CP(HL7Model):
 
     cp_2: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "cp_2",
             "price_type",
@@ -63,6 +64,7 @@ class CP(HL7Model):
 
     cp_3: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "cp_3",
             "from_value",
@@ -74,6 +76,7 @@ class CP(HL7Model):
 
     cp_4: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "cp_4",
             "to_value",
@@ -96,6 +99,7 @@ class CP(HL7Model):
 
     cp_6: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "cp_6",
             "range_type",

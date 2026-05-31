@@ -26,6 +26,7 @@ class QIP(HL7Model):
 
     qip_1: str = Field(
         default=...,
+        max_length=12,
         validation_alias=AliasChoices(
             "qip_1",
             "segment_field_name",

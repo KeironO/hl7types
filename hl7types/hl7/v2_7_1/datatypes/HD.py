@@ -51,6 +51,7 @@ class HD(HL7Model):
 
     hd_3: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "hd_3",
             "universal_id_type",

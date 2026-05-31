@@ -26,6 +26,7 @@ class FC(HL7Model):
 
     fc_1: str = Field(
         default=...,
+        max_length=20,
         validation_alias=AliasChoices(
             "fc_1",
             "financial_class_code",
@@ -37,6 +38,7 @@ class FC(HL7Model):
 
     fc_2: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "fc_2",
             "effective_date",

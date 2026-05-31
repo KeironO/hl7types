@@ -43,6 +43,7 @@ class PRL(HL7Model):
 
     prl_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "prl_2",
             "parent_observation_sub_identifier",

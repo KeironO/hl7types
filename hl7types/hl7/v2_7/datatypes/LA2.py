@@ -213,6 +213,7 @@ class LA2(HL7Model):
 
     la2_14: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "la2_14",
             "country",
@@ -224,6 +225,7 @@ class LA2(HL7Model):
 
     la2_15: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "la2_15",
             "address_type",

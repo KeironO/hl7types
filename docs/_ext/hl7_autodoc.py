@@ -58,6 +58,7 @@ class FieldInfo:
     required: bool
     title: str
     description: str
+    max_length: int | None
 
 
 def _human_version(ver: str) -> str:
@@ -123,6 +124,10 @@ def _parse_file(path: Path) -> tuple[str, str, list[FieldInfo]] | None:
                 n = kwargs.get(key)
                 return n.value if isinstance(n, ast.Constant) and isinstance(n.value, str) else ""
 
+            def _int(key: str) -> int | None:
+                n = kwargs.get(key)
+                return n.value if isinstance(n, ast.Constant) and isinstance(n.value, int) else None
+
             fields.append(
                 FieldInfo(
                     name=fname,
@@ -131,6 +136,7 @@ def _parse_file(path: Path) -> tuple[str, str, list[FieldInfo]] | None:
                     required=required,
                     title=_str("title"),
                     description=_str("description"),
+                    max_length=_int("max_length"),
                 )
             )
 
@@ -170,6 +176,7 @@ def _class_to_rst(
         "     - HL7",
         "     - Type",
         "     - Required",
+        "     - Max Length",
         "     - Description",
     ]
     for fi in fields:
@@ -179,11 +186,13 @@ def _class_to_rst(
         else:
             desc = fi.title or fi.description or ""
         type_cell = _type_rst(fi.annotation, version)
+        max_len = str(fi.max_length) if fi.max_length is not None else ""
         lines += [
             f"   * - ``{fi.name}``",
             f"     - {fi.alias}",
             f"     - {type_cell}",
             f"     - {req}",
+            f"     - {max_len}",
             f"     - {desc}",
         ]
     lines.append("")

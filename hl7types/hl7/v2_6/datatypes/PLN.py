@@ -32,6 +32,7 @@ class PLN(HL7Model):
 
     pln_1: str = Field(
         default=...,
+        max_length=20,
         validation_alias=AliasChoices(
             "pln_1",
             "id_number",
@@ -43,6 +44,7 @@ class PLN(HL7Model):
 
     pln_2: str = Field(
         default=...,
+        max_length=8,
         validation_alias=AliasChoices(
             "pln_2",
             "type_of_id_number",
@@ -54,6 +56,7 @@ class PLN(HL7Model):
 
     pln_3: Optional[str] = Field(
         default=None,
+        max_length=62,
         validation_alias=AliasChoices(
             "pln_3",
             "state_other_qualifying_information",
@@ -65,6 +68,7 @@ class PLN(HL7Model):
 
     pln_4: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "pln_4",
             "expiration_date",

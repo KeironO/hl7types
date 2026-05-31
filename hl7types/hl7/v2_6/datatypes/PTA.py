@@ -34,6 +34,7 @@ class PTA(HL7Model):
 
     pta_1: str = Field(
         default=...,
+        max_length=5,
         validation_alias=AliasChoices(
             "pta_1",
             "policy_type",
@@ -45,6 +46,7 @@ class PTA(HL7Model):
 
     pta_2: Optional[str] = Field(
         default=None,
+        max_length=9,
         validation_alias=AliasChoices(
             "pta_2",
             "amount_class",
@@ -56,6 +58,7 @@ class PTA(HL7Model):
 
     pta_3: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "pta_3",
             "money_or_percentage_quantity",

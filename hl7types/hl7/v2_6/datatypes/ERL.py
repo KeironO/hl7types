@@ -38,6 +38,7 @@ class ERL(HL7Model):
 
     erl_1: str = Field(
         default=...,
+        max_length=3,
         validation_alias=AliasChoices(
             "erl_1",
             "segment_id",
@@ -49,6 +50,7 @@ class ERL(HL7Model):
 
     erl_2: str = Field(
         default=...,
+        max_length=2,
         validation_alias=AliasChoices(
             "erl_2",
             "segment_sequence",
@@ -60,6 +62,7 @@ class ERL(HL7Model):
 
     erl_3: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "erl_3",
             "field_position",
@@ -71,6 +74,7 @@ class ERL(HL7Model):
 
     erl_4: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "erl_4",
             "field_repetition",
@@ -82,6 +86,7 @@ class ERL(HL7Model):
 
     erl_5: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "erl_5",
             "component_number",
@@ -93,6 +98,7 @@ class ERL(HL7Model):
 
     erl_6: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "erl_6",
             "sub_component_number",

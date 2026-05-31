@@ -45,6 +45,7 @@ class DLT(HL7Model):
 
     dlt_2: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "dlt_2",
             "numeric_threshold",
@@ -56,6 +57,7 @@ class DLT(HL7Model):
 
     dlt_3: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "dlt_3",
             "change_computation",
@@ -67,6 +69,7 @@ class DLT(HL7Model):
 
     dlt_4: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "dlt_4",
             "days_retained",

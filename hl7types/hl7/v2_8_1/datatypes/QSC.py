@@ -43,6 +43,7 @@ class QSC(HL7Model):
 
     qsc_2: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "qsc_2",
             "relational_operator",
@@ -65,6 +66,7 @@ class QSC(HL7Model):
 
     qsc_4: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "qsc_4",
             "relational_conjunction",

@@ -84,6 +84,7 @@ class TQ(HL7Model):
 
     tq_3: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "tq_3",
             "duration",
@@ -95,6 +96,7 @@ class TQ(HL7Model):
 
     tq_4: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "tq_4",
             "start_date_time",
@@ -106,6 +108,7 @@ class TQ(HL7Model):
 
     tq_5: Optional[str] = Field(
         default=None,
+        max_length=24,
         validation_alias=AliasChoices(
             "tq_5",
             "end_date_time",
@@ -117,6 +120,7 @@ class TQ(HL7Model):
 
     tq_6: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "tq_6",
             "priority",
@@ -128,6 +132,7 @@ class TQ(HL7Model):
 
     tq_7: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "tq_7",
             "condition",
@@ -150,6 +155,7 @@ class TQ(HL7Model):
 
     tq_9: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "tq_9",
             "conjunction",
@@ -183,6 +189,7 @@ class TQ(HL7Model):
 
     tq_12: Optional[str] = Field(
         default=None,
+        max_length=4,
         validation_alias=AliasChoices(
             "tq_12",
             "total_occurrences",

@@ -66,6 +66,7 @@ class RPT(HL7Model):
 
     rpt_2: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "rpt_2",
             "calendar_alignment",
@@ -121,6 +122,7 @@ class RPT(HL7Model):
 
     rpt_7: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "rpt_7",
             "institution_specified_time",
@@ -132,6 +134,7 @@ class RPT(HL7Model):
 
     rpt_8: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "rpt_8",
             "event",

@@ -65,6 +65,7 @@ class EI(HL7Model):
 
     ei_4: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "ei_4",
             "universal_id_type",

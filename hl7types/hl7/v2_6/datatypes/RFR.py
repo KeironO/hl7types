@@ -55,6 +55,7 @@ class RFR(HL7Model):
 
     rfr_2: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "rfr_2",
             "administrative_sex",
@@ -88,6 +89,7 @@ class RFR(HL7Model):
 
     rfr_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "rfr_5",
             "species",
@@ -99,6 +101,7 @@ class RFR(HL7Model):
 
     rfr_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "rfr_6",
             "race_subspecies",

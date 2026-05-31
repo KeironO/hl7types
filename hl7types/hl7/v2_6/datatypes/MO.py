@@ -26,6 +26,7 @@ class MO(HL7Model):
 
     mo_1: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "mo_1",
             "quantity",
@@ -37,6 +38,7 @@ class MO(HL7Model):
 
     mo_2: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "mo_2",
             "denomination",

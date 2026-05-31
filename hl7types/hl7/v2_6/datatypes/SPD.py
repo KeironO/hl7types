@@ -32,6 +32,7 @@ class SPD(HL7Model):
 
     spd_1: str = Field(
         default=...,
+        max_length=50,
         validation_alias=AliasChoices(
             "spd_1",
             "specialty_name",
@@ -43,6 +44,7 @@ class SPD(HL7Model):
 
     spd_2: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "spd_2",
             "governing_board",
@@ -54,6 +56,7 @@ class SPD(HL7Model):
 
     spd_3: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "spd_3",
             "eligible_or_certified",
@@ -65,6 +68,7 @@ class SPD(HL7Model):
 
     spd_4: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "spd_4",
             "date_of_certification",

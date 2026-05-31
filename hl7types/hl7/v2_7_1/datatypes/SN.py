@@ -32,6 +32,7 @@ class SN(HL7Model):
 
     sn_1: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "sn_1",
             "comparator",
@@ -54,6 +55,7 @@ class SN(HL7Model):
 
     sn_3: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "sn_3",
             "separator_suffix",

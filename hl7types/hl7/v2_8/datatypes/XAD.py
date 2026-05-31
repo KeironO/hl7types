@@ -145,6 +145,7 @@ class XAD(HL7Model):
 
     xad_6: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xad_6",
             "country",
@@ -156,6 +157,7 @@ class XAD(HL7Model):
 
     xad_7: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "xad_7",
             "address_type",
@@ -200,6 +202,7 @@ class XAD(HL7Model):
 
     xad_11: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xad_11",
             "address_representation_code",
@@ -244,6 +247,7 @@ class XAD(HL7Model):
 
     xad_16: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xad_16",
             "temporary_indicator",
@@ -255,6 +259,7 @@ class XAD(HL7Model):
 
     xad_17: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xad_17",
             "bad_address_indicator",
@@ -266,6 +271,7 @@ class XAD(HL7Model):
 
     xad_18: Optional[str] = Field(
         default=None,
+        max_length=1,
         validation_alias=AliasChoices(
             "xad_18",
             "address_usage",

@@ -34,6 +34,7 @@ class ELD(HL7Model):
 
     eld_1: Optional[str] = Field(
         default=None,
+        max_length=3,
         validation_alias=AliasChoices(
             "eld_1",
             "segment_id",
@@ -45,6 +46,7 @@ class ELD(HL7Model):
 
     eld_2: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "eld_2",
             "segment_sequence",
@@ -56,6 +58,7 @@ class ELD(HL7Model):
 
     eld_3: Optional[str] = Field(
         default=None,
+        max_length=2,
         validation_alias=AliasChoices(
             "eld_3",
             "field_position",

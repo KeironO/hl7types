@@ -50,6 +50,7 @@ class LA1(HL7Model):
 
     la1_1: Optional[str] = Field(
         default=None,
+            max_length=20,
         validation_alias=AliasChoices(
             "la1_1",
             "point_of_care",
@@ -61,6 +62,7 @@ class LA1(HL7Model):
 
     la1_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la1_2",
             "room",
@@ -72,6 +74,7 @@ class LA1(HL7Model):
 
     la1_3: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la1_3",
             "bed",
@@ -94,6 +97,7 @@ class LA1(HL7Model):
 
     la1_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la1_5",
             "location_status",
@@ -105,6 +109,7 @@ class LA1(HL7Model):
 
     la1_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la1_6",
             "patient_location_type",
@@ -116,6 +121,7 @@ class LA1(HL7Model):
 
     la1_7: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la1_7",
             "building",
@@ -127,6 +133,7 @@ class LA1(HL7Model):
 
     la1_8: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "la1_8",
             "floor",

@@ -29,6 +29,7 @@ class DLN(HL7Model):
 
     dln_1: str = Field(
         default=...,
+        max_length=20,
         validation_alias=AliasChoices(
             "dln_1",
             "license_number",
@@ -40,6 +41,7 @@ class DLN(HL7Model):
 
     dln_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "dln_2",
             "issuing_state_province_country",
@@ -51,6 +53,7 @@ class DLN(HL7Model):
 
     dln_3: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "dln_3",
             "expiration_date",

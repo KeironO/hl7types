@@ -110,6 +110,7 @@ class CF(HL7Model):
 
     cf_3: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "cf_3",
             "name_of_coding_system",
@@ -143,6 +144,7 @@ class CF(HL7Model):
 
     cf_6: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "cf_6",
             "name_of_alternate_coding_system",
@@ -209,6 +211,7 @@ class CF(HL7Model):
 
     cf_12: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "cf_12",
             "name_of_second_alternate_coding_system",

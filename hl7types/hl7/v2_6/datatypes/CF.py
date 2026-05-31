@@ -40,6 +40,7 @@ class CF(HL7Model):
 
     cf_1: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cf_1",
             "identifier",
@@ -62,6 +63,7 @@ class CF(HL7Model):
 
     cf_3: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cf_3",
             "name_of_coding_system",
@@ -73,6 +75,7 @@ class CF(HL7Model):
 
     cf_4: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cf_4",
             "alternate_identifier",
@@ -95,6 +98,7 @@ class CF(HL7Model):
 
     cf_6: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "cf_6",
             "name_of_alternate_coding_system",

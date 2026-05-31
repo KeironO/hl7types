@@ -32,6 +32,7 @@ class EI(HL7Model):
 
     ei_1: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "ei_1",
             "entity_identifier",
@@ -43,6 +44,7 @@ class EI(HL7Model):
 
     ei_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "ei_2",
             "namespace_id",
@@ -54,6 +56,7 @@ class EI(HL7Model):
 
     ei_3: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "ei_3",
             "universal_id",
@@ -65,6 +68,7 @@ class EI(HL7Model):
 
     ei_4: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "ei_4",
             "universal_id_type",

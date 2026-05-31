@@ -29,6 +29,7 @@ class CCP(HL7Model):
 
     ccp_1: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "ccp_1",
             "channel_calibration_sensitivity_correction_factor",
@@ -40,6 +41,7 @@ class CCP(HL7Model):
 
     ccp_2: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "ccp_2",
             "channel_calibration_baseline",
@@ -51,6 +53,7 @@ class CCP(HL7Model):
 
     ccp_3: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "ccp_3",
             "channel_calibration_time_skew",

@@ -29,6 +29,7 @@ class HD(HL7Model):
 
     hd_1: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "hd_1",
             "namespace_id",
@@ -40,6 +41,7 @@ class HD(HL7Model):
 
     hd_2: Optional[str] = Field(
         default=None,
+        max_length=999,
         validation_alias=AliasChoices(
             "hd_2",
             "universal_id",
@@ -51,6 +53,7 @@ class HD(HL7Model):
 
     hd_3: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "hd_3",
             "universal_id_type",

@@ -41,6 +41,7 @@ class CSU(HL7Model):
 
     csu_1: str = Field(
         default=...,
+        max_length=60,
         validation_alias=AliasChoices(
             "csu_1",
             "channel_sensitivity",
@@ -52,6 +53,7 @@ class CSU(HL7Model):
 
     csu_2: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "csu_2",
             "unit_of_measure_identifier",
@@ -63,6 +65,7 @@ class CSU(HL7Model):
 
     csu_3: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "csu_3",
             "unit_of_measure_description",
@@ -74,6 +77,7 @@ class CSU(HL7Model):
 
     csu_4: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "csu_4",
             "unit_of_measure_coding_system",
@@ -85,6 +89,7 @@ class CSU(HL7Model):
 
     csu_5: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "csu_5",
             "alternate_unit_of_measure_identifier",
@@ -96,6 +101,7 @@ class CSU(HL7Model):
 
     csu_6: Optional[str] = Field(
         default=None,
+        max_length=199,
         validation_alias=AliasChoices(
             "csu_6",
             "alternate_unit_of_measure_description",
@@ -107,6 +113,7 @@ class CSU(HL7Model):
 
     csu_7: Optional[str] = Field(
         default=None,
+        max_length=20,
         validation_alias=AliasChoices(
             "csu_7",
             "alternate_unit_of_measure_coding_system",

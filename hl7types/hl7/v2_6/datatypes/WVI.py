@@ -26,6 +26,7 @@ class WVI(HL7Model):
 
     wvi_1: str = Field(
         default=...,
+        max_length=4,
         validation_alias=AliasChoices(
             "wvi_1",
             "channel_number",
@@ -37,6 +38,7 @@ class WVI(HL7Model):
 
     wvi_2: Optional[str] = Field(
         default=None,
+        max_length=17,
         validation_alias=AliasChoices(
             "wvi_2",
             "channel_name",

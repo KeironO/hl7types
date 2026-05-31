@@ -29,6 +29,7 @@ class SAD(HL7Model):
 
     sad_1: Optional[str] = Field(
         default=None,
+        max_length=120,
         validation_alias=AliasChoices(
             "sad_1",
             "street_or_mailing_address",
@@ -40,6 +41,7 @@ class SAD(HL7Model):
 
     sad_2: Optional[str] = Field(
         default=None,
+        max_length=50,
         validation_alias=AliasChoices(
             "sad_2",
             "street_name",
@@ -51,6 +53,7 @@ class SAD(HL7Model):
 
     sad_3: Optional[str] = Field(
         default=None,
+        max_length=12,
         validation_alias=AliasChoices(
             "sad_3",
             "dwelling_number",

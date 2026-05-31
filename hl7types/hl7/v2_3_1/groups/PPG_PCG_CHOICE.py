@@ -11,10 +11,31 @@ from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
+from ..segments.OBR import OBR
+from ..segments.RXO import RXO
+
+_OBR = OBR
+_RXO = RXO
+
 
 class PPG_PCG_CHOICE(HL7Model):
-    """HL7 v2 PPG_PCG.CHOICE group."""
+    """HL7 v2 PPG_PCG.CHOICE group.
 
-    pass
+    Attributes:
+        OBR (Optional[OBR]): optional
+        RXO (Optional[RXO]): optional
+    """
+
+    OBR: Optional[_OBR] = Field(
+        default=None,
+        title="OBR",
+        description="Optional",
+    )
+
+    RXO: Optional[_RXO] = Field(
+        default=None,
+        title="RXO",
+        description="Optional",
+    )
 
     model_config = {"populate_by_name": True}

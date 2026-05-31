@@ -29,6 +29,7 @@ class MSG(HL7Model):
 
     msg_1: str = Field(
         default=...,
+        max_length=3,
         validation_alias=AliasChoices(
             "msg_1",
             "message_code",
@@ -40,6 +41,7 @@ class MSG(HL7Model):
 
     msg_2: str = Field(
         default=...,
+        max_length=3,
         validation_alias=AliasChoices(
             "msg_2",
             "trigger_event",

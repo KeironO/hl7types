@@ -60,6 +60,7 @@ class PIP(HL7Model):
 
     pip_3: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "pip_3",
             "expiration_date",
@@ -71,6 +72,7 @@ class PIP(HL7Model):
 
     pip_4: Optional[str] = Field(
         default=None,
+        max_length=8,
         validation_alias=AliasChoices(
             "pip_4",
             "activation_date",

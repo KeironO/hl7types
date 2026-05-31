@@ -88,6 +88,7 @@ class CD(HL7Model):
 
     cd_5: Optional[str] = Field(
         default=None,
+        max_length=6,
         validation_alias=AliasChoices(
             "cd_5",
             "channel_sampling_frequency",

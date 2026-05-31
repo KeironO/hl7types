@@ -32,6 +32,7 @@ class NA(HL7Model):
 
     na_1: str = Field(
         default=...,
+        max_length=16,
         validation_alias=AliasChoices(
             "na_1",
             "value1",
@@ -43,6 +44,7 @@ class NA(HL7Model):
 
     na_2: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "na_2",
             "value2",
@@ -54,6 +56,7 @@ class NA(HL7Model):
 
     na_3: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "na_3",
             "value3",
@@ -65,6 +68,7 @@ class NA(HL7Model):
 
     na_4: Optional[str] = Field(
         default=None,
+        max_length=16,
         validation_alias=AliasChoices(
             "na_4",
             "value4",
