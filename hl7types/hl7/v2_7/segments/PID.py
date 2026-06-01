@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.CX import CX
@@ -30,8 +31,8 @@ class PID(HL7Model):
     pid_3 : list[CX]
         PID.3 (req, rep) - Patient Identifier List (CX)
 
-    pid_5 : list[XPN]
-        PID.5 (req, rep) - Patient Name (XPN)
+    pid_5 : list[XPN] | None
+        PID.5 (req, rep) - Patient Name (XPN) [optional: XPN has no required components]
 
     pid_6 : list[XPN] | None
         PID.6 (opt, rep) - Mother's Maiden Name (XPN)
@@ -148,8 +149,8 @@ class PID(HL7Model):
         description="Item #106",
     )
 
-    pid_5: List[XPN] = Field(
-        default=...,
+    pid_5: Optional[List[XPN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "pid_5",
             "patient_name",
@@ -519,5 +520,29 @@ class PID(HL7Model):
         title="Patient Telecommunication Information",
         description="Item #2289",
     )
+
+    @field_validator("pid_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
+
+    @field_validator("pid_7", "pid_29", "pid_33", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
+
+    @field_validator("pid_25", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

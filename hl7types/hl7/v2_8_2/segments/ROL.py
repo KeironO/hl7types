@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
@@ -34,8 +35,8 @@ class ROL(HL7Model):
     rol_3 : CWE
         ROL.3 (req) - Role-ROL (CWE)
 
-    rol_4 : list[XCN]
-        ROL.4 (req, rep) - Role Person (XCN)
+    rol_4 : list[XCN] | None
+        ROL.4 (req, rep) - Role Person (XCN) [optional: XCN has no required components]
 
     rol_5 : str | None
         ROL.5 (opt) - Role Begin Date/Time (DTM)
@@ -104,8 +105,8 @@ class ROL(HL7Model):
         description="Item #1197 | Table HL70443",
     )
 
-    rol_4: List[XCN] = Field(
-        default=...,
+    rol_4: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "rol_4",
             "role_person",
@@ -235,5 +236,13 @@ class ROL(HL7Model):
         title="Organization",
         description="Item #2377",
     )
+
+    @field_validator("rol_5", "rol_6", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

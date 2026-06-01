@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CX import CX
@@ -32,14 +33,14 @@ class PID(HL7Model):
     pid_2 : CX | None
         PID.2 (opt) - Patient ID (CX)
 
-    pid_3 : list[CX]
-        PID.3 (req, rep) - Patient Identifier List (CX)
+    pid_3 : list[CX] | None
+        PID.3 (req, rep) - Patient Identifier List (CX) [optional: CX has no required components]
 
     pid_4 : list[CX] | None
         PID.4 (opt, rep) - Alternate Patient ID - PID (CX)
 
-    pid_5 : list[XPN]
-        PID.5 (req, rep) - Patient Name (XPN)
+    pid_5 : list[XPN] | None
+        PID.5 (req, rep) - Patient Name (XPN) [optional: XPN has no required components]
 
     pid_6 : list[XPN] | None
         PID.6 (opt, rep) - Mother's Maiden Name (XPN)
@@ -165,8 +166,8 @@ class PID(HL7Model):
         description="Item #105",
     )
 
-    pid_3: List[CX] = Field(
-        default=...,
+    pid_3: Optional[List[CX]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "pid_3",
             "patient_identifier_list",
@@ -189,8 +190,8 @@ class PID(HL7Model):
         description="Item #107",
     )
 
-    pid_5: List[XPN] = Field(
-        default=...,
+    pid_5: Optional[List[XPN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "pid_5",
             "patient_name",
@@ -596,5 +597,21 @@ class PID(HL7Model):
         title="Production Class Code",
         description="Item #1542 | Table HL70429",
     )
+
+    @field_validator("pid_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
+
+    @field_validator("pid_25", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

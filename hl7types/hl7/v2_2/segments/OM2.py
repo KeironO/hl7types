@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.TX import TX
@@ -35,8 +36,8 @@ class OM2(HL7Model):
     om2_5 : CE | None
         OM2.5 (opt) - Corresponding SI Units of Measure (CE)
 
-    om2_6 : list[TX]
-        OM2.6 (req, rep) - SI Conversion Factor (TX)
+    om2_6 : list[TX] | None
+        OM2.6 (req, rep) - SI Conversion Factor (TX) [optional: TX has no required components]
 
     om2_7 : list[str] | None
         OM2.7 (opt, rep) - Reference (normal) range - ordinal & continuous observations (CM)
@@ -114,8 +115,8 @@ class OM2(HL7Model):
         description="Item #629",
     )
 
-    om2_6: List[TX] = Field(
-        default=...,
+    om2_6: Optional[List[TX]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "om2_6",
             "si_conversion_factor",
@@ -185,5 +186,13 @@ class OM2(HL7Model):
         title="Minimum Meaningful Increments",
         description="Item #635",
     )
+
+    @field_validator("om2_2", "om2_4", "om2_11", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

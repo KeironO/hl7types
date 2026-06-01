@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.PL import PL
@@ -578,5 +579,21 @@ class PV2(HL7Model):
         title="Baby Detained Indicator",
         description="Item #738 | Table HL70136",
     )
+
+    @field_validator("pv2_10", "pv2_11", "pv2_20", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
+
+    @field_validator("pv2_14", "pv2_17", "pv2_26", "pv2_28", "pv2_29", mode='before')
+    @classmethod
+    def _validate_dt(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2})?)?)?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 date (YYYY[MM[DD]])")
+        return v
 
     model_config = {"populate_by_name": True}

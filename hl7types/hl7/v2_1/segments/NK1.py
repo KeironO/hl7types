@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 
 class NK1(HL7Model):
@@ -92,5 +93,13 @@ class NK1(HL7Model):
         title="NEXT OF KIN - PHONE NUMBER",
         description="Item #230",
     )
+
+    @field_validator("nk1_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
 
     model_config = {"populate_by_name": True}

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -21,8 +22,8 @@ class PDC(HL7Model):
 
     Attributes
     ----------
-    pdc_1 : list[XON]
-        PDC.1 (req, rep) - Manufacturer/Distributor (XON)
+    pdc_1 : list[XON] | None
+        PDC.1 (req, rep) - Manufacturer/Distributor (XON) [optional: XON has no required components]
 
     pdc_2 : CWE
         PDC.2 (req) - Country (CWE)
@@ -67,8 +68,8 @@ class PDC(HL7Model):
         PDC.15 (opt) - Date Last Marketed (DTM)
     """
 
-    pdc_1: List[XON] = Field(
-        default=...,
+    pdc_1: Optional[List[XON]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "pdc_1",
             "manufacturer_distributor",
@@ -246,5 +247,13 @@ class PDC(HL7Model):
         title="Date Last Marketed",
         description="Item #1261",
     )
+
+    @field_validator("pdc_14", "pdc_15", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

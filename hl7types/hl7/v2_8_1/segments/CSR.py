@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.CX import CX
@@ -43,8 +44,8 @@ class CSR(HL7Model):
     csr_7 : list[XCN] | None
         CSR.7 (opt, rep) - Person Performing Study Registration (XCN)
 
-    csr_8 : list[XCN]
-        CSR.8 (req, rep) - Study Authorizing Provider (XCN)
+    csr_8 : list[XCN] | None
+        CSR.8 (req, rep) - Study Authorizing Provider (XCN) [optional: XCN has no required components]
 
     csr_9 : str | None
         CSR.9 (opt) - Date/Time Patient Study Consent Signed (DTM)
@@ -155,8 +156,8 @@ class CSR(HL7Model):
         description="Item #1041",
     )
 
-    csr_8: List[XCN] = Field(
-        default=...,
+    csr_8: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "csr_8",
             "study_authorizing_provider",
@@ -262,5 +263,13 @@ class CSR(HL7Model):
         title="Reason Ended Study",
         description="Item #1050 | Table HL79999",
     )
+
+    @field_validator("csr_6", "csr_9", "csr_11", "csr_15", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

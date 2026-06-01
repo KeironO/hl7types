@@ -50,7 +50,7 @@ class LA1(HL7Model):
 
     la1_1: Optional[str] = Field(
         default=None,
-            max_length=20,
+        max_length=20,
         validation_alias=AliasChoices(
             "la1_1",
             "point_of_care",

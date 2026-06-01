@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CX import CX
@@ -31,8 +32,8 @@ class PID(HL7Model):
     pid_2 : CX | None
         PID.2 (opt) - Patient ID (External ID) (CX)
 
-    pid_3 : list[CX]
-        PID.3 (req, rep) - Patient ID (Internal ID) (CX)
+    pid_3 : list[CX] | None
+        PID.3 (req, rep) - Patient ID (Internal ID) (CX) [optional: CX has no required components]
 
     pid_4 : CX | None
         PID.4 (opt) - Alternate Patient ID (CX)
@@ -140,8 +141,8 @@ class PID(HL7Model):
         description="Item #105",
     )
 
-    pid_3: List[CX] = Field(
-        default=...,
+    pid_3: Optional[List[CX]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "pid_3",
             "patient_id_internal_id",
@@ -475,5 +476,21 @@ class PID(HL7Model):
         title="Patient Death Indicator",
         description="Item #741 | Table HL70136",
     )
+
+    @field_validator("pid_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
+
+    @field_validator("pid_25", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

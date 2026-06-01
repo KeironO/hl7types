@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.XCN import XCN
 from ..datatypes.varies import varies
@@ -29,8 +30,8 @@ class MFE(HL7Model):
     mfe_3 : str | None
         MFE.3 (opt) - Effective Date/Time (DTM)
 
-    mfe_4 : list[varies]
-        MFE.4 (req, rep) - Primary Key Value - MFE (varies)
+    mfe_4 : list[varies] | None
+        MFE.4 (req, rep) - Primary Key Value - MFE (varies) [optional: varies has no required components]
 
     mfe_5 : list[str]
         MFE.5 (req, rep) - Primary Key Value Type (ID)
@@ -78,8 +79,8 @@ class MFE(HL7Model):
         description="Item #662",
     )
 
-    mfe_4: List[varies] = Field(
-        default=...,
+    mfe_4: Optional[List[varies]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "mfe_4",
             "primary_key_value_mfe",
@@ -125,5 +126,13 @@ class MFE(HL7Model):
         title="Entered By",
         description="Item #224",
     )
+
+    @field_validator("mfe_3", "mfe_6", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

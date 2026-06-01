@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -64,8 +65,8 @@ class SCH(HL7Model):
     sch_15 : PL | None
         SCH.15 (opt) - Placer Contact Location (PL)
 
-    sch_16 : list[XCN]
-        SCH.16 (req, rep) - Filler Contact Person (XCN)
+    sch_16 : list[XCN] | None
+        SCH.16 (req, rep) - Filler Contact Person (XCN) [optional: XCN has no required components]
 
     sch_17 : XTN | None
         SCH.17 (opt) - Filler Contact Phone Number (XTN)
@@ -76,8 +77,8 @@ class SCH(HL7Model):
     sch_19 : PL | None
         SCH.19 (opt) - Filler Contact Location (PL)
 
-    sch_20 : list[XCN]
-        SCH.20 (req, rep) - Entered By Person (XCN)
+    sch_20 : list[XCN] | None
+        SCH.20 (req, rep) - Entered By Person (XCN) [optional: XCN has no required components]
 
     sch_21 : list[XTN] | None
         SCH.21 (opt, rep) - Entered By Phone Number (XTN)
@@ -257,8 +258,8 @@ class SCH(HL7Model):
         description="Item #877",
     )
 
-    sch_16: List[XCN] = Field(
-        default=...,
+    sch_16: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "sch_16",
             "filler_contact_person",
@@ -305,8 +306,8 @@ class SCH(HL7Model):
         description="Item #888",
     )
 
-    sch_20: List[XCN] = Field(
-        default=...,
+    sch_20: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "sch_20",
             "entered_by_person",
@@ -400,5 +401,13 @@ class SCH(HL7Model):
         title="Filler Order Number",
         description="Item #217",
     )
+
+    @field_validator("sch_3", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

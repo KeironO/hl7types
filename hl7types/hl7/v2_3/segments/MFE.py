@@ -29,8 +29,8 @@ class MFE(HL7Model):
     mfe_3 : TS | None
         MFE.3 (opt) - Effective Date/Time (TS)
 
-    mfe_4 : list[CE]
-        MFE.4 (req, rep) - Primary Key Value (CE)
+    mfe_4 : list[CE] | None
+        MFE.4 (req, rep) - Primary Key Value (CE) [optional: CE has no required components]
     """
 
     mfe_1: str = Field(
@@ -69,8 +69,8 @@ class MFE(HL7Model):
         description="Item #662",
     )
 
-    mfe_4: List[CE] = Field(
-        default=...,
+    mfe_4: Optional[List[CE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "mfe_4",
             "primary_key_value",

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.TX import TX
 
@@ -25,8 +26,8 @@ class NTE(HL7Model):
     nte_2 : str | None
         NTE.2 (opt) - SOURCE OF COMMENT (ID)
 
-    nte_3 : list[TX]
-        NTE.3 (req, rep) - COMMENT (TX)
+    nte_3 : list[TX] | None
+        NTE.3 (req, rep) - COMMENT (TX) [optional: TX has no required components]
     """
 
     nte_1: Optional[str] = Field(
@@ -53,8 +54,8 @@ class NTE(HL7Model):
         description="Item #574 | Table HL70105",
     )
 
-    nte_3: List[TX] = Field(
-        default=...,
+    nte_3: Optional[List[TX]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "nte_3",
             "comment",
@@ -64,5 +65,13 @@ class NTE(HL7Model):
         title="COMMENT",
         description="Item #575",
     )
+
+    @field_validator("nte_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
 
     model_config = {"populate_by_name": True}

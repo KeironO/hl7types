@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -23,8 +24,8 @@ class DPS(HL7Model):
     dps_1 : CWE
         DPS.1 (req) - Diagnosis Code - MCP (CWE)
 
-    dps_2 : list[CWE]
-        DPS.2 (req, rep) - Procedure Code (CWE)
+    dps_2 : list[CWE] | None
+        DPS.2 (req, rep) - Procedure Code (CWE) [optional: CWE has no required components]
 
     dps_3 : str | None
         DPS.3 (opt) - Effective Date/Time (DTM)
@@ -48,8 +49,8 @@ class DPS(HL7Model):
         description="Item #3472 | Table HL70051",
     )
 
-    dps_2: List[CWE] = Field(
-        default=...,
+    dps_2: Optional[List[CWE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "dps_2",
             "procedure_code",
@@ -95,5 +96,13 @@ class DPS(HL7Model):
         title="Type of Limitation",
         description="Item #3474 | Table HL70940",
     )
+
+    @field_validator("dps_3", "dps_4", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

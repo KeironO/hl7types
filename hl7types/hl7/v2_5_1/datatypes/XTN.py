@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 
 class XTN(HL7Model):
@@ -185,5 +186,13 @@ class XTN(HL7Model):
         serialization_alias="XTN.12",
         title="Unformatted Telephone number",
     )
+
+    @field_validator("xtn_5", "xtn_6", "xtn_7", "xtn_8", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

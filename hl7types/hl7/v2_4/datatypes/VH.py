@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 
 class VH(HL7Model):
@@ -73,5 +74,13 @@ class VH(HL7Model):
         serialization_alias="VH.4",
         title="end hour range",
     )
+
+    @field_validator("vh_3", "vh_4", mode='before')
+    @classmethod
+    def _validate_tm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 time")
+        return v
 
     model_config = {"populate_by_name": True}

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.PL import PL
@@ -25,8 +26,8 @@ class PRD(HL7Model):
 
     Attributes
     ----------
-    prd_1 : list[CWE]
-        PRD.1 (req, rep) - Provider Role (CWE)
+    prd_1 : list[CWE] | None
+        PRD.1 (req, rep) - Provider Role (CWE) [optional: CWE has no required components]
 
     prd_2 : list[XPN] | None
         PRD.2 (opt, rep) - Provider Name (XPN)
@@ -68,8 +69,8 @@ class PRD(HL7Model):
         PRD.14 (opt) - Provider Organization Method of Contact (CWE)
     """
 
-    prd_1: List[CWE] = Field(
-        default=...,
+    prd_1: Optional[List[CWE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "prd_1",
             "provider_role",
@@ -235,5 +236,13 @@ class PRD(HL7Model):
         title="Provider Organization Method of Contact",
         description="Item #2260 | Table HL70185",
     )
+
+    @field_validator("prd_8", "prd_9", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

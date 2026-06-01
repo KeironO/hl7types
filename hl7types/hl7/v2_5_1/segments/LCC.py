@@ -29,8 +29,8 @@ class LCC(HL7Model):
     lcc_3 : list[CE] | None
         LCC.3 (opt, rep) - Accommodation Type (CE)
 
-    lcc_4 : list[CE]
-        LCC.4 (req, rep) - Charge Code (CE)
+    lcc_4 : list[CE] | None
+        LCC.4 (req, rep) - Charge Code (CE) [optional: CE has no required components]
     """
 
     lcc_1: PL = Field(
@@ -69,8 +69,8 @@ class LCC(HL7Model):
         description="Item #980 | Table HL70129",
     )
 
-    lcc_4: List[CE] = Field(
-        default=...,
+    lcc_4: Optional[List[CE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "lcc_4",
             "charge_code",

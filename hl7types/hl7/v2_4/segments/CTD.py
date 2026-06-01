@@ -24,8 +24,8 @@ class CTD(HL7Model):
 
     Attributes
     ----------
-    ctd_1 : list[CE]
-        CTD.1 (req, rep) - Contact Role (CE)
+    ctd_1 : list[CE] | None
+        CTD.1 (req, rep) - Contact Role (CE) [optional: CE has no required components]
 
     ctd_2 : list[XPN] | None
         CTD.2 (opt, rep) - Contact Name (XPN)
@@ -46,8 +46,8 @@ class CTD(HL7Model):
         CTD.7 (opt, rep) - Contact Identifiers (PI)
     """
 
-    ctd_1: List[CE] = Field(
-        default=...,
+    ctd_1: Optional[List[CE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "ctd_1",
             "contact_role",

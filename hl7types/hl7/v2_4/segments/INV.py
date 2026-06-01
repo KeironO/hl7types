@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.TQ import TQ
@@ -24,8 +25,8 @@ class INV(HL7Model):
     inv_1 : CE
         INV.1 (req) - Substance Identifier (CE)
 
-    inv_2 : list[CE]
-        INV.2 (req, rep) - Substance Status (CE)
+    inv_2 : list[CE] | None
+        INV.2 (req, rep) - Substance Status (CE) [optional: CE has no required components]
 
     inv_3 : CE | None
         INV.3 (opt) - Substance Type (CE)
@@ -88,8 +89,8 @@ class INV(HL7Model):
         description="Item #1372 | Table HL70451",
     )
 
-    inv_2: List[CE] = Field(
-        default=...,
+    inv_2: Optional[List[CE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "inv_2",
             "substance_status",
@@ -291,5 +292,13 @@ class INV(HL7Model):
         title="Supplier Identifier",
         description="Item #1389 | Table HL70386",
     )
+
+    @field_validator("inv_7", "inv_8", "inv_9", "inv_10", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

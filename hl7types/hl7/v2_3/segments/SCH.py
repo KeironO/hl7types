@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.EI import EI
@@ -55,8 +56,8 @@ class SCH(HL7Model):
     sch_10 : CE | None
         SCH.10 (opt) - Appointment Duration Units (CE)
 
-    sch_11 : list[TQ]
-        SCH.11 (req, rep) - Appointment Timing Quantity (TQ)
+    sch_11 : list[TQ] | None
+        SCH.11 (req, rep) - Appointment Timing Quantity (TQ) [optional: TQ has no required components]
 
     sch_12 : XCN | None
         SCH.12 (opt) - Placer Contact Person (XCN)
@@ -221,8 +222,8 @@ class SCH(HL7Model):
         description="Item #869",
     )
 
-    sch_11: List[TQ] = Field(
-        default=...,
+    sch_11: Optional[List[TQ]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "sch_11",
             "appointment_timing_quantity",
@@ -400,5 +401,13 @@ class SCH(HL7Model):
         title="Filler Status Code",
         description="Item #889 | Table HL70278",
     )
+
+    @field_validator("sch_3", "sch_9", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

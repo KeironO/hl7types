@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.TQ import TQ
@@ -381,5 +382,13 @@ class RXE(HL7Model):
         title="Give Rate Units",
         description="Item #333",
     )
+
+    @field_validator("rxe_3", "rxe_4", "rxe_10", "rxe_12", "rxe_16", "rxe_17", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 
@@ -28,8 +29,8 @@ class CM2(HL7Model):
     cm2_3 : str | None
         CM2.3 (opt) - Description of Time Point (ST)
 
-    cm2_4 : list[CWE]
-        CM2.4 (req, rep) - Events Scheduled This Time Point (CWE)
+    cm2_4 : list[CWE] | None
+        CM2.4 (req, rep) - Events Scheduled This Time Point (CWE) [optional: CWE has no required components]
     """
 
     cm2_1: Optional[str] = Field(
@@ -68,8 +69,8 @@ class CM2(HL7Model):
         description="Item #1026",
     )
 
-    cm2_4: List[CWE] = Field(
-        default=...,
+    cm2_4: Optional[List[CWE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "cm2_4",
             "events_scheduled_this_time_point",
@@ -79,5 +80,13 @@ class CM2(HL7Model):
         title="Events Scheduled This Time Point",
         description="Item #1027",
     )
+
+    @field_validator("cm2_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
 
     model_config = {"populate_by_name": True}

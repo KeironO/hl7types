@@ -4,6 +4,8 @@ Source: https://github.com/hapifhir/hapi-hl7v2/blob/master/hapi-core/src/test/ja
 """
 from __future__ import annotations
 
+from pydantic import ValidationError
+import pytest
 from hl7types.hl7.v2_5.datatypes.NR import NR
 
 
@@ -38,22 +40,21 @@ def test_primitive_component_set_get() -> None:
     When setting values on primitive components, they should be retrievable.
     """
     # Test with simple values
-    nr1 = NR(nr_1="AAAA", nr_2="BBBB")
-    assert nr1.nr_1 == "AAAA"
-    assert nr1.nr_2 == "BBBB"
+    nr1 = NR(nr_1="0.1", nr_2="0.2")
+    assert nr1.nr_1 == "0.1"
+    assert nr1.nr_2 == "0.2"
 
-    # Test with empty string
-    nr2 = NR(nr_1="", nr_2="value")
-    assert nr2.nr_1 == ""
-    assert nr2.nr_2 == "value"
+    nr2 = NR(nr_1="1.0", nr_2="2.0")
+    assert nr2.nr_1 == "1.0"
+    assert nr2.nr_2 == "2.0"
 
     # Test with space
-    nr3 = NR(nr_1=" ", nr_2="value")
-    assert nr3.nr_1 == " "
+    with pytest.raises(ValidationError):
+        nr3 = NR(nr_1=" ", nr_2="value")
 
     # Test with complex string
-    nr4 = NR(nr_1="1234aBCDerfgkyuy", nr_2="value")
-    assert nr4.nr_1 == "1234aBCDerfgkyuy"
+    with pytest.raises(ValidationError):
+        nr4 = NR(nr_1="1234aBCDerfgkyuy", nr_2="value")
 
 
 def test_composite_serialisation() -> None:
