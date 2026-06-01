@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.EI import EI
@@ -95,5 +96,13 @@ class VND(HL7Model):
         title="Primary Vendor Indicator",
         description="Item #2220 | Table HL70532",
     )
+
+    @field_validator("vnd_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
 
     model_config = {"populate_by_name": True}

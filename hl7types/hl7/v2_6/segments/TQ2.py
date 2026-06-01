@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.EI import EI
@@ -170,5 +171,21 @@ class TQ2(HL7Model):
         title="Special Service Request Relationship",
         description="Item #1657 | Table HL70506",
     )
+
+    @field_validator("tq2_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
+
+    @field_validator("tq2_9", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CQ import CQ
@@ -231,5 +232,13 @@ class OM4(HL7Model):
         title="Specimen Retention Time",
         description="Item #654",
     )
+
+    @field_validator("om4_1", "om4_4", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

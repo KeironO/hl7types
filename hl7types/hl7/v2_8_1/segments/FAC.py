@@ -28,8 +28,8 @@ class FAC(HL7Model):
     fac_2 : str | None
         FAC.2 (opt) - Facility Type (ID)
 
-    fac_3 : list[XAD]
-        FAC.3 (req, rep) - Facility Address (XAD)
+    fac_3 : list[XAD] | None
+        FAC.3 (req, rep) - Facility Address (XAD) [optional: XAD has no required components]
 
     fac_4 : XTN
         FAC.4 (req) - Facility Telecommunication (XTN)
@@ -46,8 +46,8 @@ class FAC(HL7Model):
     fac_8 : list[XTN] | None
         FAC.8 (opt, rep) - Contact Telecommunication (XTN)
 
-    fac_9 : list[XCN]
-        FAC.9 (req, rep) - Signature Authority (XCN)
+    fac_9 : list[XCN] | None
+        FAC.9 (req, rep) - Signature Authority (XCN) [optional: XCN has no required components]
 
     fac_10 : str | None
         FAC.10 (opt) - Signature Authority Title (ST)
@@ -83,8 +83,8 @@ class FAC(HL7Model):
         description="Item #1263 | Table HL70331",
     )
 
-    fac_3: List[XAD] = Field(
-        default=...,
+    fac_3: Optional[List[XAD]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "fac_3",
             "facility_address",
@@ -155,8 +155,8 @@ class FAC(HL7Model):
         description="Item #1269",
     )
 
-    fac_9: List[XCN] = Field(
-        default=...,
+    fac_9: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "fac_9",
             "signature_authority",

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -493,5 +494,13 @@ class ORC(HL7Model):
         title="Parent Universal Service Identifier",
         description="Item #2287",
     )
+
+    @field_validator("orc_9", "orc_15", "orc_27", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

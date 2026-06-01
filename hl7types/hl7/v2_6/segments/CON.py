@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -92,8 +93,8 @@ class CON(HL7Model):
     con_23 : CWE | None
         CON.23 (opt) - Non-subject Consenter Reason (CWE)
 
-    con_24 : list[XPN]
-        CON.24 (req, rep) - Consenter ID (XPN)
+    con_24 : list[XPN] | None
+        CON.24 (req, rep) - Consenter ID (XPN) [optional: XPN has no required components]
 
     con_25 : list[str]
         CON.25 (req, rep) - Relationship to Subject (IS)
@@ -375,8 +376,8 @@ class CON(HL7Model):
         description="Item #1798 | Table HL70502",
     )
 
-    con_24: List[XPN] = Field(
-        default=...,
+    con_24: Optional[List[XPN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "con_24",
             "consenter_id",
@@ -398,5 +399,21 @@ class CON(HL7Model):
         title="Relationship to Subject",
         description="Item #1898 | Table HL70548",
     )
+
+    @field_validator("con_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
+
+    @field_validator("con_12", "con_13", "con_14", "con_15", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

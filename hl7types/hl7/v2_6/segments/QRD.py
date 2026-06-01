@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -43,14 +44,14 @@ class QRD(HL7Model):
     qrd_7 : CQ
         QRD.7 (req) - Quantity Limited Request (CQ)
 
-    qrd_8 : list[XCN]
-        QRD.8 (req, rep) - Who Subject Filter (XCN)
+    qrd_8 : list[XCN] | None
+        QRD.8 (req, rep) - Who Subject Filter (XCN) [optional: XCN has no required components]
 
-    qrd_9 : list[CWE]
-        QRD.9 (req, rep) - What Subject Filter (CWE)
+    qrd_9 : list[CWE] | None
+        QRD.9 (req, rep) - What Subject Filter (CWE) [optional: CWE has no required components]
 
-    qrd_10 : list[CWE]
-        QRD.10 (req, rep) - What Department Data Code (CWE)
+    qrd_10 : list[CWE] | None
+        QRD.10 (req, rep) - What Department Data Code (CWE) [optional: CWE has no required components]
 
     qrd_11 : list[VR] | None
         QRD.11 (opt, rep) - What Data Code Value Qual. (VR)
@@ -143,8 +144,8 @@ class QRD(HL7Model):
         description="Item #31 | Table HL70126",
     )
 
-    qrd_8: List[XCN] = Field(
-        default=...,
+    qrd_8: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "qrd_8",
             "who_subject_filter",
@@ -155,8 +156,8 @@ class QRD(HL7Model):
         description="Item #32",
     )
 
-    qrd_9: List[CWE] = Field(
-        default=...,
+    qrd_9: Optional[List[CWE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "qrd_9",
             "what_subject_filter",
@@ -167,8 +168,8 @@ class QRD(HL7Model):
         description="Item #33 | Table HL70048",
     )
 
-    qrd_10: List[CWE] = Field(
-        default=...,
+    qrd_10: Optional[List[CWE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "qrd_10",
             "what_department_data_code",
@@ -202,5 +203,13 @@ class QRD(HL7Model):
         title="Query Results Level",
         description="Item #36 | Table HL70108",
     )
+
+    @field_validator("qrd_1", "qrd_6", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

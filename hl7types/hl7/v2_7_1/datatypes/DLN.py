@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from .CWE import CWE
 
@@ -61,5 +62,13 @@ class DLN(HL7Model):
         serialization_alias="DLN.3",
         title="Expiration Date",
     )
+
+    @field_validator("dln_3", mode='before')
+    @classmethod
+    def _validate_dt(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2})?)?)?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 date (YYYY[MM[DD]])")
+        return v
 
     model_config = {"populate_by_name": True}

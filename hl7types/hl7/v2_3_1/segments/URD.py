@@ -27,8 +27,8 @@ class URD(HL7Model):
     urd_2 : str | None
         URD.2 (opt) - Report Priority (ID)
 
-    urd_3 : list[XCN]
-        URD.3 (req, rep) - R/U Who Subject Definition (XCN)
+    urd_3 : list[XCN] | None
+        URD.3 (req, rep) - R/U Who Subject Definition (XCN) [optional: XCN has no required components]
 
     urd_4 : list[CE] | None
         URD.4 (opt, rep) - R/U What Subject Definition (CE)
@@ -67,8 +67,8 @@ class URD(HL7Model):
         description="Item #46 | Table HL70109",
     )
 
-    urd_3: List[XCN] = Field(
-        default=...,
+    urd_3: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "urd_3",
             "r_u_who_subject_definition",

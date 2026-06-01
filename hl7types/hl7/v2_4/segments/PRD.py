@@ -25,8 +25,8 @@ class PRD(HL7Model):
 
     Attributes
     ----------
-    prd_1 : list[CE]
-        PRD.1 (req, rep) - Provider Role (CE)
+    prd_1 : list[CE] | None
+        PRD.1 (req, rep) - Provider Role (CE) [optional: CE has no required components]
 
     prd_2 : list[XPN] | None
         PRD.2 (opt, rep) - Provider Name (XPN)
@@ -53,8 +53,8 @@ class PRD(HL7Model):
         PRD.9 (opt) - Effective End Date of Provider Role (TS)
     """
 
-    prd_1: List[CE] = Field(
-        default=...,
+    prd_1: Optional[List[CE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "prd_1",
             "provider_role",

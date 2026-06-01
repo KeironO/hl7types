@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 
 class UB2(HL7Model):
@@ -257,5 +258,13 @@ class UB2(HL7Model):
         title="UB92 Locator 78 (state)",
         description="Item #568",
     )
+
+    @field_validator("ub2_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
 
     model_config = {"populate_by_name": True}

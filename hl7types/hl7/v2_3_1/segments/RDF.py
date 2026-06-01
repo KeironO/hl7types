@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.RCD import RCD
 
@@ -22,8 +23,8 @@ class RDF(HL7Model):
     rdf_1 : str
         RDF.1 (req) - Number of Columns per Row (NM)
 
-    rdf_2 : list[RCD]
-        RDF.2 (req, rep) - Column Description (RCD)
+    rdf_2 : list[RCD] | None
+        RDF.2 (req, rep) - Column Description (RCD) [optional: RCD has no required components]
     """
 
     rdf_1: str = Field(
@@ -38,8 +39,8 @@ class RDF(HL7Model):
         description="Item #701",
     )
 
-    rdf_2: List[RCD] = Field(
-        default=...,
+    rdf_2: Optional[List[RCD]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "rdf_2",
             "column_description",
@@ -49,5 +50,13 @@ class RDF(HL7Model):
         title="Column Description",
         description="Item #702",
     )
+
+    @field_validator("rdf_1", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

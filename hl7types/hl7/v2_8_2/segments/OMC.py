@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
@@ -33,8 +34,8 @@ class OMC(HL7Model):
     omc_4 : CWE
         OMC.4 (req) - Clinical Information Request (CWE)
 
-    omc_5 : list[CWE]
-        OMC.5 (req, rep) - Collection Event/Process Step (CWE)
+    omc_5 : list[CWE] | None
+        OMC.5 (req, rep) - Collection Event/Process Step (CWE) [optional: CWE has no required components]
 
     omc_6 : CWE
         OMC.6 (req) - Communication Location (CWE)
@@ -109,8 +110,8 @@ class OMC(HL7Model):
         description="Item #3444 | Table HL79999",
     )
 
-    omc_5: List[CWE] = Field(
-        default=...,
+    omc_5: Optional[List[CWE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "omc_5",
             "collection_event_process_step",
@@ -216,5 +217,13 @@ class OMC(HL7Model):
         title="Number of Decimals",
         description="Item #3453",
     )
+
+    @field_validator("omc_1", "omc_12", "omc_13", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

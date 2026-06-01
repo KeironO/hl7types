@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.TX import TX
 
@@ -94,5 +95,13 @@ class DSP(HL7Model):
         title="RESULT ID",
         description="Item #599",
     )
+
+    @field_validator("dsp_1", "dsp_2", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
 
     model_config = {"populate_by_name": True}

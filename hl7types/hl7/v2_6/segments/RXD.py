@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -518,5 +519,21 @@ class RXD(HL7Model):
         title="Dispense Type",
         description="Item #1691 | Table HL70484",
     )
+
+    @field_validator("rxd_1", "rxd_4", "rxd_8", "rxd_16", "rxd_22", "rxd_28", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
+
+    @field_validator("rxd_3", "rxd_19", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

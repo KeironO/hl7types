@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from .CWE import CWE
 from .EI import EI
@@ -272,5 +273,21 @@ class XTN(HL7Model):
         serialization_alias="XTN.18",
         title="Preference Order",
     )
+
+    @field_validator("xtn_5", "xtn_6", "xtn_7", "xtn_8", "xtn_18", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
+
+    @field_validator("xtn_13", "xtn_14", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

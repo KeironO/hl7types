@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -23,8 +24,8 @@ class INV(HL7Model):
     inv_1 : CWE
         INV.1 (req) - Substance Identifier (CWE)
 
-    inv_2 : list[CWE]
-        INV.2 (req, rep) - Substance Status (CWE)
+    inv_2 : list[CWE] | None
+        INV.2 (req, rep) - Substance Status (CWE) [optional: CWE has no required components]
 
     inv_3 : CWE | None
         INV.3 (opt) - Substance Type (CWE)
@@ -90,8 +91,8 @@ class INV(HL7Model):
         description="Item #1372 | Table HL70451",
     )
 
-    inv_2: List[CWE] = Field(
-        default=...,
+    inv_2: Optional[List[CWE]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "inv_2",
             "substance_status",
@@ -305,5 +306,21 @@ class INV(HL7Model):
         title="Target Value",
         description="Item #1896",
     )
+
+    @field_validator("inv_7", "inv_8", "inv_9", "inv_10", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
+
+    @field_validator("inv_12", "inv_13", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.CWE import CWE
@@ -33,8 +34,8 @@ class GT1(HL7Model):
     gt1_2 : list[CX] | None
         GT1.2 (opt, rep) - Guarantor Number (CX)
 
-    gt1_3 : list[XPN]
-        GT1.3 (req, rep) - Guarantor Name (XPN)
+    gt1_3 : list[XPN] | None
+        GT1.3 (req, rep) - Guarantor Name (XPN) [optional: XPN has no required components]
 
     gt1_4 : list[XPN] | None
         GT1.4 (opt, rep) - Guarantor Spouse Name (XPN)
@@ -223,8 +224,8 @@ class GT1(HL7Model):
         description="Item #406",
     )
 
-    gt1_3: List[XPN] = Field(
-        default=...,
+    gt1_3: Optional[List[XPN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "gt1_3",
             "guarantor_name",
@@ -882,5 +883,37 @@ class GT1(HL7Model):
         title="VIP Indicator",
         description="Item #146 | Table HL70099",
     )
+
+    @field_validator("gt1_1", mode='before')
+    @classmethod
+    def _validate_si(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or a non-negative integer")
+        return v
+
+    @field_validator("gt1_8", "gt1_24", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
+
+    @field_validator("gt1_13", "gt1_14", "gt1_31", "gt1_32", mode='before')
+    @classmethod
+    def _validate_dt(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2})?)?)?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 date (YYYY[MM[DD]])")
+        return v
+
+    @field_validator("gt1_15", "gt1_28", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

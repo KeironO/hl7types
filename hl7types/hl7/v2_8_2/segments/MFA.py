@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.varies import varies
@@ -32,8 +33,8 @@ class MFA(HL7Model):
     mfa_4 : CWE
         MFA.4 (req) - MFN Record Level Error Return (CWE)
 
-    mfa_5 : list[varies]
-        MFA.5 (req, rep) - Primary Key Value - MFA (varies)
+    mfa_5 : list[varies] | None
+        MFA.5 (req, rep) - Primary Key Value - MFA (varies) [optional: varies has no required components]
 
     mfa_6 : list[str]
         MFA.6 (req, rep) - Primary Key Value Type - MFA (ID)
@@ -87,8 +88,8 @@ class MFA(HL7Model):
         description="Item #669 | Table HL70181",
     )
 
-    mfa_5: List[varies] = Field(
-        default=...,
+    mfa_5: Optional[List[varies]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "mfa_5",
             "primary_key_value_mfa",
@@ -110,5 +111,13 @@ class MFA(HL7Model):
         title="Primary Key Value Type - MFA",
         description="Item #1320 | Table HL70355",
     )
+
+    @field_validator("mfa_3", mode='before')
+    @classmethod
+    def _validate_dtm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
+        return v
 
     model_config = {"populate_by_name": True}

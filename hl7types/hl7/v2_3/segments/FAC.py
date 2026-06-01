@@ -22,8 +22,8 @@ class FAC(HL7Model):
 
     Attributes
     ----------
-    fac_1 : list[EI]
-        FAC.1 (req, rep) - Facility ID (EI)
+    fac_1 : list[EI] | None
+        FAC.1 (req, rep) - Facility ID (EI) [optional: EI has no required components]
 
     fac_2 : str | None
         FAC.2 (opt) - Facility Type (ID)
@@ -59,8 +59,8 @@ class FAC(HL7Model):
         FAC.12 (opt) - Signature Authority Telecommunication (XTN)
     """
 
-    fac_1: List[EI] = Field(
-        default=...,
+    fac_1: Optional[List[EI]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "fac_1",
             "facility_id",

@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.AD import AD
 from ..datatypes.CE import CE
@@ -730,5 +731,13 @@ class OM1(HL7Model):
         title="Modality of imaging measurement",
         description="Item #942",
     )
+
+    @field_validator("om1_1", "om1_23", "om1_24", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

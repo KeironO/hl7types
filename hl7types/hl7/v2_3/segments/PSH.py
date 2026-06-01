@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.FT import FT
@@ -231,5 +232,13 @@ class PSH(HL7Model):
         title="Number of Product Experience Reports Filed by Distributor",
         description="Item #1246",
     )
+
+    @field_validator("psh_13", "psh_14", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

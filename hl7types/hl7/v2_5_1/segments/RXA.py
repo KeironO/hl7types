@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CWE import CWE
@@ -413,5 +414,13 @@ class RXA(HL7Model):
         title="Pharmacy Order Type",
         description="Item #1699 | Table HL70480",
     )
+
+    @field_validator("rxa_1", "rxa_2", "rxa_6", "rxa_13", "rxa_23", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

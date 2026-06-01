@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CP import CP
@@ -26,8 +27,8 @@ class PRC(HL7Model):
     prc_1 : CE
         PRC.1 (req) - Primary Key Value (CE)
 
-    prc_2 : list[EI]
-        PRC.2 (req, rep) - Facility ID (EI)
+    prc_2 : list[EI] | None
+        PRC.2 (req, rep) - Facility ID (EI) [optional: EI has no required components]
 
     prc_3 : list[CE] | None
         PRC.3 (opt, rep) - Department (CE)
@@ -90,8 +91,8 @@ class PRC(HL7Model):
         description="Item #982 | Table HL70132",
     )
 
-    prc_2: List[EI] = Field(
-        default=...,
+    prc_2: Optional[List[EI]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "prc_2",
             "facility_id",
@@ -293,5 +294,13 @@ class PRC(HL7Model):
         title="Charge On Indicator",
         description="Item #1009 | Table HL70269",
     )
+
+    @field_validator("prc_7", "prc_8", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

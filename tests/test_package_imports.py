@@ -24,7 +24,7 @@ def test_message_import_returns_class() -> None:
 def test_imported_class_is_instantiable() -> None:
     from hl7types.hl7.v2_1.segments import MSH
 
-    msh = MSH(msh_9="ACK", msh_10="1", msh_11="P", msh_12="2.5.1")
+    msh = MSH(msh_9="ACK", msh_10="1", msh_11="P", msh_12="2.1")
     assert msh.msh_9 == "ACK"
 
 

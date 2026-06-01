@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -69,8 +70,8 @@ class ARQ(HL7Model):
     arq_14 : str | None
         ARQ.14 (opt) - Repeating Interval Duration (ST)
 
-    arq_15 : list[XCN]
-        ARQ.15 (req, rep) - Placer Contact Person (XCN)
+    arq_15 : list[XCN] | None
+        ARQ.15 (req, rep) - Placer Contact Person (XCN) [optional: XCN has no required components]
 
     arq_16 : list[XTN] | None
         ARQ.16 (opt, rep) - Placer Contact Phone Number (XTN)
@@ -81,8 +82,8 @@ class ARQ(HL7Model):
     arq_18 : PL | None
         ARQ.18 (opt) - Placer Contact Location (PL)
 
-    arq_19 : list[XCN]
-        ARQ.19 (req, rep) - Entered By Person (XCN)
+    arq_19 : list[XCN] | None
+        ARQ.19 (req, rep) - Entered By Person (XCN) [optional: XCN has no required components]
 
     arq_20 : list[XTN] | None
         ARQ.20 (opt, rep) - Entered By Phone Number (XTN)
@@ -271,8 +272,8 @@ class ARQ(HL7Model):
         description="Item #873",
     )
 
-    arq_15: List[XCN] = Field(
-        default=...,
+    arq_15: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "arq_15",
             "placer_contact_person",
@@ -319,8 +320,8 @@ class ARQ(HL7Model):
         description="Item #877",
     )
 
-    arq_19: List[XCN] = Field(
-        default=...,
+    arq_19: Optional[List[XCN]] = Field(
+        default=None,
         validation_alias=AliasChoices(
             "arq_19",
             "entered_by_person",
@@ -402,5 +403,13 @@ class ARQ(HL7Model):
         title="Filler Order Number",
         description="Item #217",
     )
+
+    @field_validator("arq_3", "arq_9", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}

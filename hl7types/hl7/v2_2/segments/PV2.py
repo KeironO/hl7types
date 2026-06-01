@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional, List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 from ..datatypes.CE import CE
 
@@ -154,5 +155,13 @@ class PV2(HL7Model):
         title="Expected Discharge Date",
         description="Item #189",
     )
+
+    @field_validator("pv2_8", "pv2_9", mode='before')
+    @classmethod
+    def _validate_dt(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\d{4}([01]\d(\d{2})?)?)?', v or ''):
+            raise ValueError(f"{v!r} is not empty or a valid HL7 date (YYYY[MM[DD]])")
+        return v
 
     model_config = {"populate_by_name": True}

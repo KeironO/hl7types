@@ -10,6 +10,7 @@ from __future__ import annotations
 from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
+from pydantic import field_validator
 
 
 class CM_DLT(HL7Model):
@@ -73,5 +74,13 @@ class CM_DLT(HL7Model):
         serialization_alias="CM_DLT.4",
         title="length of time-days",
     )
+
+    @field_validator("cm_dlt_2", "cm_dlt_4", mode='before')
+    @classmethod
+    def _validate_nm(cls, v: str) -> str:
+        import re
+        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+            raise ValueError(f"{v!r} is not empty or numeric")
+        return v
 
     model_config = {"populate_by_name": True}
