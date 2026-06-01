@@ -8,7 +8,6 @@ Notes:
 """
 from __future__ import annotations
 
-from hl7types.hl7.v2_5.messages.ADT_A01 import ADT_A01
 from hl7types.hl7.v2_5.segments.MSH import MSH
 from hl7types.hl7.v2_5.datatypes.MSG import MSG
 from hl7types.hl7.v2_5.datatypes.HD import HD
