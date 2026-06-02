@@ -1715,8 +1715,8 @@ MFA
      - Error return code and/or text: Item #669 | Table HL70181
    * - ``mfa_5``
      - MFA.5
-     - List[:ref:`CE <hl7-v2_2-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_2-CE>`]]
+     - optional
      -
      - Primary key value: Item #667
 
@@ -1760,8 +1760,8 @@ MFE
      - Effective date / time: Item #662
    * - ``mfe_4``
      - MFE.4
-     - List[:ref:`CE <hl7-v2_2-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_2-CE>`]]
+     - optional
      -
      - Primary key value: Item #667
 
@@ -2819,8 +2819,8 @@ ODS
      - Service Period: Item #270
    * - ``ods_3``
      - ODS.3
-     - List[:ref:`CE <hl7-v2_2-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_2-CE>`]]
+     - optional
      -
      - Diet, Supplement, or Preference Code: Item #271
    * - ``ods_4``
@@ -3194,8 +3194,8 @@ OM2
      - Corresponding SI Units of Measure: Item #629
    * - ``om2_6``
      - OM2.6
-     - List[:ref:`TX <hl7-v2_2-TX>`]
-     - required
+     - Optional[List[:ref:`TX <hl7-v2_2-TX>`]]
+     - optional
      -
      - SI Conversion Factor: Item #630
    * - ``om2_7``

@@ -151,6 +151,44 @@ def decode_er7_segment(
     *,
     strict: bool = False,
 ) -> BaseModel:
+    """Decode a single ER7 segment string into a typed segment model.
+
+    Parameters
+    ----------
+    seg_str : str
+        A single ER7 segment string, e.g. ``"MSA|AA|MSG001"``.
+    seg_cls : type[BaseModel]
+        The segment model class to decode into.
+    enc : EncodingChars, optional
+        Delimiter characters to use for decoding. For delimiter-definition
+        segments (``MSH``, ``FHS``, ``BHS``), the encoding characters are
+        read from the segment string itself and override this value. Defaults
+        to the standard HL7 encoding characters.
+    strict : bool, optional
+        If ``True``, raises ``pydantic.ValidationError`` when required fields
+        are absent. If ``False``, missing required fields are filled with
+        empty placeholder values and a ``UserWarning`` is emitted. Defaults
+        to ``False``.
+
+    Returns
+    -------
+    BaseModel
+        A validated instance of ``seg_cls``.
+
+    Raises
+    ------
+    pydantic.ValidationError
+        If ``strict=True`` and required fields are missing, or if any field
+        value fails format validation.
+
+    Examples
+    --------
+    >>> from hl7types.hl7.v2_5_1.segments import MSA
+    >>> from hl7types.codecs.er7.decoder import decode_er7_segment
+    >>> seg = decode_er7_segment("MSA|AA|MSG001", MSA)
+    >>> seg.msa_1
+    'AA'
+    """
     seg_name = seg_cls.__name__
 
     if seg_name in DELIM_DEF and len(seg_str) > 3:
@@ -393,6 +431,55 @@ def decode_er7(
     strict: bool = True,
     registry: HL7Registry | None = None,
 ) -> BaseModel:
+    """Decode an ER7 wire string into a typed message model.
+
+    When ``msg_cls`` is not provided, the message class is resolved
+    automatically from ``MSH.9`` (message type) and ``MSH.12`` (version) in
+    the wire string. Encoding characters are read from the delimiter-definition
+    segment in the wire and applied consistently throughout decoding.
+
+    Parameters
+    ----------
+    wire : str
+        A complete ER7-encoded message string with segments separated by
+        ``segment_separator``.
+    msg_cls : type[BaseModel], optional
+        The message model class to decode into. If ``None``, the class is
+        resolved dynamically from ``MSH.9`` and ``MSH.12``.
+    segment_separator : str, optional
+        Character used to split segments. Defaults to ``"\\r"``.
+    strict : bool, optional
+        If ``True``, raises ``pydantic.ValidationError`` when required fields
+        or segments are absent. If ``False``, missing required fields are
+        filled with empty placeholder values and a ``UserWarning`` is emitted.
+        Defaults to ``True``.
+    registry : HL7Registry, optional
+        Registry of custom segment and message classes. Consulted when the
+        decoder encounters a segment or message type not present in the
+        generated specification models.
+
+    Returns
+    -------
+    BaseModel
+        A validated instance of the resolved or provided message class.
+
+    Raises
+    ------
+    ValueError
+        If the wire string is empty, no MSH segment is found, or the message
+        type or version cannot be resolved to a known model class.
+    pydantic.ValidationError
+        If ``strict=True`` and required fields or segments are missing, or if
+        any field value fails format validation.
+
+    Examples
+    --------
+    >>> from hl7types import decode_er7
+    >>> wire = "MSH|^~\\\\&|SEND||RECV||20260101||ACK|001|P|2.5.1\\rMSA|AA|001"
+    >>> msg = decode_er7(wire)
+    >>> msg.MSA.msa_1
+    'AA'
+    """
     seg_strings = _split_segments(wire, segment_separator)
     if not seg_strings:
         raise ValueError("Empty wire string")

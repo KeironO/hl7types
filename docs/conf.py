@@ -32,8 +32,7 @@ extensions = [
 templates_path = ["_templates"]
 exclude_patterns = ["_build", "Thumbs.db", ".DS_Store"]
 suppress_warnings = []
-# Skip viewcode source links for generated HL7 modules — linking ~10k classes
-# to source adds significant build time for no user value.
+
 viewcode_exclude_modules = [r"hl7types\.hl7\..*"]
 
 language = "en"
@@ -68,8 +67,8 @@ autosummary_imported_members = False
 
 # -- Napoleon ----------------------------------------------------------------
 
-napoleon_google_docstring = True
-napoleon_numpy_docstring = False
+napoleon_google_docstring = False
+napoleon_numpy_docstring = True
 
 # -- HTML output -------------------------------------------------------------
 
