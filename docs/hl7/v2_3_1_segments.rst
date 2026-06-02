@@ -671,8 +671,8 @@ ARQ
      - Repeating Interval Duration: Item #873
    * - ``arq_15``
      - ARQ.15
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Placer Contact Person: Item #874
    * - ``arq_16``
@@ -695,8 +695,8 @@ ARQ
      - Placer Contact Location: Item #877
    * - ``arq_19``
      - ARQ.19
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Entered by Person: Item #878
    * - ``arq_20``
@@ -1241,8 +1241,8 @@ CM2
      - Description of Time Point: Item #1026
    * - ``cm2_4``
      - CM2.4
-     - List[:ref:`CE <hl7-v2_3_1-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_3_1-CE>`]]
+     - optional
      -
      - Events Scheduled This Time Point: Item #1027
 
@@ -1355,8 +1355,8 @@ CSR
      - Person Performing Study Registration: Item #1041
    * - ``csr_8``
      - CSR.8
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Study Authorizing Provider: Item #1042
    * - ``csr_9``
@@ -2018,8 +2018,8 @@ ERR
      - Description
    * - ``err_1``
      - ERR.1
-     - List[:ref:`ELD <hl7-v2_3_1-ELD>`]
-     - required
+     - Optional[List[:ref:`ELD <hl7-v2_3_1-ELD>`]]
+     - optional
      -
      - Error Code and Location: Item #24
 
@@ -2114,8 +2114,8 @@ FAC
      - Facility Type: Item #1263 | Table HL70331
    * - ``fac_3``
      - FAC.3
-     - List[:ref:`XAD <hl7-v2_3_1-XAD>`]
-     - required
+     - Optional[List[:ref:`XAD <hl7-v2_3_1-XAD>`]]
+     - optional
      -
      - Facility Address: Item #1264
    * - ``fac_4``
@@ -2150,8 +2150,8 @@ FAC
      - Contact Telecommunication: Item #1269
    * - ``fac_9``
      - FAC.9
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Signature Authority: Item #1270
    * - ``fac_10``
@@ -2657,8 +2657,8 @@ GT1
      - Guarantor Number: Item #406
    * - ``gt1_3``
      - GT1.3
-     - List[:ref:`XPN <hl7-v2_3_1-XPN>`]
-     - required
+     - Optional[List[:ref:`XPN <hl7-v2_3_1-XPN>`]]
+     - optional
      -
      - Guarantor Name: Item #407
    * - ``gt1_4``
@@ -3008,8 +3008,8 @@ IN1
      - Insurance Plan ID: Item #368 | Table HL70072
    * - ``in1_3``
      - IN1.3
-     - List[:ref:`CX <hl7-v2_3_1-CX>`]
-     - required
+     - Optional[List[:ref:`CX <hl7-v2_3_1-CX>`]]
+     - optional
      -
      - Insurance Company ID: Item #428
    * - ``in1_4``
@@ -3953,8 +3953,8 @@ LCC
      - Accommodation Type: Item #980 | Table HL70129
    * - ``lcc_4``
      - LCC.4
-     - List[:ref:`CE <hl7-v2_3_1-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_3_1-CE>`]]
+     - optional
      -
      - Charge Code: Item #981 | Table HL70132
 
@@ -4268,8 +4268,8 @@ MFA
      - MFN Record Level Error Return: Item #669 | Table HL70181
    * - ``mfa_5``
      - MFA.5
-     - List[:ref:`CE <hl7-v2_3_1-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_3_1-CE>`]]
+     - optional
      -
      - Primary Key Value – MFA: Item #1308
    * - ``mfa_6``
@@ -4409,8 +4409,8 @@ MRG
      - Description
    * - ``mrg_1``
      - MRG.1
-     - List[:ref:`CX <hl7-v2_3_1-CX>`]
-     - required
+     - Optional[List[:ref:`CX <hl7-v2_3_1-CX>`]]
+     - optional
      -
      - Prior Patient Identifier List: Item #211
    * - ``mrg_2``
@@ -5630,8 +5630,8 @@ ODS
      - Service Period: Item #270
    * - ``ods_3``
      - ODS.3
-     - List[:ref:`CE <hl7-v2_3_1-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_3_1-CE>`]]
+     - optional
      -
      - Diet, Supplement, or Preference Code: Item #271
    * - ``ods_4``
@@ -6743,8 +6743,8 @@ PDC
      - Description
    * - ``pdc_1``
      - PDC.1
-     - List[:ref:`XON <hl7-v2_3_1-XON>`]
-     - required
+     - Optional[List[:ref:`XON <hl7-v2_3_1-XON>`]]
+     - optional
      -
      - Manufacturer/Distributor: Item #1247
    * - ``pdc_2``
@@ -7136,8 +7136,8 @@ PID
      - Patient ID: Item #105
    * - ``pid_3``
      - PID.3
-     - List[:ref:`CX <hl7-v2_3_1-CX>`]
-     - required
+     - Optional[List[:ref:`CX <hl7-v2_3_1-CX>`]]
+     - optional
      -
      - Patient Identifier List: Item #106
    * - ``pid_4``
@@ -7148,8 +7148,8 @@ PID
      - Alternate Patient ID - PID: Item #107
    * - ``pid_5``
      - PID.5
-     - List[:ref:`XPN <hl7-v2_3_1-XPN>`]
-     - required
+     - Optional[List[:ref:`XPN <hl7-v2_3_1-XPN>`]]
+     - optional
      -
      - Patient Name: Item #108
    * - ``pid_6``
@@ -7811,8 +7811,8 @@ PRD
      - Description
    * - ``prd_1``
      - PRD.1
-     - List[:ref:`CE <hl7-v2_3_1-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_3_1-CE>`]]
+     - optional
      -
      - Provider Role: Item #1155 | Table HL70286
    * - ``prd_2``
@@ -8699,20 +8699,20 @@ QRD
      - Quantity Limited Request: Item #31 | Table HL70126
    * - ``qrd_8``
      - QRD.8
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Who Subject Filter: Item #32
    * - ``qrd_9``
      - QRD.9
-     - List[:ref:`CE <hl7-v2_3_1-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_3_1-CE>`]]
+     - optional
      -
      - What Subject Filter: Item #33 | Table HL70048
    * - ``qrd_10``
      - QRD.10
-     - List[:ref:`CE <hl7-v2_3_1-CE>`]
-     - required
+     - Optional[List[:ref:`CE <hl7-v2_3_1-CE>`]]
+     - optional
      -
      - What Department Data Code: Item #34
    * - ``qrd_11``
@@ -8831,8 +8831,8 @@ RDF
      - Number of Columns per Row: Item #701
    * - ``rdf_2``
      - RDF.2
-     - List[:ref:`RCD <hl7-v2_3_1-RCD>`]
-     - required
+     - Optional[List[:ref:`RCD <hl7-v2_3_1-RCD>`]]
+     - optional
      -
      - Column Description: Item #702
 
@@ -9029,8 +9029,8 @@ ROL
      - Role-ROL: Item #1197
    * - ``rol_4``
      - ROL.4
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Role Person: Item #1198
    * - ``rol_5``
@@ -10223,8 +10223,8 @@ SCH
      - Appointment Duration Units: Item #869
    * - ``sch_11``
      - SCH.11
-     - List[:ref:`TQ <hl7-v2_3_1-TQ>`]
-     - required
+     - Optional[List[:ref:`TQ <hl7-v2_3_1-TQ>`]]
+     - optional
      -
      - Appointment Timing Quantity: Item #884
    * - ``sch_12``
@@ -10253,8 +10253,8 @@ SCH
      - Placer Contact Location: Item #877
    * - ``sch_16``
      - SCH.16
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Filler Contact Person: Item #885
    * - ``sch_17``
@@ -10277,8 +10277,8 @@ SCH
      - Filler Contact Location: Item #888
    * - ``sch_20``
      - SCH.20
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - Entered by Person: Item #878
    * - ``sch_21``
@@ -11009,8 +11009,8 @@ URD
      - Report Priority: Item #46 | Table HL70109
    * - ``urd_3``
      - URD.3
-     - List[:ref:`XCN <hl7-v2_3_1-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_3_1-XCN>`]]
+     - optional
      -
      - R/U Who Subject Definition: Item #47
    * - ``urd_4``

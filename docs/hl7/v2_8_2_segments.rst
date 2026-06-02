@@ -986,8 +986,8 @@ ARQ
      - Repeating Interval Duration: Item #873
    * - ``arq_15``
      - ARQ.15
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Placer Contact Person: Item #874
    * - ``arq_16``
@@ -1010,8 +1010,8 @@ ARQ
      - Placer Contact Location: Item #877
    * - ``arq_19``
      - ARQ.19
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Entered By Person: Item #878
    * - ``arq_20``
@@ -2528,8 +2528,8 @@ CM2
      - Description of Time Point: Item #1026
    * - ``cm2_4``
      - CM2.4
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Events Scheduled This Time Point: Item #1027
 
@@ -2750,14 +2750,14 @@ CON
      - Non-subject Consenter Reason: Item #1798 | Table HL70502
    * - ``con_24``
      - CON.24
-     - List[:ref:`XPN <hl7-v2_8_2-XPN>`]
-     - required
+     - Optional[List[:ref:`XPN <hl7-v2_8_2-XPN>`]]
+     - optional
      -
      - Consenter ID: Item #1909
    * - ``con_25``
      - CON.25
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Relationship to Subject: Item #1898 | Table HL70548
 
@@ -2870,8 +2870,8 @@ CSR
      - Person Performing Study Registration: Item #1041
    * - ``csr_8``
      - CSR.8
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Study Authorizing Provider: Item #1042
    * - ``csr_9``
@@ -2984,8 +2984,8 @@ CTD
      - Description
    * - ``ctd_1``
      - CTD.1
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Contact Role: Item #196 | Table HL70131
    * - ``ctd_2``
@@ -3503,8 +3503,8 @@ DON
      - Number of Tubes Collected: Item #3369
    * - ``don_31``
      - DON.31
-     - List[:ref:`EI <hl7-v2_8_2-EI>`]
-     - required
+     - Optional[List[:ref:`EI <hl7-v2_8_2-EI>`]]
+     - optional
      -
      - Donation Sample Identifier: Item #3370
    * - ``don_32``
@@ -3515,8 +3515,8 @@ DON
      - Donation Accept Staff: Item #3371
    * - ``don_33``
      - DON.33
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Donation Material Review Staff: Item #3372
 
@@ -3548,8 +3548,8 @@ DPS
      - Diagnosis Code - MCP: Item #3472 | Table HL70051
    * - ``dps_2``
      - DPS.2
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Procedure Code: Item #3484 | Table HL70941
    * - ``dps_3``
@@ -4106,8 +4106,8 @@ EQU
      - Description
    * - ``equ_1``
      - EQU.1
-     - List[:ref:`EI <hl7-v2_8_2-EI>`]
-     - required
+     - Optional[List[:ref:`EI <hl7-v2_8_2-EI>`]]
+     - optional
      -
      - Equipment Instance Identifier: Item #1479
    * - ``equ_2``
@@ -4313,8 +4313,8 @@ FAC
      - Facility Type: Item #1263 | Table HL70331
    * - ``fac_3``
      - FAC.3
-     - List[:ref:`XAD <hl7-v2_8_2-XAD>`]
-     - required
+     - Optional[List[:ref:`XAD <hl7-v2_8_2-XAD>`]]
+     - optional
      -
      - Facility Address: Item #1264
    * - ``fac_4``
@@ -4349,8 +4349,8 @@ FAC
      - Contact Telecommunication: Item #1269
    * - ``fac_9``
      - FAC.9
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Signature Authority: Item #1270
    * - ``fac_10``
@@ -5114,8 +5114,8 @@ GT1
      - Guarantor Number: Item #406
    * - ``gt1_3``
      - GT1.3
-     - List[:ref:`XPN <hl7-v2_8_2-XPN>`]
-     - required
+     - Optional[List[:ref:`XPN <hl7-v2_8_2-XPN>`]]
+     - optional
      -
      - Guarantor Name: Item #407
    * - ``gt1_4``
@@ -6878,8 +6878,8 @@ INV
      - Substance Identifier: Item #1372 | Table HL70451
    * - ``inv_2``
      - INV.2
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Substance Status: Item #1373 | Table HL70383
    * - ``inv_3``
@@ -7850,8 +7850,8 @@ LCC
      - Accommodation Type: Item #980 | Table HL70129
    * - ``lcc_4``
      - LCC.4
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Charge Code: Item #981 | Table HL70132
 
@@ -8033,8 +8033,8 @@ LOC
      - Location Description: Item #944
    * - ``loc_3``
      - LOC.3
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Location Type - LOC: Item #945 | Table HL70260
    * - ``loc_4``
@@ -8228,8 +8228,8 @@ MFA
      - MFN Record Level Error Return: Item #669 | Table HL70181
    * - ``mfa_5``
      - MFA.5
-     - List[varies]
-     - required
+     - Optional[List[varies]]
+     - optional
      -
      - Primary Key Value - MFA: Item #1308 | Table HL79999
    * - ``mfa_6``
@@ -8279,8 +8279,8 @@ MFE
      - Effective Date/Time: Item #662
    * - ``mfe_4``
      - MFE.4
-     - List[varies]
-     - required
+     - Optional[List[varies]]
+     - optional
      -
      - Primary Key Value - MFE: Item #667 | Table HL79999
    * - ``mfe_5``
@@ -9809,8 +9809,8 @@ ODS
      - Service Period: Item #270 | Table HL79999
    * - ``ods_3``
      - ODS.3
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Diet, Supplement, or Preference Code: Item #271 | Table HL79999
    * - ``ods_4``
@@ -10790,8 +10790,8 @@ OMC
      - Clinical Information Request: Item #3444 | Table HL79999
    * - ``omc_5``
      - OMC.5
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Collection Event/Process Step: Item #3445 | Table HL70938
    * - ``omc_6``
@@ -11729,8 +11729,8 @@ PDC
      - Description
    * - ``pdc_1``
      - PDC.1
-     - List[:ref:`XON <hl7-v2_8_2-XON>`]
-     - required
+     - Optional[List[:ref:`XON <hl7-v2_8_2-XON>`]]
+     - optional
      -
      - Manufacturer/Distributor: Item #1247
    * - ``pdc_2``
@@ -12122,8 +12122,8 @@ PID
      - Patient Identifier List: Item #106
    * - ``pid_5``
      - PID.5
-     - List[:ref:`XPN <hl7-v2_8_2-XPN>`]
-     - required
+     - Optional[List[:ref:`XPN <hl7-v2_8_2-XPN>`]]
+     - optional
      -
      - Patient Name: Item #108 | Table HL70200
    * - ``pid_6``
@@ -13208,8 +13208,8 @@ PRD
      - Description
    * - ``prd_1``
      - PRD.1
-     - List[:ref:`CWE <hl7-v2_8_2-CWE>`]
-     - required
+     - Optional[List[:ref:`CWE <hl7-v2_8_2-CWE>`]]
+     - optional
      -
      - Provider Role: Item #1155 | Table HL70286
    * - ``prd_2``
@@ -15005,8 +15005,8 @@ RDF
      - Number of Columns per Row: Item #701
    * - ``rdf_2``
      - RDF.2
-     - List[:ref:`RCD <hl7-v2_8_2-RCD>`]
-     - required
+     - Optional[List[:ref:`RCD <hl7-v2_8_2-RCD>`]]
+     - optional
      -
      - Column Description: Item #702 | Table HL70440
 
@@ -15488,8 +15488,8 @@ ROL
      - Role-ROL: Item #1197 | Table HL70443
    * - ``rol_4``
      - ROL.4
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Role Person: Item #1198
    * - ``rol_5``
@@ -17747,8 +17747,8 @@ SCH
      - Placer Contact Location: Item #877
    * - ``sch_16``
      - SCH.16
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Filler Contact Person: Item #885
    * - ``sch_17``
@@ -17771,8 +17771,8 @@ SCH
      - Filler Contact Location: Item #888
    * - ``sch_20``
      - SCH.20
-     - List[:ref:`XCN <hl7-v2_8_2-XCN>`]
-     - required
+     - Optional[List[:ref:`XCN <hl7-v2_8_2-XCN>`]]
+     - optional
      -
      - Entered By Person: Item #878
    * - ``sch_21``

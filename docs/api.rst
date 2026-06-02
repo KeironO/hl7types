@@ -1,37 +1,9 @@
 API Reference
 =============
 
-Core
-----
+.. toctree::
+   :maxdepth: 1
 
-.. automodule:: hl7types
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-HL7 Model
----------
-
-.. autoclass:: hl7types.hl7.HL7Model
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Registry
---------
-
-.. automodule:: hl7types.registry
-   :members:
-   :undoc-members:
-   :show-inheritance:
-
-Codecs
-------
-
-.. automodule:: hl7types.codecs.er7.encoder
-   :members:
-   :undoc-members:
-
-.. automodule:: hl7types.codecs.er7.decoder
-   :members:
-   :undoc-members:
+   api/core
+   api/registry
+   api/codecs

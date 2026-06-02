@@ -1724,8 +1724,8 @@ NTE
      - SOURCE OF COMMENT: Item #574 | Table HL70105
    * - ``nte_3``
      - NTE.3
-     - List[:ref:`TX <hl7-v2_1-TX>`]
-     - required
+     - Optional[List[:ref:`TX <hl7-v2_1-TX>`]]
+     - optional
      -
      - COMMENT: Item #575
 

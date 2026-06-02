@@ -147,6 +147,29 @@ def _collect_segments(obj: BaseModel) -> list[BaseModel]:
 
 
 def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) -> str:
+    """Encode a single segment model to an ER7 segment string.
+
+    Parameters
+    ----------
+    seg : BaseModel
+        The segment model instance to encode.
+    enc : EncodingChars, optional
+        Delimiter characters to use. Defaults to the standard HL7 encoding
+        characters (``|``, ``^``, ``~``, ``\\``, ``&``).
+
+    Returns
+    -------
+    str
+        A single ER7 segment string with no trailing separator, e.g.
+        ``"MSA|AA|MSG001"``.
+
+    Examples
+    --------
+    >>> from hl7types.hl7.v2_5_1.segments import MSA
+    >>> from hl7types.codecs.er7.encoder import encode_er7_segment
+    >>> encode_er7_segment(MSA(msa_1="AA", msa_2="MSG001"))
+    'MSA|AA|MSG001'
+    """
     seg_name = type(seg).__name__
     d = seg.model_dump(by_alias=True)
     pm = _pos_map(d)
@@ -181,6 +204,33 @@ def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) ->
 
 
 def encode_er7(model: BaseModel, segment_separator: str = "\r") -> str:
+    """Encode a message or segment model to an ER7 wire string.
+
+    Encoding characters are read from the delimiter-definition segment
+    (``MSH``, ``FHS``, or ``BHS``) in the model if present, falling back to
+    the standard HL7 defaults.
+
+    Parameters
+    ----------
+    model : BaseModel
+        The message, group, or segment model instance to encode.
+    segment_separator : str, optional
+        Character used to join segments. The HL7 v2 specification mandates a
+        carriage return (``\\r``, ASCII 0x0D). Defaults to ``"\\r"``.
+
+    Returns
+    -------
+    str
+        ER7-encoded wire string with segments joined by ``segment_separator``.
+        Returns an empty string if the model contains no encodable segments.
+
+    Examples
+    --------
+    >>> from hl7types.hl7.v2_5_1.segments import MSA
+    >>> from hl7types.codecs.er7.encoder import encode_er7
+    >>> encode_er7(MSA(msa_1="AA", msa_2="MSG001"))
+    'MSA|AA|MSG001'
+    """
     if is_segment(model):
         return encode_er7_segment(model)
 
