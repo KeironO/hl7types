@@ -14,7 +14,7 @@ from hl7types.profiles.parser.constraints import (
 def _parse_sub_component(elem: ET.Element) -> SubComponentConstraint:
     return SubComponentConstraint(
         name=elem.get("name", ""),
-        usage=Usage.get(elem.get("usage"), "O"),
+        usage=Usage.get(elem.get("Usage"), "O"),
         datatype=elem.get("Datatype", ""),
         length=int(elem.get("Length")) if elem.get("Length") else None,
         table=elem.get("Table"),
@@ -25,7 +25,7 @@ def _parse_component(elem: ET.Element) -> SubComponentConstraint:
     predicate = elem.find("Predicate")
     return SubComponentConstraint(
         name=elem.get("Name", ""),
-        usage=Usage.get(elem.get("usage"), "O"),
+        usage=Usage.get(elem.get("Usage"), "O"),
         datatype=elem.get("Datatype", ""),
         length=int(elem.get("Length")) if elem.get("Length") else None,
         table=elem.get("Table"),
@@ -50,7 +50,18 @@ def _parse_field(elem: ET.Element) -> FieldConstraint:
         item_no=elem.get("ItemNo"),
         length=int(elem.get("Length")) if elem.get("Length") else None,
         table=elem.get("Table"),
-        components=[_parse_component(sc) for sc in elem.findall("Component")],
+        components=[_parse_component(c) for c in elem.findall("Component")],
+    )
+
+
+def _parse_segment(elem: ET.Element) -> SegmentConstraint:
+    return SegmentConstraint(
+        name=elem.get("Name", ""),
+        long_name=elem.get("LongName", ""),
+        usage=Usage.get(elem.get("Usage"), "O"),
+        min=int(elem.get("Min", "0")),
+        max=_max(elem.get("Max", "*")),
+        fields=[_parse_field(f) for f in elem.findall("Field")],
     )
 
 
