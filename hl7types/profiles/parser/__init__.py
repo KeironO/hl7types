@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from hl7types.profiles.parser.constraints import (
+    FieldConstraint,
     ProfileConstraints,
     SegGroupConstraint,
     SegmentConstraint,
@@ -13,11 +14,28 @@ from hl7types.profiles.parser.constraints import (
 def _parse_sub_component(elem: ET.Element) -> SubComponentConstraint:
     return SubComponentConstraint(
         name=elem.get("name", ""),
-        usage=Usage.get(elem.get("usage"), "O") if elem.get("usage") else Usage.OPTIONAL,
-        datatype=elem.get("DAtatype", ""),
+        usage=Usage.get(elem.get("usage"), "O"),
+        datatype=elem.get("Datatype", ""),
         length=int(elem.get("Length")) if elem.get("Length") else None,
         table=elem.get("Table"),
     )
+
+
+def _parse_component(elem: ET.Element) -> SubComponentConstraint:
+    predicate = elem.find("Predicate")
+    return SubComponentConstraint(
+        name=elem.get("Name", ""),
+        usage=Usage.get(elem.get("usage"), "O"),
+        datatype=elem.get("Datatype", ""),
+        length=int(elem.get("Length")) if elem.get("Length") else None,
+        table=elem.get("Table"),
+        predicate=predicate.text.strip() if predicate is not None and predicate.text else None,
+        sub_components=[_parse_sub_component(sc) for sc in elem.findall("SubComponent")],
+    )
+
+
+def _parse_field(elem: ET.Element) -> FieldConstraint:
+    return FieldConstraint()
 
 
 def parse_tables(path: str | Path) -> dict[str, dict[str, set[str]]]:
