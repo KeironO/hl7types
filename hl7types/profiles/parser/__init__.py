@@ -2,6 +2,7 @@ import xml.etree.ElementTree as ET
 from pathlib import Path
 
 from hl7types.profiles.parser.constraints import (
+    ComponentConstraint,
     FieldConstraint,
     ProfileConstraints,
     SegGroupConstraint,
@@ -11,21 +12,33 @@ from hl7types.profiles.parser.constraints import (
 )
 
 
+def _parse_usage(value: str | None, default: str = "O") -> Usage:
+    value = value or default
+
+    try:
+        return Usage(value)
+    except ValueError:
+        try:
+            return Usage[value]
+        except KeyError as exc:
+            raise ValueError(f"Unknown usage value: {value!r}") from exc
+
+
 def _parse_sub_component(elem: ET.Element) -> SubComponentConstraint:
     return SubComponentConstraint(
-        name=elem.get("name", ""),
-        usage=Usage.get(elem.get("Usage"), "O"),
+        name=elem.get("Name", ""),
+        usage=_parse_usage(elem.get("Usage")),
         datatype=elem.get("Datatype", ""),
         length=int(elem.get("Length")) if elem.get("Length") else None,
         table=elem.get("Table"),
     )
 
 
-def _parse_component(elem: ET.Element) -> SubComponentConstraint:
+def _parse_component(elem: ET.Element) -> ComponentConstraint:
     predicate = elem.find("Predicate")
-    return SubComponentConstraint(
+    return ComponentConstraint(
         name=elem.get("Name", ""),
-        usage=Usage.get(elem.get("Usage"), "O"),
+        usage=_parse_usage(elem.get("Usage")),
         datatype=elem.get("Datatype", ""),
         length=int(elem.get("Length")) if elem.get("Length") else None,
         table=elem.get("Table"),
@@ -34,11 +47,10 @@ def _parse_component(elem: ET.Element) -> SubComponentConstraint:
     )
 
 
-def _max(value: str) -> int | None:
-    if value == "*":
+def _max(value: str | None) -> int | None:
+    if value in (None, "*"):
         return None
-    else:
-        return int(value)
+    return int(value)
 
 
 def _parse_field(elem: ET.Element) -> FieldConstraint:
@@ -47,6 +59,7 @@ def _parse_field(elem: ET.Element) -> FieldConstraint:
         datatype=elem.get("Datatype", ""),
         min=int(elem.get("Min", "0")),
         max=_max(elem.get("Max", "*")),
+        usage=_parse_usage(elem.get("Usage")),
         item_no=elem.get("ItemNo"),
         length=int(elem.get("Length")) if elem.get("Length") else None,
         table=elem.get("Table"),
@@ -58,7 +71,7 @@ def _parse_segment(elem: ET.Element) -> SegmentConstraint:
     return SegmentConstraint(
         name=elem.get("Name", ""),
         long_name=elem.get("LongName", ""),
-        usage=Usage.get(elem.get("Usage"), "O"),
+        usage=_parse_usage(elem.get("Usage")),
         min=int(elem.get("Min", "0")),
         max=_max(elem.get("Max", "*")),
         fields=[_parse_field(f) for f in elem.findall("Field")],
@@ -76,17 +89,18 @@ def _parse_seg_group(elem: ET.Element) -> SegGroupConstraint:
     return SegGroupConstraint(
         name=elem.get("Name", ""),
         long_name=elem.get("LongName", ""),
-        usage=Usage.get(elem.get("Usage"), "O"),
+        usage=_parse_usage(elem.get("Usage")),
         min=int(elem.get("Min", "0")),
         max=_max(elem.get("Max", "*")),
         children=children,
     )
 
 
-def parse_tables(path: str | Path) -> dict[str, dict[str, set[str]]]:
-    """Parse a table file into a mapping of table ID and allowed codes."""
+def parse_tables(path: str | Path) -> dict[str, set[str]]:
+    """Parse a table file into a mapping of table ID to allowed codes."""
     root = ET.parse(path).getroot()
-    tables: dict[str, dict[str, set[str]]] = {}
+    tables: dict[str, set[str]] = {}
+
     for hl7table in root.iter("hl7table"):
         table_id = hl7table.get("id")
         codes: set[str] = {
@@ -95,7 +109,8 @@ def parse_tables(path: str | Path) -> dict[str, dict[str, set[str]]]:
 
         if table_id and codes:
             tables[table_id] = codes
-        return tables
+
+    return tables
 
 
 def parse_profile(path: str | Path) -> ProfileConstraints:

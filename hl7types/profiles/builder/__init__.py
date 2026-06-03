@@ -64,7 +64,6 @@ def make_constrained_segment(
     """Return a pydantic subclass of base_cls that enforces constraint."""
 
     seg_name = constraint.name
-    print(seg_name)
 
     resolved_tables: dict[str, set[str]] = tables or {}
 
@@ -73,7 +72,7 @@ def make_constrained_segment(
     hints = get_type_hints(base_cls)
 
     for i, field_constraint in enumerate(constraint.fields, start=1):
-        field_name = field_constraint.name
+        field_name = f"{seg_name.lower()}_{i}"
         if field_name not in base_cls.model_fields:
             print(f"{field_name} is not a valid field, skipping")
 
@@ -134,7 +133,7 @@ def make_constrained_segment(
         return constrained_cls
 
 
-def build_registry_from_pofile(
+def build_registry_from_profile(
     profile: ProfileConstraints,
     registry: HL7Registry,
     *,
@@ -162,13 +161,13 @@ def build_registry_from_pofile(
                 registry.register_segment(name, constrained)
             except ValueError as e:
                 # TODO: Override this as it's likely going to be impacted by blocks to MSH/FHS/BHS protection
-                raise e
+                print(e)
 
-        def _walk(children: list[SegmentConstraint | SegGroupConstraint]) -> None:
-            for child in children:
-                if isinstance(child, SegmentConstraint):
-                    _register(child)
-                elif isinstance(child, SegGroupConstraint):
-                    _walk(child.children)
+    def _walk(children: list[SegmentConstraint | SegGroupConstraint]) -> None:
+        for child in children:
+            if isinstance(child, SegmentConstraint):
+                _register(child)
+            elif isinstance(child, SegGroupConstraint):
+                _walk(child.children)
 
-        _walk(profile.segments)
+    _walk(profile.segments)
