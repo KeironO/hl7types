@@ -8,7 +8,12 @@ from pydantic_core import PydanticUndefined
 
 from hl7types import HL7Model, HL7Registry
 from hl7types._utils import version_to_module
-from hl7types.profiles.parser import ProfileConstraints, SegmentConstraint, Usage
+from hl7types.profiles.parser import (
+    ProfileConstraints,
+    SegGroupConstraint,
+    SegmentConstraint,
+    Usage,
+)
 
 
 def _import_segment(version: str, seg_name: str) -> type[HL7Model] | None:
@@ -151,4 +156,19 @@ def build_registry_from_pofile(
         if base_cls is None:
             return
 
-        print(base_cls)
+        constrained = make_constrained_segment(base_cls, constraint, tables)
+        if constrained is not base_cls:
+            try:
+                registry.register_segment(name, constrained)
+            except ValueError as e:
+                # TODO: Override this as it's likely going to be impacted by blocks to MSH/FHS/BHS protection
+                raise e
+
+        def _walk(children: list[SegmentConstraint | SegGroupConstraint]) -> None:
+            for child in children:
+                if isinstance(child, SegmentConstraint):
+                    _register(child)
+                elif isinstance(child, SegGroupConstraint):
+                    _walk(child.children)
+
+        _walk(profile.segments)
