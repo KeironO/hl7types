@@ -9,6 +9,7 @@ from typing import Any, get_type_hints
 
 from pydantic import BaseModel
 
+from hl7types._utils import version_to_module
 from hl7types.codecs.er7.encoder import (
     DEFAULT_ENCODING,
     DELIM_DEF,
@@ -366,10 +367,6 @@ def _seg_name(seg_str: str, field_sep: str = "|") -> str:
     return seg_str[:idx] if idx != -1 else seg_str
 
 
-def _version_to_module(version: str) -> str:
-    return "v" + version.replace(".", "_")
-
-
 def _resolve_msg_cls(
     seg_strings: list[str],
     registry: HL7Registry | None = None,
@@ -412,7 +409,7 @@ def _resolve_msg_cls(
         if cls is not None:
             return cls
 
-    mod_name = _version_to_module(version)
+    mod_name = version_to_module(version)
     module = importlib.import_module(f"hl7types.hl7.{mod_name}.messages.{structure}")
     return getattr(module, structure)
 
