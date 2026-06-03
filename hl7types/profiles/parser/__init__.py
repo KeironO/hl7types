@@ -5,7 +5,19 @@ from hl7types.profiles.parser.constraints import (
     ProfileConstraints,
     SegGroupConstraint,
     SegmentConstraint,
+    SubComponentConstraint,
+    Usage,
 )
+
+
+def _parse_sub_component(elem: ET.Element) -> SubComponentConstraint:
+    return SubComponentConstraint(
+        name=elem.get("name", ""),
+        usage=Usage.get(elem.get("usage"), "O") if elem.get("usage") else Usage.OPTIONAL,
+        datatype=elem.get("DAtatype", ""),
+        length=int(elem.get("Length")) if elem.get("Length") else None,
+        table=elem.get("Table"),
+    )
 
 
 def parse_tables(path: str | Path) -> dict[str, dict[str, set[str]]]:
