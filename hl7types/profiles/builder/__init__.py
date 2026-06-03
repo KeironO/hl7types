@@ -1,3 +1,4 @@
+import importlib
 from collections.abc import Callable
 from typing import Any, Union, get_args, get_origin, get_type_hints
 
@@ -5,8 +6,22 @@ from pydantic import create_model
 from pydantic.fields import Field, FieldInfo
 from pydantic_core import PydanticUndefined
 
-from hl7types import HL7Model
-from hl7types.profiles.parser import SegmentConstraint, Usage
+from hl7types import HL7Model, HL7Registry
+from hl7types._utils import version_to_module
+from hl7types.profiles.parser import ProfileConstraints, SegmentConstraint, Usage
+
+
+def _import_segment(version: str, seg_name: str) -> type[HL7Model] | None:
+    mod_name = version_to_module(version)
+    try:
+        mod = importlib.import_module(f"hl7types.hl7.{mod_name}.segments.{seg_name}")
+        cls = getattr(mod, seg_name, None)
+        if isinstance(cls, type) and issubclass(cls, HL7Model):
+            return cls
+        else:
+            raise ValueError(f"segment {seg_name!r} is not a valid hl7 segment")
+    except ModuleNotFoundError:
+        raise ValueError(f"segment {seg_name!r} is not a valid hl7 segment")
 
 
 def _copy_field_info(field: FieldInfo, **overrides: Any) -> FieldInfo:
@@ -114,5 +129,26 @@ def make_constrained_segment(
         return constrained_cls
 
 
-def build_registry_from_pofile():
-    pass
+def build_registry_from_pofile(
+    profile: ProfileConstraints,
+    registry: HL7Registry,
+    *,
+    version: str | None = None,
+    tables: dict[str, set[str]] | None = None,
+) -> None:
+    hl7_version = version or profile.hl7_version
+
+    seen: set[str] = set()
+
+    def _register(constraint: SegmentConstraint) -> None:
+        name = constraint.name
+        if name in seen:
+            return
+        seen.add(name)
+
+        base_cls = _import_segment(hl7_version, name)
+
+        if base_cls is None:
+            return
+
+        print(base_cls)
