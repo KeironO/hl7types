@@ -34,8 +34,24 @@ def _parse_component(elem: ET.Element) -> SubComponentConstraint:
     )
 
 
+def _max(value: str) -> int | None:
+    if value == "*":
+        return None
+    else:
+        return int(value)
+
+
 def _parse_field(elem: ET.Element) -> FieldConstraint:
-    return FieldConstraint()
+    return FieldConstraint(
+        name=elem.get("Name", ""),
+        datatype=elem.get("Datatype", ""),
+        min=int(elem.get("Min", "0")),
+        max=_max(elem.get("Max", "*")),
+        item_no=elem.get("ItemNo"),
+        length=int(elem.get("Length")) if elem.get("Length") else None,
+        table=elem.get("Table"),
+        components=[_parse_component(sc) for sc in elem.findall("Component")],
+    )
 
 
 def parse_tables(path: str | Path) -> dict[str, dict[str, set[str]]]:
