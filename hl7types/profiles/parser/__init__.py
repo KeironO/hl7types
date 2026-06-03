@@ -65,6 +65,24 @@ def _parse_segment(elem: ET.Element) -> SegmentConstraint:
     )
 
 
+def _parse_seg_group(elem: ET.Element) -> SegGroupConstraint:
+    # This is an assumption and needs testing against more than the stuff we've seen so far.
+    children: list[SegmentConstraint | SegGroupConstraint] = []
+    for child in elem:
+        if child.tag == "Segment":
+            children.append(_parse_segment(child))
+        elif child.tag == "SegGroup":
+            children.append(_parse_seg_group(child))
+    return SegGroupConstraint(
+        name=elem.get("Name", ""),
+        long_name=elem.get("LongName", ""),
+        usage=Usage.get(elem.get("Usage"), "O"),
+        min=int(elem.get("Min", "0")),
+        max=_max(elem.get("Max", "*")),
+        children=children,
+    )
+
+
 def parse_tables(path: str | Path) -> dict[str, dict[str, set[str]]]:
     """Parse a table file into a mapping of table ID and allowed codes."""
     root = ET.parse(path).getroot()
@@ -101,8 +119,15 @@ def parse_profile(path: str | Path) -> ProfileConstraints:
 
     for child in static_def:
         if child.tag == "Segment":
-            print("PARSE SEGMENT")
+            children.append(_parse_segment(child))
         elif child.tag == "SegGroup":
-            print("PARSE SEGGROUP")
+            children.append(_parse_seg_group(child))
 
-    print(children, hl7_version, msg_type, msg_struct_id, name, event_type)
+    return ProfileConstraints(
+        hl7_version=hl7_version,
+        msg_type=msg_type,
+        event_type=event_type,
+        msg_struct_id=msg_struct_id,
+        name=name,
+        segments=children,
+    )
