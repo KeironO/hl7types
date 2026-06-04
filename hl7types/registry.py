@@ -42,7 +42,7 @@ class HL7Registry:
         self._segments: dict[str, type[BaseModel]] = {}
         self._messages: dict[tuple[str, str], type[BaseModel]] = {}
 
-    def register_segment(self, name: str, cls: type[BaseModel]) -> None:
+    def register_segment(self, name: str, cls: type[BaseModel], *, override: bool = False) -> None:
         """Register a custom segment class against its three-letter name.
 
         Parameters
@@ -50,17 +50,21 @@ class HL7Registry:
         name : str
             The HL7 segment name, e.g. ``"ZWCC"``. Must not be one of the
             protected delimiter-definition segments (``MSH``, ``FHS``,
-            ``BHS``).
+            ``BHS``) unless ``override`` is ``True``.
         cls : type[BaseModel]
             The Pydantic model class to use when this segment is encountered
             during decoding.
+        override : bool
+            If ``True``, bypass protection for delimiter-definition segments
+            (``MSH``, ``FHS``, ``BHS``). Defaults to ``False``.
 
         Raises
         ------
         ValueError
-            If ``name`` is a protected delimiter-definition segment.
+            If ``name`` is a protected delimiter-definition segment and
+            ``override`` is ``False``.
         """
-        if name in _PROTECTED_SEGMENTS:
+        if name in _PROTECTED_SEGMENTS and not override:
             raise ValueError(f"{name!r} is a delimiter-definition segment and cannot be overridden")
         self._segments[name] = cls
 

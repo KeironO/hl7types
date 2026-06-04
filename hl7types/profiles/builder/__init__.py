@@ -169,11 +169,7 @@ def build_registry_from_profile(
 
         constrained = make_constrained_segment(base_cls, constraint, tables)
         if constrained is not base_cls:
-            try:
-                registry.register_segment(name, constrained)
-            except ValueError as e:
-                # TODO: Override this as it's likely going to be impacted by blocks to MSH/FHS/BHS protection
-                print(e)
+            registry.register_segment(name, constrained, override=True)
 
     def _walk(children: list[SegmentConstraint | SegGroupConstraint]) -> None:
         for child in children:
