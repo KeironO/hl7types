@@ -66,7 +66,29 @@ def make_constrained_segment(
     constraint: SegmentConstraint,
     tables: dict[str, set[str]] | None = None,
 ) -> type[HL7Model]:
-    """Return a pydantic subclass of base_cls that enforces constraint."""
+    """Return a Pydantic subclass of ``base_cls`` that enforces the given constraint.
+
+    Fields marked ``R`` (required) are made non-optional. Fields marked ``X``
+    (not used) are set to ``None``. String fields have ``max_length`` applied
+    where a length is defined, and an ``AfterValidator`` is added for any field
+    whose table ID is present in ``tables``. If no overrides are needed the
+    original ``base_cls`` is returned unchanged.
+
+    Parameters
+    ----------
+    base_cls : type[HL7Model]
+        The standard generated segment class to constrain.
+    constraint : SegmentConstraint
+        The field-level constraints parsed from the conformance profile.
+    tables : dict[str, set[str]], optional
+        Mapping of table ID to permitted codes. Only tables present in this
+        dict are enforced.
+
+    Returns
+    -------
+    type[HL7Model]
+        A constrained subclass, or ``base_cls`` if no constraints apply.
+    """
 
     seg_name = constraint.name
 
@@ -152,6 +174,28 @@ def build_registry_from_profile(
     version: str | None = None,
     tables: dict[str, set[str]] | None = None,
 ) -> None:
+    """Walk a parsed conformance profile and register constrained segment classes.
+
+    For each segment in the profile that has field-level constraints worth
+    enforcing, a Pydantic subclass of the standard generated segment is created
+    and registered in ``registry`` under the segment's three-letter name.
+    Segments with no enforceable constraints are left as-is.
+
+    Parameters
+    ----------
+    profile : ProfileConstraints
+        A parsed conformance profile, as returned by ``parse_profile``.
+    registry : HL7Registry
+        The registry to populate. Constrained classes are registered with
+        ``override=True``, so protected segments such as ``MSH`` can be
+        constrained if the profile defines rules for them.
+    version : str, optional
+        HL7 version string to use when importing segment classes. Defaults to
+        the version declared in the profile.
+    tables : dict[str, set[str]], optional
+        Mapping of table ID to permitted codes, as returned by
+        ``parse_tables``. Only tables present here are enforced.
+    """
     hl7_version = version or profile.hl7_version
 
     seen: set[str] = set()

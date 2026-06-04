@@ -17,18 +17,33 @@ class EncodingChars:
     repetition: str = "~"
     escape: str = "\\"
     subcomponent: str = "&"
+    truncation: str = ""
 
     @classmethod
-    def from_msh2(cls, msh2: str) -> EncodingChars:
-        if len(msh2) != 4:
+    def from_msh2(cls, msh2: str, hl7_version: str | None = None) -> EncodingChars:
+        if len(msh2) not in (4, 5):
             raise ValueError(
-                f"MSH.2 must be exactly 4 encoding characters, got {len(msh2)!r}: {msh2!r}"
+                f"MSH.2 must be 4 or 5 encoding characters, got {len(msh2)!r}: {msh2!r}"
             )
+        truncation = ""
+        if len(msh2) == 5:
+            v = hl7_version or ""
+            try:
+                major, minor = int(v.split(".")[0]), int(v.split(".")[1]) if "." in v else 0
+            except (ValueError, IndexError):
+                major, minor = 0, 0
+            if (major, minor) < (2, 7):
+                raise ValueError(
+                    f"Truncation character in MSH.2 is only supported from HL7 v2.7 "
+                    f"(got version {hl7_version!r})"
+                )
+            truncation = msh2[4]
         return cls(
             component=msh2[0],
             repetition=msh2[1],
             escape=msh2[2],
             subcomponent=msh2[3],
+            truncation=truncation,
         )
 
 
@@ -74,6 +89,8 @@ def _escape(value: str, enc: EncodingChars) -> str:
             part = part.replace(enc.component, f"{enc.escape}S{enc.escape}")
             part = part.replace(enc.repetition, f"{enc.escape}R{enc.escape}")
             part = part.replace(enc.subcomponent, f"{enc.escape}T{enc.escape}")
+            if enc.truncation:
+                part = part.replace(enc.truncation, f"{enc.escape}Z{enc.escape}")
             out.append(part)
     return "".join(out)
 
@@ -179,8 +196,12 @@ def encode_er7_segment(seg: BaseModel, enc: EncodingChars = DEFAULT_ENCODING) ->
     max_pos = max(pm)
 
     if seg_name in DELIM_DEF:
-        enc_chars_literal = str(pm.get(2, "^~\\&") or "^~\\&")
-        parts: list[str] = [enc_chars_literal]
+        stored_msh2 = str(pm.get(2, "") or "")
+        if not stored_msh2:
+            stored_msh2 = f"{enc.component}{enc.repetition}{enc.escape}{enc.subcomponent}"
+            if enc.truncation:
+                stored_msh2 += enc.truncation
+        parts: list[str] = [stored_msh2]
         for i in range(3, max_pos + 1):
             val = pm.get(i)
             # MSH-9 contains composite separators literally; never escape them
@@ -244,14 +265,23 @@ def encode_er7(model: BaseModel, segment_separator: str = "\r") -> str:
             d = seg.model_dump(by_alias=True)
             msh1 = d.get("MSH.1") or d.get("FHS.1") or d.get("BHS.1")
             msh2 = d.get("MSH.2") or d.get("FHS.2") or d.get("BHS.2")
+            msh12 = d.get("MSH.12") or d.get("FHS.12") or d.get("BHS.12")
+            if isinstance(msh12, str):
+                hl7_version = msh12
+            elif isinstance(msh12, dict):
+                # VID composite , first component is the version string
+                hl7_version = next((v for v in msh12.values() if isinstance(v, str)), None)  # type: ignore
+            else:
+                hl7_version = None
             field_sep = msh1 if isinstance(msh1, str) and msh1 else DEFAULT_ENCODING.field
-            base = EncodingChars.from_msh2(msh2) if msh2 else DEFAULT_ENCODING
+            base = EncodingChars.from_msh2(msh2, hl7_version) if msh2 else DEFAULT_ENCODING
             enc = EncodingChars(
                 field=field_sep,
                 component=base.component,
                 repetition=base.repetition,
                 escape=base.escape,
                 subcomponent=base.subcomponent,
+                truncation=base.truncation,
             )
             break
 

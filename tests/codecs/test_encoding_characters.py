@@ -32,7 +32,7 @@ VALID_CRLF_WIRE = (
 
 def test_invalid_msh2_raises() -> None:
     """A 3-char MSH.2 must raise rather than silently fall back to defaults."""
-    with pytest.raises(ValueError, match="MSH.2 must be exactly 4 encoding characters"):
+    with pytest.raises(ValueError, match="MSH.2 must be 4 or 5 encoding characters"):
         decode_er7(INVALID_MSH2_WIRE)
 
 
@@ -43,7 +43,7 @@ def test_from_msh2_raises_on_short_string() -> None:
 
 def test_from_msh2_raises_on_long_string() -> None:
     with pytest.raises(ValueError):
-        EncodingChars.from_msh2("^~\\&&")
+        EncodingChars.from_msh2("^~\\&&#")
 
 
 def test_crlf_line_endings_accepted() -> None:

@@ -73,7 +73,7 @@ and by ``decode_er7_segment`` for single-segment decoding. Note that the default
 Field-level validation
 -----------------------
 
-Field-level validation is independent of strict mode — it runs regardless, and always raises
+Field-level validation is independent of strict mode, it runs regardless, and always raises
 ``ValidationError`` on a format violation. This validation is baked directly into the generated
 model classes as Pydantic ``@field_validator`` methods. Because the validators live on the model
 itself rather than in the decoder, they fire identically whether a value arrives from a decoded
