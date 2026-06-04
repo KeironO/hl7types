@@ -1,13 +1,13 @@
 from __future__ import annotations
 
+import importlib
 import re
 from typing import Any
 
 from pydantic import ValidationError
 
-from hl7types.hl7.v2_5.datatypes.CWE import CWE
-from hl7types.hl7.v2_5.datatypes.ERL import ERL
-from hl7types.hl7.v2_5.segments.ERR import ERR
+from hl7types._utils import version_to_module
+from hl7types.hl7 import HL7Model
 
 HL70357: dict[str, str] = {
     "0": "Message accepted",
@@ -27,6 +27,34 @@ HL70357: dict[str, str] = {
     "206": "Application record locked",
     "207": "Application error",
 }
+
+HL70060: set[str] = {
+    "0",
+    "100",
+    "101",
+    "102",
+    "103",
+    "200",
+    "201",
+    "202",
+    "203",
+    "204",
+    "205",
+    "206",
+    "207",
+}
+
+
+def _import_from_version(version: str, kind: str, name: str) -> type[HL7Model] | None:
+    mod_name = version_to_module(version)
+    try:
+        mod = importlib.import_module(f"hl7types.hl7.{mod_name}.{kind}.{name}")
+        cls = getattr(mod, name, None)
+        if isinstance(cls, type) and issubclass(cls, HL7Model):
+            return cls
+    except ModuleNotFoundError:
+        pass
+    return None
 
 
 def _error_code_from_pydantic_error(error: dict[str, Any]) -> str:
@@ -83,35 +111,54 @@ def _segment_and_field_from_loc(loc: tuple[Any, ...]) -> tuple[str | None, int |
     return match.group(1).upper(), int(match.group(2))
 
 
-def _err_location_from_pydantic_loc(loc: tuple[Any, ...]) -> ERL | None:
-    segment_id, field_position = _segment_and_field_from_loc(loc)
-
-    if segment_id is None or field_position is None:
-        return None
-
-    return ERL(
-        erl_1=segment_id,
-        erl_2="1",
-        erl_3=str(field_position),
-    )
+def _parse_version(version: str) -> tuple[int, ...]:
+    return tuple(int(x) for x in version.split("."))
 
 
-def err_from_pydantic_error(error: dict[str, Any]) -> ERR:
+def err_from_pydantic_error(error: dict[str, Any], version: str) -> HL7Model:
+    err_cls = _import_from_version(version, "segments", "ERR")
+    if err_cls is None:
+        raise ValueError(f"ERR segment not found for version {version!r}")
+
     code = _error_code_from_pydantic_error(error)
     display = HL70357[code]
+    v = _parse_version(version)
+    segment_id, field_position = _segment_and_field_from_loc(tuple(error.get("loc", ())))
 
-    location = _err_location_from_pydantic_loc(tuple(error.get("loc", ())))
-    return ERR(
-        err_2=[location] if location is not None else None,
-        err_3=CWE(
-            cwe_1=code,
-            cwe_2=display,
-            cwe_3="HL70357",
-        ),
-        err_4="E",
-    )
+    kwargs: dict[str, Any] = {}
+
+    if v <= (2, 2):
+        kwargs["err_1"] = [code, str(field_position)]
+
+    elif v <= (2, 5):
+        eld_cls = _import_from_version(version, "datatypes", "ELD")
+        ce_cls = _import_from_version(version, "datatypes", "CE")
+        if eld_cls is not None and ce_cls is not None:
+            hl70060_code = code if code in HL70060 else "207"
+            kwargs["err_1"] = [
+                eld_cls(
+                    eld_1=segment_id,
+                    eld_2="1",
+                    eld_3=str(field_position) if field_position is not None else None,
+                    eld_4=ce_cls(ce_1=hl70060_code, ce_2=HL70357.get(hl70060_code), ce_3="HL70060"),
+                )
+            ]
+
+    if v >= (2, 5):
+        cwe_cls = _import_from_version(version, "datatypes", "CWE")
+        if cwe_cls is not None:
+            kwargs["err_3"] = cwe_cls(cwe_1=code, cwe_2=display, cwe_3="HL70357")
+
+        kwargs["err_4"] = "E"
+
+        erl_cls = _import_from_version(version, "datatypes", "ERL")
+        if erl_cls is not None and segment_id is not None and field_position is not None:
+            kwargs["err_2"] = [erl_cls(erl_1=segment_id, erl_2="1", erl_3=str(field_position))]
+
+    return err_cls(**kwargs)
 
 
-def errs_from_exception(exc: Exception) -> list[ERR]:
+def errs_from_exception(exc: Exception, version: str) -> list[HL7Model]:
     if isinstance(exc, ValidationError):
-        return [err_from_pydantic_error(error) for error in exc.errors() if error]
+        return [err_from_pydantic_error(error, version) for error in exc.errors() if error]
+    return []
