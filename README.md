@@ -80,7 +80,6 @@ True
 'M'
 ```
 
----
 
 **Example 2:** Encode to ER7 (pipe-delimited):
 
@@ -94,7 +93,7 @@ PID|||M12345^^^WPAS^PI||Jones^Brynn^^^Mr||19930707|M|||18 Stryd Mill^^Pontypandy
 PV1||I
 ```
 
----
+
 
 **Example 3:** Decode an ER7 string back into typed models:
 
@@ -108,7 +107,7 @@ True
 'M'
 ```
 
----
+
 
 **Example 4:** Standard Pydantic serialisation is available on all models:
 
@@ -119,7 +118,7 @@ True
 'M'
 ```
 
----
+
 
 **Example 5:** Type validation is enforced , passing the wrong type raises a `ValidationError`:
 
@@ -138,7 +137,7 @@ pid_5
     For further information visit https://errors.pydantic.dev/2.13/v/missing
 ```
 
----
+
 
 **Example 6:** Fields accept human-readable aliases as well as the positional names , all three forms are equivalent:
 
@@ -154,7 +153,7 @@ pid_5
 'HL7TYPES'
 ```
 
----
+
 
 **Example 7:** By default, decoding is lenient. Required segments absent from the wire produce an empty placeholder rather than raising an error. Pass `strict=True` to enforce the spec instead:
 
@@ -187,7 +186,7 @@ MSA
 >>> ACK.model_validate_er7(wire, strict=True)  # raises ValidationError
 ```
 
----
+
 
 **Example 8:** Encode to XML:
 
@@ -242,7 +241,7 @@ MSA|AA|MSG000001
 ZWCC|WPAS|20260101120000
 ```
 
----
+
 
 **Example 10:** Decode a wire string containing a custom segment by registering the message class:
 
@@ -264,7 +263,7 @@ ZWCC|WPAS|20260101120000
 'WPAS'
 ```
 
-`MSH`, `FHS`, and `BHS` cannot be overridden — the decoder relies on them internally to detect encoding characters and message type. Attempting to register them raises immediately:
+By default `MSH`, `FHS`, and `BHS` cannot be overridden. The decoder relies on them internally to detect encoding characters and message type. Attempting to register them raises immediately:
 
 ```python
 >>> registry.register_segment("MSH", ZWCC)
@@ -273,8 +272,61 @@ ValueError: 'MSH' is a delimiter-definition segment and cannot be overridden
 
 Each `HL7Registry` instance is independent, so concurrent pipelines with different vendor extensions can each hold their own registry without shared state.
 
----
+## Conformance profiles
 
+HL7 v2 conformance profiles constrain a base message specification for a specific integration, declaring exactly which fields are required, which are forbidden, and what coded values are permitted. `hl7types` can parse a profile XML file and apply its constraints to the standard segment classes via the registry, so the profile rules are enforced automatically during normal Pydantic validation.
+
+**Example 11:** Parse a conformance profile and validate a message against it:
+
+```python
+>>> from hl7types import HL7Registry, decode_er7
+>>> from hl7types.profiles.builder import build_registry_from_profile
+>>> from hl7types.profiles.parser import parse_profile, parse_tables
+>>>
+>>> tables = parse_tables("/path/to/sampleTables.xml")
+>>> profile = parse_profile("/path/to/ADT_A01.xml")
+>>>
+>>> registry = HL7Registry()
+>>> build_registry_from_profile(profile, registry, tables=tables)
+>>>
+>>> msg = decode_er7(wire, registry=registry, strict=True)
+```
+
+Constrained segment classes can also be used directly for programmatic construction:
+
+```python
+>>> ConformedPID = registry.get_segment("PID")
+>>> pid = ConformedPID(
+...     pid_3=[CX(cx_1="MRN001", cx_4=HD(hd_1="HospA"), cx_5="MR")],
+...     pid_5=[XPN(xpn_1=FN(fn_1="Smith"), xpn_2="John")],
+...     pid_8="M",
+... )
+```
+
+Any field that violates the profile raises a `ValidationError` immediately. See the [conformance profiles documentation](https://hl7types.readthedocs.io/en/latest/conformance.html) for full details.
+
+## Error handling
+
+When validation fails, `errs_from_exception` converts a Pydantic `ValidationError` into a list of spec-compliant `ERR` segments ready to embed in a negative acknowledgement. It handles the structural differences between HL7 versions automatically.
+
+**Example 12:** Build a NAK from a validation failure:
+
+```python
+>>> from hl7types.utils.error import errs_from_exception
+>>>
+>>> try:
+...     decode_er7(wire, registry=registry, strict=True)
+... except Exception as e:
+...     errs = errs_from_exception(e, "2.8.2")
+...     nak = ACK(MSH=msh, MSA=MSA(msa_1="AE", msa_2="MSG000001"), ERR=errs)
+...     print(nak.model_dump_er7())
+MSH|^~\&|RECEIVING_APP||SENDING_APP||20260101120000||ACK|MSG000002|P|2.8.2
+MSA|AE|MSG000001
+ERR||PID^1^3|101^Required field missing^HL70357|E
+ERR||PID^1^8|103^Table value not found^HL70357|E
+```
+
+The correct `ERR` structure is produced for every supported HL7 version, from the simple CM string of v2.1 through to the fully structured `CWE`/`ERL` form of v2.4 and later. See the [error handling documentation](https://hl7types.readthedocs.io/en/latest/errors.html) for full details.
 ## License
 
 Proudly licensed under the MIT License. See [LICENSE](LICENSE) for details.

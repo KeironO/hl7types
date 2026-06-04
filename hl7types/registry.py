@@ -13,8 +13,8 @@ class HL7Registry:
     message type identifiers to Pydantic model classes so that
     :func:`hl7types.decode_er7` can resolve them during decoding.
 
-    Each registry instance is entirely independent — there is no shared
-    global state — so concurrent pipelines with different vendor extensions
+    Each registry instance is entirely independent. There is no shared
+    global state. Concurrent pipelines with different vendor extensions
     can each hold their own registry without interference.
 
     Examples

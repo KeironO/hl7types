@@ -7,3 +7,5 @@ API Reference
    api/core
    api/registry
    api/codecs
+   api/conformance
+   api/errors

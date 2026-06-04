@@ -114,6 +114,24 @@ def parse_tables(path: str | Path) -> dict[str, set[str]]:
 
 
 def parse_profile(path: str | Path) -> ProfileConstraints:
+    """Parse an HL7 v2 conformance profile XML file into a ``ProfileConstraints`` object.
+
+    Parameters
+    ----------
+    path : str or Path
+        Path to the conformance profile XML file.
+
+    Returns
+    -------
+    ProfileConstraints
+        The full tree of segment and field constraints defined in the profile,
+        along with metadata such as HL7 version, message type, and event type.
+
+    Raises
+    ------
+    ValueError
+        If the file does not contain a valid ``HL7v2xStaticDef`` element.
+    """
     root = ET.parse(path).getroot()
     static_def = root.find("HL7v2xStaticDef")
     if static_def is None:

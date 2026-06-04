@@ -116,6 +116,26 @@ def _parse_version(version: str) -> tuple[int, ...]:
 
 
 def err_from_pydantic_error(error: dict[str, Any], version: str) -> HL7Model:
+    """Convert a single Pydantic error dict into a version-appropriate ``ERR`` segment.
+
+    Parameters
+    ----------
+    error : dict
+        A single error entry from ``ValidationError.errors()``.
+    version : str
+        The HL7 version string, e.g. ``"2.5.1"`` or ``"2.8.2"``. Determines
+        the structure of the returned ``ERR`` segment.
+
+    Returns
+    -------
+    HL7Model
+        An ``ERR`` segment instance for the given version.
+
+    Raises
+    ------
+    ValueError
+        If no ``ERR`` segment class is found for the given version.
+    """
     err_cls = _import_from_version(version, "segments", "ERR")
     if err_cls is None:
         raise ValueError(f"ERR segment not found for version {version!r}")
@@ -159,6 +179,26 @@ def err_from_pydantic_error(error: dict[str, Any], version: str) -> HL7Model:
 
 
 def errs_from_exception(exc: Exception, version: str) -> list[HL7Model]:
+    """Convert an exception into a list of version-appropriate ``ERR`` segments.
+
+    Only ``pydantic.ValidationError`` is handled. Any other exception type
+    returns an empty list.
+
+    Parameters
+    ----------
+    exc : Exception
+        The exception to convert. Typically a ``pydantic.ValidationError``
+        raised by ``decode_er7`` or direct model construction.
+    version : str
+        The HL7 version string, e.g. ``"2.5.1"`` or ``"2.8.2"``. Determines
+        the structure of each returned ``ERR`` segment.
+
+    Returns
+    -------
+    list[HL7Model]
+        One ``ERR`` segment per violated field, or an empty list if ``exc``
+        is not a ``ValidationError``.
+    """
     if isinstance(exc, ValidationError):
         return [err_from_pydantic_error(error, version) for error in exc.errors() if error]
     return []

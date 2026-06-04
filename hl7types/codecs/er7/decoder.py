@@ -28,11 +28,14 @@ _UNESCAPE_MAP: dict[str, str] = {
 
 def _unescape(value: str, enc: EncodingChars) -> str:
     e = re.escape(enc.escape)
-    return re.sub(
+    result = re.sub(
         f"{e}([FSTRE]){e}",
         lambda m: _UNESCAPE_MAP.get(m.group(1), m.group(0)),
         value,
     )
+    if enc.truncation and result.endswith(enc.truncation):
+        result = result.rstrip(enc.truncation)
+    return result
 
 
 def _unwrap(annotation: Any) -> tuple[Any, bool]:
@@ -198,6 +201,7 @@ def decode_er7_segment(
             rest = seg_str[4:]
             msh2_end = rest.find(field_sep)
             msh2 = rest[:msh2_end] if msh2_end != -1 else rest
+            # Version unknown at this point; truncation support requires decode_er7 path
             base = EncodingChars.from_msh2(msh2) if msh2 else enc
             enc = EncodingChars(
                 field=field_sep,
@@ -205,6 +209,7 @@ def decode_er7_segment(
                 repetition=base.repetition,
                 escape=base.escape,
                 subcomponent=base.subcomponent,
+                truncation=base.truncation,
             )
 
     tokens = seg_str.split(enc.field)
@@ -383,11 +388,11 @@ def _resolve_msg_cls(
     field_sep = msh_str[3]
     tokens = msh_str.split(field_sep)
     msh2 = tokens[1] if len(tokens) > 1 else ""
-    enc = EncodingChars.from_msh2(msh2) if msh2 else DEFAULT_ENCODING
+    msh12 = tokens[11] if len(tokens) > 11 else ""
+    enc = EncodingChars.from_msh2(msh2, msh12 or None) if msh2 else DEFAULT_ENCODING
     comp_sep = enc.component
 
     msh9 = tokens[8] if len(tokens) > 8 else ""
-    msh12 = tokens[11] if len(tokens) > 11 else ""
 
     if not msh9:
         raise ValueError("MSH.9 is empty. Unable to auto-detect message type")
@@ -488,16 +493,17 @@ def decode_er7(
     for ss in seg_strings:
         if ss[:3] in DELIM_DEF and len(ss) > 3:
             field_sep = ss[3]
-            rest = ss[4:]
-            msh2_end = rest.find(field_sep)
-            msh2 = rest[:msh2_end] if msh2_end != -1 else rest
-            base = EncodingChars.from_msh2(msh2) if msh2 else DEFAULT_ENCODING
+            tokens = ss.split(field_sep)
+            msh2 = tokens[1] if len(tokens) > 1 else ""
+            msh12 = tokens[11] if len(tokens) > 11 else ""
+            base = EncodingChars.from_msh2(msh2, msh12 or None) if msh2 else DEFAULT_ENCODING
             enc = EncodingChars(
                 field=field_sep,
                 component=base.component,
                 repetition=base.repetition,
                 escape=base.escape,
                 subcomponent=base.subcomponent,
+                truncation=base.truncation,
             )
             break
 

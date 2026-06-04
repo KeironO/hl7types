@@ -68,7 +68,7 @@ def test_unescape_uuencoded_real_data() -> None:
     """Real-world uuencoded payload must not raise (EscapeTest.testUnescape).
 
     The file contains genuine HL7 delimiter escapes (\\S\\, \\T\\, \\E\\) so the
-    result is not identical to the input — the test guards against exceptions,
+    result is not identical to the input. The test guards against exceptions,
     not identity.
     """
     content = (RESOURCES / "uuencoded_escaped.txt").read_text(encoding="latin-1")

@@ -32,6 +32,23 @@ The defaults are:
 - ``\``: escape character
 - ``&``: subcomponent separator
 
+Truncation character (v2.7+)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+HL7 v2.7 introduced a sixth encoding character, the truncation character, appended to ``MSH.2``
+to give a five-character string such as ``^~\&#``. When present, it marks the point at which a
+field value has been truncated by the sender. The decoder strips any trailing truncation
+characters from field values after unescaping.
+
+The truncation character is only permitted in messages that declare version 2.7 or later in
+``MSH.12``. Passing a five-character ``MSH.2`` with an earlier version raises a ``ValueError``.
+Four-character ``MSH.2`` strings are accepted at any version and produce no truncation
+behaviour.
+
+When encoding back to ER7, the truncation character is included in ``MSH.2`` automatically if
+it was present in the original message. Any literal occurrence of the truncation character
+in a field value is escaped to prevent ambiguity.
+
 Non-standard delimiters are fully supported. If a message arrives with a different field separator
 the decoder detects it from the raw bytes and applies it consistently throughout.
 
