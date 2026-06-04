@@ -1,9 +1,11 @@
 import importlib
 from collections.abc import Callable
-from typing import Any, Union, get_args, get_origin, get_type_hints
+from types import UnionType
+from typing import Annotated, Any, Union, get_args, get_origin, get_type_hints
 
 from pydantic import create_model
 from pydantic.fields import Field, FieldInfo
+from pydantic.functional_validators import AfterValidator
 from pydantic_core import PydanticUndefined
 
 from hl7types import HL7Model, HL7Registry
@@ -40,10 +42,13 @@ def _copy_field_info(field: FieldInfo, **overrides: Any) -> FieldInfo:
 
 
 def _unwrap_optional(annotation: Any) -> tuple[Any, bool]:
-    if get_origin(annotation) is Union and type(None) in get_args(annotation):
+    origin = get_origin(annotation)
+
+    if origin in (Union, UnionType) and type(None) in get_args(annotation):
         inner_args = [a for a in get_args(annotation) if a is not type(None)]
         if len(inner_args) == 1:
-            return inner_args[0], False
+            return inner_args[0], True
+
     return annotation, False
 
 
@@ -75,6 +80,7 @@ def make_constrained_segment(
         field_name = f"{seg_name.lower()}_{i}"
         if field_name not in base_cls.model_fields:
             print(f"{field_name} is not a valid field, skipping")
+            continue
 
         # Need to get hints to compare and constrain
         hint = hints.get(field_name)
@@ -86,7 +92,7 @@ def make_constrained_segment(
         has_length_rule = field_constraint.length is not None
         has_table_rule = bool(field_constraint.table and field_constraint.table in resolved_tables)
 
-        if not (has_usage_rules, has_length_rule, has_table_rule):
+        if not (has_usage_rules or has_length_rule or has_table_rule):
             continue
 
         base_field = base_cls.model_fields[field_name]
@@ -96,7 +102,7 @@ def make_constrained_segment(
         if field_constraint.usage == Usage.NOT_USED:
             field_overrides[field_name] = (
                 type(None),
-                _copy_field_info(base_field, default=default),
+                _copy_field_info(base_field, default=None),
             )
             continue
 
@@ -108,29 +114,35 @@ def make_constrained_segment(
 
         if has_length_rule or has_table_rule:
             inner, was_optional = _unwrap_optional(annotation)
+
             if inner is str:
                 metadata: list[Any] = [str]
+
                 if has_length_rule:
                     metadata.append(Field(max_length=field_constraint.length))
+
                 if has_table_rule:
-                    checkerer = _generate_table_checkerer(
-                        field_constraint, resolved_tables[field_constraint.table]
+                    checker = _generate_table_checkerer(
+                        field_constraint.table,
+                        resolved_tables[field_constraint.table],
                     )
-                    metadata.append(checkerer)
-                    annotation = inner | None if was_optional else inner
+                    metadata.append(AfterValidator(checker))
 
-            field_overrides[field_name] = (
-                annotation,
-                _copy_field_info(base_field, default=default),
-            )
+                constrained_inner = Annotated[tuple(metadata)]
+                annotation = constrained_inner | None if was_optional else constrained_inner
 
-        if not field_overrides:
-            return base_cls
+        field_overrides[field_name] = (
+            annotation,
+            _copy_field_info(base_field, default=default),
+        )
 
-        constrained_cls = create_model(seg_name, __base__=base_cls, **field_overrides)
-        constrained_cls.__module__ = base_cls.__module__
-        constrained_cls.__qualname__ = f"Profile{seg_name}"
-        return constrained_cls
+    if not field_overrides:
+        return base_cls
+
+    constrained_cls = create_model(seg_name, __base__=base_cls, **field_overrides)
+    constrained_cls.__module__ = base_cls.__module__
+    constrained_cls.__qualname__ = f"Profile{seg_name}"
+    return constrained_cls
 
 
 def build_registry_from_profile(
