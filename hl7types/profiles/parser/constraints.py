@@ -72,10 +72,3 @@ class ProfileConstraints:
     msg_struct_id: str
     name: str
     segments: list[SegmentConstraint | SegGroupConstraint] | None = field(default_factory=list)
-
-    def get_segment(self, name: str) -> SegmentConstraint | None:
-        if self.segments:
-            for child in self.segments:
-                if isinstance(child, SegGroupConstraint) and child.name == name:
-                    return child
-        return None

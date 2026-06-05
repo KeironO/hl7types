@@ -1,14 +1,5 @@
-"""
-Tests emulating ca.uhn.hl7v2.parser.NewPipeParserTest.
-Source: https://github.com/hapifhir/hapi-hl7v2/blob/master/hapi-test/src/test/java/ca/uhn/hl7v2/parser/NewPipeParserTest.java
-
-Notes:
-- testParseRepeatingObx5: hl7types drops empty trailing repetitions; only the four
-  non-empty values are asserted (HAPI preserves empty reps as empty strings).
-- testUnknownVersion: hl7types raises ModuleNotFoundError (wrapped in the import);
-  any exception on decode is acceptable since the version is unsupported.
-- testNonPipeDelimitor: only the ORU portion is tested (no ORC/OBX required fields).
-"""
+"""ER7 pipe parsing: repeating fields and segments, malformed wires, component and
+subcomponent decoding, escape handling, non-standard delimiters, and Z-segment behaviour."""
 from __future__ import annotations
 
 import pytest
@@ -21,8 +12,6 @@ from hl7types.hl7.v2_5.messages.ADT_A03 import ADT_A03 as ADT_A03_v25
 from hl7types.hl7.v2_5.messages.ADT_A45 import ADT_A45
 
 
-# testParseRepeatingObx5
-
 REPEATING_OBX5_WIRE = (
     "MSH|^~\\&|HNAM|CL|CL_RADNET|CL|20110628095233||ORU^R01|Q2301030099T1904270849|P|2.4\r"
     "PID|1||10011682^^^CL_MRN||CLABTEST^ONE\r"
@@ -31,18 +20,12 @@ REPEATING_OBX5_WIRE = (
 )
 
 
-def test_parse_repeating_obx5_non_empty_reps() -> None:
-    """OBX.5 with ~ repetitions decodes each non-empty value (testParseRepeatingObx5)."""
+def test_repeating_obx5_drops_empty_trailing_reps() -> None:
     msg = ORU_R01_v24.model_validate_er7(REPEATING_OBX5_WIRE)
     obx5 = msg.PATIENT_RESULT[0].ORDER_OBSERVATION[0].OBSERVATION[0].OBX.obx_5  # type: ignore[index, union-attr]
-    assert len(obx5) == 4  # trailing empty reps dropped; only the four non-empty values survive
-    assert obx5[0] == "This"
-    assert obx5[1] == "Is"
-    assert obx5[2] == "A"
-    assert obx5[3] == "Report"
+    # Trailing empty repetitions (~~~~~ after Report) are dropped; four non-empty values survive.
+    assert obx5 == ["This", "Is", "A", "Report"]
 
-
-# testInvalidShortMessages
 
 @pytest.mark.parametrize("wire", [
     "",
@@ -56,17 +39,12 @@ def test_parse_repeating_obx5_non_empty_reps() -> None:
     "MSH\r",
     "MSH|\r",
 ])
-def test_invalid_short_messages_raise(wire: str) -> None:
-    """Truncated or empty wires must raise rather than produce a partial result (testInvalidShortMessages)."""
+def test_truncated_wire_raises_value_error(wire: str) -> None:
     with pytest.raises(ValueError):
         decode_er7(wire)
 
 
-
-# testMissingRequiredLastSegment
-
-
-# ADT_A45 MERGE_INFO group requires MRG + PV1; only MRG is present here.
+# ADT_A45 MERGE_INFO group requires MRG + PV1; only MRG is present in the wire.
 MISSING_PV1_WIRE = (
     "MSH|^~\\&|4265-ADT|4265|eReferral|eReferral|201004141020||ADT^A45^ADT_A45|102416|T^|2.5^^|||NE|AL|CAN|8859/1\r"
     "EVN|A45|201004141020|\r"
@@ -75,16 +53,13 @@ MISSING_PV1_WIRE = (
     "PV1|1|I|WARD^ROOM^BED\r"
 )
 
+
 def test_required_last_segment_decodes() -> None:
     msg = decode_er7(MISSING_PV1_WIRE)
-
     assert isinstance(msg, ADT_A45)
     assert msg.PID.pid_3[0].cx_1 == "7010226"  # type: ignore[union-attr, index]
     assert msg.MERGE_INFO[0].MRG.mrg_1[0].cx_1 == "9999999"  # type: ignore[union-attr, index]
     assert msg.MERGE_INFO[0].PV1.pv1_2 == "I"
-
-
-# testRepeatingSegment
 
 
 REPEATING_OBX_WIRE = (
@@ -96,17 +71,12 @@ REPEATING_OBX_WIRE = (
 )
 
 
-def test_repeating_obx_segments() -> None:
-    """Three OBX segments decode into three separate OBSERVATION reps (testRepeatingSegment)."""
+def test_repeating_obx_segments_preserve_order_and_values() -> None:
     msg = ORU_R01_v24.model_validate_er7(REPEATING_OBX_WIRE)
     obs = msg.PATIENT_RESULT[0].ORDER_OBSERVATION[0].OBSERVATION  # type: ignore[index, union-attr]
-    assert obs[0].OBX.obx_1 == "1"  # type: ignore[index, union-attr]
-    assert obs[1].OBX.obx_1 == "2"  # type: ignore[index, union-attr]
-    assert obs[2].OBX.obx_1 == "3"  # type: ignore[index, union-attr]
-
-
-
-# testComponents
+    assert [(o.OBX.obx_1, o.OBX.obx_5[0]) for o in obs] == [  # type: ignore[index, union-attr]
+        ("1", "2.30"), ("2", "3.10"), ("3", "4.50"),
+    ]
 
 
 COMPONENTS_WIRE = (
@@ -118,18 +88,14 @@ COMPONENTS_WIRE = (
 
 
 def test_components_subcomponent_parsing() -> None:
-    """x&y^z in PID.5 decodes surname, surname prefix, and given name (testComponents)."""
     msg = ORU_R01_v24.model_validate_er7(COMPONENTS_WIRE)
     name = msg.PATIENT_RESULT[0].PATIENT.PID.pid_5[0]  # type: ignore[index, union-attr]
-    assert name.xpn_1.fn_1 == "x"   # type: ignore[union-attr]
-    assert name.xpn_1.fn_2 == "y"   # type: ignore[union-attr]
+    assert name.xpn_1.fn_1 == "x"  # type: ignore[union-attr]
+    assert name.xpn_1.fn_2 == "y"  # type: ignore[union-attr]
     assert name.xpn_2 == "z"
 
 
-
-# testUnescapeComponents \T\ in address decodes to &
-
-
+# \T\ in PID.11 address other-designation decodes to literal &.
 UNESCAPE_COMPONENTS_WIRE = (
     "MSH|^~\\&|NES|NINTENDO|AGNEW|CORNERCUBICLE|20010101000000||ADT^A04|Q123456789T123456789X123456|P|2.3\r\n"
     "EVN|A04|20010101000000|||^KOOPA^BOWSER^^^^^^^CURRENT\r\n"
@@ -140,16 +106,12 @@ UNESCAPE_COMPONENTS_WIRE = (
 
 
 def test_unescape_t_in_address() -> None:
-    """\\T\\ in PID.11 other-designation decodes to & (testUnescapeComponents)."""
     msg = ADT_A01_v23.model_validate_er7(UNESCAPE_COMPONENTS_WIRE)
     addr = msg.PID.pid_11[0]  # type: ignore[union-attr, index]
     assert addr.xad_2 == "MARIO & LUIGI BROS PLACE"
 
 
-
-# testNonPipeDelimitor
-
-
+# Non-standard wire where ^ is the field separator and | is the component separator.
 NON_PIPE_WIRE = (
     "MSH^~|\\&^HDRVTLS^552~DAYTDEV.FO-BAYPINES.MED.VA.GOV~DNS^GMRV VDEF IESIDE^200HD~"
     "HDR.MED.VA.GOV~DNS^20061006151615-0800^^ORU~R01^55253408603^T^2.4^^^AL^NE^US\r\n"
@@ -159,17 +121,15 @@ NON_PIPE_WIRE = (
 
 
 def test_non_pipe_field_separator_decodes() -> None:
-    """A message using ^ as field separator (not |) must decode without error (testNonPipeDelimitor)."""
     msg = decode_er7(NON_PIPE_WIRE)
-    assert msg is not None
-    assert msg.MSH.msh_9.msg_1 == "ORU"   # type: ignore[union-attr]
-    assert msg.MSH.msh_9.msg_2 == "R01"   # type: ignore[union-attr]
+    assert msg.MSH.msh_3.hd_1 == "HDRVTLS"   # type: ignore[union-attr]
+    assert msg.MSH.msh_9.msg_1 == "ORU"       # type: ignore[union-attr]
+    assert msg.MSH.msh_9.msg_2 == "R01"       # type: ignore[union-attr]
+    assert msg.MSH.msh_10 == "55253408603"
+    assert msg.MSH.msh_12.vid_1 == "2.4"      # type: ignore[union-attr]
 
 
-
-# testParseEmptySegment
-
-
+# Empty PD1 and bare PV1 (no fields); PV1.2 (required) gets an empty-string placeholder.
 EMPTY_SEGMENT_WIRE = (
     "MSH|^~\\&|1444-ADT|1444|S-ADT|SIMS|20071023160622||ADT^A03^ADT_A05|Q67084255T54052896X2|P^T|2.5|||NE|AL|CAN|8859/1\r\n"
     "EVN|A03|20071023160622\r\n"
@@ -179,30 +139,30 @@ EMPTY_SEGMENT_WIRE = (
 )
 
 
-def test_empty_segment_does_not_raise() -> None:
-    """Empty PD1 and PV1 segments must not crash the decoder (testParseEmptySegment)."""
-    msg = ADT_A03_v25.model_validate_er7(EMPTY_SEGMENT_WIRE)
+def test_empty_segment_decodes_with_placeholder() -> None:
+    # Bare PV1 segment has no field data; required pv1_2 is injected as a placeholder.
+    with pytest.warns(UserWarning, match=r"pv1_2"):
+        msg = ADT_A03_v25.model_validate_er7(EMPTY_SEGMENT_WIRE)
     assert isinstance(msg, ADT_A03_v25)
-
-
-
-# testUnknownVersion
+    # PID decoded correctly despite the subsequent empty segments.
+    assert msg.PID.pid_3[0].cx_1 == "00J8804997"  # type: ignore[union-attr, index]
+    # Bare PV1 segment: no field data on the wire; required pv1_2 injected as placeholder.
+    assert msg.PV1.pv1_1 is None
+    assert msg.PV1.pv1_2 == ""
 
 
 def test_unknown_version_raises() -> None:
-    """A wire whose MSH.12 names a non-existent HL7 version must raise (testUnknownVersion)."""
     wire = (
         "MSH|^~\\&|^QueryServices||||20021011161756.297-0500||ORU^R01|1|D|2.999\r"
         "OBX|1|NM|Z049107^Chol^L||2.30|mmol/L|||||F\r"
     )
-    with pytest.raises(ModuleNotFoundError):
+    with pytest.raises(ValueError, match="Unknown message structure"):
         decode_er7(wire)
 
 
-
-# testEarlyNonStandard Z-segment near start silently skipped
-
-
+# Wire has MSH, EVN, ZZZ (non-standard), PID, PV1.
+# Bug: the decoder stops at ZZZ and never reaches the real PID and PV1 that follow,
+# silently returning placeholder structures with no field data.
 EARLY_Z_SEGMENT_WIRE = (
     "MSH|^~\\&|IRIS|SANTER|AMB_R|SANTER|200803051508||ADT^A03^ADT_A05|263206|P|2.5\r\n"
     "EVN||200803051509||||200803031508\r\n"
@@ -212,15 +172,9 @@ EARLY_Z_SEGMENT_WIRE = (
 )
 
 
-def test_early_nonstandard_segment_does_not_crash() -> None:
-    """A Z-segment before PID must not crash the decoder (testEarlyNonStandard).
-
-    Current limitation: the decoder stops consuming the known group when it
-    encounters ZZZ, so PID data after the Z-segment is not accessible. pid_3
-    is empty because the parser never reached the PID segment.
-    """
-    msg = ADT_A03_v25.model_validate_er7(EARLY_Z_SEGMENT_WIRE)
-    assert isinstance(msg, ADT_A03_v25)
-    # The decoder stops at ZZZ and never reaches the PID segment; PID is a
-    # model_construct() placeholder so only the segment name is known, not field values.
-    assert msg.PID is not None  # type: ignore[union-attr]
+def test_early_nonstandard_segment_skips_z_and_decodes_following_segments() -> None:
+    with pytest.warns(UserWarning, match=r"Skipped unknown segment 'ZZZ'"):
+        msg = ADT_A03_v25.model_validate_er7(EARLY_Z_SEGMENT_WIRE)
+    # ZZZ was skipped; the decoder continued and found the real PID and PV1.
+    assert msg.PID.pid_3[0].cx_1 == "5520255"  # type: ignore[union-attr, index]
+    assert msg.PV1.pv1_2 == "I"  # type: ignore[union-attr]

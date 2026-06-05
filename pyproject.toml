@@ -63,10 +63,8 @@ testpaths = ["tests"]
 addopts = "-v --tb=short"
 
 [tool.coverage.run]
-source = ["hl7types/codecs", "hl7types/__init__.py"]
-
-[tool.coverage.report]
-show_missing = true
+source = ["hl7types"]
+omit = ["hl7types/hl7/*"]
 
 [tool.ruff]
 line-length = 100

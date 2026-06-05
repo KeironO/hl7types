@@ -1,13 +1,21 @@
-"""
-Tests for strict=True decoding, which enforces required segments/fields
-instead of silently injecting empty placeholders.
+"""Strict vs lenient ER7 decoding of ACK messages.
+
+Lenient mode (default / strict=False):
+  - Complete messages decode correctly.
+  - Missing required segments are replaced with empty placeholders; a
+    UserWarning names the missing segment and references strict=False.
+
+Strict mode (strict=True):
+  - Complete messages decode identically to lenient mode.
+  - Missing required segments raise ValidationError.
+
+Both decode_er7() and ACK.model_validate_er7() expose the same contract.
 """
 from __future__ import annotations
 
 import pytest
 from pydantic import ValidationError
 
-import hl7types  # noqa: F401
 from hl7types import decode_er7
 from hl7types.hl7.v2_5_1.messages.ACK import ACK
 
@@ -21,43 +29,47 @@ ACK_MISSING_MSA_WIRE = (
 )
 
 
-def test_lenient_decode_complete_ack() -> None:
-    """A complete ACK wire decodes correctly in lenient mode."""
-    msg = decode_er7(ACK_WIRE, msg_cls=ACK)
+
+@pytest.mark.parametrize("decode", [
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=False), id="decode_er7/lenient"),
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=True),  id="decode_er7/strict"),
+    pytest.param(lambda w: ACK.model_validate_er7(w),                id="model_validate_er7/lenient"),
+    pytest.param(lambda w: ACK.model_validate_er7(w, strict=True),   id="model_validate_er7/strict"),
+])
+def test_complete_ack_decodes_correctly(decode) -> None:
+    msg = decode(ACK_WIRE)
     assert isinstance(msg, ACK)
+    assert msg.MSH.msh_3.hd_1 == "SEND"
+    assert msg.MSH.msh_10 == "MSG001"
+    assert msg.MSH.msh_12.vid_1 == "2.5.1"
     assert msg.MSA.msa_1 == "AA"
     assert msg.MSA.msa_2 == "MSG001"
 
 
-def test_lenient_decode_missing_msa_succeeds() -> None:
-    """ACK without MSA decodes without error in lenient mode (default)."""
-    msg = decode_er7(ACK_MISSING_MSA_WIRE, strict=False)
-    assert isinstance(msg, ACK)
+
+@pytest.mark.parametrize("decode", [
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=False), id="decode_er7"),
+    pytest.param(lambda w: ACK.model_validate_er7(w),                id="model_validate_er7"),
+])
+def test_lenient_missing_msa_warns_and_injects_placeholder(decode) -> None:
+    with pytest.warns(UserWarning, match=r"MSA.*strict=False"):
+        msg = decode(ACK_MISSING_MSA_WIRE)
+
+    # Segments present on the wire still decode correctly.
+    assert msg.MSH.msh_3.hd_1 == "SEND"
+    assert msg.MSH.msh_10 == "MSG001"
+
+    # Missing MSA is injected as an empty placeholder: no fields were decoded
+    # from the wire (model_fields_set is empty) and optional fields carry their
+    # schema defaults rather than wire values.
     assert msg.MSA.model_fields_set == set()
+    assert msg.MSA.msa_3 is None
 
 
-def test_strict_decode_complete_ack() -> None:
-    """A complete ACK wire decodes correctly in strict mode."""
-    msg = decode_er7(ACK_WIRE, msg_cls=ACK, strict=True)
-    assert isinstance(msg, ACK)
-    assert msg.MSA.msa_1 == "AA"
-    assert msg.MSA.msa_2 == "MSG001"
-
-
-def test_strict_decode_missing_msa_raises() -> None:
-    """ACK without MSA raises ValidationError in strict mode."""
-    with pytest.raises(ValidationError):
-        decode_er7(ACK_MISSING_MSA_WIRE, msg_cls=ACK, strict=True)
-
-
-def test_lenient_model_validate_er7_missing_msa_succeeds() -> None:
-    """model_validate_er7 without MSA succeeds in lenient mode."""
-    msg = ACK.model_validate_er7(ACK_MISSING_MSA_WIRE)
-    assert isinstance(msg, ACK)
-    assert msg.MSA.model_fields_set == set()
-
-
-def test_strict_model_validate_er7_missing_msa_raises() -> None:
-    """model_validate_er7 without MSA raises ValidationError in strict mode."""
-    with pytest.raises(ValidationError):
-        ACK.model_validate_er7(ACK_MISSING_MSA_WIRE, strict=True)
+@pytest.mark.parametrize("decode", [
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=True), id="decode_er7"),
+    pytest.param(lambda w: ACK.model_validate_er7(w, strict=True),  id="model_validate_er7"),
+])
+def test_strict_missing_msa_raises_validation_error(decode) -> None:
+    with pytest.raises(ValidationError, match=r"MSA"):
+        decode(ACK_MISSING_MSA_WIRE)

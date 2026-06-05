@@ -106,11 +106,12 @@ def test_decode_explicit_msg_cls_with_custom_segment():
 
 def test_decode_without_registry_drops_z_segment():
     # Without a registry or explicit msg_cls the decoder falls back to the
-    # generated ACK model, which has no ZWCC field the segment is silently
-    # ignored rather than raising.
+    # generated ACK model, which has no ZWCC field; the unknown segment is
+    # warned and skipped rather than raising.
     from hl7types.hl7.v2_5_1.messages.ACK import ACK
 
-    msg = decode_er7(_WIRE, msg_cls=ACK, strict=True)
+    with pytest.warns(UserWarning, match=r"Skipped unknown segment 'ZWCC'"):
+        msg = decode_er7(_WIRE, msg_cls=ACK, strict=True)
     assert not hasattr(msg, "ZWCC")
 
 
