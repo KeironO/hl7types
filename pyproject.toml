@@ -1,6 +1,6 @@
 [project]
 name = "hl7types"
-version = "0.4.4"
+version = "0.5.0"
 description = "Typed, Pydantic-powered HL7 v2 models with built-in ER7 and XML serialisation"
 readme = "README.md"
 requires-python = ">=3.10"
