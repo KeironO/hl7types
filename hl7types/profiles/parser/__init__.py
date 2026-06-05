@@ -145,8 +145,8 @@ def parse_profile(path: str | Path) -> ProfileConstraints:
     hl7_version = root.get("HL7Version")
     msg_type = static_def.get("MsgType")
     event_type = static_def.get("EventType")
-    msg_struct_id = static_def.get("MsgStructId")
-    name = meta.get("Name") if meta else None
+    msg_struct_id = static_def.get("MsgStructID")
+    name = meta.get("Name") if meta is not None else None
 
     children: list[SegmentConstraint | SegGroupConstraint] = []
 

@@ -1,15 +1,8 @@
-"""
-Tests emulating ca.uhn.hl7v2.parser.GenericParserTest.
-Source: https://github.com/hapifhir/hapi-hl7v2/blob/master/hapi-test/src/test/java/ca/uhn/hl7v2/parser/GenericParserTest.java
-
-Notes:
-- testMessageSetAppropriatelyForParse: the XML round-trip half is not applicable (hl7types
-  has no XML decoder). ADT_A31 has no dedicated model; it shares the ADT_A05 structure
-  per the HL7 v2.5 spec, so ADT_A05 is used for decoding.
-- testAmpersandCorrectlyParsed: marked @Ignore in HAPI due to a known bug. hl7types
-  handles & -> \\T\\ correctly, so this is a positive assertion of correct behaviour.
-"""
+"""ER7 parsing of ADT^A31 (sharing the ADT_A05 structure), CX identifier decoding,
+and ampersand escape / unescape round-trip contracts."""
 from __future__ import annotations
+
+import pytest
 
 from hl7types import decode_er7
 from hl7types.codecs.er7.decoder import _unescape
@@ -18,16 +11,15 @@ from hl7types.hl7.v2_5.messages.ADT_A05 import ADT_A05
 
 ENC = DEFAULT_ENCODING
 
-# Wire taken verbatim from testMessageSetAppropriatelyForParse.
-# ADT^A31 uses the ADT_A05 structure in v2.5.
+# From testMessageSetAppropriatelyForParse. v2.5 ADT^A31 reuses the ADT_A05 structure.
 ADT_A31_WIRE = (
     "MSH|^~\\&|||||200803051508||ADT^A31|2|P|2.5\r"
     "EVN||200803051509\r"
     "PID|||ZZZZZZ83M64Z148R^^^SSN^SSN^^20070103\r"
 )
 
-# Wire taken verbatim from testAmpersandCorrectlyParsed (Java println to \n line endings).
-# OBX.5 contains a literal & which must be escaped to \T\ on re-encode.
+# From testAmpersandCorrectlyParsed (marked @Ignore in HAPI due to a known bug there).
+# OBX.5 of OBX segment 2 contains a literal & that must encode as \T\ and decode back.
 AMPERSAND_WIRE = (
     "MSH|^~\\&|OADD||DADD||20090511130702||ORU^R01|91310000023|P|2.3\n"
     "PID|||2278111^^^6||CSCXBOB^LAB^||19480205|M|^^||^^, ^^|||||||||\n"
@@ -41,15 +33,20 @@ AMPERSAND_WIRE = (
 
 
 def test_adt_a31_decodes_using_adt_a05_structure() -> None:
-    """ER7 decode of an ADT A31 wire must succeed (testMessageSetAppropriatelyForParse)."""
-    msg = ADT_A05.model_validate_er7(ADT_A31_WIRE)
+    # ADT_A31_WIRE has no PV1; lenient mode injects a placeholder and warns.
+    with pytest.warns(UserWarning, match=r"PV1"):
+        msg = ADT_A05.model_validate_er7(ADT_A31_WIRE)
     assert isinstance(msg, ADT_A05)
+    assert msg.MSH.msh_9.msg_1 == "ADT"    # type: ignore[union-attr]
+    assert msg.MSH.msh_9.msg_2 == "A31"    # type: ignore[union-attr]
     assert msg.MSH.msh_10 == "2"
+    assert msg.MSH.msh_11.pt_1 == "P"      # type: ignore[union-attr]
+    assert msg.MSH.msh_12.vid_1 == "2.5"   # type: ignore[union-attr]
 
 
 def test_parse_adt_a31_pid_cx() -> None:
-    """PID.3 with 7-component CX value decodes the ID and assigning authority."""
-    msg = ADT_A05.model_validate_er7(ADT_A31_WIRE)
+    with pytest.warns(UserWarning, match=r"PV1"):
+        msg = ADT_A05.model_validate_er7(ADT_A31_WIRE)
     pid3 = msg.PID.pid_3[0]  # type: ignore[union-attr]
     assert pid3.cx_1 == "ZZZZZZ83M64Z148R"
     assert pid3.cx_4.hd_1 == "SSN"  # type: ignore[union-attr]
@@ -57,19 +54,16 @@ def test_parse_adt_a31_pid_cx() -> None:
 
 
 def test_ampersand_escaped_in_encode() -> None:
-    """& (subcomponent separator) in data must encode to \\T\\ (testAmpersandCorrectlyParsed, @Ignore in HAPI)."""
     assert _escape("WBCS: Adequate in number & normal in appearance", ENC) == (
         "WBCS: Adequate in number \\T\\ normal in appearance"
     )
 
 
 def test_ampersand_escape_decodes_to_literal_ampersand() -> None:
-    """\\T\\ in wire data must decode to a literal & in the model value."""
-    assert _unescape(r"number \T\ normal", DEFAULT_ENCODING) == "number & normal"
+    assert _unescape(r"number \T\ normal", ENC) == "number & normal"
 
 
 def test_ampersand_roundtrip() -> None:
-    """& in OBX.5 survives decode to re-encode as \\T\\ (testAmpersandCorrectlyParsed, @Ignore in HAPI)."""
     msg = decode_er7(AMPERSAND_WIRE)
     # v2.3 ORU_R01 group path: RESPONSE > ORDER_OBSERVATION > OBSERVATION
     obx2 = msg.RESPONSE[0].ORDER_OBSERVATION[0].OBSERVATION[1].OBX  # type: ignore[index, union-attr]

@@ -82,6 +82,50 @@ def is_segment_cls(cls: Any, registry: HL7Registry | None = None) -> bool:
     return False
 
 
+@lru_cache(maxsize=256)
+def _reachable_segment_names_standard(model_cls: type[BaseModel]) -> frozenset[str]:
+    """Segment names reachable from model_cls using only the standard generated classes."""
+    if is_segment_cls(model_cls):
+        return frozenset({model_cls.__name__})
+    names: set[str] = set()
+    try:
+        hints = get_type_hints(model_cls)
+    except Exception:
+        return frozenset()
+    for fname in model_cls.model_fields:
+        ann = hints.get(fname)
+        if ann is None:
+            continue
+        base_type, _ = _unwrap(ann)
+        if _is_model(base_type):
+            names |= _reachable_segment_names_standard(base_type)
+    return frozenset(names)
+
+
+def _reachable_segment_names(
+    model_cls: type[BaseModel],
+    registry: HL7Registry | None = None,
+) -> frozenset[str]:
+    """Segment names reachable from model_cls, including registry-registered segments."""
+    if registry is None:
+        return _reachable_segment_names_standard(model_cls)
+    if is_segment_cls(model_cls, registry):
+        return frozenset({model_cls.__name__})
+    names: set[str] = set()
+    try:
+        hints = get_type_hints(model_cls)
+    except Exception:
+        return frozenset()
+    for fname in model_cls.model_fields:
+        ann = hints.get(fname)
+        if ann is None:
+            continue
+        base_type, _ = _unwrap(ann)
+        if _is_model(base_type):
+            names |= _reachable_segment_names(base_type, registry)
+    return frozenset(names)
+
+
 @lru_cache(maxsize=512)
 def _build_pos_map(model_cls: type[BaseModel]) -> dict[int, tuple[str, Any, bool]]:
     hints = get_type_hints(model_cls)
@@ -284,6 +328,7 @@ def _decode_struct(
     *,
     strict: bool = False,
     registry: HL7Registry | None = None,
+    _globally_reachable: frozenset[str] | None = None,
 ) -> tuple[int, BaseModel | None]:
     if is_segment_cls(model_cls, registry):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
@@ -293,6 +338,12 @@ def _decode_struct(
     hints = get_type_hints(model_cls)
     data: dict[str, Any] = {}
 
+    # The reachable set is computed once at the message root and threaded down.
+    # Using the root set (rather than the current sub-group's set) means segments
+    # that belong to sibling groups are never mistakenly drained.
+    if _globally_reachable is None:
+        _globally_reachable = _reachable_segment_names(model_cls, registry)
+
     for fname in model_cls.model_fields:
         ann = hints.get(fname)
         if ann is None:
@@ -300,6 +351,16 @@ def _decode_struct(
         base_type, is_list = _unwrap(ann)
         if not _is_model(base_type):
             continue
+
+        # Drain segments whose names are not reachable anywhere in the message
+        # structure. These are true unknowns (e.g. unregistered Z-segments).
+        while idx < len(segs) and segs[idx][0] not in _globally_reachable:
+            warnings.warn(
+                f"Skipped unknown segment {segs[idx][0]!r} in {model_cls.__name__}.",
+                UserWarning,
+                stacklevel=2,
+            )
+            idx += 1
 
         seg_name = base_type.__name__
         resolved_type = (
@@ -311,8 +372,24 @@ def _decode_struct(
         if is_list:
             items: list[Any] = []
             while idx < len(segs):
+                # Drain unknowns between repetitions of a list field too.
+                while idx < len(segs) and segs[idx][0] not in _globally_reachable:
+                    warnings.warn(
+                        f"Skipped unknown segment {segs[idx][0]!r} in {model_cls.__name__}.",
+                        UserWarning,
+                        stacklevel=2,
+                    )
+                    idx += 1
+                if idx >= len(segs):
+                    break
                 new_idx, item = _decode_struct(
-                    segs, idx, resolved_type, enc, strict=strict, registry=registry
+                    segs,
+                    idx,
+                    resolved_type,
+                    enc,
+                    strict=strict,
+                    registry=registry,
+                    _globally_reachable=_globally_reachable,
                 )
                 if item is None:
                     break
@@ -322,7 +399,13 @@ def _decode_struct(
                 data[fname] = items
         else:
             new_idx, item = _decode_struct(
-                segs, idx, resolved_type, enc, strict=strict, registry=registry
+                segs,
+                idx,
+                resolved_type,
+                enc,
+                strict=strict,
+                registry=registry,
+                _globally_reachable=_globally_reachable,
             )
             if item is not None:
                 data[fname] = item
@@ -415,8 +498,13 @@ def _resolve_msg_cls(
             return cls
 
     mod_name = version_to_module(version)
-    module = importlib.import_module(f"hl7types.hl7.{mod_name}.messages.{structure}")
-    return getattr(module, structure)
+    try:
+        module = importlib.import_module(f"hl7types.hl7.{mod_name}.messages.{structure}")
+        return getattr(module, structure)
+    except (ModuleNotFoundError, AttributeError) as exc:
+        raise ValueError(
+            f"Unknown message structure {structure!r} for HL7 version {version!r}"
+        ) from exc
 
 
 def _split_segments(wire: str, segment_separator: str) -> list[str]:
