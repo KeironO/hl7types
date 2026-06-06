@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import importlib
 from collections.abc import Callable
-from typing import Annotated, Any, Optional, Union, get_args, get_origin, get_type_hints
+from typing import Annotated, Any, Union, get_args, get_origin, get_type_hints
 
 from pydantic import create_model
 from pydantic.fields import Field, FieldInfo
@@ -152,7 +152,7 @@ def make_constrained_segment(
                     metadata.append(AfterValidator(checker))
 
                 constrained_inner = Annotated[tuple(metadata)]
-                annotation = Optional[constrained_inner] if was_optional else constrained_inner
+                annotation = Union[constrained_inner, None] if was_optional else constrained_inner
 
         field_overrides[field_name] = (
             annotation,
