@@ -1,6 +1,10 @@
 # hl7types
 
+[![PyPI version](https://img.shields.io/pypi/v/hl7types.svg)](https://pypi.python.org/pypi/hl7types)
+[![Supported Python Versions](https://img.shields.io/pypi/pyversions/hl7types.svg)](https://pypi.python.org/pypi/hl7types)
 [![Documentation](https://readthedocs.org/projects/hl7types/badge/?version=latest)](https://hl7types.readthedocs.io)
+[![codecov](https://codecov.io/gh/KeironO/hl7types/branch/main/graph/badge.svg)](https://codecov.io/gh/KeironO/hl7types)
+[![Downloads](https://static.pepy.tech/personalized-badge/hl7types?period=total&units=international_system&left_color=black&right_color=green&left_text=Downloads)](https://pepy.tech/project/hl7types)
 
 > For full API reference, usage guides, and HL7 type documentation, visit **[hl7types.readthedocs.io](https://hl7types.readthedocs.io/en/latest/)**.
 

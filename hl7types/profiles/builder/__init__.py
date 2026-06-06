@@ -1,7 +1,8 @@
+from __future__ import annotations
+
 import importlib
 from collections.abc import Callable
-from types import UnionType
-from typing import Annotated, Any, Union, get_args, get_origin, get_type_hints
+from typing import Annotated, Any, Optional, Union, get_args, get_origin, get_type_hints
 
 from pydantic import create_model
 from pydantic.fields import Field, FieldInfo
@@ -44,7 +45,7 @@ def _copy_field_info(field: FieldInfo, **overrides: Any) -> FieldInfo:
 def _unwrap_optional(annotation: Any) -> tuple[Any, bool]:
     origin = get_origin(annotation)
 
-    if origin in (Union, UnionType) and type(None) in get_args(annotation):
+    if origin is Union and type(None) in get_args(annotation):
         inner_args = [a for a in get_args(annotation) if a is not type(None)]
         if len(inner_args) == 1:
             return inner_args[0], True
@@ -151,7 +152,7 @@ def make_constrained_segment(
                     metadata.append(AfterValidator(checker))
 
                 constrained_inner = Annotated[tuple(metadata)]
-                annotation = constrained_inner | None if was_optional else constrained_inner
+                annotation = Optional[constrained_inner] if was_optional else constrained_inner
 
         field_overrides[field_name] = (
             annotation,

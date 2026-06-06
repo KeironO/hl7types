@@ -109,6 +109,18 @@ def _fill_composite(model: BaseModel, elem: ET.Element) -> None:
             _append_model(value, elem)
 
 
+def _indent(elem: ET.Element, level: int = 0) -> None:
+    """Indent an ElementTree in-place (backport of ET.indent added in 3.9)."""
+    pad = "\n" + "    " * level
+    if len(elem):
+        elem.text = pad + "    "
+        for child in elem:
+            _indent(child, level + 1)
+        child.tail = pad  # type: ignore[possibly-undefined]
+    if level:
+        elem.tail = pad
+
+
 def encode_xml(
     model: BaseModel,
     *,
@@ -128,5 +140,5 @@ def encode_xml(
 
     declaration = '<?xml version="1.0" encoding="UTF-8"?>'
     if pretty:
-        ET.indent(root, space="    ")
+        _indent(root)
     return declaration + ET.tostring(root, encoding="unicode")
