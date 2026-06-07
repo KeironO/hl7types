@@ -11,22 +11,20 @@ from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
-from .TX import TX
-
 
 class TX_CHALLENGE(HL7Model):
     """HL7 v2 TX_CHALLENGE data type.
 
     Attributes
     ----------
-    tx_challenge_1 : TX | None
+    tx_challenge_1 : str | None
         TX_CHALLENGE.1 (opt) - ??????????? (TX)
 
-    tx_challenge_2 : TX | None
+    tx_challenge_2 : str | None
         TX_CHALLENGE.2 (opt) - ??????????? (TX)
     """
 
-    tx_challenge_1: Optional[TX] = Field(
+    tx_challenge_1: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tx_challenge_1",
@@ -37,7 +35,7 @@ class TX_CHALLENGE(HL7Model):
         title="???????????",
     )
 
-    tx_challenge_2: Optional[TX] = Field(
+    tx_challenge_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tx_challenge_2",

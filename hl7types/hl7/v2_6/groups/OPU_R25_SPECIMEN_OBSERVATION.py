@@ -27,7 +27,6 @@ class OPU_R25_SPECIMEN_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

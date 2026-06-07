@@ -5,11 +5,11 @@ import types
 _all_ = {
     'AD', 'AUI', 'CCD', 'CCP', 'CD', 'CF', 'CNE', 'CNN', 'CP', 'CQ', 'CSU',
     'CWE', 'CX', 'DDI', 'DIN', 'DLD', 'DLN', 'DLT', 'DR', 'DTN', 'ED', 'EI',
-    'EIP', 'ERL', 'FC', 'FN', 'FT', 'HD', 'ICD', 'JCC', 'MA', 'MO', 'MOC',
-    'MOP', 'MSG', 'NA', 'NDL', 'NR', 'OCD', 'OSP', 'PIP', 'PL', 'PLN', 'PPN',
-    'PRL', 'PT', 'PTA', 'QIP', 'QSC', 'RCD', 'RFR', 'RI', 'RMC', 'RP', 'RPT',
-    'SAD', 'SCV', 'SN', 'SPD', 'SRT', 'TX', 'UVC', 'VH', 'VID', 'VR', 'WVI',
-    'WVS', 'XAD', 'XCN', 'XON', 'XPN', 'XTN', 'varies'
+    'EIP', 'ERL', 'FC', 'FN', 'HD', 'ICD', 'JCC', 'MA', 'MO', 'MOC', 'MOP',
+    'MSG', 'NA', 'NDL', 'NR', 'OCD', 'OSP', 'PIP', 'PL', 'PLN', 'PPN', 'PRL',
+    'PT', 'PTA', 'QIP', 'QSC', 'RCD', 'RFR', 'RI', 'RMC', 'RP', 'RPT', 'SAD',
+    'SCV', 'SN', 'SPD', 'SRT', 'UVC', 'VH', 'VID', 'VR', 'WVI', 'WVS', 'XAD',
+    'XCN', 'XON', 'XPN', 'XTN', 'varies'
 }  # type: ignore
 
 

@@ -34,7 +34,6 @@ class EAC_U07_COMMAND(HL7Model):
     """
 
     ECD: _ECD = Field(
-        default=...,
         title="ECD",
         description="Required",
     )

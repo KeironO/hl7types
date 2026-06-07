@@ -27,7 +27,6 @@ class PPG_PCG_PATHWAY_ROLE(HL7Model):
     """
 
     ROL: _ROL = Field(
-        default=...,
         title="ROL",
         description="Required",
     )

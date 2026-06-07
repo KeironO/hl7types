@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.TS import TS
@@ -90,7 +89,6 @@ class RXA(HL7Model):
     """
 
     rxa_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxa_1",
             "give_sub_id_counter",
@@ -102,7 +100,6 @@ class RXA(HL7Model):
     )
 
     rxa_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxa_2",
             "administration_sub_id_counter",
@@ -114,7 +111,6 @@ class RXA(HL7Model):
     )
 
     rxa_3: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxa_3",
             "date_time_start_of_administration",
@@ -126,7 +122,6 @@ class RXA(HL7Model):
     )
 
     rxa_4: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxa_4",
             "date_time_end_of_administration",
@@ -138,7 +133,6 @@ class RXA(HL7Model):
     )
 
     rxa_5: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxa_5",
             "administered_code",
@@ -150,7 +144,6 @@ class RXA(HL7Model):
     )
 
     rxa_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxa_6",
             "administered_amount",

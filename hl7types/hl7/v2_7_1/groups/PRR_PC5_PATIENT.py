@@ -31,7 +31,6 @@ class PRR_PC5_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -43,7 +42,7 @@ class PRR_PC5_PATIENT(HL7Model):
     )
 
     PROBLEM: List[_PRR_PC5_PROBLEM] = Field(
-        default=...,
+        min_length=1,
         title="PROBLEM",
         description="Required, repeating",
     )

@@ -27,7 +27,7 @@ class RAS_O01_COMPONENTS(HL7Model):
     """
 
     RXC: List[_RXC] = Field(
-        default=...,
+        min_length=1,
         title="RXC",
         description="Required, repeating",
     )

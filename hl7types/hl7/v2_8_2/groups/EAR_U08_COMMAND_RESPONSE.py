@@ -31,7 +31,6 @@ class EAR_U08_COMMAND_RESPONSE(HL7Model):
     """
 
     ECD: _ECD = Field(
-        default=...,
         title="ECD",
         description="Required",
     )
@@ -43,7 +42,6 @@ class EAR_U08_COMMAND_RESPONSE(HL7Model):
     )
 
     ECR: _ECR = Field(
-        default=...,
         title="ECR",
         description="Required",
     )

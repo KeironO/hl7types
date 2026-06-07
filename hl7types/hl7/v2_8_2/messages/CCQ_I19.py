@@ -40,7 +40,6 @@ class CCQ_I19(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,7 +57,6 @@ class CCQ_I19(HL7Model):
     )
 
     RF1: _RF1 = Field(
-        default=...,
         title="RF1",
         description="Required",
     )

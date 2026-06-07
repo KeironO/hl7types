@@ -27,7 +27,6 @@ class CCU_I20_PATIENT_VISITS(HL7Model):
     """
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

@@ -33,7 +33,6 @@ class ADT_A20(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -45,13 +44,11 @@ class ADT_A20(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     NPU: _NPU = Field(
-        default=...,
         title="NPU",
         description="Required",
     )

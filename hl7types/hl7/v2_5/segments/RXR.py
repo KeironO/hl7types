@@ -40,7 +40,6 @@ class RXR(HL7Model):
     """
 
     rxr_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxr_1",
             "route",

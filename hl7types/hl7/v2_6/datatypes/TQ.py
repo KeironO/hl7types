@@ -8,15 +8,13 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from .CQ import CQ
 from .CWE import CWE
 from .OSD import OSD
 from .RI import RI
-from .TX import TX
 
 
 class TQ(HL7Model):
@@ -45,7 +43,7 @@ class TQ(HL7Model):
     tq_7 : str | None
         TQ.7 (opt) - Condition (ST)
 
-    tq_8 : TX | None
+    tq_8 : str | None
         TQ.8 (opt) - Text (TX)
 
     tq_9 : str | None
@@ -143,7 +141,7 @@ class TQ(HL7Model):
         title="Condition",
     )
 
-    tq_8: Optional[TX] = Field(
+    tq_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_8",

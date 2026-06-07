@@ -34,7 +34,6 @@ class RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER(HL7Model):
     """
 
     RXV: _RXV = Field(
-        default=...,
         title="RXV",
         description="Required",
     )
@@ -52,7 +51,7 @@ class RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER(HL7Model):
     )
 
     TIMING_ENCODED: List[_RDE_O11_TIMING_ENCODED] = Field(
-        default=...,
+        min_length=1,
         title="TIMING_ENCODED",
         description="Required, repeating",
     )

@@ -52,7 +52,7 @@ class OML_O21_PRIOR_RESULT(HL7Model):
     )
 
     ORDER_PRIOR: List[_OML_O21_ORDER_PRIOR] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_PRIOR",
         description="Required, repeating",
     )

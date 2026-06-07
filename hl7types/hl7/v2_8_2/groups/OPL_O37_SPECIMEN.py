@@ -34,7 +34,6 @@ class OPL_O37_SPECIMEN(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )
@@ -52,7 +51,7 @@ class OPL_O37_SPECIMEN(HL7Model):
     )
 
     OBSERVATION_REQUEST: List[_OPL_O37_OBSERVATION_REQUEST] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION_REQUEST",
         description="Required, repeating",
     )

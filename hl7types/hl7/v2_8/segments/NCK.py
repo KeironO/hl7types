@@ -7,10 +7,8 @@ Type: Segment
 """
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class NCK(HL7Model):
@@ -23,7 +21,6 @@ class NCK(HL7Model):
     """
 
     nck_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nck_1",
             "system_date_time",

@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.EI import EI
@@ -149,7 +148,6 @@ class DON(HL7Model):
     )
 
     don_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_3",
             "phlebotomy_start_date_time",
@@ -161,7 +159,6 @@ class DON(HL7Model):
     )
 
     don_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_4",
             "phlebotomy_end_date_time",
@@ -173,7 +170,6 @@ class DON(HL7Model):
     )
 
     don_5: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_5",
             "donation_duration",
@@ -185,7 +181,6 @@ class DON(HL7Model):
     )
 
     don_6: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_6",
             "donation_duration_units",
@@ -197,7 +192,7 @@ class DON(HL7Model):
     )
 
     don_7: List[CNE] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "don_7",
             "intended_procedure_type",
@@ -209,7 +204,7 @@ class DON(HL7Model):
     )
 
     don_8: List[CNE] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "don_8",
             "actual_procedure_type",
@@ -221,7 +216,6 @@ class DON(HL7Model):
     )
 
     don_9: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_9",
             "donor_eligibility_flag",
@@ -233,7 +227,7 @@ class DON(HL7Model):
     )
 
     don_10: List[CNE] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "don_10",
             "donor_eligibility_procedure_type",
@@ -245,7 +239,6 @@ class DON(HL7Model):
     )
 
     don_11: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_11",
             "donor_eligibility_date",
@@ -257,7 +250,6 @@ class DON(HL7Model):
     )
 
     don_12: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_12",
             "process_interruption",
@@ -269,7 +261,6 @@ class DON(HL7Model):
     )
 
     don_13: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_13",
             "process_interruption_reason",
@@ -281,7 +272,7 @@ class DON(HL7Model):
     )
 
     don_14: List[CNE] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "don_14",
             "phlebotomy_issue",
@@ -293,7 +284,6 @@ class DON(HL7Model):
     )
 
     don_15: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_15",
             "intended_recipient_blood_relative",
@@ -305,7 +295,6 @@ class DON(HL7Model):
     )
 
     don_16: XPN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_16",
             "intended_recipient_name",
@@ -317,7 +306,6 @@ class DON(HL7Model):
     )
 
     don_17: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_17",
             "intended_recipient_dob",
@@ -329,7 +317,6 @@ class DON(HL7Model):
     )
 
     don_18: XON = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_18",
             "intended_recipient_facility",
@@ -341,7 +328,6 @@ class DON(HL7Model):
     )
 
     don_19: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_19",
             "intended_recipient_procedure_date",
@@ -353,7 +339,6 @@ class DON(HL7Model):
     )
 
     don_20: XPN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_20",
             "intended_recipient_ordering_provider",
@@ -365,7 +350,6 @@ class DON(HL7Model):
     )
 
     don_21: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_21",
             "phlebotomy_status",
@@ -377,7 +361,6 @@ class DON(HL7Model):
     )
 
     don_22: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_22",
             "arm_stick",
@@ -389,7 +372,6 @@ class DON(HL7Model):
     )
 
     don_23: XPN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_23",
             "bleed_start_phlebotomist",
@@ -401,7 +383,6 @@ class DON(HL7Model):
     )
 
     don_24: XPN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_24",
             "bleed_end_phlebotomist",
@@ -413,7 +394,6 @@ class DON(HL7Model):
     )
 
     don_25: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_25",
             "aphaeresis_type_machine",
@@ -425,7 +405,6 @@ class DON(HL7Model):
     )
 
     don_26: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_26",
             "aphaeresis_machine_serial_number",
@@ -437,7 +416,6 @@ class DON(HL7Model):
     )
 
     don_27: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_27",
             "donor_reaction",
@@ -449,7 +427,6 @@ class DON(HL7Model):
     )
 
     don_28: XPN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_28",
             "final_review_staff_id",
@@ -461,7 +438,6 @@ class DON(HL7Model):
     )
 
     don_29: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_29",
             "final_review_date_time",
@@ -473,7 +449,6 @@ class DON(HL7Model):
     )
 
     don_30: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_30",
             "number_of_tubes_collected",
@@ -497,7 +472,6 @@ class DON(HL7Model):
     )
 
     don_32: XCN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "don_32",
             "donation_accept_staff",

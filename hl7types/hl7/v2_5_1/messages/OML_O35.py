@@ -37,7 +37,6 @@ class OML_O35(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,7 +60,7 @@ class OML_O35(HL7Model):
     )
 
     SPECIMEN: List[_OML_O35_SPECIMEN] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN",
         description="Required, repeating",
     )

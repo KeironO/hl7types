@@ -39,7 +39,6 @@ class INR_U06(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -57,13 +56,12 @@ class INR_U06(HL7Model):
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     INV: List[_INV] = Field(
-        default=...,
+        min_length=1,
         title="INV",
         description="Required, repeating",
     )

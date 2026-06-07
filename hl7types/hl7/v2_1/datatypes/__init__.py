@@ -3,7 +3,7 @@ import sys
 import types
 
 _all_ = {
-    'CE', 'FT', 'TX'
+    'CE'
 }  # type: ignore
 
 

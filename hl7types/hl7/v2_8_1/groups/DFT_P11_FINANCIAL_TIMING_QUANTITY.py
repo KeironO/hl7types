@@ -27,7 +27,6 @@ class DFT_P11_FINANCIAL_TIMING_QUANTITY(HL7Model):
     """
 
     TQ1: _TQ1 = Field(
-        default=...,
         title="TQ1",
         description="Required",
     )

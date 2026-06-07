@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.MO import MO
@@ -53,7 +52,6 @@ class ILT(HL7Model):
     """
 
     ilt_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ilt_1",
             "set_id_ilt",
@@ -65,7 +63,6 @@ class ILT(HL7Model):
     )
 
     ilt_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ilt_2",
             "inventory_lot_number",

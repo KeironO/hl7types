@@ -36,7 +36,6 @@ class SPQ_Q08(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -48,7 +47,6 @@ class SPQ_Q08(HL7Model):
     )
 
     SPR: _SPR = Field(
-        default=...,
         title="SPR",
         description="Required",
     )

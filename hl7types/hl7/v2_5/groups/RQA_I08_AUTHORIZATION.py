@@ -27,7 +27,6 @@ class RQA_I08_AUTHORIZATION(HL7Model):
     """
 
     AUT: _AUT = Field(
-        default=...,
         title="AUT",
         description="Required",
     )

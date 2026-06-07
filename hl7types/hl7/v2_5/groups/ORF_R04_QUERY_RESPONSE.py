@@ -33,7 +33,7 @@ class ORF_R04_QUERY_RESPONSE(HL7Model):
     )
 
     ORDER: List[_ORF_R04_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

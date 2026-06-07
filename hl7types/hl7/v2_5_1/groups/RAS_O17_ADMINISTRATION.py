@@ -31,13 +31,12 @@ class RAS_O17_ADMINISTRATION(HL7Model):
     """
 
     RXA: List[_RXA] = Field(
-        default=...,
+        min_length=1,
         title="RXA",
         description="Required, repeating",
     )
 
     RXR: _RXR = Field(
-        default=...,
         title="RXR",
         description="Required",
     )

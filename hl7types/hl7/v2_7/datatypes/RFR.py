@@ -13,7 +13,6 @@ from hl7types.hl7 import HL7Model
 
 from .CWE import CWE
 from .NR import NR
-from .TX import TX
 
 
 class RFR(HL7Model):
@@ -39,12 +38,11 @@ class RFR(HL7Model):
     rfr_6 : str | None
         RFR.6 (opt) - Race/subspecies (ST)
 
-    rfr_7 : TX | None
+    rfr_7 : str | None
         RFR.7 (opt) - Conditions (TX)
     """
 
     rfr_1: NR = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rfr_1",
             "numeric_range",
@@ -109,7 +107,7 @@ class RFR(HL7Model):
         title="Race/subspecies",
     )
 
-    rfr_7: Optional[TX] = Field(
+    rfr_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_7",

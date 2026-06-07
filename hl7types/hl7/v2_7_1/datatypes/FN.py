@@ -34,7 +34,6 @@ class FN(HL7Model):
     """
 
     fn_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "fn_1",
             "surname",

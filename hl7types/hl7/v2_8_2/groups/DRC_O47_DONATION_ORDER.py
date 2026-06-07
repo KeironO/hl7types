@@ -27,7 +27,6 @@ class DRC_O47_DONATION_ORDER(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )

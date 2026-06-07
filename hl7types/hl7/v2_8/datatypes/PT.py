@@ -25,7 +25,6 @@ class PT(HL7Model):
     """
 
     pt_1: str = Field(
-        default=...,
         max_length=1,
         validation_alias=AliasChoices(
             "pt_1",

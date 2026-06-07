@@ -30,7 +30,6 @@ class OMQ_O57_PATIENT_VISIT_PRIOR(HL7Model):
     """
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

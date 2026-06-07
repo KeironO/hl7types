@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -87,7 +86,6 @@ class IAM(HL7Model):
     """
 
     iam_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "iam_1",
             "set_id_iam",
@@ -111,7 +109,6 @@ class IAM(HL7Model):
     )
 
     iam_3: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "iam_3",
             "allergen_code_mnemonic_description",
@@ -147,7 +144,6 @@ class IAM(HL7Model):
     )
 
     iam_6: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "iam_6",
             "allergy_action_code",

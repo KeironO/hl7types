@@ -27,7 +27,6 @@ class EHC_E15_ADJUSTMENT_PAYEE(HL7Model):
     """
 
     ADJ: _ADJ = Field(
-        default=...,
         title="ADJ",
         description="Required",
     )

@@ -33,7 +33,6 @@ class ADT_A44_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -51,7 +50,6 @@ class ADT_A44_PATIENT(HL7Model):
     )
 
     MRG: _MRG = Field(
-        default=...,
         title="MRG",
         description="Required",
     )

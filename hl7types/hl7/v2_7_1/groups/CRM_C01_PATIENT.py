@@ -37,7 +37,6 @@ class CRM_C01_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -55,7 +54,6 @@ class CRM_C01_PATIENT(HL7Model):
     )
 
     CSR: _CSR = Field(
-        default=...,
         title="CSR",
         description="Required",
     )

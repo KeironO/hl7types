@@ -39,13 +39,11 @@ class MFR_M05_MF_QUERY(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     LOC: _LOC = Field(
-        default=...,
         title="LOC",
         description="Required",
     )
@@ -63,7 +61,7 @@ class MFR_M05_MF_QUERY(HL7Model):
     )
 
     LDP: List[_LDP] = Field(
-        default=...,
+        min_length=1,
         title="LDP",
         description="Required, repeating",
     )

@@ -74,7 +74,6 @@ class ROL(HL7Model):
     )
 
     rol_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rol_2",
             "action_code",
@@ -86,7 +85,6 @@ class ROL(HL7Model):
     )
 
     rol_3: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rol_3",
             "role_rol",

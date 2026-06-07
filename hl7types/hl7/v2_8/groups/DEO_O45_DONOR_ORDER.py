@@ -31,7 +31,6 @@ class DEO_O45_DONOR_ORDER(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )

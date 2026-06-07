@@ -37,7 +37,6 @@ class PEX_P07_ASSOCIATED_PERSON(HL7Model):
     """
 
     NK1: _NK1 = Field(
-        default=...,
         title="NK1",
         description="Required",
     )

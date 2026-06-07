@@ -7,7 +7,6 @@ Type: Message
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -30,19 +29,16 @@ class QBP_Z73(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )
 
     RCP: _RCP = Field(
-        default=...,
         title="RCP",
         description="Required",
     )

@@ -27,7 +27,6 @@ class NMD_N01_APP_STATUS(HL7Model):
     """
 
     NSC: _NSC = Field(
-        default=...,
         title="NSC",
         description="Required",
     )

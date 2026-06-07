@@ -28,7 +28,6 @@ class PPG_PCG_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

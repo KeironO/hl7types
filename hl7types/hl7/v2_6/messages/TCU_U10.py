@@ -40,7 +40,6 @@ class TCU_U10(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,13 +57,12 @@ class TCU_U10(HL7Model):
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     TEST_CONFIGURATION: List[_TCU_U10_TEST_CONFIGURATION] = Field(
-        default=...,
+        min_length=1,
         title="TEST_CONFIGURATION",
         description="Required, repeating",
     )

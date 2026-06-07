@@ -42,7 +42,6 @@ class LRL(HL7Model):
     """
 
     lrl_1: PL = Field(
-        default=...,
         validation_alias=AliasChoices(
             "lrl_1",
             "primary_key_value",

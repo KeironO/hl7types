@@ -60,7 +60,6 @@ class FAC(HL7Model):
     """
 
     fac_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "fac_1",
             "facility_id_fac",
@@ -96,7 +95,6 @@ class FAC(HL7Model):
     )
 
     fac_4: XTN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "fac_4",
             "facility_telecommunication",

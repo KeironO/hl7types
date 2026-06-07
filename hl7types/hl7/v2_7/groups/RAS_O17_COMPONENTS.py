@@ -27,7 +27,6 @@ class RAS_O17_COMPONENTS(HL7Model):
     """
 
     RXC: _RXC = Field(
-        default=...,
         title="RXC",
         description="Required",
     )

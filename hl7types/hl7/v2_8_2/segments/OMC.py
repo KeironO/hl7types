@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
@@ -99,7 +98,6 @@ class OMC(HL7Model):
     )
 
     omc_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "omc_4",
             "clinical_information_request",
@@ -123,7 +121,6 @@ class OMC(HL7Model):
     )
 
     omc_6: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "omc_6",
             "communication_location",

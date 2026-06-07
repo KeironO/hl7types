@@ -31,13 +31,12 @@ class ORU_R01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     RESPONSE: List[_ORU_R01_RESPONSE] = Field(
-        default=...,
+        min_length=1,
         title="RESPONSE",
         description="Required, repeating",
     )

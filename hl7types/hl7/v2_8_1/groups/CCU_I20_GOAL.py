@@ -34,7 +34,6 @@ class CCU_I20_GOAL(HL7Model):
     """
 
     GOL: _GOL = Field(
-        default=...,
         title="GOL",
         description="Required",
     )

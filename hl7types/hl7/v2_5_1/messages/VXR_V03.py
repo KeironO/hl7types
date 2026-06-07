@@ -58,13 +58,11 @@ class VXR_V03(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -76,7 +74,6 @@ class VXR_V03(HL7Model):
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -88,7 +85,6 @@ class VXR_V03(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

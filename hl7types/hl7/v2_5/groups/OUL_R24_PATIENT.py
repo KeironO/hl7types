@@ -30,7 +30,6 @@ class OUL_R24_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

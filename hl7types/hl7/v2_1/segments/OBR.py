@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 
@@ -166,7 +165,6 @@ class OBR(HL7Model):
     )
 
     obr_4: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obr_4",
             "universal_service_ident",
@@ -202,7 +200,6 @@ class OBR(HL7Model):
     )
 
     obr_7: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obr_7",
             "observation_date_time",
@@ -214,7 +211,6 @@ class OBR(HL7Model):
     )
 
     obr_8: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obr_8",
             "observation_end_date_time",
@@ -226,7 +222,6 @@ class OBR(HL7Model):
     )
 
     obr_9: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obr_9",
             "collection_volume",
@@ -286,7 +281,6 @@ class OBR(HL7Model):
     )
 
     obr_14: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obr_14",
             "specimen_received_date_time",
@@ -382,7 +376,6 @@ class OBR(HL7Model):
     )
 
     obr_22: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obr_22",
             "results_rpt_status_chng_date_t",

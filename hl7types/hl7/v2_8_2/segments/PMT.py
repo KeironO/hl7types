@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.CWE import CWE
@@ -62,7 +61,6 @@ class PMT(HL7Model):
     """
 
     pmt_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pmt_1",
             "payment_remittance_advice_number",
@@ -74,7 +72,6 @@ class PMT(HL7Model):
     )
 
     pmt_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pmt_2",
             "payment_remittance_effective_date_time",
@@ -86,7 +83,6 @@ class PMT(HL7Model):
     )
 
     pmt_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pmt_3",
             "payment_remittance_expiration_date_time",
@@ -98,7 +94,6 @@ class PMT(HL7Model):
     )
 
     pmt_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pmt_4",
             "payment_method",
@@ -110,7 +105,6 @@ class PMT(HL7Model):
     )
 
     pmt_5: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pmt_5",
             "payment_remittance_date_time",
@@ -122,7 +116,6 @@ class PMT(HL7Model):
     )
 
     pmt_6: CP = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pmt_6",
             "payment_remittance_amount",
@@ -182,7 +175,6 @@ class PMT(HL7Model):
     )
 
     pmt_11: XON = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pmt_11",
             "payment_organization",

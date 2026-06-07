@@ -28,7 +28,6 @@ class EHC_E02_PRODUCT_SERVICE_SECTION(HL7Model):
     """
 
     PSS: _PSS = Field(
-        default=...,
         title="PSS",
         description="Required",
     )

@@ -42,7 +42,6 @@ class PRA(HL7Model):
     """
 
     pra_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pra_1",
             "pra_primary_key_value",

@@ -43,7 +43,6 @@ class OML_O39_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

@@ -8,13 +8,11 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CQ import CQ
-from ..datatypes.TX import TX
 
 
 class OM4(HL7Model):
@@ -28,7 +26,7 @@ class OM4(HL7Model):
     om4_2 : str | None
         OM4.2 (opt) - Derived Specimen (ID)
 
-    om4_3 : TX | None
+    om4_3 : str | None
         OM4.3 (opt) - Container Description (TX)
 
     om4_4 : str | None
@@ -43,10 +41,10 @@ class OM4(HL7Model):
     om4_7 : CE | None
         OM4.7 (opt) - Additive (CE)
 
-    om4_8 : TX | None
+    om4_8 : str | None
         OM4.8 (opt) - Preparation (TX)
 
-    om4_9 : TX | None
+    om4_9 : str | None
         OM4.9 (opt) - Special Handling Requirements (TX)
 
     om4_10 : CQ | None
@@ -55,7 +53,7 @@ class OM4(HL7Model):
     om4_11 : CQ | None
         OM4.11 (opt) - Minimum Collection Volume (CQ)
 
-    om4_12 : TX | None
+    om4_12 : str | None
         OM4.12 (opt) - Specimen Requirements (TX)
 
     om4_13 : list[str] | None
@@ -89,7 +87,7 @@ class OM4(HL7Model):
         description="Item #642 | Table HL70170",
     )
 
-    om4_3: Optional[TX] = Field(
+    om4_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om4_3",
@@ -149,7 +147,7 @@ class OM4(HL7Model):
         description="Item #647 | Table HL70371",
     )
 
-    om4_8: Optional[TX] = Field(
+    om4_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om4_8",
@@ -161,7 +159,7 @@ class OM4(HL7Model):
         description="Item #648",
     )
 
-    om4_9: Optional[TX] = Field(
+    om4_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om4_9",
@@ -197,7 +195,7 @@ class OM4(HL7Model):
         description="Item #651",
     )
 
-    om4_12: Optional[TX] = Field(
+    om4_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om4_12",

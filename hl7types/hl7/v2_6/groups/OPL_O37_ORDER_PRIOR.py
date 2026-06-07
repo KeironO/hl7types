@@ -37,7 +37,6 @@ class OPL_O37_ORDER_PRIOR(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -61,7 +60,7 @@ class OPL_O37_ORDER_PRIOR(HL7Model):
     )
 
     OBX: List[_OBX] = Field(
-        default=...,
+        min_length=1,
         title="OBX",
         description="Required, repeating",
     )

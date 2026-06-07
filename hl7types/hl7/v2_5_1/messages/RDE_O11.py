@@ -37,7 +37,6 @@ class RDE_O11(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,7 +60,7 @@ class RDE_O11(HL7Model):
     )
 
     ORDER: List[_RDE_O11_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

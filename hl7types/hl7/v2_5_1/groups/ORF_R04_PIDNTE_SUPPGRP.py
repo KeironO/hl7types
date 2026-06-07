@@ -27,7 +27,6 @@ class ORF_R04_PIDNTE_SUPPGRP(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

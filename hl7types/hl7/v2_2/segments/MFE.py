@@ -34,7 +34,6 @@ class MFE(HL7Model):
     """
 
     mfe_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfe_1",
             "record_level_event_code",

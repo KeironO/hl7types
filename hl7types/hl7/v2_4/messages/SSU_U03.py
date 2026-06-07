@@ -34,19 +34,17 @@ class SSU_U03(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     SPECIMEN_CONTAINER: List[_SSU_U03_SPECIMEN_CONTAINER] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN_CONTAINER",
         description="Required, repeating",
     )

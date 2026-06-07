@@ -49,13 +49,11 @@ class OSU_O51(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -97,7 +95,7 @@ class OSU_O51(HL7Model):
     )
 
     ORDER_STATUS: List[_OSU_O51_ORDER_STATUS] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_STATUS",
         description="Required, repeating",
     )

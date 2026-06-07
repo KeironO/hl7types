@@ -33,7 +33,6 @@ class MFN_M13(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -45,13 +44,12 @@ class MFN_M13(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MFE: List[_MFE] = Field(
-        default=...,
+        min_length=1,
         title="MFE",
         description="Required, repeating",
     )

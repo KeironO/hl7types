@@ -27,7 +27,6 @@ class PIN_I07_PROVIDER(HL7Model):
     """
 
     PRD: _PRD = Field(
-        default=...,
         title="PRD",
         description="Required",
     )

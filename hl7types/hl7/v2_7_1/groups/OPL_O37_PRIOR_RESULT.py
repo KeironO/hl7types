@@ -37,7 +37,7 @@ class OPL_O37_PRIOR_RESULT(HL7Model):
     """
 
     NK1: List[_NK1] = Field(
-        default=...,
+        min_length=1,
         title="NK1",
         description="Required, repeating",
     )
@@ -61,7 +61,7 @@ class OPL_O37_PRIOR_RESULT(HL7Model):
     )
 
     ORDER_PRIOR: List[_OPL_O37_ORDER_PRIOR] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_PRIOR",
         description="Required, repeating",
     )

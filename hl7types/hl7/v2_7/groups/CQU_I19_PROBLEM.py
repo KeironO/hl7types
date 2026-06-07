@@ -34,7 +34,6 @@ class CQU_I19_PROBLEM(HL7Model):
     """
 
     PRB: _PRB = Field(
-        default=...,
         title="PRB",
         description="Required",
     )

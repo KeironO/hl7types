@@ -28,7 +28,6 @@ class CCI_I22_APPOINTMENT_HISTORY(HL7Model):
     """
 
     SCH: _SCH = Field(
-        default=...,
         title="SCH",
         description="Required",
     )

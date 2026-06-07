@@ -34,13 +34,11 @@ class MFN_M09_MF_TEST_CATEGORICAL(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     OM1: _OM1 = Field(
-        default=...,
         title="OM1",
         description="Required",
     )

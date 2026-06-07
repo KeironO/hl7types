@@ -72,7 +72,6 @@ class STF(HL7Model):
     """
 
     stf_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "stf_1",
             "stf_primary_key_value",

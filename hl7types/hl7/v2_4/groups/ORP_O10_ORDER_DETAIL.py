@@ -33,7 +33,6 @@ class ORP_O10_ORDER_DETAIL(HL7Model):
     """
 
     RXO: _RXO = Field(
-        default=...,
         title="RXO",
         description="Required",
     )
@@ -45,7 +44,7 @@ class ORP_O10_ORDER_DETAIL(HL7Model):
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

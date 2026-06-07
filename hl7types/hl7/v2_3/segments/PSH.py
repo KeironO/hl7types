@@ -8,12 +8,10 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
-from ..datatypes.FT import FT
 from ..datatypes.TS import TS
 
 
@@ -46,7 +44,7 @@ class PSH(HL7Model):
     psh_8 : str | None
         PSH.8 (opt) - Quantity Distributed Method (ID)
 
-    psh_9 : FT | None
+    psh_9 : str | None
         PSH.9 (opt) - Quantity Distributed Comment (FT)
 
     psh_10 : CQ | None
@@ -55,7 +53,7 @@ class PSH(HL7Model):
     psh_11 : str | None
         PSH.11 (opt) - Quantity in Use Method (ID)
 
-    psh_12 : FT | None
+    psh_12 : str | None
         PSH.12 (opt) - Quantity in Use Comment (FT)
 
     psh_13 : list[str] | None
@@ -66,7 +64,6 @@ class PSH(HL7Model):
     """
 
     psh_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psh_1",
             "report_type",
@@ -90,7 +87,6 @@ class PSH(HL7Model):
     )
 
     psh_3: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psh_3",
             "report_date",
@@ -161,7 +157,7 @@ class PSH(HL7Model):
         description="Item #1240 | Table HL70329",
     )
 
-    psh_9: Optional[FT] = Field(
+    psh_9: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_9",
@@ -197,7 +193,7 @@ class PSH(HL7Model):
         description="Item #1243 | Table HL70329",
     )
 
-    psh_12: Optional[FT] = Field(
+    psh_12: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "psh_12",

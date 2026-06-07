@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -27,13 +26,11 @@ class MFN_M11_MF_TEST_CALC_DETAIL(HL7Model):
     """
 
     OM6: _OM6 = Field(
-        default=...,
         title="OM6",
         description="Required",
     )
 
     OM2: _OM2 = Field(
-        default=...,
         title="OM2",
         description="Required",
     )

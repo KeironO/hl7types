@@ -30,7 +30,6 @@ class OMQ_O57_OBSERVATION_PRIOR(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

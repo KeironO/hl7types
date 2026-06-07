@@ -37,7 +37,6 @@ class OMD_O01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,7 +54,7 @@ class OMD_O01(HL7Model):
     )
 
     ORDER_DIET: List[_OMD_O01_ORDER_DIET] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_DIET",
         description="Required, repeating",
     )

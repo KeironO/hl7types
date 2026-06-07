@@ -7,7 +7,6 @@ Type: Message
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -27,13 +26,11 @@ class QRY_A19(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )

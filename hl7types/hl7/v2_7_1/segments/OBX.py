@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -118,7 +117,6 @@ class OBX(HL7Model):
     )
 
     obx_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obx_2",
             "value_type",
@@ -130,7 +128,6 @@ class OBX(HL7Model):
     )
 
     obx_3: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obx_3",
             "observation_identifier",
@@ -142,7 +139,6 @@ class OBX(HL7Model):
     )
 
     obx_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obx_4",
             "observation_sub_id",
@@ -226,7 +222,6 @@ class OBX(HL7Model):
     )
 
     obx_11: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "obx_11",
             "observation_result_status",

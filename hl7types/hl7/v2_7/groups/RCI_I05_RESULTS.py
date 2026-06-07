@@ -27,7 +27,6 @@ class RCI_I05_RESULTS(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

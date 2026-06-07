@@ -27,7 +27,6 @@ class RRI_I12_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

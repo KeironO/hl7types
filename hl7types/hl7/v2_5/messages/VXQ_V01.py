@@ -33,7 +33,6 @@ class VXQ_V01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -45,7 +44,6 @@ class VXQ_V01(HL7Model):
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )

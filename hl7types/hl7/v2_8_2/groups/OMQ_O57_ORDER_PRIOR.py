@@ -43,7 +43,6 @@ class OMQ_O57_ORDER_PRIOR(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -55,7 +54,6 @@ class OMQ_O57_ORDER_PRIOR(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -79,7 +77,7 @@ class OMQ_O57_ORDER_PRIOR(HL7Model):
     )
 
     OBSERVATION_PRIOR: List[_OMQ_O57_OBSERVATION_PRIOR] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION_PRIOR",
         description="Required, repeating",
     )

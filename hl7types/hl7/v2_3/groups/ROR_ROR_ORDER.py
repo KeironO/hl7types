@@ -33,19 +33,17 @@ class ROR_ROR_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
 
     RXO: _RXO = Field(
-        default=...,
         title="RXO",
         description="Required",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

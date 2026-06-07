@@ -43,13 +43,11 @@ class ARD_A19(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -61,7 +59,6 @@ class ARD_A19(HL7Model):
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -73,7 +70,7 @@ class ARD_A19(HL7Model):
     )
 
     QUERY_RESPONSE: List[_ARD_A19_QUERY_RESPONSE] = Field(
-        default=...,
+        min_length=1,
         title="QUERY_RESPONSE",
         description="Required, repeating",
     )

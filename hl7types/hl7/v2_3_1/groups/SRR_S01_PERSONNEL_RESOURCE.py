@@ -27,7 +27,6 @@ class SRR_S01_PERSONNEL_RESOURCE(HL7Model):
     """
 
     AIP: _AIP = Field(
-        default=...,
         title="AIP",
         description="Required",
     )

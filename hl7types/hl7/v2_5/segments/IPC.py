@@ -49,7 +49,6 @@ class IPC(HL7Model):
     """
 
     ipc_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipc_1",
             "accession_identifier",
@@ -61,7 +60,6 @@ class IPC(HL7Model):
     )
 
     ipc_2: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipc_2",
             "requested_procedure_id",
@@ -73,7 +71,6 @@ class IPC(HL7Model):
     )
 
     ipc_3: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipc_3",
             "study_instance_uid",
@@ -85,7 +82,6 @@ class IPC(HL7Model):
     )
 
     ipc_4: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipc_4",
             "scheduled_procedure_step_id",

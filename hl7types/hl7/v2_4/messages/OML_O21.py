@@ -34,7 +34,6 @@ class OML_O21(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,7 @@ class OML_O21(HL7Model):
     )
 
     ORDER_GENERAL: List[_OML_O21_ORDER_GENERAL] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_GENERAL",
         description="Required, repeating",
     )

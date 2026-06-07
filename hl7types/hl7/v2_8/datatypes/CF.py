@@ -8,11 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
-
-from .FT import FT
 
 
 class CF(HL7Model):
@@ -23,7 +20,7 @@ class CF(HL7Model):
     cf_1 : str | None
         CF.1 (opt) - Identifier (ST)
 
-    cf_2 : FT | None
+    cf_2 : str | None
         CF.2 (opt) - Formatted Text (FT)
 
     cf_3 : str | None
@@ -32,7 +29,7 @@ class CF(HL7Model):
     cf_4 : str | None
         CF.4 (opt) - Alternate Identifier (ST)
 
-    cf_5 : FT | None
+    cf_5 : str | None
         CF.5 (opt) - Alternate Formatted Text (FT)
 
     cf_6 : str | None
@@ -50,7 +47,7 @@ class CF(HL7Model):
     cf_10 : str | None
         CF.10 (opt) - Second Alternate Identifier (ST)
 
-    cf_11 : FT | None
+    cf_11 : str | None
         CF.11 (opt) - Second Alternate Formatted Text (FT)
 
     cf_12 : str | None
@@ -98,7 +95,7 @@ class CF(HL7Model):
         title="Identifier",
     )
 
-    cf_2: Optional[FT] = Field(
+    cf_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_2",
@@ -132,7 +129,7 @@ class CF(HL7Model):
         title="Alternate Identifier",
     )
 
-    cf_5: Optional[FT] = Field(
+    cf_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_5",
@@ -199,7 +196,7 @@ class CF(HL7Model):
         title="Second Alternate Identifier",
     )
 
-    cf_11: Optional[FT] = Field(
+    cf_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_11",

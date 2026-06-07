@@ -34,7 +34,6 @@ class PEX_P07_ASSOCIATED_RX_ORDER(HL7Model):
     """
 
     RXE: _RXE = Field(
-        default=...,
         title="RXE",
         description="Required",
     )
@@ -46,7 +45,7 @@ class PEX_P07_ASSOCIATED_RX_ORDER(HL7Model):
     )
 
     NK1_TIMING_QTY: List[_PEX_P07_NK1_TIMING_QTY] = Field(
-        default=...,
+        min_length=1,
         title="NK1_TIMING_QTY",
         description="Required, repeating",
     )

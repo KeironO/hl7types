@@ -11,8 +11,6 @@ from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
-from .FT import FT
-
 
 class CF(HL7Model):
     """HL7 v2 CF data type.
@@ -22,7 +20,7 @@ class CF(HL7Model):
     cf_1 : str | None
         CF.1 (opt) - Identifier (ST)
 
-    cf_2 : FT | None
+    cf_2 : str | None
         CF.2 (opt) - Formatted Text (FT)
 
     cf_3 : str | None
@@ -31,7 +29,7 @@ class CF(HL7Model):
     cf_4 : str | None
         CF.4 (opt) - Alternate Identifier (ST)
 
-    cf_5 : FT | None
+    cf_5 : str | None
         CF.5 (opt) - Alternate Formatted Text (FT)
 
     cf_6 : str | None
@@ -49,7 +47,7 @@ class CF(HL7Model):
         title="Identifier",
     )
 
-    cf_2: Optional[FT] = Field(
+    cf_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_2",
@@ -82,7 +80,7 @@ class CF(HL7Model):
         title="Alternate Identifier",
     )
 
-    cf_5: Optional[FT] = Field(
+    cf_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cf_5",

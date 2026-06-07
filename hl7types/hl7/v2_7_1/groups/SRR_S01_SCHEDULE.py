@@ -37,7 +37,6 @@ class SRR_S01_SCHEDULE(HL7Model):
     """
 
     SCH: _SCH = Field(
-        default=...,
         title="SCH",
         description="Required",
     )
@@ -61,7 +60,7 @@ class SRR_S01_SCHEDULE(HL7Model):
     )
 
     RESOURCE: List[_SRR_S01_RESOURCE] = Field(
-        default=...,
+        min_length=1,
         title="RESOURCE",
         description="Required, repeating",
     )

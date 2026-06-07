@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -27,13 +27,12 @@ class RRA_O02_ADMINISTRATION(HL7Model):
     """
 
     RXA: List[_RXA] = Field(
-        default=...,
+        min_length=1,
         title="RXA",
         description="Required, repeating",
     )
 
     RXR: _RXR = Field(
-        default=...,
         title="RXR",
         description="Required",
     )

@@ -30,13 +30,12 @@ class RSP_Z86_ADMINISTRATION(HL7Model):
     """
 
     RXA: _RXA = Field(
-        default=...,
         title="RXA",
         description="Required",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

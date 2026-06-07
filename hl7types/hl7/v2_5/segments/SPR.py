@@ -46,7 +46,6 @@ class SPR(HL7Model):
     )
 
     spr_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "spr_2",
             "query_response_format_code",
@@ -58,7 +57,6 @@ class SPR(HL7Model):
     )
 
     spr_3: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "spr_3",
             "stored_procedure_name",

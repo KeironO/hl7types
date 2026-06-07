@@ -8,11 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
-
-from ..datatypes.TX import TX
 
 
 class NTE(HL7Model):
@@ -26,7 +23,7 @@ class NTE(HL7Model):
     nte_2 : str | None
         NTE.2 (opt) - SOURCE OF COMMENT (ID)
 
-    nte_3 : list[TX] | None
+    nte_3 : list[str] | None
         NTE.3 (req, rep) - COMMENT (TX) [optional: TX has no required components]
     """
 
@@ -54,7 +51,7 @@ class NTE(HL7Model):
         description="Item #574 | Table HL70105",
     )
 
-    nte_3: Optional[List[TX]] = Field(
+    nte_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "nte_3",

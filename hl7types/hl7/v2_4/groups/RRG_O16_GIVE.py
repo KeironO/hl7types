@@ -30,13 +30,12 @@ class RRG_O16_GIVE(HL7Model):
     """
 
     RXG: _RXG = Field(
-        default=...,
         title="RXG",
         description="Required",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

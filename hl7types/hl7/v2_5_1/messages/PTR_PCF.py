@@ -43,7 +43,6 @@ class PTR_PCF(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,7 +54,6 @@ class PTR_PCF(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -73,13 +71,12 @@ class PTR_PCF(HL7Model):
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
 
     PATIENT: List[_PTR_PCF_PATIENT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT",
         description="Required, repeating",
     )

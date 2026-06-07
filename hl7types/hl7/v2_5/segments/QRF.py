@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.TQ import TQ
 from ..datatypes.TS import TS
@@ -53,7 +52,7 @@ class QRF(HL7Model):
     """
 
     qrf_1: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "qrf_1",
             "where_subject_filter",

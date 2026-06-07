@@ -30,13 +30,12 @@ class RSP_Z82_VISIT(HL7Model):
     """
 
     AL1: List[_AL1] = Field(
-        default=...,
+        min_length=1,
         title="AL1",
         description="Required, repeating",
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

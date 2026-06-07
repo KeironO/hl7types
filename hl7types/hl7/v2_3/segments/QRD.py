@@ -72,7 +72,6 @@ class QRD(HL7Model):
     )
 
     qrd_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_2",
             "query_format_code",
@@ -84,7 +83,6 @@ class QRD(HL7Model):
     )
 
     qrd_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_3",
             "query_priority",
@@ -96,7 +94,6 @@ class QRD(HL7Model):
     )
 
     qrd_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_4",
             "query_id",
@@ -132,7 +129,6 @@ class QRD(HL7Model):
     )
 
     qrd_7: CQ = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_7",
             "quantity_limited_request",

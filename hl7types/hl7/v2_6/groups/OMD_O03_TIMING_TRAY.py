@@ -27,7 +27,6 @@ class OMD_O03_TIMING_TRAY(HL7Model):
     """
 
     TQ1: _TQ1 = Field(
-        default=...,
         title="TQ1",
         description="Required",
     )

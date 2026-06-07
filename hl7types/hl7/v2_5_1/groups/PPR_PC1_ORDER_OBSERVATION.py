@@ -30,7 +30,6 @@ class PPR_PC1_ORDER_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

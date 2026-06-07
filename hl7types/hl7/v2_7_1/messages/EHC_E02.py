@@ -34,7 +34,6 @@ class EHC_E02(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,6 @@ class EHC_E02(HL7Model):
     )
 
     INVOICE_INFORMATION: _EHC_E02_INVOICE_INFORMATION = Field(
-        default=...,
         title="INVOICE_INFORMATION",
         description="Required",
     )

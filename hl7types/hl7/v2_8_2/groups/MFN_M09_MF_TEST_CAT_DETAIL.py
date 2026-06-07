@@ -27,7 +27,6 @@ class MFN_M09_MF_TEST_CAT_DETAIL(HL7Model):
     """
 
     OM3: _OM3 = Field(
-        default=...,
         title="OM3",
         description="Required",
     )

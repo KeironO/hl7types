@@ -8,13 +8,11 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
-from ..datatypes.TX import TX
 
 
 class SHP(HL7Model):
@@ -34,7 +32,7 @@ class SHP(HL7Model):
     shp_4 : str
         SHP.4 (req) - Shipment Status Date/Time (DTM)
 
-    shp_5 : TX | None
+    shp_5 : str | None
         SHP.5 (opt) - Shipment Status Reason (TX)
 
     shp_6 : CWE | None
@@ -57,7 +55,6 @@ class SHP(HL7Model):
     """
 
     shp_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "shp_1",
             "shipment_id",
@@ -93,7 +90,6 @@ class SHP(HL7Model):
     )
 
     shp_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "shp_4",
             "shipment_status_date_time",
@@ -104,7 +100,7 @@ class SHP(HL7Model):
         description="Item #2320",
     )
 
-    shp_5: Optional[TX] = Field(
+    shp_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "shp_5",

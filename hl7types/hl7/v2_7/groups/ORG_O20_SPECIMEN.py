@@ -27,7 +27,6 @@ class ORG_O20_SPECIMEN(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )

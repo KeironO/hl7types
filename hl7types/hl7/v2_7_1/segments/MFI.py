@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.HD import HD
@@ -41,7 +40,6 @@ class MFI(HL7Model):
     """
 
     mfi_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfi_1",
             "master_file_identifier",
@@ -65,7 +63,6 @@ class MFI(HL7Model):
     )
 
     mfi_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfi_3",
             "file_level_event_code",
@@ -101,7 +98,6 @@ class MFI(HL7Model):
     )
 
     mfi_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfi_6",
             "response_level_code",

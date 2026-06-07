@@ -34,7 +34,6 @@ class PPP_PCB_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _PPP_PCB_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

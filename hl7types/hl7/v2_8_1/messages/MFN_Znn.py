@@ -37,7 +37,6 @@ class MFN_Znn(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,13 +54,12 @@ class MFN_Znn(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF_SITE_DEFINED: List[_MFN_Znn_MF_SITE_DEFINED] = Field(
-        default=...,
+        min_length=1,
         title="MF_SITE_DEFINED",
         description="Required, repeating",
     )

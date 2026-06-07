@@ -27,7 +27,6 @@ class MFN_M10_MF_TEST_BATT_DETAIL(HL7Model):
     """
 
     OM5: _OM5 = Field(
-        default=...,
         title="OM5",
         description="Required",
     )

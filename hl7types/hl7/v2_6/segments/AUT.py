@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.CWE import CWE
@@ -66,7 +65,6 @@ class AUT(HL7Model):
     )
 
     aut_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "aut_2",
             "authorizing_payor_company_id",

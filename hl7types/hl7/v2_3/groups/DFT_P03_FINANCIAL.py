@@ -28,7 +28,6 @@ class DFT_P03_FINANCIAL(HL7Model):
     """
 
     FT1: _FT1 = Field(
-        default=...,
         title="FT1",
         description="Required",
     )

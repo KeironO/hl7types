@@ -33,7 +33,6 @@ class RSP_K21_QUERY_RESPONSE(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -51,7 +50,6 @@ class RSP_K21_QUERY_RESPONSE(HL7Model):
     )
 
     QRI: _QRI = Field(
-        default=...,
         title="QRI",
         description="Required",
     )

@@ -43,7 +43,6 @@ class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     """
 
     IPR: _IPR = Field(
-        default=...,
         title="IPR",
         description="Required",
     )
@@ -55,13 +54,11 @@ class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     )
 
     PYE: _PYE = Field(
-        default=...,
         title="PYE",
         description="Required",
     )
 
     IN1: _IN1 = Field(
-        default=...,
         title="IN1",
         description="Required",
     )
@@ -73,13 +70,12 @@ class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     )
 
     IVC: _IVC = Field(
-        default=...,
         title="IVC",
         description="Required",
     )
 
     PRODUCT_SERVICE_SECTION: List[_EHC_E10_PRODUCT_SERVICE_SECTION] = Field(
-        default=...,
+        min_length=1,
         title="PRODUCT_SERVICE_SECTION",
         description="Required, repeating",
     )

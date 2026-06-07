@@ -40,13 +40,11 @@ class SQR_S25(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -58,7 +56,6 @@ class SQR_S25(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )

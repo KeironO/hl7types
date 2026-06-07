@@ -39,7 +39,6 @@ class EHC_E12_REQUEST(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )

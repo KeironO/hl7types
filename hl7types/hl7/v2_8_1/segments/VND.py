@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.EI import EI
@@ -38,7 +37,6 @@ class VND(HL7Model):
     """
 
     vnd_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "vnd_1",
             "set_id_vnd",
@@ -50,7 +48,6 @@ class VND(HL7Model):
     )
 
     vnd_2: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "vnd_2",
             "vendor_identifier",

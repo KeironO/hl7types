@@ -31,7 +31,6 @@ class OML_O21_SPECIMEN(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )

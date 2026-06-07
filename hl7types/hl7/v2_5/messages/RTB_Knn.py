@@ -43,7 +43,6 @@ class RTB_Knn(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,7 +54,6 @@ class RTB_Knn(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -67,13 +65,11 @@ class RTB_Knn(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )

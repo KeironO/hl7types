@@ -31,7 +31,6 @@ class OUL_R23_SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )
@@ -43,7 +42,7 @@ class OUL_R23_SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP(HL7Model):
     )
 
     CONTAINER: List[_OUL_R23_CONTAINER] = Field(
-        default=...,
+        min_length=1,
         title="CONTAINER",
         description="Required, repeating",
     )

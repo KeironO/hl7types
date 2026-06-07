@@ -34,7 +34,6 @@ class PPT_PCL_ORDER_DETAIL(HL7Model):
     """
 
     OBR_SUPPGRP: _PPT_PCL_OBR_SUPPGRP = Field(
-        default=...,
         title="OBR_SUPPGRP",
         description="Required",
     )

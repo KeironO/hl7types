@@ -27,7 +27,6 @@ class OPL_O37_TIMING2(HL7Model):
     """
 
     TQ1: _TQ1 = Field(
-        default=...,
         title="TQ1",
         description="Required",
     )

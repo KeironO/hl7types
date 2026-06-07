@@ -43,7 +43,6 @@ class OUL_R23(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -73,7 +72,7 @@ class OUL_R23(HL7Model):
     )
 
     SPECIMEN: List[_OUL_R23_SPECIMEN] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN",
         description="Required, repeating",
     )

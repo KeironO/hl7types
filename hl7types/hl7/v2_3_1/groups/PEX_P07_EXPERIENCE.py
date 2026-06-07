@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -28,13 +28,12 @@ class PEX_P07_EXPERIENCE(HL7Model):
     """
 
     PES: _PES = Field(
-        default=...,
         title="PES",
         description="Required",
     )
 
     PEX_OBSERVATION: List[_PEX_P07_PEX_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="PEX_OBSERVATION",
         description="Required, repeating",
     )

@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -163,7 +162,6 @@ class RF1(HL7Model):
     )
 
     rf1_6: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rf1_6",
             "originating_referral_identifier",

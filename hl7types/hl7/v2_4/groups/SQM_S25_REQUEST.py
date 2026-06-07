@@ -34,7 +34,6 @@ class SQM_S25_REQUEST(HL7Model):
     """
 
     ARQ: _ARQ = Field(
-        default=...,
         title="ARQ",
         description="Required",
     )
@@ -52,7 +51,7 @@ class SQM_S25_REQUEST(HL7Model):
     )
 
     RESOURCES: List[_SQM_S25_RESOURCES] = Field(
-        default=...,
+        min_length=1,
         title="RESOURCES",
         description="Required, repeating",
     )

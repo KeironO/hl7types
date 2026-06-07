@@ -33,19 +33,17 @@ class SSR_U04(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     SAC: List[_SAC] = Field(
-        default=...,
+        min_length=1,
         title="SAC",
         description="Required, repeating",
     )

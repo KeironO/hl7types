@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.CQ import CQ
@@ -172,7 +171,6 @@ class PSL(HL7Model):
     """
 
     psl_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psl_1",
             "provider_product_service_line_item_number",
@@ -196,7 +194,6 @@ class PSL(HL7Model):
     )
 
     psl_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psl_3",
             "product_service_line_item_sequence_number",
@@ -232,7 +229,6 @@ class PSL(HL7Model):
     )
 
     psl_6: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psl_6",
             "product_service_line_item_status",
@@ -244,7 +240,6 @@ class PSL(HL7Model):
     )
 
     psl_7: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psl_7",
             "product_service_code",
@@ -412,7 +407,6 @@ class PSL(HL7Model):
     )
 
     psl_21: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psl_21",
             "restricted_disclosure_indicator",

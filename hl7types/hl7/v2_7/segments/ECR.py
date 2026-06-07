@@ -8,12 +8,10 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
-from ..datatypes.TX import TX
 
 
 class ECR(HL7Model):
@@ -27,12 +25,11 @@ class ECR(HL7Model):
     ecr_2 : str
         ECR.2 (req) - Date/Time Completed (DTM)
 
-    ecr_3 : list[TX] | None
+    ecr_3 : list[str] | None
         ECR.3 (opt, rep) - Command Response Parameters (TX)
     """
 
     ecr_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecr_1",
             "command_response",
@@ -44,7 +41,6 @@ class ECR(HL7Model):
     )
 
     ecr_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecr_2",
             "date_time_completed",
@@ -55,7 +51,7 @@ class ECR(HL7Model):
         description="Item #1396",
     )
 
-    ecr_3: Optional[List[TX]] = Field(
+    ecr_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ecr_3",

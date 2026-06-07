@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class NK1(HL7Model):
@@ -35,7 +34,6 @@ class NK1(HL7Model):
     """
 
     nk1_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nk1_1",
             "set_id_next_of_kin",

@@ -34,7 +34,6 @@ class ORM_O01_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _ORM_O01_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

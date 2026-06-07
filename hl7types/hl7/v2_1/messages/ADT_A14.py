@@ -40,19 +40,16 @@ class ADT_A14(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -60,13 +57,11 @@ class ADT_A14(HL7Model):
     pd1: Any
 
     NK1: _NK1 = Field(
-        default=...,
         title="NK1",
         description="Required",
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

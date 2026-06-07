@@ -33,7 +33,7 @@ class TCU_U10_TEST_CONFIGURATION(HL7Model):
     )
 
     TCC: List[_TCC] = Field(
-        default=...,
+        min_length=1,
         title="TCC",
         description="Required, repeating",
     )

@@ -30,7 +30,6 @@ class RSP_K22_QUERY_RESPONSE(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

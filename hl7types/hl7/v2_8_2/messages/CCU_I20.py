@@ -70,7 +70,6 @@ class CCU_I20(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -88,7 +87,6 @@ class CCU_I20(HL7Model):
     )
 
     RF1: _RF1 = Field(
-        default=...,
         title="RF1",
         description="Required",
     )
@@ -130,7 +128,7 @@ class CCU_I20(HL7Model):
     )
 
     PATIENT_VISITS: List[_CCU_I20_PATIENT_VISITS] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )

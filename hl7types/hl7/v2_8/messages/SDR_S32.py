@@ -34,7 +34,6 @@ class SDR_S32(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,6 @@ class SDR_S32(HL7Model):
     )
 
     ANTI_MICROBIAL_DEVICE_CYCLE_DATA: _SDR_S32_ANTI_MICROBIAL_DEVICE_CYCLE_DATA = Field(
-        default=...,
         title="ANTI_MICROBIAL_DEVICE_CYCLE_DATA",
         description="Required",
     )

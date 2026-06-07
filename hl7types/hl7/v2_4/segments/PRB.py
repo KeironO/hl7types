@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.EI import EI
@@ -99,7 +98,6 @@ class PRB(HL7Model):
     """
 
     prb_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "prb_1",
             "action_code",
@@ -111,7 +109,6 @@ class PRB(HL7Model):
     )
 
     prb_2: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "prb_2",
             "action_date_time",
@@ -123,7 +120,6 @@ class PRB(HL7Model):
     )
 
     prb_3: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "prb_3",
             "problem_id",
@@ -135,7 +131,6 @@ class PRB(HL7Model):
     )
 
     prb_4: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "prb_4",
             "problem_instance_id",

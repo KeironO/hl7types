@@ -25,7 +25,6 @@ class MFR_M03_MF_TEST(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )

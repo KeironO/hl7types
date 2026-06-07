@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -27,13 +26,11 @@ class SUR_P09_PRODUCT(HL7Model):
     """
 
     PSH: _PSH = Field(
-        default=...,
         title="PSH",
         description="Required",
     )
 
     PDC: _PDC = Field(
-        default=...,
         title="PDC",
         description="Required",
     )

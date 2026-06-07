@@ -46,13 +46,11 @@ class RQC_I05(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -64,13 +62,12 @@ class RQC_I05(HL7Model):
     )
 
     PROVIDER: List[_RQC_I05_PROVIDER] = Field(
-        default=...,
+        min_length=1,
         title="PROVIDER",
         description="Required, repeating",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

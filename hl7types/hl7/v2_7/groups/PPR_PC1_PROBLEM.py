@@ -46,7 +46,6 @@ class PPR_PC1_PROBLEM(HL7Model):
     """
 
     PRB: _PRB = Field(
-        default=...,
         title="PRB",
         description="Required",
     )

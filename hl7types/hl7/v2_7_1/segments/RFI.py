@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class RFI(HL7Model):
@@ -32,7 +31,6 @@ class RFI(HL7Model):
     """
 
     rfi_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rfi_1",
             "request_date",
@@ -44,7 +42,6 @@ class RFI(HL7Model):
     )
 
     rfi_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rfi_2",
             "response_due_date",

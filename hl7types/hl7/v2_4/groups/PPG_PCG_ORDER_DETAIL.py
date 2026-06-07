@@ -34,7 +34,6 @@ class PPG_PCG_ORDER_DETAIL(HL7Model):
     """
 
     OBRRXO_SUPPGRP: _PPG_PCG_OBRRXO_SUPPGRP = Field(
-        default=...,
         title="OBRRXO_SUPPGRP",
         description="Required",
     )

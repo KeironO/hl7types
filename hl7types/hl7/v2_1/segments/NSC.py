@@ -46,7 +46,6 @@ class NSC(HL7Model):
     """
 
     nsc_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nsc_1",
             "network_change_type",

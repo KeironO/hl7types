@@ -33,7 +33,7 @@ class RRG_O16_RESPONSE(HL7Model):
     )
 
     ORDER: List[_RRG_O16_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

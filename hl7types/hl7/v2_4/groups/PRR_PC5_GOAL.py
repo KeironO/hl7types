@@ -37,7 +37,6 @@ class PRR_PC5_GOAL(HL7Model):
     """
 
     GOL: _GOL = Field(
-        default=...,
         title="GOL",
         description="Required",
     )

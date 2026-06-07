@@ -34,7 +34,6 @@ class LCC(HL7Model):
     """
 
     lcc_1: PL = Field(
-        default=...,
         validation_alias=AliasChoices(
             "lcc_1",
             "primary_key_value_lcc",
@@ -46,7 +45,6 @@ class LCC(HL7Model):
     )
 
     lcc_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "lcc_2",
             "location_department",

@@ -31,7 +31,6 @@ class QSC(HL7Model):
     """
 
     qsc_1: str = Field(
-        default=...,
         max_length=12,
         validation_alias=AliasChoices(
             "qsc_1",

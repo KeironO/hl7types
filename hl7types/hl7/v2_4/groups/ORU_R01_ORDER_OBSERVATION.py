@@ -49,7 +49,6 @@ class ORU_R01_ORDER_OBSERVATION(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -67,7 +66,7 @@ class ORU_R01_ORDER_OBSERVATION(HL7Model):
     )
 
     OBSERVATION: List[_ORU_R01_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION",
         description="Required, repeating",
     )

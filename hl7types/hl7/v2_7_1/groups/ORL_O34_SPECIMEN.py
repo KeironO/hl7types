@@ -34,7 +34,6 @@ class ORL_O34_SPECIMEN(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )

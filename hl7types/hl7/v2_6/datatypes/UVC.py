@@ -28,7 +28,6 @@ class UVC(HL7Model):
     """
 
     uvc_1: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "uvc_1",
             "value_code",

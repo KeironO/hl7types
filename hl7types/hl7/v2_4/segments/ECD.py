@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.TQ import TQ
@@ -38,7 +37,6 @@ class ECD(HL7Model):
     """
 
     ecd_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecd_1",
             "reference_command_number",
@@ -50,7 +48,6 @@ class ECD(HL7Model):
     )
 
     ecd_2: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecd_2",
             "remote_control_command",

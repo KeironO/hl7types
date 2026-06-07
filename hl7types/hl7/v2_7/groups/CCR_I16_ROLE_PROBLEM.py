@@ -28,7 +28,6 @@ class CCR_I16_ROLE_PROBLEM(HL7Model):
     """
 
     ROLE_PROBLEM_OBJECT: _CCR_I16_ROLE_PROBLEM_OBJECT = Field(
-        default=...,
         title="ROLE_PROBLEM_OBJECT",
         description="Required",
     )

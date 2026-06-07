@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from .CWE import CWE
 
@@ -34,7 +33,6 @@ class PLN(HL7Model):
     """
 
     pln_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pln_1",
             "id_number",
@@ -45,7 +43,6 @@ class PLN(HL7Model):
     )
 
     pln_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pln_2",
             "type_of_id_number",

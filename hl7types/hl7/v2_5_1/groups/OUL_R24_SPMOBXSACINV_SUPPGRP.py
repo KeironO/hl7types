@@ -31,7 +31,6 @@ class OUL_R24_SPMOBXSACINV_SUPPGRP(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )

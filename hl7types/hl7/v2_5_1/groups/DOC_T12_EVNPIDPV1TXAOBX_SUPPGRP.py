@@ -42,19 +42,16 @@ class DOC_T12_EVNPIDPV1TXAOBX_SUPPGRP(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )
 
     TXA: _TXA = Field(
-        default=...,
         title="TXA",
         description="Required",
     )

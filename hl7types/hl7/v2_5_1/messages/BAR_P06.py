@@ -34,7 +34,6 @@ class BAR_P06(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -46,13 +45,12 @@ class BAR_P06(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PATIENT: List[_BAR_P06_PATIENT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT",
         description="Required, repeating",
     )

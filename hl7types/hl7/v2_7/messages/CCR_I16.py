@@ -73,7 +73,6 @@ class CCR_I16(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -91,13 +90,13 @@ class CCR_I16(HL7Model):
     )
 
     RF1: List[_RF1] = Field(
-        default=...,
+        min_length=1,
         title="RF1",
         description="Required, repeating",
     )
 
     PROVIDER_CONTACT: List[_CCR_I16_PROVIDER_CONTACT] = Field(
-        default=...,
+        min_length=1,
         title="PROVIDER_CONTACT",
         description="Required, repeating",
     )
@@ -109,7 +108,7 @@ class CCR_I16(HL7Model):
     )
 
     PATIENT: List[_CCR_I16_PATIENT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT",
         description="Required, repeating",
     )
@@ -139,7 +138,7 @@ class CCR_I16(HL7Model):
     )
 
     PATIENT_VISITS: List[_CCR_I16_PATIENT_VISITS] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )

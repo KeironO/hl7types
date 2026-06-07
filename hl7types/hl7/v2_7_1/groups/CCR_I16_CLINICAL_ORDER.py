@@ -34,7 +34,6 @@ class CCR_I16_CLINICAL_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -46,7 +45,7 @@ class CCR_I16_CLINICAL_ORDER(HL7Model):
     )
 
     CLINICAL_ORDER_DETAIL: List[_CCR_I16_CLINICAL_ORDER_DETAIL] = Field(
-        default=...,
+        min_length=1,
         title="CLINICAL_ORDER_DETAIL",
         description="Required, repeating",
     )

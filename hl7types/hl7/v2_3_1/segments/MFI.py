@@ -41,7 +41,6 @@ class MFI(HL7Model):
     """
 
     mfi_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfi_1",
             "master_file_identifier",
@@ -65,7 +64,6 @@ class MFI(HL7Model):
     )
 
     mfi_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfi_3",
             "file_level_event_code",
@@ -101,7 +99,6 @@ class MFI(HL7Model):
     )
 
     mfi_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfi_6",
             "response_level_code",

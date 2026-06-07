@@ -30,7 +30,6 @@ class EHC_E13_RESPONSE(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

@@ -34,7 +34,6 @@ class OSM_R26(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,7 @@ class OSM_R26(HL7Model):
     )
 
     SHIPMENT: List[_OSM_R26_SHIPMENT] = Field(
-        default=...,
+        min_length=1,
         title="SHIPMENT",
         description="Required, repeating",
     )

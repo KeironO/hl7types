@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from .CWE import CWE
 
@@ -28,7 +27,6 @@ class DLD(HL7Model):
     """
 
     dld_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "dld_1",
             "discharge_to_location",

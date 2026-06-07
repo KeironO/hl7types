@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.MO import MO
@@ -38,7 +37,6 @@ class MCP(HL7Model):
     """
 
     mcp_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mcp_1",
             "set_id_mcp",
@@ -50,7 +48,6 @@ class MCP(HL7Model):
     )
 
     mcp_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mcp_2",
             "producer_s_service_test_observation_id",

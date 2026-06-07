@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from .CWE import CWE
-from .TX import TX
 
 
 class JCC(HL7Model):
@@ -26,7 +25,7 @@ class JCC(HL7Model):
     jcc_2 : CWE | None
         JCC.2 (opt) - Job Class (CWE)
 
-    jcc_3 : TX | None
+    jcc_3 : str | None
         JCC.3 (opt) - Job Description Text (TX)
     """
 
@@ -52,7 +51,7 @@ class JCC(HL7Model):
         title="Job Class",
     )
 
-    jcc_3: Optional[TX] = Field(
+    jcc_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "jcc_3",

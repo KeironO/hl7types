@@ -43,19 +43,16 @@ class PEX_P07(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -79,7 +76,7 @@ class PEX_P07(HL7Model):
     )
 
     EXPERIENCE: List[_PEX_P07_EXPERIENCE] = Field(
-        default=...,
+        min_length=1,
         title="EXPERIENCE",
         description="Required, repeating",
     )

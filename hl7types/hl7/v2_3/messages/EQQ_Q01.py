@@ -30,13 +30,11 @@ class EQQ_Q01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EQL: _EQL = Field(
-        default=...,
         title="EQL",
         description="Required",
     )

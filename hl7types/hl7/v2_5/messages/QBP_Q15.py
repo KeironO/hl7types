@@ -37,7 +37,6 @@ class QBP_Q15(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -49,7 +48,6 @@ class QBP_Q15(HL7Model):
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )
@@ -57,7 +55,6 @@ class QBP_Q15(HL7Model):
     anyhl7segment: Optional[Any] = None
 
     RCP: _RCP = Field(
-        default=...,
         title="RCP",
         description="Required",
     )

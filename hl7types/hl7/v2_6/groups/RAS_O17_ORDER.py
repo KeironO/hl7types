@@ -40,7 +40,6 @@ class RAS_O17_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -64,7 +63,7 @@ class RAS_O17_ORDER(HL7Model):
     )
 
     ADMINISTRATION: List[_RAS_O17_ADMINISTRATION] = Field(
-        default=...,
+        min_length=1,
         title="ADMINISTRATION",
         description="Required, repeating",
     )

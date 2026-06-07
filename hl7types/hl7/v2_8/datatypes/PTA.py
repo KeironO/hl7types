@@ -31,7 +31,6 @@ class PTA(HL7Model):
     """
 
     pta_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pta_1",
             "policy_type",
@@ -53,7 +52,6 @@ class PTA(HL7Model):
     )
 
     pta_4: MOP = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pta_4",
             "money_or_percentage",

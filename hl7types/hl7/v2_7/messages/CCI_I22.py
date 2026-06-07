@@ -73,7 +73,6 @@ class CCI_I22(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -91,7 +90,6 @@ class CCI_I22(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -103,7 +101,6 @@ class CCI_I22(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -139,7 +136,7 @@ class CCI_I22(HL7Model):
     )
 
     PATIENT_VISITS: List[_CCI_I22_PATIENT_VISITS] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )

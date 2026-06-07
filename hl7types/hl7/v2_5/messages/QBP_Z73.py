@@ -33,7 +33,6 @@ class QBP_Z73(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -45,13 +44,11 @@ class QBP_Z73(HL7Model):
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )
 
     RCP: _RCP = Field(
-        default=...,
         title="RCP",
         description="Required",
     )

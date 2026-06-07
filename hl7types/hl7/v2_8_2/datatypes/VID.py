@@ -30,7 +30,6 @@ class VID(HL7Model):
     """
 
     vid_1: str = Field(
-        default=...,
         max_length=5,
         validation_alias=AliasChoices(
             "vid_1",

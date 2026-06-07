@@ -34,7 +34,6 @@ class RDR_RDR_DEFINITION(HL7Model):
     """
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -52,7 +51,7 @@ class RDR_RDR_DEFINITION(HL7Model):
     )
 
     ORDER: List[_RDR_RDR_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

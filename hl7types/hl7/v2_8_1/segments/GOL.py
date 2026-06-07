@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -88,7 +87,6 @@ class GOL(HL7Model):
     """
 
     gol_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "gol_1",
             "action_code",
@@ -100,7 +98,6 @@ class GOL(HL7Model):
     )
 
     gol_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "gol_2",
             "action_date_time",
@@ -112,7 +109,6 @@ class GOL(HL7Model):
     )
 
     gol_3: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "gol_3",
             "goal_id",
@@ -124,7 +120,6 @@ class GOL(HL7Model):
     )
 
     gol_4: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "gol_4",
             "goal_instance_id",

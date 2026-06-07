@@ -33,7 +33,6 @@ class ADT_A01_INSURANCE(HL7Model):
     """
 
     IN1: _IN1 = Field(
-        default=...,
         title="IN1",
         description="Required",
     )

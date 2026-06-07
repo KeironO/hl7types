@@ -37,7 +37,6 @@ class RDO_O01_ORDER_DETAIL(HL7Model):
     """
 
     RXO: _RXO = Field(
-        default=...,
         title="RXO",
         description="Required",
     )
@@ -49,7 +48,7 @@ class RDO_O01_ORDER_DETAIL(HL7Model):
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

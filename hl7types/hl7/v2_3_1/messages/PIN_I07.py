@@ -40,19 +40,17 @@ class PIN_I07(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     PROVIDER: List[_PIN_I07_PROVIDER] = Field(
-        default=...,
+        min_length=1,
         title="PROVIDER",
         description="Required, repeating",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

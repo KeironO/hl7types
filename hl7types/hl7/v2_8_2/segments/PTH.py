@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -45,7 +44,6 @@ class PTH(HL7Model):
     """
 
     pth_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_1",
             "action_code",
@@ -57,7 +55,6 @@ class PTH(HL7Model):
     )
 
     pth_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_2",
             "pathway_id",
@@ -69,7 +66,6 @@ class PTH(HL7Model):
     )
 
     pth_3: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_3",
             "pathway_instance_id",
@@ -81,7 +77,6 @@ class PTH(HL7Model):
     )
 
     pth_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_4",
             "pathway_established_date_time",

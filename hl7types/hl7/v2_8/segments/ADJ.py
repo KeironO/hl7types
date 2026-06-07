@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.CQ import CQ
@@ -71,7 +70,6 @@ class ADJ(HL7Model):
     """
 
     adj_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "adj_1",
             "provider_adjustment_number",
@@ -83,7 +81,6 @@ class ADJ(HL7Model):
     )
 
     adj_2: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "adj_2",
             "payer_adjustment_number",
@@ -95,7 +92,6 @@ class ADJ(HL7Model):
     )
 
     adj_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "adj_3",
             "adjustment_sequence_number",
@@ -107,7 +103,6 @@ class ADJ(HL7Model):
     )
 
     adj_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "adj_4",
             "adjustment_category",
@@ -227,7 +222,6 @@ class ADJ(HL7Model):
     )
 
     adj_14: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "adj_14",
             "adjustment_date",

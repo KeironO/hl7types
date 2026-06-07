@@ -25,7 +25,6 @@ from .ELD import ELD as ELD
 from .ERL import ERL as ERL
 from .FC import FC as FC
 from .FN import FN as FN
-from .FT import FT as FT
 from .HD import HD as HD
 from .ICD import ICD as ICD
 from .JCC import JCC as JCC
@@ -64,7 +63,6 @@ from .SPD import SPD as SPD
 from .SPS import SPS as SPS
 from .SRT import SRT as SRT
 from .TQ import TQ as TQ
-from .TX import TX as TX
 from .UVC import UVC as UVC
 from .VH import VH as VH
 from .VID import VID as VID

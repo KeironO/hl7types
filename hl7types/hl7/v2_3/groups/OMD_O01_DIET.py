@@ -31,7 +31,7 @@ class OMD_O01_DIET(HL7Model):
     """
 
     ODS: List[_ODS] = Field(
-        default=...,
+        min_length=1,
         title="ODS",
         description="Required, repeating",
     )
@@ -43,7 +43,7 @@ class OMD_O01_DIET(HL7Model):
     )
 
     OBSERVATION: List[_OMD_O01_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION",
         description="Required, repeating",
     )

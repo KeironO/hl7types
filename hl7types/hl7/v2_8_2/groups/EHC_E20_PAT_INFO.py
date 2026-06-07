@@ -37,7 +37,6 @@ class EHC_E20_PAT_INFO(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -49,7 +48,7 @@ class EHC_E20_PAT_INFO(HL7Model):
     )
 
     INSURANCE: List[_EHC_E20_INSURANCE] = Field(
-        default=...,
+        min_length=1,
         title="INSURANCE",
         description="Required, repeating",
     )

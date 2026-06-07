@@ -33,7 +33,7 @@ class CSU_C09_STUDY_PHARM(HL7Model):
     )
 
     RX_ADMIN: List[_CSU_C09_RX_ADMIN] = Field(
-        default=...,
+        min_length=1,
         title="RX_ADMIN",
         description="Required, repeating",
     )

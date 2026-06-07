@@ -31,7 +31,6 @@ class OML_O35_SPECIMEN(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )
@@ -43,7 +42,7 @@ class OML_O35_SPECIMEN(HL7Model):
     )
 
     SPECIMEN_CONTAINER: List[_OML_O35_SPECIMEN_CONTAINER] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN_CONTAINER",
         description="Required, repeating",
     )

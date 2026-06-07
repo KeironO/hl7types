@@ -37,7 +37,6 @@ class OSR_Q06_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -49,7 +48,6 @@ class OSR_Q06_ORDER(HL7Model):
     )
 
     OBRRQDRQ1RXOODSODT_SUPPGRP: _OSR_Q06_OBRRQDRQ1RXOODSODT_SUPPGRP = Field(
-        default=...,
         title="OBRRQDRQ1RXOODSODT_SUPPGRP",
         description="Required",
     )

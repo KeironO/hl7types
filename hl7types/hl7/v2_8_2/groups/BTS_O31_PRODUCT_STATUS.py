@@ -27,7 +27,6 @@ class BTS_O31_PRODUCT_STATUS(HL7Model):
     """
 
     BTX: _BTX = Field(
-        default=...,
         title="BTX",
         description="Required",
     )

@@ -27,7 +27,6 @@ class NMQ_N02_QRY_WITH_DETAIL(HL7Model):
     """
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )

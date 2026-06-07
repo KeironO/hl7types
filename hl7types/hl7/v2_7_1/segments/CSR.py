@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.CX import CX
@@ -73,7 +72,6 @@ class CSR(HL7Model):
     """
 
     csr_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "csr_1",
             "sponsor_study_id",
@@ -109,7 +107,6 @@ class CSR(HL7Model):
     )
 
     csr_4: CX = Field(
-        default=...,
         validation_alias=AliasChoices(
             "csr_4",
             "sponsor_patient_id",
@@ -133,7 +130,6 @@ class CSR(HL7Model):
     )
 
     csr_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "csr_6",
             "date_time_of_patient_study_registration",

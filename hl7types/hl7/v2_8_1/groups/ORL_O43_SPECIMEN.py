@@ -34,7 +34,6 @@ class ORL_O43_SPECIMEN(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )
@@ -52,7 +51,7 @@ class ORL_O43_SPECIMEN(HL7Model):
     )
 
     SPECIMEN_CONTAINER: List[_ORL_O43_SPECIMEN_CONTAINER] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN_CONTAINER",
         description="Required, repeating",
     )

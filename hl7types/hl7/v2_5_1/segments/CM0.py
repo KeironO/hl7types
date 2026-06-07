@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.EI import EI
 from ..datatypes.XAD import XAD
@@ -70,7 +69,6 @@ class CM0(HL7Model):
     )
 
     cm0_2: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cm0_2",
             "sponsor_study_id",
@@ -94,7 +92,6 @@ class CM0(HL7Model):
     )
 
     cm0_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cm0_4",
             "title_of_study",

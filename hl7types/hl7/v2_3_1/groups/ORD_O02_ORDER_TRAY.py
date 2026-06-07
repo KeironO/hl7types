@@ -30,7 +30,6 @@ class ORD_O02_ORDER_TRAY(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

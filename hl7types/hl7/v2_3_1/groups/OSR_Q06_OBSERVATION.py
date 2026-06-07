@@ -34,13 +34,11 @@ class OSR_Q06_OBSERVATION(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
 
     CHOICE: _OSR_Q06_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

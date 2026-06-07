@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -54,7 +53,6 @@ class ARV(HL7Model):
     )
 
     arv_2: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "arv_2",
             "access_restriction_action_code",
@@ -66,7 +64,6 @@ class ARV(HL7Model):
     )
 
     arv_3: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "arv_3",
             "access_restriction_value",

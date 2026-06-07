@@ -27,7 +27,6 @@ class RRD_O02_RESPONSE(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

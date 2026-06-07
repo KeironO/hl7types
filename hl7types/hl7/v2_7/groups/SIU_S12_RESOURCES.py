@@ -37,7 +37,6 @@ class SIU_S12_RESOURCES(HL7Model):
     """
 
     RGS: _RGS = Field(
-        default=...,
         title="RGS",
         description="Required",
     )

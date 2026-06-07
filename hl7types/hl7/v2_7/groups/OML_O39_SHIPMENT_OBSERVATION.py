@@ -27,7 +27,6 @@ class OML_O39_SHIPMENT_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

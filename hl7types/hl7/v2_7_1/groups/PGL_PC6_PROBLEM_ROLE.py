@@ -27,7 +27,6 @@ class PGL_PC6_PROBLEM_ROLE(HL7Model):
     """
 
     ROL: _ROL = Field(
-        default=...,
         title="ROL",
         description="Required",
     )

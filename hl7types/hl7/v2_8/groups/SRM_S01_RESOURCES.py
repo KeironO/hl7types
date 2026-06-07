@@ -37,7 +37,6 @@ class SRM_S01_RESOURCES(HL7Model):
     """
 
     RGS: _RGS = Field(
-        default=...,
         title="RGS",
         description="Required",
     )

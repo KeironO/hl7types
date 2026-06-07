@@ -28,7 +28,6 @@ class OML_O39_PACKAGE(HL7Model):
     """
 
     PAC: _PAC = Field(
-        default=...,
         title="PAC",
         description="Required",
     )

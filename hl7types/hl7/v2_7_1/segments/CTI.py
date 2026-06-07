@@ -31,7 +31,6 @@ class CTI(HL7Model):
     """
 
     cti_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cti_1",
             "sponsor_study_id",

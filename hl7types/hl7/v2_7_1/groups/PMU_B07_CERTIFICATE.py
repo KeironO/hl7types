@@ -27,7 +27,6 @@ class PMU_B07_CERTIFICATE(HL7Model):
     """
 
     CER: _CER = Field(
-        default=...,
         title="CER",
         description="Required",
     )

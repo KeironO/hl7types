@@ -27,7 +27,6 @@ from .EIP import EIP as EIP
 from .ELD import ELD as ELD
 from .FC import FC as FC
 from .FN import FN as FN
-from .FT import FT as FT
 from .HD import HD as HD
 from .JCC import JCC as JCC
 from .LA1 import LA1 as LA1
@@ -66,7 +65,6 @@ from .SPD import SPD as SPD
 from .SPS import SPS as SPS
 from .TQ import TQ as TQ
 from .TS import TS as TS
-from .TX import TX as TX
 from .TX_CHALLENGE import TX_CHALLENGE as TX_CHALLENGE
 from .UVC import UVC as UVC
 from .VH import VH as VH

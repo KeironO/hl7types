@@ -46,7 +46,6 @@ class CNE(HL7Model):
     """
 
     cne_1: str = Field(
-        default=...,
         max_length=20,
         validation_alias=AliasChoices(
             "cne_1",

@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -74,7 +73,6 @@ class BUI(HL7Model):
     )
 
     bui_2: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_2",
             "blood_unit_identifier",
@@ -86,7 +84,6 @@ class BUI(HL7Model):
     )
 
     bui_3: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_3",
             "blood_unit_type",
@@ -98,7 +95,6 @@ class BUI(HL7Model):
     )
 
     bui_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_4",
             "blood_unit_weight",
@@ -110,7 +106,6 @@ class BUI(HL7Model):
     )
 
     bui_5: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_5",
             "weight_units",
@@ -122,7 +117,6 @@ class BUI(HL7Model):
     )
 
     bui_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_6",
             "blood_unit_volume",
@@ -134,7 +128,6 @@ class BUI(HL7Model):
     )
 
     bui_7: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_7",
             "volume_units",
@@ -146,7 +139,6 @@ class BUI(HL7Model):
     )
 
     bui_8: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_8",
             "container_catalog_number",
@@ -158,7 +150,6 @@ class BUI(HL7Model):
     )
 
     bui_9: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_9",
             "container_lot_number",
@@ -170,7 +161,6 @@ class BUI(HL7Model):
     )
 
     bui_10: XON = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_10",
             "container_manufacturer",
@@ -182,7 +172,6 @@ class BUI(HL7Model):
     )
 
     bui_11: NR = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_11",
             "transport_temperature",
@@ -194,7 +183,6 @@ class BUI(HL7Model):
     )
 
     bui_12: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bui_12",
             "transport_temperature_units",

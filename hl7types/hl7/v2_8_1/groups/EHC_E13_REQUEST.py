@@ -40,7 +40,6 @@ class EHC_E13_REQUEST(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -52,7 +51,7 @@ class EHC_E13_REQUEST(HL7Model):
     )
 
     RESPONSE: List[_EHC_E13_RESPONSE] = Field(
-        default=...,
+        min_length=1,
         title="RESPONSE",
         description="Required, repeating",
     )

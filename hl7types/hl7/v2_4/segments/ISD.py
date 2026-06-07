@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 
@@ -31,7 +30,6 @@ class ISD(HL7Model):
     """
 
     isd_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "isd_1",
             "reference_interaction_number_unique_identifier",
@@ -55,7 +53,6 @@ class ISD(HL7Model):
     )
 
     isd_3: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "isd_3",
             "interaction_active_state",

@@ -36,7 +36,7 @@ class RSP_Z90_QUERY_RESPONSE(HL7Model):
     )
 
     COMMON_ORDER: List[_RSP_Z90_COMMON_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="COMMON_ORDER",
         description="Required, repeating",
     )

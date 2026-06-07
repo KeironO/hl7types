@@ -33,7 +33,6 @@ class OUL_R22_OBXTCDSIDNTE_SUPPGRP(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

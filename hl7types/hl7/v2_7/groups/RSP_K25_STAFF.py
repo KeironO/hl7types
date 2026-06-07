@@ -48,7 +48,6 @@ class RSP_K25_STAFF(HL7Model):
     """
 
     STF: _STF = Field(
-        default=...,
         title="STF",
         description="Required",
     )

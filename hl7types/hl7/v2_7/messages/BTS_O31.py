@@ -40,7 +40,6 @@ class BTS_O31(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -70,7 +69,7 @@ class BTS_O31(HL7Model):
     )
 
     ORDER: List[_BTS_O31_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

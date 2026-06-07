@@ -34,7 +34,6 @@ class NMQ_N01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,7 @@ class NMQ_N01(HL7Model):
     )
 
     CLOCK_AND_STATISTICS: List[_NMQ_N01_CLOCK_AND_STATISTICS] = Field(
-        default=...,
+        min_length=1,
         title="CLOCK_AND_STATISTICS",
         description="Required, repeating",
     )

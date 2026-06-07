@@ -34,7 +34,6 @@ class CCU_I20_CLINICAL_HISTORY(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

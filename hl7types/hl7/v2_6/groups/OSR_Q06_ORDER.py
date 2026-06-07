@@ -37,7 +37,6 @@ class OSR_Q06_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -49,7 +48,6 @@ class OSR_Q06_ORDER(HL7Model):
     )
 
     CHOICE: _OSR_Q06_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

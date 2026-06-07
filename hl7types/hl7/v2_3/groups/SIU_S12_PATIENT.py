@@ -36,7 +36,6 @@ class SIU_S12_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

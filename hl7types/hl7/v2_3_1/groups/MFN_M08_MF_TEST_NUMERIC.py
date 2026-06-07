@@ -31,7 +31,6 @@ class MFN_M08_MF_TEST_NUMERIC(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )

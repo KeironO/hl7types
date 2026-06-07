@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.PIP import PIP
@@ -49,7 +48,6 @@ class PRA(HL7Model):
     """
 
     pra_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pra_1",
             "primary_key_value_pra",

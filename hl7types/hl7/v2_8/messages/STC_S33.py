@@ -33,7 +33,6 @@ class STC_S33(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -51,7 +50,7 @@ class STC_S33(HL7Model):
     )
 
     SCP: List[_SCP] = Field(
-        default=...,
+        min_length=1,
         title="SCP",
         description="Required, repeating",
     )

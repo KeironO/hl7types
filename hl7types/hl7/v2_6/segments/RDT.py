@@ -7,7 +7,6 @@ Type: Segment
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
@@ -24,7 +23,6 @@ class RDT(HL7Model):
     """
 
     rdt_1: varies = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rdt_1",
             "column_value",

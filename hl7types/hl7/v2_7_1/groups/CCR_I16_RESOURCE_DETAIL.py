@@ -28,7 +28,6 @@ class CCR_I16_RESOURCE_DETAIL(HL7Model):
     """
 
     RESOURCE_OBJECT: _CCR_I16_RESOURCE_OBJECT = Field(
-        default=...,
         title="RESOURCE_OBJECT",
         description="Required",
     )

@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class IN1(HL7Model):
@@ -152,7 +151,6 @@ class IN1(HL7Model):
     """
 
     in1_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "in1_1",
             "set_id_insurance",
@@ -164,7 +162,6 @@ class IN1(HL7Model):
     )
 
     in1_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "in1_2",
             "insurance_plan_id",
@@ -176,7 +173,6 @@ class IN1(HL7Model):
     )
 
     in1_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "in1_3",
             "insurance_company_id",

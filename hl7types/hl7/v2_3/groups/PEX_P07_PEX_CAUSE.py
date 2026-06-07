@@ -46,7 +46,6 @@ class PEX_P07_PEX_CAUSE(HL7Model):
     """
 
     PCR: _PCR = Field(
-        default=...,
         title="PCR",
         description="Required",
     )

@@ -33,7 +33,6 @@ class ORX_O58_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -45,7 +44,6 @@ class ORX_O58_ORDER(HL7Model):
     )
 
     TXA: _TXA = Field(
-        default=...,
         title="TXA",
         description="Required",
     )

@@ -8,12 +8,10 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
-from ..datatypes.FT import FT
 
 
 class EQP(HL7Model):
@@ -33,12 +31,11 @@ class EQP(HL7Model):
     eqp_4 : str | None
         EQP.4 (opt) - End Date/Time (DTM)
 
-    eqp_5 : FT
+    eqp_5 : str
         EQP.5 (req) - Transaction Data (FT)
     """
 
     eqp_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "eqp_1",
             "event_type",
@@ -62,7 +59,6 @@ class EQP(HL7Model):
     )
 
     eqp_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "eqp_3",
             "start_date_time",
@@ -85,8 +81,7 @@ class EQP(HL7Model):
         description="Item #1432",
     )
 
-    eqp_5: FT = Field(
-        default=...,
+    eqp_5: str = Field(
         validation_alias=AliasChoices(
             "eqp_5",
             "transaction_data",

@@ -30,13 +30,11 @@ class ORS_O02_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
 
     RQD: _RQD = Field(
-        default=...,
         title="RQD",
         description="Required",
     )

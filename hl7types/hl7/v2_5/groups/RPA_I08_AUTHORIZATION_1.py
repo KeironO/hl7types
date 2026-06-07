@@ -27,7 +27,6 @@ class RPA_I08_AUTHORIZATION_1(HL7Model):
     """
 
     AUT: _AUT = Field(
-        default=...,
         title="AUT",
         description="Required",
     )

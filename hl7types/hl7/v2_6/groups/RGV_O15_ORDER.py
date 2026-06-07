@@ -37,7 +37,6 @@ class RGV_O15_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -61,7 +60,7 @@ class RGV_O15_ORDER(HL7Model):
     )
 
     GIVE: List[_RGV_O15_GIVE] = Field(
-        default=...,
+        min_length=1,
         title="GIVE",
         description="Required, repeating",
     )

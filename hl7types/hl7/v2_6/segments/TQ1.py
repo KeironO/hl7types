@@ -8,14 +8,12 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
 from ..datatypes.RPT import RPT
-from ..datatypes.TX import TX
 
 
 class TQ1(HL7Model):
@@ -50,10 +48,10 @@ class TQ1(HL7Model):
     tq1_9 : list[CWE] | None
         TQ1.9 (opt, rep) - Priority (CWE)
 
-    tq1_10 : TX | None
+    tq1_10 : str | None
         TQ1.10 (opt) - Condition text (TX)
 
-    tq1_11 : TX | None
+    tq1_11 : str | None
         TQ1.11 (opt) - Text instruction (TX)
 
     tq1_12 : str | None
@@ -174,7 +172,7 @@ class TQ1(HL7Model):
         description="Item #1635 | Table HL70485",
     )
 
-    tq1_10: Optional[TX] = Field(
+    tq1_10: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq1_10",
@@ -186,7 +184,7 @@ class TQ1(HL7Model):
         description="Item #1636",
     )
 
-    tq1_11: Optional[TX] = Field(
+    tq1_11: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq1_11",

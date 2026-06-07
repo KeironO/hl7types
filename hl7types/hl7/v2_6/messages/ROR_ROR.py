@@ -43,13 +43,11 @@ class ROR_ROR(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -73,7 +71,7 @@ class ROR_ROR(HL7Model):
     )
 
     DEFINITION: List[_ROR_ROR_DEFINITION] = Field(
-        default=...,
+        min_length=1,
         title="DEFINITION",
         description="Required, repeating",
     )

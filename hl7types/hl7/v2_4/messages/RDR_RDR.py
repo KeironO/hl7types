@@ -37,13 +37,11 @@ class RDR_RDR(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -55,7 +53,7 @@ class RDR_RDR(HL7Model):
     )
 
     DEFINITION: List[_RDR_RDR_DEFINITION] = Field(
-        default=...,
+        min_length=1,
         title="DEFINITION",
         description="Required, repeating",
     )

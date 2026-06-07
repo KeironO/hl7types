@@ -27,7 +27,6 @@ class OMG_O19_CONTAINER(HL7Model):
     """
 
     SAC: _SAC = Field(
-        default=...,
         title="SAC",
         description="Required",
     )

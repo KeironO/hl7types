@@ -27,7 +27,6 @@ class ORL_O41_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

@@ -36,7 +36,6 @@ class VQQ_Q07(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -48,7 +47,6 @@ class VQQ_Q07(HL7Model):
     )
 
     VTQ: _VTQ = Field(
-        default=...,
         title="VTQ",
         description="Required",
     )

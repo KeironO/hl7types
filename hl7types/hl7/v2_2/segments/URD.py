@@ -66,7 +66,7 @@ class URD(HL7Model):
     )
 
     urd_3: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "urd_3",
             "r_u_who_subject_definition",

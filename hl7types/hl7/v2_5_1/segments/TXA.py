@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.EI import EI
 from ..datatypes.PPN import PPN
@@ -94,7 +93,6 @@ class TXA(HL7Model):
     """
 
     txa_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "txa_1",
             "set_id_txa",
@@ -106,7 +104,6 @@ class TXA(HL7Model):
     )
 
     txa_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "txa_2",
             "document_type",
@@ -226,7 +223,6 @@ class TXA(HL7Model):
     )
 
     txa_12: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "txa_12",
             "unique_document_number",
@@ -286,7 +282,6 @@ class TXA(HL7Model):
     )
 
     txa_17: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "txa_17",
             "document_completion_status",

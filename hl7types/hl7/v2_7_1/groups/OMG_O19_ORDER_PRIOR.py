@@ -43,13 +43,11 @@ class OMG_O19_ORDER_PRIOR(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -79,7 +77,7 @@ class OMG_O19_ORDER_PRIOR(HL7Model):
     )
 
     OBSERVATION_PRIOR: List[_OMG_O19_OBSERVATION_PRIOR] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION_PRIOR",
         description="Required, repeating",
     )

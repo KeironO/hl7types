@@ -116,7 +116,6 @@ class RF1(HL7Model):
     )
 
     rf1_6: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rf1_6",
             "originating_referral_identifier",

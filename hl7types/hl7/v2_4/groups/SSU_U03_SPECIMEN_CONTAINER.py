@@ -27,7 +27,6 @@ class SSU_U03_SPECIMEN_CONTAINER(HL7Model):
     """
 
     SAC: _SAC = Field(
-        default=...,
         title="SAC",
         description="Required",
     )

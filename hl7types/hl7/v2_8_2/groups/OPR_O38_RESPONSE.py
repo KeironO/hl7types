@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -24,7 +24,7 @@ class OPR_O38_RESPONSE(HL7Model):
     """
 
     ORDER: List[_OPR_O38_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

@@ -8,12 +8,10 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
-from ..datatypes.FT import FT
 from ..datatypes.XAD import XAD
 from ..datatypes.XPN import XPN
 from ..datatypes.XTN import XTN
@@ -60,19 +58,19 @@ class PEO(HL7Model):
     peo_12 : str | None
         PEO.12 (opt) - Patient Outcome (ID)
 
-    peo_13 : list[FT] | None
+    peo_13 : list[str] | None
         PEO.13 (opt, rep) - Event Description from Others (FT)
 
-    peo_14 : list[FT] | None
+    peo_14 : list[str] | None
         PEO.14 (opt, rep) - Event Description from Original Reporter (FT)
 
-    peo_15 : list[FT] | None
+    peo_15 : list[str] | None
         PEO.15 (opt, rep) - Event Description from Patient (FT)
 
-    peo_16 : list[FT] | None
+    peo_16 : list[str] | None
         PEO.16 (opt, rep) - Event Description from Practitioner (FT)
 
-    peo_17 : list[FT] | None
+    peo_17 : list[str] | None
         PEO.17 (opt, rep) - Event Description from Autopsy (FT)
 
     peo_18 : list[CWE] | None
@@ -125,7 +123,6 @@ class PEO(HL7Model):
     )
 
     peo_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "peo_3",
             "event_onset_date_time",
@@ -244,7 +241,7 @@ class PEO(HL7Model):
         description="Item #1084 | Table HL70241",
     )
 
-    peo_13: Optional[List[FT]] = Field(
+    peo_13: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_13",
@@ -256,7 +253,7 @@ class PEO(HL7Model):
         description="Item #1085",
     )
 
-    peo_14: Optional[List[FT]] = Field(
+    peo_14: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_14",
@@ -268,7 +265,7 @@ class PEO(HL7Model):
         description="Item #1086",
     )
 
-    peo_15: Optional[List[FT]] = Field(
+    peo_15: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_15",
@@ -280,7 +277,7 @@ class PEO(HL7Model):
         description="Item #1087",
     )
 
-    peo_16: Optional[List[FT]] = Field(
+    peo_16: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_16",
@@ -292,7 +289,7 @@ class PEO(HL7Model):
         description="Item #1088",
     )
 
-    peo_17: Optional[List[FT]] = Field(
+    peo_17: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "peo_17",

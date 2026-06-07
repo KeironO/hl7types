@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.CWE import CWE
@@ -48,7 +47,6 @@ class IPR(HL7Model):
     """
 
     ipr_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipr_1",
             "ipr_identifier",
@@ -60,7 +58,6 @@ class IPR(HL7Model):
     )
 
     ipr_2: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipr_2",
             "provider_cross_reference_identifier",
@@ -72,7 +69,6 @@ class IPR(HL7Model):
     )
 
     ipr_3: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipr_3",
             "payer_cross_reference_identifier",
@@ -84,7 +80,6 @@ class IPR(HL7Model):
     )
 
     ipr_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipr_4",
             "ipr_status",
@@ -96,7 +91,6 @@ class IPR(HL7Model):
     )
 
     ipr_5: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipr_5",
             "ipr_date_time",
@@ -132,7 +126,6 @@ class IPR(HL7Model):
     )
 
     ipr_8: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ipr_8",
             "ipr_checksum",

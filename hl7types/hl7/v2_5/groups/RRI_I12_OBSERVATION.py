@@ -31,7 +31,6 @@ class RRI_I12_OBSERVATION(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )

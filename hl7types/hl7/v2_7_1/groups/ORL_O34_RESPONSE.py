@@ -31,7 +31,6 @@ class ORL_O34_RESPONSE(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -43,7 +42,7 @@ class ORL_O34_RESPONSE(HL7Model):
     )
 
     SPECIMEN: List[_ORL_O34_SPECIMEN] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN",
         description="Required, repeating",
     )

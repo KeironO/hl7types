@@ -43,7 +43,6 @@ class OPL_O37_OBSERVATION_REQUEST(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -55,7 +54,6 @@ class OPL_O37_OBSERVATION_REQUEST(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )

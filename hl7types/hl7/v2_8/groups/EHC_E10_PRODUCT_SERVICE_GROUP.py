@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -28,13 +28,12 @@ class EHC_E10_PRODUCT_SERVICE_GROUP(HL7Model):
     """
 
     PSG: _PSG = Field(
-        default=...,
         title="PSG",
         description="Required",
     )
 
     PRODUCT_SERVICE_LINE_INFO: List[_EHC_E10_PRODUCT_SERVICE_LINE_INFO] = Field(
-        default=...,
+        min_length=1,
         title="PRODUCT_SERVICE_LINE_INFO",
         description="Required, repeating",
     )

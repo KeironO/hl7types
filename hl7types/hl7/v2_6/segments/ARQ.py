@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -105,7 +104,6 @@ class ARQ(HL7Model):
     """
 
     arq_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "arq_1",
             "placer_appointment_id",

@@ -40,7 +40,6 @@ class RSP_E03(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,7 +57,6 @@ class RSP_E03(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -70,7 +68,6 @@ class RSP_E03(HL7Model):
     )
 
     QUERY_ACK: _RSP_E03_QUERY_ACK = Field(
-        default=...,
         title="QUERY_ACK",
         description="Required",
     )

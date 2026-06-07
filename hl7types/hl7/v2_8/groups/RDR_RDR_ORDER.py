@@ -34,7 +34,6 @@ class RDR_RDR_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -52,7 +51,7 @@ class RDR_RDR_ORDER(HL7Model):
     )
 
     DISPENSE: List[_RDR_RDR_DISPENSE] = Field(
-        default=...,
+        min_length=1,
         title="DISPENSE",
         description="Required, repeating",
     )

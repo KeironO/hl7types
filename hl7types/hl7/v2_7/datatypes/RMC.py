@@ -31,7 +31,6 @@ class RMC(HL7Model):
     """
 
     rmc_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rmc_1",
             "room_type",
@@ -53,7 +52,6 @@ class RMC(HL7Model):
     )
 
     rmc_4: MOP = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rmc_4",
             "money_or_percentage",

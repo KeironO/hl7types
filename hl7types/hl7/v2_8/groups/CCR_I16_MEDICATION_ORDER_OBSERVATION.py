@@ -27,7 +27,6 @@ class CCR_I16_MEDICATION_ORDER_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

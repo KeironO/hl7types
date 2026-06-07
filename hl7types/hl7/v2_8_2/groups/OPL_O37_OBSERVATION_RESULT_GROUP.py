@@ -27,7 +27,6 @@ class OPL_O37_OBSERVATION_RESULT_GROUP(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -28,13 +28,12 @@ class ORL_O44_SPECIMEN_SHIPMENT(HL7Model):
     """
 
     SHP: _SHP = Field(
-        default=...,
         title="SHP",
         description="Required",
     )
 
     PACKAGE: List[_ORL_O44_PACKAGE] = Field(
-        default=...,
+        min_length=1,
         title="PACKAGE",
         description="Required, repeating",
     )

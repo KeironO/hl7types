@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class PV1(HL7Model):
@@ -179,7 +178,6 @@ class PV1(HL7Model):
     )
 
     pv1_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pv1_2",
             "patient_class",
@@ -191,7 +189,6 @@ class PV1(HL7Model):
     )
 
     pv1_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pv1_3",
             "assigned_patient_location",

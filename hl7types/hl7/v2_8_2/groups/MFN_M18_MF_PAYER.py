@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -28,13 +28,12 @@ class MFN_M18_MF_PAYER(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     PAYER_MF_ENTRY: List[_MFN_M18_PAYER_MF_ENTRY] = Field(
-        default=...,
+        min_length=1,
         title="PAYER_MF_ENTRY",
         description="Required, repeating",
     )

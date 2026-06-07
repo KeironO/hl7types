@@ -56,7 +56,6 @@ class EVN(HL7Model):
     )
 
     evn_2: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "evn_2",
             "recorded_date_time",

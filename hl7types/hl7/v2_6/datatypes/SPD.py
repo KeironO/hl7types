@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class SPD(HL7Model):
@@ -32,7 +31,6 @@ class SPD(HL7Model):
     """
 
     spd_1: str = Field(
-        default=...,
         max_length=50,
         validation_alias=AliasChoices(
             "spd_1",

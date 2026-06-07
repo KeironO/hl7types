@@ -34,7 +34,6 @@ class MFN_M08(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -46,13 +45,12 @@ class MFN_M08(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF_TEST_NUMERIC: List[_MFN_M08_MF_TEST_NUMERIC] = Field(
-        default=...,
+        min_length=1,
         title="MF_TEST_NUMERIC",
         description="Required, repeating",
     )

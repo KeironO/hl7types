@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
-from ..datatypes.FT import FT
 from ..datatypes.TS import TS
 
 
@@ -33,12 +32,11 @@ class EQP(HL7Model):
     eqp_4 : TS | None
         EQP.4 (opt) - End Date/Time (TS)
 
-    eqp_5 : FT
+    eqp_5 : str
         EQP.5 (req) - Transaction Data (FT)
     """
 
     eqp_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "eqp_1",
             "event_type",
@@ -62,7 +60,6 @@ class EQP(HL7Model):
     )
 
     eqp_3: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "eqp_3",
             "start_date_time",
@@ -85,8 +82,7 @@ class EQP(HL7Model):
         description="Item #1432",
     )
 
-    eqp_5: FT = Field(
-        default=...,
+    eqp_5: str = Field(
         validation_alias=AliasChoices(
             "eqp_5",
             "transaction_data",

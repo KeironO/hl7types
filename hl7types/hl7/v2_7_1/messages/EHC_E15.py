@@ -40,7 +40,6 @@ class EHC_E15(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,7 +57,6 @@ class EHC_E15(HL7Model):
     )
 
     PAYMENT_REMITTANCE_HEADER_INFO: _EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO = Field(
-        default=...,
         title="PAYMENT_REMITTANCE_HEADER_INFO",
         description="Required",
     )

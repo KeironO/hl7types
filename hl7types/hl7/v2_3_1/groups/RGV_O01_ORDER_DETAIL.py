@@ -28,7 +28,6 @@ class RGV_O01_ORDER_DETAIL(HL7Model):
     """
 
     RXO: _RXO = Field(
-        default=...,
         title="RXO",
         description="Required",
     )

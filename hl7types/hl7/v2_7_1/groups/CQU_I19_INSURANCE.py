@@ -30,7 +30,6 @@ class CQU_I19_INSURANCE(HL7Model):
     """
 
     IN1: _IN1 = Field(
-        default=...,
         title="IN1",
         description="Required",
     )

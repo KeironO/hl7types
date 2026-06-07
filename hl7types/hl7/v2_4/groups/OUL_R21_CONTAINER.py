@@ -30,7 +30,6 @@ class OUL_R21_CONTAINER(HL7Model):
     """
 
     SAC: _SAC = Field(
-        default=...,
         title="SAC",
         description="Required",
     )

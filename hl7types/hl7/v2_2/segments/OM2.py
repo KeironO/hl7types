@@ -8,12 +8,10 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
-from ..datatypes.TX import TX
 
 
 class OM2(HL7Model):
@@ -36,7 +34,7 @@ class OM2(HL7Model):
     om2_5 : CE | None
         OM2.5 (opt) - Corresponding SI Units of Measure (CE)
 
-    om2_6 : list[TX] | None
+    om2_6 : list[str] | None
         OM2.6 (req, rep) - SI Conversion Factor (TX) [optional: TX has no required components]
 
     om2_7 : list[str] | None
@@ -115,7 +113,7 @@ class OM2(HL7Model):
         description="Item #629",
     )
 
-    om2_6: Optional[List[TX]] = Field(
+    om2_6: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om2_6",

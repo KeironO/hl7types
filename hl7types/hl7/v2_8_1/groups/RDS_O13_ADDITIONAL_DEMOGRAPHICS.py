@@ -30,7 +30,6 @@ class RDS_O13_ADDITIONAL_DEMOGRAPHICS(HL7Model):
     """
 
     PD1: _PD1 = Field(
-        default=...,
         title="PD1",
         description="Required",
     )

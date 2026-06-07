@@ -37,25 +37,23 @@ class ORF_R04(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
 
     QUERY_RESPONSE: List[_ORF_R04_QUERY_RESPONSE] = Field(
-        default=...,
+        min_length=1,
         title="QUERY_RESPONSE",
         description="Required, repeating",
     )
 
     ORDER: List[_ORF_R04_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

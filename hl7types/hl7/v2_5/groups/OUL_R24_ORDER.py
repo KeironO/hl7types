@@ -43,7 +43,6 @@ class OUL_R24_ORDER(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )

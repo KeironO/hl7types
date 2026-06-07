@@ -46,7 +46,6 @@ class CTD(HL7Model):
     """
 
     ctd_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ctd_1",
             "contact_role",

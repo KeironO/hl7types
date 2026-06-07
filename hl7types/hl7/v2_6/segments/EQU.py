@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
@@ -38,7 +37,6 @@ class EQU(HL7Model):
     """
 
     equ_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "equ_1",
             "equipment_instance_identifier",
@@ -50,7 +48,6 @@ class EQU(HL7Model):
     )
 
     equ_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "equ_2",
             "event_date_time",

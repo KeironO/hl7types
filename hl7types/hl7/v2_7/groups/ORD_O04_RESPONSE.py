@@ -36,7 +36,7 @@ class ORD_O04_RESPONSE(HL7Model):
     )
 
     ORDER_DIET: List[_ORD_O04_ORDER_DIET] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_DIET",
         description="Required, repeating",
     )

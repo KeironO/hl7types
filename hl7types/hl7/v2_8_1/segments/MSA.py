@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class MSA(HL7Model):
@@ -35,7 +34,6 @@ class MSA(HL7Model):
     """
 
     msa_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msa_1",
             "acknowledgment_code",
@@ -47,7 +45,6 @@ class MSA(HL7Model):
     )
 
     msa_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msa_2",
             "message_control_id",

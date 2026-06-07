@@ -25,7 +25,6 @@ class WVS(HL7Model):
     """
 
     wvs_1: str = Field(
-        default=...,
         max_length=8,
         validation_alias=AliasChoices(
             "wvs_1",

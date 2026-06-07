@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.TS import TS
@@ -71,7 +70,6 @@ class DG1(HL7Model):
     """
 
     dg1_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "dg1_1",
             "set_id_diagnosis",
@@ -83,7 +81,6 @@ class DG1(HL7Model):
     )
 
     dg1_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "dg1_2",
             "diagnosis_coding_method",
@@ -131,7 +128,6 @@ class DG1(HL7Model):
     )
 
     dg1_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "dg1_6",
             "diagnosis_drg_type",

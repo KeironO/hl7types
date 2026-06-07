@@ -36,7 +36,6 @@ class MFE(HL7Model):
     """
 
     mfe_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfe_1",
             "record_level_event_code",
@@ -72,7 +71,7 @@ class MFE(HL7Model):
     )
 
     mfe_4: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "mfe_4",
             "primary_key_value_mfe",
@@ -84,7 +83,7 @@ class MFE(HL7Model):
     )
 
     mfe_5: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "mfe_5",
             "primary_key_value_type",

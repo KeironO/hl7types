@@ -27,7 +27,6 @@ class OPL_O37_OBSERVATIONS_ON_PATIENT(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

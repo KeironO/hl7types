@@ -40,13 +40,11 @@ class PPV_PCA(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -64,13 +62,12 @@ class PPV_PCA(HL7Model):
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
 
     PATIENT: List[_PPV_PCA_PATIENT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT",
         description="Required, repeating",
     )

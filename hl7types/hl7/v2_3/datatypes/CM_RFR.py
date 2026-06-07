@@ -11,8 +11,6 @@ from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
-from .TX import TX
-
 
 class CM_RFR(HL7Model):
     """HL7 v2 CM_RFR data type.
@@ -31,13 +29,13 @@ class CM_RFR(HL7Model):
     cm_rfr_4 : str | None
         CM_RFR.4 (opt) - age gestation (CM)
 
-    cm_rfr_5 : TX | None
+    cm_rfr_5 : str | None
         CM_RFR.5 (opt) - species (TX)
 
     cm_rfr_6 : str | None
         CM_RFR.6 (opt) - race/subspecies (ST)
 
-    cm_rfr_7 : TX | None
+    cm_rfr_7 : str | None
         CM_RFR.7 (opt) - conditions (TX)
     """
 
@@ -85,7 +83,7 @@ class CM_RFR(HL7Model):
         title="age gestation",
     )
 
-    cm_rfr_5: Optional[TX] = Field(
+    cm_rfr_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_5",
@@ -107,7 +105,7 @@ class CM_RFR(HL7Model):
         title="race/subspecies",
     )
 
-    cm_rfr_7: Optional[TX] = Field(
+    cm_rfr_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_rfr_7",

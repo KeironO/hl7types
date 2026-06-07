@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 
@@ -115,7 +114,6 @@ class OM3(HL7Model):
     )
 
     om3_7: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om3_7",
             "value_type",

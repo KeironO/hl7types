@@ -31,7 +31,6 @@ class QPD(HL7Model):
     """
 
     qpd_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qpd_1",
             "message_query_name",

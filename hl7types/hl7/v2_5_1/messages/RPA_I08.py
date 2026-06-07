@@ -76,7 +76,6 @@ class RPA_I08(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -88,7 +87,6 @@ class RPA_I08(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -106,13 +104,12 @@ class RPA_I08(HL7Model):
     )
 
     PROVIDER: List[_RPA_I08_PROVIDER] = Field(
-        default=...,
+        min_length=1,
         title="PROVIDER",
         description="Required, repeating",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -160,7 +157,7 @@ class RPA_I08(HL7Model):
     )
 
     PROCEDURE: List[_RPA_I08_PROCEDURE] = Field(
-        default=...,
+        min_length=1,
         title="PROCEDURE",
         description="Required, repeating",
     )

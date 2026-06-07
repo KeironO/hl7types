@@ -28,7 +28,6 @@ class CCR_I16_ROLE_GOAL(HL7Model):
     """
 
     ROLE_GOAL_OBJECT: _CCR_I16_ROLE_GOAL_OBJECT = Field(
-        default=...,
         title="ROLE_GOAL_OBJECT",
         description="Required",
     )

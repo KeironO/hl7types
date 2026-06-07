@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -27,13 +26,11 @@ class ADT_A17_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

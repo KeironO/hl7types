@@ -55,7 +55,6 @@ class OMQ_O57_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -67,13 +66,11 @@ class OMQ_O57_ORDER(HL7Model):
     )
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )
 
     TXA: _TXA = Field(
-        default=...,
         title="TXA",
         description="Required",
     )

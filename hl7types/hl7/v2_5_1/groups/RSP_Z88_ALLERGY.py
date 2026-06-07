@@ -28,7 +28,7 @@ class RSP_Z88_ALLERGY(HL7Model):
     """
 
     AL1: List[_AL1] = Field(
-        default=...,
+        min_length=1,
         title="AL1",
         description="Required, repeating",
     )

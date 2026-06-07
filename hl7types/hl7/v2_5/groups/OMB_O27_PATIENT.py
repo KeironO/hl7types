@@ -43,7 +43,6 @@ class OMB_O27_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

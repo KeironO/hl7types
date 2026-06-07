@@ -36,7 +36,6 @@ class ESU_U01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -48,7 +47,6 @@ class ESU_U01(HL7Model):
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )

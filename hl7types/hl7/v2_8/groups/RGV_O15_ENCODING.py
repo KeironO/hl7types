@@ -40,7 +40,6 @@ class RGV_O15_ENCODING(HL7Model):
     """
 
     RXE: _RXE = Field(
-        default=...,
         title="RXE",
         description="Required",
     )
@@ -58,13 +57,13 @@ class RGV_O15_ENCODING(HL7Model):
     )
 
     TIMING_ENCODED: List[_RGV_O15_TIMING_ENCODED] = Field(
-        default=...,
+        min_length=1,
         title="TIMING_ENCODED",
         description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

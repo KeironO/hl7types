@@ -48,7 +48,6 @@ class ROL(HL7Model):
     """
 
     rol_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rol_1",
             "role_instance_id",
@@ -60,7 +59,6 @@ class ROL(HL7Model):
     )
 
     rol_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rol_2",
             "action_code",
@@ -84,7 +82,6 @@ class ROL(HL7Model):
     )
 
     rol_4: XCN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rol_4",
             "role_person",

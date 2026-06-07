@@ -31,7 +31,7 @@ class OPU_R25_ACCESSION_DETAIL(HL7Model):
     """
 
     NK1: List[_NK1] = Field(
-        default=...,
+        min_length=1,
         title="NK1",
         description="Required, repeating",
     )
@@ -43,7 +43,7 @@ class OPU_R25_ACCESSION_DETAIL(HL7Model):
     )
 
     SPECIMEN: List[_OPU_R25_SPECIMEN] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN",
         description="Required, repeating",
     )

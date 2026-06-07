@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from .MO import MO
 
@@ -42,7 +41,6 @@ class DDI(HL7Model):
     )
 
     ddi_2: MO = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ddi_2",
             "monetary_amount",

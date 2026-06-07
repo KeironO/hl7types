@@ -30,7 +30,6 @@ class MFR_M05_MF_LOC_DEPT(HL7Model):
     """
 
     LDP: _LDP = Field(
-        default=...,
         title="LDP",
         description="Required",
     )

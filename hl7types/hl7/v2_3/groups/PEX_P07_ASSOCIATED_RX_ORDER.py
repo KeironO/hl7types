@@ -27,7 +27,6 @@ class PEX_P07_ASSOCIATED_RX_ORDER(HL7Model):
     """
 
     RXE: _RXE = Field(
-        default=...,
         title="RXE",
         description="Required",
     )

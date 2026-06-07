@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CNE import CNE
@@ -160,7 +159,6 @@ class FT1(HL7Model):
     )
 
     ft1_4: DR = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ft1_4",
             "transaction_date",
@@ -184,7 +182,6 @@ class FT1(HL7Model):
     )
 
     ft1_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ft1_6",
             "transaction_type",
@@ -196,7 +193,6 @@ class FT1(HL7Model):
     )
 
     ft1_7: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ft1_7",
             "transaction_code",

@@ -27,7 +27,6 @@ class EHC_E20_DIAGNOSIS(HL7Model):
     """
 
     DG1: _DG1 = Field(
-        default=...,
         title="DG1",
         description="Required",
     )

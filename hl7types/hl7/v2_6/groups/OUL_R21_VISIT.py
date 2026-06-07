@@ -27,7 +27,6 @@ class OUL_R21_VISIT(HL7Model):
     """
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

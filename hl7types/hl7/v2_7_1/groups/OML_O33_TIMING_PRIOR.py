@@ -27,7 +27,6 @@ class OML_O33_TIMING_PRIOR(HL7Model):
     """
 
     TQ1: _TQ1 = Field(
-        default=...,
         title="TQ1",
         description="Required",
     )

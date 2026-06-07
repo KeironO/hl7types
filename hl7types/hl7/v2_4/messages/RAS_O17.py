@@ -34,7 +34,6 @@ class RAS_O17(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,7 @@ class RAS_O17(HL7Model):
     )
 
     ORDER: List[_RAS_O17_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

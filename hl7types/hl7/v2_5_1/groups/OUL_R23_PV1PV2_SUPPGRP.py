@@ -27,7 +27,6 @@ class OUL_R23_PV1PV2_SUPPGRP(HL7Model):
     """
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

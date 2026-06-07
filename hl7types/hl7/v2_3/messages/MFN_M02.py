@@ -7,7 +7,7 @@ Type: Message
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -31,19 +31,17 @@ class MFN_M02(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF_STAFF: List[_MFN_M02_MF_STAFF] = Field(
-        default=...,
+        min_length=1,
         title="MF_STAFF",
         description="Required, repeating",
     )

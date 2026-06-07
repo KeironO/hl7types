@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class ERL(HL7Model):
@@ -38,7 +37,6 @@ class ERL(HL7Model):
     """
 
     erl_1: str = Field(
-        default=...,
         max_length=3,
         validation_alias=AliasChoices(
             "erl_1",
@@ -50,7 +48,6 @@ class ERL(HL7Model):
     )
 
     erl_2: str = Field(
-        default=...,
         max_length=2,
         validation_alias=AliasChoices(
             "erl_2",

@@ -36,13 +36,11 @@ class ADR_A19_QUERY_RESPONSE(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

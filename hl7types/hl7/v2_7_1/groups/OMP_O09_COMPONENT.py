@@ -27,7 +27,6 @@ class OMP_O09_COMPONENT(HL7Model):
     """
 
     RXC: _RXC = Field(
-        default=...,
         title="RXC",
         description="Required",
     )

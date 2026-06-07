@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -27,13 +26,11 @@ class CSU_C09_RX_ADMIN(HL7Model):
     """
 
     RXA: _RXA = Field(
-        default=...,
         title="RXA",
         description="Required",
     )
 
     RXR: _RXR = Field(
-        default=...,
         title="RXR",
         description="Required",
     )

@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.PL import PL
@@ -61,7 +60,6 @@ class LDP(HL7Model):
     """
 
     ldp_1: PL = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ldp_1",
             "primary_key_value_ldp",
@@ -73,7 +71,6 @@ class LDP(HL7Model):
     )
 
     ldp_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ldp_2",
             "location_department",

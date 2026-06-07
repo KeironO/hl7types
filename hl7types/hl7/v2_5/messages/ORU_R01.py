@@ -34,7 +34,6 @@ class ORU_R01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -46,7 +45,7 @@ class ORU_R01(HL7Model):
     )
 
     PATIENT_RESULT: List[_ORU_R01_PATIENT_RESULT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT_RESULT",
         description="Required, repeating",
     )

@@ -30,7 +30,6 @@ class VXU_V04_PERSON_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

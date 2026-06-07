@@ -34,7 +34,7 @@ class URS(HL7Model):
     """
 
     urs_1: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "urs_1",
             "r_u_where_subject_definition",

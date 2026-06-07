@@ -37,13 +37,11 @@ class SIU_S12(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     SCH: _SCH = Field(
-        default=...,
         title="SCH",
         description="Required",
     )
@@ -61,7 +59,7 @@ class SIU_S12(HL7Model):
     )
 
     RESOURCES: List[_SIU_S12_RESOURCES] = Field(
-        default=...,
+        min_length=1,
         title="RESOURCES",
         description="Required, repeating",
     )

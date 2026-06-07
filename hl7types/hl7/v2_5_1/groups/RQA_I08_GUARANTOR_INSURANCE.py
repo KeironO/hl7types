@@ -34,7 +34,7 @@ class RQA_I08_GUARANTOR_INSURANCE(HL7Model):
     )
 
     INSURANCE: List[_RQA_I08_INSURANCE] = Field(
-        default=...,
+        min_length=1,
         title="INSURANCE",
         description="Required, repeating",
     )

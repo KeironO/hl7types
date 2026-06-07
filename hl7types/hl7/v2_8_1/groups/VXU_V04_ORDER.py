@@ -40,7 +40,6 @@ class VXU_V04_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -58,7 +57,6 @@ class VXU_V04_ORDER(HL7Model):
     )
 
     RXA: _RXA = Field(
-        default=...,
         title="RXA",
         description="Required",
     )

@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
@@ -66,7 +65,6 @@ class TCC(HL7Model):
     """
 
     tcc_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "tcc_1",
             "universal_service_identifier",
@@ -78,7 +76,6 @@ class TCC(HL7Model):
     )
 
     tcc_2: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "tcc_2",
             "equipment_test_application_identifier",

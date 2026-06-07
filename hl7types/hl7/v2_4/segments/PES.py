@@ -8,12 +8,10 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.EI import EI
-from ..datatypes.FT import FT
 from ..datatypes.TS import TS
 from ..datatypes.XAD import XAD
 from ..datatypes.XCN import XCN
@@ -44,10 +42,10 @@ class PES(HL7Model):
     pes_6 : str | None
         PES.6 (opt) - Sender Sequence Number (NM)
 
-    pes_7 : list[FT] | None
+    pes_7 : list[str] | None
         PES.7 (opt, rep) - Sender Event Description (FT)
 
-    pes_8 : FT | None
+    pes_8 : str | None
         PES.8 (opt) - Sender Comment (FT)
 
     pes_9 : TS | None
@@ -138,7 +136,7 @@ class PES(HL7Model):
         description="Item #1065",
     )
 
-    pes_7: Optional[List[FT]] = Field(
+    pes_7: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_7",
@@ -150,7 +148,7 @@ class PES(HL7Model):
         description="Item #1066",
     )
 
-    pes_8: Optional[FT] = Field(
+    pes_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "pes_8",
@@ -175,7 +173,6 @@ class PES(HL7Model):
     )
 
     pes_10: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pes_10",
             "event_report_date",

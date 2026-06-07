@@ -27,7 +27,6 @@ class ORD_O04_TIMING_DIET(HL7Model):
     """
 
     TQ1: _TQ1 = Field(
-        default=...,
         title="TQ1",
         description="Required",
     )

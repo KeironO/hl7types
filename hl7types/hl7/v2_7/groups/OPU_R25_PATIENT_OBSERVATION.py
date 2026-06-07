@@ -30,7 +30,6 @@ class OPU_R25_PATIENT_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

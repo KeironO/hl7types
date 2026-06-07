@@ -40,7 +40,6 @@ class RAS_O17_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

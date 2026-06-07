@@ -49,7 +49,6 @@ class VTQ(HL7Model):
     )
 
     vtq_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "vtq_2",
             "query_response_format_code",
@@ -61,7 +60,6 @@ class VTQ(HL7Model):
     )
 
     vtq_3: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "vtq_3",
             "vt_query_name",
@@ -73,7 +71,6 @@ class VTQ(HL7Model):
     )
 
     vtq_4: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "vtq_4",
             "virtual_table_name",

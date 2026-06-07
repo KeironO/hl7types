@@ -28,7 +28,6 @@ class CQU_I19_ROLE_GOAL(HL7Model):
     """
 
     ROLE_GOAL_OBJECT: _CQU_I19_ROLE_GOAL_OBJECT = Field(
-        default=...,
         title="ROLE_GOAL_OBJECT",
         description="Required",
     )

@@ -33,7 +33,7 @@ class RSP_K31_RESPONSE(HL7Model):
     )
 
     ORDER: List[_RSP_K31_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

@@ -31,7 +31,6 @@ class OUL_R23_CONTAINER(HL7Model):
     """
 
     SAC: _SAC = Field(
-        default=...,
         title="SAC",
         description="Required",
     )
@@ -43,7 +42,7 @@ class OUL_R23_CONTAINER(HL7Model):
     )
 
     ORDER: List[_OUL_R23_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

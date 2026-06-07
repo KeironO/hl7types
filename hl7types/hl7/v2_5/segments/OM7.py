@@ -8,14 +8,12 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.PL import PL
 from ..datatypes.TS import TS
-from ..datatypes.TX import TX
 from ..datatypes.XCN import XCN
 
 
@@ -33,7 +31,7 @@ class OM7(HL7Model):
     om7_3 : list[CE] | None
         OM7.3 (opt, rep) - Category Identifier (CE)
 
-    om7_4 : TX | None
+    om7_4 : str | None
         OM7.4 (opt) - Category Description (TX)
 
     om7_5 : list[str] | None
@@ -98,7 +96,6 @@ class OM7(HL7Model):
     """
 
     om7_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om7_1",
             "sequence_number_test_observation_master_file",
@@ -110,7 +107,6 @@ class OM7(HL7Model):
     )
 
     om7_2: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om7_2",
             "universal_service_identifier",
@@ -133,7 +129,7 @@ class OM7(HL7Model):
         description="Item #1481 | Table HL70412",
     )
 
-    om7_4: Optional[TX] = Field(
+    om7_4: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om7_4",

@@ -7,7 +7,7 @@ Type: Message
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -28,13 +28,12 @@ class SUR_P09(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     FACPSHPDCPSHFACPDCNTEED_SUPPGRP: List[_SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP] = Field(
-        default=...,
+        min_length=1,
         title="FACPSHPDCPSHFACPDCNTEED_SUPPGRP",
         description="Required, repeating",
     )

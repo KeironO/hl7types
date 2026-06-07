@@ -106,7 +106,6 @@ class ORC(HL7Model):
     """
 
     orc_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "orc_1",
             "order_control",

@@ -34,7 +34,6 @@ class MFN_M01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -46,13 +45,12 @@ class MFN_M01(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF: List[_MFN_M01_MF] = Field(
-        default=...,
+        min_length=1,
         title="MF",
         description="Required, repeating",
     )

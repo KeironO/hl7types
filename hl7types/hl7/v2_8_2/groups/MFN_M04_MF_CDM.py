@@ -33,7 +33,6 @@ class MFN_M04_MF_CDM(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
@@ -45,7 +44,6 @@ class MFN_M04_MF_CDM(HL7Model):
     )
 
     CDM: _CDM = Field(
-        default=...,
         title="CDM",
         description="Required",
     )

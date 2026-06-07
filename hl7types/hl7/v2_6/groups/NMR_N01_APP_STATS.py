@@ -27,7 +27,6 @@ class NMR_N01_APP_STATS(HL7Model):
     """
 
     NST: _NST = Field(
-        default=...,
         title="NST",
         description="Required",
     )

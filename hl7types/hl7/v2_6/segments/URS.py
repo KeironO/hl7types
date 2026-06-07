@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.TQ import TQ
 
@@ -49,7 +48,7 @@ class URS(HL7Model):
     """
 
     urs_1: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "urs_1",
             "r_u_where_subject_definition",

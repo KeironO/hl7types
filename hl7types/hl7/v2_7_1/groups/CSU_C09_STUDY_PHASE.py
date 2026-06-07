@@ -34,7 +34,7 @@ class CSU_C09_STUDY_PHASE(HL7Model):
     )
 
     STUDY_SCHEDULE: List[_CSU_C09_STUDY_SCHEDULE] = Field(
-        default=...,
+        min_length=1,
         title="STUDY_SCHEDULE",
         description="Required, repeating",
     )

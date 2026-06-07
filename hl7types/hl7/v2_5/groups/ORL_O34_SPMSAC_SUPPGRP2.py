@@ -27,7 +27,6 @@ class ORL_O34_SPMSAC_SUPPGRP2(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )

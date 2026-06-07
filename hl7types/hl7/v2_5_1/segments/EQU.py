@@ -38,7 +38,6 @@ class EQU(HL7Model):
     """
 
     equ_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "equ_1",
             "equipment_instance_identifier",
@@ -50,7 +49,6 @@ class EQU(HL7Model):
     )
 
     equ_2: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "equ_2",
             "event_date_time",
