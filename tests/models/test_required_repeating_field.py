@@ -1,7 +1,7 @@
 """Contract tests for required repeating fields (List[X] = Field(..., min_length=1)).
 
 Uses ORU_R01_ORDER_OBSERVATION from v2.3, where OBSERVATION is typed as
-List[ORU_R01_OBSERVATION] = Field(..., min_length=1) — required and non-empty.
+List[ORU_R01_OBSERVATION] = Field(..., min_length=1) required and non-empty.
 
 The generated models use both Field(...) (required) and min_length=1 (non-empty),
 so both an absent field and an empty list raise ValidationError.
