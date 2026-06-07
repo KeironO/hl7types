@@ -27,7 +27,6 @@ class RSP_K31_COMPONENTS(HL7Model):
     """
 
     RXC: _RXC = Field(
-        default=...,
         title="RXC",
         description="Required",
     )

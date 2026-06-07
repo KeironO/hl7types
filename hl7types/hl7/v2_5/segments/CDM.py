@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CX import CX
@@ -63,7 +62,6 @@ class CDM(HL7Model):
     """
 
     cdm_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cdm_1",
             "primary_key_value_cdm",
@@ -87,7 +85,6 @@ class CDM(HL7Model):
     )
 
     cdm_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cdm_3",
             "charge_description_short",

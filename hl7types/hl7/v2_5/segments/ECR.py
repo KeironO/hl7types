@@ -13,7 +13,6 @@ from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
 from ..datatypes.TS import TS
-from ..datatypes.TX import TX
 
 
 class ECR(HL7Model):
@@ -27,12 +26,11 @@ class ECR(HL7Model):
     ecr_2 : TS
         ECR.2 (req) - Date/Time Completed (TS)
 
-    ecr_3 : list[TX] | None
+    ecr_3 : list[str] | None
         ECR.3 (opt, rep) - Command Response Parameters (TX)
     """
 
     ecr_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecr_1",
             "command_response",
@@ -44,7 +42,6 @@ class ECR(HL7Model):
     )
 
     ecr_2: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecr_2",
             "date_time_completed",
@@ -55,7 +52,7 @@ class ECR(HL7Model):
         description="Item #1396",
     )
 
-    ecr_3: Optional[List[TX]] = Field(
+    ecr_3: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ecr_3",

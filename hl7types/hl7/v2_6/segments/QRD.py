@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -61,7 +60,6 @@ class QRD(HL7Model):
     """
 
     qrd_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_1",
             "query_date_time",
@@ -73,7 +71,6 @@ class QRD(HL7Model):
     )
 
     qrd_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_2",
             "query_format_code",
@@ -85,7 +82,6 @@ class QRD(HL7Model):
     )
 
     qrd_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_3",
             "query_priority",
@@ -97,7 +93,6 @@ class QRD(HL7Model):
     )
 
     qrd_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_4",
             "query_id",
@@ -133,7 +128,6 @@ class QRD(HL7Model):
     )
 
     qrd_7: CQ = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_7",
             "quantity_limited_request",

@@ -51,7 +51,6 @@ class PMU_B01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -63,13 +62,11 @@ class PMU_B01(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     STF: _STF = Field(
-        default=...,
         title="STF",
         description="Required",
     )

@@ -42,7 +42,6 @@ class UDM_Q05(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -60,7 +59,6 @@ class UDM_Q05(HL7Model):
     )
 
     URD: _URD = Field(
-        default=...,
         title="URD",
         description="Required",
     )
@@ -72,7 +70,7 @@ class UDM_Q05(HL7Model):
     )
 
     DSP: List[_DSP] = Field(
-        default=...,
+        min_length=1,
         title="DSP",
         description="Required, repeating",
     )

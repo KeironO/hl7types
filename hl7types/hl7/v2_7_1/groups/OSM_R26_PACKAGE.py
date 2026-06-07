@@ -31,7 +31,6 @@ class OSM_R26_PACKAGE(HL7Model):
     """
 
     PAC: _PAC = Field(
-        default=...,
         title="PAC",
         description="Required",
     )

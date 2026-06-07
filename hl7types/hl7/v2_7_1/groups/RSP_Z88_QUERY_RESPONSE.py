@@ -33,7 +33,7 @@ class RSP_Z88_QUERY_RESPONSE(HL7Model):
     )
 
     COMMON_ORDER: List[_RSP_Z88_COMMON_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="COMMON_ORDER",
         description="Required, repeating",
     )

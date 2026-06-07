@@ -49,7 +49,6 @@ class OMI_O23_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -61,7 +60,6 @@ class OMI_O23_ORDER(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -97,7 +95,7 @@ class OMI_O23_ORDER(HL7Model):
     )
 
     IPC: List[_IPC] = Field(
-        default=...,
+        min_length=1,
         title="IPC",
         description="Required, repeating",
     )

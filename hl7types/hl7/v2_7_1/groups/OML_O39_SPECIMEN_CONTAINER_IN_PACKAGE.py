@@ -28,7 +28,6 @@ class OML_O39_SPECIMEN_CONTAINER_IN_PACKAGE(HL7Model):
     """
 
     SAC: _SAC = Field(
-        default=...,
         title="SAC",
         description="Required",
     )

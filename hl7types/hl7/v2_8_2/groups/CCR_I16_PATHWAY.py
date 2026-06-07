@@ -34,7 +34,6 @@ class CCR_I16_PATHWAY(HL7Model):
     """
 
     PTH: _PTH = Field(
-        default=...,
         title="PTH",
         description="Required",
     )

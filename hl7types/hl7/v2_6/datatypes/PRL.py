@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from .CWE import CWE
-from .TX import TX
 
 
 class PRL(HL7Model):
@@ -26,12 +25,11 @@ class PRL(HL7Model):
     prl_2 : str | None
         PRL.2 (opt) - Parent Observation Sub-identifier (ST)
 
-    prl_3 : TX | None
+    prl_3 : str | None
         PRL.3 (opt) - Parent Observation Value Descriptor (TX)
     """
 
     prl_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "prl_1",
             "parent_observation_identifier",
@@ -53,7 +51,7 @@ class PRL(HL7Model):
         title="Parent Observation Sub-identifier",
     )
 
-    prl_3: Optional[TX] = Field(
+    prl_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prl_3",

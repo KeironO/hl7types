@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -24,7 +23,6 @@ class ORR_O02_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _ORR_O02_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

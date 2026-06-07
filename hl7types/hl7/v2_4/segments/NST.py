@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.TS import TS
 
@@ -67,7 +66,6 @@ class NST(HL7Model):
     """
 
     nst_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nst_1",
             "statistics_available",

@@ -30,7 +30,6 @@ class RSP_O34_DONATION(HL7Model):
     """
 
     DON: _DON = Field(
-        default=...,
         title="DON",
         description="Required",
     )

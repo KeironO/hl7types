@@ -37,7 +37,6 @@ class RDS_O13_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

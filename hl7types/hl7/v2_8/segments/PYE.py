@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.XAD import XAD
@@ -46,7 +45,6 @@ class PYE(HL7Model):
     """
 
     pye_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pye_1",
             "set_id_pye",
@@ -58,7 +56,6 @@ class PYE(HL7Model):
     )
 
     pye_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pye_2",
             "payee_type",

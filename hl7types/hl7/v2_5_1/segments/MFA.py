@@ -40,7 +40,6 @@ class MFA(HL7Model):
     """
 
     mfa_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfa_1",
             "record_level_event_code",
@@ -76,7 +75,6 @@ class MFA(HL7Model):
     )
 
     mfa_4: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfa_4",
             "mfn_record_level_error_return",
@@ -88,7 +86,7 @@ class MFA(HL7Model):
     )
 
     mfa_5: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "mfa_5",
             "primary_key_value_mfa",
@@ -100,7 +98,7 @@ class MFA(HL7Model):
     )
 
     mfa_6: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "mfa_6",
             "primary_key_value_type_mfa",

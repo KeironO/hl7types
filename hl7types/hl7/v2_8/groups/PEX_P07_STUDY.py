@@ -27,7 +27,6 @@ class PEX_P07_STUDY(HL7Model):
     """
 
     CSR: _CSR = Field(
-        default=...,
         title="CSR",
         description="Required",
     )

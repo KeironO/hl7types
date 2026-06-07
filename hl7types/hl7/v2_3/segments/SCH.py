@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.EI import EI
@@ -103,7 +102,6 @@ class SCH(HL7Model):
     """
 
     sch_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sch_1",
             "placer_appointment_id",
@@ -163,7 +161,6 @@ class SCH(HL7Model):
     )
 
     sch_6: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sch_6",
             "event_reason",
@@ -283,7 +280,6 @@ class SCH(HL7Model):
     )
 
     sch_16: XCN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sch_16",
             "filler_contact_person",
@@ -331,7 +327,6 @@ class SCH(HL7Model):
     )
 
     sch_20: XCN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sch_20",
             "entered_by_person",

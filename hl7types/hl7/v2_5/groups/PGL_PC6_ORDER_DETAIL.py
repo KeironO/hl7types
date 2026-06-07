@@ -34,7 +34,6 @@ class PGL_PC6_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _PGL_PC6_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

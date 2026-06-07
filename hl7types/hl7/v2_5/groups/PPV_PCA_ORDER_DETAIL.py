@@ -34,7 +34,6 @@ class PPV_PCA_ORDER_DETAIL(HL7Model):
     """
 
     OBRanyHL7Segment_SUPPGRP: _PPV_PCA_OBRanyHL7Segment_SUPPGRP = Field(
-        default=...,
         title="OBRanyHL7Segment_SUPPGRP",
         description="Required",
     )

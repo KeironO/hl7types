@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.EI import EI
@@ -163,7 +162,6 @@ class MSH(HL7Model):
     )
 
     msh_7: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msh_7",
             "date_time_of_message",
@@ -187,7 +185,6 @@ class MSH(HL7Model):
     )
 
     msh_9: MSG = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msh_9",
             "message_type",
@@ -199,7 +196,6 @@ class MSH(HL7Model):
     )
 
     msh_10: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msh_10",
             "message_control_id",
@@ -211,7 +207,6 @@ class MSH(HL7Model):
     )
 
     msh_11: PT = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msh_11",
             "processing_id",
@@ -223,7 +218,6 @@ class MSH(HL7Model):
     )
 
     msh_12: VID = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msh_12",
             "version_id",

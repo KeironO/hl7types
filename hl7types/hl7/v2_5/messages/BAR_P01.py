@@ -43,7 +43,6 @@ class BAR_P01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,13 +54,11 @@ class BAR_P01(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -79,7 +76,7 @@ class BAR_P01(HL7Model):
     )
 
     VISIT: List[_BAR_P01_VISIT] = Field(
-        default=...,
+        min_length=1,
         title="VISIT",
         description="Required, repeating",
     )

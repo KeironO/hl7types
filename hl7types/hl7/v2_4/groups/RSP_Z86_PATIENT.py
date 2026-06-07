@@ -37,7 +37,6 @@ class RSP_Z86_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -61,7 +60,7 @@ class RSP_Z86_PATIENT(HL7Model):
     )
 
     COMMON_ORDER: List[_RSP_Z86_COMMON_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="COMMON_ORDER",
         description="Required, repeating",
     )

@@ -30,13 +30,12 @@ class RRD_O14_DISPENSE(HL7Model):
     """
 
     RXD: _RXD = Field(
-        default=...,
         title="RXD",
         description="Required",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

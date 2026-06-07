@@ -46,7 +46,6 @@ class OML_O21_ORDER_PRIOR(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -70,7 +69,7 @@ class OML_O21_ORDER_PRIOR(HL7Model):
     )
 
     OBSERVATION_PRIOR: List[_OML_O21_OBSERVATION_PRIOR] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION_PRIOR",
         description="Required, repeating",
     )

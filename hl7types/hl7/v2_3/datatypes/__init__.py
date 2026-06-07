@@ -8,9 +8,9 @@ _all_ = {
     'CM_MOC', 'CM_MSG', 'CM_NDL', 'CM_OCD', 'CM_OSP', 'CM_PCF', 'CM_PEN',
     'CM_PI', 'CM_PIP', 'CM_PLN', 'CM_PRL', 'CM_PTA', 'CM_RANGE', 'CM_RFR',
     'CM_RI', 'CM_RMC', 'CM_SPD', 'CM_SPS', 'CM_UVC', 'CM_VR', 'CM_WVI', 'CN',
-    'CP', 'CQ', 'CX', 'DLN', 'DR', 'ED', 'EI', 'FC', 'FT', 'HD', 'JCC', 'MA',
-    'MO', 'NA', 'PL', 'PPN', 'PT', 'QIP', 'QSC', 'RCD', 'RI', 'RP', 'SCV',
-    'SN', 'TQ', 'TS', 'TX', 'VH', 'XAD', 'XCN', 'XON', 'XPN', 'XTN', 'varies'
+    'CP', 'CQ', 'CX', 'DLN', 'DR', 'ED', 'EI', 'FC', 'HD', 'JCC', 'MA', 'MO',
+    'NA', 'PL', 'PPN', 'PT', 'QIP', 'QSC', 'RCD', 'RI', 'RP', 'SCV', 'SN',
+    'TQ', 'TS', 'VH', 'XAD', 'XCN', 'XON', 'XPN', 'XTN', 'varies'
 }  # type: ignore
 
 

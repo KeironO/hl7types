@@ -34,19 +34,17 @@ class EAN_U09(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     NOTIFICATION: List[_EAN_U09_NOTIFICATION] = Field(
-        default=...,
+        min_length=1,
         title="NOTIFICATION",
         description="Required, repeating",
     )

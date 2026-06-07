@@ -27,7 +27,6 @@ class SRR_S01_SERVICE(HL7Model):
     """
 
     AIS: _AIS = Field(
-        default=...,
         title="AIS",
         description="Required",
     )

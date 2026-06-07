@@ -27,7 +27,6 @@ class RGV_O15_COMPONENTS(HL7Model):
     """
 
     RXC: _RXC = Field(
-        default=...,
         title="RXC",
         description="Required",
     )

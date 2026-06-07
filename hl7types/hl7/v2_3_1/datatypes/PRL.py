@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from .CE import CE
-from .TX import TX
 
 
 class PRL(HL7Model):
@@ -26,7 +25,7 @@ class PRL(HL7Model):
     prl_2 : str | None
         PRL.2 (opt) - OBX-4 sub-ID of parent result (ST)
 
-    prl_3 : TX | None
+    prl_3 : str | None
         PRL.3 (opt) - part of OBX-5 observation result from parent (TX)
     """
 
@@ -52,7 +51,7 @@ class PRL(HL7Model):
         title="OBX-4 sub-ID of parent result",
     )
 
-    prl_3: Optional[TX] = Field(
+    prl_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "prl_3",

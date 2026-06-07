@@ -31,7 +31,6 @@ class CSS(HL7Model):
     """
 
     css_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "css_1",
             "study_scheduled_time_point",

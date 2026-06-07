@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class NA(HL7Model):
@@ -32,7 +31,6 @@ class NA(HL7Model):
     """
 
     na_1: str = Field(
-        default=...,
         max_length=16,
         validation_alias=AliasChoices(
             "na_1",

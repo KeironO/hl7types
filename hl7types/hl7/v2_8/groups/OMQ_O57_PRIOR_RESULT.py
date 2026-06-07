@@ -52,7 +52,7 @@ class OMQ_O57_PRIOR_RESULT(HL7Model):
     )
 
     ORDER_PRIOR: List[_OMQ_O57_ORDER_PRIOR] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_PRIOR",
         description="Required, repeating",
     )

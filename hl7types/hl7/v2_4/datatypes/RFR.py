@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from .NR import NR
-from .TX import TX
 
 
 class RFR(HL7Model):
@@ -32,13 +31,13 @@ class RFR(HL7Model):
     rfr_4 : NR | None
         RFR.4 (opt) - gestational range (NR)
 
-    rfr_5 : TX | None
+    rfr_5 : str | None
         RFR.5 (opt) - species (TX)
 
     rfr_6 : str | None
         RFR.6 (opt) - race/subspecies (ST)
 
-    rfr_7 : TX | None
+    rfr_7 : str | None
         RFR.7 (opt) - conditions (TX)
     """
 
@@ -86,7 +85,7 @@ class RFR(HL7Model):
         title="gestational range",
     )
 
-    rfr_5: Optional[TX] = Field(
+    rfr_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_5",
@@ -108,7 +107,7 @@ class RFR(HL7Model):
         title="race/subspecies",
     )
 
-    rfr_7: Optional[TX] = Field(
+    rfr_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rfr_7",

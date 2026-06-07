@@ -39,13 +39,11 @@ class OMQ_O57_ORDER_DOCUMENT(HL7Model):
     """
 
     SGH: _SGH = Field(
-        default=...,
         title="SGH",
         description="Required",
     )
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )
@@ -69,7 +67,6 @@ class OMQ_O57_ORDER_DOCUMENT(HL7Model):
     )
 
     SGT: _SGT = Field(
-        default=...,
         title="SGT",
         description="Required",
     )

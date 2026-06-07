@@ -27,7 +27,6 @@ class OMS_O05_PATIENT_VISIT(HL7Model):
     """
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

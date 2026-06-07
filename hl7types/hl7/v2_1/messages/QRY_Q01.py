@@ -33,13 +33,11 @@ class QRY_Q01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -51,7 +49,6 @@ class QRY_Q01(HL7Model):
     )
 
     DSC: _DSC = Field(
-        default=...,
         title="DSC",
         description="Required",
     )

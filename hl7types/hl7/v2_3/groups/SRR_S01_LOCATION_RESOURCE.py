@@ -27,7 +27,6 @@ class SRR_S01_LOCATION_RESOURCE(HL7Model):
     """
 
     AIL: _AIL = Field(
-        default=...,
         title="AIL",
         description="Required",
     )

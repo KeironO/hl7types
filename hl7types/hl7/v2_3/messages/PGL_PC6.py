@@ -34,13 +34,11 @@ class PGL_PC6(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -52,7 +50,7 @@ class PGL_PC6(HL7Model):
     )
 
     GOAL: List[_PGL_PC6_GOAL] = Field(
-        default=...,
+        min_length=1,
         title="GOAL",
         description="Required, repeating",
     )

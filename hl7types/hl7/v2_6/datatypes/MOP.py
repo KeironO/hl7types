@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 
 class MOP(HL7Model):
@@ -29,7 +28,6 @@ class MOP(HL7Model):
     """
 
     mop_1: str = Field(
-        default=...,
         max_length=2,
         validation_alias=AliasChoices(
             "mop_1",
@@ -41,7 +39,6 @@ class MOP(HL7Model):
     )
 
     mop_2: str = Field(
-        default=...,
         max_length=16,
         validation_alias=AliasChoices(
             "mop_2",

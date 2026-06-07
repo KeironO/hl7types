@@ -61,7 +61,6 @@ class EHC_E13(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -79,7 +78,6 @@ class EHC_E13(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -91,7 +89,6 @@ class EHC_E13(HL7Model):
     )
 
     RFI: _RFI = Field(
-        default=...,
         title="RFI",
         description="Required",
     )
@@ -103,19 +100,16 @@ class EHC_E13(HL7Model):
     )
 
     IVC: _IVC = Field(
-        default=...,
         title="IVC",
         description="Required",
     )
 
     PSS: _PSS = Field(
-        default=...,
         title="PSS",
         description="Required",
     )
 
     PSG: _PSG = Field(
-        default=...,
         title="PSG",
         description="Required",
     )
@@ -133,7 +127,7 @@ class EHC_E13(HL7Model):
     )
 
     REQUEST: List[_EHC_E13_REQUEST] = Field(
-        default=...,
+        min_length=1,
         title="REQUEST",
         description="Required, repeating",
     )

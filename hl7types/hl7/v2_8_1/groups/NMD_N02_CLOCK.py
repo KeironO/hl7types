@@ -27,7 +27,6 @@ class NMD_N02_CLOCK(HL7Model):
     """
 
     NCK: _NCK = Field(
-        default=...,
         title="NCK",
         description="Required",
     )

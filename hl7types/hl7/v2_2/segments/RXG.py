@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.TQ import TQ
@@ -71,7 +70,6 @@ class RXG(HL7Model):
     """
 
     rxg_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxg_1",
             "give_sub_id_counter",
@@ -107,7 +105,6 @@ class RXG(HL7Model):
     )
 
     rxg_4: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxg_4",
             "give_code",
@@ -119,7 +116,6 @@ class RXG(HL7Model):
     )
 
     rxg_5: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxg_5",
             "give_amount_minimum",
@@ -143,7 +139,6 @@ class RXG(HL7Model):
     )
 
     rxg_7: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxg_7",
             "give_units",

@@ -37,7 +37,6 @@ class MFA(HL7Model):
     """
 
     mfa_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfa_1",
             "record_level_event_code",
@@ -73,7 +72,6 @@ class MFA(HL7Model):
     )
 
     mfa_4: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfa_4",
             "error_return_code_and_or_text",

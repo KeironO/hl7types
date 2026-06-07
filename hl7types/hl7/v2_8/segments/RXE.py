@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -156,7 +155,6 @@ class RXE(HL7Model):
     """
 
     rxe_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxe_2",
             "give_code",
@@ -168,7 +166,6 @@ class RXE(HL7Model):
     )
 
     rxe_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxe_3",
             "give_amount_minimum",
@@ -192,7 +189,6 @@ class RXE(HL7Model):
     )
 
     rxe_5: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxe_5",
             "give_units",

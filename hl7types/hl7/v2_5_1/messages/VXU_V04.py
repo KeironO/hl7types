@@ -49,7 +49,6 @@ class VXU_V04(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,7 +60,6 @@ class VXU_V04(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

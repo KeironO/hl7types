@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.CWE import CWE
@@ -117,7 +116,6 @@ class IVC(HL7Model):
     """
 
     ivc_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_1",
             "provider_invoice_number",
@@ -153,7 +151,6 @@ class IVC(HL7Model):
     )
 
     ivc_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_4",
             "invoice_control",
@@ -165,7 +162,6 @@ class IVC(HL7Model):
     )
 
     ivc_5: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_5",
             "invoice_reason",
@@ -177,7 +173,6 @@ class IVC(HL7Model):
     )
 
     ivc_6: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_6",
             "invoice_type",
@@ -189,7 +184,6 @@ class IVC(HL7Model):
     )
 
     ivc_7: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_7",
             "invoice_date_time",
@@ -201,7 +195,6 @@ class IVC(HL7Model):
     )
 
     ivc_8: CP = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_8",
             "invoice_amount",
@@ -225,7 +218,6 @@ class IVC(HL7Model):
     )
 
     ivc_10: XON = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_10",
             "provider_organization",
@@ -237,7 +229,6 @@ class IVC(HL7Model):
     )
 
     ivc_11: XON = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_11",
             "payer_organization",
@@ -405,7 +396,6 @@ class IVC(HL7Model):
     )
 
     ivc_25: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ivc_25",
             "benefit_group",

@@ -33,7 +33,6 @@ class OSR_Q06_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

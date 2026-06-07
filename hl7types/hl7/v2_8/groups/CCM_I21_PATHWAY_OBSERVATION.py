@@ -27,7 +27,6 @@ class CCM_I21_PATHWAY_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

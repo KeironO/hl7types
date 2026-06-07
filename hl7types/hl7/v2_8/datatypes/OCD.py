@@ -7,10 +7,8 @@ Type: Datatype
 """
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from .CNE import CNE
 
@@ -28,7 +26,6 @@ class OCD(HL7Model):
     """
 
     ocd_1: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ocd_1",
             "occurrence_code",
@@ -39,7 +36,6 @@ class OCD(HL7Model):
     )
 
     ocd_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ocd_2",
             "occurrence_date",

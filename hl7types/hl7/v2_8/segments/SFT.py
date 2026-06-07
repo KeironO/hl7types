@@ -8,11 +8,9 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
-from ..datatypes.TX import TX
 from ..datatypes.XON import XON
 
 
@@ -33,7 +31,7 @@ class SFT(HL7Model):
     sft_4 : str
         SFT.4 (req) - Software Binary ID (ST)
 
-    sft_5 : TX | None
+    sft_5 : str | None
         SFT.5 (opt) - Software Product Information (TX)
 
     sft_6 : str | None
@@ -41,7 +39,6 @@ class SFT(HL7Model):
     """
 
     sft_1: XON = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sft_1",
             "software_vendor_organization",
@@ -53,7 +50,6 @@ class SFT(HL7Model):
     )
 
     sft_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sft_2",
             "software_certified_version_or_release_number",
@@ -65,7 +61,6 @@ class SFT(HL7Model):
     )
 
     sft_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sft_3",
             "software_product_name",
@@ -77,7 +72,6 @@ class SFT(HL7Model):
     )
 
     sft_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "sft_4",
             "software_binary_id",
@@ -88,7 +82,7 @@ class SFT(HL7Model):
         description="Item #1837",
     )
 
-    sft_5: Optional[TX] = Field(
+    sft_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "sft_5",

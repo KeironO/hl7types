@@ -7,7 +7,6 @@ Type: Datatype
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
@@ -28,7 +27,6 @@ class MSG(HL7Model):
     """
 
     msg_1: str = Field(
-        default=...,
         max_length=3,
         validation_alias=AliasChoices(
             "msg_1",
@@ -40,7 +38,6 @@ class MSG(HL7Model):
     )
 
     msg_2: str = Field(
-        default=...,
         max_length=3,
         validation_alias=AliasChoices(
             "msg_2",
@@ -52,7 +49,6 @@ class MSG(HL7Model):
     )
 
     msg_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "msg_3",
             "message_structure",

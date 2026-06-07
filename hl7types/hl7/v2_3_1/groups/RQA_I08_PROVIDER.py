@@ -27,7 +27,6 @@ class RQA_I08_PROVIDER(HL7Model):
     """
 
     PRD: _PRD = Field(
-        default=...,
         title="PRD",
         description="Required",
     )

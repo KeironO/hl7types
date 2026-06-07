@@ -31,7 +31,6 @@ class OUL_R22_COMMON_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

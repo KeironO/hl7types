@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -24,7 +23,6 @@ class EHC_E24_PAYER_ADJUSTMENT(HL7Model):
     """
 
     ADJ: _ADJ = Field(
-        default=...,
         title="ADJ",
         description="Required",
     )

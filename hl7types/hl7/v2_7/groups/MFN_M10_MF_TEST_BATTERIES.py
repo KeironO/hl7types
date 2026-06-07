@@ -31,13 +31,11 @@ class MFN_M10_MF_TEST_BATTERIES(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     OM1: _OM1 = Field(
-        default=...,
         title="OM1",
         description="Required",
     )

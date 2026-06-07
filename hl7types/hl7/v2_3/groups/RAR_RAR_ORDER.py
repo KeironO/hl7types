@@ -31,7 +31,6 @@ class RAR_RAR_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -43,7 +42,7 @@ class RAR_RAR_ORDER(HL7Model):
     )
 
     RXA: List[_RXA] = Field(
-        default=...,
+        min_length=1,
         title="RXA",
         description="Required, repeating",
     )

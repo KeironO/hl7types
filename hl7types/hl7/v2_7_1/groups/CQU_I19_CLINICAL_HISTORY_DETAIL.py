@@ -28,7 +28,6 @@ class CQU_I19_CLINICAL_HISTORY_DETAIL(HL7Model):
     """
 
     CLINICAL_HISTORY_OBJECT: _CQU_I19_CLINICAL_HISTORY_OBJECT = Field(
-        default=...,
         title="CLINICAL_HISTORY_OBJECT",
         description="Required",
     )

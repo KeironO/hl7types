@@ -30,7 +30,6 @@ class QCN_J01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -42,7 +41,6 @@ class QCN_J01(HL7Model):
     )
 
     QID: _QID = Field(
-        default=...,
         title="QID",
         description="Required",
     )

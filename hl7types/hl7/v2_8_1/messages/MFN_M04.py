@@ -40,7 +40,6 @@ class MFN_M04(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,7 +57,6 @@ class MFN_M04(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
@@ -70,7 +68,7 @@ class MFN_M04(HL7Model):
     )
 
     MF_CDM: List[_MFN_M04_MF_CDM] = Field(
-        default=...,
+        min_length=1,
         title="MF_CDM",
         description="Required, repeating",
     )

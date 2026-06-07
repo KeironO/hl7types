@@ -34,7 +34,6 @@ class PTR_PCF_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _PTR_PCF_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

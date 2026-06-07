@@ -30,7 +30,6 @@ class ADT_A60_ADVERSE_REACTION_GROUP(HL7Model):
     """
 
     IAM: _IAM = Field(
-        default=...,
         title="IAM",
         description="Required",
     )

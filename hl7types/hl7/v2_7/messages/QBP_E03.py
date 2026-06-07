@@ -34,7 +34,6 @@ class QBP_E03(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,6 @@ class QBP_E03(HL7Model):
     )
 
     QUERY_INFORMATION: _QBP_E03_QUERY_INFORMATION = Field(
-        default=...,
         title="QUERY_INFORMATION",
         description="Required",
     )

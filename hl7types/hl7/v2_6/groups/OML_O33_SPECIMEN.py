@@ -34,7 +34,6 @@ class OML_O33_SPECIMEN(HL7Model):
     """
 
     SPM: _SPM = Field(
-        default=...,
         title="SPM",
         description="Required",
     )
@@ -52,7 +51,7 @@ class OML_O33_SPECIMEN(HL7Model):
     )
 
     ORDER: List[_OML_O33_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

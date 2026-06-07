@@ -34,7 +34,7 @@ class RPI_I04_GUARANTOR_INSURANCE(HL7Model):
     )
 
     INSURANCE: List[_RPI_I04_INSURANCE] = Field(
-        default=...,
+        min_length=1,
         title="INSURANCE",
         description="Required, repeating",
     )

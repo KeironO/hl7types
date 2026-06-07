@@ -27,7 +27,6 @@ class SQR_S25_GENERAL_RESOURCE(HL7Model):
     """
 
     AIG: _AIG = Field(
-        default=...,
         title="AIG",
         description="Required",
     )

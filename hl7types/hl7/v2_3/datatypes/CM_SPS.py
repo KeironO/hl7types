@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from .CE import CE
-from .TX import TX
 
 
 class CM_SPS(HL7Model):
@@ -23,10 +22,10 @@ class CM_SPS(HL7Model):
     cm_sps_1 : CE | None
         CM_SPS.1 (opt) - specimen source name or code (CE)
 
-    cm_sps_2 : TX | None
+    cm_sps_2 : str | None
         CM_SPS.2 (opt) - additives (TX)
 
-    cm_sps_3 : TX | None
+    cm_sps_3 : str | None
         CM_SPS.3 (opt) - freetext (TX)
 
     cm_sps_4 : CE | None
@@ -50,7 +49,7 @@ class CM_SPS(HL7Model):
         title="specimen source name or code",
     )
 
-    cm_sps_2: Optional[TX] = Field(
+    cm_sps_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_2",
@@ -61,7 +60,7 @@ class CM_SPS(HL7Model):
         title="additives",
     )
 
-    cm_sps_3: Optional[TX] = Field(
+    cm_sps_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "cm_sps_3",

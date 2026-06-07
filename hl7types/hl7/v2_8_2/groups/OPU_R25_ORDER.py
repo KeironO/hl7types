@@ -40,7 +40,6 @@ class OPU_R25_ORDER(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -70,7 +69,7 @@ class OPU_R25_ORDER(HL7Model):
     )
 
     RESULT: List[_OPU_R25_RESULT] = Field(
-        default=...,
+        min_length=1,
         title="RESULT",
         description="Required, repeating",
     )

@@ -27,7 +27,6 @@ class MFN_M18_PAYER_MF_COVERAGE(HL7Model):
     """
 
     MCP: _MCP = Field(
-        default=...,
         title="MCP",
         description="Required",
     )

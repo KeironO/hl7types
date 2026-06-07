@@ -7,10 +7,8 @@ Type: Segment
 """
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 
@@ -34,7 +32,6 @@ class NDS(HL7Model):
     """
 
     nds_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nds_1",
             "notification_reference_number",
@@ -46,7 +43,6 @@ class NDS(HL7Model):
     )
 
     nds_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nds_2",
             "notification_date_time",
@@ -58,7 +54,6 @@ class NDS(HL7Model):
     )
 
     nds_3: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nds_3",
             "notification_alert_severity",
@@ -70,7 +65,6 @@ class NDS(HL7Model):
     )
 
     nds_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nds_4",
             "notification_code",

@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -31,19 +31,17 @@ class RSP_E22_AUTHORIZATION_INFO(HL7Model):
     """
 
     IVC: _IVC = Field(
-        default=...,
         title="IVC",
         description="Required",
     )
 
     PSG: _PSG = Field(
-        default=...,
         title="PSG",
         description="Required",
     )
 
     PSL_ITEM_INFO: List[_RSP_E22_PSL_ITEM_INFO] = Field(
-        default=...,
+        min_length=1,
         title="PSL_ITEM_INFO",
         description="Required, repeating",
     )

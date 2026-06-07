@@ -34,7 +34,6 @@ class ORL_O22_RESPONSE(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

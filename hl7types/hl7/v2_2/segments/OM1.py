@@ -8,14 +8,12 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.AD import AD
 from ..datatypes.CE import CE
 from ..datatypes.TS import TS
-from ..datatypes.TX import TX
 
 
 class OM1(HL7Model):
@@ -41,7 +39,7 @@ class OM1(HL7Model):
     om1_6 : CE
         OM1.6 (req) - Producer ID (CE)
 
-    om1_7 : TX | None
+    om1_7 : str | None
         OM1.7 (opt) - Observation Description (TX)
 
     om1_8 : CE | None
@@ -119,7 +117,7 @@ class OM1(HL7Model):
     om1_32 : list[CE] | None
         OM1.32 (opt, rep) - Observations required to interpret the observation (CE)
 
-    om1_33 : TX | None
+    om1_33 : str | None
         OM1.33 (opt) - Interpretation of Observations (TX)
 
     om1_34 : list[CE] | None
@@ -134,19 +132,19 @@ class OM1(HL7Model):
     om1_37 : list[CE] | None
         OM1.37 (opt, rep) - Fixed Canned Message (CE)
 
-    om1_38 : TX | None
+    om1_38 : str | None
         OM1.38 (opt) - Patient Preparation (TX)
 
     om1_39 : CE | None
         OM1.39 (opt) - Procedure Medication (CE)
 
-    om1_40 : TX | None
+    om1_40 : str | None
         OM1.40 (opt) - Factors that may affect the observation (TX)
 
     om1_41 : list[str] | None
         OM1.41 (opt, rep) - Test / observation performance schedule (ST)
 
-    om1_42 : TX | None
+    om1_42 : str | None
         OM1.42 (opt) - Description of Test Methods (TX)
     """
 
@@ -175,7 +173,6 @@ class OM1(HL7Model):
     )
 
     om1_3: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om1_3",
             "producer_s_test_observation_id",
@@ -199,7 +196,6 @@ class OM1(HL7Model):
     )
 
     om1_5: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om1_5",
             "specimen_required",
@@ -211,7 +207,6 @@ class OM1(HL7Model):
     )
 
     om1_6: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om1_6",
             "producer_id",
@@ -222,7 +217,7 @@ class OM1(HL7Model):
         description="Item #590",
     )
 
-    om1_7: Optional[TX] = Field(
+    om1_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_7",
@@ -247,7 +242,7 @@ class OM1(HL7Model):
     )
 
     om1_9: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "om1_9",
             "other_names",
@@ -367,7 +362,6 @@ class OM1(HL7Model):
     )
 
     om1_19: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om1_19",
             "nature_of_test_observation",
@@ -403,7 +397,6 @@ class OM1(HL7Model):
     )
 
     om1_22: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "om1_22",
             "date_time_stamp_for_any_change_in_definition_for_obs",
@@ -534,7 +527,7 @@ class OM1(HL7Model):
         description="Item #616",
     )
 
-    om1_33: Optional[TX] = Field(
+    om1_33: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_33",
@@ -594,7 +587,7 @@ class OM1(HL7Model):
         description="Item #621",
     )
 
-    om1_38: Optional[TX] = Field(
+    om1_38: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_38",
@@ -618,7 +611,7 @@ class OM1(HL7Model):
         description="Item #623",
     )
 
-    om1_40: Optional[TX] = Field(
+    om1_40: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_40",
@@ -642,7 +635,7 @@ class OM1(HL7Model):
         description="Item #625",
     )
 
-    om1_42: Optional[TX] = Field(
+    om1_42: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om1_42",

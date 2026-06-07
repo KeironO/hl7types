@@ -40,13 +40,11 @@ class MFN_M16_MATERIAL_ITEM_RECORD(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     ITM: _ITM = Field(
-        default=...,
         title="ITM",
         description="Required",
     )

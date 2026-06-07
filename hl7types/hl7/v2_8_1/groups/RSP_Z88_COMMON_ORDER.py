@@ -46,7 +46,6 @@ class RSP_Z88_COMMON_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -70,13 +69,12 @@ class RSP_Z88_COMMON_ORDER(HL7Model):
     )
 
     RXD: _RXD = Field(
-        default=...,
         title="RXD",
         description="Required",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )
@@ -88,7 +86,7 @@ class RSP_Z88_COMMON_ORDER(HL7Model):
     )
 
     OBSERVATION: List[_RSP_Z88_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION",
         description="Required, repeating",
     )

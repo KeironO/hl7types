@@ -34,7 +34,6 @@ class PPV_PCA_ORDER_DETAIL(HL7Model):
     """
 
     ORDER_CHOICE: _PPV_PCA_ORDER_CHOICE = Field(
-        default=...,
         title="ORDER_CHOICE",
         description="Required",
     )

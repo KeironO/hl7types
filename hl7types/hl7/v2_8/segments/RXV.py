@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
@@ -101,7 +100,6 @@ class RXV(HL7Model):
     )
 
     rxv_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxv_2",
             "bolus_type",
@@ -161,7 +159,6 @@ class RXV(HL7Model):
     )
 
     rxv_7: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxv_7",
             "pca_type",
@@ -269,7 +266,6 @@ class RXV(HL7Model):
     )
 
     rxv_16: CQ = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxv_16",
             "max_dose_per_time",

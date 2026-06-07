@@ -40,13 +40,11 @@ class SRM_S01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     ARQ: _ARQ = Field(
-        default=...,
         title="ARQ",
         description="Required",
     )
@@ -70,7 +68,7 @@ class SRM_S01(HL7Model):
     )
 
     RESOURCES: List[_SRM_S01_RESOURCES] = Field(
-        default=...,
+        min_length=1,
         title="RESOURCES",
         description="Required, repeating",
     )

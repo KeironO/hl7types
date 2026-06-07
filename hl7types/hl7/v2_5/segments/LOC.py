@@ -52,7 +52,6 @@ class LOC(HL7Model):
     """
 
     loc_1: PL = Field(
-        default=...,
         validation_alias=AliasChoices(
             "loc_1",
             "primary_key_value_loc",
@@ -76,7 +75,7 @@ class LOC(HL7Model):
     )
 
     loc_3: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "loc_3",
             "location_type_loc",

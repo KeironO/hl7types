@@ -28,7 +28,6 @@ class ORL_O40_PACKAGE(HL7Model):
     """
 
     PAC: _PAC = Field(
-        default=...,
         title="PAC",
         description="Required",
     )

@@ -43,7 +43,6 @@ class MDM_T01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,19 +54,16 @@ class MDM_T01(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )
@@ -79,7 +75,6 @@ class MDM_T01(HL7Model):
     )
 
     TXA: _TXA = Field(
-        default=...,
         title="TXA",
         description="Required",
     )

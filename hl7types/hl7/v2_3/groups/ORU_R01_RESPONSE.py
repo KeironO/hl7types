@@ -33,7 +33,7 @@ class ORU_R01_RESPONSE(HL7Model):
     )
 
     ORDER_OBSERVATION: List[_ORU_R01_ORDER_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_OBSERVATION",
         description="Required, repeating",
     )

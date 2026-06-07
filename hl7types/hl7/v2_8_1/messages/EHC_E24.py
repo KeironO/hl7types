@@ -40,7 +40,6 @@ class EHC_E24(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,7 +57,6 @@ class EHC_E24(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -70,7 +68,6 @@ class EHC_E24(HL7Model):
     )
 
     AUTHORIZATION_RESPONSE_INFO: _EHC_E24_AUTHORIZATION_RESPONSE_INFO = Field(
-        default=...,
         title="AUTHORIZATION_RESPONSE_INFO",
         description="Required",
     )

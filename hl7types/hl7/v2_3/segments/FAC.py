@@ -84,7 +84,6 @@ class FAC(HL7Model):
     )
 
     fac_3: XAD = Field(
-        default=...,
         validation_alias=AliasChoices(
             "fac_3",
             "facility_address",
@@ -96,7 +95,6 @@ class FAC(HL7Model):
     )
 
     fac_4: XTN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "fac_4",
             "facility_telecommunication",
@@ -156,7 +154,6 @@ class FAC(HL7Model):
     )
 
     fac_9: XCN = Field(
-        default=...,
         validation_alias=AliasChoices(
             "fac_9",
             "signature_authority",

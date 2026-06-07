@@ -27,7 +27,6 @@ class CCM_I21_RESOURCE_DETAIL(HL7Model):
     """
 
     RESOURCE_OBJECT: _CCM_I21_RESOURCE_OBJECT = Field(
-        default=...,
         title="RESOURCE_OBJECT",
         description="Required",
     )

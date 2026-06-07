@@ -27,7 +27,6 @@ class RRA_O18_TREATMENT(HL7Model):
     """
 
     RXA: _RXA = Field(
-        default=...,
         title="RXA",
         description="Required",
     )

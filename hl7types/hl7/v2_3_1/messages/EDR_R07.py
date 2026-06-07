@@ -39,13 +39,11 @@ class EDR_R07(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -57,13 +55,12 @@ class EDR_R07(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )
 
     DSP: List[_DSP] = Field(
-        default=...,
+        min_length=1,
         title="DSP",
         description="Required, repeating",
     )

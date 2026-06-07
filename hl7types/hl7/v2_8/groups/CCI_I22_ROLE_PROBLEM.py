@@ -28,7 +28,6 @@ class CCI_I22_ROLE_PROBLEM(HL7Model):
     """
 
     ROLE_PROBLEM_OBJECT: _CCI_I22_ROLE_PROBLEM_OBJECT = Field(
-        default=...,
         title="ROLE_PROBLEM_OBJECT",
         description="Required",
     )

@@ -37,7 +37,6 @@ class DEO_O45(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,7 +60,7 @@ class DEO_O45(HL7Model):
     )
 
     DONATION_ORDER: List[_DEO_O45_DONATION_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="DONATION_ORDER",
         description="Required, repeating",
     )

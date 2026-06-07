@@ -8,12 +8,10 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
-from ..datatypes.TX import TX
 
 
 class RX1(HL7Model):
@@ -102,13 +100,13 @@ class RX1(HL7Model):
     rx1_27 : str | None
         RX1.27 (opt) - PRN STATUS (ID)
 
-    rx1_28 : list[TX] | None
+    rx1_28 : list[str] | None
         RX1.28 (opt, rep) - PHARMACY INSTRUCTIONS (TX)
 
-    rx1_29 : list[TX] | None
+    rx1_29 : list[str] | None
         RX1.29 (opt, rep) - PATIENT INSTRUCTIONS (TX)
 
-    rx1_30 : list[TX] | None
+    rx1_30 : list[str] | None
         RX1.30 (opt, rep) - INSTRUCTIONS (SIG) (TX)
     """
 
@@ -436,7 +434,7 @@ class RX1(HL7Model):
         description="Item #621",
     )
 
-    rx1_28: Optional[List[TX]] = Field(
+    rx1_28: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_28",
@@ -448,7 +446,7 @@ class RX1(HL7Model):
         description="Item #484",
     )
 
-    rx1_29: Optional[List[TX]] = Field(
+    rx1_29: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_29",
@@ -460,7 +458,7 @@ class RX1(HL7Model):
         description="Item #489",
     )
 
-    rx1_30: Optional[List[TX]] = Field(
+    rx1_30: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "rx1_30",

@@ -34,7 +34,6 @@ class RSP_Z86_ENCODED_ORDER(HL7Model):
     """
 
     RXE: _RXE = Field(
-        default=...,
         title="RXE",
         description="Required",
     )
@@ -46,7 +45,7 @@ class RSP_Z86_ENCODED_ORDER(HL7Model):
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

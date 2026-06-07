@@ -34,7 +34,6 @@ class PPP_PCB_ORDER_DETAIL(HL7Model):
     """
 
     OBR_SUPPGRP: _PPP_PCB_OBR_SUPPGRP = Field(
-        default=...,
         title="OBR_SUPPGRP",
         description="Required",
     )

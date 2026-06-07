@@ -40,7 +40,6 @@ class VXU_V04_ORDER(HL7Model):
     )
 
     RXA: _RXA = Field(
-        default=...,
         title="RXA",
         description="Required",
     )

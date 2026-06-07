@@ -77,7 +77,7 @@ select = ["E", "F", "I", "UP"]
 ignore = ["E501"]
 
 [tool.pyright]
-include = ["hl7types/codecs", "hl7types/__init__.py", "hl7types/hl7/__init__.py"]
+include = ["hl7types/codecs", "hl7types/__init__.py", "hl7types/hl7/__init__.py", "hl7types/hl7/*"]
 pythonVersion = "3.8"
 typeCheckingMode = "strict"
 

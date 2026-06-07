@@ -49,7 +49,6 @@ class ORF_R04(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,13 +60,11 @@ class ORF_R04(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -79,7 +76,7 @@ class ORF_R04(HL7Model):
     )
 
     PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP: List[_ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP] = Field(
-        default=...,
+        min_length=1,
         title="PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP",
         description="Required, repeating",
     )

@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from .TS import TS
-from .TX import TX
 
 
 class TQ(HL7Model):
@@ -41,7 +40,7 @@ class TQ(HL7Model):
     tq_7 : str | None
         TQ.7 (opt) - condition (ST)
 
-    tq_8 : TX | None
+    tq_8 : str | None
         TQ.8 (opt) - text (TX) (TX)
 
     tq_9 : str | None
@@ -128,7 +127,7 @@ class TQ(HL7Model):
         title="condition",
     )
 
-    tq_8: Optional[TX] = Field(
+    tq_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "tq_8",

@@ -37,7 +37,6 @@ class MFN_M12(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,13 +54,12 @@ class MFN_M12(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF_OBS_ATTRIBUTES: List[_MFN_M12_MF_OBS_ATTRIBUTES] = Field(
-        default=...,
+        min_length=1,
         title="MF_OBS_ATTRIBUTES",
         description="Required, repeating",
     )

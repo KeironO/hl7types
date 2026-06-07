@@ -30,13 +30,11 @@ class CSU_C09_RX_ADMIN(HL7Model):
     """
 
     RXA: _RXA = Field(
-        default=...,
         title="RXA",
         description="Required",
     )
 
     RXR: _RXR = Field(
-        default=...,
         title="RXR",
         description="Required",
     )

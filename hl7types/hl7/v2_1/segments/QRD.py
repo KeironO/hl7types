@@ -55,7 +55,6 @@ class QRD(HL7Model):
     """
 
     qrd_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_1",
             "query_date_time",
@@ -67,7 +66,6 @@ class QRD(HL7Model):
     )
 
     qrd_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_2",
             "query_format_code",
@@ -79,7 +77,6 @@ class QRD(HL7Model):
     )
 
     qrd_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_3",
             "query_priority",
@@ -91,7 +88,6 @@ class QRD(HL7Model):
     )
 
     qrd_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_4",
             "query_id",
@@ -127,7 +123,6 @@ class QRD(HL7Model):
     )
 
     qrd_7: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qrd_7",
             "quantity_limited_request",
@@ -139,7 +134,7 @@ class QRD(HL7Model):
     )
 
     qrd_8: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_8",
             "who_subject_filter",
@@ -151,7 +146,7 @@ class QRD(HL7Model):
     )
 
     qrd_9: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_9",
             "what_subject_filter",
@@ -163,7 +158,7 @@ class QRD(HL7Model):
     )
 
     qrd_10: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_10",
             "what_department_data_code",

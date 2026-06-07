@@ -27,7 +27,6 @@ class OSU_O51_ORDER_STATUS(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

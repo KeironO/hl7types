@@ -46,7 +46,6 @@ class RDS_O13_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -64,13 +63,12 @@ class RDS_O13_ORDER(HL7Model):
     )
 
     RXD: _RXD = Field(
-        default=...,
         title="RXD",
         description="Required",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

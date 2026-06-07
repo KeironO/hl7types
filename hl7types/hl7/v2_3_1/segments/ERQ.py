@@ -43,7 +43,6 @@ class ERQ(HL7Model):
     )
 
     erq_2: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "erq_2",
             "event_identifier",

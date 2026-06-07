@@ -13,7 +13,6 @@ from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
 from ..datatypes.ERL import ERL
-from ..datatypes.TX import TX
 from ..datatypes.XTN import XTN
 
 
@@ -37,10 +36,10 @@ class ERR(HL7Model):
     err_6 : list[str] | None
         ERR.6 (opt, rep) - Application Error Parameter (ST)
 
-    err_7 : TX | None
+    err_7 : str | None
         ERR.7 (opt) - Diagnostic Information (TX)
 
-    err_8 : TX | None
+    err_8 : str | None
         ERR.8 (opt) - User Message (TX)
 
     err_9 : list[CWE] | None
@@ -69,7 +68,6 @@ class ERR(HL7Model):
     )
 
     err_3: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "err_3",
             "hl7_error_code",
@@ -81,7 +79,6 @@ class ERR(HL7Model):
     )
 
     err_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "err_4",
             "severity",
@@ -116,7 +113,7 @@ class ERR(HL7Model):
         description="Item #1816",
     )
 
-    err_7: Optional[TX] = Field(
+    err_7: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_7",
@@ -128,7 +125,7 @@ class ERR(HL7Model):
         description="Item #1817",
     )
 
-    err_8: Optional[TX] = Field(
+    err_8: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "err_8",

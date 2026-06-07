@@ -49,7 +49,6 @@ class RDE_O11_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

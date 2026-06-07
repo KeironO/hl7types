@@ -40,19 +40,17 @@ class RPL_I02(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
 
     PROVIDER: List[_RPL_I02_PROVIDER] = Field(
-        default=...,
+        min_length=1,
         title="PROVIDER",
         description="Required, repeating",
     )

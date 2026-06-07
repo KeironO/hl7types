@@ -34,7 +34,6 @@ class OMD_O03_ORDER_DIET(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

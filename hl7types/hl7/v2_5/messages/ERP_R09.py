@@ -42,7 +42,6 @@ class ERP_R09(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -54,7 +53,6 @@ class ERP_R09(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -66,13 +64,11 @@ class ERP_R09(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )
 
     ERQ: _ERQ = Field(
-        default=...,
         title="ERQ",
         description="Required",
     )

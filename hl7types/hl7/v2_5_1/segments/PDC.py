@@ -81,7 +81,6 @@ class PDC(HL7Model):
     )
 
     pdc_2: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pdc_2",
             "country",
@@ -93,7 +92,6 @@ class PDC(HL7Model):
     )
 
     pdc_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pdc_3",
             "brand_name",

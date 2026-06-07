@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
-from ..datatypes.TX import TX
 from ..datatypes.XCN import XCN
 
 
@@ -27,7 +26,7 @@ class OVR(HL7Model):
     ovr_2 : CWE | None
         OVR.2 (opt) - Business Rule Override Code (CWE)
 
-    ovr_3 : TX | None
+    ovr_3 : str | None
         OVR.3 (opt) - Override Comments (TX)
 
     ovr_4 : XCN | None
@@ -61,7 +60,7 @@ class OVR(HL7Model):
         description="Item #1830 | Table HL70521",
     )
 
-    ovr_3: Optional[TX] = Field(
+    ovr_3: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ovr_3",

@@ -34,13 +34,11 @@ class ORR_O02_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
 
     OBRRQDRQ1RXOODSODT_SUPPGRP: _ORR_O02_OBRRQDRQ1RXOODSODT_SUPPGRP = Field(
-        default=...,
         title="OBRRQDRQ1RXOODSODT_SUPPGRP",
         description="Required",
     )

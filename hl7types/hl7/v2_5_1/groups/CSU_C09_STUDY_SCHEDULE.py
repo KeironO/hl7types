@@ -37,13 +37,13 @@ class CSU_C09_STUDY_SCHEDULE(HL7Model):
     )
 
     STUDY_OBSERVATION: List[_CSU_C09_STUDY_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="STUDY_OBSERVATION",
         description="Required, repeating",
     )
 
     ORCRXARXR_SUPPGRP: List[_CSU_C09_ORCRXARXR_SUPPGRP] = Field(
-        default=...,
+        min_length=1,
         title="ORCRXARXR_SUPPGRP",
         description="Required, repeating",
     )

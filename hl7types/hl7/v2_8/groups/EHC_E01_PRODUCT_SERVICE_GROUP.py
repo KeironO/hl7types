@@ -46,7 +46,6 @@ class EHC_E01_PRODUCT_SERVICE_GROUP(HL7Model):
     """
 
     PSG: _PSG = Field(
-        default=...,
         title="PSG",
         description="Required",
     )
@@ -76,7 +75,7 @@ class EHC_E01_PRODUCT_SERVICE_GROUP(HL7Model):
     )
 
     PRODUCT_SERVICE_LINE_ITEM: List[_EHC_E01_PRODUCT_SERVICE_LINE_ITEM] = Field(
-        default=...,
+        min_length=1,
         title="PRODUCT_SERVICE_LINE_ITEM",
         description="Required, repeating",
     )

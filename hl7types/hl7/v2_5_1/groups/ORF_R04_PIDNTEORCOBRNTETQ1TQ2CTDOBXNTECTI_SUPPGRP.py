@@ -33,7 +33,7 @@ class ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(HL7Model):
     )
 
     ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP: List[_ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP] = Field(
-        default=...,
+        min_length=1,
         title="ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP",
         description="Required, repeating",
     )

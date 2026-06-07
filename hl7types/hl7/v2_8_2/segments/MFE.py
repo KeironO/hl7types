@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.XCN import XCN
 from ..datatypes.varies import varies
@@ -44,7 +43,6 @@ class MFE(HL7Model):
     """
 
     mfe_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfe_1",
             "record_level_event_code",
@@ -92,7 +90,7 @@ class MFE(HL7Model):
     )
 
     mfe_5: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "mfe_5",
             "primary_key_value_type",

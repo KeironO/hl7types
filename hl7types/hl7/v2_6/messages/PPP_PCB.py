@@ -40,7 +40,6 @@ class PPP_PCB(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,7 +57,6 @@ class PPP_PCB(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -70,7 +68,7 @@ class PPP_PCB(HL7Model):
     )
 
     PATHWAY: List[_PPP_PCB_PATHWAY] = Field(
-        default=...,
+        min_length=1,
         title="PATHWAY",
         description="Required, repeating",
     )

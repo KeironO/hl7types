@@ -46,9 +46,7 @@ from .CM_VR import CM_VR as CM_VR
 from .CN_PERSON import CN_PERSON as CN_PERSON
 from .CN_PHYSICIAN import CN_PHYSICIAN as CN_PHYSICIAN
 from .CQ_QUANTITY import CQ_QUANTITY as CQ_QUANTITY
-from .FT import FT as FT
 from .PN import PN as PN
 from .TQ import TQ as TQ
 from .TS import TS as TS
-from .TX import TX as TX
 from .varies import varies as varies

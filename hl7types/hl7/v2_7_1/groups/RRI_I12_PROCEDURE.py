@@ -28,7 +28,6 @@ class RRI_I12_PROCEDURE(HL7Model):
     """
 
     PR1: _PR1 = Field(
-        default=...,
         title="PR1",
         description="Required",
     )

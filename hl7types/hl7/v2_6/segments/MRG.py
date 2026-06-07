@@ -43,7 +43,7 @@ class MRG(HL7Model):
     """
 
     mrg_1: List[CX] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "mrg_1",
             "prior_patient_identifier_list",

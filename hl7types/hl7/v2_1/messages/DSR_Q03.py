@@ -36,13 +36,11 @@ class DSR_Q03(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -54,13 +52,12 @@ class DSR_Q03(HL7Model):
     )
 
     DSP: List[_DSP] = Field(
-        default=...,
+        min_length=1,
         title="DSP",
         description="Required, repeating",
     )
 
     DSC: _DSC = Field(
-        default=...,
         title="DSC",
         description="Required",
     )

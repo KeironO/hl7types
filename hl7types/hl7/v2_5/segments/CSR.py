@@ -73,7 +73,6 @@ class CSR(HL7Model):
     """
 
     csr_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "csr_1",
             "sponsor_study_id",
@@ -109,7 +108,6 @@ class CSR(HL7Model):
     )
 
     csr_4: CX = Field(
-        default=...,
         validation_alias=AliasChoices(
             "csr_4",
             "sponsor_patient_id",
@@ -133,7 +131,6 @@ class CSR(HL7Model):
     )
 
     csr_6: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "csr_6",
             "date_time_of_patient_study_registration",

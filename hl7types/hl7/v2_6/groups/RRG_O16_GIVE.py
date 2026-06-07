@@ -34,19 +34,18 @@ class RRG_O16_GIVE(HL7Model):
     """
 
     RXG: _RXG = Field(
-        default=...,
         title="RXG",
         description="Required",
     )
 
     TIMING_GIVE: List[_RRG_O16_TIMING_GIVE] = Field(
-        default=...,
+        min_length=1,
         title="TIMING_GIVE",
         description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

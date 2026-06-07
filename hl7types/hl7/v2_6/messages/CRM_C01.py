@@ -34,7 +34,6 @@ class CRM_C01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,7 @@ class CRM_C01(HL7Model):
     )
 
     PATIENT: List[_CRM_C01_PATIENT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT",
         description="Required, repeating",
     )

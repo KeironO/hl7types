@@ -25,7 +25,6 @@ class MFN_M02_MF_STAFF(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )

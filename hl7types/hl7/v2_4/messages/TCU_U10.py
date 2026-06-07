@@ -33,19 +33,17 @@ class TCU_U10(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     TCC: List[_TCC] = Field(
-        default=...,
+        min_length=1,
         title="TCC",
         description="Required, repeating",
     )

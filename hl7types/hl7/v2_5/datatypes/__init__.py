@@ -5,12 +5,12 @@ import types
 _all_ = {
     'AD', 'AUI', 'CCD', 'CCP', 'CD', 'CE', 'CF', 'CNE', 'CNN', 'CP', 'CQ',
     'CSU', 'CWE', 'CX', 'DDI', 'DIN', 'DLD', 'DLN', 'DLT', 'DR', 'DTN', 'ED',
-    'EI', 'EIP', 'ELD', 'ERL', 'FC', 'FN', 'FT', 'HD', 'ICD', 'JCC', 'LA1',
-    'LA2', 'MA', 'MO', 'MOC', 'MOP', 'MSG', 'NA', 'NDL', 'NR', 'OCD', 'OSD',
-    'OSP', 'PIP', 'PL', 'PLN', 'PPN', 'PRL', 'PT', 'PTA', 'QIP', 'QSC', 'RCD',
-    'RFR', 'RI', 'RMC', 'RP', 'RPT', 'SAD', 'SCV', 'SN', 'SPD', 'SPS', 'SRT',
-    'TQ', 'TS', 'TX', 'UVC', 'VH', 'VID', 'VR', 'WVI', 'WVS', 'XAD', 'XCN',
-    'XON', 'XPN', 'XTN', 'varies'
+    'EI', 'EIP', 'ELD', 'ERL', 'FC', 'FN', 'HD', 'ICD', 'JCC', 'LA1', 'LA2',
+    'MA', 'MO', 'MOC', 'MOP', 'MSG', 'NA', 'NDL', 'NR', 'OCD', 'OSD', 'OSP',
+    'PIP', 'PL', 'PLN', 'PPN', 'PRL', 'PT', 'PTA', 'QIP', 'QSC', 'RCD', 'RFR',
+    'RI', 'RMC', 'RP', 'RPT', 'SAD', 'SCV', 'SN', 'SPD', 'SPS', 'SRT', 'TQ',
+    'TS', 'UVC', 'VH', 'VID', 'VR', 'WVI', 'WVS', 'XAD', 'XCN', 'XON', 'XPN',
+    'XTN', 'varies'
 }  # type: ignore
 
 

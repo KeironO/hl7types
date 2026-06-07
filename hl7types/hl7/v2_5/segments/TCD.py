@@ -46,7 +46,6 @@ class TCD(HL7Model):
     """
 
     tcd_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "tcd_1",
             "universal_service_identifier",

@@ -43,7 +43,6 @@ class CSU_C09_STUDY_OBSERVATION(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -61,7 +60,6 @@ class CSU_C09_STUDY_OBSERVATION(HL7Model):
     )
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

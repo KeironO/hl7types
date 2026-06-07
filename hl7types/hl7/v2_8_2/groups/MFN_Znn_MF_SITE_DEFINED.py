@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, Any
+from typing import Any
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -25,7 +25,6 @@ class MFN_Znn_MF_SITE_DEFINED(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )

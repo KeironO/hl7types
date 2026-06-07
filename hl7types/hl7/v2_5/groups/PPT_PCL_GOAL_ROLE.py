@@ -27,7 +27,6 @@ class PPT_PCL_GOAL_ROLE(HL7Model):
     """
 
     ROL: _ROL = Field(
-        default=...,
         title="ROL",
         description="Required",
     )

@@ -40,7 +40,6 @@ class OMB_O27(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -70,7 +69,7 @@ class OMB_O27(HL7Model):
     )
 
     ORDER: List[_OMB_O27_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

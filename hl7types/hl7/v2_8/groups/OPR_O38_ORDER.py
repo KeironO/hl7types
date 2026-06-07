@@ -37,7 +37,7 @@ class OPR_O38_ORDER(HL7Model):
     """
 
     NK1: List[_NK1] = Field(
-        default=...,
+        min_length=1,
         title="NK1",
         description="Required, repeating",
     )

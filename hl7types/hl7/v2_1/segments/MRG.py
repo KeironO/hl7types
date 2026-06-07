@@ -28,7 +28,6 @@ class MRG(HL7Model):
     """
 
     mrg_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mrg_1",
             "prior_patient_id_internal",

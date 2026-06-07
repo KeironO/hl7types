@@ -30,7 +30,6 @@ class OML_O21_PATIENT_PRIOR(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

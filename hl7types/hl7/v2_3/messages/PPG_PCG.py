@@ -34,13 +34,11 @@ class PPG_PCG(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -52,7 +50,7 @@ class PPG_PCG(HL7Model):
     )
 
     PATHWAY: List[_PPG_PCG_PATHWAY] = Field(
-        default=...,
+        min_length=1,
         title="PATHWAY",
         description="Required, repeating",
     )

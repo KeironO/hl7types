@@ -27,7 +27,6 @@ class CQU_I19_GOAL_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

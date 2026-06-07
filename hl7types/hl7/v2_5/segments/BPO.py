@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CWE import CWE
@@ -68,7 +67,6 @@ class BPO(HL7Model):
     """
 
     bpo_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bpo_1",
             "set_id_bpo",
@@ -80,7 +78,6 @@ class BPO(HL7Model):
     )
 
     bpo_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bpo_2",
             "bp_universal_service_id",
@@ -104,7 +101,6 @@ class BPO(HL7Model):
     )
 
     bpo_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "bpo_4",
             "bp_quantity",

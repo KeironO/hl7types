@@ -27,7 +27,6 @@ class RSP_O33_DONOR(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

@@ -34,7 +34,6 @@ class RAR_RAR_DEFINITION(HL7Model):
     """
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -52,7 +51,7 @@ class RAR_RAR_DEFINITION(HL7Model):
     )
 
     ORDER: List[_RAR_RAR_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

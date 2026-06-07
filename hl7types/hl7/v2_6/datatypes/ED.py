@@ -12,7 +12,6 @@ from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
 from .HD import HD
-from .TX import TX
 
 
 class ED(HL7Model):
@@ -32,7 +31,7 @@ class ED(HL7Model):
     ed_4 : str
         ED.4 (req) - Encoding (ID)
 
-    ed_5 : TX
+    ed_5 : str
         ED.5 (req) - Data (TX)
     """
 
@@ -48,7 +47,6 @@ class ED(HL7Model):
     )
 
     ed_2: str = Field(
-        default=...,
         max_length=11,
         validation_alias=AliasChoices(
             "ed_2",
@@ -72,7 +70,6 @@ class ED(HL7Model):
     )
 
     ed_4: str = Field(
-        default=...,
         max_length=6,
         validation_alias=AliasChoices(
             "ed_4",
@@ -83,8 +80,7 @@ class ED(HL7Model):
         title="Encoding",
     )
 
-    ed_5: TX = Field(
-        default=...,
+    ed_5: str = Field(
         validation_alias=AliasChoices(
             "ed_5",
             "data",

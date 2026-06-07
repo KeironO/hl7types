@@ -30,7 +30,6 @@ class ODT(HL7Model):
     """
 
     odt_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "odt_1",
             "tray_type",

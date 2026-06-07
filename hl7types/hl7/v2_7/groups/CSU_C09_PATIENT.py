@@ -43,7 +43,6 @@ class CSU_C09_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -73,13 +72,12 @@ class CSU_C09_PATIENT(HL7Model):
     )
 
     CSR: _CSR = Field(
-        default=...,
         title="CSR",
         description="Required",
     )
 
     STUDY_PHASE: List[_CSU_C09_STUDY_PHASE] = Field(
-        default=...,
+        min_length=1,
         title="STUDY_PHASE",
         description="Required, repeating",
     )

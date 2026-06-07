@@ -31,13 +31,12 @@ class ORU_R03(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     PATIENT_RESULT: List[_ORU_R03_PATIENT_RESULT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT_RESULT",
         description="Required, repeating",
     )

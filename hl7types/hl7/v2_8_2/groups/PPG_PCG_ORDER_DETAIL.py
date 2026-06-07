@@ -34,7 +34,6 @@ class PPG_PCG_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _PPG_PCG_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

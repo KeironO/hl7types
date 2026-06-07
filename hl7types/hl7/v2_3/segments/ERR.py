@@ -7,7 +7,7 @@ Type: Segment
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
@@ -22,7 +22,7 @@ class ERR(HL7Model):
     """
 
     err_1: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "err_1",
             "error_code_and_location",

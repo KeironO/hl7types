@@ -31,7 +31,6 @@ class NMD_N02(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -43,7 +42,7 @@ class NMD_N02(HL7Model):
     )
 
     CLOCK_AND_STATS_WITH_NOTES: List[_NMD_N02_CLOCK_AND_STATS_WITH_NOTES] = Field(
-        default=...,
+        min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES",
         description="Required, repeating",
     )

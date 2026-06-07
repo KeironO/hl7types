@@ -8,11 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
-
-from ..datatypes.TX import TX
 
 
 class OM6(HL7Model):
@@ -23,7 +20,7 @@ class OM6(HL7Model):
     om6_1 : str | None
         OM6.1 (opt) - Sequence Number - Test/Observation Master File (NM)
 
-    om6_2 : TX | None
+    om6_2 : str | None
         OM6.2 (opt) - Derivation Rule (TX)
     """
 
@@ -39,7 +36,7 @@ class OM6(HL7Model):
         description="Item #586",
     )
 
-    om6_2: Optional[TX] = Field(
+    om6_2: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "om6_2",

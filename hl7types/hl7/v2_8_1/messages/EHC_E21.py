@@ -34,7 +34,6 @@ class EHC_E21(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,6 @@ class EHC_E21(HL7Model):
     )
 
     AUTHORIZATION_REQUEST: _EHC_E21_AUTHORIZATION_REQUEST = Field(
-        default=...,
         title="AUTHORIZATION_REQUEST",
         description="Required",
     )

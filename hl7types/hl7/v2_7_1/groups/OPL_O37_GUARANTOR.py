@@ -27,7 +27,6 @@ class OPL_O37_GUARANTOR(HL7Model):
     """
 
     GT1: _GT1 = Field(
-        default=...,
         title="GT1",
         description="Required",
     )

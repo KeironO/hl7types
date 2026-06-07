@@ -33,7 +33,6 @@ class OMG_O19_PATIENT_PRIOR(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

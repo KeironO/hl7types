@@ -31,7 +31,6 @@ class EVN(HL7Model):
     """
 
     evn_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "evn_1",
             "event_type_code",
@@ -43,7 +42,6 @@ class EVN(HL7Model):
     )
 
     evn_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "evn_2",
             "date_time_of_event",

@@ -37,7 +37,6 @@ class EAR_U08(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -49,13 +48,12 @@ class EAR_U08(HL7Model):
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     COMMAND_RESPONSE: List[_EAR_U08_COMMAND_RESPONSE] = Field(
-        default=...,
+        min_length=1,
         title="COMMAND_RESPONSE",
         description="Required, repeating",
     )

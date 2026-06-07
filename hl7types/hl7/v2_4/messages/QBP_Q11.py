@@ -33,19 +33,16 @@ class QBP_Q11(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )
 
     RCP: _RCP = Field(
-        default=...,
         title="RCP",
         description="Required",
     )

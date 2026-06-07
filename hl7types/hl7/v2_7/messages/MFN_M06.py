@@ -37,7 +37,6 @@ class MFN_M06(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,13 +54,12 @@ class MFN_M06(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF_CLIN_STUDY: List[_MFN_M06_MF_CLIN_STUDY] = Field(
-        default=...,
+        min_length=1,
         title="MF_CLIN_STUDY",
         description="Required, repeating",
     )

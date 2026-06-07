@@ -37,7 +37,6 @@ class OSM_R26_SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

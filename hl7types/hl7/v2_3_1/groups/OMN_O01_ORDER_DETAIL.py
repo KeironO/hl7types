@@ -34,7 +34,6 @@ class OMN_O01_ORDER_DETAIL(HL7Model):
     """
 
     RQD: _RQD = Field(
-        default=...,
         title="RQD",
         description="Required",
     )

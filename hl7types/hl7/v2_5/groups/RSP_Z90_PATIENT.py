@@ -37,7 +37,6 @@ class RSP_Z90_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

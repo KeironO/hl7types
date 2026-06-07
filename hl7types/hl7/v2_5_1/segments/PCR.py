@@ -92,7 +92,6 @@ class PCR(HL7Model):
     """
 
     pcr_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pcr_1",
             "implicated_product",

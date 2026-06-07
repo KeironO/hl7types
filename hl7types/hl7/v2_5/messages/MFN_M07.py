@@ -34,7 +34,6 @@ class MFN_M07(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -46,13 +45,12 @@ class MFN_M07(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF_CLIN_STUDY_SCHED: List[_MFN_M07_MF_CLIN_STUDY_SCHED] = Field(
-        default=...,
+        min_length=1,
         title="MF_CLIN_STUDY_SCHED",
         description="Required, repeating",
     )

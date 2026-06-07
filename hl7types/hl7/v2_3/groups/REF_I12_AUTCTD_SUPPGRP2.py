@@ -27,7 +27,6 @@ class REF_I12_AUTCTD_SUPPGRP2(HL7Model):
     """
 
     AUT: _AUT = Field(
-        default=...,
         title="AUT",
         description="Required",
     )

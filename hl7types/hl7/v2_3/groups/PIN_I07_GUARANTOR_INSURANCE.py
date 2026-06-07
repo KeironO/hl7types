@@ -34,7 +34,7 @@ class PIN_I07_GUARANTOR_INSURANCE(HL7Model):
     )
 
     INSURANCE: List[_PIN_I07_INSURANCE] = Field(
-        default=...,
+        min_length=1,
         title="INSURANCE",
         description="Required, repeating",
     )

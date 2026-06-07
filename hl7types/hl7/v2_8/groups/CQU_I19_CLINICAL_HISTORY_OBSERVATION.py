@@ -27,7 +27,6 @@ class CQU_I19_CLINICAL_HISTORY_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

@@ -7,7 +7,6 @@ Type: Message
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -30,19 +29,16 @@ class ADT_A20(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     NPU: _NPU = Field(
-        default=...,
         title="NPU",
         description="Required",
     )

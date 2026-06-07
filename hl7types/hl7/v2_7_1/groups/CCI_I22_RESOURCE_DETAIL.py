@@ -28,7 +28,6 @@ class CCI_I22_RESOURCE_DETAIL(HL7Model):
     """
 
     RESOURCE_OBJECT: _CCI_I22_RESOURCE_OBJECT = Field(
-        default=...,
         title="RESOURCE_OBJECT",
         description="Required",
     )

@@ -30,7 +30,6 @@ class RRI_I12_RESULTS_NOTES(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

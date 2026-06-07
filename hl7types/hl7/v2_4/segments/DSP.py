@@ -8,11 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
-
-from ..datatypes.TX import TX
 
 
 class DSP(HL7Model):
@@ -26,13 +23,13 @@ class DSP(HL7Model):
     dsp_2 : str | None
         DSP.2 (opt) - Display Level (SI)
 
-    dsp_3 : TX
+    dsp_3 : str
         DSP.3 (req) - Data Line (TX)
 
     dsp_4 : str | None
         DSP.4 (opt) - Logical Break Point (ST)
 
-    dsp_5 : TX | None
+    dsp_5 : str | None
         DSP.5 (opt) - Result ID (TX)
     """
 
@@ -60,8 +57,7 @@ class DSP(HL7Model):
         description="Item #62",
     )
 
-    dsp_3: TX = Field(
-        default=...,
+    dsp_3: str = Field(
         validation_alias=AliasChoices(
             "dsp_3",
             "data_line",
@@ -84,7 +80,7 @@ class DSP(HL7Model):
         description="Item #64",
     )
 
-    dsp_5: Optional[TX] = Field(
+    dsp_5: Optional[str] = Field(
         default=None,
         validation_alias=AliasChoices(
             "dsp_5",

@@ -37,7 +37,6 @@ class OSM_R26_SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION(HL7Model):
     """
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

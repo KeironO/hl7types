@@ -8,9 +8,8 @@ Type: Datatype
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from .CWE import CWE
 from .HD import HD
@@ -59,7 +58,6 @@ class CX(HL7Model):
     """
 
     cx_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cx_1",
             "id_number",
@@ -104,7 +102,6 @@ class CX(HL7Model):
     )
 
     cx_5: str = Field(
-        default=...,
         max_length=5,
         validation_alias=AliasChoices(
             "cx_5",

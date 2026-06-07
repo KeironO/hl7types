@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -24,7 +23,6 @@ class RSP_E03_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     """
 
     IPR: _IPR = Field(
-        default=...,
         title="IPR",
         description="Required",
     )

@@ -34,7 +34,6 @@ class EHC_E04(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -52,7 +51,6 @@ class EHC_E04(HL7Model):
     )
 
     REASSESSMENT_REQUEST_INFO: _EHC_E04_REASSESSMENT_REQUEST_INFO = Field(
-        default=...,
         title="REASSESSMENT_REQUEST_INFO",
         description="Required",
     )

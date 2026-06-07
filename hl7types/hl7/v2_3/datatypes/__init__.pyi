@@ -44,7 +44,6 @@ from .DR import DR as DR
 from .ED import ED as ED
 from .EI import EI as EI
 from .FC import FC as FC
-from .FT import FT as FT
 from .HD import HD as HD
 from .JCC import JCC as JCC
 from .MA import MA as MA
@@ -62,7 +61,6 @@ from .SCV import SCV as SCV
 from .SN import SN as SN
 from .TQ import TQ as TQ
 from .TS import TS as TS
-from .TX import TX as TX
 from .VH import VH as VH
 from .XAD import XAD as XAD
 from .XCN import XCN as XCN

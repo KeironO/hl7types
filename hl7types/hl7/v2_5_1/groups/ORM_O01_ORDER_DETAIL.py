@@ -37,7 +37,6 @@ class ORM_O01_ORDER_DETAIL(HL7Model):
     """
 
     OBRRQDRQ1RXOODSODT_SUPPGRP: _ORM_O01_OBRRQDRQ1RXOODSODT_SUPPGRP = Field(
-        default=...,
         title="OBRRQDRQ1RXOODSODT_SUPPGRP",
         description="Required",
     )

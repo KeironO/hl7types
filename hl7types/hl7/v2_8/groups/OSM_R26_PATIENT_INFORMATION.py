@@ -27,7 +27,6 @@ class OSM_R26_PATIENT_INFORMATION(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

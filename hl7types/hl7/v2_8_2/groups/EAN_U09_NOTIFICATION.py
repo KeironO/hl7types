@@ -27,7 +27,6 @@ class EAN_U09_NOTIFICATION(HL7Model):
     """
 
     NDS: _NDS = Field(
-        default=...,
         title="NDS",
         description="Required",
     )

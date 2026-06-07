@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.DR import DR
@@ -88,7 +87,6 @@ class REL(HL7Model):
     )
 
     rel_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rel_2",
             "relationship_type",
@@ -100,7 +98,6 @@ class REL(HL7Model):
     )
 
     rel_3: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rel_3",
             "this_relationship_instance_identifier",
@@ -112,7 +109,6 @@ class REL(HL7Model):
     )
 
     rel_4: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rel_4",
             "source_information_instance_identifier",
@@ -124,7 +120,6 @@ class REL(HL7Model):
     )
 
     rel_5: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rel_5",
             "target_information_instance_identifier",

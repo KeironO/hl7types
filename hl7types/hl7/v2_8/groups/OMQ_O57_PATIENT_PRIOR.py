@@ -33,7 +33,6 @@ class OMQ_O57_PATIENT_PRIOR(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

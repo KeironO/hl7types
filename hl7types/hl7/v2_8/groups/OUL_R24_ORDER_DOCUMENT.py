@@ -30,7 +30,6 @@ class OUL_R24_ORDER_DOCUMENT(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )
@@ -42,7 +41,6 @@ class OUL_R24_ORDER_DOCUMENT(HL7Model):
     )
 
     TXA: _TXA = Field(
-        default=...,
         title="TXA",
         description="Required",
     )

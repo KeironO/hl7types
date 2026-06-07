@@ -33,7 +33,6 @@ class ODS(HL7Model):
     """
 
     ods_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ods_1",
             "type_",

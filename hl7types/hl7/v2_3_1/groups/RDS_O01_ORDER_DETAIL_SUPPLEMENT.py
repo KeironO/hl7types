@@ -31,13 +31,13 @@ class RDS_O01_ORDER_DETAIL_SUPPLEMENT(HL7Model):
     """
 
     NTE: List[_NTE] = Field(
-        default=...,
+        min_length=1,
         title="NTE",
         description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

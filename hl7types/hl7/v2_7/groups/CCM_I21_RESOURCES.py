@@ -28,7 +28,6 @@ class CCM_I21_RESOURCES(HL7Model):
     """
 
     RGS: _RGS = Field(
-        default=...,
         title="RGS",
         description="Required",
     )

@@ -30,7 +30,6 @@ class DFT_P03_VISIT(HL7Model):
     """
 
     PV2: _PV2 = Field(
-        default=...,
         title="PV2",
         description="Required",
     )

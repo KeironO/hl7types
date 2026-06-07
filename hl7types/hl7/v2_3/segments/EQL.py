@@ -45,7 +45,6 @@ class EQL(HL7Model):
     )
 
     eql_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "eql_2",
             "query_response_format_code",
@@ -57,7 +56,6 @@ class EQL(HL7Model):
     )
 
     eql_3: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "eql_3",
             "eql_query_name",
@@ -69,7 +67,6 @@ class EQL(HL7Model):
     )
 
     eql_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "eql_4",
             "eql_query_statement",

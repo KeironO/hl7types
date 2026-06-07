@@ -27,7 +27,6 @@ class RRI_I12_AUTHORIZATION(HL7Model):
     """
 
     AUT: _AUT = Field(
-        default=...,
         title="AUT",
         description="Required",
     )

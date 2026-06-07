@@ -28,7 +28,6 @@ class CCM_I21_ROLE_PROBLEM(HL7Model):
     """
 
     ROLE_PROBLEM_OBJECT: _CCM_I21_ROLE_PROBLEM_OBJECT = Field(
-        default=...,
         title="ROLE_PROBLEM_OBJECT",
         description="Required",
     )

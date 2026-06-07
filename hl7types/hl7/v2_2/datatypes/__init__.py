@@ -11,7 +11,7 @@ _all_ = {
     'CM_PCF', 'CM_PEN', 'CM_PIP', 'CM_PLACER', 'CM_PLN', 'CM_POSITION',
     'CM_PRACTITIONER', 'CM_PTA', 'CM_RANGE', 'CM_RFR', 'CM_RI', 'CM_RMC',
     'CM_SPD', 'CM_SPS', 'CM_UVC', 'CM_VR', 'CN_PERSON', 'CN_PHYSICIAN',
-    'CQ_QUANTITY', 'FT', 'PN', 'TQ', 'TS', 'TX', 'varies'
+    'CQ_QUANTITY', 'PN', 'TQ', 'TS', 'varies'
 }  # type: ignore
 
 

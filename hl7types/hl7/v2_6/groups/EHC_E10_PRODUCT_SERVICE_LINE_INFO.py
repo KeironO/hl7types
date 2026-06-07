@@ -27,7 +27,6 @@ class EHC_E10_PRODUCT_SERVICE_LINE_INFO(HL7Model):
     """
 
     PSL: _PSL = Field(
-        default=...,
         title="PSL",
         description="Required",
     )

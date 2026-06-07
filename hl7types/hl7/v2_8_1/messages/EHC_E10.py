@@ -40,7 +40,6 @@ class EHC_E10(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,7 +57,6 @@ class EHC_E10(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -70,7 +68,7 @@ class EHC_E10(HL7Model):
     )
 
     INVOICE_PROCESSING_RESULTS_INFO: List[_EHC_E10_INVOICE_PROCESSING_RESULTS_INFO] = Field(
-        default=...,
+        min_length=1,
         title="INVOICE_PROCESSING_RESULTS_INFO",
         description="Required, repeating",
     )

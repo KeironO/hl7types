@@ -7,10 +7,8 @@ Type: Segment
 """
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 
@@ -31,7 +29,6 @@ class CM1(HL7Model):
     """
 
     cm1_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cm1_1",
             "set_id_cm1",
@@ -43,7 +40,6 @@ class CM1(HL7Model):
     )
 
     cm1_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cm1_2",
             "study_phase_identifier",
@@ -55,7 +51,6 @@ class CM1(HL7Model):
     )
 
     cm1_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "cm1_3",
             "description_of_study_phase",

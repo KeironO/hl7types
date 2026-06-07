@@ -37,7 +37,6 @@ class OPL_O37_ORDER_PRIOR(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -61,7 +60,7 @@ class OPL_O37_ORDER_PRIOR(HL7Model):
     )
 
     OBSERVATION_RESULT: List[_OPL_O37_OBSERVATION_RESULT] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION_RESULT",
         description="Required, repeating",
     )

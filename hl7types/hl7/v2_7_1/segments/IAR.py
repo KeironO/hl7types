@@ -33,7 +33,6 @@ class IAR(HL7Model):
     """
 
     iar_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "iar_1",
             "allergy_reaction_code",
@@ -45,7 +44,6 @@ class IAR(HL7Model):
     )
 
     iar_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "iar_2",
             "allergy_severity_code",

@@ -7,7 +7,6 @@ Type: Segment
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
@@ -27,7 +26,6 @@ class QID(HL7Model):
     """
 
     qid_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qid_1",
             "query_tag",
@@ -39,7 +37,6 @@ class QID(HL7Model):
     )
 
     qid_2: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "qid_2",
             "message_query_name",

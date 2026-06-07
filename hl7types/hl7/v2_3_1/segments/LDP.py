@@ -58,7 +58,6 @@ class LDP(HL7Model):
     """
 
     ldp_1: PL = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ldp_1",
             "primary_key_value_ldp",
@@ -70,7 +69,6 @@ class LDP(HL7Model):
     )
 
     ldp_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ldp_2",
             "location_department",

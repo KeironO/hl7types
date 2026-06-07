@@ -34,13 +34,11 @@ class PPR_PC1(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -52,7 +50,7 @@ class PPR_PC1(HL7Model):
     )
 
     PROBLEM: List[_PPR_PC1_PROBLEM] = Field(
-        default=...,
+        min_length=1,
         title="PROBLEM",
         description="Required, repeating",
     )

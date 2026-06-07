@@ -49,7 +49,6 @@ class OPU_R25(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -73,7 +72,6 @@ class OPU_R25(HL7Model):
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )
@@ -91,13 +89,13 @@ class OPU_R25(HL7Model):
     )
 
     ROL: List[_ROL] = Field(
-        default=...,
+        min_length=1,
         title="ROL",
         description="Required, repeating",
     )
 
     ACCESSION_DETAIL: List[_OPU_R25_ACCESSION_DETAIL] = Field(
-        default=...,
+        min_length=1,
         title="ACCESSION_DETAIL",
         description="Required, repeating",
     )

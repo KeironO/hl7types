@@ -27,7 +27,6 @@ class RDS_O13_COMPONENT(HL7Model):
     """
 
     RXC: _RXC = Field(
-        default=...,
         title="RXC",
         description="Required",
     )

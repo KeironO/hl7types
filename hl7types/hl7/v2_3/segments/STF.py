@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.AD import AD
 from ..datatypes.CE import CE
@@ -105,7 +104,6 @@ class STF(HL7Model):
     """
 
     stf_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "stf_1",
             "stf_primary_key_value",

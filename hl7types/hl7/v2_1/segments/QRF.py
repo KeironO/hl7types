@@ -34,7 +34,7 @@ class QRF(HL7Model):
     """
 
     qrf_1: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "qrf_1",
             "where_subject_filter",

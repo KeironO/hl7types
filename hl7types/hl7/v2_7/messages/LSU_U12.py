@@ -39,7 +39,6 @@ class LSU_U12(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -57,13 +56,12 @@ class LSU_U12(HL7Model):
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     EQP: List[_EQP] = Field(
-        default=...,
+        min_length=1,
         title="EQP",
         description="Required, repeating",
     )

@@ -33,7 +33,6 @@ class SLR_S28(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -51,7 +50,7 @@ class SLR_S28(HL7Model):
     )
 
     SLT: List[_SLT] = Field(
-        default=...,
+        min_length=1,
         title="SLT",
         description="Required, repeating",
     )

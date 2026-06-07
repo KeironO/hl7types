@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 from ..datatypes.CWE import CWE
@@ -70,7 +69,6 @@ class IIM(HL7Model):
     """
 
     iim_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "iim_1",
             "primary_key_value_iim",
@@ -82,7 +80,6 @@ class IIM(HL7Model):
     )
 
     iim_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "iim_2",
             "service_item_code",

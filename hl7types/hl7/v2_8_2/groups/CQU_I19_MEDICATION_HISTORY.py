@@ -37,7 +37,6 @@ class CQU_I19_MEDICATION_HISTORY(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

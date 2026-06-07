@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -37,31 +37,28 @@ class SUR_P09_FACILITY(HL7Model):
     """
 
     FAC: _FAC = Field(
-        default=...,
         title="FAC",
         description="Required",
     )
 
     PRODUCT: List[_SUR_P09_PRODUCT] = Field(
-        default=...,
+        min_length=1,
         title="PRODUCT",
         description="Required, repeating",
     )
 
     PSH: _PSH = Field(
-        default=...,
         title="PSH",
         description="Required",
     )
 
     FACILITY_DETAIL: List[_SUR_P09_FACILITY_DETAIL] = Field(
-        default=...,
+        min_length=1,
         title="FACILITY_DETAIL",
         description="Required, repeating",
     )
 
     ED: _ED = Field(
-        default=...,
         title="ED",
         description="Required",
     )

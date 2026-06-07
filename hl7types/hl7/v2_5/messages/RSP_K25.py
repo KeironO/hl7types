@@ -49,7 +49,6 @@ class RSP_K25(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,7 +60,6 @@ class RSP_K25(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -73,25 +71,22 @@ class RSP_K25(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )
 
     RCP: _RCP = Field(
-        default=...,
         title="RCP",
         description="Required",
     )
 
     STAFF: List[_RSP_K25_STAFF] = Field(
-        default=...,
+        min_length=1,
         title="STAFF",
         description="Required, repeating",
     )

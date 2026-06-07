@@ -33,7 +33,6 @@ class ORF_R04_QUERY_RESPONSE(HL7Model):
     """
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )

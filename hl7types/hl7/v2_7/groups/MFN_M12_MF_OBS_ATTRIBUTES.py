@@ -30,13 +30,11 @@ class MFN_M12_MF_OBS_ATTRIBUTES(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     OM1: _OM1 = Field(
-        default=...,
         title="OM1",
         description="Required",
     )

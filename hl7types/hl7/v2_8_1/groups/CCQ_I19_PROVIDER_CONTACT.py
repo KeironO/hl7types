@@ -27,7 +27,6 @@ class CCQ_I19_PROVIDER_CONTACT(HL7Model):
     """
 
     PRD: _PRD = Field(
-        default=...,
         title="PRD",
         description="Required",
     )

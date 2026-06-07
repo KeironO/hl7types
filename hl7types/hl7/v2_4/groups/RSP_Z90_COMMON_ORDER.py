@@ -37,13 +37,11 @@ class RSP_Z90_COMMON_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -61,7 +59,7 @@ class RSP_Z90_COMMON_ORDER(HL7Model):
     )
 
     OBSERVATION: List[_RSP_Z90_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION",
         description="Required, repeating",
     )

@@ -7,10 +7,8 @@ Type: Datatype
 """
 from __future__ import annotations
 
-from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from .CWE import CWE
 
@@ -28,7 +26,6 @@ class DIN(HL7Model):
     """
 
     din_1: str = Field(
-        default=...,
         max_length=24,
         validation_alias=AliasChoices(
             "din_1",
@@ -40,7 +37,6 @@ class DIN(HL7Model):
     )
 
     din_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "din_2",
             "institution_name",

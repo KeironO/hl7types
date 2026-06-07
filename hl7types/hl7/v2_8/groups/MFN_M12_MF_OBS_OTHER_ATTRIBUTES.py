@@ -27,7 +27,6 @@ class MFN_M12_MF_OBS_OTHER_ATTRIBUTES(HL7Model):
     """
 
     OM7: _OM7 = Field(
-        default=...,
         title="OM7",
         description="Required",
     )

@@ -31,7 +31,6 @@ class OML_O39_SPECIMEN_SHIPMENT(HL7Model):
     """
 
     SHP: _SHP = Field(
-        default=...,
         title="SHP",
         description="Required",
     )
@@ -43,7 +42,7 @@ class OML_O39_SPECIMEN_SHIPMENT(HL7Model):
     )
 
     PACKAGE: List[_OML_O39_PACKAGE] = Field(
-        default=...,
+        min_length=1,
         title="PACKAGE",
         description="Required, repeating",
     )

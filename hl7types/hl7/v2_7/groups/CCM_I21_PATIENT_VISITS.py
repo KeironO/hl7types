@@ -27,7 +27,6 @@ class CCM_I21_PATIENT_VISITS(HL7Model):
     """
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

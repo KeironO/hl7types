@@ -25,7 +25,6 @@ class NPU(HL7Model):
     """
 
     npu_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "npu_1",
             "bed_location",

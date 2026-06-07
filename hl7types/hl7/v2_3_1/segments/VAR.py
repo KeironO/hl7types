@@ -42,7 +42,6 @@ class VAR(HL7Model):
     """
 
     var_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "var_1",
             "variance_instance_id",
@@ -54,7 +53,6 @@ class VAR(HL7Model):
     )
 
     var_2: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "var_2",
             "documented_date_time",

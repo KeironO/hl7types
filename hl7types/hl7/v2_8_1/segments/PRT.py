@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
@@ -85,7 +84,6 @@ class PRT(HL7Model):
     )
 
     prt_2: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "prt_2",
             "action_code",
@@ -109,7 +107,6 @@ class PRT(HL7Model):
     )
 
     prt_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "prt_4",
             "participation",

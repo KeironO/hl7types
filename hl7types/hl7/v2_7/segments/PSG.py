@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CP import CP
 from ..datatypes.EI import EI
@@ -41,7 +40,6 @@ class PSG(HL7Model):
     """
 
     psg_1: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psg_1",
             "provider_product_service_group_number",
@@ -65,7 +63,6 @@ class PSG(HL7Model):
     )
 
     psg_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psg_3",
             "product_service_group_sequence_number",
@@ -77,7 +74,6 @@ class PSG(HL7Model):
     )
 
     psg_4: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psg_4",
             "adjudicate_as_group",
@@ -89,7 +85,6 @@ class PSG(HL7Model):
     )
 
     psg_5: CP = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psg_5",
             "product_service_group_billed_amount",
@@ -101,7 +96,6 @@ class PSG(HL7Model):
     )
 
     psg_6: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "psg_6",
             "product_service_group_description",

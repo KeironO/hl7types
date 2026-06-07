@@ -52,7 +52,6 @@ class QBP_Qnn(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -70,7 +69,6 @@ class QBP_Qnn(HL7Model):
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )
@@ -82,7 +80,6 @@ class QBP_Qnn(HL7Model):
     )
 
     RCP: _RCP = Field(
-        default=...,
         title="RCP",
         description="Required",
     )
@@ -94,7 +91,6 @@ class QBP_Qnn(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -106,7 +102,6 @@ class QBP_Qnn(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )

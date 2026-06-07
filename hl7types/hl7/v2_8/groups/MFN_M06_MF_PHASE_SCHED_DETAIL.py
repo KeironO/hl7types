@@ -27,7 +27,6 @@ class MFN_M06_MF_PHASE_SCHED_DETAIL(HL7Model):
     """
 
     CM1: _CM1 = Field(
-        default=...,
         title="CM1",
         description="Required",
     )

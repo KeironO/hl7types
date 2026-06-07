@@ -31,7 +31,6 @@ class PTR_PCF_PATIENT(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -43,7 +42,7 @@ class PTR_PCF_PATIENT(HL7Model):
     )
 
     PATHWAY: List[_PTR_PCF_PATHWAY] = Field(
-        default=...,
+        min_length=1,
         title="PATHWAY",
         description="Required, repeating",
     )

@@ -45,7 +45,6 @@ class TBR_R08(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -57,7 +56,6 @@ class TBR_R08(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -69,19 +67,17 @@ class TBR_R08(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )
 
     RDF: _RDF = Field(
-        default=...,
         title="RDF",
         description="Required",
     )
 
     RDT: List[_RDT] = Field(
-        default=...,
+        min_length=1,
         title="RDT",
         description="Required, repeating",
     )

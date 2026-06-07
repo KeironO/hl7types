@@ -34,7 +34,6 @@ class PPT_PCL_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _PPT_PCL_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

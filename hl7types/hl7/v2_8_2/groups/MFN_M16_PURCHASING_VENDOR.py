@@ -28,7 +28,6 @@ class MFN_M16_PURCHASING_VENDOR(HL7Model):
     """
 
     VND: _VND = Field(
-        default=...,
         title="VND",
         description="Required",
     )

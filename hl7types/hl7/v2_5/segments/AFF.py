@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.DR import DR
 from ..datatypes.XAD import XAD
@@ -39,7 +38,6 @@ class AFF(HL7Model):
     """
 
     aff_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "aff_1",
             "set_id_aff",
@@ -51,7 +49,6 @@ class AFF(HL7Model):
     )
 
     aff_2: XON = Field(
-        default=...,
         validation_alias=AliasChoices(
             "aff_2",
             "professional_organization",

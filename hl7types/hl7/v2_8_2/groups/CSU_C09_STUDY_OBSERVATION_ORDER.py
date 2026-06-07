@@ -27,7 +27,6 @@ class CSU_C09_STUDY_OBSERVATION_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )

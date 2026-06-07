@@ -34,7 +34,7 @@ class CSU_C09_ORCRXARXR_SUPPGRP(HL7Model):
     )
 
     RXARXR_SUPPGRP: List[_CSU_C09_RXARXR_SUPPGRP] = Field(
-        default=...,
+        min_length=1,
         title="RXARXR_SUPPGRP",
         description="Required, repeating",
     )

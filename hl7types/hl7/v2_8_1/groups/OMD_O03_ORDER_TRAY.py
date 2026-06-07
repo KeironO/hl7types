@@ -37,7 +37,6 @@ class OMD_O03_ORDER_TRAY(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -55,7 +54,7 @@ class OMD_O03_ORDER_TRAY(HL7Model):
     )
 
     ODT: List[_ODT] = Field(
-        default=...,
+        min_length=1,
         title="ODT",
         description="Required, repeating",
     )

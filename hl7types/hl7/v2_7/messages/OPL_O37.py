@@ -43,7 +43,6 @@ class OPL_O37(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -67,7 +66,7 @@ class OPL_O37(HL7Model):
     )
 
     PRT: List[_PRT] = Field(
-        default=...,
+        min_length=1,
         title="PRT",
         description="Required, repeating",
     )
@@ -79,7 +78,7 @@ class OPL_O37(HL7Model):
     )
 
     ORDER: List[_OPL_O37_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

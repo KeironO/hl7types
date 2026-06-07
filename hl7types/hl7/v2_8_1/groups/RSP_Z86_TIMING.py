@@ -27,7 +27,6 @@ class RSP_Z86_TIMING(HL7Model):
     """
 
     TQ1: _TQ1 = Field(
-        default=...,
         title="TQ1",
         description="Required",
     )

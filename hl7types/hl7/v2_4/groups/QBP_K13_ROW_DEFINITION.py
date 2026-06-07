@@ -27,7 +27,6 @@ class QBP_K13_ROW_DEFINITION(HL7Model):
     """
 
     RDF: _RDF = Field(
-        default=...,
         title="RDF",
         description="Required",
     )

@@ -27,7 +27,6 @@ class EHC_E04_PRODUCT_SERVICE_GROUP(HL7Model):
     """
 
     PSG: _PSG = Field(
-        default=...,
         title="PSG",
         description="Required",
     )

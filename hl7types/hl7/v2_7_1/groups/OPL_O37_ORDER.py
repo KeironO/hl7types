@@ -43,7 +43,7 @@ class OPL_O37_ORDER(HL7Model):
     """
 
     NK1: List[_NK1] = Field(
-        default=...,
+        min_length=1,
         title="NK1",
         description="Required, repeating",
     )
@@ -55,7 +55,7 @@ class OPL_O37_ORDER(HL7Model):
     )
 
     SPECIMEN: List[_OPL_O37_SPECIMEN] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN",
         description="Required, repeating",
     )

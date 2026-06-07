@@ -27,7 +27,6 @@ class OMG_O19_CONTAINER_OBSERVATION(HL7Model):
     """
 
     OBX: _OBX = Field(
-        default=...,
         title="OBX",
         description="Required",
     )

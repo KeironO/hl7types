@@ -8,13 +8,11 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.TQ import TQ
-from ..datatypes.TX import TX
 
 
 class ECD(HL7Model):
@@ -34,12 +32,11 @@ class ECD(HL7Model):
     ecd_4 : TQ | None
         ECD.4 (opt) - Requested Completion Time (TQ)
 
-    ecd_5 : list[TX] | None
+    ecd_5 : list[str] | None
         ECD.5 (opt, rep) - Parameters (TX)
     """
 
     ecd_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecd_1",
             "reference_command_number",
@@ -51,7 +48,6 @@ class ECD(HL7Model):
     )
 
     ecd_2: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecd_2",
             "remote_control_command",
@@ -86,7 +82,7 @@ class ECD(HL7Model):
         description="Item #1393",
     )
 
-    ecd_5: Optional[List[TX]] = Field(
+    ecd_5: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "ecd_5",

@@ -37,7 +37,6 @@ class GP1(HL7Model):
     """
 
     gp1_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "gp1_1",
             "type_of_bill_code",

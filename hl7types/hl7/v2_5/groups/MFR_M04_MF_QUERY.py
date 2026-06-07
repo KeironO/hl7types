@@ -33,13 +33,11 @@ class MFR_M04_MF_QUERY(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     CDM: _CDM = Field(
-        default=...,
         title="CDM",
         description="Required",
     )

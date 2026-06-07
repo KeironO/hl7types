@@ -33,7 +33,6 @@ class RQQ_Q09(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -45,7 +44,6 @@ class RQQ_Q09(HL7Model):
     )
 
     ERQ: _ERQ = Field(
-        default=...,
         title="ERQ",
         description="Required",
     )

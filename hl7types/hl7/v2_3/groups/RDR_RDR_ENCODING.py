@@ -30,13 +30,11 @@ class RDR_RDR_ENCODING(HL7Model):
     """
 
     RXE: _RXE = Field(
-        default=...,
         title="RXE",
         description="Required",
     )
 
     RXR: _RXR = Field(
-        default=...,
         title="RXR",
         description="Required",
     )

@@ -43,7 +43,6 @@ class RQI_I01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -55,13 +54,12 @@ class RQI_I01(HL7Model):
     )
 
     PROVIDER: List[_RQI_I01_PROVIDER] = Field(
-        default=...,
+        min_length=1,
         title="PROVIDER",
         description="Required, repeating",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )

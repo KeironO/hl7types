@@ -34,7 +34,6 @@ class PRR_PC5_ORDER_DETAIL(HL7Model):
     """
 
     CHOICE: _PRR_PC5_CHOICE = Field(
-        default=...,
         title="CHOICE",
         description="Required",
     )

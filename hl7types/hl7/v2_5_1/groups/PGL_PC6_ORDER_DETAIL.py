@@ -34,7 +34,6 @@ class PGL_PC6_ORDER_DETAIL(HL7Model):
     """
 
     OBR_SUPPGRP: _PGL_PC6_OBR_SUPPGRP = Field(
-        default=...,
         title="OBR_SUPPGRP",
         description="Required",
     )

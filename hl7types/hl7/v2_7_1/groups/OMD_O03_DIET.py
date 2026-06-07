@@ -31,7 +31,7 @@ class OMD_O03_DIET(HL7Model):
     """
 
     ODS: List[_ODS] = Field(
-        default=...,
+        min_length=1,
         title="ODS",
         description="Required, repeating",
     )

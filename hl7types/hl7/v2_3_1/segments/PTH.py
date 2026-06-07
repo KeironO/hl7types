@@ -41,7 +41,6 @@ class PTH(HL7Model):
     """
 
     pth_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_1",
             "action_code",
@@ -53,7 +52,6 @@ class PTH(HL7Model):
     )
 
     pth_2: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_2",
             "pathway_id",
@@ -65,7 +63,6 @@ class PTH(HL7Model):
     )
 
     pth_3: EI = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_3",
             "pathway_instance_id",
@@ -77,7 +74,6 @@ class PTH(HL7Model):
     )
 
     pth_4: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pth_4",
             "pathway_established_date_time",

@@ -37,13 +37,11 @@ class MFN_M05_MF_LOCATION(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )
 
     LOC: _LOC = Field(
-        default=...,
         title="LOC",
         description="Required",
     )
@@ -61,7 +59,7 @@ class MFN_M05_MF_LOCATION(HL7Model):
     )
 
     MF_LOC_DEPT: List[_MFN_M05_MF_LOC_DEPT] = Field(
-        default=...,
+        min_length=1,
         title="MF_LOC_DEPT",
         description="Required, repeating",
     )

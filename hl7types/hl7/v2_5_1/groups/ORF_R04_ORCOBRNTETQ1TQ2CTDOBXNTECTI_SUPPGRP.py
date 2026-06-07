@@ -49,7 +49,6 @@ class ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(HL7Model):
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -73,7 +72,7 @@ class ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(HL7Model):
     )
 
     OBXNTE_SUPPGRP: List[_ORF_R04_OBXNTE_SUPPGRP] = Field(
-        default=...,
+        min_length=1,
         title="OBXNTE_SUPPGRP",
         description="Required, repeating",
     )

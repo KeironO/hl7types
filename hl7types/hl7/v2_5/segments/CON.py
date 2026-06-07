@@ -8,14 +8,12 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
-from ..datatypes.FT import FT
 from ..datatypes.TS import TS
 from ..datatypes.XPN import XPN
 
@@ -37,19 +35,19 @@ class CON(HL7Model):
     con_4 : EI | None
         CON.4 (opt) - Consent Form Number (EI)
 
-    con_5 : list[FT] | None
+    con_5 : list[str] | None
         CON.5 (opt, rep) - Consent Text (FT)
 
-    con_6 : list[FT] | None
+    con_6 : list[str] | None
         CON.6 (opt, rep) - Subject-specific Consent Text (FT)
 
-    con_7 : list[FT] | None
+    con_7 : list[str] | None
         CON.7 (opt, rep) - Consent Background (FT)
 
-    con_8 : list[FT] | None
+    con_8 : list[str] | None
         CON.8 (opt, rep) - Subject-specific Consent Background (FT)
 
-    con_9 : list[FT] | None
+    con_9 : list[str] | None
         CON.9 (opt, rep) - Consenter-imposed limitations (FT)
 
     con_10 : CNE | None
@@ -102,7 +100,6 @@ class CON(HL7Model):
     """
 
     con_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "con_1",
             "set_id_con",
@@ -149,7 +146,7 @@ class CON(HL7Model):
         description="Item #1779",
     )
 
-    con_5: Optional[List[FT]] = Field(
+    con_5: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_5",
@@ -161,7 +158,7 @@ class CON(HL7Model):
         description="Item #1780",
     )
 
-    con_6: Optional[List[FT]] = Field(
+    con_6: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_6",
@@ -173,7 +170,7 @@ class CON(HL7Model):
         description="Item #1781",
     )
 
-    con_7: Optional[List[FT]] = Field(
+    con_7: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_7",
@@ -185,7 +182,7 @@ class CON(HL7Model):
         description="Item #1782",
     )
 
-    con_8: Optional[List[FT]] = Field(
+    con_8: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_8",
@@ -197,7 +194,7 @@ class CON(HL7Model):
         description="Item #1783",
     )
 
-    con_9: Optional[List[FT]] = Field(
+    con_9: Optional[List[str]] = Field(
         default=None,
         validation_alias=AliasChoices(
             "con_9",
@@ -222,7 +219,6 @@ class CON(HL7Model):
     )
 
     con_11: CNE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "con_11",
             "consent_status",
@@ -390,7 +386,7 @@ class CON(HL7Model):
     )
 
     con_25: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "con_25",
             "relationship_to_subject_table",

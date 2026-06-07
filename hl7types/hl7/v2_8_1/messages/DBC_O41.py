@@ -34,7 +34,6 @@ class DBC_O41(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )

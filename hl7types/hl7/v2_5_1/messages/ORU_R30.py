@@ -52,7 +52,6 @@ class ORU_R30(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -64,7 +63,6 @@ class ORU_R30(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -82,13 +80,11 @@ class ORU_R30(HL7Model):
     )
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )
@@ -106,7 +102,7 @@ class ORU_R30(HL7Model):
     )
 
     OBSERVATION: List[_ORU_R30_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION",
         description="Required, repeating",
     )

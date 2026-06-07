@@ -45,7 +45,6 @@ class ADT_A50(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -63,13 +62,11 @@ class ADT_A50(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -81,13 +78,11 @@ class ADT_A50(HL7Model):
     )
 
     MRG: _MRG = Field(
-        default=...,
         title="MRG",
         description="Required",
     )
 
     PV1: _PV1 = Field(
-        default=...,
         title="PV1",
         description="Required",
     )

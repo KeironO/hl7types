@@ -27,7 +27,6 @@ class RDE_O11_COMPONENT(HL7Model):
     """
 
     RXC: _RXC = Field(
-        default=...,
         title="RXC",
         description="Required",
     )

@@ -34,7 +34,6 @@ class DPR_O48_DONATION(HL7Model):
     """
 
     DON: _DON = Field(
-        default=...,
         title="DON",
         description="Required",
     )

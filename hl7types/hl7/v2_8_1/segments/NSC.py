@@ -49,7 +49,6 @@ class NSC(HL7Model):
     """
 
     nsc_1: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "nsc_1",
             "application_change_type",

@@ -33,7 +33,7 @@ class OML_O21_ORDER_GENERAL(HL7Model):
     )
 
     ORDER: List[_OML_O21_ORDER] = Field(
-        default=...,
+        min_length=1,
         title="ORDER",
         description="Required, repeating",
     )

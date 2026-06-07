@@ -67,7 +67,6 @@ class CCM_I21(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -85,7 +84,6 @@ class CCM_I21(HL7Model):
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -121,7 +119,7 @@ class CCM_I21(HL7Model):
     )
 
     PATIENT_VISITS: List[_CCM_I21_PATIENT_VISITS] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )

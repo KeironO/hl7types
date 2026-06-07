@@ -34,13 +34,12 @@ class OSM_R26_SHIPMENT(HL7Model):
     """
 
     SHP: _SHP = Field(
-        default=...,
         title="SHP",
         description="Required",
     )
 
     PRT: List[_PRT] = Field(
-        default=...,
+        min_length=1,
         title="PRT",
         description="Required, repeating",
     )
@@ -52,7 +51,7 @@ class OSM_R26_SHIPMENT(HL7Model):
     )
 
     PACKAGE: List[_OSM_R26_PACKAGE] = Field(
-        default=...,
+        min_length=1,
         title="PACKAGE",
         description="Required, repeating",
     )

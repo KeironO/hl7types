@@ -27,7 +27,6 @@ class MFN_M16_STERILIZATION(HL7Model):
     """
 
     STZ: _STZ = Field(
-        default=...,
         title="STZ",
         description="Required",
     )

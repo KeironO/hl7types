@@ -46,13 +46,11 @@ class MFR_M02(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -64,7 +62,6 @@ class MFR_M02(HL7Model):
     )
 
     QRD: _QRD = Field(
-        default=...,
         title="QRD",
         description="Required",
     )
@@ -76,13 +73,12 @@ class MFR_M02(HL7Model):
     )
 
     MFI: _MFI = Field(
-        default=...,
         title="MFI",
         description="Required",
     )
 
     MF_STAFF: List[_MFR_M02_MF_STAFF] = Field(
-        default=...,
+        min_length=1,
         title="MF_STAFF",
         description="Required, repeating",
     )

@@ -46,7 +46,6 @@ class CSP(HL7Model):
     )
 
     csp_2: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "csp_2",
             "date_time_study_phase_began",

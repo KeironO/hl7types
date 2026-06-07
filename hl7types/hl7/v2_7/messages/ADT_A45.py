@@ -43,7 +43,6 @@ class ADT_A45(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,13 +60,11 @@ class ADT_A45(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -79,7 +76,7 @@ class ADT_A45(HL7Model):
     )
 
     MERGE_INFO: List[_ADT_A45_MERGE_INFO] = Field(
-        default=...,
+        min_length=1,
         title="MERGE_INFO",
         description="Required, repeating",
     )

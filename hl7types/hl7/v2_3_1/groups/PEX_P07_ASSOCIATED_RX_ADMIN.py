@@ -27,7 +27,6 @@ class PEX_P07_ASSOCIATED_RX_ADMIN(HL7Model):
     """
 
     RXA: _RXA = Field(
-        default=...,
         title="RXA",
         description="Required",
     )

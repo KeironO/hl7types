@@ -28,7 +28,6 @@ class CQU_I19_RESOURCE_DETAIL(HL7Model):
     """
 
     RESOURCE_OBJECT: _CQU_I19_RESOURCE_OBJECT = Field(
-        default=...,
         title="RESOURCE_OBJECT",
         description="Required",
     )

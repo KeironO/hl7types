@@ -43,7 +43,6 @@ class EHC_E01_PATIENT_INFO(HL7Model):
     """
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -67,7 +66,7 @@ class EHC_E01_PATIENT_INFO(HL7Model):
     )
 
     INSURANCE: List[_EHC_E01_INSURANCE] = Field(
-        default=...,
+        min_length=1,
         title="INSURANCE",
         description="Required, repeating",
     )

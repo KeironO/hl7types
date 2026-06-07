@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
@@ -48,7 +47,6 @@ class PAC(HL7Model):
     """
 
     pac_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pac_1",
             "set_id_pac",
@@ -96,7 +94,6 @@ class PAC(HL7Model):
     )
 
     pac_5: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "pac_5",
             "package_type",

@@ -40,7 +40,6 @@ class EAC_U07(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -58,13 +57,12 @@ class EAC_U07(HL7Model):
     )
 
     EQU: _EQU = Field(
-        default=...,
         title="EQU",
         description="Required",
     )
 
     COMMAND: List[_EAC_U07_COMMAND] = Field(
-        default=...,
+        min_length=1,
         title="COMMAND",
         description="Required, repeating",
     )

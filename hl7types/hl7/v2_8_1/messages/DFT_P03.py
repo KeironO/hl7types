@@ -73,7 +73,6 @@ class DFT_P03(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -91,13 +90,11 @@ class DFT_P03(HL7Model):
     )
 
     EVN: _EVN = Field(
-        default=...,
         title="EVN",
         description="Required",
     )
 
     PID: _PID = Field(
-        default=...,
         title="PID",
         description="Required",
     )
@@ -139,7 +136,7 @@ class DFT_P03(HL7Model):
     )
 
     FINANCIAL: List[_DFT_P03_FINANCIAL] = Field(
-        default=...,
+        min_length=1,
         title="FINANCIAL",
         description="Required, repeating",
     )

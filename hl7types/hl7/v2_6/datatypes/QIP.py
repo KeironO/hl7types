@@ -7,7 +7,6 @@ Type: Datatype
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import AliasChoices, Field
 from hl7types.hl7 import HL7Model
 
@@ -25,7 +24,6 @@ class QIP(HL7Model):
     """
 
     qip_1: str = Field(
-        default=...,
         max_length=12,
         validation_alias=AliasChoices(
             "qip_1",
@@ -37,7 +35,6 @@ class QIP(HL7Model):
     )
 
     qip_2: str = Field(
-        default=...,
         max_length=199,
         validation_alias=AliasChoices(
             "qip_2",

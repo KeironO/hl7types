@@ -31,7 +31,6 @@ class ECR(HL7Model):
     """
 
     ecr_1: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecr_1",
             "command_response",
@@ -43,7 +42,6 @@ class ECR(HL7Model):
     )
 
     ecr_2: TS = Field(
-        default=...,
         validation_alias=AliasChoices(
             "ecr_2",
             "date_time_completed",

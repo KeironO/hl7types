@@ -33,7 +33,7 @@ class OSR_Q06_RESPONSE(HL7Model):
     )
 
     OBSERVATION: List[_OSR_Q06_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION",
         description="Required, repeating",
     )

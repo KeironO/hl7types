@@ -49,7 +49,6 @@ class OMP_O09_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -61,7 +60,6 @@ class OMP_O09_ORDER(HL7Model):
     )
 
     RXO: _RXO = Field(
-        default=...,
         title="RXO",
         description="Required",
     )
@@ -73,7 +71,7 @@ class OMP_O09_ORDER(HL7Model):
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

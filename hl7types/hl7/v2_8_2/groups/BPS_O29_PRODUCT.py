@@ -27,7 +27,6 @@ class BPS_O29_PRODUCT(HL7Model):
     """
 
     BPX: _BPX = Field(
-        default=...,
         title="BPX",
         description="Required",
     )

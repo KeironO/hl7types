@@ -49,7 +49,6 @@ class RSP_Z82(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,7 +60,6 @@ class RSP_Z82(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -73,25 +71,22 @@ class RSP_Z82(HL7Model):
     )
 
     QAK: _QAK = Field(
-        default=...,
         title="QAK",
         description="Required",
     )
 
     QPD: _QPD = Field(
-        default=...,
         title="QPD",
         description="Required",
     )
 
     RCP: _RCP = Field(
-        default=...,
         title="RCP",
         description="Required",
     )
 
     QUERY_RESPONSE: List[_RSP_Z82_QUERY_RESPONSE] = Field(
-        default=...,
+        min_length=1,
         title="QUERY_RESPONSE",
         description="Required, repeating",
     )

@@ -37,7 +37,6 @@ class BTS_O31_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -49,7 +48,6 @@ class BTS_O31_ORDER(HL7Model):
     )
 
     BPO: _BPO = Field(
-        default=...,
         title="BPO",
         description="Required",
     )

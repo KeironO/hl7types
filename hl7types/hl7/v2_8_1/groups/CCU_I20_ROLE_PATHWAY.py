@@ -28,7 +28,6 @@ class CCU_I20_ROLE_PATHWAY(HL7Model):
     """
 
     ROLE_PATHWAY_OBJECT: _CCU_I20_ROLE_PATHWAY_OBJECT = Field(
-        default=...,
         title="ROLE_PATHWAY_OBJECT",
         description="Required",
     )

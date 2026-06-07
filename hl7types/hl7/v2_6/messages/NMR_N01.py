@@ -43,7 +43,6 @@ class NMR_N01(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -61,7 +60,6 @@ class NMR_N01(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -79,7 +77,7 @@ class NMR_N01(HL7Model):
     )
 
     CLOCK_AND_STATS_WITH_NOTES_ALT: List[_NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT] = Field(
-        default=...,
+        min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES_ALT",
         description="Required, repeating",
     )

@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CE import CE
 
@@ -40,7 +39,6 @@ class RXC(HL7Model):
     """
 
     rxc_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxc_1",
             "rx_component_type",
@@ -52,7 +50,6 @@ class RXC(HL7Model):
     )
 
     rxc_2: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxc_2",
             "component_code",
@@ -64,7 +61,6 @@ class RXC(HL7Model):
     )
 
     rxc_3: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxc_3",
             "component_amount",
@@ -76,7 +72,6 @@ class RXC(HL7Model):
     )
 
     rxc_4: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "rxc_4",
             "component_units",

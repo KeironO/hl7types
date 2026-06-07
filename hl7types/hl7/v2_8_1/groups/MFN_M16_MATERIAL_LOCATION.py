@@ -30,7 +30,6 @@ class MFN_M16_MATERIAL_LOCATION(HL7Model):
     """
 
     IVT: _IVT = Field(
-        default=...,
         title="IVT",
         description="Required",
     )

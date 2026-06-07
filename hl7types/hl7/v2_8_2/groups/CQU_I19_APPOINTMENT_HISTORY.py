@@ -28,7 +28,6 @@ class CQU_I19_APPOINTMENT_HISTORY(HL7Model):
     """
 
     SCH: _SCH = Field(
-        default=...,
         title="SCH",
         description="Required",
     )

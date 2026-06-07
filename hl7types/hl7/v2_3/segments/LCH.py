@@ -38,7 +38,6 @@ class LCH(HL7Model):
     """
 
     lch_1: PL = Field(
-        default=...,
         validation_alias=AliasChoices(
             "lch_1",
             "primary_key_value",
@@ -74,7 +73,6 @@ class LCH(HL7Model):
     )
 
     lch_4: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "lch_4",
             "location_characteristic_id",
@@ -86,7 +84,6 @@ class LCH(HL7Model):
     )
 
     lch_5: CE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "lch_5",
             "location_characteristic_value",

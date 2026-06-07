@@ -28,7 +28,6 @@ class ORL_O36_SPECIMEN_CONTAINER(HL7Model):
     """
 
     SAC: _SAC = Field(
-        default=...,
         title="SAC",
         description="Required",
     )

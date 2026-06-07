@@ -37,7 +37,6 @@ class RGR_RGR_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -49,13 +48,13 @@ class RGR_RGR_ORDER(HL7Model):
     )
 
     RXG: List[_RXG] = Field(
-        default=...,
+        min_length=1,
         title="RXG",
         description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )

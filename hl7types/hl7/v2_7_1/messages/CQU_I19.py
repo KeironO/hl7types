@@ -76,7 +76,6 @@ class CQU_I19(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -94,7 +93,6 @@ class CQU_I19(HL7Model):
     )
 
     MSA: _MSA = Field(
-        default=...,
         title="MSA",
         description="Required",
     )
@@ -106,7 +104,6 @@ class CQU_I19(HL7Model):
     )
 
     RF1: _RF1 = Field(
-        default=...,
         title="RF1",
         description="Required",
     )
@@ -148,7 +145,7 @@ class CQU_I19(HL7Model):
     )
 
     PATIENT_VISITS: List[_CQU_I19_PATIENT_VISITS] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT_VISITS",
         description="Required, repeating",
     )

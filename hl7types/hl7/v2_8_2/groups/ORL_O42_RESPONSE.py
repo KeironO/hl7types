@@ -33,7 +33,7 @@ class ORL_O42_RESPONSE(HL7Model):
     )
 
     SPECIMEN: List[_ORL_O42_SPECIMEN] = Field(
-        default=...,
+        min_length=1,
         title="SPECIMEN",
         description="Required, repeating",
     )

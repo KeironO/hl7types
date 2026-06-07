@@ -25,7 +25,6 @@ class MFR_M01_MF_QUERY(HL7Model):
     """
 
     MFE: _MFE = Field(
-        default=...,
         title="MFE",
         description="Required",
     )

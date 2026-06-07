@@ -27,7 +27,6 @@ class PRR_PC5_PROBLEM_PATHWAY(HL7Model):
     """
 
     PTH: _PTH = Field(
-        default=...,
         title="PTH",
         description="Required",
     )

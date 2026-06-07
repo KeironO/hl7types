@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CNE import CNE
 from ..datatypes.CWE import CWE
@@ -86,7 +85,6 @@ class BTX(HL7Model):
     """
 
     btx_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "btx_1",
             "set_id_btx",
@@ -170,7 +168,6 @@ class BTX(HL7Model):
     )
 
     btx_8: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "btx_8",
             "bp_quantity",
@@ -206,7 +203,6 @@ class BTX(HL7Model):
     )
 
     btx_11: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "btx_11",
             "bp_transfusion_disposition_status",
@@ -218,7 +214,6 @@ class BTX(HL7Model):
     )
 
     btx_12: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "btx_12",
             "bp_message_status",
@@ -230,7 +225,6 @@ class BTX(HL7Model):
     )
 
     btx_13: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "btx_13",
             "bp_date_time_of_status",

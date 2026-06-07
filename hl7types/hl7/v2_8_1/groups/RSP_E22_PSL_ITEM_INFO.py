@@ -7,7 +7,6 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional
 from pydantic import Field
 from hl7types.hl7 import HL7Model
 
@@ -24,7 +23,6 @@ class RSP_E22_PSL_ITEM_INFO(HL7Model):
     """
 
     PSL: _PSL = Field(
-        default=...,
         title="PSL",
         description="Required",
     )

@@ -40,7 +40,6 @@ class DEL_O46(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -64,7 +63,6 @@ class DEL_O46(HL7Model):
     )
 
     DON: _DON = Field(
-        default=...,
         title="DON",
         description="Required",
     )

@@ -43,7 +43,6 @@ class OUL_R21(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -73,7 +72,7 @@ class OUL_R21(HL7Model):
     )
 
     ORDER_OBSERVATION: List[_OUL_R21_ORDER_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="ORDER_OBSERVATION",
         description="Required, repeating",
     )

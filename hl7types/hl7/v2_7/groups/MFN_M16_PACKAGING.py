@@ -27,7 +27,6 @@ class MFN_M16_PACKAGING(HL7Model):
     """
 
     PKG: _PKG = Field(
-        default=...,
         title="PKG",
         description="Required",
     )

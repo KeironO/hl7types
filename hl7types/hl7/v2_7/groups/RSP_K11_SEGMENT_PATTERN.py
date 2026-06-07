@@ -7,8 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from typing import Optional, Any
-from pydantic import Field
+from typing import Any
 from hl7types.hl7 import HL7Model
 
 

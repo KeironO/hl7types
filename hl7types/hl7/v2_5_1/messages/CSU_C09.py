@@ -31,7 +31,6 @@ class CSU_C09(HL7Model):
     """
 
     MSH: _MSH = Field(
-        default=...,
         title="MSH",
         description="Required",
     )
@@ -43,7 +42,7 @@ class CSU_C09(HL7Model):
     )
 
     PATIENT: List[_CSU_C09_PATIENT] = Field(
-        default=...,
+        min_length=1,
         title="PATIENT",
         description="Required, repeating",
     )

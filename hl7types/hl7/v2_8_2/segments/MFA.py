@@ -8,9 +8,8 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
-from pydantic import field_validator
 
 from ..datatypes.CWE import CWE
 from ..datatypes.varies import varies
@@ -41,7 +40,6 @@ class MFA(HL7Model):
     """
 
     mfa_1: str = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfa_1",
             "record_level_event_code",
@@ -77,7 +75,6 @@ class MFA(HL7Model):
     )
 
     mfa_4: CWE = Field(
-        default=...,
         validation_alias=AliasChoices(
             "mfa_4",
             "mfn_record_level_error_return",
@@ -101,7 +98,7 @@ class MFA(HL7Model):
     )
 
     mfa_6: List[str] = Field(
-        default=...,
+        min_length=1,
         validation_alias=AliasChoices(
             "mfa_6",
             "primary_key_value_type_mfa",

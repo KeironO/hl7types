@@ -27,7 +27,6 @@ class CCU_I20_RESOURCE_DETAIL(HL7Model):
     """
 
     RESOURCE_OBJECT: _CCU_I20_RESOURCE_OBJECT = Field(
-        default=...,
         title="RESOURCE_OBJECT",
         description="Required",
     )

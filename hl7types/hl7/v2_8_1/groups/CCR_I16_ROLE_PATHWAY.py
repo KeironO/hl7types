@@ -28,7 +28,6 @@ class CCR_I16_ROLE_PATHWAY(HL7Model):
     """
 
     ROLE_PATHWAY_OBJECT: _CCR_I16_ROLE_PATHWAY_OBJECT = Field(
-        default=...,
         title="ROLE_PATHWAY_OBJECT",
         description="Required",
     )

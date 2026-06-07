@@ -34,7 +34,6 @@ class PRR_PC5_ORDER_DETAIL(HL7Model):
     """
 
     OBRanyHL7Segment_SUPPGRP: _PRR_PC5_OBRanyHL7Segment_SUPPGRP = Field(
-        default=...,
         title="OBRanyHL7Segment_SUPPGRP",
         description="Required",
     )

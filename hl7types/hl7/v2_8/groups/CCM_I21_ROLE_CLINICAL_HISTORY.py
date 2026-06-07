@@ -28,7 +28,6 @@ class CCM_I21_ROLE_CLINICAL_HISTORY(HL7Model):
     """
 
     ROLE_CLINICAL_HISTORY_OBJECT: _CCM_I21_ROLE_CLINICAL_HISTORY_OBJECT = Field(
-        default=...,
         title="ROLE_CLINICAL_HISTORY_OBJECT",
         description="Required",
     )

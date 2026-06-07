@@ -27,7 +27,6 @@ class ORL_O36_OBSERVATION_REQUEST(HL7Model):
     """
 
     OBR: _OBR = Field(
-        default=...,
         title="OBR",
         description="Required",
     )

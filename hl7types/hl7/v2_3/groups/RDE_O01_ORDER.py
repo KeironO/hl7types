@@ -43,7 +43,6 @@ class RDE_O01_ORDER(HL7Model):
     """
 
     ORC: _ORC = Field(
-        default=...,
         title="ORC",
         description="Required",
     )
@@ -55,13 +54,12 @@ class RDE_O01_ORDER(HL7Model):
     )
 
     RXE: _RXE = Field(
-        default=...,
         title="RXE",
         description="Required",
     )
 
     RXR: List[_RXR] = Field(
-        default=...,
+        min_length=1,
         title="RXR",
         description="Required, repeating",
     )
@@ -73,7 +71,7 @@ class RDE_O01_ORDER(HL7Model):
     )
 
     OBSERVATION: List[_RDE_O01_OBSERVATION] = Field(
-        default=...,
+        min_length=1,
         title="OBSERVATION",
         description="Required, repeating",
     )
