@@ -59,7 +59,7 @@ def _local(tag: str) -> str:
 
 
 def _group_xml_tag(cls: type) -> str:
-    """ADT_A01_PROCEDURE → ADT_A01.PROCEDURE (mirrors the encoder)."""
+    """ADT_A01_PROCEDURE to ADT_A01.PROCEDURE (mirrors the encoder)."""
     name = cls.__name__
     idx = name.rfind("_")
     return f"{name[:idx]}.{name[idx + 1 :]}" if idx != -1 else name
@@ -103,7 +103,7 @@ def _extract_truncation(root: ET.Element) -> str:
 
 
 def _build_alias_map(seg_cls: type[BaseModel]) -> dict[str, tuple[str, Any, bool]]:
-    """Map serialization_alias → (fname, base_type, is_list) for a segment."""
+    """Map serialization_alias to (fname, base_type, is_list) for a segment."""
     hints = get_type_hints(seg_cls)
     result: dict[str, tuple[str, Any, bool]] = {}
     for fname, fi in seg_cls.model_fields.items():
@@ -196,7 +196,7 @@ def decode_xml_segment(
 
     data: dict[str, Any] = {}
 
-    # MSH.2 / FHS.2 / BHS.2 are the encoding character definitions — never strip them.
+    # MSH.2 / FHS.2 / BHS.2 are the encoding character definitions. Never strip them!
     delim_encoding_alias = f"{seg_name}.2" if seg_name in DELIM_DEF else ""
 
     for alias, (fname, base_type, is_list) in alias_map.items():
