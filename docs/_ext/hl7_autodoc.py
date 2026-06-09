@@ -117,8 +117,7 @@ def _parse_file(path: Path) -> tuple[str, str, list[FieldInfo]] | None:
             annotation = ast.unparse(stmt.annotation)
             kwargs = {kw.arg: kw.value for kw in stmt.value.keywords}
 
-            default_node = kwargs.get("default")
-            required = isinstance(default_node, ast.Constant) and default_node.value is ...
+            required = "default" not in kwargs and not stmt.value.args
 
             def _str(key: str) -> str:
                 n = kwargs.get(key)

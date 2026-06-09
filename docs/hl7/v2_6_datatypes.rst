@@ -132,7 +132,7 @@ CCD
    * - ``ccd_1``
      - CCD.1
      - str
-     - optional
+     - required
      - 1
      - Invocation Event
    * - ``ccd_2``
@@ -205,25 +205,25 @@ CD
      - CD.1
      - Optional[:ref:`WVI <hl7-v2_6-WVI>`]
      - optional
-     -
+     - 
      - Channel Identifier
    * - ``cd_2``
      - CD.2
      - Optional[:ref:`WVS <hl7-v2_6-WVS>`]
      - optional
-     -
+     - 
      - Waveform Source
    * - ``cd_3``
      - CD.3
      - Optional[:ref:`CSU <hl7-v2_6-CSU>`]
      - optional
-     -
+     - 
      - Channel Sensitivity and Units
    * - ``cd_4``
      - CD.4
      - Optional[:ref:`CCP <hl7-v2_6-CCP>`]
      - optional
-     -
+     - 
      - Channel Calibration Parameters
    * - ``cd_5``
      - CD.5
@@ -235,7 +235,7 @@ CD
      - CD.6
      - Optional[:ref:`NR <hl7-v2_6-NR>`]
      - optional
-     -
+     - 
      - Minimum and Maximum Data Values
 
 .. _hl7-v2_6-CF:
@@ -268,7 +268,7 @@ CF
      - CF.2
      - Optional[str]
      - optional
-     -
+     - 
      - Formatted Text
    * - ``cf_3``
      - CF.3
@@ -286,7 +286,7 @@ CF
      - CF.5
      - Optional[str]
      - optional
-     -
+     - 
      - Alternate Formatted Text
    * - ``cf_6``
      - CF.6
@@ -318,7 +318,7 @@ CNE
    * - ``cne_1``
      - CNE.1
      - str
-     - optional
+     - required
      - 20
      - Identifier
    * - ``cne_2``
@@ -480,8 +480,8 @@ CP
    * - ``cp_1``
      - CP.1
      - :ref:`MO <hl7-v2_6-MO>`
-     - optional
-     -
+     - required
+     - 
      - Price
    * - ``cp_2``
      - CP.2
@@ -505,7 +505,7 @@ CP
      - CP.5
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Range Units
    * - ``cp_6``
      - CP.6
@@ -544,7 +544,7 @@ CQ
      - CQ.2
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Units
 
 .. _hl7-v2_6-CSU:
@@ -570,7 +570,7 @@ CSU
    * - ``csu_1``
      - CSU.1
      - str
-     - optional
+     - required
      - 60
      - Channel Sensitivity
    * - ``csu_2``
@@ -708,7 +708,7 @@ CX
    * - ``cx_1``
      - CX.1
      - str
-     - optional
+     - required
      - 15
      - ID Number
    * - ``cx_2``
@@ -727,7 +727,7 @@ CX
      - CX.4
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Authority
    * - ``cx_5``
      - CX.5
@@ -739,7 +739,7 @@ CX
      - CX.6
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Facility
    * - ``cx_7``
      - CX.7
@@ -757,13 +757,13 @@ CX
      - CX.9
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Assigning Jurisdiction
    * - ``cx_10``
      - CX.10
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Assigning Agency or Department
 
 .. _hl7-v2_6-DDI:
@@ -795,8 +795,8 @@ DDI
    * - ``ddi_2``
      - DDI.2
      - :ref:`MO <hl7-v2_6-MO>`
-     - optional
-     -
+     - required
+     - 
      - Monetary Amount
    * - ``ddi_3``
      - DDI.3
@@ -828,14 +828,14 @@ DIN
    * - ``din_1``
      - DIN.1
      - str
-     - optional
+     - required
      - 24
      - Date
    * - ``din_2``
      - DIN.2
      - :ref:`CWE <hl7-v2_6-CWE>`
-     - optional
-     -
+     - required
+     - 
      - Institution Name
 
 .. _hl7-v2_6-DLD:
@@ -861,8 +861,8 @@ DLD
    * - ``dld_1``
      - DLD.1
      - :ref:`CWE <hl7-v2_6-CWE>`
-     - optional
-     -
+     - required
+     - 
      - Discharge to Location
    * - ``dld_2``
      - DLD.2
@@ -894,7 +894,7 @@ DLN
    * - ``dln_1``
      - DLN.1
      - str
-     - optional
+     - required
      - 20
      - License Number
    * - ``dln_2``
@@ -934,7 +934,7 @@ DLT
      - DLT.1
      - Optional[:ref:`NR <hl7-v2_6-NR>`]
      - optional
-     -
+     - 
      - Normal Range
    * - ``dlt_2``
      - DLT.2
@@ -1011,13 +1011,13 @@ DTN
    * - ``dtn_1``
      - DTN.1
      - str
-     - optional
+     - required
      - 2
      - Day Type
    * - ``dtn_2``
      - DTN.2
      - str
-     - optional
+     - required
      - 3
      - Number of Days
 
@@ -1045,12 +1045,12 @@ ED
      - ED.1
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Source Application
    * - ``ed_2``
      - ED.2
      - str
-     - optional
+     - required
      - 11
      - Type of Data
    * - ``ed_3``
@@ -1062,14 +1062,14 @@ ED
    * - ``ed_4``
      - ED.4
      - str
-     - optional
+     - required
      - 6
      - Encoding
    * - ``ed_5``
      - ED.5
      - str
-     - optional
-     -
+     - required
+     - 
      - Data
 
 .. _hl7-v2_6-EI:
@@ -1141,13 +1141,13 @@ EIP
      - EIP.1
      - Optional[:ref:`EI <hl7-v2_6-EI>`]
      - optional
-     -
+     - 
      - Placer Assigned Identifier
    * - ``eip_2``
      - EIP.2
      - Optional[:ref:`EI <hl7-v2_6-EI>`]
      - optional
-     -
+     - 
      - Filler Assigned Identifier
 
 .. _hl7-v2_6-ELD:
@@ -1192,7 +1192,7 @@ ELD
      - ELD.4
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Code Identifying Error
 
 .. _hl7-v2_6-ERL:
@@ -1218,13 +1218,13 @@ ERL
    * - ``erl_1``
      - ERL.1
      - str
-     - optional
+     - required
      - 3
      - Segment ID
    * - ``erl_2``
      - ERL.2
      - str
-     - optional
+     - required
      - 2
      - Segment Sequence
    * - ``erl_3``
@@ -1275,7 +1275,7 @@ FC
    * - ``fc_1``
      - FC.1
      - str
-     - optional
+     - required
      - 20
      - Financial Class Code
    * - ``fc_2``
@@ -1308,7 +1308,7 @@ FN
    * - ``fn_1``
      - FN.1
      - str
-     - optional
+     - required
      - 50
      - Surname
    * - ``fn_2``
@@ -1404,7 +1404,7 @@ ICD
    * - ``icd_2``
      - ICD.2
      - str
-     - optional
+     - required
      - 1
      - Certification Required
    * - ``icd_3``
@@ -1450,7 +1450,7 @@ JCC
      - JCC.3
      - Optional[str]
      - optional
-     -
+     - 
      - Job Description Text
 
 .. _hl7-v2_6-LA1:
@@ -1495,7 +1495,7 @@ LA1
      - LA1.4
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Facility
    * - ``la1_5``
      - LA1.5
@@ -1525,7 +1525,7 @@ LA1
      - LA1.9
      - Optional[:ref:`AD <hl7-v2_6-AD>`]
      - optional
-     -
+     - 
      - Address
 
 .. _hl7-v2_6-LA2:
@@ -1570,7 +1570,7 @@ LA2
      - LA2.4
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Facility
    * - ``la2_5``
      - LA2.5
@@ -1747,13 +1747,13 @@ MOC
      - MOC.1
      - Optional[:ref:`MO <hl7-v2_6-MO>`]
      - optional
-     -
+     - 
      - Monetary Amount
    * - ``moc_2``
      - MOC.2
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Charge Code
 
 .. _hl7-v2_6-MOP:
@@ -1779,13 +1779,13 @@ MOP
    * - ``mop_1``
      - MOP.1
      - str
-     - optional
+     - required
      - 2
      - Money or Percentage Indicator
    * - ``mop_2``
      - MOP.2
      - str
-     - optional
+     - required
      - 16
      - Money or Percentage Quantity
    * - ``mop_3``
@@ -1818,19 +1818,19 @@ MSG
    * - ``msg_1``
      - MSG.1
      - str
-     - optional
+     - required
      - 3
      - Message Code
    * - ``msg_2``
      - MSG.2
      - str
-     - optional
+     - required
      - 3
      - Trigger Event
    * - ``msg_3``
      - MSG.3
      - str
-     - optional
+     - required
      - 7
      - Message Structure
 
@@ -1857,7 +1857,7 @@ NA
    * - ``na_1``
      - NA.1
      - str
-     - optional
+     - required
      - 16
      - Value1
    * - ``na_2``
@@ -1903,7 +1903,7 @@ NDL
      - NDL.1
      - Optional[:ref:`CNN <hl7-v2_6-CNN>`]
      - optional
-     -
+     - 
      - Name
    * - ``ndl_2``
      - NDL.2
@@ -1939,7 +1939,7 @@ NDL
      - NDL.7
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Facility
    * - ``ndl_8``
      - NDL.8
@@ -2022,13 +2022,13 @@ OCD
    * - ``ocd_1``
      - OCD.1
      - :ref:`CNE <hl7-v2_6-CNE>`
-     - optional
-     -
+     - required
+     - 
      - Occurrence Code
    * - ``ocd_2``
      - OCD.2
      - str
-     - optional
+     - required
      - 8
      - Occurrence Date
 
@@ -2055,13 +2055,13 @@ OSD
    * - ``osd_1``
      - OSD.1
      - str
-     - optional
+     - required
      - 1
      - Sequence/Results Flag
    * - ``osd_2``
      - OSD.2
      - str
-     - optional
+     - required
      - 15
      - Placer Order Number: Entity Identifier
    * - ``osd_3``
@@ -2073,7 +2073,7 @@ OSD
    * - ``osd_4``
      - OSD.4
      - str
-     - optional
+     - required
      - 15
      - Filler Order Number: Entity Identifier
    * - ``osd_5``
@@ -2097,7 +2097,7 @@ OSD
    * - ``osd_8``
      - OSD.8
      - str
-     - optional
+     - required
      - 15
      - Placer Order Number: Universal ID
    * - ``osd_9``
@@ -2109,7 +2109,7 @@ OSD
    * - ``osd_10``
      - OSD.10
      - str
-     - optional
+     - required
      - 15
      - Filler Order Number: Universal ID
    * - ``osd_11``
@@ -2142,8 +2142,8 @@ OSP
    * - ``osp_1``
      - OSP.1
      - :ref:`CNE <hl7-v2_6-CNE>`
-     - optional
-     -
+     - required
+     - 
      - Occurrence Span Code
    * - ``osp_2``
      - OSP.2
@@ -2181,14 +2181,14 @@ PIP
    * - ``pip_1``
      - PIP.1
      - :ref:`CWE <hl7-v2_6-CWE>`
-     - optional
-     -
+     - required
+     - 
      - Privilege
    * - ``pip_2``
      - PIP.2
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Privilege Class
    * - ``pip_3``
      - PIP.3
@@ -2206,7 +2206,7 @@ PIP
      - PIP.5
      - Optional[:ref:`EI <hl7-v2_6-EI>`]
      - optional
-     -
+     - 
      - Facility
 
 .. _hl7-v2_6-PL:
@@ -2251,7 +2251,7 @@ PL
      - PL.4
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Facility
    * - ``pl_5``
      - PL.5
@@ -2287,13 +2287,13 @@ PL
      - PL.10
      - Optional[:ref:`EI <hl7-v2_6-EI>`]
      - optional
-     -
+     - 
      - Comprehensive Location Identifier
    * - ``pl_11``
      - PL.11
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Authority for Location
 
 .. _hl7-v2_6-PLN:
@@ -2319,13 +2319,13 @@ PLN
    * - ``pln_1``
      - PLN.1
      - str
-     - optional
+     - required
      - 20
      - ID Number
    * - ``pln_2``
      - PLN.2
      - str
-     - optional
+     - required
      - 8
      - Type of ID Number
    * - ``pln_3``
@@ -2371,7 +2371,7 @@ PPN
      - PPN.2
      - Optional[:ref:`FN <hl7-v2_6-FN>`]
      - optional
-     -
+     - 
      - Family Name
    * - ``ppn_3``
      - PPN.3
@@ -2413,7 +2413,7 @@ PPN
      - PPN.9
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Authority
    * - ``ppn_10``
      - PPN.10
@@ -2443,7 +2443,7 @@ PPN
      - PPN.14
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Facility
    * - ``ppn_15``
      - PPN.15
@@ -2461,13 +2461,13 @@ PPN
      - PPN.17
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Name Context
    * - ``ppn_18``
      - PPN.18
      - Optional[:ref:`DR <hl7-v2_6-DR>`]
      - optional
-     -
+     - 
      - Name Validity Range
    * - ``ppn_19``
      - PPN.19
@@ -2497,13 +2497,13 @@ PPN
      - PPN.23
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Assigning Jurisdiction
    * - ``ppn_24``
      - PPN.24
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Assigning Agency or Department
 
 .. _hl7-v2_6-PRL:
@@ -2529,8 +2529,8 @@ PRL
    * - ``prl_1``
      - PRL.1
      - :ref:`CWE <hl7-v2_6-CWE>`
-     - optional
-     -
+     - required
+     - 
      - Parent Observation Identifier
    * - ``prl_2``
      - PRL.2
@@ -2542,7 +2542,7 @@ PRL
      - PRL.3
      - Optional[str]
      - optional
-     -
+     - 
      - Parent Observation Value Descriptor
 
 .. _hl7-v2_6-PT:
@@ -2601,7 +2601,7 @@ PTA
    * - ``pta_1``
      - PTA.1
      - str
-     - optional
+     - required
      - 5
      - Policy Type
    * - ``pta_2``
@@ -2619,8 +2619,8 @@ PTA
    * - ``pta_4``
      - PTA.4
      - :ref:`MOP <hl7-v2_6-MOP>`
-     - optional
-     -
+     - required
+     - 
      - Money or Percentage
 
 .. _hl7-v2_6-QIP:
@@ -2646,13 +2646,13 @@ QIP
    * - ``qip_1``
      - QIP.1
      - str
-     - optional
+     - required
      - 12
      - Segment Field Name
    * - ``qip_2``
      - QIP.2
      - str
-     - optional
+     - required
      - 199
      - Values
 
@@ -2679,7 +2679,7 @@ QSC
    * - ``qsc_1``
      - QSC.1
      - str
-     - optional
+     - required
      - 12
      - Segment Field Name
    * - ``qsc_2``
@@ -2763,8 +2763,8 @@ RFR
    * - ``rfr_1``
      - RFR.1
      - :ref:`NR <hl7-v2_6-NR>`
-     - optional
-     -
+     - required
+     - 
      - Numeric Range
    * - ``rfr_2``
      - RFR.2
@@ -2776,13 +2776,13 @@ RFR
      - RFR.3
      - Optional[:ref:`NR <hl7-v2_6-NR>`]
      - optional
-     -
+     - 
      - Age Range
    * - ``rfr_4``
      - RFR.4
      - Optional[:ref:`NR <hl7-v2_6-NR>`]
      - optional
-     -
+     - 
      - Gestational Age Range
    * - ``rfr_5``
      - RFR.5
@@ -2800,7 +2800,7 @@ RFR
      - RFR.7
      - Optional[str]
      - optional
-     -
+     - 
      - Conditions
 
 .. _hl7-v2_6-RI:
@@ -2859,7 +2859,7 @@ RMC
    * - ``rmc_1``
      - RMC.1
      - str
-     - optional
+     - required
      - 20
      - Room Type
    * - ``rmc_2``
@@ -2877,8 +2877,8 @@ RMC
    * - ``rmc_4``
      - RMC.4
      - :ref:`MOP <hl7-v2_6-MOP>`
-     - optional
-     -
+     - required
+     - 
      - Money or Percentage
 
 .. _hl7-v2_6-RP:
@@ -2911,7 +2911,7 @@ RP
      - RP.2
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Application ID
    * - ``rp_3``
      - RP.3
@@ -2949,8 +2949,8 @@ RPT
    * - ``rpt_1``
      - RPT.1
      - :ref:`CWE <hl7-v2_6-CWE>`
-     - optional
-     -
+     - required
+     - 
      - Repeat Pattern Code
    * - ``rpt_2``
      - RPT.2
@@ -3076,7 +3076,7 @@ SCV
      - SCV.1
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Parameter Class
    * - ``scv_2``
      - SCV.2
@@ -3153,7 +3153,7 @@ SPD
    * - ``spd_1``
      - SPD.1
      - str
-     - optional
+     - required
      - 50
      - Specialty Name
    * - ``spd_2``
@@ -3199,43 +3199,43 @@ SPS
      - SPS.1
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Specimen Source Name or Code
    * - ``sps_2``
      - SPS.2
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Additives
    * - ``sps_3``
      - SPS.3
      - Optional[str]
      - optional
-     -
+     - 
      - Specimen Collection Method
    * - ``sps_4``
      - SPS.4
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Body Site
    * - ``sps_5``
      - SPS.5
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Site Modifier
    * - ``sps_6``
      - SPS.6
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Collection Method Modifier Code
    * - ``sps_7``
      - SPS.7
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Specimen Role
 
 .. _hl7-v2_6-SRT:
@@ -3261,7 +3261,7 @@ SRT
    * - ``srt_1``
      - SRT.1
      - str
-     - optional
+     - required
      - 12
      - Sort-by Field
    * - ``srt_2``
@@ -3295,13 +3295,13 @@ TQ
      - TQ.1
      - Optional[:ref:`CQ <hl7-v2_6-CQ>`]
      - optional
-     -
+     - 
      - Quantity
    * - ``tq_2``
      - TQ.2
      - Optional[:ref:`RI <hl7-v2_6-RI>`]
      - optional
-     -
+     - 
      - Interval
    * - ``tq_3``
      - TQ.3
@@ -3337,7 +3337,7 @@ TQ
      - TQ.8
      - Optional[str]
      - optional
-     -
+     - 
      - Text
    * - ``tq_9``
      - TQ.9
@@ -3349,13 +3349,13 @@ TQ
      - TQ.10
      - Optional[:ref:`OSD <hl7-v2_6-OSD>`]
      - optional
-     -
+     - 
      - Order Sequencing
    * - ``tq_11``
      - TQ.11
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Occurrence Duration
    * - ``tq_12``
      - TQ.12
@@ -3387,14 +3387,14 @@ UVC
    * - ``uvc_1``
      - UVC.1
      - :ref:`CNE <hl7-v2_6-CNE>`
-     - optional
-     -
+     - required
+     - 
      - Value Code
    * - ``uvc_2``
      - UVC.2
      - Optional[:ref:`MO <hl7-v2_6-MO>`]
      - optional
-     -
+     - 
      - Value Amount
 
 .. _hl7-v2_6-VH:
@@ -3472,13 +3472,13 @@ VID
      - VID.2
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Internationalization Code
    * - ``vid_3``
      - VID.3
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - International Version ID
 
 .. _hl7-v2_6-VR:
@@ -3537,7 +3537,7 @@ WVI
    * - ``wvi_1``
      - WVI.1
      - str
-     - optional
+     - required
      - 4
      - Channel Number
    * - ``wvi_2``
@@ -3570,7 +3570,7 @@ WVS
    * - ``wvs_1``
      - WVS.1
      - str
-     - optional
+     - required
      - 8
      - Source One Name
    * - ``wvs_2``
@@ -3604,7 +3604,7 @@ XAD
      - XAD.1
      - Optional[:ref:`SAD <hl7-v2_6-SAD>`]
      - optional
-     -
+     - 
      - Street Address
    * - ``xad_2``
      - XAD.2
@@ -3670,7 +3670,7 @@ XAD
      - XAD.12
      - Optional[:ref:`DR <hl7-v2_6-DR>`]
      - optional
-     -
+     - 
      - Address Validity Range
    * - ``xad_13``
      - XAD.13
@@ -3688,7 +3688,7 @@ XAD
      - XAD.15
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Expiration Reason
    * - ``xad_16``
      - XAD.16
@@ -3730,13 +3730,13 @@ XAD
      - XAD.22
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Protection Code
    * - ``xad_23``
      - XAD.23
      - Optional[:ref:`EI <hl7-v2_6-EI>`]
      - optional
-     -
+     - 
      - Address Identifier
 
 .. _hl7-v2_6-XCN:
@@ -3769,7 +3769,7 @@ XCN
      - XCN.2
      - Optional[:ref:`FN <hl7-v2_6-FN>`]
      - optional
-     -
+     - 
      - Family Name
    * - ``xcn_3``
      - XCN.3
@@ -3811,7 +3811,7 @@ XCN
      - XCN.9
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Authority
    * - ``xcn_10``
      - XCN.10
@@ -3841,7 +3841,7 @@ XCN
      - XCN.14
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Facility
    * - ``xcn_15``
      - XCN.15
@@ -3853,13 +3853,13 @@ XCN
      - XCN.16
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Name Context
    * - ``xcn_17``
      - XCN.17
      - Optional[:ref:`DR <hl7-v2_6-DR>`]
      - optional
-     -
+     - 
      - Name Validity Range
    * - ``xcn_18``
      - XCN.18
@@ -3889,13 +3889,13 @@ XCN
      - XCN.22
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Assigning Jurisdiction
    * - ``xcn_23``
      - XCN.23
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Assigning Agency or Department
 
 .. _hl7-v2_6-XON:
@@ -3952,7 +3952,7 @@ XON
      - XON.6
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Authority
    * - ``xon_7``
      - XON.7
@@ -3964,7 +3964,7 @@ XON
      - XON.8
      - Optional[:ref:`HD <hl7-v2_6-HD>`]
      - optional
-     -
+     - 
      - Assigning Facility
    * - ``xon_9``
      - XON.9
@@ -4003,7 +4003,7 @@ XPN
      - XPN.1
      - Optional[:ref:`FN <hl7-v2_6-FN>`]
      - optional
-     -
+     - 
      - Family Name
    * - ``xpn_2``
      - XPN.2
@@ -4051,13 +4051,13 @@ XPN
      - XPN.9
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Name Context
    * - ``xpn_10``
      - XPN.10
      - Optional[:ref:`DR <hl7-v2_6-DR>`]
      - optional
-     -
+     - 
      - Name Validity Range
    * - ``xpn_11``
      - XPN.11
@@ -4186,19 +4186,19 @@ XTN
      - XTN.15
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Expiration Reason
    * - ``xtn_16``
      - XTN.16
      - Optional[:ref:`CWE <hl7-v2_6-CWE>`]
      - optional
-     -
+     - 
      - Protection Code
    * - ``xtn_17``
      - XTN.17
      - Optional[:ref:`EI <hl7-v2_6-EI>`]
      - optional
-     -
+     - 
      - Shared Telecommunication Identifier
    * - ``xtn_18``
      - XTN.18
