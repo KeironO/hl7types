@@ -98,7 +98,7 @@ class HL7Model(BaseModel):
         segment_separator: str = "\r",
         enc: EncodingChars | None = None,
         *,
-        strict: bool = False,
+        strict: bool = True,
     ) -> Self:
         """Decode an ER7 wire string into a typed model instance.
 
@@ -117,10 +117,10 @@ class HL7Model(BaseModel):
             Delimiter characters to use for decoding. When ``None``, the
             decoder reads the encoding characters from MSH in the wire string.
         strict : bool, optional
-            If ``True``, raises ``pydantic.ValidationError`` when required
-            fields or segments are absent. If ``False``, missing required
-            fields are filled with empty placeholder values and a
-            ``UserWarning`` is emitted. Defaults to ``False``.
+            If ``True`` (the default), raises ``pydantic.ValidationError`` when
+            required fields or segments are absent. If ``False``, missing
+            required fields are filled with empty placeholder values and a
+            ``UserWarning`` is emitted.
 
         Returns
         -------

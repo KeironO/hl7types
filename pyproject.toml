@@ -1,9 +1,9 @@
 [project]
 name = "hl7types"
-version = "0.6.0"
+version = "0.7.0"
 description = "Pydantic-powered HL7 v2 models with ER7 parsing and XML serialisation"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = "MIT"
 license-files = ["LICENSE"]
 authors = [
@@ -26,7 +26,6 @@ classifiers = [
     "Intended Audience :: Healthcare Industry",
     "License :: OSI Approved :: MIT License",
     "Programming Language :: Python :: 3",
-    "Programming Language :: Python :: 3.9",
     "Programming Language :: Python :: 3.10",
     "Programming Language :: Python :: 3.11",
     "Programming Language :: Python :: 3.12",
@@ -47,11 +46,11 @@ Documentation = "https://hl7types.readthedocs.io"
 [dependency-groups]
 dev = [
     "hatchling>=1.27.0",
-    "pre-commit>=4.6.0; python_version >= '3.10'",
-    "pyright>=1.1.0; python_version >= '3.10'",
+    "pre-commit>=4.6.0",
+    "pyright>=1.1.0",
     "pytest>=8.0",
     "pytest-cov>=6.0",
-    "ruff>=0.11.0; python_version >= '3.10'",
+    "ruff>=0.11.0",
 ]
 docs = [
     "furo>=2025.12.19; python_version >= '3.11'",
@@ -78,7 +77,7 @@ ignore = ["E501"]
 
 [tool.pyright]
 include = ["hl7types/codecs", "hl7types/__init__.py", "hl7types/hl7/__init__.py", "hl7types/hl7/*"]
-pythonVersion = "3.8"
+pythonVersion = "3.10"
 typeCheckingMode = "strict"
 
 [build-system]

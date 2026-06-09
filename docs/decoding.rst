@@ -104,4 +104,4 @@ This behaviour is derived from HAPI (the reference Java HL7 implementation). Unk
 sequences,  such as ``\H\``, ``\N\``, or ``\.br\``, which are presentation-layer formatting
 hints are left untouched rather than raising an error.
 
-See :doc:`validation` for details on field-level validation and strict verses lenient decoding.
+See :doc:`validation` for details on field-level validation and strict versus lenient decoding.

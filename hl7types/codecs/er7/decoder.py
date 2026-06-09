@@ -197,7 +197,7 @@ def decode_er7_segment(
     seg_cls: type[BaseModel],
     enc: EncodingChars = DEFAULT_ENCODING,
     *,
-    strict: bool = False,
+    strict: bool = True,
 ) -> BaseModel:
     """Decode a single ER7 segment string into a typed segment model.
 
@@ -213,10 +213,9 @@ def decode_er7_segment(
         read from the segment string itself and override this value. Defaults
         to the standard HL7 encoding characters.
     strict : bool, optional
-        If ``True``, raises ``pydantic.ValidationError`` when required fields
-        are absent. If ``False``, missing required fields are filled with
-        empty placeholder values and a ``UserWarning`` is emitted. Defaults
-        to ``False``.
+        If ``True`` (the default), raises ``pydantic.ValidationError`` when
+        required fields are absent. If ``False``, missing required fields are
+        filled with empty placeholder values and a ``UserWarning`` is emitted.
 
     Returns
     -------
@@ -326,7 +325,7 @@ def _decode_struct(
     model_cls: type[BaseModel],
     enc: EncodingChars,
     *,
-    strict: bool = False,
+    strict: bool = True,
     registry: HL7Registry | None = None,
     _globally_reachable: frozenset[str] | None = None,
 ) -> tuple[int, BaseModel | None]:

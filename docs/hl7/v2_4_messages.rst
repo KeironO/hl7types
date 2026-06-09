@@ -22,22 +22,22 @@ ACK
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
 
 .. _hl7-v2_4-ACK_N02:
@@ -61,16 +61,16 @@ ACK_N02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
 
 .. _hl7-v2_4-ADR_A19:
@@ -94,52 +94,52 @@ ADR_A19
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``QUERY_RESPONSE``
-     -
+     - 
      - List[:ref:`ADR_A19_QUERY_RESPONSE <hl7-v2_4-ADR_A19_QUERY_RESPONSE>`]
      - required
-     -
+     - 
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-ADT_A01:
@@ -163,124 +163,124 @@ ADT_A01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`ADT_A01_PROCEDURE <hl7-v2_4-ADT_A01_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`ADT_A01_INSURANCE <hl7-v2_4-ADT_A01_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``UB1``
-     -
+     - 
      - Optional[:ref:`UB1 <hl7-v2_4-UB1>`]
      - optional
-     -
+     - 
      - UB1: Optional
    * - ``UB2``
-     -
+     - 
      - Optional[:ref:`UB2 <hl7-v2_4-UB2>`]
      - optional
-     -
+     - 
      - UB2: Optional
    * - ``PDA``
-     -
+     - 
      - Optional[:ref:`PDA <hl7-v2_4-PDA>`]
      - optional
-     -
+     - 
      - PDA: Optional
 
 .. _hl7-v2_4-ADT_A02:
@@ -304,64 +304,64 @@ ADT_A02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``PDA``
-     -
+     - 
      - Optional[:ref:`PDA <hl7-v2_4-PDA>`]
      - optional
-     -
+     - 
      - PDA: Optional
 
 .. _hl7-v2_4-ADT_A03:
@@ -385,82 +385,82 @@ ADT_A03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`ADT_A03_PROCEDURE <hl7-v2_4-ADT_A03_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``PDA``
-     -
+     - 
      - Optional[:ref:`PDA <hl7-v2_4-PDA>`]
      - optional
-     -
+     - 
      - PDA: Optional
 
 .. _hl7-v2_4-ADT_A05:
@@ -484,118 +484,118 @@ ADT_A05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`ADT_A05_PROCEDURE <hl7-v2_4-ADT_A05_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`ADT_A05_INSURANCE <hl7-v2_4-ADT_A05_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``UB1``
-     -
+     - 
      - Optional[:ref:`UB1 <hl7-v2_4-UB1>`]
      - optional
-     -
+     - 
      - UB1: Optional
    * - ``UB2``
-     -
+     - 
      - Optional[:ref:`UB2 <hl7-v2_4-UB2>`]
      - optional
-     -
+     - 
      - UB2: Optional
 
 .. _hl7-v2_4-ADT_A06:
@@ -619,124 +619,124 @@ ADT_A06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``MRG``
-     -
+     - 
      - Optional[:ref:`MRG <hl7-v2_4-MRG>`]
      - optional
-     -
+     - 
      - MRG: Optional
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`ADT_A06_PROCEDURE <hl7-v2_4-ADT_A06_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`ADT_A06_INSURANCE <hl7-v2_4-ADT_A06_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``UB1``
-     -
+     - 
      - Optional[:ref:`UB1 <hl7-v2_4-UB1>`]
      - optional
-     -
+     - 
      - UB1: Optional
    * - ``UB2``
-     -
+     - 
      - Optional[:ref:`UB2 <hl7-v2_4-UB2>`]
      - optional
-     -
+     - 
      - UB2: Optional
 
 .. _hl7-v2_4-ADT_A09:
@@ -760,58 +760,58 @@ ADT_A09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
 
 .. _hl7-v2_4-ADT_A15:
@@ -835,64 +835,64 @@ ADT_A15
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
 
 .. _hl7-v2_4-ADT_A16:
@@ -916,70 +916,70 @@ ADT_A16
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
 
 .. _hl7-v2_4-ADT_A17:
@@ -1003,52 +1003,52 @@ ADT_A17
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
 
 .. _hl7-v2_4-ADT_A18:
@@ -1072,40 +1072,40 @@ ADT_A18
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``MRG``
-     -
+     - 
      - :ref:`MRG <hl7-v2_4-MRG>`
      - required
-     -
+     - 
      - MRG: Required
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
 
 .. _hl7-v2_4-ADT_A20:
@@ -1129,22 +1129,22 @@ ADT_A20
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``NPU``
-     -
+     - 
      - :ref:`NPU <hl7-v2_4-NPU>`
      - required
-     -
+     - 
      - NPU: Required
 
 .. _hl7-v2_4-ADT_A21:
@@ -1168,52 +1168,52 @@ ADT_A21
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
 
 .. _hl7-v2_4-ADT_A24:
@@ -1237,40 +1237,40 @@ ADT_A24
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - Optional[:ref:`PV1 <hl7-v2_4-PV1>`]
      - optional
-     -
+     - 
      - PV1: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
 
 .. _hl7-v2_4-ADT_A30:
@@ -1294,34 +1294,34 @@ ADT_A30
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``MRG``
-     -
+     - 
      - :ref:`MRG <hl7-v2_4-MRG>`
      - required
-     -
+     - 
      - MRG: Required
 
 .. _hl7-v2_4-ADT_A37:
@@ -1345,40 +1345,40 @@ ADT_A37
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - Optional[:ref:`PV1 <hl7-v2_4-PV1>`]
      - optional
-     -
+     - 
      - PV1: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
 
 .. _hl7-v2_4-ADT_A38:
@@ -1402,64 +1402,64 @@ ADT_A38
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``OBX``
-     -
+     - 
      - Optional[List[:ref:`OBX <hl7-v2_4-OBX>`]]
      - optional
-     -
+     - 
      - OBX: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
 
 .. _hl7-v2_4-ADT_A39:
@@ -1483,22 +1483,22 @@ ADT_A39
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`ADT_A39_PATIENT <hl7-v2_4-ADT_A39_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-ADT_A43:
@@ -1522,22 +1522,22 @@ ADT_A43
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`ADT_A43_PATIENT <hl7-v2_4-ADT_A43_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-ADT_A45:
@@ -1561,34 +1561,34 @@ ADT_A45
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``MERGE_INFO``
-     -
+     - 
      - List[:ref:`ADT_A45_MERGE_INFO <hl7-v2_4-ADT_A45_MERGE_INFO>`]
      - required
-     -
+     - 
      - MERGE_INFO: Required, repeating
 
 .. _hl7-v2_4-ADT_A50:
@@ -1612,40 +1612,40 @@ ADT_A50
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``MRG``
-     -
+     - 
      - :ref:`MRG <hl7-v2_4-MRG>`
      - required
-     -
+     - 
      - MRG: Required
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
 
 .. _hl7-v2_4-ADT_A52:
@@ -1669,40 +1669,40 @@ ADT_A52
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
 
 .. _hl7-v2_4-ADT_A54:
@@ -1726,46 +1726,46 @@ ADT_A54
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
 
 .. _hl7-v2_4-ADT_A60:
@@ -1789,40 +1789,40 @@ ADT_A60
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PV1``
-     -
+     - 
      - Optional[:ref:`PV1 <hl7-v2_4-PV1>`]
      - optional
-     -
+     - 
      - PV1: Optional
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``IAM``
-     -
+     - 
      - Optional[List[:ref:`IAM <hl7-v2_4-IAM>`]]
      - optional
-     -
+     - 
      - IAM: Optional, repeating
 
 .. _hl7-v2_4-ADT_A61:
@@ -1846,46 +1846,46 @@ ADT_A61
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
 
 .. _hl7-v2_4-BAR_P01:
@@ -1909,40 +1909,40 @@ BAR_P01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``VISIT``
-     -
+     - 
      - List[:ref:`BAR_P01_VISIT <hl7-v2_4-BAR_P01_VISIT>`]
      - required
-     -
+     - 
      - VISIT: Required, repeating
 
 .. _hl7-v2_4-BAR_P02:
@@ -1966,22 +1966,22 @@ BAR_P02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`BAR_P02_PATIENT <hl7-v2_4-BAR_P02_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-BAR_P05:
@@ -2005,40 +2005,40 @@ BAR_P05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``VISIT``
-     -
+     - 
      - List[:ref:`BAR_P05_VISIT <hl7-v2_4-BAR_P05_VISIT>`]
      - required
-     -
+     - 
      - VISIT: Required, repeating
 
 .. _hl7-v2_4-BAR_P06:
@@ -2062,22 +2062,22 @@ BAR_P06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`BAR_P06_PATIENT <hl7-v2_4-BAR_P06_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-BAR_P10:
@@ -2101,46 +2101,46 @@ BAR_P10
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``GP1``
-     -
+     - 
      - :ref:`GP1 <hl7-v2_4-GP1>`
      - required
-     -
+     - 
      - GP1: Required
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`BAR_P10_PROCEDURE <hl7-v2_4-BAR_P10_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
 
 .. _hl7-v2_4-CRM_C01:
@@ -2164,16 +2164,16 @@ CRM_C01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`CRM_C01_PATIENT <hl7-v2_4-CRM_C01_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-CSU_C09:
@@ -2197,16 +2197,16 @@ CSU_C09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`CSU_C09_PATIENT <hl7-v2_4-CSU_C09_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-DFT_P03:
@@ -2230,94 +2230,94 @@ DFT_P03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - Optional[:ref:`PV1 <hl7-v2_4-PV1>`]
      - optional
-     -
+     - 
      - PV1: Optional
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``COMMON_ORDER``
-     -
+     - 
      - Optional[List[:ref:`DFT_P03_COMMON_ORDER <hl7-v2_4-DFT_P03_COMMON_ORDER>`]]
      - optional
-     -
+     - 
      - COMMON_ORDER: Optional, repeating
    * - ``FINANCIAL``
-     -
+     - 
      - List[:ref:`DFT_P03_FINANCIAL <hl7-v2_4-DFT_P03_FINANCIAL>`]
      - required
-     -
+     - 
      - FINANCIAL: Required, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`DFT_P03_INSURANCE <hl7-v2_4-DFT_P03_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
 
 .. _hl7-v2_4-DFT_P11:
@@ -2341,94 +2341,94 @@ DFT_P11
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[List[:ref:`ROL <hl7-v2_4-ROL>`]]
      - optional
-     -
+     - 
      - ROL: Optional, repeating
    * - ``PV1``
-     -
+     - 
      - Optional[:ref:`PV1 <hl7-v2_4-PV1>`]
      - optional
-     -
+     - 
      - PV1: Optional
    * - ``PV2``
-     -
+     - 
      - Optional[:ref:`PV2 <hl7-v2_4-PV2>`]
      - optional
-     -
+     - 
      - PV2: Optional
    * - ``DB1``
-     -
+     - 
      - Optional[List[:ref:`DB1 <hl7-v2_4-DB1>`]]
      - optional
-     -
+     - 
      - DB1: Optional, repeating
    * - ``COMMON_ORDER``
-     -
+     - 
      - Optional[List[:ref:`DFT_P11_COMMON_ORDER <hl7-v2_4-DFT_P11_COMMON_ORDER>`]]
      - optional
-     -
+     - 
      - COMMON_ORDER: Optional, repeating
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[:ref:`DRG <hl7-v2_4-DRG>`]
      - optional
-     -
+     - 
      - DRG: Optional
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`DFT_P11_INSURANCE <hl7-v2_4-DFT_P11_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``FINANCIAL``
-     -
+     - 
      - List[:ref:`DFT_P11_FINANCIAL <hl7-v2_4-DFT_P11_FINANCIAL>`]
      - required
-     -
+     - 
      - FINANCIAL: Required, repeating
 
 .. _hl7-v2_4-DOC_T12:
@@ -2452,46 +2452,46 @@ DOC_T12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``RESULT``
-     -
+     - 
      - List[:ref:`DOC_T12_RESULT <hl7-v2_4-DOC_T12_RESULT>`]
      - required
-     -
+     - 
      - RESULT: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-DSR_Q01:
@@ -2515,52 +2515,52 @@ DSR_Q01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``DSP``
-     -
+     - 
      - List[:ref:`DSP <hl7-v2_4-DSP>`]
      - required
-     -
+     - 
      - DSP: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-DSR_Q03:
@@ -2584,52 +2584,52 @@ DSR_Q03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - Optional[:ref:`MSA <hl7-v2_4-MSA>`]
      - optional
-     -
+     - 
      - MSA: Optional
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``DSP``
-     -
+     - 
      - List[:ref:`DSP <hl7-v2_4-DSP>`]
      - required
-     -
+     - 
      - DSP: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-EAC_U07:
@@ -2653,40 +2653,40 @@ EAC_U07
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``ECD``
-     -
+     - 
      - List[:ref:`ECD <hl7-v2_4-ECD>`]
      - required
-     -
+     - 
      - ECD: Required, repeating
    * - ``SAC``
-     -
+     - 
      - Optional[:ref:`SAC <hl7-v2_4-SAC>`]
      - optional
-     -
+     - 
      - SAC: Optional
    * - ``CNS``
-     -
+     - 
      - Optional[:ref:`CNS <hl7-v2_4-CNS>`]
      - optional
-     -
+     - 
      - CNS: Optional
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-EAN_U09:
@@ -2710,28 +2710,28 @@ EAN_U09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``NOTIFICATION``
-     -
+     - 
      - List[:ref:`EAN_U09_NOTIFICATION <hl7-v2_4-EAN_U09_NOTIFICATION>`]
      - required
-     -
+     - 
      - NOTIFICATION: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-EAR_U08:
@@ -2755,28 +2755,28 @@ EAR_U08
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``COMMAND_RESPONSE``
-     -
+     - 
      - List[:ref:`EAR_U08_COMMAND_RESPONSE <hl7-v2_4-EAR_U08_COMMAND_RESPONSE>`]
      - required
-     -
+     - 
      - COMMAND_RESPONSE: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-EDR_R07:
@@ -2800,40 +2800,40 @@ EDR_R07
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``DSP``
-     -
+     - 
      - List[:ref:`DSP <hl7-v2_4-DSP>`]
      - required
-     -
+     - 
      - DSP: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-EQQ_Q04:
@@ -2857,22 +2857,22 @@ EQQ_Q04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQL``
-     -
+     - 
      - :ref:`EQL <hl7-v2_4-EQL>`
      - required
-     -
+     - 
      - EQL: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-ERP_R09:
@@ -2896,40 +2896,40 @@ ERP_R09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``ERQ``
-     -
+     - 
      - :ref:`ERQ <hl7-v2_4-ERQ>`
      - required
-     -
+     - 
      - ERQ: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-ESR_U02:
@@ -2953,22 +2953,22 @@ ESR_U02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-ESU_U01:
@@ -2992,28 +2992,28 @@ ESU_U01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``ISD``
-     -
+     - 
      - Optional[List[:ref:`ISD <hl7-v2_4-ISD>`]]
      - optional
-     -
+     - 
      - ISD: Optional, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-INR_U06:
@@ -3037,28 +3037,28 @@ INR_U06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``INV``
-     -
+     - 
      - List[:ref:`INV <hl7-v2_4-INV>`]
      - required
-     -
+     - 
      - INV: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-INU_U05:
@@ -3082,28 +3082,28 @@ INU_U05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``INV``
-     -
+     - 
      - List[:ref:`INV <hl7-v2_4-INV>`]
      - required
-     -
+     - 
      - INV: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-LSU_U12:
@@ -3127,28 +3127,28 @@ LSU_U12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``EQP``
-     -
+     - 
      - List[:ref:`EQP <hl7-v2_4-EQP>`]
      - required
-     -
+     - 
      - EQP: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-MDM_T01:
@@ -3172,34 +3172,34 @@ MDM_T01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``TXA``
-     -
+     - 
      - :ref:`TXA <hl7-v2_4-TXA>`
      - required
-     -
+     - 
      - TXA: Required
 
 .. _hl7-v2_4-MDM_T02:
@@ -3223,40 +3223,40 @@ MDM_T02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PV1``
-     -
+     - 
      - :ref:`PV1 <hl7-v2_4-PV1>`
      - required
-     -
+     - 
      - PV1: Required
    * - ``TXA``
-     -
+     - 
      - :ref:`TXA <hl7-v2_4-TXA>`
      - required
-     -
+     - 
      - TXA: Required
    * - ``OBX``
-     -
+     - 
      - List[:ref:`OBX <hl7-v2_4-OBX>`]
      - required
-     -
+     - 
      - OBX: Required, repeating
 
 .. _hl7-v2_4-MFK_M01:
@@ -3280,34 +3280,34 @@ MFK_M01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MFA``
-     -
+     - 
      - Optional[List[:ref:`MFA <hl7-v2_4-MFA>`]]
      - optional
-     -
+     - 
      - MFA: Optional, repeating
 
 .. _hl7-v2_4-MFN_M01:
@@ -3331,22 +3331,22 @@ MFN_M01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF``
-     -
+     - 
      - List[:ref:`MFN_M01_MF <hl7-v2_4-MFN_M01_MF>`]
      - required
-     -
+     - 
      - MF: Required, repeating
 
 .. _hl7-v2_4-MFN_M02:
@@ -3370,22 +3370,22 @@ MFN_M02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_STAFF``
-     -
+     - 
      - List[:ref:`MFN_M02_MF_STAFF <hl7-v2_4-MFN_M02_MF_STAFF>`]
      - required
-     -
+     - 
      - MF_STAFF: Required, repeating
 
 .. _hl7-v2_4-MFN_M03:
@@ -3409,22 +3409,22 @@ MFN_M03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_TEST``
-     -
+     - 
      - List[:ref:`MFN_M03_MF_TEST <hl7-v2_4-MFN_M03_MF_TEST>`]
      - required
-     -
+     - 
      - MF_TEST: Required, repeating
 
 .. _hl7-v2_4-MFN_M04:
@@ -3448,22 +3448,22 @@ MFN_M04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_CDM``
-     -
+     - 
      - List[:ref:`MFN_M04_MF_CDM <hl7-v2_4-MFN_M04_MF_CDM>`]
      - required
-     -
+     - 
      - MF_CDM: Required, repeating
 
 .. _hl7-v2_4-MFN_M05:
@@ -3487,22 +3487,22 @@ MFN_M05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_LOCATION``
-     -
+     - 
      - List[:ref:`MFN_M05_MF_LOCATION <hl7-v2_4-MFN_M05_MF_LOCATION>`]
      - required
-     -
+     - 
      - MF_LOCATION: Required, repeating
 
 .. _hl7-v2_4-MFN_M06:
@@ -3526,22 +3526,22 @@ MFN_M06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_CLIN_STUDY``
-     -
+     - 
      - List[:ref:`MFN_M06_MF_CLIN_STUDY <hl7-v2_4-MFN_M06_MF_CLIN_STUDY>`]
      - required
-     -
+     - 
      - MF_CLIN_STUDY: Required, repeating
 
 .. _hl7-v2_4-MFN_M07:
@@ -3565,22 +3565,22 @@ MFN_M07
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_CLIN_STUDY_SCHED``
-     -
+     - 
      - List[:ref:`MFN_M07_MF_CLIN_STUDY_SCHED <hl7-v2_4-MFN_M07_MF_CLIN_STUDY_SCHED>`]
      - required
-     -
+     - 
      - MF_CLIN_STUDY_SCHED: Required, repeating
 
 .. _hl7-v2_4-MFN_M08:
@@ -3604,22 +3604,22 @@ MFN_M08
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_TEST_NUMERIC``
-     -
+     - 
      - List[:ref:`MFN_M08_MF_TEST_NUMERIC <hl7-v2_4-MFN_M08_MF_TEST_NUMERIC>`]
      - required
-     -
+     - 
      - MF_TEST_NUMERIC: Required, repeating
 
 .. _hl7-v2_4-MFN_M09:
@@ -3643,22 +3643,22 @@ MFN_M09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_TEST_CATEGORICAL``
-     -
+     - 
      - List[:ref:`MFN_M09_MF_TEST_CATEGORICAL <hl7-v2_4-MFN_M09_MF_TEST_CATEGORICAL>`]
      - required
-     -
+     - 
      - MF_TEST_CATEGORICAL: Required, repeating
 
 .. _hl7-v2_4-MFN_M10:
@@ -3682,22 +3682,22 @@ MFN_M10
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_TEST_BATTERIES``
-     -
+     - 
      - List[:ref:`MFN_M10_MF_TEST_BATTERIES <hl7-v2_4-MFN_M10_MF_TEST_BATTERIES>`]
      - required
-     -
+     - 
      - MF_TEST_BATTERIES: Required, repeating
 
 .. _hl7-v2_4-MFN_M11:
@@ -3721,22 +3721,22 @@ MFN_M11
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_TEST_CALCULATED``
-     -
+     - 
      - List[:ref:`MFN_M11_MF_TEST_CALCULATED <hl7-v2_4-MFN_M11_MF_TEST_CALCULATED>`]
      - required
-     -
+     - 
      - MF_TEST_CALCULATED: Required, repeating
 
 .. _hl7-v2_4-MFN_M12:
@@ -3760,22 +3760,22 @@ MFN_M12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_OBS_ATTRIBUTES``
-     -
+     - 
      - List[:ref:`MFN_M12_MF_OBS_ATTRIBUTES <hl7-v2_4-MFN_M12_MF_OBS_ATTRIBUTES>`]
      - required
-     -
+     - 
      - MF_OBS_ATTRIBUTES: Required, repeating
 
 .. _hl7-v2_4-MFQ_M01:
@@ -3799,28 +3799,28 @@ MFQ_M01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-MFR_M01:
@@ -3844,58 +3844,58 @@ MFR_M01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``MFI``
-     -
+     - 
      - :ref:`MFI <hl7-v2_4-MFI>`
      - required
-     -
+     - 
      - MFI: Required
    * - ``MF_QUERY``
-     -
+     - 
      - List[:ref:`MFR_M01_MF_QUERY <hl7-v2_4-MFR_M01_MF_QUERY>`]
      - required
-     -
+     - 
      - MF_QUERY: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-NMD_N02:
@@ -3919,16 +3919,16 @@ NMD_N02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``CLOCK_AND_STATS_WITH_NOTES``
-     -
+     - 
      - List[:ref:`NMD_N02_CLOCK_AND_STATS_WITH_NOTES <hl7-v2_4-NMD_N02_CLOCK_AND_STATS_WITH_NOTES>`]
      - required
-     -
+     - 
      - CLOCK_AND_STATS_WITH_NOTES: Required, repeating
 
 .. _hl7-v2_4-NMQ_N01:
@@ -3952,22 +3952,22 @@ NMQ_N01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRY_WITH_DETAIL``
-     -
+     - 
      - Optional[:ref:`NMQ_N01_QRY_WITH_DETAIL <hl7-v2_4-NMQ_N01_QRY_WITH_DETAIL>`]
      - optional
-     -
+     - 
      - QRY_WITH_DETAIL: Optional
    * - ``CLOCK_AND_STATISTICS``
-     -
+     - 
      - List[:ref:`NMQ_N01_CLOCK_AND_STATISTICS <hl7-v2_4-NMQ_N01_CLOCK_AND_STATISTICS>`]
      - required
-     -
+     - 
      - CLOCK_AND_STATISTICS: Required, repeating
 
 .. _hl7-v2_4-NMR_N01:
@@ -3991,34 +3991,34 @@ NMR_N01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QRD``
-     -
+     - 
      - Optional[:ref:`QRD <hl7-v2_4-QRD>`]
      - optional
-     -
+     - 
      - QRD: Optional
    * - ``CLOCK_AND_STATS_WITH_NOTES_ALT``
-     -
+     - 
      - List[:ref:`NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT <hl7-v2_4-NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT>`]
      - required
-     -
+     - 
      - CLOCK_AND_STATS_WITH_NOTES_ALT: Required, repeating
 
 .. _hl7-v2_4-OMD_O03:
@@ -4042,34 +4042,34 @@ OMD_O03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`OMD_O03_PATIENT <hl7-v2_4-OMD_O03_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER_DIET``
-     -
+     - 
      - List[:ref:`OMD_O03_ORDER_DIET <hl7-v2_4-OMD_O03_ORDER_DIET>`]
      - required
-     -
+     - 
      - ORDER_DIET: Required, repeating
    * - ``ORDER_TRAY``
-     -
+     - 
      - Optional[List[:ref:`OMD_O03_ORDER_TRAY <hl7-v2_4-OMD_O03_ORDER_TRAY>`]]
      - optional
-     -
+     - 
      - ORDER_TRAY: Optional, repeating
 
 .. _hl7-v2_4-OMG_O19:
@@ -4093,28 +4093,28 @@ OMG_O19
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`OMG_O19_PATIENT <hl7-v2_4-OMG_O19_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`OMG_O19_ORDER <hl7-v2_4-OMG_O19_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-OML_O21:
@@ -4138,28 +4138,28 @@ OML_O21
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`OML_O21_PATIENT <hl7-v2_4-OML_O21_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER_GENERAL``
-     -
+     - 
      - List[:ref:`OML_O21_ORDER_GENERAL <hl7-v2_4-OML_O21_ORDER_GENERAL>`]
      - required
-     -
+     - 
      - ORDER_GENERAL: Required, repeating
 
 .. _hl7-v2_4-OMN_O07:
@@ -4183,28 +4183,28 @@ OMN_O07
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`OMN_O07_PATIENT <hl7-v2_4-OMN_O07_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`OMN_O07_ORDER <hl7-v2_4-OMN_O07_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-OMP_O09:
@@ -4228,28 +4228,28 @@ OMP_O09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`OMP_O09_PATIENT <hl7-v2_4-OMP_O09_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`OMP_O09_ORDER <hl7-v2_4-OMP_O09_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-OMS_O05:
@@ -4273,28 +4273,28 @@ OMS_O05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`OMS_O05_PATIENT <hl7-v2_4-OMS_O05_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`OMS_O05_ORDER <hl7-v2_4-OMS_O05_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-ORD_O04:
@@ -4318,34 +4318,34 @@ ORD_O04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`ORD_O04_RESPONSE <hl7-v2_4-ORD_O04_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-ORF_R04:
@@ -4369,52 +4369,52 @@ ORF_R04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``RESPONSE``
-     -
+     - 
      - List[:ref:`ORF_R04_RESPONSE <hl7-v2_4-ORF_R04_RESPONSE>`]
      - required
-     -
+     - 
      - RESPONSE: Required, repeating
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-ORG_O20:
@@ -4438,34 +4438,34 @@ ORG_O20
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`ORG_O20_RESPONSE <hl7-v2_4-ORG_O20_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-ORL_O22:
@@ -4489,34 +4489,34 @@ ORL_O22
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`ORL_O22_RESPONSE <hl7-v2_4-ORL_O22_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-ORM_O01:
@@ -4540,28 +4540,28 @@ ORM_O01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`ORM_O01_PATIENT <hl7-v2_4-ORM_O01_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`ORM_O01_ORDER <hl7-v2_4-ORM_O01_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-ORN_O08:
@@ -4585,34 +4585,34 @@ ORN_O08
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`ORN_O08_RESPONSE <hl7-v2_4-ORN_O08_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-ORP_O10:
@@ -4636,34 +4636,34 @@ ORP_O10
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`ORP_O10_RESPONSE <hl7-v2_4-ORP_O10_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-ORR_O02:
@@ -4687,34 +4687,34 @@ ORR_O02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`ORR_O02_RESPONSE <hl7-v2_4-ORR_O02_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-ORS_O06:
@@ -4738,34 +4738,34 @@ ORS_O06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RSPONSE``
-     -
+     - 
      - Optional[:ref:`ORS_O06_RSPONSE <hl7-v2_4-ORS_O06_RSPONSE>`]
      - optional
-     -
+     - 
      - RSPONSE: Optional
 
 .. _hl7-v2_4-ORU_R01:
@@ -4789,22 +4789,22 @@ ORU_R01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PATIENT_RESULT``
-     -
+     - 
      - List[:ref:`ORU_R01_PATIENT_RESULT <hl7-v2_4-ORU_R01_PATIENT_RESULT>`]
      - required
-     -
+     - 
      - PATIENT_RESULT: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-OSQ_Q06:
@@ -4828,28 +4828,28 @@ OSQ_Q06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-OSR_Q06:
@@ -4873,52 +4873,52 @@ OSR_Q06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`OSR_Q06_RESPONSE <hl7-v2_4-OSR_Q06_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-OUL_R21:
@@ -4942,40 +4942,40 @@ OUL_R21
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[:ref:`NTE <hl7-v2_4-NTE>`]
      - optional
-     -
+     - 
      - NTE: Optional
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`OUL_R21_PATIENT <hl7-v2_4-OUL_R21_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``VISIT``
-     -
+     - 
      - Optional[:ref:`OUL_R21_VISIT <hl7-v2_4-OUL_R21_VISIT>`]
      - optional
-     -
+     - 
      - VISIT: Optional
    * - ``ORDER_OBSERVATION``
-     -
+     - 
      - List[:ref:`OUL_R21_ORDER_OBSERVATION <hl7-v2_4-OUL_R21_ORDER_OBSERVATION>`]
      - required
-     -
+     - 
      - ORDER_OBSERVATION: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-PEX_P07:
@@ -4999,46 +4999,46 @@ PEX_P07
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``VISIT``
-     -
+     - 
      - Optional[:ref:`PEX_P07_VISIT <hl7-v2_4-PEX_P07_VISIT>`]
      - optional
-     -
+     - 
      - VISIT: Optional
    * - ``EXPERIENCE``
-     -
+     - 
      - List[:ref:`PEX_P07_EXPERIENCE <hl7-v2_4-PEX_P07_EXPERIENCE>`]
      - required
-     -
+     - 
      - EXPERIENCE: Required, repeating
 
 .. _hl7-v2_4-PGL_PC6:
@@ -5062,28 +5062,28 @@ PGL_PC6
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PATIENT_VISIT``
-     -
+     - 
      - Optional[:ref:`PGL_PC6_PATIENT_VISIT <hl7-v2_4-PGL_PC6_PATIENT_VISIT>`]
      - optional
-     -
+     - 
      - PATIENT_VISIT: Optional
    * - ``GOAL``
-     -
+     - 
      - List[:ref:`PGL_PC6_GOAL <hl7-v2_4-PGL_PC6_GOAL>`]
      - required
-     -
+     - 
      - GOAL: Required, repeating
 
 .. _hl7-v2_4-PMU_B01:
@@ -5107,52 +5107,52 @@ PMU_B01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``STF``
-     -
+     - 
      - :ref:`STF <hl7-v2_4-STF>`
      - required
-     -
+     - 
      - STF: Required
    * - ``PRA``
-     -
+     - 
      - Optional[List[:ref:`PRA <hl7-v2_4-PRA>`]]
      - optional
-     -
+     - 
      - PRA: Optional, repeating
    * - ``ORG``
-     -
+     - 
      - Optional[List[:ref:`ORG <hl7-v2_4-ORG>`]]
      - optional
-     -
+     - 
      - ORG: Optional, repeating
    * - ``AFF``
-     -
+     - 
      - Optional[List[:ref:`AFF <hl7-v2_4-AFF>`]]
      - optional
-     -
+     - 
      - AFF: Optional, repeating
    * - ``LAN``
-     -
+     - 
      - Optional[List[:ref:`LAN <hl7-v2_4-LAN>`]]
      - optional
-     -
+     - 
      - LAN: Optional, repeating
    * - ``EDU``
-     -
+     - 
      - Optional[List[:ref:`EDU <hl7-v2_4-EDU>`]]
      - optional
-     -
+     - 
      - EDU: Optional, repeating
 
 .. _hl7-v2_4-PMU_B03:
@@ -5176,22 +5176,22 @@ PMU_B03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``STF``
-     -
+     - 
      - :ref:`STF <hl7-v2_4-STF>`
      - required
-     -
+     - 
      - STF: Required
 
 .. _hl7-v2_4-PMU_B04:
@@ -5215,34 +5215,34 @@ PMU_B04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EVN``
-     -
+     - 
      - :ref:`EVN <hl7-v2_4-EVN>`
      - required
-     -
+     - 
      - EVN: Required
    * - ``STF``
-     -
+     - 
      - :ref:`STF <hl7-v2_4-STF>`
      - required
-     -
+     - 
      - STF: Required
    * - ``PRA``
-     -
+     - 
      - Optional[List[:ref:`PRA <hl7-v2_4-PRA>`]]
      - optional
-     -
+     - 
      - PRA: Optional, repeating
    * - ``ORG``
-     -
+     - 
      - Optional[:ref:`ORG <hl7-v2_4-ORG>`]
      - optional
-     -
+     - 
      - ORG: Optional
 
 .. _hl7-v2_4-PPG_PCG:
@@ -5266,28 +5266,28 @@ PPG_PCG
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PATIENT_VISIT``
-     -
+     - 
      - Optional[:ref:`PPG_PCG_PATIENT_VISIT <hl7-v2_4-PPG_PCG_PATIENT_VISIT>`]
      - optional
-     -
+     - 
      - PATIENT_VISIT: Optional
    * - ``PATHWAY``
-     -
+     - 
      - List[:ref:`PPG_PCG_PATHWAY <hl7-v2_4-PPG_PCG_PATHWAY>`]
      - required
-     -
+     - 
      - PATHWAY: Required, repeating
 
 .. _hl7-v2_4-PPP_PCB:
@@ -5311,28 +5311,28 @@ PPP_PCB
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PATIENT_VISIT``
-     -
+     - 
      - Optional[:ref:`PPP_PCB_PATIENT_VISIT <hl7-v2_4-PPP_PCB_PATIENT_VISIT>`]
      - optional
-     -
+     - 
      - PATIENT_VISIT: Optional
    * - ``PATHWAY``
-     -
+     - 
      - List[:ref:`PPP_PCB_PATHWAY <hl7-v2_4-PPP_PCB_PATHWAY>`]
      - required
-     -
+     - 
      - PATHWAY: Required, repeating
 
 .. _hl7-v2_4-PPR_PC1:
@@ -5356,28 +5356,28 @@ PPR_PC1
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PATIENT_VISIT``
-     -
+     - 
      - Optional[:ref:`PPR_PC1_PATIENT_VISIT <hl7-v2_4-PPR_PC1_PATIENT_VISIT>`]
      - optional
-     -
+     - 
      - PATIENT_VISIT: Optional
    * - ``PROBLEM``
-     -
+     - 
      - List[:ref:`PPR_PC1_PROBLEM <hl7-v2_4-PPR_PC1_PROBLEM>`]
      - required
-     -
+     - 
      - PROBLEM: Required, repeating
 
 .. _hl7-v2_4-PPT_PCL:
@@ -5401,40 +5401,40 @@ PPT_PCL
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`PPT_PCL_PATIENT <hl7-v2_4-PPT_PCL_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-PPV_PCA:
@@ -5458,40 +5458,40 @@ PPV_PCA
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`PPV_PCA_PATIENT <hl7-v2_4-PPV_PCA_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-PRR_PC5:
@@ -5515,40 +5515,40 @@ PRR_PC5
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`PRR_PC5_PATIENT <hl7-v2_4-PRR_PC5_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-PTR_PCF:
@@ -5572,40 +5572,40 @@ PTR_PCF
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`PTR_PCF_PATIENT <hl7-v2_4-PTR_PCF_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating
 
 .. _hl7-v2_4-QBP_K13:
@@ -5629,46 +5629,46 @@ QBP_K13
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``ROW_DEFINITION``
-     -
+     - 
      - Optional[:ref:`QBP_K13_ROW_DEFINITION <hl7-v2_4-QBP_K13_ROW_DEFINITION>`]
      - optional
-     -
+     - 
      - ROW_DEFINITION: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QBP_Q11:
@@ -5692,28 +5692,28 @@ QBP_Q11
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QBP_Q13:
@@ -5737,40 +5737,40 @@ QBP_Q13
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``QBP``
-     -
+     - 
      - Optional[:ref:`QBP_Q13_QBP <hl7-v2_4-QBP_Q13_QBP>`]
      - optional
-     -
+     - 
      - QBP: Optional
    * - ``RDF``
-     -
+     - 
      - Optional[:ref:`RDF <hl7-v2_4-RDF>`]
      - optional
-     -
+     - 
      - RDF: Optional
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QBP_Q15:
@@ -5794,28 +5794,28 @@ QBP_Q15
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QBP_Q21:
@@ -5839,28 +5839,28 @@ QBP_Q21
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QBP_Qnn:
@@ -5884,34 +5884,34 @@ QBP_Qnn
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RDF``
-     -
+     - 
      - Optional[:ref:`RDF <hl7-v2_4-RDF>`]
      - optional
-     -
+     - 
      - RDF: Optional
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QBP_Z73:
@@ -5935,22 +5935,22 @@ QBP_Z73
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
 
 .. _hl7-v2_4-QCK_Q02:
@@ -5974,28 +5974,28 @@ QCK_Q02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - Optional[:ref:`QAK <hl7-v2_4-QAK>`]
      - optional
-     -
+     - 
      - QAK: Optional
 
 .. _hl7-v2_4-QCN_J01:
@@ -6019,16 +6019,16 @@ QCN_J01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QID``
-     -
+     - 
      - :ref:`QID <hl7-v2_4-QID>`
      - required
-     -
+     - 
      - QID: Required
 
 .. _hl7-v2_4-QRY_A19:
@@ -6052,22 +6052,22 @@ QRY_A19
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
 
 .. _hl7-v2_4-QRY_PC4:
@@ -6091,22 +6091,22 @@ QRY_PC4
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
 
 .. _hl7-v2_4-QRY_Q01:
@@ -6130,28 +6130,28 @@ QRY_Q01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QRY_Q02:
@@ -6175,28 +6175,28 @@ QRY_Q02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QRY_R02:
@@ -6220,22 +6220,22 @@ QRY_R02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - :ref:`QRF <hl7-v2_4-QRF>`
      - required
-     -
+     - 
      - QRF: Required
 
 .. _hl7-v2_4-QRY_T12:
@@ -6259,22 +6259,22 @@ QRY_T12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
 
 .. _hl7-v2_4-QSB_Q16:
@@ -6298,28 +6298,28 @@ QSB_Q16
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-QVR_Q17:
@@ -6343,28 +6343,28 @@ QVR_Q17
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RAR_RAR:
@@ -6388,34 +6388,34 @@ RAR_RAR
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``DEFINITION``
-     -
+     - 
      - List[:ref:`RAR_RAR_DEFINITION <hl7-v2_4-RAR_RAR_DEFINITION>`]
      - required
-     -
+     - 
      - DEFINITION: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RAS_O17:
@@ -6439,28 +6439,28 @@ RAS_O17
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`RAS_O17_PATIENT <hl7-v2_4-RAS_O17_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`RAS_O17_ORDER <hl7-v2_4-RAS_O17_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-RCI_I05:
@@ -6484,70 +6484,70 @@ RCI_I05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RCI_I05_PROVIDER <hl7-v2_4-RCI_I05_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[List[:ref:`DRG <hl7-v2_4-DRG>`]]
      - optional
-     -
+     - 
      - DRG: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``OBSERVATION``
-     -
+     - 
      - Optional[List[:ref:`RCI_I05_OBSERVATION <hl7-v2_4-RCI_I05_OBSERVATION>`]]
      - optional
-     -
+     - 
      - OBSERVATION: Optional, repeating
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RCL_I06:
@@ -6571,76 +6571,76 @@ RCL_I06
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RCL_I06_PROVIDER <hl7-v2_4-RCL_I06_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[List[:ref:`DRG <hl7-v2_4-DRG>`]]
      - optional
-     -
+     - 
      - DRG: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``DSP``
-     -
+     - 
      - Optional[List[:ref:`DSP <hl7-v2_4-DSP>`]]
      - optional
-     -
+     - 
      - DSP: Optional, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RDE_O11:
@@ -6664,28 +6664,28 @@ RDE_O11
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`RDE_O11_PATIENT <hl7-v2_4-RDE_O11_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`RDE_O11_ORDER <hl7-v2_4-RDE_O11_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-RDR_RDR:
@@ -6709,34 +6709,34 @@ RDR_RDR
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``DEFINITION``
-     -
+     - 
      - List[:ref:`RDR_RDR_DEFINITION <hl7-v2_4-RDR_RDR_DEFINITION>`]
      - required
-     -
+     - 
      - DEFINITION: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RDS_O13:
@@ -6760,28 +6760,28 @@ RDS_O13
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`RDS_O13_PATIENT <hl7-v2_4-RDS_O13_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`RDS_O13_ORDER <hl7-v2_4-RDS_O13_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-RDY_K15:
@@ -6805,46 +6805,46 @@ RDY_K15
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``DSP``
-     -
+     - 
      - Optional[List[:ref:`DSP <hl7-v2_4-DSP>`]]
      - optional
-     -
+     - 
      - DSP: Optional, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-REF_I12:
@@ -6868,100 +6868,100 @@ REF_I12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``RF1``
-     -
+     - 
      - Optional[:ref:`RF1 <hl7-v2_4-RF1>`]
      - optional
-     -
+     - 
      - RF1: Optional
    * - ``AUTHORIZATION_CONTACT``
-     -
+     - 
      - Optional[:ref:`REF_I12_AUTHORIZATION_CONTACT <hl7-v2_4-REF_I12_AUTHORIZATION_CONTACT>`]
      - optional
-     -
+     - 
      - AUTHORIZATION_CONTACT: Optional
    * - ``PROVIDER_CONTACT``
-     -
+     - 
      - List[:ref:`REF_I12_PROVIDER_CONTACT <hl7-v2_4-REF_I12_PROVIDER_CONTACT>`]
      - required
-     -
+     - 
      - PROVIDER_CONTACT: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`REF_I12_INSURANCE <hl7-v2_4-REF_I12_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[List[:ref:`DRG <hl7-v2_4-DRG>`]]
      - optional
-     -
+     - 
      - DRG: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`REF_I12_PROCEDURE <hl7-v2_4-REF_I12_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
    * - ``OBSERVATION``
-     -
+     - 
      - Optional[List[:ref:`REF_I12_OBSERVATION <hl7-v2_4-REF_I12_OBSERVATION>`]]
      - optional
-     -
+     - 
      - OBSERVATION: Optional, repeating
    * - ``PATIENT_VISIT``
-     -
+     - 
      - Optional[:ref:`REF_I12_PATIENT_VISIT <hl7-v2_4-REF_I12_PATIENT_VISIT>`]
      - optional
-     -
+     - 
      - PATIENT_VISIT: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RER_RER:
@@ -6985,34 +6985,34 @@ RER_RER
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``DEFINITION``
-     -
+     - 
      - List[:ref:`RER_RER_DEFINITION <hl7-v2_4-RER_RER_DEFINITION>`]
      - required
-     -
+     - 
      - DEFINITION: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RGR_RGR:
@@ -7036,34 +7036,34 @@ RGR_RGR
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``DEFINTION``
-     -
+     - 
      - List[:ref:`RGR_RGR_DEFINTION <hl7-v2_4-RGR_RGR_DEFINTION>`]
      - required
-     -
+     - 
      - DEFINTION: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RGV_O15:
@@ -7087,28 +7087,28 @@ RGV_O15
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`RGV_O15_PATIENT <hl7-v2_4-RGV_O15_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``ORDER``
-     -
+     - 
      - List[:ref:`RGV_O15_ORDER <hl7-v2_4-RGV_O15_ORDER>`]
      - required
-     -
+     - 
      - ORDER: Required, repeating
 
 .. _hl7-v2_4-ROR_ROR:
@@ -7132,34 +7132,34 @@ ROR_ROR
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``DEFINITION``
-     -
+     - 
      - List[:ref:`ROR_ROR_DEFINITION <hl7-v2_4-ROR_ROR_DEFINITION>`]
      - required
-     -
+     - 
      - DEFINITION: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RPA_I08:
@@ -7183,106 +7183,106 @@ RPA_I08
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``RF1``
-     -
+     - 
      - Optional[:ref:`RF1 <hl7-v2_4-RF1>`]
      - optional
-     -
+     - 
      - RF1: Optional
    * - ``AUTHORIZATION``
-     -
+     - 
      - Optional[:ref:`RPA_I08_AUTHORIZATION <hl7-v2_4-RPA_I08_AUTHORIZATION>`]
      - optional
-     -
+     - 
      - AUTHORIZATION: Optional
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RPA_I08_PROVIDER <hl7-v2_4-RPA_I08_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`RPA_I08_INSURANCE <hl7-v2_4-RPA_I08_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[List[:ref:`DRG <hl7-v2_4-DRG>`]]
      - optional
-     -
+     - 
      - DRG: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``PROCEDURE``
-     -
+     - 
      - List[:ref:`RPA_I08_PROCEDURE <hl7-v2_4-RPA_I08_PROCEDURE>`]
      - required
-     -
+     - 
      - PROCEDURE: Required, repeating
    * - ``OBSERVATION``
-     -
+     - 
      - Optional[List[:ref:`RPA_I08_OBSERVATION <hl7-v2_4-RPA_I08_OBSERVATION>`]]
      - optional
-     -
+     - 
      - OBSERVATION: Optional, repeating
    * - ``VISIT``
-     -
+     - 
      - Optional[:ref:`RPA_I08_VISIT <hl7-v2_4-RPA_I08_VISIT>`]
      - optional
-     -
+     - 
      - VISIT: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RPI_I01:
@@ -7306,46 +7306,46 @@ RPI_I01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RPI_I01_PROVIDER <hl7-v2_4-RPI_I01_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GUARANTOR_INSURANCE``
-     -
+     - 
      - Optional[:ref:`RPI_I01_GUARANTOR_INSURANCE <hl7-v2_4-RPI_I01_GUARANTOR_INSURANCE>`]
      - optional
-     -
+     - 
      - GUARANTOR_INSURANCE: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RPI_I04:
@@ -7369,46 +7369,46 @@ RPI_I04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RPI_I04_PROVIDER <hl7-v2_4-RPI_I04_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GUARANTOR_INSURANCE``
-     -
+     - 
      - Optional[:ref:`RPI_I04_GUARANTOR_INSURANCE <hl7-v2_4-RPI_I04_GUARANTOR_INSURANCE>`]
      - optional
-     -
+     - 
      - GUARANTOR_INSURANCE: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RPL_I02:
@@ -7432,40 +7432,40 @@ RPL_I02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RPL_I02_PROVIDER <hl7-v2_4-RPL_I02_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``DSP``
-     -
+     - 
      - Optional[List[:ref:`DSP <hl7-v2_4-DSP>`]]
      - optional
-     -
+     - 
      - DSP: Optional, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RPR_I03:
@@ -7489,34 +7489,34 @@ RPR_I03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RPR_I03_PROVIDER <hl7-v2_4-RPR_I03_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - Optional[List[:ref:`PID <hl7-v2_4-PID>`]]
      - optional
-     -
+     - 
      - PID: Optional, repeating
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RQA_I08:
@@ -7540,94 +7540,94 @@ RQA_I08
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``RF1``
-     -
+     - 
      - Optional[:ref:`RF1 <hl7-v2_4-RF1>`]
      - optional
-     -
+     - 
      - RF1: Optional
    * - ``AUTHORIZATION``
-     -
+     - 
      - Optional[:ref:`RQA_I08_AUTHORIZATION <hl7-v2_4-RQA_I08_AUTHORIZATION>`]
      - optional
-     -
+     - 
      - AUTHORIZATION: Optional
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RQA_I08_PROVIDER <hl7-v2_4-RQA_I08_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GUARANTOR_INSURANCE``
-     -
+     - 
      - Optional[:ref:`RQA_I08_GUARANTOR_INSURANCE <hl7-v2_4-RQA_I08_GUARANTOR_INSURANCE>`]
      - optional
-     -
+     - 
      - GUARANTOR_INSURANCE: Optional
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[List[:ref:`DRG <hl7-v2_4-DRG>`]]
      - optional
-     -
+     - 
      - DRG: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`RQA_I08_PROCEDURE <hl7-v2_4-RQA_I08_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
    * - ``OBSERVATION``
-     -
+     - 
      - Optional[List[:ref:`RQA_I08_OBSERVATION <hl7-v2_4-RQA_I08_OBSERVATION>`]]
      - optional
-     -
+     - 
      - OBSERVATION: Optional, repeating
    * - ``VISIT``
-     -
+     - 
      - Optional[:ref:`RQA_I08_VISIT <hl7-v2_4-RQA_I08_VISIT>`]
      - optional
-     -
+     - 
      - VISIT: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RQC_I05:
@@ -7651,52 +7651,52 @@ RQC_I05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RQC_I05_PROVIDER <hl7-v2_4-RQC_I05_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RQI_I01:
@@ -7720,40 +7720,40 @@ RQI_I01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RQI_I01_PROVIDER <hl7-v2_4-RQI_I01_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GUARANTOR_INSURANCE``
-     -
+     - 
      - Optional[:ref:`RQI_I01_GUARANTOR_INSURANCE <hl7-v2_4-RQI_I01_GUARANTOR_INSURANCE>`]
      - optional
-     -
+     - 
      - GUARANTOR_INSURANCE: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RQP_I04:
@@ -7777,40 +7777,40 @@ RQP_I04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PROVIDER``
-     -
+     - 
      - List[:ref:`RQP_I04_PROVIDER <hl7-v2_4-RQP_I04_PROVIDER>`]
      - required
-     -
+     - 
      - PROVIDER: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RQQ_Q09:
@@ -7834,22 +7834,22 @@ RQQ_Q09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``ERQ``
-     -
+     - 
      - :ref:`ERQ <hl7-v2_4-ERQ>`
      - required
-     -
+     - 
      - ERQ: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RRA_O18:
@@ -7873,34 +7873,34 @@ RRA_O18
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`RRA_O18_RESPONSE <hl7-v2_4-RRA_O18_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-RRD_O14:
@@ -7924,34 +7924,34 @@ RRD_O14
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`RRD_O14_RESPONSE <hl7-v2_4-RRD_O14_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-RRE_O12:
@@ -7975,34 +7975,34 @@ RRE_O12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`RRE_O12_RESPONSE <hl7-v2_4-RRE_O12_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-RRG_O16:
@@ -8026,34 +8026,34 @@ RRG_O16
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``RESPONSE``
-     -
+     - 
      - Optional[:ref:`RRG_O16_RESPONSE <hl7-v2_4-RRG_O16_RESPONSE>`]
      - optional
-     -
+     - 
      - RESPONSE: Optional
 
 .. _hl7-v2_4-RRI_I12:
@@ -8077,88 +8077,88 @@ RRI_I12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - Optional[:ref:`MSA <hl7-v2_4-MSA>`]
      - optional
-     -
+     - 
      - MSA: Optional
    * - ``RF1``
-     -
+     - 
      - Optional[:ref:`RF1 <hl7-v2_4-RF1>`]
      - optional
-     -
+     - 
      - RF1: Optional
    * - ``AUTHORIZATION_CONTACT``
-     -
+     - 
      - Optional[:ref:`RRI_I12_AUTHORIZATION_CONTACT <hl7-v2_4-RRI_I12_AUTHORIZATION_CONTACT>`]
      - optional
-     -
+     - 
      - AUTHORIZATION_CONTACT: Optional
    * - ``PROVIDER_CONTACT``
-     -
+     - 
      - List[:ref:`RRI_I12_PROVIDER_CONTACT <hl7-v2_4-RRI_I12_PROVIDER_CONTACT>`]
      - required
-     -
+     - 
      - PROVIDER_CONTACT: Required, repeating
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``ACC``
-     -
+     - 
      - Optional[:ref:`ACC <hl7-v2_4-ACC>`]
      - optional
-     -
+     - 
      - ACC: Optional
    * - ``DG1``
-     -
+     - 
      - Optional[List[:ref:`DG1 <hl7-v2_4-DG1>`]]
      - optional
-     -
+     - 
      - DG1: Optional, repeating
    * - ``DRG``
-     -
+     - 
      - Optional[List[:ref:`DRG <hl7-v2_4-DRG>`]]
      - optional
-     -
+     - 
      - DRG: Optional, repeating
    * - ``AL1``
-     -
+     - 
      - Optional[List[:ref:`AL1 <hl7-v2_4-AL1>`]]
      - optional
-     -
+     - 
      - AL1: Optional, repeating
    * - ``PROCEDURE``
-     -
+     - 
      - Optional[List[:ref:`RRI_I12_PROCEDURE <hl7-v2_4-RRI_I12_PROCEDURE>`]]
      - optional
-     -
+     - 
      - PROCEDURE: Optional, repeating
    * - ``OBSERVATION``
-     -
+     - 
      - Optional[List[:ref:`RRI_I12_OBSERVATION <hl7-v2_4-RRI_I12_OBSERVATION>`]]
      - optional
-     -
+     - 
      - OBSERVATION: Optional, repeating
    * - ``PATIENT_VISIT``
-     -
+     - 
      - Optional[:ref:`RRI_I12_PATIENT_VISIT <hl7-v2_4-RRI_I12_PATIENT_VISIT>`]
      - optional
-     -
+     - 
      - PATIENT_VISIT: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
 
 .. _hl7-v2_4-RSP_K11:
@@ -8182,40 +8182,40 @@ RSP_K11
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_K13:
@@ -8239,46 +8239,46 @@ RSP_K13
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``ROW_DEFINITION``
-     -
+     - 
      - Optional[:ref:`RSP_K13_ROW_DEFINITION <hl7-v2_4-RSP_K13_ROW_DEFINITION>`]
      - optional
-     -
+     - 
      - ROW_DEFINITION: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_K15:
@@ -8302,46 +8302,46 @@ RSP_K15
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``DSP``
-     -
+     - 
      - Optional[List[:ref:`DSP <hl7-v2_4-DSP>`]]
      - optional
-     -
+     - 
      - DSP: Optional, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_K21:
@@ -8365,46 +8365,46 @@ RSP_K21
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``QUERY_RESPONSE``
-     -
+     - 
      - Optional[:ref:`RSP_K21_QUERY_RESPONSE <hl7-v2_4-RSP_K21_QUERY_RESPONSE>`]
      - optional
-     -
+     - 
      - QUERY_RESPONSE: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_K22:
@@ -8428,46 +8428,46 @@ RSP_K22
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``QUERY_RESPONSE``
-     -
+     - 
      - Optional[List[:ref:`RSP_K22_QUERY_RESPONSE <hl7-v2_4-RSP_K22_QUERY_RESPONSE>`]]
      - optional
-     -
+     - 
      - QUERY_RESPONSE: Optional, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_K23:
@@ -8491,46 +8491,46 @@ RSP_K23
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``PID``
-     -
+     - 
      - Optional[:ref:`PID <hl7-v2_4-PID>`]
      - optional
-     -
+     - 
      - PID: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_K24:
@@ -8554,46 +8554,46 @@ RSP_K24
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``PID``
-     -
+     - 
      - Optional[:ref:`PID <hl7-v2_4-PID>`]
      - optional
-     -
+     - 
      - PID: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_K25:
@@ -8617,52 +8617,52 @@ RSP_K25
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``STAFF``
-     -
+     - 
      - List[:ref:`RSP_K25_STAFF <hl7-v2_4-RSP_K25_STAFF>`]
      - required
-     -
+     - 
      - STAFF: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_Z82:
@@ -8686,52 +8686,52 @@ RSP_Z82
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``QUERY_RESPONSE``
-     -
+     - 
      - List[:ref:`RSP_Z82_QUERY_RESPONSE <hl7-v2_4-RSP_Z82_QUERY_RESPONSE>`]
      - required
-     -
+     - 
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_Z86:
@@ -8755,46 +8755,46 @@ RSP_Z86
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``QUERY_RESPONSE``
-     -
+     - 
      - List[:ref:`RSP_Z86_QUERY_RESPONSE <hl7-v2_4-RSP_Z86_QUERY_RESPONSE>`]
      - required
-     -
+     - 
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RSP_Z88:
@@ -8818,52 +8818,52 @@ RSP_Z88
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``QUERY_RESPONSE``
-     -
+     - 
      - List[:ref:`RSP_Z88_QUERY_RESPONSE <hl7-v2_4-RSP_Z88_QUERY_RESPONSE>`]
      - required
-     -
+     - 
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
-     -
+     - 
      - :ref:`DSC <hl7-v2_4-DSC>`
      - required
-     -
+     - 
      - DSC: Required
 
 .. _hl7-v2_4-RSP_Z90:
@@ -8887,52 +8887,52 @@ RSP_Z90
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``RCP``
-     -
+     - 
      - :ref:`RCP <hl7-v2_4-RCP>`
      - required
-     -
+     - 
      - RCP: Required
    * - ``QUERY_RESPONSE``
-     -
+     - 
      - List[:ref:`RSP_Z90_QUERY_RESPONSE <hl7-v2_4-RSP_Z90_QUERY_RESPONSE>`]
      - required
-     -
+     - 
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
-     -
+     - 
      - :ref:`DSC <hl7-v2_4-DSC>`
      - required
-     -
+     - 
      - DSC: Required
 
 .. _hl7-v2_4-RTB_K13:
@@ -8956,46 +8956,46 @@ RTB_K13
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``ROW_DEFINITION``
-     -
+     - 
      - Optional[:ref:`RTB_K13_ROW_DEFINITION <hl7-v2_4-RTB_K13_ROW_DEFINITION>`]
      - optional
-     -
+     - 
      - ROW_DEFINITION: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RTB_Knn:
@@ -9019,40 +9019,40 @@ RTB_Knn
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RTB_Q13:
@@ -9076,46 +9076,46 @@ RTB_Q13
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``ROW_DEFINITION``
-     -
+     - 
      - Optional[:ref:`RTB_Q13_ROW_DEFINITION <hl7-v2_4-RTB_Q13_ROW_DEFINITION>`]
      - optional
-     -
+     - 
      - ROW_DEFINITION: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-RTB_Z74:
@@ -9139,46 +9139,46 @@ RTB_Z74
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``QPD``
-     -
+     - 
      - :ref:`QPD <hl7-v2_4-QPD>`
      - required
-     -
+     - 
      - QPD: Required
    * - ``ROW_DEFINITION``
-     -
+     - 
      - Optional[:ref:`RTB_Z74_ROW_DEFINITION <hl7-v2_4-RTB_Z74_ROW_DEFINITION>`]
      - optional
-     -
+     - 
      - ROW_DEFINITION: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-SIU_S12:
@@ -9202,34 +9202,34 @@ SIU_S12
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``SCH``
-     -
+     - 
      - :ref:`SCH <hl7-v2_4-SCH>`
      - required
-     -
+     - 
      - SCH: Required
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_4-SIU_S12_PATIENT>`]]
      - optional
-     -
+     - 
      - PATIENT: Optional, repeating
    * - ``RESOURCES``
-     -
+     - 
      - List[:ref:`SIU_S12_RESOURCES <hl7-v2_4-SIU_S12_RESOURCES>`]
      - required
-     -
+     - 
      - RESOURCES: Required, repeating
 
 .. _hl7-v2_4-SPQ_Q08:
@@ -9253,28 +9253,28 @@ SPQ_Q08
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``SPR``
-     -
+     - 
      - :ref:`SPR <hl7-v2_4-SPR>`
      - required
-     -
+     - 
      - SPR: Required
    * - ``RDF``
-     -
+     - 
      - Optional[:ref:`RDF <hl7-v2_4-RDF>`]
      - optional
-     -
+     - 
      - RDF: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-SQM_S25:
@@ -9298,34 +9298,34 @@ SQM_S25
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``REQUEST``
-     -
+     - 
      - Optional[:ref:`SQM_S25_REQUEST <hl7-v2_4-SQM_S25_REQUEST>`]
      - optional
-     -
+     - 
      - REQUEST: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-SQR_S25:
@@ -9349,40 +9349,40 @@ SQR_S25
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``SCHEDULE``
-     -
+     - 
      - Optional[List[:ref:`SQR_S25_SCHEDULE <hl7-v2_4-SQR_S25_SCHEDULE>`]]
      - optional
-     -
+     - 
      - SCHEDULE: Optional, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-SRM_S01:
@@ -9406,40 +9406,40 @@ SRM_S01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``ARQ``
-     -
+     - 
      - :ref:`ARQ <hl7-v2_4-ARQ>`
      - required
-     -
+     - 
      - ARQ: Required
    * - ``APR``
-     -
+     - 
      - Optional[:ref:`APR <hl7-v2_4-APR>`]
      - optional
-     -
+     - 
      - APR: Optional
    * - ``NTE``
-     -
+     - 
      - Optional[List[:ref:`NTE <hl7-v2_4-NTE>`]]
      - optional
-     -
+     - 
      - NTE: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_4-SRM_S01_PATIENT>`]]
      - optional
-     -
+     - 
      - PATIENT: Optional, repeating
    * - ``RESOURCES``
-     -
+     - 
      - List[:ref:`SRM_S01_RESOURCES <hl7-v2_4-SRM_S01_RESOURCES>`]
      - required
-     -
+     - 
      - RESOURCES: Required, repeating
 
 .. _hl7-v2_4-SRR_S01:
@@ -9463,28 +9463,28 @@ SRR_S01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``SCHEDULE``
-     -
+     - 
      - Optional[:ref:`SRR_S01_SCHEDULE <hl7-v2_4-SRR_S01_SCHEDULE>`]
      - optional
-     -
+     - 
      - SCHEDULE: Optional
 
 .. _hl7-v2_4-SSR_U04:
@@ -9508,28 +9508,28 @@ SSR_U04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``SAC``
-     -
+     - 
      - List[:ref:`SAC <hl7-v2_4-SAC>`]
      - required
-     -
+     - 
      - SAC: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-SSU_U03:
@@ -9553,28 +9553,28 @@ SSU_U03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``SPECIMEN_CONTAINER``
-     -
+     - 
      - List[:ref:`SSU_U03_SPECIMEN_CONTAINER <hl7-v2_4-SSU_U03_SPECIMEN_CONTAINER>`]
      - required
-     -
+     - 
      - SPECIMEN_CONTAINER: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-SUR_P09:
@@ -9598,16 +9598,16 @@ SUR_P09
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``FACILITY``
-     -
+     - 
      - List[:ref:`SUR_P09_FACILITY <hl7-v2_4-SUR_P09_FACILITY>`]
      - required
-     -
+     - 
      - FACILITY: Required, repeating
 
 .. _hl7-v2_4-TBR_R08:
@@ -9631,46 +9631,46 @@ TBR_R08
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``ERR``
-     -
+     - 
      - Optional[:ref:`ERR <hl7-v2_4-ERR>`]
      - optional
-     -
+     - 
      - ERR: Optional
    * - ``QAK``
-     -
+     - 
      - :ref:`QAK <hl7-v2_4-QAK>`
      - required
-     -
+     - 
      - QAK: Required
    * - ``RDF``
-     -
+     - 
      - :ref:`RDF <hl7-v2_4-RDF>`
      - required
-     -
+     - 
      - RDF: Required
    * - ``RDT``
-     -
+     - 
      - List[:ref:`RDT <hl7-v2_4-RDT>`]
      - required
-     -
+     - 
      - RDT: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-TCU_U10:
@@ -9694,28 +9694,28 @@ TCU_U10
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``EQU``
-     -
+     - 
      - :ref:`EQU <hl7-v2_4-EQU>`
      - required
-     -
+     - 
      - EQU: Required
    * - ``TCC``
-     -
+     - 
      - List[:ref:`TCC <hl7-v2_4-TCC>`]
      - required
-     -
+     - 
      - TCC: Required, repeating
    * - ``ROL``
-     -
+     - 
      - Optional[:ref:`ROL <hl7-v2_4-ROL>`]
      - optional
-     -
+     - 
      - ROL: Optional
 
 .. _hl7-v2_4-UDM_Q05:
@@ -9739,34 +9739,34 @@ UDM_Q05
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``URD``
-     -
+     - 
      - :ref:`URD <hl7-v2_4-URD>`
      - required
-     -
+     - 
      - URD: Required
    * - ``URS``
-     -
+     - 
      - Optional[:ref:`URS <hl7-v2_4-URS>`]
      - optional
-     -
+     - 
      - URS: Optional
    * - ``DSP``
-     -
+     - 
      - List[:ref:`DSP <hl7-v2_4-DSP>`]
      - required
-     -
+     - 
      - DSP: Required, repeating
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-VQQ_Q07:
@@ -9790,28 +9790,28 @@ VQQ_Q07
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``VTQ``
-     -
+     - 
      - :ref:`VTQ <hl7-v2_4-VTQ>`
      - required
-     -
+     - 
      - VTQ: Required
    * - ``RDF``
-     -
+     - 
      - Optional[:ref:`RDF <hl7-v2_4-RDF>`]
      - optional
-     -
+     - 
      - RDF: Optional
    * - ``DSC``
-     -
+     - 
      - Optional[:ref:`DSC <hl7-v2_4-DSC>`]
      - optional
-     -
+     - 
      - DSC: Optional
 
 .. _hl7-v2_4-VXQ_V01:
@@ -9835,22 +9835,22 @@ VXQ_V01
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
 
 .. _hl7-v2_4-VXR_V03:
@@ -9874,70 +9874,70 @@ VXR_V03
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``PATIENT_VISIT``
-     -
+     - 
      - Optional[:ref:`VXR_V03_PATIENT_VISIT <hl7-v2_4-VXR_V03_PATIENT_VISIT>`]
      - optional
-     -
+     - 
      - PATIENT_VISIT: Optional
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`VXR_V03_INSURANCE <hl7-v2_4-VXR_V03_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ORDER``
-     -
+     - 
      - Optional[List[:ref:`VXR_V03_ORDER <hl7-v2_4-VXR_V03_ORDER>`]]
      - optional
-     -
+     - 
      - ORDER: Optional, repeating
 
 .. _hl7-v2_4-VXU_V04:
@@ -9961,52 +9961,52 @@ VXU_V04
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``PID``
-     -
+     - 
      - :ref:`PID <hl7-v2_4-PID>`
      - required
-     -
+     - 
      - PID: Required
    * - ``PD1``
-     -
+     - 
      - Optional[:ref:`PD1 <hl7-v2_4-PD1>`]
      - optional
-     -
+     - 
      - PD1: Optional
    * - ``NK1``
-     -
+     - 
      - Optional[List[:ref:`NK1 <hl7-v2_4-NK1>`]]
      - optional
-     -
+     - 
      - NK1: Optional, repeating
    * - ``PATIENT``
-     -
+     - 
      - Optional[:ref:`VXU_V04_PATIENT <hl7-v2_4-VXU_V04_PATIENT>`]
      - optional
-     -
+     - 
      - PATIENT: Optional
    * - ``GT1``
-     -
+     - 
      - Optional[List[:ref:`GT1 <hl7-v2_4-GT1>`]]
      - optional
-     -
+     - 
      - GT1: Optional, repeating
    * - ``INSURANCE``
-     -
+     - 
      - Optional[List[:ref:`VXU_V04_INSURANCE <hl7-v2_4-VXU_V04_INSURANCE>`]]
      - optional
-     -
+     - 
      - INSURANCE: Optional, repeating
    * - ``ORDER``
-     -
+     - 
      - Optional[List[:ref:`VXU_V04_ORDER <hl7-v2_4-VXU_V04_ORDER>`]]
      - optional
-     -
+     - 
      - ORDER: Optional, repeating
 
 .. _hl7-v2_4-VXX_V02:
@@ -10030,32 +10030,32 @@ VXX_V02
      - Max Length
      - Description
    * - ``MSH``
-     -
+     - 
      - :ref:`MSH <hl7-v2_4-MSH>`
      - required
-     -
+     - 
      - MSH: Required
    * - ``MSA``
-     -
+     - 
      - :ref:`MSA <hl7-v2_4-MSA>`
      - required
-     -
+     - 
      - MSA: Required
    * - ``QRD``
-     -
+     - 
      - :ref:`QRD <hl7-v2_4-QRD>`
      - required
-     -
+     - 
      - QRD: Required
    * - ``QRF``
-     -
+     - 
      - Optional[:ref:`QRF <hl7-v2_4-QRF>`]
      - optional
-     -
+     - 
      - QRF: Optional
    * - ``PATIENT``
-     -
+     - 
      - List[:ref:`VXX_V02_PATIENT <hl7-v2_4-VXX_V02_PATIENT>`]
      - required
-     -
+     - 
      - PATIENT: Required, repeating

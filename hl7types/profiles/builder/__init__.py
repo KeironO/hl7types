@@ -152,7 +152,7 @@ def make_constrained_segment(
                     metadata.append(AfterValidator(checker))
 
                 constrained_inner = Annotated[tuple(metadata)]
-                annotation = Union[constrained_inner, None] if was_optional else constrained_inner
+                annotation = constrained_inner if was_optional else constrained_inner
 
         field_overrides[field_name] = (
             annotation,

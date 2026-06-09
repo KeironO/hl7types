@@ -142,7 +142,7 @@ EMPTY_SEGMENT_WIRE = (
 def test_empty_segment_decodes_with_placeholder() -> None:
     # Bare PV1 segment has no field data; required pv1_2 is injected as a placeholder.
     with pytest.warns(UserWarning, match=r"pv1_2"):
-        msg = ADT_A03_v25.model_validate_er7(EMPTY_SEGMENT_WIRE)
+        msg = ADT_A03_v25.model_validate_er7(EMPTY_SEGMENT_WIRE, strict=False)
     assert isinstance(msg, ADT_A03_v25)
     # PID decoded correctly despite the subsequent empty segments.
     assert msg.PID.pid_3[0].cx_1 == "00J8804997"  # type: ignore[union-attr, index]

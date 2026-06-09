@@ -45,6 +45,10 @@ Each HL7 version is available as a sub-package under `hl7types.hl7.<version>`, w
 pip install hl7types
 ```
 
+## Real-world examples
+
+For workflow-based examples covering common HL7 integration tasks, parsing ADT and ORU messages, building ACKs, handling missing segments, custom Z-segments, XML conversion, and conformance-profile validation, see the **[`examples/`](examples/)** directory.
+
 ## Usage
 
 **Example 1:** Construct an ADT^A01 message from typed models and access fields directly:
@@ -159,7 +163,7 @@ pid_5
 
 
 
-**Example 7:** By default, decoding is lenient. Required segments absent from the wire produce an empty placeholder rather than raising an error. Pass `strict=True` to enforce the spec instead:
+**Example 7:** By default, decoding is strict. A required segment absent from the wire raises a `ValidationError`. Pass `strict=False` to opt into lenient mode, where missing required segments are filled with empty placeholders instead:
 
 ```python
 >>> from hl7types import decode_er7
@@ -169,25 +173,29 @@ pid_5
 >>> # ACK wire with MSA omitted
 >>> wire = "MSH|^~\\&|SEND|FAC|RECV|FAC|20240101120000||ACK|MSG001|P|2.5.1\r"
 >>>
->>> # Lenient (default): succeeds, msg.MSA is an empty placeholder
->>> msg = decode_er7(wire, msg_cls=ACK)
->>> msg.MSA.model_fields_set
-set()
->>>
->>> # Strict: raises if a required segment is missing
+>>> # Strict (default): raises if a required segment is missing
 >>> try:
-...     decode_er7(wire, msg_cls=ACK, strict=True)
+...     decode_er7(wire, msg_cls=ACK)
 ... except ValidationError as e:
 ...     print(e)
 1 validation error for ACK
 MSA
   Field required [type=missing, ...]
+>>>
+>>> # Lenient (opt-in): succeeds, msg.MSA is an empty placeholder
+>>> import warnings
+>>> with warnings.catch_warnings(record=True):
+...     msg = decode_er7(wire, msg_cls=ACK, strict=False)
+>>> msg.MSA.model_fields_set
+set()
 ```
 
-`strict=True` is also accepted by `model_validate_er7`:
+`strict=False` is also accepted by `model_validate_er7`:
 
 ```python
->>> ACK.model_validate_er7(wire, strict=True)  # raises ValidationError
+>>> ACK.model_validate_er7(wire)  # raises ValidationError (strict by default)
+>>> with warnings.catch_warnings(record=True):
+...     msg = ACK.model_validate_er7(wire, strict=False)  # succeeds
 ```
 
 

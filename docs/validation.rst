@@ -24,23 +24,24 @@ time too, and vice versa.
    except ValidationError as e:
        print(e)
 
-Structural validation and strict mode
+Strict and lenient decoding
 --------------------------------------
 
 Once the decoder has parsed the wire string, it passes the collected field data to Pydantic's
 ``model_validate``. Whether missing required segments and fields cause an error or are silently
 tolerated is controlled by the ``strict`` parameter.
 
-**Strict mode** (``strict=True``, the default) passes data directly to Pydantic. Any required
+**Strict mode** (``strict=True``, the default) performs structural validation: any required
 segment or field that is absent from the wire causes Pydantic to raise a ``ValidationError``
 immediately, with a precise error message identifying every missing field. This is the safest
 option when you control both ends of the interface and can rely on the sender conforming to the
-specification.
+specification. Strict mode is the default for ``decode_er7``, ``model_validate_er7``, and
+``decode_er7_segment``.
 
-**Lenient mode** (``strict=False``) is designed for integration with real-world systems that
-routinely omit technically required fields,  a common reality in HL7 v2 deployments. Rather than
-raising, the decoder injects placeholder values for any missing required field before calling
-``model_validate``:
+**Lenient mode** (``strict=False``) is opt-in and designed for integration with real-world
+systems that routinely omit technically required fields,  a common reality in HL7 v2 deployments.
+Rather than raising, the decoder injects placeholder values for any missing required field before
+calling ``model_validate``:
 
 - Missing required scalar fields receive an empty string (``""``).
 - Missing required composite fields receive an empty dict (``{}``), which Pydantic constructs
@@ -55,20 +56,22 @@ warning tells you exactly what was missing.
 
    import warnings
    from hl7types import decode_er7
+   from pydantic import ValidationError
 
-   # Strict (default),  raises ValidationError on missing required fields
-   msg = decode_er7(wire)
+   # Strict (default),  raises ValidationError on missing required segments
+   try:
+       msg = decode_er7(wire)
+   except ValidationError as e:
+       print(e)
 
-   # Lenient,  injects placeholders and warns
+   # Lenient (opt-in),  injects placeholders and warns
    with warnings.catch_warnings(record=True) as caught:
        msg = decode_er7(wire, strict=False)
        for w in caught:
            print(w.message)
 
-The same ``strict`` parameter is accepted by ``model_validate_er7`` on any ``HL7Model`` subclass,
-and by ``decode_er7_segment`` for single-segment decoding. Note that the default for
-``model_validate_er7`` and ``decode_er7_segment`` is ``strict=False``, whereas the top-level
-``decode_er7`` defaults to ``strict=True``.
+The same ``strict`` parameter is accepted by ``model_validate_er7`` on any ``HL7Model`` subclass
+and by ``decode_er7_segment`` for single-segment decoding. All three default to ``strict=True``.
 
 Field-level validation
 -----------------------
