@@ -323,7 +323,7 @@ CF
      - Identifier
    * - ``cf_2``
      - CF.2
-     - Optional[:ref:`FT <hl7-v2_5_1-FT>`]
+     - Optional[str]
      - optional
      -
      - Formatted Text
@@ -341,7 +341,7 @@ CF
      - Alternate Identifier
    * - ``cf_5``
      - CF.5
-     - Optional[:ref:`FT <hl7-v2_5_1-FT>`]
+     - Optional[str]
      - optional
      -
      - Alternate Formatted Text
@@ -1124,7 +1124,7 @@ ED
      - Encoding
    * - ``ed_5``
      - ED.5
-     - Optional[:ref:`TX <hl7-v2_5_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Data
@@ -1505,7 +1505,7 @@ JCC
      - Job Class
    * - ``jcc_3``
      - JCC.3
-     - Optional[:ref:`TX <hl7-v2_5_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Job Description Text
@@ -2609,7 +2609,7 @@ PRL
      - Parent Observation Sub-identifier
    * - ``prl_3``
      - PRL.3
-     - Optional[:ref:`TX <hl7-v2_5_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Parent Observation Value Descriptor
@@ -2867,7 +2867,7 @@ RFR
      - Race/subspecies
    * - ``rfr_7``
      - RFR.7
-     - Optional[:ref:`TX <hl7-v2_5_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Conditions
@@ -3278,7 +3278,7 @@ SPS
      - Additives
    * - ``sps_3``
      - SPS.3
-     - Optional[:ref:`TX <hl7-v2_5_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Specimen Collection Method
@@ -3404,7 +3404,7 @@ TQ
      - Condition
    * - ``tq_8``
      - TQ.8
-     - Optional[:ref:`TX <hl7-v2_5_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Text

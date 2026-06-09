@@ -261,13 +261,13 @@ DG1
    * - ``dg1_1``
      - DG1.1
      - str
-     - required
+     - optional
      -
      - SET ID - DIAGNOSIS: Item #506
    * - ``dg1_2``
      - DG1.2
      - str
-     - required
+     - optional
      -
      - DIAGNOSIS CODING METHOD: Item #394 | Table HL70053
    * - ``dg1_3``
@@ -291,7 +291,7 @@ DG1
    * - ``dg1_6``
      - DG1.6
      - str
-     - required
+     - optional
      -
      - DIAGNOSIS/DRG TYPE: Item #297 | Table HL70052
    * - ``dg1_7``
@@ -404,8 +404,8 @@ DSP
      - DISPLAY LEVEL: Item #571
    * - ``dsp_3``
      - DSP.3
-     - :ref:`TX <hl7-v2_1-TX>`
-     - required
+     - str
+     - optional
      -
      - DATA LINE: Item #153
    * - ``dsp_4``
@@ -416,7 +416,7 @@ DSP
      - LOGICAL BREAK POINT: Item #154
    * - ``dsp_5``
      - DSP.5
-     - Optional[:ref:`TX <hl7-v2_1-TX>`]
+     - Optional[str]
      - optional
      -
      - RESULT ID: Item #599
@@ -444,7 +444,7 @@ ERR
    * - ``err_1``
      - ERR.1
      - List[str]
-     - required
+     - optional
      -
      - ERROR CODE AND LOCATION: Item #80 | Table HL70060
 
@@ -471,13 +471,13 @@ EVN
    * - ``evn_1``
      - EVN.1
      - str
-     - required
+     - optional
      -
      - EVENT TYPE CODE: Item #29 | Table HL70003
    * - ``evn_2``
      - EVN.2
      - str
-     - required
+     - optional
      -
      - DATE/TIME OF EVENT: Item #30
    * - ``evn_3``
@@ -627,7 +627,7 @@ FT1
    * - ``ft1_4``
      - FT1.4
      - str
-     - required
+     - optional
      -
      - TRANSACTION DATE: Item #351
    * - ``ft1_5``
@@ -639,13 +639,13 @@ FT1
    * - ``ft1_6``
      - FT1.6
      - str
-     - required
+     - optional
      -
      - TRANSACTION TYPE: Item #353 | Table HL70017
    * - ``ft1_7``
      - FT1.7
      - str
-     - required
+     - optional
      -
      - TRANSACTION CODE: Item #354 | Table HL70096
    * - ``ft1_8``
@@ -795,7 +795,7 @@ GT1
    * - ``gt1_1``
      - GT1.1
      - str
-     - required
+     - optional
      -
      - SET ID - GUARANTOR: Item #321
    * - ``gt1_2``
@@ -807,7 +807,7 @@ GT1
    * - ``gt1_3``
      - GT1.3
      - str
-     - required
+     - optional
      -
      - GUARANTOR NAME: Item #323
    * - ``gt1_4``
@@ -936,19 +936,19 @@ IN1
    * - ``in1_1``
      - IN1.1
      - str
-     - required
+     - optional
      -
      - SET ID - INSURANCE: Item #234
    * - ``in1_2``
      - IN1.2
      - str
-     - required
+     - optional
      -
      - INSURANCE PLAN ID: Item #378 | Table HL70072
    * - ``in1_3``
      - IN1.3
      - str
-     - required
+     - optional
      -
      - INSURANCE COMPANY ID: Item #235
    * - ``in1_4``
@@ -1221,7 +1221,7 @@ MRG
    * - ``mrg_1``
      - MRG.1
      - str
-     - required
+     - optional
      -
      - PRIOR PATIENT ID - INTERNAL: Item #576 | Table HL70061
    * - ``mrg_2``
@@ -1260,13 +1260,13 @@ MSA
    * - ``msa_1``
      - MSA.1
      - str
-     - required
+     - optional
      -
      - ACKNOWLEDGMENT CODE: Item #2 | Table HL70008
    * - ``msa_2``
      - MSA.2
      - str
-     - required
+     - optional
      -
      - MESSAGE CONTROL ID: Item #3
    * - ``msa_3``
@@ -1359,25 +1359,25 @@ MSH
    * - ``msh_9``
      - MSH.9
      - str
-     - required
+     - optional
      -
      - MESSAGE TYPE: Item #12 | Table HL70076
    * - ``msh_10``
      - MSH.10
      - str
-     - required
+     - optional
      -
      - MESSAGE CONTROL ID: Item #13
    * - ``msh_11``
      - MSH.11
      - str
-     - required
+     - optional
      -
      - PROCESSING ID: Item #14 | Table HL70103
    * - ``msh_12``
      - MSH.12
      - str
-     - required
+     - optional
      -
      - VERSION ID: Item #15 | Table HL70104
    * - ``msh_13``
@@ -1416,7 +1416,7 @@ NCK
    * - ``nck_1``
      - NCK.1
      - str
-     - required
+     - optional
      -
      - SYSTEM DATE/TIME: Item #742
 
@@ -1443,7 +1443,7 @@ NK1
    * - ``nk1_1``
      - NK1.1
      - str
-     - required
+     - optional
      -
      - SET ID - NEXT OF KIN: Item #712
    * - ``nk1_2``
@@ -1494,7 +1494,7 @@ NPU
    * - ``npu_1``
      - NPU.1
      - str
-     - required
+     - optional
      -
      - BED LOCATION: Item #785 | Table HL70079
    * - ``npu_2``
@@ -1527,7 +1527,7 @@ NSC
    * - ``nsc_1``
      - NSC.1
      - str
-     - required
+     - optional
      -
      - NETWORK CHANGE TYPE: Item #758
    * - ``nsc_2``
@@ -1602,7 +1602,7 @@ NST
    * - ``nst_1``
      - NST.1
      - str
-     - required
+     - optional
      -
      - STATISTICS AVAILABLE: Item #743
    * - ``nst_2``
@@ -1724,7 +1724,7 @@ NTE
      - SOURCE OF COMMENT: Item #574 | Table HL70105
    * - ``nte_3``
      - NTE.3
-     - Optional[List[:ref:`TX <hl7-v2_1-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - COMMENT: Item #575
@@ -1770,7 +1770,7 @@ OBR
    * - ``obr_4``
      - OBR.4
      - :ref:`CE <hl7-v2_1-CE>`
-     - required
+     - optional
      -
      - UNIVERSAL SERVICE IDENT.: Item #523
    * - ``obr_5``
@@ -1788,19 +1788,19 @@ OBR
    * - ``obr_7``
      - OBR.7
      - str
-     - required
+     - optional
      -
      - OBSERVATION DATE/TIME: Item #530
    * - ``obr_8``
      - OBR.8
      - str
-     - required
+     - optional
      -
      - OBSERVATION END DATE/TIME: Item #531
    * - ``obr_9``
      - OBR.9
      - str
-     - required
+     - optional
      -
      - COLLECTION VOLUME: Item #532 | Table HL70036
    * - ``obr_10``
@@ -1830,7 +1830,7 @@ OBR
    * - ``obr_14``
      - OBR.14
      - str
-     - required
+     - optional
      -
      - SPECIMEN RECEIVED DATE/TIME: Item #537
    * - ``obr_15``
@@ -1878,7 +1878,7 @@ OBR
    * - ``obr_22``
      - OBR.22
      - str
-     - required
+     - optional
      -
      - RESULTS RPT/STATUS CHNG - DATE/T: Item #546
    * - ``obr_23``
@@ -2001,7 +2001,7 @@ OBX
    * - ``obx_3``
      - OBX.3
      - :ref:`CE <hl7-v2_1-CE>`
-     - required
+     - optional
      -
      - OBSERVATION IDENTIFIER: Item #560
    * - ``obx_4``
@@ -2013,7 +2013,7 @@ OBX
    * - ``obx_5``
      - OBX.5
      - str
-     - required
+     - optional
      -
      - OBSERVATION RESULTS: Item #561
    * - ``obx_6``
@@ -2082,7 +2082,7 @@ ORC
    * - ``orc_1``
      - ORC.1
      - str
-     - required
+     - optional
      -
      - ORDER CONTROL: Item #714 | Table HL70119
    * - ``orc_2``
@@ -2244,7 +2244,7 @@ PID
    * - ``pid_3``
      - PID.3
      - str
-     - required
+     - optional
      -
      - PATIENT ID INTERNAL (INTERNAL ID): Item #34 | Table HL70061
    * - ``pid_4``
@@ -2256,7 +2256,7 @@ PID
    * - ``pid_5``
      - PID.5
      - str
-     - required
+     - optional
      -
      - PATIENT NAME: Item #41
    * - ``pid_6``
@@ -2373,19 +2373,19 @@ PR1
    * - ``pr1_1``
      - PR1.1
      - List[str]
-     - required
+     - optional
      -
      - SET ID - PROCEDURE: Item #304
    * - ``pr1_2``
      - PR1.2
      - str
-     - required
+     - optional
      -
      - PROCEDURE CODING METHOD.: Item #393 | Table HL70089
    * - ``pr1_3``
      - PR1.3
      - str
-     - required
+     - optional
      -
      - PROCEDURE CODE: Item #305 | Table HL70088
    * - ``pr1_4``
@@ -2397,13 +2397,13 @@ PR1
    * - ``pr1_5``
      - PR1.5
      - str
-     - required
+     - optional
      -
      - PROCEDURE DATE/TIME: Item #307
    * - ``pr1_6``
      - PR1.6
      - str
-     - required
+     - optional
      -
      - PROCEDURE TYPE: Item #309 | Table HL70090
    * - ``pr1_7``
@@ -2478,13 +2478,13 @@ PV1
    * - ``pv1_2``
      - PV1.2
      - str
-     - required
+     - optional
      -
      - PATIENT CLASS: Item #52 | Table HL70004
    * - ``pv1_3``
      - PV1.3
      - str
-     - required
+     - optional
      -
      - ASSIGNED PATIENT LOCATION: Item #53 | Table HL70079
    * - ``pv1_4``
@@ -2787,25 +2787,25 @@ QRD
    * - ``qrd_1``
      - QRD.1
      - str
-     - required
+     - optional
      -
      - QUERY DATE/TIME: Item #156
    * - ``qrd_2``
      - QRD.2
      - str
-     - required
+     - optional
      -
      - QUERY FORMAT CODE: Item #158 | Table HL70106
    * - ``qrd_3``
      - QRD.3
      - str
-     - required
+     - optional
      -
      - QUERY PRIORITY: Item #159 | Table HL70091
    * - ``qrd_4``
      - QRD.4
      - str
-     - required
+     - optional
      -
      - QUERY ID: Item #160
    * - ``qrd_5``
@@ -2823,25 +2823,25 @@ QRD
    * - ``qrd_7``
      - QRD.7
      - str
-     - required
+     - optional
      -
      - QUANTITY LIMITED REQUEST: Item #164 | Table HL70126
    * - ``qrd_8``
      - QRD.8
      - List[str]
-     - required
+     - optional
      -
      - WHO SUBJECT FILTER: Item #168
    * - ``qrd_9``
      - QRD.9
      - List[str]
-     - required
+     - optional
      -
      - WHAT SUBJECT FILTER: Item #169 | Table HL70048
    * - ``qrd_10``
      - QRD.10
      - List[str]
-     - required
+     - optional
      -
      - WHAT DEPARTMENT DATA CODE: Item #170
    * - ``qrd_11``
@@ -2880,7 +2880,7 @@ QRF
    * - ``qrf_1``
      - QRF.1
      - List[str]
-     - required
+     - optional
      -
      - WHERE SUBJECT FILTER: Item #173
    * - ``qrf_2``
@@ -3092,19 +3092,19 @@ RX1
      - PRN STATUS: Item #621
    * - ``rx1_28``
      - RX1.28
-     - Optional[List[:ref:`TX <hl7-v2_1-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - PHARMACY INSTRUCTIONS: Item #484
    * - ``rx1_29``
      - RX1.29
-     - Optional[List[:ref:`TX <hl7-v2_1-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - PATIENT INSTRUCTIONS: Item #489
    * - ``rx1_30``
      - RX1.30
-     - Optional[List[:ref:`TX <hl7-v2_1-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - INSTRUCTIONS (SIG): Item #618
@@ -3303,7 +3303,7 @@ URD
    * - ``urd_3``
      - URD.3
      - List[str]
-     - required
+     - optional
      -
      - R/U WHO SUBJECT DEFINITION: Item #602
    * - ``urd_4``
@@ -3354,7 +3354,7 @@ URS
    * - ``urs_1``
      - URS.1
      - List[str]
-     - required
+     - optional
      -
      - R/U WHERE SUBJECT DEFINITION: Item #608
    * - ``urs_2``

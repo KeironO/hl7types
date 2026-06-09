@@ -1721,13 +1721,13 @@ CM_SPS
      - Specimen source name or code
    * - ``cm_sps_2``
      - CM_SPS.2
-     - Optional[:ref:`TX <hl7-v2_2-TX>`]
+     - Optional[str]
      - optional
      -
      - additives
    * - ``cm_sps_3``
      - CM_SPS.3
-     - Optional[:ref:`TX <hl7-v2_2-TX>`]
+     - Optional[str]
      - optional
      -
      - freetext
@@ -2132,7 +2132,7 @@ TQ
      - condition
    * - ``tq_8``
      - TQ.8
-     - Optional[:ref:`TX <hl7-v2_2-TX>`]
+     - Optional[str]
      - optional
      -
      - text (TX)

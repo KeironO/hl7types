@@ -30,13 +30,13 @@ ADR_A19_QUERY_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_1-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
 
@@ -63,13 +63,13 @@ ADT_A17_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_1-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
 
@@ -165,7 +165,7 @@ BAR_P02_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
@@ -237,7 +237,7 @@ ORM_O01_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_1-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -276,7 +276,7 @@ ORM_O01_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`ORM_O01_CHOICE <hl7-v2_1-ORM_O01_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
    * - ``NTE``
@@ -315,7 +315,7 @@ ORM_O01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -393,7 +393,7 @@ ORR_O02_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_1-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -432,7 +432,7 @@ ORR_O02_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`ORR_O02_CHOICE <hl7-v2_1-ORR_O02_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
 
@@ -471,7 +471,7 @@ ORR_O02_PATIENT
    * - ``ORDER``
      -
      - List[:ref:`ORR_O02_ORDER <hl7-v2_1-ORR_O02_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -537,7 +537,7 @@ ORU_R01_ORDER_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_1-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -549,7 +549,7 @@ ORU_R01_ORDER_OBSERVATION
    * - ``OBSERVATION``
      -
      - List[:ref:`ORU_R01_OBSERVATION <hl7-v2_1-ORU_R01_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -576,7 +576,7 @@ ORU_R01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -621,7 +621,7 @@ ORU_R01_PATIENT_RESULT
    * - ``ORDER_OBSERVATION``
      -
      - List[:ref:`ORU_R01_ORDER_OBSERVATION <hl7-v2_1-ORU_R01_ORDER_OBSERVATION>`]
-     - required
+     - optional
      -
      - ORDER_OBSERVATION: Required, repeating
 
@@ -687,7 +687,7 @@ ORU_R03_ORDER_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_1-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -699,7 +699,7 @@ ORU_R03_ORDER_OBSERVATION
    * - ``OBSERVATION``
      -
      - List[:ref:`ORU_R03_OBSERVATION <hl7-v2_1-ORU_R03_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -726,7 +726,7 @@ ORU_R03_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_1-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -771,6 +771,6 @@ ORU_R03_PATIENT_RESULT
    * - ``ORDER_OBSERVATION``
      -
      - List[:ref:`ORU_R03_ORDER_OBSERVATION <hl7-v2_1-ORU_R03_ORDER_OBSERVATION>`]
-     - required
+     - optional
      -
      - ORDER_OBSERVATION: Required, repeating

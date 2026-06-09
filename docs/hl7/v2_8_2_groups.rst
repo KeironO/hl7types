@@ -24,7 +24,7 @@ ADT_A01_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -81,7 +81,7 @@ ADT_A01_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``ROL``
@@ -114,7 +114,7 @@ ADT_A03_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -171,7 +171,7 @@ ADT_A03_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``ROL``
@@ -204,7 +204,7 @@ ADT_A05_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -261,7 +261,7 @@ ADT_A05_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``ROL``
@@ -294,7 +294,7 @@ ADT_A06_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -339,7 +339,7 @@ ADT_A06_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``ROL``
@@ -372,7 +372,7 @@ ADT_A16_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -429,7 +429,7 @@ ADT_A16_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``ROL``
@@ -462,7 +462,7 @@ ADT_A39_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -474,7 +474,7 @@ ADT_A39_PATIENT
    * - ``MRG``
      -
      - :ref:`MRG <hl7-v2_8_2-MRG>`
-     - required
+     - optional
      -
      - MRG: Required
    * - ``PV1``
@@ -507,7 +507,7 @@ ADT_A43_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -519,7 +519,7 @@ ADT_A43_PATIENT
    * - ``MRG``
      -
      - :ref:`MRG <hl7-v2_8_2-MRG>`
-     - required
+     - optional
      -
      - MRG: Required
 
@@ -546,7 +546,7 @@ ADT_A44_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -564,7 +564,7 @@ ADT_A44_PATIENT
    * - ``MRG``
      -
      - :ref:`MRG <hl7-v2_8_2-MRG>`
-     - required
+     - optional
      -
      - MRG: Required
 
@@ -591,13 +591,13 @@ ADT_A45_MERGE_INFO
    * - ``MRG``
      -
      - :ref:`MRG <hl7-v2_8_2-MRG>`
-     - required
+     - optional
      -
      - MRG: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
 
@@ -624,7 +624,7 @@ ADT_A60_ADVERSE_REACTION_GROUP
    * - ``IAM``
      -
      - :ref:`IAM <hl7-v2_8_2-IAM>`
-     - required
+     - optional
      -
      - IAM: Required
    * - ``NTE``
@@ -663,7 +663,7 @@ ADT_A60_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -702,7 +702,7 @@ BAR_P01_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -753,7 +753,7 @@ BAR_P01_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``PRT``
@@ -909,7 +909,7 @@ BAR_P02_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -954,7 +954,7 @@ BAR_P05_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -1005,7 +1005,7 @@ BAR_P05_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``PRT``
@@ -1179,7 +1179,7 @@ BAR_P06_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
@@ -1212,7 +1212,7 @@ BAR_P10_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``GP2``
@@ -1245,7 +1245,7 @@ BAR_P12_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``PRT``
@@ -1284,7 +1284,7 @@ BPS_O29_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -1302,7 +1302,7 @@ BPS_O29_ORDER
    * - ``BPO``
      -
      - :ref:`BPO <hl7-v2_8_2-BPO>`
-     - required
+     - optional
      -
      - BPO: Required
    * - ``NTE``
@@ -1341,7 +1341,7 @@ BPS_O29_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1398,7 +1398,7 @@ BPS_O29_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1437,7 +1437,7 @@ BPS_O29_PRODUCT
    * - ``BPX``
      -
      - :ref:`BPX <hl7-v2_8_2-BPX>`
-     - required
+     - optional
      -
      - BPX: Required
    * - ``NTE``
@@ -1470,7 +1470,7 @@ BPS_O29_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -1503,7 +1503,7 @@ BRP_O30_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -1554,7 +1554,7 @@ BRP_O30_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -1626,7 +1626,7 @@ BRP_O30_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -1659,7 +1659,7 @@ BRT_O32_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -1749,7 +1749,7 @@ BRT_O32_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -1782,7 +1782,7 @@ BTS_O31_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -1800,7 +1800,7 @@ BTS_O31_ORDER
    * - ``BPO``
      -
      - :ref:`BPO <hl7-v2_8_2-BPO>`
-     - required
+     - optional
      -
      - BPO: Required
    * - ``NTE``
@@ -1839,7 +1839,7 @@ BTS_O31_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1890,7 +1890,7 @@ BTS_O31_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1929,7 +1929,7 @@ BTS_O31_PRODUCT_STATUS
    * - ``BTX``
      -
      - :ref:`BTX <hl7-v2_8_2-BTX>`
-     - required
+     - optional
      -
      - BTX: Required
    * - ``NTE``
@@ -1962,7 +1962,7 @@ BTS_O31_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -1995,7 +1995,7 @@ CCI_I22_APPOINTMENT_HISTORY
    * - ``SCH``
      -
      - :ref:`SCH <hl7-v2_8_2-SCH>`
-     - required
+     - optional
      -
      - SCH: Required
    * - ``RESOURCES``
@@ -2028,7 +2028,7 @@ CCI_I22_CLINICAL_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``CLINICAL_HISTORY_DETAIL``
@@ -2073,7 +2073,7 @@ CCI_I22_CLINICAL_HISTORY_DETAIL
    * - ``CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCI_I22_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCI_I22_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - CLINICAL_HISTORY_OBJECT: Required
    * - ``CLINICAL_HISTORY_OBSERVATION``
@@ -2199,7 +2199,7 @@ CCI_I22_CLINICAL_HISTORY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2232,7 +2232,7 @@ CCI_I22_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``VAR``
@@ -2277,7 +2277,7 @@ CCI_I22_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2310,7 +2310,7 @@ CCI_I22_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -2349,13 +2349,13 @@ CCI_I22_MEDICATION_ADMINISTRATION_DETAIL
    * - ``RXA``
      -
      - List[:ref:`RXA <hl7-v2_8_2-RXA>`]
-     - required
+     - optional
      -
      - RXA: Required, repeating
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
    * - ``MEDICATION_ADMINISTRATION_OBSERVATION``
@@ -2388,7 +2388,7 @@ CCI_I22_MEDICATION_ADMINISTRATION_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2421,13 +2421,13 @@ CCI_I22_MEDICATION_ENCODING_DETAIL
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -2466,7 +2466,7 @@ CCI_I22_MEDICATION_ENCODING_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2499,7 +2499,7 @@ CCI_I22_MEDICATION_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``MEDICATION_ORDER_DETAIL``
@@ -2550,13 +2550,13 @@ CCI_I22_MEDICATION_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -2595,7 +2595,7 @@ CCI_I22_MEDICATION_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2628,7 +2628,7 @@ CCI_I22_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``VAR``
@@ -2673,7 +2673,7 @@ CCI_I22_PATHWAY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2706,7 +2706,7 @@ CCI_I22_PATIENT_VISITS
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -2739,7 +2739,7 @@ CCI_I22_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``VAR``
@@ -2784,7 +2784,7 @@ CCI_I22_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2817,7 +2817,7 @@ CCI_I22_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``RESOURCE_DETAIL``
@@ -2850,7 +2850,7 @@ CCI_I22_RESOURCE_DETAIL
    * - ``RESOURCE_OBJECT``
      -
      - :ref:`CCI_I22_RESOURCE_OBJECT <hl7-v2_8_2-CCI_I22_RESOURCE_OBJECT>`
-     - required
+     - optional
      -
      - RESOURCE_OBJECT: Required
    * - ``RESOURCE_OBSERVATION``
@@ -2928,7 +2928,7 @@ CCI_I22_RESOURCE_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -2961,7 +2961,7 @@ CCI_I22_ROLE_CLINICAL_HISTORY
    * - ``ROLE_CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCI_I22_ROLE_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCI_I22_ROLE_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_CLINICAL_HISTORY_OBJECT: Required
    * - ``VAR``
@@ -3027,7 +3027,7 @@ CCI_I22_ROLE_GOAL
    * - ``ROLE_GOAL_OBJECT``
      -
      - :ref:`CCI_I22_ROLE_GOAL_OBJECT <hl7-v2_8_2-CCI_I22_ROLE_GOAL_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_GOAL_OBJECT: Required
    * - ``VAR``
@@ -3093,7 +3093,7 @@ CCI_I22_ROLE_PATHWAY
    * - ``ROLE_PATHWAY_OBJECT``
      -
      - :ref:`CCI_I22_ROLE_PATHWAY_OBJECT <hl7-v2_8_2-CCI_I22_ROLE_PATHWAY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PATHWAY_OBJECT: Required
    * - ``VAR``
@@ -3159,7 +3159,7 @@ CCI_I22_ROLE_PROBLEM
    * - ``ROLE_PROBLEM_OBJECT``
      -
      - :ref:`CCI_I22_ROLE_PROBLEM_OBJECT <hl7-v2_8_2-CCI_I22_ROLE_PROBLEM_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PROBLEM_OBJECT: Required
    * - ``VAR``
@@ -3225,7 +3225,7 @@ CCM_I21_APPOINTMENT_HISTORY
    * - ``SCH``
      -
      - :ref:`SCH <hl7-v2_8_2-SCH>`
-     - required
+     - optional
      -
      - SCH: Required
    * - ``RESOURCES``
@@ -3258,7 +3258,7 @@ CCM_I21_CLINICAL_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``CLINICAL_HISTORY_DETAIL``
@@ -3303,7 +3303,7 @@ CCM_I21_CLINICAL_HISTORY_DETAIL
    * - ``CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCM_I21_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCM_I21_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - CLINICAL_HISTORY_OBJECT: Required
    * - ``CLINICAL_HISTORY_OBSERVATION``
@@ -3429,7 +3429,7 @@ CCM_I21_CLINICAL_HISTORY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -3462,7 +3462,7 @@ CCM_I21_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``VAR``
@@ -3507,7 +3507,7 @@ CCM_I21_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -3540,7 +3540,7 @@ CCM_I21_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -3579,13 +3579,13 @@ CCM_I21_MEDICATION_ADMINISTRATION_DETAIL
    * - ``RXA``
      -
      - List[:ref:`RXA <hl7-v2_8_2-RXA>`]
-     - required
+     - optional
      -
      - RXA: Required, repeating
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
    * - ``MEDICATION_ADMINISTRATION_OBSERVATION``
@@ -3618,7 +3618,7 @@ CCM_I21_MEDICATION_ADMINISTRATION_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -3651,13 +3651,13 @@ CCM_I21_MEDICATION_ENCODING_DETAIL
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -3696,7 +3696,7 @@ CCM_I21_MEDICATION_ENCODING_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -3729,7 +3729,7 @@ CCM_I21_MEDICATION_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``MEDICATION_ORDER_DETAIL``
@@ -3780,13 +3780,13 @@ CCM_I21_MEDICATION_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -3825,7 +3825,7 @@ CCM_I21_MEDICATION_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -3858,7 +3858,7 @@ CCM_I21_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``VAR``
@@ -3903,7 +3903,7 @@ CCM_I21_PATHWAY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -3936,7 +3936,7 @@ CCM_I21_PATIENT_VISITS
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -3969,7 +3969,7 @@ CCM_I21_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``VAR``
@@ -4014,7 +4014,7 @@ CCM_I21_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -4047,7 +4047,7 @@ CCM_I21_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``RESOURCE_DETAIL``
@@ -4080,7 +4080,7 @@ CCM_I21_RESOURCE_DETAIL
    * - ``RESOURCE_OBJECT``
      -
      - :ref:`CCM_I21_RESOURCE_OBJECT <hl7-v2_8_2-CCM_I21_RESOURCE_OBJECT>`
-     - required
+     - optional
      -
      - RESOURCE_OBJECT: Required
    * - ``RESOURCE_OBSERVATION``
@@ -4158,7 +4158,7 @@ CCM_I21_RESOURCE_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -4191,7 +4191,7 @@ CCM_I21_ROLE_CLINICAL_HISTORY
    * - ``ROLE_CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCM_I21_ROLE_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCM_I21_ROLE_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_CLINICAL_HISTORY_OBJECT: Required
    * - ``VAR``
@@ -4257,7 +4257,7 @@ CCM_I21_ROLE_GOAL
    * - ``ROLE_GOAL_OBJECT``
      -
      - :ref:`CCM_I21_ROLE_GOAL_OBJECT <hl7-v2_8_2-CCM_I21_ROLE_GOAL_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_GOAL_OBJECT: Required
    * - ``VAR``
@@ -4323,7 +4323,7 @@ CCM_I21_ROLE_PATHWAY
    * - ``ROLE_PATHWAY_OBJECT``
      -
      - :ref:`CCM_I21_ROLE_PATHWAY_OBJECT <hl7-v2_8_2-CCM_I21_ROLE_PATHWAY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PATHWAY_OBJECT: Required
    * - ``VAR``
@@ -4389,7 +4389,7 @@ CCM_I21_ROLE_PROBLEM
    * - ``ROLE_PROBLEM_OBJECT``
      -
      - :ref:`CCM_I21_ROLE_PROBLEM_OBJECT <hl7-v2_8_2-CCM_I21_ROLE_PROBLEM_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PROBLEM_OBJECT: Required
    * - ``VAR``
@@ -4455,7 +4455,7 @@ CCQ_I19_PROVIDER_CONTACT
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -4488,7 +4488,7 @@ CCR_I16_APPOINTMENT_HISTORY
    * - ``SCH``
      -
      - :ref:`SCH <hl7-v2_8_2-SCH>`
-     - required
+     - optional
      -
      - SCH: Required
    * - ``RESOURCES``
@@ -4521,7 +4521,7 @@ CCR_I16_CLINICAL_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``CLINICAL_HISTORY_DETAIL``
@@ -4566,7 +4566,7 @@ CCR_I16_CLINICAL_HISTORY_DETAIL
    * - ``CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCR_I16_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCR_I16_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - CLINICAL_HISTORY_OBJECT: Required
    * - ``CLINICAL_HISTORY_OBSERVATION``
@@ -4686,7 +4686,7 @@ CCR_I16_CLINICAL_HISTORY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -4719,7 +4719,7 @@ CCR_I16_CLINICAL_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``CLINICAL_ORDER_TIMING``
@@ -4731,7 +4731,7 @@ CCR_I16_CLINICAL_ORDER
    * - ``CLINICAL_ORDER_DETAIL``
      -
      - List[:ref:`CCR_I16_CLINICAL_ORDER_DETAIL <hl7-v2_8_2-CCR_I16_CLINICAL_ORDER_DETAIL>`]
-     - required
+     - optional
      -
      - CLINICAL_ORDER_DETAIL: Required, repeating
    * - ``CTI``
@@ -4764,7 +4764,7 @@ CCR_I16_CLINICAL_ORDER_DETAIL
    * - ``CLINICAL_ORDER_OBJECT``
      -
      - :ref:`CCR_I16_CLINICAL_ORDER_OBJECT <hl7-v2_8_2-CCR_I16_CLINICAL_ORDER_OBJECT>`
-     - required
+     - optional
      -
      - CLINICAL_ORDER_OBJECT: Required
    * - ``CLINICAL_ORDER_OBSERVATION``
@@ -4842,7 +4842,7 @@ CCR_I16_CLINICAL_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -4875,7 +4875,7 @@ CCR_I16_CLINICAL_ORDER_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -4908,7 +4908,7 @@ CCR_I16_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``VAR``
@@ -4953,7 +4953,7 @@ CCR_I16_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -4986,7 +4986,7 @@ CCR_I16_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -5025,13 +5025,13 @@ CCR_I16_MEDICATION_ADMINISTRATION_DETAIL
    * - ``RXA``
      -
      - List[:ref:`RXA <hl7-v2_8_2-RXA>`]
-     - required
+     - optional
      -
      - RXA: Required, repeating
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
    * - ``MEDICATION_ADMINISTRATION_OBSERVATION``
@@ -5064,7 +5064,7 @@ CCR_I16_MEDICATION_ADMINISTRATION_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -5097,13 +5097,13 @@ CCR_I16_MEDICATION_ENCODING_DETAIL
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -5142,7 +5142,7 @@ CCR_I16_MEDICATION_ENCODING_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -5175,7 +5175,7 @@ CCR_I16_MEDICATION_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``MEDICATION_ORDER_DETAIL``
@@ -5226,13 +5226,13 @@ CCR_I16_MEDICATION_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -5271,7 +5271,7 @@ CCR_I16_MEDICATION_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -5304,7 +5304,7 @@ CCR_I16_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``VAR``
@@ -5349,7 +5349,7 @@ CCR_I16_PATHWAY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -5382,7 +5382,7 @@ CCR_I16_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -5415,7 +5415,7 @@ CCR_I16_PATIENT_VISITS
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -5448,7 +5448,7 @@ CCR_I16_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``VAR``
@@ -5493,7 +5493,7 @@ CCR_I16_PROVIDER_CONTACT
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -5526,7 +5526,7 @@ CCR_I16_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``RESOURCE_DETAIL``
@@ -5559,7 +5559,7 @@ CCR_I16_RESOURCE_DETAIL
    * - ``RESOURCE_OBJECT``
      -
      - :ref:`CCR_I16_RESOURCE_OBJECT <hl7-v2_8_2-CCR_I16_RESOURCE_OBJECT>`
-     - required
+     - optional
      -
      - RESOURCE_OBJECT: Required
    * - ``RESOURCE_OBSERVATION``
@@ -5637,7 +5637,7 @@ CCR_I16_RESOURCE_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -5670,7 +5670,7 @@ CCR_I16_ROLE_CLINICAL_HISTORY
    * - ``ROLE_CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_CLINICAL_HISTORY_OBJECT: Required
    * - ``VAR``
@@ -5736,7 +5736,7 @@ CCR_I16_ROLE_GOAL
    * - ``ROLE_GOAL_OBJECT``
      -
      - :ref:`CCR_I16_ROLE_GOAL_OBJECT <hl7-v2_8_2-CCR_I16_ROLE_GOAL_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_GOAL_OBJECT: Required
    * - ``VAR``
@@ -5802,7 +5802,7 @@ CCR_I16_ROLE_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -5835,7 +5835,7 @@ CCR_I16_ROLE_PATHWAY
    * - ``ROLE_PATHWAY_OBJECT``
      -
      - :ref:`CCR_I16_ROLE_PATHWAY_OBJECT <hl7-v2_8_2-CCR_I16_ROLE_PATHWAY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PATHWAY_OBJECT: Required
    * - ``VAR``
@@ -5901,7 +5901,7 @@ CCR_I16_ROLE_PROBLEM
    * - ``ROLE_PROBLEM_OBJECT``
      -
      - :ref:`CCR_I16_ROLE_PROBLEM_OBJECT <hl7-v2_8_2-CCR_I16_ROLE_PROBLEM_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PROBLEM_OBJECT: Required
    * - ``VAR``
@@ -5967,7 +5967,7 @@ CCU_I20_APPOINTMENT_HISTORY
    * - ``SCH``
      -
      - :ref:`SCH <hl7-v2_8_2-SCH>`
-     - required
+     - optional
      -
      - SCH: Required
    * - ``RESOURCES``
@@ -6000,7 +6000,7 @@ CCU_I20_CLINICAL_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``CLINICAL_HISTORY_DETAIL``
@@ -6045,7 +6045,7 @@ CCU_I20_CLINICAL_HISTORY_DETAIL
    * - ``CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCU_I20_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCU_I20_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - CLINICAL_HISTORY_OBJECT: Required
    * - ``CLINICAL_HISTORY_OBSERVATION``
@@ -6171,7 +6171,7 @@ CCU_I20_CLINICAL_HISTORY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6204,7 +6204,7 @@ CCU_I20_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``VAR``
@@ -6249,7 +6249,7 @@ CCU_I20_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6282,7 +6282,7 @@ CCU_I20_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -6321,13 +6321,13 @@ CCU_I20_MEDICATION_ADMINISTRATION_DETAIL
    * - ``RXA``
      -
      - List[:ref:`RXA <hl7-v2_8_2-RXA>`]
-     - required
+     - optional
      -
      - RXA: Required, repeating
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
    * - ``MEDICATION_ADMINISTRATION_OBSERVATION``
@@ -6360,7 +6360,7 @@ CCU_I20_MEDICATION_ADMINISTRATION_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6393,13 +6393,13 @@ CCU_I20_MEDICATION_ENCODING_DETAIL
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -6438,7 +6438,7 @@ CCU_I20_MEDICATION_ENCODING_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6471,7 +6471,7 @@ CCU_I20_MEDICATION_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``MEDICATION_ORDER_DETAIL``
@@ -6522,13 +6522,13 @@ CCU_I20_MEDICATION_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -6567,7 +6567,7 @@ CCU_I20_MEDICATION_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6600,7 +6600,7 @@ CCU_I20_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``VAR``
@@ -6645,7 +6645,7 @@ CCU_I20_PATHWAY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6678,7 +6678,7 @@ CCU_I20_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -6711,7 +6711,7 @@ CCU_I20_PATIENT_VISITS
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -6744,7 +6744,7 @@ CCU_I20_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``VAR``
@@ -6789,7 +6789,7 @@ CCU_I20_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6822,7 +6822,7 @@ CCU_I20_PROVIDER_CONTACT
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -6855,7 +6855,7 @@ CCU_I20_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``RESOURCE_DETAIL``
@@ -6888,7 +6888,7 @@ CCU_I20_RESOURCE_DETAIL
    * - ``RESOURCE_OBJECT``
      -
      - :ref:`CCU_I20_RESOURCE_OBJECT <hl7-v2_8_2-CCU_I20_RESOURCE_OBJECT>`
-     - required
+     - optional
      -
      - RESOURCE_OBJECT: Required
    * - ``RESOURCE_OBSERVATION``
@@ -6966,7 +6966,7 @@ CCU_I20_RESOURCE_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -6999,7 +6999,7 @@ CCU_I20_ROLE_CLINICAL_HISTORY
    * - ``ROLE_CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CCU_I20_ROLE_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CCU_I20_ROLE_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_CLINICAL_HISTORY_OBJECT: Required
    * - ``VAR``
@@ -7065,7 +7065,7 @@ CCU_I20_ROLE_GOAL
    * - ``ROLE_GOAL_OBJECT``
      -
      - :ref:`CCU_I20_ROLE_GOAL_OBJECT <hl7-v2_8_2-CCU_I20_ROLE_GOAL_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_GOAL_OBJECT: Required
    * - ``VAR``
@@ -7131,7 +7131,7 @@ CCU_I20_ROLE_PATHWAY
    * - ``ROLE_PATHWAY_OBJECT``
      -
      - :ref:`CCU_I20_ROLE_PATHWAY_OBJECT <hl7-v2_8_2-CCU_I20_ROLE_PATHWAY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PATHWAY_OBJECT: Required
    * - ``VAR``
@@ -7197,7 +7197,7 @@ CCU_I20_ROLE_PROBLEM
    * - ``ROLE_PROBLEM_OBJECT``
      -
      - :ref:`CCU_I20_ROLE_PROBLEM_OBJECT <hl7-v2_8_2-CCU_I20_ROLE_PROBLEM_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PROBLEM_OBJECT: Required
    * - ``VAR``
@@ -7263,7 +7263,7 @@ CQU_I19_APPOINTMENT_HISTORY
    * - ``SCH``
      -
      - :ref:`SCH <hl7-v2_8_2-SCH>`
-     - required
+     - optional
      -
      - SCH: Required
    * - ``RESOURCES``
@@ -7296,7 +7296,7 @@ CQU_I19_CLINICAL_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``CLINICAL_HISTORY_DETAIL``
@@ -7341,7 +7341,7 @@ CQU_I19_CLINICAL_HISTORY_DETAIL
    * - ``CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CQU_I19_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CQU_I19_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - CLINICAL_HISTORY_OBJECT: Required
    * - ``CLINICAL_HISTORY_OBSERVATION``
@@ -7467,7 +7467,7 @@ CQU_I19_CLINICAL_HISTORY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -7500,7 +7500,7 @@ CQU_I19_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``VAR``
@@ -7545,7 +7545,7 @@ CQU_I19_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -7578,7 +7578,7 @@ CQU_I19_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -7617,13 +7617,13 @@ CQU_I19_MEDICATION_ADMINISTRATION_DETAIL
    * - ``RXA``
      -
      - List[:ref:`RXA <hl7-v2_8_2-RXA>`]
-     - required
+     - optional
      -
      - RXA: Required, repeating
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
    * - ``MEDICATION_ADMINISTRATION_OBSERVATION``
@@ -7656,7 +7656,7 @@ CQU_I19_MEDICATION_ADMINISTRATION_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -7689,13 +7689,13 @@ CQU_I19_MEDICATION_ENCODING_DETAIL
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -7734,7 +7734,7 @@ CQU_I19_MEDICATION_ENCODING_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -7767,7 +7767,7 @@ CQU_I19_MEDICATION_HISTORY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``MEDICATION_ORDER_DETAIL``
@@ -7818,13 +7818,13 @@ CQU_I19_MEDICATION_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -7863,7 +7863,7 @@ CQU_I19_MEDICATION_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -7896,7 +7896,7 @@ CQU_I19_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``VAR``
@@ -7941,7 +7941,7 @@ CQU_I19_PATHWAY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -7974,7 +7974,7 @@ CQU_I19_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -8007,7 +8007,7 @@ CQU_I19_PATIENT_VISITS
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -8040,7 +8040,7 @@ CQU_I19_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``VAR``
@@ -8085,7 +8085,7 @@ CQU_I19_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -8118,7 +8118,7 @@ CQU_I19_PROVIDER_CONTACT
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -8151,7 +8151,7 @@ CQU_I19_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``RESOURCE_DETAIL``
@@ -8184,7 +8184,7 @@ CQU_I19_RESOURCE_DETAIL
    * - ``RESOURCE_OBJECT``
      -
      - :ref:`CQU_I19_RESOURCE_OBJECT <hl7-v2_8_2-CQU_I19_RESOURCE_OBJECT>`
-     - required
+     - optional
      -
      - RESOURCE_OBJECT: Required
    * - ``RESOURCE_OBSERVATION``
@@ -8262,7 +8262,7 @@ CQU_I19_RESOURCE_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -8295,7 +8295,7 @@ CQU_I19_ROLE_CLINICAL_HISTORY
    * - ``ROLE_CLINICAL_HISTORY_OBJECT``
      -
      - :ref:`CQU_I19_ROLE_CLINICAL_HISTORY_OBJECT <hl7-v2_8_2-CQU_I19_ROLE_CLINICAL_HISTORY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_CLINICAL_HISTORY_OBJECT: Required
    * - ``VAR``
@@ -8361,7 +8361,7 @@ CQU_I19_ROLE_GOAL
    * - ``ROLE_GOAL_OBJECT``
      -
      - :ref:`CQU_I19_ROLE_GOAL_OBJECT <hl7-v2_8_2-CQU_I19_ROLE_GOAL_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_GOAL_OBJECT: Required
    * - ``VAR``
@@ -8427,7 +8427,7 @@ CQU_I19_ROLE_PATHWAY
    * - ``ROLE_PATHWAY_OBJECT``
      -
      - :ref:`CQU_I19_ROLE_PATHWAY_OBJECT <hl7-v2_8_2-CQU_I19_ROLE_PATHWAY_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PATHWAY_OBJECT: Required
    * - ``VAR``
@@ -8493,7 +8493,7 @@ CQU_I19_ROLE_PROBLEM
    * - ``ROLE_PROBLEM_OBJECT``
      -
      - :ref:`CQU_I19_ROLE_PROBLEM_OBJECT <hl7-v2_8_2-CQU_I19_ROLE_PROBLEM_OBJECT>`
-     - required
+     - optional
      -
      - ROLE_PROBLEM_OBJECT: Required
    * - ``VAR``
@@ -8559,7 +8559,7 @@ CRM_C01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -8583,7 +8583,7 @@ CRM_C01_PATIENT
    * - ``CSR``
      -
      - :ref:`CSR <hl7-v2_8_2-CSR>`
-     - required
+     - optional
      -
      - CSR: Required
    * - ``CSP``
@@ -8616,7 +8616,7 @@ CRM_C01_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PRT``
@@ -8649,7 +8649,7 @@ CSU_C09_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -8682,7 +8682,7 @@ CSU_C09_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -8718,13 +8718,13 @@ CSU_C09_PATIENT
    * - ``CSR``
      -
      - :ref:`CSR <hl7-v2_8_2-CSR>`
-     - required
+     - optional
      -
      - CSR: Required
    * - ``STUDY_PHASE``
      -
      - List[:ref:`CSU_C09_STUDY_PHASE <hl7-v2_8_2-CSU_C09_STUDY_PHASE>`]
-     - required
+     - optional
      -
      - STUDY_PHASE: Required, repeating
 
@@ -8751,13 +8751,13 @@ CSU_C09_RX_ADMIN
    * - ``RXA``
      -
      - :ref:`RXA <hl7-v2_8_2-RXA>`
-     - required
+     - optional
      -
      - RXA: Required
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
    * - ``PRT``
@@ -8796,7 +8796,7 @@ CSU_C09_STUDY_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -8814,7 +8814,7 @@ CSU_C09_STUDY_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
 
@@ -8841,7 +8841,7 @@ CSU_C09_STUDY_OBSERVATION_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -8880,7 +8880,7 @@ CSU_C09_STUDY_PHARM
    * - ``RX_ADMIN``
      -
      - List[:ref:`CSU_C09_RX_ADMIN <hl7-v2_8_2-CSU_C09_RX_ADMIN>`]
-     - required
+     - optional
      -
      - RX_ADMIN: Required, repeating
 
@@ -8913,7 +8913,7 @@ CSU_C09_STUDY_PHASE
    * - ``STUDY_SCHEDULE``
      -
      - List[:ref:`CSU_C09_STUDY_SCHEDULE <hl7-v2_8_2-CSU_C09_STUDY_SCHEDULE>`]
-     - required
+     - optional
      -
      - STUDY_SCHEDULE: Required, repeating
 
@@ -8946,13 +8946,13 @@ CSU_C09_STUDY_SCHEDULE
    * - ``STUDY_OBSERVATION``
      -
      - List[:ref:`CSU_C09_STUDY_OBSERVATION <hl7-v2_8_2-CSU_C09_STUDY_OBSERVATION>`]
-     - required
+     - optional
      -
      - STUDY_OBSERVATION: Required, repeating
    * - ``STUDY_PHARM``
      -
      - List[:ref:`CSU_C09_STUDY_PHARM <hl7-v2_8_2-CSU_C09_STUDY_PHARM>`]
-     - required
+     - optional
      -
      - STUDY_PHARM: Required, repeating
 
@@ -8979,7 +8979,7 @@ CSU_C09_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -9012,7 +9012,7 @@ CSU_C09_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -9051,7 +9051,7 @@ DBC_O41_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -9108,7 +9108,7 @@ DBC_O42_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -9165,7 +9165,7 @@ DEL_O46_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -9261,7 +9261,7 @@ DEO_O45_DONATION_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -9294,7 +9294,7 @@ DEO_O45_DONATION_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -9333,7 +9333,7 @@ DEO_O45_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``OBX``
@@ -9417,7 +9417,7 @@ DER_O44_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -9480,7 +9480,7 @@ DER_O44_DONOR_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -9591,7 +9591,7 @@ DFT_P03_FINANCIAL
    * - ``FT1``
      -
      - :ref:`FT1 <hl7-v2_8_2-FT1>`
-     - required
+     - optional
      -
      - FT1: Required
    * - ``PRT``
@@ -9693,7 +9693,7 @@ DFT_P03_FINANCIAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -9726,7 +9726,7 @@ DFT_P03_FINANCIAL_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -9759,7 +9759,7 @@ DFT_P03_FINANCIAL_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``PRT``
@@ -9798,7 +9798,7 @@ DFT_P03_FINANCIAL_TIMING_QUANTITY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -9831,7 +9831,7 @@ DFT_P03_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -9882,7 +9882,7 @@ DFT_P03_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -9915,7 +9915,7 @@ DFT_P03_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -9948,7 +9948,7 @@ DFT_P03_TIMING_QUANTITY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -9981,7 +9981,7 @@ DFT_P03_VISIT
    * - ``PV2``
      -
      - :ref:`PV2 <hl7-v2_8_2-PV2>`
-     - required
+     - optional
      -
      - PV2: Required
    * - ``PRT``
@@ -10065,7 +10065,7 @@ DFT_P11_FINANCIAL
    * - ``FT1``
      -
      - :ref:`FT1 <hl7-v2_8_2-FT1>`
-     - required
+     - optional
      -
      - FT1: Required
    * - ``FINANCIAL_PROCEDURE``
@@ -10173,7 +10173,7 @@ DFT_P11_FINANCIAL_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -10224,7 +10224,7 @@ DFT_P11_FINANCIAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -10257,7 +10257,7 @@ DFT_P11_FINANCIAL_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -10290,7 +10290,7 @@ DFT_P11_FINANCIAL_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``PRT``
@@ -10329,7 +10329,7 @@ DFT_P11_FINANCIAL_TIMING_QUANTITY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -10362,7 +10362,7 @@ DFT_P11_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -10413,7 +10413,7 @@ DFT_P11_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -10446,7 +10446,7 @@ DFT_P11_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -10479,7 +10479,7 @@ DFT_P11_TIMING_QUANTITY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -10512,7 +10512,7 @@ DFT_P11_VISIT
    * - ``PV2``
      -
      - :ref:`PV2 <hl7-v2_8_2-PV2>`
-     - required
+     - optional
      -
      - PV2: Required
    * - ``PRT``
@@ -10584,7 +10584,7 @@ DPR_O48_DONATION
    * - ``DON``
      -
      - :ref:`DON <hl7-v2_8_2-DON>`
-     - required
+     - optional
      -
      - DON: Required
    * - ``OBX``
@@ -10629,7 +10629,7 @@ DPR_O48_DONATION_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -10662,7 +10662,7 @@ DPR_O48_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -10758,7 +10758,7 @@ DRC_O47_DONATION_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -10791,7 +10791,7 @@ DRC_O47_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -10887,7 +10887,7 @@ DRG_O43_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -10983,7 +10983,7 @@ EAC_U07_COMMAND
    * - ``ECD``
      -
      - :ref:`ECD <hl7-v2_8_2-ECD>`
-     - required
+     - optional
      -
      - ECD: Required
    * - ``TQ1``
@@ -11028,7 +11028,7 @@ EAC_U07_SPECIMEN_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``OBR``
@@ -11067,7 +11067,7 @@ EAN_U09_NOTIFICATION
    * - ``NDS``
      -
      - :ref:`NDS <hl7-v2_8_2-NDS>`
-     - required
+     - optional
      -
      - NDS: Required
    * - ``NTE``
@@ -11100,7 +11100,7 @@ EAR_U08_COMMAND_RESPONSE
    * - ``ECD``
      -
      - :ref:`ECD <hl7-v2_8_2-ECD>`
-     - required
+     - optional
      -
      - ECD: Required
    * - ``SPECIMEN_CONTAINER``
@@ -11112,7 +11112,7 @@ EAR_U08_COMMAND_RESPONSE
    * - ``ECR``
      -
      - :ref:`ECR <hl7-v2_8_2-ECR>`
-     - required
+     - optional
      -
      - ECR: Required
 
@@ -11139,7 +11139,7 @@ EAR_U08_SPECIMEN_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``SPM``
@@ -11172,7 +11172,7 @@ EHC_E01_DIAGNOSIS
    * - ``DG1``
      -
      - :ref:`DG1 <hl7-v2_8_2-DG1>`
-     - required
+     - optional
      -
      - DG1: Required
    * - ``NTE``
@@ -11205,7 +11205,7 @@ EHC_E01_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -11307,7 +11307,7 @@ EHC_E01_PATIENT_INFO
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
@@ -11331,7 +11331,7 @@ EHC_E01_PATIENT_INFO
    * - ``INSURANCE``
      -
      - List[:ref:`EHC_E01_INSURANCE <hl7-v2_8_2-EHC_E01_INSURANCE>`]
-     - required
+     - optional
      -
      - INSURANCE: Required, repeating
    * - ``DIAGNOSIS``
@@ -11370,7 +11370,7 @@ EHC_E01_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``NTE``
@@ -11415,7 +11415,7 @@ EHC_E01_PRODUCT_SERVICE_GROUP
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_8_2-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``LOC``
@@ -11445,7 +11445,7 @@ EHC_E01_PRODUCT_SERVICE_GROUP
    * - ``PRODUCT_SERVICE_LINE_ITEM``
      -
      - List[:ref:`EHC_E01_PRODUCT_SERVICE_LINE_ITEM <hl7-v2_8_2-EHC_E01_PRODUCT_SERVICE_LINE_ITEM>`]
-     - required
+     - optional
      -
      - PRODUCT_SERVICE_LINE_ITEM: Required, repeating
    * - ``PROCEDURE``
@@ -11484,7 +11484,7 @@ EHC_E01_PRODUCT_SERVICE_LINE_ITEM
    * - ``PSL``
      -
      - :ref:`PSL <hl7-v2_8_2-PSL>`
-     - required
+     - optional
      -
      - PSL: Required
    * - ``NTE``
@@ -11547,13 +11547,13 @@ EHC_E01_PRODUCT_SERVICE_SECTION
    * - ``PSS``
      -
      - :ref:`PSS <hl7-v2_8_2-PSS>`
-     - required
+     - optional
      -
      - PSS: Required
    * - ``PRODUCT_SERVICE_GROUP``
      -
      - List[:ref:`EHC_E01_PRODUCT_SERVICE_GROUP <hl7-v2_8_2-EHC_E01_PRODUCT_SERVICE_GROUP>`]
-     - required
+     - optional
      -
      - PRODUCT_SERVICE_GROUP: Required, repeating
 
@@ -11631,7 +11631,7 @@ EHC_E02_PRODUCT_SERVICE_SECTION
    * - ``PSS``
      -
      - :ref:`PSS <hl7-v2_8_2-PSS>`
-     - required
+     - optional
      -
      - PSS: Required
    * - ``PSG``
@@ -11664,7 +11664,7 @@ EHC_E02_PSG
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_8_2-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``PSL``
@@ -11697,7 +11697,7 @@ EHC_E04_PRODUCT_SERVICE_GROUP
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_8_2-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``PSL``
@@ -11730,7 +11730,7 @@ EHC_E04_PRODUCT_SERVICE_SECTION
    * - ``PSS``
      -
      - :ref:`PSS <hl7-v2_8_2-PSS>`
-     - required
+     - optional
      -
      - PSS: Required
    * - ``PRODUCT_SERVICE_GROUP``
@@ -11802,7 +11802,7 @@ EHC_E10_INVOICE_PROCESSING_RESULTS_INFO
    * - ``IPR``
      -
      - :ref:`IPR <hl7-v2_8_2-IPR>`
-     - required
+     - optional
      -
      - IPR: Required
    * - ``NTE``
@@ -11814,13 +11814,13 @@ EHC_E10_INVOICE_PROCESSING_RESULTS_INFO
    * - ``PYE``
      -
      - :ref:`PYE <hl7-v2_8_2-PYE>`
-     - required
+     - optional
      -
      - PYE: Required
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -11832,13 +11832,13 @@ EHC_E10_INVOICE_PROCESSING_RESULTS_INFO
    * - ``IVC``
      -
      - :ref:`IVC <hl7-v2_8_2-IVC>`
-     - required
+     - optional
      -
      - IVC: Required
    * - ``PRODUCT_SERVICE_SECTION``
      -
      - List[:ref:`EHC_E10_PRODUCT_SERVICE_SECTION <hl7-v2_8_2-EHC_E10_PRODUCT_SERVICE_SECTION>`]
-     - required
+     - optional
      -
      - PRODUCT_SERVICE_SECTION: Required, repeating
 
@@ -11865,13 +11865,13 @@ EHC_E10_PRODUCT_SERVICE_GROUP
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_8_2-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``PRODUCT_SERVICE_LINE_INFO``
      -
      - List[:ref:`EHC_E10_PRODUCT_SERVICE_LINE_INFO <hl7-v2_8_2-EHC_E10_PRODUCT_SERVICE_LINE_INFO>`]
-     - required
+     - optional
      -
      - PRODUCT_SERVICE_LINE_INFO: Required, repeating
 
@@ -11898,7 +11898,7 @@ EHC_E10_PRODUCT_SERVICE_LINE_INFO
    * - ``PSL``
      -
      - :ref:`PSL <hl7-v2_8_2-PSL>`
-     - required
+     - optional
      -
      - PSL: Required
    * - ``ADJ``
@@ -11931,13 +11931,13 @@ EHC_E10_PRODUCT_SERVICE_SECTION
    * - ``PSS``
      -
      - :ref:`PSS <hl7-v2_8_2-PSS>`
-     - required
+     - optional
      -
      - PSS: Required
    * - ``PRODUCT_SERVICE_GROUP``
      -
      - List[:ref:`EHC_E10_PRODUCT_SERVICE_GROUP <hl7-v2_8_2-EHC_E10_PRODUCT_SERVICE_GROUP>`]
-     - required
+     - optional
      -
      - PRODUCT_SERVICE_GROUP: Required, repeating
 
@@ -11970,7 +11970,7 @@ EHC_E12_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -12015,7 +12015,7 @@ EHC_E13_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -12027,7 +12027,7 @@ EHC_E13_REQUEST
    * - ``RESPONSE``
      -
      - List[:ref:`EHC_E13_RESPONSE <hl7-v2_8_2-EHC_E13_RESPONSE>`]
-     - required
+     - optional
      -
      - RESPONSE: Required, repeating
 
@@ -12054,7 +12054,7 @@ EHC_E13_RESPONSE
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -12093,7 +12093,7 @@ EHC_E15_ADJUSTMENT_PAYEE
    * - ``ADJ``
      -
      - :ref:`ADJ <hl7-v2_8_2-ADJ>`
-     - required
+     - optional
      -
      - ADJ: Required
    * - ``PRT``
@@ -12132,19 +12132,19 @@ EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO
    * - ``IPR``
      -
      - :ref:`IPR <hl7-v2_8_2-IPR>`
-     - required
+     - optional
      -
      - IPR: Required
    * - ``IVC``
      -
      - :ref:`IVC <hl7-v2_8_2-IVC>`
-     - required
+     - optional
      -
      - IVC: Required
    * - ``PRODUCT_SERVICE_SECTION``
      -
      - List[:ref:`EHC_E15_PRODUCT_SERVICE_SECTION <hl7-v2_8_2-EHC_E15_PRODUCT_SERVICE_SECTION>`]
-     - required
+     - optional
      -
      - PRODUCT_SERVICE_SECTION: Required, repeating
 
@@ -12204,13 +12204,13 @@ EHC_E15_PRODUCT_SERVICE_GROUP
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_8_2-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``PSL_ITEM_INFO``
      -
      - List[:ref:`EHC_E15_PSL_ITEM_INFO <hl7-v2_8_2-EHC_E15_PSL_ITEM_INFO>`]
-     - required
+     - optional
      -
      - PSL_ITEM_INFO: Required, repeating
 
@@ -12237,13 +12237,13 @@ EHC_E15_PRODUCT_SERVICE_SECTION
    * - ``PSS``
      -
      - :ref:`PSS <hl7-v2_8_2-PSS>`
-     - required
+     - optional
      -
      - PSS: Required
    * - ``PRODUCT_SERVICE_GROUP``
      -
      - List[:ref:`EHC_E15_PRODUCT_SERVICE_GROUP <hl7-v2_8_2-EHC_E15_PRODUCT_SERVICE_GROUP>`]
-     - required
+     - optional
      -
      - PRODUCT_SERVICE_GROUP: Required, repeating
 
@@ -12270,7 +12270,7 @@ EHC_E15_PSL_ITEM_INFO
    * - ``PSL``
      -
      - :ref:`PSL <hl7-v2_8_2-PSL>`
-     - required
+     - optional
      -
      - PSL: Required
    * - ``ADJ``
@@ -12360,7 +12360,7 @@ EHC_E20_DIAGNOSIS
    * - ``DG1``
      -
      - :ref:`DG1 <hl7-v2_8_2-DG1>`
-     - required
+     - optional
      -
      - DG1: Required
    * - ``NTE``
@@ -12393,7 +12393,7 @@ EHC_E20_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -12426,7 +12426,7 @@ EHC_E20_PAT_INFO
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ACC``
@@ -12438,7 +12438,7 @@ EHC_E20_PAT_INFO
    * - ``INSURANCE``
      -
      - List[:ref:`EHC_E20_INSURANCE <hl7-v2_8_2-EHC_E20_INSURANCE>`]
-     - required
+     - optional
      -
      - INSURANCE: Required, repeating
    * - ``DIAGNOSIS``
@@ -12477,7 +12477,7 @@ EHC_E20_PSL_ITEM_INFO
    * - ``PSL``
      -
      - :ref:`PSL <hl7-v2_8_2-PSL>`
-     - required
+     - optional
      -
      - PSL: Required
    * - ``NTE``
@@ -12567,7 +12567,7 @@ EHC_E21_PSL_ITEM_INFO
    * - ``PSL``
      -
      - :ref:`PSL <hl7-v2_8_2-PSL>`
-     - required
+     - optional
      -
      - PSL: Required
    * - ``NTE``
@@ -12639,7 +12639,7 @@ EHC_E24_PSL_ITEM_INFO
    * - ``PSL``
      -
      - :ref:`PSL <hl7-v2_8_2-PSL>`
-     - required
+     - optional
      -
      - PSL: Required
    * - ``AUT``
@@ -12678,7 +12678,7 @@ MDM_T01_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -12690,7 +12690,7 @@ MDM_T01_COMMON_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -12723,7 +12723,7 @@ MDM_T01_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -12756,7 +12756,7 @@ MDM_T02_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -12768,7 +12768,7 @@ MDM_T02_COMMON_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -12801,7 +12801,7 @@ MDM_T02_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -12834,7 +12834,7 @@ MDM_T02_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -12867,13 +12867,13 @@ MFN_M02_MF_STAFF
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``STF``
      -
      - :ref:`STF <hl7-v2_8_2-STF>`
-     - required
+     - optional
      -
      - STF: Required
    * - ``PRA``
@@ -12942,7 +12942,7 @@ MFN_M04_MF_CDM
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``NTE``
@@ -12954,7 +12954,7 @@ MFN_M04_MF_CDM
    * - ``CDM``
      -
      - :ref:`CDM <hl7-v2_8_2-CDM>`
-     - required
+     - optional
      -
      - CDM: Required
    * - ``PRC``
@@ -12987,13 +12987,13 @@ MFN_M05_MF_LOCATION
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``LOC``
      -
      - :ref:`LOC <hl7-v2_8_2-LOC>`
-     - required
+     - optional
      -
      - LOC: Required
    * - ``LCH``
@@ -13011,7 +13011,7 @@ MFN_M05_MF_LOCATION
    * - ``MF_LOC_DEPT``
      -
      - List[:ref:`MFN_M05_MF_LOC_DEPT <hl7-v2_8_2-MFN_M05_MF_LOC_DEPT>`]
-     - required
+     - optional
      -
      - MF_LOC_DEPT: Required, repeating
 
@@ -13038,7 +13038,7 @@ MFN_M05_MF_LOC_DEPT
    * - ``LDP``
      -
      - :ref:`LDP <hl7-v2_8_2-LDP>`
-     - required
+     - optional
      -
      - LDP: Required
    * - ``LCH``
@@ -13077,13 +13077,13 @@ MFN_M06_MF_CLIN_STUDY
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``CM0``
      -
      - :ref:`CM0 <hl7-v2_8_2-CM0>`
-     - required
+     - optional
      -
      - CM0: Required
    * - ``MF_PHASE_SCHED_DETAIL``
@@ -13116,7 +13116,7 @@ MFN_M06_MF_PHASE_SCHED_DETAIL
    * - ``CM1``
      -
      - :ref:`CM1 <hl7-v2_8_2-CM1>`
-     - required
+     - optional
      -
      - CM1: Required
    * - ``CM2``
@@ -13149,13 +13149,13 @@ MFN_M07_MF_CLIN_STUDY_SCHED
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``CM0``
      -
      - :ref:`CM0 <hl7-v2_8_2-CM0>`
-     - required
+     - optional
      -
      - CM0: Required
    * - ``CM2``
@@ -13188,13 +13188,13 @@ MFN_M08_MF_TEST_NUMERIC
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``OM1``
      -
      - :ref:`OM1 <hl7-v2_8_2-OM1>`
-     - required
+     - optional
      -
      - OM1: Required
    * - ``OMC``
@@ -13251,13 +13251,13 @@ MFN_M09_MF_TEST_CATEGORICAL
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``OM1``
      -
      - :ref:`OM1 <hl7-v2_8_2-OM1>`
-     - required
+     - optional
      -
      - OM1: Required
    * - ``OMC``
@@ -13302,7 +13302,7 @@ MFN_M09_MF_TEST_CAT_DETAIL
    * - ``OM3``
      -
      - :ref:`OM3 <hl7-v2_8_2-OM3>`
-     - required
+     - optional
      -
      - OM3: Required
    * - ``OM4``
@@ -13335,13 +13335,13 @@ MFN_M10_MF_TEST_BATTERIES
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``OM1``
      -
      - :ref:`OM1 <hl7-v2_8_2-OM1>`
-     - required
+     - optional
      -
      - OM1: Required
    * - ``OMC``
@@ -13386,7 +13386,7 @@ MFN_M10_MF_TEST_BATT_DETAIL
    * - ``OM5``
      -
      - :ref:`OM5 <hl7-v2_8_2-OM5>`
-     - required
+     - optional
      -
      - OM5: Required
    * - ``OM4``
@@ -13419,13 +13419,13 @@ MFN_M11_MF_TEST_CALCULATED
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``OM1``
      -
      - :ref:`OM1 <hl7-v2_8_2-OM1>`
-     - required
+     - optional
      -
      - OM1: Required
    * - ``OMC``
@@ -13470,13 +13470,13 @@ MFN_M11_MF_TEST_CALC_DETAIL
    * - ``OM6``
      -
      - :ref:`OM6 <hl7-v2_8_2-OM6>`
-     - required
+     - optional
      -
      - OM6: Required
    * - ``OM2``
      -
      - :ref:`OM2 <hl7-v2_8_2-OM2>`
-     - required
+     - optional
      -
      - OM2: Required
 
@@ -13503,13 +13503,13 @@ MFN_M12_MF_OBS_ATTRIBUTES
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``OM1``
      -
      - :ref:`OM1 <hl7-v2_8_2-OM1>`
-     - required
+     - optional
      -
      - OM1: Required
    * - ``PRT``
@@ -13548,7 +13548,7 @@ MFN_M12_MF_OBS_OTHER_ATTRIBUTES
    * - ``OM7``
      -
      - :ref:`OM7 <hl7-v2_8_2-OM7>`
-     - required
+     - optional
      -
      - OM7: Required
    * - ``PRT``
@@ -13581,13 +13581,13 @@ MFN_M15_MF_INV_ITEM
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``IIM``
      -
      - :ref:`IIM <hl7-v2_8_2-IIM>`
-     - required
+     - optional
      -
      - IIM: Required
 
@@ -13614,13 +13614,13 @@ MFN_M16_MATERIAL_ITEM_RECORD
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``ITM``
      -
      - :ref:`ITM <hl7-v2_8_2-ITM>`
-     - required
+     - optional
      -
      - ITM: Required
    * - ``NTE``
@@ -13671,7 +13671,7 @@ MFN_M16_MATERIAL_LOCATION
    * - ``IVT``
      -
      - :ref:`IVT <hl7-v2_8_2-IVT>`
-     - required
+     - optional
      -
      - IVT: Required
    * - ``ILT``
@@ -13710,7 +13710,7 @@ MFN_M16_PACKAGING
    * - ``PKG``
      -
      - :ref:`PKG <hl7-v2_8_2-PKG>`
-     - required
+     - optional
      -
      - PKG: Required
    * - ``PCE``
@@ -13743,7 +13743,7 @@ MFN_M16_PURCHASING_VENDOR
    * - ``VND``
      -
      - :ref:`VND <hl7-v2_8_2-VND>`
-     - required
+     - optional
      -
      - VND: Required
    * - ``PACKAGING``
@@ -13776,7 +13776,7 @@ MFN_M16_STERILIZATION
    * - ``STZ``
      -
      - :ref:`STZ <hl7-v2_8_2-STZ>`
-     - required
+     - optional
      -
      - STZ: Required
    * - ``NTE``
@@ -13809,13 +13809,13 @@ MFN_M17_MF_DRG
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``DMI``
      -
      - :ref:`DMI <hl7-v2_8_2-DMI>`
-     - required
+     - optional
      -
      - DMI: Required
 
@@ -13842,13 +13842,13 @@ MFN_M18_MF_PAYER
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
    * - ``PAYER_MF_ENTRY``
      -
      - List[:ref:`MFN_M18_PAYER_MF_ENTRY <hl7-v2_8_2-MFN_M18_PAYER_MF_ENTRY>`]
-     - required
+     - optional
      -
      - PAYER_MF_ENTRY: Required, repeating
 
@@ -13875,7 +13875,7 @@ MFN_M18_PAYER_MF_COVERAGE
    * - ``MCP``
      -
      - :ref:`MCP <hl7-v2_8_2-MCP>`
-     - required
+     - optional
      -
      - MCP: Required
    * - ``DPS``
@@ -13908,13 +13908,13 @@ MFN_M18_PAYER_MF_ENTRY
    * - ``PM1``
      -
      - :ref:`PM1 <hl7-v2_8_2-PM1>`
-     - required
+     - optional
      -
      - PM1: Required
    * - ``PAYER_MF_COVERAGE``
      -
      - List[:ref:`MFN_M18_PAYER_MF_COVERAGE <hl7-v2_8_2-MFN_M18_PAYER_MF_COVERAGE>`]
-     - required
+     - optional
      -
      - PAYER_MF_COVERAGE: Required, repeating
 
@@ -13941,7 +13941,7 @@ MFN_Znn_MF_SITE_DEFINED
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_8_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
 
@@ -13968,7 +13968,7 @@ NMD_N02_APP_STATS
    * - ``NST``
      -
      - :ref:`NST <hl7-v2_8_2-NST>`
-     - required
+     - optional
      -
      - NST: Required
    * - ``NTE``
@@ -14001,7 +14001,7 @@ NMD_N02_APP_STATUS
    * - ``NSC``
      -
      - :ref:`NSC <hl7-v2_8_2-NSC>`
-     - required
+     - optional
      -
      - NSC: Required
    * - ``NTE``
@@ -14034,7 +14034,7 @@ NMD_N02_CLOCK
    * - ``NCK``
      -
      - :ref:`NCK <hl7-v2_8_2-NCK>`
-     - required
+     - optional
      -
      - NCK: Required
    * - ``NTE``
@@ -14106,7 +14106,7 @@ OMB_O27_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -14145,7 +14145,7 @@ OMB_O27_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -14184,7 +14184,7 @@ OMB_O27_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -14202,7 +14202,7 @@ OMB_O27_ORDER
    * - ``BPO``
      -
      - :ref:`BPO <hl7-v2_8_2-BPO>`
-     - required
+     - optional
      -
      - BPO: Required
    * - ``SPM``
@@ -14265,7 +14265,7 @@ OMB_O27_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -14340,7 +14340,7 @@ OMB_O27_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -14379,7 +14379,7 @@ OMB_O27_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -14412,7 +14412,7 @@ OMD_O03_DIET
    * - ``ODS``
      -
      - List[:ref:`ODS <hl7-v2_8_2-ODS>`]
-     - required
+     - optional
      -
      - ODS: Required, repeating
    * - ``NTE``
@@ -14451,7 +14451,7 @@ OMD_O03_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -14490,7 +14490,7 @@ OMD_O03_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -14529,7 +14529,7 @@ OMD_O03_ORDER_DIET
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -14574,7 +14574,7 @@ OMD_O03_ORDER_TRAY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -14592,7 +14592,7 @@ OMD_O03_ORDER_TRAY
    * - ``ODT``
      -
      - List[:ref:`ODT <hl7-v2_8_2-ODT>`]
-     - required
+     - optional
      -
      - ODT: Required, repeating
    * - ``NTE``
@@ -14625,7 +14625,7 @@ OMD_O03_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -14700,7 +14700,7 @@ OMD_O03_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -14739,7 +14739,7 @@ OMD_O03_TIMING_DIET
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -14772,7 +14772,7 @@ OMD_O03_TIMING_TRAY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -14805,7 +14805,7 @@ OMG_O19_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``CONTAINER_OBSERVATION``
@@ -14838,7 +14838,7 @@ OMG_O19_CONTAINER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -14871,7 +14871,7 @@ OMG_O19_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -14910,7 +14910,7 @@ OMG_O19_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -14949,7 +14949,7 @@ OMG_O19_OBSERVATION_PRIOR
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -14988,7 +14988,7 @@ OMG_O19_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -15006,7 +15006,7 @@ OMG_O19_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -15099,7 +15099,7 @@ OMG_O19_ORDER_PRIOR
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -15111,7 +15111,7 @@ OMG_O19_ORDER_PRIOR
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``TIMING_PRIOR``
@@ -15135,7 +15135,7 @@ OMG_O19_ORDER_PRIOR
    * - ``OBSERVATION_PRIOR``
      -
      - List[:ref:`OMG_O19_OBSERVATION_PRIOR <hl7-v2_8_2-OMG_O19_OBSERVATION_PRIOR>`]
-     - required
+     - optional
      -
      - OBSERVATION_PRIOR: Required, repeating
 
@@ -15162,7 +15162,7 @@ OMG_O19_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -15243,7 +15243,7 @@ OMG_O19_PATIENT_PRIOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -15288,7 +15288,7 @@ OMG_O19_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -15327,7 +15327,7 @@ OMG_O19_PATIENT_VISIT_PRIOR
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -15384,7 +15384,7 @@ OMG_O19_PRIOR_RESULT
    * - ``ORDER_PRIOR``
      -
      - List[:ref:`OMG_O19_ORDER_PRIOR <hl7-v2_8_2-OMG_O19_ORDER_PRIOR>`]
-     - required
+     - optional
      -
      - ORDER_PRIOR: Required, repeating
 
@@ -15411,7 +15411,7 @@ OMG_O19_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -15450,7 +15450,7 @@ OMG_O19_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -15483,7 +15483,7 @@ OMG_O19_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -15516,7 +15516,7 @@ OMG_O19_TIMING_PRIOR
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -15549,7 +15549,7 @@ OMI_O23_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -15588,7 +15588,7 @@ OMI_O23_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -15627,7 +15627,7 @@ OMI_O23_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -15645,7 +15645,7 @@ OMI_O23_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -15675,7 +15675,7 @@ OMI_O23_ORDER
    * - ``IPC``
      -
      - List[:ref:`IPC <hl7-v2_8_2-IPC>`]
-     - required
+     - optional
      -
      - IPC: Required, repeating
 
@@ -15702,7 +15702,7 @@ OMI_O23_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -15777,7 +15777,7 @@ OMI_O23_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -15816,7 +15816,7 @@ OMI_O23_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -15849,7 +15849,7 @@ OML_O21_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``CONTAINER_OBSERVATION``
@@ -15882,7 +15882,7 @@ OML_O21_CONTAINER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -15915,7 +15915,7 @@ OML_O21_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -15954,7 +15954,7 @@ OML_O21_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -15999,7 +15999,7 @@ OML_O21_OBSERVATION_PRIOR
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -16038,7 +16038,7 @@ OML_O21_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``TCD``
@@ -16125,7 +16125,7 @@ OML_O21_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -16188,7 +16188,7 @@ OML_O21_ORDER_PRIOR
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -16200,7 +16200,7 @@ OML_O21_ORDER_PRIOR
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -16218,7 +16218,7 @@ OML_O21_ORDER_PRIOR
    * - ``OBSERVATION_PRIOR``
      -
      - List[:ref:`OML_O21_OBSERVATION_PRIOR <hl7-v2_8_2-OML_O21_OBSERVATION_PRIOR>`]
-     - required
+     - optional
      -
      - OBSERVATION_PRIOR: Required, repeating
 
@@ -16245,7 +16245,7 @@ OML_O21_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -16326,7 +16326,7 @@ OML_O21_PATIENT_PRIOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -16371,7 +16371,7 @@ OML_O21_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -16410,7 +16410,7 @@ OML_O21_PATIENT_VISIT_PRIOR
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -16467,7 +16467,7 @@ OML_O21_PRIOR_RESULT
    * - ``ORDER_PRIOR``
      -
      - List[:ref:`OML_O21_ORDER_PRIOR <hl7-v2_8_2-OML_O21_ORDER_PRIOR>`]
-     - required
+     - optional
      -
      - ORDER_PRIOR: Required, repeating
 
@@ -16494,7 +16494,7 @@ OML_O21_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -16533,7 +16533,7 @@ OML_O21_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -16566,7 +16566,7 @@ OML_O21_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -16599,7 +16599,7 @@ OML_O21_TIMING_PRIOR
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -16632,7 +16632,7 @@ OML_O33_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -16671,7 +16671,7 @@ OML_O33_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -16716,7 +16716,7 @@ OML_O33_OBSERVATION_PRIOR
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -16755,7 +16755,7 @@ OML_O33_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``TCD``
@@ -16830,7 +16830,7 @@ OML_O33_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -16893,7 +16893,7 @@ OML_O33_ORDER_PRIOR
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -16905,7 +16905,7 @@ OML_O33_ORDER_PRIOR
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -16923,7 +16923,7 @@ OML_O33_ORDER_PRIOR
    * - ``OBSERVATION_PRIOR``
      -
      - List[:ref:`OML_O33_OBSERVATION_PRIOR <hl7-v2_8_2-OML_O33_OBSERVATION_PRIOR>`]
-     - required
+     - optional
      -
      - OBSERVATION_PRIOR: Required, repeating
 
@@ -16950,7 +16950,7 @@ OML_O33_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -17031,7 +17031,7 @@ OML_O33_PATIENT_PRIOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -17076,7 +17076,7 @@ OML_O33_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -17115,7 +17115,7 @@ OML_O33_PATIENT_VISIT_PRIOR
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -17172,7 +17172,7 @@ OML_O33_PRIOR_RESULT
    * - ``ORDER_PRIOR``
      -
      - List[:ref:`OML_O33_ORDER_PRIOR <hl7-v2_8_2-OML_O33_ORDER_PRIOR>`]
-     - required
+     - optional
      -
      - ORDER_PRIOR: Required, repeating
 
@@ -17199,7 +17199,7 @@ OML_O33_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -17217,7 +17217,7 @@ OML_O33_SPECIMEN
    * - ``ORDER``
      -
      - List[:ref:`OML_O33_ORDER <hl7-v2_8_2-OML_O33_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -17244,7 +17244,7 @@ OML_O33_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -17277,7 +17277,7 @@ OML_O33_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -17310,7 +17310,7 @@ OML_O33_TIMING_PRIOR
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -17343,7 +17343,7 @@ OML_O35_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -17382,7 +17382,7 @@ OML_O35_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -17427,7 +17427,7 @@ OML_O35_OBSERVATION_PRIOR
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -17466,7 +17466,7 @@ OML_O35_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``TCD``
@@ -17541,7 +17541,7 @@ OML_O35_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -17604,7 +17604,7 @@ OML_O35_ORDER_PRIOR
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -17616,7 +17616,7 @@ OML_O35_ORDER_PRIOR
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -17634,7 +17634,7 @@ OML_O35_ORDER_PRIOR
    * - ``OBSERVATION_PRIOR``
      -
      - List[:ref:`OML_O35_OBSERVATION_PRIOR <hl7-v2_8_2-OML_O35_OBSERVATION_PRIOR>`]
-     - required
+     - optional
      -
      - OBSERVATION_PRIOR: Required, repeating
 
@@ -17661,7 +17661,7 @@ OML_O35_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -17742,7 +17742,7 @@ OML_O35_PATIENT_PRIOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -17787,7 +17787,7 @@ OML_O35_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -17826,7 +17826,7 @@ OML_O35_PATIENT_VISIT_PRIOR
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -17883,7 +17883,7 @@ OML_O35_PRIOR_RESULT
    * - ``ORDER_PRIOR``
      -
      - List[:ref:`OML_O35_ORDER_PRIOR <hl7-v2_8_2-OML_O35_ORDER_PRIOR>`]
-     - required
+     - optional
      -
      - ORDER_PRIOR: Required, repeating
 
@@ -17910,7 +17910,7 @@ OML_O35_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -17922,7 +17922,7 @@ OML_O35_SPECIMEN
    * - ``SPECIMEN_CONTAINER``
      -
      - List[:ref:`OML_O35_SPECIMEN_CONTAINER <hl7-v2_8_2-OML_O35_SPECIMEN_CONTAINER>`]
-     - required
+     - optional
      -
      - SPECIMEN_CONTAINER: Required, repeating
 
@@ -17949,13 +17949,13 @@ OML_O35_SPECIMEN_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``ORDER``
      -
      - List[:ref:`OML_O35_ORDER <hl7-v2_8_2-OML_O35_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -17982,7 +17982,7 @@ OML_O35_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -18015,7 +18015,7 @@ OML_O35_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -18048,7 +18048,7 @@ OML_O35_TIMING_PRIOR
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -18081,7 +18081,7 @@ OML_O39_CONTAINER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -18114,7 +18114,7 @@ OML_O39_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -18153,7 +18153,7 @@ OML_O39_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -18198,7 +18198,7 @@ OML_O39_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``TCD``
@@ -18267,7 +18267,7 @@ OML_O39_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -18330,7 +18330,7 @@ OML_O39_PACKAGE
    * - ``PAC``
      -
      - :ref:`PAC <hl7-v2_8_2-PAC>`
-     - required
+     - optional
      -
      - PAC: Required
    * - ``SPECIMEN_IN_PACKAGE``
@@ -18363,7 +18363,7 @@ OML_O39_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -18444,7 +18444,7 @@ OML_O39_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -18483,7 +18483,7 @@ OML_O39_SHIPMENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -18516,7 +18516,7 @@ OML_O39_SPECIMEN_CONTAINER_IN_PACKAGE
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``CONTAINER_OBSERVATION``
@@ -18549,7 +18549,7 @@ OML_O39_SPECIMEN_IN_PACKAGE
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -18588,7 +18588,7 @@ OML_O39_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -18621,7 +18621,7 @@ OML_O39_SPECIMEN_SHIPMENT
    * - ``SHP``
      -
      - :ref:`SHP <hl7-v2_8_2-SHP>`
-     - required
+     - optional
      -
      - SHP: Required
    * - ``SHIPMENT_OBSERVATION``
@@ -18633,7 +18633,7 @@ OML_O39_SPECIMEN_SHIPMENT
    * - ``PACKAGE``
      -
      - List[:ref:`OML_O39_PACKAGE <hl7-v2_8_2-OML_O39_PACKAGE>`]
-     - required
+     - optional
      -
      - PACKAGE: Required, repeating
 
@@ -18660,7 +18660,7 @@ OML_O39_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -18693,7 +18693,7 @@ OMN_O07_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -18732,7 +18732,7 @@ OMN_O07_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -18771,7 +18771,7 @@ OMN_O07_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -18789,7 +18789,7 @@ OMN_O07_ORDER
    * - ``RQD``
      -
      - :ref:`RQD <hl7-v2_8_2-RQD>`
-     - required
+     - optional
      -
      - RQD: Required
    * - ``RQ1``
@@ -18840,7 +18840,7 @@ OMN_O07_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -18915,7 +18915,7 @@ OMN_O07_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -18954,7 +18954,7 @@ OMN_O07_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -18987,7 +18987,7 @@ OMP_O09_ADDITIONAL_DEMOGRAPHICS
    * - ``PD1``
      -
      - :ref:`PD1 <hl7-v2_8_2-PD1>`
-     - required
+     - optional
      -
      - PD1: Required
    * - ``PRT``
@@ -19020,7 +19020,7 @@ OMP_O09_COMPONENT
    * - ``RXC``
      -
      - :ref:`RXC <hl7-v2_8_2-RXC>`
-     - required
+     - optional
      -
      - RXC: Required
    * - ``NTE``
@@ -19053,7 +19053,7 @@ OMP_O09_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -19092,7 +19092,7 @@ OMP_O09_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -19131,7 +19131,7 @@ OMP_O09_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -19143,7 +19143,7 @@ OMP_O09_ORDER
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``PRT``
@@ -19161,7 +19161,7 @@ OMP_O09_ORDER
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENT``
@@ -19218,7 +19218,7 @@ OMP_O09_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ADDITIONAL_DEMOGRAPHICS``
@@ -19287,7 +19287,7 @@ OMP_O09_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -19332,7 +19332,7 @@ OMP_O09_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -19365,7 +19365,7 @@ OMQ_O57_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -19404,7 +19404,7 @@ OMQ_O57_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -19443,7 +19443,7 @@ OMQ_O57_OBSERVATION_PRIOR
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -19482,7 +19482,7 @@ OMQ_O57_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -19494,13 +19494,13 @@ OMQ_O57_ORDER
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_8_2-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
    * - ``CTD``
@@ -19569,7 +19569,7 @@ OMQ_O57_ORDER_PRIOR
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -19581,7 +19581,7 @@ OMQ_O57_ORDER_PRIOR
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``TIMING_PRIOR``
@@ -19605,7 +19605,7 @@ OMQ_O57_ORDER_PRIOR
    * - ``OBSERVATION_PRIOR``
      -
      - List[:ref:`OMQ_O57_OBSERVATION_PRIOR <hl7-v2_8_2-OMQ_O57_OBSERVATION_PRIOR>`]
-     - required
+     - optional
      -
      - OBSERVATION_PRIOR: Required, repeating
 
@@ -19632,7 +19632,7 @@ OMQ_O57_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -19713,7 +19713,7 @@ OMQ_O57_PATIENT_PRIOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -19758,7 +19758,7 @@ OMQ_O57_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -19797,7 +19797,7 @@ OMQ_O57_PATIENT_VISIT_PRIOR
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -19854,7 +19854,7 @@ OMQ_O57_PRIOR_RESULT
    * - ``ORDER_PRIOR``
      -
      - List[:ref:`OMQ_O57_ORDER_PRIOR <hl7-v2_8_2-OMQ_O57_ORDER_PRIOR>`]
-     - required
+     - optional
      -
      - ORDER_PRIOR: Required, repeating
 
@@ -19881,7 +19881,7 @@ OMQ_O57_TIMING_PRIOR
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -19914,7 +19914,7 @@ OMS_O05_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -19953,7 +19953,7 @@ OMS_O05_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -19992,7 +19992,7 @@ OMS_O05_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -20010,7 +20010,7 @@ OMS_O05_ORDER
    * - ``RQD``
      -
      - :ref:`RQD <hl7-v2_8_2-RQD>`
-     - required
+     - optional
      -
      - RQD: Required
    * - ``RQ1``
@@ -20061,7 +20061,7 @@ OMS_O05_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -20136,7 +20136,7 @@ OMS_O05_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -20175,7 +20175,7 @@ OMS_O05_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -20208,7 +20208,7 @@ OPL_O37_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``CONTAINER_OBSERVATION``
@@ -20241,7 +20241,7 @@ OPL_O37_CONTAINER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -20274,7 +20274,7 @@ OPL_O37_GUARANTOR
    * - ``GT1``
      -
      - :ref:`GT1 <hl7-v2_8_2-GT1>`
-     - required
+     - optional
      -
      - GT1: Required
    * - ``NTE``
@@ -20307,7 +20307,7 @@ OPL_O37_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -20346,7 +20346,7 @@ OPL_O37_OBSERVATIONS_ON_PATIENT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -20379,7 +20379,7 @@ OPL_O37_OBSERVATION_REQUEST
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -20391,7 +20391,7 @@ OPL_O37_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``TIMING``
@@ -20442,7 +20442,7 @@ OPL_O37_OBSERVATION_RESULT_GROUP
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -20475,7 +20475,7 @@ OPL_O37_ORDER
    * - ``NK1``
      -
      - List[:ref:`NK1 <hl7-v2_8_2-NK1>`]
-     - required
+     - optional
      -
      - NK1: Required, repeating
    * - ``PATIENT``
@@ -20487,7 +20487,7 @@ OPL_O37_ORDER
    * - ``SPECIMEN``
      -
      - List[:ref:`OPL_O37_SPECIMEN <hl7-v2_8_2-OPL_O37_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
    * - ``SGH``
@@ -20550,7 +20550,7 @@ OPL_O37_ORDER_PRIOR
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``ORC``
@@ -20574,7 +20574,7 @@ OPL_O37_ORDER_PRIOR
    * - ``OBSERVATION_RESULT_GROUP``
      -
      - List[:ref:`OPL_O37_OBSERVATION_RESULT_GROUP <hl7-v2_8_2-OPL_O37_OBSERVATION_RESULT_GROUP>`]
-     - required
+     - optional
      -
      - OBSERVATION_RESULT_GROUP: Required, repeating
 
@@ -20601,7 +20601,7 @@ OPL_O37_ORDER_RELATED_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -20634,7 +20634,7 @@ OPL_O37_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -20697,7 +20697,7 @@ OPL_O37_PATIENT_PRIOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -20742,7 +20742,7 @@ OPL_O37_PATIENT_VISIT_PRIOR
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -20781,7 +20781,7 @@ OPL_O37_PRIOR_RESULT
    * - ``NK1``
      -
      - List[:ref:`NK1 <hl7-v2_8_2-NK1>`]
-     - required
+     - optional
      -
      - NK1: Required, repeating
    * - ``PATIENT_PRIOR``
@@ -20805,7 +20805,7 @@ OPL_O37_PRIOR_RESULT
    * - ``ORDER_PRIOR``
      -
      - List[:ref:`OPL_O37_ORDER_PRIOR <hl7-v2_8_2-OPL_O37_ORDER_PRIOR>`]
-     - required
+     - optional
      -
      - ORDER_PRIOR: Required, repeating
 
@@ -20832,7 +20832,7 @@ OPL_O37_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -20850,7 +20850,7 @@ OPL_O37_SPECIMEN
    * - ``OBSERVATION_REQUEST``
      -
      - List[:ref:`OPL_O37_OBSERVATION_REQUEST <hl7-v2_8_2-OPL_O37_OBSERVATION_REQUEST>`]
-     - required
+     - optional
      -
      - OBSERVATION_REQUEST: Required, repeating
 
@@ -20877,7 +20877,7 @@ OPL_O37_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -20910,7 +20910,7 @@ OPL_O37_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -20943,7 +20943,7 @@ OPR_O38_OBSERVATION_REQUEST
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -20955,7 +20955,7 @@ OPR_O38_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
 
@@ -20982,7 +20982,7 @@ OPR_O38_ORDER
    * - ``NK1``
      -
      - List[:ref:`NK1 <hl7-v2_8_2-NK1>`]
-     - required
+     - optional
      -
      - NK1: Required, repeating
    * - ``PID``
@@ -21033,7 +21033,7 @@ OPR_O38_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`OPR_O38_ORDER <hl7-v2_8_2-OPR_O38_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -21060,7 +21060,7 @@ OPR_O38_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -21111,7 +21111,7 @@ OPR_O38_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -21144,7 +21144,7 @@ OPR_O38_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -21177,7 +21177,7 @@ OPU_R25_ACCESSION_DETAIL
    * - ``NK1``
      -
      - List[:ref:`NK1 <hl7-v2_8_2-NK1>`]
-     - required
+     - optional
      -
      - NK1: Required, repeating
    * - ``PATIENT``
@@ -21189,7 +21189,7 @@ OPU_R25_ACCESSION_DETAIL
    * - ``SPECIMEN``
      -
      - List[:ref:`OPU_R25_SPECIMEN <hl7-v2_8_2-OPU_R25_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
 
@@ -21216,7 +21216,7 @@ OPU_R25_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -21249,7 +21249,7 @@ OPU_R25_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``INV``
@@ -21282,7 +21282,7 @@ OPU_R25_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -21312,7 +21312,7 @@ OPU_R25_ORDER
    * - ``RESULT``
      -
      - List[:ref:`OPU_R25_RESULT <hl7-v2_8_2-OPU_R25_RESULT>`]
-     - required
+     - optional
      -
      - RESULT: Required, repeating
 
@@ -21339,7 +21339,7 @@ OPU_R25_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -21390,7 +21390,7 @@ OPU_R25_PATIENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -21429,7 +21429,7 @@ OPU_R25_PATIENT_VISIT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``NTE``
@@ -21468,7 +21468,7 @@ OPU_R25_RESULT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -21507,7 +21507,7 @@ OPU_R25_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -21525,7 +21525,7 @@ OPU_R25_SPECIMEN
    * - ``ORDER``
      -
      - List[:ref:`OPU_R25_ORDER <hl7-v2_8_2-OPU_R25_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -21552,7 +21552,7 @@ OPU_R25_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -21591,7 +21591,7 @@ OPU_R25_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -21624,7 +21624,7 @@ ORB_O28_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -21669,7 +21669,7 @@ ORB_O28_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -21741,7 +21741,7 @@ ORB_O28_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -21774,7 +21774,7 @@ ORD_O04_ORDER_DIET
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -21825,7 +21825,7 @@ ORD_O04_ORDER_TRAY
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -21876,7 +21876,7 @@ ORD_O04_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -21927,7 +21927,7 @@ ORD_O04_RESPONSE
    * - ``ORDER_DIET``
      -
      - List[:ref:`ORD_O04_ORDER_DIET <hl7-v2_8_2-ORD_O04_ORDER_DIET>`]
-     - required
+     - optional
      -
      - ORDER_DIET: Required, repeating
    * - ``ORDER_TRAY``
@@ -21960,7 +21960,7 @@ ORD_O04_TIMING_DIET
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -21993,7 +21993,7 @@ ORD_O04_TIMING_TRAY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -22026,7 +22026,7 @@ ORG_O20_OBSERVATION_GROUP
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -22059,7 +22059,7 @@ ORG_O20_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -22122,7 +22122,7 @@ ORG_O20_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -22173,7 +22173,7 @@ ORG_O20_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`ORG_O20_ORDER <hl7-v2_8_2-ORG_O20_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -22200,7 +22200,7 @@ ORG_O20_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SAC``
@@ -22233,7 +22233,7 @@ ORG_O20_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -22266,7 +22266,7 @@ ORI_O24_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -22284,7 +22284,7 @@ ORI_O24_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -22296,7 +22296,7 @@ ORI_O24_ORDER
    * - ``IPC``
      -
      - List[:ref:`IPC <hl7-v2_8_2-IPC>`]
-     - required
+     - optional
      -
      - IPC: Required, repeating
 
@@ -22323,7 +22323,7 @@ ORI_O24_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ARV``
@@ -22374,7 +22374,7 @@ ORI_O24_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`ORI_O24_ORDER <hl7-v2_8_2-ORI_O24_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -22401,7 +22401,7 @@ ORI_O24_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -22434,7 +22434,7 @@ ORL_O22_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -22473,7 +22473,7 @@ ORL_O22_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -22518,7 +22518,7 @@ ORL_O22_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -22563,7 +22563,7 @@ ORL_O22_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SAC``
@@ -22596,7 +22596,7 @@ ORL_O22_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -22629,7 +22629,7 @@ ORL_O34_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -22662,7 +22662,7 @@ ORL_O34_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -22707,7 +22707,7 @@ ORL_O34_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -22725,7 +22725,7 @@ ORL_O34_RESPONSE
    * - ``SPECIMEN``
      -
      - List[:ref:`ORL_O34_SPECIMEN <hl7-v2_8_2-ORL_O34_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
 
@@ -22752,7 +22752,7 @@ ORL_O34_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -22797,7 +22797,7 @@ ORL_O34_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -22830,7 +22830,7 @@ ORL_O34_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -22863,7 +22863,7 @@ ORL_O36_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -22896,7 +22896,7 @@ ORL_O36_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -22941,7 +22941,7 @@ ORL_O36_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -22959,7 +22959,7 @@ ORL_O36_RESPONSE
    * - ``SPECIMEN``
      -
      - List[:ref:`ORL_O36_SPECIMEN <hl7-v2_8_2-ORL_O36_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
 
@@ -22986,7 +22986,7 @@ ORL_O36_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -23004,7 +23004,7 @@ ORL_O36_SPECIMEN
    * - ``SPECIMEN_CONTAINER``
      -
      - List[:ref:`ORL_O36_SPECIMEN_CONTAINER <hl7-v2_8_2-ORL_O36_SPECIMEN_CONTAINER>`]
-     - required
+     - optional
      -
      - SPECIMEN_CONTAINER: Required, repeating
 
@@ -23031,7 +23031,7 @@ ORL_O36_SPECIMEN_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``ORDER``
@@ -23064,7 +23064,7 @@ ORL_O36_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -23097,7 +23097,7 @@ ORL_O36_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -23130,7 +23130,7 @@ ORL_O40_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -23169,7 +23169,7 @@ ORL_O40_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -23214,7 +23214,7 @@ ORL_O40_PACKAGE
    * - ``PAC``
      -
      - :ref:`PAC <hl7-v2_8_2-PAC>`
-     - required
+     - optional
      -
      - PAC: Required
    * - ``SPECIMEN_IN_PACKAGE``
@@ -23247,7 +23247,7 @@ ORL_O40_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -23319,7 +23319,7 @@ ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
 
@@ -23346,7 +23346,7 @@ ORL_O40_SPECIMEN_IN_PACKAGE
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_CONTAINER_IN_PACKAGE``
@@ -23379,13 +23379,13 @@ ORL_O40_SPECIMEN_SHIPMENT
    * - ``SHP``
      -
      - :ref:`SHP <hl7-v2_8_2-SHP>`
-     - required
+     - optional
      -
      - SHP: Required
    * - ``PACKAGE``
      -
      - List[:ref:`ORL_O40_PACKAGE <hl7-v2_8_2-ORL_O40_PACKAGE>`]
-     - required
+     - optional
      -
      - PACKAGE: Required, repeating
 
@@ -23412,7 +23412,7 @@ ORL_O40_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -23445,7 +23445,7 @@ ORL_O41_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -23484,7 +23484,7 @@ ORL_O41_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -23529,7 +23529,7 @@ ORL_O41_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -23595,7 +23595,7 @@ ORL_O41_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SAC``
@@ -23628,7 +23628,7 @@ ORL_O41_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -23661,7 +23661,7 @@ ORL_O42_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -23694,7 +23694,7 @@ ORL_O42_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -23739,7 +23739,7 @@ ORL_O42_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -23778,7 +23778,7 @@ ORL_O42_RESPONSE
    * - ``SPECIMEN``
      -
      - List[:ref:`ORL_O42_SPECIMEN <hl7-v2_8_2-ORL_O42_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
 
@@ -23805,7 +23805,7 @@ ORL_O42_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -23850,7 +23850,7 @@ ORL_O42_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -23883,7 +23883,7 @@ ORL_O42_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -23916,7 +23916,7 @@ ORL_O43_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -23949,7 +23949,7 @@ ORL_O43_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -23994,7 +23994,7 @@ ORL_O43_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -24033,7 +24033,7 @@ ORL_O43_RESPONSE
    * - ``SPECIMEN``
      -
      - List[:ref:`ORL_O43_SPECIMEN <hl7-v2_8_2-ORL_O43_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
 
@@ -24060,7 +24060,7 @@ ORL_O43_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -24078,7 +24078,7 @@ ORL_O43_SPECIMEN
    * - ``SPECIMEN_CONTAINER``
      -
      - List[:ref:`ORL_O43_SPECIMEN_CONTAINER <hl7-v2_8_2-ORL_O43_SPECIMEN_CONTAINER>`]
-     - required
+     - optional
      -
      - SPECIMEN_CONTAINER: Required, repeating
 
@@ -24105,7 +24105,7 @@ ORL_O43_SPECIMEN_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``ORDER``
@@ -24138,7 +24138,7 @@ ORL_O43_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -24171,7 +24171,7 @@ ORL_O43_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -24204,7 +24204,7 @@ ORL_O44_OBSERVATION_REQUEST
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -24243,7 +24243,7 @@ ORL_O44_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -24288,7 +24288,7 @@ ORL_O44_PACKAGE
    * - ``PAC``
      -
      - :ref:`PAC <hl7-v2_8_2-PAC>`
-     - required
+     - optional
      -
      - PAC: Required
    * - ``SPECIMEN_IN_PACKAGE``
@@ -24321,7 +24321,7 @@ ORL_O44_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -24387,7 +24387,7 @@ ORL_O44_SPECIMEN_CONTAINER_IN_PACKAGE
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
 
@@ -24414,7 +24414,7 @@ ORL_O44_SPECIMEN_IN_PACKAGE
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_CONTAINER_IN_PACKAGE``
@@ -24447,13 +24447,13 @@ ORL_O44_SPECIMEN_SHIPMENT
    * - ``SHP``
      -
      - :ref:`SHP <hl7-v2_8_2-SHP>`
-     - required
+     - optional
      -
      - SHP: Required
    * - ``PACKAGE``
      -
      - List[:ref:`ORL_O44_PACKAGE <hl7-v2_8_2-ORL_O44_PACKAGE>`]
-     - required
+     - optional
      -
      - PACKAGE: Required, repeating
 
@@ -24480,7 +24480,7 @@ ORL_O44_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -24513,7 +24513,7 @@ ORN_O08_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -24531,7 +24531,7 @@ ORN_O08_ORDER
    * - ``RQD``
      -
      - :ref:`RQD <hl7-v2_8_2-RQD>`
-     - required
+     - optional
      -
      - RQD: Required
    * - ``RQ1``
@@ -24570,7 +24570,7 @@ ORN_O08_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ARV``
@@ -24615,7 +24615,7 @@ ORN_O08_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`ORN_O08_ORDER <hl7-v2_8_2-ORN_O08_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -24642,7 +24642,7 @@ ORN_O08_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -24675,7 +24675,7 @@ ORP_O10_COMPONENT
    * - ``RXC``
      -
      - :ref:`RXC <hl7-v2_8_2-RXC>`
-     - required
+     - optional
      -
      - RXC: Required
    * - ``NTE``
@@ -24708,7 +24708,7 @@ ORP_O10_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -24753,7 +24753,7 @@ ORP_O10_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``PRT``
@@ -24771,7 +24771,7 @@ ORP_O10_ORDER_DETAIL
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENT``
@@ -24804,7 +24804,7 @@ ORP_O10_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -24843,7 +24843,7 @@ ORP_O10_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`ORP_O10_ORDER <hl7-v2_8_2-ORP_O10_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -24870,7 +24870,7 @@ ORP_O10_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -24903,7 +24903,7 @@ ORS_O06_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -24921,7 +24921,7 @@ ORS_O06_ORDER
    * - ``RQD``
      -
      - :ref:`RQD <hl7-v2_8_2-RQD>`
-     - required
+     - optional
      -
      - RQD: Required
    * - ``RQ1``
@@ -24960,7 +24960,7 @@ ORS_O06_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -25011,7 +25011,7 @@ ORS_O06_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`ORS_O06_ORDER <hl7-v2_8_2-ORS_O06_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -25038,7 +25038,7 @@ ORS_O06_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -25071,7 +25071,7 @@ ORU_R01_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -25110,7 +25110,7 @@ ORU_R01_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25149,7 +25149,7 @@ ORU_R01_ORDER_DOCUMENT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25161,7 +25161,7 @@ ORU_R01_ORDER_DOCUMENT
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_8_2-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
 
@@ -25194,7 +25194,7 @@ ORU_R01_ORDER_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -25269,7 +25269,7 @@ ORU_R01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -25338,7 +25338,7 @@ ORU_R01_PATIENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25377,7 +25377,7 @@ ORU_R01_PATIENT_RESULT
    * - ``ORDER_OBSERVATION``
      -
      - List[:ref:`ORU_R01_ORDER_OBSERVATION <hl7-v2_8_2-ORU_R01_ORDER_OBSERVATION>`]
-     - required
+     - optional
      -
      - ORDER_OBSERVATION: Required, repeating
 
@@ -25404,7 +25404,7 @@ ORU_R01_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -25437,7 +25437,7 @@ ORU_R01_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25470,7 +25470,7 @@ ORU_R01_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -25503,7 +25503,7 @@ ORU_R01_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -25542,7 +25542,7 @@ ORU_R30_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25581,7 +25581,7 @@ ORU_R30_PATIENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25614,7 +25614,7 @@ ORU_R30_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -25647,7 +25647,7 @@ ORU_R30_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -25686,7 +25686,7 @@ ORX_O58_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -25698,7 +25698,7 @@ ORX_O58_ORDER
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_8_2-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
    * - ``CTI``
@@ -25731,7 +25731,7 @@ ORX_O58_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -25782,7 +25782,7 @@ ORX_O58_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`ORX_O58_ORDER <hl7-v2_8_2-ORX_O58_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -25809,7 +25809,7 @@ OSM_R26_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``CONTAINER_OBSERVATION``
@@ -25842,7 +25842,7 @@ OSM_R26_CONTAINER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25875,7 +25875,7 @@ OSM_R26_PACKAGE
    * - ``PAC``
      -
      - :ref:`PAC <hl7-v2_8_2-PAC>`
-     - required
+     - optional
      -
      - PAC: Required
    * - ``PRT``
@@ -25914,7 +25914,7 @@ OSM_R26_PATIENT_INFORMATION
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -25947,7 +25947,7 @@ OSM_R26_PATIENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -25980,7 +25980,7 @@ OSM_R26_PATIENT_VISIT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26013,13 +26013,13 @@ OSM_R26_SHIPMENT
    * - ``SHP``
      -
      - :ref:`SHP <hl7-v2_8_2-SHP>`
-     - required
+     - optional
      -
      - SHP: Required
    * - ``PRT``
      -
      - List[:ref:`PRT <hl7-v2_8_2-PRT>`]
-     - required
+     - optional
      -
      - PRT: Required, repeating
    * - ``SHIPPING_OBSERVATION``
@@ -26031,7 +26031,7 @@ OSM_R26_SHIPMENT
    * - ``PACKAGE``
      -
      - List[:ref:`OSM_R26_PACKAGE <hl7-v2_8_2-OSM_R26_PACKAGE>`]
-     - required
+     - optional
      -
      - PACKAGE: Required, repeating
 
@@ -26058,7 +26058,7 @@ OSM_R26_SHIPPING_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26091,7 +26091,7 @@ OSM_R26_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``PRT``
@@ -26148,7 +26148,7 @@ OSM_R26_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26181,7 +26181,7 @@ OSM_R26_SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PRT``
@@ -26232,7 +26232,7 @@ OSM_R26_SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PRT``
@@ -26283,7 +26283,7 @@ OSU_O51_ORDER_STATUS
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -26316,7 +26316,7 @@ OUL_R22_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -26355,7 +26355,7 @@ OUL_R22_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``INV``
@@ -26388,7 +26388,7 @@ OUL_R22_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -26451,7 +26451,7 @@ OUL_R22_ORDER_DOCUMENT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26463,7 +26463,7 @@ OUL_R22_ORDER_DOCUMENT
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_8_2-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
 
@@ -26490,7 +26490,7 @@ OUL_R22_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -26553,7 +26553,7 @@ OUL_R22_PATIENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26586,7 +26586,7 @@ OUL_R22_RESULT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26637,7 +26637,7 @@ OUL_R22_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -26655,7 +26655,7 @@ OUL_R22_SPECIMEN
    * - ``ORDER``
      -
      - List[:ref:`OUL_R22_ORDER <hl7-v2_8_2-OUL_R22_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -26682,7 +26682,7 @@ OUL_R22_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26715,7 +26715,7 @@ OUL_R22_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -26748,7 +26748,7 @@ OUL_R22_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -26787,7 +26787,7 @@ OUL_R23_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -26826,7 +26826,7 @@ OUL_R23_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``INV``
@@ -26838,7 +26838,7 @@ OUL_R23_CONTAINER
    * - ``ORDER``
      -
      - List[:ref:`OUL_R23_ORDER <hl7-v2_8_2-OUL_R23_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -26865,7 +26865,7 @@ OUL_R23_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -26928,7 +26928,7 @@ OUL_R23_ORDER_DOCUMENT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -26940,7 +26940,7 @@ OUL_R23_ORDER_DOCUMENT
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_8_2-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
 
@@ -26967,7 +26967,7 @@ OUL_R23_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -27030,7 +27030,7 @@ OUL_R23_PATIENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27063,7 +27063,7 @@ OUL_R23_RESULT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27114,7 +27114,7 @@ OUL_R23_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -27126,7 +27126,7 @@ OUL_R23_SPECIMEN
    * - ``CONTAINER``
      -
      - List[:ref:`OUL_R23_CONTAINER <hl7-v2_8_2-OUL_R23_CONTAINER>`]
-     - required
+     - optional
      -
      - CONTAINER: Required, repeating
 
@@ -27153,7 +27153,7 @@ OUL_R23_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27186,7 +27186,7 @@ OUL_R23_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -27219,7 +27219,7 @@ OUL_R23_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -27258,7 +27258,7 @@ OUL_R24_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -27297,7 +27297,7 @@ OUL_R24_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``INV``
@@ -27330,7 +27330,7 @@ OUL_R24_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``PRT``
@@ -27399,7 +27399,7 @@ OUL_R24_ORDER_DOCUMENT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27411,7 +27411,7 @@ OUL_R24_ORDER_DOCUMENT
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_8_2-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
 
@@ -27438,7 +27438,7 @@ OUL_R24_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -27501,7 +27501,7 @@ OUL_R24_PATIENT_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27534,7 +27534,7 @@ OUL_R24_RESULT
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27585,7 +27585,7 @@ OUL_R24_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``SPECIMEN_OBSERVATION``
@@ -27624,7 +27624,7 @@ OUL_R24_SPECIMEN_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27657,7 +27657,7 @@ OUL_R24_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -27690,7 +27690,7 @@ OUL_R24_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -27729,7 +27729,7 @@ PEX_P07_ASSOCIATED_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27762,7 +27762,7 @@ PEX_P07_ASSOCIATED_PERSON
    * - ``NK1``
      -
      - :ref:`NK1 <hl7-v2_8_2-NK1>`
-     - required
+     - optional
      -
      - NK1: Required
    * - ``ASSOCIATED_RX_ORDER``
@@ -27813,7 +27813,7 @@ PEX_P07_ASSOCIATED_RX_ADMIN
    * - ``RXA``
      -
      - :ref:`RXA <hl7-v2_8_2-RXA>`
-     - required
+     - optional
      -
      - RXA: Required
    * - ``RXR``
@@ -27852,7 +27852,7 @@ PEX_P07_ASSOCIATED_RX_ORDER
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``PRT``
@@ -27864,7 +27864,7 @@ PEX_P07_ASSOCIATED_RX_ORDER
    * - ``NK1_TIMING_QTY``
      -
      - List[:ref:`PEX_P07_NK1_TIMING_QTY <hl7-v2_8_2-PEX_P07_NK1_TIMING_QTY>`]
-     - required
+     - optional
      -
      - NK1_TIMING_QTY: Required, repeating
    * - ``RXR``
@@ -27897,13 +27897,13 @@ PEX_P07_EXPERIENCE
    * - ``PES``
      -
      - :ref:`PES <hl7-v2_8_2-PES>`
-     - required
+     - optional
      -
      - PES: Required
    * - ``PEX_OBSERVATION``
      -
      - List[:ref:`PEX_P07_PEX_OBSERVATION <hl7-v2_8_2-PEX_P07_PEX_OBSERVATION>`]
-     - required
+     - optional
      -
      - PEX_OBSERVATION: Required, repeating
 
@@ -27930,7 +27930,7 @@ PEX_P07_NK1_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -27963,7 +27963,7 @@ PEX_P07_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -27996,7 +27996,7 @@ PEX_P07_PEX_CAUSE
    * - ``PCR``
      -
      - :ref:`PCR <hl7-v2_8_2-PCR>`
-     - required
+     - optional
      -
      - PCR: Required
    * - ``RX_ORDER``
@@ -28065,13 +28065,13 @@ PEX_P07_PEX_OBSERVATION
    * - ``PEO``
      -
      - :ref:`PEO <hl7-v2_8_2-PEO>`
-     - required
+     - optional
      -
      - PEO: Required
    * - ``PEX_CAUSE``
      -
      - List[:ref:`PEX_P07_PEX_CAUSE <hl7-v2_8_2-PEX_P07_PEX_CAUSE>`]
-     - required
+     - optional
      -
      - PEX_CAUSE: Required, repeating
 
@@ -28098,7 +28098,7 @@ PEX_P07_RX_ADMINISTRATION
    * - ``RXA``
      -
      - :ref:`RXA <hl7-v2_8_2-RXA>`
-     - required
+     - optional
      -
      - RXA: Required
    * - ``RXR``
@@ -28137,7 +28137,7 @@ PEX_P07_RX_ORDER
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``PRT``
@@ -28149,7 +28149,7 @@ PEX_P07_RX_ORDER
    * - ``TIMING_QTY``
      -
      - List[:ref:`PEX_P07_TIMING_QTY <hl7-v2_8_2-PEX_P07_TIMING_QTY>`]
-     - required
+     - optional
      -
      - TIMING_QTY: Required, repeating
    * - ``RXR``
@@ -28182,7 +28182,7 @@ PEX_P07_STUDY
    * - ``CSR``
      -
      - :ref:`CSR <hl7-v2_8_2-CSR>`
-     - required
+     - optional
      -
      - CSR: Required
    * - ``CSP``
@@ -28215,7 +28215,7 @@ PEX_P07_TIMING_QTY
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -28248,7 +28248,7 @@ PEX_P07_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -28314,7 +28314,7 @@ PGL_PC6_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``NTE``
@@ -28383,7 +28383,7 @@ PGL_PC6_GOAL_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -28416,7 +28416,7 @@ PGL_PC6_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -28455,7 +28455,7 @@ PGL_PC6_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -28488,7 +28488,7 @@ PGL_PC6_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`PGL_PC6_CHOICE <hl7-v2_8_2-PGL_PC6_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
    * - ``NTE``
@@ -28533,7 +28533,7 @@ PGL_PC6_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -28578,7 +28578,7 @@ PGL_PC6_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``VAR``
@@ -28611,7 +28611,7 @@ PGL_PC6_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -28644,7 +28644,7 @@ PGL_PC6_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``NTE``
@@ -28695,7 +28695,7 @@ PGL_PC6_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -28734,7 +28734,7 @@ PGL_PC6_PROBLEM_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -28767,7 +28767,7 @@ PMU_B07_CERTIFICATE
    * - ``CER``
      -
      - :ref:`CER <hl7-v2_8_2-CER>`
-     - required
+     - optional
      -
      - CER: Required
    * - ``PRT``
@@ -28833,7 +28833,7 @@ PPG_PCG_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``NTE``
@@ -28896,7 +28896,7 @@ PPG_PCG_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -28935,7 +28935,7 @@ PPG_PCG_GOAL_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -28968,7 +28968,7 @@ PPG_PCG_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -29001,7 +29001,7 @@ PPG_PCG_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`PPG_PCG_CHOICE <hl7-v2_8_2-PPG_PCG_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
    * - ``NTE``
@@ -29046,7 +29046,7 @@ PPG_PCG_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -29091,7 +29091,7 @@ PPG_PCG_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``NTE``
@@ -29142,7 +29142,7 @@ PPG_PCG_PATHWAY_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -29175,7 +29175,7 @@ PPG_PCG_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -29208,7 +29208,7 @@ PPG_PCG_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``NTE``
@@ -29259,7 +29259,7 @@ PPG_PCG_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -29298,7 +29298,7 @@ PPG_PCG_PROBLEM_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -29358,7 +29358,7 @@ PPP_PCB_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``NTE``
@@ -29409,7 +29409,7 @@ PPP_PCB_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -29448,7 +29448,7 @@ PPP_PCB_GOAL_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -29481,7 +29481,7 @@ PPP_PCB_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -29514,7 +29514,7 @@ PPP_PCB_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`PPP_PCB_CHOICE <hl7-v2_8_2-PPP_PCB_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
    * - ``NTE``
@@ -29559,7 +29559,7 @@ PPP_PCB_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -29604,7 +29604,7 @@ PPP_PCB_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``NTE``
@@ -29655,7 +29655,7 @@ PPP_PCB_PATHWAY_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -29688,7 +29688,7 @@ PPP_PCB_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -29721,7 +29721,7 @@ PPP_PCB_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``NTE``
@@ -29784,7 +29784,7 @@ PPP_PCB_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -29823,7 +29823,7 @@ PPP_PCB_PROBLEM_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -29883,7 +29883,7 @@ PPR_PC1_GOAL
    * - ``GOL``
      -
      - :ref:`GOL <hl7-v2_8_2-GOL>`
-     - required
+     - optional
      -
      - GOL: Required
    * - ``NTE``
@@ -29934,7 +29934,7 @@ PPR_PC1_GOAL_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -29973,7 +29973,7 @@ PPR_PC1_GOAL_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -30006,7 +30006,7 @@ PPR_PC1_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -30039,7 +30039,7 @@ PPR_PC1_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`PPR_PC1_CHOICE <hl7-v2_8_2-PPR_PC1_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
    * - ``NTE``
@@ -30084,7 +30084,7 @@ PPR_PC1_ORDER_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -30129,7 +30129,7 @@ PPR_PC1_PATHWAY
    * - ``PTH``
      -
      - :ref:`PTH <hl7-v2_8_2-PTH>`
-     - required
+     - optional
      -
      - PTH: Required
    * - ``VAR``
@@ -30162,7 +30162,7 @@ PPR_PC1_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -30195,7 +30195,7 @@ PPR_PC1_PROBLEM
    * - ``PRB``
      -
      - :ref:`PRB <hl7-v2_8_2-PRB>`
-     - required
+     - optional
      -
      - PRB: Required
    * - ``NTE``
@@ -30264,7 +30264,7 @@ PPR_PC1_PROBLEM_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -30303,7 +30303,7 @@ PPR_PC1_PROBLEM_ROLE
    * - ``ROL``
      -
      - :ref:`ROL <hl7-v2_8_2-ROL>`
-     - required
+     - optional
      -
      - ROL: Required
    * - ``VAR``
@@ -30402,7 +30402,7 @@ RAS_O17_ADDITIONAL_DEMOGRAPHICS
    * - ``PD1``
      -
      - :ref:`PD1 <hl7-v2_8_2-PD1>`
-     - required
+     - optional
      -
      - PD1: Required
    * - ``PRT``
@@ -30435,7 +30435,7 @@ RAS_O17_ADMINISTRATION
    * - ``RXA``
      -
      - List[:ref:`RXA <hl7-v2_8_2-RXA>`]
-     - required
+     - optional
      -
      - RXA: Required, repeating
    * - ``PRT``
@@ -30447,7 +30447,7 @@ RAS_O17_ADMINISTRATION
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
    * - ``OBSERVATION``
@@ -30480,7 +30480,7 @@ RAS_O17_COMPONENTS
    * - ``RXC``
      -
      - :ref:`RXC <hl7-v2_8_2-RXC>`
-     - required
+     - optional
      -
      - RXC: Required
    * - ``NTE``
@@ -30513,7 +30513,7 @@ RAS_O17_ENCODING
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``PRT``
@@ -30531,13 +30531,13 @@ RAS_O17_ENCODING
    * - ``TIMING_ENCODED``
      -
      - List[:ref:`RAS_O17_TIMING_ENCODED <hl7-v2_8_2-RAS_O17_TIMING_ENCODED>`]
-     - required
+     - optional
      -
      - TIMING_ENCODED: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -30576,7 +30576,7 @@ RAS_O17_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -30615,7 +30615,7 @@ RAS_O17_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -30645,7 +30645,7 @@ RAS_O17_ORDER
    * - ``ADMINISTRATION``
      -
      - List[:ref:`RAS_O17_ADMINISTRATION <hl7-v2_8_2-RAS_O17_ADMINISTRATION>`]
-     - required
+     - optional
      -
      - ADMINISTRATION: Required, repeating
    * - ``CTI``
@@ -30678,7 +30678,7 @@ RAS_O17_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``ORDER_DETAIL_SUPPLEMENT``
@@ -30711,13 +30711,13 @@ RAS_O17_ORDER_DETAIL_SUPPLEMENT
    * - ``NTE``
      -
      - List[:ref:`NTE <hl7-v2_8_2-NTE>`]
-     - required
+     - optional
      -
      - NTE: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENTS``
@@ -30750,7 +30750,7 @@ RAS_O17_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ADDITIONAL_DEMOGRAPHICS``
@@ -30807,7 +30807,7 @@ RAS_O17_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -30852,7 +30852,7 @@ RAS_O17_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -30885,7 +30885,7 @@ RAS_O17_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -30918,7 +30918,7 @@ RDE_O11_COMPONENT
    * - ``RXC``
      -
      - :ref:`RXC <hl7-v2_8_2-RXC>`
-     - required
+     - optional
      -
      - RXC: Required
    * - ``NTE``
@@ -30951,7 +30951,7 @@ RDE_O11_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -30990,7 +30990,7 @@ RDE_O11_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -31029,7 +31029,7 @@ RDE_O11_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -31053,7 +31053,7 @@ RDE_O11_ORDER
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``NTE``
@@ -31065,7 +31065,7 @@ RDE_O11_ORDER
    * - ``TIMING_ENCODED``
      -
      - List[:ref:`RDE_O11_TIMING_ENCODED <hl7-v2_8_2-RDE_O11_TIMING_ENCODED>`]
-     - required
+     - optional
      -
      - TIMING_ENCODED: Required, repeating
    * - ``PHARMACY_TREATMENT_INFUSION_ORDER``
@@ -31077,7 +31077,7 @@ RDE_O11_ORDER
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -31140,7 +31140,7 @@ RDE_O11_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``PRT``
@@ -31158,7 +31158,7 @@ RDE_O11_ORDER_DETAIL
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENT``
@@ -31191,7 +31191,7 @@ RDE_O11_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -31266,7 +31266,7 @@ RDE_O11_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -31311,7 +31311,7 @@ RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER
    * - ``RXV``
      -
      - :ref:`RXV <hl7-v2_8_2-RXV>`
-     - required
+     - optional
      -
      - RXV: Required
    * - ``PRT``
@@ -31329,7 +31329,7 @@ RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER
    * - ``TIMING_ENCODED``
      -
      - List[:ref:`RDE_O11_TIMING_ENCODED <hl7-v2_8_2-RDE_O11_TIMING_ENCODED>`]
-     - required
+     - optional
      -
      - TIMING_ENCODED: Required, repeating
 
@@ -31356,7 +31356,7 @@ RDE_O11_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -31389,7 +31389,7 @@ RDE_O11_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -31422,7 +31422,7 @@ RDR_RDR_DEFINITION
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_8_2-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -31440,7 +31440,7 @@ RDR_RDR_DEFINITION
    * - ``ORDER``
      -
      - List[:ref:`RDR_RDR_ORDER <hl7-v2_8_2-RDR_RDR_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -31467,13 +31467,13 @@ RDR_RDR_DISPENSE
    * - ``RXD``
      -
      - :ref:`RXD <hl7-v2_8_2-RXD>`
-     - required
+     - optional
      -
      - RXD: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -31506,7 +31506,7 @@ RDR_RDR_ENCODING
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``TIMING_ENCODED``
@@ -31518,7 +31518,7 @@ RDR_RDR_ENCODING
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -31551,7 +31551,7 @@ RDR_RDR_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -31569,7 +31569,7 @@ RDR_RDR_ORDER
    * - ``DISPENSE``
      -
      - List[:ref:`RDR_RDR_DISPENSE <hl7-v2_8_2-RDR_RDR_DISPENSE>`]
-     - required
+     - optional
      -
      - DISPENSE: Required, repeating
 
@@ -31596,7 +31596,7 @@ RDR_RDR_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -31629,7 +31629,7 @@ RDR_RDR_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -31662,7 +31662,7 @@ RDR_RDR_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -31695,7 +31695,7 @@ RDS_O13_ADDITIONAL_DEMOGRAPHICS
    * - ``PD1``
      -
      - :ref:`PD1 <hl7-v2_8_2-PD1>`
-     - required
+     - optional
      -
      - PD1: Required
    * - ``PRT``
@@ -31734,7 +31734,7 @@ RDS_O13_COMPONENT
    * - ``RXC``
      -
      - :ref:`RXC <hl7-v2_8_2-RXC>`
-     - required
+     - optional
      -
      - RXC: Required
    * - ``NTE``
@@ -31767,7 +31767,7 @@ RDS_O13_ENCODING
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``PRT``
@@ -31785,13 +31785,13 @@ RDS_O13_ENCODING
    * - ``TIMING_ENCODED``
      -
      - List[:ref:`RDS_O13_TIMING_ENCODED <hl7-v2_8_2-RDS_O13_TIMING_ENCODED>`]
-     - required
+     - optional
      -
      - TIMING_ENCODED: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -31824,7 +31824,7 @@ RDS_O13_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -31863,7 +31863,7 @@ RDS_O13_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -31893,7 +31893,7 @@ RDS_O13_ORDER
    * - ``RXD``
      -
      - :ref:`RXD <hl7-v2_8_2-RXD>`
-     - required
+     - optional
      -
      - RXD: Required
    * - ``NTE``
@@ -31905,7 +31905,7 @@ RDS_O13_ORDER
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -31956,7 +31956,7 @@ RDS_O13_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``PRT``
@@ -31995,13 +31995,13 @@ RDS_O13_ORDER_DETAIL_SUPPLEMENT
    * - ``NTE``
      -
      - List[:ref:`NTE <hl7-v2_8_2-NTE>`]
-     - required
+     - optional
      -
      - NTE: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENT``
@@ -32034,7 +32034,7 @@ RDS_O13_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ADDITIONAL_DEMOGRAPHICS``
@@ -32085,7 +32085,7 @@ RDS_O13_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -32130,7 +32130,7 @@ RDS_O13_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -32163,7 +32163,7 @@ RDS_O13_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -32196,7 +32196,7 @@ REF_I12_AUTHORIZATION_CONTACT2
    * - ``AUT``
      -
      - :ref:`AUT <hl7-v2_8_2-AUT>`
-     - required
+     - optional
      -
      - AUT: Required
    * - ``CTD``
@@ -32229,7 +32229,7 @@ REF_I12_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -32268,7 +32268,7 @@ REF_I12_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -32307,7 +32307,7 @@ REF_I12_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -32340,7 +32340,7 @@ REF_I12_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``AUTHORIZATION_CONTACT2``
@@ -32373,7 +32373,7 @@ REF_I12_PROVIDER_CONTACT
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -32406,7 +32406,7 @@ REF_I12_RESULTS_NOTES
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -32445,7 +32445,7 @@ RGV_O15_COMPONENTS
    * - ``RXC``
      -
      - :ref:`RXC <hl7-v2_8_2-RXC>`
-     - required
+     - optional
      -
      - RXC: Required
    * - ``NTE``
@@ -32478,7 +32478,7 @@ RGV_O15_ENCODING
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``PRT``
@@ -32496,13 +32496,13 @@ RGV_O15_ENCODING
    * - ``TIMING_ENCODED``
      -
      - List[:ref:`RGV_O15_TIMING_ENCODED <hl7-v2_8_2-RGV_O15_TIMING_ENCODED>`]
-     - required
+     - optional
      -
      - TIMING_ENCODED: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -32535,19 +32535,19 @@ RGV_O15_GIVE
    * - ``RXG``
      -
      - :ref:`RXG <hl7-v2_8_2-RXG>`
-     - required
+     - optional
      -
      - RXG: Required
    * - ``TIMING_GIVE``
      -
      - List[:ref:`RGV_O15_TIMING_GIVE <hl7-v2_8_2-RGV_O15_TIMING_GIVE>`]
-     - required
+     - optional
      -
      - TIMING_GIVE: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -32592,7 +32592,7 @@ RGV_O15_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -32631,7 +32631,7 @@ RGV_O15_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -32661,7 +32661,7 @@ RGV_O15_ORDER
    * - ``GIVE``
      -
      - List[:ref:`RGV_O15_GIVE <hl7-v2_8_2-RGV_O15_GIVE>`]
-     - required
+     - optional
      -
      - GIVE: Required, repeating
 
@@ -32688,7 +32688,7 @@ RGV_O15_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``PRT``
@@ -32727,13 +32727,13 @@ RGV_O15_ORDER_DETAIL_SUPPLEMENT
    * - ``NTE``
      -
      - List[:ref:`NTE <hl7-v2_8_2-NTE>`]
-     - required
+     - optional
      -
      - NTE: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENTS``
@@ -32766,7 +32766,7 @@ RGV_O15_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -32817,7 +32817,7 @@ RGV_O15_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -32862,7 +32862,7 @@ RGV_O15_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -32895,7 +32895,7 @@ RGV_O15_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -32928,7 +32928,7 @@ RGV_O15_TIMING_GIVE
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -32961,7 +32961,7 @@ RPA_I08_AUTHORIZATION
    * - ``AUT``
      -
      - :ref:`AUT <hl7-v2_8_2-AUT>`
-     - required
+     - optional
      -
      - AUT: Required
    * - ``CTD``
@@ -32994,7 +32994,7 @@ RPA_I08_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -33033,7 +33033,7 @@ RPA_I08_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -33072,7 +33072,7 @@ RPA_I08_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``AUTHORIZATION``
@@ -33105,7 +33105,7 @@ RPA_I08_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33138,7 +33138,7 @@ RPA_I08_RESULTS
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -33177,7 +33177,7 @@ RPA_I08_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -33216,7 +33216,7 @@ RPI_I01_GUARANTOR_INSURANCE
    * - ``INSURANCE``
      -
      - List[:ref:`RPI_I01_INSURANCE <hl7-v2_8_2-RPI_I01_INSURANCE>`]
-     - required
+     - optional
      -
      - INSURANCE: Required, repeating
 
@@ -33243,7 +33243,7 @@ RPI_I01_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -33282,7 +33282,7 @@ RPI_I01_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33321,7 +33321,7 @@ RPI_I04_GUARANTOR_INSURANCE
    * - ``INSURANCE``
      -
      - List[:ref:`RPI_I04_INSURANCE <hl7-v2_8_2-RPI_I04_INSURANCE>`]
-     - required
+     - optional
      -
      - INSURANCE: Required, repeating
 
@@ -33348,7 +33348,7 @@ RPI_I04_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -33387,7 +33387,7 @@ RPI_I04_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33420,7 +33420,7 @@ RPL_I02_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33453,7 +33453,7 @@ RPR_I03_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33486,7 +33486,7 @@ RQA_I08_AUTHORIZATION
    * - ``AUT``
      -
      - :ref:`AUT <hl7-v2_8_2-AUT>`
-     - required
+     - optional
      -
      - AUT: Required
    * - ``CTD``
@@ -33525,7 +33525,7 @@ RQA_I08_GUARANTOR_INSURANCE
    * - ``INSURANCE``
      -
      - List[:ref:`RQA_I08_INSURANCE <hl7-v2_8_2-RQA_I08_INSURANCE>`]
-     - required
+     - optional
      -
      - INSURANCE: Required, repeating
 
@@ -33552,7 +33552,7 @@ RQA_I08_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -33591,7 +33591,7 @@ RQA_I08_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -33630,7 +33630,7 @@ RQA_I08_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``AUTHORIZATION``
@@ -33663,7 +33663,7 @@ RQA_I08_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33696,7 +33696,7 @@ RQA_I08_RESULTS
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -33735,7 +33735,7 @@ RQA_I08_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -33774,7 +33774,7 @@ RQI_I01_GUARANTOR_INSURANCE
    * - ``INSURANCE``
      -
      - List[:ref:`RQI_I01_INSURANCE <hl7-v2_8_2-RQI_I01_INSURANCE>`]
-     - required
+     - optional
      -
      - INSURANCE: Required, repeating
 
@@ -33801,7 +33801,7 @@ RQI_I01_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -33840,7 +33840,7 @@ RQI_I01_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33873,7 +33873,7 @@ RQP_I04_PROVIDER
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -33906,13 +33906,13 @@ RRA_O18_ADMINISTRATION
    * - ``TREATMENT``
      -
      - List[:ref:`RRA_O18_TREATMENT <hl7-v2_8_2-RRA_O18_TREATMENT>`]
-     - required
+     - optional
      -
      - TREATMENT: Required, repeating
    * - ``RXR``
      -
      - :ref:`RXR <hl7-v2_8_2-RXR>`
-     - required
+     - optional
      -
      - RXR: Required
 
@@ -33939,7 +33939,7 @@ RRA_O18_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -33984,7 +33984,7 @@ RRA_O18_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -34023,7 +34023,7 @@ RRA_O18_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`RRA_O18_ORDER <hl7-v2_8_2-RRA_O18_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -34050,7 +34050,7 @@ RRA_O18_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -34083,7 +34083,7 @@ RRA_O18_TREATMENT
    * - ``RXA``
      -
      - :ref:`RXA <hl7-v2_8_2-RXA>`
-     - required
+     - optional
      -
      - RXA: Required
    * - ``PRT``
@@ -34116,7 +34116,7 @@ RRD_O14_DISPENSE
    * - ``RXD``
      -
      - :ref:`RXD <hl7-v2_8_2-RXD>`
-     - required
+     - optional
      -
      - RXD: Required
    * - ``NTE``
@@ -34128,7 +34128,7 @@ RRD_O14_DISPENSE
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -34161,7 +34161,7 @@ RRD_O14_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -34206,7 +34206,7 @@ RRD_O14_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -34245,7 +34245,7 @@ RRD_O14_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`RRD_O14_ORDER <hl7-v2_8_2-RRD_O14_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -34272,7 +34272,7 @@ RRD_O14_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -34305,7 +34305,7 @@ RRE_O12_ENCODING
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``PRT``
@@ -34323,13 +34323,13 @@ RRE_O12_ENCODING
    * - ``TIMING_ENCODED``
      -
      - List[:ref:`RRE_O12_TIMING_ENCODED <hl7-v2_8_2-RRE_O12_TIMING_ENCODED>`]
-     - required
+     - optional
      -
      - TIMING_ENCODED: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -34362,7 +34362,7 @@ RRE_O12_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -34407,7 +34407,7 @@ RRE_O12_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -34446,7 +34446,7 @@ RRE_O12_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`RRE_O12_ORDER <hl7-v2_8_2-RRE_O12_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -34473,7 +34473,7 @@ RRE_O12_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -34506,7 +34506,7 @@ RRE_O12_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -34539,19 +34539,19 @@ RRG_O16_GIVE
    * - ``RXG``
      -
      - :ref:`RXG <hl7-v2_8_2-RXG>`
-     - required
+     - optional
      -
      - RXG: Required
    * - ``TIMING_GIVE``
      -
      - List[:ref:`RRG_O16_TIMING_GIVE <hl7-v2_8_2-RRG_O16_TIMING_GIVE>`]
-     - required
+     - optional
      -
      - TIMING_GIVE: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -34584,7 +34584,7 @@ RRG_O16_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -34629,7 +34629,7 @@ RRG_O16_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -34668,7 +34668,7 @@ RRG_O16_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`RRG_O16_ORDER <hl7-v2_8_2-RRG_O16_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -34695,7 +34695,7 @@ RRG_O16_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -34728,7 +34728,7 @@ RRG_O16_TIMING_GIVE
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -34761,7 +34761,7 @@ RRI_I12_AUTHORIZATION_CONTACT2
    * - ``AUT``
      -
      - :ref:`AUT <hl7-v2_8_2-AUT>`
-     - required
+     - optional
      -
      - AUT: Required
    * - ``CTD``
@@ -34794,7 +34794,7 @@ RRI_I12_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -34833,7 +34833,7 @@ RRI_I12_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -34866,7 +34866,7 @@ RRI_I12_PROCEDURE
    * - ``PR1``
      -
      - :ref:`PR1 <hl7-v2_8_2-PR1>`
-     - required
+     - optional
      -
      - PR1: Required
    * - ``AUTHORIZATION_CONTACT2``
@@ -34899,7 +34899,7 @@ RRI_I12_PROVIDER_CONTACT
    * - ``PRD``
      -
      - :ref:`PRD <hl7-v2_8_2-PRD>`
-     - required
+     - optional
      -
      - PRD: Required
    * - ``CTD``
@@ -34932,7 +34932,7 @@ RRI_I12_RESULTS_NOTES
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -35010,19 +35010,19 @@ RSP_E22_AUTHORIZATION_INFO
    * - ``IVC``
      -
      - :ref:`IVC <hl7-v2_8_2-IVC>`
-     - required
+     - optional
      -
      - IVC: Required
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_8_2-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``PSL_ITEM_INFO``
      -
      - List[:ref:`RSP_E22_PSL_ITEM_INFO <hl7-v2_8_2-RSP_E22_PSL_ITEM_INFO>`]
-     - required
+     - optional
      -
      - PSL_ITEM_INFO: Required, repeating
 
@@ -35049,7 +35049,7 @@ RSP_E22_PSL_ITEM_INFO
    * - ``PSL``
      -
      - :ref:`PSL <hl7-v2_8_2-PSL>`
-     - required
+     - optional
      -
      - PSL: Required
 
@@ -35115,7 +35115,7 @@ RSP_K21_QUERY_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -35139,7 +35139,7 @@ RSP_K21_QUERY_RESPONSE
    * - ``QRI``
      -
      - :ref:`QRI <hl7-v2_8_2-QRI>`
-     - required
+     - optional
      -
      - QRI: Required
 
@@ -35166,7 +35166,7 @@ RSP_K22_QUERY_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -35211,7 +35211,7 @@ RSP_K23_QUERY_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
 
@@ -35238,7 +35238,7 @@ RSP_K25_STAFF
    * - ``STF``
      -
      - :ref:`STF <hl7-v2_8_2-STF>`
-     - required
+     - optional
      -
      - STF: Required
    * - ``PRA``
@@ -35319,7 +35319,7 @@ RSP_K31_ADDITIONAL_DEMOGRAPHICS
    * - ``PD1``
      -
      - :ref:`PD1 <hl7-v2_8_2-PD1>`
-     - required
+     - optional
      -
      - PD1: Required
    * - ``PRT``
@@ -35352,7 +35352,7 @@ RSP_K31_COMPONENTS
    * - ``RXC``
      -
      - :ref:`RXC <hl7-v2_8_2-RXC>`
-     - required
+     - optional
      -
      - RXC: Required
    * - ``NTE``
@@ -35385,7 +35385,7 @@ RSP_K31_ENCODING
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``PRT``
@@ -35403,13 +35403,13 @@ RSP_K31_ENCODING
    * - ``TIMING_ENCODED``
      -
      - List[:ref:`RSP_K31_TIMING_ENCODED <hl7-v2_8_2-RSP_K31_TIMING_ENCODED>`]
-     - required
+     - optional
      -
      - TIMING_ENCODED: Required, repeating
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -35442,7 +35442,7 @@ RSP_K31_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -35481,7 +35481,7 @@ RSP_K31_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -35511,13 +35511,13 @@ RSP_K31_ORDER
    * - ``RXD``
      -
      - :ref:`RXD <hl7-v2_8_2-RXD>`
-     - required
+     - optional
      -
      - RXD: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -35562,7 +35562,7 @@ RSP_K31_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``NTE``
@@ -35574,7 +35574,7 @@ RSP_K31_ORDER_DETAIL
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENTS``
@@ -35607,7 +35607,7 @@ RSP_K31_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ADDITIONAL_DEMOGRAPHICS``
@@ -35664,7 +35664,7 @@ RSP_K31_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -35715,7 +35715,7 @@ RSP_K31_RESPONSE
    * - ``ORDER``
      -
      - List[:ref:`RSP_K31_ORDER <hl7-v2_8_2-RSP_K31_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -35742,7 +35742,7 @@ RSP_K31_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -35775,7 +35775,7 @@ RSP_K31_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -35808,7 +35808,7 @@ RSP_K32_QUERY_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -35826,7 +35826,7 @@ RSP_K32_QUERY_RESPONSE
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -35865,7 +35865,7 @@ RSP_O33_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ARV``
@@ -35898,7 +35898,7 @@ RSP_O34_DONATION
    * - ``DON``
      -
      - :ref:`DON <hl7-v2_8_2-DON>`
-     - required
+     - optional
      -
      - DON: Required
    * - ``OBX``
@@ -35937,7 +35937,7 @@ RSP_O34_DONOR
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -36033,7 +36033,7 @@ RSP_Z82_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -36057,13 +36057,13 @@ RSP_Z82_COMMON_ORDER
    * - ``RXD``
      -
      - :ref:`RXD <hl7-v2_8_2-RXD>`
-     - required
+     - optional
      -
      - RXD: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36075,7 +36075,7 @@ RSP_Z82_COMMON_ORDER
    * - ``OBSERVATION``
      -
      - List[:ref:`RSP_Z82_OBSERVATION <hl7-v2_8_2-RSP_Z82_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -36102,7 +36102,7 @@ RSP_Z82_ENCODED_ORDER
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``TIMING_ENCODED``
@@ -36114,7 +36114,7 @@ RSP_Z82_ENCODED_ORDER
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36180,7 +36180,7 @@ RSP_Z82_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``NTE``
@@ -36192,7 +36192,7 @@ RSP_Z82_ORDER_DETAIL
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``TREATMENT``
@@ -36225,7 +36225,7 @@ RSP_Z82_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -36276,7 +36276,7 @@ RSP_Z82_QUERY_RESPONSE
    * - ``COMMON_ORDER``
      -
      - List[:ref:`RSP_Z82_COMMON_ORDER <hl7-v2_8_2-RSP_Z82_COMMON_ORDER>`]
-     - required
+     - optional
      -
      - COMMON_ORDER: Required, repeating
 
@@ -36303,7 +36303,7 @@ RSP_Z82_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -36336,7 +36336,7 @@ RSP_Z82_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -36369,7 +36369,7 @@ RSP_Z82_TREATMENT
    * - ``RXC``
      -
      - List[:ref:`RXC <hl7-v2_8_2-RXC>`]
-     - required
+     - optional
      -
      - RXC: Required, repeating
    * - ``NTE``
@@ -36402,13 +36402,13 @@ RSP_Z82_VISIT
    * - ``AL1``
      -
      - List[:ref:`AL1 <hl7-v2_8_2-AL1>`]
-     - required
+     - optional
      -
      - AL1: Required, repeating
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -36441,7 +36441,7 @@ RSP_Z84_ROW_DEFINITION
    * - ``RDF``
      -
      - :ref:`RDF <hl7-v2_8_2-RDF>`
-     - required
+     - optional
      -
      - RDF: Required
    * - ``RDT``
@@ -36474,13 +36474,13 @@ RSP_Z86_ADMINISTRATION
    * - ``RXA``
      -
      - :ref:`RXA <hl7-v2_8_2-RXA>`
-     - required
+     - optional
      -
      - RXA: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36513,7 +36513,7 @@ RSP_Z86_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -36555,7 +36555,7 @@ RSP_Z86_COMMON_ORDER
    * - ``OBSERVATION``
      -
      - List[:ref:`RSP_Z86_OBSERVATION <hl7-v2_8_2-RSP_Z86_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -36582,13 +36582,13 @@ RSP_Z86_DISPENSE
    * - ``RXD``
      -
      - :ref:`RXD <hl7-v2_8_2-RXD>`
-     - required
+     - optional
      -
      - RXD: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36621,7 +36621,7 @@ RSP_Z86_ENCODED_ORDER
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``TIMING_ENCODED``
@@ -36633,7 +36633,7 @@ RSP_Z86_ENCODED_ORDER
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36666,13 +36666,13 @@ RSP_Z86_GIVE
    * - ``RXG``
      -
      - :ref:`RXG <hl7-v2_8_2-RXG>`
-     - required
+     - optional
      -
      - RXG: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36738,13 +36738,13 @@ RSP_Z86_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36777,7 +36777,7 @@ RSP_Z86_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -36828,7 +36828,7 @@ RSP_Z86_QUERY_RESPONSE
    * - ``COMMON_ORDER``
      -
      - List[:ref:`RSP_Z86_COMMON_ORDER <hl7-v2_8_2-RSP_Z86_COMMON_ORDER>`]
-     - required
+     - optional
      -
      - COMMON_ORDER: Required, repeating
 
@@ -36855,7 +36855,7 @@ RSP_Z86_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -36888,7 +36888,7 @@ RSP_Z86_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -36921,7 +36921,7 @@ RSP_Z88_ALLERGY
    * - ``AL1``
      -
      - List[:ref:`AL1 <hl7-v2_8_2-AL1>`]
-     - required
+     - optional
      -
      - AL1: Required, repeating
    * - ``VISIT``
@@ -36954,7 +36954,7 @@ RSP_Z88_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -36978,13 +36978,13 @@ RSP_Z88_COMMON_ORDER
    * - ``RXD``
      -
      - :ref:`RXD <hl7-v2_8_2-RXD>`
-     - required
+     - optional
      -
      - RXD: Required
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -36996,7 +36996,7 @@ RSP_Z88_COMMON_ORDER
    * - ``OBSERVATION``
      -
      - List[:ref:`RSP_Z88_OBSERVATION <hl7-v2_8_2-RSP_Z88_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -37023,7 +37023,7 @@ RSP_Z88_COMPONENT
    * - ``RXC``
      -
      - List[:ref:`RXC <hl7-v2_8_2-RXC>`]
-     - required
+     - optional
      -
      - RXC: Required, repeating
    * - ``NTE``
@@ -37089,7 +37089,7 @@ RSP_Z88_ORDER_DETAIL
    * - ``RXO``
      -
      - :ref:`RXO <hl7-v2_8_2-RXO>`
-     - required
+     - optional
      -
      - RXO: Required
    * - ``NTE``
@@ -37101,7 +37101,7 @@ RSP_Z88_ORDER_DETAIL
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``COMPONENT``
@@ -37134,7 +37134,7 @@ RSP_Z88_ORDER_ENCODED
    * - ``RXE``
      -
      - :ref:`RXE <hl7-v2_8_2-RXE>`
-     - required
+     - optional
      -
      - RXE: Required
    * - ``TIMING_ENCODED``
@@ -37146,7 +37146,7 @@ RSP_Z88_ORDER_ENCODED
    * - ``RXR``
      -
      - List[:ref:`RXR <hl7-v2_8_2-RXR>`]
-     - required
+     - optional
      -
      - RXR: Required, repeating
    * - ``RXC``
@@ -37179,7 +37179,7 @@ RSP_Z88_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -37230,7 +37230,7 @@ RSP_Z88_QUERY_RESPONSE
    * - ``COMMON_ORDER``
      -
      - List[:ref:`RSP_Z88_COMMON_ORDER <hl7-v2_8_2-RSP_Z88_COMMON_ORDER>`]
-     - required
+     - optional
      -
      - COMMON_ORDER: Required, repeating
 
@@ -37257,7 +37257,7 @@ RSP_Z88_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -37290,7 +37290,7 @@ RSP_Z88_TIMING_ENCODED
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -37323,7 +37323,7 @@ RSP_Z88_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -37356,7 +37356,7 @@ RSP_Z90_COMMON_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``TIMING``
@@ -37368,7 +37368,7 @@ RSP_Z90_COMMON_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_8_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -37386,7 +37386,7 @@ RSP_Z90_COMMON_ORDER
    * - ``OBSERVATION``
      -
      - List[:ref:`RSP_Z90_OBSERVATION <hl7-v2_8_2-RSP_Z90_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -37446,7 +37446,7 @@ RSP_Z90_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -37503,7 +37503,7 @@ RSP_Z90_QUERY_RESPONSE
    * - ``COMMON_ORDER``
      -
      - List[:ref:`RSP_Z90_COMMON_ORDER <hl7-v2_8_2-RSP_Z90_COMMON_ORDER>`]
-     - required
+     - optional
      -
      - COMMON_ORDER: Required, repeating
    * - ``SPECIMEN``
@@ -37536,7 +37536,7 @@ RSP_Z90_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``OBX``
@@ -37569,7 +37569,7 @@ RSP_Z90_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``
@@ -37602,7 +37602,7 @@ RSP_Z90_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -37635,7 +37635,7 @@ RTB_K13_ROW_DEFINITION
    * - ``RDF``
      -
      - :ref:`RDF <hl7-v2_8_2-RDF>`
-     - required
+     - optional
      -
      - RDF: Required
    * - ``RDT``
@@ -37668,7 +37668,7 @@ RTB_Z74_ROW_DEFINITION
    * - ``RDF``
      -
      - :ref:`RDF <hl7-v2_8_2-RDF>`
-     - required
+     - optional
      -
      - RDF: Required
    * - ``RDT``
@@ -37767,7 +37767,7 @@ SIU_S12_GENERAL_RESOURCE
    * - ``AIG``
      -
      - :ref:`AIG <hl7-v2_8_2-AIG>`
-     - required
+     - optional
      -
      - AIG: Required
    * - ``NTE``
@@ -37800,7 +37800,7 @@ SIU_S12_LOCATION_RESOURCE
    * - ``AIL``
      -
      - :ref:`AIL <hl7-v2_8_2-AIL>`
-     - required
+     - optional
      -
      - AIL: Required
    * - ``NTE``
@@ -37833,7 +37833,7 @@ SIU_S12_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -37890,7 +37890,7 @@ SIU_S12_PERSONNEL_RESOURCE
    * - ``AIP``
      -
      - :ref:`AIP <hl7-v2_8_2-AIP>`
-     - required
+     - optional
      -
      - AIP: Required
    * - ``NTE``
@@ -37923,7 +37923,7 @@ SIU_S12_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``SERVICE``
@@ -37974,7 +37974,7 @@ SIU_S12_SERVICE
    * - ``AIS``
      -
      - :ref:`AIS <hl7-v2_8_2-AIS>`
-     - required
+     - optional
      -
      - AIS: Required
    * - ``NTE``
@@ -38007,7 +38007,7 @@ SRM_S01_GENERAL_RESOURCE
    * - ``AIG``
      -
      - :ref:`AIG <hl7-v2_8_2-AIG>`
-     - required
+     - optional
      -
      - AIG: Required
    * - ``APR``
@@ -38046,7 +38046,7 @@ SRM_S01_LOCATION_RESOURCE
    * - ``AIL``
      -
      - :ref:`AIL <hl7-v2_8_2-AIL>`
-     - required
+     - optional
      -
      - AIL: Required
    * - ``APR``
@@ -38085,7 +38085,7 @@ SRM_S01_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -38118,7 +38118,7 @@ SRM_S01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
@@ -38169,7 +38169,7 @@ SRM_S01_PERSONNEL_RESOURCE
    * - ``AIP``
      -
      - :ref:`AIP <hl7-v2_8_2-AIP>`
-     - required
+     - optional
      -
      - AIP: Required
    * - ``APR``
@@ -38208,7 +38208,7 @@ SRM_S01_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``SERVICE``
@@ -38259,7 +38259,7 @@ SRM_S01_SERVICE
    * - ``AIS``
      -
      - :ref:`AIS <hl7-v2_8_2-AIS>`
-     - required
+     - optional
      -
      - AIS: Required
    * - ``APR``
@@ -38298,7 +38298,7 @@ SRR_S01_GENERAL_RESOURCE
    * - ``AIG``
      -
      - :ref:`AIG <hl7-v2_8_2-AIG>`
-     - required
+     - optional
      -
      - AIG: Required
    * - ``NTE``
@@ -38331,7 +38331,7 @@ SRR_S01_LOCATION_RESOURCE
    * - ``AIL``
      -
      - :ref:`AIL <hl7-v2_8_2-AIL>`
-     - required
+     - optional
      -
      - AIL: Required
    * - ``NTE``
@@ -38364,7 +38364,7 @@ SRR_S01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_8_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
@@ -38409,7 +38409,7 @@ SRR_S01_PERSONNEL_RESOURCE
    * - ``AIP``
      -
      - :ref:`AIP <hl7-v2_8_2-AIP>`
-     - required
+     - optional
      -
      - AIP: Required
    * - ``NTE``
@@ -38442,7 +38442,7 @@ SRR_S01_RESOURCES
    * - ``RGS``
      -
      - :ref:`RGS <hl7-v2_8_2-RGS>`
-     - required
+     - optional
      -
      - RGS: Required
    * - ``SERVICE``
@@ -38493,7 +38493,7 @@ SRR_S01_SCHEDULE
    * - ``SCH``
      -
      - :ref:`SCH <hl7-v2_8_2-SCH>`
-     - required
+     - optional
      -
      - SCH: Required
    * - ``TQ1``
@@ -38517,7 +38517,7 @@ SRR_S01_SCHEDULE
    * - ``RESOURCES``
      -
      - List[:ref:`SRR_S01_RESOURCES <hl7-v2_8_2-SRR_S01_RESOURCES>`]
-     - required
+     - optional
      -
      - RESOURCES: Required, repeating
 
@@ -38544,7 +38544,7 @@ SRR_S01_SERVICE
    * - ``AIS``
      -
      - :ref:`AIS <hl7-v2_8_2-AIS>`
-     - required
+     - optional
      -
      - AIS: Required
    * - ``NTE``
@@ -38577,7 +38577,7 @@ SSR_U04_SPECIMEN_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``SPM``
@@ -38610,7 +38610,7 @@ SSU_U03_SPECIMEN
    * - ``SPM``
      -
      - :ref:`SPM <hl7-v2_8_2-SPM>`
-     - required
+     - optional
      -
      - SPM: Required
    * - ``OBX``
@@ -38643,7 +38643,7 @@ SSU_U03_SPECIMEN_CONTAINER
    * - ``SAC``
      -
      - :ref:`SAC <hl7-v2_8_2-SAC>`
-     - required
+     - optional
      -
      - SAC: Required
    * - ``OBX``
@@ -38694,7 +38694,7 @@ TCU_U10_TEST_CONFIGURATION
    * - ``TCC``
      -
      - List[:ref:`TCC <hl7-v2_8_2-TCC>`]
-     - required
+     - optional
      -
      - TCC: Required, repeating
 
@@ -38721,7 +38721,7 @@ VXU_V04_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_8_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -38760,7 +38760,7 @@ VXU_V04_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -38799,7 +38799,7 @@ VXU_V04_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_8_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``PRT``
@@ -38817,7 +38817,7 @@ VXU_V04_ORDER
    * - ``RXA``
      -
      - :ref:`RXA <hl7-v2_8_2-RXA>`
-     - required
+     - optional
      -
      - RXA: Required
    * - ``RXR``
@@ -38856,7 +38856,7 @@ VXU_V04_PATIENT_VISIT
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_8_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -38895,7 +38895,7 @@ VXU_V04_PERSON_OBSERVATION
    * - ``OBX``
      -
      - :ref:`OBX <hl7-v2_8_2-OBX>`
-     - required
+     - optional
      -
      - OBX: Required
    * - ``PRT``
@@ -38934,7 +38934,7 @@ VXU_V04_TIMING
    * - ``TQ1``
      -
      - :ref:`TQ1 <hl7-v2_8_2-TQ1>`
-     - required
+     - optional
      -
      - TQ1: Required
    * - ``TQ2``

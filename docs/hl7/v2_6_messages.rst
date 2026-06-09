@@ -24,7 +24,7 @@ ACK
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -42,7 +42,7 @@ ACK
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -75,7 +75,7 @@ ADR_A19
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -93,7 +93,7 @@ ADR_A19
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -111,7 +111,7 @@ ADR_A19
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -123,7 +123,7 @@ ADR_A19
    * - ``QUERY_RESPONSE``
      -
      - List[:ref:`ADR_A19_QUERY_RESPONSE <hl7-v2_6-ADR_A19_QUERY_RESPONSE>`]
-     - required
+     - optional
      -
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
@@ -156,7 +156,7 @@ ADT_A01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -174,13 +174,13 @@ ADT_A01
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -210,7 +210,7 @@ ADT_A01
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -315,7 +315,7 @@ ADT_A02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -333,13 +333,13 @@ ADT_A02
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -363,7 +363,7 @@ ADT_A02
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -414,7 +414,7 @@ ADT_A03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -432,13 +432,13 @@ ADT_A03
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -468,7 +468,7 @@ ADT_A03
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -561,7 +561,7 @@ ADT_A05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -579,13 +579,13 @@ ADT_A05
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -615,7 +615,7 @@ ADT_A05
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -714,7 +714,7 @@ ADT_A06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -732,13 +732,13 @@ ADT_A06
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -774,7 +774,7 @@ ADT_A06
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -873,7 +873,7 @@ ADT_A09
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -891,13 +891,13 @@ ADT_A09
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -909,7 +909,7 @@ ADT_A09
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -960,7 +960,7 @@ ADT_A12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -978,13 +978,13 @@ ADT_A12
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -996,7 +996,7 @@ ADT_A12
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1047,7 +1047,7 @@ ADT_A15
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1065,13 +1065,13 @@ ADT_A15
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1095,7 +1095,7 @@ ADT_A15
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1146,7 +1146,7 @@ ADT_A16
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1164,13 +1164,13 @@ ADT_A16
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1200,7 +1200,7 @@ ADT_A16
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1287,7 +1287,7 @@ ADT_A17
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1305,13 +1305,13 @@ ADT_A17
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1323,7 +1323,7 @@ ADT_A17
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1368,7 +1368,7 @@ ADT_A18
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1380,13 +1380,13 @@ ADT_A18
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1398,13 +1398,13 @@ ADT_A18
    * - ``MRG``
      -
      - :ref:`MRG <hl7-v2_6-MRG>`
-     - required
+     - optional
      -
      - MRG: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
 
@@ -1431,7 +1431,7 @@ ADT_A20
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1449,13 +1449,13 @@ ADT_A20
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``NPU``
      -
      - :ref:`NPU <hl7-v2_6-NPU>`
-     - required
+     - optional
      -
      - NPU: Required
 
@@ -1482,7 +1482,7 @@ ADT_A21
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1500,13 +1500,13 @@ ADT_A21
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1518,7 +1518,7 @@ ADT_A21
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1563,7 +1563,7 @@ ADT_A24
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1581,13 +1581,13 @@ ADT_A24
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1632,7 +1632,7 @@ ADT_A30
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1650,13 +1650,13 @@ ADT_A30
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1674,7 +1674,7 @@ ADT_A30
    * - ``MRG``
      -
      - :ref:`MRG <hl7-v2_6-MRG>`
-     - required
+     - optional
      -
      - MRG: Required
 
@@ -1701,7 +1701,7 @@ ADT_A37
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1719,13 +1719,13 @@ ADT_A37
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1770,7 +1770,7 @@ ADT_A38
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1788,13 +1788,13 @@ ADT_A38
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -1806,7 +1806,7 @@ ADT_A38
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -1863,7 +1863,7 @@ ADT_A39
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1881,13 +1881,13 @@ ADT_A39
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PATIENT``
      -
      - List[:ref:`ADT_A39_PATIENT <hl7-v2_6-ADT_A39_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -1914,7 +1914,7 @@ ADT_A43
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1932,13 +1932,13 @@ ADT_A43
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PATIENT``
      -
      - List[:ref:`ADT_A43_PATIENT <hl7-v2_6-ADT_A43_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -1965,7 +1965,7 @@ ADT_A45
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -1983,13 +1983,13 @@ ADT_A45
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -2001,7 +2001,7 @@ ADT_A45
    * - ``MERGE_INFO``
      -
      - List[:ref:`ADT_A45_MERGE_INFO <hl7-v2_6-ADT_A45_MERGE_INFO>`]
-     - required
+     - optional
      -
      - MERGE_INFO: Required, repeating
 
@@ -2028,7 +2028,7 @@ ADT_A50
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2046,13 +2046,13 @@ ADT_A50
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -2064,13 +2064,13 @@ ADT_A50
    * - ``MRG``
      -
      - :ref:`MRG <hl7-v2_6-MRG>`
-     - required
+     - optional
      -
      - MRG: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
 
@@ -2097,7 +2097,7 @@ ADT_A52
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2115,13 +2115,13 @@ ADT_A52
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -2133,7 +2133,7 @@ ADT_A52
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -2166,7 +2166,7 @@ ADT_A54
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2184,13 +2184,13 @@ ADT_A54
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -2208,7 +2208,7 @@ ADT_A54
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -2241,7 +2241,7 @@ ADT_A60
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2259,13 +2259,13 @@ ADT_A60
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ARV``
@@ -2310,7 +2310,7 @@ ADT_A61
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2328,13 +2328,13 @@ ADT_A61
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -2352,7 +2352,7 @@ ADT_A61
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -2385,7 +2385,7 @@ BAR_P01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2403,13 +2403,13 @@ BAR_P01
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -2427,7 +2427,7 @@ BAR_P01
    * - ``VISIT``
      -
      - List[:ref:`BAR_P01_VISIT <hl7-v2_6-BAR_P01_VISIT>`]
-     - required
+     - optional
      -
      - VISIT: Required, repeating
 
@@ -2454,7 +2454,7 @@ BAR_P02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2472,13 +2472,13 @@ BAR_P02
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PATIENT``
      -
      - List[:ref:`BAR_P02_PATIENT <hl7-v2_6-BAR_P02_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -2505,7 +2505,7 @@ BAR_P05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2523,13 +2523,13 @@ BAR_P05
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -2547,7 +2547,7 @@ BAR_P05
    * - ``VISIT``
      -
      - List[:ref:`BAR_P05_VISIT <hl7-v2_6-BAR_P05_VISIT>`]
-     - required
+     - optional
      -
      - VISIT: Required, repeating
 
@@ -2574,7 +2574,7 @@ BAR_P06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2592,13 +2592,13 @@ BAR_P06
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PATIENT``
      -
      - List[:ref:`BAR_P06_PATIENT <hl7-v2_6-BAR_P06_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -2625,7 +2625,7 @@ BAR_P10
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2643,19 +2643,19 @@ BAR_P10
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``DG1``
@@ -2667,7 +2667,7 @@ BAR_P10
    * - ``GP1``
      -
      - :ref:`GP1 <hl7-v2_6-GP1>`
-     - required
+     - optional
      -
      - GP1: Required
    * - ``PROCEDURE``
@@ -2700,7 +2700,7 @@ BAR_P12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2718,19 +2718,19 @@ BAR_P12
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``DG1``
@@ -2775,7 +2775,7 @@ BPS_O29
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2805,7 +2805,7 @@ BPS_O29
    * - ``ORDER``
      -
      - List[:ref:`BPS_O29_ORDER <hl7-v2_6-BPS_O29_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -2832,13 +2832,13 @@ BRP_O30
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -2895,13 +2895,13 @@ BRT_O32
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -2958,7 +2958,7 @@ BTS_O31
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -2988,7 +2988,7 @@ BTS_O31
    * - ``ORDER``
      -
      - List[:ref:`BTS_O31_ORDER <hl7-v2_6-BTS_O31_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -3015,7 +3015,7 @@ CRM_C01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3033,7 +3033,7 @@ CRM_C01
    * - ``PATIENT``
      -
      - List[:ref:`CRM_C01_PATIENT <hl7-v2_6-CRM_C01_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -3060,7 +3060,7 @@ CSU_C09
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3078,7 +3078,7 @@ CSU_C09
    * - ``PATIENT``
      -
      - List[:ref:`CSU_C09_PATIENT <hl7-v2_6-CSU_C09_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -3105,7 +3105,7 @@ DFT_P03
    * - ``MSH``
      -
      - List[:ref:`MSH <hl7-v2_6-MSH>`]
-     - required
+     - optional
      -
      - MSH: Required, repeating
    * - ``SFT``
@@ -3123,13 +3123,13 @@ DFT_P03
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -3165,7 +3165,7 @@ DFT_P03
    * - ``FINANCIAL``
      -
      - List[:ref:`DFT_P03_FINANCIAL <hl7-v2_6-DFT_P03_FINANCIAL>`]
-     - required
+     - optional
      -
      - FINANCIAL: Required, repeating
    * - ``DG1``
@@ -3222,7 +3222,7 @@ DFT_P11
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3240,13 +3240,13 @@ DFT_P11
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -3312,7 +3312,7 @@ DFT_P11
    * - ``FINANCIAL``
      -
      - List[:ref:`DFT_P11_FINANCIAL <hl7-v2_6-DFT_P11_FINANCIAL>`]
-     - required
+     - optional
      -
      - FINANCIAL: Required, repeating
 
@@ -3339,13 +3339,13 @@ DOC_T12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -3363,13 +3363,13 @@ DOC_T12
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``RESULT``
      -
      - List[:ref:`DOC_T12_RESULT <hl7-v2_6-DOC_T12_RESULT>`]
-     - required
+     - optional
      -
      - RESULT: Required, repeating
    * - ``DSC``
@@ -3402,7 +3402,7 @@ EAC_U07
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3420,13 +3420,13 @@ EAC_U07
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``COMMAND``
      -
      - List[:ref:`EAC_U07_COMMAND <hl7-v2_6-EAC_U07_COMMAND>`]
-     - required
+     - optional
      -
      - COMMAND: Required, repeating
    * - ``ROL``
@@ -3459,7 +3459,7 @@ EAN_U09
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3477,13 +3477,13 @@ EAN_U09
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``NOTIFICATION``
      -
      - List[:ref:`EAN_U09_NOTIFICATION <hl7-v2_6-EAN_U09_NOTIFICATION>`]
-     - required
+     - optional
      -
      - NOTIFICATION: Required, repeating
    * - ``ROL``
@@ -3516,7 +3516,7 @@ EAR_U08
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3534,13 +3534,13 @@ EAR_U08
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``COMMAND_RESPONSE``
      -
      - List[:ref:`EAR_U08_COMMAND_RESPONSE <hl7-v2_6-EAR_U08_COMMAND_RESPONSE>`]
-     - required
+     - optional
      -
      - COMMAND_RESPONSE: Required, repeating
    * - ``ROL``
@@ -3573,7 +3573,7 @@ EHC_E01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3591,7 +3591,7 @@ EHC_E01
    * - ``INVOICE_INFORMATION``
      -
      - :ref:`EHC_E01_INVOICE_INFORMATION <hl7-v2_6-EHC_E01_INVOICE_INFORMATION>`
-     - required
+     - optional
      -
      - INVOICE_INFORMATION: Required
 
@@ -3618,7 +3618,7 @@ EHC_E02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3636,7 +3636,7 @@ EHC_E02
    * - ``INVOICE_INFORMATION``
      -
      - :ref:`EHC_E02_INVOICE_INFORMATION <hl7-v2_6-EHC_E02_INVOICE_INFORMATION>`
-     - required
+     - optional
      -
      - INVOICE_INFORMATION: Required
 
@@ -3663,7 +3663,7 @@ EHC_E04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3681,7 +3681,7 @@ EHC_E04
    * - ``REASSESSMENT_REQUEST_INFO``
      -
      - :ref:`EHC_E04_REASSESSMENT_REQUEST_INFO <hl7-v2_6-EHC_E04_REASSESSMENT_REQUEST_INFO>`
-     - required
+     - optional
      -
      - REASSESSMENT_REQUEST_INFO: Required
 
@@ -3708,7 +3708,7 @@ EHC_E10
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3726,7 +3726,7 @@ EHC_E10
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -3738,7 +3738,7 @@ EHC_E10
    * - ``INVOICE_PROCESSING_RESULTS_INFO``
      -
      - List[:ref:`EHC_E10_INVOICE_PROCESSING_RESULTS_INFO <hl7-v2_6-EHC_E10_INVOICE_PROCESSING_RESULTS_INFO>`]
-     - required
+     - optional
      -
      - INVOICE_PROCESSING_RESULTS_INFO: Required, repeating
 
@@ -3765,7 +3765,7 @@ EHC_E12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3783,7 +3783,7 @@ EHC_E12
    * - ``RFI``
      -
      - :ref:`RFI <hl7-v2_6-RFI>`
-     - required
+     - optional
      -
      - RFI: Required
    * - ``CTD``
@@ -3795,19 +3795,19 @@ EHC_E12
    * - ``IVC``
      -
      - :ref:`IVC <hl7-v2_6-IVC>`
-     - required
+     - optional
      -
      - IVC: Required
    * - ``PSS``
      -
      - :ref:`PSS <hl7-v2_6-PSS>`
-     - required
+     - optional
      -
      - PSS: Required
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_6-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``PID``
@@ -3825,7 +3825,7 @@ EHC_E12
    * - ``REQUEST``
      -
      - List[:ref:`EHC_E12_REQUEST <hl7-v2_6-EHC_E12_REQUEST>`]
-     - required
+     - optional
      -
      - REQUEST: Required, repeating
 
@@ -3852,7 +3852,7 @@ EHC_E13
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3870,7 +3870,7 @@ EHC_E13
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -3882,7 +3882,7 @@ EHC_E13
    * - ``RFI``
      -
      - :ref:`RFI <hl7-v2_6-RFI>`
-     - required
+     - optional
      -
      - RFI: Required
    * - ``CTD``
@@ -3894,19 +3894,19 @@ EHC_E13
    * - ``IVC``
      -
      - :ref:`IVC <hl7-v2_6-IVC>`
-     - required
+     - optional
      -
      - IVC: Required
    * - ``PSS``
      -
      - :ref:`PSS <hl7-v2_6-PSS>`
-     - required
+     - optional
      -
      - PSS: Required
    * - ``PSG``
      -
      - :ref:`PSG <hl7-v2_6-PSG>`
-     - required
+     - optional
      -
      - PSG: Required
    * - ``PID``
@@ -3924,7 +3924,7 @@ EHC_E13
    * - ``REQUEST``
      -
      - List[:ref:`EHC_E13_REQUEST <hl7-v2_6-EHC_E13_REQUEST>`]
-     - required
+     - optional
      -
      - REQUEST: Required, repeating
 
@@ -3951,7 +3951,7 @@ EHC_E15
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -3969,7 +3969,7 @@ EHC_E15
    * - ``PAYMENT_REMITTANCE_HEADER_INFO``
      -
      - :ref:`EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO <hl7-v2_6-EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO>`
-     - required
+     - optional
      -
      - PAYMENT_REMITTANCE_HEADER_INFO: Required
    * - ``PAYMENT_REMITTANCE_DETAIL_INFO``
@@ -4008,7 +4008,7 @@ EHC_E20
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4026,7 +4026,7 @@ EHC_E20
    * - ``AUTHORIZATION_REQUEST``
      -
      - :ref:`EHC_E20_AUTHORIZATION_REQUEST <hl7-v2_6-EHC_E20_AUTHORIZATION_REQUEST>`
-     - required
+     - optional
      -
      - AUTHORIZATION_REQUEST: Required
 
@@ -4053,7 +4053,7 @@ EHC_E21
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4071,7 +4071,7 @@ EHC_E21
    * - ``AUTHORIZATION_REQUEST``
      -
      - :ref:`EHC_E21_AUTHORIZATION_REQUEST <hl7-v2_6-EHC_E21_AUTHORIZATION_REQUEST>`
-     - required
+     - optional
      -
      - AUTHORIZATION_REQUEST: Required
 
@@ -4098,7 +4098,7 @@ EHC_E24
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4116,7 +4116,7 @@ EHC_E24
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -4128,7 +4128,7 @@ EHC_E24
    * - ``AUTHORIZATION_RESPONSE_INFO``
      -
      - :ref:`EHC_E24_AUTHORIZATION_RESPONSE_INFO <hl7-v2_6-EHC_E24_AUTHORIZATION_RESPONSE_INFO>`
-     - required
+     - optional
      -
      - AUTHORIZATION_RESPONSE_INFO: Required
 
@@ -4155,7 +4155,7 @@ ESR_U02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4173,7 +4173,7 @@ ESR_U02
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``ROL``
@@ -4206,7 +4206,7 @@ ESU_U01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4224,7 +4224,7 @@ ESU_U01
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``ISD``
@@ -4263,7 +4263,7 @@ INR_U06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4281,13 +4281,13 @@ INR_U06
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``INV``
      -
      - List[:ref:`INV <hl7-v2_6-INV>`]
-     - required
+     - optional
      -
      - INV: Required, repeating
    * - ``ROL``
@@ -4320,7 +4320,7 @@ INU_U05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4338,13 +4338,13 @@ INU_U05
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``INV``
      -
      - List[:ref:`INV <hl7-v2_6-INV>`]
-     - required
+     - optional
      -
      - INV: Required, repeating
    * - ``ROL``
@@ -4377,7 +4377,7 @@ LSU_U12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4395,13 +4395,13 @@ LSU_U12
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``EQP``
      -
      - List[:ref:`EQP <hl7-v2_6-EQP>`]
-     - required
+     - optional
      -
      - EQP: Required, repeating
    * - ``ROL``
@@ -4434,7 +4434,7 @@ MDM_T01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4452,19 +4452,19 @@ MDM_T01
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``COMMON_ORDER``
@@ -4476,7 +4476,7 @@ MDM_T01
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_6-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
 
@@ -4503,7 +4503,7 @@ MDM_T02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4521,19 +4521,19 @@ MDM_T02
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``COMMON_ORDER``
@@ -4545,13 +4545,13 @@ MDM_T02
    * - ``TXA``
      -
      - :ref:`TXA <hl7-v2_6-TXA>`
-     - required
+     - optional
      -
      - TXA: Required
    * - ``OBSERVATION``
      -
      - List[:ref:`MDM_T02_OBSERVATION <hl7-v2_6-MDM_T02_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -4578,7 +4578,7 @@ MFK_M01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4596,7 +4596,7 @@ MFK_M01
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -4608,7 +4608,7 @@ MFK_M01
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MFA``
@@ -4641,7 +4641,7 @@ MFN_M01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4653,13 +4653,13 @@ MFN_M01
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF``
      -
      - List[:ref:`MFN_M01_MF <hl7-v2_6-MFN_M01_MF>`]
-     - required
+     - optional
      -
      - MF: Required, repeating
 
@@ -4686,7 +4686,7 @@ MFN_M02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4704,13 +4704,13 @@ MFN_M02
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_STAFF``
      -
      - List[:ref:`MFN_M02_MF_STAFF <hl7-v2_6-MFN_M02_MF_STAFF>`]
-     - required
+     - optional
      -
      - MF_STAFF: Required, repeating
 
@@ -4737,7 +4737,7 @@ MFN_M03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4749,13 +4749,13 @@ MFN_M03
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_TEST``
      -
      - List[:ref:`MFN_M03_MF_TEST <hl7-v2_6-MFN_M03_MF_TEST>`]
-     - required
+     - optional
      -
      - MF_TEST: Required, repeating
 
@@ -4782,7 +4782,7 @@ MFN_M04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4800,13 +4800,13 @@ MFN_M04
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_CDM``
      -
      - List[:ref:`MFN_M04_MF_CDM <hl7-v2_6-MFN_M04_MF_CDM>`]
-     - required
+     - optional
      -
      - MF_CDM: Required, repeating
 
@@ -4833,7 +4833,7 @@ MFN_M05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4851,13 +4851,13 @@ MFN_M05
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_LOCATION``
      -
      - List[:ref:`MFN_M05_MF_LOCATION <hl7-v2_6-MFN_M05_MF_LOCATION>`]
-     - required
+     - optional
      -
      - MF_LOCATION: Required, repeating
 
@@ -4884,7 +4884,7 @@ MFN_M06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4902,13 +4902,13 @@ MFN_M06
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_CLIN_STUDY``
      -
      - List[:ref:`MFN_M06_MF_CLIN_STUDY <hl7-v2_6-MFN_M06_MF_CLIN_STUDY>`]
-     - required
+     - optional
      -
      - MF_CLIN_STUDY: Required, repeating
 
@@ -4935,7 +4935,7 @@ MFN_M07
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -4953,13 +4953,13 @@ MFN_M07
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_CLIN_STUDY_SCHED``
      -
      - List[:ref:`MFN_M07_MF_CLIN_STUDY_SCHED <hl7-v2_6-MFN_M07_MF_CLIN_STUDY_SCHED>`]
-     - required
+     - optional
      -
      - MF_CLIN_STUDY_SCHED: Required, repeating
 
@@ -4986,7 +4986,7 @@ MFN_M08
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5004,13 +5004,13 @@ MFN_M08
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_TEST_NUMERIC``
      -
      - List[:ref:`MFN_M08_MF_TEST_NUMERIC <hl7-v2_6-MFN_M08_MF_TEST_NUMERIC>`]
-     - required
+     - optional
      -
      - MF_TEST_NUMERIC: Required, repeating
 
@@ -5037,7 +5037,7 @@ MFN_M09
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5055,13 +5055,13 @@ MFN_M09
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_TEST_CATEGORICAL``
      -
      - List[:ref:`MFN_M09_MF_TEST_CATEGORICAL <hl7-v2_6-MFN_M09_MF_TEST_CATEGORICAL>`]
-     - required
+     - optional
      -
      - MF_TEST_CATEGORICAL: Required, repeating
 
@@ -5088,7 +5088,7 @@ MFN_M10
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5106,13 +5106,13 @@ MFN_M10
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_TEST_BATTERIES``
      -
      - List[:ref:`MFN_M10_MF_TEST_BATTERIES <hl7-v2_6-MFN_M10_MF_TEST_BATTERIES>`]
-     - required
+     - optional
      -
      - MF_TEST_BATTERIES: Required, repeating
 
@@ -5139,7 +5139,7 @@ MFN_M11
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5157,13 +5157,13 @@ MFN_M11
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_TEST_CALCULATED``
      -
      - List[:ref:`MFN_M11_MF_TEST_CALCULATED <hl7-v2_6-MFN_M11_MF_TEST_CALCULATED>`]
-     - required
+     - optional
      -
      - MF_TEST_CALCULATED: Required, repeating
 
@@ -5190,7 +5190,7 @@ MFN_M12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5208,13 +5208,13 @@ MFN_M12
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_OBS_ATTRIBUTES``
      -
      - List[:ref:`MFN_M12_MF_OBS_ATTRIBUTES <hl7-v2_6-MFN_M12_MF_OBS_ATTRIBUTES>`]
-     - required
+     - optional
      -
      - MF_OBS_ATTRIBUTES: Required, repeating
 
@@ -5241,7 +5241,7 @@ MFN_M13
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5259,13 +5259,13 @@ MFN_M13
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MFE``
      -
      - List[:ref:`MFE <hl7-v2_6-MFE>`]
-     - required
+     - optional
      -
      - MFE: Required, repeating
 
@@ -5292,7 +5292,7 @@ MFN_M15
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5310,13 +5310,13 @@ MFN_M15
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_INV_ITEM``
      -
      - List[:ref:`MFN_M15_MF_INV_ITEM <hl7-v2_6-MFN_M15_MF_INV_ITEM>`]
-     - required
+     - optional
      -
      - MF_INV_ITEM: Required, repeating
 
@@ -5343,7 +5343,7 @@ MFN_M16
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5361,13 +5361,13 @@ MFN_M16
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MATERIAL_ITEM_RECORD``
      -
      - List[:ref:`MFN_M16_MATERIAL_ITEM_RECORD <hl7-v2_6-MFN_M16_MATERIAL_ITEM_RECORD>`]
-     - required
+     - optional
      -
      - MATERIAL_ITEM_RECORD: Required, repeating
 
@@ -5394,7 +5394,7 @@ MFN_M17
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5412,13 +5412,13 @@ MFN_M17
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_DRG``
      -
      - List[:ref:`MFN_M17_MF_DRG <hl7-v2_6-MFN_M17_MF_DRG>`]
-     - required
+     - optional
      -
      - MF_DRG: Required, repeating
 
@@ -5445,7 +5445,7 @@ MFN_Znn
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5463,13 +5463,13 @@ MFN_Znn
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_SITE_DEFINED``
      -
      - List[MFN_ZnnMF_SITE_DEFINED]
-     - required
+     - optional
      -
      - MF_SITE_DEFINED: Required, repeating
 
@@ -5496,7 +5496,7 @@ MFQ_M01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5514,7 +5514,7 @@ MFQ_M01
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -5553,7 +5553,7 @@ MFR_M01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5571,7 +5571,7 @@ MFR_M01
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -5589,7 +5589,7 @@ MFR_M01
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -5601,13 +5601,13 @@ MFR_M01
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_QUERY``
      -
      - List[:ref:`MFR_M01_MF_QUERY <hl7-v2_6-MFR_M01_MF_QUERY>`]
-     - required
+     - optional
      -
      - MF_QUERY: Required, repeating
    * - ``DSC``
@@ -5640,7 +5640,7 @@ MFR_M04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5658,7 +5658,7 @@ MFR_M04
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -5676,7 +5676,7 @@ MFR_M04
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -5688,13 +5688,13 @@ MFR_M04
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_QUERY``
      -
      - List[:ref:`MFR_M04_MF_QUERY <hl7-v2_6-MFR_M04_MF_QUERY>`]
-     - required
+     - optional
      -
      - MF_QUERY: Required, repeating
    * - ``DSC``
@@ -5727,7 +5727,7 @@ MFR_M05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5745,7 +5745,7 @@ MFR_M05
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -5763,7 +5763,7 @@ MFR_M05
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -5775,13 +5775,13 @@ MFR_M05
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_QUERY``
      -
      - List[:ref:`MFR_M05_MF_QUERY <hl7-v2_6-MFR_M05_MF_QUERY>`]
-     - required
+     - optional
      -
      - MF_QUERY: Required, repeating
    * - ``DSC``
@@ -5814,7 +5814,7 @@ MFR_M06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5826,7 +5826,7 @@ MFR_M06
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -5844,7 +5844,7 @@ MFR_M06
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -5856,13 +5856,13 @@ MFR_M06
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_QUERY``
      -
      - List[:ref:`MFR_M06_MF_QUERY <hl7-v2_6-MFR_M06_MF_QUERY>`]
-     - required
+     - optional
      -
      - MF_QUERY: Required, repeating
    * - ``DSC``
@@ -5895,7 +5895,7 @@ MFR_M07
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5907,7 +5907,7 @@ MFR_M07
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -5925,7 +5925,7 @@ MFR_M07
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -5937,13 +5937,13 @@ MFR_M07
    * - ``MFI``
      -
      - :ref:`MFI <hl7-v2_6-MFI>`
-     - required
+     - optional
      -
      - MFI: Required
    * - ``MF_QUERY``
      -
      - List[:ref:`MFR_M07_MF_QUERY <hl7-v2_6-MFR_M07_MF_QUERY>`]
-     - required
+     - optional
      -
      - MF_QUERY: Required, repeating
    * - ``DSC``
@@ -5976,7 +5976,7 @@ NMD_N02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -5994,7 +5994,7 @@ NMD_N02
    * - ``CLOCK_AND_STATS_WITH_NOTES``
      -
      - List[:ref:`NMD_N02_CLOCK_AND_STATS_WITH_NOTES <hl7-v2_6-NMD_N02_CLOCK_AND_STATS_WITH_NOTES>`]
-     - required
+     - optional
      -
      - CLOCK_AND_STATS_WITH_NOTES: Required, repeating
 
@@ -6021,7 +6021,7 @@ NMQ_N01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6045,7 +6045,7 @@ NMQ_N01
    * - ``CLOCK_AND_STATISTICS``
      -
      - List[:ref:`NMQ_N01_CLOCK_AND_STATISTICS <hl7-v2_6-NMQ_N01_CLOCK_AND_STATISTICS>`]
-     - required
+     - optional
      -
      - CLOCK_AND_STATISTICS: Required, repeating
 
@@ -6072,7 +6072,7 @@ NMR_N01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6090,7 +6090,7 @@ NMR_N01
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -6108,7 +6108,7 @@ NMR_N01
    * - ``CLOCK_AND_STATS_WITH_NOTES_ALT``
      -
      - List[:ref:`NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT <hl7-v2_6-NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT>`]
-     - required
+     - optional
      -
      - CLOCK_AND_STATS_WITH_NOTES_ALT: Required, repeating
 
@@ -6135,7 +6135,7 @@ OMB_O27
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6165,7 +6165,7 @@ OMB_O27
    * - ``ORDER``
      -
      - List[:ref:`OMB_O27_ORDER <hl7-v2_6-OMB_O27_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6192,7 +6192,7 @@ OMD_O03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6222,7 +6222,7 @@ OMD_O03
    * - ``ORDER_DIET``
      -
      - List[:ref:`OMD_O03_ORDER_DIET <hl7-v2_6-OMD_O03_ORDER_DIET>`]
-     - required
+     - optional
      -
      - ORDER_DIET: Required, repeating
    * - ``ORDER_TRAY``
@@ -6255,7 +6255,7 @@ OMG_O19
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6285,7 +6285,7 @@ OMG_O19
    * - ``ORDER``
      -
      - List[:ref:`OMG_O19_ORDER <hl7-v2_6-OMG_O19_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6312,7 +6312,7 @@ OMI_O23
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6342,7 +6342,7 @@ OMI_O23
    * - ``ORDER``
      -
      - List[:ref:`OMI_O23_ORDER <hl7-v2_6-OMI_O23_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6369,7 +6369,7 @@ OML_O21
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6399,7 +6399,7 @@ OML_O21
    * - ``ORDER``
      -
      - List[:ref:`OML_O21_ORDER <hl7-v2_6-OML_O21_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6426,7 +6426,7 @@ OML_O33
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6456,7 +6456,7 @@ OML_O33
    * - ``SPECIMEN``
      -
      - List[:ref:`OML_O33_SPECIMEN <hl7-v2_6-OML_O33_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
 
@@ -6483,7 +6483,7 @@ OML_O35
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6513,7 +6513,7 @@ OML_O35
    * - ``SPECIMEN``
      -
      - List[:ref:`OML_O35_SPECIMEN <hl7-v2_6-OML_O35_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
 
@@ -6540,7 +6540,7 @@ OMN_O07
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6570,7 +6570,7 @@ OMN_O07
    * - ``ORDER``
      -
      - List[:ref:`OMN_O07_ORDER <hl7-v2_6-OMN_O07_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6597,7 +6597,7 @@ OMP_O09
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6627,7 +6627,7 @@ OMP_O09
    * - ``ORDER``
      -
      - List[:ref:`OMP_O09_ORDER <hl7-v2_6-OMP_O09_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6654,7 +6654,7 @@ OMS_O05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6684,7 +6684,7 @@ OMS_O05
    * - ``ORDER``
      -
      - List[:ref:`OMS_O05_ORDER <hl7-v2_6-OMS_O05_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6711,7 +6711,7 @@ OPL_O37
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6735,7 +6735,7 @@ OPL_O37
    * - ``ROL``
      -
      - List[:ref:`ROL <hl7-v2_6-ROL>`]
-     - required
+     - optional
      -
      - ROL: Required, repeating
    * - ``GUARANTOR``
@@ -6747,7 +6747,7 @@ OPL_O37
    * - ``ORDER``
      -
      - List[:ref:`OPL_O37_ORDER <hl7-v2_6-OPL_O37_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -6774,13 +6774,13 @@ OPR_O38
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -6837,7 +6837,7 @@ OPU_R25
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -6861,7 +6861,7 @@ OPU_R25
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_6-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -6879,13 +6879,13 @@ OPU_R25
    * - ``ROL``
      -
      - List[:ref:`ROL <hl7-v2_6-ROL>`]
-     - required
+     - optional
      -
      - ROL: Required, repeating
    * - ``ACCESSION_DETAIL``
      -
      - List[:ref:`OPU_R25_ACCESSION_DETAIL <hl7-v2_6-OPU_R25_ACCESSION_DETAIL>`]
-     - required
+     - optional
      -
      - ACCESSION_DETAIL: Required, repeating
 
@@ -6912,13 +6912,13 @@ ORB_O28
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -6975,13 +6975,13 @@ ORD_O04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7038,7 +7038,7 @@ ORF_R04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -7056,13 +7056,13 @@ ORF_R04
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -7074,7 +7074,7 @@ ORF_R04
    * - ``QUERY_RESPONSE``
      -
      - List[:ref:`ORF_R04_QUERY_RESPONSE <hl7-v2_6-ORF_R04_QUERY_RESPONSE>`]
-     - required
+     - optional
      -
      - QUERY_RESPONSE: Required, repeating
    * - ``ERR``
@@ -7119,13 +7119,13 @@ ORG_O20
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7182,13 +7182,13 @@ ORI_O24
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7245,13 +7245,13 @@ ORL_O22
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7308,13 +7308,13 @@ ORL_O34
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7371,13 +7371,13 @@ ORL_O36
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7434,7 +7434,7 @@ ORM_O01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``NTE``
@@ -7452,7 +7452,7 @@ ORM_O01
    * - ``ORDER``
      -
      - List[:ref:`ORM_O01_ORDER <hl7-v2_6-ORM_O01_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -7479,13 +7479,13 @@ ORN_O08
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7542,13 +7542,13 @@ ORP_O10
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7605,13 +7605,13 @@ ORR_O02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7656,13 +7656,13 @@ ORS_O06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7719,7 +7719,7 @@ ORU_R01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -7737,7 +7737,7 @@ ORU_R01
    * - ``PATIENT_RESULT``
      -
      - List[:ref:`ORU_R01_PATIENT_RESULT <hl7-v2_6-ORU_R01_PATIENT_RESULT>`]
-     - required
+     - optional
      -
      - PATIENT_RESULT: Required, repeating
    * - ``DSC``
@@ -7770,7 +7770,7 @@ ORU_R30
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -7788,7 +7788,7 @@ ORU_R30
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -7812,13 +7812,13 @@ ORU_R30
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_6-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_6-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -7842,7 +7842,7 @@ ORU_R30
    * - ``OBSERVATION``
      -
      - List[:ref:`ORU_R30_OBSERVATION <hl7-v2_6-ORU_R30_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -7869,7 +7869,7 @@ OSQ_Q06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -7887,7 +7887,7 @@ OSQ_Q06
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -7926,13 +7926,13 @@ OSR_Q06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -7962,7 +7962,7 @@ OSR_Q06
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -8007,7 +8007,7 @@ OUL_R21
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8031,7 +8031,7 @@ OUL_R21
    * - ``ORDER_OBSERVATION``
      -
      - List[:ref:`OUL_R21_ORDER_OBSERVATION <hl7-v2_6-OUL_R21_ORDER_OBSERVATION>`]
-     - required
+     - optional
      -
      - ORDER_OBSERVATION: Required, repeating
    * - ``DSC``
@@ -8064,7 +8064,7 @@ OUL_R22
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8100,7 +8100,7 @@ OUL_R22
    * - ``SPECIMEN``
      -
      - List[:ref:`OUL_R22_SPECIMEN <hl7-v2_6-OUL_R22_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
    * - ``DSC``
@@ -8133,7 +8133,7 @@ OUL_R23
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8169,7 +8169,7 @@ OUL_R23
    * - ``SPECIMEN``
      -
      - List[:ref:`OUL_R23_SPECIMEN <hl7-v2_6-OUL_R23_SPECIMEN>`]
-     - required
+     - optional
      -
      - SPECIMEN: Required, repeating
    * - ``DSC``
@@ -8202,7 +8202,7 @@ OUL_R24
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8238,7 +8238,7 @@ OUL_R24
    * - ``ORDER``
      -
      - List[:ref:`OUL_R24_ORDER <hl7-v2_6-OUL_R24_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
    * - ``DSC``
@@ -8271,7 +8271,7 @@ PEX_P07
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8289,13 +8289,13 @@ PEX_P07
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -8319,7 +8319,7 @@ PEX_P07
    * - ``EXPERIENCE``
      -
      - List[:ref:`PEX_P07_EXPERIENCE <hl7-v2_6-PEX_P07_EXPERIENCE>`]
-     - required
+     - optional
      -
      - EXPERIENCE: Required, repeating
 
@@ -8346,7 +8346,7 @@ PGL_PC6
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8364,7 +8364,7 @@ PGL_PC6
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PATIENT_VISIT``
@@ -8376,7 +8376,7 @@ PGL_PC6
    * - ``GOAL``
      -
      - List[:ref:`PGL_PC6_GOAL <hl7-v2_6-PGL_PC6_GOAL>`]
-     - required
+     - optional
      -
      - GOAL: Required, repeating
 
@@ -8403,7 +8403,7 @@ PMU_B01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8421,13 +8421,13 @@ PMU_B01
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``STF``
      -
      - :ref:`STF <hl7-v2_6-STF>`
-     - required
+     - optional
      -
      - STF: Required
    * - ``PRA``
@@ -8490,7 +8490,7 @@ PMU_B03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8508,13 +8508,13 @@ PMU_B03
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``STF``
      -
      - :ref:`STF <hl7-v2_6-STF>`
-     - required
+     - optional
      -
      - STF: Required
 
@@ -8541,7 +8541,7 @@ PMU_B04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8559,13 +8559,13 @@ PMU_B04
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``STF``
      -
      - :ref:`STF <hl7-v2_6-STF>`
-     - required
+     - optional
      -
      - STF: Required
    * - ``PRA``
@@ -8604,7 +8604,7 @@ PMU_B07
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8622,13 +8622,13 @@ PMU_B07
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``STF``
      -
      - :ref:`STF <hl7-v2_6-STF>`
-     - required
+     - optional
      -
      - STF: Required
    * - ``PRA``
@@ -8667,7 +8667,7 @@ PMU_B08
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8685,13 +8685,13 @@ PMU_B08
    * - ``EVN``
      -
      - :ref:`EVN <hl7-v2_6-EVN>`
-     - required
+     - optional
      -
      - EVN: Required
    * - ``STF``
      -
      - :ref:`STF <hl7-v2_6-STF>`
-     - required
+     - optional
      -
      - STF: Required
    * - ``PRA``
@@ -8730,7 +8730,7 @@ PPG_PCG
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8748,7 +8748,7 @@ PPG_PCG
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PATIENT_VISIT``
@@ -8760,7 +8760,7 @@ PPG_PCG
    * - ``PATHWAY``
      -
      - List[:ref:`PPG_PCG_PATHWAY <hl7-v2_6-PPG_PCG_PATHWAY>`]
-     - required
+     - optional
      -
      - PATHWAY: Required, repeating
 
@@ -8787,7 +8787,7 @@ PPP_PCB
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8805,7 +8805,7 @@ PPP_PCB
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PATIENT_VISIT``
@@ -8817,7 +8817,7 @@ PPP_PCB
    * - ``PATHWAY``
      -
      - List[:ref:`PPP_PCB_PATHWAY <hl7-v2_6-PPP_PCB_PATHWAY>`]
-     - required
+     - optional
      -
      - PATHWAY: Required, repeating
 
@@ -8844,7 +8844,7 @@ PPR_PC1
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8862,7 +8862,7 @@ PPR_PC1
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PATIENT_VISIT``
@@ -8874,7 +8874,7 @@ PPR_PC1
    * - ``PROBLEM``
      -
      - List[:ref:`PPR_PC1_PROBLEM <hl7-v2_6-PPR_PC1_PROBLEM>`]
-     - required
+     - optional
      -
      - PROBLEM: Required, repeating
 
@@ -8901,7 +8901,7 @@ PPT_PCL
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8919,7 +8919,7 @@ PPT_PCL
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -8937,13 +8937,13 @@ PPT_PCL
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``PATIENT``
      -
      - List[:ref:`PPT_PCL_PATIENT <hl7-v2_6-PPT_PCL_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -8970,7 +8970,7 @@ PPV_PCA
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -8988,7 +8988,7 @@ PPV_PCA
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -9006,13 +9006,13 @@ PPV_PCA
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``PATIENT``
      -
      - List[:ref:`PPV_PCA_PATIENT <hl7-v2_6-PPV_PCA_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -9039,7 +9039,7 @@ PRR_PC5
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9057,7 +9057,7 @@ PRR_PC5
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -9075,13 +9075,13 @@ PRR_PC5
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``PATIENT``
      -
      - List[:ref:`PRR_PC5_PATIENT <hl7-v2_6-PRR_PC5_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -9108,7 +9108,7 @@ PTR_PCF
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9126,7 +9126,7 @@ PTR_PCF
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -9144,13 +9144,13 @@ PTR_PCF
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``PATIENT``
      -
      - List[:ref:`PTR_PCF_PATIENT <hl7-v2_6-PTR_PCF_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating
 
@@ -9177,7 +9177,7 @@ QBP_E03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9195,7 +9195,7 @@ QBP_E03
    * - ``QUERY_INFORMATION``
      -
      - :ref:`QBP_E03_QUERY_INFORMATION <hl7-v2_6-QBP_E03_QUERY_INFORMATION>`
-     - required
+     - optional
      -
      - QUERY_INFORMATION: Required
 
@@ -9222,7 +9222,7 @@ QBP_E22
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9240,7 +9240,7 @@ QBP_E22
    * - ``QUERY``
      -
      - :ref:`QBP_E22_QUERY <hl7-v2_6-QBP_E22_QUERY>`
-     - required
+     - optional
      -
      - QUERY: Required
 
@@ -9267,7 +9267,7 @@ QBP_Q11
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9285,13 +9285,13 @@ QBP_Q11
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``DSC``
@@ -9324,7 +9324,7 @@ QBP_Q13
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9342,7 +9342,7 @@ QBP_Q13
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RDF``
@@ -9354,7 +9354,7 @@ QBP_Q13
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``DSC``
@@ -9387,7 +9387,7 @@ QBP_Q15
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9405,13 +9405,13 @@ QBP_Q15
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``DSC``
@@ -9444,7 +9444,7 @@ QBP_Q21
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9462,13 +9462,13 @@ QBP_Q21
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``DSC``
@@ -9501,7 +9501,7 @@ QBP_Qnn
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9519,7 +9519,7 @@ QBP_Qnn
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RDF``
@@ -9531,7 +9531,7 @@ QBP_Qnn
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``DSC``
@@ -9543,7 +9543,7 @@ QBP_Qnn
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -9555,7 +9555,7 @@ QBP_Qnn
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
 
@@ -9582,7 +9582,7 @@ QBP_Z73
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9600,13 +9600,13 @@ QBP_Z73
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
 
@@ -9633,7 +9633,7 @@ QCN_J01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9651,7 +9651,7 @@ QCN_J01
    * - ``QID``
      -
      - :ref:`QID <hl7-v2_6-QID>`
-     - required
+     - optional
      -
      - QID: Required
 
@@ -9678,7 +9678,7 @@ QRY_A19
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9696,7 +9696,7 @@ QRY_A19
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -9729,7 +9729,7 @@ QRY_PC4
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9747,7 +9747,7 @@ QRY_PC4
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -9780,7 +9780,7 @@ QRY_Q01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9798,7 +9798,7 @@ QRY_Q01
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -9837,7 +9837,7 @@ QRY_R02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9855,13 +9855,13 @@ QRY_R02
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
      -
      - :ref:`QRF <hl7-v2_6-QRF>`
-     - required
+     - optional
      -
      - QRF: Required
 
@@ -9888,13 +9888,13 @@ QRY_T12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -9927,7 +9927,7 @@ QSB_Q16
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -9945,13 +9945,13 @@ QSB_Q16
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``DSC``
@@ -9984,7 +9984,7 @@ QVR_Q17
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10002,7 +10002,7 @@ QVR_Q17
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``QBP``
@@ -10014,7 +10014,7 @@ QVR_Q17
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``DSC``
@@ -10047,13 +10047,13 @@ RAR_RAR
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -10077,7 +10077,7 @@ RAR_RAR
    * - ``DEFINITION``
      -
      - List[:ref:`RAR_RAR_DEFINITION <hl7-v2_6-RAR_RAR_DEFINITION>`]
-     - required
+     - optional
      -
      - DEFINITION: Required, repeating
    * - ``DSC``
@@ -10110,7 +10110,7 @@ RAS_O17
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10140,7 +10140,7 @@ RAS_O17
    * - ``ORDER``
      -
      - List[:ref:`RAS_O17_ORDER <hl7-v2_6-RAS_O17_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -10167,7 +10167,7 @@ RCI_I05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10185,13 +10185,13 @@ RCI_I05
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -10203,13 +10203,13 @@ RCI_I05
    * - ``PROVIDER``
      -
      - List[:ref:`RCI_I05_PROVIDER <hl7-v2_6-RCI_I05_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``DG1``
@@ -10266,7 +10266,7 @@ RCL_I06
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10284,13 +10284,13 @@ RCL_I06
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -10302,13 +10302,13 @@ RCL_I06
    * - ``PROVIDER``
      -
      - List[:ref:`RCL_I06_PROVIDER <hl7-v2_6-RCL_I06_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``DG1``
@@ -10371,7 +10371,7 @@ RDE_O11
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10401,7 +10401,7 @@ RDE_O11
    * - ``ORDER``
      -
      - List[:ref:`RDE_O11_ORDER <hl7-v2_6-RDE_O11_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -10428,13 +10428,13 @@ RDR_RDR
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -10458,7 +10458,7 @@ RDR_RDR
    * - ``DEFINITION``
      -
      - List[:ref:`RDR_RDR_DEFINITION <hl7-v2_6-RDR_RDR_DEFINITION>`]
-     - required
+     - optional
      -
      - DEFINITION: Required, repeating
    * - ``DSC``
@@ -10491,7 +10491,7 @@ RDS_O13
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10521,7 +10521,7 @@ RDS_O13
    * - ``ORDER``
      -
      - List[:ref:`RDS_O13_ORDER <hl7-v2_6-RDS_O13_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -10548,7 +10548,7 @@ RDY_K15
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10566,7 +10566,7 @@ RDY_K15
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -10578,13 +10578,13 @@ RDY_K15
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``DSP``
@@ -10623,7 +10623,7 @@ REF_I12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10653,13 +10653,13 @@ REF_I12
    * - ``PROVIDER_CONTACT``
      -
      - List[:ref:`REF_I12_PROVIDER_CONTACT <hl7-v2_6-REF_I12_PROVIDER_CONTACT>`]
-     - required
+     - optional
      -
      - PROVIDER_CONTACT: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -10752,13 +10752,13 @@ RER_RER
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -10782,7 +10782,7 @@ RER_RER
    * - ``DEFINITION``
      -
      - List[:ref:`RER_RER_DEFINITION <hl7-v2_6-RER_RER_DEFINITION>`]
-     - required
+     - optional
      -
      - DEFINITION: Required, repeating
    * - ``DSC``
@@ -10815,13 +10815,13 @@ RGR_RGR
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -10845,7 +10845,7 @@ RGR_RGR
    * - ``DEFINITION``
      -
      - List[:ref:`RGR_RGR_DEFINITION <hl7-v2_6-RGR_RGR_DEFINITION>`]
-     - required
+     - optional
      -
      - DEFINITION: Required, repeating
    * - ``DSC``
@@ -10878,7 +10878,7 @@ RGV_O15
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -10908,7 +10908,7 @@ RGV_O15
    * - ``ORDER``
      -
      - List[:ref:`RGV_O15_ORDER <hl7-v2_6-RGV_O15_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -10935,13 +10935,13 @@ ROR_ROR
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -10965,7 +10965,7 @@ ROR_ROR
    * - ``DEFINITION``
      -
      - List[:ref:`ROR_ROR_DEFINITION <hl7-v2_6-ROR_ROR_DEFINITION>`]
-     - required
+     - optional
      -
      - DEFINITION: Required, repeating
    * - ``DSC``
@@ -10998,7 +10998,7 @@ RPA_I08
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11016,7 +11016,7 @@ RPA_I08
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``RF1``
@@ -11034,13 +11034,13 @@ RPA_I08
    * - ``PROVIDER``
      -
      - List[:ref:`RPA_I08_PROVIDER <hl7-v2_6-RPA_I08_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -11088,7 +11088,7 @@ RPA_I08
    * - ``PROCEDURE``
      -
      - List[:ref:`RPA_I08_PROCEDURE <hl7-v2_6-RPA_I08_PROCEDURE>`]
-     - required
+     - optional
      -
      - PROCEDURE: Required, repeating
    * - ``OBSERVATION``
@@ -11133,7 +11133,7 @@ RPI_I01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11151,19 +11151,19 @@ RPI_I01
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``PROVIDER``
      -
      - List[:ref:`RPI_I01_PROVIDER <hl7-v2_6-RPI_I01_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -11208,7 +11208,7 @@ RPI_I04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11226,19 +11226,19 @@ RPI_I04
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``PROVIDER``
      -
      - List[:ref:`RPI_I04_PROVIDER <hl7-v2_6-RPI_I04_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -11283,7 +11283,7 @@ RPL_I02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11301,13 +11301,13 @@ RPL_I02
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``PROVIDER``
      -
      - List[:ref:`RPL_I02_PROVIDER <hl7-v2_6-RPL_I02_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``NTE``
@@ -11352,7 +11352,7 @@ RPR_I03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11370,13 +11370,13 @@ RPR_I03
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``PROVIDER``
      -
      - List[:ref:`RPR_I03_PROVIDER <hl7-v2_6-RPR_I03_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
@@ -11415,7 +11415,7 @@ RQA_I08
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11445,13 +11445,13 @@ RQA_I08
    * - ``PROVIDER``
      -
      - List[:ref:`RQA_I08_PROVIDER <hl7-v2_6-RQA_I08_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -11538,7 +11538,7 @@ RQC_I05
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11556,7 +11556,7 @@ RQC_I05
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -11568,13 +11568,13 @@ RQC_I05
    * - ``PROVIDER``
      -
      - List[:ref:`RQC_I05_PROVIDER <hl7-v2_6-RQC_I05_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -11619,7 +11619,7 @@ RQI_I01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11637,13 +11637,13 @@ RQI_I01
    * - ``PROVIDER``
      -
      - List[:ref:`RQI_I01_PROVIDER <hl7-v2_6-RQI_I01_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -11688,7 +11688,7 @@ RQP_I04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -11706,13 +11706,13 @@ RQP_I04
    * - ``PROVIDER``
      -
      - List[:ref:`RQP_I04_PROVIDER <hl7-v2_6-RQP_I04_PROVIDER>`]
-     - required
+     - optional
      -
      - PROVIDER: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -11757,13 +11757,13 @@ RRA_O18
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -11820,13 +11820,13 @@ RRD_O14
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -11883,13 +11883,13 @@ RRE_O12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -11946,13 +11946,13 @@ RRG_O16
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12009,7 +12009,7 @@ RRI_I12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12045,13 +12045,13 @@ RRI_I12
    * - ``PROVIDER_CONTACT``
      -
      - List[:ref:`RRI_I12_PROVIDER_CONTACT <hl7-v2_6-RRI_I12_PROVIDER_CONTACT>`]
-     - required
+     - optional
      -
      - PROVIDER_CONTACT: Required, repeating
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``ACC``
@@ -12126,7 +12126,7 @@ RSP_E03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12144,7 +12144,7 @@ RSP_E03
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12156,7 +12156,7 @@ RSP_E03
    * - ``QUERY_ACK``
      -
      - :ref:`RSP_E03_QUERY_ACK <hl7-v2_6-RSP_E03_QUERY_ACK>`
-     - required
+     - optional
      -
      - QUERY_ACK: Required
 
@@ -12183,7 +12183,7 @@ RSP_E22
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12201,7 +12201,7 @@ RSP_E22
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12213,7 +12213,7 @@ RSP_E22
    * - ``QUERY_ACK``
      -
      - :ref:`RSP_E22_QUERY_ACK <hl7-v2_6-RSP_E22_QUERY_ACK>`
-     - required
+     - optional
      -
      - QUERY_ACK: Required
 
@@ -12240,7 +12240,7 @@ RSP_K11
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12258,7 +12258,7 @@ RSP_K11
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12270,13 +12270,13 @@ RSP_K11
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``ROW_DEFINITION``
@@ -12315,7 +12315,7 @@ RSP_K21
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12333,7 +12333,7 @@ RSP_K21
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12345,13 +12345,13 @@ RSP_K21
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``QUERY_RESPONSE``
@@ -12390,7 +12390,7 @@ RSP_K22
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12408,7 +12408,7 @@ RSP_K22
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12420,13 +12420,13 @@ RSP_K22
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``QUERY_RESPONSE``
@@ -12465,7 +12465,7 @@ RSP_K23
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12483,7 +12483,7 @@ RSP_K23
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12495,13 +12495,13 @@ RSP_K23
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``QUERY_RESPONSE``
@@ -12540,7 +12540,7 @@ RSP_K25
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12558,7 +12558,7 @@ RSP_K25
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12570,25 +12570,25 @@ RSP_K25
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``STAFF``
      -
      - List[:ref:`RSP_K25_STAFF <hl7-v2_6-RSP_K25_STAFF>`]
-     - required
+     - optional
      -
      - STAFF: Required, repeating
    * - ``DSC``
@@ -12621,13 +12621,13 @@ RSP_K31
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12651,25 +12651,25 @@ RSP_K31
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``RESPONSE``
      -
      - List[:ref:`RSP_K31_RESPONSE <hl7-v2_6-RSP_K31_RESPONSE>`]
-     - required
+     - optional
      -
      - RESPONSE: Required, repeating
    * - ``DSC``
@@ -12702,7 +12702,7 @@ RSP_Q11
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12720,7 +12720,7 @@ RSP_Q11
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12732,13 +12732,13 @@ RSP_Q11
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``QUERY_RESULT_CLUSTER``
@@ -12777,7 +12777,7 @@ RSP_Z82
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12795,7 +12795,7 @@ RSP_Z82
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12807,25 +12807,25 @@ RSP_Z82
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``QUERY_RESPONSE``
      -
      - List[:ref:`RSP_Z82_QUERY_RESPONSE <hl7-v2_6-RSP_Z82_QUERY_RESPONSE>`]
-     - required
+     - optional
      -
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
@@ -12858,7 +12858,7 @@ RSP_Z86
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12876,7 +12876,7 @@ RSP_Z86
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12888,19 +12888,19 @@ RSP_Z86
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``QUERY_RESPONSE``
      -
      - List[:ref:`RSP_Z86_QUERY_RESPONSE <hl7-v2_6-RSP_Z86_QUERY_RESPONSE>`]
-     - required
+     - optional
      -
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
@@ -12933,7 +12933,7 @@ RSP_Z88
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -12951,7 +12951,7 @@ RSP_Z88
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -12963,31 +12963,31 @@ RSP_Z88
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``QUERY_RESPONSE``
      -
      - List[:ref:`RSP_Z88_QUERY_RESPONSE <hl7-v2_6-RSP_Z88_QUERY_RESPONSE>`]
-     - required
+     - optional
      -
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
      -
      - :ref:`DSC <hl7-v2_6-DSC>`
-     - required
+     - optional
      -
      - DSC: Required
 
@@ -13014,7 +13014,7 @@ RSP_Z90
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13032,7 +13032,7 @@ RSP_Z90
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -13044,31 +13044,31 @@ RSP_Z90
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``RCP``
      -
      - :ref:`RCP <hl7-v2_6-RCP>`
-     - required
+     - optional
      -
      - RCP: Required
    * - ``QUERY_RESPONSE``
      -
      - List[:ref:`RSP_Z90_QUERY_RESPONSE <hl7-v2_6-RSP_Z90_QUERY_RESPONSE>`]
-     - required
+     - optional
      -
      - QUERY_RESPONSE: Required, repeating
    * - ``DSC``
      -
      - :ref:`DSC <hl7-v2_6-DSC>`
-     - required
+     - optional
      -
      - DSC: Required
 
@@ -13095,7 +13095,7 @@ RTB_K13
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13113,7 +13113,7 @@ RTB_K13
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -13125,13 +13125,13 @@ RTB_K13
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``ROW_DEFINITION``
@@ -13170,13 +13170,13 @@ RTB_Z74
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -13200,13 +13200,13 @@ RTB_Z74
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``QPD``
      -
      - :ref:`QPD <hl7-v2_6-QPD>`
-     - required
+     - optional
      -
      - QPD: Required
    * - ``ROW_DEFINITION``
@@ -13245,7 +13245,7 @@ SDR_S31
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13263,7 +13263,7 @@ SDR_S31
    * - ``ANTIMICROBIAL_DEVICE_DATA``
      -
      - :ref:`SDR_S31_ANTIMICROBIAL_DEVICE_DATA <hl7-v2_6-SDR_S31_ANTIMICROBIAL_DEVICE_DATA>`
-     - required
+     - optional
      -
      - ANTIMICROBIAL_DEVICE_DATA: Required
 
@@ -13290,7 +13290,7 @@ SDR_S32
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13308,7 +13308,7 @@ SDR_S32
    * - ``ANTIMICROBIAL_DEVICE_CYCLE_DATA``
      -
      - :ref:`SDR_S32_ANTIMICROBIAL_DEVICE_CYCLE_DATA <hl7-v2_6-SDR_S32_ANTIMICROBIAL_DEVICE_CYCLE_DATA>`
-     - required
+     - optional
      -
      - ANTIMICROBIAL_DEVICE_CYCLE_DATA: Required
 
@@ -13335,13 +13335,13 @@ SIU_S12
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SCH``
      -
      - :ref:`SCH <hl7-v2_6-SCH>`
-     - required
+     - optional
      -
      - SCH: Required
    * - ``TQ1``
@@ -13365,7 +13365,7 @@ SIU_S12
    * - ``RESOURCES``
      -
      - List[:ref:`SIU_S12_RESOURCES <hl7-v2_6-SIU_S12_RESOURCES>`]
-     - required
+     - optional
      -
      - RESOURCES: Required, repeating
 
@@ -13392,7 +13392,7 @@ SLR_S28
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13410,7 +13410,7 @@ SLR_S28
    * - ``SLT``
      -
      - List[:ref:`SLT <hl7-v2_6-SLT>`]
-     - required
+     - optional
      -
      - SLT: Required, repeating
 
@@ -13437,13 +13437,13 @@ SQM_S25
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -13488,13 +13488,13 @@ SQR_S25
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -13506,7 +13506,7 @@ SQR_S25
    * - ``QAK``
      -
      - :ref:`QAK <hl7-v2_6-QAK>`
-     - required
+     - optional
      -
      - QAK: Required
    * - ``SCHEDULE``
@@ -13545,13 +13545,13 @@ SRM_S01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``ARQ``
      -
      - :ref:`ARQ <hl7-v2_6-ARQ>`
-     - required
+     - optional
      -
      - ARQ: Required
    * - ``APR``
@@ -13575,7 +13575,7 @@ SRM_S01
    * - ``RESOURCES``
      -
      - List[:ref:`SRM_S01_RESOURCES <hl7-v2_6-SRM_S01_RESOURCES>`]
-     - required
+     - optional
      -
      - RESOURCES: Required, repeating
 
@@ -13602,13 +13602,13 @@ SRR_S01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``ERR``
@@ -13647,7 +13647,7 @@ SSR_U04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13665,13 +13665,13 @@ SSR_U04
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``SPECIMEN_CONTAINER``
      -
      - List[:ref:`SSR_U04_SPECIMEN_CONTAINER <hl7-v2_6-SSR_U04_SPECIMEN_CONTAINER>`]
-     - required
+     - optional
      -
      - SPECIMEN_CONTAINER: Required, repeating
    * - ``ROL``
@@ -13704,7 +13704,7 @@ SSU_U03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13722,13 +13722,13 @@ SSU_U03
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``SPECIMEN_CONTAINER``
      -
      - List[:ref:`SSU_U03_SPECIMEN_CONTAINER <hl7-v2_6-SSU_U03_SPECIMEN_CONTAINER>`]
-     - required
+     - optional
      -
      - SPECIMEN_CONTAINER: Required, repeating
    * - ``ROL``
@@ -13761,7 +13761,7 @@ STC_S33
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13779,7 +13779,7 @@ STC_S33
    * - ``SCP``
      -
      - List[:ref:`SCP <hl7-v2_6-SCP>`]
-     - required
+     - optional
      -
      - SCP: Required, repeating
 
@@ -13806,13 +13806,13 @@ SUR_P09
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``FACILITY``
      -
      - List[:ref:`SUR_P09_FACILITY <hl7-v2_6-SUR_P09_FACILITY>`]
-     - required
+     - optional
      -
      - FACILITY: Required, repeating
 
@@ -13839,7 +13839,7 @@ TCU_U10
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13857,13 +13857,13 @@ TCU_U10
    * - ``EQU``
      -
      - :ref:`EQU <hl7-v2_6-EQU>`
-     - required
+     - optional
      -
      - EQU: Required
    * - ``TEST_CONFIGURATION``
      -
      - List[:ref:`TCU_U10_TEST_CONFIGURATION <hl7-v2_6-TCU_U10_TEST_CONFIGURATION>`]
-     - required
+     - optional
      -
      - TEST_CONFIGURATION: Required, repeating
    * - ``ROL``
@@ -13896,7 +13896,7 @@ VXQ_V01
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -13914,7 +13914,7 @@ VXQ_V01
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -13947,13 +13947,13 @@ VXR_V03
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``SFT``
@@ -13971,7 +13971,7 @@ VXR_V03
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -13983,7 +13983,7 @@ VXR_V03
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -14046,7 +14046,7 @@ VXU_V04
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``SFT``
@@ -14064,7 +14064,7 @@ VXU_V04
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_6-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PD1``
@@ -14127,13 +14127,13 @@ VXX_V02
    * - ``MSH``
      -
      - :ref:`MSH <hl7-v2_6-MSH>`
-     - required
+     - optional
      -
      - MSH: Required
    * - ``MSA``
      -
      - :ref:`MSA <hl7-v2_6-MSA>`
-     - required
+     - optional
      -
      - MSA: Required
    * - ``SFT``
@@ -14151,7 +14151,7 @@ VXX_V02
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_6-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -14163,6 +14163,6 @@ VXX_V02
    * - ``PATIENT``
      -
      - List[:ref:`VXX_V02_PATIENT <hl7-v2_6-VXX_V02_PATIENT>`]
-     - required
+     - optional
      -
      - PATIENT: Required, repeating

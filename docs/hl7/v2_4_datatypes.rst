@@ -323,7 +323,7 @@ CF
      - identifier (ID)
    * - ``cf_2``
      - CF.2
-     - Optional[:ref:`FT <hl7-v2_4-FT>`]
+     - Optional[str]
      - optional
      -
      - formatted text
@@ -341,7 +341,7 @@ CF
      - alternate identifier (ID)
    * - ``cf_5``
      - CF.5
-     - Optional[:ref:`FT <hl7-v2_4-FT>`]
+     - Optional[str]
      - optional
      -
      - alternate formatted text
@@ -2702,7 +2702,7 @@ PRL
      - OBX-4 sub-ID of parent result
    * - ``prl_3``
      - PRL.3
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - part of OBX-5 observation result from parent
@@ -2942,7 +2942,7 @@ RFR
      - gestational range
    * - ``rfr_5``
      - RFR.5
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - species
@@ -2954,7 +2954,7 @@ RFR
      - race/subspecies
    * - ``rfr_7``
      - RFR.7
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - conditions
@@ -3266,13 +3266,13 @@ SPS
      - specimen source name or code
    * - ``sps_2``
      - SPS.2
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - additives
    * - ``sps_3``
      - SPS.3
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - freetext
@@ -3398,7 +3398,7 @@ TQ
      - condition
    * - ``tq_8``
      - TQ.8
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - text (TX)
@@ -3482,13 +3482,13 @@ TX_CHALLENGE
      - Description
    * - ``tx_challenge_1``
      - TX_CHALLENGE.1
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - ???????????
    * - ``tx_challenge_2``
      - TX_CHALLENGE.2
-     - Optional[:ref:`TX <hl7-v2_4-TX>`]
+     - Optional[str]
      - optional
      -
      - ???????????

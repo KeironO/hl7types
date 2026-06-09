@@ -132,7 +132,7 @@ CCD
    * - ``ccd_1``
      - CCD.1
      - str
-     - required
+     - optional
      - 1
      - Invocation Event
    * - ``ccd_2``
@@ -266,7 +266,7 @@ CF
      - Identifier
    * - ``cf_2``
      - CF.2
-     - Optional[:ref:`FT <hl7-v2_7_1-FT>`]
+     - Optional[str]
      - optional
      -
      - Formatted Text
@@ -284,7 +284,7 @@ CF
      - Alternate Identifier
    * - ``cf_5``
      - CF.5
-     - Optional[:ref:`FT <hl7-v2_7_1-FT>`]
+     - Optional[str]
      - optional
      -
      - Alternate Formatted Text
@@ -320,7 +320,7 @@ CF
      - Second Alternate Identifier
    * - ``cf_11``
      - CF.11
-     - Optional[:ref:`FT <hl7-v2_7_1-FT>`]
+     - Optional[str]
      - optional
      -
      - Second Alternate Formatted Text
@@ -414,7 +414,7 @@ CNE
    * - ``cne_1``
      - CNE.1
      - str
-     - required
+     - optional
      -
      - Identifier
    * - ``cne_2``
@@ -654,7 +654,7 @@ CP
    * - ``cp_1``
      - CP.1
      - :ref:`MO <hl7-v2_7_1-MO>`
-     - required
+     - optional
      -
      - Price
    * - ``cp_2``
@@ -744,7 +744,7 @@ CSU
    * - ``csu_1``
      - CSU.1
      - str
-     - required
+     - optional
      -
      - Channel Sensitivity
    * - ``csu_2``
@@ -1056,7 +1056,7 @@ CX
    * - ``cx_1``
      - CX.1
      - str
-     - required
+     - optional
      -
      - ID Number
    * - ``cx_2``
@@ -1080,7 +1080,7 @@ CX
    * - ``cx_5``
      - CX.5
      - str
-     - required
+     - optional
      - 5
      - Identifier Type Code
    * - ``cx_6``
@@ -1155,7 +1155,7 @@ DDI
    * - ``ddi_2``
      - DDI.2
      - :ref:`MO <hl7-v2_7_1-MO>`
-     - required
+     - optional
      -
      - Monetary Amount
    * - ``ddi_3``
@@ -1188,13 +1188,13 @@ DIN
    * - ``din_1``
      - DIN.1
      - str
-     - required
+     - optional
      -
      - Date
    * - ``din_2``
      - DIN.2
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Institution Name
 
@@ -1221,7 +1221,7 @@ DLD
    * - ``dld_1``
      - DLD.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Discharge to Location
    * - ``dld_2``
@@ -1254,7 +1254,7 @@ DLN
    * - ``dln_1``
      - DLN.1
      - str
-     - required
+     - optional
      -
      - License Number
    * - ``dln_2``
@@ -1371,13 +1371,13 @@ DTN
    * - ``dtn_1``
      - DTN.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Day Type
    * - ``dtn_2``
      - DTN.2
      - str
-     - required
+     - optional
      -
      - Number of Days
 
@@ -1410,7 +1410,7 @@ ED
    * - ``ed_2``
      - ED.2
      - str
-     - required
+     - optional
      - 11
      - Type of Data
    * - ``ed_3``
@@ -1422,13 +1422,13 @@ ED
    * - ``ed_4``
      - ED.4
      - str
-     - required
+     - optional
      - 6
      - Encoding
    * - ``ed_5``
      - ED.5
-     - :ref:`TX <hl7-v2_7_1-TX>`
-     - required
+     - str
+     - optional
      -
      - Data
 
@@ -1533,13 +1533,13 @@ ERL
    * - ``erl_1``
      - ERL.1
      - str
-     - required
+     - optional
      - 3
      - Segment ID
    * - ``erl_2``
      - ERL.2
      - str
-     - required
+     - optional
      -
      - Segment Sequence
    * - ``erl_3``
@@ -1590,7 +1590,7 @@ FC
    * - ``fc_1``
      - FC.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Financial Class Code
    * - ``fc_2``
@@ -1623,7 +1623,7 @@ FN
    * - ``fn_1``
      - FN.1
      - str
-     - required
+     - optional
      -
      - Surname
    * - ``fn_2``
@@ -1719,7 +1719,7 @@ ICD
    * - ``icd_2``
      - ICD.2
      - str
-     - required
+     - optional
      - 1
      - Certification Required
    * - ``icd_3``
@@ -1763,7 +1763,7 @@ JCC
      - Job Class
    * - ``jcc_3``
      - JCC.3
-     - Optional[:ref:`TX <hl7-v2_7_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Job Description Text
@@ -2094,13 +2094,13 @@ MOP
    * - ``mop_1``
      - MOP.1
      - str
-     - required
+     - optional
      -
      - Money or Percentage Indicator
    * - ``mop_2``
      - MOP.2
      - str
-     - required
+     - optional
      -
      - Money or Percentage Quantity
    * - ``mop_3``
@@ -2133,19 +2133,19 @@ MSG
    * - ``msg_1``
      - MSG.1
      - str
-     - required
+     - optional
      - 3
      - Message Code
    * - ``msg_2``
      - MSG.2
      - str
-     - required
+     - optional
      - 3
      - Trigger Event
    * - ``msg_3``
      - MSG.3
      - str
-     - required
+     - optional
      - 7
      - Message Structure
 
@@ -2337,13 +2337,13 @@ OCD
    * - ``ocd_1``
      - OCD.1
      - :ref:`CNE <hl7-v2_7_1-CNE>`
-     - required
+     - optional
      -
      - Occurrence Code
    * - ``ocd_2``
      - OCD.2
      - str
-     - required
+     - optional
      -
      - Occurrence Date
 
@@ -2370,7 +2370,7 @@ OSP
    * - ``osp_1``
      - OSP.1
      - :ref:`CNE <hl7-v2_7_1-CNE>`
-     - required
+     - optional
      -
      - Occurrence Span Code
    * - ``osp_2``
@@ -2409,7 +2409,7 @@ PIP
    * - ``pip_1``
      - PIP.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Privilege
    * - ``pip_2``
@@ -2547,13 +2547,13 @@ PLN
    * - ``pln_1``
      - PLN.1
      - str
-     - required
+     - optional
      -
      - ID Number
    * - ``pln_2``
      - PLN.2
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Type of ID Number
    * - ``pln_3``
@@ -2757,7 +2757,7 @@ PRL
    * - ``prl_1``
      - PRL.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Parent Observation Identifier
    * - ``prl_2``
@@ -2768,7 +2768,7 @@ PRL
      - Parent Observation Sub-identifier
    * - ``prl_3``
      - PRL.3
-     - Optional[:ref:`TX <hl7-v2_7_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Parent Observation Value Descriptor
@@ -2796,7 +2796,7 @@ PT
    * - ``pt_1``
      - PT.1
      - str
-     - required
+     - optional
      - 1
      - Processing ID
    * - ``pt_2``
@@ -2829,7 +2829,7 @@ PTA
    * - ``pta_1``
      - PTA.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Policy Type
    * - ``pta_2``
@@ -2841,7 +2841,7 @@ PTA
    * - ``pta_4``
      - PTA.4
      - :ref:`MOP <hl7-v2_7_1-MOP>`
-     - required
+     - optional
      -
      - Money or Percentage
 
@@ -2868,13 +2868,13 @@ QIP
    * - ``qip_1``
      - QIP.1
      - str
-     - required
+     - optional
      - 12
      - Segment Field Name
    * - ``qip_2``
      - QIP.2
      - str
-     - required
+     - optional
      -
      - Values
 
@@ -2901,7 +2901,7 @@ QSC
    * - ``qsc_1``
      - QSC.1
      - str
-     - required
+     - optional
      -
      - Segment Field Name
    * - ``qsc_2``
@@ -2985,7 +2985,7 @@ RFR
    * - ``rfr_1``
      - RFR.1
      - :ref:`NR <hl7-v2_7_1-NR>`
-     - required
+     - optional
      -
      - Numeric Range
    * - ``rfr_2``
@@ -3020,7 +3020,7 @@ RFR
      - Race/subspecies
    * - ``rfr_7``
      - RFR.7
-     - Optional[:ref:`TX <hl7-v2_7_1-TX>`]
+     - Optional[str]
      - optional
      -
      - Conditions
@@ -3081,7 +3081,7 @@ RMC
    * - ``rmc_1``
      - RMC.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Room Type
    * - ``rmc_2``
@@ -3093,7 +3093,7 @@ RMC
    * - ``rmc_4``
      - RMC.4
      - :ref:`MOP <hl7-v2_7_1-MOP>`
-     - required
+     - optional
      -
      - Money or Percentage
 
@@ -3165,7 +3165,7 @@ RPT
    * - ``rpt_1``
      - RPT.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Repeat Pattern Code
    * - ``rpt_2``
@@ -3369,7 +3369,7 @@ SPD
    * - ``spd_1``
      - SPD.1
      - str
-     - required
+     - optional
      -
      - Specialty Name
    * - ``spd_2``
@@ -3414,7 +3414,7 @@ SRT
    * - ``srt_1``
      - SRT.1
      - str
-     - required
+     - optional
      - 12
      - Sort-by Field
    * - ``srt_2``
@@ -3447,7 +3447,7 @@ UVC
    * - ``uvc_1``
      - UVC.1
      - :ref:`CWE <hl7-v2_7_1-CWE>`
-     - required
+     - optional
      -
      - Value Code
    * - ``uvc_2``
@@ -3537,7 +3537,7 @@ VID
    * - ``vid_1``
      - VID.1
      - str
-     - required
+     - optional
      - 5
      - Version ID
    * - ``vid_2``
@@ -3609,7 +3609,7 @@ WVI
    * - ``wvi_1``
      - WVI.1
      - str
-     - required
+     - optional
      -
      - Channel Number
    * - ``wvi_2``
@@ -3642,7 +3642,7 @@ WVS
    * - ``wvs_1``
      - WVS.1
      - str
-     - required
+     - optional
      -
      - Source One Name
    * - ``wvs_2``
@@ -4167,7 +4167,7 @@ XTN
    * - ``xtn_3``
      - XTN.3
      - str
-     - required
+     - optional
      - 8
      - Telecommunication Equipment Type
    * - ``xtn_4``

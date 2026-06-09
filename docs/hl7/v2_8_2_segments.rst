@@ -255,25 +255,25 @@ ADJ
    * - ``adj_1``
      - ADJ.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Provider Adjustment Number: Item #2003
    * - ``adj_2``
      - ADJ.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Payer Adjustment Number: Item #2004
    * - ``adj_3``
      - ADJ.3
      - str
-     - required
+     - optional
      -
      - Adjustment Sequence Number: Item #2005
    * - ``adj_4``
      - ADJ.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Adjustment Category: Item #2006 | Table HL70564
    * - ``adj_5``
@@ -333,7 +333,7 @@ ADJ
    * - ``adj_14``
      - ADJ.14
      - str
-     - required
+     - optional
      -
      - Adjustment Date: Item #2016
    * - ``adj_15``
@@ -366,13 +366,13 @@ AFF
    * - ``aff_1``
      - AFF.1
      - str
-     - required
+     - optional
      -
      - Set ID - AFF: Item #1427
    * - ``aff_2``
      - AFF.2
      - :ref:`XON <hl7-v2_8_2-XON>`
-     - required
+     - optional
      -
      - Professional Organization: Item #1444
    * - ``aff_3``
@@ -417,7 +417,7 @@ AIG
    * - ``aig_1``
      - AIG.1
      - str
-     - required
+     - optional
      -
      - Set ID - AIG: Item #896
    * - ``aig_2``
@@ -435,7 +435,7 @@ AIG
    * - ``aig_4``
      - AIG.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Resource Type: Item #898
    * - ``aig_5``
@@ -522,7 +522,7 @@ AIL
    * - ``ail_1``
      - AIL.1
      - str
-     - required
+     - optional
      -
      - Set ID - AIL: Item #902
    * - ``ail_2``
@@ -615,7 +615,7 @@ AIP
    * - ``aip_1``
      - AIP.1
      - str
-     - required
+     - optional
      -
      - Set ID - AIP: Item #906
    * - ``aip_2``
@@ -708,7 +708,7 @@ AIS
    * - ``ais_1``
      - AIS.1
      - str
-     - required
+     - optional
      -
      - Set ID - AIS: Item #890
    * - ``ais_2``
@@ -720,7 +720,7 @@ AIS
    * - ``ais_3``
      - AIS.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Universal Service Identifier: Item #238
    * - ``ais_4``
@@ -801,7 +801,7 @@ AL1
    * - ``al1_1``
      - AL1.1
      - str
-     - required
+     - optional
      -
      - Set ID - AL1: Item #203
    * - ``al1_2``
@@ -813,7 +813,7 @@ AL1
    * - ``al1_3``
      - AL1.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Allergen Code/Mnemonic/Description: Item #205
    * - ``al1_4``
@@ -903,7 +903,7 @@ ARQ
    * - ``arq_1``
      - ARQ.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Placer Appointment ID: Item #860
    * - ``arq_2``
@@ -1080,13 +1080,13 @@ ARV
    * - ``arv_2``
      - ARV.2
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Access Restriction Action Code: Item #2144 | Table HL70206
    * - ``arv_3``
      - ARV.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Access Restriction Value: Item #2145 | Table HL70717
    * - ``arv_4``
@@ -1137,7 +1137,7 @@ AUT
    * - ``aut_2``
      - AUT.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Authorizing Payor, Company ID: Item #1147 | Table HL70285
    * - ``aut_3``
@@ -1203,7 +1203,7 @@ AUT
    * - ``aut_13``
      - AUT.13
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Authorization Referral Type: Item #3413
    * - ``aut_14``
@@ -1509,13 +1509,13 @@ BPO
    * - ``bpo_1``
      - BPO.1
      - str
-     - required
+     - optional
      -
      - Set ID - BPO: Item #1700
    * - ``bpo_2``
      - BPO.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - BP Universal Service Identifier: Item #1701 | Table HL79999
    * - ``bpo_3``
@@ -1527,7 +1527,7 @@ BPO
    * - ``bpo_4``
      - BPO.4
      - str
-     - required
+     - optional
      -
      - BP Quantity: Item #1703
    * - ``bpo_5``
@@ -1614,25 +1614,25 @@ BPX
    * - ``bpx_1``
      - BPX.1
      - str
-     - required
+     - optional
      -
      - Set ID - BPX: Item #1714
    * - ``bpx_2``
      - BPX.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - BP Dispense Status: Item #1715 | Table HL70510
    * - ``bpx_3``
      - BPX.3
      - str
-     - required
+     - optional
      -
      - BP Status: Item #1716 | Table HL70511
    * - ``bpx_4``
      - BPX.4
      - str
-     - required
+     - optional
      -
      - BP Date/Time of Status: Item #1717
    * - ``bpx_5``
@@ -1692,7 +1692,7 @@ BPX
    * - ``bpx_14``
      - BPX.14
      - str
-     - required
+     - optional
      -
      - BP Quantity: Item #1727
    * - ``bpx_15``
@@ -1800,7 +1800,7 @@ BTX
    * - ``btx_1``
      - BTX.1
      - str
-     - required
+     - optional
      -
      - Set ID - BTX: Item #1735
    * - ``btx_2``
@@ -1842,7 +1842,7 @@ BTX
    * - ``btx_8``
      - BTX.8
      - str
-     - required
+     - optional
      -
      - BP Quantity: Item #1742
    * - ``btx_9``
@@ -1860,19 +1860,19 @@ BTX
    * - ``btx_11``
      - BTX.11
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - BP Transfusion/Disposition Status: Item #1745 | Table HL70513
    * - ``btx_12``
      - BTX.12
      - str
-     - required
+     - optional
      -
      - BP Message Status: Item #1746 | Table HL70511
    * - ``btx_13``
      - BTX.13
      - str
-     - required
+     - optional
      -
      - BP Date/Time of Status: Item #1747
    * - ``btx_14``
@@ -1947,67 +1947,67 @@ BUI
    * - ``bui_2``
      - BUI.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Blood Unit Identifier: Item #3374
    * - ``bui_3``
      - BUI.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Blood Unit Type: Item #3375 | Table HL70566
    * - ``bui_4``
      - BUI.4
      - str
-     - required
+     - optional
      -
      - Blood Unit Weight: Item #3376
    * - ``bui_5``
      - BUI.5
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Weight Units: Item #3377 | Table HL70929
    * - ``bui_6``
      - BUI.6
      - str
-     - required
+     - optional
      -
      - Blood Unit Volume: Item #3378
    * - ``bui_7``
      - BUI.7
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Volume Units: Item #3379 | Table HL70930
    * - ``bui_8``
      - BUI.8
      - str
-     - required
+     - optional
      -
      - Container Catalog Number: Item #3380
    * - ``bui_9``
      - BUI.9
      - str
-     - required
+     - optional
      -
      - Container Lot Number: Item #3381
    * - ``bui_10``
      - BUI.10
      - :ref:`XON <hl7-v2_8_2-XON>`
-     - required
+     - optional
      -
      - Container Manufacturer: Item #3382
    * - ``bui_11``
      - BUI.11
      - :ref:`NR <hl7-v2_8_2-NR>`
-     - required
+     - optional
      -
      - Transport Temperature: Item #3383
    * - ``bui_12``
      - BUI.12
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Transport Temperature Units: Item #3384 | Table HL70931
 
@@ -2034,7 +2034,7 @@ CDM
    * - ``cdm_1``
      - CDM.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Primary Key Value - CDM: Item #1306
    * - ``cdm_2``
@@ -2046,7 +2046,7 @@ CDM
    * - ``cdm_3``
      - CDM.3
      - str
-     - required
+     - optional
      -
      - Charge Description Short: Item #984
    * - ``cdm_4``
@@ -2178,7 +2178,7 @@ CER
    * - ``cer_1``
      - CER.1
      - str
-     - required
+     - optional
      -
      - Set ID - CER: Item #1856
    * - ``cer_2``
@@ -2250,7 +2250,7 @@ CER
    * - ``cer_13``
      - CER.13
      - str
-     - required
+     - optional
      -
      - Subject Name: Item #1907
    * - ``cer_14``
@@ -2391,7 +2391,7 @@ CM0
    * - ``cm0_2``
      - CM0.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Sponsor Study ID: Item #1011
    * - ``cm0_3``
@@ -2403,7 +2403,7 @@ CM0
    * - ``cm0_4``
      - CM0.4
      - str
-     - required
+     - optional
      -
      - Title of Study: Item #1013
    * - ``cm0_5``
@@ -2472,19 +2472,19 @@ CM1
    * - ``cm1_1``
      - CM1.1
      - str
-     - required
+     - optional
      -
      - Set ID - CM1: Item #1021
    * - ``cm1_2``
      - CM1.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Study Phase Identifier: Item #1022
    * - ``cm1_3``
      - CM1.3
      - str
-     - required
+     - optional
      -
      - Description of Study Phase: Item #1023
 
@@ -2517,7 +2517,7 @@ CM2
    * - ``cm2_2``
      - CM2.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Scheduled Time Point: Item #1025
    * - ``cm2_3``
@@ -2613,7 +2613,7 @@ CON
    * - ``con_1``
      - CON.1
      - str
-     - required
+     - optional
      -
      - Set ID - CON: Item #1776
    * - ``con_2``
@@ -2636,31 +2636,31 @@ CON
      - Consent Form Number: Item #1779
    * - ``con_5``
      - CON.5
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Consent Text: Item #1780
    * - ``con_6``
      - CON.6
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Subject-specific Consent Text: Item #1781
    * - ``con_7``
      - CON.7
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Consent Background Information: Item #1782
    * - ``con_8``
      - CON.8
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Subject-specific Consent Background Text: Item #1783
    * - ``con_9``
      - CON.9
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Consenter-imposed limitations: Item #1784
@@ -2673,7 +2673,7 @@ CON
    * - ``con_11``
      - CON.11
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Consent Status: Item #1786 | Table HL70498
    * - ``con_12``
@@ -2784,13 +2784,13 @@ CSP
    * - ``csp_1``
      - CSP.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Study Phase Identifier: Item #1022
    * - ``csp_2``
      - CSP.2
      - str
-     - required
+     - optional
      -
      - Date/time Study Phase Began: Item #1052
    * - ``csp_3``
@@ -2829,7 +2829,7 @@ CSR
    * - ``csr_1``
      - CSR.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Sponsor Study ID: Item #1011
    * - ``csr_2``
@@ -2847,7 +2847,7 @@ CSR
    * - ``csr_4``
      - CSR.4
      - :ref:`CX <hl7-v2_8_2-CX>`
-     - required
+     - optional
      -
      - Sponsor Patient ID: Item #1038
    * - ``csr_5``
@@ -2859,7 +2859,7 @@ CSR
    * - ``csr_6``
      - CSR.6
      - str
-     - required
+     - optional
      -
      - Date/Time of Patient Study Registration: Item #1040
    * - ``csr_7``
@@ -2946,7 +2946,7 @@ CSS
    * - ``css_1``
      - CSS.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Study Scheduled Time Point: Item #1055 | Table HL79999
    * - ``css_2``
@@ -3048,7 +3048,7 @@ CTI
    * - ``cti_1``
      - CTI.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Sponsor Study ID: Item #1011
    * - ``cti_2``
@@ -3087,7 +3087,7 @@ DB1
    * - ``db1_1``
      - DB1.1
      - str
-     - required
+     - optional
      -
      - Set ID - DB1: Item #1283
    * - ``db1_2``
@@ -3156,13 +3156,13 @@ DG1
    * - ``dg1_1``
      - DG1.1
      - str
-     - required
+     - optional
      -
      - Set ID - DG1: Item #375
    * - ``dg1_3``
      - DG1.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Diagnosis Code - DG1: Item #377 | Table HL70051
    * - ``dg1_5``
@@ -3174,7 +3174,7 @@ DG1
    * - ``dg1_6``
      - DG1.6
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Diagnosis Type: Item #380 | Table HL70052
    * - ``dg1_15``
@@ -3336,169 +3336,169 @@ DON
    * - ``don_3``
      - DON.3
      - str
-     - required
+     - optional
      -
      - Phlebotomy Start Date/Time: Item #3342
    * - ``don_4``
      - DON.4
      - str
-     - required
+     - optional
      -
      - Phlebotomy End Date/Time: Item #3343
    * - ``don_5``
      - DON.5
      - str
-     - required
+     - optional
      -
      - Donation Duration: Item #3344
    * - ``don_6``
      - DON.6
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Donation Duration Units: Item #3345 | Table HL70932
    * - ``don_7``
      - DON.7
      - List[:ref:`CNE <hl7-v2_8_2-CNE>`]
-     - required
+     - optional
      -
      - Intended Procedure Type: Item #3346 | Table HL70933
    * - ``don_8``
      - DON.8
      - List[:ref:`CNE <hl7-v2_8_2-CNE>`]
-     - required
+     - optional
      -
      - Actual Procedure Type: Item #3347 | Table HL70933
    * - ``don_9``
      - DON.9
      - str
-     - required
+     - optional
      -
      - Donor Eligibility Flag: Item #3348 | Table HL70136
    * - ``don_10``
      - DON.10
      - List[:ref:`CNE <hl7-v2_8_2-CNE>`]
-     - required
+     - optional
      -
      - Donor Eligibility Procedure Type: Item #3349 | Table HL70933
    * - ``don_11``
      - DON.11
      - str
-     - required
+     - optional
      -
      - Donor Eligibility Date: Item #3350
    * - ``don_12``
      - DON.12
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Process Interruption: Item #3351 | Table HL70923
    * - ``don_13``
      - DON.13
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Process Interruption Reason: Item #3352 | Table HL70935
    * - ``don_14``
      - DON.14
      - List[:ref:`CNE <hl7-v2_8_2-CNE>`]
-     - required
+     - optional
      -
      - Phlebotomy Issue: Item #3353 | Table HL70925
    * - ``don_15``
      - DON.15
      - str
-     - required
+     - optional
      -
      - Intended Recipient Blood Relative: Item #3354 | Table HL70136
    * - ``don_16``
      - DON.16
      - :ref:`XPN <hl7-v2_8_2-XPN>`
-     - required
+     - optional
      -
      - Intended Recipient Name: Item #3355
    * - ``don_17``
      - DON.17
      - str
-     - required
+     - optional
      -
      - Intended Recipient DOB: Item #3356
    * - ``don_18``
      - DON.18
      - :ref:`XON <hl7-v2_8_2-XON>`
-     - required
+     - optional
      -
      - Intended Recipient Facility: Item #3357
    * - ``don_19``
      - DON.19
      - str
-     - required
+     - optional
      -
      - Intended Recipient Procedure Date: Item #3358
    * - ``don_20``
      - DON.20
      - :ref:`XPN <hl7-v2_8_2-XPN>`
-     - required
+     - optional
      -
      - Intended Recipient Ordering Provider: Item #3359
    * - ``don_21``
      - DON.21
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Phlebotomy Status: Item #3360 | Table HL70926
    * - ``don_22``
      - DON.22
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Arm Stick: Item #3361 | Table HL70927
    * - ``don_23``
      - DON.23
      - :ref:`XPN <hl7-v2_8_2-XPN>`
-     - required
+     - optional
      -
      - Bleed Start Phlebotomist: Item #3362
    * - ``don_24``
      - DON.24
      - :ref:`XPN <hl7-v2_8_2-XPN>`
-     - required
+     - optional
      -
      - Bleed End Phlebotomist: Item #3363
    * - ``don_25``
      - DON.25
      - str
-     - required
+     - optional
      -
      - Aphaeresis Type Machine: Item #3364
    * - ``don_26``
      - DON.26
      - str
-     - required
+     - optional
      -
      - Aphaeresis Machine Serial Number: Item #3365
    * - ``don_27``
      - DON.27
      - str
-     - required
+     - optional
      -
      - Donor Reaction: Item #3366 | Table HL70136
    * - ``don_28``
      - DON.28
      - :ref:`XPN <hl7-v2_8_2-XPN>`
-     - required
+     - optional
      -
      - Final Review Staff ID: Item #3367
    * - ``don_29``
      - DON.29
      - str
-     - required
+     - optional
      -
      - Final Review Date/Time: Item #3368
    * - ``don_30``
      - DON.30
      - str
-     - required
+     - optional
      -
      - Number of Tubes Collected: Item #3369
    * - ``don_31``
@@ -3510,7 +3510,7 @@ DON
    * - ``don_32``
      - DON.32
      - :ref:`XCN <hl7-v2_8_2-XCN>`
-     - required
+     - optional
      -
      - Donation Accept Staff: Item #3371
    * - ``don_33``
@@ -3543,7 +3543,7 @@ DPS
    * - ``dps_1``
      - DPS.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Diagnosis Code - MCP: Item #3472 | Table HL70051
    * - ``dps_2``
@@ -3857,8 +3857,8 @@ DSP
      - Display Level: Item #62
    * - ``dsp_3``
      - DSP.3
-     - :ref:`TX <hl7-v2_8_2-TX>`
-     - required
+     - str
+     - optional
      -
      - Data Line: Item #63
    * - ``dsp_4``
@@ -3869,7 +3869,7 @@ DSP
      - Logical Break Point: Item #64
    * - ``dsp_5``
      - DSP.5
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Result ID: Item #65
@@ -3897,13 +3897,13 @@ ECD
    * - ``ecd_1``
      - ECD.1
      - str
-     - required
+     - optional
      -
      - Reference Command Number: Item #1390
    * - ``ecd_2``
      - ECD.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Remote Control Command: Item #1391 | Table HL70368
    * - ``ecd_3``
@@ -3914,7 +3914,7 @@ ECD
      - Response Required: Item #1392 | Table HL70136
    * - ``ecd_5``
      - ECD.5
-     - Optional[List[:ref:`TX <hl7-v2_8_2-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - Parameters: Item #1394
@@ -3942,18 +3942,18 @@ ECR
    * - ``ecr_1``
      - ECR.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Command Response: Item #1395 | Table HL70387
    * - ``ecr_2``
      - ECR.2
      - str
-     - required
+     - optional
      -
      - Date/Time Completed: Item #1396
    * - ``ecr_3``
      - ECR.3
-     - Optional[List[:ref:`TX <hl7-v2_8_2-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - Command Response Parameters: Item #1397
@@ -3981,7 +3981,7 @@ EDU
    * - ``edu_1``
      - EDU.1
      - str
-     - required
+     - optional
      -
      - Set ID - EDU: Item #1448
    * - ``edu_2``
@@ -4056,7 +4056,7 @@ EQP
    * - ``eqp_1``
      - EQP.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Event type: Item #1430 | Table HL70450
    * - ``eqp_2``
@@ -4068,7 +4068,7 @@ EQP
    * - ``eqp_3``
      - EQP.3
      - str
-     - required
+     - optional
      -
      - Start Date/Time: Item #1202
    * - ``eqp_4``
@@ -4079,8 +4079,8 @@ EQP
      - End Date/Time: Item #1432
    * - ``eqp_5``
      - EQP.5
-     - :ref:`FT <hl7-v2_8_2-FT>`
-     - required
+     - str
+     - optional
      -
      - Transaction Data: Item #1433
 
@@ -4113,7 +4113,7 @@ EQU
    * - ``equ_2``
      - EQU.2
      - str
-     - required
+     - optional
      -
      - Event Date/Time: Item #1322
    * - ``equ_3``
@@ -4164,13 +4164,13 @@ ERR
    * - ``err_3``
      - ERR.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - HL7 Error Code: Item #1813 | Table HL70357
    * - ``err_4``
      - ERR.4
      - str
-     - required
+     - optional
      -
      - Severity: Item #1814 | Table HL70516
    * - ``err_5``
@@ -4187,13 +4187,13 @@ ERR
      - Application Error Parameter: Item #1816
    * - ``err_7``
      - ERR.7
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Diagnostic Information: Item #1817
    * - ``err_8``
      - ERR.8
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - User Message: Item #1818
@@ -4245,7 +4245,7 @@ EVN
    * - ``evn_2``
      - EVN.2
      - str
-     - required
+     - optional
      -
      - Recorded Date/Time: Item #100
    * - ``evn_3``
@@ -4302,7 +4302,7 @@ FAC
    * - ``fac_1``
      - FAC.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Facility ID-FAC: Item #1262
    * - ``fac_2``
@@ -4320,7 +4320,7 @@ FAC
    * - ``fac_4``
      - FAC.4
      - :ref:`XTN <hl7-v2_8_2-XTN>`
-     - required
+     - optional
      -
      - Facility Telecommunication: Item #1265
    * - ``fac_5``
@@ -4518,7 +4518,7 @@ FT1
    * - ``ft1_4``
      - FT1.4
      - :ref:`DR <hl7-v2_8_2-DR>`
-     - required
+     - optional
      -
      - Transaction Date: Item #358
    * - ``ft1_5``
@@ -4530,13 +4530,13 @@ FT1
    * - ``ft1_6``
      - FT1.6
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Transaction Type: Item #360 | Table HL70017
    * - ``ft1_7``
      - FT1.7
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Transaction Code: Item #361 | Table HL70132
    * - ``ft1_10``
@@ -4800,25 +4800,25 @@ GOL
    * - ``gol_1``
      - GOL.1
      - str
-     - required
+     - optional
      -
      - Action Code: Item #816 | Table HL70206
    * - ``gol_2``
      - GOL.2
      - str
-     - required
+     - optional
      -
      - Action Date/Time: Item #817
    * - ``gol_3``
      - GOL.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Goal ID: Item #818
    * - ``gol_4``
      - GOL.4
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Goal Instance ID: Item #819
    * - ``gol_5``
@@ -4947,7 +4947,7 @@ GP1
    * - ``gp1_1``
      - GP1.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Type of Bill Code: Item #1599 | Table HL70455
    * - ``gp1_2``
@@ -5103,7 +5103,7 @@ GT1
    * - ``gt1_1``
      - GT1.1
      - str
-     - required
+     - optional
      -
      - Set ID - GT1: Item #405
    * - ``gt1_2``
@@ -5466,7 +5466,7 @@ IAM
    * - ``iam_1``
      - IAM.1
      - str
-     - required
+     - optional
      -
      - Set ID - IAM: Item #1612
    * - ``iam_2``
@@ -5478,7 +5478,7 @@ IAM
    * - ``iam_3``
      - IAM.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Allergen Code/Mnemonic/Description: Item #205
    * - ``iam_4``
@@ -5496,7 +5496,7 @@ IAM
    * - ``iam_6``
      - IAM.6
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Allergy Action Code: Item #1551 | Table HL70206
    * - ``iam_7``
@@ -5667,13 +5667,13 @@ IAR
    * - ``iar_1``
      - IAR.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Allergy Reaction Code: Item #3296
    * - ``iar_2``
      - IAR.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Allergy Severity Code: Item #3297 | Table HL70128
    * - ``iar_3``
@@ -5712,13 +5712,13 @@ IIM
    * - ``iim_1``
      - IIM.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Primary Key Value - IIM: Item #1897
    * - ``iim_2``
      - IIM.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Service Item Code: Item #1799
    * - ``iim_3``
@@ -5823,13 +5823,13 @@ ILT
    * - ``ilt_1``
      - ILT.1
      - str
-     - required
+     - optional
      -
      - Set Id - ILT: Item #2086
    * - ``ilt_2``
      - ILT.2
      - str
-     - required
+     - optional
      -
      - Inventory Lot Number: Item #1800
    * - ``ilt_3``
@@ -5904,19 +5904,19 @@ IN1
    * - ``in1_1``
      - IN1.1
      - str
-     - required
+     - optional
      -
      - Set ID - IN1: Item #426
    * - ``in1_2``
      - IN1.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Health Plan ID: Item #368 | Table HL70072
    * - ``in1_3``
      - IN1.3
      - List[:ref:`CX <hl7-v2_8_2-CX>`]
-     - required
+     - optional
      -
      - Insurance Company ID: Item #428
    * - ``in1_4``
@@ -6690,7 +6690,7 @@ IN3
    * - ``in3_1``
      - IN3.1
      - str
-     - required
+     - optional
      -
      - Set ID - IN3: Item #502
    * - ``in3_2``
@@ -6873,7 +6873,7 @@ INV
    * - ``inv_1``
      - INV.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Substance Identifier: Item #1372 | Table HL70451
    * - ``inv_2``
@@ -7008,25 +7008,25 @@ IPC
    * - ``ipc_1``
      - IPC.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Accession Identifier: Item #1330
    * - ``ipc_2``
      - IPC.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Requested Procedure ID: Item #1658
    * - ``ipc_3``
      - IPC.3
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Study Instance UID: Item #1659
    * - ``ipc_4``
      - IPC.4
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Scheduled Procedure Step ID: Item #1660
    * - ``ipc_5``
@@ -7083,31 +7083,31 @@ IPR
    * - ``ipr_1``
      - IPR.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - IPR Identifier: Item #2030
    * - ``ipr_2``
      - IPR.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Provider Cross Reference Identifier: Item #2031
    * - ``ipr_3``
      - IPR.3
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Payer Cross Reference Identifier: Item #2032
    * - ``ipr_4``
      - IPR.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - IPR Status: Item #2033 | Table HL70571
    * - ``ipr_5``
      - IPR.5
      - str
-     - required
+     - optional
      -
      - IPR Date/Time: Item #2034
    * - ``ipr_6``
@@ -7125,7 +7125,7 @@ IPR
    * - ``ipr_8``
      - IPR.8
      - str
-     - required
+     - optional
      -
      - IPR Checksum: Item #2037
 
@@ -7152,7 +7152,7 @@ ISD
    * - ``isd_1``
      - ISD.1
      - str
-     - required
+     - optional
      -
      - Reference Interaction Number: Item #1326
    * - ``isd_2``
@@ -7164,7 +7164,7 @@ ISD
    * - ``isd_3``
      - ISD.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Interaction Active State: Item #1328 | Table HL70387
 
@@ -7191,7 +7191,7 @@ ITM
    * - ``itm_1``
      - ITM.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Item Identifier: Item #2186
    * - ``itm_2``
@@ -7410,7 +7410,7 @@ IVC
    * - ``ivc_1``
      - IVC.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Provider Invoice Number: Item #1914
    * - ``ivc_2``
@@ -7428,31 +7428,31 @@ IVC
    * - ``ivc_4``
      - IVC.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Invoice Control: Item #1917 | Table HL70553
    * - ``ivc_5``
      - IVC.5
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Invoice Reason: Item #1918 | Table HL70554
    * - ``ivc_6``
      - IVC.6
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Invoice Type: Item #1919 | Table HL70555
    * - ``ivc_7``
      - IVC.7
      - str
-     - required
+     - optional
      -
      - Invoice Date/Time: Item #1920
    * - ``ivc_8``
      - IVC.8
      - :ref:`CP <hl7-v2_8_2-CP>`
-     - required
+     - optional
      -
      - Invoice Amount: Item #1921
    * - ``ivc_9``
@@ -7464,13 +7464,13 @@ IVC
    * - ``ivc_10``
      - IVC.10
      - :ref:`XON <hl7-v2_8_2-XON>`
-     - required
+     - optional
      -
      - Provider Organization: Item #1923
    * - ``ivc_11``
      - IVC.11
      - :ref:`XON <hl7-v2_8_2-XON>`
-     - required
+     - optional
      -
      - Payer Organization: Item #1924
    * - ``ivc_12``
@@ -7554,7 +7554,7 @@ IVC
    * - ``ivc_25``
      - IVC.25
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Benefit Group: Item #1938 | Table HL70556
    * - ``ivc_26``
@@ -7611,13 +7611,13 @@ IVT
    * - ``ivt_1``
      - IVT.1
      - str
-     - required
+     - optional
      -
      - Set Id - IVT: Item #2062
    * - ``ivt_2``
      - IVT.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Inventory Location Identifier: Item #2063
    * - ``ivt_3``
@@ -7788,13 +7788,13 @@ LAN
    * - ``lan_1``
      - LAN.1
      - str
-     - required
+     - optional
      -
      - Set ID - LAN: Item #1455
    * - ``lan_2``
      - LAN.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Language Code: Item #1456 | Table HL70296
    * - ``lan_3``
@@ -7833,13 +7833,13 @@ LCC
    * - ``lcc_1``
      - LCC.1
      - :ref:`PL <hl7-v2_8_2-PL>`
-     - required
+     - optional
      -
      - Primary Key Value - LCC: Item #979
    * - ``lcc_2``
      - LCC.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Location Department: Item #964 | Table HL70264
    * - ``lcc_3``
@@ -7878,7 +7878,7 @@ LCH
    * - ``lch_1``
      - LCH.1
      - :ref:`PL <hl7-v2_8_2-PL>`
-     - required
+     - optional
      -
      - Primary Key Value - LCH: Item #1305
    * - ``lch_2``
@@ -7896,13 +7896,13 @@ LCH
    * - ``lch_4``
      - LCH.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Location Characteristic ID: Item #1295 | Table HL70324
    * - ``lch_5``
      - LCH.5
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Location Characteristic Value - LCH: Item #1294 | Table HL70136
 
@@ -7929,13 +7929,13 @@ LDP
    * - ``ldp_1``
      - LDP.1
      - :ref:`PL <hl7-v2_8_2-PL>`
-     - required
+     - optional
      -
      - Primary Key Value - LDP: Item #963
    * - ``ldp_2``
      - LDP.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Location Department: Item #964 | Table HL70264
    * - ``ldp_3``
@@ -8022,7 +8022,7 @@ LOC
    * - ``loc_1``
      - LOC.1
      - :ref:`PL <hl7-v2_8_2-PL>`
-     - required
+     - optional
      -
      - Primary Key Value - LOC: Item #1307
    * - ``loc_2``
@@ -8097,7 +8097,7 @@ LRL
    * - ``lrl_1``
      - LRL.1
      - :ref:`PL <hl7-v2_8_2-PL>`
-     - required
+     - optional
      -
      - Primary Key Value - LRL: Item #943
    * - ``lrl_2``
@@ -8115,7 +8115,7 @@ LRL
    * - ``lrl_4``
      - LRL.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Location Relationship ID: Item #1277 | Table HL70325
    * - ``lrl_5``
@@ -8154,13 +8154,13 @@ MCP
    * - ``mcp_1``
      - MCP.1
      - str
-     - required
+     - optional
      -
      - Set ID - MCP: Item #3468
    * - ``mcp_2``
      - MCP.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Producer's Service/Test/Observation ID: Item #587
    * - ``mcp_3``
@@ -8205,7 +8205,7 @@ MFA
    * - ``mfa_1``
      - MFA.1
      - str
-     - required
+     - optional
      -
      - Record-Level Event Code: Item #664 | Table HL70180
    * - ``mfa_2``
@@ -8223,7 +8223,7 @@ MFA
    * - ``mfa_4``
      - MFA.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - MFN Record Level Error Return: Item #669 | Table HL70181
    * - ``mfa_5``
@@ -8235,7 +8235,7 @@ MFA
    * - ``mfa_6``
      - MFA.6
      - List[str]
-     - required
+     - optional
      -
      - Primary Key Value Type - MFA: Item #1320 | Table HL70355
 
@@ -8262,7 +8262,7 @@ MFE
    * - ``mfe_1``
      - MFE.1
      - str
-     - required
+     - optional
      -
      - Record-Level Event Code: Item #664 | Table HL70180
    * - ``mfe_2``
@@ -8286,7 +8286,7 @@ MFE
    * - ``mfe_5``
      - MFE.5
      - List[str]
-     - required
+     - optional
      -
      - Primary Key Value Type: Item #1319 | Table HL70355
    * - ``mfe_6``
@@ -8325,7 +8325,7 @@ MFI
    * - ``mfi_1``
      - MFI.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Master File Identifier: Item #658 | Table HL70175
    * - ``mfi_2``
@@ -8337,7 +8337,7 @@ MFI
    * - ``mfi_3``
      - MFI.3
      - str
-     - required
+     - optional
      -
      - File-Level Event Code: Item #660 | Table HL70178
    * - ``mfi_4``
@@ -8355,7 +8355,7 @@ MFI
    * - ``mfi_6``
      - MFI.6
      - str
-     - required
+     - optional
      -
      - Response Level Code: Item #663 | Table HL70179
 
@@ -8382,7 +8382,7 @@ MRG
    * - ``mrg_1``
      - MRG.1
      - List[:ref:`CX <hl7-v2_8_2-CX>`]
-     - required
+     - optional
      -
      - Prior Patient Identifier List: Item #211 | Table HL70061
    * - ``mrg_3``
@@ -8433,13 +8433,13 @@ MSA
    * - ``msa_1``
      - MSA.1
      - str
-     - required
+     - optional
      -
      - Acknowledgment Code: Item #18 | Table HL70008
    * - ``msa_2``
      - MSA.2
      - str
-     - required
+     - optional
      -
      - Message Control ID: Item #10
    * - ``msa_4``
@@ -8520,7 +8520,7 @@ MSH
    * - ``msh_7``
      - MSH.7
      - str
-     - required
+     - optional
      -
      - Date/Time of Message: Item #7
    * - ``msh_8``
@@ -8532,25 +8532,25 @@ MSH
    * - ``msh_9``
      - MSH.9
      - :ref:`MSG <hl7-v2_8_2-MSG>`
-     - required
+     - optional
      -
      - Message Type: Item #9
    * - ``msh_10``
      - MSH.10
      - str
-     - required
+     - optional
      -
      - Message Control ID: Item #10
    * - ``msh_11``
      - MSH.11
      - :ref:`PT <hl7-v2_8_2-PT>`
-     - required
+     - optional
      -
      - Processing ID: Item #11
    * - ``msh_12``
      - MSH.12
      - :ref:`VID <hl7-v2_8_2-VID>`
-     - required
+     - optional
      -
      - Version ID: Item #12
    * - ``msh_13``
@@ -8655,7 +8655,7 @@ NCK
    * - ``nck_1``
      - NCK.1
      - str
-     - required
+     - optional
      -
      - System Date/Time: Item #1172
 
@@ -8682,25 +8682,25 @@ NDS
    * - ``nds_1``
      - NDS.1
      - str
-     - required
+     - optional
      -
      - Notification Reference Number: Item #1398
    * - ``nds_2``
      - NDS.2
      - str
-     - required
+     - optional
      -
      - Notification Date/Time: Item #1399
    * - ``nds_3``
      - NDS.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Notification Alert Severity: Item #1400 | Table HL70367
    * - ``nds_4``
      - NDS.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Notification Code: Item #1401 | Table HL79999
 
@@ -8727,7 +8727,7 @@ NK1
    * - ``nk1_1``
      - NK1.1
      - str
-     - required
+     - optional
      -
      - Set ID - NK1: Item #190
    * - ``nk1_2``
@@ -8994,7 +8994,7 @@ NPU
    * - ``npu_1``
      - NPU.1
      - :ref:`PL <hl7-v2_8_2-PL>`
-     - required
+     - optional
      -
      - Bed Location: Item #209
    * - ``npu_2``
@@ -9027,7 +9027,7 @@ NSC
    * - ``nsc_1``
      - NSC.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Application Change Type: Item #1188 | Table HL70409
    * - ``nsc_2``
@@ -9102,7 +9102,7 @@ NST
    * - ``nst_1``
      - NST.1
      - str
-     - required
+     - optional
      -
      - Statistics Available: Item #1173 | Table HL70136
    * - ``nst_2``
@@ -9224,7 +9224,7 @@ NTE
      - Source of Comment: Item #97 | Table HL70105
    * - ``nte_3``
      - NTE.3
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Comment: Item #98
@@ -9300,7 +9300,7 @@ OBR
    * - ``obr_4``
      - OBR.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Universal Service Identifier: Item #238
    * - ``obr_7``
@@ -9609,7 +9609,7 @@ OBX
    * - ``obx_3``
      - OBX.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Observation Identifier: Item #571 | Table HL79999
    * - ``obx_4``
@@ -9657,7 +9657,7 @@ OBX
    * - ``obx_11``
      - OBX.11
      - str
-     - required
+     - optional
      -
      - Observation Result Status: Item #579 | Table HL70085
    * - ``obx_12``
@@ -9798,7 +9798,7 @@ ODS
    * - ``ods_1``
      - ODS.1
      - str
-     - required
+     - optional
      -
      - Type: Item #269 | Table HL70159
    * - ``ods_2``
@@ -9843,7 +9843,7 @@ ODT
    * - ``odt_1``
      - ODT.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Tray Type: Item #273 | Table HL70160
    * - ``odt_2``
@@ -9882,13 +9882,13 @@ OM1
    * - ``om1_1``
      - OM1.1
      - str
-     - required
+     - optional
      -
      - Sequence Number - Test/Observation Master File: Item #586
    * - ``om1_2``
      - OM1.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Producer's Service/Test/Observation ID: Item #587
    * - ``om1_3``
@@ -9900,18 +9900,18 @@ OM1
    * - ``om1_4``
      - OM1.4
      - str
-     - required
+     - optional
      -
      - Specimen Required: Item #589 | Table HL70136
    * - ``om1_5``
      - OM1.5
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Producer ID: Item #590 | Table HL79999
    * - ``om1_6``
      - OM1.6
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Observation Description: Item #591
@@ -9984,7 +9984,7 @@ OM1
    * - ``om1_18``
      - OM1.18
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Nature of Service/Test/Observation: Item #603 | Table HL70174
    * - ``om1_19``
@@ -10067,7 +10067,7 @@ OM1
      - Observations Required to Interpret this Observation: Item #616 | Table HL79999
    * - ``om1_32``
      - OM1.32
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Interpretation of Observations: Item #617
@@ -10085,7 +10085,7 @@ OM1
      - Reflex Tests/Observations: Item #619 | Table HL79999
    * - ``om1_35``
      - OM1.35
-     - Optional[List[:ref:`TX <hl7-v2_8_2-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - Rules that Trigger Reflex Testing: Item #620
@@ -10097,7 +10097,7 @@ OM1
      - Fixed Canned Message: Item #621 | Table HL79999
    * - ``om1_37``
      - OM1.37
-     - Optional[List[:ref:`TX <hl7-v2_8_2-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - Patient Preparation: Item #622
@@ -10109,7 +10109,7 @@ OM1
      - Procedure Medication: Item #623 | Table HL79999
    * - ``om1_39``
      - OM1.39
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Factors that may Affect the Observation: Item #624
@@ -10121,7 +10121,7 @@ OM1
      - Service/Test/Observation Performance Schedule: Item #625
    * - ``om1_41``
      - OM1.41
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Description of Test Methods: Item #626
@@ -10139,7 +10139,7 @@ OM1
      - Point Versus Interval: Item #938 | Table HL70255
    * - ``om1_44``
      - OM1.44
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Challenge Information: Item #939 | Table HL70256
@@ -10193,13 +10193,13 @@ OM1
      - Replacement Producer's Service/Test/Observation ID: Item #3433 | Table HL79999
    * - ``om1_53``
      - OM1.53
-     - Optional[List[:ref:`TX <hl7-v2_8_2-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - Prior Resuts Instructions: Item #3434
    * - ``om1_54``
      - OM1.54
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Special Instructions: Item #3435
@@ -10280,7 +10280,7 @@ OM2
      - Corresponding SI Units of Measure: Item #629 | Table HL79999
    * - ``om2_5``
      - OM2.5
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - SI Conversion Factor: Item #630
@@ -10412,7 +10412,7 @@ OM4
      - Derived Specimen: Item #642 | Table HL70170
    * - ``om4_3``
      - OM4.3
-     - Optional[List[:ref:`TX <hl7-v2_8_2-TX>`]]
+     - Optional[List[str]]
      - optional
      -
      - Container Description: Item #643
@@ -10442,13 +10442,13 @@ OM4
      - Additive: Item #647 | Table HL70371
    * - ``om4_8``
      - OM4.8
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Preparation: Item #648
    * - ``om4_9``
      - OM4.9
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Special Handling Requirements: Item #649
@@ -10466,7 +10466,7 @@ OM4
      - Minimum Collection Volume: Item #651
    * - ``om4_12``
      - OM4.12
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Specimen Requirements: Item #652
@@ -10574,7 +10574,7 @@ OM6
      - Sequence Number - Test/Observation Master File: Item #586
    * - ``om6_2``
      - OM6.2
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Derivation Rule: Item #657
@@ -10602,13 +10602,13 @@ OM7
    * - ``om7_1``
      - OM7.1
      - str
-     - required
+     - optional
      -
      - Sequence Number - Test/Observation Master File: Item #586
    * - ``om7_2``
      - OM7.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Universal Service Identifier: Item #238
    * - ``om7_3``
@@ -10619,7 +10619,7 @@ OM7
      - Category Identifier: Item #1481 | Table HL70412
    * - ``om7_4``
      - OM7.4
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Category Description: Item #1482
@@ -10785,7 +10785,7 @@ OMC
    * - ``omc_4``
      - OMC.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Clinical Information Request: Item #3444 | Table HL79999
    * - ``omc_5``
@@ -10797,7 +10797,7 @@ OMC
    * - ``omc_6``
      - OMC.6
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Communication Location: Item #3446 | Table HL70939
    * - ``omc_7``
@@ -10866,7 +10866,7 @@ ORC
    * - ``orc_1``
      - ORC.1
      - str
-     - required
+     - optional
      -
      - Order Control: Item #215 | Table HL70119
    * - ``orc_2``
@@ -11085,7 +11085,7 @@ ORG
    * - ``org_1``
      - ORG.1
      - str
-     - required
+     - optional
      -
      - Set ID - ORG: Item #1459
    * - ``org_2``
@@ -11195,7 +11195,7 @@ OVR
      - Business Rule Override Code: Item #1830 | Table HL70521
    * - ``ovr_3``
      - OVR.3
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Override Comments: Item #1831
@@ -11235,7 +11235,7 @@ PAC
    * - ``pac_1``
      - PAC.1
      - str
-     - required
+     - optional
      -
      - Set Id - PAC: Item #2350
    * - ``pac_2``
@@ -11259,7 +11259,7 @@ PAC
    * - ``pac_5``
      - PAC.5
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Package Type: Item #2354 | Table HL70908
    * - ``pac_6``
@@ -11304,7 +11304,7 @@ PCE
    * - ``pce_1``
      - PCE.1
      - str
-     - required
+     - optional
      -
      - Set ID - PCE: Item #2228
    * - ``pce_2``
@@ -11349,7 +11349,7 @@ PCR
    * - ``pcr_1``
      - PCR.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Implicated Product: Item #1098 | Table HL79999
    * - ``pcr_2``
@@ -11736,13 +11736,13 @@ PDC
    * - ``pdc_2``
      - PDC.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Country: Item #1248 | Table HL79999
    * - ``pdc_3``
      - PDC.3
      - str
-     - required
+     - optional
      -
      - Brand Name: Item #1249
    * - ``pdc_4``
@@ -11853,7 +11853,7 @@ PEO
    * - ``peo_3``
      - PEO.3
      - str
-     - required
+     - optional
      -
      - Event Onset Date/Time: Item #1075
    * - ``peo_4``
@@ -11912,31 +11912,31 @@ PEO
      - Patient Outcome: Item #1084 | Table HL70241
    * - ``peo_13``
      - PEO.13
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Event Description from Others: Item #1085
    * - ``peo_14``
      - PEO.14
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Event Description from Original Reporter: Item #1086
    * - ``peo_15``
      - PEO.15
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Event Description from Patient: Item #1087
    * - ``peo_16``
      - PEO.16
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Event Description from Practitioner: Item #1088
    * - ``peo_17``
      - PEO.17
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Event Description from Autopsy: Item #1089
@@ -12047,13 +12047,13 @@ PES
      - Sender Sequence Number: Item #1065
    * - ``pes_7``
      - PES.7
-     - Optional[List[:ref:`FT <hl7-v2_8_2-FT>`]]
+     - Optional[List[str]]
      - optional
      -
      - Sender Event Description: Item #1066
    * - ``pes_8``
      - PES.8
-     - Optional[:ref:`FT <hl7-v2_8_2-FT>`]
+     - Optional[str]
      - optional
      -
      - Sender Comment: Item #1067
@@ -12066,7 +12066,7 @@ PES
    * - ``pes_10``
      - PES.10
      - str
-     - required
+     - optional
      -
      - Event Report Date: Item #1069
    * - ``pes_11``
@@ -12117,7 +12117,7 @@ PID
    * - ``pid_3``
      - PID.3
      - List[:ref:`CX <hl7-v2_8_2-CX>`]
-     - required
+     - optional
      -
      - Patient Identifier List: Item #106
    * - ``pid_5``
@@ -12330,7 +12330,7 @@ PKG
    * - ``pkg_1``
      - PKG.1
      - str
-     - required
+     - optional
      -
      - Set Id - PKG: Item #2221
    * - ``pkg_2``
@@ -12399,13 +12399,13 @@ PM1
    * - ``pm1_1``
      - PM1.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Health Plan ID: Item #368 | Table HL70072
    * - ``pm1_2``
      - PM1.2
      - List[:ref:`CX <hl7-v2_8_2-CX>`]
-     - required
+     - optional
      -
      - Insurance Company ID: Item #428
    * - ``pm1_3``
@@ -12564,37 +12564,37 @@ PMT
    * - ``pmt_1``
      - PMT.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Payment/Remittance Advice Number: Item #2018
    * - ``pmt_2``
      - PMT.2
      - str
-     - required
+     - optional
      -
      - Payment/Remittance Effective Date/Time: Item #2019
    * - ``pmt_3``
      - PMT.3
      - str
-     - required
+     - optional
      -
      - Payment/Remittance Expiration Date/Time: Item #2020
    * - ``pmt_4``
      - PMT.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Payment Method: Item #2021 | Table HL70570
    * - ``pmt_5``
      - PMT.5
      - str
-     - required
+     - optional
      -
      - Payment/Remittance Date/Time: Item #2022
    * - ``pmt_6``
      - PMT.6
      - :ref:`CP <hl7-v2_8_2-CP>`
-     - required
+     - optional
      -
      - Payment/Remittance Amount: Item #2023
    * - ``pmt_7``
@@ -12624,7 +12624,7 @@ PMT
    * - ``pmt_11``
      - PMT.11
      - :ref:`XON <hl7-v2_8_2-XON>`
-     - required
+     - optional
      -
      - Payment Organization: Item #2028
    * - ``pmt_12``
@@ -12657,19 +12657,19 @@ PR1
    * - ``pr1_1``
      - PR1.1
      - str
-     - required
+     - optional
      -
      - Set ID - PR1: Item #391
    * - ``pr1_3``
      - PR1.3
      - :ref:`CNE <hl7-v2_8_2-CNE>`
-     - required
+     - optional
      -
      - Procedure Code: Item #393 | Table HL70088
    * - ``pr1_5``
      - PR1.5
      - str
-     - required
+     - optional
      -
      - Procedure Date/Time: Item #395
    * - ``pr1_6``
@@ -12891,25 +12891,25 @@ PRB
    * - ``prb_1``
      - PRB.1
      - str
-     - required
+     - optional
      -
      - Action Code: Item #816 | Table HL70206
    * - ``prb_2``
      - PRB.2
      - str
-     - required
+     - optional
      -
      - Action Date/Time: Item #817
    * - ``prb_3``
      - PRB.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Problem ID: Item #838
    * - ``prb_4``
      - PRB.4
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Problem Instance ID: Item #839
    * - ``prb_5``
@@ -13080,7 +13080,7 @@ PRC
    * - ``prc_1``
      - PRC.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Primary Key Value - PRC: Item #982 | Table HL70132
    * - ``prc_2``
@@ -13320,7 +13320,7 @@ PRT
    * - ``prt_2``
      - PRT.2
      - str
-     - required
+     - optional
      -
      - Action Code: Item #816 | Table HL70206
    * - ``prt_3``
@@ -13332,7 +13332,7 @@ PRT
    * - ``prt_4``
      - PRT.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Participation: Item #2381 | Table HL70912
    * - ``prt_5``
@@ -13467,7 +13467,7 @@ PSG
    * - ``psg_1``
      - PSG.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Provider Product/Service Group Number: Item #1950
    * - ``psg_2``
@@ -13479,25 +13479,25 @@ PSG
    * - ``psg_3``
      - PSG.3
      - str
-     - required
+     - optional
      -
      - Product/Service Group Sequence Number: Item #1952
    * - ``psg_4``
      - PSG.4
      - str
-     - required
+     - optional
      -
      - Adjudicate as Group: Item #1953 | Table HL70136
    * - ``psg_5``
      - PSG.5
      - :ref:`CP <hl7-v2_8_2-CP>`
-     - required
+     - optional
      -
      - Product/Service Group Billed Amount: Item #1954
    * - ``psg_6``
      - PSG.6
      - str
-     - required
+     - optional
      -
      - Product/Service Group Description: Item #2044
 
@@ -13524,7 +13524,7 @@ PSH
    * - ``psh_1``
      - PSH.1
      - str
-     - required
+     - optional
      -
      - Report Type: Item #1233
    * - ``psh_2``
@@ -13536,7 +13536,7 @@ PSH
    * - ``psh_3``
      - PSH.3
      - str
-     - required
+     - optional
      -
      - Report Date: Item #1235
    * - ``psh_4``
@@ -13571,7 +13571,7 @@ PSH
      - Quantity Distributed Method: Item #1240 | Table HL70329
    * - ``psh_9``
      - PSH.9
-     - Optional[:ref:`FT <hl7-v2_8_2-FT>`]
+     - Optional[str]
      - optional
      -
      - Quantity Distributed Comment: Item #1241
@@ -13589,7 +13589,7 @@ PSH
      - Quantity in Use Method: Item #1243 | Table HL70329
    * - ``psh_12``
      - PSH.12
-     - Optional[:ref:`FT <hl7-v2_8_2-FT>`]
+     - Optional[str]
      - optional
      -
      - Quantity in Use Comment: Item #1244
@@ -13629,7 +13629,7 @@ PSL
    * - ``psl_1``
      - PSL.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Provider Product/Service Line Item Number: Item #1955
    * - ``psl_2``
@@ -13641,7 +13641,7 @@ PSL
    * - ``psl_3``
      - PSL.3
      - str
-     - required
+     - optional
      -
      - Product/Service Line Item Sequence Number: Item #1957
    * - ``psl_4``
@@ -13659,13 +13659,13 @@ PSL
    * - ``psl_6``
      - PSL.6
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Product/Service Line Item Status: Item #1960 | Table HL70559
    * - ``psl_7``
      - PSL.7
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Product/Service Code: Item #1961 | Table HL70879
    * - ``psl_8``
@@ -13749,7 +13749,7 @@ PSL
    * - ``psl_21``
      - PSL.21
      - str
-     - required
+     - optional
      -
      - Restricted Disclosure Indicator: Item #1975 | Table HL70532
    * - ``psl_22``
@@ -13938,7 +13938,7 @@ PSS
    * - ``pss_1``
      - PSS.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Provider Product/Service Section Number: Item #1946
    * - ``pss_2``
@@ -13950,19 +13950,19 @@ PSS
    * - ``pss_3``
      - PSS.3
      - str
-     - required
+     - optional
      -
      - Product/Service Section Sequence Number: Item #1948
    * - ``pss_4``
      - PSS.4
      - :ref:`CP <hl7-v2_8_2-CP>`
-     - required
+     - optional
      -
      - Billed Amount: Item #1949
    * - ``pss_5``
      - PSS.5
      - str
-     - required
+     - optional
      -
      - Section Description or Heading: Item #2043
 
@@ -13989,25 +13989,25 @@ PTH
    * - ``pth_1``
      - PTH.1
      - str
-     - required
+     - optional
      -
      - Action Code: Item #816 | Table HL70206
    * - ``pth_2``
      - PTH.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Pathway ID: Item #1207
    * - ``pth_3``
      - PTH.3
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Pathway Instance ID: Item #1208
    * - ``pth_4``
      - PTH.4
      - str
-     - required
+     - optional
      -
      - Pathway Established Date/Time: Item #1209
    * - ``pth_5``
@@ -14058,7 +14058,7 @@ PV1
    * - ``pv1_2``
      - PV1.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Patient Class: Item #132 | Table HL70004
    * - ``pv1_3``
@@ -14706,13 +14706,13 @@ PYE
    * - ``pye_1``
      - PYE.1
      - str
-     - required
+     - optional
      -
      - Set ID - PYE: Item #1939
    * - ``pye_2``
      - PYE.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Payee Type: Item #1940 | Table HL70557
    * - ``pye_3``
@@ -14826,13 +14826,13 @@ QID
    * - ``qid_1``
      - QID.1
      - str
-     - required
+     - optional
      -
      - Query Tag: Item #696
    * - ``qid_2``
      - QID.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Message Query Name: Item #1375 | Table HL70471
 
@@ -14859,7 +14859,7 @@ QPD
    * - ``qpd_1``
      - QPD.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Message Query Name: Item #1375 | Table HL70471
    * - ``qpd_2``
@@ -15000,7 +15000,7 @@ RDF
    * - ``rdf_1``
      - RDF.1
      - str
-     - required
+     - optional
      -
      - Number of Columns per Row: Item #701
    * - ``rdf_2``
@@ -15033,7 +15033,7 @@ RDT
    * - ``rdt_1``
      - RDT.1
      - varies
-     - required
+     - optional
      -
      - Column Value: Item #703
 
@@ -15066,25 +15066,25 @@ REL
    * - ``rel_2``
      - REL.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Relationship Type: Item #2241
    * - ``rel_3``
      - REL.3
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - This Relationship Instance Identifier: Item #2242
    * - ``rel_4``
      - REL.4
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Source Information Instance Identifier: Item #2243
    * - ``rel_5``
      - REL.5
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Target Information Instance Identifier: Item #2244
    * - ``rel_6``
@@ -15207,7 +15207,7 @@ RF1
    * - ``rf1_6``
      - RF1.6
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Originating Referral Identifier: Item #1142
    * - ``rf1_7``
@@ -15348,13 +15348,13 @@ RFI
    * - ``rfi_1``
      - RFI.1
      - str
-     - required
+     - optional
      -
      - Request Date: Item #1910
    * - ``rfi_2``
      - RFI.2
      - str
-     - required
+     - optional
      -
      - Response Due Date: Item #1911
    * - ``rfi_3``
@@ -15393,7 +15393,7 @@ RGS
    * - ``rgs_1``
      - RGS.1
      - str
-     - required
+     - optional
      -
      - Set ID - RGS: Item #1203
    * - ``rgs_2``
@@ -15477,13 +15477,13 @@ ROL
    * - ``rol_2``
      - ROL.2
      - str
-     - required
+     - optional
      -
      - Action Code: Item #816 | Table HL70206
    * - ``rol_3``
      - ROL.3
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Role-ROL: Item #1197 | Table HL70443
    * - ``rol_4``
@@ -15720,37 +15720,37 @@ RXA
    * - ``rxa_1``
      - RXA.1
      - str
-     - required
+     - optional
      -
      - Give Sub-ID Counter: Item #342
    * - ``rxa_2``
      - RXA.2
      - str
-     - required
+     - optional
      -
      - Administration Sub-ID Counter: Item #344
    * - ``rxa_3``
      - RXA.3
      - str
-     - required
+     - optional
      -
      - Date/Time Start of Administration: Item #345
    * - ``rxa_4``
      - RXA.4
      - str
-     - required
+     - optional
      -
      - Date/Time End of Administration: Item #346
    * - ``rxa_5``
      - RXA.5
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Administered Code: Item #347 | Table HL70292
    * - ``rxa_6``
      - RXA.6
      - str
-     - required
+     - optional
      -
      - Administered Amount: Item #348
    * - ``rxa_7``
@@ -15909,25 +15909,25 @@ RXC
    * - ``rxc_1``
      - RXC.1
      - str
-     - required
+     - optional
      -
      - RX Component Type: Item #313 | Table HL70166
    * - ``rxc_2``
      - RXC.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Component Code: Item #314 | Table HL79999
    * - ``rxc_3``
      - RXC.3
      - str
-     - required
+     - optional
      -
      - Component Amount: Item #315
    * - ``rxc_4``
      - RXC.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Component Units: Item #316 | Table HL79999
    * - ``rxc_5``
@@ -15996,25 +15996,25 @@ RXD
    * - ``rxd_1``
      - RXD.1
      - str
-     - required
+     - optional
      -
      - Dispense Sub-ID Counter: Item #334
    * - ``rxd_2``
      - RXD.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Dispense/Give Code: Item #335 | Table HL70292
    * - ``rxd_3``
      - RXD.3
      - str
-     - required
+     - optional
      -
      - Date/Time Dispensed: Item #336
    * - ``rxd_4``
      - RXD.4
      - str
-     - required
+     - optional
      -
      - Actual Dispense Amount: Item #337
    * - ``rxd_5``
@@ -16032,7 +16032,7 @@ RXD
    * - ``rxd_7``
      - RXD.7
      - str
-     - required
+     - optional
      -
      - Prescription Number: Item #325
    * - ``rxd_8``
@@ -16221,13 +16221,13 @@ RXE
    * - ``rxe_2``
      - RXE.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Give Code: Item #317 | Table HL70292
    * - ``rxe_3``
      - RXE.3
      - str
-     - required
+     - optional
      -
      - Give Amount - Minimum: Item #318
    * - ``rxe_4``
@@ -16239,7 +16239,7 @@ RXE
    * - ``rxe_5``
      - RXE.5
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Give Units: Item #320 | Table HL79999
    * - ``rxe_6``
@@ -16500,7 +16500,7 @@ RXG
    * - ``rxg_1``
      - RXG.1
      - str
-     - required
+     - optional
      -
      - Give Sub-ID Counter: Item #342
    * - ``rxg_2``
@@ -16512,13 +16512,13 @@ RXG
    * - ``rxg_4``
      - RXG.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Give Code: Item #317 | Table HL70292
    * - ``rxg_5``
      - RXG.5
      - str
-     - required
+     - optional
      -
      - Give Amount - Minimum: Item #318
    * - ``rxg_6``
@@ -16530,7 +16530,7 @@ RXG
    * - ``rxg_7``
      - RXG.7
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Give Units: Item #320 | Table HL79999
    * - ``rxg_8``
@@ -16938,7 +16938,7 @@ RXR
    * - ``rxr_1``
      - RXR.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Route: Item #309 | Table HL70162
    * - ``rxr_2``
@@ -17001,7 +17001,7 @@ RXV
    * - ``rxv_2``
      - RXV.2
      - str
-     - required
+     - optional
      -
      - Bolus Type: Item #3319 | Table HL70917
    * - ``rxv_3``
@@ -17031,7 +17031,7 @@ RXV
    * - ``rxv_7``
      - RXV.7
      - str
-     - required
+     - optional
      -
      - PCA Type: Item #3324 | Table HL70918
    * - ``rxv_8``
@@ -17085,7 +17085,7 @@ RXV
    * - ``rxv_16``
      - RXV.16
      - :ref:`CQ <hl7-v2_8_2-CQ>`
-     - required
+     - optional
      -
      - Max Dose per Time: Item #3333
    * - ``rxv_17``
@@ -17700,7 +17700,7 @@ SCH
    * - ``sch_6``
      - SCH.6
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Event Reason: Item #883
    * - ``sch_7``
@@ -17973,30 +17973,30 @@ SFT
    * - ``sft_1``
      - SFT.1
      - :ref:`XON <hl7-v2_8_2-XON>`
-     - required
+     - optional
      -
      - Software Vendor Organization: Item #1834
    * - ``sft_2``
      - SFT.2
      - str
-     - required
+     - optional
      -
      - Software Certified Version or Release Number: Item #1835
    * - ``sft_3``
      - SFT.3
      - str
-     - required
+     - optional
      -
      - Software Product Name: Item #1836
    * - ``sft_4``
      - SFT.4
      - str
-     - required
+     - optional
      -
      - Software Binary ID: Item #1837
    * - ``sft_5``
      - SFT.5
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Software Product Information: Item #1838
@@ -18030,7 +18030,7 @@ SGH
    * - ``sgh_1``
      - SGH.1
      - str
-     - required
+     - optional
      -
      - Set ID - SGH: Item #3389
    * - ``sgh_2``
@@ -18063,7 +18063,7 @@ SGT
    * - ``sgt_1``
      - SGT.1
      - str
-     - required
+     - optional
      -
      - Set ID - SGT: Item #3394
    * - ``sgt_2``
@@ -18096,7 +18096,7 @@ SHP
    * - ``shp_1``
      - SHP.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Shipment ID: Item #2317
    * - ``shp_2``
@@ -18114,12 +18114,12 @@ SHP
    * - ``shp_4``
      - SHP.4
      - str
-     - required
+     - optional
      -
      - Shipment Status Date/Time: Item #2320
    * - ``shp_5``
      - SHP.5
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Shipment Status Reason: Item #2321
@@ -18297,7 +18297,7 @@ SPM
    * - ``spm_4``
      - SPM.4
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Specimen Type: Item #1900 | Table HL70487
    * - ``spm_5``
@@ -18804,13 +18804,13 @@ TCC
    * - ``tcc_1``
      - TCC.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Universal Service Identifier: Item #238
    * - ``tcc_2``
      - TCC.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Equipment Test Application Identifier: Item #1408
    * - ``tcc_4``
@@ -18909,7 +18909,7 @@ TCD
    * - ``tcd_1``
      - TCD.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Universal Service Identifier: Item #238
    * - ``tcd_2``
@@ -19031,13 +19031,13 @@ TQ1
      - Priority: Item #1635 | Table HL70485
    * - ``tq1_10``
      - TQ1.10
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Condition text: Item #1636
    * - ``tq1_11``
      - TQ1.11
-     - Optional[:ref:`TX <hl7-v2_8_2-TX>`]
+     - Optional[str]
      - optional
      -
      - Text instruction: Item #1637
@@ -19164,13 +19164,13 @@ TXA
    * - ``txa_1``
      - TXA.1
      - str
-     - required
+     - optional
      -
      - Set ID- TXA: Item #914
    * - ``txa_2``
      - TXA.2
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - Document Type: Item #915 | Table HL70270
    * - ``txa_3``
@@ -19230,7 +19230,7 @@ TXA
    * - ``txa_12``
      - TXA.12
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Unique Document Number: Item #925
    * - ``txa_13``
@@ -19260,7 +19260,7 @@ TXA
    * - ``txa_17``
      - TXA.17
      - str
-     - required
+     - optional
      -
      - Document Completion Status: Item #928 | Table HL70271
    * - ``txa_18``
@@ -19341,13 +19341,13 @@ UAC
    * - ``uac_1``
      - UAC.1
      - :ref:`CWE <hl7-v2_8_2-CWE>`
-     - required
+     - optional
      -
      - User Authentication Credential Type Code: Item #2267 | Table HL70615
    * - ``uac_2``
      - UAC.2
      - :ref:`ED <hl7-v2_8_2-ED>`
-     - required
+     - optional
      -
      - User Authentication Credential: Item #2268
 
@@ -19497,13 +19497,13 @@ VAR
    * - ``var_1``
      - VAR.1
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Variance Instance ID: Item #1212
    * - ``var_2``
      - VAR.2
      - str
-     - required
+     - optional
      -
      - Documented Date/Time: Item #1213
    * - ``var_3``
@@ -19554,13 +19554,13 @@ VND
    * - ``vnd_1``
      - VND.1
      - str
-     - required
+     - optional
      -
      - Set Id - VND: Item #2217
    * - ``vnd_2``
      - VND.2
      - :ref:`EI <hl7-v2_8_2-EI>`
-     - required
+     - optional
      -
      - Vendor Identifier: Item #2218
    * - ``vnd_3``

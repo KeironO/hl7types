@@ -212,7 +212,7 @@ CF
      - identifier
    * - ``cf_2``
      - CF.2
-     - Optional[:ref:`FT <hl7-v2_3-FT>`]
+     - Optional[str]
      - optional
      -
      - formatted text
@@ -230,7 +230,7 @@ CF
      - alternate identifier
    * - ``cf_5``
      - CF.5
-     - Optional[:ref:`FT <hl7-v2_3-FT>`]
+     - Optional[str]
      - optional
      -
      - alternate formatted text
@@ -1241,7 +1241,7 @@ CM_PRL
      - OBX-4 sub-ID of parent result
    * - ``cm_prl_3``
      - CM_PRL.3
-     - Optional[:ref:`TX <hl7-v2_3-TX>`]
+     - Optional[str]
      - optional
      -
      - part of OBX-5 observation result from parent
@@ -1364,7 +1364,7 @@ CM_RFR
      - age gestation
    * - ``cm_rfr_5``
      - CM_RFR.5
-     - Optional[:ref:`TX <hl7-v2_3-TX>`]
+     - Optional[str]
      - optional
      -
      - species
@@ -1376,7 +1376,7 @@ CM_RFR
      - race/subspecies
    * - ``cm_rfr_7``
      - CM_RFR.7
-     - Optional[:ref:`TX <hl7-v2_3-TX>`]
+     - Optional[str]
      - optional
      -
      - conditions
@@ -1526,13 +1526,13 @@ CM_SPS
      - specimen source name or code
    * - ``cm_sps_2``
      - CM_SPS.2
-     - Optional[:ref:`TX <hl7-v2_3-TX>`]
+     - Optional[str]
      - optional
      -
      - additives
    * - ``cm_sps_3``
      - CM_SPS.3
-     - Optional[:ref:`TX <hl7-v2_3-TX>`]
+     - Optional[str]
      - optional
      -
      - freetext
@@ -2840,7 +2840,7 @@ TQ
      - condition
    * - ``tq_8``
      - TQ.8
-     - Optional[:ref:`TX <hl7-v2_3-TX>`]
+     - Optional[str]
      - optional
      -
      - text (TX)

@@ -24,7 +24,7 @@ ADR_A19_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -69,7 +69,7 @@ ADR_A19_QUERY_RESPONSE
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NK1``
@@ -81,7 +81,7 @@ ADR_A19_QUERY_RESPONSE
    * - ``PV1``
      -
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
+     - optional
      -
      - PV1: Required
    * - ``PV2``
@@ -168,7 +168,7 @@ ADT_A01_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -207,7 +207,7 @@ ADT_A04_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -246,7 +246,7 @@ ADT_A05_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -285,7 +285,7 @@ ADT_A06_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -324,7 +324,7 @@ ADT_A07_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -363,7 +363,7 @@ ADT_A08_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -402,7 +402,7 @@ ADT_A13_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -441,7 +441,7 @@ ADT_A14_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -480,7 +480,7 @@ ADT_A28_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -519,7 +519,7 @@ ADT_A31_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -558,7 +558,7 @@ BAR_P01_INSURANCE
    * - ``IN1``
      -
      - :ref:`IN1 <hl7-v2_2-IN1>`
-     - required
+     - optional
      -
      - IN1: Required
    * - ``IN2``
@@ -690,7 +690,7 @@ BAR_P02_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``PV1``
@@ -723,7 +723,7 @@ MFN_M01_MF
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
 
@@ -750,7 +750,7 @@ MFN_M02_MF_STAFF
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
 
@@ -777,7 +777,7 @@ MFN_M03_MF_TEST
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
 
@@ -804,7 +804,7 @@ MFR_M01_MF
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
 
@@ -831,7 +831,7 @@ MFR_M02_MF_STAFF
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
 
@@ -858,7 +858,7 @@ MFR_M03_MF_TEST
    * - ``MFE``
      -
      - :ref:`MFE <hl7-v2_2-MFE>`
-     - required
+     - optional
      -
      - MFE: Required
 
@@ -885,7 +885,7 @@ NMD_N01_APP_STATS
    * - ``NST``
      -
      - :ref:`NST <hl7-v2_2-NST>`
-     - required
+     - optional
      -
      - NST: Required
    * - ``NTE``
@@ -918,7 +918,7 @@ NMD_N01_APP_STATUS
    * - ``NSC``
      -
      - :ref:`NSC <hl7-v2_2-NSC>`
-     - required
+     - optional
      -
      - NSC: Required
    * - ``NTE``
@@ -951,7 +951,7 @@ NMD_N01_CLOCK
    * - ``NCK``
      -
      - :ref:`NCK <hl7-v2_2-NCK>`
-     - required
+     - optional
      -
      - NCK: Required
    * - ``NTE``
@@ -1062,7 +1062,7 @@ NMQ_N02_QRY_WITH_DETAIL
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -1179,7 +1179,7 @@ ORF_R04_ORDER
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -1191,7 +1191,7 @@ ORF_R04_ORDER
    * - ``OBSERVATION``
      -
      - List[:ref:`ORF_R04_OBSERVATION <hl7-v2_2-ORF_R04_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -1218,7 +1218,7 @@ ORF_R04_QUERY_RESPONSE
    * - ``QRD``
      -
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
+     - optional
      -
      - QRD: Required
    * - ``QRF``
@@ -1320,7 +1320,7 @@ ORM_O01_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -1359,7 +1359,7 @@ ORM_O01_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`ORM_O01_CHOICE <hl7-v2_2-ORM_O01_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
    * - ``NTE``
@@ -1398,7 +1398,7 @@ ORM_O01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -1494,7 +1494,7 @@ ORR_O02_ORDER
    * - ``ORC``
      -
      - :ref:`ORC <hl7-v2_2-ORC>`
-     - required
+     - optional
      -
      - ORC: Required
    * - ``ORDER_DETAIL``
@@ -1533,7 +1533,7 @@ ORR_O02_ORDER_DETAIL
    * - ``CHOICE``
      -
      - :ref:`ORR_O02_CHOICE <hl7-v2_2-ORR_O02_CHOICE>`
-     - required
+     - optional
      -
      - CHOICE: Required
 
@@ -1572,7 +1572,7 @@ ORR_O02_PATIENT
    * - ``ORDER``
      -
      - List[:ref:`ORR_O02_ORDER <hl7-v2_2-ORR_O02_ORDER>`]
-     - required
+     - optional
      -
      - ORDER: Required, repeating
 
@@ -1638,7 +1638,7 @@ ORU_R01_ORDER_OBSERVATION
    * - ``OBR``
      -
      - :ref:`OBR <hl7-v2_2-OBR>`
-     - required
+     - optional
      -
      - OBR: Required
    * - ``NTE``
@@ -1650,7 +1650,7 @@ ORU_R01_ORDER_OBSERVATION
    * - ``OBSERVATION``
      -
      - List[:ref:`ORU_R01_OBSERVATION <hl7-v2_2-ORU_R01_OBSERVATION>`]
-     - required
+     - optional
      -
      - OBSERVATION: Required, repeating
 
@@ -1677,7 +1677,7 @@ ORU_R01_PATIENT
    * - ``PID``
      -
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
+     - optional
      -
      - PID: Required
    * - ``NTE``
@@ -1722,6 +1722,6 @@ ORU_R01_PATIENT_RESULT
    * - ``ORDER_OBSERVATION``
      -
      - List[:ref:`ORU_R01_ORDER_OBSERVATION <hl7-v2_2-ORU_R01_ORDER_OBSERVATION>`]
-     - required
+     - optional
      -
      - ORDER_OBSERVATION: Required, repeating

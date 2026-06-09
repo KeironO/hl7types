@@ -45,6 +45,10 @@ Each HL7 version is available as a sub-package under `hl7types.hl7.<version>`, w
 pip install hl7types
 ```
 
+## Real-world examples
+
+For workflow-based examples covering common HL7 integration tasks, parsing ADT and ORU messages, building ACKs, handling missing segments, custom Z-segments, XML conversion, and conformance-profile validation, see the **[`examples/`](examples/)** directory.
+
 ## Usage
 
 **Example 1:** Construct an ADT^A01 message from typed models and access fields directly:
