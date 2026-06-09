@@ -110,7 +110,7 @@ def _fill_composite(model: BaseModel, elem: ET.Element) -> None:
 
 
 def _indent(elem: ET.Element, level: int = 0) -> None:
-    """Indent an ElementTree in-place (backport of ET.indent added in 3.9)."""
+    """Indent an ElementTree in-place."""
     pad = "\n" + "    " * level
     if len(elem):
         elem.text = pad + "    "
