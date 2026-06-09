@@ -35,7 +35,7 @@ AMPERSAND_WIRE = (
 def test_adt_a31_decodes_using_adt_a05_structure() -> None:
     # ADT_A31_WIRE has no PV1; lenient mode injects a placeholder and warns.
     with pytest.warns(UserWarning, match=r"PV1"):
-        msg = ADT_A05.model_validate_er7(ADT_A31_WIRE)
+        msg = ADT_A05.model_validate_er7(ADT_A31_WIRE, strict=False)
     assert isinstance(msg, ADT_A05)
     assert msg.MSH.msh_9.msg_1 == "ADT"    # type: ignore[union-attr]
     assert msg.MSH.msh_9.msg_2 == "A31"    # type: ignore[union-attr]
@@ -46,7 +46,7 @@ def test_adt_a31_decodes_using_adt_a05_structure() -> None:
 
 def test_parse_adt_a31_pid_cx() -> None:
     with pytest.warns(UserWarning, match=r"PV1"):
-        msg = ADT_A05.model_validate_er7(ADT_A31_WIRE)
+        msg = ADT_A05.model_validate_er7(ADT_A31_WIRE, strict=False)
     pid3 = msg.PID.pid_3[0]  # type: ignore[union-attr]
     assert pid3.cx_1 == "ZZZZZZ83M64Z148R"
     assert pid3.cx_4.hd_1 == "SSN"  # type: ignore[union-attr]

@@ -1,15 +1,16 @@
 """Strict vs lenient ER7 decoding of ACK messages.
 
-Lenient mode (default / strict=False):
+Strict mode (default / strict=True):
+  - Complete messages decode correctly.
+  - Missing required segments raise ValidationError.
+
+Lenient mode (strict=False):
   - Complete messages decode correctly.
   - Missing required segments are replaced with empty placeholders; a
     UserWarning names the missing segment and references strict=False.
 
-Strict mode (strict=True):
-  - Complete messages decode identically to lenient mode.
-  - Missing required segments raise ValidationError.
-
-Both decode_er7() and ACK.model_validate_er7() expose the same contract.
+Both decode_er7() and ACK.model_validate_er7() expose the same contract,
+with strict=True as the default for both.
 """
 from __future__ import annotations
 
@@ -31,10 +32,12 @@ ACK_MISSING_MSA_WIRE = (
 
 
 @pytest.mark.parametrize("decode", [
-    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=False), id="decode_er7/lenient"),
-    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=True),  id="decode_er7/strict"),
-    pytest.param(lambda w: ACK.model_validate_er7(w),                id="model_validate_er7/lenient"),
-    pytest.param(lambda w: ACK.model_validate_er7(w, strict=True),   id="model_validate_er7/strict"),
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=False),  id="decode_er7/lenient"),
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=True),   id="decode_er7/strict"),
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK),                id="decode_er7/default"),
+    pytest.param(lambda w: ACK.model_validate_er7(w, strict=False),   id="model_validate_er7/lenient"),
+    pytest.param(lambda w: ACK.model_validate_er7(w, strict=True),    id="model_validate_er7/strict"),
+    pytest.param(lambda w: ACK.model_validate_er7(w),                 id="model_validate_er7/default"),
 ])
 def test_complete_ack_decodes_correctly(decode) -> None:
     msg = decode(ACK_WIRE)
@@ -48,8 +51,8 @@ def test_complete_ack_decodes_correctly(decode) -> None:
 
 
 @pytest.mark.parametrize("decode", [
-    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=False), id="decode_er7"),
-    pytest.param(lambda w: ACK.model_validate_er7(w),                id="model_validate_er7"),
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=False),       id="decode_er7"),
+    pytest.param(lambda w: ACK.model_validate_er7(w, strict=False),        id="model_validate_er7"),
 ])
 def test_lenient_missing_msa_warns_and_injects_placeholder(decode) -> None:
     with pytest.warns(UserWarning, match=r"MSA.*strict=False"):
@@ -67,8 +70,10 @@ def test_lenient_missing_msa_warns_and_injects_placeholder(decode) -> None:
 
 
 @pytest.mark.parametrize("decode", [
-    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=True), id="decode_er7"),
-    pytest.param(lambda w: ACK.model_validate_er7(w, strict=True),  id="model_validate_er7"),
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK, strict=True),  id="decode_er7/explicit"),
+    pytest.param(lambda w: decode_er7(w, msg_cls=ACK),               id="decode_er7/default"),
+    pytest.param(lambda w: ACK.model_validate_er7(w, strict=True),   id="model_validate_er7/explicit"),
+    pytest.param(lambda w: ACK.model_validate_er7(w),                id="model_validate_er7/default"),
 ])
 def test_strict_missing_msa_raises_validation_error(decode) -> None:
     with pytest.raises(ValidationError, match=r"MSA"):
