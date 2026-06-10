@@ -43,14 +43,14 @@ class QRD(HL7Model):
     qrd_7 : CQ
         QRD.7 (req) - Quantity Limited Request (CQ)
 
-    qrd_8 : list[XCN] | None
-        QRD.8 (req, rep) - Who Subject Filter (XCN) [optional: XCN has no required components]
+    qrd_8 : list[XCN]
+        QRD.8 (req, rep) - Who Subject Filter (XCN)
 
-    qrd_9 : list[CE] | None
-        QRD.9 (req, rep) - What Subject Filter (CE) [optional: CE has no required components]
+    qrd_9 : list[CE]
+        QRD.9 (req, rep) - What Subject Filter (CE)
 
-    qrd_10 : list[CE] | None
-        QRD.10 (req, rep) - What Department Data Code (CE) [optional: CE has no required components]
+    qrd_10 : list[CE]
+        QRD.10 (req, rep) - What Department Data Code (CE)
 
     qrd_11 : list[str] | None
         QRD.11 (opt, rep) - What Data Code Value Qualifier (CM)
@@ -139,8 +139,8 @@ class QRD(HL7Model):
         description="Item #31 | Table HL70126",
     )
 
-    qrd_8: Optional[List[XCN]] = Field(
-        default=None,
+    qrd_8: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_8",
             "who_subject_filter",
@@ -151,8 +151,8 @@ class QRD(HL7Model):
         description="Item #32",
     )
 
-    qrd_9: Optional[List[CE]] = Field(
-        default=None,
+    qrd_9: List[CE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_9",
             "what_subject_filter",
@@ -163,8 +163,8 @@ class QRD(HL7Model):
         description="Item #33 | Table HL70048",
     )
 
-    qrd_10: Optional[List[CE]] = Field(
-        default=None,
+    qrd_10: List[CE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_10",
             "what_department_data_code",

@@ -92,8 +92,8 @@ class CON(HL7Model):
     con_23 : CWE | None
         CON.23 (opt) - Non-subject Consenter Reason (CWE)
 
-    con_24 : list[XPN] | None
-        CON.24 (req, rep) - Consenter ID (XPN) [optional: XPN has no required components]
+    con_24 : list[XPN]
+        CON.24 (req, rep) - Consenter ID (XPN)
 
     con_25 : list[str]
         CON.25 (req, rep) - Relationship to Subject Table (IS)
@@ -373,8 +373,8 @@ class CON(HL7Model):
         description="Item #1798 | Table HL70502",
     )
 
-    con_24: Optional[List[XPN]] = Field(
-        default=None,
+    con_24: List[XPN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "con_24",
             "consenter_id",

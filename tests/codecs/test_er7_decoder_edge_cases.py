@@ -80,8 +80,8 @@ def test_decode_composite_datatype_inside_segment() -> None:
     from hl7types.hl7.v2_3.segments.PID import PID
 
     # PID.15 is CE in HL7 v2.3: identifier^text^coding-system.
-    # Fields 1 and 5 (required name) are supplied; 2-4 and 6-14 are empty.
-    segment = "PID|1||||DOE^JOHN||||||||||ENG^English^ISO639"
+    # Fields 1, 3 (required id list) and 5 (required name) are supplied.
+    segment = "PID|1||123456||DOE^JOHN||||||||||ENG^English^ISO639"
 
     result = decode_er7_segment(segment, PID)
     language = result.pid_15  # type: ignore[union-attr]

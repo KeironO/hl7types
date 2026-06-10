@@ -26,8 +26,8 @@ class PRC(HL7Model):
     prc_1 : CE
         PRC.1 (req) - Primary Key Value (CE)
 
-    prc_2 : list[EI] | None
-        PRC.2 (req, rep) - Facility ID (EI) [optional: EI has no required components]
+    prc_2 : list[EI]
+        PRC.2 (req, rep) - Facility ID (EI)
 
     prc_3 : list[CE] | None
         PRC.3 (opt, rep) - Department (CE)
@@ -89,8 +89,8 @@ class PRC(HL7Model):
         description="Item #982 | Table HL70132",
     )
 
-    prc_2: Optional[List[EI]] = Field(
-        default=None,
+    prc_2: List[EI] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "prc_2",
             "facility_id",

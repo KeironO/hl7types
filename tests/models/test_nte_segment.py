@@ -67,16 +67,16 @@ def test_nte_3_items_are_plain_strings() -> None:
         assert type(item) is str
 
 
-def test_direct_construction_without_nte_3_succeeds() -> None:
-    """Omitting nte_3 succeeds; the field defaults to None."""
-    nte = NTE()
-    assert nte.nte_3 is None
+def test_direct_construction_without_nte_3_raises() -> None:
+    """Omitting nte_3 raises ValidationError; NTE.3 is required (minOccurs=1)."""
+    with pytest.raises(pydantic.ValidationError, match="nte_3"):
+        NTE()
 
 
-def test_direct_construction_with_empty_nte_3_succeeds() -> None:
-    """Supplying nte_3=[] succeeds; the field is optional in the generated model."""
-    nte = NTE(nte_3=[])
-    assert nte.nte_3 == []
+def test_direct_construction_with_empty_nte_3_raises() -> None:
+    """Supplying nte_3=[] raises ValidationError; min_length=1 is enforced."""
+    with pytest.raises(pydantic.ValidationError, match="nte_3"):
+        NTE(nte_3=[])
 
 
 def test_direct_construction_by_hl7_dot_notation() -> None:

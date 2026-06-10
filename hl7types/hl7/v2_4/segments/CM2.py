@@ -28,8 +28,8 @@ class CM2(HL7Model):
     cm2_3 : str | None
         CM2.3 (opt) - Description of Time Point (ST)
 
-    cm2_4 : list[CE] | None
-        CM2.4 (req, rep) - Events Scheduled This Time Point (CE) [optional: CE has no required components]
+    cm2_4 : list[CE]
+        CM2.4 (req, rep) - Events Scheduled This Time Point (CE)
     """
 
     cm2_1: Optional[str] = Field(
@@ -67,8 +67,8 @@ class CM2(HL7Model):
         description="Item #1026",
     )
 
-    cm2_4: Optional[List[CE]] = Field(
-        default=None,
+    cm2_4: List[CE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "cm2_4",
             "events_scheduled_this_time_point",

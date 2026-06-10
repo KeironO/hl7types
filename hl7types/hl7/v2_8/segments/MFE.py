@@ -29,8 +29,8 @@ class MFE(HL7Model):
     mfe_3 : str | None
         MFE.3 (opt) - Effective Date/Time (DTM)
 
-    mfe_4 : list[varies] | None
-        MFE.4 (req, rep) - Primary Key Value - MFE (varies) [optional: varies has no required components]
+    mfe_4 : list[varies]
+        MFE.4 (req, rep) - Primary Key Value - MFE (varies)
 
     mfe_5 : list[str]
         MFE.5 (req, rep) - Primary Key Value Type (ID)
@@ -77,8 +77,8 @@ class MFE(HL7Model):
         description="Item #662",
     )
 
-    mfe_4: Optional[List[varies]] = Field(
-        default=None,
+    mfe_4: List[varies] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "mfe_4",
             "primary_key_value_mfe",

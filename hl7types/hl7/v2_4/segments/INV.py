@@ -24,8 +24,8 @@ class INV(HL7Model):
     inv_1 : CE
         INV.1 (req) - Substance Identifier (CE)
 
-    inv_2 : list[CE] | None
-        INV.2 (req, rep) - Substance Status (CE) [optional: CE has no required components]
+    inv_2 : list[CE]
+        INV.2 (req, rep) - Substance Status (CE)
 
     inv_3 : CE | None
         INV.3 (opt) - Substance Type (CE)
@@ -87,8 +87,8 @@ class INV(HL7Model):
         description="Item #1372 | Table HL70451",
     )
 
-    inv_2: Optional[List[CE]] = Field(
-        default=None,
+    inv_2: List[CE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "inv_2",
             "substance_status",

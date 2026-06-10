@@ -20,8 +20,8 @@ class MRG(HL7Model):
 
     Attributes
     ----------
-    mrg_1 : list[CX] | None
-        MRG.1 (req, rep) - Prior Patient Identifier List (CX) [optional: CX has no required components]
+    mrg_1 : list[CX]
+        MRG.1 (req, rep) - Prior Patient Identifier List (CX)
 
     mrg_2 : list[CX] | None
         MRG.2 (opt, rep) - Prior Alternate Patient ID (CX)
@@ -42,8 +42,8 @@ class MRG(HL7Model):
         MRG.7 (opt, rep) - Prior Patient Name (XPN)
     """
 
-    mrg_1: Optional[List[CX]] = Field(
-        default=None,
+    mrg_1: List[CX] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "mrg_1",
             "prior_patient_identifier_list",

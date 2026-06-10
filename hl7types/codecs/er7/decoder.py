@@ -7,6 +7,7 @@ import warnings
 from functools import lru_cache
 from typing import Any, get_type_hints
 
+from annotated_types import MinLen
 from pydantic import BaseModel
 
 from hl7types._utils import version_to_module
@@ -299,7 +300,15 @@ def decode_er7_segment(
             skipped_fields.append(fname)
 
             if is_list:
-                data[fname] = []
+                fi = seg_cls.model_fields[fname]
+                min_len = next(
+                    (c.min_length for c in fi.metadata if isinstance(c, MinLen)),
+                    0,
+                )
+                if min_len >= 1:
+                    data[fname] = [{}] if _is_model(base_type) else [""]
+                else:
+                    data[fname] = []
             elif _is_model(base_type):
                 data[fname] = {}
             else:

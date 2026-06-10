@@ -32,14 +32,14 @@ class PID(HL7Model):
     pid_2 : CX | None
         PID.2 (opt) - Patient ID (CX)
 
-    pid_3 : list[CX] | None
-        PID.3 (req, rep) - Patient Identifier List (CX) [optional: CX has no required components]
+    pid_3 : list[CX]
+        PID.3 (req, rep) - Patient Identifier List (CX)
 
     pid_4 : list[CX] | None
         PID.4 (opt, rep) - Alternate Patient ID - PID (CX)
 
-    pid_5 : list[XPN] | None
-        PID.5 (req, rep) - Patient Name (XPN) [optional: XPN has no required components]
+    pid_5 : list[XPN]
+        PID.5 (req, rep) - Patient Name (XPN)
 
     pid_6 : list[XPN] | None
         PID.6 (opt, rep) - Mother's Maiden Name (XPN)
@@ -165,8 +165,8 @@ class PID(HL7Model):
         description="Item #105",
     )
 
-    pid_3: Optional[List[CX]] = Field(
-        default=None,
+    pid_3: List[CX] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "pid_3",
             "patient_identifier_list",
@@ -189,8 +189,8 @@ class PID(HL7Model):
         description="Item #107",
     )
 
-    pid_5: Optional[List[XPN]] = Field(
-        default=None,
+    pid_5: List[XPN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "pid_5",
             "patient_name",

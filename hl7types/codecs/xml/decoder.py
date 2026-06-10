@@ -6,6 +6,7 @@ import warnings
 from typing import Any, get_type_hints
 from xml.etree import ElementTree as ET
 
+from annotated_types import MinLen
 from pydantic import BaseModel
 
 from hl7types._utils import version_to_module
@@ -253,7 +254,14 @@ def decode_xml_segment(
             base_type, is_list = _unwrap(ann)
             skipped.append(fname)
             if is_list:
-                data[fname] = []
+                min_len = next(
+                    (c.min_length for c in fi.metadata if isinstance(c, MinLen)),
+                    0,
+                )
+                if min_len >= 1:
+                    data[fname] = [{}] if _is_model(base_type) else [""]
+                else:
+                    data[fname] = []
             elif _is_model(base_type):
                 data[fname] = {}
             else:

@@ -68,8 +68,8 @@ class ARQ(HL7Model):
     arq_14 : str | None
         ARQ.14 (opt) - Repeating Interval Duration (ST)
 
-    arq_15 : list[XCN] | None
-        ARQ.15 (req, rep) - Placer Contact Person (XCN) [optional: XCN has no required components]
+    arq_15 : list[XCN]
+        ARQ.15 (req, rep) - Placer Contact Person (XCN)
 
     arq_16 : list[XTN] | None
         ARQ.16 (opt, rep) - Placer Contact Phone Number (XTN)
@@ -80,8 +80,8 @@ class ARQ(HL7Model):
     arq_18 : PL | None
         ARQ.18 (opt) - Placer Contact Location (PL)
 
-    arq_19 : list[XCN] | None
-        ARQ.19 (req, rep) - Entered by Person (XCN) [optional: XCN has no required components]
+    arq_19 : list[XCN]
+        ARQ.19 (req, rep) - Entered by Person (XCN)
 
     arq_20 : list[XTN] | None
         ARQ.20 (opt, rep) - Entered by Phone Number (XTN)
@@ -263,8 +263,8 @@ class ARQ(HL7Model):
         description="Item #873",
     )
 
-    arq_15: Optional[List[XCN]] = Field(
-        default=None,
+    arq_15: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "arq_15",
             "placer_contact_person",
@@ -311,8 +311,8 @@ class ARQ(HL7Model):
         description="Item #877",
     )
 
-    arq_19: Optional[List[XCN]] = Field(
-        default=None,
+    arq_19: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "arq_19",
             "entered_by_person",

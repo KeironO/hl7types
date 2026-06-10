@@ -34,8 +34,8 @@ class ROL(HL7Model):
     rol_3 : CWE
         ROL.3 (req) - Role-ROL (CWE)
 
-    rol_4 : list[XCN] | None
-        ROL.4 (req, rep) - Role Person (XCN) [optional: XCN has no required components]
+    rol_4 : list[XCN]
+        ROL.4 (req, rep) - Role Person (XCN)
 
     rol_5 : str | None
         ROL.5 (opt) - Role Begin Date/Time (DTM)
@@ -102,8 +102,8 @@ class ROL(HL7Model):
         description="Item #1197 | Table HL70443",
     )
 
-    rol_4: Optional[List[XCN]] = Field(
-        default=None,
+    rol_4: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "rol_4",
             "role_person",

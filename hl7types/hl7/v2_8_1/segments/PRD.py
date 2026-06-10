@@ -25,8 +25,8 @@ class PRD(HL7Model):
 
     Attributes
     ----------
-    prd_1 : list[CWE] | None
-        PRD.1 (req, rep) - Provider Role (CWE) [optional: CWE has no required components]
+    prd_1 : list[CWE]
+        PRD.1 (req, rep) - Provider Role (CWE)
 
     prd_2 : list[XPN] | None
         PRD.2 (opt, rep) - Provider Name (XPN)
@@ -68,8 +68,8 @@ class PRD(HL7Model):
         PRD.14 (opt) - Provider Organization Method of Contact (CWE)
     """
 
-    prd_1: Optional[List[CWE]] = Field(
-        default=None,
+    prd_1: List[CWE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "prd_1",
             "provider_role",

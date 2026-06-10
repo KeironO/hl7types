@@ -25,8 +25,8 @@ class ODS(HL7Model):
     ods_2 : list[CE] | None
         ODS.2 (opt, rep) - Service Period (CE)
 
-    ods_3 : list[CE] | None
-        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CE) [optional: CE has no required components]
+    ods_3 : list[CE]
+        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CE)
 
     ods_4 : list[str] | None
         ODS.4 (opt, rep) - Text Instruction (ST)
@@ -55,8 +55,8 @@ class ODS(HL7Model):
         description="Item #270",
     )
 
-    ods_3: Optional[List[CE]] = Field(
-        default=None,
+    ods_3: List[CE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "ods_3",
             "diet_supplement_or_preference_code",

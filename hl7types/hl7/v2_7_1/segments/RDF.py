@@ -7,7 +7,7 @@ Type: Segment
 """
 from __future__ import annotations
 
-from typing import Optional, List
+from typing import List
 from pydantic import AliasChoices, Field, field_validator
 from hl7types.hl7 import HL7Model
 
@@ -22,8 +22,8 @@ class RDF(HL7Model):
     rdf_1 : str
         RDF.1 (req) - Number of Columns per Row (NM)
 
-    rdf_2 : list[RCD] | None
-        RDF.2 (req, rep) - Column Description (RCD) [optional: RCD has no required components]
+    rdf_2 : list[RCD]
+        RDF.2 (req, rep) - Column Description (RCD)
     """
 
     rdf_1: str = Field(
@@ -37,8 +37,8 @@ class RDF(HL7Model):
         description="Item #701",
     )
 
-    rdf_2: Optional[List[RCD]] = Field(
-        default=None,
+    rdf_2: List[RCD] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "rdf_2",
             "column_description",

@@ -33,8 +33,8 @@ class GT1(HL7Model):
     gt1_2 : list[CX] | None
         GT1.2 (opt, rep) - Guarantor Number (CX)
 
-    gt1_3 : list[XPN] | None
-        GT1.3 (req, rep) - Guarantor Name (XPN) [optional: XPN has no required components]
+    gt1_3 : list[XPN]
+        GT1.3 (req, rep) - Guarantor Name (XPN)
 
     gt1_4 : list[XPN] | None
         GT1.4 (opt, rep) - Guarantor Spouse Name (XPN)
@@ -222,8 +222,8 @@ class GT1(HL7Model):
         description="Item #406",
     )
 
-    gt1_3: Optional[List[XPN]] = Field(
-        default=None,
+    gt1_3: List[XPN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "gt1_3",
             "guarantor_name",
