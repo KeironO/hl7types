@@ -34,8 +34,8 @@ class OM2(HL7Model):
     om2_5 : CE | None
         OM2.5 (opt) - Corresponding SI Units of Measure (CE)
 
-    om2_6 : list[str] | None
-        OM2.6 (req, rep) - SI Conversion Factor (TX) [optional: TX has no required components]
+    om2_6 : list[str]
+        OM2.6 (req, rep) - SI Conversion Factor (TX)
 
     om2_7 : list[str] | None
         OM2.7 (opt, rep) - Reference (normal) range - ordinal & continuous observations (CM)
@@ -113,8 +113,8 @@ class OM2(HL7Model):
         description="Item #629",
     )
 
-    om2_6: Optional[List[str]] = Field(
-        default=None,
+    om2_6: List[str] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "om2_6",
             "si_conversion_factor",

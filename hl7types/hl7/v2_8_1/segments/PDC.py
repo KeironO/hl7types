@@ -21,8 +21,8 @@ class PDC(HL7Model):
 
     Attributes
     ----------
-    pdc_1 : list[XON] | None
-        PDC.1 (req, rep) - Manufacturer/Distributor (XON) [optional: XON has no required components]
+    pdc_1 : list[XON]
+        PDC.1 (req, rep) - Manufacturer/Distributor (XON)
 
     pdc_2 : CWE
         PDC.2 (req) - Country (CWE)
@@ -67,8 +67,8 @@ class PDC(HL7Model):
         PDC.15 (opt) - Date Last Marketed (DTM)
     """
 
-    pdc_1: Optional[List[XON]] = Field(
-        default=None,
+    pdc_1: List[XON] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "pdc_1",
             "manufacturer_distributor",

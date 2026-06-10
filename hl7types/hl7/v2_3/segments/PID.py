@@ -31,8 +31,8 @@ class PID(HL7Model):
     pid_2 : CX | None
         PID.2 (opt) - Patient ID (External ID) (CX)
 
-    pid_3 : list[CX] | None
-        PID.3 (req, rep) - Patient ID (Internal ID) (CX) [optional: CX has no required components]
+    pid_3 : list[CX]
+        PID.3 (req, rep) - Patient ID (Internal ID) (CX)
 
     pid_4 : CX | None
         PID.4 (opt) - Alternate Patient ID (CX)
@@ -140,8 +140,8 @@ class PID(HL7Model):
         description="Item #105",
     )
 
-    pid_3: Optional[List[CX]] = Field(
-        default=None,
+    pid_3: List[CX] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "pid_3",
             "patient_id_internal_id",

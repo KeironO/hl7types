@@ -32,8 +32,8 @@ class MFA(HL7Model):
     mfa_4 : CWE
         MFA.4 (req) - MFN Record Level Error Return (CWE)
 
-    mfa_5 : list[varies] | None
-        MFA.5 (req, rep) - Primary Key Value - MFA (varies) [optional: varies has no required components]
+    mfa_5 : list[varies]
+        MFA.5 (req, rep) - Primary Key Value - MFA (varies)
 
     mfa_6 : list[str]
         MFA.6 (req, rep) - Primary Key Value Type - MFA (ID)
@@ -85,8 +85,8 @@ class MFA(HL7Model):
         description="Item #669 | Table HL70181",
     )
 
-    mfa_5: Optional[List[varies]] = Field(
-        default=None,
+    mfa_5: List[varies] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "mfa_5",
             "primary_key_value_mfa",

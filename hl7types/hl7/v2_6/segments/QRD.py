@@ -43,14 +43,14 @@ class QRD(HL7Model):
     qrd_7 : CQ
         QRD.7 (req) - Quantity Limited Request (CQ)
 
-    qrd_8 : list[XCN] | None
-        QRD.8 (req, rep) - Who Subject Filter (XCN) [optional: XCN has no required components]
+    qrd_8 : list[XCN]
+        QRD.8 (req, rep) - Who Subject Filter (XCN)
 
-    qrd_9 : list[CWE] | None
-        QRD.9 (req, rep) - What Subject Filter (CWE) [optional: CWE has no required components]
+    qrd_9 : list[CWE]
+        QRD.9 (req, rep) - What Subject Filter (CWE)
 
-    qrd_10 : list[CWE] | None
-        QRD.10 (req, rep) - What Department Data Code (CWE) [optional: CWE has no required components]
+    qrd_10 : list[CWE]
+        QRD.10 (req, rep) - What Department Data Code (CWE)
 
     qrd_11 : list[VR] | None
         QRD.11 (opt, rep) - What Data Code Value Qual. (VR)
@@ -138,8 +138,8 @@ class QRD(HL7Model):
         description="Item #31 | Table HL70126",
     )
 
-    qrd_8: Optional[List[XCN]] = Field(
-        default=None,
+    qrd_8: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_8",
             "who_subject_filter",
@@ -150,8 +150,8 @@ class QRD(HL7Model):
         description="Item #32",
     )
 
-    qrd_9: Optional[List[CWE]] = Field(
-        default=None,
+    qrd_9: List[CWE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_9",
             "what_subject_filter",
@@ -162,8 +162,8 @@ class QRD(HL7Model):
         description="Item #33 | Table HL70048",
     )
 
-    qrd_10: Optional[List[CWE]] = Field(
-        default=None,
+    qrd_10: List[CWE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "qrd_10",
             "what_department_data_code",

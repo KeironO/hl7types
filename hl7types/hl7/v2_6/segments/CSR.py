@@ -43,8 +43,8 @@ class CSR(HL7Model):
     csr_7 : list[XCN] | None
         CSR.7 (opt, rep) - Person Performing Study Registration (XCN)
 
-    csr_8 : list[XCN] | None
-        CSR.8 (req, rep) - Study Authorizing Provider (XCN) [optional: XCN has no required components]
+    csr_8 : list[XCN]
+        CSR.8 (req, rep) - Study Authorizing Provider (XCN)
 
     csr_9 : str | None
         CSR.9 (opt) - Date/time Patient Study Consent Signed (DTM)
@@ -152,8 +152,8 @@ class CSR(HL7Model):
         description="Item #1041",
     )
 
-    csr_8: Optional[List[XCN]] = Field(
-        default=None,
+    csr_8: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "csr_8",
             "study_authorizing_provider",

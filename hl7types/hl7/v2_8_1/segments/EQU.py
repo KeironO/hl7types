@@ -20,8 +20,8 @@ class EQU(HL7Model):
 
     Attributes
     ----------
-    equ_1 : list[EI] | None
-        EQU.1 (req, rep) - Equipment Instance Identifier (EI) [optional: EI has no required components]
+    equ_1 : list[EI]
+        EQU.1 (req, rep) - Equipment Instance Identifier (EI)
 
     equ_2 : str
         EQU.2 (req) - Event Date/Time (DTM)
@@ -36,8 +36,8 @@ class EQU(HL7Model):
         EQU.5 (opt) - Alert Level (CWE)
     """
 
-    equ_1: Optional[List[EI]] = Field(
-        default=None,
+    equ_1: List[EI] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "equ_1",
             "equipment_instance_identifier",

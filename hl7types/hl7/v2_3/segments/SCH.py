@@ -55,8 +55,8 @@ class SCH(HL7Model):
     sch_10 : CE | None
         SCH.10 (opt) - Appointment Duration Units (CE)
 
-    sch_11 : list[TQ] | None
-        SCH.11 (req, rep) - Appointment Timing Quantity (TQ) [optional: TQ has no required components]
+    sch_11 : list[TQ]
+        SCH.11 (req, rep) - Appointment Timing Quantity (TQ)
 
     sch_12 : XCN | None
         SCH.12 (opt) - Placer Contact Person (XCN)
@@ -219,8 +219,8 @@ class SCH(HL7Model):
         description="Item #869",
     )
 
-    sch_11: Optional[List[TQ]] = Field(
-        default=None,
+    sch_11: List[TQ] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "sch_11",
             "appointment_timing_quantity",

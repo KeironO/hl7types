@@ -23,8 +23,8 @@ class DPS(HL7Model):
     dps_1 : CWE
         DPS.1 (req) - Diagnosis Code - MCP (CWE)
 
-    dps_2 : list[CWE] | None
-        DPS.2 (req, rep) - Procedure Code (CWE) [optional: CWE has no required components]
+    dps_2 : list[CWE]
+        DPS.2 (req, rep) - Procedure Code (CWE)
 
     dps_3 : str | None
         DPS.3 (opt) - Effective Date/Time (DTM)
@@ -47,8 +47,8 @@ class DPS(HL7Model):
         description="Item #3472 | Table HL70051",
     )
 
-    dps_2: Optional[List[CWE]] = Field(
-        default=None,
+    dps_2: List[CWE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "dps_2",
             "procedure_code",

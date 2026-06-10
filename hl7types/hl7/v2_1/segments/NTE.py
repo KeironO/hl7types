@@ -23,8 +23,8 @@ class NTE(HL7Model):
     nte_2 : str | None
         NTE.2 (opt) - SOURCE OF COMMENT (ID)
 
-    nte_3 : list[str] | None
-        NTE.3 (req, rep) - COMMENT (TX) [optional: TX has no required components]
+    nte_3 : list[str]
+        NTE.3 (req, rep) - COMMENT (TX)
     """
 
     nte_1: Optional[str] = Field(
@@ -51,8 +51,8 @@ class NTE(HL7Model):
         description="Item #574 | Table HL70105",
     )
 
-    nte_3: Optional[List[str]] = Field(
-        default=None,
+    nte_3: List[str] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "nte_3",
             "comment",

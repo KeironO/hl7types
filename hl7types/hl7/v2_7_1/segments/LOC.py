@@ -29,8 +29,8 @@ class LOC(HL7Model):
     loc_2 : str | None
         LOC.2 (opt) - Location Description (ST)
 
-    loc_3 : list[CWE] | None
-        LOC.3 (req, rep) - Location Type - LOC (CWE) [optional: CWE has no required components]
+    loc_3 : list[CWE]
+        LOC.3 (req, rep) - Location Type - LOC (CWE)
 
     loc_4 : list[XON] | None
         LOC.4 (opt, rep) - Organization Name - LOC (XON)
@@ -74,8 +74,8 @@ class LOC(HL7Model):
         description="Item #944",
     )
 
-    loc_3: Optional[List[CWE]] = Field(
-        default=None,
+    loc_3: List[CWE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "loc_3",
             "location_type_loc",

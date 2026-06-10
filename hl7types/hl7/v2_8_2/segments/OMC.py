@@ -33,8 +33,8 @@ class OMC(HL7Model):
     omc_4 : CWE
         OMC.4 (req) - Clinical Information Request (CWE)
 
-    omc_5 : list[CWE] | None
-        OMC.5 (req, rep) - Collection Event/Process Step (CWE) [optional: CWE has no required components]
+    omc_5 : list[CWE]
+        OMC.5 (req, rep) - Collection Event/Process Step (CWE)
 
     omc_6 : CWE
         OMC.6 (req) - Communication Location (CWE)
@@ -108,8 +108,8 @@ class OMC(HL7Model):
         description="Item #3444 | Table HL79999",
     )
 
-    omc_5: Optional[List[CWE]] = Field(
-        default=None,
+    omc_5: List[CWE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "omc_5",
             "collection_event_process_step",

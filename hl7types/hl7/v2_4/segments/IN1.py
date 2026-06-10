@@ -34,8 +34,8 @@ class IN1(HL7Model):
     in1_2 : CE
         IN1.2 (req) - Insurance Plan ID (CE)
 
-    in1_3 : list[CX] | None
-        IN1.3 (req, rep) - Insurance Company ID (CX) [optional: CX has no required components]
+    in1_3 : list[CX]
+        IN1.3 (req, rep) - Insurance Company ID (CX)
 
     in1_4 : list[XON] | None
         IN1.4 (opt, rep) - Insurance Company Name (XON)
@@ -198,8 +198,8 @@ class IN1(HL7Model):
         description="Item #368 | Table HL70072",
     )
 
-    in1_3: Optional[List[CX]] = Field(
-        default=None,
+    in1_3: List[CX] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "in1_3",
             "insurance_company_id",

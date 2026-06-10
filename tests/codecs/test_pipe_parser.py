@@ -81,7 +81,7 @@ def test_repeating_obx_segments_preserve_order_and_values() -> None:
 
 COMPONENTS_WIRE = (
     "MSH|^~\\&|^QueryServices||||20021011161756.297-0500||ORU^R01|1|D|2.4\r"
-    "PID|||||x&y^z|\r"
+    "PID|||123456||x&y^z|\r"
     "OBR|1|||CHO^CHOLESTEROL\r"
     "OBX|1|NM|Z049107^Chol^L||2.30|mmol/L|||||F\r"
 )

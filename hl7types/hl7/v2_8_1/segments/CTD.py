@@ -24,8 +24,8 @@ class CTD(HL7Model):
 
     Attributes
     ----------
-    ctd_1 : list[CWE] | None
-        CTD.1 (req, rep) - Contact Role (CWE) [optional: CWE has no required components]
+    ctd_1 : list[CWE]
+        CTD.1 (req, rep) - Contact Role (CWE)
 
     ctd_2 : list[XPN] | None
         CTD.2 (opt, rep) - Contact Name (XPN)
@@ -46,8 +46,8 @@ class CTD(HL7Model):
         CTD.7 (opt, rep) - Contact Identifiers (PLN)
     """
 
-    ctd_1: Optional[List[CWE]] = Field(
-        default=None,
+    ctd_1: List[CWE] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "ctd_1",
             "contact_role",

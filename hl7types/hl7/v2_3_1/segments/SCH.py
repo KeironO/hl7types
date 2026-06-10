@@ -55,8 +55,8 @@ class SCH(HL7Model):
     sch_10 : CE | None
         SCH.10 (opt) - Appointment Duration Units (CE)
 
-    sch_11 : list[TQ] | None
-        SCH.11 (req, rep) - Appointment Timing Quantity (TQ) [optional: TQ has no required components]
+    sch_11 : list[TQ]
+        SCH.11 (req, rep) - Appointment Timing Quantity (TQ)
 
     sch_12 : list[XCN] | None
         SCH.12 (opt, rep) - Placer Contact Person (XCN)
@@ -70,8 +70,8 @@ class SCH(HL7Model):
     sch_15 : PL | None
         SCH.15 (opt) - Placer Contact Location (PL)
 
-    sch_16 : list[XCN] | None
-        SCH.16 (req, rep) - Filler Contact Person (XCN) [optional: XCN has no required components]
+    sch_16 : list[XCN]
+        SCH.16 (req, rep) - Filler Contact Person (XCN)
 
     sch_17 : XTN | None
         SCH.17 (opt) - Filler Contact Phone Number (XTN)
@@ -82,8 +82,8 @@ class SCH(HL7Model):
     sch_19 : PL | None
         SCH.19 (opt) - Filler Contact Location (PL)
 
-    sch_20 : list[XCN] | None
-        SCH.20 (req, rep) - Entered by Person (XCN) [optional: XCN has no required components]
+    sch_20 : list[XCN]
+        SCH.20 (req, rep) - Entered by Person (XCN)
 
     sch_21 : list[XTN] | None
         SCH.21 (opt, rep) - Entered by Phone Number (XTN)
@@ -220,8 +220,8 @@ class SCH(HL7Model):
         description="Item #869",
     )
 
-    sch_11: Optional[List[TQ]] = Field(
-        default=None,
+    sch_11: List[TQ] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "sch_11",
             "appointment_timing_quantity",
@@ -280,8 +280,8 @@ class SCH(HL7Model):
         description="Item #877",
     )
 
-    sch_16: Optional[List[XCN]] = Field(
-        default=None,
+    sch_16: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "sch_16",
             "filler_contact_person",
@@ -328,8 +328,8 @@ class SCH(HL7Model):
         description="Item #888",
     )
 
-    sch_20: Optional[List[XCN]] = Field(
-        default=None,
+    sch_20: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "sch_20",
             "entered_by_person",

@@ -113,14 +113,14 @@ class DON(HL7Model):
     don_30 : str
         DON.30 (req) - Number of Tubes Collected (NM)
 
-    don_31 : list[EI] | None
-        DON.31 (req, rep) - Donation Sample Identifier (EI) [optional: EI has no required components]
+    don_31 : list[EI]
+        DON.31 (req, rep) - Donation Sample Identifier (EI)
 
     don_32 : XCN
         DON.32 (req) - Donation Accept Staff (XCN)
 
-    don_33 : list[XCN] | None
-        DON.33 (req, rep) - Donation Material Review Staff (XCN) [optional: XCN has no required components]
+    don_33 : list[XCN]
+        DON.33 (req, rep) - Donation Material Review Staff (XCN)
     """
 
     don_1: Optional[EI] = Field(
@@ -459,8 +459,8 @@ class DON(HL7Model):
         description="Item #3369",
     )
 
-    don_31: Optional[List[EI]] = Field(
-        default=None,
+    don_31: List[EI] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "don_31",
             "donation_sample_identifier",
@@ -482,8 +482,8 @@ class DON(HL7Model):
         description="Item #3371",
     )
 
-    don_33: Optional[List[XCN]] = Field(
-        default=None,
+    don_33: List[XCN] = Field(
+        min_length=1,
         validation_alias=AliasChoices(
             "don_33",
             "donation_material_review_staff",
