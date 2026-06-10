@@ -51,4 +51,5 @@ of dots, so v2.5.1 is at ``hl7types.hl7.v2_5_1``.
    errors
    api
    hl7_reference
+   changelog
    contributing

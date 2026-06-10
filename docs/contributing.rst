@@ -61,6 +61,33 @@ Type checking is enforced with `pyright <https://github.com/microsoft/pyright>`_
 Pre-commit hooks run ruff, pyright, and the full test suite on every commit. A commit that fails
 any of these will be rejected locally before it reaches CI.
 
+Commit messages and the changelog
+----------------------------------
+
+The :doc:`changelog` is generated automatically from git history using
+`git-cliff <https://git-cliff.org/>`_. Each release tag triggers a regeneration, so your commit
+messages are what end up in the changelog — write them accordingly.
+
+Prefix commits with one of:
+
+- ``feat:`` — new feature or user-visible behaviour change
+- ``fix:`` / ``bug:`` — bug fix
+- ``refactor:`` — internal restructuring, no behaviour change
+- ``docs:`` — documentation only
+- ``test:`` — tests only
+- ``chore:`` — maintenance (deps, CI, tooling)
+
+The subject line (first line) is all that appears in the changelog, so make it a clear,
+present-tense sentence. Example::
+
+   feat: add truncation character support for HL7 v2.7+ MSH.2
+
+To preview what the next changelog entry will look like before releasing:
+
+.. code-block:: bash
+
+   uv run git-cliff --unreleased
+
 Building the documentation
 ---------------------------
 
