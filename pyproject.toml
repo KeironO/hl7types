@@ -78,9 +78,20 @@ select = ["E", "F", "I", "UP"]
 ignore = ["E501"]
 
 [tool.pyright]
-include = ["hl7types/codecs", "hl7types/__init__.py", "hl7types/hl7/__init__.py", "hl7types/hl7/*"]
+exclude = [
+  "hl7types/hl7/v*/**",
+  "**/__pycache__",
+  "tests",
+  ".venv",
+  "scratch.py",
+  "noxfile.py",
+  "docs/**",
+  "examples/**"
+]
 pythonVersion = "3.10"
 typeCheckingMode = "strict"
+
+
 
 [tool.commitizen]
 name = "cz_conventional_commits"
