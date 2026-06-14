@@ -4,6 +4,7 @@ import importlib
 import typing
 import warnings
 from typing import Any, get_type_hints
+from xml.etree.ElementTree import Element
 
 from annotated_types import MinLen
 from defusedxml import ElementTree as ET
@@ -66,7 +67,7 @@ def _group_xml_tag(cls: type) -> str:
     return f"{name[:idx]}.{name[idx + 1 :]}" if idx != -1 else name
 
 
-def _extract_truncation(root: ET.Element) -> str:
+def _extract_truncation(root: Element) -> str:
     """Read MSH.2 and MSH.12/VID.1 from an XML message root and return the
     truncation character (empty string if none or pre-v2.7)."""
     ns = _NS_PREFIX
@@ -77,7 +78,7 @@ def _extract_truncation(root: ET.Element) -> str:
     if msh_elem is None:
         return ""
 
-    def _find(elem: ET.Element, tag: str) -> ET.Element | None:
+    def _find(elem: Element, tag: str) -> Element | None:
         r = elem.find(f"{ns}{tag}")
         return r if r is not None else elem.find(tag)
 
@@ -126,7 +127,7 @@ def _strip_truncation(value: str, truncation: str) -> str:
 
 
 def _decode_composite(
-    elem: ET.Element,
+    elem: Element,
     cls: type[BaseModel],
     truncation: str = "",
 ) -> dict[str, Any]:
@@ -151,7 +152,7 @@ def _decode_composite(
 
 
 def decode_xml_segment(
-    elem: ET.Element,
+    elem: Element,
     seg_cls: type[BaseModel],
     *,
     strict: bool = False,
@@ -161,7 +162,7 @@ def decode_xml_segment(
 
     Parameters
     ----------
-    elem : ET.Element
+    elem : Element
         The XML element representing the segment (e.g. ``<MSH>``).
     seg_cls : type[BaseModel]
         The segment model class to decode into.
@@ -190,7 +191,7 @@ def decode_xml_segment(
     alias_map = _build_alias_map(seg_cls)
 
     # Group children by tag so repeating fields collect all occurrences.
-    children_by_tag: dict[str, list[ET.Element]] = {}
+    children_by_tag: dict[str, list[Element]] = {}
     for child in elem:
         tag = _local(child.tag)
         children_by_tag.setdefault(tag, []).append(child)
@@ -280,7 +281,7 @@ def decode_xml_segment(
 
 
 def _decode_struct(
-    elem: ET.Element,
+    elem: Element,
     model_cls: type[BaseModel],
     *,
     strict: bool = False,
@@ -301,7 +302,7 @@ def _decode_struct(
 
     # Index direct children by their local tag name for O(1) lookup.
     # Multiple children with the same tag are preserved as a list.
-    children_by_tag: dict[str, list[ET.Element]] = {}
+    children_by_tag: dict[str, list[Element]] = {}
     for child in elem:
         tag = _local(child.tag)
         children_by_tag.setdefault(tag, []).append(child)
@@ -385,7 +386,7 @@ def _decode_struct(
 
 
 def _resolve_msg_cls_from_xml(
-    root: ET.Element,
+    root: Element,
     registry: HL7Registry | None = None,
 ) -> type[BaseModel]:
     """Resolve the message class from the MSH segment inside an XML message element."""
@@ -397,7 +398,7 @@ def _resolve_msg_cls_from_xml(
     if msh_elem is None:
         raise ValueError("No MSH element found in XML; cannot auto-detect message type")
 
-    def _find(elem: ET.Element, tag: str) -> ET.Element | None:
+    def _find(elem: Element, tag: str) -> Element | None:
         result = elem.find(f"{ns}{tag}")
         if result is None:
             result = elem.find(tag)
