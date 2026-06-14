@@ -4,23 +4,22 @@ All notable changes to hl7types are documented here.
 
 ## Unreleased
 
-### Bug Fixes
-
-- Fixed issue with docstring and wrote small test to ensure pid3 handling (#45)
-
 ### Changes
 
-- Remove changelog build (#46)
+- Changelog-new (#47)
+- Update changelog.yml
 
-## [0.7.1] — 2026-06-10
+## [0.7.1] — 2026-06-13
 
 ### Bug Fixes
 
 - Fixed issue with changelog (#44)
+- Fixed issue with docstring and wrote small test to ensure pid3 handling (#45)
 
 ### Changes
 
 - Added changelog (#43)
+- Remove changelog build (#46)
 
 ## [0.7.0] — 2026-06-09
 
@@ -156,3 +155,4 @@ All notable changes to hl7types are documented here.
 - Added precommit with ruff
 - Lets see what happens
 - Build and release
+
