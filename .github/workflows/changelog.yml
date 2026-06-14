@@ -26,6 +26,7 @@ jobs:
         uses: peter-evans/create-pull-request@v7
         with:
           branch: automation/update-changelog
+          base: main
           delete-branch: true
           title: "docs: update changelog"
           commit-message: "docs: update changelog"
