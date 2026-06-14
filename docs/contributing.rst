@@ -58,15 +58,17 @@ Type checking is enforced with `pyright <https://github.com/microsoft/pyright>`_
 
    uv run pyright
 
-Pre-commit hooks run ruff, pyright, and the full test suite on every commit. A commit that fails
-any of these will be rejected locally before it reaches CI.
+Pre-commit hooks run ruff, pyright, and the full test suite on every commit, and a ``commit-msg``
+hook enforces the commit message format described below. A commit that fails any of these will be
+rejected locally before it reaches CI.
 
 Commit messages and the changelog
 ----------------------------------
 
-The :doc:`changelog` is generated automatically from git history using
-`git-cliff <https://git-cliff.org/>`_. Each release tag triggers a regeneration, so your commit
-messages are what end up in the changelog — write them accordingly.
+The :doc:`changelog` is generated from git history using
+`git-cliff <https://git-cliff.org/>`_. Because ``main`` is protected, the
+``Update changelog`` GitHub Actions workflow opens a pull request with the generated
+``CHANGELOG.md`` instead of pushing directly to ``main``.
 
 Prefix commits with one of:
 
@@ -87,6 +89,23 @@ To preview what the next changelog entry will look like before releasing:
 .. code-block:: bash
 
    uv run git-cliff --unreleased
+
+Release process
+---------------
+
+1. Bump the version in ``pyproject.toml``.
+2. Commit the bump: ``chore: bump version to X.Y.Z``
+3. Create the release tag: ``git tag X.Y.Z``
+4. Push the tag: ``git push origin X.Y.Z``
+
+GitHub Actions then runs automatically:
+
+- ``publish.yml`` — runs the test suite, builds the package, and publishes to PyPI.
+- ``changelog.yml`` — generates a fresh ``CHANGELOG.md`` via git-cliff and opens a pull
+  request against ``main``.
+
+Review the changelog pull request, then merge it through the normal branch protection checks.
+There is no need to trigger the workflow manually.
 
 Building the documentation
 ---------------------------

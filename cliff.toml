@@ -14,10 +14,13 @@ trim = true
 [git]
 commit_preprocessors = [
   { pattern = '\n[\s\S]*', replace = "" },
+  { pattern = '^(?i)(feat|fix|bug|refactor|docs?|test|chore):\s*', replace = "" },
+  { pattern = '^(?i)(feature|bug|fix)/(\d+[-\s])?', replace = "" },
 ]
 conventional_commits = false
 filter_unconventional = false
 commit_parsers = [
+  { message = "^[Mm]erge", skip = true },
   { message = "^[Ff]eat", group = "Features" },
   { message = "^[Bb]ug", group = "Bug Fixes" },
   { message = "^[Ff]ix", group = "Bug Fixes" },

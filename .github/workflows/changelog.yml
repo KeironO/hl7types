@@ -1,0 +1,35 @@
+name: Update changelog
+
+on:
+  workflow_dispatch:
+  push:
+    tags: ['[0-9]*']
+
+jobs:
+  update-changelog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v5
+
+      - name: Generate changelog
+        run: uv run git-cliff --output CHANGELOG.md
+
+      - name: Open changelog pull request
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: automation/update-changelog
+          delete-branch: true
+          title: "docs: update changelog"
+          commit-message: "docs: update changelog"
+          body: |
+            Updates CHANGELOG.md from the current git history and tags.
+
+            This workflow opens a pull request instead of pushing to main so branch protection can remain enabled.
