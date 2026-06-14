@@ -8,6 +8,11 @@ repos:
         stages: [commit-msg]
         args: [feat, fix, bug, refactor, docs, test, chore]
 
+  - repo: https://github.com/astral-sh/uv-pre-commit
+    rev: 0.7.12
+    hooks:
+      - id: uv-lock
+
   - repo: https://github.com/astral-sh/ruff-pre-commit
     rev: v0.15.15
     hooks:
@@ -41,3 +46,4 @@ repos:
       - id: check-merge-conflict
       - id: debug-statements
       - id: detect-private-key
+      - id: check-added-large-files
