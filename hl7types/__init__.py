@@ -10,7 +10,7 @@ from hl7types.codecs.er7.encoder import (
 from hl7types.codecs.xml.decoder import decode_xml, decode_xml_segment
 from hl7types.codecs.xml.encoder import encode_xml
 from hl7types.hl7 import HL7Model
-from hl7types.registry import HL7Registry, register_message, register_segment
+from hl7types.registry import HL7Registry
 from hl7types.utils.error import err_from_pydantic_error, errs_from_exception
 
 __all__ = [
@@ -25,8 +25,6 @@ __all__ = [
     "decode_xml",
     "decode_xml_segment",
     "HL7Registry",
-    "register_segment",
-    "register_message",
     "errs_from_exception",
     "err_from_pydantic_error",
 ]

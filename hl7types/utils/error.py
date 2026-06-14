@@ -5,6 +5,7 @@ import re
 from typing import Any
 
 from pydantic import ValidationError
+from pydantic_core import ErrorDetails
 
 from hl7types._utils import version_to_module
 from hl7types.hl7 import HL7Model
@@ -57,7 +58,7 @@ def _import_from_version(version: str, kind: str, name: str) -> type[HL7Model] |
     return None
 
 
-def _error_code_from_pydantic_error(error: dict[str, Any]) -> str:
+def _error_code_from_pydantic_error(error: ErrorDetails) -> str:
     error_type = str(error.get("type", ""))
     message = str(error.get("msg", "")).lower()
 
@@ -115,7 +116,7 @@ def _parse_version(version: str) -> tuple[int, ...]:
     return tuple(int(x) for x in version.split("."))
 
 
-def err_from_pydantic_error(error: dict[str, Any], version: str) -> HL7Model:
+def err_from_pydantic_error(error: ErrorDetails, version: str) -> HL7Model:
     """Convert a single Pydantic error dict into a version-appropriate ``ERR`` segment.
 
     Parameters
@@ -155,25 +156,31 @@ def err_from_pydantic_error(error: dict[str, Any], version: str) -> HL7Model:
         ce_cls = _import_from_version(version, "datatypes", "CE")
         if eld_cls is not None and ce_cls is not None:
             hl70060_code = code if code in HL70060 else "207"
-            kwargs["err_1"] = [
-                eld_cls(
-                    eld_1=segment_id,
-                    eld_2="1",
-                    eld_3=str(field_position) if field_position is not None else None,
-                    eld_4=ce_cls(ce_1=hl70060_code, ce_2=HL70357.get(hl70060_code), ce_3="HL70060"),
-                )
-            ]
+            ce_data = {
+                "ce_1": hl70060_code,
+                "ce_2": HL70357.get(hl70060_code),
+                "ce_3": "HL70060",
+            }
+            eld_data = {
+                "eld_1": segment_id,
+                "eld_2": "1",
+                "eld_3": str(field_position) if field_position is not None else None,
+                "eld_4": ce_cls.model_validate(ce_data),
+            }
+            kwargs["err_1"] = [eld_cls.model_validate(eld_data)]
 
     if v >= (2, 5):
         cwe_cls = _import_from_version(version, "datatypes", "CWE")
         if cwe_cls is not None:
-            kwargs["err_3"] = cwe_cls(cwe_1=code, cwe_2=display, cwe_3="HL70357")
+            cwe_data = {"cwe_1": code, "cwe_2": display, "cwe_3": "HL70357"}
+            kwargs["err_3"] = cwe_cls.model_validate(cwe_data)
 
         kwargs["err_4"] = "E"
 
         erl_cls = _import_from_version(version, "datatypes", "ERL")
         if erl_cls is not None and segment_id is not None and field_position is not None:
-            kwargs["err_2"] = [erl_cls(erl_1=segment_id, erl_2="1", erl_3=str(field_position))]
+            erl_data = {"erl_1": segment_id, "erl_2": "1", "erl_3": str(field_position)}
+            kwargs["err_2"] = [erl_cls.model_validate(erl_data)]
 
     return err_cls(**kwargs)
 
