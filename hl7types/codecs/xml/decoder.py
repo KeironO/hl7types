@@ -4,9 +4,9 @@ import importlib
 import typing
 import warnings
 from typing import Any, get_type_hints
-from xml.etree import ElementTree as ET
 
 from annotated_types import MinLen
+from defusedxml import ElementTree as ET
 from pydantic import BaseModel
 
 from hl7types._utils import version_to_module

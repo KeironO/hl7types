@@ -105,3 +105,11 @@ sequences,  such as ``\H\``, ``\N\``, or ``\.br\``, which are presentation-layer
 hints are left untouched rather than raising an error.
 
 See :doc:`validation` for details on field-level validation and strict versus lenient decoding.
+
+XML parser safety
+-----------------
+
+``hl7types`` uses ``defusedxml`` for XML parsing. XML documents containing DTDs,
+external entities, or entity expansion payloads are rejected. This is intentional:
+HL7 XML messages should not require DTD processing, and accepting such constructs
+would create unnecessary security risk when parsing messages from external systems.

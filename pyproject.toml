@@ -34,6 +34,7 @@ classifiers = [
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
+    "defusedxml>=0.7.1",
     "pydantic>=2.13.4",
     "typing_extensions>=4.0",
 ]
@@ -81,6 +82,11 @@ include = ["hl7types/codecs", "hl7types/__init__.py", "hl7types/hl7/__init__.py"
 pythonVersion = "3.10"
 typeCheckingMode = "strict"
 
+[tool.commitizen]
+name = "cz_conventional_commits"
+tag_format = "$version"
+version_scheme = "semver"
+version_provider = "uv"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
