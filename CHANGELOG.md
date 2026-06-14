@@ -2,12 +2,22 @@
 
 All notable changes to hl7types are documented here.
 
-## Unreleased
+## [0.7.3] — 2026-06-14
+
+### Bug Fixes
+
+- Fixed ET import since moved over to defusedxml
 
 ### Changes
 
 - Changelog-new (#47)
 - Update changelog.yml
+- Update changelog (#48)
+- Added defusedxml support
+- Simplified pyright runs
+- Improved typechecking on error builder
+- Cleaned up types to resolve pyright issues
+- Bumped version to 0.7.3
 
 ## [0.7.1] — 2026-06-13
 
