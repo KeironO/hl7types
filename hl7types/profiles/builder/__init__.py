@@ -144,7 +144,7 @@ def make_constrained_segment(
                 if has_length_rule:
                     metadata.append(Field(max_length=field_constraint.length))
 
-                if has_table_rule:
+                if has_table_rule and field_constraint.table:
                     checker = _generate_table_checkerer(
                         field_constraint.table,
                         resolved_tables[field_constraint.table],
@@ -220,7 +220,7 @@ def build_registry_from_profile(
         for child in children:
             if isinstance(child, SegmentConstraint):
                 _register(child)
-            elif isinstance(child, SegGroupConstraint):
+            else:
                 _walk(child.children)
 
     _walk(profile.segments)

@@ -27,22 +27,24 @@ def _parse_usage(value: str | None, default: str = "O") -> Usage:
 
 
 def _parse_sub_component(elem: ET.Element) -> SubComponentConstraint:
+    length_str = elem.get("Length")
     return SubComponentConstraint(
         name=elem.get("Name", ""),
         usage=_parse_usage(elem.get("Usage")),
         datatype=elem.get("Datatype", ""),
-        length=int(elem.get("Length")) if elem.get("Length") else None,
+        length=int(length_str) if length_str else None,
         table=elem.get("Table"),
     )
 
 
 def _parse_component(elem: ET.Element) -> ComponentConstraint:
     predicate = elem.find("Predicate")
+    length_str = elem.get("Length")
     return ComponentConstraint(
         name=elem.get("Name", ""),
         usage=_parse_usage(elem.get("Usage")),
         datatype=elem.get("Datatype", ""),
-        length=int(elem.get("Length")) if elem.get("Length") else None,
+        length=int(length_str) if length_str else None,
         table=elem.get("Table"),
         predicate=predicate.text.strip() if predicate is not None and predicate.text else None,
         sub_components=[_parse_sub_component(sc) for sc in elem.findall("SubComponent")],
@@ -56,6 +58,7 @@ def _max(value: str | None) -> int | None:
 
 
 def _parse_field(elem: ET.Element) -> FieldConstraint:
+    length_str = elem.get("Length")
     return FieldConstraint(
         name=elem.get("Name", ""),
         datatype=elem.get("Datatype", ""),
@@ -63,7 +66,7 @@ def _parse_field(elem: ET.Element) -> FieldConstraint:
         max=_max(elem.get("Max", "*")),
         usage=_parse_usage(elem.get("Usage")),
         item_no=elem.get("ItemNo"),
-        length=int(elem.get("Length")) if elem.get("Length") else None,
+        length=int(length_str) if length_str else None,
         table=elem.get("Table"),
         components=[_parse_component(c) for c in elem.findall("Component")],
     )
@@ -106,7 +109,9 @@ def parse_tables(path: str | Path) -> dict[str, set[str]]:
     for hl7table in root.iter("hl7table"):
         table_id = hl7table.get("id")
         codes: set[str] = {
-            elem.get("code") for elem in hl7table.findall("tableElement") if elem.get("code")
+            code
+            for elem in hl7table.findall("tableElement")
+            if (code := elem.get("code")) is not None
         }
 
         if table_id and codes:
@@ -149,6 +154,17 @@ def parse_profile(path: str | Path) -> ProfileConstraints:
     event_type = static_def.get("EventType")
     msg_struct_id = static_def.get("MsgStructID")
     name = meta.get("Name") if meta is not None else None
+
+    if not hl7_version:
+        raise ValueError("HL7Version attribute is required")
+    if not msg_type:
+        raise ValueError("MsgType attribute is required")
+    if not event_type:
+        raise ValueError("EventType attribute is required")
+    if not msg_struct_id:
+        raise ValueError("MsgStructID attribute is required")
+    if not name:
+        raise ValueError("Name element is required in MetaData")
 
     children: list[SegmentConstraint | SegGroupConstraint] = []
 

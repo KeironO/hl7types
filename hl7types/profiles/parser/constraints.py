@@ -43,7 +43,7 @@ class FieldConstraint:
     length: int | None = None
     item_no: str | None = None
     table: str | None = None
-    components: list[ComponentConstraint] | None = field(default_factory=list)
+    components: list[ComponentConstraint] = field(default_factory=list)  # type: ignore[assignment]
 
 
 @dataclass
@@ -53,7 +53,7 @@ class SegmentConstraint:
     usage: Usage
     min: int
     max: int | None = None
-    fields: list[FieldConstraint] | None = field(default_factory=list)
+    fields: list[FieldConstraint] = field(default_factory=list)  # type: ignore[assignment]
 
 
 @dataclass
@@ -63,7 +63,7 @@ class SegGroupConstraint:
     usage: Usage
     min: int
     max: int | None
-    children: list[SegmentConstraint] | None = field(default_factory=list)
+    children: list[SegmentConstraint | SegGroupConstraint] = field(default_factory=list)  # type: ignore[assignment]
 
 
 @dataclass
@@ -73,4 +73,4 @@ class ProfileConstraints:
     event_type: str
     msg_struct_id: str
     name: str
-    segments: list[SegmentConstraint | SegGroupConstraint] | None = field(default_factory=list)
+    segments: list[SegmentConstraint | SegGroupConstraint] = field(default_factory=list)  # type: ignore[assignment]
