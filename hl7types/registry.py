@@ -1,8 +1,11 @@
 from __future__ import annotations
 
+import re
+
 from pydantic import BaseModel
 
 _PROTECTED_SEGMENTS = {"MSH", "FHS", "BHS"}
+_SEGMENT_NAME_RE = re.compile(r"^[A-Z][A-Z0-9]{2,3}$")
 
 
 class HL7Registry:
@@ -61,11 +64,21 @@ class HL7Registry:
         Raises
         ------
         ValueError
-            If ``name`` is a protected delimiter-definition segment and
-            ``override`` is ``False``.
+            If ``name`` is not a valid HL7 segment name (3–4 uppercase
+            alphanumerics starting with a letter), or if it is a protected
+            delimiter-definition segment and ``override`` is ``False``.
+        TypeError
+            If ``cls`` is not a Pydantic ``BaseModel`` subclass.
         """
+        if not _SEGMENT_NAME_RE.match(name):
+            raise ValueError(
+                f"{name!r} is not a valid HL7 segment name "
+                "(must be 3–4 uppercase alphanumerics starting with a letter)"
+            )
         if name in _PROTECTED_SEGMENTS and not override:
             raise ValueError(f"{name!r} is a delimiter-definition segment and cannot be overridden")
+        if not issubclass(cls, BaseModel):  # type: ignore[misc]
+            raise TypeError(f"{cls!r} must be a Pydantic BaseModel subclass")
         self._segments[name] = cls
 
     def get_segment(self, name: str) -> type[BaseModel] | None:

@@ -35,9 +35,9 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "defusedxml>=0.7.1",
-    "pydantic>=2.13.4",
-    "typing_extensions>=4.0",
+    "defusedxml>=0.7.1,<1",
+    "pydantic>=2.13.4,<3",
+    "typing_extensions>=4.0,<5",
 ]
 
 [project.urls]

@@ -229,6 +229,13 @@ def decode_er7_segment(
         If ``strict=True`` and required fields are missing, or if any field
         value fails format validation.
 
+    Notes
+    -----
+    **Lenient mode:** When ``strict=False``, missing required fields are
+    filled with placeholder values (empty strings or empty dicts). The
+    resulting segment instance is intentionally partially invalid; callers
+    must not re-encode or serialise it without first populating missing fields.
+
     Examples
     --------
     >>> from hl7types.hl7.v2_5_1.segments import MSA
@@ -569,6 +576,20 @@ def decode_er7(
     pydantic.ValidationError
         If ``strict=True`` and required fields or segments are missing, or if
         any field value fails format validation.
+
+    Notes
+    -----
+    **DoS boundaries:** ER7 decoding is string-split based and imposes no
+    maximum message size or segment count. Callers that accept wire input from
+    untrusted sources should enforce size limits before calling this function
+    (e.g. ``if len(wire) > MAX_BYTES: raise ValueError``).
+
+    **Lenient mode:** When ``strict=False``, missing required fields and
+    segments are filled with placeholder values (empty strings, empty dicts,
+    or bare ``model_construct()`` instances). The resulting objects are
+    intentionally partially invalid and must not be round-tripped through
+    :func:`hl7types.encode_er7` or serialised to XML without first populating
+    the missing fields.
 
     Examples
     --------
