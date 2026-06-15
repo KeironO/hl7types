@@ -35,5 +35,23 @@ jobs:
       - name: Build
         run: uv build
 
+      - name: Check distribution
+        run: uv run --with twine twine check dist/*
+
+      - name: Smoke-test wheel
+        run: |
+          uv venv /tmp/wheel-smoke --python 3.12
+          uv pip install --python /tmp/wheel-smoke/bin/python dist/*.whl
+          /tmp/wheel-smoke/bin/python - <<'EOF'
+          import hl7types
+          from hl7types import decode_er7, HL7Registry
+          from hl7types.hl7.v2_5_1.segments import MSH, MSA
+          from hl7types.hl7.v2_5_1.messages import ACK
+          import importlib.resources, pathlib
+          pkg = importlib.resources.files("hl7types")
+          assert (pathlib.Path(str(pkg)) / "py.typed").exists(), "py.typed missing from wheel"
+          print("Wheel smoke test passed")
+          EOF
+
       - name: Publish
         run: uv publish

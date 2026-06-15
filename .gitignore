@@ -218,7 +218,6 @@ __marimo__/
 .streamlit/secrets.toml
 
 .idea
-uv.lock
 .python-version
 
 scratch.py

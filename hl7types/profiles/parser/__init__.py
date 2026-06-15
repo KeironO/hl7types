@@ -2,6 +2,10 @@ from __future__ import annotations
 
 import xml.etree.ElementTree as ET
 from pathlib import Path
+from typing import TYPE_CHECKING
+
+if not TYPE_CHECKING:
+    import defusedxml.ElementTree as ET  # noqa: F811  # shadows stdlib ET at runtime
 
 from hl7types.profiles.parser.constraints import (
     ComponentConstraint,

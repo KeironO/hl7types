@@ -1,7 +1,16 @@
+import glob
+
 import nox
 
 
 @nox.session(python=["3.10", "3.11", "3.12", "3.13"])
 def tests(session):
-    session.run("uv", "sync", "--group", "dev", external=True)
-    session.run("uv", "run", "pytest")
+    session.run("uv", "sync", "--group", "dev", "--active", external=True)
+    session.run("uv", "run", "--active", "pytest")
+
+
+@nox.session(python=["3.10", "3.11", "3.12", "3.13"])
+def examples(session):
+    session.run("uv", "sync", "--group", "dev", "--active", external=True)
+    for script in sorted(glob.glob("examples/*.py")):
+        session.run("uv", "run", "--active", "python", script, external=True)

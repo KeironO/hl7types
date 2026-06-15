@@ -1,6 +1,6 @@
 [project]
 name = "hl7types"
-version = "0.7.4"
+version = "0.8.0"
 description = "Pydantic-powered HL7 v2 models with ER7 parsing and XML serialisation"
 readme = "README.md"
 requires-python = ">=3.10"
@@ -35,9 +35,9 @@ classifiers = [
     "Typing :: Typed",
 ]
 dependencies = [
-    "defusedxml>=0.7.1",
-    "pydantic>=2.13.4",
-    "typing_extensions>=4.0",
+    "defusedxml>=0.7.1,<1",
+    "pydantic>=2.13.4,<3",
+    "typing_extensions>=4.0,<5",
 ]
 
 [project.urls]
@@ -63,8 +63,15 @@ docs = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "-v --tb=short"
+testpaths = [
+    "tests",
+    "hl7types/hl7/__init__.py",
+    "hl7types/codecs/er7/decoder.py",
+    "hl7types/codecs/er7/encoder.py",
+    "hl7types/codecs/xml/decoder.py",
+    "hl7types/registry.py",
+]
+addopts = "-v --tb=short --doctest-modules"
 
 [tool.coverage.run]
 source = ["hl7types"]
@@ -84,6 +91,7 @@ exclude = [
   "**/__pycache__",
   "tests",
   ".venv",
+  ".nox",
   "scratch.py",
   "noxfile.py",
   "docs/**",

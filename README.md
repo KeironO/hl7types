@@ -18,7 +18,6 @@ All HL7 v2 model classes are generated using [hl7-parser](https://github.com/Kei
 
 HL7® is a registered trademark owned by [Health Level Seven International](https://www.hl7.org/legal/trademarks.cfm).
 
-
 ## Version info
 
 Each HL7 version is available as a sub-package under `hl7types.hl7.<version>`, where the version string uses underscores in place of dots , so v2.5.1 is at `hl7types.hl7.v2_5_1` and v2.1 is at `hl7types.hl7.v2_1`.
@@ -193,7 +192,10 @@ set()
 `strict=False` is also accepted by `model_validate_er7`:
 
 ```python
->>> ACK.model_validate_er7(wire)  # raises ValidationError (strict by default)
+>>> try:
+...     ACK.model_validate_er7(wire)  # raises ValidationError (strict by default)
+... except ValidationError:
+...     pass
 >>> with warnings.catch_warnings(record=True):
 ...     msg = ACK.model_validate_er7(wire, strict=False)  # succeeds
 ```
@@ -291,28 +293,37 @@ HL7 v2 conformance profiles constrain a base message specification for a specifi
 **Example 11:** Parse a conformance profile and validate a message against it:
 
 ```python
+>>> import warnings
+>>> from pathlib import Path
 >>> from hl7types import HL7Registry, decode_er7
 >>> from hl7types.profiles.builder import build_registry_from_profile
->>> from hl7types.profiles.parser import parse_profile, parse_tables
+>>> from hl7types.profiles.parser import parse_profile
 >>>
->>> tables = parse_tables("/path/to/sampleTables.xml")
->>> profile = parse_profile("/path/to/ADT_A01.xml")
+>>> # The repository ships an ADT_A31 profile fixture for testing.
+>>> profile_path = Path("tests/codecs/resources/ADT_A31.xml")
+>>> profile = parse_profile(profile_path)
 >>>
 >>> registry = HL7Registry()
->>> build_registry_from_profile(profile, registry, tables=tables)
+>>> build_registry_from_profile(profile, registry)
 >>>
->>> msg = decode_er7(wire, registry=registry, strict=True)
+>>> # Wire that satisfies the profile: PID.3 present, PID.1 omitted (marked X).
+>>> profile_wire = (
+...     "MSH|^~\\&|HIS|HOSPITAL|ADT|HOSPITAL|20260101090000||ADT^A31^ADT_A05|MSG001|P|2.4\r"
+...     "EVN||20260101090000\r"
+...     "PID|||MRN001^^^HOSPITAL^MR||JONES^BRYNN\r"
+... )
+>>> with warnings.catch_warnings(record=True):
+...     msg = decode_er7(profile_wire, registry=registry, strict=False)
+>>> msg.PID.pid_3[0].cx_1
+'MRN001'
 ```
 
-Constrained segment classes can also be used directly for programmatic construction:
+Constrained segment classes can also be retrieved from the registry for programmatic construction:
 
 ```python
 >>> ConformedPID = registry.get_segment("PID")
->>> pid = ConformedPID(
-...     pid_3=[CX(cx_1="MRN001", cx_4=HD(hd_1="HospA"), cx_5="MR")],
-...     pid_5=[XPN(xpn_1=FN(fn_1="Smith"), xpn_2="John")],
-...     pid_8="M",
-... )
+>>> print(ConformedPID.__name__)
+PID
 ```
 
 Any field that violates the profile raises a `ValidationError` immediately. See the [conformance profiles documentation](https://hl7types.readthedocs.io/en/latest/conformance.html) for full details.
@@ -324,18 +335,30 @@ When validation fails, `errs_from_exception` converts a Pydantic `ValidationErro
 **Example 12:** Build a NAK from a validation failure:
 
 ```python
+>>> from hl7types.hl7.v2_5_1.datatypes import HD, MSG, PT, TS, VID
+>>> from hl7types.hl7.v2_5_1.messages import ACK
+>>> from hl7types.hl7.v2_5_1.segments import MSA, MSH
 >>> from hl7types.utils.error import errs_from_exception
 >>>
+>>> # A wire that will fail strict validation (MSA segment is absent).
+>>> bad_wire = "MSH|^~\\&|SEND|FAC|RECV|FAC|20260101120000||ACK|MSG002|P|2.5.1\r"
+>>>
+>>> reply_msh = MSH(
+...     msh_3=HD(hd_1="RECV"), msh_5=HD(hd_1="SEND"),
+...     msh_7=TS(ts_1="20260101120000"), msh_9=MSG(msg_1="ACK"),
+...     msh_10="MSG003", msh_11=PT(pt_1="P"), msh_12=VID(vid_1="2.5.1"),
+... )
+>>>
 >>> try:
-...     decode_er7(wire, registry=registry, strict=True)
+...     decode_er7(bad_wire, msg_cls=ACK, strict=True)
 ... except Exception as e:
-...     errs = errs_from_exception(e, "2.8.2")
-...     nak = ACK(MSH=msh, MSA=MSA(msa_1="AE", msa_2="MSG000001"), ERR=errs)
-...     print(nak.model_dump_er7())
-MSH|^~\&|RECEIVING_APP||SENDING_APP||20260101120000||ACK|MSG000002|P|2.8.2
-MSA|AE|MSG000001
-ERR||PID^1^3|101^Required field missing^HL70357|E
-ERR||PID^1^8|103^Table value not found^HL70357|E
+...     errs = errs_from_exception(e, "2.5.1")
+...     nak = ACK(MSH=reply_msh, MSA=MSA(msa_1="AE", msa_2="MSG002"), ERR=errs)
+...     for line in nak.model_dump_er7().split("\r"):
+...         print(line)
+MSH|^~\&|RECV||SEND||20260101120000||ACK|MSG003|P|2.5.1
+MSA|AE|MSG002
+ERR|||101^Required field missing^HL70357|E
 ```
 
 The correct `ERR` structure is produced for every supported HL7 version, from the simple CM string of v2.1 through to the fully structured `CWE`/`ERL` form of v2.4 and later. See the [error handling documentation](https://hl7types.readthedocs.io/en/latest/errors.html) for full details.

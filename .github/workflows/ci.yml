@@ -37,3 +37,13 @@ jobs:
         with:
           files: coverage.xml
           token: ${{ secrets.CODECOV_TOKEN }}
+
+  examples:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Install nox
+        run: uv tool install nox
+      - name: Run examples
+        run: nox -s "examples-3.12"

@@ -47,7 +47,7 @@ class HL7Model(BaseModel):
     >>> from hl7types.hl7.v2_5_1.datatypes import HD
     >>> HD(hd_1="WPAS").hd_1
     'WPAS'
-    >>> HD(hierarchic_designator_namespace_id="WPAS").hd_1
+    >>> HD(namespace_id="WPAS").hd_1
     'WPAS'
     >>> HD(**{"HD.1": "WPAS"}).hd_1
     'WPAS'
@@ -167,8 +167,7 @@ class HL7Model(BaseModel):
         --------
         >>> from hl7types.hl7.v2_5_1.segments import MSA
         >>> print(MSA(msa_1="AA", msa_2="MSG001").model_dump_xml())
-        <?xml version='1.0' encoding='UTF-8'?>
-        <MSA xmlns="urn:hl7-org:v2xml">
+        <?xml version="1.0" encoding="UTF-8"?><MSA xmlns="urn:hl7-org:v2xml">
             <MSA.1>AA</MSA.1>
             <MSA.2>MSG001</MSA.2>
         </MSA>

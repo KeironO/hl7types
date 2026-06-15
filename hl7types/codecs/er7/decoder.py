@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import re
+import types
 import typing
 import warnings
 from functools import lru_cache
@@ -44,7 +45,7 @@ def _unwrap(annotation: Any) -> tuple[Any, bool]:
     origin = typing.get_origin(annotation)
     args = typing.get_args(annotation)
 
-    if origin is typing.Union:
+    if origin is typing.Union or isinstance(annotation, types.UnionType):
         non_none = [a for a in args if a is not type(None)]
         if len(non_none) == 1:
             return _unwrap(non_none[0])
@@ -54,7 +55,7 @@ def _unwrap(annotation: Any) -> tuple[Any, bool]:
         inner: Any = args[0] if args else Any
         inner_origin = typing.get_origin(inner)
         inner_args = typing.get_args(inner)
-        if inner_origin is typing.Union:
+        if inner_origin is typing.Union or isinstance(inner, types.UnionType):
             non_none = [a for a in inner_args if a is not type(None)]
             if non_none:
                 inner = non_none[0]
@@ -228,6 +229,13 @@ def decode_er7_segment(
     pydantic.ValidationError
         If ``strict=True`` and required fields are missing, or if any field
         value fails format validation.
+
+    Notes
+    -----
+    **Lenient mode:** When ``strict=False``, missing required fields are
+    filled with placeholder values (empty strings or empty dicts). The
+    resulting segment instance is intentionally partially invalid; callers
+    must not re-encode or serialise it without first populating missing fields.
 
     Examples
     --------
@@ -569,6 +577,20 @@ def decode_er7(
     pydantic.ValidationError
         If ``strict=True`` and required fields or segments are missing, or if
         any field value fails format validation.
+
+    Notes
+    -----
+    **DoS boundaries:** ER7 decoding is string-split based and imposes no
+    maximum message size or segment count. Callers that accept wire input from
+    untrusted sources should enforce size limits before calling this function
+    (e.g. ``if len(wire) > MAX_BYTES: raise ValueError``).
+
+    **Lenient mode:** When ``strict=False``, missing required fields and
+    segments are filled with placeholder values (empty strings, empty dicts,
+    or bare ``model_construct()`` instances). The resulting objects are
+    intentionally partially invalid and must not be round-tripped through
+    :func:`hl7types.encode_er7` or serialised to XML without first populating
+    the missing fields.
 
     Examples
     --------

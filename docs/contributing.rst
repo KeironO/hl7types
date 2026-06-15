@@ -127,4 +127,4 @@ version per category (messages, segments, groups, datatypes) into ``docs/hl7/``.
 Those generated RST files are never committed to the repository. They are always produced fresh
 during the build. If you modify ``hl7_autodoc.py``, the changes take effect on the next
 ``sphinx-build`` run. If you regenerate the HL7 models via ``hl7-parser``, the reference pages
-update automatically on the next build with no further action required. I will fix this, eventually.
+update automatically on the next build with no further action required.
