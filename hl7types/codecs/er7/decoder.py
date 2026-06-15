@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import importlib
 import re
+import types
 import typing
 import warnings
 from functools import lru_cache
@@ -44,7 +45,7 @@ def _unwrap(annotation: Any) -> tuple[Any, bool]:
     origin = typing.get_origin(annotation)
     args = typing.get_args(annotation)
 
-    if origin is typing.Union:
+    if origin is typing.Union or isinstance(annotation, types.UnionType):
         non_none = [a for a in args if a is not type(None)]
         if len(non_none) == 1:
             return _unwrap(non_none[0])
@@ -54,7 +55,7 @@ def _unwrap(annotation: Any) -> tuple[Any, bool]:
         inner: Any = args[0] if args else Any
         inner_origin = typing.get_origin(inner)
         inner_args = typing.get_args(inner)
-        if inner_origin is typing.Union:
+        if inner_origin is typing.Union or isinstance(inner, types.UnionType):
             non_none = [a for a in inner_args if a is not type(None)]
             if non_none:
                 inner = non_none[0]
