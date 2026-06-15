@@ -1,6 +1,6 @@
 [project]
 name = "hl7types"
-version = "0.7.4"
+version = "0.8.0"
 description = "Pydantic-powered HL7 v2 models with ER7 parsing and XML serialisation"
 readme = "README.md"
 requires-python = ">=3.10"

@@ -18,7 +18,6 @@ All HL7 v2 model classes are generated using [hl7-parser](https://github.com/Kei
 
 HL7® is a registered trademark owned by [Health Level Seven International](https://www.hl7.org/legal/trademarks.cfm).
 
-
 ## Version info
 
 Each HL7 version is available as a sub-package under `hl7types.hl7.<version>`, where the version string uses underscores in place of dots , so v2.5.1 is at `hl7types.hl7.v2_5_1` and v2.1 is at `hl7types.hl7.v2_1`.
