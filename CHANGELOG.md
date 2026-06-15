@@ -2,6 +2,23 @@
 
 All notable changes to hl7types are documented here.
 
+## [0.8.0] — 2026-06-15
+
+### Bug Fixes
+
+- Fixed global private calls from old version
+- Fixed ruff on __init__.py in hl7
+
+### Changes
+
+- Update changelog
+- Added uv lock and began smoketests
+- Smoke-tests added
+- Version 0.8.0
+- Glob removed from github action, worked fine on act runner!
+- Forgot about active flag to keep venv seperated
+- Python 3.12 problems solved due to X | Y union syntax producing a different type at runtime
+
 ## [0.7.4] — 2026-06-15
 
 ### Changes
