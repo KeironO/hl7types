@@ -91,6 +91,7 @@ exclude = [
   "**/__pycache__",
   "tests",
   ".venv",
+  ".nox",
   "scratch.py",
   "noxfile.py",
   "docs/**",
