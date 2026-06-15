@@ -2,6 +2,13 @@
 
 All notable changes to hl7types are documented here.
 
+## [0.7.4] — 2026-06-15
+
+### Changes
+
+- Update changelog
+- Added pep-561 support and bumped version
+
 ## [0.7.3] — 2026-06-14
 
 ### Bug Fixes
