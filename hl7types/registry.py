@@ -145,14 +145,3 @@ class HL7Registry:
             that version and name combination.
         """
         return self._messages.get((version, name))
-
-
-_default_registry = HL7Registry()
-
-
-def register_segment(name: str, cls: type[BaseModel]) -> None:
-    _default_registry.register_segment(name, cls)
-
-
-def register_message(version: str, name: str, cls: type[BaseModel]) -> None:
-    _default_registry.register_message(version, name, cls)
