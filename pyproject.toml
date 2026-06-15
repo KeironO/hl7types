@@ -63,8 +63,15 @@ docs = [
 ]
 
 [tool.pytest.ini_options]
-testpaths = ["tests"]
-addopts = "-v --tb=short"
+testpaths = [
+    "tests",
+    "hl7types/hl7/__init__.py",
+    "hl7types/codecs/er7/decoder.py",
+    "hl7types/codecs/er7/encoder.py",
+    "hl7types/codecs/xml/decoder.py",
+    "hl7types/registry.py",
+]
+addopts = "-v --tb=short --doctest-modules"
 
 [tool.coverage.run]
 source = ["hl7types"]

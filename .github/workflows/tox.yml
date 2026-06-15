@@ -28,3 +28,19 @@ jobs:
 
       - name: Run tests
         run: nox -s "tests-${{ matrix.python-version }}"
+
+  examples:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: astral-sh/setup-uv@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install nox
+        run: uv tool install nox
+
+      - name: Run examples
+        run: nox -s "examples-3.12"
