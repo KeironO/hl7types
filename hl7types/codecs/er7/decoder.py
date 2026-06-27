@@ -5,6 +5,7 @@ import re
 import types
 import typing
 import warnings
+from collections.abc import Callable
 from functools import lru_cache
 from typing import Any, get_type_hints
 
@@ -200,6 +201,8 @@ def decode_er7_segment(
     enc: EncodingChars = DEFAULT_ENCODING,
     *,
     strict: bool = True,
+    dt_parser: Callable[[str], str] | None = None,
+    dtm_parser: Callable[[str], str] | None = None,
 ) -> BaseModel:
     """Decode a single ER7 segment string into a typed segment model.
 
@@ -333,7 +336,10 @@ def decode_er7_segment(
                 stacklevel=2,
             )
 
-    return seg_cls.model_validate(data)
+    context: dict[str, Any] | None = None
+    if dt_parser is not None or dtm_parser is not None:
+        context = {"dt_parser": dt_parser, "dtm_parser": dtm_parser}
+    return seg_cls.model_validate(data, context=context)
 
 
 def _decode_struct(
@@ -345,11 +351,15 @@ def _decode_struct(
     strict: bool = True,
     registry: HL7Registry | None = None,
     _globally_reachable: frozenset[str] | None = None,
+    dt_parser: Callable[[str], str] | None = None,
+    dtm_parser: Callable[[str], str] | None = None,
 ) -> tuple[int, BaseModel | None]:
     if is_segment_cls(model_cls, registry):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
             return idx, None
-        return idx + 1, decode_er7_segment(segs[idx][1], model_cls, enc, strict=strict)
+        return idx + 1, decode_er7_segment(
+            segs[idx][1], model_cls, enc, strict=strict, dt_parser=dt_parser, dtm_parser=dtm_parser
+        )
 
     hints = get_type_hints(model_cls)
     data: dict[str, Any] = {}
@@ -406,6 +416,8 @@ def _decode_struct(
                     strict=strict,
                     registry=registry,
                     _globally_reachable=_globally_reachable,
+                    dt_parser=dt_parser,
+                    dtm_parser=dtm_parser,
                 )
                 if item is None:
                     break
@@ -422,6 +434,8 @@ def _decode_struct(
                 strict=strict,
                 registry=registry,
                 _globally_reachable=_globally_reachable,
+                dt_parser=dt_parser,
+                dtm_parser=dtm_parser,
             )
             if item is not None:
                 data[fname] = item
@@ -463,7 +477,10 @@ def _decode_struct(
                 stacklevel=2,
             )
 
-    return idx, model_cls.model_validate(data)
+    context: dict[str, Any] | None = None
+    if dt_parser is not None or dtm_parser is not None:
+        context = {"dt_parser": dt_parser, "dtm_parser": dtm_parser}
+    return idx, model_cls.model_validate(data, context=context)
 
 
 def _seg_name(seg_str: str, field_sep: str = "|") -> str:
@@ -536,6 +553,8 @@ def decode_er7(
     *,
     strict: bool = True,
     registry: HL7Registry | None = None,
+    dt_parser: Callable[[str], str] | None = None,
+    dtm_parser: Callable[[str], str] | None = None,
 ) -> BaseModel:
     """Decode an ER7 wire string into a typed message model.
 
@@ -626,7 +645,16 @@ def decode_er7(
             break
 
     segs = [(_seg_name(ss, enc.field), ss) for ss in seg_strings]
-    _, result = _decode_struct(segs, 0, msg_cls, enc, strict=strict, registry=registry)
+    _, result = _decode_struct(
+        segs,
+        0,
+        msg_cls,
+        enc,
+        strict=strict,
+        registry=registry,
+        dt_parser=dt_parser,
+        dtm_parser=dtm_parser,
+    )
     if result is None:
         raise ValueError(f"Could not decode wire string as {msg_cls.__name__}")
     return result
