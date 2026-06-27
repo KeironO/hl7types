@@ -72,12 +72,12 @@ The :doc:`changelog` is generated from git history using
 
 Prefix commits with one of:
 
-- ``feat:`` — new feature or user-visible behaviour change
-- ``fix:`` / ``bug:`` — bug fix
-- ``refactor:`` — internal restructuring, no behaviour change
-- ``docs:`` — documentation only
-- ``test:`` — tests only
-- ``chore:`` — maintenance (deps, CI, tooling)
+- ``feat:`` new feature or user-visible behaviour change
+- ``fix:`` / ``bug:`` bug fix
+- ``refactor:`` internal restructuring, no behaviour change
+- ``docs:`` documentation only
+- ``test:`` tests only
+- ``chore:`` maintenance (deps, CI, tooling)
 
 The subject line (first line) is all that appears in the changelog, so make it a clear,
 present-tense sentence. Example::

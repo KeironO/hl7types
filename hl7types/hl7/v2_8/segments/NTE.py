@@ -151,10 +151,12 @@ class NTE(HL7Model):
 
     @field_validator("nte_6", "nte_7", "nte_8", mode='before')
     @classmethod
-    def _validate_dtm(cls, v: str) -> str:
+    def _validate_dtm(cls, v: str, info: ValidationInfo) -> str:
         import re
-        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
-            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
-        return v
+        if re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            return v
+        ctx: dict[str, object] = info.context or {}
+        from typing import cast, Callable
+        return _apply_dt_fallback(v, parser=cast(Callable[[str], str] | None, ctx.get("dtm_parser")), datatype="DTM", field_path="TS.1")
 
     model_config = {"populate_by_name": True}

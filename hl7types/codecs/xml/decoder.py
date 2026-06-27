@@ -3,6 +3,7 @@ from __future__ import annotations
 import importlib
 import typing
 import warnings
+from collections.abc import Callable
 from typing import Any, get_type_hints
 from xml.etree.ElementTree import Element
 
@@ -157,6 +158,8 @@ def decode_xml_segment(
     *,
     strict: bool = False,
     truncation: str = "",
+    dt_parser: Callable[[str], str] | None = None,
+    dtm_parser: Callable[[str], str] | None = None,
 ) -> BaseModel:
     """Decode a single XML segment element into a typed segment model.
 
@@ -171,6 +174,14 @@ def decode_xml_segment(
         are absent. If ``False``, missing required fields are filled with empty
         placeholder values and a ``UserWarning`` is emitted. Defaults to
         ``False``.
+    dt_parser : Callable[[str], str], optional
+        Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
+    dtm_parser : Callable[[str], str], optional
+        Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
 
     Returns
     -------
@@ -277,7 +288,10 @@ def decode_xml_segment(
                 stacklevel=2,
             )
 
-    return seg_cls.model_validate(data)
+    context: dict[str, Any] | None = None
+    if dt_parser is not None or dtm_parser is not None:
+        context = {"dt_parser": dt_parser, "dtm_parser": dtm_parser}
+    return seg_cls.model_validate(data, context=context)
 
 
 def _decode_struct(
@@ -287,6 +301,8 @@ def _decode_struct(
     strict: bool = False,
     registry: HL7Registry | None = None,
     truncation: str = "",
+    dt_parser: Callable[[str], str] | None = None,
+    dtm_parser: Callable[[str], str] | None = None,
 ) -> BaseModel | None:
     """Recursively decode an XML element into a message/group/segment model."""
     if _is_segment_cls(model_cls):
@@ -295,7 +311,14 @@ def _decode_struct(
             if registry and registry.get_segment(model_cls.__name__) is not None
             else None
         ) or model_cls
-        return decode_xml_segment(elem, resolved, strict=strict, truncation=truncation)
+        return decode_xml_segment(
+            elem,
+            resolved,
+            strict=strict,
+            truncation=truncation,
+            dt_parser=dt_parser,
+            dtm_parser=dtm_parser,
+        )
 
     hints = get_type_hints(model_cls)
     data: dict[str, Any] = {}
@@ -339,6 +362,8 @@ def _decode_struct(
                     strict=strict,
                     registry=registry,
                     truncation=truncation,
+                    dt_parser=dt_parser,
+                    dtm_parser=dtm_parser,
                 )
                 if item is not None:
                     items.append(item)
@@ -352,6 +377,8 @@ def _decode_struct(
                     strict=strict,
                     registry=registry,
                     truncation=truncation,
+                    dt_parser=dt_parser,
+                    dtm_parser=dtm_parser,
                 )
                 if item is not None:
                     data[fname] = item
@@ -382,7 +409,10 @@ def _decode_struct(
                 stacklevel=2,
             )
 
-    return model_cls.model_validate(data)
+    context: dict[str, Any] | None = None
+    if dt_parser is not None or dtm_parser is not None:
+        context = {"dt_parser": dt_parser, "dtm_parser": dtm_parser}
+    return model_cls.model_validate(data, context=context)
 
 
 def _resolve_msg_cls_from_xml(
@@ -454,6 +484,8 @@ def decode_xml(
     *,
     strict: bool = True,
     registry: HL7Registry | None = None,
+    dt_parser: Callable[[str], str] | None = None,
+    dtm_parser: Callable[[str], str] | None = None,
 ) -> BaseModel:
     """Decode an HL7 v2 XML string into a typed message or segment model.
 
@@ -479,6 +511,14 @@ def decode_xml(
         Registry of custom segment and message classes. Consulted when the
         decoder encounters a segment or message type not present in the
         generated specification models.
+    dt_parser : Callable[[str], str], optional
+        Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
+    dtm_parser : Callable[[str], str], optional
+        Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
 
     Returns
     -------
@@ -539,9 +579,24 @@ def decode_xml(
 
     # Single-segment shortcut: if msg_cls is a segment, decode the root element directly.
     if _is_segment_cls(msg_cls):
-        return decode_xml_segment(root, msg_cls, strict=strict, truncation=truncation)
+        return decode_xml_segment(
+            root,
+            msg_cls,
+            strict=strict,
+            truncation=truncation,
+            dt_parser=dt_parser,
+            dtm_parser=dtm_parser,
+        )
 
-    result = _decode_struct(root, msg_cls, strict=strict, registry=registry, truncation=truncation)
+    result = _decode_struct(
+        root,
+        msg_cls,
+        strict=strict,
+        registry=registry,
+        truncation=truncation,
+        dt_parser=dt_parser,
+        dtm_parser=dtm_parser,
+    )
     if result is None:
         raise ValueError(f"Could not decode XML as {msg_cls.__name__}")
     return result

@@ -751,11 +751,13 @@ class PSL(HL7Model):
 
     @field_validator("psl_10", "psl_11", mode='before')
     @classmethod
-    def _validate_dtm(cls, v: str) -> str:
+    def _validate_dtm(cls, v: str, info: ValidationInfo) -> str:
         import re
-        if not re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
-            raise ValueError(f"{v!r} is not empty or a valid HL7 datetime")
-        return v
+        if re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+            return v
+        ctx: dict[str, object] = info.context or {}
+        from typing import cast, Callable
+        return _apply_dt_fallback(v, parser=cast(Callable[[str], str] | None, ctx.get("dtm_parser")), datatype="DTM", field_path="TS.1")
 
     @field_validator("psl_14", "psl_24", "psl_27", "psl_28", "psl_34", "psl_36", "psl_37", "psl_39", "psl_41", "psl_42", "psl_45", mode='before')
     @classmethod

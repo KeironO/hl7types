@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import sys
-from typing import cast
+from typing import Callable, cast
 
 if sys.version_info >= (3, 11):
     from typing import Self
@@ -9,6 +9,8 @@ else:
     from typing_extensions import Self
 
 from pydantic import BaseModel, ConfigDict
+
+from hl7types.hl7._validators import NonStandardDateWarning as NonStandardDateWarning  # noqa: F401
 
 from hl7types.codecs.er7.decoder import is_segment_cls, decode_er7, decode_er7_segment
 from hl7types.codecs.er7.encoder import (
@@ -99,6 +101,8 @@ class HL7Model(BaseModel):
         enc: EncodingChars | None = None,
         *,
         strict: bool = True,
+        dt_parser: Callable[[str], str] | None = None,
+        dtm_parser: Callable[[str], str] | None = None,
     ) -> Self:
         """Decode an ER7 wire string into a typed model instance.
 
@@ -121,6 +125,12 @@ class HL7Model(BaseModel):
             required fields or segments are absent. If ``False``, missing
             required fields are filled with empty placeholder values and a
             ``UserWarning`` is emitted.
+        dt_parser : Callable[[str], str], optional
+            Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+            fields. See :func:`hl7types.decode_er7_segment` for full semantics.
+        dtm_parser : Callable[[str], str], optional
+            Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+            fields. See :func:`hl7types.decode_er7_segment` for full semantics.
 
         Returns
         -------
@@ -130,8 +140,8 @@ class HL7Model(BaseModel):
         Raises
         ------
         pydantic.ValidationError
-            If ``strict=True`` and required fields are missing, or if any
-            field value fails format validation.
+            If ``strict=True`` and required fields are missing, if any field
+            value fails format validation, or if a fallback parser raises.
         ValueError
             If the wire string is empty or the message type cannot be resolved.
 
@@ -144,8 +154,14 @@ class HL7Model(BaseModel):
         """
         effective_enc = enc if enc is not None else DEFAULT_ENCODING
         if is_segment_cls(cls):
-            return cast(Self, decode_er7_segment(wire, cls, effective_enc, strict=strict))
-        return cast(Self, decode_er7(wire, msg_cls=cls, segment_separator=segment_separator, strict=strict))
+            return cast(Self, decode_er7_segment(
+                wire, cls, effective_enc, strict=strict,
+                dt_parser=dt_parser, dtm_parser=dtm_parser,
+            ))
+        return cast(Self, decode_er7(
+            wire, msg_cls=cls, segment_separator=segment_separator, strict=strict,
+            dt_parser=dt_parser, dtm_parser=dtm_parser,
+        ))
 
     def model_dump_xml(self, *, pretty: bool = True) -> str:
         """Encode the model to an HL7 v2 XML wire string.
