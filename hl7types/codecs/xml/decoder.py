@@ -174,6 +174,14 @@ def decode_xml_segment(
         are absent. If ``False``, missing required fields are filled with empty
         placeholder values and a ``UserWarning`` is emitted. Defaults to
         ``False``.
+    dt_parser : Callable[[str], str], optional
+        Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
+    dtm_parser : Callable[[str], str], optional
+        Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
 
     Returns
     -------
@@ -503,6 +511,14 @@ def decode_xml(
         Registry of custom segment and message classes. Consulted when the
         decoder encounters a segment or message type not present in the
         generated specification models.
+    dt_parser : Callable[[str], str], optional
+        Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
+    dtm_parser : Callable[[str], str], optional
+        Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+        fields. See :func:`hl7types.codecs.er7.decoder.decode_er7_segment` for
+        full semantics.
 
     Returns
     -------

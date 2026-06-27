@@ -123,3 +123,87 @@ In HL7 versions before v2.5, the ``TS`` (timestamp) datatype exposes its first c
 code generator detects this by field name and applies a dedicated pre-v2.5 datetime pattern to
 those fields, ensuring consistent validation behaviour across all supported versions without
 requiring any special handling at runtime.
+
+.. _fallback-parsing:
+
+Fallback parsing for non-standard date formats
+----------------------------------------------
+
+Some real-world systems send date or datetime values that do not conform to the HL7 format,
+for example ``2026-11-01`` (ISO 8601) instead of the required ``20261101``. By default
+``hl7types`` rejects these with a ``ValidationError``. If you need to accept non-standard
+formats from a specific feed, you can supply a fallback parser as a keyword argument to any
+decode function.
+
+Two parameters are available, matching the two HL7 timestamp variants:
+
+- ``dtm_parser``: used for ``TS.1`` fields in v2.5 and later, where the XSD base type is
+  ``DTM``.
+- ``dt_parser`` used for ``TS.1`` fields in v2.4 and earlier, where the XSD base type is
+  ``ST`` but datetype validators are set.
+
+Both accept a callable with the signature ``(str) -> str``. The callable receives the raw
+non-HL7 string and must return a valid HL7 DT or DTM string, or raise any exception to signal
+that the value cannot be parsed.
+
+.. code-block:: python
+
+   import warnings
+   from datetime import datetime
+   from hl7types import decode_er7, NonStandardDateWarning
+
+   def iso_to_hl7(v: str) -> str:
+       return datetime.strptime(v, "%Y-%m-%d").strftime("%Y%m%d")
+
+   # Wire containing "2026-11-01" in MSH.7 instead of "20261101"
+   with warnings.catch_warnings(record=True) as caught:
+       warnings.simplefilter("always")
+       msg = decode_er7(wire, dtm_parser=iso_to_hl7)
+       for w in caught:
+           if issubclass(w.category, NonStandardDateWarning):
+               print(w.message)  # describes original value, field, and normalised result
+
+   # The normalised value is stored on the model
+   print(msg.MSH.msh_7.ts_1)  # "20261101"
+
+When the fallback parser succeeds, a :class:`~hl7types.NonStandardDateWarning` is always
+emitted. This warning is never silenced automatically,  it is a deliberate signal that a
+value was accepted outside the HL7 specification.
+
+The same parameters are accepted by :func:`~hl7types.decode_er7_segment`,
+:func:`~hl7types.codecs.xml.decoder.decode_xml`,
+:func:`~hl7types.codecs.xml.decoder.decode_xml_segment`, and
+:meth:`~hl7types.hl7.HL7Model.model_validate_er7`.
+
+You can also use the fallback directly when constructing a model with
+:meth:`~pydantic.BaseModel.model_validate` by passing a context dict:
+
+.. code-block:: python
+
+   from hl7types.hl7.v2_5_1.datatypes import TS
+
+   ts = TS.model_validate({"TS.1": "2026-11-01"}, context={"dtm_parser": iso_to_hl7})
+
+Direct construction without a context (e.g. ``TS(ts_1="2026-11-01")``) remains invalid by
+default, preserving strict HL7 validation for code that builds models programmatically.
+
+**Behaviour when the fallback fails**
+
+If the fallback callable raises, the exception is wrapped in a descriptive ``ValueError`` and
+surfaced as a ``ValidationError`` from Pydantic, with a message of the form::
+
+   Fallback DTM parser failed for '2026-bad' at TS.1: <original error>
+
+**Independence from** ``strict``
+
+Fallback parsing is independent of the ``strict`` flag. ``strict`` controls structural
+leniency (missing required segments and fields). ``dtm_parser`` / ``dt_parser`` control
+format leniency for date values. You may use them together or independently.
+
+**Pre-v2.5 feeds**
+
+For feeds using HL7 v2.4 or earlier, use ``dt_parser`` instead of ``dtm_parser``:
+
+.. code-block:: python
+
+   msg = decode_er7(wire, dt_parser=iso_to_hl7)

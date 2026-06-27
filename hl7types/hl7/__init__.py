@@ -125,6 +125,12 @@ class HL7Model(BaseModel):
             required fields or segments are absent. If ``False``, missing
             required fields are filled with empty placeholder values and a
             ``UserWarning`` is emitted.
+        dt_parser : Callable[[str], str], optional
+            Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+            fields. See :func:`hl7types.decode_er7_segment` for full semantics.
+        dtm_parser : Callable[[str], str], optional
+            Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+            fields. See :func:`hl7types.decode_er7_segment` for full semantics.
 
         Returns
         -------
@@ -134,8 +140,8 @@ class HL7Model(BaseModel):
         Raises
         ------
         pydantic.ValidationError
-            If ``strict=True`` and required fields are missing, or if any
-            field value fails format validation.
+            If ``strict=True`` and required fields are missing, if any field
+            value fails format validation, or if a fallback parser raises.
         ValueError
             If the wire string is empty or the message type cannot be resolved.
 

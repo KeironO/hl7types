@@ -221,6 +221,18 @@ def decode_er7_segment(
         If ``True`` (the default), raises ``pydantic.ValidationError`` when
         required fields are absent. If ``False``, missing required fields are
         filled with empty placeholder values and a ``UserWarning`` is emitted.
+    dt_parser : Callable[[str], str], optional
+        Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+        fields (XSD base type ``ST``). Called only when the value fails the
+        standard HL7 DT regex. The callable receives the raw string and must
+        return a valid HL7 DT string (e.g. ``"20261101"``), or raise any
+        exception to signal failure. On success a
+        :class:`~hl7types.NonStandardDateWarning` is emitted. Defaults to
+        ``None`` (strict HL7 validation only).
+    dtm_parser : Callable[[str], str], optional
+        Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+        fields (XSD base type ``DTM``). Behaves identically to ``dt_parser``
+        but for the DTM format. Defaults to ``None``.
 
     Returns
     -------
@@ -231,7 +243,7 @@ def decode_er7_segment(
     ------
     pydantic.ValidationError
         If ``strict=True`` and required fields are missing, or if any field
-        value fails format validation.
+        value fails format validation, or if a fallback parser raises.
 
     Notes
     -----
@@ -239,6 +251,10 @@ def decode_er7_segment(
     filled with placeholder values (empty strings or empty dicts). The
     resulting segment instance is intentionally partially invalid; callers
     must not re-encode or serialise it without first populating missing fields.
+
+    **Fallback parsers:** ``dt_parser`` and ``dtm_parser`` are independent of
+    ``strict``. They apply only to ``TS.1`` date/datetime fields that fail the
+    standard HL7 regex; all other validation is unaffected.
 
     Examples
     --------
@@ -582,6 +598,12 @@ def decode_er7(
         Registry of custom segment and message classes. Consulted when the
         decoder encounters a segment or message type not present in the
         generated specification models.
+    dt_parser : Callable[[str], str], optional
+        Fallback parser for non-standard date strings in pre-v2.5 ``TS.1``
+        fields. See :func:`decode_er7_segment` for full semantics.
+    dtm_parser : Callable[[str], str], optional
+        Fallback parser for non-standard datetime strings in v2.5+ ``TS.1``
+        fields. See :func:`decode_er7_segment` for full semantics.
 
     Returns
     -------
@@ -594,8 +616,8 @@ def decode_er7(
         If the wire string is empty, no MSH segment is found, or the message
         type or version cannot be resolved to a known model class.
     pydantic.ValidationError
-        If ``strict=True`` and required fields or segments are missing, or if
-        any field value fails format validation.
+        If ``strict=True`` and required fields or segments are missing, if any
+        field value fails format validation, or if a fallback parser raises.
 
     Notes
     -----

@@ -412,7 +412,7 @@ wheels = [
 
 [[package]]
 name = "hl7types"
-version = "0.8.0"
+version = "0.9.0"
 source = { editable = "." }
 dependencies = [
     { name = "defusedxml" },
