@@ -15,12 +15,12 @@ from ..datatypes.CE import CE
 
 
 class OBR(HL7Model):
-    """HL7 v2 OBR segment.
+    """OBSERVATION REQUEST.
 
     Attributes
     ----------
     obr_1 : str | None
-        OBR.1 (opt) - SET ID - OBSERVATION REQUEST (SI)
+        OBR.1 (opt) - SET ID - OBSERVATION REQUEST (SI) S7-4
 
     obr_2 : str | None
         OBR.2 (opt) - PLACER ORDER # (CM)
@@ -44,16 +44,16 @@ class OBR(HL7Model):
         OBR.8 (req) - OBSERVATION END DATE/TIME (TS)
 
     obr_9 : str
-        OBR.9 (req) - COLLECTION VOLUME (CQ)
+        OBR.9 (req) - COLLECTION VOLUME (CQ) | 0036 - UNITS OF MEASURE - ISO528,1977
 
     obr_10 : list[str] | None
         OBR.10 (opt, rep) - COLLECTOR IDENTIFIER (CN)
 
     obr_11 : str | None
-        OBR.11 (opt) - SPECIMEN ACTION CODE (ST)
+        OBR.11 (opt) - SPECIMEN ACTION CODE (ST) | 0065 - ACTION CODE
 
     obr_12 : str | None
-        OBR.12 (opt) - DANGER CODE (CM)
+        OBR.12 (opt) - DANGER CODE (CM) | 0047 - DANGER CODE
 
     obr_13 : str | None
         OBR.13 (opt) - RELEVANT CLINICAL INFO. (ST)
@@ -62,10 +62,10 @@ class OBR(HL7Model):
         OBR.14 (req) - SPECIMEN RECEIVED DATE/TIME (TS)
 
     obr_15 : str | None
-        OBR.15 (opt) - SPECIMEN SOURCE (CM)
+        OBR.15 (opt) - SPECIMEN SOURCE (CM) | 0070 - SOURCE OF SPECIMEN
 
     obr_16 : list[str] | None
-        OBR.16 (opt, rep) - ORDERING PROVIDER (CN)
+        OBR.16 (opt, rep) - ORDERING PROVIDER (CN) | 0010 - PHYSICIAN ID
 
     obr_17 : list[str] | None
         OBR.17 (opt, rep) - ORDER CALL-BACK PHONE NUM (TN)
@@ -89,10 +89,10 @@ class OBR(HL7Model):
         OBR.23 (opt) - CHARGE TO PRACTICE (CM)
 
     obr_24 : str | None
-        OBR.24 (opt) - DIAGNOSTIC SERV SECT ID (ID)
+        OBR.24 (opt) - DIAGNOSTIC SERV SECT ID (ID) | 0074 - DIAGNOSTIC SERVICE SECTION ID
 
     obr_25 : str | None
-        OBR.25 (opt) - RESULT STATUS (ID)
+        OBR.25 (opt) - RESULT STATUS (ID) | 0123 - RESULT STATUS - OBR
 
     obr_26 : CE | None
         OBR.26 (opt) - LINKED RESULTS (CE)
@@ -107,7 +107,7 @@ class OBR(HL7Model):
         OBR.29 (opt) - PARENT ACCESSION # (CM)
 
     obr_30 : str | None
-        OBR.30 (opt) - TRANSPORTATION MODE (ID)
+        OBR.30 (opt) - TRANSPORTATION MODE (ID) | 0124 - TRANSPORTATION MODE
 
     obr_31 : list[CE] | None
         OBR.31 (opt, rep) - REASON FOR STUDY (CE)

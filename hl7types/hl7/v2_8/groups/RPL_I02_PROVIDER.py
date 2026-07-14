@@ -22,19 +22,19 @@ class RPL_I02_PROVIDER(HL7Model):
     """HL7 v2 RPL_I02.PROVIDER group.
 
     Attributes:
-        PRD (PRD): required
-        CTD (Optional[List[CTD]]): optional
+        PRD (PRD): Provider Data, required
+        CTD (Optional[List[CTD]]): Contact Data, optional
     """
 
     PRD: _PRD = Field(
         title="PRD",
-        description="Required",
+        description="Provider Data",
     )
 
     CTD: Optional[List[_CTD]] = Field(
         default=None,
         title="CTD",
-        description="Optional, repeating",
+        description="Contact Data",
     )
 
     model_config = {"populate_by_name": True}

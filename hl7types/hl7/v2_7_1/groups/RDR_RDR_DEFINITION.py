@@ -27,33 +27,31 @@ class RDR_RDR_DEFINITION(HL7Model):
     """HL7 v2 RDR_RDR.DEFINITION group.
 
     Attributes:
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        QRD (QRD): deleted, required
+        QRF (Optional[QRF]): deleted, optional
         PATIENT (Optional[RDR_RDR_PATIENT]): optional
         ORDER (List[RDR_RDR_ORDER]): required
     """
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="deleted",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="deleted",
     )
 
     PATIENT: Optional[_RDR_RDR_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RDR_RDR_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

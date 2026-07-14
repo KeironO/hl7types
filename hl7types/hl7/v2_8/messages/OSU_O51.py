@@ -37,67 +37,66 @@ class OSU_O51(HL7Model):
     """HL7 v2 OSU_O51 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        NTE (Optional[List[NTE]]): optional
-        PID (Optional[PID]): optional
-        ARV (Optional[List[ARV]]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PID (Optional[PID]): Patient Identification, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
         ORDER_STATUS (List[OSU_O51_ORDER_STATUS]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PID: Optional[_PID] = Field(
         default=None,
         title="PID",
-        description="Optional",
+        description="Patient Identification",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     ORDER_STATUS: List[_OSU_O51_ORDER_STATUS] = Field(
         min_length=1,
         title="ORDER_STATUS",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

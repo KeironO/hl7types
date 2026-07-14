@@ -25,26 +25,25 @@ class RDO_O01_ORDER(HL7Model):
     """HL7 v2 RDO_O01.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): ORC - common order segment, required
         ORDER_DETAIL (Optional[RDO_O01_ORDER_DETAIL]): optional
-        BLG (Optional[BLG]): optional
+        BLG (Optional[BLG]): BLG - billing segment, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     ORDER_DETAIL: Optional[_RDO_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="BLG - billing segment",
     )
 
     model_config = {"populate_by_name": True}

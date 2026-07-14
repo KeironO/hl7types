@@ -29,56 +29,56 @@ _URS = URS
 
 
 class UDM_Q05(HL7Model):
-    """HL7 v2 UDM_Q05 message.
+    """UDM/ACK - Unsolicited display update message (S5.10.1.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        URD (URD): required
-        URS (Optional[URS]): optional
-        DSP (List[DSP]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        URD (URD): deprecated, required
+        URS (Optional[URS]): deprecated, optional
+        DSP (List[DSP]): Display Data, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     URD: _URD = Field(
         title="URD",
-        description="Required",
+        description="deprecated",
     )
 
     URS: Optional[_URS] = Field(
         default=None,
         title="URS",
-        description="Optional",
+        description="deprecated",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="Display Data",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

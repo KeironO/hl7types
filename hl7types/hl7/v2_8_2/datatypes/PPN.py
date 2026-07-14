@@ -18,7 +18,7 @@ from .HD import HD
 
 
 class PPN(HL7Model):
-    """HL7 v2 PPN data type.
+    """Performing person time stamp (S2.A.56).
 
     Attributes
     ----------

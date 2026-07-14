@@ -15,18 +15,18 @@ from ..datatypes.CE import CE
 
 
 class RGS(HL7Model):
-    """HL7 v2 RGS segment.
+    """RGS - resource group segment (S10.5.3).
 
     Attributes
     ----------
     rgs_1 : str
-        RGS.1 (req) - Set ID - RGS (SI)
+        RGS.1 (req) - Set ID - RGS (SI) S10.5.3.1
 
     rgs_2 : str | None
-        RGS.2 (opt) - Segment Action Code (ID)
+        RGS.2 (opt) - Segment Action Code (ID) S10.5.7.2 | 0206 - Segment action code
 
     rgs_3 : CE | None
-        RGS.3 (opt) - Resource Group ID (CE)
+        RGS.3 (opt) - Resource Group ID (CE) S10.5.3.3
     """
 
     rgs_1: str = Field(

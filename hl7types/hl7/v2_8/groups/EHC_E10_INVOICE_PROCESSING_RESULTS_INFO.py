@@ -33,51 +33,50 @@ class EHC_E10_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     """HL7 v2 EHC_E10.INVOICE_PROCESSING_RESULTS_INFO group.
 
     Attributes:
-        IPR (IPR): required
-        NTE (Optional[List[NTE]]): optional
-        PYE (PYE): required
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
-        IVC (IVC): required
+        IPR (IPR): Invoice Processing Results, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PYE (PYE): Payee Information, required
+        IN1 (IN1): Insurance, required
+        IN2 (Optional[IN2]): Insurance Additional Information, optional
+        IVC (IVC): Invoice Segment, required
         PRODUCT_SERVICE_SECTION (List[EHC_E10_PRODUCT_SERVICE_SECTION]): required
     """
 
     IPR: _IPR = Field(
         title="IPR",
-        description="Required",
+        description="Invoice Processing Results",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PYE: _PYE = Field(
         title="PYE",
-        description="Required",
+        description="Payee Information",
     )
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="Insurance",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="Insurance Additional Information",
     )
 
     IVC: _IVC = Field(
         title="IVC",
-        description="Required",
+        description="Invoice Segment",
     )
 
     PRODUCT_SERVICE_SECTION: List[_EHC_E10_PRODUCT_SERVICE_SECTION] = Field(
         min_length=1,
         title="PRODUCT_SERVICE_SECTION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

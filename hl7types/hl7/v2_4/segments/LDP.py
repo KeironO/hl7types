@@ -19,45 +19,45 @@ from ..datatypes.XTN import XTN
 
 
 class LDP(HL7Model):
-    """HL7 v2 LDP segment.
+    """Location Department (S8.9.5).
 
     Attributes
     ----------
     ldp_1 : PL
-        LDP.1 (req) - Primary Key Value - LDP (PL)
+        LDP.1 (req) - Primary Key Value - LDP (PL) S8.9.5.1
 
     ldp_2 : CE
-        LDP.2 (req) - Location Department (CE)
+        LDP.2 (req) - Location Department (CE) S8.9.6.2 | 0264 - Location department
 
     ldp_3 : list[str] | None
-        LDP.3 (opt, rep) - Location Service (IS)
+        LDP.3 (opt, rep) - Location Service (IS) S8.9.5.3 | 0069 - Hospital service
 
     ldp_4 : list[CE] | None
-        LDP.4 (opt, rep) - Specialty Type (CE)
+        LDP.4 (opt, rep) - Specialty Type (CE) S8.9.5.4 | 0265 - Specialty type
 
     ldp_5 : list[str] | None
-        LDP.5 (opt, rep) - Valid Patient Classes (IS)
+        LDP.5 (opt, rep) - Valid Patient Classes (IS) S8.10.3.4 | 0004 - Patient class
 
     ldp_6 : str | None
-        LDP.6 (opt) - Active/Inactive Flag (ID)
+        LDP.6 (opt) - Active/Inactive Flag (ID) S15.4.6.7 | 0183 - Active/inactive
 
     ldp_7 : TS | None
-        LDP.7 (opt) - Activation Date  LDP (TS)
+        LDP.7 (opt) - Activation Date  LDP (TS) S8.9.5.7
 
     ldp_8 : TS | None
-        LDP.8 (opt) - Inactivation Date - LDP (TS)
+        LDP.8 (opt) - Inactivation Date - LDP (TS) S8.9.5.8
 
     ldp_9 : str | None
-        LDP.9 (opt) - Inactivated Reason (ST)
+        LDP.9 (opt) - Inactivated Reason (ST) S8.9.5.9
 
     ldp_10 : list[VH] | None
-        LDP.10 (opt, rep) - Visiting Hours (VH)
+        LDP.10 (opt, rep) - Visiting Hours (VH) S8.9.5.10 | 0267 - Days of the week
 
     ldp_11 : XTN | None
-        LDP.11 (opt) - Contact Phone (XTN)
+        LDP.11 (opt) - Contact Phone (XTN) S8.9.5.11
 
     ldp_12 : CE | None
-        LDP.12 (opt) - Location Cost Center (CE)
+        LDP.12 (opt) - Location Cost Center (CE) S8.9.5.12 | 0462 - Location cost center
     """
 
     ldp_1: PL = Field(

@@ -17,30 +17,30 @@ from ..datatypes.EI import EI
 
 
 class PTH(HL7Model):
-    """HL7 v2 PTH segment.
+    """Pathway (S12.4.3).
 
     Attributes
     ----------
     pth_1 : str
-        PTH.1 (req) - Action Code (ID)
+        PTH.1 (req) - Action Code (ID) S12.4.1.1 | 0287 - Problem/goal action code
 
     pth_2 : CWE
-        PTH.2 (req) - Pathway ID (CWE)
+        PTH.2 (req) - Pathway ID (CWE) S12.4.3.2
 
     pth_3 : EI
-        PTH.3 (req) - Pathway Instance ID (EI)
+        PTH.3 (req) - Pathway Instance ID (EI) S12.4.3.3
 
     pth_4 : str
-        PTH.4 (req) - Pathway Established Date/Time (DTM)
+        PTH.4 (req) - Pathway Established Date/Time (DTM) S12.4.3.4
 
     pth_5 : CWE | None
-        PTH.5 (opt) - Pathway Life Cycle Status (CWE)
+        PTH.5 (opt) - Pathway Life Cycle Status (CWE) S12.4.3.5
 
     pth_6 : str | None
-        PTH.6 (opt) - Change Pathway Life Cycle Status Date/Time (DTM)
+        PTH.6 (opt) - Change Pathway Life Cycle Status Date/Time (DTM) S12.4.3.6
 
     pth_7 : CNE | None
-        PTH.7 (opt) - Mood Code (CNE)
+        PTH.7 (opt) - Mood Code (CNE) S12.4.3.7 | 0725 - Mood Codes
     """
 
     pth_1: str = Field(

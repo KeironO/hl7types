@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class SCV(HL7Model):
-    """HL7 v2 SCV data type.
+    """Scheduling class value pair (S2.9.39).
 
     Attributes
     ----------

@@ -16,27 +16,27 @@ from ..datatypes.EI import EI
 
 
 class PSG(HL7Model):
-    """HL7 v2 PSG segment.
+    """Product/Service Group (S16.4.5).
 
     Attributes
     ----------
     psg_1 : EI
-        PSG.1 (req) - Provider Product/Service Group Number (EI)
+        PSG.1 (req) - Provider Product/Service Group Number (EI) S16.4.5.1
 
     psg_2 : EI | None
-        PSG.2 (opt) - Payer Product/Service Group Number (EI)
+        PSG.2 (opt) - Payer Product/Service Group Number (EI) S16.4.5.2
 
     psg_3 : str
-        PSG.3 (req) - Product/Service Group Sequence Number (SI)
+        PSG.3 (req) - Product/Service Group Sequence Number (SI) S16.4.5.3
 
     psg_4 : str
-        PSG.4 (req) - Adjudicate as Group (ID)
+        PSG.4 (req) - Adjudicate as Group (ID) S16.4.5.4 | 0136 - Yes/no Indicator
 
     psg_5 : CP
-        PSG.5 (req) - Product/Service Group Billed Amount (CP)
+        PSG.5 (req) - Product/Service Group Billed Amount (CP) S16.4.5.5
 
     psg_6 : str
-        PSG.6 (req) - Product/Service Group Description (ST)
+        PSG.6 (req) - Product/Service Group Description (ST) S16.4.5.6
     """
 
     psg_1: EI = Field(

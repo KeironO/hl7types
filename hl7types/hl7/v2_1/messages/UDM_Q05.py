@@ -28,38 +28,38 @@ class UDM_Q05(HL7Model):
     """HL7 v2 UDM_Q05 message.
 
     Attributes:
-        MSH (MSH): required
-        URD (URD): required
-        URS (Optional[URS]): optional
-        DSP (List[DSP]): required
-        DSC (DSC): required
+        MSH (MSH): MESSAGE HEADER, required
+        URD (URD): RESULTS/UPDATE DEFINITION, required
+        URS (Optional[URS]): UNSOLICITED SELECTION, optional
+        DSP (List[DSP]): DISPLAY DATA, required
+        DSC (DSC): CONTINUATION POINTER, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     URD: _URD = Field(
         title="URD",
-        description="Required",
+        description="RESULTS/UPDATE DEFINITION",
     )
 
     URS: Optional[_URS] = Field(
         default=None,
         title="URS",
-        description="Optional",
+        description="UNSOLICITED SELECTION",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="DISPLAY DATA",
     )
 
     DSC: _DSC = Field(
         title="DSC",
-        description="Required",
+        description="CONTINUATION POINTER",
     )
 
     model_config = {"populate_by_name": True}

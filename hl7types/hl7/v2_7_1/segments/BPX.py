@@ -21,72 +21,72 @@ from ..datatypes.XON import XON
 
 
 class BPX(HL7Model):
-    """HL7 v2 BPX segment.
+    """Blood product dispense status (S4.13.2).
 
     Attributes
     ----------
     bpx_1 : str
-        BPX.1 (req) - Set ID - BPX (SI)
+        BPX.1 (req) - Set ID - BPX (SI) S4.13.2.1
 
     bpx_2 : CWE
-        BPX.2 (req) - BP Dispense Status (CWE)
+        BPX.2 (req) - BP Dispense Status (CWE) S4.13.2.2 | 0510 - Blood Product Dispense Status
 
     bpx_3 : str
-        BPX.3 (req) - BP Status (ID)
+        BPX.3 (req) - BP Status (ID) S4.13.2.3 | 0511 - BP Observation Status Codes Interpretation
 
     bpx_4 : str
-        BPX.4 (req) - BP Date/Time of Status (DTM)
+        BPX.4 (req) - BP Date/Time of Status (DTM) S4.13.2.4
 
     bpx_5 : EI | None
-        BPX.5 (opt) - BC Donation ID (EI)
+        BPX.5 (opt) - BC Donation ID (EI) S4.13.2.5
 
     bpx_6 : CNE | None
-        BPX.6 (opt) - BC Component (CNE)
+        BPX.6 (opt) - BC Component (CNE) S4.13.2.6 | 9999 - no table for CE
 
     bpx_7 : CNE | None
-        BPX.7 (opt) - BC Donation Type / Intended Use (CNE)
+        BPX.7 (opt) - BC Donation Type / Intended Use (CNE) S4.13.2.7 | 9999 - no table for CE
 
     bpx_8 : CWE | None
-        BPX.8 (opt) - CP Commercial Product (CWE)
+        BPX.8 (opt) - CP Commercial Product (CWE) S4.13.2.8 | 0512 - Commercial Product
 
     bpx_9 : XON | None
-        BPX.9 (opt) - CP Manufacturer (XON)
+        BPX.9 (opt) - CP Manufacturer (XON) S4.13.2.9
 
     bpx_10 : EI | None
-        BPX.10 (opt) - CP Lot Number (EI)
+        BPX.10 (opt) - CP Lot Number (EI) S4.13.2.10
 
     bpx_11 : CNE | None
-        BPX.11 (opt) - BP Blood Group (CNE)
+        BPX.11 (opt) - BP Blood Group (CNE) S4.13.2.11 | 9999 - no table for CE
 
     bpx_12 : list[CNE] | None
-        BPX.12 (opt, rep) - BC Special Testing (CNE)
+        BPX.12 (opt, rep) - BC Special Testing (CNE) S4.13.2.12 | 9999 - no table for CE
 
     bpx_13 : str | None
-        BPX.13 (opt) - BP Expiration Date/Time (DTM)
+        BPX.13 (opt) - BP Expiration Date/Time (DTM) S4.13.2.13
 
     bpx_14 : str
-        BPX.14 (req) - BP Quantity (NM)
+        BPX.14 (req) - BP Quantity (NM) S4.13.2.14
 
     bpx_15 : str | None
-        BPX.15 (opt) - BP Amount (NM)
+        BPX.15 (opt) - BP Amount (NM) S4.13.2.15
 
     bpx_16 : CWE | None
-        BPX.16 (opt) - BP Units (CWE)
+        BPX.16 (opt) - BP Units (CWE) S4.13.2.16 | 9999 - no table for CE
 
     bpx_17 : EI | None
-        BPX.17 (opt) - BP Unique ID (EI)
+        BPX.17 (opt) - BP Unique ID (EI) S4.13.2.17
 
     bpx_18 : PL | None
-        BPX.18 (opt) - BP Actual Dispensed To Location (PL)
+        BPX.18 (opt) - BP Actual Dispensed To Location (PL) S4.13.2.18
 
     bpx_19 : XAD | None
-        BPX.19 (opt) - BP Actual Dispensed To Address (XAD)
+        BPX.19 (opt) - BP Actual Dispensed To Address (XAD) S4.13.2.19
 
     bpx_20 : XCN | None
-        BPX.20 (opt) - BP Dispensed to Receiver (XCN)
+        BPX.20 (opt) - BP Dispensed to Receiver (XCN) S4.13.2.20
 
     bpx_21 : XCN | None
-        BPX.21 (opt) - BP Dispensing Individual (XCN)
+        BPX.21 (opt) - BP Dispensing Individual (XCN) S4.13.2.21
     """
 
     bpx_1: str = Field(

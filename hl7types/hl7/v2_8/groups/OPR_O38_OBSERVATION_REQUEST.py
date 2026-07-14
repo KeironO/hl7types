@@ -24,25 +24,25 @@ class OPR_O38_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 OPR_O38.OBSERVATION_REQUEST group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
-        OBR (OBR): required
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        OBR (OBR): Observation Request, required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,30 +15,30 @@ from ..datatypes.CE import CE
 
 
 class RQ1(HL7Model):
-    """HL7 v2 RQ1 segment.
+    """Requisition detail-1 segment (S4.7.2).
 
     Attributes
     ----------
     rq1_1 : str | None
-        RQ1.1 (opt) - Anticipated Price (ST)
+        RQ1.1 (opt) - Anticipated Price (ST) S4.7.2.1
 
     rq1_2 : CE | None
-        RQ1.2 (opt) - Manufactured ID (CE)
+        RQ1.2 (opt) - Manufactured ID (CE) S4.7.2.2
 
     rq1_3 : str | None
-        RQ1.3 (opt) - Manufacturer's Catalog (ST)
+        RQ1.3 (opt) - Manufacturer's Catalog (ST) S4.7.2.3
 
     rq1_4 : CE | None
-        RQ1.4 (opt) - Vendor ID (CE)
+        RQ1.4 (opt) - Vendor ID (CE) S4.7.2.4
 
     rq1_5 : str | None
-        RQ1.5 (opt) - Vendor Catalog (ST)
+        RQ1.5 (opt) - Vendor Catalog (ST) S4.7.2.5
 
     rq1_6 : str | None
-        RQ1.6 (opt) - Taxable (ID)
+        RQ1.6 (opt) - Taxable (ID) S4.7.2.6 | 0136 - Yes/No Indicator
 
     rq1_7 : str | None
-        RQ1.7 (opt) - Substitute Allowed (ID)
+        RQ1.7 (opt) - Substitute Allowed (ID) S4.7.2.7 | 0136 - Yes/No Indicator
     """
 
     rq1_1: Optional[str] = Field(

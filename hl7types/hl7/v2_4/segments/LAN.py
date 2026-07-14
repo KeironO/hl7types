@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class LAN(HL7Model):
-    """HL7 v2 LAN segment.
+    """Language Detail (S15.4.3).
 
     Attributes
     ----------
     lan_1 : str
-        LAN.1 (req) - Set ID - LAN (SI)
+        LAN.1 (req) - Set ID - LAN (SI) S15.4.3.1
 
     lan_2 : CE
-        LAN.2 (req) - Language Code (CE)
+        LAN.2 (req) - Language Code (CE) S15.4.3.2 | 0296 - Primary language
 
     lan_3 : list[CE] | None
-        LAN.3 (opt, rep) - Language Ability Code (CE)
+        LAN.3 (opt, rep) - Language Ability Code (CE) S15.4.3.3 | 0403 - Language ability
 
     lan_4 : CE | None
-        LAN.4 (opt) - Language Proficiency Code (CE)
+        LAN.4 (opt) - Language Proficiency Code (CE) S15.4.3.4 | 0404 - Language proficiency
     """
 
     lan_1: str = Field(

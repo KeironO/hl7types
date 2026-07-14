@@ -17,45 +17,45 @@ from ..datatypes.XCN import XCN
 
 
 class AIP(HL7Model):
-    """HL7 v2 AIP segment.
+    """Appointment Information - Personnel Resource (S10.6.7).
 
     Attributes
     ----------
     aip_1 : str
-        AIP.1 (req) - Set ID - AIP (SI)
+        AIP.1 (req) - Set ID - AIP (SI) S10.6.7.1
 
     aip_2 : str | None
-        AIP.2 (opt) - Segment Action Code (ID)
+        AIP.2 (opt) - Segment Action Code (ID) S10.6.3.2 | 0206 - Segment action code
 
     aip_3 : list[XCN] | None
-        AIP.3 (opt, rep) - Personnel Resource ID (XCN)
+        AIP.3 (opt, rep) - Personnel Resource ID (XCN) S10.6.7.3
 
     aip_4 : CE | None
-        AIP.4 (opt) - Resource Type (CE)
+        AIP.4 (opt) - Resource Type (CE) S10.6.7.4 | 0182 - Staff type
 
     aip_5 : CE | None
-        AIP.5 (opt) - Resource Group (CE)
+        AIP.5 (opt) - Resource Group (CE) S10.6.5.5
 
     aip_6 : TS | None
-        AIP.6 (opt) - Start Date/Time (TS)
+        AIP.6 (opt) - Start Date/Time (TS) S10.6.4.4
 
     aip_7 : str | None
-        AIP.7 (opt) - Start Date/Time Offset (NM)
+        AIP.7 (opt) - Start Date/Time Offset (NM) S10.6.4.5
 
     aip_8 : CE | None
-        AIP.8 (opt) - Start Date/Time Offset Units (CE)
+        AIP.8 (opt) - Start Date/Time Offset Units (CE) S10.6.4.6
 
     aip_9 : str | None
-        AIP.9 (opt) - Duration (NM)
+        AIP.9 (opt) - Duration (NM) S10.6.4.7
 
     aip_10 : CE | None
-        AIP.10 (opt) - Duration Units (CE)
+        AIP.10 (opt) - Duration Units (CE) S10.6.4.8
 
     aip_11 : str | None
-        AIP.11 (opt) - Allow Substitution Code (IS)
+        AIP.11 (opt) - Allow Substitution Code (IS) S10.6.4.9 | 0279 - Allow Substitution Codes
 
     aip_12 : CE | None
-        AIP.12 (opt) - Filler Status Code (CE)
+        AIP.12 (opt) - Filler Status Code (CE) S10.6.2.25 | 0278 - Filler status codes
     """
 
     aip_1: str = Field(

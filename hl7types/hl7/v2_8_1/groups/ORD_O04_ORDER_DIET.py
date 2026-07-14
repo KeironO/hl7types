@@ -29,40 +29,39 @@ class ORD_O04_ORDER_DIET(HL7Model):
     """HL7 v2 ORD_O04.ORDER_DIET group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING_DIET (Optional[List[ORD_O04_TIMING_DIET]]): optional
-        ODS (Optional[List[ODS]]): optional
-        NTE (Optional[List[NTE]]): optional
+        ODS (Optional[List[ODS]]): Dietary Orders, Supplements, and Preferences, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING_DIET: Optional[List[_ORD_O04_TIMING_DIET]] = Field(
         default=None,
         title="TIMING_DIET",
-        description="Optional, repeating",
     )
 
     ODS: Optional[List[_ODS]] = Field(
         default=None,
         title="ODS",
-        description="Optional, repeating",
+        description="Dietary Orders, Supplements, and Preferences",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

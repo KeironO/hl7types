@@ -27,33 +27,32 @@ class RGV_O15_ENCODING(HL7Model):
     """HL7 v2 RGV_O15.ENCODING group.
 
     Attributes:
-        RXE (RXE): required
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
         TIMING_ENCODED (List[RGV_O15_TIMING_ENCODED]): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     TIMING_ENCODED: List[_RGV_O15_TIMING_ENCODED] = Field(
         min_length=1,
         title="TIMING_ENCODED",
-        description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     model_config = {"populate_by_name": True}

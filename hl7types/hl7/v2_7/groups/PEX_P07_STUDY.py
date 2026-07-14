@@ -22,19 +22,19 @@ class PEX_P07_STUDY(HL7Model):
     """HL7 v2 PEX_P07.STUDY group.
 
     Attributes:
-        CSR (CSR): required
-        CSP (Optional[List[CSP]]): optional
+        CSR (CSR): Clinical Study Registration, required
+        CSP (Optional[List[CSP]]): Clinical Study Phase, optional
     """
 
     CSR: _CSR = Field(
         title="CSR",
-        description="Required",
+        description="Clinical Study Registration",
     )
 
     CSP: Optional[List[_CSP]] = Field(
         default=None,
         title="CSP",
-        description="Optional, repeating",
+        description="Clinical Study Phase",
     )
 
     model_config = {"populate_by_name": True}

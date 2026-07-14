@@ -24,26 +24,26 @@ class ADT_A31_INSURANCE(HL7Model):
     """HL7 v2 ADT_A31.INSURANCE group.
 
     Attributes:
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
-        IN3 (Optional[IN3]): optional
+        IN1 (IN1): INSURANCE, required
+        IN2 (Optional[IN2]): INSURANCE ADDITIONAL INFO, optional
+        IN3 (Optional[IN3]): INSURANCE ADDITIONAL INFO-CERTIFICATION, optional
     """
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="INSURANCE",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="INSURANCE ADDITIONAL INFO",
     )
 
     IN3: Optional[_IN3] = Field(
         default=None,
         title="IN3",
-        description="Optional",
+        description="INSURANCE ADDITIONAL INFO-CERTIFICATION",
     )
 
     model_config = {"populate_by_name": True}

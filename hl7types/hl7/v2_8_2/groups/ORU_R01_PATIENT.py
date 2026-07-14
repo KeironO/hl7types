@@ -35,61 +35,59 @@ class ORU_R01_PATIENT(HL7Model):
     """HL7 v2 ORU_R01.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
-        NK1 (Optional[List[NK1]]): optional
-        ARV (Optional[List[ARV]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
         PATIENT_OBSERVATION (Optional[List[ORU_R01_PATIENT_OBSERVATION]]): optional
         VISIT (Optional[ORU_R01_VISIT]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     PATIENT_OBSERVATION: Optional[List[_ORU_R01_PATIENT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_OBSERVATION",
-        description="Optional, repeating",
     )
 
     VISIT: Optional[_ORU_R01_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

@@ -25,7 +25,7 @@ class DFT_P11_COMMON_ORDER(HL7Model):
     """HL7 v2 DFT_P11.COMMON_ORDER group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
+        ORC (Optional[ORC]): Common Order, optional
         ORDER (Optional[DFT_P11_ORDER]): optional
         OBSERVATION (Optional[List[DFT_P11_OBSERVATION]]): optional
     """
@@ -33,19 +33,17 @@ class DFT_P11_COMMON_ORDER(HL7Model):
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     ORDER: Optional[_DFT_P11_ORDER] = Field(
         default=None,
         title="ORDER",
-        description="Optional",
     )
 
     OBSERVATION: Optional[List[_DFT_P11_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -25,42 +25,42 @@ _SFT = SFT
 
 
 class LSU_U12(HL7Model):
-    """HL7 v2 LSU_U12 message.
+    """LSU/ACK - Automated equipment log/service update (S13.3.12).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EQU (EQU): required
-        EQP (List[EQP]): required
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EQU (EQU): Equipment Detail, required
+        EQP (List[EQP]): Equipment/log Service, required
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     EQP: List[_EQP] = Field(
         min_length=1,
         title="EQP",
-        description="Required, repeating",
+        description="Equipment/log Service",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

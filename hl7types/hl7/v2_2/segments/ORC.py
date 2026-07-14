@@ -17,66 +17,66 @@ from ..datatypes.TS import TS
 
 
 class ORC(HL7Model):
-    """HL7 v2 ORC segment.
+    """COMMOM ORDER (S4.3.1).
 
     Attributes
     ----------
     orc_1 : str
-        ORC.1 (req) - Order Control (ID)
+        ORC.1 (req) - Order Control (ID) S4.3.1.1 | 0119 - ORDER CONTROL
 
     orc_2 : str | None
-        ORC.2 (opt) - Placer Order Number (CM)
+        ORC.2 (opt) - Placer Order Number (CM) S4.5.1.2
 
     orc_3 : str | None
-        ORC.3 (opt) - Filler Order Number (CM)
+        ORC.3 (opt) - Filler Order Number (CM) S6.4.1.23
 
     orc_4 : str | None
-        ORC.4 (opt) - Placer Group Number (CM)
+        ORC.4 (opt) - Placer Group Number (CM) S4.3.1.4
 
     orc_5 : str | None
-        ORC.5 (opt) - Order Status (ID)
+        ORC.5 (opt) - Order Status (ID) S4.3.1.5 | 0038 - ORDER STATUS
 
     orc_6 : str | None
-        ORC.6 (opt) - Response Flag (ID)
+        ORC.6 (opt) - Response Flag (ID) S4.3.1.6 | 0121 - RESPONSE FLAG
 
     orc_7 : list[TQ] | None
-        ORC.7 (opt, rep) - Quantity / timing (TQ)
+        ORC.7 (opt, rep) - Quantity / timing (TQ) S4.8.12.3
 
     orc_8 : str | None
-        ORC.8 (opt) - Parent (CM)
+        ORC.8 (opt) - Parent (CM) S4.3.1.8
 
     orc_9 : TS | None
-        ORC.9 (opt) - Date / time of transaction (TS)
+        ORC.9 (opt) - Date / time of transaction (TS) S4.3.1.9
 
     orc_10 : str | None
-        ORC.10 (opt) - Entered By (CN)
+        ORC.10 (opt) - Entered By (CN) S4.3.1.10
 
     orc_11 : str | None
-        ORC.11 (opt) - Verified By (CN)
+        ORC.11 (opt) - Verified By (CN) S4.3.1.11
 
     orc_12 : str | None
-        ORC.12 (opt) - Ordering Provider (CN)
+        ORC.12 (opt) - Ordering Provider (CN) S4.5.1.16
 
     orc_13 : str | None
-        ORC.13 (opt) - Enterer's Location (CM)
+        ORC.13 (opt) - Enterer's Location (CM) S4.3.1.13
 
     orc_14 : list[str] | None
-        ORC.14 (opt, rep) - Call Back Phone Number (TN)
+        ORC.14 (opt, rep) - Call Back Phone Number (TN) S4.3.1.14
 
     orc_15 : TS | None
-        ORC.15 (opt) - Order effective date / time (TS)
+        ORC.15 (opt) - Order effective date / time (TS) S4.3.1.15
 
     orc_16 : CE | None
-        ORC.16 (opt) - Order Control Code Reason (CE)
+        ORC.16 (opt) - Order Control Code Reason (CE) S4.3.1.16
 
     orc_17 : CE | None
-        ORC.17 (opt) - Entering Organization (CE)
+        ORC.17 (opt) - Entering Organization (CE) S4.3.1.17
 
     orc_18 : CE | None
-        ORC.18 (opt) - Entering Device (CE)
+        ORC.18 (opt) - Entering Device (CE) S4.3.1.18
 
     orc_19 : str | None
-        ORC.19 (opt) - Action by (CN)
+        ORC.19 (opt) - Action by (CN) S4.3.1.19
     """
 
     orc_1: str = Field(

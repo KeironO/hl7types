@@ -26,33 +26,33 @@ class CCI_I22_MEDICATION_ENCODING_DETAIL(HL7Model):
     """HL7 v2 CCI_I22.MEDICATION_ENCODING_DETAIL group.
 
     Attributes:
-        RXE (RXE): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
-        OBX (Optional[List[OBX]]): optional
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

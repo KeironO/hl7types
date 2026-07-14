@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class QAK(HL7Model):
-    """HL7 v2 QAK segment.
+    """Query Acknowledgement (S2.24.22).
 
     Attributes
     ----------
     qak_1 : str | None
-        QAK.1 (opt) - Query Tag (ST)
+        QAK.1 (opt) - Query Tag (ST) S2.24.22.1
 
     qak_2 : str | None
-        QAK.2 (opt) - Query Response Status (ID)
+        QAK.2 (opt) - Query Response Status (ID) S2.24.22.2 | 0208 - Query response status
     """
 
     qak_1: Optional[str] = Field(

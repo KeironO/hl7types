@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class NST(HL7Model):
-    """HL7 v2 NST segment.
+    """STATISTICS.
 
     Attributes
     ----------

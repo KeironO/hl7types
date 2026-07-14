@@ -23,20 +23,19 @@ class PIN_I07_GUARANTOR_INSURANCE(HL7Model):
     """HL7 v2 PIN_I07.GUARANTOR_INSURANCE group.
 
     Attributes:
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): GT1 - guarantor segment, optional
         INSURANCE (List[PIN_I07_INSURANCE]): required
     """
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="GT1 - guarantor segment",
     )
 
     INSURANCE: List[_PIN_I07_INSURANCE] = Field(
         min_length=1,
         title="INSURANCE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

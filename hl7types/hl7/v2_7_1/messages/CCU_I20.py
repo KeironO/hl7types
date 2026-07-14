@@ -48,16 +48,16 @@ _UAC = UAC
 
 
 class CCU_I20(HL7Model):
-    """HL7 v2 CCU_I20 message.
+    """Asynchronous Collaborative Care Update (S11.5.6).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        RF1 (RF1): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        RF1 (RF1): Referral Information, required
         PROVIDER_CONTACT (Optional[List[CCU_I20_PROVIDER_CONTACT]]): optional
         PATIENT (Optional[List[CCU_I20_PATIENT]]): optional
-        NK1 (Optional[List[NK1]]): optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
         INSURANCE (Optional[List[CCU_I20_INSURANCE]]): optional
         APPOINTMENT_HISTORY (Optional[List[CCU_I20_APPOINTMENT_HISTORY]]): optional
         CLINICAL_HISTORY (Optional[List[CCU_I20_CLINICAL_HISTORY]]): optional
@@ -66,101 +66,91 @@ class CCU_I20(HL7Model):
         PROBLEM (Optional[List[CCU_I20_PROBLEM]]): optional
         GOAL (Optional[List[CCU_I20_GOAL]]): optional
         PATHWAY (Optional[List[CCU_I20_PATHWAY]]): optional
-        REL (Optional[List[REL]]): optional
+        REL (Optional[List[REL]]): Clinical Relationship Segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     RF1: _RF1 = Field(
         title="RF1",
-        description="Required",
+        description="Referral Information",
     )
 
     PROVIDER_CONTACT: Optional[List[_CCU_I20_PROVIDER_CONTACT]] = Field(
         default=None,
         title="PROVIDER_CONTACT",
-        description="Optional, repeating",
     )
 
     PATIENT: Optional[List[_CCU_I20_PATIENT]] = Field(
         default=None,
         title="PATIENT",
-        description="Optional, repeating",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     INSURANCE: Optional[List[_CCU_I20_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     APPOINTMENT_HISTORY: Optional[List[_CCU_I20_APPOINTMENT_HISTORY]] = Field(
         default=None,
         title="APPOINTMENT_HISTORY",
-        description="Optional, repeating",
     )
 
     CLINICAL_HISTORY: Optional[List[_CCU_I20_CLINICAL_HISTORY]] = Field(
         default=None,
         title="CLINICAL_HISTORY",
-        description="Optional, repeating",
     )
 
     PATIENT_VISITS: List[_CCU_I20_PATIENT_VISITS] = Field(
         min_length=1,
         title="PATIENT_VISITS",
-        description="Required, repeating",
     )
 
     MEDICATION_HISTORY: Optional[List[_CCU_I20_MEDICATION_HISTORY]] = Field(
         default=None,
         title="MEDICATION_HISTORY",
-        description="Optional, repeating",
     )
 
     PROBLEM: Optional[List[_CCU_I20_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
-        description="Optional, repeating",
     )
 
     GOAL: Optional[List[_CCU_I20_GOAL]] = Field(
         default=None,
         title="GOAL",
-        description="Optional, repeating",
     )
 
     PATHWAY: Optional[List[_CCU_I20_PATHWAY]] = Field(
         default=None,
         title="PATHWAY",
-        description="Optional, repeating",
     )
 
     REL: Optional[List[_REL]] = Field(
         default=None,
         title="REL",
-        description="Optional, repeating",
+        description="Clinical Relationship Segment",
     )
 
     model_config = {"populate_by_name": True}

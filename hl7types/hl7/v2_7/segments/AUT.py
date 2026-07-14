@@ -18,45 +18,45 @@ from ..datatypes.EI import EI
 
 
 class AUT(HL7Model):
-    """HL7 v2 AUT segment.
+    """Authorization Information (S11.8.2).
 
     Attributes
     ----------
     aut_1 : CWE | None
-        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE)
+        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE) S11.8.2.1 | 0072 - Insurance plan ID
 
     aut_2 : CWE
-        AUT.2 (req) - Authorizing Payor, Company ID (CWE)
+        AUT.2 (req) - Authorizing Payor, Company ID (CWE) S11.8.2.2 | 0285 - Insurance Company ID Codes
 
     aut_3 : str | None
-        AUT.3 (opt) - Authorizing Payor, Company Name (ST)
+        AUT.3 (opt) - Authorizing Payor, Company Name (ST) S11.8.2.3
 
     aut_4 : str | None
-        AUT.4 (opt) - Authorization Effective Date (DTM)
+        AUT.4 (opt) - Authorization Effective Date (DTM) S11.8.2.4
 
     aut_5 : str | None
-        AUT.5 (opt) - Authorization Expiration Date (DTM)
+        AUT.5 (opt) - Authorization Expiration Date (DTM) S11.8.2.5
 
     aut_6 : EI | None
-        AUT.6 (opt) - Authorization Identifier (EI)
+        AUT.6 (opt) - Authorization Identifier (EI) S11.8.2.6
 
     aut_7 : CP | None
-        AUT.7 (opt) - Reimbursement Limit (CP)
+        AUT.7 (opt) - Reimbursement Limit (CP) S11.8.2.7
 
     aut_8 : CQ | None
-        AUT.8 (opt) - Requested Number of Treatments (CQ)
+        AUT.8 (opt) - Requested Number of Treatments (CQ) S11.8.2.8
 
     aut_9 : CQ | None
-        AUT.9 (opt) - Authorized Number of Treatments (CQ)
+        AUT.9 (opt) - Authorized Number of Treatments (CQ) S11.8.2.9
 
     aut_10 : str | None
-        AUT.10 (opt) - Process Date (DTM)
+        AUT.10 (opt) - Process Date (DTM) S11.8.1.9
 
     aut_11 : list[CWE] | None
-        AUT.11 (opt, rep) - Requested Discipline(s) (CWE)
+        AUT.11 (opt, rep) - Requested Discipline(s) (CWE) S11.8.2.11
 
     aut_12 : list[CWE] | None
-        AUT.12 (opt, rep) - Authorized Discipline(s) (CWE)
+        AUT.12 (opt, rep) - Authorized Discipline(s) (CWE) S11.8.2.12
     """
 
     aut_1: Optional[CWE] = Field(

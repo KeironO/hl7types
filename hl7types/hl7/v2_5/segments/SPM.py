@@ -19,96 +19,96 @@ from ..datatypes.TS import TS
 
 
 class SPM(HL7Model):
-    """HL7 v2 SPM segment.
+    """Specimen (S7.4.3).
 
     Attributes
     ----------
     spm_1 : str | None
-        SPM.1 (opt) - Set ID _ SPM (SI)
+        SPM.1 (opt) - Set ID _ SPM (SI) S7.4.3.1
 
     spm_2 : EIP | None
-        SPM.2 (opt) - Specimen ID (EIP)
+        SPM.2 (opt) - Specimen ID (EIP) S7.4.3.2
 
     spm_3 : list[EIP] | None
-        SPM.3 (opt, rep) - Specimen Parent IDs (EIP)
+        SPM.3 (opt, rep) - Specimen Parent IDs (EIP) S7.4.3.3
 
     spm_4 : CWE
-        SPM.4 (req) - Specimen Type (CWE)
+        SPM.4 (req) - Specimen Type (CWE) S7.4.3.4 | 0487 - Specimen Type
 
     spm_5 : list[CWE] | None
-        SPM.5 (opt, rep) - Specimen Type Modifier (CWE)
+        SPM.5 (opt, rep) - Specimen Type Modifier (CWE) S7.4.3.5 | 0541 - Specimen Type Modifier
 
     spm_6 : list[CWE] | None
-        SPM.6 (opt, rep) - Specimen Additives (CWE)
+        SPM.6 (opt, rep) - Specimen Additives (CWE) S7.4.3.6 | 0371 - Additive/Preservative
 
     spm_7 : CWE | None
-        SPM.7 (opt) - Specimen Collection Method (CWE)
+        SPM.7 (opt) - Specimen Collection Method (CWE) S7.4.3.7 | 0488 - Specimen Collection Method
 
     spm_8 : CWE | None
-        SPM.8 (opt) - Specimen Source Site (CWE)
+        SPM.8 (opt) - Specimen Source Site (CWE) S7.4.3.8
 
     spm_9 : list[CWE] | None
-        SPM.9 (opt, rep) - Specimen Source Site Modifier (CWE)
+        SPM.9 (opt, rep) - Specimen Source Site Modifier (CWE) S7.4.3.9 | 0542 - Specimen Source Type Modifier
 
     spm_10 : CWE | None
-        SPM.10 (opt) - Specimen Collection Site (CWE)
+        SPM.10 (opt) - Specimen Collection Site (CWE) S7.4.3.10 | 0543 - Specimen Collection Site
 
     spm_11 : list[CWE] | None
-        SPM.11 (opt, rep) - Specimen Role (CWE)
+        SPM.11 (opt, rep) - Specimen Role (CWE) S7.4.3.11 | 0369 - Specimen Role
 
     spm_12 : CQ | None
-        SPM.12 (opt) - Specimen Collection Amount (CQ)
+        SPM.12 (opt) - Specimen Collection Amount (CQ) S7.4.3.12
 
     spm_13 : str | None
-        SPM.13 (opt) - Grouped Specimen Count (NM)
+        SPM.13 (opt) - Grouped Specimen Count (NM) S7.4.3.13
 
     spm_14 : list[str] | None
-        SPM.14 (opt, rep) - Specimen Description (ST)
+        SPM.14 (opt, rep) - Specimen Description (ST) S7.4.3.14
 
     spm_15 : list[CWE] | None
-        SPM.15 (opt, rep) - Specimen Handling Code (CWE)
+        SPM.15 (opt, rep) - Specimen Handling Code (CWE) S7.4.3.15 | 0376 - Special Handling Code
 
     spm_16 : list[CWE] | None
-        SPM.16 (opt, rep) - Specimen Risk Code (CWE)
+        SPM.16 (opt, rep) - Specimen Risk Code (CWE) S7.4.3.16 | 0489 - Risk Codes
 
     spm_17 : DR | None
-        SPM.17 (opt) - Specimen Collection Date/Time (DR)
+        SPM.17 (opt) - Specimen Collection Date/Time (DR) S7.4.3.17
 
     spm_18 : TS | None
-        SPM.18 (opt) - Specimen Received Date/Time (TS)
+        SPM.18 (opt) - Specimen Received Date/Time (TS) S4.5.3.14
 
     spm_19 : TS | None
-        SPM.19 (opt) - Specimen Expiration Date/Time (TS)
+        SPM.19 (opt) - Specimen Expiration Date/Time (TS) S7.4.3.19
 
     spm_20 : str | None
-        SPM.20 (opt) - Specimen Availability (ID)
+        SPM.20 (opt) - Specimen Availability (ID) S7.4.3.20 | 0136 - Yes/no indicator
 
     spm_21 : list[CWE] | None
-        SPM.21 (opt, rep) - Specimen Reject Reason (CWE)
+        SPM.21 (opt, rep) - Specimen Reject Reason (CWE) S7.4.3.21 | 0490 - Specimen Reject Reason
 
     spm_22 : CWE | None
-        SPM.22 (opt) - Specimen Quality (CWE)
+        SPM.22 (opt) - Specimen Quality (CWE) S7.4.3.22 | 0491 - Specimen Quality
 
     spm_23 : CWE | None
-        SPM.23 (opt) - Specimen Appropriateness (CWE)
+        SPM.23 (opt) - Specimen Appropriateness (CWE) S7.4.3.23 | 0492 - Specimen Appropriateness
 
     spm_24 : list[CWE] | None
-        SPM.24 (opt, rep) - Specimen Condition (CWE)
+        SPM.24 (opt, rep) - Specimen Condition (CWE) S7.4.3.24 | 0493 - Specimen Condition
 
     spm_25 : CQ | None
-        SPM.25 (opt) - Specimen Current Quantity (CQ)
+        SPM.25 (opt) - Specimen Current Quantity (CQ) S7.4.3.25
 
     spm_26 : str | None
-        SPM.26 (opt) - Number of Specimen Containers (NM)
+        SPM.26 (opt) - Number of Specimen Containers (NM) S7.4.3.26
 
     spm_27 : CWE | None
-        SPM.27 (opt) - Container Type (CWE)
+        SPM.27 (opt) - Container Type (CWE) S7.4.3.27
 
     spm_28 : CWE | None
-        SPM.28 (opt) - Container Condition (CWE)
+        SPM.28 (opt) - Container Condition (CWE) S7.4.3.28 | 0544 - Container Condition
 
     spm_29 : CWE | None
-        SPM.29 (opt) - Specimen Child Role (CWE)
+        SPM.29 (opt) - Specimen Child Role (CWE) S7.4.3.29 | 0494 - Specimen Child Role
     """
 
     spm_1: Optional[str] = Field(

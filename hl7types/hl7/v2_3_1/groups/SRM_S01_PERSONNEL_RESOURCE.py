@@ -24,26 +24,28 @@ class SRM_S01_PERSONNEL_RESOURCE(HL7Model):
     """HL7 v2 SRM_S01.PERSONNEL_RESOURCE group.
 
     Attributes:
-        AIP (AIP): required
-        APR (Optional[APR]): optional
-        NTE (Optional[List[NTE]]): optional
+        AIP (AIP): AIP - appointment information - personnel resource segment, required
+        APR (Optional[APR]): APR - appointment preferences segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     AIP: _AIP = Field(
         title="AIP",
-        description="Required",
+        description=(
+            "AIP - appointment information - personnel resource segment"
+        ),
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="APR - appointment preferences segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

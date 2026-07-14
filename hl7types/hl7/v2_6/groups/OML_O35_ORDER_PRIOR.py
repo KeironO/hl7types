@@ -31,10 +31,10 @@ class OML_O35_ORDER_PRIOR(HL7Model):
     """HL7 v2 OML_O35.ORDER_PRIOR group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
-        ROL (Optional[List[ROL]]): optional
+        ORC (Optional[ORC]): Common Order, optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        ROL (Optional[List[ROL]]): Role, optional
         TIMING_PRIOR (Optional[List[OML_O35_TIMING_PRIOR]]): optional
         OBSERVATION_PRIOR (List[OML_O35_OBSERVATION_PRIOR]): required
     """
@@ -42,36 +42,34 @@ class OML_O35_ORDER_PRIOR(HL7Model):
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     TIMING_PRIOR: Optional[List[_OML_O35_TIMING_PRIOR]] = Field(
         default=None,
         title="TIMING_PRIOR",
-        description="Optional, repeating",
     )
 
     OBSERVATION_PRIOR: List[_OML_O35_OBSERVATION_PRIOR] = Field(
         min_length=1,
         title="OBSERVATION_PRIOR",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

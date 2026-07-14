@@ -32,51 +32,51 @@ class ADT_A09(HL7Model):
     """HL7 v2 ADT_A09 message.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        OBX (Optional[List[OBX]]): optional
-        DG1 (Optional[List[DG1]]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        EVN (EVN): EVENT TYPE, required
+        PID (PID): PATIENT IDENTIFICATION, required
+        PV1 (PV1): PATIENT VISIT, required
+        PV2 (Optional[PV2]): PATIENT VISIT - additional information, optional
+        OBX (Optional[List[OBX]]): OBSERVATION RESULT, optional
+        DG1 (Optional[List[DG1]]): DIAGNOSIS, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVENT TYPE",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PATIENT IDENTIFICATION",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PATIENT VISIT",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="PATIENT VISIT - additional information",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBSERVATION RESULT",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DIAGNOSIS",
     )
 
     model_config = {"populate_by_name": True}

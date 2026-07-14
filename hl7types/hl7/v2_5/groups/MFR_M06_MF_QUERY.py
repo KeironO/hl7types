@@ -26,32 +26,32 @@ class MFR_M06_MF_QUERY(HL7Model):
     """HL7 v2 MFR_M06.MF_QUERY group.
 
     Attributes:
-        MFE (MFE): required
-        CM0 (CM0): required
-        CM1 (Optional[List[CM1]]): optional
-        CM2 (Optional[List[CM2]]): optional
+        MFE (MFE): Master File Entry, required
+        CM0 (CM0): Clinical Study Master, required
+        CM1 (Optional[List[CM1]]): Clinical Study Phase Master, optional
+        CM2 (Optional[List[CM2]]): Clinical Study Schedule Master, optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     CM0: _CM0 = Field(
         title="CM0",
-        description="Required",
+        description="Clinical Study Master",
     )
 
     CM1: Optional[List[_CM1]] = Field(
         default=None,
         title="CM1",
-        description="Optional, repeating",
+        description="Clinical Study Phase Master",
     )
 
     CM2: Optional[List[_CM2]] = Field(
         default=None,
         title="CM2",
-        description="Optional, repeating",
+        description="Clinical Study Schedule Master",
     )
 
     model_config = {"populate_by_name": True}

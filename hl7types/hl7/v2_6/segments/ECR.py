@@ -15,18 +15,18 @@ from ..datatypes.CWE import CWE
 
 
 class ECR(HL7Model):
-    """HL7 v2 ECR segment.
+    """Equipment Command Response (S13.4.6).
 
     Attributes
     ----------
     ecr_1 : CWE
-        ECR.1 (req) - Command Response (CWE)
+        ECR.1 (req) - Command Response (CWE) S13.4.6.1 | 0387 - Command response
 
     ecr_2 : str
-        ECR.2 (req) - Date/Time Completed (DTM)
+        ECR.2 (req) - Date/Time Completed (DTM) S13.4.6.2
 
     ecr_3 : list[str] | None
-        ECR.3 (opt, rep) - Command Response Parameters (TX)
+        ECR.3 (opt, rep) - Command Response Parameters (TX) S13.4.6.3
     """
 
     ecr_1: CWE = Field(

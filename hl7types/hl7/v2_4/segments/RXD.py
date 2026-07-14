@@ -19,90 +19,90 @@ from ..datatypes.XCN import XCN
 
 
 class RXD(HL7Model):
-    """HL7 v2 RXD segment.
+    """Pharmacy/Treatment Dispense (S4.14.5).
 
     Attributes
     ----------
     rxd_1 : str
-        RXD.1 (req) - Dispense Sub-ID Counter (NM)
+        RXD.1 (req) - Dispense Sub-ID Counter (NM) S4.14.6.2
 
     rxd_2 : CE
-        RXD.2 (req) - Dispense/Give Code (CE)
+        RXD.2 (req) - Dispense/Give Code (CE) S4.14.5.2 | 0292 - Vaccines administered
 
     rxd_3 : TS
-        RXD.3 (req) - Date/Time Dispensed (TS)
+        RXD.3 (req) - Date/Time Dispensed (TS) S4.14.5.3
 
     rxd_4 : str
-        RXD.4 (req) - Actual Dispense Amount (NM)
+        RXD.4 (req) - Actual Dispense Amount (NM) S4.14.5.4
 
     rxd_5 : CE | None
-        RXD.5 (opt) - Actual Dispense Units (CE)
+        RXD.5 (opt) - Actual Dispense Units (CE) S4.14.5.5
 
     rxd_6 : CE | None
-        RXD.6 (opt) - Actual Dosage Form (CE)
+        RXD.6 (opt) - Actual Dosage Form (CE) S4.14.5.6
 
     rxd_7 : str
-        RXD.7 (req) - Prescription Number (ST)
+        RXD.7 (req) - Prescription Number (ST) S4.14.5.7
 
     rxd_8 : str | None
-        RXD.8 (opt) - Number of Refills Remaining (NM)
+        RXD.8 (opt) - Number of Refills Remaining (NM) S4.14.5.8
 
     rxd_9 : list[str] | None
-        RXD.9 (opt, rep) - Dispense Notes (ST)
+        RXD.9 (opt, rep) - Dispense Notes (ST) S4.14.5.9
 
     rxd_10 : list[XCN] | None
-        RXD.10 (opt, rep) - Dispensing Provider (XCN)
+        RXD.10 (opt, rep) - Dispensing Provider (XCN) S4.14.5.10
 
     rxd_11 : str | None
-        RXD.11 (opt) - Substitution Status (ID)
+        RXD.11 (opt) - Substitution Status (ID) S4.14.6.10 | 0167 - Substitution status
 
     rxd_12 : CQ | None
-        RXD.12 (opt) - Total Daily Dose (CQ)
+        RXD.12 (opt) - Total Daily Dose (CQ) S4.14.5.12
 
     rxd_13 : LA2 | None
-        RXD.13 (opt) - Dispense-To Location (LA2)
+        RXD.13 (opt) - Dispense-To Location (LA2) S4.14.6.11
 
     rxd_14 : str | None
-        RXD.14 (opt) - Needs Human Review (ID)
+        RXD.14 (opt) - Needs Human Review (ID) S4.14.6.12 | 0136 - Yes/no indicator
 
     rxd_15 : list[CE] | None
-        RXD.15 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CE)
+        RXD.15 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CE) S4.14.5.15
 
     rxd_16 : str | None
-        RXD.16 (opt) - Actual Strength (NM)
+        RXD.16 (opt) - Actual Strength (NM) S4.14.5.16
 
     rxd_17 : CE | None
-        RXD.17 (opt) - Actual Strength Unit (CE)
+        RXD.17 (opt) - Actual Strength Unit (CE) S4.14.5.17
 
     rxd_18 : list[str] | None
-        RXD.18 (opt, rep) - Substance Lot Number (ST)
+        RXD.18 (opt, rep) - Substance Lot Number (ST) S13.4.11.2
 
     rxd_19 : list[TS] | None
-        RXD.19 (opt, rep) - Substance Expiration Date (TS)
+        RXD.19 (opt, rep) - Substance Expiration Date (TS) S4.14.7.16
 
     rxd_20 : list[CE] | None
-        RXD.20 (opt, rep) - Substance Manufacturer Name (CE)
+        RXD.20 (opt, rep) - Substance Manufacturer Name (CE) S4.14.7.17 | 0227 - Manufacturers of vaccines (code=MVX)
 
     rxd_21 : list[CE] | None
-        RXD.21 (opt, rep) - Indication (CE)
+        RXD.21 (opt, rep) - Indication (CE) S4.14.7.19
 
     rxd_22 : str | None
-        RXD.22 (opt) - Dispense Package Size (NM)
+        RXD.22 (opt) - Dispense Package Size (NM) S4.14.5.22
 
     rxd_23 : CE | None
-        RXD.23 (opt) - Dispense Package Size Unit (CE)
+        RXD.23 (opt) - Dispense Package Size Unit (CE) S4.14.5.23
 
     rxd_24 : str | None
-        RXD.24 (opt) - Dispense Package Method (ID)
+        RXD.24 (opt) - Dispense Package Method (ID) S4.14.5.24 | 0321 - Dispense method
 
     rxd_25 : list[CE] | None
-        RXD.25 (opt, rep) - Supplementary Code (CE)
+        RXD.25 (opt, rep) - Supplementary Code (CE) S4.14.5.25
 
     rxd_26 : CE | None
-        RXD.26 (opt) - Initiating Location (CE)
+        RXD.26 (opt) - Initiating Location (CE) S4.14.5.26
 
     rxd_27 : CE | None
-        RXD.27 (opt) - Packaging/Assembly Location (CE)
+        RXD.27 (opt) - Packaging/Assembly Location (CE) S4.14.5.27
     """
 
     rxd_1: str = Field(

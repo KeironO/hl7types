@@ -15,24 +15,24 @@ from ..datatypes.EI import EI
 
 
 class SLT(HL7Model):
-    """HL7 v2 SLT segment.
+    """Sterilization Lot (S17.7.2).
 
     Attributes
     ----------
     slt_1 : EI | None
-        SLT.1 (opt) - Device Number (EI)
+        SLT.1 (opt) - Device Number (EI) S17.7.2.1
 
     slt_2 : str | None
-        SLT.2 (opt) - Device Name (ST)
+        SLT.2 (opt) - Device Name (ST) S17.7.2.2
 
     slt_3 : EI | None
-        SLT.3 (opt) - Lot Number (EI)
+        SLT.3 (opt) - Lot Number (EI) S17.7.2.3
 
     slt_4 : EI | None
-        SLT.4 (opt) - Item Identifier (EI)
+        SLT.4 (opt) - Item Identifier (EI) S17.7.2.4
 
     slt_5 : str | None
-        SLT.5 (opt) - Bar Code (ST)
+        SLT.5 (opt) - Bar Code (ST) S17.7.2.5
     """
 
     slt_1: Optional[EI] = Field(

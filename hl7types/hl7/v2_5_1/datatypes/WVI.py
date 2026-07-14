@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class WVI(HL7Model):
-    """HL7 v2 WVI data type.
+    """Channel identifier (S2.A.1.83).
 
     Attributes
     ----------

@@ -33,54 +33,51 @@ class OUL_R24_ORDER(HL7Model):
     """HL7 v2 OUL_R24.ORDER group.
 
     Attributes:
-        OBR (OBR): required
-        ORC (Optional[ORC]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): Observation Request, required
+        ORC (Optional[ORC]): Common Order, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         TQ1TQ2_SUPPGRP (Optional[List[OUL_R24_TQ1TQ2_SUPPGRP]]): optional
         SPMOBXSACINV_SUPPGRP (Optional[List[OUL_R24_SPMOBXSACINV_SUPPGRP]]): optional
         OBXTCDSIDNTE_SUPPGRP (Optional[List[OUL_R24_OBXTCDSIDNTE_SUPPGRP]]): optional
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     TQ1TQ2_SUPPGRP: Optional[List[_OUL_R24_TQ1TQ2_SUPPGRP]] = Field(
         default=None,
         title="TQ1TQ2_SUPPGRP",
-        description="Optional, repeating",
     )
 
     SPMOBXSACINV_SUPPGRP: Optional[List[_OUL_R24_SPMOBXSACINV_SUPPGRP]] = Field(
         default=None,
         title="SPMOBXSACINV_SUPPGRP",
-        description="Optional, repeating",
     )
 
     OBXTCDSIDNTE_SUPPGRP: Optional[List[_OUL_R24_OBXTCDSIDNTE_SUPPGRP]] = Field(
         default=None,
         title="OBXTCDSIDNTE_SUPPGRP",
-        description="Optional, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,33 +17,33 @@ from ..datatypes.NA import NA
 
 
 class PAC(HL7Model):
-    """HL7 v2 PAC segment.
+    """Shipment Package (S7.18.3).
 
     Attributes
     ----------
     pac_1 : str
-        PAC.1 (req) - Set Id - PAC (SI)
+        PAC.1 (req) - Set Id - PAC (SI) S7.18.3.1
 
     pac_2 : EI | None
-        PAC.2 (opt) - Package ID (EI)
+        PAC.2 (opt) - Package ID (EI) S7.18.3.2
 
     pac_3 : EI | None
-        PAC.3 (opt) - Parent Package ID (EI)
+        PAC.3 (opt) - Parent Package ID (EI) S7.18.3.3
 
     pac_4 : NA | None
-        PAC.4 (opt) - Position in Parent Package (NA)
+        PAC.4 (opt) - Position in Parent Package (NA) S7.18.3.4
 
     pac_5 : CWE
-        PAC.5 (req) - Package Type (CWE)
+        PAC.5 (req) - Package Type (CWE) S7.18.3.5 | 0908 - Package Type
 
     pac_6 : list[CWE] | None
-        PAC.6 (opt, rep) - Package Condition (CWE)
+        PAC.6 (opt, rep) - Package Condition (CWE) S7.18.3.6 | 0544 - Container Condition
 
     pac_7 : list[CWE] | None
-        PAC.7 (opt, rep) - Package Handling Code (CWE)
+        PAC.7 (opt, rep) - Package Handling Code (CWE) S7.18.3.7 | 0376 - Special Handling Code
 
     pac_8 : list[CWE] | None
-        PAC.8 (opt, rep) - Package Risk Code (CWE)
+        PAC.8 (opt, rep) - Package Risk Code (CWE) S7.18.3.8 | 0489 - Risk Codes
     """
 
     pac_1: str = Field(

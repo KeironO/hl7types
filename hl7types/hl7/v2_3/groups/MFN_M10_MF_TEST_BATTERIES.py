@@ -26,7 +26,6 @@ class MFN_M10_MF_TEST_BATTERIES(HL7Model):
     MF_TEST_BATT_DETAIL: Optional[_MFN_M10_MF_TEST_BATT_DETAIL] = Field(
         default=None,
         title="MF_TEST_BATT_DETAIL",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

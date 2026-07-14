@@ -29,39 +29,37 @@ class VXR_V03_ORDER(HL7Model):
     """HL7 v2 VXR_V03.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[VXR_V03_TIMING]]): optional
-        RXA (RXA): required
-        RXR (Optional[RXR]): optional
+        RXA (RXA): Pharmacy/Treatment Administration, required
+        RXR (Optional[RXR]): Pharmacy/Treatment Route, optional
         OBSERVATION (Optional[List[VXR_V03_OBSERVATION]]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_VXR_V03_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="Pharmacy/Treatment Administration",
     )
 
     RXR: Optional[_RXR] = Field(
         default=None,
         title="RXR",
-        description="Optional",
+        description="Pharmacy/Treatment Route",
     )
 
     OBSERVATION: Optional[List[_VXR_V03_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

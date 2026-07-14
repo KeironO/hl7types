@@ -25,25 +25,24 @@ class MFN_M11_MF_TEST_CALCULATED(HL7Model):
     """HL7 v2 MFN_M11.MF_TEST_CALCULATED group.
 
     Attributes:
-        MFE (MFE): required
-        OM1 (OM1): required
+        MFE (MFE): Master File Entry, required
+        OM1 (OM1): General Segment, required
         MF_TEST_CALC_DETAIL (Optional[MFN_M11_MF_TEST_CALC_DETAIL]): optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     OM1: _OM1 = Field(
         title="OM1",
-        description="Required",
+        description="General Segment",
     )
 
     MF_TEST_CALC_DETAIL: Optional[_MFN_M11_MF_TEST_CALC_DETAIL] = Field(
         default=None,
         title="MF_TEST_CALC_DETAIL",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

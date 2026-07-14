@@ -21,57 +21,57 @@ from ..datatypes.XTN import XTN
 
 
 class REL(HL7Model):
-    """HL7 v2 REL segment.
+    """Clinical Relationship Segment (S12.4.5).
 
     Attributes
     ----------
     rel_1 : str | None
-        REL.1 (opt) - Set ID -REL (SI)
+        REL.1 (opt) - Set ID -REL (SI) S12.4.5.1
 
     rel_2 : CWE
-        REL.2 (req) - Relationship Type (CWE)
+        REL.2 (req) - Relationship Type (CWE) S12.4.5.2
 
     rel_3 : EI
-        REL.3 (req) - This Relationship Instance Identifier (EI)
+        REL.3 (req) - This Relationship Instance Identifier (EI) S12.4.5.3
 
     rel_4 : EI
-        REL.4 (req) - Source Information Instance Identifier (EI)
+        REL.4 (req) - Source Information Instance Identifier (EI) S12.4.5.4
 
     rel_5 : EI
-        REL.5 (req) - Target Information Instance Identifier (EI)
+        REL.5 (req) - Target Information Instance Identifier (EI) S12.4.5.5
 
     rel_6 : EI | None
-        REL.6 (opt) - Asserting Entity Instance ID (EI)
+        REL.6 (opt) - Asserting Entity Instance ID (EI) S12.4.5.6
 
     rel_7 : XCN | None
-        REL.7 (opt) - Asserting Person (XCN)
+        REL.7 (opt) - Asserting Person (XCN) S12.4.5.7
 
     rel_8 : XON | None
-        REL.8 (opt) - Asserting Organization (XON)
+        REL.8 (opt) - Asserting Organization (XON) S12.4.5.8
 
     rel_9 : XAD | None
-        REL.9 (opt) - Assertor Address (XAD)
+        REL.9 (opt) - Assertor Address (XAD) S12.4.5.9
 
     rel_10 : XTN | None
-        REL.10 (opt) - Assertor Contact (XTN)
+        REL.10 (opt) - Assertor Contact (XTN) S12.4.5.10
 
     rel_11 : DR | None
-        REL.11 (opt) - Assertion Date Range (DR)
+        REL.11 (opt) - Assertion Date Range (DR) S12.4.5.11
 
     rel_12 : str | None
-        REL.12 (opt) - Negation Indicator (ID)
+        REL.12 (opt) - Negation Indicator (ID) S12.4.5.12 | 0136 - Yes/no Indicator
 
     rel_13 : CWE | None
-        REL.13 (opt) - Certainty of Relationship (CWE)
+        REL.13 (opt) - Certainty of Relationship (CWE) S12.4.5.13
 
     rel_14 : str | None
-        REL.14 (opt) - Priority No (NM)
+        REL.14 (opt) - Priority No (NM) S12.4.5.14
 
     rel_15 : str | None
-        REL.15 (opt) - Priority  Sequence No (rel preference for consideration) (NM)
+        REL.15 (opt) - Priority  Sequence No (rel preference for consideration) (NM) S12.4.5.15
 
     rel_16 : str | None
-        REL.16 (opt) - Separability Indicator (ID)
+        REL.16 (opt) - Separability Indicator (ID) S12.4.5.16 | 0136 - Yes/no Indicator
     """
 
     rel_1: Optional[str] = Field(

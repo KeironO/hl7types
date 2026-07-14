@@ -20,48 +20,48 @@ from ..datatypes.XTN import XTN
 
 
 class PES(HL7Model):
-    """HL7 v2 PES segment.
+    """PES - product experience sender segment (S7.11.1).
 
     Attributes
     ----------
     pes_1 : list[XON] | None
-        PES.1 (opt, rep) - Sender Organization Name (XON)
+        PES.1 (opt, rep) - Sender Organization Name (XON) S7.11.1.1
 
     pes_2 : list[XCN] | None
-        PES.2 (opt, rep) - Sender Individual Name (XCN)
+        PES.2 (opt, rep) - Sender Individual Name (XCN) S7.11.1.2
 
     pes_3 : list[XAD] | None
-        PES.3 (opt, rep) - Sender Address (XAD)
+        PES.3 (opt, rep) - Sender Address (XAD) S7.11.1.3
 
     pes_4 : list[XTN] | None
-        PES.4 (opt, rep) - Sender Telephone (XTN)
+        PES.4 (opt, rep) - Sender Telephone (XTN) S7.11.1.4
 
     pes_5 : EI | None
-        PES.5 (opt) - Sender Event Identifier (EI)
+        PES.5 (opt) - Sender Event Identifier (EI) S7.11.1.5
 
     pes_6 : str | None
-        PES.6 (opt) - Sender Sequence Number (NM)
+        PES.6 (opt) - Sender Sequence Number (NM) S7.11.1.6
 
     pes_7 : list[str] | None
-        PES.7 (opt, rep) - Sender Event Description (FT)
+        PES.7 (opt, rep) - Sender Event Description (FT) S7.11.1.7
 
     pes_8 : str | None
-        PES.8 (opt) - Sender Comment (FT)
+        PES.8 (opt) - Sender Comment (FT) S7.11.1.8
 
     pes_9 : TS | None
-        PES.9 (opt) - Sender Aware Date/Time (TS)
+        PES.9 (opt) - Sender Aware Date/Time (TS) S7.11.1.9
 
     pes_10 : TS
-        PES.10 (req) - Event Report Date (TS)
+        PES.10 (req) - Event Report Date (TS) S7.11.1.10
 
     pes_11 : list[str] | None
-        PES.11 (opt, rep) - Event Report Timing/Type (ID)
+        PES.11 (opt, rep) - Event Report Timing/Type (ID) S7.11.1.11 | 0234 - Report timing
 
     pes_12 : str | None
-        PES.12 (opt) - Event Report Source (ID)
+        PES.12 (opt) - Event Report Source (ID) S7.11.1.12 | 0235 - Report source
 
     pes_13 : list[str] | None
-        PES.13 (opt, rep) - Event Reported To (ID)
+        PES.13 (opt, rep) - Event Reported To (ID) S7.11.1.13 | 0236 - Event reported to
     """
 
     pes_1: Optional[List[XON]] = Field(

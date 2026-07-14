@@ -17,27 +17,27 @@ from ..datatypes.TS import TS
 
 
 class PTH(HL7Model):
-    """HL7 v2 PTH segment.
+    """Pathway (S12.3.4).
 
     Attributes
     ----------
     pth_1 : str
-        PTH.1 (req) - Action Code (ID)
+        PTH.1 (req) - Action Code (ID) S12.3.1 | 0287 - Action Code
 
     pth_2 : CE
-        PTH.2 (req) - Pathway ID (CE)
+        PTH.2 (req) - Pathway ID (CE) S12.3.4.2
 
     pth_3 : EI
-        PTH.3 (req) - Pathway Instance ID (EI)
+        PTH.3 (req) - Pathway Instance ID (EI) S12.3.4.3
 
     pth_4 : TS
-        PTH.4 (req) - Pathway Established Date/Time (TS)
+        PTH.4 (req) - Pathway Established Date/Time (TS) S12.3.4.4
 
     pth_5 : CE | None
-        PTH.5 (opt) - Pathway Lifecycle Status (CE)
+        PTH.5 (opt) - Pathway Lifecycle Status (CE) S12.3.4.5
 
     pth_6 : TS | None
-        PTH.6 (opt) - Change Pathway Lifecycle Status Date/Time (TS)
+        PTH.6 (opt) - Change Pathway Lifecycle Status Date/Time (TS) S12.3.4.6
     """
 
     pth_1: str = Field(

@@ -22,19 +22,19 @@ class PTR_PCF_PATHWAY_ROLE(HL7Model):
     """HL7 v2 PTR_PCF.PATHWAY_ROLE group.
 
     Attributes:
-        ROL (ROL): required
-        VAR (Optional[List[VAR]]): optional
+        ROL (ROL): Role, required
+        VAR (Optional[List[VAR]]): Variance, optional
     """
 
     ROL: _ROL = Field(
         title="ROL",
-        description="Required",
+        description="Role",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     model_config = {"populate_by_name": True}

@@ -23,36 +23,36 @@ _UAC = UAC
 
 
 class STC_S33(HL7Model):
-    """HL7 v2 STC_S33 message.
+    """STC/ACK - Notification of sterilization configuration (S17.6.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        SCP (List[SCP]): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        SCP (List[SCP]): Sterilizer Configuration (Anti-Microbial Devices), required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     SCP: List[_SCP] = Field(
         min_length=1,
         title="SCP",
-        description="Required, repeating",
+        description="Sterilizer Configuration (Anti-Microbial Devices)",
     )
 
     model_config = {"populate_by_name": True}

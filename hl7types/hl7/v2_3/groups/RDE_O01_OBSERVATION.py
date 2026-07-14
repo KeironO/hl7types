@@ -22,20 +22,20 @@ class RDE_O01_OBSERVATION(HL7Model):
     """HL7 v2 RDE_O01.OBSERVATION group.
 
     Attributes:
-        OBX (Optional[OBX]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBX (Optional[OBX]): Observation segment, optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     OBX: Optional[_OBX] = Field(
         default=None,
         title="OBX",
-        description="Optional",
+        description="Observation segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

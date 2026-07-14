@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class DLN(HL7Model):
-    """HL7 v2 DLN data type.
+    """Driver's license number (S2.A.18).
 
     Attributes
     ----------

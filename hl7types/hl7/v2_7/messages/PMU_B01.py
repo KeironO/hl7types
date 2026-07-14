@@ -41,97 +41,97 @@ _UAC = UAC
 
 
 class PMU_B01(HL7Model):
-    """HL7 v2 PMU_B01 message.
+    """PMU/ACK - Add personnel record (S15.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EVN (EVN): required
-        STF (STF): required
-        PRA (Optional[List[PRA]]): optional
-        ORG (Optional[List[ORG]]): optional
-        AFF (Optional[List[AFF]]): optional
-        LAN (Optional[List[LAN]]): optional
-        EDU (Optional[List[EDU]]): optional
-        CER (Optional[List[CER]]): optional
-        NK1 (Optional[List[NK1]]): optional
-        ROL (Optional[List[ROL]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EVN (EVN): Event Type, required
+        STF (STF): Staff Identification, required
+        PRA (Optional[List[PRA]]): Practitioner Detail, optional
+        ORG (Optional[List[ORG]]): Practitioner Organization Unit s, optional
+        AFF (Optional[List[AFF]]): Professional Affiliation, optional
+        LAN (Optional[List[LAN]]): Language Detail, optional
+        EDU (Optional[List[EDU]]): Educational Detail, optional
+        CER (Optional[List[CER]]): Certificate Detail, optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[List[_PRA]] = Field(
         default=None,
         title="PRA",
-        description="Optional, repeating",
+        description="Practitioner Detail",
     )
 
     ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
-        description="Optional, repeating",
+        description="Practitioner Organization Unit s",
     )
 
     AFF: Optional[List[_AFF]] = Field(
         default=None,
         title="AFF",
-        description="Optional, repeating",
+        description="Professional Affiliation",
     )
 
     LAN: Optional[List[_LAN]] = Field(
         default=None,
         title="LAN",
-        description="Optional, repeating",
+        description="Language Detail",
     )
 
     EDU: Optional[List[_EDU]] = Field(
         default=None,
         title="EDU",
-        description="Optional, repeating",
+        description="Educational Detail",
     )
 
     CER: Optional[List[_CER]] = Field(
         default=None,
         title="CER",
-        description="Optional, repeating",
+        description="Certificate Detail",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

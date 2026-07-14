@@ -18,42 +18,42 @@ from ..datatypes.XTN import XTN
 
 
 class CM0(HL7Model):
-    """HL7 v2 CM0 segment.
+    """Clinical Study Master (S8.11.2).
 
     Attributes
     ----------
     cm0_1 : str | None
-        CM0.1 (opt) - Set ID - CM0 (SI)
+        CM0.1 (opt) - Set ID - CM0 (SI) S8.11.2.1
 
     cm0_2 : EI
-        CM0.2 (req) - Sponsor Study ID (EI)
+        CM0.2 (req) - Sponsor Study ID (EI) S8.11.2.2
 
     cm0_3 : list[EI] | None
-        CM0.3 (opt, rep) - Alternate Study ID (EI)
+        CM0.3 (opt, rep) - Alternate Study ID (EI) S8.11.2.3
 
     cm0_4 : str
-        CM0.4 (req) - Title of Study (ST)
+        CM0.4 (req) - Title of Study (ST) S8.11.2.4
 
     cm0_5 : list[XCN] | None
-        CM0.5 (opt, rep) - Chairman of Study (XCN)
+        CM0.5 (opt, rep) - Chairman of Study (XCN) S8.11.2.5
 
     cm0_6 : str | None
-        CM0.6 (opt) - Last IRB Approval Date (DT)
+        CM0.6 (opt) - Last IRB Approval Date (DT) S8.11.2.6
 
     cm0_7 : str | None
-        CM0.7 (opt) - Total Accrual to Date (NM)
+        CM0.7 (opt) - Total Accrual to Date (NM) S8.11.2.7
 
     cm0_8 : str | None
-        CM0.8 (opt) - Last Accrual Date (DT)
+        CM0.8 (opt) - Last Accrual Date (DT) S8.11.2.8
 
     cm0_9 : list[XCN] | None
-        CM0.9 (opt, rep) - Contact for Study (XCN)
+        CM0.9 (opt, rep) - Contact for Study (XCN) S8.11.2.9
 
     cm0_10 : XTN | None
-        CM0.10 (opt) - Contact's Telephone Number (XTN)
+        CM0.10 (opt) - Contact's Telephone Number (XTN) S8.11.2.10
 
     cm0_11 : list[XAD] | None
-        CM0.11 (opt, rep) - Contact's Address (XAD)
+        CM0.11 (opt, rep) - Contact's Address (XAD) S8.11.2.11
     """
 
     cm0_1: Optional[str] = Field(

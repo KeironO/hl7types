@@ -23,35 +23,35 @@ _TCC = TCC
 
 
 class TCU_U10(HL7Model):
-    """HL7 v2 TCU_U10 message.
+    """TCU/ACK - Automated equipment test code settings update (S13).
 
     Attributes:
-        MSH (MSH): required
-        EQU (EQU): required
-        TCC (List[TCC]): required
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        EQU (EQU): Equipment Detail, required
+        TCC (List[TCC]): Test Code Configuration, required
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     TCC: List[_TCC] = Field(
         min_length=1,
         title="TCC",
-        description="Required, repeating",
+        description="Test Code Configuration",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

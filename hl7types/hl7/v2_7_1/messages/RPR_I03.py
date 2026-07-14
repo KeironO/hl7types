@@ -30,56 +30,55 @@ _UAC = UAC
 
 
 class RPR_I03(HL7Model):
-    """HL7 v2 RPR_I03 message.
+    """RQI/RPR - Request/receipt of patient selection list (S11.2.3).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (MSA): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
         PROVIDER (List[RPR_I03_PROVIDER]): required
-        PID (Optional[List[PID]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (Optional[List[PID]]): Patient Identification, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     PROVIDER: List[_RPR_I03_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: Optional[List[_PID]] = Field(
         default=None,
         title="PID",
-        description="Optional, repeating",
+        description="Patient Identification",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

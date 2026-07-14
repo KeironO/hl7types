@@ -28,40 +28,40 @@ class OUL_R23_RESULT(HL7Model):
     """HL7 v2 OUL_R23.RESULT group.
 
     Attributes:
-        OBX (OBX): required
-        PRT (Optional[List[PRT]]): optional
-        TCD (Optional[TCD]): optional
-        SID (Optional[List[SID]]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBX (OBX): Observation/Result, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        TCD (Optional[TCD]): Test Code Detail, optional
+        SID (Optional[List[SID]]): Substance Identifier, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     SID: Optional[List[_SID]] = Field(
         default=None,
         title="SID",
-        description="Optional, repeating",
+        description="Substance Identifier",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -27,7 +27,7 @@ class RDR_RDR_ORDER(HL7Model):
     """HL7 v2 RDR_RDR.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[RDR_RDR_TIMING]]): optional
         ENCODING (Optional[RDR_RDR_ENCODING]): optional
         DISPENSE (List[RDR_RDR_DISPENSE]): required
@@ -35,25 +35,22 @@ class RDR_RDR_ORDER(HL7Model):
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_RDR_RDR_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ENCODING: Optional[_RDR_RDR_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     DISPENSE: List[_RDR_RDR_DISPENSE] = Field(
         min_length=1,
         title="DISPENSE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

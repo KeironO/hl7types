@@ -16,51 +16,51 @@ from ..datatypes.CP import CP
 
 
 class GP2(HL7Model):
-    """HL7 v2 GP2 segment.
+    """Grouping/Reimbursement - Procedure Line Item (S6.5.16).
 
     Attributes
     ----------
     gp2_1 : str | None
-        GP2.1 (opt) - Revenue Code (IS)
+        GP2.1 (opt) - Revenue Code (IS) S6.5.16.1 | 0456 - Revenue code
 
     gp2_2 : str | None
-        GP2.2 (opt) - Number of Service Units (NM)
+        GP2.2 (opt) - Number of Service Units (NM) S6.5.16.2
 
     gp2_3 : CP | None
-        GP2.3 (opt) - Charge (CP)
+        GP2.3 (opt) - Charge (CP) S6.5.16.3
 
     gp2_4 : str | None
-        GP2.4 (opt) - Reimbursement Action Code (IS)
+        GP2.4 (opt) - Reimbursement Action Code (IS) S6.5.16.4 | 0459 - Reimbursement Action Code
 
     gp2_5 : str | None
-        GP2.5 (opt) - Denial or Rejection Code (IS)
+        GP2.5 (opt) - Denial or Rejection Code (IS) S6.5.16.5 | 0460 - Denial or rejection code
 
     gp2_6 : list[str] | None
-        GP2.6 (opt, rep) - OCE Edit Code (IS)
+        GP2.6 (opt, rep) - OCE Edit Code (IS) S6.5.16.6 | 0458 - OCE edit code
 
     gp2_7 : CE | None
-        GP2.7 (opt) - Ambulatory Payment Classification Code (CE)
+        GP2.7 (opt) - Ambulatory Payment Classification Code (CE) S6.5.16.7 | 0466 - Ambulatory payment classification code
 
     gp2_8 : list[str] | None
-        GP2.8 (opt, rep) - Modifier Edit Code (IS)
+        GP2.8 (opt, rep) - Modifier Edit Code (IS) S6.5.16.8 | 0467 - Modifier edit code
 
     gp2_9 : str | None
-        GP2.9 (opt) - Payment Adjustment Code (IS)
+        GP2.9 (opt) - Payment Adjustment Code (IS) S6.5.16.9 | 0468 - Payment adjustment code
 
     gp2_10 : str | None
-        GP2.10 (opt) - Packaging Status Code (IS)
+        GP2.10 (opt) - Packaging Status Code (IS) S6.5.16.10 | 0469 - Packaging status code
 
     gp2_11 : CP | None
-        GP2.11 (opt) - Expected HCFA Payment Amount (CP)
+        GP2.11 (opt) - Expected HCFA Payment Amount (CP) S6.5.16.11
 
     gp2_12 : str | None
-        GP2.12 (opt) - Reimbursement Type Code (IS)
+        GP2.12 (opt) - Reimbursement Type Code (IS) S6.5.16.12 | 0470 - Reimbursement type code
 
     gp2_13 : CP | None
-        GP2.13 (opt) - Co-Pay Amount (CP)
+        GP2.13 (opt) - Co-Pay Amount (CP) S6.5.16.13
 
     gp2_14 : str | None
-        GP2.14 (opt) - Pay Rate per Unit (NM)
+        GP2.14 (opt) - Pay Rate per Unit (NM) S6.5.16.14
     """
 
     gp2_1: Optional[str] = Field(

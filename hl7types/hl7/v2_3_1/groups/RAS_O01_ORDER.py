@@ -33,53 +33,50 @@ class RAS_O01_ORDER(HL7Model):
     """HL7 v2 RAS_O01.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): ORC - common order segment, required
         ORDER_DETAIL (Optional[RAS_O01_ORDER_DETAIL]): optional
         ENCODING (Optional[RAS_O01_ENCODING]): optional
-        RXA (List[RXA]): required
-        RXR (RXR): required
+        RXA (List[RXA]): RXA - pharmacy/treatment administration segment, required
+        RXR (RXR): RXR - pharmacy/treatment route segment, required
         OBSERVATION (Optional[List[RAS_O01_OBSERVATION]]): optional
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): CTI - clinical trial identification segment, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     ORDER_DETAIL: Optional[_RAS_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     ENCODING: Optional[_RAS_O01_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     RXA: List[_RXA] = Field(
         min_length=1,
         title="RXA",
-        description="Required, repeating",
+        description="RXA - pharmacy/treatment administration segment",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="RXR - pharmacy/treatment route segment",
     )
 
     OBSERVATION: Optional[List[_RAS_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="CTI - clinical trial identification segment",
     )
 
     model_config = {"populate_by_name": True}

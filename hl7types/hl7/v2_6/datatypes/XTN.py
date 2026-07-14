@@ -17,7 +17,7 @@ from .EI import EI
 
 
 class XTN(HL7Model):
-    """HL7 v2 XTN data type.
+    """Extended telecommunication number (S2.A.89).
 
     Attributes
     ----------

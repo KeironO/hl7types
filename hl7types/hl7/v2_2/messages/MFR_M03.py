@@ -35,58 +35,57 @@ class MFR_M03(HL7Model):
     """HL7 v2 MFR_M03 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        MFI (MFI): required
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (MSA): MESSAGE ACKNOWLEDGMENT, required
+        ERR (Optional[ERR]): ERROR, optional
+        QRD (QRD): QUERY DEFINITION, required
+        QRF (Optional[QRF]): QUERY FILTER, optional
+        MFI (MFI): MASTER FILE IDENTIFICATION, required
         MF_TEST (List[MFR_M03_MF_TEST]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): CONTINUATION POINTER, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="ERROR",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QUERY DEFINITION",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QUERY FILTER",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="MASTER FILE IDENTIFICATION",
     )
 
     MF_TEST: List[_MFR_M03_MF_TEST] = Field(
         min_length=1,
         title="MF_TEST",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="CONTINUATION POINTER",
     )
 
     model_config = {"populate_by_name": True}

@@ -26,7 +26,6 @@ class BRP_O30_RESPONSE(HL7Model):
     PATIENT: Optional[_BRP_O30_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

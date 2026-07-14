@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class NTE(HL7Model):
-    """HL7 v2 NTE segment.
+    """Notes and Comments (S2.16.10).
 
     Attributes
     ----------
     nte_1 : str | None
-        NTE.1 (opt) - Set ID - NTE (SI)
+        NTE.1 (opt) - Set ID - NTE (SI) S2.16.10.1
 
     nte_2 : str | None
-        NTE.2 (opt) - Source of Comment (ID)
+        NTE.2 (opt) - Source of Comment (ID) S2.16.10.2 | 0105 - Source of comment
 
     nte_3 : list[str] | None
-        NTE.3 (opt, rep) - Comment (FT)
+        NTE.3 (opt, rep) - Comment (FT) S2.16.10.3
 
     nte_4 : CE | None
-        NTE.4 (opt) - Comment Type (CE)
+        NTE.4 (opt) - Comment Type (CE) S2.16.10.4 | 0364 - Comment type
     """
 
     nte_1: Optional[str] = Field(

@@ -22,19 +22,19 @@ class SQR_S25_SERVICE(HL7Model):
     """HL7 v2 SQR_S25.SERVICE group.
 
     Attributes:
-        AIS (AIS): required
-        NTE (Optional[List[NTE]]): optional
+        AIS (AIS): Appointment Information - Service, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     AIS: _AIS = Field(
         title="AIS",
-        description="Required",
+        description="Appointment Information - Service",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

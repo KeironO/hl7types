@@ -30,48 +30,48 @@ class OSR_Q06_OBRRQDRQ1RXOODSODT_SUPPGRP(HL7Model):
     """HL7 v2 OSR_Q06.OBRRQDRQ1RXOODSODT_SUPPGRP group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        RQD (Optional[RQD]): optional
-        RQ1 (Optional[RQ1]): optional
-        RXO (Optional[RXO]): optional
-        ODS (Optional[ODS]): optional
-        ODT (Optional[ODT]): optional
+        OBR (Optional[OBR]): Observation Request, optional
+        RQD (Optional[RQD]): Requisition Detail, optional
+        RQ1 (Optional[RQ1]): Requisition Detail-1, optional
+        RXO (Optional[RXO]): Pharmacy/Treatment Order, optional
+        ODS (Optional[ODS]): Dietary Orders, Supplements, and Preferences, optional
+        ODT (Optional[ODT]): Diet Tray Instructions, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation Request",
     )
 
     RQD: Optional[_RQD] = Field(
         default=None,
         title="RQD",
-        description="Optional",
+        description="Requisition Detail",
     )
 
     RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
-        description="Optional",
+        description="Requisition Detail-1",
     )
 
     RXO: Optional[_RXO] = Field(
         default=None,
         title="RXO",
-        description="Optional",
+        description="Pharmacy/Treatment Order",
     )
 
     ODS: Optional[_ODS] = Field(
         default=None,
         title="ODS",
-        description="Optional",
+        description="Dietary Orders, Supplements, and Preferences",
     )
 
     ODT: Optional[_ODT] = Field(
         default=None,
         title="ODT",
-        description="Optional",
+        description="Diet Tray Instructions",
     )
 
     model_config = {"populate_by_name": True}

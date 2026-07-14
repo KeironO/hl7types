@@ -19,84 +19,84 @@ from ..datatypes.XPN import XPN
 
 
 class CON(HL7Model):
-    """HL7 v2 CON segment.
+    """Consent Segment (S9.9.4).
 
     Attributes
     ----------
     con_1 : str
-        CON.1 (req) - Set ID - CON (SI)
+        CON.1 (req) - Set ID - CON (SI) S9.9.4.1
 
     con_2 : CWE | None
-        CON.2 (opt) - Consent Type (CWE)
+        CON.2 (opt) - Consent Type (CWE) S9.9.4.2 | 0496 - Consent Type
 
     con_3 : str | None
-        CON.3 (opt) - Consent Form ID (ST)
+        CON.3 (opt) - Consent Form ID (ST) S9.9.4.3
 
     con_4 : EI | None
-        CON.4 (opt) - Consent Form Number (EI)
+        CON.4 (opt) - Consent Form Number (EI) S9.9.4.4
 
     con_5 : list[str] | None
-        CON.5 (opt, rep) - Consent Text (FT)
+        CON.5 (opt, rep) - Consent Text (FT) S9.9.4.5
 
     con_6 : list[str] | None
-        CON.6 (opt, rep) - Subject-specific Consent Text (FT)
+        CON.6 (opt, rep) - Subject-specific Consent Text (FT) S9.9.4.6
 
     con_7 : list[str] | None
-        CON.7 (opt, rep) - Consent Background (FT)
+        CON.7 (opt, rep) - Consent Background (FT) S9.9.4.7
 
     con_8 : list[str] | None
-        CON.8 (opt, rep) - Subject-specific Consent Background (FT)
+        CON.8 (opt, rep) - Subject-specific Consent Background (FT) S9.9.4.8
 
     con_9 : list[str] | None
-        CON.9 (opt, rep) - Consenter-imposed limitations (FT)
+        CON.9 (opt, rep) - Consenter-imposed limitations (FT) S9.9.4.9
 
     con_10 : CNE | None
-        CON.10 (opt) - Consent Mode (CNE)
+        CON.10 (opt) - Consent Mode (CNE) S9.9.4.10 | 0497 - Consent Mode
 
     con_11 : CNE
-        CON.11 (req) - Consent Status (CNE)
+        CON.11 (req) - Consent Status (CNE) S9.9.4.11 | 0498 - Consent Status
 
     con_12 : TS | None
-        CON.12 (opt) - Consent Discussion Date/Time (TS)
+        CON.12 (opt) - Consent Discussion Date/Time (TS) S9.9.4.12
 
     con_13 : TS | None
-        CON.13 (opt) - Consent Decision Date/Time (TS)
+        CON.13 (opt) - Consent Decision Date/Time (TS) S9.9.4.13
 
     con_14 : TS | None
-        CON.14 (opt) - Consent Effective Date/Time (TS)
+        CON.14 (opt) - Consent Effective Date/Time (TS) S9.9.4.14
 
     con_15 : TS | None
-        CON.15 (opt) - Consent End Date/Time (TS)
+        CON.15 (opt) - Consent End Date/Time (TS) S9.9.4.15
 
     con_16 : str | None
-        CON.16 (opt) - Subject Competence Indicator (ID)
+        CON.16 (opt) - Subject Competence Indicator (ID) S9.9.4.16 | 0136 - Yes/no indicator
 
     con_17 : str | None
-        CON.17 (opt) - Translator Assistance Indicator (ID)
+        CON.17 (opt) - Translator Assistance Indicator (ID) S9.9.4.17 | 0136 - Yes/no indicator
 
     con_18 : str | None
-        CON.18 (opt) - Language Translated To (ID)
+        CON.18 (opt) - Language Translated To (ID) S9.9.4.18 | 0296 - Primary Language
 
     con_19 : str | None
-        CON.19 (opt) - Informational Material Supplied Indicator (ID)
+        CON.19 (opt) - Informational Material Supplied Indicator (ID) S9.9.4.19 | 0136 - Yes/no indicator
 
     con_20 : CWE | None
-        CON.20 (opt) - Consent Bypass Reason (CWE)
+        CON.20 (opt) - Consent Bypass Reason (CWE) S9.9.4.20 | 0499 - Consent Bypass Reason
 
     con_21 : str | None
-        CON.21 (opt) - Consent Disclosure Level (ID)
+        CON.21 (opt) - Consent Disclosure Level (ID) S9.9.4.21 | 0500 - Consent Disclosure Level
 
     con_22 : CWE | None
-        CON.22 (opt) - Consent Non-disclosure Reason (CWE)
+        CON.22 (opt) - Consent Non-disclosure Reason (CWE) S9.9.4.22 | 0501 - Consent Non-Disclosure Reason
 
     con_23 : CWE | None
-        CON.23 (opt) - Non-subject Consenter Reason (CWE)
+        CON.23 (opt) - Non-subject Consenter Reason (CWE) S9.9.4.23 | 0502 - Non-Subject Consenter Reason
 
     con_24 : list[XPN]
-        CON.24 (req, rep) - Consenter ID (XPN)
+        CON.24 (req, rep) - Consenter ID (XPN) S9.9.4.24
 
     con_25 : list[str]
-        CON.25 (req, rep) - Relationship to Subject Table (IS)
+        CON.25 (req, rep) - Relationship to Subject Table (IS) S9.9.4.25 | 0548 - Signatory's Relationship to Subject
     """
 
     con_1: str = Field(

@@ -36,76 +36,75 @@ _UAC = UAC
 
 
 class RQC_I05(HL7Model):
-    """HL7 v2 RQC_I05 message.
+    """RQC/RCI - Request for patient clinical information (S11.2.5).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        QRD (QRD): deleted, required
+        QRF (Optional[QRF]): deleted, optional
         PROVIDER (List[RQC_I05_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
-        GT1 (Optional[List[GT1]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient Identification, required
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="deleted",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="deleted",
     )
 
     PROVIDER: List[_RQC_I05_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

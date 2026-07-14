@@ -28,49 +28,48 @@ _UAC = UAC
 
 
 class SSR_U04(HL7Model):
-    """HL7 v2 SSR_U04 message.
+    """SSR/ACK - specimen status request (S13.3.4).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EQU (EQU): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EQU (EQU): Equipment Detail, required
         SPECIMEN_CONTAINER (List[SSR_U04_SPECIMEN_CONTAINER]): required
-        ROL (Optional[ROL]): optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     SPECIMEN_CONTAINER: List[_SSR_U04_SPECIMEN_CONTAINER] = Field(
         min_length=1,
         title="SPECIMEN_CONTAINER",
-        description="Required, repeating",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

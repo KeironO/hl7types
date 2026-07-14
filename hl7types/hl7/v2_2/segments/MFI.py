@@ -16,27 +16,27 @@ from ..datatypes.TS import TS
 
 
 class MFI(HL7Model):
-    """HL7 v2 MFI segment.
+    """MASTER FILE IDENTIFICATION (S8.4.1).
 
     Attributes
     ----------
     mfi_1 : CE
-        MFI.1 (req) - Master file identifier (CE)
+        MFI.1 (req) - Master file identifier (CE) S8.4.1.1 | 0175 - MASTER FILE IDENTIFIER CODE
 
     mfi_2 : str | None
-        MFI.2 (opt) - Master file application identifier (ID)
+        MFI.2 (opt) - Master file application identifier (ID) S8.4.1.2 | 0176 - MASTER FILE APPLICATION IDENTIFIER
 
     mfi_3 : str
-        MFI.3 (req) - File-level event code (ID)
+        MFI.3 (req) - File-level event code (ID) S8.4.1.3 | 0178 - FILE-LEVEL EVENT CODE
 
     mfi_4 : TS | None
-        MFI.4 (opt) - Entered date / time (TS)
+        MFI.4 (opt) - Entered date / time (TS) S8.4.1.4
 
     mfi_5 : TS | None
-        MFI.5 (opt) - Effective date / time (TS)
+        MFI.5 (opt) - Effective date / time (TS) S8.4.2.3
 
     mfi_6 : str
-        MFI.6 (req) - Response level code (ID)
+        MFI.6 (req) - Response level code (ID) S8.4.1.6 | 0179 - Response Level
     """
 
     mfi_1: CE = Field(

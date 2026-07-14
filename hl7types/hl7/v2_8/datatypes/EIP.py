@@ -15,7 +15,7 @@ from .EI import EI
 
 
 class EIP(HL7Model):
-    """HL7 v2 EIP data type.
+    """Entity identifier pair (S2.A.26).
 
     Attributes
     ----------

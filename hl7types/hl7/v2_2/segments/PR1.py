@@ -15,51 +15,51 @@ from ..datatypes.TS import TS
 
 
 class PR1(HL7Model):
-    """HL7 v2 PR1 segment.
+    """PROCEDURES (S6.4.3).
 
     Attributes
     ----------
     pr1_1 : str
-        PR1.1 (req) - Set ID - procedure (SI)
+        PR1.1 (req) - Set ID - procedure (SI) S6.4.3.1
 
     pr1_2 : list[str]
-        PR1.2 (req, rep) - Procedure coding method (ID)
+        PR1.2 (req, rep) - Procedure coding method (ID) S6.4.3.2 | 0089 - PROCEDURE CODING METHOD
 
     pr1_3 : list[str]
-        PR1.3 (req, rep) - Procedure code (ID)
+        PR1.3 (req, rep) - Procedure code (ID) S6.4.3.3 | 0088 - PROCEDURE CODE
 
     pr1_4 : list[str] | None
-        PR1.4 (opt, rep) - Procedure description (ST)
+        PR1.4 (opt, rep) - Procedure description (ST) S6.4.3.4
 
     pr1_5 : TS
-        PR1.5 (req) - Procedure date / time (TS)
+        PR1.5 (req) - Procedure date / time (TS) S6.4.3.5
 
     pr1_6 : str
-        PR1.6 (req) - Procedure type (ID)
+        PR1.6 (req) - Procedure type (ID) S6.4.3.6 | 0090 - PROCEDURE TYPE
 
     pr1_7 : str | None
-        PR1.7 (opt) - Procedure minutes (NM)
+        PR1.7 (opt) - Procedure minutes (NM) S6.4.3.7
 
     pr1_8 : str | None
-        PR1.8 (opt) - Anesthesiologist (CN)
+        PR1.8 (opt) - Anesthesiologist (CN) S6.4.3.8 | 0010 - PHYSICIAN ID
 
     pr1_9 : str | None
-        PR1.9 (opt) - Anesthesia code (ID)
+        PR1.9 (opt) - Anesthesia code (ID) S6.4.3.9 | 0019 - ANESTHESIA CODE
 
     pr1_10 : str | None
-        PR1.10 (opt) - Anesthesia minutes (NM)
+        PR1.10 (opt) - Anesthesia minutes (NM) S6.4.3.10
 
     pr1_11 : str | None
-        PR1.11 (opt) - Surgeon (CN)
+        PR1.11 (opt) - Surgeon (CN) S6.4.3.11 | 0010 - PHYSICIAN ID
 
     pr1_12 : list[str] | None
-        PR1.12 (opt, rep) - Procedure Practitioner (CM)
+        PR1.12 (opt, rep) - Procedure Practitioner (CM) S6.4.3.12 | 0010 - PHYSICIAN ID
 
     pr1_13 : str | None
-        PR1.13 (opt) - Consent code (ID)
+        PR1.13 (opt) - Consent code (ID) S6.4.3.13 | 0059 - CONSENT CODE
 
     pr1_14 : str | None
-        PR1.14 (opt) - Procedure priority (NM)
+        PR1.14 (opt) - Procedure priority (NM) S6.4.3.14
     """
 
     pr1_1: str = Field(

@@ -20,14 +20,14 @@ class PRR_PC5_CHOICE(HL7Model):
     """HL7 v2 PRR_PC5.CHOICE group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
+        OBR (Optional[OBR]): Observation Request, optional
         anyhl7segment (Optional[Any]): optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation Request",
     )
 
     anyhl7segment: Optional[Any] = None

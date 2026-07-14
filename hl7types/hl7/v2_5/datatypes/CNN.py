@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CNN(HL7Model):
-    """HL7 v2 CNN data type.
+    """Composite id number and name simplified (S2.A.9).
 
     Attributes
     ----------

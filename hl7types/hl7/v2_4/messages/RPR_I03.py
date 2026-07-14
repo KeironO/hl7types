@@ -26,42 +26,41 @@ _RPR_I03_PROVIDER = RPR_I03_PROVIDER
 
 
 class RPR_I03(HL7Model):
-    """HL7 v2 RPR_I03 message.
+    """RQI/RPR - Request/receipt of patient selection list (S11).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
         PROVIDER (List[RPR_I03_PROVIDER]): required
-        PID (Optional[List[PID]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (Optional[List[PID]]): Patient identification, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     PROVIDER: List[_RPR_I03_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: Optional[List[_PID]] = Field(
         default=None,
         title="PID",
-        description="Optional, repeating",
+        description="Patient identification",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

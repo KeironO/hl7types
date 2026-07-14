@@ -22,19 +22,19 @@ class RGV_O15_COMPONENTS(HL7Model):
     """HL7 v2 RGV_O15.COMPONENTS group.
 
     Attributes:
-        RXC (RXC): required
-        NTE (Optional[List[NTE]]): optional
+        RXC (RXC): Pharmacy/Treatment Component Order, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     RXC: _RXC = Field(
         title="RXC",
-        description="Required",
+        description="Pharmacy/Treatment Component Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -19,99 +19,99 @@ from ..datatypes.XON import XON
 
 
 class IVC(HL7Model):
-    """HL7 v2 IVC segment.
+    """Invoice Segment (S16.4.2).
 
     Attributes
     ----------
     ivc_1 : EI
-        IVC.1 (req) - Provider Invoice Number (EI)
+        IVC.1 (req) - Provider Invoice Number (EI) S16.4.2.1
 
     ivc_2 : EI | None
-        IVC.2 (opt) - Payer Invoice Number (EI)
+        IVC.2 (opt) - Payer Invoice Number (EI) S16.4.2.2
 
     ivc_3 : EI | None
-        IVC.3 (opt) - Contract/Agreement Number (EI)
+        IVC.3 (opt) - Contract/Agreement Number (EI) S16.4.2.3
 
     ivc_4 : str
-        IVC.4 (req) - Invoice Control (IS)
+        IVC.4 (req) - Invoice Control (IS) S16.4.2.4 | 0553 - Invoice Control Code
 
     ivc_5 : str
-        IVC.5 (req) - Invoice Reason (IS)
+        IVC.5 (req) - Invoice Reason (IS) S16.4.2.5 | 0554 - Invoice Reason Codes
 
     ivc_6 : str
-        IVC.6 (req) - Invoice Type (IS)
+        IVC.6 (req) - Invoice Type (IS) S16.4.2.6 | 0555 - Invoice Type
 
     ivc_7 : str
-        IVC.7 (req) - Invoice Date/Time (DTM)
+        IVC.7 (req) - Invoice Date/Time (DTM) S16.4.2.7
 
     ivc_8 : CP
-        IVC.8 (req) - Invoice Amount (CP)
+        IVC.8 (req) - Invoice Amount (CP) S16.4.2.8
 
     ivc_9 : str | None
-        IVC.9 (opt) - Payment Terms (ST)
+        IVC.9 (opt) - Payment Terms (ST) S16.4.2.9
 
     ivc_10 : XON
-        IVC.10 (req) - Provider Organization (XON)
+        IVC.10 (req) - Provider Organization (XON) S16.4.2.10
 
     ivc_11 : XON
-        IVC.11 (req) - Payer Organization (XON)
+        IVC.11 (req) - Payer Organization (XON) S16.4.2.11
 
     ivc_12 : XCN | None
-        IVC.12 (opt) - Attention (XCN)
+        IVC.12 (opt) - Attention (XCN) S16.4.2.12
 
     ivc_13 : str | None
-        IVC.13 (opt) - Last Invoice Indicator (ID)
+        IVC.13 (opt) - Last Invoice Indicator (ID) S16.4.2.13 | 0136 - Yes/no indicator
 
     ivc_14 : str | None
-        IVC.14 (opt) - Invoice Booking Period (DTM)
+        IVC.14 (opt) - Invoice Booking Period (DTM) S16.4.2.14
 
     ivc_15 : str | None
-        IVC.15 (opt) - Origin (ST)
+        IVC.15 (opt) - Origin (ST) S16.4.2.15
 
     ivc_16 : CP | None
-        IVC.16 (opt) - Invoice Fixed Amount (CP)
+        IVC.16 (opt) - Invoice Fixed Amount (CP) S16.4.2.16
 
     ivc_17 : CP | None
-        IVC.17 (opt) - Special Costs (CP)
+        IVC.17 (opt) - Special Costs (CP) S16.4.2.17
 
     ivc_18 : CP | None
-        IVC.18 (opt) - Amount for Doctors Treatment (CP)
+        IVC.18 (opt) - Amount for Doctors Treatment (CP) S16.4.2.18
 
     ivc_19 : XCN | None
-        IVC.19 (opt) - Responsible Physician (XCN)
+        IVC.19 (opt) - Responsible Physician (XCN) S16.4.2.19
 
     ivc_20 : CX | None
-        IVC.20 (opt) - Cost Center (CX)
+        IVC.20 (opt) - Cost Center (CX) S16.4.2.20
 
     ivc_21 : CP | None
-        IVC.21 (opt) - Invoice Prepaid Amount (CP)
+        IVC.21 (opt) - Invoice Prepaid Amount (CP) S16.4.2.21
 
     ivc_22 : CP | None
-        IVC.22 (opt) - Total Invoice Amount without Prepaid Amount (CP)
+        IVC.22 (opt) - Total Invoice Amount without Prepaid Amount (CP) S16.4.2.22
 
     ivc_23 : CP | None
-        IVC.23 (opt) - Total-Amount of VAT (CP)
+        IVC.23 (opt) - Total-Amount of VAT (CP) S16.4.2.23
 
     ivc_24 : list[str] | None
-        IVC.24 (opt, rep) - VAT-Rates applied (NM)
+        IVC.24 (opt, rep) - VAT-Rates applied (NM) S16.4.2.24
 
     ivc_25 : str
-        IVC.25 (req) - Benefit Group (IS)
+        IVC.25 (req) - Benefit Group (IS) S16.4.2.25 | 0556 - Benefit Group
 
     ivc_26 : str | None
-        IVC.26 (opt) - Provider Tax ID (ST)
+        IVC.26 (opt) - Provider Tax ID (ST) S16.4.2.26
 
     ivc_27 : str | None
-        IVC.27 (opt) - Payer Tax ID (ST)
+        IVC.27 (opt) - Payer Tax ID (ST) S16.4.2.27
 
     ivc_28 : str | None
-        IVC.28 (opt) - Provider Tax status (IS)
+        IVC.28 (opt) - Provider Tax status (IS) S16.4.2.28 | 0572 - Tax status
 
     ivc_29 : str | None
-        IVC.29 (opt) - Payer Tax status (IS)
+        IVC.29 (opt) - Payer Tax status (IS) S16.4.2.29 | 0572 - Tax status
 
     ivc_30 : str | None
-        IVC.30 (opt) - Sales Tax ID (ST)
+        IVC.30 (opt) - Sales Tax ID (ST) S16.4.2.30
     """
 
     ivc_1: EI = Field(

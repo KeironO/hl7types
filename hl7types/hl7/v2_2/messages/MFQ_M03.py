@@ -26,32 +26,32 @@ class MFQ_M03(HL7Model):
     """HL7 v2 MFQ_M03 message.
 
     Attributes:
-        MSH (MSH): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        DSC (Optional[DSC]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        QRD (QRD): QUERY DEFINITION, required
+        QRF (Optional[QRF]): QUERY FILTER, optional
+        DSC (Optional[DSC]): CONTINUATION POINTER, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QUERY DEFINITION",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QUERY FILTER",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="CONTINUATION POINTER",
     )
 
     model_config = {"populate_by_name": True}

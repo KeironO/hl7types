@@ -15,36 +15,36 @@ from ..datatypes.CE import CE
 
 
 class PV2(HL7Model):
-    """HL7 v2 PV2 segment.
+    """PATIENT VISIT - additional information (S3.3.4).
 
     Attributes
     ----------
     pv2_1 : str | None
-        PV2.1 (opt) - Prior Pending Location (CM)
+        PV2.1 (opt) - Prior Pending Location (CM) S3.3.4.1
 
     pv2_2 : CE | None
-        PV2.2 (opt) - Accommodation Code (CE)
+        PV2.2 (opt) - Accommodation Code (CE) S3.3.4.2 | 0129 - ACCOMODATION CODE
 
     pv2_3 : CE | None
-        PV2.3 (opt) - Admit Reason (CE)
+        PV2.3 (opt) - Admit Reason (CE) S3.3.4.3
 
     pv2_4 : CE | None
-        PV2.4 (opt) - Transfer Reason (CE)
+        PV2.4 (opt) - Transfer Reason (CE) S3.3.4.4
 
     pv2_5 : list[str] | None
-        PV2.5 (opt, rep) - Patient Valuables (ST)
+        PV2.5 (opt, rep) - Patient Valuables (ST) S3.3.4.5
 
     pv2_6 : str | None
-        PV2.6 (opt) - Patient Valuables Location (ST)
+        PV2.6 (opt) - Patient Valuables Location (ST) S3.3.4.6
 
     pv2_7 : str | None
-        PV2.7 (opt) - Visit User Code (ID)
+        PV2.7 (opt) - Visit User Code (ID) S3.3.4.7 | 0130 - VISIT USER CODE
 
     pv2_8 : str | None
-        PV2.8 (opt) - Expected Admit Date (DT)
+        PV2.8 (opt) - Expected Admit Date (DT) S3.3.4.8
 
     pv2_9 : str | None
-        PV2.9 (opt) - Expected Discharge Date (DT)
+        PV2.9 (opt) - Expected Discharge Date (DT) S3.3.4.9
     """
 
     pv2_1: Optional[str] = Field(

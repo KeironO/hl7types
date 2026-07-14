@@ -27,46 +27,46 @@ _TXA = TXA
 
 
 class MDM_T02(HL7Model):
-    """HL7 v2 MDM_T02 message.
+    """MDM/ACK - Original document notification and content.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (PV1): required
-        TXA (TXA): required
-        OBX (List[OBX]): required
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        PID (PID): Patient Identification, required
+        PV1 (PV1): Patient visit, required
+        TXA (TXA): Document notification segment, required
+        OBX (List[OBX]): Observation segment, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient visit",
     )
 
     TXA: _TXA = Field(
         title="TXA",
-        description="Required",
+        description="Document notification segment",
     )
 
     OBX: List[_OBX] = Field(
         min_length=1,
         title="OBX",
-        description="Required, repeating",
+        description="Observation segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,39 +15,39 @@ from ..datatypes.CE import CE
 
 
 class RQD(HL7Model):
-    """HL7 v2 RQD segment.
+    """Requisition Detail (S4.11.1).
 
     Attributes
     ----------
     rqd_1 : str | None
-        RQD.1 (opt) - Requisition Line Number (SI)
+        RQD.1 (opt) - Requisition Line Number (SI) S4.11.1.1
 
     rqd_2 : CE | None
-        RQD.2 (opt) - Item Code - Internal (CE)
+        RQD.2 (opt) - Item Code - Internal (CE) S4.11.1.2
 
     rqd_3 : CE | None
-        RQD.3 (opt) - Item Code - External (CE)
+        RQD.3 (opt) - Item Code - External (CE) S4.11.1.3
 
     rqd_4 : CE | None
-        RQD.4 (opt) - Hospital Item Code (CE)
+        RQD.4 (opt) - Hospital Item Code (CE) S4.11.1.4
 
     rqd_5 : str | None
-        RQD.5 (opt) - Requisition Quantity (NM)
+        RQD.5 (opt) - Requisition Quantity (NM) S4.11.1.5
 
     rqd_6 : CE | None
-        RQD.6 (opt) - Requisition Unit of Measure (CE)
+        RQD.6 (opt) - Requisition Unit of Measure (CE) S4.11.1.6
 
     rqd_7 : str | None
-        RQD.7 (opt) - Dept. Cost Center (IS)
+        RQD.7 (opt) - Dept. Cost Center (IS) S4.11.1.7 | 0319 - Department Cost Center
 
     rqd_8 : str | None
-        RQD.8 (opt) - Item Natural Account Code (IS)
+        RQD.8 (opt) - Item Natural Account Code (IS) S4.11.1.8 | 0320 - Item Natural Account Code
 
     rqd_9 : CE | None
-        RQD.9 (opt) - Deliver To ID (CE)
+        RQD.9 (opt) - Deliver To ID (CE) S4.11.1.9
 
     rqd_10 : str | None
-        RQD.10 (opt) - Date Needed (DT)
+        RQD.10 (opt) - Date Needed (DT) S4.11.1.10
     """
 
     rqd_1: Optional[str] = Field(

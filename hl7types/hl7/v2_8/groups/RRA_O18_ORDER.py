@@ -27,33 +27,31 @@ class RRA_O18_ORDER(HL7Model):
     """HL7 v2 RRA_O18.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[RRA_O18_TIMING]]): optional
         ADMINISTRATION (Optional[RRA_O18_ADMINISTRATION]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_RRA_O18_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ADMINISTRATION: Optional[_RRA_O18_ADMINISTRATION] = Field(
         default=None,
         title="ADMINISTRATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

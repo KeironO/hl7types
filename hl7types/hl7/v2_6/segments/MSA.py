@@ -15,30 +15,30 @@ from ..datatypes.CNE import CNE
 
 
 class MSA(HL7Model):
-    """HL7 v2 MSA segment.
+    """Message Acknowledgment (S2.14.8).
 
     Attributes
     ----------
     msa_1 : str
-        MSA.1 (req) - Acknowledgment Code (ID)
+        MSA.1 (req) - Acknowledgment Code (ID) S2.14.8.1 | 0008 - Acknowledgment code
 
     msa_2 : str
-        MSA.2 (req) - Message Control ID (ST)
+        MSA.2 (req) - Message Control ID (ST) S2.14.8.2
 
     msa_3 : str | None
-        MSA.3 (opt) - Text Message (ST)
+        MSA.3 (opt) - Text Message (ST) S2.14.8.3
 
     msa_4 : str | None
-        MSA.4 (opt) - Expected Sequence Number (NM)
+        MSA.4 (opt) - Expected Sequence Number (NM) S2.14.8.4
 
     msa_6 : CNE | None
-        MSA.6 (opt) - Error Condition (CNE)
+        MSA.6 (opt) - Error Condition (CNE) S2.14.8.6 | 0357 - Message error condition codes
 
     msa_7 : str | None
-        MSA.7 (opt) - Message Waiting Number (NM)
+        MSA.7 (opt) - Message Waiting Number (NM) S2.14.8.7
 
     msa_8 : str | None
-        MSA.8 (opt) - Message Waiting Priority (ID)
+        MSA.8 (opt) - Message Waiting Priority (ID) S2.14.8.8 | 0520 - Message waiting priority
     """
 
     msa_1: str = Field(

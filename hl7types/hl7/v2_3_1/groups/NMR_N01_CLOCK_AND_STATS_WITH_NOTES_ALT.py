@@ -26,34 +26,34 @@ class NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT(HL7Model):
     """HL7 v2 NMR_N01.CLOCK_AND_STATS_WITH_NOTES_ALT group.
 
     Attributes:
-        NCK (Optional[NCK]): optional
-        NTE (Optional[List[NTE]]): optional
-        NST (Optional[NST]): optional
-        NSC (Optional[NSC]): optional
+        NCK (Optional[NCK]): System Clock, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        NST (Optional[NST]): Application control level statistics, optional
+        NSC (Optional[NSC]): Application status change, optional
     """
 
     NCK: Optional[_NCK] = Field(
         default=None,
         title="NCK",
-        description="Optional",
+        description="System Clock",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     NST: Optional[_NST] = Field(
         default=None,
         title="NST",
-        description="Optional",
+        description="Application control level statistics",
     )
 
     NSC: Optional[_NSC] = Field(
         default=None,
         title="NSC",
-        description="Optional",
+        description="Application status change",
     )
 
     model_config = {"populate_by_name": True}

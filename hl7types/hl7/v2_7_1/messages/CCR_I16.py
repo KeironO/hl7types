@@ -50,17 +50,17 @@ _UAC = UAC
 
 
 class CCR_I16(HL7Model):
-    """HL7 v2 CCR_I16 message.
+    """Collaborative Care Referral (S11.5.2).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        RF1 (List[RF1]): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        RF1 (List[RF1]): Referral Information, required
         PROVIDER_CONTACT (List[CCR_I16_PROVIDER_CONTACT]): required
         CLINICAL_ORDER (Optional[List[CCR_I16_CLINICAL_ORDER]]): optional
         PATIENT (List[CCR_I16_PATIENT]): required
-        NK1 (Optional[List[NK1]]): optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
         INSURANCE (Optional[List[CCR_I16_INSURANCE]]): optional
         APPOINTMENT_HISTORY (Optional[List[CCR_I16_APPOINTMENT_HISTORY]]): optional
         CLINICAL_HISTORY (Optional[List[CCR_I16_CLINICAL_HISTORY]]): optional
@@ -69,108 +69,97 @@ class CCR_I16(HL7Model):
         PROBLEM (Optional[List[CCR_I16_PROBLEM]]): optional
         GOAL (Optional[List[CCR_I16_GOAL]]): optional
         PATHWAY (Optional[List[CCR_I16_PATHWAY]]): optional
-        REL (Optional[List[REL]]): optional
+        REL (Optional[List[REL]]): Clinical Relationship Segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     RF1: List[_RF1] = Field(
         min_length=1,
         title="RF1",
-        description="Required, repeating",
+        description="Referral Information",
     )
 
     PROVIDER_CONTACT: List[_CCR_I16_PROVIDER_CONTACT] = Field(
         min_length=1,
         title="PROVIDER_CONTACT",
-        description="Required, repeating",
     )
 
     CLINICAL_ORDER: Optional[List[_CCR_I16_CLINICAL_ORDER]] = Field(
         default=None,
         title="CLINICAL_ORDER",
-        description="Optional, repeating",
     )
 
     PATIENT: List[_CCR_I16_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     INSURANCE: Optional[List[_CCR_I16_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     APPOINTMENT_HISTORY: Optional[List[_CCR_I16_APPOINTMENT_HISTORY]] = Field(
         default=None,
         title="APPOINTMENT_HISTORY",
-        description="Optional, repeating",
     )
 
     CLINICAL_HISTORY: Optional[List[_CCR_I16_CLINICAL_HISTORY]] = Field(
         default=None,
         title="CLINICAL_HISTORY",
-        description="Optional, repeating",
     )
 
     PATIENT_VISITS: List[_CCR_I16_PATIENT_VISITS] = Field(
         min_length=1,
         title="PATIENT_VISITS",
-        description="Required, repeating",
     )
 
     MEDICATION_HISTORY: Optional[List[_CCR_I16_MEDICATION_HISTORY]] = Field(
         default=None,
         title="MEDICATION_HISTORY",
-        description="Optional, repeating",
     )
 
     PROBLEM: Optional[List[_CCR_I16_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
-        description="Optional, repeating",
     )
 
     GOAL: Optional[List[_CCR_I16_GOAL]] = Field(
         default=None,
         title="GOAL",
-        description="Optional, repeating",
     )
 
     PATHWAY: Optional[List[_CCR_I16_PATHWAY]] = Field(
         default=None,
         title="PATHWAY",
-        description="Optional, repeating",
     )
 
     REL: Optional[List[_REL]] = Field(
         default=None,
         title="REL",
-        description="Optional, repeating",
+        description="Clinical Relationship Segment",
     )
 
     model_config = {"populate_by_name": True}

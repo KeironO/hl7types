@@ -34,70 +34,69 @@ _UAC = UAC
 
 
 class OPU_R25(HL7Model):
-    """HL7 v2 OPU_R25 message.
+    """OPU - Unsolicited Population/Location-Based Laboratory Observation Message (S7.3.10).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        NTE (Optional[List[NTE]]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        OBX (Optional[List[OBX]]): optional
-        ROL (List[ROL]): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PV1 (PV1): Patient Visit, required
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
+        ROL (List[ROL]): Role, required
         ACCESSION_DETAIL (List[OPU_R25_ACCESSION_DETAIL]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     ROL: List[_ROL] = Field(
         min_length=1,
         title="ROL",
-        description="Required, repeating",
+        description="Role",
     )
 
     ACCESSION_DETAIL: List[_OPU_R25_ACCESSION_DETAIL] = Field(
         min_length=1,
         title="ACCESSION_DETAIL",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

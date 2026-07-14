@@ -15,24 +15,24 @@ from ..datatypes.TS import TS
 
 
 class MFE(HL7Model):
-    """HL7 v2 MFE segment.
+    """Master File Entry (S8.5.2).
 
     Attributes
     ----------
     mfe_1 : str
-        MFE.1 (req) - Record-Level Event Code (ID)
+        MFE.1 (req) - Record-Level Event Code (ID) S8.5.2.1 | 0180 - Record-level event code
 
     mfe_2 : str | None
-        MFE.2 (opt) - MFN Control ID (ST)
+        MFE.2 (opt) - MFN Control ID (ST) S8.5.2.2
 
     mfe_3 : TS | None
-        MFE.3 (opt) - Effective Date/Time (TS)
+        MFE.3 (opt) - Effective Date/Time (TS) S8.5.1.5
 
     mfe_4 : list[str]
-        MFE.4 (req, rep) - Primary Key Value - MFE (var)
+        MFE.4 (req, rep) - Primary Key Value - MFE (var) S8.5.2.4 | 9999 - no table for CE
 
     mfe_5 : list[str]
-        MFE.5 (req, rep) - Primary Key Value Type (ID)
+        MFE.5 (req, rep) - Primary Key Value Type (ID) S8.5.2.5 | 0355 - Primary key value type
     """
 
     mfe_1: str = Field(

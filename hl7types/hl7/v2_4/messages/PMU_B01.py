@@ -31,62 +31,62 @@ _STF = STF
 
 
 class PMU_B01(HL7Model):
-    """HL7 v2 PMU_B01 message.
+    """PMU/ACK - Add personnel record (S15).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        STF (STF): required
-        PRA (Optional[List[PRA]]): optional
-        ORG (Optional[List[ORG]]): optional
-        AFF (Optional[List[AFF]]): optional
-        LAN (Optional[List[LAN]]): optional
-        EDU (Optional[List[EDU]]): optional
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
+        STF (STF): Staff Identification, required
+        PRA (Optional[List[PRA]]): Practitioner Detail, optional
+        ORG (Optional[List[ORG]]): Practitioner Organization Unit, optional
+        AFF (Optional[List[AFF]]): Professional Affiliation, optional
+        LAN (Optional[List[LAN]]): Language Detail, optional
+        EDU (Optional[List[EDU]]): Educational Detail, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[List[_PRA]] = Field(
         default=None,
         title="PRA",
-        description="Optional, repeating",
+        description="Practitioner Detail",
     )
 
     ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
-        description="Optional, repeating",
+        description="Practitioner Organization Unit",
     )
 
     AFF: Optional[List[_AFF]] = Field(
         default=None,
         title="AFF",
-        description="Optional, repeating",
+        description="Professional Affiliation",
     )
 
     LAN: Optional[List[_LAN]] = Field(
         default=None,
         title="LAN",
-        description="Optional, repeating",
+        description="Language Detail",
     )
 
     EDU: Optional[List[_EDU]] = Field(
         default=None,
         title="EDU",
-        description="Optional, repeating",
+        description="Educational Detail",
     )
 
     model_config = {"populate_by_name": True}

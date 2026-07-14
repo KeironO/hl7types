@@ -24,35 +24,33 @@ _PPG_PCG_PATIENT_VISIT = PPG_PCG_PATIENT_VISIT
 
 
 class PPG_PCG(HL7Model):
-    """HL7 v2 PPG_PCG message.
+    """PPG - PC/ Pathway (Goal-Oriented) Add.
 
     Attributes:
-        MSH (MSH): required
-        PID (PID): required
+        MSH (MSH): MSH - message header segment, required
+        PID (PID): PID - patient identification segment, required
         PATIENT_VISIT (Optional[PPG_PCG_PATIENT_VISIT]): optional
         PATHWAY (List[PPG_PCG_PATHWAY]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PATIENT_VISIT: Optional[_PPG_PCG_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PATHWAY: List[_PPG_PCG_PATHWAY] = Field(
         min_length=1,
         title="PATHWAY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

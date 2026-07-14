@@ -31,61 +31,61 @@ _PV2 = PV2
 
 
 class ADT_A17(HL7Model):
-    """HL7 v2 ADT_A17 message.
+    """ADT/ACK -  Swap patients.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        DB1 (Optional[List[DB1]]): optional
-        OBX (Optional[List[OBX]]): optional
+        MSH (MSH): MSH - message header segment, required
+        EVN (EVN): EVN - event type segment, required
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        PV1 (PV1): PV1 - patient visit segment-, required
+        PV2 (Optional[PV2]): PV2 - patient visit - additional information segment, optional
+        DB1 (Optional[List[DB1]]): DB1 - Disability segment, optional
+        OBX (Optional[List[OBX]]): OBX - observation/result segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVN - event type segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PV1 - patient visit segment-",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="PV2 - patient visit - additional information segment",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="DB1 - Disability segment",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBX - observation/result segment",
     )
 
     model_config = {"populate_by_name": True}

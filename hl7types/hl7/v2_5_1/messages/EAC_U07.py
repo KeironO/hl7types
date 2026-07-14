@@ -26,42 +26,41 @@ _SFT = SFT
 
 
 class EAC_U07(HL7Model):
-    """HL7 v2 EAC_U07 message.
+    """EAC/ACK - Automated equipment command (S13.3.7).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EQU (EQU): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EQU (EQU): Equipment Detail, required
         COMMAND (List[EAC_U07_COMMAND]): required
-        ROL (Optional[ROL]): optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     COMMAND: List[_EAC_U07_COMMAND] = Field(
         min_length=1,
         title="COMMAND",
-        description="Required, repeating",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

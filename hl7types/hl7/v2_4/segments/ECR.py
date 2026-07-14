@@ -16,18 +16,18 @@ from ..datatypes.TS import TS
 
 
 class ECR(HL7Model):
-    """HL7 v2 ECR segment.
+    """Equipment Command Response (S13.4.6).
 
     Attributes
     ----------
     ecr_1 : CE
-        ECR.1 (req) - Command Response (CE)
+        ECR.1 (req) - Command Response (CE) S13.4.6.1 | 0387 - Command response
 
     ecr_2 : TS
-        ECR.2 (req) - Date/Time Completed (TS)
+        ECR.2 (req) - Date/Time Completed (TS) S13.4.6.2
 
     ecr_3 : list[str] | None
-        ECR.3 (opt, rep) - Command Response Parameters (ST)
+        ECR.3 (opt, rep) - Command Response Parameters (ST) S13.4.6.3
     """
 
     ecr_1: CE = Field(

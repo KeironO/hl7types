@@ -39,75 +39,73 @@ class OML_O39_PATIENT(HL7Model):
     """HL7 v2 OML_O39.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
-        NK1 (Optional[List[NK1]]): optional
-        ARV (Optional[List[ARV]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
         PATIENT_VISIT (Optional[OML_O39_PATIENT_VISIT]): optional
         INSURANCE (Optional[List[OML_O39_INSURANCE]]): optional
-        GT1 (Optional[GT1]): optional
-        AL1 (Optional[List[AL1]]): optional
+        GT1 (Optional[GT1]): Guarantor, optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     PATIENT_VISIT: Optional[_OML_O39_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     INSURANCE: Optional[List[_OML_O39_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     GT1: Optional[_GT1] = Field(
         default=None,
         title="GT1",
-        description="Optional",
+        description="Guarantor",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     model_config = {"populate_by_name": True}

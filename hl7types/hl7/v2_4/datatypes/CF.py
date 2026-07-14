@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CF(HL7Model):
-    """HL7 v2 CF data type.
+    """Coded element with formatted values (S2.9.4).
 
     Attributes
     ----------

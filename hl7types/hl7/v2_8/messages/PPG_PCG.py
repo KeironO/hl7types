@@ -28,49 +28,47 @@ _UAC = UAC
 
 
 class PPG_PCG(HL7Model):
-    """HL7 v2 PPG_PCG message.
+    """PPG - PC/ pathway (goal-oriented) add (S12.3.4).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        PID (PID): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        PID (PID): Patient Identification, required
         PATIENT_VISIT (Optional[PPG_PCG_PATIENT_VISIT]): optional
         PATHWAY (List[PPG_PCG_PATHWAY]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PATIENT_VISIT: Optional[_PPG_PCG_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PATHWAY: List[_PPG_PCG_PATHWAY] = Field(
         min_length=1,
         title="PATHWAY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

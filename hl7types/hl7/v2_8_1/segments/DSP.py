@@ -13,24 +13,24 @@ from hl7types.hl7 import HL7Model
 
 
 class DSP(HL7Model):
-    """HL7 v2 DSP segment.
+    """Display Data (S5.5.1).
 
     Attributes
     ----------
     dsp_1 : str | None
-        DSP.1 (opt) - Set ID - DSP (SI)
+        DSP.1 (opt) - Set ID - DSP (SI) S5.5.1.1
 
     dsp_2 : str | None
-        DSP.2 (opt) - Display Level (SI)
+        DSP.2 (opt) - Display Level (SI) S5.5.1.2
 
     dsp_3 : str
-        DSP.3 (req) - Data Line (TX)
+        DSP.3 (req) - Data Line (TX) S5.5.1.3
 
     dsp_4 : str | None
-        DSP.4 (opt) - Logical Break Point (ST)
+        DSP.4 (opt) - Logical Break Point (ST) S5.5.1.4
 
     dsp_5 : str | None
-        DSP.5 (opt) - Result ID (TX)
+        DSP.5 (opt) - Result ID (TX) S5.5.1.5
     """
 
     dsp_1: Optional[str] = Field(

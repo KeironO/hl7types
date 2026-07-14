@@ -26,33 +26,33 @@ class EHC_E01_PROCEDURE(HL7Model):
     """HL7 v2 EHC_E01.PROCEDURE group.
 
     Attributes:
-        PR1 (PR1): required
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
+        PR1 (PR1): Procedures, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     PR1: _PR1 = Field(
         title="PR1",
-        description="Required",
+        description="Procedures",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

@@ -18,75 +18,75 @@ from ..datatypes.TS import TS
 
 
 class RXG(HL7Model):
-    """HL7 v2 RXG segment.
+    """Pharmacy/Treatment Give (S4.14.6).
 
     Attributes
     ----------
     rxg_1 : str
-        RXG.1 (req) - Give Sub-ID Counter (NM)
+        RXG.1 (req) - Give Sub-ID Counter (NM) S4.14.7.1
 
     rxg_2 : str | None
-        RXG.2 (opt) - Dispense Sub-ID Counter (NM)
+        RXG.2 (opt) - Dispense Sub-ID Counter (NM) S4.14.6.2
 
     rxg_3 : TQ
-        RXG.3 (req) - Quantity/Timing (TQ)
+        RXG.3 (req) - Quantity/Timing (TQ) S7.4.1.27
 
     rxg_4 : CE
-        RXG.4 (req) - Give Code (CE)
+        RXG.4 (req) - Give Code (CE) S4.14.6.4 | 0292 - Vaccines administered
 
     rxg_5 : str
-        RXG.5 (req) - Give Amount - Minimum (NM)
+        RXG.5 (req) - Give Amount - Minimum (NM) S4.14.6.5
 
     rxg_6 : str | None
-        RXG.6 (opt) - Give Amount - Maximum (NM)
+        RXG.6 (opt) - Give Amount - Maximum (NM) S4.14.6.6
 
     rxg_7 : CE
-        RXG.7 (req) - Give Units (CE)
+        RXG.7 (req) - Give Units (CE) S4.14.6.7
 
     rxg_8 : CE | None
-        RXG.8 (opt) - Give Dosage Form (CE)
+        RXG.8 (opt) - Give Dosage Form (CE) S4.14.6.8
 
     rxg_9 : list[CE] | None
-        RXG.9 (opt, rep) - Administration Notes (CE)
+        RXG.9 (opt, rep) - Administration Notes (CE) S4.14.7.9
 
     rxg_10 : str | None
-        RXG.10 (opt) - Substitution Status (ID)
+        RXG.10 (opt) - Substitution Status (ID) S4.14.6.10 | 0167 - Substitution status
 
     rxg_11 : LA2 | None
-        RXG.11 (opt) - Dispense-To Location (LA2)
+        RXG.11 (opt) - Dispense-To Location (LA2) S4.14.6.11
 
     rxg_12 : str | None
-        RXG.12 (opt) - Needs Human Review (ID)
+        RXG.12 (opt) - Needs Human Review (ID) S4.14.6.12 | 0136 - Yes/no indicator
 
     rxg_13 : list[CE] | None
-        RXG.13 (opt, rep) - Pharmacy/Treatment Supplier's Special Administration Instructions (CE)
+        RXG.13 (opt, rep) - Pharmacy/Treatment Supplier's Special Administration Instructions (CE) S4.14.6.13
 
     rxg_14 : str | None
-        RXG.14 (opt) - Give Per (Time Unit) (ST)
+        RXG.14 (opt) - Give Per (Time Unit) (ST) S4.14.6.14
 
     rxg_15 : str | None
-        RXG.15 (opt) - Give Rate Amount (ST)
+        RXG.15 (opt) - Give Rate Amount (ST) S4.14.6.15
 
     rxg_16 : CE | None
-        RXG.16 (opt) - Give Rate Units (CE)
+        RXG.16 (opt) - Give Rate Units (CE) S4.14.6.16
 
     rxg_17 : str | None
-        RXG.17 (opt) - Give Strength (NM)
+        RXG.17 (opt) - Give Strength (NM) S4.14.6.17
 
     rxg_18 : CE | None
-        RXG.18 (opt) - Give Strength Units (CE)
+        RXG.18 (opt) - Give Strength Units (CE) S4.14.6.18
 
     rxg_19 : list[str] | None
-        RXG.19 (opt, rep) - Substance Lot Number (ST)
+        RXG.19 (opt, rep) - Substance Lot Number (ST) S13.4.11.2
 
     rxg_20 : list[TS] | None
-        RXG.20 (opt, rep) - Substance Expiration Date (TS)
+        RXG.20 (opt, rep) - Substance Expiration Date (TS) S4.14.7.16
 
     rxg_21 : list[CE] | None
-        RXG.21 (opt, rep) - Substance Manufacturer Name (CE)
+        RXG.21 (opt, rep) - Substance Manufacturer Name (CE) S4.14.7.17 | 0227 - Manufacturers of vaccines (code=MVX)
 
     rxg_22 : list[CE] | None
-        RXG.22 (opt, rep) - Indication (CE)
+        RXG.22 (opt, rep) - Indication (CE) S4.14.7.19
     """
 
     rxg_1: str = Field(

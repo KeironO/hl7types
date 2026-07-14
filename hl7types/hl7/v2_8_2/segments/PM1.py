@@ -20,81 +20,81 @@ from ..datatypes.XTN import XTN
 
 
 class PM1(HL7Model):
-    """HL7 v2 PM1 segment.
+    """Payer Master File (S8.8.17).
 
     Attributes
     ----------
     pm1_1 : CWE
-        PM1.1 (req) - Health Plan ID (CWE)
+        PM1.1 (req) - Health Plan ID (CWE) S6.5.1.14 | 0072 - Insurance Plan ID
 
     pm1_2 : list[CX]
-        PM1.2 (req, rep) - Insurance Company ID (CX)
+        PM1.2 (req, rep) - Insurance Company ID (CX) S6.5.6.3
 
     pm1_3 : list[XON] | None
-        PM1.3 (opt, rep) - Insurance Company Name (XON)
+        PM1.3 (opt, rep) - Insurance Company Name (XON) S6.5.6.4
 
     pm1_4 : list[XAD] | None
-        PM1.4 (opt, rep) - Insurance Company Address (XAD)
+        PM1.4 (opt, rep) - Insurance Company Address (XAD) S6.5.6.5
 
     pm1_5 : list[XPN] | None
-        PM1.5 (opt, rep) - Insurance Co Contact Person (XPN)
+        PM1.5 (opt, rep) - Insurance Co Contact Person (XPN) S6.5.6.6
 
     pm1_6 : list[XTN] | None
-        PM1.6 (opt, rep) - Insurance Co Phone Number (XTN)
+        PM1.6 (opt, rep) - Insurance Co Phone Number (XTN) S6.5.6.7
 
     pm1_7 : str | None
-        PM1.7 (opt) - Group Number (ST)
+        PM1.7 (opt) - Group Number (ST) S6.5.6.8
 
     pm1_8 : list[XON] | None
-        PM1.8 (opt, rep) - Group Name (XON)
+        PM1.8 (opt, rep) - Group Name (XON) S6.5.6.9
 
     pm1_9 : str | None
-        PM1.9 (opt) - Plan Effective Date (DT)
+        PM1.9 (opt) - Plan Effective Date (DT) S6.5.6.12
 
     pm1_10 : str | None
-        PM1.10 (opt) - Plan Expiration Date (DT)
+        PM1.10 (opt) - Plan Expiration Date (DT) S6.5.6.13
 
     pm1_11 : str | None
-        PM1.11 (opt) - Patient DOB Required (ID)
+        PM1.11 (opt) - Patient DOB Required (ID) S8.8.17.11 | 0136 - Yes/no Indicator
 
     pm1_12 : str | None
-        PM1.12 (opt) - Patient Gender Required (ID)
+        PM1.12 (opt) - Patient Gender Required (ID) S8.8.17.12 | 0136 - Yes/no Indicator
 
     pm1_13 : str | None
-        PM1.13 (opt) - Patient Relationship Required (ID)
+        PM1.13 (opt) - Patient Relationship Required (ID) S8.8.17.13 | 0136 - Yes/no Indicator
 
     pm1_14 : str | None
-        PM1.14 (opt) - Patient Signature Required (ID)
+        PM1.14 (opt) - Patient Signature Required (ID) S8.8.17.14 | 0136 - Yes/no Indicator
 
     pm1_15 : str | None
-        PM1.15 (opt) - Diagnosis Required (ID)
+        PM1.15 (opt) - Diagnosis Required (ID) S8.8.17.15 | 0136 - Yes/no Indicator
 
     pm1_16 : str | None
-        PM1.16 (opt) - Service Required (ID)
+        PM1.16 (opt) - Service Required (ID) S8.8.17.16 | 0136 - Yes/no Indicator
 
     pm1_17 : str | None
-        PM1.17 (opt) - Patient Name Required (ID)
+        PM1.17 (opt) - Patient Name Required (ID) S8.8.17.17 | 0136 - Yes/no Indicator
 
     pm1_18 : str | None
-        PM1.18 (opt) - Patient Address Required (ID)
+        PM1.18 (opt) - Patient Address Required (ID) S8.8.17.18 | 0136 - Yes/no Indicator
 
     pm1_19 : str | None
-        PM1.19 (opt) - Subscribers Name Required (ID)
+        PM1.19 (opt) - Subscribers Name Required (ID) S8.8.17.19 | 0136 - Yes/no Indicator
 
     pm1_20 : str | None
-        PM1.20 (opt) - Workman's Comp Indicator (ID)
+        PM1.20 (opt) - Workman's Comp Indicator (ID) S8.8.17.20 | 0136 - Yes/no Indicator
 
     pm1_21 : str | None
-        PM1.21 (opt) - Bill Type Required (ID)
+        PM1.21 (opt) - Bill Type Required (ID) S8.8.17.21 | 0136 - Yes/no Indicator
 
     pm1_22 : str | None
-        PM1.22 (opt) - Commercial Carrier Name and Address Required (ID)
+        PM1.22 (opt) - Commercial Carrier Name and Address Required (ID) S8.8.17.22 | 0136 - Yes/no Indicator
 
     pm1_23 : str | None
-        PM1.23 (opt) - Policy Number Pattern (ST)
+        PM1.23 (opt) - Policy Number Pattern (ST) S8.8.17.23
 
     pm1_24 : str | None
-        PM1.24 (opt) - Group Number Pattern (ST)
+        PM1.24 (opt) - Group Number Pattern (ST) S8.8.17.24
     """
 
     pm1_1: CWE = Field(

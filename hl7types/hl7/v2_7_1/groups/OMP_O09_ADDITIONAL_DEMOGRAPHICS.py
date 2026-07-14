@@ -22,19 +22,19 @@ class OMP_O09_ADDITIONAL_DEMOGRAPHICS(HL7Model):
     """HL7 v2 OMP_O09.ADDITIONAL_DEMOGRAPHICS group.
 
     Attributes:
-        PD1 (PD1): required
-        PRT (Optional[List[PRT]]): optional
+        PD1 (PD1): Patient Additional Demographic, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     PD1: _PD1 = Field(
         title="PD1",
-        description="Required",
+        description="Patient Additional Demographic",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

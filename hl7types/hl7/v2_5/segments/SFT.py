@@ -16,27 +16,27 @@ from ..datatypes.XON import XON
 
 
 class SFT(HL7Model):
-    """HL7 v2 SFT segment.
+    """Software Segment (S2.15.12).
 
     Attributes
     ----------
     sft_1 : XON
-        SFT.1 (req) - Software Vendor Organization (XON)
+        SFT.1 (req) - Software Vendor Organization (XON) S2.15.12.1
 
     sft_2 : str
-        SFT.2 (req) - Software Certified Version or Release Number (ST)
+        SFT.2 (req) - Software Certified Version or Release Number (ST) S2.15.12.2
 
     sft_3 : str
-        SFT.3 (req) - Software Product Name (ST)
+        SFT.3 (req) - Software Product Name (ST) S2.15.12.3
 
     sft_4 : str
-        SFT.4 (req) - Software Binary ID (ST)
+        SFT.4 (req) - Software Binary ID (ST) S2.15.12.4
 
     sft_5 : str | None
-        SFT.5 (opt) - Software Product Information (TX)
+        SFT.5 (opt) - Software Product Information (TX) S2.15.12.5
 
     sft_6 : TS | None
-        SFT.6 (opt) - Software Install Date (TS)
+        SFT.6 (opt) - Software Install Date (TS) S2.15.12.6
     """
 
     sft_1: XON = Field(

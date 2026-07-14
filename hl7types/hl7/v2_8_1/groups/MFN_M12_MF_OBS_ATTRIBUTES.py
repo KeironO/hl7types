@@ -27,32 +27,31 @@ class MFN_M12_MF_OBS_ATTRIBUTES(HL7Model):
     """HL7 v2 MFN_M12.MF_OBS_ATTRIBUTES group.
 
     Attributes:
-        MFE (MFE): required
-        OM1 (OM1): required
-        PRT (Optional[List[PRT]]): optional
+        MFE (MFE): Master File Entry, required
+        OM1 (OM1): General Segment, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         MF_OBS_OTHER_ATTRIBUTES (Optional[MFN_M12_MF_OBS_OTHER_ATTRIBUTES]): optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     OM1: _OM1 = Field(
         title="OM1",
-        description="Required",
+        description="General Segment",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     MF_OBS_OTHER_ATTRIBUTES: Optional[_MFN_M12_MF_OBS_OTHER_ATTRIBUTES] = Field(
         default=None,
         title="MF_OBS_OTHER_ATTRIBUTES",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

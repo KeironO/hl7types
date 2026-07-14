@@ -29,40 +29,38 @@ class PPR_PC1_GOAL(HL7Model):
     """HL7 v2 PPR_PC1.GOAL group.
 
     Attributes:
-        GOL (GOL): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        GOL (GOL): Goal Detail, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         GOAL_ROLE (Optional[List[PPR_PC1_GOAL_ROLE]]): optional
         GOAL_OBSERVATION (Optional[List[PPR_PC1_GOAL_OBSERVATION]]): optional
     """
 
     GOL: _GOL = Field(
         title="GOL",
-        description="Required",
+        description="Goal Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     GOAL_ROLE: Optional[List[_PPR_PC1_GOAL_ROLE]] = Field(
         default=None,
         title="GOAL_ROLE",
-        description="Optional, repeating",
     )
 
     GOAL_OBSERVATION: Optional[List[_PPR_PC1_GOAL_OBSERVATION]] = Field(
         default=None,
         title="GOAL_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

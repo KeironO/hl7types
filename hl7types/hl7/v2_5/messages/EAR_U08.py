@@ -26,42 +26,41 @@ _SFT = SFT
 
 
 class EAR_U08(HL7Model):
-    """HL7 v2 EAR_U08 message.
+    """EAR/ACK - Automated equipment response (S13.3.8).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EQU (EQU): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EQU (EQU): Equipment Detail, required
         COMMAND_RESPONSE (List[EAR_U08_COMMAND_RESPONSE]): required
-        ROL (Optional[ROL]): optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     COMMAND_RESPONSE: List[_EAR_U08_COMMAND_RESPONSE] = Field(
         min_length=1,
         title="COMMAND_RESPONSE",
-        description="Required, repeating",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

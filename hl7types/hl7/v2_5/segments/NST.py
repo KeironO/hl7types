@@ -15,54 +15,54 @@ from ..datatypes.TS import TS
 
 
 class NST(HL7Model):
-    """HL7 v2 NST segment.
+    """Application control level statistics (S14.4.3).
 
     Attributes
     ----------
     nst_1 : str
-        NST.1 (req) - Statistics Available (ID)
+        NST.1 (req) - Statistics Available (ID) S14.4.3.1 | 0136 - Yes/no indicator
 
     nst_2 : str | None
-        NST.2 (opt) - Source Identifier (ST)
+        NST.2 (opt) - Source Identifier (ST) S14.4.3.2
 
     nst_3 : str | None
-        NST.3 (opt) - Source Type (ID)
+        NST.3 (opt) - Source Type (ID) S14.4.3.3 | 0332 - Source type
 
     nst_4 : TS | None
-        NST.4 (opt) - Statistics Start (TS)
+        NST.4 (opt) - Statistics Start (TS) S14.4.3.4
 
     nst_5 : TS | None
-        NST.5 (opt) - Statistics End (TS)
+        NST.5 (opt) - Statistics End (TS) S14.4.3.5
 
     nst_6 : str | None
-        NST.6 (opt) - Receive Character Count (NM)
+        NST.6 (opt) - Receive Character Count (NM) S14.4.3.6
 
     nst_7 : str | None
-        NST.7 (opt) - Send Character Count (NM)
+        NST.7 (opt) - Send Character Count (NM) S14.4.3.7
 
     nst_8 : str | None
-        NST.8 (opt) - Messages Received (NM)
+        NST.8 (opt) - Messages Received (NM) S14.4.3.8
 
     nst_9 : str | None
-        NST.9 (opt) - Messages Sent (NM)
+        NST.9 (opt) - Messages Sent (NM) S14.4.3.9
 
     nst_10 : str | None
-        NST.10 (opt) - Checksum Errors Received (NM)
+        NST.10 (opt) - Checksum Errors Received (NM) S14.4.3.10
 
     nst_11 : str | None
-        NST.11 (opt) - Length Errors Received (NM)
+        NST.11 (opt) - Length Errors Received (NM) S14.4.3.11
 
     nst_12 : str | None
-        NST.12 (opt) - Other Errors Received (NM)
+        NST.12 (opt) - Other Errors Received (NM) S14.4.3.12
 
     nst_13 : str | None
-        NST.13 (opt) - Connect Timeouts (NM)
+        NST.13 (opt) - Connect Timeouts (NM) S14.4.3.13
 
     nst_14 : str | None
-        NST.14 (opt) - Receive Timeouts (NM)
+        NST.14 (opt) - Receive Timeouts (NM) S14.4.3.14
 
     nst_15 : str | None
-        NST.15 (opt) - Application control-level Errors (NM)
+        NST.15 (opt) - Application control-level Errors (NM) S14.4.3.15
     """
 
     nst_1: str = Field(

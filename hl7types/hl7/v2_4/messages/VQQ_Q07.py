@@ -23,35 +23,35 @@ _VTQ = VTQ
 
 
 class VQQ_Q07(HL7Model):
-    """HL7 v2 VQQ_Q07 message.
+    """VQQ - Virtual table query (S5).
 
     Attributes:
-        MSH (MSH): required
-        VTQ (VTQ): required
-        RDF (Optional[RDF]): optional
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        VTQ (VTQ): Virtual Table Query Request, required
+        RDF (Optional[RDF]): Table Row Definition, optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     VTQ: _VTQ = Field(
         title="VTQ",
-        description="Required",
+        description="Virtual Table Query Request",
     )
 
     RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
-        description="Optional",
+        description="Table Row Definition",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

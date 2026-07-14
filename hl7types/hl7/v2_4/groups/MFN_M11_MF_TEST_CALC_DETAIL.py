@@ -21,18 +21,18 @@ class MFN_M11_MF_TEST_CALC_DETAIL(HL7Model):
     """HL7 v2 MFN_M11.MF_TEST_CALC_DETAIL group.
 
     Attributes:
-        OM6 (OM6): required
-        OM2 (OM2): required
+        OM6 (OM6): Observations that are Calculated from Other Observ, required
+        OM2 (OM2): Numeric Observation, required
     """
 
     OM6: _OM6 = Field(
         title="OM6",
-        description="Required",
+        description="Observations that are Calculated from Other Observ",
     )
 
     OM2: _OM2 = Field(
         title="OM2",
-        description="Required",
+        description="Numeric Observation",
     )
 
     model_config = {"populate_by_name": True}

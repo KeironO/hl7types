@@ -24,132 +24,132 @@ from ..datatypes.XON import XON
 
 
 class FT1(HL7Model):
-    """HL7 v2 FT1 segment.
+    """Financial Transaction (S6.5.1).
 
     Attributes
     ----------
     ft1_1 : str | None
-        FT1.1 (opt) - Set ID - FT1 (SI)
+        FT1.1 (opt) - Set ID - FT1 (SI) S6.5.1.1
 
     ft1_2 : str | None
-        FT1.2 (opt) - Transaction ID (ST)
+        FT1.2 (opt) - Transaction ID (ST) S6.5.1.2
 
     ft1_3 : str | None
-        FT1.3 (opt) - Transaction Batch ID (ST)
+        FT1.3 (opt) - Transaction Batch ID (ST) S6.5.1.3
 
     ft1_4 : DR
-        FT1.4 (req) - Transaction Date (DR)
+        FT1.4 (req) - Transaction Date (DR) S6.5.1.4
 
     ft1_5 : str | None
-        FT1.5 (opt) - Transaction Posting Date (DTM)
+        FT1.5 (opt) - Transaction Posting Date (DTM) S6.5.1.5
 
     ft1_6 : CWE
-        FT1.6 (req) - Transaction Type (CWE)
+        FT1.6 (req) - Transaction Type (CWE) S6.5.1.6 | 0017 - Transaction Type
 
     ft1_7 : CWE
-        FT1.7 (req) - Transaction Code (CWE)
+        FT1.7 (req) - Transaction Code (CWE) S17.4.2.12 | 0132 - Transaction Code
 
     ft1_10 : str | None
-        FT1.10 (opt) - Transaction Quantity (NM)
+        FT1.10 (opt) - Transaction Quantity (NM) S6.5.1.10
 
     ft1_11 : CP | None
-        FT1.11 (opt) - Transaction Amount - Extended (CP)
+        FT1.11 (opt) - Transaction Amount - Extended (CP) S6.5.1.11
 
     ft1_12 : CP | None
-        FT1.12 (opt) - Transaction amount - unit (CP)
+        FT1.12 (opt) - Transaction amount - unit (CP) S17.4.2.13
 
     ft1_13 : CWE | None
-        FT1.13 (opt) - Department Code (CWE)
+        FT1.13 (opt) - Department Code (CWE) S6.5.1.13 | 0049 - Department Code
 
     ft1_14 : CWE | None
-        FT1.14 (opt) - Health Plan ID (CWE)
+        FT1.14 (opt) - Health Plan ID (CWE) S6.5.1.14 | 0072 - Insurance Plan ID
 
     ft1_15 : CP | None
-        FT1.15 (opt) - Insurance Amount (CP)
+        FT1.15 (opt) - Insurance Amount (CP) S6.5.1.15
 
     ft1_16 : PL | None
-        FT1.16 (opt) - Assigned Patient Location (PL)
+        FT1.16 (opt) - Assigned Patient Location (PL) S3.4.3.3
 
     ft1_17 : CWE | None
-        FT1.17 (opt) - Fee Schedule (CWE)
+        FT1.17 (opt) - Fee Schedule (CWE) S6.5.1.17 | 0024 - Fee Schedule
 
     ft1_18 : CWE | None
-        FT1.18 (opt) - Patient Type (CWE)
+        FT1.18 (opt) - Patient Type (CWE) S3.4.3.18 | 0018 - Patient Type
 
     ft1_19 : list[CWE] | None
-        FT1.19 (opt, rep) - Diagnosis Code - FT1 (CWE)
+        FT1.19 (opt, rep) - Diagnosis Code - FT1 (CWE) S6.5.1.19 | 0051 - Diagnosis Code
 
     ft1_20 : list[XCN] | None
-        FT1.20 (opt, rep) - Performed By Code (XCN)
+        FT1.20 (opt, rep) - Performed By Code (XCN) S6.5.1.20 | 0084 - Performed by
 
     ft1_21 : list[XCN] | None
-        FT1.21 (opt, rep) - Ordered By Code (XCN)
+        FT1.21 (opt, rep) - Ordered By Code (XCN) S6.5.1.21
 
     ft1_22 : CP | None
-        FT1.22 (opt) - Unit Cost (CP)
+        FT1.22 (opt) - Unit Cost (CP) S6.5.1.22
 
     ft1_23 : EI | None
-        FT1.23 (opt) - Filler Order Number (EI)
+        FT1.23 (opt) - Filler Order Number (EI) S10.6.1.25
 
     ft1_24 : list[XCN] | None
-        FT1.24 (opt, rep) - Entered By Code (XCN)
+        FT1.24 (opt, rep) - Entered By Code (XCN) S6.5.1.24
 
     ft1_25 : CNE | None
-        FT1.25 (opt) - Procedure Code (CNE)
+        FT1.25 (opt) - Procedure Code (CNE) S17.4.1.14 | 0088 - Procedure Code
 
     ft1_26 : list[CNE] | None
-        FT1.26 (opt, rep) - Procedure Code Modifier (CNE)
+        FT1.26 (opt, rep) - Procedure Code Modifier (CNE) S17.4.1.15 | 0340 - Procedure Code Modifier
 
     ft1_27 : CWE | None
-        FT1.27 (opt) - Advanced Beneficiary Notice Code (CWE)
+        FT1.27 (opt) - Advanced Beneficiary Notice Code (CWE) S4.5.1.20 | 0339 - Advanced Beneficiary Notice Code
 
     ft1_28 : CWE | None
-        FT1.28 (opt) - Medically Necessary Duplicate Procedure Reason (CWE)
+        FT1.28 (opt) - Medically Necessary Duplicate Procedure Reason (CWE) S4.5.3.48 | 0476 - Medically Necessary Duplicate Procedure Reason
 
     ft1_29 : CWE | None
-        FT1.29 (opt) - NDC Code (CWE)
+        FT1.29 (opt) - NDC Code (CWE) S6.5.1.29 | 0549 - NDC Codes
 
     ft1_30 : CX | None
-        FT1.30 (opt) - Payment Reference ID (CX)
+        FT1.30 (opt) - Payment Reference ID (CX) S6.5.1.30
 
     ft1_31 : list[str] | None
-        FT1.31 (opt, rep) - Transaction Reference Key (SI)
+        FT1.31 (opt, rep) - Transaction Reference Key (SI) S6.5.1.31
 
     ft1_32 : list[XON] | None
-        FT1.32 (opt, rep) - Performing Facility (XON)
+        FT1.32 (opt, rep) - Performing Facility (XON) S6.5.1.32
 
     ft1_33 : XON | None
-        FT1.33 (opt) - Ordering Facility (XON)
+        FT1.33 (opt) - Ordering Facility (XON) S6.5.1.33
 
     ft1_34 : CWE | None
-        FT1.34 (opt) - Item Number (CWE)
+        FT1.34 (opt) - Item Number (CWE) S6.5.1.34
 
     ft1_35 : str | None
-        FT1.35 (opt) - Model Number (ST)
+        FT1.35 (opt) - Model Number (ST) S6.5.1.35
 
     ft1_36 : list[CWE] | None
-        FT1.36 (opt, rep) - Special Processing Code (CWE)
+        FT1.36 (opt, rep) - Special Processing Code (CWE) S6.5.1.36
 
     ft1_37 : CWE | None
-        FT1.37 (opt) - Clinic Code (CWE)
+        FT1.37 (opt) - Clinic Code (CWE) S6.5.1.37
 
     ft1_38 : CX | None
-        FT1.38 (opt) - Referral Number (CX)
+        FT1.38 (opt) - Referral Number (CX) S6.5.1.38
 
     ft1_39 : CX | None
-        FT1.39 (opt) - Authorization Number (CX)
+        FT1.39 (opt) - Authorization Number (CX) S6.5.1.39
 
     ft1_40 : CWE | None
-        FT1.40 (opt) - Service Provider Taxonomy Code (CWE)
+        FT1.40 (opt) - Service Provider Taxonomy Code (CWE) S6.5.1.40
 
     ft1_41 : CWE | None
-        FT1.41 (opt) - Revenue Code (CWE)
+        FT1.41 (opt) - Revenue Code (CWE) S6.5.1.41 | 0456 - Revenue code
 
     ft1_42 : str | None
-        FT1.42 (opt) - Prescription Number (ST)
+        FT1.42 (opt) - Prescription Number (ST) S6.5.1.42
 
     ft1_43 : CQ | None
-        FT1.43 (opt) - NDC Qty and UOM (CQ)
+        FT1.43 (opt) - NDC Qty and UOM (CQ) S6.5.1.43
     """
 
     ft1_1: Optional[str] = Field(

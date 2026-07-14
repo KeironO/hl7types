@@ -24,26 +24,26 @@ class ORN_O08_PATIENT(HL7Model):
     """HL7 v2 ORN_O08.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        ARV (Optional[List[ARV]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient Identification, required
+        ARV (Optional[List[ARV]]): Access Restriction, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

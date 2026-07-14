@@ -41,80 +41,78 @@ class OMQ_O57_ORDER(HL7Model):
     """HL7 v2 OMQ_O57.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
-        OBX (OBX): required
-        TXA (TXA): required
-        CTD (Optional[CTD]): optional
-        DG1 (Optional[List[DG1]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        OBX (OBX): Observation/Result, required
+        TXA (TXA): Transcription Document Header, required
+        CTD (Optional[CTD]): Contact Data, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[OMQ_O57_OBSERVATION]]): optional
         PRIOR_RESULT (Optional[List[OMQ_O57_PRIOR_RESULT]]): optional
-        FT1 (Optional[List[FT1]]): optional
-        CTI (Optional[List[CTI]]): optional
-        BLG (Optional[BLG]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     TXA: _TXA = Field(
         title="TXA",
-        description="Required",
+        description="Transcription Document Header",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_OMQ_O57_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     PRIOR_RESULT: Optional[List[_OMQ_O57_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
-        description="Optional, repeating",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

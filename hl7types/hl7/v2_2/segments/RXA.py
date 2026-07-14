@@ -16,45 +16,45 @@ from ..datatypes.TS import TS
 
 
 class RXA(HL7Model):
-    """HL7 v2 RXA segment.
+    """PHARMACY AADMINISTRATION (S4.8.14).
 
     Attributes
     ----------
     rxa_1 : str
-        RXA.1 (req) - Give Sub-ID Counter (NM)
+        RXA.1 (req) - Give Sub-ID Counter (NM) S4.8.14.1
 
     rxa_2 : str
-        RXA.2 (req) - Administration Sub-ID Counter (NM)
+        RXA.2 (req) - Administration Sub-ID Counter (NM) S4.8.14.2
 
     rxa_3 : TS
-        RXA.3 (req) - Date / time start of administration (TS)
+        RXA.3 (req) - Date / time start of administration (TS) S4.8.14.3
 
     rxa_4 : TS
-        RXA.4 (req) - Date / time end of administration (TS)
+        RXA.4 (req) - Date / time end of administration (TS) S4.8.14.4
 
     rxa_5 : CE
-        RXA.5 (req) - Administered Code (CE)
+        RXA.5 (req) - Administered Code (CE) S4.8.14.5
 
     rxa_6 : str
-        RXA.6 (req) - Administered Amount (NM)
+        RXA.6 (req) - Administered Amount (NM) S4.8.14.6
 
     rxa_7 : CE | None
-        RXA.7 (opt) - Administered Units (CE)
+        RXA.7 (opt) - Administered Units (CE) S4.8.14.7
 
     rxa_8 : CE | None
-        RXA.8 (opt) - Administered Dosage Form (CE)
+        RXA.8 (opt) - Administered Dosage Form (CE) S4.8.14.8
 
     rxa_9 : str | None
-        RXA.9 (opt) - Administration Notes (ST)
+        RXA.9 (opt) - Administration Notes (ST) S4.8.14.9
 
     rxa_10 : str | None
-        RXA.10 (opt) - Administering Provider (CN)
+        RXA.10 (opt) - Administering Provider (CN) S4.8.14.10
 
     rxa_11 : str | None
-        RXA.11 (opt) - Administered-at Location (CM)
+        RXA.11 (opt) - Administered-at Location (CM) S4.8.14.11
 
     rxa_12 : str | None
-        RXA.12 (opt) - Administered Per (Time Unit) (ST)
+        RXA.12 (opt) - Administered Per (Time Unit) (ST) S4.8.14.12
     """
 
     rxa_1: str = Field(

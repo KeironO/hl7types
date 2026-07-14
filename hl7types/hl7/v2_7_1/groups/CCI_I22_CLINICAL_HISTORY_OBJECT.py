@@ -42,90 +42,90 @@ class CCI_I22_CLINICAL_HISTORY_OBJECT(HL7Model):
     """HL7 v2 CCI_I22.CLINICAL_HISTORY_OBJECT group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        ODS (Optional[ODS]): optional
-        PR1 (Optional[PR1]): optional
-        RF1 (Optional[RF1]): optional
-        AL1 (Optional[AL1]): optional
-        IAM (Optional[IAM]): optional
-        ACC (Optional[ACC]): optional
-        RMI (Optional[RMI]): optional
-        DB1 (Optional[DB1]): optional
-        DG1 (Optional[DG1]): optional
-        DRG (Optional[DRG]): optional
-        PDA (Optional[PDA]): optional
+        OBR (Optional[OBR]): Observation Request, optional
+        ODS (Optional[ODS]): Dietary Orders, Supplements, and Preferences, optional
+        PR1 (Optional[PR1]): Procedures, optional
+        RF1 (Optional[RF1]): Referral Information, optional
+        AL1 (Optional[AL1]): Patient Allergy Information, optional
+        IAM (Optional[IAM]): Patient Adverse Reaction Information, optional
+        ACC (Optional[ACC]): Accident, optional
+        RMI (Optional[RMI]): Risk Management Incident, optional
+        DB1 (Optional[DB1]): Disability, optional
+        DG1 (Optional[DG1]): Diagnosis, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
+        PDA (Optional[PDA]): Patient Death and Autopsy, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation Request",
     )
 
     ODS: Optional[_ODS] = Field(
         default=None,
         title="ODS",
-        description="Optional",
+        description="Dietary Orders, Supplements, and Preferences",
     )
 
     PR1: Optional[_PR1] = Field(
         default=None,
         title="PR1",
-        description="Optional",
+        description="Procedures",
     )
 
     RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
-        description="Optional",
+        description="Referral Information",
     )
 
     AL1: Optional[_AL1] = Field(
         default=None,
         title="AL1",
-        description="Optional",
+        description="Patient Allergy Information",
     )
 
     IAM: Optional[_IAM] = Field(
         default=None,
         title="IAM",
-        description="Optional",
+        description="Patient Adverse Reaction Information",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     RMI: Optional[_RMI] = Field(
         default=None,
         title="RMI",
-        description="Optional",
+        description="Risk Management Incident",
     )
 
     DB1: Optional[_DB1] = Field(
         default=None,
         title="DB1",
-        description="Optional",
+        description="Disability",
     )
 
     DG1: Optional[_DG1] = Field(
         default=None,
         title="DG1",
-        description="Optional",
+        description="Diagnosis",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     PDA: Optional[_PDA] = Field(
         default=None,
         title="PDA",
-        description="Optional",
+        description="Patient Death and Autopsy",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,20 +22,20 @@ class CCI_I22_ROLE_CLINICAL_HISTORY_OBJECT(HL7Model):
     """HL7 v2 CCI_I22.ROLE_CLINICAL_HISTORY_OBJECT group.
 
     Attributes:
-        ROL (Optional[ROL]): optional
-        PRD (Optional[PRD]): optional
+        ROL (Optional[ROL]): Role, optional
+        PRD (Optional[PRD]): Provider Data, optional
     """
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     PRD: Optional[_PRD] = Field(
         default=None,
         title="PRD",
-        description="Optional",
+        description="Provider Data",
     )
 
     model_config = {"populate_by_name": True}

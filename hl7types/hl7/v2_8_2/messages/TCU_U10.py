@@ -26,42 +26,41 @@ _UAC = UAC
 
 
 class TCU_U10(HL7Model):
-    """HL7 v2 TCU_U10 message.
+    """TCU/ACK - Automated equipment test code settings update (S13.3.10).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EQU (EQU): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EQU (EQU): Equipment Detail, required
         TEST_CONFIGURATION (List[TCU_U10_TEST_CONFIGURATION]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     TEST_CONFIGURATION: List[_TCU_U10_TEST_CONFIGURATION] = Field(
         min_length=1,
         title="TEST_CONFIGURATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

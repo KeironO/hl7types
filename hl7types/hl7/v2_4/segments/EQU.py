@@ -17,24 +17,24 @@ from ..datatypes.TS import TS
 
 
 class EQU(HL7Model):
-    """HL7 v2 EQU segment.
+    """Equipment Detail (S13.4.1).
 
     Attributes
     ----------
     equ_1 : EI
-        EQU.1 (req) - Equipment Instance Identifier (EI)
+        EQU.1 (req) - Equipment Instance Identifier (EI) S13.4.1.1
 
     equ_2 : TS
-        EQU.2 (req) - Event Date/Time (TS)
+        EQU.2 (req) - Event Date/Time (TS) S13.4.1.2
 
     equ_3 : CE | None
-        EQU.3 (opt) - Equipment State (CE)
+        EQU.3 (opt) - Equipment State (CE) S13.4.1.3 | 0365 - Equipment state
 
     equ_4 : CE | None
-        EQU.4 (opt) - Local/Remote Control State (CE)
+        EQU.4 (opt) - Local/Remote Control State (CE) S13.4.1.4 | 0366 - Local/remote control state
 
     equ_5 : CE | None
-        EQU.5 (opt) - Alert Level (CE)
+        EQU.5 (opt) - Alert Level (CE) S13.4.1.5 | 0367 - Alert level
     """
 
     equ_1: EI = Field(

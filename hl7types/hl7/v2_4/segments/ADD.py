@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class ADD(HL7Model):
-    """HL7 v2 ADD segment.
+    """Addendum (S2.16.1).
 
     Attributes
     ----------
     add_1 : str | None
-        ADD.1 (opt) - Addendum Continuation Pointer (ST)
+        ADD.1 (opt) - Addendum Continuation Pointer (ST) S2.16.1.1
     """
 
     add_1: Optional[str] = Field(

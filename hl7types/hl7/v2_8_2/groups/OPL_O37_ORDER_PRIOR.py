@@ -29,40 +29,38 @@ class OPL_O37_ORDER_PRIOR(HL7Model):
     """HL7 v2 OPL_O37.ORDER_PRIOR group.
 
     Attributes:
-        OBR (OBR): required
-        ORC (Optional[ORC]): optional
-        PRT (Optional[List[PRT]]): optional
+        OBR (OBR): Observation Request, required
+        ORC (Optional[ORC]): Common Order, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[OPL_O37_TIMING]): optional
         OBSERVATION_RESULT_GROUP (List[OPL_O37_OBSERVATION_RESULT_GROUP]): required
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[_OPL_O37_TIMING] = Field(
         default=None,
         title="TIMING",
-        description="Optional",
     )
 
     OBSERVATION_RESULT_GROUP: List[_OPL_O37_OBSERVATION_RESULT_GROUP] = Field(
         min_length=1,
         title="OBSERVATION_RESULT_GROUP",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

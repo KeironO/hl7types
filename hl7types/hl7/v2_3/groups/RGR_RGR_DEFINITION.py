@@ -27,33 +27,31 @@ class RGR_RGR_DEFINITION(HL7Model):
     """HL7 v2 RGR_RGR.DEFINITION group.
 
     Attributes:
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        QRD (QRD): Query definition segment, required
+        QRF (Optional[QRF]): Query filter segment, optional
         PATIENT (Optional[RGR_RGR_PATIENT]): optional
         ORDER (List[RGR_RGR_ORDER]): required
     """
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Query filter segment",
     )
 
     PATIENT: Optional[_RGR_RGR_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RGR_RGR_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

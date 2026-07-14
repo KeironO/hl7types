@@ -15,30 +15,30 @@ from ..datatypes.CWE import CWE
 
 
 class OM3(HL7Model):
-    """HL7 v2 OM3 segment.
+    """Categorical Service/Test/Observation (S8.8.10).
 
     Attributes
     ----------
     om3_1 : str | None
-        OM3.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+        OM3.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
 
     om3_2 : CWE | None
-        OM3.2 (opt) - Preferred Coding System (CWE)
+        OM3.2 (opt) - Preferred Coding System (CWE) S8.8.10.2 | 9999 - no table for CE
 
     om3_3 : list[CWE] | None
-        OM3.3 (opt, rep) - Valid Coded "Answers" (CWE)
+        OM3.3 (opt, rep) - Valid Coded "Answers" (CWE) S8.8.10.3 | 9999 - no table for CE
 
     om3_4 : list[CWE] | None
-        OM3.4 (opt, rep) - Normal Text/Codes for Categorical Observations (CWE)
+        OM3.4 (opt, rep) - Normal Text/Codes for Categorical Observations (CWE) S8.8.10.4 | 9999 - no table for CE
 
     om3_5 : list[CWE] | None
-        OM3.5 (opt, rep) - Abnormal Text/Codes for Categorical Observations (CWE)
+        OM3.5 (opt, rep) - Abnormal Text/Codes for Categorical Observations (CWE) S8.8.10.5 | 9999 - no table for CE
 
     om3_6 : list[CWE] | None
-        OM3.6 (opt, rep) - Critical Text/Codes for Categorical Observations (CWE)
+        OM3.6 (opt, rep) - Critical Text/Codes for Categorical Observations (CWE) S8.8.10.6 | 9999 - no table for CE
 
     om3_7 : str | None
-        OM3.7 (opt) - Value Type (ID)
+        OM3.7 (opt) - Value Type (ID) S7.16.3.2 | 0125 - Value Type
     """
 
     om3_1: Optional[str] = Field(

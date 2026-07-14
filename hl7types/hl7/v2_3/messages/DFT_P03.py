@@ -44,104 +44,102 @@ _PV2 = PV2
 
 
 class DFT_P03(HL7Model):
-    """HL7 v2 DFT_P03 message.
+    """DFT/ACK - Post detail financial transaction.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        DB1 (Optional[List[DB1]]): optional
-        OBX (Optional[List[OBX]]): optional
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Demographic, optional
+        PV1 (Optional[PV1]): Patient visit, optional
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
+        DB1 (Optional[List[DB1]]): Disability Segment, optional
+        OBX (Optional[List[OBX]]): Observation segment, optional
         FINANCIAL (List[DFT_P03_FINANCIAL]): required
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[DRG]): optional
-        GT1 (Optional[List[GT1]]): optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[DFT_P03_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
+        ACC (Optional[ACC]): Accident, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Demographic",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="Disability Segment",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation segment",
     )
 
     FINANCIAL: List[_DFT_P03_FINANCIAL] = Field(
         min_length=1,
         title="FINANCIAL",
-        description="Required, repeating",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_DFT_P03_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     model_config = {"populate_by_name": True}

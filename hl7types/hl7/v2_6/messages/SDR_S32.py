@@ -24,35 +24,34 @@ _UAC = UAC
 
 
 class SDR_S32(HL7Model):
-    """HL7 v2 SDR_S32 message.
+    """SMD/SMS - Request anti-microbial device cycle data (S17.5.4).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         ANTIMICROBIAL_DEVICE_CYCLE_DATA (SDR_S32_ANTIMICROBIAL_DEVICE_CYCLE_DATA): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     ANTIMICROBIAL_DEVICE_CYCLE_DATA: _SDR_S32_ANTIMICROBIAL_DEVICE_CYCLE_DATA = Field(
         title="ANTIMICROBIAL_DEVICE_CYCLE_DATA",
-        description="Required",
     )
 
     model_config = {"populate_by_name": True}

@@ -16,7 +16,7 @@ from .MOP import MOP
 
 
 class RMC(HL7Model):
-    """HL7 v2 RMC data type.
+    """Room coverage (S2.A.65).
 
     Attributes
     ----------

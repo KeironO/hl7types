@@ -27,33 +27,32 @@ class DPR_O48_DONATION(HL7Model):
     """HL7 v2 DPR_O48.DONATION group.
 
     Attributes:
-        DON (DON): required
-        OBX (Optional[List[OBX]]): optional
-        NTE (Optional[List[NTE]]): optional
+        DON (DON): Donation, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         BLOOD_UNIT (Optional[DPR_O48_BLOOD_UNIT]): optional
     """
 
     DON: _DON = Field(
         title="DON",
-        description="Required",
+        description="Donation",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     BLOOD_UNIT: Optional[_DPR_O48_BLOOD_UNIT] = Field(
         default=None,
         title="BLOOD_UNIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,57 +17,57 @@ from ..datatypes.XCN import XCN
 
 
 class DG1(HL7Model):
-    """HL7 v2 DG1 segment.
+    """Diagnosis (S6.5.2).
 
     Attributes
     ----------
     dg1_1 : str
-        DG1.1 (req) - Set ID - DG1 (SI)
+        DG1.1 (req) - Set ID - DG1 (SI) S6.5.2.1
 
     dg1_3 : CWE
-        DG1.3 (req) - Diagnosis Code - DG1 (CWE)
+        DG1.3 (req) - Diagnosis Code - DG1 (CWE) S6.5.2.3 | 0051 - Diagnosis Code
 
     dg1_5 : str | None
-        DG1.5 (opt) - Diagnosis Date/Time (DTM)
+        DG1.5 (opt) - Diagnosis Date/Time (DTM) S6.5.2.5
 
     dg1_6 : CWE
-        DG1.6 (req) - Diagnosis Type (CWE)
+        DG1.6 (req) - Diagnosis Type (CWE) S6.5.2.6 | 0052 - Diagnosis Type
 
     dg1_15 : str | None
-        DG1.15 (opt) - Diagnosis Priority (NM)
+        DG1.15 (opt) - Diagnosis Priority (NM) S6.5.2.15 | 0359 - Diagnosis Priority
 
     dg1_16 : list[XCN] | None
-        DG1.16 (opt, rep) - Diagnosing Clinician (XCN)
+        DG1.16 (opt, rep) - Diagnosing Clinician (XCN) S6.5.2.16
 
     dg1_17 : CWE | None
-        DG1.17 (opt) - Diagnosis Classification (CWE)
+        DG1.17 (opt) - Diagnosis Classification (CWE) S6.5.2.17 | 0228 - Diagnosis Classification
 
     dg1_18 : str | None
-        DG1.18 (opt) - Confidential Indicator (ID)
+        DG1.18 (opt) - Confidential Indicator (ID) S6.5.2.18 | 0136 - Yes/no Indicator
 
     dg1_19 : str | None
-        DG1.19 (opt) - Attestation Date/Time (DTM)
+        DG1.19 (opt) - Attestation Date/Time (DTM) S6.5.2.19
 
     dg1_20 : EI | None
-        DG1.20 (opt) - Diagnosis Identifier (EI)
+        DG1.20 (opt) - Diagnosis Identifier (EI) S6.5.2.20
 
     dg1_21 : str | None
-        DG1.21 (opt) - Diagnosis Action Code (ID)
+        DG1.21 (opt) - Diagnosis Action Code (ID) S6.5.2.21 | 0206 - Segment Action Code
 
     dg1_22 : EI | None
-        DG1.22 (opt) - Parent Diagnosis (EI)
+        DG1.22 (opt) - Parent Diagnosis (EI) S6.5.2.22
 
     dg1_23 : CWE | None
-        DG1.23 (opt) - DRG CCL Value Code (CWE)
+        DG1.23 (opt) - DRG CCL Value Code (CWE) S6.5.2.23 | 0728 - CCL Value
 
     dg1_24 : str | None
-        DG1.24 (opt) - DRG Grouping Usage (ID)
+        DG1.24 (opt) - DRG Grouping Usage (ID) S6.5.2.24 | 0136 - Yes/no Indicator
 
     dg1_25 : CWE | None
-        DG1.25 (opt) - DRG Diagnosis Determination Status (CWE)
+        DG1.25 (opt) - DRG Diagnosis Determination Status (CWE) S6.5.2.25 | 0731 - DRG Diagnosis Determination Status
 
     dg1_26 : CWE | None
-        DG1.26 (opt) - Present On Admission (POA) Indicator (CWE)
+        DG1.26 (opt) - Present On Admission (POA) Indicator (CWE) S6.5.2.26 | 0895 - Present On Admission (POA) Indicator
     """
 
     dg1_1: str = Field(

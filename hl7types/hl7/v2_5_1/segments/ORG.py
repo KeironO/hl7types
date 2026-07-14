@@ -17,45 +17,45 @@ from ..datatypes.DR import DR
 
 
 class ORG(HL7Model):
-    """HL7 v2 ORG segment.
+    """Practitioner Organization Unit (S15.4.5).
 
     Attributes
     ----------
     org_1 : str
-        ORG.1 (req) - Set ID - ORG (SI)
+        ORG.1 (req) - Set ID - ORG (SI) S15.4.5.1
 
     org_2 : CE | None
-        ORG.2 (opt) - Organization Unit Code (CE)
+        ORG.2 (opt) - Organization Unit Code (CE) S15.4.5.2 | 0405 - Organization Unit
 
     org_3 : CE | None
-        ORG.3 (opt) - Organization Unit Type Code (CE)
+        ORG.3 (opt) - Organization Unit Type Code (CE) S15.4.5.3 | 0474 - Organization Unit Type
 
     org_4 : str | None
-        ORG.4 (opt) - Primary Org Unit Indicator (ID)
+        ORG.4 (opt) - Primary Org Unit Indicator (ID) S15.4.5.4 | 0136 - Yes/no indicator
 
     org_5 : CX | None
-        ORG.5 (opt) - Practitioner Org Unit Identifier (CX)
+        ORG.5 (opt) - Practitioner Org Unit Identifier (CX) S15.4.5.5
 
     org_6 : CE | None
-        ORG.6 (opt) - Health Care Provider Type Code (CE)
+        ORG.6 (opt) - Health Care Provider Type Code (CE) S15.4.5.6 | 0452 - Health care provider type code
 
     org_7 : CE | None
-        ORG.7 (opt) - Health Care Provider Classification Code (CE)
+        ORG.7 (opt) - Health Care Provider Classification Code (CE) S15.4.5.7 | 0453 - Health care provider classification
 
     org_8 : CE | None
-        ORG.8 (opt) - Health Care Provider Area of Specialization Code (CE)
+        ORG.8 (opt) - Health Care Provider Area of Specialization Code (CE) S15.4.5.8 | 0454 - Health care provider area of specialization
 
     org_9 : DR | None
-        ORG.9 (opt) - Effective Date Range (DR)
+        ORG.9 (opt) - Effective Date Range (DR) S15.4.5.9
 
     org_10 : CE | None
-        ORG.10 (opt) - Employment Status Code (CE)
+        ORG.10 (opt) - Employment Status Code (CE) S15.4.5.10 | 0066 - Employment Status
 
     org_11 : str | None
-        ORG.11 (opt) - Board Approval Indicator (ID)
+        ORG.11 (opt) - Board Approval Indicator (ID) S15.4.5.11 | 0136 - Yes/no indicator
 
     org_12 : str | None
-        ORG.12 (opt) - Primary Care Physician Indicator (ID)
+        ORG.12 (opt) - Primary Care Physician Indicator (ID) S15.4.5.12 | 0136 - Yes/no indicator
     """
 
     org_1: str = Field(

@@ -25,26 +25,24 @@ class RRE_O12_ORDER(HL7Model):
     """HL7 v2 RRE_O12.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[RRE_O12_TIMING]]): optional
         ENCODING (Optional[RRE_O12_ENCODING]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_RRE_O12_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ENCODING: Optional[_RRE_O12_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

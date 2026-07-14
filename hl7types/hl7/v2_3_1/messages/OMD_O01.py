@@ -29,8 +29,8 @@ class OMD_O01(HL7Model):
     """HL7 v2 OMD_O01 message.
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): MSH - message header segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         PATIENT (Optional[OMD_O01_PATIENT]): optional
         ORDER_DIET (List[OMD_O01_ORDER_DIET]): required
         ORDER_TRAY (Optional[List[OMD_O01_ORDER_TRAY]]): optional
@@ -38,31 +38,28 @@ class OMD_O01(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     PATIENT: Optional[_OMD_O01_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER_DIET: List[_OMD_O01_ORDER_DIET] = Field(
         min_length=1,
         title="ORDER_DIET",
-        description="Required, repeating",
     )
 
     ORDER_TRAY: Optional[List[_OMD_O01_ORDER_TRAY]] = Field(
         default=None,
         title="ORDER_TRAY",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

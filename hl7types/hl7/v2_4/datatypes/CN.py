@@ -16,7 +16,7 @@ from .HD import HD
 
 
 class CN(HL7Model):
-    """HL7 v2 CN data type.
+    """Composite id number and name (S2.9.7).
 
     Attributes
     ----------

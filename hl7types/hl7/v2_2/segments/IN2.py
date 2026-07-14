@@ -15,99 +15,99 @@ from ..datatypes.PN import PN
 
 
 class IN2(HL7Model):
-    """HL7 v2 IN2 segment.
+    """INSURANCE ADDITIONAL INFO (S6.4.6).
 
     Attributes
     ----------
     in2_1 : str | None
-        IN2.1 (opt) - Insured's employee ID (ST)
+        IN2.1 (opt) - Insured's employee ID (ST) S6.4.6.1
 
     in2_2 : str | None
-        IN2.2 (opt) - Insured's social security number (ST)
+        IN2.2 (opt) - Insured's social security number (ST) S6.4.6.2
 
     in2_3 : str | None
-        IN2.3 (opt) - Insured's employer name (CN)
+        IN2.3 (opt) - Insured's employer name (CN) S6.4.6.3
 
     in2_4 : str | None
-        IN2.4 (opt) - Employer information data (ID)
+        IN2.4 (opt) - Employer information data (ID) S6.4.6.4 | 0139 - EMPLOYER INFORMATION DATA
 
     in2_5 : str | None
-        IN2.5 (opt) - Mail claim party (ID)
+        IN2.5 (opt) - Mail claim party (ID) S6.4.6.5 | 0137 - MAIL CLAIM PARTY
 
     in2_6 : str | None
-        IN2.6 (opt) - Medicare health insurance card number (NM)
+        IN2.6 (opt) - Medicare health insurance card number (NM) S6.4.6.6
 
     in2_7 : PN | None
-        IN2.7 (opt) - Medicaid case name (PN)
+        IN2.7 (opt) - Medicaid case name (PN) S6.4.6.7
 
     in2_8 : str | None
-        IN2.8 (opt) - Medicaid case number (NM)
+        IN2.8 (opt) - Medicaid case number (NM) S6.4.6.8
 
     in2_9 : PN | None
-        IN2.9 (opt) - Champus sponsor name (PN)
+        IN2.9 (opt) - Champus sponsor name (PN) S6.4.6.9
 
     in2_10 : str | None
-        IN2.10 (opt) - Champus ID number (NM)
+        IN2.10 (opt) - Champus ID number (NM) S6.4.6.10
 
     in2_11 : str | None
-        IN2.11 (opt) - Dependent of champus recipient (ID)
+        IN2.11 (opt) - Dependent of champus recipient (ID) S6.4.6.11
 
     in2_12 : str | None
-        IN2.12 (opt) - Champus organization (ST)
+        IN2.12 (opt) - Champus organization (ST) S6.4.6.12
 
     in2_13 : str | None
-        IN2.13 (opt) - Champus station (ST)
+        IN2.13 (opt) - Champus station (ST) S6.4.6.13
 
     in2_14 : str | None
-        IN2.14 (opt) - Champus service (ID)
+        IN2.14 (opt) - Champus service (ID) S6.4.6.14 | 0140 - CHAMPUS SERVICE
 
     in2_15 : str | None
-        IN2.15 (opt) - Champus rank / grade (ID)
+        IN2.15 (opt) - Champus rank / grade (ID) S6.4.6.15 | 0141 - CHAMPUS RANK/GRADE
 
     in2_16 : str | None
-        IN2.16 (opt) - Champus status (ID)
+        IN2.16 (opt) - Champus status (ID) S6.4.6.16 | 0142 - CHAMPUS STATE
 
     in2_17 : str | None
-        IN2.17 (opt) - Champus retire date (DT)
+        IN2.17 (opt) - Champus retire date (DT) S6.4.6.17
 
     in2_18 : str | None
-        IN2.18 (opt) - Champus non-availability certification on file (ID)
+        IN2.18 (opt) - Champus non-availability certification on file (ID) S6.4.6.18 | 0136 - Y/N Indicator
 
     in2_19 : str | None
-        IN2.19 (opt) - Baby coverage (ID)
+        IN2.19 (opt) - Baby coverage (ID) S6.4.6.19 | 0136 - Y/N Indicator
 
     in2_20 : str | None
-        IN2.20 (opt) - Combine baby bill (ID)
+        IN2.20 (opt) - Combine baby bill (ID) S6.4.6.20 | 0136 - Y/N Indicator
 
     in2_21 : str | None
-        IN2.21 (opt) - Blood deductible (NM)
+        IN2.21 (opt) - Blood deductible (NM) S6.4.9.2
 
     in2_22 : PN | None
-        IN2.22 (opt) - Special coverage approval name (PN)
+        IN2.22 (opt) - Special coverage approval name (PN) S6.4.6.22
 
     in2_23 : str | None
-        IN2.23 (opt) - Special coverage approval title (ST)
+        IN2.23 (opt) - Special coverage approval title (ST) S6.4.6.23
 
     in2_24 : list[str] | None
-        IN2.24 (opt, rep) - Non-covered insurance code (ID)
+        IN2.24 (opt, rep) - Non-covered insurance code (ID) S6.4.6.24 | 0143 - NON-COVEREDINSURANCE CODE
 
     in2_25 : str | None
-        IN2.25 (opt) - Payor ID (ST)
+        IN2.25 (opt) - Payor ID (ST) S6.4.6.25
 
     in2_26 : str | None
-        IN2.26 (opt) - Payor subscriber ID (ST)
+        IN2.26 (opt) - Payor subscriber ID (ST) S6.4.6.26
 
     in2_27 : str | None
-        IN2.27 (opt) - Eligibility source (ID)
+        IN2.27 (opt) - Eligibility source (ID) S6.4.6.27 | 0144 - ELIGIBILITY SOURCE
 
     in2_28 : list[str] | None
-        IN2.28 (opt, rep) - Room coverage type / amount (CM)
+        IN2.28 (opt, rep) - Room coverage type / amount (CM) S6.4.6.28 | 0145 - Room Type
 
     in2_29 : list[str] | None
-        IN2.29 (opt, rep) - Policy type / amount (CM)
+        IN2.29 (opt, rep) - Policy type / amount (CM) S6.4.6.29 | 0147 - POLICY TYPE
 
     in2_30 : str | None
-        IN2.30 (opt) - Daily deductible (CM)
+        IN2.30 (opt) - Daily deductible (CM) S6.4.6.30
     """
 
     in2_1: Optional[str] = Field(

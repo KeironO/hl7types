@@ -27,33 +27,32 @@ class SQM_S25_REQUEST(HL7Model):
     """HL7 v2 SQM_S25.REQUEST group.
 
     Attributes:
-        ARQ (ARQ): required
-        APR (Optional[APR]): optional
-        PID (Optional[PID]): optional
+        ARQ (ARQ): Appointment Request, required
+        APR (Optional[APR]): Appointment Preferences, optional
+        PID (Optional[PID]): Patient identification, optional
         RESOURCES (List[SQM_S25_RESOURCES]): required
     """
 
     ARQ: _ARQ = Field(
         title="ARQ",
-        description="Required",
+        description="Appointment Request",
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="Appointment Preferences",
     )
 
     PID: Optional[_PID] = Field(
         default=None,
         title="PID",
-        description="Optional",
+        description="Patient identification",
     )
 
     RESOURCES: List[_SQM_S25_RESOURCES] = Field(
         min_length=1,
         title="RESOURCES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

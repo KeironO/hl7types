@@ -30,47 +30,47 @@ class ADT_A03_INSURANCE(HL7Model):
     """HL7 v2 ADT_A03.INSURANCE group.
 
     Attributes:
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
-        IN3 (Optional[List[IN3]]): optional
-        ROL (Optional[List[ROL]]): optional
-        AUT (Optional[List[AUT]]): optional
-        RF1 (Optional[List[RF1]]): optional
+        IN1 (IN1): Insurance, required
+        IN2 (Optional[IN2]): Insurance Additional Information, optional
+        IN3 (Optional[List[IN3]]): Insurance Additional Information, Certification, optional
+        ROL (Optional[List[ROL]]): Role, optional
+        AUT (Optional[List[AUT]]): Authorization Information, optional
+        RF1 (Optional[List[RF1]]): Referral Information, optional
     """
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="Insurance",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="Insurance Additional Information",
     )
 
     IN3: Optional[List[_IN3]] = Field(
         default=None,
         title="IN3",
-        description="Optional, repeating",
+        description="Insurance Additional Information, Certification",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     AUT: Optional[List[_AUT]] = Field(
         default=None,
         title="AUT",
-        description="Optional, repeating",
+        description="Authorization Information",
     )
 
     RF1: Optional[List[_RF1]] = Field(
         default=None,
         title="RF1",
-        description="Optional, repeating",
+        description="Referral Information",
     )
 
     model_config = {"populate_by_name": True}

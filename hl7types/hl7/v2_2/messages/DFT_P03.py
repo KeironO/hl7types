@@ -32,52 +32,52 @@ class DFT_P03(HL7Model):
     """HL7 v2 DFT_P03 message.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        OBX (Optional[List[OBX]]): optional
-        FT1 (List[FT1]): required
+        MSH (MSH): MESSAGE HEADER, required
+        EVN (EVN): EVENT TYPE, required
+        PID (PID): PATIENT IDENTIFICATION, required
+        PV1 (Optional[PV1]): PATIENT VISIT, optional
+        PV2 (Optional[PV2]): PATIENT VISIT - additional information, optional
+        OBX (Optional[List[OBX]]): OBSERVATION RESULT, optional
+        FT1 (List[FT1]): FINANCIAL TRANSACTION, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVENT TYPE",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PATIENT IDENTIFICATION",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="PATIENT VISIT",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="PATIENT VISIT - additional information",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBSERVATION RESULT",
     )
 
     FT1: List[_FT1] = Field(
         min_length=1,
         title="FT1",
-        description="Required, repeating",
+        description="FINANCIAL TRANSACTION",
     )
 
     model_config = {"populate_by_name": True}

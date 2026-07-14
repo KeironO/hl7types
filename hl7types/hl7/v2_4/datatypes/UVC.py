@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class UVC(HL7Model):
-    """HL7 v2 UVC data type.
+    """Value code and amount.
 
     Attributes
     ----------

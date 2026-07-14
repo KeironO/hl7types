@@ -29,40 +29,37 @@ class OPR_O38_SPECIMEN(HL7Model):
     """HL7 v2 OPR_O38.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         SPECIMEN_OBSERVATION (Optional[List[OPR_O38_SPECIMEN_OBSERVATION]]): optional
-        SAC (Optional[List[SAC]]): optional
+        SAC (Optional[List[SAC]]): Specimen Container detail, optional
         OBSERVATION_REQUEST (Optional[List[OPR_O38_OBSERVATION_REQUEST]]): optional
         TIMING (Optional[List[OPR_O38_TIMING]]): optional
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OPR_O38_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     SAC: Optional[List[_SAC]] = Field(
         default=None,
         title="SAC",
-        description="Optional, repeating",
+        description="Specimen Container detail",
     )
 
     OBSERVATION_REQUEST: Optional[List[_OPR_O38_OBSERVATION_REQUEST]] = Field(
         default=None,
         title="OBSERVATION_REQUEST",
-        description="Optional, repeating",
     )
 
     TIMING: Optional[List[_OPR_O38_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

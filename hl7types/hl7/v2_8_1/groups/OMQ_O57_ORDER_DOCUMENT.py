@@ -30,45 +30,45 @@ class OMQ_O57_ORDER_DOCUMENT(HL7Model):
     """HL7 v2 OMQ_O57.ORDER_DOCUMENT group.
 
     Attributes:
-        SGH (SGH): required
-        OBX (OBX): required
-        PRT (Optional[List[PRT]]): optional
-        TXA (Optional[TXA]): optional
-        NTE (Optional[List[NTE]]): optional
-        SGT (SGT): required
+        SGH (SGH): Segment Group Header, required
+        OBX (OBX): Observation/Result, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        TXA (Optional[TXA]): Transcription Document Header, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        SGT (SGT): Segment Group Trailer, required
     """
 
     SGH: _SGH = Field(
         title="SGH",
-        description="Required",
+        description="Segment Group Header",
     )
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TXA: Optional[_TXA] = Field(
         default=None,
         title="TXA",
-        description="Optional",
+        description="Transcription Document Header",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     SGT: _SGT = Field(
         title="SGT",
-        description="Required",
+        description="Segment Group Trailer",
     )
 
     model_config = {"populate_by_name": True}

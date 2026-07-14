@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class DSP(HL7Model):
-    """HL7 v2 DSP segment.
+    """DISPLAY DATA (S5.3.2).
 
     Attributes
     ----------

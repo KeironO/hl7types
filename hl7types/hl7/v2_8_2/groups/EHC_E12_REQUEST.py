@@ -26,33 +26,33 @@ class EHC_E12_REQUEST(HL7Model):
     """HL7 v2 EHC_E12.REQUEST group.
 
     Attributes:
-        CTD (Optional[CTD]): optional
-        OBR (OBR): required
-        NTE (Optional[NTE]): optional
-        OBX (Optional[List[OBX]]): optional
+        CTD (Optional[CTD]): Contact Data, optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[NTE]): Notes and Comments, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

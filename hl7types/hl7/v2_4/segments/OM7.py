@@ -18,81 +18,81 @@ from ..datatypes.XCN import XCN
 
 
 class OM7(HL7Model):
-    """HL7 v2 OM7 segment.
+    """Additional Basic Attributes (S8.8.9).
 
     Attributes
     ----------
     om7_1 : str
-        OM7.1 (req) - Sequence Number - Test/ Observation Master File (NM)
+        OM7.1 (req) - Sequence Number - Test/ Observation Master File (NM) S8.8.9.1
 
     om7_2 : CE
-        OM7.2 (req) - Universal Service Identifier (CE)
+        OM7.2 (req) - Universal Service Identifier (CE) S13.4.10.1
 
     om7_3 : list[CE] | None
-        OM7.3 (opt, rep) - Category Identifier (CE)
+        OM7.3 (opt, rep) - Category Identifier (CE) S8.8.9.3 | 0412 - Category identifier
 
     om7_4 : str | None
-        OM7.4 (opt) - Category Description (TX)
+        OM7.4 (opt) - Category Description (TX) S8.8.9.4
 
     om7_5 : list[str] | None
-        OM7.5 (opt, rep) - Category Synonym (ST)
+        OM7.5 (opt, rep) - Category Synonym (ST) S8.8.9.5
 
     om7_6 : TS | None
-        OM7.6 (opt) - Effective Test/Service Start Date/Time (TS)
+        OM7.6 (opt) - Effective Test/Service Start Date/Time (TS) S8.8.9.6
 
     om7_7 : TS | None
-        OM7.7 (opt) - Effective Test/Service End Date/Time (TS)
+        OM7.7 (opt) - Effective Test/Service End Date/Time (TS) S8.8.9.7
 
     om7_8 : str | None
-        OM7.8 (opt) - Test/Service Default Duration Quantity (NM)
+        OM7.8 (opt) - Test/Service Default Duration Quantity (NM) S8.8.9.8
 
     om7_9 : CE | None
-        OM7.9 (opt) - Test/Service Default Duration Units (CE)
+        OM7.9 (opt) - Test/Service Default Duration Units (CE) S8.8.9.9 | 9999 - for unknown CE data elements
 
     om7_10 : str | None
-        OM7.10 (opt) - Test/Service Default Frequency (IS)
+        OM7.10 (opt) - Test/Service Default Frequency (IS) S8.8.9.10 | 0335 - Repeat pattern
 
     om7_11 : str | None
-        OM7.11 (opt) - Consent Indicator (ID)
+        OM7.11 (opt) - Consent Indicator (ID) S8.8.9.11 | 0136 - Yes/no indicator
 
     om7_12 : CE | None
-        OM7.12 (opt) - Consent Identifier (CE)
+        OM7.12 (opt) - Consent Identifier (CE) S8.8.9.12 | 0413 - Consent identifier
 
     om7_13 : TS | None
-        OM7.13 (opt) - Consent Effective Start Date/Time (TS)
+        OM7.13 (opt) - Consent Effective Start Date/Time (TS) S8.8.9.13
 
     om7_14 : TS | None
-        OM7.14 (opt) - Consent Effective End Date/Time (TS)
+        OM7.14 (opt) - Consent Effective End Date/Time (TS) S8.8.9.14
 
     om7_15 : str | None
-        OM7.15 (opt) - Consent Interval Quantity (NM)
+        OM7.15 (opt) - Consent Interval Quantity (NM) S8.8.9.15
 
     om7_16 : CE | None
-        OM7.16 (opt) - Consent Interval Units (CE)
+        OM7.16 (opt) - Consent Interval Units (CE) S8.8.9.16 | 0414 - Units of time
 
     om7_17 : str | None
-        OM7.17 (opt) - Consent Waiting Period Quantity (NM)
+        OM7.17 (opt) - Consent Waiting Period Quantity (NM) S8.8.9.17
 
     om7_18 : CE | None
-        OM7.18 (opt) - Consent Waiting Period Units (CE)
+        OM7.18 (opt) - Consent Waiting Period Units (CE) S8.8.9.18 | 0414 - Units of time
 
     om7_19 : TS | None
-        OM7.19 (opt) - Effective Date/Time of Change (TS)
+        OM7.19 (opt) - Effective Date/Time of Change (TS) S8.8.9.19
 
     om7_20 : XCN | None
-        OM7.20 (opt) - Entered By (XCN)
+        OM7.20 (opt) - Entered By (XCN) S8.8.9.20
 
     om7_21 : list[PL] | None
-        OM7.21 (opt, rep) - Orderable-at Location (PL)
+        OM7.21 (opt, rep) - Orderable-at Location (PL) S8.8.9.21
 
     om7_22 : str | None
-        OM7.22 (opt) - Formulary Status (IS)
+        OM7.22 (opt) - Formulary Status (IS) S8.8.9.22 | 0473 - Formulary status
 
     om7_23 : str | None
-        OM7.23 (opt) - Special Order Indicator (ID)
+        OM7.23 (opt) - Special Order Indicator (ID) S8.8.9.23 | 0136 - Yes/no indicator
 
     om7_24 : list[CE] | None
-        OM7.24 (opt, rep) - Primary Key Value - CDM (CE)
+        OM7.24 (opt, rep) - Primary Key Value - CDM (CE) S8.10.2.1 | 0132 - Transaction code
     """
 
     om7_1: str = Field(

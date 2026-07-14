@@ -26,42 +26,41 @@ _RRD_O02_PATIENT = RRD_O02_PATIENT
 
 
 class RRD_O02(HL7Model):
-    """HL7 v2 RRD_O02 message.
+    """ORR - Order response (also RRE, RRD, RRG, RRA,.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message header segment, required
+        MSA (MSA): Message acknowledgement segment, required
+        ERR (Optional[ERR]): Error segment, optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
         PATIENT (Optional[RRD_O02_PATIENT]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message acknowledgement segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     PATIENT: Optional[_RRD_O02_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

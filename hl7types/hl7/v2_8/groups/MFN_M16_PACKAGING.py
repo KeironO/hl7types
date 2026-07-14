@@ -22,19 +22,19 @@ class MFN_M16_PACKAGING(HL7Model):
     """HL7 v2 MFN_M16.PACKAGING group.
 
     Attributes:
-        PKG (PKG): required
-        PCE (Optional[List[PCE]]): optional
+        PKG (PKG): Item Packaging, required
+        PCE (Optional[List[PCE]]): Patient Charge Cost Center Exceptions, optional
     """
 
     PKG: _PKG = Field(
         title="PKG",
-        description="Required",
+        description="Item Packaging",
     )
 
     PCE: Optional[List[_PCE]] = Field(
         default=None,
         title="PCE",
-        description="Optional, repeating",
+        description="Patient Charge Cost Center Exceptions",
     )
 
     model_config = {"populate_by_name": True}

@@ -41,82 +41,79 @@ class OML_O21_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 OML_O21.OBSERVATION_REQUEST group.
 
     Attributes:
-        OBR (OBR): required
-        TCD (Optional[TCD]): optional
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
-        CTD (Optional[CTD]): optional
-        DG1 (Optional[List[DG1]]): optional
+        OBR (OBR): Observation Request, required
+        TCD (Optional[TCD]): Test Code Detail, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        CTD (Optional[CTD]): Contact Data, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[OML_O21_OBSERVATION]]): optional
         SPECIMEN (Optional[List[OML_O21_SPECIMEN]]): optional
-        SGH (Optional[SGH]): optional
+        SGH (Optional[SGH]): Segment Group Header, optional
         PRIOR_RESULT (Optional[List[OML_O21_PRIOR_RESULT]]): optional
-        SGT (Optional[SGT]): optional
+        SGT (Optional[SGT]): Segment Group Trailer, optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_OML_O21_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     SPECIMEN: Optional[List[_OML_O21_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
-        description="Optional, repeating",
     )
 
     SGH: Optional[_SGH] = Field(
         default=None,
         title="SGH",
-        description="Optional",
+        description="Segment Group Header",
     )
 
     PRIOR_RESULT: Optional[List[_OML_O21_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
-        description="Optional, repeating",
     )
 
     SGT: Optional[_SGT] = Field(
         default=None,
         title="SGT",
-        description="Optional",
+        description="Segment Group Trailer",
     )
 
     model_config = {"populate_by_name": True}

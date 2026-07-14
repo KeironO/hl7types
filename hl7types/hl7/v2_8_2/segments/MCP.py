@@ -16,24 +16,24 @@ from ..datatypes.MO import MO
 
 
 class MCP(HL7Model):
-    """HL7 v2 MCP segment.
+    """Master File Coverage (S8.8.18).
 
     Attributes
     ----------
     mcp_1 : str
-        MCP.1 (req) - Set ID - MCP (SI)
+        MCP.1 (req) - Set ID - MCP (SI) S8.8.18.1
 
     mcp_2 : CWE
-        MCP.2 (req) - Producer's Service/Test/Observation ID (CWE)
+        MCP.2 (req) - Producer's Service/Test/Observation ID (CWE) S8.8.18.2
 
     mcp_3 : MO | None
-        MCP.3 (opt) - Universal Service Price Range - Low Value (MO)
+        MCP.3 (opt) - Universal Service Price Range - Low Value (MO) S8.8.18.3
 
     mcp_4 : MO | None
-        MCP.4 (opt) - Universal Service Price Range - High Value (MO)
+        MCP.4 (opt) - Universal Service Price Range - High Value (MO) S8.8.18.4
 
     mcp_5 : str | None
-        MCP.5 (opt) - Reason for Universal Service Cost Range (ST)
+        MCP.5 (opt) - Reason for Universal Service Cost Range (ST) S8.8.18.5
     """
 
     mcp_1: str = Field(

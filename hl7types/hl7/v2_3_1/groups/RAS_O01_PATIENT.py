@@ -29,40 +29,39 @@ class RAS_O01_PATIENT(HL7Model):
     """HL7 v2 RAS_O01.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NTE (Optional[List[NTE]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        AL1 (Optional[List[AL1]]): AL1 - patient allergy information segment, optional
         PATIENT_VISIT (Optional[RAS_O01_PATIENT_VISIT]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="AL1 - patient allergy information segment",
     )
 
     PATIENT_VISIT: Optional[_RAS_O01_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

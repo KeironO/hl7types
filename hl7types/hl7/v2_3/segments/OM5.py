@@ -15,18 +15,18 @@ from ..datatypes.CE import CE
 
 
 class OM5(HL7Model):
-    """HL7 v2 OM5 segment.
+    """Observation batteries (S8.7.7).
 
     Attributes
     ----------
     om5_1 : str | None
-        OM5.1 (opt) - Sequence Number - Test/ Observation Master File (NM)
+        OM5.1 (opt) - Sequence Number - Test/ Observation Master File (NM) S8.7.3
 
     om5_2 : list[CE] | None
-        OM5.2 (opt, rep) - Test/Observations Included w/an Ordered Test Battery (CE)
+        OM5.2 (opt, rep) - Test/Observations Included w/an Ordered Test Battery (CE) S8.7.7.2
 
     om5_3 : str | None
-        OM5.3 (opt) - Observation ID Suffixes (ST)
+        OM5.3 (opt) - Observation ID Suffixes (ST) S8.7.7.3
     """
 
     om5_1: Optional[str] = Field(

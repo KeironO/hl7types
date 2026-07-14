@@ -40,89 +40,88 @@ _RCL_I06_PROVIDER = RCL_I06_PROVIDER
 
 
 class RCL_I06(HL7Model):
-    """HL7 v2 RCL_I06 message.
+    """RQC/RCL - Request/receipt of clinical data listing.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): MSH - message header segment, required
+        MSA (MSA): MSA - message acknowledgment segment, required
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
         PROVIDER (List[RCL_I06_PROVIDER]): required
-        PID (PID): required
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
-        NTE (Optional[List[NTE]]): optional
-        DSP (Optional[List[DSP]]): optional
-        DSC (Optional[DSC]): optional
+        PID (PID): PID - patient identification segment, required
+        DG1 (Optional[List[DG1]]): DG1 - diagnosis segment, optional
+        DRG (Optional[List[DRG]]): DRG - diagnosis related group segment, optional
+        AL1 (Optional[List[AL1]]): AL1 - patient allergy information segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        DSP (Optional[List[DSP]]): DSP - display data segment, optional
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MSA - message acknowledgment segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     PROVIDER: List[_RCL_I06_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DG1 - diagnosis segment",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="DRG - diagnosis related group segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="AL1 - patient allergy information segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     DSP: Optional[List[_DSP]] = Field(
         default=None,
         title="DSP",
-        description="Optional, repeating",
+        description="DSP - display data segment",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

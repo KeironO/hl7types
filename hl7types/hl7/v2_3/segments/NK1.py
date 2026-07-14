@@ -22,120 +22,120 @@ from ..datatypes.XTN import XTN
 
 
 class NK1(HL7Model):
-    """HL7 v2 NK1 segment.
+    """Next of kin (S3.3.5).
 
     Attributes
     ----------
     nk1_1 : str
-        NK1.1 (req) - Set ID - Next of Kin (SI)
+        NK1.1 (req) - Set ID - Next of Kin (SI) S3.3.5.1
 
     nk1_2 : list[XPN] | None
-        NK1.2 (opt, rep) - Name (XPN)
+        NK1.2 (opt, rep) - Name (XPN) S3.3.5.2
 
     nk1_3 : CE | None
-        NK1.3 (opt) - Relationship (CE)
+        NK1.3 (opt) - Relationship (CE) S3.3.5.3 | 0063 - Relationship
 
     nk1_4 : list[XAD] | None
-        NK1.4 (opt, rep) - Address (XAD)
+        NK1.4 (opt, rep) - Address (XAD) S3.3.5.4
 
     nk1_5 : list[XTN] | None
-        NK1.5 (opt, rep) - Phone Number (XTN)
+        NK1.5 (opt, rep) - Phone Number (XTN) S3.3.5.5
 
     nk1_6 : list[XTN] | None
-        NK1.6 (opt, rep) - Business Phone Number (XTN)
+        NK1.6 (opt, rep) - Business Phone Number (XTN) S3.3.5.6
 
     nk1_7 : CE | None
-        NK1.7 (opt) - Contact Role (CE)
+        NK1.7 (opt) - Contact Role (CE) S3.3.5.7 | 0131 - Contact Role
 
     nk1_8 : str | None
-        NK1.8 (opt) - Start Date (DT)
+        NK1.8 (opt) - Start Date (DT) S3.3.5.8
 
     nk1_9 : str | None
-        NK1.9 (opt) - End Date (DT)
+        NK1.9 (opt) - End Date (DT) S3.3.5.9
 
     nk1_10 : str | None
-        NK1.10 (opt) - Next of Kin/Associated Parties Job Title (ST)
+        NK1.10 (opt) - Next of Kin/Associated Parties Job Title (ST) S3.3.5.10
 
     nk1_11 : JCC | None
-        NK1.11 (opt) - Next of Kin Job/Associated Parties Code/Class (JCC)
+        NK1.11 (opt) - Next of Kin Job/Associated Parties Code/Class (JCC) S3.3.5.11
 
     nk1_12 : CX | None
-        NK1.12 (opt) - Next of Kin/Associated Parties Employee Number (CX)
+        NK1.12 (opt) - Next of Kin/Associated Parties Employee Number (CX) S3.3.5.12
 
     nk1_13 : list[XON] | None
-        NK1.13 (opt, rep) - Organization Name (XON)
+        NK1.13 (opt, rep) - Organization Name (XON) S3.3.5.13
 
     nk1_14 : list[str] | None
-        NK1.14 (opt, rep) - Marital Status (IS)
+        NK1.14 (opt, rep) - Marital Status (IS) S3.3.2 | 0002 - Marital Status
 
     nk1_15 : str | None
-        NK1.15 (opt) - Sex (IS)
+        NK1.15 (opt) - Sex (IS) S3.3.2 | 0001 - Sex
 
     nk1_16 : TS | None
-        NK1.16 (opt) - Date of Birth (TS)
+        NK1.16 (opt) - Date of Birth (TS) S3.3.2
 
     nk1_17 : str | None
-        NK1.17 (opt) - Living Dependency (IS)
+        NK1.17 (opt) - Living Dependency (IS) S3.3.5 | 0223 - Living Dependency
 
     nk1_18 : str | None
-        NK1.18 (opt) - Ambulatory Status (IS)
+        NK1.18 (opt) - Ambulatory Status (IS) S3.3.3 | 0009 - Ambulatory Status
 
     nk1_19 : str | None
-        NK1.19 (opt) - Citizenship (IS)
+        NK1.19 (opt) - Citizenship (IS) S3.3.2 | 0171 - Country Code
 
     nk1_20 : CE | None
-        NK1.20 (opt) - Primary Language (CE)
+        NK1.20 (opt) - Primary Language (CE) S3.3.2 | 0296 - Language
 
     nk1_21 : str | None
-        NK1.21 (opt) - Living Arrangement (IS)
+        NK1.21 (opt) - Living Arrangement (IS) S3.3.5 | 0220 - Living Arrangements
 
     nk1_22 : CE | None
-        NK1.22 (opt) - Publicity Indicator (CE)
+        NK1.22 (opt) - Publicity Indicator (CE) S3.3.5 | 0215 - Publicity Code
 
     nk1_23 : str | None
-        NK1.23 (opt) - Protection Indicator (ID)
+        NK1.23 (opt) - Protection Indicator (ID) S3.3.5 | 0136 - Yes/No Indicator
 
     nk1_24 : str | None
-        NK1.24 (opt) - Student Indicator (IS)
+        NK1.24 (opt) - Student Indicator (IS) S3.3.5 | 0231 - Student Status
 
     nk1_25 : str | None
-        NK1.25 (opt) - Religion (IS)
+        NK1.25 (opt) - Religion (IS) S3.3.2 | 0006 - Religion
 
     nk1_26 : XPN | None
-        NK1.26 (opt) - Mother’s Maiden Name (XPN)
+        NK1.26 (opt) - Mother’s Maiden Name (XPN) S3.3.5
 
     nk1_27 : CE | None
-        NK1.27 (opt) - Nationality Code (CE)
+        NK1.27 (opt) - Nationality Code (CE) S3.3.2 | 0212 - Nationality
 
     nk1_28 : str | None
-        NK1.28 (opt) - Ethnic Group (IS)
+        NK1.28 (opt) - Ethnic Group (IS) S3.3.2 | 0189 - Ethnic Group
 
     nk1_29 : CE | None
-        NK1.29 (opt) - Contact Reason (CE)
+        NK1.29 (opt) - Contact Reason (CE) S3.3.5 | 0222 - Contact Reason
 
     nk1_30 : list[XPN] | None
-        NK1.30 (opt, rep) - Contact Person's Name (XPN)
+        NK1.30 (opt, rep) - Contact Person's Name (XPN) S3.3.5
 
     nk1_31 : list[XTN] | None
-        NK1.31 (opt, rep) - Contact Person’s Telephone Number (XTN)
+        NK1.31 (opt, rep) - Contact Person’s Telephone Number (XTN) S3.3.5
 
     nk1_32 : list[XAD] | None
-        NK1.32 (opt, rep) - Contact Person’s Address (XAD)
+        NK1.32 (opt, rep) - Contact Person’s Address (XAD) S3.3.5
 
     nk1_33 : list[CX] | None
-        NK1.33 (opt, rep) - Associated Party’s Identifiers (CX)
+        NK1.33 (opt, rep) - Associated Party’s Identifiers (CX) S3.3.5.33
 
     nk1_34 : str | None
-        NK1.34 (opt) - Job Status (IS)
+        NK1.34 (opt) - Job Status (IS) S3.3.5 | 0311 - Job Status
 
     nk1_35 : str | None
-        NK1.35 (opt) - Race (IS)
+        NK1.35 (opt) - Race (IS) S3.3.2 | 0005 - Race
 
     nk1_36 : str | None
-        NK1.36 (opt) - Handicap (IS)
+        NK1.36 (opt) - Handicap (IS) S3.3.5 | 0295 - Handicap
 
     nk1_37 : str | None
-        NK1.37 (opt) - Contact Person Social Security Number (ST)
+        NK1.37 (opt) - Contact Person Social Security Number (ST) S3.3.5.37
     """
 
     nk1_1: str = Field(

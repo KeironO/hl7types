@@ -16,51 +16,51 @@ from ..datatypes.TS import TS
 
 
 class AIG(HL7Model):
-    """HL7 v2 AIG segment.
+    """AIG - appointment information - general resource segment (S10.5.5).
 
     Attributes
     ----------
     aig_1 : str
-        AIG.1 (req) - Set ID - AIG (SI)
+        AIG.1 (req) - Set ID - AIG (SI) S10.5.5.1
 
     aig_2 : str | None
-        AIG.2 (opt) - Segment Action Code (ID)
+        AIG.2 (opt) - Segment Action Code (ID) S10.5.7.2 | 0206 - Segment action code
 
     aig_3 : CE | None
-        AIG.3 (opt) - Resource ID (CE)
+        AIG.3 (opt) - Resource ID (CE) S10.5.5.3
 
     aig_4 : CE
-        AIG.4 (req) - Resource Type (CE)
+        AIG.4 (req) - Resource Type (CE) S10.5.5.4
 
     aig_5 : list[CE] | None
-        AIG.5 (opt, rep) - Resource Group (CE)
+        AIG.5 (opt, rep) - Resource Group (CE) S10.5.7.5
 
     aig_6 : str | None
-        AIG.6 (opt) - Resource Quantity (NM)
+        AIG.6 (opt) - Resource Quantity (NM) S10.5.5.6
 
     aig_7 : CE | None
-        AIG.7 (opt) - Resource Quantity Units (CE)
+        AIG.7 (opt) - Resource Quantity Units (CE) S10.5.5.7
 
     aig_8 : TS | None
-        AIG.8 (opt) - Start Date/Time (TS)
+        AIG.8 (opt) - Start Date/Time (TS) S10.5.7.6
 
     aig_9 : str | None
-        AIG.9 (opt) - Start Date/Time Offset (NM)
+        AIG.9 (opt) - Start Date/Time Offset (NM) S10.5.7.7
 
     aig_10 : CE | None
-        AIG.10 (opt) - Start Date/Time Offset Units (CE)
+        AIG.10 (opt) - Start Date/Time Offset Units (CE) S10.5.7.8
 
     aig_11 : str | None
-        AIG.11 (opt) - Duration (NM)
+        AIG.11 (opt) - Duration (NM) S10.5.7.9
 
     aig_12 : CE | None
-        AIG.12 (opt) - Duration Units (CE)
+        AIG.12 (opt) - Duration Units (CE) S10.5.7.10
 
     aig_13 : str | None
-        AIG.13 (opt) - Allow Substitution Code (IS)
+        AIG.13 (opt) - Allow Substitution Code (IS) S10.5.7.11 | 0279 - Allow substitution codes
 
     aig_14 : CE | None
-        AIG.14 (opt) - Filler Status Code (CE)
+        AIG.14 (opt) - Filler Status Code (CE) S10.5.7.12 | 0278 - Filler status codes
     """
 
     aig_1: str = Field(

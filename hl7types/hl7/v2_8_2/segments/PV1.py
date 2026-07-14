@@ -20,165 +20,165 @@ from ..datatypes.XCN import XCN
 
 
 class PV1(HL7Model):
-    """HL7 v2 PV1 segment.
+    """Patient Visit (S3.4.3).
 
     Attributes
     ----------
     pv1_1 : str | None
-        PV1.1 (opt) - Set ID - PV1 (SI)
+        PV1.1 (opt) - Set ID - PV1 (SI) S3.4.3.1
 
     pv1_2 : CWE
-        PV1.2 (req) - Patient Class (CWE)
+        PV1.2 (req) - Patient Class (CWE) S3.4.3.2 | 0004 - Patient Class
 
     pv1_3 : PL | None
-        PV1.3 (opt) - Assigned Patient Location (PL)
+        PV1.3 (opt) - Assigned Patient Location (PL) S3.4.3.3
 
     pv1_4 : CWE | None
-        PV1.4 (opt) - Admission Type (CWE)
+        PV1.4 (opt) - Admission Type (CWE) S3.4.3.4 | 0007 - Admission Type
 
     pv1_5 : CX | None
-        PV1.5 (opt) - Preadmit Number (CX)
+        PV1.5 (opt) - Preadmit Number (CX) S3.4.3.5
 
     pv1_6 : PL | None
-        PV1.6 (opt) - Prior Patient Location (PL)
+        PV1.6 (opt) - Prior Patient Location (PL) S3.4.3.6
 
     pv1_7 : list[XCN] | None
-        PV1.7 (opt, rep) - Attending Doctor (XCN)
+        PV1.7 (opt, rep) - Attending Doctor (XCN) S17.7.4.34 | 0010 - Physician ID
 
     pv1_8 : list[XCN] | None
-        PV1.8 (opt, rep) - Referring Doctor (XCN)
+        PV1.8 (opt, rep) - Referring Doctor (XCN) S3.4.3.8 | 0010 - Physician ID
 
     pv1_9 : list[XCN] | None
-        PV1.9 (opt, rep) - Consulting Doctor (XCN)
+        PV1.9 (opt, rep) - Consulting Doctor (XCN) S3.4.3.9
 
     pv1_10 : CWE | None
-        PV1.10 (opt) - Hospital Service (CWE)
+        PV1.10 (opt) - Hospital Service (CWE) S3.4.3.10 | 0069 - Hospital Service
 
     pv1_11 : PL | None
-        PV1.11 (opt) - Temporary Location (PL)
+        PV1.11 (opt) - Temporary Location (PL) S3.4.3.11
 
     pv1_12 : CWE | None
-        PV1.12 (opt) - Preadmit Test Indicator (CWE)
+        PV1.12 (opt) - Preadmit Test Indicator (CWE) S3.4.3.12 | 0087 - Pre-Admit Test Indicator
 
     pv1_13 : CWE | None
-        PV1.13 (opt) - Re-admission Indicator (CWE)
+        PV1.13 (opt) - Re-admission Indicator (CWE) S3.4.3.13 | 0092 - Re-Admission Indicator
 
     pv1_14 : CWE | None
-        PV1.14 (opt) - Admit Source (CWE)
+        PV1.14 (opt) - Admit Source (CWE) S3.4.3.14 | 0023 - Admit Source
 
     pv1_15 : list[CWE] | None
-        PV1.15 (opt, rep) - Ambulatory Status (CWE)
+        PV1.15 (opt, rep) - Ambulatory Status (CWE) S3.4.3.15 | 0009 - Ambulatory Status
 
     pv1_16 : CWE | None
-        PV1.16 (opt) - VIP Indicator (CWE)
+        PV1.16 (opt) - VIP Indicator (CWE) S3.4.3.16 | 0099 - VIP Indicator
 
     pv1_17 : list[XCN] | None
-        PV1.17 (opt, rep) - Admitting Doctor (XCN)
+        PV1.17 (opt, rep) - Admitting Doctor (XCN) S3.4.3.17 | 0010 - Physician ID
 
     pv1_18 : CWE | None
-        PV1.18 (opt) - Patient Type (CWE)
+        PV1.18 (opt) - Patient Type (CWE) S3.4.3.18 | 0018 - Patient Type
 
     pv1_19 : CX | None
-        PV1.19 (opt) - Visit Number (CX)
+        PV1.19 (opt) - Visit Number (CX) S3.4.3.19
 
     pv1_20 : list[FC] | None
-        PV1.20 (opt, rep) - Financial Class (FC)
+        PV1.20 (opt, rep) - Financial Class (FC) S3.4.3.20 | 0064 - Financial Class
 
     pv1_21 : CWE | None
-        PV1.21 (opt) - Charge Price Indicator (CWE)
+        PV1.21 (opt) - Charge Price Indicator (CWE) S3.4.3.21 | 0032 - Charge/Price Indicator
 
     pv1_22 : CWE | None
-        PV1.22 (opt) - Courtesy Code (CWE)
+        PV1.22 (opt) - Courtesy Code (CWE) S3.4.3.22 | 0045 - Courtesy Code
 
     pv1_23 : CWE | None
-        PV1.23 (opt) - Credit Rating (CWE)
+        PV1.23 (opt) - Credit Rating (CWE) S3.4.3.23 | 0046 - Credit Rating
 
     pv1_24 : list[CWE] | None
-        PV1.24 (opt, rep) - Contract Code (CWE)
+        PV1.24 (opt, rep) - Contract Code (CWE) S3.4.3.24 | 0044 - Contract Code
 
     pv1_25 : list[str] | None
-        PV1.25 (opt, rep) - Contract Effective Date (DT)
+        PV1.25 (opt, rep) - Contract Effective Date (DT) S3.4.3.25
 
     pv1_26 : list[str] | None
-        PV1.26 (opt, rep) - Contract Amount (NM)
+        PV1.26 (opt, rep) - Contract Amount (NM) S3.4.3.26
 
     pv1_27 : list[str] | None
-        PV1.27 (opt, rep) - Contract Period (NM)
+        PV1.27 (opt, rep) - Contract Period (NM) S3.4.3.27
 
     pv1_28 : CWE | None
-        PV1.28 (opt) - Interest Code (CWE)
+        PV1.28 (opt) - Interest Code (CWE) S3.4.3.28 | 0073 - Interest Rate Code
 
     pv1_29 : CWE | None
-        PV1.29 (opt) - Transfer to Bad Debt Code (CWE)
+        PV1.29 (opt) - Transfer to Bad Debt Code (CWE) S3.4.3.29 | 0110 - Transfer to Bad Debt Code
 
     pv1_30 : str | None
-        PV1.30 (opt) - Transfer to Bad Debt Date (DT)
+        PV1.30 (opt) - Transfer to Bad Debt Date (DT) S3.4.3.30
 
     pv1_31 : CWE | None
-        PV1.31 (opt) - Bad Debt Agency Code (CWE)
+        PV1.31 (opt) - Bad Debt Agency Code (CWE) S3.4.3.31 | 0021 - Bad Debt Agency Code
 
     pv1_32 : str | None
-        PV1.32 (opt) - Bad Debt Transfer Amount (NM)
+        PV1.32 (opt) - Bad Debt Transfer Amount (NM) S3.4.3.32
 
     pv1_33 : str | None
-        PV1.33 (opt) - Bad Debt Recovery Amount (NM)
+        PV1.33 (opt) - Bad Debt Recovery Amount (NM) S3.4.3.33
 
     pv1_34 : CWE | None
-        PV1.34 (opt) - Delete Account Indicator (CWE)
+        PV1.34 (opt) - Delete Account Indicator (CWE) S3.4.3.34 | 0111 - Delete Account Code
 
     pv1_35 : str | None
-        PV1.35 (opt) - Delete Account Date (DT)
+        PV1.35 (opt) - Delete Account Date (DT) S3.4.3.35
 
     pv1_36 : CWE | None
-        PV1.36 (opt) - Discharge Disposition (CWE)
+        PV1.36 (opt) - Discharge Disposition (CWE) S3.4.3.36 | 0112 - Discharge Disposition
 
     pv1_37 : DLD | None
-        PV1.37 (opt) - Discharged to Location (DLD)
+        PV1.37 (opt) - Discharged to Location (DLD) S3.4.3.37 | 0113 - Discharged to Location
 
     pv1_38 : CWE | None
-        PV1.38 (opt) - Diet Type (CWE)
+        PV1.38 (opt) - Diet Type (CWE) S3.4.3.38 | 0114 - Diet Type
 
     pv1_39 : CWE | None
-        PV1.39 (opt) - Servicing Facility (CWE)
+        PV1.39 (opt) - Servicing Facility (CWE) S3.4.3.39 | 0115 - Servicing Facilities
 
     pv1_41 : CWE | None
-        PV1.41 (opt) - Account Status (CWE)
+        PV1.41 (opt) - Account Status (CWE) S3.4.3.41 | 0117 - Account Status
 
     pv1_42 : PL | None
-        PV1.42 (opt) - Pending Location (PL)
+        PV1.42 (opt) - Pending Location (PL) S3.4.3.42
 
     pv1_43 : PL | None
-        PV1.43 (opt) - Prior Temporary Location (PL)
+        PV1.43 (opt) - Prior Temporary Location (PL) S3.4.3.43
 
     pv1_44 : str | None
-        PV1.44 (opt) - Admit Date/Time (DTM)
+        PV1.44 (opt) - Admit Date/Time (DTM) S3.4.3.44
 
     pv1_45 : str | None
-        PV1.45 (opt) - Discharge Date/Time (DTM)
+        PV1.45 (opt) - Discharge Date/Time (DTM) S3.4.3.45
 
     pv1_46 : str | None
-        PV1.46 (opt) - Current Patient Balance (NM)
+        PV1.46 (opt) - Current Patient Balance (NM) S3.4.3.46
 
     pv1_47 : str | None
-        PV1.47 (opt) - Total Charges (NM)
+        PV1.47 (opt) - Total Charges (NM) S3.4.3.47
 
     pv1_48 : str | None
-        PV1.48 (opt) - Total Adjustments (NM)
+        PV1.48 (opt) - Total Adjustments (NM) S3.4.3.48
 
     pv1_49 : str | None
-        PV1.49 (opt) - Total Payments (NM)
+        PV1.49 (opt) - Total Payments (NM) S3.4.3.49
 
     pv1_50 : list[CX] | None
-        PV1.50 (opt, rep) - Alternate Visit ID (CX)
+        PV1.50 (opt, rep) - Alternate Visit ID (CX) S3.4.3.50 | 0203 - Identifier Type
 
     pv1_51 : CWE | None
-        PV1.51 (opt) - Visit Indicator (CWE)
+        PV1.51 (opt) - Visit Indicator (CWE) S3.4.3.51 | 0326 - Visit Indicator
 
     pv1_53 : str | None
-        PV1.53 (opt) - Service Episode Description (ST)
+        PV1.53 (opt) - Service Episode Description (ST) S3.4.3.53
 
     pv1_54 : CX | None
-        PV1.54 (opt) - Service Episode Identifier (CX)
+        PV1.54 (opt) - Service Episode Identifier (CX) S3.4.3.54
     """
 
     pv1_1: Optional[str] = Field(

@@ -30,48 +30,48 @@ class ORM_O01_CHOICE(HL7Model):
     """HL7 v2 ORM_O01.CHOICE group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        RQD (Optional[RQD]): optional
-        RQ1 (Optional[RQ1]): optional
-        RXO (Optional[RXO]): optional
-        ODS (Optional[ODS]): optional
-        ODT (Optional[ODT]): optional
+        OBR (Optional[OBR]): OBSERVATION REQUEST, optional
+        RQD (Optional[RQD]): REQUISITION DETAIL, optional
+        RQ1 (Optional[RQ1]): REQUISITION DETAIL-!, optional
+        RXO (Optional[RXO]): PHARMACY PRESCRIPTION ORDER, optional
+        ODS (Optional[ODS]): DIETARY ORDERS, SUPPLEMENTS, and PREFERENCES, optional
+        ODT (Optional[ODT]): DIET TRAY INSTRUCTION, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="OBSERVATION REQUEST",
     )
 
     RQD: Optional[_RQD] = Field(
         default=None,
         title="RQD",
-        description="Optional",
+        description="REQUISITION DETAIL",
     )
 
     RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
-        description="Optional",
+        description="REQUISITION DETAIL-!",
     )
 
     RXO: Optional[_RXO] = Field(
         default=None,
         title="RXO",
-        description="Optional",
+        description="PHARMACY PRESCRIPTION ORDER",
     )
 
     ODS: Optional[_ODS] = Field(
         default=None,
         title="ODS",
-        description="Optional",
+        description="DIETARY ORDERS, SUPPLEMENTS, and PREFERENCES",
     )
 
     ODT: Optional[_ODT] = Field(
         default=None,
         title="ODT",
-        description="Optional",
+        description="DIET TRAY INSTRUCTION",
     )
 
     model_config = {"populate_by_name": True}

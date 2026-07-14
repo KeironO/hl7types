@@ -15,27 +15,27 @@ from ..datatypes.CE import CE
 
 
 class QAK(HL7Model):
-    """HL7 v2 QAK segment.
+    """Query Acknowledgment (S5.5.2).
 
     Attributes
     ----------
     qak_1 : str | None
-        QAK.1 (opt) - Query Tag (ST)
+        QAK.1 (opt) - Query Tag (ST) S5.10.5.1.1
 
     qak_2 : str | None
-        QAK.2 (opt) - Query Response Status (ID)
+        QAK.2 (opt) - Query Response Status (ID) S5.5.2.2 | 0208 - Query Response Status
 
     qak_3 : CE | None
-        QAK.3 (opt) - Message Query Name (CE)
+        QAK.3 (opt) - Message Query Name (CE) S5.5.2.3 | 0471 - Query name
 
     qak_4 : str | None
-        QAK.4 (opt) - Hit Count (NM)
+        QAK.4 (opt) - Hit Count (NM) S5.5.2.4
 
     qak_5 : str | None
-        QAK.5 (opt) - This payload (NM)
+        QAK.5 (opt) - This payload (NM) S5.5.2.5
 
     qak_6 : str | None
-        QAK.6 (opt) - Hits remaining (NM)
+        QAK.6 (opt) - Hits remaining (NM) S5.5.2.6
     """
 
     qak_1: Optional[str] = Field(

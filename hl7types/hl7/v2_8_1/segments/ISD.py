@@ -15,18 +15,18 @@ from ..datatypes.CWE import CWE
 
 
 class ISD(HL7Model):
-    """HL7 v2 ISD segment.
+    """Interaction Status Detail (S13.4.2).
 
     Attributes
     ----------
     isd_1 : str
-        ISD.1 (req) - Reference Interaction Number (NM)
+        ISD.1 (req) - Reference Interaction Number (NM) S13.4.2.1
 
     isd_2 : CWE | None
-        ISD.2 (opt) - Interaction Type Identifier (CWE)
+        ISD.2 (opt) - Interaction Type Identifier (CWE) S13.4.2.2 | 0368 - Remote Control Command
 
     isd_3 : CWE
-        ISD.3 (req) - Interaction Active State (CWE)
+        ISD.3 (req) - Interaction Active State (CWE) S13.4.2.3 | 0387 - Command Response
     """
 
     isd_1: str = Field(

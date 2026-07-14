@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class SPD(HL7Model):
-    """HL7 v2 SPD data type.
+    """Specialty description (S2.A.72).
 
     Attributes
     ----------

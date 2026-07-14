@@ -23,35 +23,35 @@ _SAC = SAC
 
 
 class SSR_U04(HL7Model):
-    """HL7 v2 SSR_U04 message.
+    """SSR/ACK - specimen status request (S13).
 
     Attributes:
-        MSH (MSH): required
-        EQU (EQU): required
-        SAC (List[SAC]): required
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        EQU (EQU): Equipment Detail, required
+        SAC (List[SAC]): Specimen and container detail, required
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     SAC: List[_SAC] = Field(
         min_length=1,
         title="SAC",
-        description="Required, repeating",
+        description="Specimen and container detail",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

@@ -1,0 +1,23 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.3.1
+Class: PPR_PC3
+Type: Message
+"""
+from __future__ import annotations
+
+from .PPR_PC1 import PPR_PC1
+
+
+class PPR_PC3(PPR_PC1):
+    """PPR - PC/ Problem Delete.
+
+    Attributes:
+        MSH (MSH): MSH - message header segment, required
+        PID (PID): PID - patient identification segment, required
+        PATIENT_VISIT (Optional[PPR_PC1_PATIENT_VISIT]): optional
+        PROBLEM (List[PPR_PC1_PROBLEM]): required
+    """
+
+    pass

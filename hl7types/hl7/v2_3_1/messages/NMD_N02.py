@@ -20,22 +20,21 @@ _NMD_N02_CLOCK_AND_STATS_WITH_NOTES = NMD_N02_CLOCK_AND_STATS_WITH_NOTES
 
 
 class NMD_N02(HL7Model):
-    """HL7 v2 NMD_N02 message.
+    """NMD/ACK - Application management data message (unsolicited).
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): MSH - message header segment, required
         CLOCK_AND_STATS_WITH_NOTES (List[NMD_N02_CLOCK_AND_STATS_WITH_NOTES]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     CLOCK_AND_STATS_WITH_NOTES: List[_NMD_N02_CLOCK_AND_STATS_WITH_NOTES] = Field(
         min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

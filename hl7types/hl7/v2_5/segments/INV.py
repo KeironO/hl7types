@@ -18,69 +18,69 @@ from ..datatypes.TS import TS
 
 
 class INV(HL7Model):
-    """HL7 v2 INV segment.
+    """Inventory Detail (S13.4.4).
 
     Attributes
     ----------
     inv_1 : CE
-        INV.1 (req) - Substance Identifier (CE)
+        INV.1 (req) - Substance Identifier (CE) S13.4.4.1 | 0451 - Substance identifier
 
     inv_2 : list[CE]
-        INV.2 (req, rep) - Substance Status (CE)
+        INV.2 (req, rep) - Substance Status (CE) S13.4.4.2 | 0383 - Substance status
 
     inv_3 : CE | None
-        INV.3 (opt) - Substance Type (CE)
+        INV.3 (opt) - Substance Type (CE) S13.4.4.3 | 0384 - Substance type
 
     inv_4 : CE | None
-        INV.4 (opt) - Inventory Container Identifier (CE)
+        INV.4 (opt) - Inventory Container Identifier (CE) S13.4.4.4
 
     inv_5 : CE | None
-        INV.5 (opt) - Container Carrier Identifier (CE)
+        INV.5 (opt) - Container Carrier Identifier (CE) S13.4.4.5
 
     inv_6 : CE | None
-        INV.6 (opt) - Position on Carrier (CE)
+        INV.6 (opt) - Position on Carrier (CE) S13.4.4.6
 
     inv_7 : str | None
-        INV.7 (opt) - Initial Quantity (NM)
+        INV.7 (opt) - Initial Quantity (NM) S13.4.4.7
 
     inv_8 : str | None
-        INV.8 (opt) - Current Quantity (NM)
+        INV.8 (opt) - Current Quantity (NM) S13.4.4.8
 
     inv_9 : str | None
-        INV.9 (opt) - Available Quantity (NM)
+        INV.9 (opt) - Available Quantity (NM) S13.4.4.9
 
     inv_10 : str | None
-        INV.10 (opt) - Consumption Quantity (NM)
+        INV.10 (opt) - Consumption Quantity (NM) S13.4.4.10
 
     inv_11 : CE | None
-        INV.11 (opt) - Quantity Units (CE)
+        INV.11 (opt) - Quantity Units (CE) S13.4.4.11
 
     inv_12 : TS | None
-        INV.12 (opt) - Expiration Date/Time (TS)
+        INV.12 (opt) - Expiration Date/Time (TS) S13.4.4.12
 
     inv_13 : TS | None
-        INV.13 (opt) - First Used Date/Time (TS)
+        INV.13 (opt) - First Used Date/Time (TS) S13.4.4.13
 
     inv_14 : TQ | None
-        INV.14 (opt) - On Board Stability Duration (TQ)
+        INV.14 (opt) - On Board Stability Duration (TQ) S13.4.4.14
 
     inv_15 : list[CE] | None
-        INV.15 (opt, rep) - Test/Fluid Identifier(s) (CE)
+        INV.15 (opt, rep) - Test/Fluid Identifier(s) (CE) S13.4.4.15
 
     inv_16 : str | None
-        INV.16 (opt) - Manufacturer Lot Number (ST)
+        INV.16 (opt) - Manufacturer Lot Number (ST) S13.4.4.16
 
     inv_17 : CE | None
-        INV.17 (opt) - Manufacturer Identifier (CE)
+        INV.17 (opt) - Manufacturer Identifier (CE) S4.11.2.2 | 0385 - Manufacturer identifier
 
     inv_18 : CE | None
-        INV.18 (opt) - Supplier Identifier (CE)
+        INV.18 (opt) - Supplier Identifier (CE) S13.4.4.18 | 0386 - Supplier identifier
 
     inv_19 : CQ | None
-        INV.19 (opt) - On Board Stability Time (CQ)
+        INV.19 (opt) - On Board Stability Time (CQ) S13.4.4.19
 
     inv_20 : CQ | None
-        INV.20 (opt) - Target Value (CQ)
+        INV.20 (opt) - Target Value (CQ) S13.4.4.20
     """
 
     inv_1: CE = Field(

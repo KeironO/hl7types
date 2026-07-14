@@ -17,135 +17,135 @@ from ..datatypes.TS import TS
 
 
 class OM1(HL7Model):
-    """HL7 v2 OM1 segment.
+    """GENERAL - fields that apply to most observations (S7.6.4).
 
     Attributes
     ----------
     om1_1 : str | None
-        OM1.1 (opt) - Segment Type ID (ST)
+        OM1.1 (opt) - Segment Type ID (ST) S7.6.9.1
 
     om1_2 : str | None
-        OM1.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+        OM1.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
 
     om1_3 : CE
-        OM1.3 (req) - Producer's test / observation ID (CE)
+        OM1.3 (req) - Producer's test / observation ID (CE) S7.6.4.3
 
     om1_4 : list[str] | None
-        OM1.4 (opt, rep) - Permitted Data Types (ID)
+        OM1.4 (opt, rep) - Permitted Data Types (ID) S7.6.4.4 | 0125 - VALUE TYPE
 
     om1_5 : str
-        OM1.5 (req) - Specimen Required (ID)
+        OM1.5 (req) - Specimen Required (ID) S7.6.4.5 | 0136 - Y/N Indicator
 
     om1_6 : CE
-        OM1.6 (req) - Producer ID (CE)
+        OM1.6 (req) - Producer ID (CE) S7.6.4.6
 
     om1_7 : str | None
-        OM1.7 (opt) - Observation Description (TX)
+        OM1.7 (opt) - Observation Description (TX) S7.6.4.7
 
     om1_8 : CE | None
-        OM1.8 (opt) - Other test / observation IDs for the observation (CE)
+        OM1.8 (opt) - Other test / observation IDs for the observation (CE) S7.6.4.8
 
     om1_9 : list[str]
-        OM1.9 (req, rep) - Other Names (ST)
+        OM1.9 (req, rep) - Other Names (ST) S7.6.4.9
 
     om1_10 : str | None
-        OM1.10 (opt) - Preferred Report Name for the Observation (ST)
+        OM1.10 (opt) - Preferred Report Name for the Observation (ST) S7.6.4.10
 
     om1_11 : str | None
-        OM1.11 (opt) - Preferred Short Name or Mnemonic for Observation (ST)
+        OM1.11 (opt) - Preferred Short Name or Mnemonic for Observation (ST) S7.6.4.11
 
     om1_12 : str | None
-        OM1.12 (opt) - Preferred Long Name for the Observation (ST)
+        OM1.12 (opt) - Preferred Long Name for the Observation (ST) S7.6.4.12
 
     om1_13 : str | None
-        OM1.13 (opt) - Orderability (ID)
+        OM1.13 (opt) - Orderability (ID) S7.6.4.13 | 0136 - Y/N Indicator
 
     om1_14 : list[CE] | None
-        OM1.14 (opt, rep) - Identity of instrument used to perform this study (CE)
+        OM1.14 (opt, rep) - Identity of instrument used to perform this study (CE) S7.6.4.14
 
     om1_15 : list[CE] | None
-        OM1.15 (opt, rep) - Coded Representation of Method (CE)
+        OM1.15 (opt, rep) - Coded Representation of Method (CE) S7.6.4.15
 
     om1_16 : str | None
-        OM1.16 (opt) - Portable (ID)
+        OM1.16 (opt) - Portable (ID) S7.6.4.16 | 0136 - Y/N Indicator
 
     om1_17 : list[str] | None
-        OM1.17 (opt, rep) - Observation producing department / section (ID)
+        OM1.17 (opt, rep) - Observation producing department / section (ID) S7.6.4.17
 
     om1_18 : str | None
-        OM1.18 (opt) - Telephone Number of Section (TN)
+        OM1.18 (opt) - Telephone Number of Section (TN) S7.6.4.18
 
     om1_19 : str
-        OM1.19 (req) - Nature of test / observation (ID)
+        OM1.19 (req) - Nature of test / observation (ID) S7.6.4.19 | 0174 - NATURE OF TEST/OBSERVATION
 
     om1_20 : CE | None
-        OM1.20 (opt) - Report Subheader (CE)
+        OM1.20 (opt) - Report Subheader (CE) S7.6.4.20
 
     om1_21 : str | None
-        OM1.21 (opt) - Report Display Order (ST)
+        OM1.21 (opt) - Report Display Order (ST) S7.6.4.21
 
     om1_22 : TS
-        OM1.22 (req) - Date / time stamp for any change in definition for obs (TS)
+        OM1.22 (req) - Date / time stamp for any change in definition for obs (TS) S7.6.4.22
 
     om1_23 : TS | None
-        OM1.23 (opt) - Effective date / time of change (TS)
+        OM1.23 (opt) - Effective date / time of change (TS) S7.6.4.23
 
     om1_24 : str | None
-        OM1.24 (opt) - Typical Turn-around Time (NM)
+        OM1.24 (opt) - Typical Turn-around Time (NM) S7.6.4.24
 
     om1_25 : str | None
-        OM1.25 (opt) - Processing Time (NM)
+        OM1.25 (opt) - Processing Time (NM) S7.6.4.25
 
     om1_26 : list[str] | None
-        OM1.26 (opt, rep) - Processing Priority (ID)
+        OM1.26 (opt, rep) - Processing Priority (ID) S7.6.4.26 | 0168 - PROCESSING PRIORITY
 
     om1_27 : str | None
-        OM1.27 (opt) - Reporting Priority (ID)
+        OM1.27 (opt) - Reporting Priority (ID) S7.6.4.27 | 0169 - REPORTIN PRIORITY
 
     om1_28 : list[CE] | None
-        OM1.28 (opt, rep) - Outside Site(s) Where Observation may be Performed (CE)
+        OM1.28 (opt, rep) - Outside Site(s) Where Observation may be Performed (CE) S7.6.4.28
 
     om1_29 : list[AD] | None
-        OM1.29 (opt, rep) - Address of Outside Site(s) (AD)
+        OM1.29 (opt, rep) - Address of Outside Site(s) (AD) S7.6.4.29
 
     om1_30 : list[str] | None
-        OM1.30 (opt, rep) - Phone Number of Outside Site (TN)
+        OM1.30 (opt, rep) - Phone Number of Outside Site (TN) S7.6.4.30
 
     om1_31 : str | None
-        OM1.31 (opt) - Confidentiality Code (ID)
+        OM1.31 (opt) - Confidentiality Code (ID) S7.6.4.31 | 0177 - CONFIDENTIALITY CODE
 
     om1_32 : list[CE] | None
-        OM1.32 (opt, rep) - Observations required to interpret the observation (CE)
+        OM1.32 (opt, rep) - Observations required to interpret the observation (CE) S7.6.4.32
 
     om1_33 : str | None
-        OM1.33 (opt) - Interpretation of Observations (TX)
+        OM1.33 (opt) - Interpretation of Observations (TX) S7.6.4.33
 
     om1_34 : list[CE] | None
-        OM1.34 (opt, rep) - Contraindications to Observations (CE)
+        OM1.34 (opt, rep) - Contraindications to Observations (CE) S7.6.4.34
 
     om1_35 : list[CE] | None
-        OM1.35 (opt, rep) - Reflex tests / observations (CE)
+        OM1.35 (opt, rep) - Reflex tests / observations (CE) S7.6.4.35
 
     om1_36 : str | None
-        OM1.36 (opt) - Rules that Trigger Reflex Testing (ST)
+        OM1.36 (opt) - Rules that Trigger Reflex Testing (ST) S7.6.4.36
 
     om1_37 : list[CE] | None
-        OM1.37 (opt, rep) - Fixed Canned Message (CE)
+        OM1.37 (opt, rep) - Fixed Canned Message (CE) S7.6.4.37
 
     om1_38 : str | None
-        OM1.38 (opt) - Patient Preparation (TX)
+        OM1.38 (opt) - Patient Preparation (TX) S7.6.4.38
 
     om1_39 : CE | None
-        OM1.39 (opt) - Procedure Medication (CE)
+        OM1.39 (opt) - Procedure Medication (CE) S7.6.4.39
 
     om1_40 : str | None
-        OM1.40 (opt) - Factors that may affect the observation (TX)
+        OM1.40 (opt) - Factors that may affect the observation (TX) S7.6.4.40
 
     om1_41 : list[str] | None
-        OM1.41 (opt, rep) - Test / observation performance schedule (ST)
+        OM1.41 (opt, rep) - Test / observation performance schedule (ST) S7.6.4.41
 
     om1_42 : str | None
-        OM1.42 (opt) - Description of Test Methods (TX)
+        OM1.42 (opt) - Description of Test Methods (TX) S7.6.4.42
     """
 
     om1_1: Optional[str] = Field(

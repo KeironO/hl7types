@@ -21,90 +21,90 @@ from ..datatypes.XTN import XTN
 
 
 class SCH(HL7Model):
-    """HL7 v2 SCH segment.
+    """Scheduling Activity Information (S10.6.2).
 
     Attributes
     ----------
     sch_1 : EI | None
-        SCH.1 (opt) - Placer Appointment ID (EI)
+        SCH.1 (opt) - Placer Appointment ID (EI) S10.6.1.1
 
     sch_2 : EI | None
-        SCH.2 (opt) - Filler Appointment ID (EI)
+        SCH.2 (opt) - Filler Appointment ID (EI) S10.6.1.2
 
     sch_3 : str | None
-        SCH.3 (opt) - Occurrence Number (NM)
+        SCH.3 (opt) - Occurrence Number (NM) S10.6.1.3
 
     sch_4 : EI | None
-        SCH.4 (opt) - Placer Group Number (EI)
+        SCH.4 (opt) - Placer Group Number (EI) S4.5.1.4
 
     sch_5 : CE | None
-        SCH.5 (opt) - Schedule ID (CE)
+        SCH.5 (opt) - Schedule ID (CE) S10.6.1.5
 
     sch_6 : CE
-        SCH.6 (req) - Event Reason (CE)
+        SCH.6 (req) - Event Reason (CE) S10.6.2.6
 
     sch_7 : CE | None
-        SCH.7 (opt) - Appointment Reason (CE)
+        SCH.7 (opt) - Appointment Reason (CE) S10.6.1.7 | 0276 - Appointment reason codes
 
     sch_8 : CE | None
-        SCH.8 (opt) - Appointment Type (CE)
+        SCH.8 (opt) - Appointment Type (CE) S10.6.1.8 | 0277 - Appointment Type Codes
 
     sch_9 : str | None
-        SCH.9 (opt) - Appointment Duration (NM)
+        SCH.9 (opt) - Appointment Duration (NM) S10.6.1.9
 
     sch_10 : CE | None
-        SCH.10 (opt) - Appointment Duration Units (CE)
+        SCH.10 (opt) - Appointment Duration Units (CE) S10.6.1.10
 
     sch_11 : list[TQ] | None
-        SCH.11 (opt, rep) - Appointment Timing Quantity (TQ)
+        SCH.11 (opt, rep) - Appointment Timing Quantity (TQ) S10.6.2.11
 
     sch_12 : list[XCN] | None
-        SCH.12 (opt, rep) - Placer Contact Person (XCN)
+        SCH.12 (opt, rep) - Placer Contact Person (XCN) S10.6.1.15
 
     sch_13 : XTN | None
-        SCH.13 (opt) - Placer Contact Phone Number (XTN)
+        SCH.13 (opt) - Placer Contact Phone Number (XTN) S10.6.1.16
 
     sch_14 : list[XAD] | None
-        SCH.14 (opt, rep) - Placer Contact Address (XAD)
+        SCH.14 (opt, rep) - Placer Contact Address (XAD) S10.6.1.17
 
     sch_15 : PL | None
-        SCH.15 (opt) - Placer Contact Location (PL)
+        SCH.15 (opt) - Placer Contact Location (PL) S10.6.1.18
 
     sch_16 : list[XCN]
-        SCH.16 (req, rep) - Filler Contact Person (XCN)
+        SCH.16 (req, rep) - Filler Contact Person (XCN) S10.6.2.16
 
     sch_17 : XTN | None
-        SCH.17 (opt) - Filler Contact Phone Number (XTN)
+        SCH.17 (opt) - Filler Contact Phone Number (XTN) S10.6.2.17
 
     sch_18 : list[XAD] | None
-        SCH.18 (opt, rep) - Filler Contact Address (XAD)
+        SCH.18 (opt, rep) - Filler Contact Address (XAD) S10.6.2.18
 
     sch_19 : PL | None
-        SCH.19 (opt) - Filler Contact Location (PL)
+        SCH.19 (opt) - Filler Contact Location (PL) S10.6.2.19
 
     sch_20 : list[XCN]
-        SCH.20 (req, rep) - Entered By Person (XCN)
+        SCH.20 (req, rep) - Entered By Person (XCN) S10.6.1.19
 
     sch_21 : list[XTN] | None
-        SCH.21 (opt, rep) - Entered By Phone Number (XTN)
+        SCH.21 (opt, rep) - Entered By Phone Number (XTN) S10.6.1.20
 
     sch_22 : PL | None
-        SCH.22 (opt) - Entered By Location (PL)
+        SCH.22 (opt) - Entered By Location (PL) S10.6.1.21
 
     sch_23 : EI | None
-        SCH.23 (opt) - Parent Placer Appointment ID (EI)
+        SCH.23 (opt) - Parent Placer Appointment ID (EI) S10.6.1.22
 
     sch_24 : EI | None
-        SCH.24 (opt) - Parent Filler Appointment ID (EI)
+        SCH.24 (opt) - Parent Filler Appointment ID (EI) S10.6.1.23
 
     sch_25 : CE | None
-        SCH.25 (opt) - Filler Status Code (CE)
+        SCH.25 (opt) - Filler Status Code (CE) S10.6.2.25 | 0278 - Filler status codes
 
     sch_26 : list[EI] | None
-        SCH.26 (opt, rep) - Placer Order Number (EI)
+        SCH.26 (opt, rep) - Placer Order Number (EI) S4.5.1.2
 
     sch_27 : list[EI] | None
-        SCH.27 (opt, rep) - Filler Order Number (EI)
+        SCH.27 (opt, rep) - Filler Order Number (EI) S4.5.1.3
     """
 
     sch_1: Optional[EI] = Field(

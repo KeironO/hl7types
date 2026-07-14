@@ -15,24 +15,24 @@ from ..datatypes.TS import TS
 
 
 class EVN(HL7Model):
-    """HL7 v2 EVN segment.
+    """EVENT TYPE (S3.3.1).
 
     Attributes
     ----------
     evn_1 : str
-        EVN.1 (req) - Event Type Code (ID)
+        EVN.1 (req) - Event Type Code (ID) S3.3.1.1 | 0003 - EVENT TYPE CODE
 
     evn_2 : TS
-        EVN.2 (req) - Date / time of event (TS)
+        EVN.2 (req) - Date / time of event (TS) S3.3.1.2
 
     evn_3 : TS | None
-        EVN.3 (opt) - Date / time planned event (TS)
+        EVN.3 (opt) - Date / time planned event (TS) S3.3.1.3
 
     evn_4 : str | None
-        EVN.4 (opt) - Event Reason Code (ID)
+        EVN.4 (opt) - Event Reason Code (ID) S3.3.1.4 | 0062 - EVENT REASON
 
     evn_5 : str | None
-        EVN.5 (opt) - Operator ID (ID)
+        EVN.5 (opt) - Operator ID (ID) S3.3.1.5 | 0188 - Operator ID
     """
 
     evn_1: str = Field(

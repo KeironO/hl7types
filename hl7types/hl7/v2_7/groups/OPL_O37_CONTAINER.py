@@ -23,19 +23,18 @@ class OPL_O37_CONTAINER(HL7Model):
     """HL7 v2 OPL_O37.CONTAINER group.
 
     Attributes:
-        SAC (SAC): required
+        SAC (SAC): Specimen Container detail, required
         CONTAINER_OBSERVATION (Optional[List[OPL_O37_CONTAINER_OBSERVATION]]): optional
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     CONTAINER_OBSERVATION: Optional[List[_OPL_O37_CONTAINER_OBSERVATION]] = Field(
         default=None,
         title="CONTAINER_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

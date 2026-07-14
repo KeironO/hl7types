@@ -18,147 +18,147 @@ from ..datatypes.TS import TS
 
 
 class IN1(HL7Model):
-    """HL7 v2 IN1 segment.
+    """INSURANCE (S6.4.5).
 
     Attributes
     ----------
     in1_1 : str
-        IN1.1 (req) - Set ID - insurance (SI)
+        IN1.1 (req) - Set ID - insurance (SI) S6.4.5.1
 
     in1_2 : str
-        IN1.2 (req) - Insurance plan ID (ID)
+        IN1.2 (req) - Insurance plan ID (ID) S6.4.1.14 | 0072 - INS. PLAN ID
 
     in1_3 : str
-        IN1.3 (req) - Insurance company ID (ST)
+        IN1.3 (req) - Insurance company ID (ST) S6.4.5.3
 
     in1_4 : str | None
-        IN1.4 (opt) - Insurance company name (ST)
+        IN1.4 (opt) - Insurance company name (ST) S6.4.5.4
 
     in1_5 : AD | None
-        IN1.5 (opt) - Insurance company address (AD)
+        IN1.5 (opt) - Insurance company address (AD) S6.4.5.5
 
     in1_6 : PN | None
-        IN1.6 (opt) - Insurance company contact pers (PN)
+        IN1.6 (opt) - Insurance company contact pers (PN) S6.4.5.6
 
     in1_7 : list[str] | None
-        IN1.7 (opt, rep) - Insurance company phone number (TN)
+        IN1.7 (opt, rep) - Insurance company phone number (TN) S6.4.5.7
 
     in1_8 : str | None
-        IN1.8 (opt) - Group number (ST)
+        IN1.8 (opt) - Group number (ST) S6.4.5.8
 
     in1_9 : str | None
-        IN1.9 (opt) - Group name (ST)
+        IN1.9 (opt) - Group name (ST) S6.4.5.9
 
     in1_10 : str | None
-        IN1.10 (opt) - Insured's group employer ID (ST)
+        IN1.10 (opt) - Insured's group employer ID (ST) S6.4.5.10
 
     in1_11 : str | None
-        IN1.11 (opt) - Insured's group employer name (ST)
+        IN1.11 (opt) - Insured's group employer name (ST) S6.4.5.11
 
     in1_12 : str | None
-        IN1.12 (opt) - Plan effective date (DT)
+        IN1.12 (opt) - Plan effective date (DT) S6.4.5.12
 
     in1_13 : str | None
-        IN1.13 (opt) - Plan expiration date (DT)
+        IN1.13 (opt) - Plan expiration date (DT) S6.4.5.13
 
     in1_14 : str | None
-        IN1.14 (opt) - Authorization information (CM)
+        IN1.14 (opt) - Authorization information (CM) S6.4.5.14
 
     in1_15 : str | None
-        IN1.15 (opt) - Plan type (ID)
+        IN1.15 (opt) - Plan type (ID) S6.4.5.15 | 0086 - INS. PLAN TYPE
 
     in1_16 : PN | None
-        IN1.16 (opt) - Name of insured (PN)
+        IN1.16 (opt) - Name of insured (PN) S6.4.5.16
 
     in1_17 : str | None
-        IN1.17 (opt) - Insured's relationship to patient (ID)
+        IN1.17 (opt) - Insured's relationship to patient (ID) S6.4.5.17 | 0063 - RELATIONSHIP
 
     in1_18 : str | None
-        IN1.18 (opt) - Insured's date of birth (DT)
+        IN1.18 (opt) - Insured's date of birth (DT) S6.4.5.18
 
     in1_19 : AD | None
-        IN1.19 (opt) - Insured's address (AD)
+        IN1.19 (opt) - Insured's address (AD) S6.4.5.19
 
     in1_20 : str | None
-        IN1.20 (opt) - Assignment of benefits (ID)
+        IN1.20 (opt) - Assignment of benefits (ID) S6.4.5.20 | 0135 - ASSIGNMENT OF BENEFITS
 
     in1_21 : str | None
-        IN1.21 (opt) - Coordination of benefits (ID)
+        IN1.21 (opt) - Coordination of benefits (ID) S6.4.5.21 | 0173 - COORDINATION OF BENEFITS
 
     in1_22 : str | None
-        IN1.22 (opt) - Coordination of benefits - priority (ST)
+        IN1.22 (opt) - Coordination of benefits - priority (ST) S6.4.5.22
 
     in1_23 : str | None
-        IN1.23 (opt) - Notice of admission code (ID)
+        IN1.23 (opt) - Notice of admission code (ID) S6.4.5.23 | 0136 - Y/N Indicator
 
     in1_24 : str | None
-        IN1.24 (opt) - Notice of admission date (DT)
+        IN1.24 (opt) - Notice of admission date (DT) S6.4.5.24
 
     in1_25 : str | None
-        IN1.25 (opt) - Report of eligibility code (ID)
+        IN1.25 (opt) - Report of eligibility code (ID) S6.4.5.25
 
     in1_26 : str | None
-        IN1.26 (opt) - Report of eligibility date (DT)
+        IN1.26 (opt) - Report of eligibility date (DT) S6.4.5.26
 
     in1_27 : str | None
-        IN1.27 (opt) - Release information code (ID)
+        IN1.27 (opt) - Release information code (ID) S6.4.5.27 | 0093 - RELEASE OF INFORMATION
 
     in1_28 : str | None
-        IN1.28 (opt) - Pre-admit certification (PAC) (ST)
+        IN1.28 (opt) - Pre-admit certification (PAC) (ST) S6.4.5.28
 
     in1_29 : TS | None
-        IN1.29 (opt) - Verification date / time (TS)
+        IN1.29 (opt) - Verification date / time (TS) S6.4.5.29
 
     in1_30 : str | None
-        IN1.30 (opt) - Verification by (CN)
+        IN1.30 (opt) - Verification by (CN) S6.4.5.30
 
     in1_31 : str | None
-        IN1.31 (opt) - Type of agreement code (ID)
+        IN1.31 (opt) - Type of agreement code (ID) S6.4.5.31 | 0098 - TYPE OF AGREEMENT CODE
 
     in1_32 : str | None
-        IN1.32 (opt) - Billing status (ID)
+        IN1.32 (opt) - Billing status (ID) S6.4.5.32 | 0022 - BILLING STATUS
 
     in1_33 : str | None
-        IN1.33 (opt) - Lifetime reserve days (NM)
+        IN1.33 (opt) - Lifetime reserve days (NM) S6.4.5.33
 
     in1_34 : str | None
-        IN1.34 (opt) - Delay before lifetime reserve days (NM)
+        IN1.34 (opt) - Delay before lifetime reserve days (NM) S6.4.5.34
 
     in1_35 : str | None
-        IN1.35 (opt) - Company plan code (ID)
+        IN1.35 (opt) - Company plan code (ID) S6.4.5.35 | 0042 - INS. COMPANY PLAN CODE
 
     in1_36 : str | None
-        IN1.36 (opt) - Policy number (ST)
+        IN1.36 (opt) - Policy number (ST) S6.4.5.36
 
     in1_37 : str | None
-        IN1.37 (opt) - Policy deductible (NM)
+        IN1.37 (opt) - Policy deductible (NM) S6.4.5.37
 
     in1_38 : str | None
-        IN1.38 (opt) - Policy limit - amount (NM)
+        IN1.38 (opt) - Policy limit - amount (NM) S6.4.5.38
 
     in1_39 : str | None
-        IN1.39 (opt) - Policy limit - days (NM)
+        IN1.39 (opt) - Policy limit - days (NM) S6.4.5.39
 
     in1_40 : str | None
-        IN1.40 (opt) - Room rate - semi-private (NM)
+        IN1.40 (opt) - Room rate - semi-private (NM) S6.4.5.40
 
     in1_41 : str | None
-        IN1.41 (opt) - Room rate - private (NM)
+        IN1.41 (opt) - Room rate - private (NM) S6.4.5.41
 
     in1_42 : CE | None
-        IN1.42 (opt) - Insured's employment status (CE)
+        IN1.42 (opt) - Insured's employment status (CE) S6.4.5.42 | 0066 - EMPLOYMENT STATUS
 
     in1_43 : str | None
-        IN1.43 (opt) - Insured's sex (ID)
+        IN1.43 (opt) - Insured's sex (ID) S6.4.5.43 | 0001 - SEX
 
     in1_44 : AD | None
-        IN1.44 (opt) - Insured's employer address (AD)
+        IN1.44 (opt) - Insured's employer address (AD) S6.4.5.44
 
     in1_45 : str | None
-        IN1.45 (opt) - Verification status (ST)
+        IN1.45 (opt) - Verification status (ST) S6.4.5.45
 
     in1_46 : str | None
-        IN1.46 (opt) - Prior insurance plan ID (ID)
+        IN1.46 (opt) - Prior insurance plan ID (ID) S6.4.5.46 | 0072 - INS. PLAN ID
     """
 
     in1_1: str = Field(

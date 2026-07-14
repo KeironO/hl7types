@@ -25,41 +25,41 @@ _UAC = UAC
 
 
 class QRY_R02(HL7Model):
-    """HL7 v2 QRY_R02 message.
+    """QRY - Query for results of observation (S12.3.11).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        QRD (QRD): required
-        QRF (QRF): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        QRD (QRD): Original-Style Query Definition, required
+        QRF (QRF): Original style query filter, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Original-Style Query Definition",
     )
 
     QRF: _QRF = Field(
         title="QRF",
-        description="Required",
+        description="Original style query filter",
     )
 
     model_config = {"populate_by_name": True}

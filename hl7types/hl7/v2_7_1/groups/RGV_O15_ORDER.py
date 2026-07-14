@@ -31,47 +31,43 @@ class RGV_O15_ORDER(HL7Model):
     """HL7 v2 RGV_O15.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[RGV_O15_TIMING]]): optional
         ORDER_DETAIL (Optional[RGV_O15_ORDER_DETAIL]): optional
-        PRT (Optional[List[PRT]]): optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
         ENCODING (Optional[RGV_O15_ENCODING]): optional
         GIVE (List[RGV_O15_GIVE]): required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_RGV_O15_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ORDER_DETAIL: Optional[_RGV_O15_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ENCODING: Optional[_RGV_O15_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     GIVE: List[_RGV_O15_GIVE] = Field(
         min_length=1,
         title="GIVE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

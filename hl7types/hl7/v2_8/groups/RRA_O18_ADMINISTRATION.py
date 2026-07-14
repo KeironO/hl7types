@@ -24,18 +24,17 @@ class RRA_O18_ADMINISTRATION(HL7Model):
 
     Attributes:
         TREATMENT (List[RRA_O18_TREATMENT]): required
-        RXR (RXR): required
+        RXR (RXR): Pharmacy/Treatment Route, required
     """
 
     TREATMENT: List[_RRA_O18_TREATMENT] = Field(
         min_length=1,
         title="TREATMENT",
-        description="Required, repeating",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="Pharmacy/Treatment Route",
     )
 
     model_config = {"populate_by_name": True}

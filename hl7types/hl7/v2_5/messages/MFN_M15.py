@@ -24,35 +24,34 @@ _SFT = SFT
 
 
 class MFN_M15(HL7Model):
-    """HL7 v2 MFN_M15 message.
+    """MFN/MFK - Inventory item master file notification (S8.4.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        MFI (MFI): Master File Identification, required
         MF_INV_ITEM (List[MFN_M15_MF_INV_ITEM]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_INV_ITEM: List[_MFN_M15_MF_INV_ITEM] = Field(
         min_length=1,
         title="MF_INV_ITEM",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

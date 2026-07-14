@@ -23,19 +23,18 @@ class RAS_O17_ORDER_DETAIL(HL7Model):
     """HL7 v2 RAS_O17.ORDER_DETAIL group.
 
     Attributes:
-        RXO (RXO): required
+        RXO (RXO): Pharmacy/Treatment Order, required
         ORDER_DETAIL_SUPPLEMENT (Optional[RAS_O17_ORDER_DETAIL_SUPPLEMENT]): optional
     """
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="Pharmacy/Treatment Order",
     )
 
     ORDER_DETAIL_SUPPLEMENT: Optional[_RAS_O17_ORDER_DETAIL_SUPPLEMENT] = Field(
         default=None,
         title="ORDER_DETAIL_SUPPLEMENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

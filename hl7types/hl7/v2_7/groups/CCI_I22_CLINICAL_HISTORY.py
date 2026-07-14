@@ -27,33 +27,31 @@ class CCI_I22_CLINICAL_HISTORY(HL7Model):
     """HL7 v2 CCI_I22.CLINICAL_HISTORY group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         CLINICAL_HISTORY_DETAIL (Optional[List[CCI_I22_CLINICAL_HISTORY_DETAIL]]): optional
         ROLE_CLINICAL_HISTORY (Optional[List[CCI_I22_ROLE_CLINICAL_HISTORY]]): optional
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     CLINICAL_HISTORY_DETAIL: Optional[List[_CCI_I22_CLINICAL_HISTORY_DETAIL]] = Field(
         default=None,
         title="CLINICAL_HISTORY_DETAIL",
-        description="Optional, repeating",
     )
 
     ROLE_CLINICAL_HISTORY: Optional[List[_CCI_I22_ROLE_CLINICAL_HISTORY]] = Field(
         default=None,
         title="ROLE_CLINICAL_HISTORY",
-        description="Optional, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

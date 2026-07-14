@@ -22,20 +22,20 @@ class DEO_O45_DONOR_REGISTRATION(HL7Model):
     """HL7 v2 DEO_O45.DONOR_REGISTRATION group.
 
     Attributes:
-        PV1 (Optional[PV1]): optional
-        NTE (Optional[List[NTE]]): optional
+        PV1 (Optional[PV1]): Patient Visit, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient Visit",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class ERL(HL7Model):
-    """HL7 v2 ERL data type.
+    """Error location (S2.A.28).
 
     Attributes
     ----------

@@ -27,32 +27,31 @@ class MFN_Znn(HL7Model):
     """HL7 v2 MFN_Znn message.
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        MFI (MFI): Master File Identification, required
         MF_SITE_DEFINED (List[MFN_Znn_MF_SITE_DEFINED]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_SITE_DEFINED: List[_MFN_Znn_MF_SITE_DEFINED] = Field(
         min_length=1,
         title="MF_SITE_DEFINED",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

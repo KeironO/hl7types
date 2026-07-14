@@ -25,27 +25,26 @@ class RDS_O13_ORDER_DETAIL_SUPPLEMENT(HL7Model):
     """HL7 v2 RDS_O13.ORDER_DETAIL_SUPPLEMENT group.
 
     Attributes:
-        NTE (List[NTE]): required
-        RXR (List[RXR]): required
+        NTE (List[NTE]): Notes and Comments, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
         COMPONENT (Optional[RDS_O13_COMPONENT]): optional
     """
 
     NTE: List[_NTE] = Field(
         min_length=1,
         title="NTE",
-        description="Required, repeating",
+        description="Notes and Comments",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     COMPONENT: Optional[_RDS_O13_COMPONENT] = Field(
         default=None,
         title="COMPONENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

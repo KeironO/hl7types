@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class PLN(HL7Model):
-    """HL7 v2 PLN data type.
+    """Practitioner license or other id number (S2.A.54).
 
     Attributes
     ----------

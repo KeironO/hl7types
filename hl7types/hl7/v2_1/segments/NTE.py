@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class NTE(HL7Model):
-    """HL7 v2 NTE segment.
+    """NOTES AND COMMENTS (S2.5.9).
 
     Attributes
     ----------
     nte_1 : str | None
-        NTE.1 (opt) - SET ID - NOTES AND COMMENTS (SI)
+        NTE.1 (opt) - SET ID - NOTES AND COMMENTS (SI) S2-49
 
     nte_2 : str | None
-        NTE.2 (opt) - SOURCE OF COMMENT (ID)
+        NTE.2 (opt) - SOURCE OF COMMENT (ID) | 0105 - SOURCE OF COMMENT
 
     nte_3 : list[str]
         NTE.3 (req, rep) - COMMENT (TX)

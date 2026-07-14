@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class XPN(HL7Model):
-    """HL7 v2 XPN data type.
+    """Extended person name (S2.8.48).
 
     Attributes
     ----------

@@ -18,45 +18,45 @@ from ..datatypes.XON import XON
 
 
 class PD1(HL7Model):
-    """HL7 v2 PD1 segment.
+    """Patient Demographic (S3.3.9).
 
     Attributes
     ----------
     pd1_1 : str | None
-        PD1.1 (opt) - Living Dependency (IS)
+        PD1.1 (opt) - Living Dependency (IS) S3.3.5 | 0223 - Living Dependency
 
     pd1_2 : str | None
-        PD1.2 (opt) - Living Arrangement (IS)
+        PD1.2 (opt) - Living Arrangement (IS) S3.3.5 | 0220 - Living Arrangements
 
     pd1_3 : list[XON] | None
-        PD1.3 (opt, rep) - Patient Primary Facility (XON)
+        PD1.3 (opt, rep) - Patient Primary Facility (XON) S3.3.9.3
 
     pd1_4 : list[XCN] | None
-        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN)
+        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN) S3.3.9.4
 
     pd1_5 : str | None
-        PD1.5 (opt) - Student Indicator (IS)
+        PD1.5 (opt) - Student Indicator (IS) S3.3.5 | 0231 - Student Status
 
     pd1_6 : str | None
-        PD1.6 (opt) - Handicap (IS)
+        PD1.6 (opt) - Handicap (IS) S3.3.5 | 0295 - Handicap
 
     pd1_7 : str | None
-        PD1.7 (opt) - Living Will (IS)
+        PD1.7 (opt) - Living Will (IS) S3.3.9.7 | 0315 - Living Will
 
     pd1_8 : str | None
-        PD1.8 (opt) - Organ Donor (IS)
+        PD1.8 (opt) - Organ Donor (IS) S3.3.9.8 | 0316 - Organ Donor
 
     pd1_9 : str | None
-        PD1.9 (opt) - Separate Bill (ID)
+        PD1.9 (opt) - Separate Bill (ID) S3.3.9.9 | 0136 - Yes/No Indicator
 
     pd1_10 : list[CX] | None
-        PD1.10 (opt, rep) - Duplicate Patient (CX)
+        PD1.10 (opt, rep) - Duplicate Patient (CX) S3.3.9.10
 
     pd1_11 : CE | None
-        PD1.11 (opt) - Publicity Indicator (CE)
+        PD1.11 (opt) - Publicity Indicator (CE) S3.3.5 | 0215 - Publicity Code
 
     pd1_12 : str | None
-        PD1.12 (opt) - Protection Indicator (ID)
+        PD1.12 (opt) - Protection Indicator (ID) S3.3.5 | 0136 - Yes/No Indicator
     """
 
     pd1_1: Optional[str] = Field(

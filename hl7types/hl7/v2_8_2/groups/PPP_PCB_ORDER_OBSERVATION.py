@@ -26,33 +26,33 @@ class PPP_PCB_ORDER_OBSERVATION(HL7Model):
     """HL7 v2 PPP_PCB.ORDER_OBSERVATION group.
 
     Attributes:
-        OBX (OBX): required
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        OBX (OBX): Observation/Result, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        VAR (Optional[List[VAR]]): Variance, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     model_config = {"populate_by_name": True}

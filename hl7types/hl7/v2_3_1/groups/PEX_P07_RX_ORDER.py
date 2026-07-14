@@ -22,19 +22,19 @@ class PEX_P07_RX_ORDER(HL7Model):
     """HL7 v2 PEX_P07.RX_ORDER group.
 
     Attributes:
-        RXE (RXE): required
-        RXR (Optional[List[RXR]]): optional
+        RXE (RXE): RXE - pharmacy/treatment encoded order segment, required
+        RXR (Optional[List[RXR]]): RXR - pharmacy/treatment route segment, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="RXE - pharmacy/treatment encoded order segment",
     )
 
     RXR: Optional[List[_RXR]] = Field(
         default=None,
         title="RXR",
-        description="Optional, repeating",
+        description="RXR - pharmacy/treatment route segment",
     )
 
     model_config = {"populate_by_name": True}

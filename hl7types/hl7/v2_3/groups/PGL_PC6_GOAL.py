@@ -35,9 +35,9 @@ class PGL_PC6_GOAL(HL7Model):
     """HL7 v2 PGL_PC6.GOAL group.
 
     Attributes:
-        GOL (GOL): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        GOL (GOL): Goal Detail, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         GOAL_ROLE (Optional[List[PGL_PC6_GOAL_ROLE]]): optional
         PATHWAY (Optional[List[PGL_PC6_PATHWAY]]): optional
         OBSERVATION (Optional[List[PGL_PC6_OBSERVATION]]): optional
@@ -47,49 +47,44 @@ class PGL_PC6_GOAL(HL7Model):
 
     GOL: _GOL = Field(
         title="GOL",
-        description="Required",
+        description="Goal Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     GOAL_ROLE: Optional[List[_PGL_PC6_GOAL_ROLE]] = Field(
         default=None,
         title="GOAL_ROLE",
-        description="Optional, repeating",
     )
 
     PATHWAY: Optional[List[_PGL_PC6_PATHWAY]] = Field(
         default=None,
         title="PATHWAY",
-        description="Optional, repeating",
     )
 
     OBSERVATION: Optional[List[_PGL_PC6_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     PROBLEM: Optional[List[_PGL_PC6_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_PGL_PC6_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

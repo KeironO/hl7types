@@ -22,19 +22,19 @@ class DFT_P03_OBSERVATION(HL7Model):
     """HL7 v2 DFT_P03.OBSERVATION group.
 
     Attributes:
-        OBX (OBX): required
-        NTE (Optional[List[NTE]]): optional
+        OBX (OBX): Observation/Result, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

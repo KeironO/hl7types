@@ -35,9 +35,9 @@ class PPV_PCA_GOAL(HL7Model):
     """HL7 v2 PPV_PCA.GOAL group.
 
     Attributes:
-        GOL (GOL): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        GOL (GOL): Goal Detail, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         GOAL_ROLE (Optional[List[PPV_PCA_GOAL_ROLE]]): optional
         GOAL_PATHWAY (Optional[List[PPV_PCA_GOAL_PATHWAY]]): optional
         GOAL_OBSERVATION (Optional[List[PPV_PCA_GOAL_OBSERVATION]]): optional
@@ -47,49 +47,44 @@ class PPV_PCA_GOAL(HL7Model):
 
     GOL: _GOL = Field(
         title="GOL",
-        description="Required",
+        description="Goal Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     GOAL_ROLE: Optional[List[_PPV_PCA_GOAL_ROLE]] = Field(
         default=None,
         title="GOAL_ROLE",
-        description="Optional, repeating",
     )
 
     GOAL_PATHWAY: Optional[List[_PPV_PCA_GOAL_PATHWAY]] = Field(
         default=None,
         title="GOAL_PATHWAY",
-        description="Optional, repeating",
     )
 
     GOAL_OBSERVATION: Optional[List[_PPV_PCA_GOAL_OBSERVATION]] = Field(
         default=None,
         title="GOAL_OBSERVATION",
-        description="Optional, repeating",
     )
 
     PROBLEM: Optional[List[_PPV_PCA_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_PPV_PCA_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

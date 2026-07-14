@@ -16,84 +16,84 @@ from ..datatypes.TS import TS
 
 
 class IN3(HL7Model):
-    """HL7 v2 IN3 segment.
+    """INSURANCE ADDITIONAL INFO-CERTIFICATION (S6.4.7).
 
     Attributes
     ----------
     in3_1 : str
-        IN3.1 (req) - Set ID - insurance certification (SI)
+        IN3.1 (req) - Set ID - insurance certification (SI) S6.4.7.1
 
     in3_2 : str | None
-        IN3.2 (opt) - Certification number (ST)
+        IN3.2 (opt) - Certification number (ST) S6.4.7.2
 
     in3_3 : str | None
-        IN3.3 (opt) - Certified by (CN)
+        IN3.3 (opt) - Certified by (CN) S6.4.7.3
 
     in3_4 : str | None
-        IN3.4 (opt) - Certification required (ID)
+        IN3.4 (opt) - Certification required (ID) S6.4.7.4 | 0136 - Y/N Indicator
 
     in3_5 : str | None
-        IN3.5 (opt) - Penalty (CM)
+        IN3.5 (opt) - Penalty (CM) S6.4.7.5 | 0148 - PENALTY TYPE
 
     in3_6 : TS | None
-        IN3.6 (opt) - Certification date / time (TS)
+        IN3.6 (opt) - Certification date / time (TS) S6.4.7.6
 
     in3_7 : TS | None
-        IN3.7 (opt) - Certification modify date / time (TS)
+        IN3.7 (opt) - Certification modify date / time (TS) S6.4.7.7
 
     in3_8 : str | None
-        IN3.8 (opt) - Operator (CN)
+        IN3.8 (opt) - Operator (CN) S6.4.7.8
 
     in3_9 : str | None
-        IN3.9 (opt) - Certification begin date (DT)
+        IN3.9 (opt) - Certification begin date (DT) S6.4.7.9
 
     in3_10 : str | None
-        IN3.10 (opt) - Certification end date (DT)
+        IN3.10 (opt) - Certification end date (DT) S6.4.7.10
 
     in3_11 : str | None
-        IN3.11 (opt) - Days (CM)
+        IN3.11 (opt) - Days (CM) S6.4.7.11 | 0149 - DAY TYPE
 
     in3_12 : CE | None
-        IN3.12 (opt) - Non-concur code / description (CE)
+        IN3.12 (opt) - Non-concur code / description (CE) S6.4.7.12
 
     in3_13 : TS | None
-        IN3.13 (opt) - Non-concur effective date / time (TS)
+        IN3.13 (opt) - Non-concur effective date / time (TS) S6.4.7.13
 
     in3_14 : str | None
-        IN3.14 (opt) - Physician reviewer (CN)
+        IN3.14 (opt) - Physician reviewer (CN) S6.4.7.14
 
     in3_15 : str | None
-        IN3.15 (opt) - Certification contact (ST)
+        IN3.15 (opt) - Certification contact (ST) S6.4.7.15
 
     in3_16 : list[str] | None
-        IN3.16 (opt, rep) - Certification contact phone number (TN)
+        IN3.16 (opt, rep) - Certification contact phone number (TN) S6.4.7.16
 
     in3_17 : CE | None
-        IN3.17 (opt) - Appeal reason (CE)
+        IN3.17 (opt) - Appeal reason (CE) S6.4.7.17
 
     in3_18 : CE | None
-        IN3.18 (opt) - Certification agency (CE)
+        IN3.18 (opt) - Certification agency (CE) S6.4.7.18
 
     in3_19 : list[str] | None
-        IN3.19 (opt, rep) - Certification agency phone number (TN)
+        IN3.19 (opt, rep) - Certification agency phone number (TN) S6.4.7.19
 
     in3_20 : list[str] | None
-        IN3.20 (opt, rep) - Pre-certification required / window (CM)
+        IN3.20 (opt, rep) - Pre-certification required / window (CM) S6.4.7.20 | 0150 - PRECERTIFICATION PATIENT TYPE
 
     in3_21 : str | None
-        IN3.21 (opt) - Case manager (ST)
+        IN3.21 (opt) - Case manager (ST) S6.4.7.21
 
     in3_22 : str | None
-        IN3.22 (opt) - Second opinion date (DT)
+        IN3.22 (opt) - Second opinion date (DT) S6.4.7.22
 
     in3_23 : str | None
-        IN3.23 (opt) - Second opinion status (ID)
+        IN3.23 (opt) - Second opinion status (ID) S6.4.7.23 | 0151 - SECOND OPINION STATUS
 
     in3_24 : str | None
-        IN3.24 (opt) - Second opinion documentation received (ID)
+        IN3.24 (opt) - Second opinion documentation received (ID) S6.4.7.24 | 0152 - SECOND OPINION DOCUMENTATION RECEIVED
 
     in3_25 : str | None
-        IN3.25 (opt) - Second opinion practitioner (CN)
+        IN3.25 (opt) - Second opinion practitioner (CN) S6.4.7.25
     """
 
     in3_1: str = Field(

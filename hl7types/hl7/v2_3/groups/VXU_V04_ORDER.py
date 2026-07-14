@@ -27,33 +27,32 @@ class VXU_V04_ORDER(HL7Model):
     """HL7 v2 VXU_V04.ORDER group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
-        RXA (RXA): required
-        RXR (Optional[RXR]): optional
+        ORC (Optional[ORC]): Common order segment, optional
+        RXA (RXA): Pharmacy administration segment, required
+        RXR (Optional[RXR]): Pharmacy route segment, optional
         OBSERVATION (Optional[List[VXU_V04_OBSERVATION]]): optional
     """
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common order segment",
     )
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="Pharmacy administration segment",
     )
 
     RXR: Optional[_RXR] = Field(
         default=None,
         title="RXR",
-        description="Optional",
+        description="Pharmacy route segment",
     )
 
     OBSERVATION: Optional[List[_VXU_V04_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

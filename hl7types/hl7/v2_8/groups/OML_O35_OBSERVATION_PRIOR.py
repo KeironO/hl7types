@@ -24,26 +24,26 @@ class OML_O35_OBSERVATION_PRIOR(HL7Model):
     """HL7 v2 OML_O35.OBSERVATION_PRIOR group.
 
     Attributes:
-        OBX (OBX): required
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBX (OBX): Observation/Result, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

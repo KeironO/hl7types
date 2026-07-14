@@ -26,43 +26,41 @@ _UAC = UAC
 
 
 class DRC_O47(HL7Model):
-    """HL7 v2 DRC_O47 message.
+    """Donor Request to Collect Message (S4.16.14).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         DONOR (Optional[DRC_O47_DONOR]): optional
         DONATION_ORDER (List[DRC_O47_DONATION_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     DONOR: Optional[_DRC_O47_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     DONATION_ORDER: List[_DRC_O47_DONATION_ORDER] = Field(
         min_length=1,
         title="DONATION_ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

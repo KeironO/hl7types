@@ -35,61 +35,56 @@ class PEX_P07_PEX_CAUSE(HL7Model):
     """HL7 v2 PEX_P07.PEX_CAUSE group.
 
     Attributes:
-        PCR (PCR): required
+        PCR (PCR): Possible Causal Relationship, required
         RX_ORDER (Optional[PEX_P07_RX_ORDER]): optional
         RX_ADMINISTRATION (Optional[List[PEX_P07_RX_ADMINISTRATION]]): optional
-        PRB (Optional[List[PRB]]): optional
+        PRB (Optional[List[PRB]]): Problem Details, optional
         OBSERVATION (Optional[List[PEX_P07_OBSERVATION]]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         ASSOCIATED_PERSON (Optional[PEX_P07_ASSOCIATED_PERSON]): optional
         STUDY (Optional[List[PEX_P07_STUDY]]): optional
     """
 
     PCR: _PCR = Field(
         title="PCR",
-        description="Required",
+        description="Possible Causal Relationship",
     )
 
     RX_ORDER: Optional[_PEX_P07_RX_ORDER] = Field(
         default=None,
         title="RX_ORDER",
-        description="Optional",
     )
 
     RX_ADMINISTRATION: Optional[List[_PEX_P07_RX_ADMINISTRATION]] = Field(
         default=None,
         title="RX_ADMINISTRATION",
-        description="Optional, repeating",
     )
 
     PRB: Optional[List[_PRB]] = Field(
         default=None,
         title="PRB",
-        description="Optional, repeating",
+        description="Problem Details",
     )
 
     OBSERVATION: Optional[List[_PEX_P07_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ASSOCIATED_PERSON: Optional[_PEX_P07_ASSOCIATED_PERSON] = Field(
         default=None,
         title="ASSOCIATED_PERSON",
-        description="Optional",
     )
 
     STUDY: Optional[List[_PEX_P07_STUDY]] = Field(
         default=None,
         title="STUDY",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

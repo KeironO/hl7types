@@ -22,78 +22,78 @@ from ..datatypes.XTN import XTN
 
 
 class ARQ(HL7Model):
-    """HL7 v2 ARQ segment.
+    """Appointment Request (S10.5.1).
 
     Attributes
     ----------
     arq_1 : EI
-        ARQ.1 (req) - Placer Appointment ID (EI)
+        ARQ.1 (req) - Placer Appointment ID (EI) S10.5.1
 
     arq_2 : EI | None
-        ARQ.2 (opt) - Filler Appointment ID (EI)
+        ARQ.2 (opt) - Filler Appointment ID (EI) S10.5.1
 
     arq_3 : str | None
-        ARQ.3 (opt) - Occurrence Number (NM)
+        ARQ.3 (opt) - Occurrence Number (NM) S10.5.1
 
     arq_4 : EI | None
-        ARQ.4 (opt) - Placer Group Number (EI)
+        ARQ.4 (opt) - Placer Group Number (EI) S10.5.2
 
     arq_5 : CE | None
-        ARQ.5 (opt) - Schedule ID (CE)
+        ARQ.5 (opt) - Schedule ID (CE) S10.5.1
 
     arq_6 : CE | None
-        ARQ.6 (opt) - Request Event Reason (CE)
+        ARQ.6 (opt) - Request Event Reason (CE) S10.5.1
 
     arq_7 : CE | None
-        ARQ.7 (opt) - Appointment Reason (CE)
+        ARQ.7 (opt) - Appointment Reason (CE) S10.5.1 | 0276 - Appointment Reason Codes
 
     arq_8 : CE | None
-        ARQ.8 (opt) - Appointment Type (CE)
+        ARQ.8 (opt) - Appointment Type (CE) S10.5.1 | 0277 - Appointment Type Codes
 
     arq_9 : str | None
-        ARQ.9 (opt) - Appointment Duration (NM)
+        ARQ.9 (opt) - Appointment Duration (NM) S10.5.1
 
     arq_10 : CE | None
-        ARQ.10 (opt) - Appointment Duration Units (CE)
+        ARQ.10 (opt) - Appointment Duration Units (CE) S10.5.1.10
 
     arq_11 : list[DR] | None
-        ARQ.11 (opt, rep) - Requested Start Date/Time Range (DR)
+        ARQ.11 (opt, rep) - Requested Start Date/Time Range (DR) S10.5.1.11
 
     arq_12 : str | None
-        ARQ.12 (opt) - Priority (ST)
+        ARQ.12 (opt) - Priority (ST) S10.5.1.12
 
     arq_13 : RI | None
-        ARQ.13 (opt) - Repeating Interval (RI)
+        ARQ.13 (opt) - Repeating Interval (RI) S10.5.1.13
 
     arq_14 : str | None
-        ARQ.14 (opt) - Repeating Interval Duration (ST)
+        ARQ.14 (opt) - Repeating Interval Duration (ST) S10.5.1.14
 
     arq_15 : XCN | None
-        ARQ.15 (opt) - Placer Contact Person (XCN)
+        ARQ.15 (opt) - Placer Contact Person (XCN) S10.5.1
 
     arq_16 : XTN | None
-        ARQ.16 (opt) - Placer Contact Phone Number (XTN)
+        ARQ.16 (opt) - Placer Contact Phone Number (XTN) S10.5.1
 
     arq_17 : XAD | None
-        ARQ.17 (opt) - Placer Contact Address (XAD)
+        ARQ.17 (opt) - Placer Contact Address (XAD) S10.5.1
 
     arq_18 : PL | None
-        ARQ.18 (opt) - Placer Contact Location (PL)
+        ARQ.18 (opt) - Placer Contact Location (PL) S10.5.1
 
     arq_19 : XCN
-        ARQ.19 (req) - Entered By Person (XCN)
+        ARQ.19 (req) - Entered By Person (XCN) S10.5.1
 
     arq_20 : list[XTN] | None
-        ARQ.20 (opt, rep) - Entered By Phone Number (XTN)
+        ARQ.20 (opt, rep) - Entered By Phone Number (XTN) S10.5.1
 
     arq_21 : PL | None
-        ARQ.21 (opt) - Entered By Location (PL)
+        ARQ.21 (opt) - Entered By Location (PL) S10.5.1
 
     arq_22 : EI | None
-        ARQ.22 (opt) - Parent Placer Appointment ID (EI)
+        ARQ.22 (opt) - Parent Placer Appointment ID (EI) S10.5.1
 
     arq_23 : EI | None
-        ARQ.23 (opt) - Parent Filler Appointment ID (EI)
+        ARQ.23 (opt) - Parent Filler Appointment ID (EI) S10.5.1
     """
 
     arq_1: EI = Field(

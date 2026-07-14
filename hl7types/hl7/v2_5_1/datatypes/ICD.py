@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class ICD(HL7Model):
-    """HL7 v2 ICD data type.
+    """Insurance certification definition (S2.A.1.34).
 
     Attributes
     ----------

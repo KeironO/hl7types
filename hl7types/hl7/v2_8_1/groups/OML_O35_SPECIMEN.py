@@ -25,26 +25,24 @@ class OML_O35_SPECIMEN(HL7Model):
     """HL7 v2 OML_O35.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         SPECIMEN_OBSERVATION (Optional[List[OML_O35_SPECIMEN_OBSERVATION]]): optional
         SPECIMEN_CONTAINER (List[OML_O35_SPECIMEN_CONTAINER]): required
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OML_O35_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     SPECIMEN_CONTAINER: List[_OML_O35_SPECIMEN_CONTAINER] = Field(
         min_length=1,
         title="SPECIMEN_CONTAINER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

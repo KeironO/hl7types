@@ -24,35 +24,33 @@ _PPP_PCB_PATIENT_VISIT = PPP_PCB_PATIENT_VISIT
 
 
 class PPP_PCB(HL7Model):
-    """HL7 v2 PPP_PCB message.
+    """PPP - PC/ Pathway (Problem-Oriented) Add (S12).
 
     Attributes:
-        MSH (MSH): required
-        PID (PID): required
+        MSH (MSH): Message Header, required
+        PID (PID): Patient identification, required
         PATIENT_VISIT (Optional[PPP_PCB_PATIENT_VISIT]): optional
         PATHWAY (List[PPP_PCB_PATHWAY]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PATIENT_VISIT: Optional[_PPP_PCB_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PATHWAY: List[_PPP_PCB_PATHWAY] = Field(
         min_length=1,
         title="PATHWAY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -26,42 +26,41 @@ _UAC = UAC
 
 
 class MFN_M18(HL7Model):
-    """HL7 v2 MFN_M18 message.
+    """MFN/MFK - Master file notification - Test/Observation (Payer) (S8.10.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MFI (MFI): Master File Identification, required
         MF_PAYER (List[MFN_M18_MF_PAYER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_PAYER: List[_MFN_M18_MF_PAYER] = Field(
         min_length=1,
         title="MF_PAYER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

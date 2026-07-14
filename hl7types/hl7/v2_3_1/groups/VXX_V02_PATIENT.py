@@ -22,19 +22,19 @@ class VXX_V02_PATIENT(HL7Model):
     """HL7 v2 VXX_V02.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
+        PID (PID): PID - patient identification segment, required
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     model_config = {"populate_by_name": True}

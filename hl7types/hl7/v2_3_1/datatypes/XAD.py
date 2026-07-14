@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class XAD(HL7Model):
-    """HL7 v2 XAD data type.
+    """Extended address (S2.8.48).
 
     Attributes
     ----------

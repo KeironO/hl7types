@@ -17,42 +17,42 @@ from ..datatypes.TS import TS
 
 
 class RF1(HL7Model):
-    """HL7 v2 RF1 segment.
+    """Referral Infomation (S11.5.1).
 
     Attributes
     ----------
     rf1_1 : CE | None
-        RF1.1 (opt) - Referral Status (CE)
+        RF1.1 (opt) - Referral Status (CE) S11.5.1.1 | 0283 - Referral Status
 
     rf1_2 : CE | None
-        RF1.2 (opt) - Referral Priority (CE)
+        RF1.2 (opt) - Referral Priority (CE) S11.5.1.2 | 0280 - Referral priority
 
     rf1_3 : CE | None
-        RF1.3 (opt) - Referral Type (CE)
+        RF1.3 (opt) - Referral Type (CE) S11.5.1.3 | 0281 - Referral type
 
     rf1_4 : list[CE] | None
-        RF1.4 (opt, rep) - Referral Disposition (CE)
+        RF1.4 (opt, rep) - Referral Disposition (CE) S11.5.1.4 | 0282 - Referral disposition
 
     rf1_5 : CE | None
-        RF1.5 (opt) - Referral Category (CE)
+        RF1.5 (opt) - Referral Category (CE) S11.5.1.5 | 0284 - Referral category
 
     rf1_6 : EI
-        RF1.6 (req) - Originating Referral Identifier (EI)
+        RF1.6 (req) - Originating Referral Identifier (EI) S11.5.1.6
 
     rf1_7 : TS | None
-        RF1.7 (opt) - Effective Date (TS)
+        RF1.7 (opt) - Effective Date (TS) S11.5.1.7
 
     rf1_8 : TS | None
-        RF1.8 (opt) - Expiration Date (TS)
+        RF1.8 (opt) - Expiration Date (TS) S11.5.1.8
 
     rf1_9 : TS | None
-        RF1.9 (opt) - Process Date (TS)
+        RF1.9 (opt) - Process Date (TS) S11.5.2.10
 
     rf1_10 : list[CE] | None
-        RF1.10 (opt, rep) - Referral Reason (CE)
+        RF1.10 (opt, rep) - Referral Reason (CE) S11.5.1.10 | 0336 - Referral reason
 
     rf1_11 : list[EI] | None
-        RF1.11 (opt, rep) - External Referral Identifier (EI)
+        RF1.11 (opt, rep) - External Referral Identifier (EI) S11.5.1.11
     """
 
     rf1_1: Optional[CE] = Field(

@@ -54,138 +54,136 @@ _UB2 = UB2
 
 
 class ADT_A06(HL7Model):
-    """HL7 v2 ADT_A06 message.
+    """ADT/ACK -  Transfer an outpatient to inpatient.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        MRG (Optional[MRG]): optional
-        NK1 (Optional[List[NK1]]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        DB1 (Optional[List[DB1]]): optional
-        DRG (Optional[DRG]): optional
-        OBX (Optional[List[OBX]]): optional
-        AL1 (Optional[List[AL1]]): optional
-        DG1 (Optional[List[DG1]]): optional
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Demographic, optional
+        MRG (Optional[MRG]): Merge patient information, optional
+        NK1 (Optional[List[NK1]]): Next of kin, optional
+        PV1 (PV1): Patient visit, required
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
+        DB1 (Optional[List[DB1]]): Disability Segment, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
+        OBX (Optional[List[OBX]]): Observation segment, optional
+        AL1 (Optional[List[AL1]]): Patient allergy information, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         PROCEDURE (Optional[List[ADT_A06_PROCEDURE]]): optional
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[ADT_A06_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
-        UB1 (Optional[UB1]): optional
-        UB2 (Optional[UB2]): optional
+        ACC (Optional[ACC]): Accident, optional
+        UB1 (Optional[UB1]): UB82  data, optional
+        UB2 (Optional[UB2]): UB92 data, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Demographic",
     )
 
     MRG: Optional[_MRG] = Field(
         default=None,
         title="MRG",
-        description="Optional",
+        description="Merge patient information",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="Disability Segment",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient allergy information",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     PROCEDURE: Optional[List[_ADT_A06_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_ADT_A06_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     UB1: Optional[_UB1] = Field(
         default=None,
         title="UB1",
-        description="Optional",
+        description="UB82  data",
     )
 
     UB2: Optional[_UB2] = Field(
         default=None,
         title="UB2",
-        description="Optional",
+        description="UB92 data",
     )
 
     model_config = {"populate_by_name": True}

@@ -27,33 +27,32 @@ class CQU_I19_MEDICATION_ENCODING_DETAIL(HL7Model):
     """HL7 v2 CQU_I19.MEDICATION_ENCODING_DETAIL group.
 
     Attributes:
-        RXE (RXE): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
         MEDICATION_ENCODING_OBSERVATION (Optional[List[CQU_I19_MEDICATION_ENCODING_OBSERVATION]]): optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     MEDICATION_ENCODING_OBSERVATION: Optional[List[_CQU_I19_MEDICATION_ENCODING_OBSERVATION]] = Field(
         default=None,
         title="MEDICATION_ENCODING_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

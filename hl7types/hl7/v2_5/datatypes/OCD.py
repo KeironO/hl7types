@@ -15,7 +15,7 @@ from .CNE import CNE
 
 
 class OCD(HL7Model):
-    """HL7 v2 OCD data type.
+    """Occurrence code and date (S2.A.49).
 
     Attributes
     ----------

@@ -18,87 +18,87 @@ from ..datatypes.EI import EI
 
 
 class IVT(HL7Model):
-    """HL7 v2 IVT segment.
+    """Material Location (S17.4.7).
 
     Attributes
     ----------
     ivt_1 : str
-        IVT.1 (req) - Set Id - IVT (SI)
+        IVT.1 (req) - Set Id - IVT (SI) S17.4.7.1
 
     ivt_2 : EI
-        IVT.2 (req) - Inventory Location Identifier (EI)
+        IVT.2 (req) - Inventory Location Identifier (EI) S17.4.7.2
 
     ivt_3 : str | None
-        IVT.3 (opt) - Inventory Location Name (ST)
+        IVT.3 (opt) - Inventory Location Name (ST) S17.4.7.3
 
     ivt_4 : EI | None
-        IVT.4 (opt) - Source Location Identifier (EI)
+        IVT.4 (opt) - Source Location Identifier (EI) S17.4.7.4
 
     ivt_5 : str | None
-        IVT.5 (opt) - Source Location Name (ST)
+        IVT.5 (opt) - Source Location Name (ST) S17.4.7.5
 
     ivt_6 : CWE | None
-        IVT.6 (opt) - Item Status (CWE)
+        IVT.6 (opt) - Item Status (CWE) S17.4.7.6 | 0625 - Item Status Codes
 
     ivt_7 : list[EI] | None
-        IVT.7 (opt, rep) - Bin Location Identifier (EI)
+        IVT.7 (opt, rep) - Bin Location Identifier (EI) S17.4.7.7
 
     ivt_8 : CWE | None
-        IVT.8 (opt) - Order Packaging (CWE)
+        IVT.8 (opt) - Order Packaging (CWE) S17.4.7.8
 
     ivt_9 : CWE | None
-        IVT.9 (opt) - Issue Packaging (CWE)
+        IVT.9 (opt) - Issue Packaging (CWE) S17.4.7.9
 
     ivt_10 : EI | None
-        IVT.10 (opt) - Default Inventory Asset Account (EI)
+        IVT.10 (opt) - Default Inventory Asset Account (EI) S17.4.7.10
 
     ivt_11 : CNE | None
-        IVT.11 (opt) - Patient Chargeable Indicator (CNE)
+        IVT.11 (opt) - Patient Chargeable Indicator (CNE) S17.4.2.11 | 0532 - Expanded yes/no indicator
 
     ivt_12 : CWE | None
-        IVT.12 (opt) - Transaction Code (CWE)
+        IVT.12 (opt) - Transaction Code (CWE) S17.4.2.12 | 0132 - Transaction Code
 
     ivt_13 : CP | None
-        IVT.13 (opt) - Transaction amount - unit (CP)
+        IVT.13 (opt) - Transaction amount - unit (CP) S17.4.2.13
 
     ivt_14 : CWE | None
-        IVT.14 (opt) - Item Importance Code (CWE)
+        IVT.14 (opt) - Item Importance Code (CWE) S17.4.7.14 | 0634 - Item Importance Codes
 
     ivt_15 : CNE | None
-        IVT.15 (opt) - Stocked Item Indicator (CNE)
+        IVT.15 (opt) - Stocked Item Indicator (CNE) S17.4.7.15 | 0532 - Expanded yes/no indicator
 
     ivt_16 : CNE | None
-        IVT.16 (opt) - Consignment Item Indicator (CNE)
+        IVT.16 (opt) - Consignment Item Indicator (CNE) S17.4.7.16 | 0532 - Expanded yes/no indicator
 
     ivt_17 : CNE | None
-        IVT.17 (opt) - Reusable Item Indicator (CNE)
+        IVT.17 (opt) - Reusable Item Indicator (CNE) S17.4.7.17 | 0532 - Expanded yes/no indicator
 
     ivt_18 : CP | None
-        IVT.18 (opt) - Reusable Cost (CP)
+        IVT.18 (opt) - Reusable Cost (CP) S17.4.7.18
 
     ivt_19 : list[EI] | None
-        IVT.19 (opt, rep) - Substitute Item Identifier (EI)
+        IVT.19 (opt, rep) - Substitute Item Identifier (EI) S17.4.7.19
 
     ivt_20 : EI | None
-        IVT.20 (opt) - Latex-Free Substitute Item Identifier (EI)
+        IVT.20 (opt) - Latex-Free Substitute Item Identifier (EI) S17.4.7.20
 
     ivt_21 : CWE | None
-        IVT.21 (opt) - Recommended Reorder Theory (CWE)
+        IVT.21 (opt) - Recommended Reorder Theory (CWE) S17.4.7.21 | 0642 - Reorder Theory Codes
 
     ivt_22 : str | None
-        IVT.22 (opt) - Recommended Safety Stock Days (NM)
+        IVT.22 (opt) - Recommended Safety Stock Days (NM) S17.4.7.22
 
     ivt_23 : str | None
-        IVT.23 (opt) - Recommended Maximum Days Inventory (NM)
+        IVT.23 (opt) - Recommended Maximum Days Inventory (NM) S17.4.7.23
 
     ivt_24 : str | None
-        IVT.24 (opt) - Recommended Order Point (NM)
+        IVT.24 (opt) - Recommended Order Point (NM) S17.4.7.24
 
     ivt_25 : str | None
-        IVT.25 (opt) - Recommended Order Amount (NM)
+        IVT.25 (opt) - Recommended Order Amount (NM) S17.4.7.25
 
     ivt_26 : CNE | None
-        IVT.26 (opt) - Operating Room Par Level Indicator (CNE)
+        IVT.26 (opt) - Operating Room Par Level Indicator (CNE) S17.4.7.26 | 0532 - Expanded yes/no indicator
     """
 
     ivt_1: str = Field(

@@ -23,19 +23,18 @@ class ORL_O22_PATIENT(HL7Model):
     """HL7 v2 ORL_O22.PATIENT group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient identification, required
         GENERAL_ORDER (List[ORL_O22_GENERAL_ORDER]): required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     GENERAL_ORDER: List[_ORL_O22_GENERAL_ORDER] = Field(
         min_length=1,
         title="GENERAL_ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

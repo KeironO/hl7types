@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class DDI(HL7Model):
-    """HL7 v2 DDI data type.
+    """Daily deductible.
 
     Attributes
     ----------

@@ -22,19 +22,19 @@ class BTS_O31_PRODUCT_STATUS(HL7Model):
     """HL7 v2 BTS_O31.PRODUCT_STATUS group.
 
     Attributes:
-        BTX (BTX): required
-        NTE (Optional[List[NTE]]): optional
+        BTX (BTX): Blood Product Transfusion/Disposition, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     BTX: _BTX = Field(
         title="BTX",
-        description="Required",
+        description="Blood Product Transfusion/Disposition",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

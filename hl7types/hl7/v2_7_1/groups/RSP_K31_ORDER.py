@@ -37,67 +37,63 @@ class RSP_K31_ORDER(HL7Model):
     """HL7 v2 RSP_K31.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[RSP_K31_TIMING]]): optional
         ORDER_DETAIL (Optional[RSP_K31_ORDER_DETAIL]): optional
         ENCODING (Optional[RSP_K31_ENCODING]): optional
-        RXD (RXD): required
-        PRT (Optional[List[PRT]]): optional
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXD (RXD): Pharmacy/Treatment Dispense, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
         OBSERVATION (Optional[List[RSP_K31_OBSERVATION]]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_RSP_K31_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ORDER_DETAIL: Optional[_RSP_K31_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     ENCODING: Optional[_RSP_K31_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     RXD: _RXD = Field(
         title="RXD",
-        description="Required",
+        description="Pharmacy/Treatment Dispense",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     OBSERVATION: Optional[List[_RSP_K31_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

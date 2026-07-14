@@ -21,51 +21,51 @@ from ..datatypes.XTN import XTN
 
 
 class PRD(HL7Model):
-    """HL7 v2 PRD segment.
+    """Provider Data (S11.6.3).
 
     Attributes
     ----------
     prd_1 : list[CWE]
-        PRD.1 (req, rep) - Provider Role (CWE)
+        PRD.1 (req, rep) - Provider Role (CWE) S11.6.3.1 | 0286 - Provider role
 
     prd_2 : list[XPN] | None
-        PRD.2 (opt, rep) - Provider Name (XPN)
+        PRD.2 (opt, rep) - Provider Name (XPN) S11.6.3.2
 
     prd_3 : list[XAD] | None
-        PRD.3 (opt, rep) - Provider Address (XAD)
+        PRD.3 (opt, rep) - Provider Address (XAD) S11.6.3.3
 
     prd_4 : PL | None
-        PRD.4 (opt) - Provider Location (PL)
+        PRD.4 (opt) - Provider Location (PL) S11.6.3.4
 
     prd_5 : list[XTN] | None
-        PRD.5 (opt, rep) - Provider Communication Information (XTN)
+        PRD.5 (opt, rep) - Provider Communication Information (XTN) S11.6.3.5
 
     prd_6 : CWE | None
-        PRD.6 (opt) - Preferred Method of Contact (CWE)
+        PRD.6 (opt) - Preferred Method of Contact (CWE) S11.6.3.6 | 0185 - Preferred method of contact
 
     prd_7 : list[PLN] | None
-        PRD.7 (opt, rep) - Provider Identifiers (PLN)
+        PRD.7 (opt, rep) - Provider Identifiers (PLN) S11.6.3.7 | 0338 - Practitioner ID number type
 
     prd_8 : str | None
-        PRD.8 (opt) - Effective Start Date of Provider Role (DTM)
+        PRD.8 (opt) - Effective Start Date of Provider Role (DTM) S11.6.3.8
 
     prd_9 : list[str] | None
-        PRD.9 (opt, rep) - Effective End Date of Provider Role (DTM)
+        PRD.9 (opt, rep) - Effective End Date of Provider Role (DTM) S11.6.3.9
 
     prd_10 : XON | None
-        PRD.10 (opt) - Provider Organization Name and Identifier (XON)
+        PRD.10 (opt) - Provider Organization Name and Identifier (XON) S11.6.3.10
 
     prd_11 : list[XAD] | None
-        PRD.11 (opt, rep) - Provider Organization Address (XAD)
+        PRD.11 (opt, rep) - Provider Organization Address (XAD) S11.6.3.11
 
     prd_12 : list[PL] | None
-        PRD.12 (opt, rep) - Provider Organization Location Information (PL)
+        PRD.12 (opt, rep) - Provider Organization Location Information (PL) S11.6.3.12
 
     prd_13 : list[XTN] | None
-        PRD.13 (opt, rep) - Provider Organization Communication Information (XTN)
+        PRD.13 (opt, rep) - Provider Organization Communication Information (XTN) S11.6.3.13
 
     prd_14 : CWE | None
-        PRD.14 (opt) - Provider Organization Method of Contact (CWE)
+        PRD.14 (opt) - Provider Organization Method of Contact (CWE) S11.6.3.14 | 0185 - Preferred method of contact
     """
 
     prd_1: List[CWE] = Field(

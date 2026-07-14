@@ -23,19 +23,18 @@ class MFN_M18_PAYER_MF_ENTRY(HL7Model):
     """HL7 v2 MFN_M18.PAYER_MF_ENTRY group.
 
     Attributes:
-        PM1 (PM1): required
+        PM1 (PM1): Payer Master File, required
         PAYER_MF_COVERAGE (List[MFN_M18_PAYER_MF_COVERAGE]): required
     """
 
     PM1: _PM1 = Field(
         title="PM1",
-        description="Required",
+        description="Payer Master File",
     )
 
     PAYER_MF_COVERAGE: List[_MFN_M18_PAYER_MF_COVERAGE] = Field(
         min_length=1,
         title="PAYER_MF_COVERAGE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,75 +17,75 @@ from ..datatypes.UVC import UVC
 
 
 class UB1(HL7Model):
-    """HL7 v2 UB1 segment.
+    """UB82 (S6.5.10).
 
     Attributes
     ----------
     ub1_1 : str | None
-        UB1.1 (opt) - Set ID - UB1 (SI)
+        UB1.1 (opt) - Set ID - UB1 (SI) S6.5.10.1
 
     ub1_3 : str | None
-        UB1.3 (opt) - Blood Furnished-Pints (NM)
+        UB1.3 (opt) - Blood Furnished-Pints (NM) S6.5.10.3
 
     ub1_4 : str | None
-        UB1.4 (opt) - Blood Replaced-Pints (NM)
+        UB1.4 (opt) - Blood Replaced-Pints (NM) S6.5.10.4
 
     ub1_5 : str | None
-        UB1.5 (opt) - Blood Not Replaced-Pints (NM)
+        UB1.5 (opt) - Blood Not Replaced-Pints (NM) S6.5.10.5
 
     ub1_6 : str | None
-        UB1.6 (opt) - Co-Insurance Days (NM)
+        UB1.6 (opt) - Co-Insurance Days (NM) S6.5.10.6
 
     ub1_7 : list[str] | None
-        UB1.7 (opt, rep) - Condition Code (IS)
+        UB1.7 (opt, rep) - Condition Code (IS) S6.5.10.7 | 0043 - Condition Code
 
     ub1_8 : str | None
-        UB1.8 (opt) - Covered Days (NM)
+        UB1.8 (opt) - Covered Days (NM) S6.5.10.8
 
     ub1_9 : str | None
-        UB1.9 (opt) - Non Covered Days (NM)
+        UB1.9 (opt) - Non Covered Days (NM) S6.5.10.9
 
     ub1_10 : list[UVC] | None
-        UB1.10 (opt, rep) - Value Amount & Code (UVC)
+        UB1.10 (opt, rep) - Value Amount & Code (UVC) S6.5.10.10
 
     ub1_11 : str | None
-        UB1.11 (opt) - Number Of Grace Days (NM)
+        UB1.11 (opt) - Number Of Grace Days (NM) S6.5.10.11
 
     ub1_12 : CWE | None
-        UB1.12 (opt) - Special Program Indicator (CWE)
+        UB1.12 (opt) - Special Program Indicator (CWE) S6.5.10.12 | 0348 - Special Program Indicator
 
     ub1_13 : CWE | None
-        UB1.13 (opt) - PSRO/UR Approval Indicator (CWE)
+        UB1.13 (opt) - PSRO/UR Approval Indicator (CWE) S6.5.10.13 | 0349 - PSRO/UR Approval Indicator
 
     ub1_14 : str | None
-        UB1.14 (opt) - PSRO/UR Approved Stay-Fm (DT)
+        UB1.14 (opt) - PSRO/UR Approved Stay-Fm (DT) S6.5.10.14
 
     ub1_15 : str | None
-        UB1.15 (opt) - PSRO/UR Approved Stay-To (DT)
+        UB1.15 (opt) - PSRO/UR Approved Stay-To (DT) S6.5.10.15
 
     ub1_16 : list[OCD] | None
-        UB1.16 (opt, rep) - Occurrence (OCD)
+        UB1.16 (opt, rep) - Occurrence (OCD) S6.5.10.16
 
     ub1_17 : CWE | None
-        UB1.17 (opt) - Occurrence Span (CWE)
+        UB1.17 (opt) - Occurrence Span (CWE) S6.5.10.17 | 0351 - Occurrence span
 
     ub1_18 : str | None
-        UB1.18 (opt) - Occur Span Start Date (DT)
+        UB1.18 (opt) - Occur Span Start Date (DT) S6.5.10.18
 
     ub1_19 : str | None
-        UB1.19 (opt) - Occur Span End Date (DT)
+        UB1.19 (opt) - Occur Span End Date (DT) S6.5.10.19
 
     ub1_20 : str | None
-        UB1.20 (opt) - UB-82 Locator 2 (ST)
+        UB1.20 (opt) - UB-82 Locator 2 (ST) S6.5.10.20
 
     ub1_21 : str | None
-        UB1.21 (opt) - UB-82 Locator 9 (ST)
+        UB1.21 (opt) - UB-82 Locator 9 (ST) S6.5.10.21
 
     ub1_22 : str | None
-        UB1.22 (opt) - UB-82 Locator 27 (ST)
+        UB1.22 (opt) - UB-82 Locator 27 (ST) S6.5.10.22
 
     ub1_23 : str | None
-        UB1.23 (opt) - UB-82 Locator 45 (ST)
+        UB1.23 (opt) - UB-82 Locator 45 (ST) S6.5.10.23
     """
 
     ub1_1: Optional[str] = Field(

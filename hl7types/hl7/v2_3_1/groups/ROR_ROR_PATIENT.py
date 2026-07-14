@@ -22,19 +22,19 @@ class ROR_ROR_PATIENT(HL7Model):
     """HL7 v2 ROR_ROR.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): PID - patient identification segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -29,55 +29,55 @@ _SFT = SFT
 
 
 class ADT_A60(HL7Model):
-    """HL7 v2 ADT_A60 message.
+    """ADT/ACK - Update allergy information (S3.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        IAM (Optional[List[IAM]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PV1 (Optional[PV1]): Patient Visit, optional
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        IAM (Optional[List[IAM]]): Patient Adverse Reaction Information, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     IAM: Optional[List[_IAM]] = Field(
         default=None,
         title="IAM",
-        description="Optional, repeating",
+        description="Patient Adverse Reaction Information",
     )
 
     model_config = {"populate_by_name": True}

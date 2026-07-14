@@ -15,7 +15,7 @@ from .NR import NR
 
 
 class DLT(HL7Model):
-    """HL7 v2 DLT data type.
+    """Delta (S2.A.19).
 
     Attributes
     ----------

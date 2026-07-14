@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CK_PAT_ID(HL7Model):
-    """HL7 v2 CK_PAT_ID data type.
+    """Ck für patienten-ids.
 
     Attributes
     ----------

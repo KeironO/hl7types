@@ -16,24 +16,24 @@ from ..datatypes.EI import EI
 
 
 class EQU(HL7Model):
-    """HL7 v2 EQU segment.
+    """Equipment Detail (S13.4.1).
 
     Attributes
     ----------
     equ_1 : EI
-        EQU.1 (req) - Equipment Instance Identifier (EI)
+        EQU.1 (req) - Equipment Instance Identifier (EI) S7.4.2.18
 
     equ_2 : str
-        EQU.2 (req) - Event Date/Time (DTM)
+        EQU.2 (req) - Event Date/Time (DTM) S13.4.1.2
 
     equ_3 : CWE | None
-        EQU.3 (opt) - Equipment State (CWE)
+        EQU.3 (opt) - Equipment State (CWE) S13.4.1.3 | 0365 - Equipment state
 
     equ_4 : CWE | None
-        EQU.4 (opt) - Local/Remote Control State (CWE)
+        EQU.4 (opt) - Local/Remote Control State (CWE) S13.4.1.4 | 0366 - Local/remote control state
 
     equ_5 : CWE | None
-        EQU.5 (opt) - Alert Level (CWE)
+        EQU.5 (opt) - Alert Level (CWE) S13.4.1.5 | 0367 - Alert level
     """
 
     equ_1: EI = Field(

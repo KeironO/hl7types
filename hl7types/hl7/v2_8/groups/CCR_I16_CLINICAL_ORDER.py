@@ -27,33 +27,31 @@ class CCR_I16_CLINICAL_ORDER(HL7Model):
     """HL7 v2 CCR_I16.CLINICAL_ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         CLINICAL_ORDER_TIMING (Optional[List[CCR_I16_CLINICAL_ORDER_TIMING]]): optional
         CLINICAL_ORDER_DETAIL (List[CCR_I16_CLINICAL_ORDER_DETAIL]): required
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     CLINICAL_ORDER_TIMING: Optional[List[_CCR_I16_CLINICAL_ORDER_TIMING]] = Field(
         default=None,
         title="CLINICAL_ORDER_TIMING",
-        description="Optional, repeating",
     )
 
     CLINICAL_ORDER_DETAIL: List[_CCR_I16_CLINICAL_ORDER_DETAIL] = Field(
         min_length=1,
         title="CLINICAL_ORDER_DETAIL",
-        description="Required, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

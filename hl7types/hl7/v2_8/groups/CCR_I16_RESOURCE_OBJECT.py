@@ -26,34 +26,34 @@ class CCR_I16_RESOURCE_OBJECT(HL7Model):
     """HL7 v2 CCR_I16.RESOURCE_OBJECT group.
 
     Attributes:
-        AIS (Optional[AIS]): optional
-        AIG (Optional[AIG]): optional
-        AIL (Optional[AIL]): optional
-        AIP (Optional[AIP]): optional
+        AIS (Optional[AIS]): Appointment Information, optional
+        AIG (Optional[AIG]): Appointment Information - General Resource, optional
+        AIL (Optional[AIL]): Appointment Information - Location Resource, optional
+        AIP (Optional[AIP]): Appointment Information - Personnel Resource, optional
     """
 
     AIS: Optional[_AIS] = Field(
         default=None,
         title="AIS",
-        description="Optional",
+        description="Appointment Information",
     )
 
     AIG: Optional[_AIG] = Field(
         default=None,
         title="AIG",
-        description="Optional",
+        description="Appointment Information - General Resource",
     )
 
     AIL: Optional[_AIL] = Field(
         default=None,
         title="AIL",
-        description="Optional",
+        description="Appointment Information - Location Resource",
     )
 
     AIP: Optional[_AIP] = Field(
         default=None,
         title="AIP",
-        description="Optional",
+        description="Appointment Information - Personnel Resource",
     )
 
     model_config = {"populate_by_name": True}

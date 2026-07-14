@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class BLG(HL7Model):
-    """HL7 v2 BLG segment.
+    """BILLING.
 
     Attributes
     ----------
     blg_1 : str | None
-        BLG.1 (opt) - WHEN TO CHARGE (CM)
+        BLG.1 (opt) - WHEN TO CHARGE (CM) S4-12 | 0100 - WHEN TO CHARGE
 
     blg_2 : str | None
-        BLG.2 (opt) - CHARGE TYPE (ID)
+        BLG.2 (opt) - CHARGE TYPE (ID) | 0122 - CHARGE TYPE
 
     blg_3 : str | None
         BLG.3 (opt) - ACCOUNT ID (CM)

@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class XTN(HL7Model):
-    """HL7 v2 XTN data type.
+    """Extended telecommunication number (S2.9.55).
 
     Attributes
     ----------

@@ -23,35 +23,35 @@ _ROL = ROL
 
 
 class ESU_U01(HL7Model):
-    """HL7 v2 ESU_U01 message.
+    """ESU/ACK - Automated equipment status update (S13).
 
     Attributes:
-        MSH (MSH): required
-        EQU (EQU): required
-        ISD (Optional[List[ISD]]): optional
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        EQU (EQU): Equipment Detail, required
+        ISD (Optional[List[ISD]]): Interaction Status Detail, optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     ISD: Optional[List[_ISD]] = Field(
         default=None,
         title="ISD",
-        description="Optional, repeating",
+        description="Interaction Status Detail",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

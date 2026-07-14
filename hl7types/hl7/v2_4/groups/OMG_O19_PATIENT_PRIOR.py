@@ -22,19 +22,19 @@ class OMG_O19_PATIENT_PRIOR(HL7Model):
     """HL7 v2 OMG_O19.PATIENT_PRIOR group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     model_config = {"populate_by_name": True}

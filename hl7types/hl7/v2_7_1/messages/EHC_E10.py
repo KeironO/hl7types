@@ -28,49 +28,48 @@ _UAC = UAC
 
 
 class EHC_E10(HL7Model):
-    """HL7 v2 EHC_E10 message.
+    """Edit/Adjudication Results (S16.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[List[UAC]]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[List[UAC]]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
         INVOICE_PROCESSING_RESULTS_INFO (List[EHC_E10_INVOICE_PROCESSING_RESULTS_INFO]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[List[_UAC]] = Field(
         default=None,
         title="UAC",
-        description="Optional, repeating",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     INVOICE_PROCESSING_RESULTS_INFO: List[_EHC_E10_INVOICE_PROCESSING_RESULTS_INFO] = Field(
         min_length=1,
         title="INVOICE_PROCESSING_RESULTS_INFO",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class FT1(HL7Model):
-    """HL7 v2 FT1 segment.
+    """FINANCIAL TRANSACTION (S6.3.3).
 
     Attributes
     ----------
     ft1_1 : str | None
-        FT1.1 (opt) - SET ID - FINANCIAL TRANSACTION (SI)
+        FT1.1 (opt) - SET ID - FINANCIAL TRANSACTION (SI) S6-5
 
     ft1_2 : str | None
         FT1.2 (opt) - TRANSACTION ID (ST)
@@ -33,10 +33,10 @@ class FT1(HL7Model):
         FT1.5 (opt) - TRANSACTION POSTING DATE (DT)
 
     ft1_6 : str
-        FT1.6 (req) - TRANSACTION TYPE (ID)
+        FT1.6 (req) - TRANSACTION TYPE (ID) | 0017 - TRANSACTION TYPE
 
     ft1_7 : str
-        FT1.7 (req) - TRANSACTION CODE (ID)
+        FT1.7 (req) - TRANSACTION CODE (ID) | 0096 - FINANCIAL TRANSACTION CODE
 
     ft1_8 : str | None
         FT1.8 (opt) - TRANSACTION DESCRIPTION (ST)
@@ -54,28 +54,28 @@ class FT1(HL7Model):
         FT1.12 (opt) - TRANSACTION AMOUNT - UNIT (NM)
 
     ft1_13 : str | None
-        FT1.13 (opt) - DEPARTMENT CODE (ST)
+        FT1.13 (opt) - DEPARTMENT CODE (ST) | 0049 - DEPARTMENT CODE
 
     ft1_14 : str | None
-        FT1.14 (opt) - INSURANCE PLAN ID (ID)
+        FT1.14 (opt) - INSURANCE PLAN ID (ID) | 0072 - INS. PLAN ID
 
     ft1_15 : str | None
         FT1.15 (opt) - INSURANCE AMOUNT (NM)
 
     ft1_16 : str | None
-        FT1.16 (opt) - PATIENT LOCATION (ST)
+        FT1.16 (opt) - PATIENT LOCATION (ST) | 0079 - LOCATION
 
     ft1_17 : str | None
-        FT1.17 (opt) - FEE SCHEDULE (ID)
+        FT1.17 (opt) - FEE SCHEDULE (ID) | 0024 - FEE SCHEDULE
 
     ft1_18 : str | None
-        FT1.18 (opt) - PATIENT TYPE (ID)
+        FT1.18 (opt) - PATIENT TYPE (ID) | 0018 - PATIENT TYPE
 
     ft1_19 : str | None
-        FT1.19 (opt) - DIAGNOSIS CODE (ID)
+        FT1.19 (opt) - DIAGNOSIS CODE (ID) | 0051 - DIAGNOSIS CODE
 
     ft1_20 : str | None
-        FT1.20 (opt) - PERFORMED BY CODE (CN)
+        FT1.20 (opt) - PERFORMED BY CODE (CN) | 0084 - PERFORMED BY
 
     ft1_21 : str | None
         FT1.21 (opt) - ORDERED BY CODE (CN)

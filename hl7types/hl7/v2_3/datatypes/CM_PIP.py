@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class CM_PIP(HL7Model):
-    """HL7 v2 CM_PIP data type.
+    """Privileges.
 
     Attributes
     ----------

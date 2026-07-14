@@ -27,32 +27,31 @@ class ORR_O02(HL7Model):
     """HL7 v2 ORR_O02 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (MSA): MESSAGE ACKNOWLEDGMENT, required
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
         PATIENT (Optional[ORR_O02_PATIENT]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     PATIENT: Optional[_ORR_O02_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

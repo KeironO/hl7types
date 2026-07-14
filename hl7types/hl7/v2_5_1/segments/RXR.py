@@ -16,27 +16,27 @@ from ..datatypes.CWE import CWE
 
 
 class RXR(HL7Model):
-    """HL7 v2 RXR segment.
+    """Pharmacy/Treatment Route (S4.14.2).
 
     Attributes
     ----------
     rxr_1 : CE
-        RXR.1 (req) - Route (CE)
+        RXR.1 (req) - Route (CE) S4.14.2.1 | 0162 - Route of Administration
 
     rxr_2 : CWE | None
-        RXR.2 (opt) - Administration Site (CWE)
+        RXR.2 (opt) - Administration Site (CWE) S4.14.2.2 | 0163 - Body site
 
     rxr_3 : CE | None
-        RXR.3 (opt) - Administration Device (CE)
+        RXR.3 (opt) - Administration Device (CE) S4.14.2.3 | 0164 - Administration Device
 
     rxr_4 : CWE | None
-        RXR.4 (opt) - Administration Method (CWE)
+        RXR.4 (opt) - Administration Method (CWE) S4.14.2.4 | 0165 - Administration Method
 
     rxr_5 : CE | None
-        RXR.5 (opt) - Routing Instruction (CE)
+        RXR.5 (opt) - Routing Instruction (CE) S4.14.2.5
 
     rxr_6 : CWE | None
-        RXR.6 (opt) - Administration Site Modifier (CWE)
+        RXR.6 (opt) - Administration Site Modifier (CWE) S4.14.2.6 | 0495 - Body Site Modifier
     """
 
     rxr_1: CE = Field(

@@ -25,26 +25,24 @@ class ORL_O22_ORDER(HL7Model):
     """HL7 v2 ORL_O22.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[ORL_O22_TIMING]]): optional
         OBSERVATION_REQUEST (Optional[ORL_O22_OBSERVATION_REQUEST]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_ORL_O22_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     OBSERVATION_REQUEST: Optional[_ORL_O22_OBSERVATION_REQUEST] = Field(
         default=None,
         title="OBSERVATION_REQUEST",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

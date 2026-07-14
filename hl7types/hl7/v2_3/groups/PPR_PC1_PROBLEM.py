@@ -35,9 +35,9 @@ class PPR_PC1_PROBLEM(HL7Model):
     """HL7 v2 PPR_PC1.PROBLEM group.
 
     Attributes:
-        PRB (PRB): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        PRB (PRB): Problem Detail, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         PROBLEM_ROLE (Optional[List[PPR_PC1_PROBLEM_ROLE]]): optional
         PATHWAY (Optional[List[PPR_PC1_PATHWAY]]): optional
         PROBLEM_OBSERVATION (Optional[List[PPR_PC1_PROBLEM_OBSERVATION]]): optional
@@ -47,49 +47,44 @@ class PPR_PC1_PROBLEM(HL7Model):
 
     PRB: _PRB = Field(
         title="PRB",
-        description="Required",
+        description="Problem Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     PROBLEM_ROLE: Optional[List[_PPR_PC1_PROBLEM_ROLE]] = Field(
         default=None,
         title="PROBLEM_ROLE",
-        description="Optional, repeating",
     )
 
     PATHWAY: Optional[List[_PPR_PC1_PATHWAY]] = Field(
         default=None,
         title="PATHWAY",
-        description="Optional, repeating",
     )
 
     PROBLEM_OBSERVATION: Optional[List[_PPR_PC1_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
-        description="Optional, repeating",
     )
 
     GOAL: Optional[List[_PPR_PC1_GOAL]] = Field(
         default=None,
         title="GOAL",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_PPR_PC1_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

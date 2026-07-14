@@ -25,25 +25,24 @@ class MFN_M03(HL7Model):
     """HL7 v2 MFN_M03 message.
 
     Attributes:
-        MSH (MSH): required
-        MFI (MFI): required
+        MSH (MSH): MESSAGE HEADER, required
+        MFI (MFI): MASTER FILE IDENTIFICATION, required
         MF_TEST (List[MFN_M03_MF_TEST]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="MASTER FILE IDENTIFICATION",
     )
 
     MF_TEST: List[_MFN_M03_MF_TEST] = Field(
         min_length=1,
         title="MF_TEST",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

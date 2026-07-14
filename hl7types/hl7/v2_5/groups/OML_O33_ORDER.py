@@ -31,47 +31,45 @@ class OML_O33_ORDER(HL7Model):
     """HL7 v2 OML_O33.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIIMING (Optional[List[OML_O33_TIIMING]]): optional
         OBSERVATION_REQUEST (Optional[OML_O33_OBSERVATION_REQUEST]): optional
-        FT1 (Optional[List[FT1]]): optional
-        CTI (Optional[List[CTI]]): optional
-        BLG (Optional[BLG]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIIMING: Optional[List[_OML_O33_TIIMING]] = Field(
         default=None,
         title="TIIMING",
-        description="Optional, repeating",
     )
 
     OBSERVATION_REQUEST: Optional[_OML_O33_OBSERVATION_REQUEST] = Field(
         default=None,
         title="OBSERVATION_REQUEST",
-        description="Optional",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

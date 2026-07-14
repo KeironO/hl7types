@@ -19,45 +19,45 @@ from ..datatypes.XON import XON
 
 
 class BUI(HL7Model):
-    """HL7 v2 BUI segment.
+    """Blood Unit Information (S4.17.2).
 
     Attributes
     ----------
     bui_1 : str | None
-        BUI.1 (opt) - Set ID - BUI (SI)
+        BUI.1 (opt) - Set ID - BUI (SI) S4.17.2.1
 
     bui_2 : EI
-        BUI.2 (req) - Blood Unit Identifier (EI)
+        BUI.2 (req) - Blood Unit Identifier (EI) S4.17.2.2
 
     bui_3 : CWE
-        BUI.3 (req) - Blood Unit Type (CWE)
+        BUI.3 (req) - Blood Unit Type (CWE) S4.17.2.3 | 0566 - Blood Unit Type
 
     bui_4 : str
-        BUI.4 (req) - Blood Unit Weight (NM)
+        BUI.4 (req) - Blood Unit Weight (NM) S4.17.2.4
 
     bui_5 : CNE
-        BUI.5 (req) - Weight Units (CNE)
+        BUI.5 (req) - Weight Units (CNE) S4.17.2.5 | 0929 - Weight Units
 
     bui_6 : str
-        BUI.6 (req) - Blood Unit Volume (NM)
+        BUI.6 (req) - Blood Unit Volume (NM) S4.17.2.6
 
     bui_7 : CNE
-        BUI.7 (req) - Volume Units (CNE)
+        BUI.7 (req) - Volume Units (CNE) S4.17.2.7 | 0930 - Volume Units
 
     bui_8 : str
-        BUI.8 (req) - Container Catalog Number (ST)
+        BUI.8 (req) - Container Catalog Number (ST) S4.17.2.8
 
     bui_9 : str
-        BUI.9 (req) - Container Lot Number (ST)
+        BUI.9 (req) - Container Lot Number (ST) S4.17.2.9
 
     bui_10 : XON
-        BUI.10 (req) - Container Manufacturer (XON)
+        BUI.10 (req) - Container Manufacturer (XON) S4.17.2.10
 
     bui_11 : NR
-        BUI.11 (req) - Transport Temperature (NR)
+        BUI.11 (req) - Transport Temperature (NR) S4.17.2.11
 
     bui_12 : CNE
-        BUI.12 (req) - Transport Temperature Units (CNE)
+        BUI.12 (req) - Transport Temperature Units (CNE) S4.17.2.12 | 0931 - Temperature Units
     """
 
     bui_1: Optional[str] = Field(

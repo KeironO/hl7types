@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class SID(HL7Model):
-    """HL7 v2 SID segment.
+    """Substance Identifier (S13.4.11).
 
     Attributes
     ----------
     sid_1 : CE | None
-        SID.1 (opt) - Application / Method Identifier (CE)
+        SID.1 (opt) - Application / Method Identifier (CE) S13.4.11.1
 
     sid_2 : str | None
-        SID.2 (opt) - Substance Lot Number (ST)
+        SID.2 (opt) - Substance Lot Number (ST) S4.14.5.18
 
     sid_3 : str | None
-        SID.3 (opt) - Substance Container Identifier (ST)
+        SID.3 (opt) - Substance Container Identifier (ST) S13.4.11.3
 
     sid_4 : CE | None
-        SID.4 (opt) - Substance Manufacturer Identifier (CE)
+        SID.4 (opt) - Substance Manufacturer Identifier (CE) S13.4.11.4 | 0385 - Manufacturer identifier
     """
 
     sid_1: Optional[CE] = Field(

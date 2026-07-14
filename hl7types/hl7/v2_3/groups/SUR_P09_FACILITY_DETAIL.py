@@ -23,24 +23,24 @@ class SUR_P09_FACILITY_DETAIL(HL7Model):
     """HL7 v2 SUR_P09.FACILITY_DETAIL group.
 
     Attributes:
-        FAC (FAC): required
-        PDC (PDC): required
-        NTE (NTE): required
+        FAC (FAC): Facility, required
+        PDC (PDC): Product Detail Country, required
+        NTE (NTE): Notes and comments segment, required
     """
 
     FAC: _FAC = Field(
         title="FAC",
-        description="Required",
+        description="Facility",
     )
 
     PDC: _PDC = Field(
         title="PDC",
-        description="Required",
+        description="Product Detail Country",
     )
 
     NTE: _NTE = Field(
         title="NTE",
-        description="Required",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

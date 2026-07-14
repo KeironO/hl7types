@@ -26,42 +26,41 @@ _UAC = UAC
 
 
 class MFN_M06(HL7Model):
-    """HL7 v2 MFN_M06 message.
+    """MFN/MFK - Clinical study with phases and schedules master file (S8.10.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MFI (MFI): Master File Identification, required
         MF_CLIN_STUDY (List[MFN_M06_MF_CLIN_STUDY]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_CLIN_STUDY: List[_MFN_M06_MF_CLIN_STUDY] = Field(
         min_length=1,
         title="MF_CLIN_STUDY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -16,39 +16,39 @@ from ..datatypes.EI import EI
 
 
 class TQ2(HL7Model):
-    """HL7 v2 TQ2 segment.
+    """Timing/Quantity Relationship (S4.5.5).
 
     Attributes
     ----------
     tq2_1 : str | None
-        TQ2.1 (opt) - Set ID - TQ2 (SI)
+        TQ2.1 (opt) - Set ID - TQ2 (SI) S4.5.5.1
 
     tq2_2 : str | None
-        TQ2.2 (opt) - Sequence/Results Flag (ID)
+        TQ2.2 (opt) - Sequence/Results Flag (ID) S4.5.5.2 | 0503 - Sequence/Results Flag
 
     tq2_3 : list[EI] | None
-        TQ2.3 (opt, rep) - Related Placer Number (EI)
+        TQ2.3 (opt, rep) - Related Placer Number (EI) S4.5.5.3
 
     tq2_4 : list[EI] | None
-        TQ2.4 (opt, rep) - Related Filler Number (EI)
+        TQ2.4 (opt, rep) - Related Filler Number (EI) S4.5.5.4
 
     tq2_5 : list[EI] | None
-        TQ2.5 (opt, rep) - Related Placer Group Number (EI)
+        TQ2.5 (opt, rep) - Related Placer Group Number (EI) S4.5.5.5
 
     tq2_6 : str | None
-        TQ2.6 (opt) - Sequence Condition Code (ID)
+        TQ2.6 (opt) - Sequence Condition Code (ID) S4.5.5.6 | 0504 - Sequence Condition Code
 
     tq2_7 : str | None
-        TQ2.7 (opt) - Cyclic Entry/Exit Indicator (ID)
+        TQ2.7 (opt) - Cyclic Entry/Exit Indicator (ID) S4.5.5.7 | 0505 - Cyclic Entry/Exit Indicator
 
     tq2_8 : CQ | None
-        TQ2.8 (opt) - Sequence Condition Time Interval (CQ)
+        TQ2.8 (opt) - Sequence Condition Time Interval (CQ) S4.5.5.8
 
     tq2_9 : str | None
-        TQ2.9 (opt) - Cyclic Group Maximum Number of Repeats (NM)
+        TQ2.9 (opt) - Cyclic Group Maximum Number of Repeats (NM) S4.5.5.9
 
     tq2_10 : str | None
-        TQ2.10 (opt) - Special Service Request Relationship (ID)
+        TQ2.10 (opt) - Special Service Request Relationship (ID) S4.5.5.10 | 0506 - Service Request Relationship
     """
 
     tq2_1: Optional[str] = Field(

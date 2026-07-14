@@ -26,34 +26,34 @@ class CCR_I16_CLINICAL_ORDER_OBJECT(HL7Model):
     """HL7 v2 CCR_I16.CLINICAL_ORDER_OBJECT group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        RXO (Optional[RXO]): optional
-        ODS (Optional[ODS]): optional
-        PR1 (Optional[PR1]): optional
+        OBR (Optional[OBR]): Observation Request, optional
+        RXO (Optional[RXO]): Pharmacy/Treatment Order, optional
+        ODS (Optional[ODS]): Dietary Orders, Supplements, and Preferences, optional
+        PR1 (Optional[PR1]): Procedures, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation Request",
     )
 
     RXO: Optional[_RXO] = Field(
         default=None,
         title="RXO",
-        description="Optional",
+        description="Pharmacy/Treatment Order",
     )
 
     ODS: Optional[_ODS] = Field(
         default=None,
         title="ODS",
-        description="Optional",
+        description="Dietary Orders, Supplements, and Preferences",
     )
 
     PR1: Optional[_PR1] = Field(
         default=None,
         title="PR1",
-        description="Optional",
+        description="Procedures",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,7 +15,7 @@ from .MO import MO
 
 
 class DDI(HL7Model):
-    """HL7 v2 DDI data type.
+    """Daily deductible information (S2.A.15).
 
     Attributes
     ----------

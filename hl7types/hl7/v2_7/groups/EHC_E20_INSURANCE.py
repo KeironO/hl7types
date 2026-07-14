@@ -22,19 +22,19 @@ class EHC_E20_INSURANCE(HL7Model):
     """HL7 v2 EHC_E20.INSURANCE group.
 
     Attributes:
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
+        IN1 (IN1): Insurance, required
+        IN2 (Optional[IN2]): Insurance Additional Information, optional
     """
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="Insurance",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="Insurance Additional Information",
     )
 
     model_config = {"populate_by_name": True}

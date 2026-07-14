@@ -20,45 +20,45 @@ from ..datatypes.XTN import XTN
 
 
 class ROL(HL7Model):
-    """HL7 v2 ROL segment.
+    """Role (S15.4.7).
 
     Attributes
     ----------
     rol_1 : EI | None
-        ROL.1 (opt) - Role Instance ID (EI)
+        ROL.1 (opt) - Role Instance ID (EI) S15.4.7.1
 
     rol_2 : str
-        ROL.2 (req) - Action Code (ID)
+        ROL.2 (req) - Action Code (ID) S12.4.1.1 | 0287 - Problem/goal action code
 
     rol_3 : CE
-        ROL.3 (req) - Role-ROL (CE)
+        ROL.3 (req) - Role-ROL (CE) S15.4.7.3 | 0443 - Provider role
 
     rol_4 : list[XCN]
-        ROL.4 (req, rep) - Role Person (XCN)
+        ROL.4 (req, rep) - Role Person (XCN) S15.4.7.4
 
     rol_5 : TS | None
-        ROL.5 (opt) - Role Begin Date/Time (TS)
+        ROL.5 (opt) - Role Begin Date/Time (TS) S15.4.7.5
 
     rol_6 : TS | None
-        ROL.6 (opt) - Role End Date/Time (TS)
+        ROL.6 (opt) - Role End Date/Time (TS) S15.4.7.6
 
     rol_7 : CE | None
-        ROL.7 (opt) - Role Duration (CE)
+        ROL.7 (opt) - Role Duration (CE) S15.4.7.7
 
     rol_8 : CE | None
-        ROL.8 (opt) - Role Action Reason (CE)
+        ROL.8 (opt) - Role Action Reason (CE) S15.4.7.8
 
     rol_9 : list[CE] | None
-        ROL.9 (opt, rep) - Provider Type (CE)
+        ROL.9 (opt, rep) - Provider Type (CE) S15.4.7.9
 
     rol_10 : CE | None
-        ROL.10 (opt) - Organization Unit Type (CE)
+        ROL.10 (opt) - Organization Unit Type (CE) S15.4.7.10 | 0406 - Organization unit type
 
     rol_11 : list[XAD] | None
-        ROL.11 (opt, rep) - Office/Home Address/Birthplace (XAD)
+        ROL.11 (opt, rep) - Office/Home Address/Birthplace (XAD) S15.4.7.11
 
     rol_12 : list[XTN] | None
-        ROL.12 (opt, rep) - Phone (XTN)
+        ROL.12 (opt, rep) - Phone (XTN) S15.4.7.12
     """
 
     rol_1: Optional[EI] = Field(

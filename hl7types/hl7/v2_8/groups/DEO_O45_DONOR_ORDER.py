@@ -25,26 +25,25 @@ class DEO_O45_DONOR_ORDER(HL7Model):
     """HL7 v2 DEO_O45.DONOR_ORDER group.
 
     Attributes:
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         DONOR_OBSERVATION (Optional[List[DEO_O45_DONOR_OBSERVATION]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     DONOR_OBSERVATION: Optional[List[_DEO_O45_DONOR_OBSERVATION]] = Field(
         default=None,
         title="DONOR_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -20,13 +20,13 @@ class MFR_M01_MF_QUERY(HL7Model):
     """HL7 v2 MFR_M01.MF_QUERY group.
 
     Attributes:
-        MFE (MFE): required
+        MFE (MFE): Master File Entry, required
         anyhl7segment (Any): required
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     anyhl7segment: Any

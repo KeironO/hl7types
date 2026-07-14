@@ -11,7 +11,7 @@ from hl7types.hl7 import HL7Model
 
 
 class Hxx(HL7Model):
-    """HL7 v2 Hxx segment."""
+    """any HL7 segment."""
 
     pass
 

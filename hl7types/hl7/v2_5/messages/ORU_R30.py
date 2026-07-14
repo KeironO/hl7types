@@ -36,75 +36,72 @@ _SFT = SFT
 
 
 class ORU_R30(HL7Model):
-    """HL7 v2 ORU_R30 message.
+    """ORU - Unsolicited Point-Of-Care Observation Message Without Existing Order - Pla (S5.7.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
         VISIT (Optional[ORU_R30_VISIT]): optional
-        ORC (ORC): required
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        ORC (ORC): Common Order, required
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         TIMING_QTY (Optional[List[ORU_R30_TIMING_QTY]]): optional
         OBSERVATION (List[ORU_R30_OBSERVATION]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     VISIT: Optional[_ORU_R30_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     TIMING_QTY: Optional[List[_ORU_R30_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
-        description="Optional, repeating",
     )
 
     OBSERVATION: List[_ORU_R30_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -23,37 +23,37 @@ _RCP = RCP
 
 
 class QVR_Q17(HL7Model):
-    """HL7 v2 QVR_Q17 message.
+    """QVR - Query for previous events (S5).
 
     Attributes:
-        MSH (MSH): required
-        QPD (QPD): required
+        MSH (MSH): Message Header, required
+        QPD (QPD): Query Parameter Definition, required
         anyzsegment (Optional[Any]): optional
-        RCP (RCP): required
-        DSC (Optional[DSC]): optional
+        RCP (RCP): Response Control Parameter, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     anyzsegment: Optional[Any] = None
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

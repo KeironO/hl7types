@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class CM_FINANCE(HL7Model):
-    """HL7 v2 CM_FINANCE data type.
+    """Cm für finanzen.
 
     Attributes
     ----------

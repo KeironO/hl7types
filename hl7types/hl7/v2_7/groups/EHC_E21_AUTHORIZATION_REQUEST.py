@@ -23,20 +23,19 @@ class EHC_E21_AUTHORIZATION_REQUEST(HL7Model):
     """HL7 v2 EHC_E21.AUTHORIZATION_REQUEST group.
 
     Attributes:
-        IVC (Optional[IVC]): optional
+        IVC (Optional[IVC]): Invoice Segment, optional
         PSL_ITEM_INFO (Optional[List[EHC_E21_PSL_ITEM_INFO]]): optional
     """
 
     IVC: Optional[_IVC] = Field(
         default=None,
         title="IVC",
-        description="Optional",
+        description="Invoice Segment",
     )
 
     PSL_ITEM_INFO: Optional[List[_EHC_E21_PSL_ITEM_INFO]] = Field(
         default=None,
         title="PSL_ITEM_INFO",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

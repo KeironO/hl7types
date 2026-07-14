@@ -30,46 +30,46 @@ class MFR_M05_MF_QUERY(HL7Model):
     """HL7 v2 MFR_M05.MF_QUERY group.
 
     Attributes:
-        MFE (MFE): required
-        LOC (LOC): required
-        LCH (Optional[List[LCH]]): optional
-        LRL (Optional[List[LRL]]): optional
-        LDP (List[LDP]): required
-        LCC (Optional[List[LCC]]): optional
+        MFE (MFE): Master File Entry, required
+        LOC (LOC): Location Identification, required
+        LCH (Optional[List[LCH]]): Location Characteristic, optional
+        LRL (Optional[List[LRL]]): Location Relationship, optional
+        LDP (List[LDP]): Location Department, required
+        LCC (Optional[List[LCC]]): Location Charge Code, optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     LOC: _LOC = Field(
         title="LOC",
-        description="Required",
+        description="Location Identification",
     )
 
     LCH: Optional[List[_LCH]] = Field(
         default=None,
         title="LCH",
-        description="Optional, repeating",
+        description="Location Characteristic",
     )
 
     LRL: Optional[List[_LRL]] = Field(
         default=None,
         title="LRL",
-        description="Optional, repeating",
+        description="Location Relationship",
     )
 
     LDP: List[_LDP] = Field(
         min_length=1,
         title="LDP",
-        description="Required, repeating",
+        description="Location Department",
     )
 
     LCC: Optional[List[_LCC]] = Field(
         default=None,
         title="LCC",
-        description="Optional, repeating",
+        description="Location Charge Code",
     )
 
     model_config = {"populate_by_name": True}

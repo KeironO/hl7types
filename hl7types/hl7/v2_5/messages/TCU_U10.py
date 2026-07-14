@@ -26,42 +26,41 @@ _TCU_U10_TEST_CONFIGURATION = TCU_U10_TEST_CONFIGURATION
 
 
 class TCU_U10(HL7Model):
-    """HL7 v2 TCU_U10 message.
+    """TCU/ACK - Automated equipment test code settings update (S13.3.10).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EQU (EQU): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EQU (EQU): Equipment Detail, required
         TEST_CONFIGURATION (List[TCU_U10_TEST_CONFIGURATION]): required
-        ROL (Optional[ROL]): optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     TEST_CONFIGURATION: List[_TCU_U10_TEST_CONFIGURATION] = Field(
         min_length=1,
         title="TEST_CONFIGURATION",
-        description="Required, repeating",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

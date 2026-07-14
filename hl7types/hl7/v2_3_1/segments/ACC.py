@@ -16,27 +16,27 @@ from ..datatypes.TS import TS
 
 
 class ACC(HL7Model):
-    """HL7 v2 ACC segment.
+    """ACC - accident segment (S6.4.9).
 
     Attributes
     ----------
     acc_1 : TS | None
-        ACC.1 (opt) - Accident Date/Time (TS)
+        ACC.1 (opt) - Accident Date/Time (TS) S6.4.9.1
 
     acc_2 : CE | None
-        ACC.2 (opt) - Accident Code (CE)
+        ACC.2 (opt) - Accident Code (CE) S6.4.9.2 | 0050 - Accident Code
 
     acc_3 : str | None
-        ACC.3 (opt) - Accident Location (ST)
+        ACC.3 (opt) - Accident Location (ST) S6.4.9.3
 
     acc_4 : CE | None
-        ACC.4 (opt) - Auto Accident State (CE)
+        ACC.4 (opt) - Auto Accident State (CE) S6.4.9.4 | 0347 - Auto Accident State
 
     acc_5 : str | None
-        ACC.5 (opt) - Accident Job Related Indicator (ID)
+        ACC.5 (opt) - Accident Job Related Indicator (ID) S6.4.9.5 | 0136 - Yes/no indicator
 
     acc_6 : str | None
-        ACC.6 (opt) - Accident Death Indicator (ID)
+        ACC.6 (opt) - Accident Death Indicator (ID) S6.4.9.6 | 0136 - Yes/no indicator
     """
 
     acc_1: Optional[TS] = Field(

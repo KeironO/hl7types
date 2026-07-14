@@ -33,54 +33,53 @@ class RAS_O17_ENCODING(HL7Model):
     """HL7 v2 RAS_O17.ENCODING group.
 
     Attributes:
-        RXE (RXE): required
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         TIMING_ENCODED (List[RAS_O17_TIMING_ENCODED]): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
-        CDO (Optional[List[CDO]]): optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
+        CDO (Optional[List[CDO]]): Cumulative Dosage, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     TIMING_ENCODED: List[_RAS_O17_TIMING_ENCODED] = Field(
         min_length=1,
         title="TIMING_ENCODED",
-        description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     CDO: Optional[List[_CDO]] = Field(
         default=None,
         title="CDO",
-        description="Optional, repeating",
+        description="Cumulative Dosage",
     )
 
     model_config = {"populate_by_name": True}

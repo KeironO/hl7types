@@ -15,27 +15,27 @@ from ..datatypes.CWE import CWE
 
 
 class CNS(HL7Model):
-    """HL7 v2 CNS segment.
+    """Clear Notification (S13.4.8).
 
     Attributes
     ----------
     cns_1 : str | None
-        CNS.1 (opt) - Starting Notification Reference Number (NM)
+        CNS.1 (opt) - Starting Notification Reference Number (NM) S13.4.8.1
 
     cns_2 : str | None
-        CNS.2 (opt) - Ending Notification Reference Number (NM)
+        CNS.2 (opt) - Ending Notification Reference Number (NM) S13.4.8.2
 
     cns_3 : str | None
-        CNS.3 (opt) - Starting Notification Date/Time (DTM)
+        CNS.3 (opt) - Starting Notification Date/Time (DTM) S13.4.8.3
 
     cns_4 : str | None
-        CNS.4 (opt) - Ending Notification Date/Time (DTM)
+        CNS.4 (opt) - Ending Notification Date/Time (DTM) S13.4.8.4
 
     cns_5 : CWE | None
-        CNS.5 (opt) - Starting Notification Code (CWE)
+        CNS.5 (opt) - Starting Notification Code (CWE) S13.4.8.5 | 9999 - no table for CE
 
     cns_6 : CWE | None
-        CNS.6 (opt) - Ending Notification Code (CWE)
+        CNS.6 (opt) - Ending Notification Code (CWE) S13.4.8.6 | 9999 - no table for CE
     """
 
     cns_1: Optional[str] = Field(

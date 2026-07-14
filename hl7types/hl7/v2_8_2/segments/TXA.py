@@ -18,87 +18,87 @@ from ..datatypes.XCN import XCN
 
 
 class TXA(HL7Model):
-    """HL7 v2 TXA segment.
+    """Transcription Document Header (S9.7.3).
 
     Attributes
     ----------
     txa_1 : str
-        TXA.1 (req) - Set ID- TXA (SI)
+        TXA.1 (req) - Set ID- TXA (SI) S9.7.3.1
 
     txa_2 : CWE
-        TXA.2 (req) - Document Type (CWE)
+        TXA.2 (req) - Document Type (CWE) S9.7.3.2 | 0270 - Document Type
 
     txa_3 : str | None
-        TXA.3 (opt) - Document Content Presentation (ID)
+        TXA.3 (opt) - Document Content Presentation (ID) S9.7.3.3 | 0191 - Type of Referenced Data
 
     txa_4 : str | None
-        TXA.4 (opt) - Activity Date/Time (DTM)
+        TXA.4 (opt) - Activity Date/Time (DTM) S9.7.3.4
 
     txa_5 : list[XCN] | None
-        TXA.5 (opt, rep) - Primary Activity Provider Code/Name (XCN)
+        TXA.5 (opt, rep) - Primary Activity Provider Code/Name (XCN) S9.7.3.5
 
     txa_6 : str | None
-        TXA.6 (opt) - Origination Date/Time (DTM)
+        TXA.6 (opt) - Origination Date/Time (DTM) S9.7.3.6
 
     txa_7 : str | None
-        TXA.7 (opt) - Transcription Date/Time (DTM)
+        TXA.7 (opt) - Transcription Date/Time (DTM) S9.7.3.7
 
     txa_8 : list[str] | None
-        TXA.8 (opt, rep) - Edit Date/Time (DTM)
+        TXA.8 (opt, rep) - Edit Date/Time (DTM) S9.7.3.8
 
     txa_9 : list[XCN] | None
-        TXA.9 (opt, rep) - Originator Code/Name (XCN)
+        TXA.9 (opt, rep) - Originator Code/Name (XCN) S9.7.3.9
 
     txa_10 : list[XCN] | None
-        TXA.10 (opt, rep) - Assigned Document Authenticator (XCN)
+        TXA.10 (opt, rep) - Assigned Document Authenticator (XCN) S9.7.3.10
 
     txa_11 : list[XCN] | None
-        TXA.11 (opt, rep) - Transcriptionist Code/Name (XCN)
+        TXA.11 (opt, rep) - Transcriptionist Code/Name (XCN) S9.7.3.11
 
     txa_12 : EI
-        TXA.12 (req) - Unique Document Number (EI)
+        TXA.12 (req) - Unique Document Number (EI) S9.7.3.12
 
     txa_13 : EI | None
-        TXA.13 (opt) - Parent Document Number (EI)
+        TXA.13 (opt) - Parent Document Number (EI) S9.7.3.13
 
     txa_14 : list[EI] | None
-        TXA.14 (opt, rep) - Placer Order Number (EI)
+        TXA.14 (opt, rep) - Placer Order Number (EI) S10.6.1.24
 
     txa_15 : EI | None
-        TXA.15 (opt) - Filler Order Number (EI)
+        TXA.15 (opt) - Filler Order Number (EI) S10.6.1.25
 
     txa_16 : str | None
-        TXA.16 (opt) - Unique Document File Name (ST)
+        TXA.16 (opt) - Unique Document File Name (ST) S9.7.3.16
 
     txa_17 : str
-        TXA.17 (req) - Document Completion Status (ID)
+        TXA.17 (req) - Document Completion Status (ID) S9.7.3.17 | 0271 - Document Completion Status
 
     txa_18 : str | None
-        TXA.18 (opt) - Document Confidentiality Status (ID)
+        TXA.18 (opt) - Document Confidentiality Status (ID) S9.7.3.18 | 0272 - Document Confidentiality Status
 
     txa_19 : str | None
-        TXA.19 (opt) - Document Availability Status (ID)
+        TXA.19 (opt) - Document Availability Status (ID) S9.7.3.19 | 0273 - Document Availability Status
 
     txa_20 : str | None
-        TXA.20 (opt) - Document Storage Status (ID)
+        TXA.20 (opt) - Document Storage Status (ID) S9.7.3.20 | 0275 - Document Storage Status
 
     txa_21 : str | None
-        TXA.21 (opt) - Document Change Reason (ST)
+        TXA.21 (opt) - Document Change Reason (ST) S9.7.3.21
 
     txa_22 : list[PPN] | None
-        TXA.22 (opt, rep) - Authentication Person, Time Stamp (set) (PPN)
+        TXA.22 (opt, rep) - Authentication Person, Time Stamp (set) (PPN) S9.7.3.22
 
     txa_23 : list[XCN] | None
-        TXA.23 (opt, rep) - Distributed Copies (Code and Name of Recipient(s) ) (XCN)
+        TXA.23 (opt, rep) - Distributed Copies (Code and Name of Recipient(s) ) (XCN) S9.7.3.23
 
     txa_24 : list[CWE] | None
-        TXA.24 (opt, rep) - Folder Assignment (CWE)
+        TXA.24 (opt, rep) - Folder Assignment (CWE) S9.7.3.24
 
     txa_25 : list[str] | None
-        TXA.25 (opt, rep) - Document Title (ST)
+        TXA.25 (opt, rep) - Document Title (ST) S9.7.3.25
 
     txa_26 : str | None
-        TXA.26 (opt) - Agreed Due Date/Time (DTM)
+        TXA.26 (opt) - Agreed Due Date/Time (DTM) S9.7.3.26
     """
 
     txa_1: str = Field(

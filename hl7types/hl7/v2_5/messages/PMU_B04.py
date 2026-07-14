@@ -27,48 +27,48 @@ _STF = STF
 
 
 class PMU_B04(HL7Model):
-    """HL7 v2 PMU_B04 message.
+    """PMU/ACK - Active practicing person (S15.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EVN (EVN): required
-        STF (STF): required
-        PRA (Optional[List[PRA]]): optional
-        ORG (Optional[List[ORG]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EVN (EVN): Event Type, required
+        STF (STF): Staff Identification, required
+        PRA (Optional[List[PRA]]): Practitioner Detail, optional
+        ORG (Optional[List[ORG]]): Practitioner Organization Unit, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[List[_PRA]] = Field(
         default=None,
         title="PRA",
-        description="Optional, repeating",
+        description="Practitioner Detail",
     )
 
     ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
-        description="Optional, repeating",
+        description="Practitioner Organization Unit",
     )
 
     model_config = {"populate_by_name": True}

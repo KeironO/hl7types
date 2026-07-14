@@ -15,33 +15,33 @@ from ..datatypes.TS import TS
 
 
 class QRF(HL7Model):
-    """HL7 v2 QRF segment.
+    """QUERY FILTER (S2.10.5).
 
     Attributes
     ----------
     qrf_1 : list[str]
-        QRF.1 (req, rep) - Where Subject Filter (ST)
+        QRF.1 (req, rep) - Where Subject Filter (ST) S2.10.5.1
 
     qrf_2 : TS | None
-        QRF.2 (opt) - When data start date / time (TS)
+        QRF.2 (opt) - When data start date / time (TS) S2.10.5.2
 
     qrf_3 : TS | None
-        QRF.3 (opt) - When data end date / time (TS)
+        QRF.3 (opt) - When data end date / time (TS) S2.10.5.3
 
     qrf_4 : list[str] | None
-        QRF.4 (opt, rep) - What User Qualifier (ST)
+        QRF.4 (opt, rep) - What User Qualifier (ST) S2.10.5.4
 
     qrf_5 : list[str] | None
-        QRF.5 (opt, rep) - Other QRY Subject Filter (ST)
+        QRF.5 (opt, rep) - Other QRY Subject Filter (ST) S2.10.5.5
 
     qrf_6 : list[str] | None
-        QRF.6 (opt, rep) - Which date / time qualifier (ID)
+        QRF.6 (opt, rep) - Which date / time qualifier (ID) S2.10.5.6 | 0156 - DATE/TIME QUALIFIER
 
     qrf_7 : list[str] | None
-        QRF.7 (opt, rep) - Which date / time status qualifier (ID)
+        QRF.7 (opt, rep) - Which date / time status qualifier (ID) S2.10.5.7 | 0157 - WHIHC DATE/TIME STATUS QUALIFIER
 
     qrf_8 : list[str] | None
-        QRF.8 (opt, rep) - Date / time selection qualifier (ID)
+        QRF.8 (opt, rep) - Date / time selection qualifier (ID) S2.10.5.8 | 0158 - DATE/TIME SELECTION QUALIFIER
     """
 
     qrf_1: List[str] = Field(

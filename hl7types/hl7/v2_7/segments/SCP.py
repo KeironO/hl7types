@@ -16,33 +16,33 @@ from ..datatypes.EI import EI
 
 
 class SCP(HL7Model):
-    """HL7 v2 SCP segment.
+    """Sterilizer Configuration (Anti-Microbial Devices) (S17.7.1).
 
     Attributes
     ----------
     scp_1 : str | None
-        SCP.1 (opt) - Number Of Decontamination/Sterilization Devices (NM)
+        SCP.1 (opt) - Number Of Decontamination/Sterilization Devices (NM) S17.7.1.1
 
     scp_2 : CWE | None
-        SCP.2 (opt) - Labor Calculation Type (CWE)
+        SCP.2 (opt) - Labor Calculation Type (CWE) S17.7.1.2 | 0651 - Labor Calculation Type
 
     scp_3 : CWE | None
-        SCP.3 (opt) - Date Format (CWE)
+        SCP.3 (opt) - Date Format (CWE) S17.7.1.3 | 0653 - Date Format
 
     scp_4 : EI | None
-        SCP.4 (opt) - Device Number (EI)
+        SCP.4 (opt) - Device Number (EI) S17.7.1.4
 
     scp_5 : str | None
-        SCP.5 (opt) - Device Name (ST)
+        SCP.5 (opt) - Device Name (ST) S17.7.1.5
 
     scp_6 : str | None
-        SCP.6 (opt) - Device Model Name (ST)
+        SCP.6 (opt) - Device Model Name (ST) S17.7.1.6
 
     scp_7 : CWE | None
-        SCP.7 (opt) - Device Type (CWE)
+        SCP.7 (opt) - Device Type (CWE) S17.7.1.7 | 0657 - Device Type
 
     scp_8 : CWE | None
-        SCP.8 (opt) - Lot Control (CWE)
+        SCP.8 (opt) - Lot Control (CWE) S17.7.1.8 | 0659 - Lot Control
     """
 
     scp_1: Optional[str] = Field(

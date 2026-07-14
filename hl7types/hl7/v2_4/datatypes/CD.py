@@ -19,7 +19,7 @@ from .WVS import WVS
 
 
 class CD(HL7Model):
-    """HL7 v2 CD data type.
+    """Channel definition (S2.9.2).
 
     Attributes
     ----------

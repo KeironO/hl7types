@@ -20,36 +20,36 @@ from ..datatypes.XTN import XTN
 
 
 class PRD(HL7Model):
-    """HL7 v2 PRD segment.
+    """Provider Data (S11.5.3).
 
     Attributes
     ----------
     prd_1 : list[CE]
-        PRD.1 (req, rep) - Role (CE)
+        PRD.1 (req, rep) - Role (CE) S11.5.3 | 0286 - Provider Role
 
     prd_2 : list[XPN] | None
-        PRD.2 (opt, rep) - Provider Name (XPN)
+        PRD.2 (opt, rep) - Provider Name (XPN) S11.5.3.2
 
     prd_3 : XAD | None
-        PRD.3 (opt) - Provider Address (XAD)
+        PRD.3 (opt) - Provider Address (XAD) S11.5.3.3
 
     prd_4 : PL | None
-        PRD.4 (opt) - Provider Location (PL)
+        PRD.4 (opt) - Provider Location (PL) S11.5.3.4
 
     prd_5 : list[XTN] | None
-        PRD.5 (opt, rep) - Provider Communication Information (XTN)
+        PRD.5 (opt, rep) - Provider Communication Information (XTN) S11.5.3.5
 
     prd_6 : CE | None
-        PRD.6 (opt) - Preferred Method of Contact (CE)
+        PRD.6 (opt) - Preferred Method of Contact (CE) S8.6.2.16 | 0185 - Preferred Method of Contact
 
     prd_7 : list[str] | None
-        PRD.7 (opt, rep) - Provider Identifiers (CM)
+        PRD.7 (opt, rep) - Provider Identifiers (CM) S11.5.3.7
 
     prd_8 : TS | None
-        PRD.8 (opt) - Effective Start Date of Role (TS)
+        PRD.8 (opt) - Effective Start Date of Role (TS) S11.5.3.8
 
     prd_9 : TS | None
-        PRD.9 (opt) - Effective End Date of Role (TS)
+        PRD.9 (opt) - Effective End Date of Role (TS) S11.5.3.9
     """
 
     prd_1: List[CE] = Field(

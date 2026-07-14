@@ -16,18 +16,18 @@ from ..datatypes.QIP import QIP
 
 
 class ERQ(HL7Model):
-    """HL7 v2 ERQ segment.
+    """Event replay query (S5.10.5.2).
 
     Attributes
     ----------
     erq_1 : str | None
-        ERQ.1 (opt) - Query Tag (ST)
+        ERQ.1 (opt) - Query Tag (ST) S5.5.2.1
 
     erq_2 : CE
-        ERQ.2 (req) - Event Identifier (CE)
+        ERQ.2 (req) - Event Identifier (CE) S5.10.5.2.2
 
     erq_3 : list[QIP] | None
-        ERQ.3 (opt, rep) - Input Parameter List (QIP)
+        ERQ.3 (opt, rep) - Input Parameter List (QIP) S5.10.5.2.3
     """
 
     erq_1: Optional[str] = Field(

@@ -19,72 +19,72 @@ from ..datatypes.XPN import XPN
 
 
 class GOL(HL7Model):
-    """HL7 v2 GOL segment.
+    """Goal Detail (S12.3.1).
 
     Attributes
     ----------
     gol_1 : str
-        GOL.1 (req) - Action Code (ID)
+        GOL.1 (req) - Action Code (ID) S12.3.1 | 0287 - Action Code
 
     gol_2 : TS
-        GOL.2 (req) - Action Date/Time (TS)
+        GOL.2 (req) - Action Date/Time (TS) S12.3.1
 
     gol_3 : CE
-        GOL.3 (req) - Goal ID (CE)
+        GOL.3 (req) - Goal ID (CE) S12.3.1.3
 
     gol_4 : EI
-        GOL.4 (req) - Goal Instance ID (EI)
+        GOL.4 (req) - Goal Instance ID (EI) S12.3.1.4
 
     gol_5 : EI | None
-        GOL.5 (opt) - Episode of Care ID (EI)
+        GOL.5 (opt) - Episode of Care ID (EI) S12.3.1.5
 
     gol_6 : str | None
-        GOL.6 (opt) - Goal List Priority (NM)
+        GOL.6 (opt) - Goal List Priority (NM) S12.3.1.6
 
     gol_7 : TS | None
-        GOL.7 (opt) - Goal Established Date/Time (TS)
+        GOL.7 (opt) - Goal Established Date/Time (TS) S12.3.1.7
 
     gol_8 : TS | None
-        GOL.8 (opt) - Expected Goal Achievement Date/Time (TS)
+        GOL.8 (opt) - Expected Goal Achievement Date/Time (TS) S12.3.1.8
 
     gol_9 : CE | None
-        GOL.9 (opt) - Goal Classification (CE)
+        GOL.9 (opt) - Goal Classification (CE) S12.3.1.9
 
     gol_10 : CE | None
-        GOL.10 (opt) - Goal Management Discipline (CE)
+        GOL.10 (opt) - Goal Management Discipline (CE) S12.3.1.10
 
     gol_11 : CE | None
-        GOL.11 (opt) - Current Goal Review Status (CE)
+        GOL.11 (opt) - Current Goal Review Status (CE) S12.3.1.11
 
     gol_12 : TS | None
-        GOL.12 (opt) - Current Goal Review Date/Time (TS)
+        GOL.12 (opt) - Current Goal Review Date/Time (TS) S12.3.1.12
 
     gol_13 : TS | None
-        GOL.13 (opt) - Next Goal Review Date/Time (TS)
+        GOL.13 (opt) - Next Goal Review Date/Time (TS) S12.3.1.13
 
     gol_14 : TS | None
-        GOL.14 (opt) - Previous Goal Review Date/Time (TS)
+        GOL.14 (opt) - Previous Goal Review Date/Time (TS) S12.3.1.14
 
     gol_15 : TQ | None
-        GOL.15 (opt) - Goal Review Interval (TQ)
+        GOL.15 (opt) - Goal Review Interval (TQ) S12.3.1.15
 
     gol_16 : CE | None
-        GOL.16 (opt) - Goal Evaluation (CE)
+        GOL.16 (opt) - Goal Evaluation (CE) S12.3.1.16
 
     gol_17 : list[str] | None
-        GOL.17 (opt, rep) - Goal Evaluation Comment (ST)
+        GOL.17 (opt, rep) - Goal Evaluation Comment (ST) S12.3.1.17
 
     gol_18 : CE | None
-        GOL.18 (opt) - Goal Life Cycle Status (CE)
+        GOL.18 (opt) - Goal Life Cycle Status (CE) S12.3.1.18
 
     gol_19 : TS | None
-        GOL.19 (opt) - Goal Life Cycle Status Date/Time (TS)
+        GOL.19 (opt) - Goal Life Cycle Status Date/Time (TS) S12.3.1.19
 
     gol_20 : list[CE] | None
-        GOL.20 (opt, rep) - Goal Target Type (CE)
+        GOL.20 (opt, rep) - Goal Target Type (CE) S12.3.1.20
 
     gol_21 : list[XPN] | None
-        GOL.21 (opt, rep) - Goal Target Name (XPN)
+        GOL.21 (opt, rep) - Goal Target Name (XPN) S12.3.1.21
     """
 
     gol_1: str = Field(

@@ -18,21 +18,21 @@ _QID = QID
 
 
 class QCN_J01(HL7Model):
-    """HL7 v2 QCN_J01 message.
+    """QCN/ACK - Cancel query/acknowledge message (S5).
 
     Attributes:
-        MSH (MSH): required
-        QID (QID): required
+        MSH (MSH): Message Header, required
+        QID (QID): Query Identification, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     QID: _QID = Field(
         title="QID",
-        description="Required",
+        description="Query Identification",
     )
 
     model_config = {"populate_by_name": True}

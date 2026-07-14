@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class UB1(HL7Model):
-    """HL7 v2 UB1 segment.
+    """UB82 DATA (S6.3.8).
 
     Attributes
     ----------
     ub1_1 : str | None
-        UB1.1 (opt) - SET ID - UB82 (SI)
+        UB1.1 (opt) - SET ID - UB82 (SI) S6-17
 
     ub1_2 : str | None
         UB1.2 (opt) - BLOOD DEDUCTIBLE (ST)
@@ -36,7 +36,7 @@ class UB1(HL7Model):
         UB1.6 (opt) - CO-INSURANCE DAYS (25) (ST)
 
     ub1_7 : list[str] | None
-        UB1.7 (opt, rep) - CONDITION CODE (ID)
+        UB1.7 (opt, rep) - CONDITION CODE (ID) | 0043 - CONDITION
 
     ub1_8 : str | None
         UB1.8 (opt) - COVERED DAYS - (23) (ST)

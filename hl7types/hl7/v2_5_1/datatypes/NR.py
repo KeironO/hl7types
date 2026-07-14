@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class NR(HL7Model):
-    """HL7 v2 NR data type.
+    """Numeric range (S2.A.1.48).
 
     Attributes
     ----------

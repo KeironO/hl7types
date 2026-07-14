@@ -13,78 +13,78 @@ from hl7types.hl7 import HL7Model
 
 
 class UB1(HL7Model):
-    """HL7 v2 UB1 segment.
+    """UB82 DATA (S6.4.9).
 
     Attributes
     ----------
     ub1_1 : str | None
-        UB1.1 (opt) - Set ID - UB82 (SI)
+        UB1.1 (opt) - Set ID - UB82 (SI) S6.4.9.1
 
     ub1_2 : str | None
-        UB1.2 (opt) - Blood deductible (43) (NM)
+        UB1.2 (opt) - Blood deductible (43) (NM) S6.4.6.21 | 0136 - Y/N Indicator
 
     ub1_3 : str | None
-        UB1.3 (opt) - Blood furnished pints of (40) (NM)
+        UB1.3 (opt) - Blood furnished pints of (40) (NM) S6-30
 
     ub1_4 : str | None
-        UB1.4 (opt) - Blood replaced pints (41) (NM)
+        UB1.4 (opt) - Blood replaced pints (41) (NM) S6.4.9.4
 
     ub1_5 : str | None
-        UB1.5 (opt) - Blood not replaced pints (42) (NM)
+        UB1.5 (opt) - Blood not replaced pints (42) (NM) S6.4.9.5
 
     ub1_6 : str | None
-        UB1.6 (opt) - Co-insurance days (25) (NM)
+        UB1.6 (opt) - Co-insurance days (25) (NM) S6.4.9.6
 
     ub1_7 : list[str] | None
-        UB1.7 (opt, rep) - Condition code (35-39) (ID)
+        UB1.7 (opt, rep) - Condition code (35-39) (ID) S6.4.9.7 | 0043 - CONDITION CODE
 
     ub1_8 : str | None
-        UB1.8 (opt) - Covered days (23) (NM)
+        UB1.8 (opt) - Covered days (23) (NM) S6.4.9.8
 
     ub1_9 : str | None
-        UB1.9 (opt) - Non-covered days (24) (NM)
+        UB1.9 (opt) - Non-covered days (24) (NM) S6.4.9.9
 
     ub1_10 : list[str] | None
-        UB1.10 (opt, rep) - Value amount and code (46-49) (CM)
+        UB1.10 (opt, rep) - Value amount and code (46-49) (CM) S6.4.9.10 | 0153 - VALUE CODE
 
     ub1_11 : str | None
-        UB1.11 (opt) - Number of grace days (90) (NM)
+        UB1.11 (opt) - Number of grace days (90) (NM) S6-31
 
     ub1_12 : str | None
-        UB1.12 (opt) - Special program indicator (44) (ID)
+        UB1.12 (opt) - Special program indicator (44) (ID) S6.4.9.12
 
     ub1_13 : str | None
-        UB1.13 (opt) - PSRO / UR approval indicator (87) (ID)
+        UB1.13 (opt) - PSRO / UR approval indicator (87) (ID) S6.4.9.13
 
     ub1_14 : str | None
-        UB1.14 (opt) - PSRO / UR approved stay - from (88) (DT)
+        UB1.14 (opt) - PSRO / UR approved stay - from (88) (DT) S6.4.9.14
 
     ub1_15 : str | None
-        UB1.15 (opt) - PSRO / UR approved stay - to (89) (DT)
+        UB1.15 (opt) - PSRO / UR approved stay - to (89) (DT) S6.4.9.15
 
     ub1_16 : list[str] | None
-        UB1.16 (opt, rep) - Occurrence (28-32) (CM)
+        UB1.16 (opt, rep) - Occurrence (28-32) (CM) S6.4.9.16
 
     ub1_17 : str | None
-        UB1.17 (opt) - Occurrence span (33) (ID)
+        UB1.17 (opt) - Occurrence span (33) (ID) S6.4.9.17
 
     ub1_18 : str | None
-        UB1.18 (opt) - Occurrence span start date (33) (DT)
+        UB1.18 (opt) - Occurrence span start date (33) (DT) S6.4.9.18
 
     ub1_19 : str | None
-        UB1.19 (opt) - Occurrence span end date (33) (DT)
+        UB1.19 (opt) - Occurrence span end date (33) (DT) S6.4.9.19
 
     ub1_20 : str | None
-        UB1.20 (opt) - UB-82 locator 2 (ST)
+        UB1.20 (opt) - UB-82 locator 2 (ST) S6.4.9.20
 
     ub1_21 : str | None
-        UB1.21 (opt) - UB-82 locator 9 (ST)
+        UB1.21 (opt) - UB-82 locator 9 (ST) S6.4.9.21
 
     ub1_22 : str | None
-        UB1.22 (opt) - UB-82 locator 27 (ST)
+        UB1.22 (opt) - UB-82 locator 27 (ST) S6.4.9.22
 
     ub1_23 : str | None
-        UB1.23 (opt) - UB-82 locator 45 (ST)
+        UB1.23 (opt) - UB-82 locator 45 (ST) S6.4.9.23
     """
 
     ub1_1: Optional[str] = Field(

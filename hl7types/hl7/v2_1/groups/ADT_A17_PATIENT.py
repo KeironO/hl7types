@@ -21,18 +21,18 @@ class ADT_A17_PATIENT(HL7Model):
     """HL7 v2 ADT_A17.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PV1 (PV1): required
+        PID (PID): PATIENT IDENTIFICATION, required
+        PV1 (PV1): PATIENT VISIT, required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PATIENT IDENTIFICATION",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PATIENT VISIT",
     )
 
     model_config = {"populate_by_name": True}

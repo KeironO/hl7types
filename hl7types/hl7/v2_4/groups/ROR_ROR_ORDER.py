@@ -26,32 +26,32 @@ class ROR_ROR_ORDER(HL7Model):
     """HL7 v2 ROR_ROR.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        RXO (RXO): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        ORC (ORC): Common Order, required
+        RXO (RXO): Pharmacy/Treatment Order, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="Pharmacy/Treatment Order",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     model_config = {"populate_by_name": True}

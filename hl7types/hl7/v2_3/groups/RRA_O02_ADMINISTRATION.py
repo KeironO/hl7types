@@ -21,18 +21,18 @@ class RRA_O02_ADMINISTRATION(HL7Model):
     """HL7 v2 RRA_O02.ADMINISTRATION group.
 
     Attributes:
-        RXA (RXA): required
-        RXR (RXR): required
+        RXA (RXA): Pharmacy administration segment, required
+        RXR (RXR): Pharmacy route segment, required
     """
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="Pharmacy administration segment",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="Pharmacy route segment",
     )
 
     model_config = {"populate_by_name": True}

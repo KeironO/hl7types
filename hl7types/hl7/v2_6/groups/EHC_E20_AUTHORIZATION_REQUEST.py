@@ -31,10 +31,10 @@ class EHC_E20_AUTHORIZATION_REQUEST(HL7Model):
     """HL7 v2 EHC_E20.AUTHORIZATION_REQUEST group.
 
     Attributes:
-        IVC (Optional[IVC]): optional
-        CTD (Optional[List[CTD]]): optional
-        LOC (Optional[List[LOC]]): optional
-        ROL (Optional[List[ROL]]): optional
+        IVC (Optional[IVC]): Invoice Segment, optional
+        CTD (Optional[List[CTD]]): Contact Data, optional
+        LOC (Optional[List[LOC]]): Location Identification, optional
+        ROL (Optional[List[ROL]]): Role, optional
         PAT_INFO (Optional[List[EHC_E20_PAT_INFO]]): optional
         PSL_ITEM_INFO (Optional[List[EHC_E20_PSL_ITEM_INFO]]): optional
     """
@@ -42,37 +42,35 @@ class EHC_E20_AUTHORIZATION_REQUEST(HL7Model):
     IVC: Optional[_IVC] = Field(
         default=None,
         title="IVC",
-        description="Optional",
+        description="Invoice Segment",
     )
 
     CTD: Optional[List[_CTD]] = Field(
         default=None,
         title="CTD",
-        description="Optional, repeating",
+        description="Contact Data",
     )
 
     LOC: Optional[List[_LOC]] = Field(
         default=None,
         title="LOC",
-        description="Optional, repeating",
+        description="Location Identification",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     PAT_INFO: Optional[List[_EHC_E20_PAT_INFO]] = Field(
         default=None,
         title="PAT_INFO",
-        description="Optional, repeating",
     )
 
     PSL_ITEM_INFO: Optional[List[_EHC_E20_PSL_ITEM_INFO]] = Field(
         default=None,
         title="PSL_ITEM_INFO",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

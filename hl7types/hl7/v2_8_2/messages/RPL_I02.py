@@ -32,63 +32,62 @@ _UAC = UAC
 
 
 class RPL_I02(HL7Model):
-    """HL7 v2 RPL_I02 message.
+    """RQI/RPL - Request/receipt of patient selection display list (S11.3.2).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (MSA): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
         PROVIDER (List[RPL_I02_PROVIDER]): required
-        NTE (Optional[List[NTE]]): optional
-        DSP (Optional[List[DSP]]): optional
-        DSC (Optional[DSC]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        DSP (Optional[List[DSP]]): Display Data, optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     PROVIDER: List[_RPL_I02_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     DSP: Optional[List[_DSP]] = Field(
         default=None,
         title="DSP",
-        description="Optional, repeating",
+        description="Display Data",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,19 +22,19 @@ class SQM_S25_PERSONNEL_RESOURCE(HL7Model):
     """HL7 v2 SQM_S25.PERSONNEL_RESOURCE group.
 
     Attributes:
-        AIP (AIP): required
-        APR (Optional[APR]): optional
+        AIP (AIP): Appointment Information - Personnel Resource, required
+        APR (Optional[APR]): Appointment Preferences, optional
     """
 
     AIP: _AIP = Field(
         title="AIP",
-        description="Required",
+        description="Appointment Information - Personnel Resource",
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="Appointment Preferences",
     )
 
     model_config = {"populate_by_name": True}

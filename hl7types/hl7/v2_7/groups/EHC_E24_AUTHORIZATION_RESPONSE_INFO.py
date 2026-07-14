@@ -23,20 +23,19 @@ class EHC_E24_AUTHORIZATION_RESPONSE_INFO(HL7Model):
     """HL7 v2 EHC_E24.AUTHORIZATION_RESPONSE_INFO group.
 
     Attributes:
-        IVC (Optional[IVC]): optional
+        IVC (Optional[IVC]): Invoice Segment, optional
         PSL_ITEM_INFO (Optional[List[EHC_E24_PSL_ITEM_INFO]]): optional
     """
 
     IVC: Optional[_IVC] = Field(
         default=None,
         title="IVC",
-        description="Optional",
+        description="Invoice Segment",
     )
 
     PSL_ITEM_INFO: Optional[List[_EHC_E24_PSL_ITEM_INFO]] = Field(
         default=None,
         title="PSL_ITEM_INFO",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

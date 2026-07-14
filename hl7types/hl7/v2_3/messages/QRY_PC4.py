@@ -21,28 +21,28 @@ _QRF = QRF
 
 
 class QRY_PC4(HL7Model):
-    """HL7 v2 QRY_PC4 message.
+    """PPR - PC/Problem Query.
 
     Attributes:
-        MSH (MSH): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): Message header segment, required
+        QRD (QRD): Query definition segment, required
+        QRF (Optional[QRF]): Query filter segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Query filter segment",
     )
 
     model_config = {"populate_by_name": True}

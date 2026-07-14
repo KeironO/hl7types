@@ -13,36 +13,36 @@ from hl7types.hl7 import HL7Model
 
 
 class QRD(HL7Model):
-    """HL7 v2 QRD segment.
+    """QUERY DEFINITION (S5.3.3).
 
     Attributes
     ----------
     qrd_1 : str
-        QRD.1 (req) - QUERY DATE/TIME (TS)
+        QRD.1 (req) - QUERY DATE/TIME (TS) S5-6
 
     qrd_2 : str
-        QRD.2 (req) - QUERY FORMAT CODE (ID)
+        QRD.2 (req) - QUERY FORMAT CODE (ID) | 0106 - QUERY FORMAT CODE
 
     qrd_3 : str
-        QRD.3 (req) - QUERY PRIORITY (ID)
+        QRD.3 (req) - QUERY PRIORITY (ID) | 0091 - QUERY PRIORITY
 
     qrd_4 : str
         QRD.4 (req) - QUERY ID (ST)
 
     qrd_5 : str | None
-        QRD.5 (opt) - DEFERRED RESPONSE TYPE (ID)
+        QRD.5 (opt) - DEFERRED RESPONSE TYPE (ID) | 0107 - DEFERRED RESPONSE TYPE
 
     qrd_6 : str | None
         QRD.6 (opt) - DEFERRED RESPONSE DATE/TIME (TS)
 
     qrd_7 : str
-        QRD.7 (req) - QUANTITY LIMITED REQUEST (CQ)
+        QRD.7 (req) - QUANTITY LIMITED REQUEST (CQ) | 0126 - QUANTITY LIMITED REQUEST
 
     qrd_8 : list[str]
         QRD.8 (req, rep) - WHO SUBJECT FILTER (ST)
 
     qrd_9 : list[str]
-        QRD.9 (req, rep) - WHAT SUBJECT FILTER (ID)
+        QRD.9 (req, rep) - WHAT SUBJECT FILTER (ID) | 0048 - WHAT SUBJECT FILTER
 
     qrd_10 : list[str]
         QRD.10 (req, rep) - WHAT DEPARTMENT DATA CODE (ST)
@@ -51,7 +51,7 @@ class QRD(HL7Model):
         QRD.11 (opt, rep) - WHAT DATA CODE VALUE QUAL. (ST)
 
     qrd_12 : str | None
-        QRD.12 (opt) - QUERY RESULTS LEVEL (ID)
+        QRD.12 (opt) - QUERY RESULTS LEVEL (ID) | 0108 - QUERY RESULTS LEVEL
     """
 
     qrd_1: str = Field(

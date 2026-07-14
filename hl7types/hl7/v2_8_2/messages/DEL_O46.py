@@ -28,49 +28,48 @@ _UAC = UAC
 
 
 class DEL_O46(HL7Model):
-    """HL7 v2 DEL_O46 message.
+    """Donor Eligiblity Message (S4.16.13).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         DONOR (Optional[DEL_O46_DONOR]): optional
-        DON (DON): required
-        NTE (Optional[List[NTE]]): optional
+        DON (DON): Donation, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     DONOR: Optional[_DEL_O46_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     DON: _DON = Field(
         title="DON",
-        description="Required",
+        description="Donation",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

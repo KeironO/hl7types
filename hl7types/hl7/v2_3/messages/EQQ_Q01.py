@@ -21,28 +21,28 @@ _MSH = MSH
 
 
 class EQQ_Q01(HL7Model):
-    """HL7 v2 EQQ_Q01 message.
+    """QRY/DSR - Query sent for immediate response.
 
     Attributes:
-        MSH (MSH): required
-        EQL (EQL): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message header segment, required
+        EQL (EQL): Embedded Query Language, required
+        DSC (Optional[DSC]): Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EQL: _EQL = Field(
         title="EQL",
-        description="Required",
+        description="Embedded Query Language",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

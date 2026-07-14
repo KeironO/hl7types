@@ -29,39 +29,38 @@ class RSP_Z90_COMMON_ORDER(HL7Model):
     """HL7 v2 RSP_Z90.COMMON_ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
-        CTD (Optional[CTD]): optional
+        ORC (ORC): Common Order, required
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        CTD (Optional[CTD]): Contact Data, optional
         OBSERVATION (List[RSP_Z90_OBSERVATION]): required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     OBSERVATION: List[_RSP_Z90_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

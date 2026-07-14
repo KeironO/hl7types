@@ -21,18 +21,18 @@ class CSU_C09_RX_ADMIN(HL7Model):
     """HL7 v2 CSU_C09.RX_ADMIN group.
 
     Attributes:
-        RXA (RXA): required
-        RXR (RXR): required
+        RXA (RXA): Pharmacy administration segment, required
+        RXR (RXR): Pharmacy route segment, required
     """
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="Pharmacy administration segment",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="Pharmacy route segment",
     )
 
     model_config = {"populate_by_name": True}

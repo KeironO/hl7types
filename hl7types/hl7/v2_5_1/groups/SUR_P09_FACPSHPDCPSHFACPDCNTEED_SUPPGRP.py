@@ -27,33 +27,31 @@ class SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP(HL7Model):
     """HL7 v2 SUR_P09.FACPSHPDCPSHFACPDCNTEED_SUPPGRP group.
 
     Attributes:
-        FAC (FAC): required
+        FAC (FAC): Facility, required
         PSHPDC_SUPPGRP (List[SUR_P09_PSHPDC_SUPPGRP]): required
-        PSH (PSH): required
+        PSH (PSH): Product Summary Header, required
         FACPDCNTE_SUPPGRP (List[SUR_P09_FACPDCNTE_SUPPGRP]): required
-        ed (Any): required
+        ed (Any): Encapsulated Data (wrong segment), required
     """
 
     FAC: _FAC = Field(
         title="FAC",
-        description="Required",
+        description="Facility",
     )
 
     PSHPDC_SUPPGRP: List[_SUR_P09_PSHPDC_SUPPGRP] = Field(
         min_length=1,
         title="PSHPDC_SUPPGRP",
-        description="Required, repeating",
     )
 
     PSH: _PSH = Field(
         title="PSH",
-        description="Required",
+        description="Product Summary Header",
     )
 
     FACPDCNTE_SUPPGRP: List[_SUR_P09_FACPDCNTE_SUPPGRP] = Field(
         min_length=1,
         title="FACPDCNTE_SUPPGRP",
-        description="Required, repeating",
     )
 
     ed: Any

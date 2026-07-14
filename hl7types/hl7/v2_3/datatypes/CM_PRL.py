@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class CM_PRL(HL7Model):
-    """HL7 v2 CM_PRL data type.
+    """Parent result link.
 
     Attributes
     ----------

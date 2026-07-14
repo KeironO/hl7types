@@ -25,26 +25,24 @@ class NMQ_N02(HL7Model):
     """HL7 v2 NMQ_N02 message.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): MESSAGE HEADER, required
         QRY_WITH_DETAIL (Optional[NMQ_N02_QRY_WITH_DETAIL]): optional
         CLOCK_AND_STATISTICS (List[NMQ_N02_CLOCK_AND_STATISTICS]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     QRY_WITH_DETAIL: Optional[_NMQ_N02_QRY_WITH_DETAIL] = Field(
         default=None,
         title="QRY_WITH_DETAIL",
-        description="Optional",
     )
 
     CLOCK_AND_STATISTICS: List[_NMQ_N02_CLOCK_AND_STATISTICS] = Field(
         min_length=1,
         title="CLOCK_AND_STATISTICS",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

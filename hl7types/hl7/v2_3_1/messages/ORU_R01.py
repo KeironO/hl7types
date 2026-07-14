@@ -22,29 +22,28 @@ _ORU_R01_PATIENT_RESULT = ORU_R01_PATIENT_RESULT
 
 
 class ORU_R01(HL7Model):
-    """HL7 v2 ORU_R01 message.
+    """ORU/ACK - Unsolicited transmission of an observation message.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): MSH - message header segment, required
         PATIENT_RESULT (List[ORU_R01_PATIENT_RESULT]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     PATIENT_RESULT: List[_ORU_R01_PATIENT_RESULT] = Field(
         min_length=1,
         title="PATIENT_RESULT",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -30,47 +30,47 @@ class DBC_O42_DONOR(HL7Model):
     """HL7 v2 DBC_O42.DONOR group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        OBX (Optional[List[OBX]]): optional
-        NTE (Optional[List[NTE]]): optional
-        AL1 (Optional[List[AL1]]): optional
-        ARV (Optional[List[ARV]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,36 +13,36 @@ from hl7types.hl7 import HL7Model
 
 
 class NSC(HL7Model):
-    """HL7 v2 NSC segment.
+    """Application status change (SC.2.3.10).
 
     Attributes
     ----------
     nsc_1 : str | None
-        NSC.1 (opt) - Network Change Type (IS)
+        NSC.1 (opt) - Network Change Type (IS) SC.2.3.1 | 0333 - Driver’s license issuing authority
 
     nsc_2 : str | None
-        NSC.2 (opt) - Current CPU (ST)
+        NSC.2 (opt) - Current CPU (ST) SC.2.3.2
 
     nsc_3 : str | None
-        NSC.3 (opt) - Current Fileserver (ST)
+        NSC.3 (opt) - Current Fileserver (ST) SC.2.3.3
 
     nsc_4 : str | None
-        NSC.4 (opt) - Current Application (ST)
+        NSC.4 (opt) - Current Application (ST) SC.2.3.4
 
     nsc_5 : str | None
-        NSC.5 (opt) - Current Facility (ST)
+        NSC.5 (opt) - Current Facility (ST) SC.2.3.5
 
     nsc_6 : str | None
-        NSC.6 (opt) - New CPU (ST)
+        NSC.6 (opt) - New CPU (ST) SC.2.3.6
 
     nsc_7 : str | None
-        NSC.7 (opt) - New Fileserver (ST)
+        NSC.7 (opt) - New Fileserver (ST) SC.2.3.7
 
     nsc_8 : str | None
-        NSC.8 (opt) - New Application (ST)
+        NSC.8 (opt) - New Application (ST) SC.2.3.8
 
     nsc_9 : str | None
-        NSC.9 (opt) - New Facility (ST)
+        NSC.9 (opt) - New Facility (ST) SC.2.3.9
     """
 
     nsc_1: Optional[str] = Field(

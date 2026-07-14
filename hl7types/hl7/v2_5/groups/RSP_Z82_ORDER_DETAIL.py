@@ -27,33 +27,32 @@ class RSP_Z82_ORDER_DETAIL(HL7Model):
     """HL7 v2 RSP_Z82.ORDER_DETAIL group.
 
     Attributes:
-        RXO (RXO): required
-        NTE (Optional[List[NTE]]): optional
-        RXR (List[RXR]): required
+        RXO (RXO): Pharmacy/Treatment Order, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
         TREATMENT (Optional[RSP_Z82_TREATMENT]): optional
     """
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="Pharmacy/Treatment Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     TREATMENT: Optional[_RSP_Z82_TREATMENT] = Field(
         default=None,
         title="TREATMENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

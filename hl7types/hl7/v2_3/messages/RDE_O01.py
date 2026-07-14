@@ -24,36 +24,34 @@ _RDE_O01_PATIENT = RDE_O01_PATIENT
 
 
 class RDE_O01(HL7Model):
-    """HL7 v2 RDE_O01 message.
+    """ORM - Order message (also RDE, RDS, RGV, RAS,.
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message header segment, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
         PATIENT (Optional[RDE_O01_PATIENT]): optional
         ORDER (List[RDE_O01_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     PATIENT: Optional[_RDE_O01_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RDE_O01_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

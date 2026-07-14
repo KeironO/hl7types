@@ -14,7 +14,7 @@ from hl7types.hl7._validators import _apply_dt_fallback
 
 
 class CCD(HL7Model):
-    """HL7 v2 CCD data type.
+    """Charge code and date (S2.A.3).
 
     Attributes
     ----------

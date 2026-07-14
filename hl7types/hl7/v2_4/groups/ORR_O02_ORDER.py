@@ -27,32 +27,31 @@ class ORR_O02_ORDER(HL7Model):
     """HL7 v2 ORR_O02.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         ORDER_DETAIL (ORR_O02_ORDER_DETAIL): required
-        NTE (Optional[List[NTE]]): optional
-        CTI (Optional[List[CTI]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     ORDER_DETAIL: _ORR_O02_ORDER_DETAIL = Field(
         title="ORDER_DETAIL",
-        description="Required",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

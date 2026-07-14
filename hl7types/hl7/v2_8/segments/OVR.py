@@ -16,24 +16,24 @@ from ..datatypes.XCN import XCN
 
 
 class OVR(HL7Model):
-    """HL7 v2 OVR segment.
+    """Override Segment (S2.14.11).
 
     Attributes
     ----------
     ovr_1 : CWE | None
-        OVR.1 (opt) - Business Rule Override Type (CWE)
+        OVR.1 (opt) - Business Rule Override Type (CWE) S2.14.11.1 | 0518 - Override Type
 
     ovr_2 : CWE | None
-        OVR.2 (opt) - Business Rule Override Code (CWE)
+        OVR.2 (opt) - Business Rule Override Code (CWE) S2.14.11.2 | 0521 - Override Code
 
     ovr_3 : str | None
-        OVR.3 (opt) - Override Comments (TX)
+        OVR.3 (opt) - Override Comments (TX) S2.14.11.3
 
     ovr_4 : XCN | None
-        OVR.4 (opt) - Override Entered By (XCN)
+        OVR.4 (opt) - Override Entered By (XCN) S2.14.11.4
 
     ovr_5 : XCN | None
-        OVR.5 (opt) - Override Authorized By (XCN)
+        OVR.5 (opt) - Override Authorized By (XCN) S2.14.11.5
     """
 
     ovr_1: Optional[CWE] = Field(

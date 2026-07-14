@@ -24,26 +24,26 @@ class EHC_E21_PSL_ITEM_INFO(HL7Model):
     """HL7 v2 EHC_E21.PSL_ITEM_INFO group.
 
     Attributes:
-        PSL (PSL): required
-        NTE (Optional[List[NTE]]): optional
-        AUT (Optional[AUT]): optional
+        PSL (PSL): Product/Service Line Item, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        AUT (Optional[AUT]): Authorization Information, optional
     """
 
     PSL: _PSL = Field(
         title="PSL",
-        description="Required",
+        description="Product/Service Line Item",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     AUT: Optional[_AUT] = Field(
         default=None,
         title="AUT",
-        description="Optional",
+        description="Authorization Information",
     )
 
     model_config = {"populate_by_name": True}

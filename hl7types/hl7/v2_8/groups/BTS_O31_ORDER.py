@@ -31,46 +31,44 @@ class BTS_O31_ORDER(HL7Model):
     """HL7 v2 BTS_O31.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[BTS_O31_TIMING]]): optional
-        BPO (BPO): required
-        NTE (Optional[List[NTE]]): optional
+        BPO (BPO): Blood product order, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PRODUCT_STATUS (Optional[List[BTS_O31_PRODUCT_STATUS]]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_BTS_O31_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     BPO: _BPO = Field(
         title="BPO",
-        description="Required",
+        description="Blood product order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRODUCT_STATUS: Optional[List[_BTS_O31_PRODUCT_STATUS]] = Field(
         default=None,
         title="PRODUCT_STATUS",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

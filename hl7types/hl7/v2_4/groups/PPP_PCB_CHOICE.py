@@ -22,20 +22,20 @@ class PPP_PCB_CHOICE(HL7Model):
     """HL7 v2 PPP_PCB.CHOICE group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        RXO (Optional[RXO]): optional
+        OBR (Optional[OBR]): Observation Request, optional
+        RXO (Optional[RXO]): Pharmacy/Treatment Order, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation Request",
     )
 
     RXO: Optional[_RXO] = Field(
         default=None,
         title="RXO",
-        description="Optional",
+        description="Pharmacy/Treatment Order",
     )
 
     model_config = {"populate_by_name": True}

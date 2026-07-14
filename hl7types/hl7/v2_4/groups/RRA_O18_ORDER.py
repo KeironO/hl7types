@@ -23,19 +23,18 @@ class RRA_O18_ORDER(HL7Model):
     """HL7 v2 RRA_O18.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         ADMINISTRATION (Optional[RRA_O18_ADMINISTRATION]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     ADMINISTRATION: Optional[_RRA_O18_ADMINISTRATION] = Field(
         default=None,
         title="ADMINISTRATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

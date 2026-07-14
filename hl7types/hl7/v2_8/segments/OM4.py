@@ -16,63 +16,63 @@ from ..datatypes.CWE import CWE
 
 
 class OM4(HL7Model):
-    """HL7 v2 OM4 segment.
+    """Observations that Require Specimens (S8.8.11).
 
     Attributes
     ----------
     om4_1 : str | None
-        OM4.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+        OM4.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
 
     om4_2 : str | None
-        OM4.2 (opt) - Derived Specimen (ID)
+        OM4.2 (opt) - Derived Specimen (ID) S8.8.11.2 | 0170 - Derived Specimen
 
     om4_3 : list[str] | None
-        OM4.3 (opt, rep) - Container Description (TX)
+        OM4.3 (opt, rep) - Container Description (TX) S8.8.11.3
 
     om4_4 : list[str] | None
-        OM4.4 (opt, rep) - Container Volume (NM)
+        OM4.4 (opt, rep) - Container Volume (NM) S13.4.3.21
 
     om4_5 : list[CWE] | None
-        OM4.5 (opt, rep) - Container Units (CWE)
+        OM4.5 (opt, rep) - Container Units (CWE) S8.8.11.5 | 9999 - no table for CE
 
     om4_6 : CWE | None
-        OM4.6 (opt) - Specimen (CWE)
+        OM4.6 (opt) - Specimen (CWE) S8.8.11.6 | 9999 - no table for CE
 
     om4_7 : CWE | None
-        OM4.7 (opt) - Additive (CWE)
+        OM4.7 (opt) - Additive (CWE) S13.4.3.27 | 0371 - Additive/Preservative
 
     om4_8 : str | None
-        OM4.8 (opt) - Preparation (TX)
+        OM4.8 (opt) - Preparation (TX) S8.8.11.8
 
     om4_9 : str | None
-        OM4.9 (opt) - Special Handling Requirements (TX)
+        OM4.9 (opt) - Special Handling Requirements (TX) S8.8.11.9
 
     om4_10 : CQ | None
-        OM4.10 (opt) - Normal Collection Volume (CQ)
+        OM4.10 (opt) - Normal Collection Volume (CQ) S8.8.11.10
 
     om4_11 : CQ | None
-        OM4.11 (opt) - Minimum Collection Volume (CQ)
+        OM4.11 (opt) - Minimum Collection Volume (CQ) S8.8.11.11
 
     om4_12 : str | None
-        OM4.12 (opt) - Specimen Requirements (TX)
+        OM4.12 (opt) - Specimen Requirements (TX) S8.8.11.12
 
     om4_13 : list[str] | None
-        OM4.13 (opt, rep) - Specimen Priorities (ID)
+        OM4.13 (opt, rep) - Specimen Priorities (ID) S8.8.11.13 | 0027 - Priority
 
     om4_14 : CQ | None
-        OM4.14 (opt) - Specimen Retention Time (CQ)
+        OM4.14 (opt) - Specimen Retention Time (CQ) S8.8.11.14
 
     om4_15 : list[CWE] | None
-        OM4.15 (opt, rep) - Specimen Handling Code (CWE)
+        OM4.15 (opt, rep) - Specimen Handling Code (CWE) S7.4.3.15 | 0376 - Special Handling Code
 
     om4_16 : str | None
-        OM4.16 (opt) - Specimen Preference (ID)
+        OM4.16 (opt) - Specimen Preference (ID) S8.8.11.16 | 0920 - Preferred Specimen/Attribute Status
 
     om4_17 : str | None
-        OM4.17 (opt) - Preferred Specimen/Attribture Sequence ID (NM)
+        OM4.17 (opt) - Preferred Specimen/Attribture Sequence ID (NM) S8.8.11.17
 
     om4_18 : list[CWE] | None
-        OM4.18 (opt, rep) - Taxonomic Classification Code (CWE)
+        OM4.18 (opt, rep) - Taxonomic Classification Code (CWE) S3.4.2.35
     """
 
     om4_1: Optional[str] = Field(

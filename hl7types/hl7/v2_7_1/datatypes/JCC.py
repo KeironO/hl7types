@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class JCC(HL7Model):
-    """HL7 v2 JCC data type.
+    """Job code/class (S2.A.37).
 
     Attributes
     ----------

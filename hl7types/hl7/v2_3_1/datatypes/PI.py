@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class PI(HL7Model):
-    """HL7 v2 PI data type.
+    """Person identifier (S11).
 
     Attributes
     ----------

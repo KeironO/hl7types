@@ -16,21 +16,21 @@ from ..datatypes.TS import TS
 
 
 class CSP(HL7Model):
-    """HL7 v2 CSP segment.
+    """Clinical Study Phase (S7.7.2).
 
     Attributes
     ----------
     csp_1 : CE | None
-        CSP.1 (opt) - Study Phase Identifier (CE)
+        CSP.1 (opt) - Study Phase Identifier (CE) S7.7.2
 
     csp_2 : TS
-        CSP.2 (req) - Date/time Study Phase Began (TS)
+        CSP.2 (req) - Date/time Study Phase Began (TS) S7.7.2.2
 
     csp_3 : TS | None
-        CSP.3 (opt) - Date/time Study Phase Ended (TS)
+        CSP.3 (opt) - Date/time Study Phase Ended (TS) S7.7.2.3
 
     csp_4 : CE | None
-        CSP.4 (opt) - Study Phase Evaluability (CE)
+        CSP.4 (opt) - Study Phase Evaluability (CE) S7.7.2.4
     """
 
     csp_1: Optional[CE] = Field(

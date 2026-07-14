@@ -23,19 +23,18 @@ class RDS_O01_ORDER_DETAIL(HL7Model):
     """HL7 v2 RDS_O01.ORDER_DETAIL group.
 
     Attributes:
-        RXO (RXO): required
+        RXO (RXO): Pharmacy prescription order segment, required
         ORDER_DETAIL_SUPPLEMENT (Optional[RDS_O01_ORDER_DETAIL_SUPPLEMENT]): optional
     """
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="Pharmacy prescription order segment",
     )
 
     ORDER_DETAIL_SUPPLEMENT: Optional[_RDS_O01_ORDER_DETAIL_SUPPLEMENT] = Field(
         default=None,
         title="ORDER_DETAIL_SUPPLEMENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

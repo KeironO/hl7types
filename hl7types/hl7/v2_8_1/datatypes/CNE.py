@@ -14,7 +14,7 @@ from hl7types.hl7._validators import _apply_dt_fallback
 
 
 class CNE(HL7Model):
-    """HL7 v2 CNE data type.
+    """Coded with no exceptions (S2.A.8).
 
     Attributes
     ----------

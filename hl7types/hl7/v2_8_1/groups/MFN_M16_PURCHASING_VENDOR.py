@@ -23,19 +23,18 @@ class MFN_M16_PURCHASING_VENDOR(HL7Model):
     """HL7 v2 MFN_M16.PURCHASING_VENDOR group.
 
     Attributes:
-        VND (VND): required
+        VND (VND): Purchasing Vendor, required
         PACKAGING (Optional[List[MFN_M16_PACKAGING]]): optional
     """
 
     VND: _VND = Field(
         title="VND",
-        description="Required",
+        description="Purchasing Vendor",
     )
 
     PACKAGING: Optional[List[_MFN_M16_PACKAGING]] = Field(
         default=None,
         title="PACKAGING",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

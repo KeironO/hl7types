@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class NK1(HL7Model):
-    """HL7 v2 NK1 segment.
+    """NEXT OF KIN (S6.3.6).
 
     Attributes
     ----------
     nk1_1 : str
-        NK1.1 (req) - SET ID - NEXT OF KIN (SI)
+        NK1.1 (req) - SET ID - NEXT OF KIN (SI) S3-23, 6-15
 
     nk1_2 : str | None
         NK1.2 (opt) - NEXT OF KIN NAME (PN)
 
     nk1_3 : str | None
-        NK1.3 (opt) - NEXT OF KIN RELATIONSHIP (ST)
+        NK1.3 (opt) - NEXT OF KIN RELATIONSHIP (ST) | 0063 - RELATIONSHIP
 
     nk1_4 : str | None
         NK1.4 (opt) - NEXT OF KIN - ADDRESS (AD)

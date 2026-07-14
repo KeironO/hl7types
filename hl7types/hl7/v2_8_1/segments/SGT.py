@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class SGT(HL7Model):
-    """HL7 v2 SGT segment.
+    """Segment Group Trailer (S2.14.14).
 
     Attributes
     ----------
     sgt_1 : str
-        SGT.1 (req) - Set ID - SGT (SI)
+        SGT.1 (req) - Set ID - SGT (SI) S2.14.14.1
 
     sgt_2 : str | None
-        SGT.2 (opt) - Segment Group Name (ST)
+        SGT.2 (opt) - Segment Group Name (ST) S2.14.14.2
     """
 
     sgt_1: str = Field(

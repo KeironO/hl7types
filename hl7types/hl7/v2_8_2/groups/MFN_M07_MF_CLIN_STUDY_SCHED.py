@@ -24,25 +24,25 @@ class MFN_M07_MF_CLIN_STUDY_SCHED(HL7Model):
     """HL7 v2 MFN_M07.MF_CLIN_STUDY_SCHED group.
 
     Attributes:
-        MFE (MFE): required
-        CM0 (CM0): required
-        CM2 (Optional[List[CM2]]): optional
+        MFE (MFE): Master File Entry, required
+        CM0 (CM0): Clinical Study Master, required
+        CM2 (Optional[List[CM2]]): Clinical Study Schedule Master, optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     CM0: _CM0 = Field(
         title="CM0",
-        description="Required",
+        description="Clinical Study Master",
     )
 
     CM2: Optional[List[_CM2]] = Field(
         default=None,
         title="CM2",
-        description="Optional, repeating",
+        description="Clinical Study Schedule Master",
     )
 
     model_config = {"populate_by_name": True}

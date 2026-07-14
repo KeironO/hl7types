@@ -24,35 +24,34 @@ _SFT = SFT
 
 
 class MFN_M03(HL7Model):
-    """HL7 v2 MFN_M03 message.
+    """MFN/MFK - Master file - test/observation (for backward compatibility only) (S8.10.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        MFI (MFI): Master File Identification, required
         MF_TEST (List[MFN_M03_MF_TEST]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_TEST: List[_MFN_M03_MF_TEST] = Field(
         min_length=1,
         title="MF_TEST",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

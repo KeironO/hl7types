@@ -30,47 +30,47 @@ class SIU_S12_PATIENT(HL7Model):
     """HL7 v2 SIU_S12.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        OBX (Optional[List[OBX]]): optional
-        DG1 (Optional[List[DG1]]): optional
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        PV1 (Optional[PV1]): PV1 - patient visit segment-, optional
+        PV2 (Optional[PV2]): PV2 - patient visit - additional information segment, optional
+        OBX (Optional[List[OBX]]): OBX - observation/result segment, optional
+        DG1 (Optional[List[DG1]]): DG1 - diagnosis segment, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="PV1 - patient visit segment-",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="PV2 - patient visit - additional information segment",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBX - observation/result segment",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DG1 - diagnosis segment",
     )
 
     model_config = {"populate_by_name": True}

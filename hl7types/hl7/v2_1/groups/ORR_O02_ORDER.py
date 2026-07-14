@@ -25,26 +25,25 @@ class ORR_O02_ORDER(HL7Model):
     """HL7 v2 ORR_O02.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): COMMON ORDER, required
         ORDER_DETAIL (Optional[ORR_O02_ORDER_DETAIL]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="COMMON ORDER",
     )
 
     ORDER_DETAIL: Optional[_ORR_O02_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     model_config = {"populate_by_name": True}

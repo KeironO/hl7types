@@ -15,159 +15,159 @@ from ..datatypes.TS import TS
 
 
 class PV1(HL7Model):
-    """HL7 v2 PV1 segment.
+    """PATIENT VISIT (S3.3.3).
 
     Attributes
     ----------
     pv1_1 : str | None
-        PV1.1 (opt) - Set ID - Patient Visit (SI)
+        PV1.1 (opt) - Set ID - Patient Visit (SI) S3.3.3.1
 
     pv1_2 : str
-        PV1.2 (req) - Patient Class (ID)
+        PV1.2 (req) - Patient Class (ID) S3.3.3.2 | 0004 - PATIENT CLASS
 
     pv1_3 : str | None
-        PV1.3 (opt) - Assigned Patient Location (CM)
+        PV1.3 (opt) - Assigned Patient Location (CM) S3.3.3.3 | 0079 - LOCATION
 
     pv1_4 : str | None
-        PV1.4 (opt) - Admission Type (ID)
+        PV1.4 (opt) - Admission Type (ID) S3.3.3.4 | 0007 - ADMISSION TYPE
 
     pv1_5 : str | None
-        PV1.5 (opt) - Preadmit Number (ST)
+        PV1.5 (opt) - Preadmit Number (ST) S3.3.3.5
 
     pv1_6 : str | None
-        PV1.6 (opt) - Prior Patient Location (CM)
+        PV1.6 (opt) - Prior Patient Location (CM) S3.3.3.6
 
     pv1_7 : str | None
-        PV1.7 (opt) - Attending Doctor (CN)
+        PV1.7 (opt) - Attending Doctor (CN) S3.3.3.7 | 0010 - PHYSICIAN ID
 
     pv1_8 : str | None
-        PV1.8 (opt) - Referring Doctor (CN)
+        PV1.8 (opt) - Referring Doctor (CN) S3.3.3.8 | 0010 - PHYSICIAN ID
 
     pv1_9 : list[str] | None
-        PV1.9 (opt, rep) - Consulting Doctor (CN)
+        PV1.9 (opt, rep) - Consulting Doctor (CN) S3.3.3.9 | 0010 - PHYSICIAN ID
 
     pv1_10 : str | None
-        PV1.10 (opt) - Hospital Service (ID)
+        PV1.10 (opt) - Hospital Service (ID) S3.3.3.10 | 0069 - HOSPITAL SERVICE
 
     pv1_11 : str | None
-        PV1.11 (opt) - Temporary Location (CM)
+        PV1.11 (opt) - Temporary Location (CM) S3.3.3.11 | 0079 - LOCATION
 
     pv1_12 : str | None
-        PV1.12 (opt) - Preadmit Test Indicator (ID)
+        PV1.12 (opt) - Preadmit Test Indicator (ID) S3.3.3.12 | 0087 - PRE-ADMIT TESTING
 
     pv1_13 : str | None
-        PV1.13 (opt) - Readmission indicator (ID)
+        PV1.13 (opt) - Readmission indicator (ID) S3.3.3.13 | 0092 - RE-ADMISSION INDICATOR
 
     pv1_14 : str | None
-        PV1.14 (opt) - Admit Source (ID)
+        PV1.14 (opt) - Admit Source (ID) S3.3.3.14 | 0023 - ADMIT SOURCE
 
     pv1_15 : list[str] | None
-        PV1.15 (opt, rep) - Ambulatory Status (ID)
+        PV1.15 (opt, rep) - Ambulatory Status (ID) S3.3.3.15 | 0009 - AMBULATORY STATUS
 
     pv1_16 : str | None
-        PV1.16 (opt) - VIP Indicator (ID)
+        PV1.16 (opt) - VIP Indicator (ID) S3.3.3.16 | 0099 - VIP INDICATOR
 
     pv1_17 : str | None
-        PV1.17 (opt) - Admitting Doctor (CN)
+        PV1.17 (opt) - Admitting Doctor (CN) S3.3.3.17 | 0010 - PHYSICIAN ID
 
     pv1_18 : str | None
-        PV1.18 (opt) - Patient type (ID)
+        PV1.18 (opt) - Patient type (ID) S3.3.3.18 | 0018 - PATIENT TYPE
 
     pv1_19 : str | None
-        PV1.19 (opt) - Visit Number (CM)
+        PV1.19 (opt) - Visit Number (CM) S3.3.3.19
 
     pv1_20 : list[str] | None
-        PV1.20 (opt, rep) - Financial Class (CM)
+        PV1.20 (opt, rep) - Financial Class (CM) S3.3.3.20 | 0064 - FINANCIAL CLASS
 
     pv1_21 : str | None
-        PV1.21 (opt) - Charge Price Indicator (ID)
+        PV1.21 (opt) - Charge Price Indicator (ID) S3.3.3.21 | 0032 - CHARGE/PRICE INDICATOR
 
     pv1_22 : str | None
-        PV1.22 (opt) - Courtesy Code (ID)
+        PV1.22 (opt) - Courtesy Code (ID) S3.3.3.22 | 0045 - COURTESY CODE
 
     pv1_23 : str | None
-        PV1.23 (opt) - Credit Rating (ID)
+        PV1.23 (opt) - Credit Rating (ID) S3.3.3.23 | 0046 - CREDIT RATING
 
     pv1_24 : list[str] | None
-        PV1.24 (opt, rep) - Contract Code (ID)
+        PV1.24 (opt, rep) - Contract Code (ID) S3.3.3.24 | 0044 - CONTRACT CODE
 
     pv1_25 : list[str] | None
-        PV1.25 (opt, rep) - Contract Effective Date (DT)
+        PV1.25 (opt, rep) - Contract Effective Date (DT) S3.3.3.25
 
     pv1_26 : list[str] | None
-        PV1.26 (opt, rep) - Contract Amount (NM)
+        PV1.26 (opt, rep) - Contract Amount (NM) S3.3.3.26
 
     pv1_27 : list[str] | None
-        PV1.27 (opt, rep) - Contract Period (NM)
+        PV1.27 (opt, rep) - Contract Period (NM) S3.3.3.27
 
     pv1_28 : str | None
-        PV1.28 (opt) - Interest Code (ID)
+        PV1.28 (opt) - Interest Code (ID) S3.3.3.28 | 0073 - INTEREST RATE CODE
 
     pv1_29 : str | None
-        PV1.29 (opt) - Transfer to bad debt - code (ID)
+        PV1.29 (opt) - Transfer to bad debt - code (ID) S3.3.3.29 | 0110 - TRANSFER TO BAD DEBT CODE
 
     pv1_30 : str | None
-        PV1.30 (opt) - Transfer to bad debt - date (DT)
+        PV1.30 (opt) - Transfer to bad debt - date (DT) S3.3.3.30
 
     pv1_31 : str | None
-        PV1.31 (opt) - Bad Debt Agency Code (ID)
+        PV1.31 (opt) - Bad Debt Agency Code (ID) S3.3.3.31 | 0021 - BAD DEBT AGENCY CODE
 
     pv1_32 : str | None
-        PV1.32 (opt) - Bad Debt Transfer Amount (NM)
+        PV1.32 (opt) - Bad Debt Transfer Amount (NM) S3.3.3.32
 
     pv1_33 : str | None
-        PV1.33 (opt) - Bad Debt Recovery Amount (NM)
+        PV1.33 (opt) - Bad Debt Recovery Amount (NM) S3.3.3.33
 
     pv1_34 : str | None
-        PV1.34 (opt) - Delete Account Indicator (ID)
+        PV1.34 (opt) - Delete Account Indicator (ID) S3.3.3.34 | 0111 - DELETE ACCOUNT CODE
 
     pv1_35 : str | None
-        PV1.35 (opt) - Delete Account Date (DT)
+        PV1.35 (opt) - Delete Account Date (DT) S3.3.3.35
 
     pv1_36 : str | None
-        PV1.36 (opt) - Discharge Disposition (ID)
+        PV1.36 (opt) - Discharge Disposition (ID) S3.3.3.36 | 0112 - DISCHARGE DISPOSITION
 
     pv1_37 : str | None
-        PV1.37 (opt) - Discharged to Location (CM)
+        PV1.37 (opt) - Discharged to Location (CM) S3.3.3.37 | 0113 - DISCHARGED TO LOCATION
 
     pv1_38 : str | None
-        PV1.38 (opt) - Diet Type (ID)
+        PV1.38 (opt) - Diet Type (ID) S3.3.3.38 | 0114 - DIET TYPE
 
     pv1_39 : str | None
-        PV1.39 (opt) - Servicing Facility (ID)
+        PV1.39 (opt) - Servicing Facility (ID) S3.3.3.39 | 0115 - SERVICING FACILITY
 
     pv1_40 : str | None
-        PV1.40 (opt) - Bed Status (ID)
+        PV1.40 (opt) - Bed Status (ID) S3.3.7.2 | 0116 - BED STATUS
 
     pv1_41 : str | None
-        PV1.41 (opt) - Account Status (ID)
+        PV1.41 (opt) - Account Status (ID) S3.3.3.41 | 0117 - ACCOUNT STATUS
 
     pv1_42 : str | None
-        PV1.42 (opt) - Pending Location (CM)
+        PV1.42 (opt) - Pending Location (CM) S3.3.3.42
 
     pv1_43 : str | None
-        PV1.43 (opt) - Prior Temporary Location (CM)
+        PV1.43 (opt) - Prior Temporary Location (CM) S3.3.3.43
 
     pv1_44 : TS | None
-        PV1.44 (opt) - Admit date / time (TS)
+        PV1.44 (opt) - Admit date / time (TS) S3.3.3.44
 
     pv1_45 : TS | None
-        PV1.45 (opt) - Discharge date / time (TS)
+        PV1.45 (opt) - Discharge date / time (TS) S3.3.3.45
 
     pv1_46 : str | None
-        PV1.46 (opt) - Current Patient Balance (NM)
+        PV1.46 (opt) - Current Patient Balance (NM) S3.3.3.46
 
     pv1_47 : str | None
-        PV1.47 (opt) - Total Charges (NM)
+        PV1.47 (opt) - Total Charges (NM) S3.3.3.47
 
     pv1_48 : str | None
-        PV1.48 (opt) - Total Adjustments (NM)
+        PV1.48 (opt) - Total Adjustments (NM) S3.3.3.48
 
     pv1_49 : str | None
-        PV1.49 (opt) - Total Payments (NM)
+        PV1.49 (opt) - Total Payments (NM) S3.3.3.49
 
     pv1_50 : str | None
-        PV1.50 (opt) - Alternate Visit ID (CM)
+        PV1.50 (opt) - Alternate Visit ID (CM) S3.3.3.50 | 0192 - Visit Id type
     """
 
     pv1_1: Optional[str] = Field(

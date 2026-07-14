@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class FTS(HL7Model):
-    """HL7 v2 FTS segment.
+    """File trailer segment (S2.24.12).
 
     Attributes
     ----------
     fts_1 : str | None
-        FTS.1 (opt) - File Batch Count (NM)
+        FTS.1 (opt) - File Batch Count (NM) S2.24.12.1
 
     fts_2 : str | None
-        FTS.2 (opt) - File Trailer Comment (ST)
+        FTS.2 (opt) - File Trailer Comment (ST) S2.24.12.2
     """
 
     fts_1: Optional[str] = Field(

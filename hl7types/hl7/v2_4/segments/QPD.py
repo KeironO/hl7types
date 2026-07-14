@@ -15,18 +15,18 @@ from ..datatypes.CE import CE
 
 
 class QPD(HL7Model):
-    """HL7 v2 QPD segment.
+    """Query Parameter Definition (S5.5.4).
 
     Attributes
     ----------
     qpd_1 : CE
-        QPD.1 (req) - Message Query Name (CE)
+        QPD.1 (req) - Message Query Name (CE) S5.5.3.2 | 0471 - Query name
 
     qpd_2 : str | None
-        QPD.2 (opt) - Query Tag (ST)
+        QPD.2 (opt) - Query Tag (ST) S5.10.5.8.1
 
     qpd_3 : str | None
-        QPD.3 (opt) - User Parameters (in successive fields) (*)
+        QPD.3 (opt) - User Parameters (in successive fields) (*) S5.5.4.3
     """
 
     qpd_1: CE = Field(

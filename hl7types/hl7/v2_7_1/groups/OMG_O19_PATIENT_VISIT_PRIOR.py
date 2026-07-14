@@ -24,26 +24,26 @@ class OMG_O19_PATIENT_VISIT_PRIOR(HL7Model):
     """HL7 v2 OMG_O19.PATIENT_VISIT_PRIOR group.
 
     Attributes:
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        PRT (Optional[List[PRT]]): optional
+        PV1 (PV1): Patient Visit, required
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

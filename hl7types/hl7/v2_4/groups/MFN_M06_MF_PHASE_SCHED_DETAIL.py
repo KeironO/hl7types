@@ -22,19 +22,19 @@ class MFN_M06_MF_PHASE_SCHED_DETAIL(HL7Model):
     """HL7 v2 MFN_M06.MF_PHASE_SCHED_DETAIL group.
 
     Attributes:
-        CM1 (CM1): required
-        CM2 (Optional[List[CM2]]): optional
+        CM1 (CM1): Clinical Study Phase Master, required
+        CM2 (Optional[List[CM2]]): Clinical Study Schedule Master, optional
     """
 
     CM1: _CM1 = Field(
         title="CM1",
-        description="Required",
+        description="Clinical Study Phase Master",
     )
 
     CM2: Optional[List[_CM2]] = Field(
         default=None,
         title="CM2",
-        description="Optional, repeating",
+        description="Clinical Study Schedule Master",
     )
 
     model_config = {"populate_by_name": True}

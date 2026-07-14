@@ -22,20 +22,20 @@ class TCU_U10_TEST_CONFIGURATION(HL7Model):
     """HL7 v2 TCU_U10.TEST_CONFIGURATION group.
 
     Attributes:
-        SPM (Optional[SPM]): optional
-        TCC (List[TCC]): required
+        SPM (Optional[SPM]): Specimen, optional
+        TCC (List[TCC]): Test Code Configuration, required
     """
 
     SPM: Optional[_SPM] = Field(
         default=None,
         title="SPM",
-        description="Optional",
+        description="Specimen",
     )
 
     TCC: List[_TCC] = Field(
         min_length=1,
         title="TCC",
-        description="Required, repeating",
+        description="Test Code Configuration",
     )
 
     model_config = {"populate_by_name": True}

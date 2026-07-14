@@ -20,66 +20,66 @@ from ..datatypes.XON import XON
 
 
 class OBX(HL7Model):
-    """HL7 v2 OBX segment.
+    """Observation/Result (S7.4.2).
 
     Attributes
     ----------
     obx_1 : str | None
-        OBX.1 (opt) - Set ID - OBX (SI)
+        OBX.1 (opt) - Set ID - OBX (SI) S7.4.2.1
 
     obx_2 : str | None
-        OBX.2 (opt) - Value Type (ID)
+        OBX.2 (opt) - Value Type (ID) S7.4.2.2 | 0125 - Value type
 
     obx_3 : CE
-        OBX.3 (req) - Observation Identifier (CE)
+        OBX.3 (req) - Observation Identifier (CE) S7.4.2.3
 
     obx_4 : str | None
-        OBX.4 (opt) - Observation Sub-ID (ST)
+        OBX.4 (opt) - Observation Sub-ID (ST) S7.4.2.4
 
     obx_5 : list[str] | None
-        OBX.5 (opt, rep) - Observation Value (var)
+        OBX.5 (opt, rep) - Observation Value (var) S7.4.2.5
 
     obx_6 : CE | None
-        OBX.6 (opt) - Units (CE)
+        OBX.6 (opt) - Units (CE) S7.4.2.6
 
     obx_7 : str | None
-        OBX.7 (opt) - References Range (ST)
+        OBX.7 (opt) - References Range (ST) S7.4.2.7
 
     obx_8 : list[str] | None
-        OBX.8 (opt, rep) - Abnormal Flags (IS)
+        OBX.8 (opt, rep) - Abnormal Flags (IS) S7.4.2.8 | 0078 - Abnormal flags
 
     obx_9 : str | None
-        OBX.9 (opt) - Probability (NM)
+        OBX.9 (opt) - Probability (NM) S7.4.2.9
 
     obx_10 : list[str] | None
-        OBX.10 (opt, rep) - Nature of Abnormal Test (ID)
+        OBX.10 (opt, rep) - Nature of Abnormal Test (ID) S7.4.2.10 | 0080 - Nature of Abnormal Testing
 
     obx_11 : str
-        OBX.11 (req) - Observation Result Status (ID)
+        OBX.11 (req) - Observation Result Status (ID) S7.4.2.11 | 0085 - Observation result status codes interpretation
 
     obx_12 : TS | None
-        OBX.12 (opt) - Effective Date of Reference Range Values (TS)
+        OBX.12 (opt) - Effective Date of Reference Range Values (TS) S7.4.2.12
 
     obx_13 : str | None
-        OBX.13 (opt) - User Defined Access Checks (ST)
+        OBX.13 (opt) - User Defined Access Checks (ST) S7.4.2.13
 
     obx_14 : TS | None
-        OBX.14 (opt) - Date/Time of the Observation (TS)
+        OBX.14 (opt) - Date/Time of the Observation (TS) S7.4.2.14
 
     obx_15 : CE | None
-        OBX.15 (opt) - Producer's Reference (CE)
+        OBX.15 (opt) - Producer's Reference (CE) S7.4.2.15
 
     obx_16 : list[XCN] | None
-        OBX.16 (opt, rep) - Responsible Observer (XCN)
+        OBX.16 (opt, rep) - Responsible Observer (XCN) S7.4.2.16
 
     obx_17 : list[CE] | None
-        OBX.17 (opt, rep) - Observation Method (CE)
+        OBX.17 (opt, rep) - Observation Method (CE) S7.4.2.17
 
     obx_18 : list[EI] | None
-        OBX.18 (opt, rep) - Equipment Instance Identifier (EI)
+        OBX.18 (opt, rep) - Equipment Instance Identifier (EI) S7.4.2.18
 
     obx_19 : TS | None
-        OBX.19 (opt) - Date/Time of the Analysis (TS)
+        OBX.19 (opt) - Date/Time of the Analysis (TS) S7.4.2.19
 
     obx_20 : XON | None
         OBX.20 (opt) - Performing Organization Name (XON)

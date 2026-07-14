@@ -15,21 +15,21 @@ from ..datatypes.CQ import CQ
 
 
 class CDO(HL7Model):
-    """HL7 v2 CDO segment.
+    """Cumulative Dosage (S4.A.9).
 
     Attributes
     ----------
     cdo_1 : str | None
-        CDO.1 (opt) - Set ID - CDO (SI)
+        CDO.1 (opt) - Set ID - CDO (SI) S4.A.9.1
 
     cdo_2 : str | None
-        CDO.2 (opt) - Action Code (ID)
+        CDO.2 (opt) - Action Code (ID) S4.A.8.22 | 0206 - Segment Action Code
 
     cdo_3 : CQ | None
-        CDO.3 (opt) - Cumulative Dosage Limit (CQ)
+        CDO.3 (opt) - Cumulative Dosage Limit (CQ) S4.A.9.3
 
     cdo_4 : CQ | None
-        CDO.4 (opt) - Cumulative Dosage Limit Time Interval (CQ)
+        CDO.4 (opt) - Cumulative Dosage Limit Time Interval (CQ) S4.A.9.4 | 0924 - Cumulative Dosage Limit UoM
     """
 
     cdo_1: Optional[str] = Field(

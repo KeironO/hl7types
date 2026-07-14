@@ -31,46 +31,45 @@ class OMN_O07_ORDER(HL7Model):
     """HL7 v2 OMN_O07.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        RQD (RQD): required
-        RQ1 (Optional[RQ1]): optional
-        NTE (Optional[List[NTE]]): optional
+        ORC (ORC): Common Order, required
+        RQD (RQD): Requisition Detail, required
+        RQ1 (Optional[RQ1]): Requisition Detail-1, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         OBSERVATION (Optional[List[OMN_O07_OBSERVATION]]): optional
-        BLG (Optional[BLG]): optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     RQD: _RQD = Field(
         title="RQD",
-        description="Required",
+        description="Requisition Detail",
     )
 
     RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
-        description="Optional",
+        description="Requisition Detail-1",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     OBSERVATION: Optional[List[_OMN_O07_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

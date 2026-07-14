@@ -27,48 +27,48 @@ _PV2 = PV2
 
 
 class ADT_A60(HL7Model):
-    """HL7 v2 ADT_A60 message.
+    """ADT/ACK -  Update allergy information (S3).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        IAM (Optional[List[IAM]]): optional
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
+        PID (PID): Patient identification, required
+        PV1 (Optional[PV1]): Patient visit, optional
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
+        IAM (Optional[List[IAM]]): Patient adverse reaction information - unique iden, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     IAM: Optional[List[_IAM]] = Field(
         default=None,
         title="IAM",
-        description="Optional, repeating",
+        description="Patient adverse reaction information - unique iden",
     )
 
     model_config = {"populate_by_name": True}

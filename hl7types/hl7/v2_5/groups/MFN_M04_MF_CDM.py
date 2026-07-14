@@ -24,25 +24,25 @@ class MFN_M04_MF_CDM(HL7Model):
     """HL7 v2 MFN_M04.MF_CDM group.
 
     Attributes:
-        MFE (MFE): required
-        CDM (CDM): required
-        PRC (Optional[List[PRC]]): optional
+        MFE (MFE): Master File Entry, required
+        CDM (CDM): Charge Description Master, required
+        PRC (Optional[List[PRC]]): Pricing, optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     CDM: _CDM = Field(
         title="CDM",
-        description="Required",
+        description="Charge Description Master",
     )
 
     PRC: Optional[List[_PRC]] = Field(
         default=None,
         title="PRC",
-        description="Optional, repeating",
+        description="Pricing",
     )
 
     model_config = {"populate_by_name": True}

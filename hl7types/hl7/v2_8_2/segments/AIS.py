@@ -16,45 +16,45 @@ from ..datatypes.CWE import CWE
 
 
 class AIS(HL7Model):
-    """HL7 v2 AIS segment.
+    """Appointment Information (S10.6.4).
 
     Attributes
     ----------
     ais_1 : str
-        AIS.1 (req) - Set ID - AIS (SI)
+        AIS.1 (req) - Set ID - AIS (SI) S10.6.4.1
 
     ais_2 : str | None
-        AIS.2 (opt) - Segment Action Code (ID)
+        AIS.2 (opt) - Segment Action Code (ID) S8.8.16.2 | 0206 - Segment Action Code
 
     ais_3 : CWE
-        AIS.3 (req) - Universal Service Identifier (CWE)
+        AIS.3 (req) - Universal Service Identifier (CWE) S10.6.4.3
 
     ais_4 : str | None
-        AIS.4 (opt) - Start Date/Time (DTM)
+        AIS.4 (opt) - Start Date/Time (DTM) S10.6.4.4
 
     ais_5 : str | None
-        AIS.5 (opt) - Start Date/Time Offset (NM)
+        AIS.5 (opt) - Start Date/Time Offset (NM) S10.6.4.5
 
     ais_6 : CNE | None
-        AIS.6 (opt) - Start Date/Time Offset Units (CNE)
+        AIS.6 (opt) - Start Date/Time Offset Units (CNE) S10.6.4.6
 
     ais_7 : str | None
-        AIS.7 (opt) - Duration (NM)
+        AIS.7 (opt) - Duration (NM) S10.6.4.7
 
     ais_8 : CNE | None
-        AIS.8 (opt) - Duration Units (CNE)
+        AIS.8 (opt) - Duration Units (CNE) S10.6.4.8
 
     ais_9 : CWE | None
-        AIS.9 (opt) - Allow Substitution Code (CWE)
+        AIS.9 (opt) - Allow Substitution Code (CWE) S10.6.4.9 | 0279 - Allow Substitution Codes
 
     ais_10 : CWE | None
-        AIS.10 (opt) - Filler Status Code (CWE)
+        AIS.10 (opt) - Filler Status Code (CWE) S10.6.2.25 | 0278 - Filler status codes
 
     ais_11 : list[CWE] | None
-        AIS.11 (opt, rep) - Placer Supplemental Service Information (CWE)
+        AIS.11 (opt, rep) - Placer Supplemental Service Information (CWE) S10.6.4.11 | 0411 - Supplemental Service Information Values
 
     ais_12 : list[CWE] | None
-        AIS.12 (opt, rep) - Filler Supplemental Service Information (CWE)
+        AIS.12 (opt, rep) - Filler Supplemental Service Information (CWE) S10.6.4.12 | 0411 - Supplemental Service Information Values
     """
 
     ais_1: str = Field(

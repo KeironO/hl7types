@@ -17,51 +17,51 @@ from ..datatypes.RPT import RPT
 
 
 class TQ1(HL7Model):
-    """HL7 v2 TQ1 segment.
+    """Timing/Quantity (S4.5.4).
 
     Attributes
     ----------
     tq1_1 : str | None
-        TQ1.1 (opt) - Set ID - TQ1 (SI)
+        TQ1.1 (opt) - Set ID - TQ1 (SI) S4.5.4.1
 
     tq1_2 : CQ | None
-        TQ1.2 (opt) - Quantity (CQ)
+        TQ1.2 (opt) - Quantity (CQ) S4.5.4.2
 
     tq1_3 : list[RPT] | None
-        TQ1.3 (opt, rep) - Repeat Pattern (RPT)
+        TQ1.3 (opt, rep) - Repeat Pattern (RPT) S4.5.4.3
 
     tq1_4 : list[str] | None
-        TQ1.4 (opt, rep) - Explicit Time (TM)
+        TQ1.4 (opt, rep) - Explicit Time (TM) S4.5.4.4
 
     tq1_5 : list[CQ] | None
-        TQ1.5 (opt, rep) - Relative Time and Units (CQ)
+        TQ1.5 (opt, rep) - Relative Time and Units (CQ) S4.5.4.5
 
     tq1_6 : CQ | None
-        TQ1.6 (opt) - Service Duration (CQ)
+        TQ1.6 (opt) - Service Duration (CQ) S4.5.4.6
 
     tq1_7 : str | None
-        TQ1.7 (opt) - Start date/time (DTM)
+        TQ1.7 (opt) - Start date/time (DTM) S4.5.4.7
 
     tq1_8 : str | None
-        TQ1.8 (opt) - End date/time (DTM)
+        TQ1.8 (opt) - End date/time (DTM) S4.5.4.8
 
     tq1_9 : list[CWE] | None
-        TQ1.9 (opt, rep) - Priority (CWE)
+        TQ1.9 (opt, rep) - Priority (CWE) S4.5.4.9 | 0485 - Extended Priority Codes
 
     tq1_10 : str | None
-        TQ1.10 (opt) - Condition text (TX)
+        TQ1.10 (opt) - Condition text (TX) S4.5.4.10
 
     tq1_11 : str | None
-        TQ1.11 (opt) - Text instruction (TX)
+        TQ1.11 (opt) - Text instruction (TX) S4.5.4.11
 
     tq1_12 : str | None
-        TQ1.12 (opt) - Conjunction (ID)
+        TQ1.12 (opt) - Conjunction (ID) S4.5.4.12 | 0472 - TQ conjunction ID
 
     tq1_13 : CQ | None
-        TQ1.13 (opt) - Occurrence duration (CQ)
+        TQ1.13 (opt) - Occurrence duration (CQ) S4.5.4.13
 
     tq1_14 : str | None
-        TQ1.14 (opt) - Total occurrences (NM)
+        TQ1.14 (opt) - Total occurrences (NM) S4.5.4.14
     """
 
     tq1_1: Optional[str] = Field(

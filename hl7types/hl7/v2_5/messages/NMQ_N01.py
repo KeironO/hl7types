@@ -24,36 +24,34 @@ _SFT = SFT
 
 
 class NMQ_N01(HL7Model):
-    """HL7 v2 NMQ_N01 message.
+    """NMQ/NMR - Application management query message (S14.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
         QRY_WITH_DETAIL (Optional[NMQ_N01_QRY_WITH_DETAIL]): optional
         CLOCK_AND_STATISTICS (List[NMQ_N01_CLOCK_AND_STATISTICS]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     QRY_WITH_DETAIL: Optional[_NMQ_N01_QRY_WITH_DETAIL] = Field(
         default=None,
         title="QRY_WITH_DETAIL",
-        description="Optional",
     )
 
     CLOCK_AND_STATISTICS: List[_NMQ_N01_CLOCK_AND_STATISTICS] = Field(
         min_length=1,
         title="CLOCK_AND_STATISTICS",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -24,25 +24,25 @@ class RDR_RDR_ENCODING(HL7Model):
     """HL7 v2 RDR_RDR.ENCODING group.
 
     Attributes:
-        RXE (RXE): required
-        RXR (RXR): required
-        RXC (Optional[List[RXC]]): optional
+        RXE (RXE): Pharmacy encoded order segment, required
+        RXR (RXR): Pharmacy route segment, required
+        RXC (Optional[List[RXC]]): Pharmacy component order segment, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy encoded order segment",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="Pharmacy route segment",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy component order segment",
     )
 
     model_config = {"populate_by_name": True}

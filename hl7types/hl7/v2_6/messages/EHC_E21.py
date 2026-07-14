@@ -24,35 +24,34 @@ _UAC = UAC
 
 
 class EHC_E21(HL7Model):
-    """HL7 v2 EHC_E21 message.
+    """Cancel Authorization Request (S16.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[List[UAC]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[List[UAC]]): User Authentication Credential Segment, optional
         AUTHORIZATION_REQUEST (EHC_E21_AUTHORIZATION_REQUEST): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[List[_UAC]] = Field(
         default=None,
         title="UAC",
-        description="Optional, repeating",
+        description="User Authentication Credential Segment",
     )
 
     AUTHORIZATION_REQUEST: _EHC_E21_AUTHORIZATION_REQUEST = Field(
         title="AUTHORIZATION_REQUEST",
-        description="Required",
     )
 
     model_config = {"populate_by_name": True}

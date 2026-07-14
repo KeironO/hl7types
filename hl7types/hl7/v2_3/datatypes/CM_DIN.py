@@ -16,7 +16,7 @@ from .TS import TS
 
 
 class CM_DIN(HL7Model):
-    """HL7 v2 CM_DIN data type.
+    """Activation date.
 
     Attributes
     ----------

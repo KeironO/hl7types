@@ -22,19 +22,19 @@ class ORF_R04_PIDNTE_SUPPGRP(HL7Model):
     """HL7 v2 ORF_R04.PIDNTE_SUPPGRP group.
 
     Attributes:
-        PID (PID): required
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient Identification, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

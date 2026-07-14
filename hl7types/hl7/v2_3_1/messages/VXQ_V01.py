@@ -21,28 +21,28 @@ _QRF = QRF
 
 
 class VXQ_V01(HL7Model):
-    """HL7 v2 VXQ_V01 message.
+    """VXQ - Query for vaccination record.
 
     Attributes:
-        MSH (MSH): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): MSH - message header segment, required
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     model_config = {"populate_by_name": True}

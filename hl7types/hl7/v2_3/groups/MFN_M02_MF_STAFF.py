@@ -24,25 +24,25 @@ class MFN_M02_MF_STAFF(HL7Model):
     """HL7 v2 MFN_M02.MF_STAFF group.
 
     Attributes:
-        MFE (MFE): required
-        STF (STF): required
-        PRA (Optional[PRA]): optional
+        MFE (MFE): Master file entry segment, required
+        STF (STF): Staff identification segment, required
+        PRA (Optional[PRA]): Practitioner detail segment, optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master file entry segment",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff identification segment",
     )
 
     PRA: Optional[_PRA] = Field(
         default=None,
         title="PRA",
-        description="Optional",
+        description="Practitioner detail segment",
     )
 
     model_config = {"populate_by_name": True}

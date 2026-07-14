@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CSU(HL7Model):
-    """HL7 v2 CSU data type.
+    """Channel sensitivity/units (S7.13.1.3).
 
     Attributes
     ----------

@@ -33,54 +33,52 @@ class OUL_R23_ORDER(HL7Model):
     """HL7 v2 OUL_R23.ORDER group.
 
     Attributes:
-        OBR (OBR): required
-        ORC (Optional[ORC]): optional
-        NTE (Optional[List[NTE]]): optional
-        ROL (Optional[List[ROL]]): optional
+        OBR (OBR): Observation Request, required
+        ORC (Optional[ORC]): Common Order, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        ROL (Optional[List[ROL]]): Role, optional
         TIMING_QTY (Optional[List[OUL_R23_TIMING_QTY]]): optional
         RESULT (Optional[List[OUL_R23_RESULT]]): optional
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     TIMING_QTY: Optional[List[_OUL_R23_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
-        description="Optional, repeating",
     )
 
     RESULT: Optional[List[_OUL_R23_RESULT]] = Field(
         default=None,
         title="RESULT",
-        description="Optional, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

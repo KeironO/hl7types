@@ -15,30 +15,30 @@ from ..datatypes.CE import CE
 
 
 class PRA(HL7Model):
-    """HL7 v2 PRA segment.
+    """Practitioner detail segment (S8.6.3).
 
     Attributes
     ----------
     pra_1 : str
-        PRA.1 (req) - PRA - Primary Key Value (ST)
+        PRA.1 (req) - PRA - Primary Key Value (ST) S8.6.3.1
 
     pra_2 : list[CE] | None
-        PRA.2 (opt, rep) - Practioner Group (CE)
+        PRA.2 (opt, rep) - Practioner Group (CE) S8.6.3.2
 
     pra_3 : list[str] | None
-        PRA.3 (opt, rep) - Practioner Category (ID)
+        PRA.3 (opt, rep) - Practioner Category (ID) S8.6.3.3
 
     pra_4 : str | None
-        PRA.4 (opt) - Provider Billing (ID)
+        PRA.4 (opt) - Provider Billing (ID) S8.6.3.4 | 0186 - Practioner Category
 
     pra_5 : list[str] | None
-        PRA.5 (opt, rep) - Specialty (CM)
+        PRA.5 (opt, rep) - Specialty (CM) S8.6.3.5 | 0187 - Provider Billing
 
     pra_6 : list[str] | None
-        PRA.6 (opt, rep) - Practitioner ID Numbers (CM)
+        PRA.6 (opt, rep) - Practitioner ID Numbers (CM) S8.6.3.6
 
     pra_7 : list[str] | None
-        PRA.7 (opt, rep) - Privileges (CM)
+        PRA.7 (opt, rep) - Privileges (CM) S8.6.3.7
     """
 
     pra_1: str = Field(

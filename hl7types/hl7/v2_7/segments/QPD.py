@@ -16,18 +16,18 @@ from ..datatypes.varies import varies
 
 
 class QPD(HL7Model):
-    """HL7 v2 QPD segment.
+    """Query Parameter Definition (S5.5.4).
 
     Attributes
     ----------
     qpd_1 : CWE
-        QPD.1 (req) - Message Query Name (CWE)
+        QPD.1 (req) - Message Query Name (CWE) S5.5.2.3 | 0471 - Query Name
 
     qpd_2 : str | None
-        QPD.2 (opt) - Query Tag (ST)
+        QPD.2 (opt) - Query Tag (ST) S5.5.2.1
 
     qpd_3 : varies | None
-        QPD.3 (opt) - User Parameters (in successive fields) (varies)
+        QPD.3 (opt) - User Parameters (in successive fields) (varies) S5.5.4.3
     """
 
     qpd_1: CWE = Field(

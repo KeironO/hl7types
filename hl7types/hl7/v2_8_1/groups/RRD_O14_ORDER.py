@@ -27,33 +27,31 @@ class RRD_O14_ORDER(HL7Model):
     """HL7 v2 RRD_O14.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[RRD_O14_TIMING]]): optional
         DISPENSE (Optional[RRD_O14_DISPENSE]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_RRD_O14_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     DISPENSE: Optional[_RRD_O14_DISPENSE] = Field(
         default=None,
         title="DISPENSE",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

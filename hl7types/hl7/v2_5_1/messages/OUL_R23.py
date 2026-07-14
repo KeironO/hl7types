@@ -30,57 +30,54 @@ _SFT = SFT
 
 
 class OUL_R23(HL7Model):
-    """HL7 v2 OUL_R23 message.
+    """OUL - Unsolicited Specimen Container Oriented Observation Message (S7.3.2).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        NTE (Optional[NTE]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        NTE (Optional[NTE]): Notes and Comments, optional
         PIDPD1NTE_SUPPGRP (Optional[OUL_R23_PIDPD1NTE_SUPPGRP]): optional
         PV1PV2_SUPPGRP (Optional[OUL_R23_PV1PV2_SUPPGRP]): optional
         SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP (List[OUL_R23_SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     PIDPD1NTE_SUPPGRP: Optional[_OUL_R23_PIDPD1NTE_SUPPGRP] = Field(
         default=None,
         title="PIDPD1NTE_SUPPGRP",
-        description="Optional",
     )
 
     PV1PV2_SUPPGRP: Optional[_OUL_R23_PV1PV2_SUPPGRP] = Field(
         default=None,
         title="PV1PV2_SUPPGRP",
-        description="Optional",
     )
 
     SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP: List[_OUL_R23_SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP] = Field(
         min_length=1,
         title="SPMOBXSACINVOBRORCNTETQ1TQ2OBXTCDSIDNTECTI_SUPPGRP",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

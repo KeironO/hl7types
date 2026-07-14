@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class OSD(HL7Model):
-    """HL7 v2 OSD data type.
+    """Order sequence definition (S2.A.50).
 
     Attributes
     ----------

@@ -28,48 +28,47 @@ _UAC = UAC
 
 
 class EHC_E24(HL7Model):
-    """HL7 v2 EHC_E24 message.
+    """Authorization Response (S16.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[List[UAC]]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[List[UAC]]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
         AUTHORIZATION_RESPONSE_INFO (EHC_E24_AUTHORIZATION_RESPONSE_INFO): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[List[_UAC]] = Field(
         default=None,
         title="UAC",
-        description="Optional, repeating",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     AUTHORIZATION_RESPONSE_INFO: _EHC_E24_AUTHORIZATION_RESPONSE_INFO = Field(
         title="AUTHORIZATION_RESPONSE_INFO",
-        description="Required",
     )
 
     model_config = {"populate_by_name": True}

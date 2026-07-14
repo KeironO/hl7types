@@ -27,7 +27,7 @@ class DFT_P03_COMMON_ORDER(HL7Model):
     """HL7 v2 DFT_P03.COMMON_ORDER group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
+        ORC (Optional[ORC]): Common Order, optional
         TIMING_QUANTITY (Optional[List[DFT_P03_TIMING_QUANTITY]]): optional
         ORDER (Optional[DFT_P03_ORDER]): optional
         OBSERVATION (Optional[List[DFT_P03_OBSERVATION]]): optional
@@ -36,25 +36,22 @@ class DFT_P03_COMMON_ORDER(HL7Model):
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     TIMING_QUANTITY: Optional[List[_DFT_P03_TIMING_QUANTITY]] = Field(
         default=None,
         title="TIMING_QUANTITY",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[_DFT_P03_ORDER] = Field(
         default=None,
         title="ORDER",
-        description="Optional",
     )
 
     OBSERVATION: Optional[List[_DFT_P03_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -53,123 +53,121 @@ class ADR_A19_QUERY_RESPONSE(HL7Model):
     """HL7 v2 ADR_A19.QUERY_RESPONSE group.
 
     Attributes:
-        EVN (Optional[EVN]): optional
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        DB1 (Optional[List[DB1]]): optional
-        OBX (Optional[List[OBX]]): optional
-        AL1 (Optional[List[AL1]]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[DRG]): optional
+        EVN (Optional[EVN]): EVN - event type segment, optional
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
+        PV1 (PV1): PV1 - patient visit segment-, required
+        PV2 (Optional[PV2]): PV2 - patient visit - additional information segment, optional
+        DB1 (Optional[List[DB1]]): DB1 - Disability segment, optional
+        OBX (Optional[List[OBX]]): OBX - observation/result segment, optional
+        AL1 (Optional[List[AL1]]): AL1 - patient allergy information segment, optional
+        DG1 (Optional[List[DG1]]): DG1 - diagnosis segment, optional
+        DRG (Optional[DRG]): DRG - diagnosis related group segment, optional
         PROCEDURE (Optional[List[ADR_A19_PROCEDURE]]): optional
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): GT1 - guarantor segment, optional
         INSURANCE (Optional[List[ADR_A19_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
-        UB1 (Optional[UB1]): optional
-        UB2 (Optional[UB2]): optional
+        ACC (Optional[ACC]): ACC - accident segment, optional
+        UB1 (Optional[UB1]): UB1 - UB82 data segment, optional
+        UB2 (Optional[UB2]): UB2 - UB92 data segment, optional
     """
 
     EVN: Optional[_EVN] = Field(
         default=None,
         title="EVN",
-        description="Optional",
+        description="EVN - event type segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PV1 - patient visit segment-",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="PV2 - patient visit - additional information segment",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="DB1 - Disability segment",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBX - observation/result segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="AL1 - patient allergy information segment",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DG1 - diagnosis segment",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="DRG - diagnosis related group segment",
     )
 
     PROCEDURE: Optional[List[_ADR_A19_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="GT1 - guarantor segment",
     )
 
     INSURANCE: Optional[List[_ADR_A19_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="ACC - accident segment",
     )
 
     UB1: Optional[_UB1] = Field(
         default=None,
         title="UB1",
-        description="Optional",
+        description="UB1 - UB82 data segment",
     )
 
     UB2: Optional[_UB2] = Field(
         default=None,
         title="UB2",
-        description="Optional",
+        description="UB2 - UB92 data segment",
     )
 
     model_config = {"populate_by_name": True}

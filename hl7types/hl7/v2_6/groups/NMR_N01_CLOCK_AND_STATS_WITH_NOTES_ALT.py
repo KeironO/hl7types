@@ -32,19 +32,16 @@ class NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT(HL7Model):
     CLOCK: Optional[_NMR_N01_CLOCK] = Field(
         default=None,
         title="CLOCK",
-        description="Optional",
     )
 
     APP_STATS: Optional[_NMR_N01_APP_STATS] = Field(
         default=None,
         title="APP_STATS",
-        description="Optional",
     )
 
     APP_STATUS: Optional[_NMR_N01_APP_STATUS] = Field(
         default=None,
         title="APP_STATUS",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

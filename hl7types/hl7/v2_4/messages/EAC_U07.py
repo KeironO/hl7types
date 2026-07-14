@@ -27,49 +27,49 @@ _SAC = SAC
 
 
 class EAC_U07(HL7Model):
-    """HL7 v2 EAC_U07 message.
+    """EAC/ACK - Automated equipment command (S13).
 
     Attributes:
-        MSH (MSH): required
-        EQU (EQU): required
-        ECD (List[ECD]): required
-        SAC (Optional[SAC]): optional
-        CNS (Optional[CNS]): optional
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        EQU (EQU): Equipment Detail, required
+        ECD (List[ECD]): Equipment Command, required
+        SAC (Optional[SAC]): Specimen and container detail, optional
+        CNS (Optional[CNS]): Clear Notification, optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     ECD: List[_ECD] = Field(
         min_length=1,
         title="ECD",
-        description="Required, repeating",
+        description="Equipment Command",
     )
 
     SAC: Optional[_SAC] = Field(
         default=None,
         title="SAC",
-        description="Optional",
+        description="Specimen and container detail",
     )
 
     CNS: Optional[_CNS] = Field(
         default=None,
         title="CNS",
-        description="Optional",
+        description="Clear Notification",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

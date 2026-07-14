@@ -23,35 +23,35 @@ _ROL = ROL
 
 
 class INR_U06(HL7Model):
-    """HL7 v2 INR_U06 message.
+    """INR/ACK - Automated equipment inventory request (S13).
 
     Attributes:
-        MSH (MSH): required
-        EQU (EQU): required
-        INV (List[INV]): required
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        EQU (EQU): Equipment Detail, required
+        INV (List[INV]): Inventory Detail, required
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     INV: List[_INV] = Field(
         min_length=1,
         title="INV",
-        description="Required, repeating",
+        description="Inventory Detail",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

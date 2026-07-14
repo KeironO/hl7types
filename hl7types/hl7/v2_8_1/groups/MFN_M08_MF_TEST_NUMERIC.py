@@ -30,46 +30,46 @@ class MFN_M08_MF_TEST_NUMERIC(HL7Model):
     """HL7 v2 MFN_M08.MF_TEST_NUMERIC group.
 
     Attributes:
-        MFE (MFE): required
-        OM1 (OM1): required
-        PRT (Optional[List[PRT]]): optional
-        OM2 (Optional[OM2]): optional
-        OM3 (Optional[OM3]): optional
-        OM4 (Optional[List[OM4]]): optional
+        MFE (MFE): Master File Entry, required
+        OM1 (OM1): General Segment, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        OM2 (Optional[OM2]): Numeric Observation, optional
+        OM3 (Optional[OM3]): Categorical Service/Test/Observation, optional
+        OM4 (Optional[List[OM4]]): Observations that Require Specimens, optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     OM1: _OM1 = Field(
         title="OM1",
-        description="Required",
+        description="General Segment",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     OM2: Optional[_OM2] = Field(
         default=None,
         title="OM2",
-        description="Optional",
+        description="Numeric Observation",
     )
 
     OM3: Optional[_OM3] = Field(
         default=None,
         title="OM3",
-        description="Optional",
+        description="Categorical Service/Test/Observation",
     )
 
     OM4: Optional[List[_OM4]] = Field(
         default=None,
         title="OM4",
-        description="Optional, repeating",
+        description="Observations that Require Specimens",
     )
 
     model_config = {"populate_by_name": True}

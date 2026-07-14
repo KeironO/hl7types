@@ -16,42 +16,42 @@ from ..datatypes.EI import EI
 
 
 class SHP(HL7Model):
-    """HL7 v2 SHP segment.
+    """Shipment (S7.18.2).
 
     Attributes
     ----------
     shp_1 : EI
-        SHP.1 (req) - Shipment ID (EI)
+        SHP.1 (req) - Shipment ID (EI) S7.18.2.1
 
     shp_2 : list[EI] | None
-        SHP.2 (opt, rep) - Internal Shipment ID (EI)
+        SHP.2 (opt, rep) - Internal Shipment ID (EI) S7.18.2.2
 
     shp_3 : CWE | None
-        SHP.3 (opt) - Shipment Status (CWE)
+        SHP.3 (opt) - Shipment Status (CWE) S7.18.2.3 | 0905 - Shipment Status
 
     shp_4 : str
-        SHP.4 (req) - Shipment Status Date/Time (DTM)
+        SHP.4 (req) - Shipment Status Date/Time (DTM) S7.18.2.4
 
     shp_5 : str | None
-        SHP.5 (opt) - Shipment Status Reason (TX)
+        SHP.5 (opt) - Shipment Status Reason (TX) S7.18.2.5
 
     shp_6 : CWE | None
-        SHP.6 (opt) - Shipment Priority (CWE)
+        SHP.6 (opt) - Shipment Priority (CWE) S7.18.2.6 | 0906 - ActPriority
 
     shp_7 : list[CWE] | None
-        SHP.7 (opt, rep) - Shipment Confidentiality (CWE)
+        SHP.7 (opt, rep) - Shipment Confidentiality (CWE) S7.18.2.7 | 0907 - Confidentiality
 
     shp_8 : str | None
-        SHP.8 (opt) - Number of Packages in Shipment (NM)
+        SHP.8 (opt) - Number of Packages in Shipment (NM) S7.18.2.8
 
     shp_9 : list[CWE] | None
-        SHP.9 (opt, rep) - Shipment Condition (CWE)
+        SHP.9 (opt, rep) - Shipment Condition (CWE) S7.18.2.9 | 0544 - Container Condition
 
     shp_10 : list[CWE] | None
-        SHP.10 (opt, rep) - Shipment Handling Code (CWE)
+        SHP.10 (opt, rep) - Shipment Handling Code (CWE) S7.18.2.10 | 0376 - Special Handling Code
 
     shp_11 : list[CWE] | None
-        SHP.11 (opt, rep) - Shipment Risk Code (CWE)
+        SHP.11 (opt, rep) - Shipment Risk Code (CWE) S7.18.2.11 | 0489 - Risk Codes
     """
 
     shp_1: EI = Field(

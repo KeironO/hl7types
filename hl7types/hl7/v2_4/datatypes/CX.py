@@ -15,7 +15,7 @@ from .HD import HD
 
 
 class CX(HL7Model):
-    """HL7 v2 CX data type.
+    """Extended composite id with check digit (S2.9.12).
 
     Attributes
     ----------

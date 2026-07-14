@@ -27,33 +27,31 @@ class SUR_P09_FACILITY(HL7Model):
     """HL7 v2 SUR_P09.FACILITY group.
 
     Attributes:
-        FAC (FAC): required
+        FAC (FAC): Facility, required
         PRODUCT (List[SUR_P09_PRODUCT]): required
-        PSH (PSH): required
+        PSH (PSH): Product Summary Header, required
         FACILITY_DETAIL (List[SUR_P09_FACILITY_DETAIL]): required
-        ed (Any): required
+        ed (Any): Encapsulated Data (wrong segment), required
     """
 
     FAC: _FAC = Field(
         title="FAC",
-        description="Required",
+        description="Facility",
     )
 
     PRODUCT: List[_SUR_P09_PRODUCT] = Field(
         min_length=1,
         title="PRODUCT",
-        description="Required, repeating",
     )
 
     PSH: _PSH = Field(
         title="PSH",
-        description="Required",
+        description="Product Summary Header",
     )
 
     FACILITY_DETAIL: List[_SUR_P09_FACILITY_DETAIL] = Field(
         min_length=1,
         title="FACILITY_DETAIL",
-        description="Required, repeating",
     )
 
     ed: Any

@@ -45,95 +45,91 @@ class RDE_O11_ORDER(HL7Model):
     """HL7 v2 RDE_O11.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[RDE_O11_TIMING]]): optional
         ORDER_DETAIL (Optional[RDE_O11_ORDER_DETAIL]): optional
-        PRT (Optional[List[PRT]]): optional
-        RXE (RXE): required
-        NTE (Optional[List[NTE]]): optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         TIMING_ENCODED (List[RDE_O11_TIMING_ENCODED]): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
         OBSERVATION (Optional[List[RDE_O11_OBSERVATION]]): optional
-        FT1 (Optional[List[FT1]]): optional
-        BLG (Optional[BLG]): optional
-        CTI (Optional[List[CTI]]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        BLG (Optional[BLG]): Billing, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_RDE_O11_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ORDER_DETAIL: Optional[_RDE_O11_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     TIMING_ENCODED: List[_RDE_O11_TIMING_ENCODED] = Field(
         min_length=1,
         title="TIMING_ENCODED",
-        description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     OBSERVATION: Optional[List[_RDE_O11_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

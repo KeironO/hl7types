@@ -33,53 +33,50 @@ class RDS_O01_ORDER(HL7Model):
     """HL7 v2 RDS_O01.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): ORC - common order segment, required
         ORDER_DETAIL (Optional[RDS_O01_ORDER_DETAIL]): optional
         ENCODING (Optional[RDS_O01_ENCODING]): optional
-        RXD (RXD): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXD (RXD): RXD - pharmacy/treatment dispense segment, required
+        RXR (List[RXR]): RXR - pharmacy/treatment route segment, required
+        RXC (Optional[List[RXC]]): RXC - pharmacy/treatment component order segment, optional
         OBSERVATION (Optional[List[RDS_O01_OBSERVATION]]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     ORDER_DETAIL: Optional[_RDS_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     ENCODING: Optional[_RDS_O01_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     RXD: _RXD = Field(
         title="RXD",
-        description="Required",
+        description="RXD - pharmacy/treatment dispense segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="RXR - pharmacy/treatment route segment",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="RXC - pharmacy/treatment component order segment",
     )
 
     OBSERVATION: Optional[List[_RDS_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

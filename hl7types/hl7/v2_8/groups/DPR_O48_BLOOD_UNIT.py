@@ -22,20 +22,20 @@ class DPR_O48_BLOOD_UNIT(HL7Model):
     """HL7 v2 DPR_O48.BLOOD_UNIT group.
 
     Attributes:
-        BUI (Optional[List[BUI]]): optional
-        NTE (Optional[List[NTE]]): optional
+        BUI (Optional[List[BUI]]): Blood Unit Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     BUI: Optional[List[_BUI]] = Field(
         default=None,
         title="BUI",
-        description="Optional, repeating",
+        description="Blood Unit Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

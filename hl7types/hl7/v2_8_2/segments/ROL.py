@@ -21,51 +21,51 @@ from ..datatypes.XTN import XTN
 
 
 class ROL(HL7Model):
-    """HL7 v2 ROL segment.
+    """Role (S15.4.7).
 
     Attributes
     ----------
     rol_1 : EI | None
-        ROL.1 (opt) - Role Instance ID (EI)
+        ROL.1 (opt) - Role Instance ID (EI) S15.4.7.1
 
     rol_2 : str
-        ROL.2 (req) - Action Code (ID)
+        ROL.2 (req) - Action Code (ID) S4.A.9.2 | 0206 - Segment Action Code
 
     rol_3 : CWE
-        ROL.3 (req) - Role-ROL (CWE)
+        ROL.3 (req) - Role-ROL (CWE) S15.4.7.3 | 0443 - Provider Role
 
     rol_4 : list[XCN]
-        ROL.4 (req, rep) - Role Person (XCN)
+        ROL.4 (req, rep) - Role Person (XCN) S15.4.7.4
 
     rol_5 : str | None
-        ROL.5 (opt) - Role Begin Date/Time (DTM)
+        ROL.5 (opt) - Role Begin Date/Time (DTM) S15.4.7.5
 
     rol_6 : str | None
-        ROL.6 (opt) - Role End Date/Time (DTM)
+        ROL.6 (opt) - Role End Date/Time (DTM) S15.4.7.6
 
     rol_7 : CWE | None
-        ROL.7 (opt) - Role Duration (CWE)
+        ROL.7 (opt) - Role Duration (CWE) S15.4.7.7
 
     rol_8 : CWE | None
-        ROL.8 (opt) - Role Action Reason (CWE)
+        ROL.8 (opt) - Role Action Reason (CWE) S15.4.7.8
 
     rol_9 : list[CWE] | None
-        ROL.9 (opt, rep) - Provider Type (CWE)
+        ROL.9 (opt, rep) - Provider Type (CWE) S15.4.7.9
 
     rol_10 : CWE | None
-        ROL.10 (opt) - Organization Unit Type (CWE)
+        ROL.10 (opt) - Organization Unit Type (CWE) S15.4.7.10 | 0406 - Organization Unit Type
 
     rol_11 : list[XAD] | None
-        ROL.11 (opt, rep) - Office/Home Address/Birthplace (XAD)
+        ROL.11 (opt, rep) - Office/Home Address/Birthplace (XAD) S15.4.7.11
 
     rol_12 : list[XTN] | None
-        ROL.12 (opt, rep) - Phone (XTN)
+        ROL.12 (opt, rep) - Phone (XTN) S15.4.7.12
 
     rol_13 : PL | None
-        ROL.13 (opt) - Person's Location (PL)
+        ROL.13 (opt) - Person's Location (PL) S15.4.7.13
 
     rol_14 : XON | None
-        ROL.14 (opt) - Organization (XON)
+        ROL.14 (opt) - Organization (XON) S15.4.7.14
     """
 
     rol_1: Optional[EI] = Field(

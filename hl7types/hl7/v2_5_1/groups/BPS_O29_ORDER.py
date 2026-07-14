@@ -29,39 +29,37 @@ class BPS_O29_ORDER(HL7Model):
     """HL7 v2 BPS_O29.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[BPS_O29_TIMING]]): optional
-        BPO (BPO): required
-        NTE (Optional[List[NTE]]): optional
+        BPO (BPO): Blood product order, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PRODUCT (Optional[List[BPS_O29_PRODUCT]]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_BPS_O29_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     BPO: _BPO = Field(
         title="BPO",
-        description="Required",
+        description="Blood product order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRODUCT: Optional[List[_BPS_O29_PRODUCT]] = Field(
         default=None,
         title="PRODUCT",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

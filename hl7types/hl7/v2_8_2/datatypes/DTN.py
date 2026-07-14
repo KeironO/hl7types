@@ -14,7 +14,7 @@ from .CWE import CWE
 
 
 class DTN(HL7Model):
-    """HL7 v2 DTN data type.
+    """Day type and number (S2.A.23).
 
     Attributes
     ----------

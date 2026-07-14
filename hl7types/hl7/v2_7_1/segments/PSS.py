@@ -16,24 +16,24 @@ from ..datatypes.EI import EI
 
 
 class PSS(HL7Model):
-    """HL7 v2 PSS segment.
+    """Product/Service Section (S16.4.4).
 
     Attributes
     ----------
     pss_1 : EI
-        PSS.1 (req) - Provider Product/Service Section Number (EI)
+        PSS.1 (req) - Provider Product/Service Section Number (EI) S16.4.4.1
 
     pss_2 : EI | None
-        PSS.2 (opt) - Payer Product/Service Section Number (EI)
+        PSS.2 (opt) - Payer Product/Service Section Number (EI) S16.4.4.2
 
     pss_3 : str
-        PSS.3 (req) - Product/Service Section Sequence Number (SI)
+        PSS.3 (req) - Product/Service Section Sequence Number (SI) S16.4.4.3
 
     pss_4 : CP
-        PSS.4 (req) - Billed Amount (CP)
+        PSS.4 (req) - Billed Amount (CP) S16.4.4.4
 
     pss_5 : str
-        PSS.5 (req) - Section Description or Heading (ST)
+        PSS.5 (req) - Section Description or Heading (ST) S16.4.4.5
     """
 
     pss_1: EI = Field(

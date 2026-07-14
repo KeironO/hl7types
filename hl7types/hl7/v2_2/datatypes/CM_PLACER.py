@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_PLACER(HL7Model):
-    """HL7 v2 CM_PLACER data type.
+    """Auftragsnummer des auftraggebers / der auftraggebenden stelle.
 
     Attributes
     ----------

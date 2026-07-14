@@ -22,19 +22,19 @@ class EAN_U09_NOTIFICATION(HL7Model):
     """HL7 v2 EAN_U09.NOTIFICATION group.
 
     Attributes:
-        NDS (NDS): required
-        NTE (Optional[NTE]): optional
+        NDS (NDS): Notification Detail, required
+        NTE (Optional[NTE]): Notes and Comments, optional
     """
 
     NDS: _NDS = Field(
         title="NDS",
-        description="Required",
+        description="Notification Detail",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -20,27 +20,27 @@ _QRF = QRF
 
 
 class QRY_R02(HL7Model):
-    """HL7 v2 QRY_R02 message.
+    """QRY - Query for results of observation (S12).
 
     Attributes:
-        MSH (MSH): required
-        QRD (QRD): required
-        QRF (QRF): required
+        MSH (MSH): Message Header, required
+        QRD (QRD): Original-Style Query Definition, required
+        QRF (QRF): Original Style Query Filter, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Original-Style Query Definition",
     )
 
     QRF: _QRF = Field(
         title="QRF",
-        description="Required",
+        description="Original Style Query Filter",
     )
 
     model_config = {"populate_by_name": True}

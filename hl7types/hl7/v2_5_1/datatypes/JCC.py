@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class JCC(HL7Model):
-    """HL7 v2 JCC data type.
+    """Job code/class (S2.A.1.37).
 
     Attributes
     ----------

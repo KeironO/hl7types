@@ -15,24 +15,24 @@ from ..datatypes.CP import CP
 
 
 class GP1(HL7Model):
-    """HL7 v2 GP1 segment.
+    """Grouping/Reimbursement - Visit (S6.5.15).
 
     Attributes
     ----------
     gp1_1 : str
-        GP1.1 (req) - Type of Bill Code (IS)
+        GP1.1 (req) - Type of Bill Code (IS) S6.5.15.1 | 0455 - Type of Bill Code
 
     gp1_2 : list[str] | None
-        GP1.2 (opt, rep) - Revenue Code (IS)
+        GP1.2 (opt, rep) - Revenue Code (IS) S6.5.15.2 | 0456 - Revenue code
 
     gp1_3 : str | None
-        GP1.3 (opt) - Overall Claim Disposition Code (IS)
+        GP1.3 (opt) - Overall Claim Disposition Code (IS) S6.5.15.3 | 0457 - Overall Claim Disposition Code
 
     gp1_4 : list[str] | None
-        GP1.4 (opt, rep) - OCE Edits per Visit Code (IS)
+        GP1.4 (opt, rep) - OCE Edits per Visit Code (IS) S6.5.15.4 | 0458 - OCE Edit Code
 
     gp1_5 : CP | None
-        GP1.5 (opt) - Outlier Cost (CP)
+        GP1.5 (opt) - Outlier Cost (CP) S6.5.2.13
     """
 
     gp1_1: str = Field(

@@ -22,20 +22,20 @@ class EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO(HL7Model):
     """HL7 v2 EHC_E15.PAYMENT_REMITTANCE_HEADER_INFO group.
 
     Attributes:
-        PMT (Optional[PMT]): optional
-        PYE (Optional[PYE]): optional
+        PMT (Optional[PMT]): Payment Information, optional
+        PYE (Optional[PYE]): Payee Information, optional
     """
 
     PMT: Optional[_PMT] = Field(
         default=None,
         title="PMT",
-        description="Optional",
+        description="Payment Information",
     )
 
     PYE: Optional[_PYE] = Field(
         default=None,
         title="PYE",
-        description="Optional",
+        description="Payee Information",
     )
 
     model_config = {"populate_by_name": True}

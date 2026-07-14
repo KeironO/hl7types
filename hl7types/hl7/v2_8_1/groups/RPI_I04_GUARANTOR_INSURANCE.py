@@ -23,20 +23,19 @@ class RPI_I04_GUARANTOR_INSURANCE(HL7Model):
     """HL7 v2 RPI_I04.GUARANTOR_INSURANCE group.
 
     Attributes:
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (List[RPI_I04_INSURANCE]): required
     """
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: List[_RPI_I04_INSURANCE] = Field(
         min_length=1,
         title="INSURANCE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

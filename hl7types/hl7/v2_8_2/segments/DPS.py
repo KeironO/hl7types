@@ -16,24 +16,24 @@ from ..datatypes.CWE import CWE
 
 
 class DPS(HL7Model):
-    """HL7 v2 DPS segment.
+    """Diagnosis and Procedure Code (S8.8.19).
 
     Attributes
     ----------
     dps_1 : CWE
-        DPS.1 (req) - Diagnosis Code - MCP (CWE)
+        DPS.1 (req) - Diagnosis Code - MCP (CWE) S8.8.19.1 | 0051 - Diagnosis Code
 
     dps_2 : list[CWE]
-        DPS.2 (req, rep) - Procedure Code (CWE)
+        DPS.2 (req, rep) - Procedure Code (CWE) S8.8.19.2 | 0941 - Procedure Code
 
     dps_3 : str | None
-        DPS.3 (opt) - Effective Date/Time (DTM)
+        DPS.3 (opt) - Effective Date/Time (DTM) S8.5.1.5
 
     dps_4 : str | None
-        DPS.4 (opt) - Expiration Date/Time (DTM)
+        DPS.4 (opt) - Expiration Date/Time (DTM) S8.8.19.4
 
     dps_5 : CNE | None
-        DPS.5 (opt) - Type of Limitation (CNE)
+        DPS.5 (opt) - Type of Limitation (CNE) S8.8.19.5 | 0940 - Limitation Type Codes
     """
 
     dps_1: CWE = Field(

@@ -22,19 +22,19 @@ class ORL_O22_SPECIMEN(HL7Model):
     """HL7 v2 ORL_O22.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
-        SAC (Optional[List[SAC]]): optional
+        SPM (SPM): Specimen, required
+        SAC (Optional[List[SAC]]): Specimen Container detail, optional
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SAC: Optional[List[_SAC]] = Field(
         default=None,
         title="SAC",
-        description="Optional, repeating",
+        description="Specimen Container detail",
     )
 
     model_config = {"populate_by_name": True}

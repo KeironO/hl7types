@@ -17,48 +17,48 @@ from ..datatypes.XON import XON
 
 
 class CDM(HL7Model):
-    """HL7 v2 CDM segment.
+    """Charge Description Master (S8.9.2).
 
     Attributes
     ----------
     cdm_1 : CE
-        CDM.1 (req) - Primary Key Value (CE)
+        CDM.1 (req) - Primary Key Value (CE) S8.9.3.1 | 0132 - Transaction Code
 
     cdm_2 : list[CE] | None
-        CDM.2 (opt, rep) - Charge Code Alias (CE)
+        CDM.2 (opt, rep) - Charge Code Alias (CE) S8.9.2.2
 
     cdm_3 : str
-        CDM.3 (req) - Charge Description Short (ST)
+        CDM.3 (req) - Charge Description Short (ST) S8.9.2.3
 
     cdm_4 : str | None
-        CDM.4 (opt) - Charge Description Long (ST)
+        CDM.4 (opt) - Charge Description Long (ST) S8.9.2.4
 
     cdm_5 : str | None
-        CDM.5 (opt) - Description Override Indicator (ID)
+        CDM.5 (opt) - Description Override Indicator (ID) S8.9.2.5 | 0268 - Override
 
     cdm_6 : list[CE] | None
-        CDM.6 (opt, rep) - Exploding Charges (CE)
+        CDM.6 (opt, rep) - Exploding Charges (CE) S8.9.2.6
 
     cdm_7 : list[CE] | None
-        CDM.7 (opt, rep) - Procedure Code (CE)
+        CDM.7 (opt, rep) - Procedure Code (CE) S8.9.2.7
 
     cdm_8 : str | None
-        CDM.8 (opt) - Active/Inactive Flag (ID)
+        CDM.8 (opt) - Active/Inactive Flag (ID) S8.6.2 | 0183 - Active/Inactive
 
     cdm_9 : list[CE] | None
-        CDM.9 (opt, rep) - Inventory Number (CE)
+        CDM.9 (opt, rep) - Inventory Number (CE) S8.9.2.9
 
     cdm_10 : str | None
-        CDM.10 (opt) - Resource Load (NM)
+        CDM.10 (opt) - Resource Load (NM) S8.9.2.10
 
     cdm_11 : list[CK] | None
-        CDM.11 (opt, rep) - Contract Number (CK)
+        CDM.11 (opt, rep) - Contract Number (CK) S8.9.2.11
 
     cdm_12 : XON | None
-        CDM.12 (opt) - Contract Organization (XON)
+        CDM.12 (opt) - Contract Organization (XON) S8.9.2.12
 
     cdm_13 : str | None
-        CDM.13 (opt) - Room Fee Indicator (ID)
+        CDM.13 (opt) - Room Fee Indicator (ID) S8.9.2.13 | 0136 - Yes/No Indicator
     """
 
     cdm_1: CE = Field(

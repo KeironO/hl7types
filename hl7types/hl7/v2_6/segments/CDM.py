@@ -18,48 +18,48 @@ from ..datatypes.XON import XON
 
 
 class CDM(HL7Model):
-    """HL7 v2 CDM segment.
+    """Charge Description Master (S8.10.2).
 
     Attributes
     ----------
     cdm_1 : CWE
-        CDM.1 (req) - Primary Key Value - CDM (CWE)
+        CDM.1 (req) - Primary Key Value - CDM (CWE) S8.10.2.1 | 0132 - Transaction Code
 
     cdm_2 : list[CWE] | None
-        CDM.2 (opt, rep) - Charge Code Alias (CWE)
+        CDM.2 (opt, rep) - Charge Code Alias (CWE) S8.10.2.2
 
     cdm_3 : str
-        CDM.3 (req) - Charge Description Short (ST)
+        CDM.3 (req) - Charge Description Short (ST) S8.10.2.3
 
     cdm_4 : str | None
-        CDM.4 (opt) - Charge Description Long (ST)
+        CDM.4 (opt) - Charge Description Long (ST) S8.10.2.4
 
     cdm_5 : str | None
-        CDM.5 (opt) - Description Override Indicator (IS)
+        CDM.5 (opt) - Description Override Indicator (IS) S8.10.2.5 | 0268 - Override
 
     cdm_6 : list[CWE] | None
-        CDM.6 (opt, rep) - Exploding Charges (CWE)
+        CDM.6 (opt, rep) - Exploding Charges (CWE) S8.10.2.6 | 0132 - Transaction Code
 
     cdm_7 : list[CNE] | None
-        CDM.7 (opt, rep) - Procedure Code (CNE)
+        CDM.7 (opt, rep) - Procedure Code (CNE) S17.4.1.14 | 0088 - Procedure Code
 
     cdm_8 : str | None
-        CDM.8 (opt) - Active/Inactive Flag (ID)
+        CDM.8 (opt) - Active/Inactive Flag (ID) S15.4.8.7 | 0183 - Active/Inactive
 
     cdm_9 : list[CWE] | None
-        CDM.9 (opt, rep) - Inventory Number (CWE)
+        CDM.9 (opt, rep) - Inventory Number (CWE) S8.10.2.9 | 0463 - Inventory Number
 
     cdm_10 : str | None
-        CDM.10 (opt) - Resource Load (NM)
+        CDM.10 (opt) - Resource Load (NM) S8.10.2.10
 
     cdm_11 : list[CX] | None
-        CDM.11 (opt, rep) - Contract Number (CX)
+        CDM.11 (opt, rep) - Contract Number (CX) S8.10.2.11
 
     cdm_12 : list[XON] | None
-        CDM.12 (opt, rep) - Contract Organization (XON)
+        CDM.12 (opt, rep) - Contract Organization (XON) S8.10.2.12
 
     cdm_13 : str | None
-        CDM.13 (opt) - Room Fee Indicator (ID)
+        CDM.13 (opt) - Room Fee Indicator (ID) S8.10.2.13 | 0136 - Yes/no indicator
     """
 
     cdm_1: CWE = Field(

@@ -29,54 +29,54 @@ _RDT = RDT
 
 
 class TBR_R08(HL7Model):
-    """HL7 v2 TBR_R08 message.
+    """Tabular Data Response.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
-        RDF (RDF): required
-        RDT (List[RDT]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): MSH - message header segment, required
+        MSA (MSA): MSA - message acknowledgment segment, required
+        ERR (Optional[ERR]): ERR - error segment, optional
+        QAK (QAK): Query Acknowledgement, required
+        RDF (RDF): RDF - table row definition segment, required
+        RDT (List[RDT]): RDT - table row data segment, required
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MSA - message acknowledgment segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="ERR - error segment",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgement",
     )
 
     RDF: _RDF = Field(
         title="RDF",
-        description="Required",
+        description="RDF - table row definition segment",
     )
 
     RDT: List[_RDT] = Field(
         min_length=1,
         title="RDT",
-        description="Required, repeating",
+        description="RDT - table row data segment",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

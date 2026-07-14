@@ -34,62 +34,62 @@ class BAR_P01_VISIT(HL7Model):
     """HL7 v2 BAR_P01.VISIT group.
 
     Attributes:
-        PV1 (Optional[PV1]): optional
-        DG1 (Optional[List[DG1]]): optional
-        PR1 (Optional[List[PR1]]): optional
-        GT1 (Optional[List[GT1]]): optional
-        NK1 (Optional[List[NK1]]): optional
-        IN1 (Optional[List[IN1]]): optional
-        ACC (Optional[ACC]): optional
-        UB1 (Optional[UB1]): optional
+        PV1 (Optional[PV1]): PATIENT VISIT, optional
+        DG1 (Optional[List[DG1]]): DIAGNOSIS, optional
+        PR1 (Optional[List[PR1]]): PROCEDURES, optional
+        GT1 (Optional[List[GT1]]): GUARANTOR, optional
+        NK1 (Optional[List[NK1]]): NEXT OF KIN, optional
+        IN1 (Optional[List[IN1]]): INSURANCE, optional
+        ACC (Optional[ACC]): ACCIDENT, optional
+        UB1 (Optional[UB1]): UB82 DATA, optional
     """
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="PATIENT VISIT",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DIAGNOSIS",
     )
 
     PR1: Optional[List[_PR1]] = Field(
         default=None,
         title="PR1",
-        description="Optional, repeating",
+        description="PROCEDURES",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="GUARANTOR",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NEXT OF KIN",
     )
 
     IN1: Optional[List[_IN1]] = Field(
         default=None,
         title="IN1",
-        description="Optional, repeating",
+        description="INSURANCE",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="ACCIDENT",
     )
 
     UB1: Optional[_UB1] = Field(
         default=None,
         title="UB1",
-        description="Optional",
+        description="UB82 DATA",
     )
 
     model_config = {"populate_by_name": True}

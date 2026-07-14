@@ -32,59 +32,58 @@ _RSP_Z90_QUERY_RESPONSE = RSP_Z90_QUERY_RESPONSE
 
 
 class RSP_Z90(HL7Model):
-    """HL7 v2 RSP_Z90 message.
+    """Lab Results History (response) (S15).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
-        QPD (QPD): required
-        RCP (RCP): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (QAK): Query Acknowledgment, required
+        QPD (QPD): Query Parameter Definition, required
+        RCP (RCP): Response Control Parameter, required
         QUERY_RESPONSE (List[RSP_Z90_QUERY_RESPONSE]): required
-        DSC (DSC): required
+        DSC (DSC): Continuation Pointer, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     QUERY_RESPONSE: List[_RSP_Z90_QUERY_RESPONSE] = Field(
         min_length=1,
         title="QUERY_RESPONSE",
-        description="Required, repeating",
     )
 
     DSC: _DSC = Field(
         title="DSC",
-        description="Required",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

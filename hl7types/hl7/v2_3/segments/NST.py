@@ -15,54 +15,54 @@ from ..datatypes.TS import TS
 
 
 class NST(HL7Model):
-    """HL7 v2 NST segment.
+    """Statistics (SC.2.2).
 
     Attributes
     ----------
     nst_1 : str | None
-        NST.1 (opt) - Statistics Available (ID)
+        NST.1 (opt) - Statistics Available (ID) SC.2.2.1 | 0125 - Value Type
 
     nst_2 : str | None
-        NST.2 (opt) - Source Identifier (ST)
+        NST.2 (opt) - Source Identifier (ST) SC.2.2.2
 
     nst_3 : str | None
-        NST.3 (opt) - Source Type (ID)
+        NST.3 (opt) - Source Type (ID) SC.2.2.3
 
     nst_4 : TS | None
-        NST.4 (opt) - Statistics Start (TS)
+        NST.4 (opt) - Statistics Start (TS) SC.2.2.4
 
     nst_5 : TS | None
-        NST.5 (opt) - Statistics End (TS)
+        NST.5 (opt) - Statistics End (TS) SC.2.2.5
 
     nst_6 : str | None
-        NST.6 (opt) - Receive Character Count (NM)
+        NST.6 (opt) - Receive Character Count (NM) SC.2.2.6
 
     nst_7 : str | None
-        NST.7 (opt) - Send Character Count (NM)
+        NST.7 (opt) - Send Character Count (NM) SC.2.2.7
 
     nst_8 : str | None
-        NST.8 (opt) - Messages Received (NM)
+        NST.8 (opt) - Messages Received (NM) SC.2.2.8
 
     nst_9 : str | None
-        NST.9 (opt) - Messages Sent (NM)
+        NST.9 (opt) - Messages Sent (NM) SC.2.2.9
 
     nst_10 : str | None
-        NST.10 (opt) - Checksum Errors Received (NM)
+        NST.10 (opt) - Checksum Errors Received (NM) SC.2.2.10
 
     nst_11 : str | None
-        NST.11 (opt) - Length Errors Received (NM)
+        NST.11 (opt) - Length Errors Received (NM) SC.2.2.11
 
     nst_12 : str | None
-        NST.12 (opt) - Other Errors Received (NM)
+        NST.12 (opt) - Other Errors Received (NM) SC.2.2.12
 
     nst_13 : str | None
-        NST.13 (opt) - Connect Timeouts (NM)
+        NST.13 (opt) - Connect Timeouts (NM) SC.2.2.13
 
     nst_14 : str | None
-        NST.14 (opt) - Receive Timeouts (NM)
+        NST.14 (opt) - Receive Timeouts (NM) SC.2.2.14
 
     nst_15 : str | None
-        NST.15 (opt) - Network Errors (NM)
+        NST.15 (opt) - Network Errors (NM) SC.2.2.15
     """
 
     nst_1: Optional[str] = Field(

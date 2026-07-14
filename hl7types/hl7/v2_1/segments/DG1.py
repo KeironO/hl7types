@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class DG1(HL7Model):
-    """HL7 v2 DG1 segment.
+    """DIAGNOSIS (S6.3.2).
 
     Attributes
     ----------
     dg1_1 : str
-        DG1.1 (req) - SET ID - DIAGNOSIS (SI)
+        DG1.1 (req) - SET ID - DIAGNOSIS (SI) S6-3
 
     dg1_2 : str
-        DG1.2 (req) - DIAGNOSIS CODING METHOD (ID)
+        DG1.2 (req) - DIAGNOSIS CODING METHOD (ID) | 0053 - DIAGNOSIS CODING METHOD
 
     dg1_3 : str | None
-        DG1.3 (opt) - DIAGNOSIS CODE (ID)
+        DG1.3 (opt) - DIAGNOSIS CODE (ID) | 0051 - DIAGNOSIS CODE
 
     dg1_4 : str | None
         DG1.4 (opt) - DIAGNOSIS DESCRIPTION (ST)
@@ -33,22 +33,22 @@ class DG1(HL7Model):
         DG1.5 (opt) - DIAGNOSIS DATE/TIME (TS)
 
     dg1_6 : str
-        DG1.6 (req) - DIAGNOSIS/DRG TYPE (ID)
+        DG1.6 (req) - DIAGNOSIS/DRG TYPE (ID) | 0052 - DIAGNOSIS TYPE
 
     dg1_7 : str | None
-        DG1.7 (opt) - MAJOR DIAGNOSTIC CATEGORY (ST)
+        DG1.7 (opt) - MAJOR DIAGNOSTIC CATEGORY (ST) | 0118 - MAJOR DIAGNOSTIC CATEGORY
 
     dg1_8 : str | None
-        DG1.8 (opt) - DIAGNOSTIC RELATED GROUP (ID)
+        DG1.8 (opt) - DIAGNOSTIC RELATED GROUP (ID) | 0055 - DRG CODE
 
     dg1_9 : str | None
         DG1.9 (opt) - DRG APPROVAL INDICATOR (ID)
 
     dg1_10 : str | None
-        DG1.10 (opt) - DRG GROUPER REVIEW CODE (ID)
+        DG1.10 (opt) - DRG GROUPER REVIEW CODE (ID) | 0056 - DRG GROUPER REVIEW CODE
 
     dg1_11 : str | None
-        DG1.11 (opt) - OUTLIER TYPE (ID)
+        DG1.11 (opt) - OUTLIER TYPE (ID) | 0083 - OUTLIER TYPE
 
     dg1_12 : str | None
         DG1.12 (opt) - OUTLIER DAYS (NM)

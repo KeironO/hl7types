@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class MSH(HL7Model):
-    """HL7 v2 MSH segment.
+    """MESSAGE HEADER (S2.5.8).
 
     Attributes
     ----------
     msh_1 : str
-        MSH.1 (req) - FIELD SEPARATOR (ST)
+        MSH.1 (req) - FIELD SEPARATOR (ST) S2-46
 
     msh_2 : str
         MSH.2 (req) - ENCODING CHARACTERS (ST)
@@ -42,16 +42,16 @@ class MSH(HL7Model):
         MSH.8 (opt) - Security (ST)
 
     msh_9 : str
-        MSH.9 (req) - MESSAGE TYPE (ID)
+        MSH.9 (req) - MESSAGE TYPE (ID) | 0076 - MESSAGE TYPE
 
     msh_10 : str
         MSH.10 (req) - MESSAGE CONTROL ID (ST)
 
     msh_11 : str
-        MSH.11 (req) - PROCESSING ID (ID)
+        MSH.11 (req) - PROCESSING ID (ID) | 0103 - PROCESSING ID
 
     msh_12 : str
-        MSH.12 (req) - VERSION ID (NM)
+        MSH.12 (req) - VERSION ID (NM) | 0104 - VERSION CONTROL TABLE
 
     msh_13 : str | None
         MSH.13 (opt) - SEQUENCE NUMBER (NM)

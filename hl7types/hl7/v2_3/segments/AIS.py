@@ -16,39 +16,39 @@ from ..datatypes.TS import TS
 
 
 class AIS(HL7Model):
-    """HL7 v2 AIS segment.
+    """Appointment Information - Service (S10.5.4).
 
     Attributes
     ----------
     ais_1 : str
-        AIS.1 (req) - Set ID - AIS (SI)
+        AIS.1 (req) - Set ID - AIS (SI) S10.5.4.1
 
     ais_2 : str | None
-        AIS.2 (opt) - Segment Action Code (ID)
+        AIS.2 (opt) - Segment Action Code (ID) S8.8.3 | 0206 - Segment Action Code
 
     ais_3 : CE
-        AIS.3 (req) - Universal Service Identifier (CE)
+        AIS.3 (req) - Universal Service Identifier (CE) S4.5.1
 
     ais_4 : TS | None
-        AIS.4 (opt) - Start Date/Time (TS)
+        AIS.4 (opt) - Start Date/Time (TS) S10.5.4
 
     ais_5 : str | None
-        AIS.5 (opt) - Start Date/Time Offset (NM)
+        AIS.5 (opt) - Start Date/Time Offset (NM) S10.5.4
 
     ais_6 : CE | None
-        AIS.6 (opt) - Start Date/Time Offset Units (CE)
+        AIS.6 (opt) - Start Date/Time Offset Units (CE) S10.5.4
 
     ais_7 : str | None
-        AIS.7 (opt) - Duration (NM)
+        AIS.7 (opt) - Duration (NM) S10.5.4
 
     ais_8 : CE | None
-        AIS.8 (opt) - Duration Units (CE)
+        AIS.8 (opt) - Duration Units (CE) S10.5.4
 
     ais_9 : str | None
-        AIS.9 (opt) - Allow Substitution Code (IS)
+        AIS.9 (opt) - Allow Substitution Code (IS) S10.5.4 | 0279 - Allow Substitution Codes
 
     ais_10 : CE | None
-        AIS.10 (opt) - Filler Status Code (CE)
+        AIS.10 (opt) - Filler Status Code (CE) S10.5.2 | 0278 - Filler Status Codes
     """
 
     ais_1: str = Field(

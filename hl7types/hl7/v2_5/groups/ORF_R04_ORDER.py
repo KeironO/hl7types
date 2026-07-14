@@ -33,54 +33,52 @@ class ORF_R04_ORDER(HL7Model):
     """HL7 v2 ORF_R04.ORDER group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        ORC (Optional[ORC]): Common Order, optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         TIMING_QTY (Optional[List[ORF_R04_TIMING_QTY]]): optional
-        CTD (Optional[CTD]): optional
+        CTD (Optional[CTD]): Contact Data, optional
         OBSERVATION (List[ORF_R04_OBSERVATION]): required
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     TIMING_QTY: Optional[List[_ORF_R04_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
-        description="Optional, repeating",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     OBSERVATION: List[_ORF_R04_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

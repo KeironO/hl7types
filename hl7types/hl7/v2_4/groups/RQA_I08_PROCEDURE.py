@@ -23,19 +23,18 @@ class RQA_I08_PROCEDURE(HL7Model):
     """HL7 v2 RQA_I08.PROCEDURE group.
 
     Attributes:
-        PR1 (PR1): required
+        PR1 (PR1): Procedures, required
         AUTCTD_SUPPGRP2 (Optional[RQA_I08_AUTCTD_SUPPGRP2]): optional
     """
 
     PR1: _PR1 = Field(
         title="PR1",
-        description="Required",
+        description="Procedures",
     )
 
     AUTCTD_SUPPGRP2: Optional[_RQA_I08_AUTCTD_SUPPGRP2] = Field(
         default=None,
         title="AUTCTD_SUPPGRP2",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

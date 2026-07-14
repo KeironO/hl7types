@@ -22,19 +22,19 @@ class PEX_P07_ASSOCIATED_RX_ADMIN(HL7Model):
     """HL7 v2 PEX_P07.ASSOCIATED_RX_ADMIN group.
 
     Attributes:
-        RXA (RXA): required
-        RXR (Optional[RXR]): optional
+        RXA (RXA): RXA - pharmacy/treatment administration segment, required
+        RXR (Optional[RXR]): RXR - pharmacy/treatment route segment, optional
     """
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="RXA - pharmacy/treatment administration segment",
     )
 
     RXR: Optional[_RXR] = Field(
         default=None,
         title="RXR",
-        description="Optional",
+        description="RXR - pharmacy/treatment route segment",
     )
 
     model_config = {"populate_by_name": True}

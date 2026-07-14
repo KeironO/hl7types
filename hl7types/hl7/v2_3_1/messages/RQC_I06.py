@@ -32,62 +32,61 @@ _RQC_I06_PROVIDER = RQC_I06_PROVIDER
 
 
 class RQC_I06(HL7Model):
-    """HL7 v2 RQC_I06 message.
+    """RQC/RCL - Request/receipt of clinical data listing.
 
     Attributes:
-        MSH (MSH): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): MSH - message header segment, required
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
         PROVIDER (List[RQC_I06_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
-        GT1 (Optional[GT1]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): PID - patient identification segment, required
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
+        GT1 (Optional[GT1]): GT1 - guarantor segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     PROVIDER: List[_RQC_I06_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     GT1: Optional[_GT1] = Field(
         default=None,
         title="GT1",
-        description="Optional",
+        description="GT1 - guarantor segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

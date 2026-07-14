@@ -27,33 +27,32 @@ class ORU_R01_ORDER_OBSERVATION(HL7Model):
     """HL7 v2 ORU_R01.ORDER_OBSERVATION group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        ORC (Optional[ORC]): COMMOM ORDER, optional
+        OBR (OBR): OBSERVATION REQUEST, required
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
         OBSERVATION (List[ORU_R01_OBSERVATION]): required
     """
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="COMMOM ORDER",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="OBSERVATION REQUEST",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     OBSERVATION: List[_ORU_R01_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

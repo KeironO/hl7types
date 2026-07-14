@@ -22,28 +22,27 @@ _MSH = MSH
 
 
 class ADT_A39(HL7Model):
-    """HL7 v2 ADT_A39 message.
+    """ADT/ACK - Merge person - external ID.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
         PATIENT (List[ADT_A39_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PATIENT: List[_ADT_A39_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

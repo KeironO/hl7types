@@ -11,7 +11,7 @@ from hl7types.hl7 import HL7Model
 
 
 class UB1(HL7Model):
-    """HL7 v2 UB1 segment."""
+    """UB82 (S6.5.10)."""
 
     pass
 

@@ -24,35 +24,34 @@ _SFT = SFT
 
 
 class MFN_M12(HL7Model):
-    """HL7 v2 MFN_M12 message.
+    """MFN/MFK - Master file notification message (S8.10.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        MFI (MFI): Master File Identification, required
         MF_OBS_ATTRIBUTES (List[MFN_M12_MF_OBS_ATTRIBUTES]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_OBS_ATTRIBUTES: List[_MFN_M12_MF_OBS_ATTRIBUTES] = Field(
         min_length=1,
         title="MF_OBS_ATTRIBUTES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

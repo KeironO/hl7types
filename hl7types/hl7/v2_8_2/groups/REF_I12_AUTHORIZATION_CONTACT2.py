@@ -22,19 +22,19 @@ class REF_I12_AUTHORIZATION_CONTACT2(HL7Model):
     """HL7 v2 REF_I12.AUTHORIZATION_CONTACT2 group.
 
     Attributes:
-        AUT (AUT): required
-        CTD (Optional[CTD]): optional
+        AUT (AUT): Authorization Information, required
+        CTD (Optional[CTD]): Contact Data, optional
     """
 
     AUT: _AUT = Field(
         title="AUT",
-        description="Required",
+        description="Authorization Information",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     model_config = {"populate_by_name": True}

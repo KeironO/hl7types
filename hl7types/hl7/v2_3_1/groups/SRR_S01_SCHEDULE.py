@@ -27,33 +27,31 @@ class SRR_S01_SCHEDULE(HL7Model):
     """HL7 v2 SRR_S01.SCHEDULE group.
 
     Attributes:
-        SCH (SCH): required
-        NTE (Optional[List[NTE]]): optional
+        SCH (SCH): SCH - schedule activity information segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         PATIENT (Optional[List[SRR_S01_PATIENT]]): optional
         RESOURCES (List[SRR_S01_RESOURCES]): required
     """
 
     SCH: _SCH = Field(
         title="SCH",
-        description="Required",
+        description="SCH - schedule activity information segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     PATIENT: Optional[List[_SRR_S01_PATIENT]] = Field(
         default=None,
         title="PATIENT",
-        description="Optional, repeating",
     )
 
     RESOURCES: List[_SRR_S01_RESOURCES] = Field(
         min_length=1,
         title="RESOURCES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

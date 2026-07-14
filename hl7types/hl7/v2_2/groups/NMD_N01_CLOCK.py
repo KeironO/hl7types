@@ -22,19 +22,19 @@ class NMD_N01_CLOCK(HL7Model):
     """HL7 v2 NMD_N01.CLOCK group.
 
     Attributes:
-        NCK (NCK): required
-        NTE (Optional[List[NTE]]): optional
+        NCK (NCK): System Clock, required
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
     """
 
     NCK: _NCK = Field(
         title="NCK",
-        description="Required",
+        description="System Clock",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     model_config = {"populate_by_name": True}

@@ -1,0 +1,23 @@
+"""
+Profile: urn:hl7-org:v2xml
+Release: v2
+Version: 2.3.1
+Class: PPP_PCD
+Type: Message
+"""
+from __future__ import annotations
+
+from .PPP_PCB import PPP_PCB
+
+
+class PPP_PCD(PPP_PCB):
+    """PPP - PC/ Pathway (Problem-Oriented) Delete (S12.2.3).
+
+    Attributes:
+        MSH (MSH): MSH - message header segment, required
+        PID (PID): PID - patient identification segment, required
+        PATIENT_VISIT (Optional[PPP_PCB_PATIENT_VISIT]): optional
+        PATHWAY (List[PPP_PCB_PATHWAY]): required
+    """
+
+    pass

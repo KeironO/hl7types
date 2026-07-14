@@ -19,12 +19,12 @@ class ORL_O40_SPECIMEN_CONTAINER_IN_PACKAGE(HL7Model):
     """HL7 v2 ORL_O40.SPECIMEN_CONTAINER_IN_PACKAGE group.
 
     Attributes:
-        SAC (SAC): required
+        SAC (SAC): Specimen Container detail, required
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     model_config = {"populate_by_name": True}

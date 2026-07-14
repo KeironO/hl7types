@@ -16,7 +16,7 @@ from .MO import MO
 
 
 class MOC(HL7Model):
-    """HL7 v2 MOC data type.
+    """Charge to practise.
 
     Attributes
     ----------

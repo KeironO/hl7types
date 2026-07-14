@@ -24,18 +24,17 @@ class CCM_I21_ROLE_PROBLEM(HL7Model):
 
     Attributes:
         ROLE_PROBLEM_OBJECT (CCM_I21_ROLE_PROBLEM_OBJECT): required
-        VAR (Optional[List[VAR]]): optional
+        VAR (Optional[List[VAR]]): Variance, optional
     """
 
     ROLE_PROBLEM_OBJECT: _CCM_I21_ROLE_PROBLEM_OBJECT = Field(
         title="ROLE_PROBLEM_OBJECT",
-        description="Required",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     model_config = {"populate_by_name": True}

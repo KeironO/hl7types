@@ -23,19 +23,18 @@ class ORL_O34_RESPONSE(HL7Model):
     """HL7 v2 ORL_O34.RESPONSE group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient Identification, required
         SPECIMEN (List[ORL_O34_SPECIMEN]): required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     SPECIMEN: List[_ORL_O34_SPECIMEN] = Field(
         min_length=1,
         title="SPECIMEN",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

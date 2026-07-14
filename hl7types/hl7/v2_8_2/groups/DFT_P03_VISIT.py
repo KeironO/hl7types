@@ -24,26 +24,26 @@ class DFT_P03_VISIT(HL7Model):
     """HL7 v2 DFT_P03.VISIT group.
 
     Attributes:
-        PV2 (PV2): required
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
+        PV2 (PV2): Patient Visit - Additional Information, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     PV2: _PV2 = Field(
         title="PV2",
-        description="Required",
+        description="Patient Visit - Additional Information",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

@@ -24,26 +24,26 @@ class PMU_B07_CERTIFICATE(HL7Model):
     """HL7 v2 PMU_B07.CERTIFICATE group.
 
     Attributes:
-        CER (CER): required
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
+        CER (CER): Certificate Detail, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     CER: _CER = Field(
         title="CER",
-        description="Required",
+        description="Certificate Detail",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

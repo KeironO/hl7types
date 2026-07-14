@@ -16,7 +16,7 @@ from .EI import EI
 
 
 class PIP(HL7Model):
-    """HL7 v2 PIP data type.
+    """Privileges (S15).
 
     Attributes
     ----------

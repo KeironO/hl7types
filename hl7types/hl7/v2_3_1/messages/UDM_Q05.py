@@ -25,42 +25,42 @@ _URS = URS
 
 
 class UDM_Q05(HL7Model):
-    """HL7 v2 UDM_Q05 message.
+    """UDM/ACK - Unsolicited display update message.
 
     Attributes:
-        MSH (MSH): required
-        URD (URD): required
-        URS (Optional[URS]): optional
-        DSP (List[DSP]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): MSH - message header segment, required
+        URD (URD): URD - results/update definition segment, required
+        URS (Optional[URS]): URS - unsolicited selection segment, optional
+        DSP (List[DSP]): DSP - display data segment, required
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     URD: _URD = Field(
         title="URD",
-        description="Required",
+        description="URD - results/update definition segment",
     )
 
     URS: Optional[_URS] = Field(
         default=None,
         title="URS",
-        description="Optional",
+        description="URS - unsolicited selection segment",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="DSP - display data segment",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

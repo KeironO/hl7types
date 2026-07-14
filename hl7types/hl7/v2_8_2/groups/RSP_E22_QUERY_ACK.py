@@ -25,27 +25,26 @@ class RSP_E22_QUERY_ACK(HL7Model):
     """HL7 v2 RSP_E22.QUERY_ACK group.
 
     Attributes:
-        QAK (Optional[QAK]): optional
-        QPD (Optional[QPD]): optional
+        QAK (Optional[QAK]): Query Acknowledgment, optional
+        QPD (Optional[QPD]): Query Parameter Definition, optional
         AUTHORIZATION_INFO (Optional[RSP_E22_AUTHORIZATION_INFO]): optional
     """
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgment",
     )
 
     QPD: Optional[_QPD] = Field(
         default=None,
         title="QPD",
-        description="Optional",
+        description="Query Parameter Definition",
     )
 
     AUTHORIZATION_INFO: Optional[_RSP_E22_AUTHORIZATION_INFO] = Field(
         default=None,
         title="AUTHORIZATION_INFO",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

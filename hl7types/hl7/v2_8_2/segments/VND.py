@@ -16,24 +16,24 @@ from ..datatypes.EI import EI
 
 
 class VND(HL7Model):
-    """HL7 v2 VND segment.
+    """Purchasing Vendor (S17.4.4).
 
     Attributes
     ----------
     vnd_1 : str
-        VND.1 (req) - Set Id - VND (SI)
+        VND.1 (req) - Set Id - VND (SI) S17.4.4.1
 
     vnd_2 : EI
-        VND.2 (req) - Vendor Identifier (EI)
+        VND.2 (req) - Vendor Identifier (EI) S17.4.4.2
 
     vnd_3 : str | None
-        VND.3 (opt) - Vendor Name (ST)
+        VND.3 (opt) - Vendor Name (ST) S17.4.4.3
 
     vnd_4 : EI | None
-        VND.4 (opt) - Vendor Catalog Number (EI)
+        VND.4 (opt) - Vendor Catalog Number (EI) S17.4.4.4
 
     vnd_5 : CNE | None
-        VND.5 (opt) - Primary Vendor Indicator (CNE)
+        VND.5 (opt) - Primary Vendor Indicator (CNE) S17.4.4.5 | 0532 - Expanded Yes/no Indicator
     """
 
     vnd_1: str = Field(

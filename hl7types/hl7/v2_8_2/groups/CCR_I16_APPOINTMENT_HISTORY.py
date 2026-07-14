@@ -23,19 +23,18 @@ class CCR_I16_APPOINTMENT_HISTORY(HL7Model):
     """HL7 v2 CCR_I16.APPOINTMENT_HISTORY group.
 
     Attributes:
-        SCH (SCH): required
+        SCH (SCH): Scheduling Activity Information, required
         RESOURCES (Optional[List[CCR_I16_RESOURCES]]): optional
     """
 
     SCH: _SCH = Field(
         title="SCH",
-        description="Required",
+        description="Scheduling Activity Information",
     )
 
     RESOURCES: Optional[List[_CCR_I16_RESOURCES]] = Field(
         default=None,
         title="RESOURCES",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

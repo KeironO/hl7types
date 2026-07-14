@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class CQ(HL7Model):
-    """HL7 v2 CQ data type.
+    """Composite quantity with units (S2.8.9).
 
     Attributes
     ----------

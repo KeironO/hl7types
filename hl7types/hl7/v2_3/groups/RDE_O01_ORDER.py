@@ -33,53 +33,51 @@ class RDE_O01_ORDER(HL7Model):
     """HL7 v2 RDE_O01.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common order segment, required
         ORDER_DETAIL (Optional[RDE_O01_ORDER_DETAIL]): optional
-        RXE (RXE): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXE (RXE): Pharmacy encoded order segment, required
+        RXR (List[RXR]): Pharmacy route segment, required
+        RXC (Optional[List[RXC]]): Pharmacy component order segment, optional
         OBSERVATION (List[RDE_O01_OBSERVATION]): required
-        CTI (Optional[CTI]): optional
+        CTI (Optional[CTI]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common order segment",
     )
 
     ORDER_DETAIL: Optional[_RDE_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy encoded order segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy route segment",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy component order segment",
     )
 
     OBSERVATION: List[_RDE_O01_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     CTI: Optional[_CTI] = Field(
         default=None,
         title="CTI",
-        description="Optional",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

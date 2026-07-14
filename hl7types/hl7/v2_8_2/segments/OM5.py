@@ -15,18 +15,18 @@ from ..datatypes.CWE import CWE
 
 
 class OM5(HL7Model):
-    """HL7 v2 OM5 segment.
+    """Observation Batteries (Sets) (S8.8.13).
 
     Attributes
     ----------
     om5_1 : str | None
-        OM5.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+        OM5.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
 
     om5_2 : list[CWE] | None
-        OM5.2 (opt, rep) - Test/Observations Included Within an Ordered Test Battery (CWE)
+        OM5.2 (opt, rep) - Test/Observations Included Within an Ordered Test Battery (CWE) S8.8.13.2 | 9999 - no table for CE
 
     om5_3 : str | None
-        OM5.3 (opt) - Observation ID Suffixes (ST)
+        OM5.3 (opt) - Observation ID Suffixes (ST) S8.8.13.3
     """
 
     om5_1: Optional[str] = Field(

@@ -26,43 +26,41 @@ _UAC = UAC
 
 
 class DEO_O45(HL7Model):
-    """HL7 v2 DEO_O45 message.
+    """Donor Eligibility Observations Message (S4.16.12).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         DONOR (Optional[DEO_O45_DONOR]): optional
         DONATION_ORDER (List[DEO_O45_DONATION_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     DONOR: Optional[_DEO_O45_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     DONATION_ORDER: List[_DEO_O45_DONATION_ORDER] = Field(
         min_length=1,
         title="DONATION_ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

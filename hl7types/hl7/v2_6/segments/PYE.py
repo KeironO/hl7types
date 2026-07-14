@@ -17,30 +17,30 @@ from ..datatypes.XPN import XPN
 
 
 class PYE(HL7Model):
-    """HL7 v2 PYE segment.
+    """Payee Information (S16.4.3).
 
     Attributes
     ----------
     pye_1 : str
-        PYE.1 (req) - Set ID - PYE (SI)
+        PYE.1 (req) - Set ID - PYE (SI) S16.4.3.1
 
     pye_2 : str
-        PYE.2 (req) - Payee Type (IS)
+        PYE.2 (req) - Payee Type (IS) S16.4.3.2 | 0557 - Payee Type
 
     pye_3 : str | None
-        PYE.3 (opt) - Payee Relationship to Invoice (Patient) (IS)
+        PYE.3 (opt) - Payee Relationship to Invoice (Patient) (IS) S16.4.3.3 | 0558 - Payee Relationship to Invoice
 
     pye_4 : list[XON] | None
-        PYE.4 (opt, rep) - Payee Identification List (XON)
+        PYE.4 (opt, rep) - Payee Identification List (XON) S16.4.3.4
 
     pye_5 : list[XPN] | None
-        PYE.5 (opt, rep) - Payee Person Name (XPN)
+        PYE.5 (opt, rep) - Payee Person Name (XPN) S16.4.3.5
 
     pye_6 : list[XAD] | None
-        PYE.6 (opt, rep) - Payee Address (XAD)
+        PYE.6 (opt, rep) - Payee Address (XAD) S16.4.3.6
 
     pye_7 : str | None
-        PYE.7 (opt) - Payment Method (IS)
+        PYE.7 (opt) - Payment Method (IS) S16.4.3.7 | 0570 - Payment Method Code
     """
 
     pye_1: str = Field(

@@ -25,26 +25,25 @@ class REF_I12_OBSERVATION(HL7Model):
     """HL7 v2 REF_I12.OBSERVATION group.
 
     Attributes:
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): OBR - observation request segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         RESULTS_NOTES (Optional[List[REF_I12_RESULTS_NOTES]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="OBR - observation request segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     RESULTS_NOTES: Optional[List[_REF_I12_RESULTS_NOTES]] = Field(
         default=None,
         title="RESULTS_NOTES",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

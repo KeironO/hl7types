@@ -14,18 +14,18 @@ from ..datatypes.CWE import CWE
 
 
 class CM1(HL7Model):
-    """HL7 v2 CM1 segment.
+    """Clinical Study Phase Master (S8.11.3).
 
     Attributes
     ----------
     cm1_1 : str
-        CM1.1 (req) - Set ID - CM1 (SI)
+        CM1.1 (req) - Set ID - CM1 (SI) S8.11.3.1
 
     cm1_2 : CWE
-        CM1.2 (req) - Study Phase Identifier (CWE)
+        CM1.2 (req) - Study Phase Identifier (CWE) S7.8.2.1 | 9999 - no table for CE
 
     cm1_3 : str
-        CM1.3 (req) - Description of Study Phase (ST)
+        CM1.3 (req) - Description of Study Phase (ST) S8.11.3.3
     """
 
     cm1_1: str = Field(

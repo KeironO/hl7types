@@ -26,32 +26,32 @@ class CRM_C01_PATIENT(HL7Model):
     """HL7 v2 CRM_C01.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PV1 (Optional[PV1]): optional
-        CSR (CSR): required
-        CSP (Optional[List[CSP]]): optional
+        PID (PID): Patient identification, required
+        PV1 (Optional[PV1]): Patient visit, optional
+        CSR (CSR): Clinical Study Registration, required
+        CSP (Optional[List[CSP]]): Clinical Study Phase, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient visit",
     )
 
     CSR: _CSR = Field(
         title="CSR",
-        description="Required",
+        description="Clinical Study Registration",
     )
 
     CSP: Optional[List[_CSP]] = Field(
         default=None,
         title="CSP",
-        description="Optional, repeating",
+        description="Clinical Study Phase",
     )
 
     model_config = {"populate_by_name": True}

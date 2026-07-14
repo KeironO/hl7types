@@ -25,26 +25,25 @@ class PEX_P07_ASSOCIATED_RX_ORDER(HL7Model):
     """HL7 v2 PEX_P07.ASSOCIATED_RX_ORDER group.
 
     Attributes:
-        RXE (RXE): required
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
         NK1_TIMING_QTY (List[PEX_P07_NK1_TIMING_QTY]): required
-        RXR (Optional[List[RXR]]): optional
+        RXR (Optional[List[RXR]]): Pharmacy/Treatment Route, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     NK1_TIMING_QTY: List[_PEX_P07_NK1_TIMING_QTY] = Field(
         min_length=1,
         title="NK1_TIMING_QTY",
-        description="Required, repeating",
     )
 
     RXR: Optional[List[_RXR]] = Field(
         default=None,
         title="RXR",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     model_config = {"populate_by_name": True}

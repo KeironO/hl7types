@@ -19,12 +19,12 @@ class RSP_E03_INVOICE_PROCESSING_RESULTS_INFO(HL7Model):
     """HL7 v2 RSP_E03.INVOICE_PROCESSING_RESULTS_INFO group.
 
     Attributes:
-        IPR (IPR): required
+        IPR (IPR): Invoice Processing Results, required
     """
 
     IPR: _IPR = Field(
         title="IPR",
-        description="Required",
+        description="Invoice Processing Results",
     )
 
     model_config = {"populate_by_name": True}

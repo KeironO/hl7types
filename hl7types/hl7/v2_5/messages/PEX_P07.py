@@ -32,62 +32,60 @@ _SFT = SFT
 
 
 class PEX_P07(HL7Model):
-    """HL7 v2 PEX_P07 message.
+    """PEX - Unsolicited initial individual product experience report (S7.11.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         VISIT (Optional[PEX_P07_VISIT]): optional
         EXPERIENCE (List[PEX_P07_EXPERIENCE]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VISIT: Optional[_PEX_P07_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     EXPERIENCE: List[_PEX_P07_EXPERIENCE] = Field(
         min_length=1,
         title="EXPERIENCE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

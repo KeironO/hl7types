@@ -16,51 +16,51 @@ from ..datatypes.CWE import CWE
 
 
 class GP2(HL7Model):
-    """HL7 v2 GP2 segment.
+    """Grouping/Reimbursement - Procedure Line Item (S6.5.16).
 
     Attributes
     ----------
     gp2_1 : CWE | None
-        GP2.1 (opt) - Revenue Code (CWE)
+        GP2.1 (opt) - Revenue Code (CWE) S6.5.1.41 | 0456 - Revenue code
 
     gp2_2 : str | None
-        GP2.2 (opt) - Number of Service Units (NM)
+        GP2.2 (opt) - Number of Service Units (NM) S6.5.16.2
 
     gp2_3 : CP | None
-        GP2.3 (opt) - Charge (CP)
+        GP2.3 (opt) - Charge (CP) S6.5.16.3
 
     gp2_4 : CWE | None
-        GP2.4 (opt) - Reimbursement Action Code (CWE)
+        GP2.4 (opt) - Reimbursement Action Code (CWE) S6.5.16.4 | 0459 - Reimbursement Action Code
 
     gp2_5 : CWE | None
-        GP2.5 (opt) - Denial or Rejection Code (CWE)
+        GP2.5 (opt) - Denial or Rejection Code (CWE) S6.5.16.5 | 0460 - Denial or Rejection Code
 
     gp2_6 : list[CWE] | None
-        GP2.6 (opt, rep) - OCE Edit Code (CWE)
+        GP2.6 (opt, rep) - OCE Edit Code (CWE) S6.5.16.6 | 0458 - OCE Edit Code
 
     gp2_7 : CWE | None
-        GP2.7 (opt) - Ambulatory Payment Classification Code (CWE)
+        GP2.7 (opt) - Ambulatory Payment Classification Code (CWE) S6.5.16.7 | 0466 - Ambulatory Payment Classification Code
 
     gp2_8 : list[CWE] | None
-        GP2.8 (opt, rep) - Modifier Edit Code (CWE)
+        GP2.8 (opt, rep) - Modifier Edit Code (CWE) S6.5.16.8 | 0467 - Modifier Edit Code
 
     gp2_9 : CWE | None
-        GP2.9 (opt) - Payment Adjustment Code (CWE)
+        GP2.9 (opt) - Payment Adjustment Code (CWE) S6.5.16.9 | 0468 - Payment Adjustment Code
 
     gp2_10 : CWE | None
-        GP2.10 (opt) - Packaging Status Code (CWE)
+        GP2.10 (opt) - Packaging Status Code (CWE) S6.5.16.10 | 0469 - Packaging Status Code
 
     gp2_11 : CP | None
-        GP2.11 (opt) - Expected CMS Payment Amount (CP)
+        GP2.11 (opt) - Expected CMS Payment Amount (CP) S6.5.16.11
 
     gp2_12 : CWE | None
-        GP2.12 (opt) - Reimbursement Type Code (CWE)
+        GP2.12 (opt) - Reimbursement Type Code (CWE) S6.5.16.12 | 0470 - - Reimbursement Type Code
 
     gp2_13 : CP | None
-        GP2.13 (opt) - Co-Pay Amount (CP)
+        GP2.13 (opt) - Co-Pay Amount (CP) S6.5.16.13
 
     gp2_14 : str | None
-        GP2.14 (opt) - Pay Rate per Service Unit (NM)
+        GP2.14 (opt) - Pay Rate per Service Unit (NM) S6.5.16.14
     """
 
     gp2_1: Optional[CWE] = Field(

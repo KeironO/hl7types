@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class RCD(HL7Model):
-    """HL7 v2 RCD data type.
+    """Row column definition (S2.A.1.61).
 
     Attributes
     ----------

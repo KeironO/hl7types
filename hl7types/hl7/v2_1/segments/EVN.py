@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class EVN(HL7Model):
-    """HL7 v2 EVN segment.
+    """EVENT TYPE (S3.3.1).
 
     Attributes
     ----------
     evn_1 : str
-        EVN.1 (req) - EVENT TYPE CODE (ID)
+        EVN.1 (req) - EVENT TYPE CODE (ID) S3-11 | 0003 - EVENT TYPE CODE
 
     evn_2 : str
         EVN.2 (req) - DATE/TIME OF EVENT (TS)
@@ -27,7 +27,7 @@ class EVN(HL7Model):
         EVN.3 (opt) - DATE/TIME PLANNED EVENT (TS)
 
     evn_4 : str | None
-        EVN.4 (opt) - EVENT REASON CODE (ID)
+        EVN.4 (opt) - EVENT REASON CODE (ID) | 0062 - EVENT REASON
     """
 
     evn_1: str = Field(

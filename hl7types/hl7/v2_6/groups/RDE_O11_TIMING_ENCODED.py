@@ -22,19 +22,19 @@ class RDE_O11_TIMING_ENCODED(HL7Model):
     """HL7 v2 RDE_O11.TIMING_ENCODED group.
 
     Attributes:
-        TQ1 (TQ1): required
-        TQ2 (Optional[List[TQ2]]): optional
+        TQ1 (TQ1): Timing/Quantity, required
+        TQ2 (Optional[List[TQ2]]): Timing/Quantity Relationship, optional
     """
 
     TQ1: _TQ1 = Field(
         title="TQ1",
-        description="Required",
+        description="Timing/Quantity",
     )
 
     TQ2: Optional[List[_TQ2]] = Field(
         default=None,
         title="TQ2",
-        description="Optional, repeating",
+        description="Timing/Quantity Relationship",
     )
 
     model_config = {"populate_by_name": True}

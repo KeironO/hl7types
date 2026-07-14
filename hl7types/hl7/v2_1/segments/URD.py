@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class URD(HL7Model):
-    """HL7 v2 URD segment.
+    """RESULTS/UPDATE DEFINITION (S5.3.5).
 
     Attributes
     ----------
@@ -21,13 +21,13 @@ class URD(HL7Model):
         URD.1 (opt) - R/U DATE/TIME (TS)
 
     urd_2 : str | None
-        URD.2 (opt) - REPORT PRIORITY (ID)
+        URD.2 (opt) - REPORT PRIORITY (ID) | 0109 - REPORT PRIORITY
 
     urd_3 : list[str]
         URD.3 (req, rep) - R/U WHO SUBJECT DEFINITION (ST)
 
     urd_4 : list[str] | None
-        URD.4 (opt, rep) - R/U WHAT SUBJECT DEFINITION (ID)
+        URD.4 (opt, rep) - R/U WHAT SUBJECT DEFINITION (ID) | 0048 - WHAT SUBJECT FILTER
 
     urd_5 : list[str] | None
         URD.5 (opt, rep) - R/U WHAT DEPARTMENT CODE (ST)
@@ -36,7 +36,7 @@ class URD(HL7Model):
         URD.6 (opt, rep) - R/U DISPLAY/PRINT LOCATIONS (ST)
 
     urd_7 : str | None
-        URD.7 (opt) - R/U RESULTS LEVEL (ID)
+        URD.7 (opt) - R/U RESULTS LEVEL (ID) | 0108 - QUERY RESULTS LEVEL
     """
 
     urd_1: Optional[str] = Field(

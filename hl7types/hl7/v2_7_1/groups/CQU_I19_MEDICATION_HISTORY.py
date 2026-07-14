@@ -29,40 +29,37 @@ class CQU_I19_MEDICATION_HISTORY(HL7Model):
     """HL7 v2 CQU_I19.MEDICATION_HISTORY group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         MEDICATION_ORDER_DETAIL (Optional[CQU_I19_MEDICATION_ORDER_DETAIL]): optional
         MEDICATION_ENCODING_DETAIL (Optional[CQU_I19_MEDICATION_ENCODING_DETAIL]): optional
         MEDICATION_ADMINISTRATION_DETAIL (Optional[List[CQU_I19_MEDICATION_ADMINISTRATION_DETAIL]]): optional
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     MEDICATION_ORDER_DETAIL: Optional[_CQU_I19_MEDICATION_ORDER_DETAIL] = Field(
         default=None,
         title="MEDICATION_ORDER_DETAIL",
-        description="Optional",
     )
 
     MEDICATION_ENCODING_DETAIL: Optional[_CQU_I19_MEDICATION_ENCODING_DETAIL] = Field(
         default=None,
         title="MEDICATION_ENCODING_DETAIL",
-        description="Optional",
     )
 
     MEDICATION_ADMINISTRATION_DETAIL: Optional[List[_CQU_I19_MEDICATION_ADMINISTRATION_DETAIL]] = Field(
         default=None,
         title="MEDICATION_ADMINISTRATION_DETAIL",
-        description="Optional, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

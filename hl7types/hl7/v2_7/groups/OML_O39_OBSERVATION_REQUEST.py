@@ -35,61 +35,59 @@ class OML_O39_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 OML_O39.OBSERVATION_REQUEST group.
 
     Attributes:
-        OBR (OBR): required
-        TCD (Optional[TCD]): optional
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
-        CTD (Optional[CTD]): optional
-        DG1 (Optional[List[DG1]]): optional
+        OBR (OBR): Observation Request, required
+        TCD (Optional[TCD]): Test Code Detail, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        CTD (Optional[CTD]): Contact Data, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[OML_O39_OBSERVATION]]): optional
         SPECIMEN_SHIPMENT (Optional[List[OML_O39_SPECIMEN_SHIPMENT]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_OML_O39_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     SPECIMEN_SHIPMENT: Optional[List[_OML_O39_SPECIMEN_SHIPMENT]] = Field(
         default=None,
         title="SPECIMEN_SHIPMENT",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

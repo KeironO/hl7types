@@ -20,22 +20,21 @@ _MSH = MSH
 
 
 class CRM_C01(HL7Model):
-    """HL7 v2 CRM_C01 message.
+    """CRM - Register a patient on a clinical trial.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): MSH - message header segment, required
         PATIENT (List[CRM_C01_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     PATIENT: List[_CRM_C01_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

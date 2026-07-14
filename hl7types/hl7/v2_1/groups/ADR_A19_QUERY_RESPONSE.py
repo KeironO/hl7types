@@ -24,25 +24,25 @@ class ADR_A19_QUERY_RESPONSE(HL7Model):
     """HL7 v2 ADR_A19.QUERY_RESPONSE group.
 
     Attributes:
-        EVN (Optional[EVN]): optional
-        PID (PID): required
-        PV1 (PV1): required
+        EVN (Optional[EVN]): EVENT TYPE, optional
+        PID (PID): PATIENT IDENTIFICATION, required
+        PV1 (PV1): PATIENT VISIT, required
     """
 
     EVN: Optional[_EVN] = Field(
         default=None,
         title="EVN",
-        description="Optional",
+        description="EVENT TYPE",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PATIENT IDENTIFICATION",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PATIENT VISIT",
     )
 
     model_config = {"populate_by_name": True}

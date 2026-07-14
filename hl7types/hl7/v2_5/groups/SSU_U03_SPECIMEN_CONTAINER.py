@@ -25,26 +25,25 @@ class SSU_U03_SPECIMEN_CONTAINER(HL7Model):
     """HL7 v2 SSU_U03.SPECIMEN_CONTAINER group.
 
     Attributes:
-        SAC (SAC): required
-        OBX (Optional[List[OBX]]): optional
+        SAC (SAC): Specimen Container detail, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
         SPECIMEN (Optional[List[SSU_U03_SPECIMEN]]): optional
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     SPECIMEN: Optional[List[_SSU_U03_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

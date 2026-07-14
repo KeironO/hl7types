@@ -24,26 +24,26 @@ class OMD_O03_INSURANCE(HL7Model):
     """HL7 v2 OMD_O03.INSURANCE group.
 
     Attributes:
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
-        IN3 (Optional[IN3]): optional
+        IN1 (IN1): Insurance, required
+        IN2 (Optional[IN2]): Insurance Additional Information, optional
+        IN3 (Optional[IN3]): Insurance Additional Information, Certification, optional
     """
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="Insurance",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="Insurance Additional Information",
     )
 
     IN3: Optional[_IN3] = Field(
         default=None,
         title="IN3",
-        description="Optional",
+        description="Insurance Additional Information, Certification",
     )
 
     model_config = {"populate_by_name": True}

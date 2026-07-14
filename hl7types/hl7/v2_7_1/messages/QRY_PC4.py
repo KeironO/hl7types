@@ -25,42 +25,42 @@ _UAC = UAC
 
 
 class QRY_PC4(HL7Model):
-    """HL7 v2 QRY_PC4 message.
+    """QRY - PC/ problem query (S12.3.11).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        QRD (QRD): deleted, required
+        QRF (Optional[QRF]): deleted, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="deleted",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="deleted",
     )
 
     model_config = {"populate_by_name": True}

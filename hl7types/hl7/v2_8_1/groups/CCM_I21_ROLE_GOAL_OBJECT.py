@@ -22,20 +22,20 @@ class CCM_I21_ROLE_GOAL_OBJECT(HL7Model):
     """HL7 v2 CCM_I21.ROLE_GOAL_OBJECT group.
 
     Attributes:
-        ROL (Optional[ROL]): optional
-        PRD (Optional[PRD]): optional
+        ROL (Optional[ROL]): Role, optional
+        PRD (Optional[PRD]): Provider Data, optional
     """
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     PRD: Optional[_PRD] = Field(
         default=None,
         title="PRD",
-        description="Optional",
+        description="Provider Data",
     )
 
     model_config = {"populate_by_name": True}

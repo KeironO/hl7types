@@ -22,19 +22,19 @@ class PPG_PCG_PROBLEM_OBSERVATION(HL7Model):
     """HL7 v2 PPG_PCG.PROBLEM_OBSERVATION group.
 
     Attributes:
-        OBX (OBX): required
-        NTE (Optional[List[NTE]]): optional
+        OBX (OBX): OBX - observation/result segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="OBX - observation/result segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

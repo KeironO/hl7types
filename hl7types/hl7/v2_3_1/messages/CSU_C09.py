@@ -20,22 +20,21 @@ _MSH = MSH
 
 
 class CSU_C09(HL7Model):
-    """HL7 v2 CSU_C09 message.
+    """CSU - Automated time intervals for reporting, like monthly.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): MSH - message header segment, required
         PATIENT (List[CSU_C09_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     PATIENT: List[_CSU_C09_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

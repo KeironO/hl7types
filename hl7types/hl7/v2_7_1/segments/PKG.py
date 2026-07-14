@@ -17,30 +17,30 @@ from ..datatypes.CWE import CWE
 
 
 class PKG(HL7Model):
-    """HL7 v2 PKG segment.
+    """Item Packaging (S17.4.5).
 
     Attributes
     ----------
     pkg_1 : str
-        PKG.1 (req) - Set Id - PKG (SI)
+        PKG.1 (req) - Set Id - PKG (SI) S17.4.5.1
 
     pkg_2 : CWE | None
-        PKG.2 (opt) - Packaging Units (CWE)
+        PKG.2 (opt) - Packaging Units (CWE) S17.4.5.2 | 0818 - Package
 
     pkg_3 : CNE | None
-        PKG.3 (opt) - Default Order Unit Of Measure Indicator (CNE)
+        PKG.3 (opt) - Default Order Unit Of Measure Indicator (CNE) S17.4.5.3 | 0532 - Expanded Yes/no Indicator
 
     pkg_4 : str | None
-        PKG.4 (opt) - Package Quantity (NM)
+        PKG.4 (opt) - Package Quantity (NM) S17.4.5.4
 
     pkg_5 : CP | None
-        PKG.5 (opt) - Price (CP)
+        PKG.5 (opt) - Price (CP) S17.4.5.5
 
     pkg_6 : CP | None
-        PKG.6 (opt) - Future Item Price (CP)
+        PKG.6 (opt) - Future Item Price (CP) S17.4.5.6
 
     pkg_7 : str | None
-        PKG.7 (opt) - Future Item Price Effective Date (DTM)
+        PKG.7 (opt) - Future Item Price Effective Date (DTM) S17.4.5.7
     """
 
     pkg_1: str = Field(

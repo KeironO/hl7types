@@ -24,26 +24,26 @@ class RSP_K22_QUERY_RESPONSE(HL7Model):
     """HL7 v2 RSP_K22.QUERY_RESPONSE group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        QRI (Optional[QRI]): optional
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
+        QRI (Optional[QRI]): Query Response Instance, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     QRI: Optional[_QRI] = Field(
         default=None,
         title="QRI",
-        description="Optional",
+        description="Query Response Instance",
     )
 
     model_config = {"populate_by_name": True}

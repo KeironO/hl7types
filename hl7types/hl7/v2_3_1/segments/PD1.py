@@ -18,45 +18,45 @@ from ..datatypes.XON import XON
 
 
 class PD1(HL7Model):
-    """HL7 v2 PD1 segment.
+    """PD1 - patient additional demographic segment (S3.3.9).
 
     Attributes
     ----------
     pd1_1 : list[str] | None
-        PD1.1 (opt, rep) - Living Dependency (IS)
+        PD1.1 (opt, rep) - Living Dependency (IS) S6.4.7.31 | 0223 - Living dependency
 
     pd1_2 : str | None
-        PD1.2 (opt) - Living Arrangement (IS)
+        PD1.2 (opt) - Living Arrangement (IS) S6.4.7.35 | 0220 - Living arrangement
 
     pd1_3 : list[XON] | None
-        PD1.3 (opt, rep) - Patient Primary Facility (XON)
+        PD1.3 (opt, rep) - Patient Primary Facility (XON) S3.3.9.3
 
     pd1_4 : list[XCN] | None
-        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN)
+        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN) S3.3.9.4
 
     pd1_5 : str | None
-        PD1.5 (opt) - Student Indicator (IS)
+        PD1.5 (opt) - Student Indicator (IS) S6.4.7.38 | 0231 - Student status
 
     pd1_6 : str | None
-        PD1.6 (opt) - Handicap (IS)
+        PD1.6 (opt) - Handicap (IS) S6.4.6.48 | 0295 - Handicap
 
     pd1_7 : str | None
-        PD1.7 (opt) - Living Will (IS)
+        PD1.7 (opt) - Living Will (IS) S3.3.9.7 | 0315 - Living will
 
     pd1_8 : str | None
-        PD1.8 (opt) - Organ Donor (IS)
+        PD1.8 (opt) - Organ Donor (IS) S3.3.9.8 | 0316 - Organ donor
 
     pd1_9 : str | None
-        PD1.9 (opt) - Separate Bill (ID)
+        PD1.9 (opt) - Separate Bill (ID) S3.3.9.9 | 0136 - Yes/no indicator
 
     pd1_10 : list[CX] | None
-        PD1.10 (opt, rep) - Duplicate Patient (CX)
+        PD1.10 (opt, rep) - Duplicate Patient (CX) S3.3.9.10
 
     pd1_11 : CE | None
-        PD1.11 (opt) - Publicity Code (CE)
+        PD1.11 (opt) - Publicity Code (CE) S6.4.7.36 | 0215 - Publicity Code
 
     pd1_12 : str | None
-        PD1.12 (opt) - Protection Indicator (ID)
+        PD1.12 (opt) - Protection Indicator (ID) S6.4.7.37 | 0136 - Yes/no indicator
     """
 
     pd1_1: Optional[List[str]] = Field(

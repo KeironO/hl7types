@@ -23,19 +23,18 @@ class ORU_R01_SPECIMEN(HL7Model):
     """HL7 v2 ORU_R01.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         PATIENT_OBSERVATION (Optional[List[ORU_R01_PATIENT_OBSERVATION]]): optional
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     PATIENT_OBSERVATION: Optional[List[_ORU_R01_PATIENT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

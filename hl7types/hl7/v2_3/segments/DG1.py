@@ -18,66 +18,66 @@ from ..datatypes.XCN import XCN
 
 
 class DG1(HL7Model):
-    """HL7 v2 DG1 segment.
+    """Diagnosis (S6.4.2).
 
     Attributes
     ----------
     dg1_1 : str
-        DG1.1 (req) - Set ID - Diagnosis (SI)
+        DG1.1 (req) - Set ID - Diagnosis (SI) S6.4.2.1
 
     dg1_2 : str | None
-        DG1.2 (opt) - Diagnosis Coding Method (ID)
+        DG1.2 (opt) - Diagnosis Coding Method (ID) S6.4.2.2 | 0053 - Diagnosis Coding Methed
 
     dg1_3 : CE | None
-        DG1.3 (opt) - Diagnosis Code (CE)
+        DG1.3 (opt) - Diagnosis Code (CE) S6.4.2.3 | 0051 - Diagnosis Code
 
     dg1_4 : str | None
-        DG1.4 (opt) - Diagnosis Description (ST)
+        DG1.4 (opt) - Diagnosis Description (ST) S6.4.2.4
 
     dg1_5 : TS | None
-        DG1.5 (opt) - Diagnosis Date/Time (TS)
+        DG1.5 (opt) - Diagnosis Date/Time (TS) S6.4.2.5
 
     dg1_6 : str
-        DG1.6 (req) - Diagnosis Type (IS)
+        DG1.6 (req) - Diagnosis Type (IS) S6.4.2.6 | 0052 - Diagnosis Type
 
     dg1_7 : CE | None
-        DG1.7 (opt) - Major Diagnostic Category (CE)
+        DG1.7 (opt) - Major Diagnostic Category (CE) S6.4.2.7 | 0118 - Major Diagnostic Category
 
     dg1_8 : CE | None
-        DG1.8 (opt) - Diagnostic Related Group (CE)
+        DG1.8 (opt) - Diagnostic Related Group (CE) S6.4.2 | 0055 - DRG Code
 
     dg1_9 : str | None
-        DG1.9 (opt) - DRG Approval Indicator (ID)
+        DG1.9 (opt) - DRG Approval Indicator (ID) S6.4.2 | 0136 - Yes/No Indicator
 
     dg1_10 : str | None
-        DG1.10 (opt) - DRG Grouper Review Code (IS)
+        DG1.10 (opt) - DRG Grouper Review Code (IS) S6.4.2 | 0056 - DRG Grouper Review Code
 
     dg1_11 : CE | None
-        DG1.11 (opt) - Outlier Type (CE)
+        DG1.11 (opt) - Outlier Type (CE) S6.4.2 | 0083 - Outlier Type
 
     dg1_12 : str | None
-        DG1.12 (opt) - Outlier Days (NM)
+        DG1.12 (opt) - Outlier Days (NM) S6.4.2
 
     dg1_13 : CP | None
-        DG1.13 (opt) - Outlier Cost (CP)
+        DG1.13 (opt) - Outlier Cost (CP) S6.4.2
 
     dg1_14 : str | None
-        DG1.14 (opt) - Grouper Version and Type (ST)
+        DG1.14 (opt) - Grouper Version and Type (ST) S6.4.2.14
 
     dg1_15 : str | None
-        DG1.15 (opt) - Diagnosis Priority (NM)
+        DG1.15 (opt) - Diagnosis Priority (NM) S6.4.2.15
 
     dg1_16 : list[XCN] | None
-        DG1.16 (opt, rep) - Diagnosing Clinician (XCN)
+        DG1.16 (opt, rep) - Diagnosing Clinician (XCN) S6.4.2.16
 
     dg1_17 : str | None
-        DG1.17 (opt) - Diagnosis Classification (IS)
+        DG1.17 (opt) - Diagnosis Classification (IS) S6.4.2.17 | 0228 - Diagnosis Classification
 
     dg1_18 : str | None
-        DG1.18 (opt) - Confidential Indicator (ID)
+        DG1.18 (opt) - Confidential Indicator (ID) S6.4.2 | 0136 - Yes/No Indicator
 
     dg1_19 : TS | None
-        DG1.19 (opt) - Attestation Date/Time (TS)
+        DG1.19 (opt) - Attestation Date/Time (TS) S6.4.2.19
     """
 
     dg1_1: str = Field(

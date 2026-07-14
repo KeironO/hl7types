@@ -14,7 +14,7 @@ from hl7types.hl7._validators import _apply_dt_fallback
 
 
 class CWE(HL7Model):
-    """HL7 v2 CWE data type.
+    """Coded with exceptions (S2.A.13).
 
     Attributes
     ----------

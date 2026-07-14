@@ -24,25 +24,25 @@ class MFD_M03(HL7Model):
     """HL7 v2 MFD_M03 message.
 
     Attributes:
-        MSH (MSH): required
-        MFI (MFI): required
-        MFA (Optional[List[MFA]]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        MFI (MFI): MASTER FILE IDENTIFICATION, required
+        MFA (Optional[List[MFA]]): MASTER FILE ACKNOWLEDGEMENT, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="MASTER FILE IDENTIFICATION",
     )
 
     MFA: Optional[List[_MFA]] = Field(
         default=None,
         title="MFA",
-        description="Optional, repeating",
+        description="MASTER FILE ACKNOWLEDGEMENT",
     )
 
     model_config = {"populate_by_name": True}

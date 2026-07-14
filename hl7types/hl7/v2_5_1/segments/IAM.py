@@ -21,69 +21,69 @@ from ..datatypes.XPN import XPN
 
 
 class IAM(HL7Model):
-    """HL7 v2 IAM segment.
+    """Patient Adverse Reaction Information (S3.4.7).
 
     Attributes
     ----------
     iam_1 : str
-        IAM.1 (req) - Set ID - IAM (SI)
+        IAM.1 (req) - Set ID - IAM (SI) S3.4.7.1
 
     iam_2 : CE | None
-        IAM.2 (opt) - Allergen Type Code (CE)
+        IAM.2 (opt) - Allergen Type Code (CE) S3.4.6.2 | 0127 - Allergen Type
 
     iam_3 : CE
-        IAM.3 (req) - Allergen Code/Mnemonic/Description (CE)
+        IAM.3 (req) - Allergen Code/Mnemonic/Description (CE) S3.4.6.3
 
     iam_4 : CE | None
-        IAM.4 (opt) - Allergy Severity Code (CE)
+        IAM.4 (opt) - Allergy Severity Code (CE) S3.4.6.4 | 0128 - Allergy Severity
 
     iam_5 : list[str] | None
-        IAM.5 (opt, rep) - Allergy Reaction Code (ST)
+        IAM.5 (opt, rep) - Allergy Reaction Code (ST) S3.4.6.5
 
     iam_6 : CNE
-        IAM.6 (req) - Allergy Action Code (CNE)
+        IAM.6 (req) - Allergy Action Code (CNE) S3.4.7.6 | 0323 - Action Code
 
     iam_7 : EI | None
-        IAM.7 (opt) - Allergy Unique Identifier (EI)
+        IAM.7 (opt) - Allergy Unique Identifier (EI) S3.4.7.7
 
     iam_8 : str | None
-        IAM.8 (opt) - Action Reason (ST)
+        IAM.8 (opt) - Action Reason (ST) S3.4.7.8
 
     iam_9 : CE | None
-        IAM.9 (opt) - Sensitivity to Causative Agent Code (CE)
+        IAM.9 (opt) - Sensitivity to Causative Agent Code (CE) S3.4.7.9 | 0436 - Sensitivity to Causative Agent Code
 
     iam_10 : CE | None
-        IAM.10 (opt) - Allergen Group Code/Mnemonic/Description (CE)
+        IAM.10 (opt) - Allergen Group Code/Mnemonic/Description (CE) S3.4.7.10
 
     iam_11 : str | None
-        IAM.11 (opt) - Onset Date (DT)
+        IAM.11 (opt) - Onset Date (DT) S3.4.7.11
 
     iam_12 : str | None
-        IAM.12 (opt) - Onset Date Text (ST)
+        IAM.12 (opt) - Onset Date Text (ST) S3.4.7.12
 
     iam_13 : TS | None
-        IAM.13 (opt) - Reported Date/Time (TS)
+        IAM.13 (opt) - Reported Date/Time (TS) S3.4.7.13
 
     iam_14 : XPN | None
-        IAM.14 (opt) - Reported By (XPN)
+        IAM.14 (opt) - Reported By (XPN) S3.4.7.14
 
     iam_15 : CE | None
-        IAM.15 (opt) - Relationship to Patient Code (CE)
+        IAM.15 (opt) - Relationship to Patient Code (CE) S3.4.7.15 | 0063 - Relationship
 
     iam_16 : CE | None
-        IAM.16 (opt) - Alert Device Code (CE)
+        IAM.16 (opt) - Alert Device Code (CE) S3.4.7.16 | 0437 - Alert Device Code
 
     iam_17 : CE | None
-        IAM.17 (opt) - Allergy Clinical Status Code (CE)
+        IAM.17 (opt) - Allergy Clinical Status Code (CE) S3.4.7.17 | 0438 - Allergy Clinical Status
 
     iam_18 : XCN | None
-        IAM.18 (opt) - Statused by Person (XCN)
+        IAM.18 (opt) - Statused by Person (XCN) S3.4.7.18
 
     iam_19 : XON | None
-        IAM.19 (opt) - Statused by Organization (XON)
+        IAM.19 (opt) - Statused by Organization (XON) S3.4.7.19
 
     iam_20 : TS | None
-        IAM.20 (opt) - Statused at Date/Time (TS)
+        IAM.20 (opt) - Statused at Date/Time (TS) S3.4.7.20
     """
 
     iam_1: str = Field(

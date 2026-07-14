@@ -28,38 +28,38 @@ class DOC_T12_RESULT(HL7Model):
     """HL7 v2 DOC_T12.RESULT group.
 
     Attributes:
-        EVN (Optional[EVN]): optional
-        PID (PID): required
-        PV1 (PV1): required
-        TXA (TXA): required
-        OBX (Optional[List[OBX]]): optional
+        EVN (Optional[EVN]): Event Type, optional
+        PID (PID): Patient identification, required
+        PV1 (PV1): Patient visit, required
+        TXA (TXA): Transcription Document Header, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     EVN: Optional[_EVN] = Field(
         default=None,
         title="EVN",
-        description="Optional",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient visit",
     )
 
     TXA: _TXA = Field(
         title="TXA",
-        description="Required",
+        description="Transcription Document Header",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

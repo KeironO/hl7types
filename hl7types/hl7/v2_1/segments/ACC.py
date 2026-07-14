@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class ACC(HL7Model):
-    """HL7 v2 ACC segment.
+    """ACCIDENT.
 
     Attributes
     ----------
     acc_1 : str | None
-        ACC.1 (opt) - ACCIDENT DATE/TIME (TS)
+        ACC.1 (opt) - ACCIDENT DATE/TIME (TS) S6-3
 
     acc_2 : str | None
-        ACC.2 (opt) - ACCIDENT CODE (ID)
+        ACC.2 (opt) - ACCIDENT CODE (ID) | 0050 - ACCIDENT CODE
 
     acc_3 : str | None
         ACC.3 (opt) - ACCIDENT LOCATION (ST)

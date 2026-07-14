@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class URS(HL7Model):
-    """HL7 v2 URS segment.
+    """UNSOLICITED SELECTION (S5.3.6).
 
     Attributes
     ----------

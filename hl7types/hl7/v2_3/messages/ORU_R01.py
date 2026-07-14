@@ -22,29 +22,28 @@ _ORU_R01_RESPONSE = ORU_R01_RESPONSE
 
 
 class ORU_R01(HL7Model):
-    """HL7 v2 ORU_R01 message.
+    """ORU/ACK - Unsolicited transmission of an observation.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): Message header segment, required
         RESPONSE (List[ORU_R01_RESPONSE]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     RESPONSE: List[_ORU_R01_RESPONSE] = Field(
         min_length=1,
         title="RESPONSE",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

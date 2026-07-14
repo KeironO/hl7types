@@ -22,28 +22,27 @@ _MSH = MSH
 
 
 class MFN_M03(HL7Model):
-    """HL7 v2 MFN_M03 message.
+    """MFN/MFK - Master file - Test/Observation.
 
     Attributes:
-        MSH (MSH): required
-        MFI (MFI): required
+        MSH (MSH): Message header segment, required
+        MFI (MFI): Master file identification segment, required
         MF_TEST (List[MFN_M03_MF_TEST]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master file identification segment",
     )
 
     MF_TEST: List[_MFN_M03_MF_TEST] = Field(
         min_length=1,
         title="MF_TEST",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

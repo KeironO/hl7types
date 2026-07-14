@@ -27,48 +27,48 @@ _SFT = SFT
 
 
 class MFK_M01(HL7Model):
-    """HL7 v2 MFK_M01 message.
+    """MFN/MFK - Master file not otherwise specified (for backward compatibility only) (S8.4.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        MFI (MFI): required
-        MFA (Optional[List[MFA]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        MFI (MFI): Master File Identification, required
+        MFA (Optional[List[MFA]]): Master File Acknowledgment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MFA: Optional[List[_MFA]] = Field(
         default=None,
         title="MFA",
-        description="Optional, repeating",
+        description="Master File Acknowledgment",
     )
 
     model_config = {"populate_by_name": True}

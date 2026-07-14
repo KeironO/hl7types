@@ -29,54 +29,54 @@ _RDT = RDT
 
 
 class TBR_Q01(HL7Model):
-    """HL7 v2 TBR_Q01 message.
+    """QRY/DSR - Query sent for immediate response.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
-        RDF (RDF): required
-        RDT (List[RDT]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message header segment, required
+        MSA (MSA): Message acknowledgement segment, required
+        ERR (Optional[ERR]): Error segment, optional
+        QAK (QAK): Query Acknowledgement, required
+        RDF (RDF): Table Row Definition, required
+        RDT (List[RDT]): Table Row Data, required
+        DSC (Optional[DSC]): Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message acknowledgement segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error segment",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgement",
     )
 
     RDF: _RDF = Field(
         title="RDF",
-        description="Required",
+        description="Table Row Definition",
     )
 
     RDT: List[_RDT] = Field(
         min_length=1,
         title="RDT",
-        description="Required, repeating",
+        description="Table Row Data",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

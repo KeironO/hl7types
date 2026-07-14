@@ -26,25 +26,24 @@ class ORM_O01_ORDER_DETAIL(HL7Model):
 
     Attributes:
         CHOICE (ORM_O01_CHOICE): required
-        NTE (Optional[List[NTE]]): optional
-        OBX (Optional[List[OBX]]): optional
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
+        OBX (Optional[List[OBX]]): OBSERVATION RESULT, optional
     """
 
     CHOICE: _ORM_O01_CHOICE = Field(
         title="CHOICE",
-        description="Required",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBSERVATION RESULT",
     )
 
     model_config = {"populate_by_name": True}

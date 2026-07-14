@@ -17,54 +17,54 @@ from ..datatypes.XON import XON
 
 
 class PDC(HL7Model):
-    """HL7 v2 PDC segment.
+    """Product Detail Country (S7.12.5).
 
     Attributes
     ----------
     pdc_1 : list[XON]
-        PDC.1 (req, rep) - Manufacturer/Distributor (XON)
+        PDC.1 (req, rep) - Manufacturer/Distributor (XON) S7.12.5.1
 
     pdc_2 : CWE
-        PDC.2 (req) - Country (CWE)
+        PDC.2 (req) - Country (CWE) S7.12.5.2 | 9999 - no table for CE
 
     pdc_3 : str
-        PDC.3 (req) - Brand Name (ST)
+        PDC.3 (req) - Brand Name (ST) S7.12.5.3
 
     pdc_4 : str | None
-        PDC.4 (opt) - Device Family Name (ST)
+        PDC.4 (opt) - Device Family Name (ST) S7.12.5.4
 
     pdc_5 : CWE | None
-        PDC.5 (opt) - Generic Name (CWE)
+        PDC.5 (opt) - Generic Name (CWE) S7.12.5.5 | 9999 - no table for CE
 
     pdc_6 : list[str] | None
-        PDC.6 (opt, rep) - Model Identifier (ST)
+        PDC.6 (opt, rep) - Model Identifier (ST) S7.12.5.6
 
     pdc_7 : str | None
-        PDC.7 (opt) - Catalogue Identifier (ST)
+        PDC.7 (opt) - Catalogue Identifier (ST) S7.12.5.7
 
     pdc_8 : list[str] | None
-        PDC.8 (opt, rep) - Other Identifier (ST)
+        PDC.8 (opt, rep) - Other Identifier (ST) S7.12.5.8
 
     pdc_9 : CWE | None
-        PDC.9 (opt) - Product Code (CWE)
+        PDC.9 (opt) - Product Code (CWE) S7.12.5.9 | 9999 - no table for CE
 
     pdc_10 : str | None
-        PDC.10 (opt) - Marketing Basis (ID)
+        PDC.10 (opt) - Marketing Basis (ID) S7.12.5.10 | 0330 - Marketing basis
 
     pdc_11 : str | None
-        PDC.11 (opt) - Marketing Approval ID (ST)
+        PDC.11 (opt) - Marketing Approval ID (ST) S7.12.5.11
 
     pdc_12 : CQ | None
-        PDC.12 (opt) - Labeled Shelf Life (CQ)
+        PDC.12 (opt) - Labeled Shelf Life (CQ) S7.12.5.12
 
     pdc_13 : CQ | None
-        PDC.13 (opt) - Expected Shelf Life (CQ)
+        PDC.13 (opt) - Expected Shelf Life (CQ) S7.12.5.13
 
     pdc_14 : str | None
-        PDC.14 (opt) - Date First Marketed (DTM)
+        PDC.14 (opt) - Date First Marketed (DTM) S7.12.5.14
 
     pdc_15 : str | None
-        PDC.15 (opt) - Date Last Marketed (DTM)
+        PDC.15 (opt) - Date Last Marketed (DTM) S7.12.5.15
     """
 
     pdc_1: List[XON] = Field(

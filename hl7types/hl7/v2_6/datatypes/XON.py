@@ -15,7 +15,7 @@ from .HD import HD
 
 
 class XON(HL7Model):
-    """HL7 v2 XON data type.
+    """Extended composite name and identification number for organizations (S2.A.87).
 
     Attributes
     ----------

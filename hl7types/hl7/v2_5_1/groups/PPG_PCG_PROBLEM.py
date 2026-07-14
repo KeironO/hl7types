@@ -29,40 +29,38 @@ class PPG_PCG_PROBLEM(HL7Model):
     """HL7 v2 PPG_PCG.PROBLEM group.
 
     Attributes:
-        PRB (PRB): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        PRB (PRB): Problem Details, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         PROBLEM_ROLE (Optional[List[PPG_PCG_PROBLEM_ROLE]]): optional
         PROBLEM_OBSERVATION (Optional[List[PPG_PCG_PROBLEM_OBSERVATION]]): optional
     """
 
     PRB: _PRB = Field(
         title="PRB",
-        description="Required",
+        description="Problem Details",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     PROBLEM_ROLE: Optional[List[_PPG_PCG_PROBLEM_ROLE]] = Field(
         default=None,
         title="PROBLEM_ROLE",
-        description="Optional, repeating",
     )
 
     PROBLEM_OBSERVATION: Optional[List[_PPG_PCG_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

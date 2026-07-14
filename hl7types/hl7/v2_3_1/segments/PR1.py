@@ -17,57 +17,57 @@ from ..datatypes.XCN import XCN
 
 
 class PR1(HL7Model):
-    """HL7 v2 PR1 segment.
+    """PR1 - procedures segment (S6.4.4).
 
     Attributes
     ----------
     pr1_1 : str
-        PR1.1 (req) - Set ID - PR1 (SI)
+        PR1.1 (req) - Set ID - PR1 (SI) S6.4.4.1
 
     pr1_2 : str | None
-        PR1.2 (opt) - Procedure Coding Method (IS)
+        PR1.2 (opt) - Procedure Coding Method (IS) S6.4.4.2 | 0089 - Procedure Coding Method
 
     pr1_3 : CE
-        PR1.3 (req) - Procedure Code (CE)
+        PR1.3 (req) - Procedure Code (CE) S8.9.2.7 | 0088 - Procedure Code
 
     pr1_4 : str | None
-        PR1.4 (opt) - Procedure Description (ST)
+        PR1.4 (opt) - Procedure Description (ST) S6.4.4.4
 
     pr1_5 : TS
-        PR1.5 (req) - Procedure Date/Time (TS)
+        PR1.5 (req) - Procedure Date/Time (TS) S6.4.4.5
 
     pr1_6 : str
-        PR1.6 (req) - Procedure Functional Type (IS)
+        PR1.6 (req) - Procedure Functional Type (IS) S6.4.4.6 | 0230 - Procedure functional type
 
     pr1_7 : str | None
-        PR1.7 (opt) - Procedure Minutes (NM)
+        PR1.7 (opt) - Procedure Minutes (NM) S6.4.4.7
 
     pr1_8 : list[XCN] | None
-        PR1.8 (opt, rep) - Anesthesiologist (XCN)
+        PR1.8 (opt, rep) - Anesthesiologist (XCN) S6.4.4.8 | 0010 - Physician ID
 
     pr1_9 : str | None
-        PR1.9 (opt) - Anesthesia Code (IS)
+        PR1.9 (opt) - Anesthesia Code (IS) S6.4.4.9 | 0019 - Anesthesia Code
 
     pr1_10 : str | None
-        PR1.10 (opt) - Anesthesia Minutes (NM)
+        PR1.10 (opt) - Anesthesia Minutes (NM) S6.4.4.10
 
     pr1_11 : list[XCN] | None
-        PR1.11 (opt, rep) - Surgeon (XCN)
+        PR1.11 (opt, rep) - Surgeon (XCN) S6.4.4.11 | 0010 - Physician ID
 
     pr1_12 : list[XCN] | None
-        PR1.12 (opt, rep) - Procedure Practitioner (XCN)
+        PR1.12 (opt, rep) - Procedure Practitioner (XCN) S6.4.4.12 | 0010 - Physician ID
 
     pr1_13 : CE | None
-        PR1.13 (opt) - Consent Code (CE)
+        PR1.13 (opt) - Consent Code (CE) S6.4.4.13 | 0059 - Consent Code
 
     pr1_14 : str | None
-        PR1.14 (opt) - Procedure Priority (NM)
+        PR1.14 (opt) - Procedure Priority (NM) S6.4.4.14
 
     pr1_15 : CE | None
-        PR1.15 (opt) - Associated Diagnosis Code (CE)
+        PR1.15 (opt) - Associated Diagnosis Code (CE) S6.4.4.15 | 0051 - Diagnosis Code
 
     pr1_16 : list[CE] | None
-        PR1.16 (opt, rep) - Procedure Code Modifier (CE)
+        PR1.16 (opt, rep) - Procedure Code Modifier (CE) S7.3.1.45 | 0340 - Procedure Code Modifier
     """
 
     pr1_1: str = Field(

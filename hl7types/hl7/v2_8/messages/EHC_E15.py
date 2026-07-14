@@ -28,12 +28,12 @@ _UAC = UAC
 
 
 class EHC_E15(HL7Model):
-    """HL7 v2 EHC_E15 message.
+    """Payment/Remittance Advice (S16.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[List[UAC]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[List[UAC]]): User Authentication Credential Segment, optional
         PAYMENT_REMITTANCE_HEADER_INFO (EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO): required
         PAYMENT_REMITTANCE_DETAIL_INFO (Optional[List[EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO]]): optional
         ADJUSTMENT_PAYEE (Optional[List[EHC_E15_ADJUSTMENT_PAYEE]]): optional
@@ -41,36 +41,33 @@ class EHC_E15(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[List[_UAC]] = Field(
         default=None,
         title="UAC",
-        description="Optional, repeating",
+        description="User Authentication Credential Segment",
     )
 
     PAYMENT_REMITTANCE_HEADER_INFO: _EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO = Field(
         title="PAYMENT_REMITTANCE_HEADER_INFO",
-        description="Required",
     )
 
     PAYMENT_REMITTANCE_DETAIL_INFO: Optional[List[_EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO]] = Field(
         default=None,
         title="PAYMENT_REMITTANCE_DETAIL_INFO",
-        description="Optional, repeating",
     )
 
     ADJUSTMENT_PAYEE: Optional[List[_EHC_E15_ADJUSTMENT_PAYEE]] = Field(
         default=None,
         title="ADJUSTMENT_PAYEE",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

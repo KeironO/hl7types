@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class EI(HL7Model):
-    """HL7 v2 EI data type.
+    """Entity identifier (S2.8.15).
 
     Attributes
     ----------

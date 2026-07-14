@@ -27,33 +27,32 @@ class PPG_PCG_ORDER_DETAIL(HL7Model):
     """HL7 v2 PPG_PCG.ORDER_DETAIL group.
 
     Attributes:
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        OBR (OBR): Observation request segment, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         ORDER_OBSERVATION (Optional[List[PPG_PCG_ORDER_OBSERVATION]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation request segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ORDER_OBSERVATION: Optional[List[_PPG_PCG_ORDER_OBSERVATION]] = Field(
         default=None,
         title="ORDER_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -33,53 +33,51 @@ class OPL_O37_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 OPL_O37.OBSERVATION_REQUEST group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
-        OBR (OBR): required
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        OBR (OBR): Observation Request, required
         TIMING (Optional[List[OPL_O37_TIMING]]): optional
-        TCD (Optional[TCD]): optional
-        DG1 (Optional[List[DG1]]): optional
+        TCD (Optional[TCD]): Test Code Detail, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         ORDER_RELATED_OBSERVATION (Optional[List[OPL_O37_ORDER_RELATED_OBSERVATION]]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     TIMING: Optional[List[_OPL_O37_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     ORDER_RELATED_OBSERVATION: Optional[List[_OPL_O37_ORDER_RELATED_OBSERVATION]] = Field(
         default=None,
         title="ORDER_RELATED_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

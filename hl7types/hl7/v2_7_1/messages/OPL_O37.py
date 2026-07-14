@@ -30,57 +30,55 @@ _UAC = UAC
 
 
 class OPL_O37(HL7Model):
-    """HL7 v2 OPL_O37 message.
+    """OPL - Population/Location-Based Laboratory Order Message (S4.3.16).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        NTE (Optional[List[NTE]]): optional
-        PRT (List[PRT]): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (List[PRT]): Participation Information, required
         GUARANTOR (Optional[OPL_O37_GUARANTOR]): optional
         ORDER (List[OPL_O37_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: List[_PRT] = Field(
         min_length=1,
         title="PRT",
-        description="Required, repeating",
+        description="Participation Information",
     )
 
     GUARANTOR: Optional[_OPL_O37_GUARANTOR] = Field(
         default=None,
         title="GUARANTOR",
-        description="Optional",
     )
 
     ORDER: List[_OPL_O37_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

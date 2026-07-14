@@ -18,45 +18,45 @@ from ..datatypes.XTN import XTN
 
 
 class ERR(HL7Model):
-    """HL7 v2 ERR segment.
+    """Error (S2.15.5).
 
     Attributes
     ----------
     err_1 : list[ELD] | None
-        ERR.1 (opt, rep) - Error Code and Location (ELD)
+        ERR.1 (opt, rep) - Error Code and Location (ELD) S2.15.5.1
 
     err_2 : list[ERL] | None
-        ERR.2 (opt, rep) - Error Location (ERL)
+        ERR.2 (opt, rep) - Error Location (ERL) S2.15.5.2
 
     err_3 : CWE
-        ERR.3 (req) - HL7 Error Code (CWE)
+        ERR.3 (req) - HL7 Error Code (CWE) S2.15.5.3 | 0357 - Message error condition codes
 
     err_4 : str
-        ERR.4 (req) - Severity (ID)
+        ERR.4 (req) - Severity (ID) S2.15.5.4 | 0516 - Error severity
 
     err_5 : CWE | None
-        ERR.5 (opt) - Application Error Code (CWE)
+        ERR.5 (opt) - Application Error Code (CWE) S2.15.5.5 | 0533 - Application error code
 
     err_6 : list[str] | None
-        ERR.6 (opt, rep) - Application Error Parameter (ST)
+        ERR.6 (opt, rep) - Application Error Parameter (ST) S2.15.5.6
 
     err_7 : str | None
-        ERR.7 (opt) - Diagnostic Information (TX)
+        ERR.7 (opt) - Diagnostic Information (TX) S2.15.5.7
 
     err_8 : str | None
-        ERR.8 (opt) - User Message (TX)
+        ERR.8 (opt) - User Message (TX) S2.15.5.8
 
     err_9 : list[str] | None
-        ERR.9 (opt, rep) - Inform Person Indicator (IS)
+        ERR.9 (opt, rep) - Inform Person Indicator (IS) S2.15.5.9 | 0517 - Inform person code
 
     err_10 : CWE | None
-        ERR.10 (opt) - Override Type (CWE)
+        ERR.10 (opt) - Override Type (CWE) S2.15.5.10 | 0518 - Override type
 
     err_11 : list[CWE] | None
-        ERR.11 (opt, rep) - Override Reason Code (CWE)
+        ERR.11 (opt, rep) - Override Reason Code (CWE) S2.15.5.11 | 0519 - Override reason
 
     err_12 : list[XTN] | None
-        ERR.12 (opt, rep) - Help Desk Contact Point (XTN)
+        ERR.12 (opt, rep) - Help Desk Contact Point (XTN) S2.15.5.12
     """
 
     err_1: Optional[List[ELD]] = Field(

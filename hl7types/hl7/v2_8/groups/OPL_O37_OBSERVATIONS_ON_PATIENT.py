@@ -22,19 +22,19 @@ class OPL_O37_OBSERVATIONS_ON_PATIENT(HL7Model):
     """HL7 v2 OPL_O37.OBSERVATIONS_ON_PATIENT group.
 
     Attributes:
-        OBX (OBX): required
-        PRT (Optional[List[PRT]]): optional
+        OBX (OBX): Observation/Result, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

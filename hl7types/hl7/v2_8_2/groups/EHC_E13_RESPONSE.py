@@ -24,26 +24,26 @@ class EHC_E13_RESPONSE(HL7Model):
     """HL7 v2 EHC_E13.RESPONSE group.
 
     Attributes:
-        OBX (OBX): required
-        NTE (Optional[NTE]): optional
-        TXA (Optional[TXA]): optional
+        OBX (OBX): Observation/Result, required
+        NTE (Optional[NTE]): Notes and Comments, optional
+        TXA (Optional[TXA]): Transcription Document Header, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     TXA: Optional[_TXA] = Field(
         default=None,
         title="TXA",
-        description="Optional",
+        description="Transcription Document Header",
     )
 
     model_config = {"populate_by_name": True}

@@ -20,138 +20,138 @@ from ..datatypes.XTN import XTN
 
 
 class RXE(HL7Model):
-    """HL7 v2 RXE segment.
+    """Pharmacy/Treatment Encoded Order (S4.A.4).
 
     Attributes
     ----------
     rxe_2 : CWE
-        RXE.2 (req) - Give Code (CWE)
+        RXE.2 (req) - Give Code (CWE) S4.A.4.2 | 0292 - Vaccines administered
 
     rxe_3 : str
-        RXE.3 (req) - Give Amount - Minimum (NM)
+        RXE.3 (req) - Give Amount - Minimum (NM) S4.A.4.3
 
     rxe_4 : str | None
-        RXE.4 (opt) - Give Amount - Maximum (NM)
+        RXE.4 (opt) - Give Amount - Maximum (NM) S4.A.4.4
 
     rxe_5 : CWE
-        RXE.5 (req) - Give Units (CWE)
+        RXE.5 (req) - Give Units (CWE) S4.A.4.5 | 9999 - no table for CE
 
     rxe_6 : CWE | None
-        RXE.6 (opt) - Give Dosage Form (CWE)
+        RXE.6 (opt) - Give Dosage Form (CWE) S4.A.4.6 | 9999 - no table for CE
 
     rxe_7 : list[CWE] | None
-        RXE.7 (opt, rep) - Provider's Administration Instructions (CWE)
+        RXE.7 (opt, rep) - Provider's Administration Instructions (CWE) S4.A.1.7 | 9999 - no table for CE
 
     rxe_9 : str | None
-        RXE.9 (opt) - Substitution Status (ID)
+        RXE.9 (opt) - Substitution Status (ID) S4.A.4.9 | 0167 - Substitution Status
 
     rxe_10 : str | None
-        RXE.10 (opt) - Dispense Amount (NM)
+        RXE.10 (opt) - Dispense Amount (NM) S4.A.4.10
 
     rxe_11 : CWE | None
-        RXE.11 (opt) - Dispense Units (CWE)
+        RXE.11 (opt) - Dispense Units (CWE) S4.A.4.11 | 9999 - no table for CE
 
     rxe_12 : str | None
-        RXE.12 (opt) - Number Of Refills (NM)
+        RXE.12 (opt) - Number Of Refills (NM) S4.A.1.13
 
     rxe_13 : list[XCN] | None
-        RXE.13 (opt, rep) - Ordering Provider's DEA Number (XCN)
+        RXE.13 (opt, rep) - Ordering Provider's DEA Number (XCN) S4.A.1.14
 
     rxe_14 : list[XCN] | None
-        RXE.14 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN)
+        RXE.14 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN) S4.A.1.15
 
     rxe_15 : str | None
-        RXE.15 (opt) - Prescription Number (ST)
+        RXE.15 (opt) - Prescription Number (ST) S4.A.4.15
 
     rxe_16 : str | None
-        RXE.16 (opt) - Number of Refills Remaining (NM)
+        RXE.16 (opt) - Number of Refills Remaining (NM) S4.A.4.16
 
     rxe_17 : str | None
-        RXE.17 (opt) - Number of Refills/Doses Dispensed (NM)
+        RXE.17 (opt) - Number of Refills/Doses Dispensed (NM) S4.A.4.17
 
     rxe_18 : str | None
-        RXE.18 (opt) - D/T of Most Recent Refill or Dose Dispensed (DTM)
+        RXE.18 (opt) - D/T of Most Recent Refill or Dose Dispensed (DTM) S4.A.4.18
 
     rxe_19 : CQ | None
-        RXE.19 (opt) - Total Daily Dose (CQ)
+        RXE.19 (opt) - Total Daily Dose (CQ) S4.A.1.23
 
     rxe_20 : str | None
-        RXE.20 (opt) - Needs Human Review (ID)
+        RXE.20 (opt) - Needs Human Review (ID) S4.A.1.16 | 0136 - Yes/no Indicator
 
     rxe_21 : list[CWE] | None
-        RXE.21 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CWE)
+        RXE.21 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CWE) S4.A.4.21 | 9999 - no table for CE
 
     rxe_22 : str | None
-        RXE.22 (opt) - Give Per (Time Unit) (ST)
+        RXE.22 (opt) - Give Per (Time Unit) (ST) S4.A.4.22
 
     rxe_23 : str | None
-        RXE.23 (opt) - Give Rate Amount (ST)
+        RXE.23 (opt) - Give Rate Amount (ST) S4.A.4.23
 
     rxe_24 : CWE | None
-        RXE.24 (opt) - Give Rate Units (CWE)
+        RXE.24 (opt) - Give Rate Units (CWE) S4.A.4.24 | 9999 - no table for CE
 
     rxe_25 : str | None
-        RXE.25 (opt) - Give Strength (NM)
+        RXE.25 (opt) - Give Strength (NM) S4.A.4.25
 
     rxe_26 : CWE | None
-        RXE.26 (opt) - Give Strength Units (CWE)
+        RXE.26 (opt) - Give Strength Units (CWE) S4.A.4.26 | 9999 - no table for CE
 
     rxe_27 : list[CWE] | None
-        RXE.27 (opt, rep) - Give Indication (CWE)
+        RXE.27 (opt, rep) - Give Indication (CWE) S4.A.4.27 | 9999 - no table for CE
 
     rxe_28 : str | None
-        RXE.28 (opt) - Dispense Package Size (NM)
+        RXE.28 (opt) - Dispense Package Size (NM) S4.A.4.28
 
     rxe_29 : CWE | None
-        RXE.29 (opt) - Dispense Package Size Unit (CWE)
+        RXE.29 (opt) - Dispense Package Size Unit (CWE) S4.A.4.29 | 9999 - no table for CE
 
     rxe_30 : str | None
-        RXE.30 (opt) - Dispense Package Method (ID)
+        RXE.30 (opt) - Dispense Package Method (ID) S4.A.4.30 | 0321 - Dispense Method
 
     rxe_31 : list[CWE] | None
-        RXE.31 (opt, rep) - Supplementary Code (CWE)
+        RXE.31 (opt, rep) - Supplementary Code (CWE) S4.A.1.24 | 9999 - no table for CE
 
     rxe_32 : str | None
-        RXE.32 (opt) - Original Order Date/Time (DTM)
+        RXE.32 (opt) - Original Order Date/Time (DTM) S4.A.4.32
 
     rxe_33 : str | None
-        RXE.33 (opt) - Give Drug Strength Volume (NM)
+        RXE.33 (opt) - Give Drug Strength Volume (NM) S4.A.4.33
 
     rxe_34 : CWE | None
-        RXE.34 (opt) - Give Drug Strength Volume Units (CWE)
+        RXE.34 (opt) - Give Drug Strength Volume Units (CWE) S4.A.4.34 | 9999 - no table for CE
 
     rxe_35 : CWE | None
-        RXE.35 (opt) - Controlled Substance Schedule (CWE)
+        RXE.35 (opt) - Controlled Substance Schedule (CWE) S4.A.4.35 | 0477 - Controlled Substance Schedule*
 
     rxe_36 : str | None
-        RXE.36 (opt) - Formulary Status (ID)
+        RXE.36 (opt) - Formulary Status (ID) S4.A.4.36 | 0478 - Formulary Status
 
     rxe_37 : list[CWE] | None
-        RXE.37 (opt, rep) - Pharmaceutical Substance Alternative (CWE)
+        RXE.37 (opt, rep) - Pharmaceutical Substance Alternative (CWE) S4.A.4.37 | 9999 - no table for CE
 
     rxe_38 : CWE | None
-        RXE.38 (opt) - Pharmacy of Most Recent Fill (CWE)
+        RXE.38 (opt) - Pharmacy of Most Recent Fill (CWE) S4.A.4.38 | 9999 - no table for CE
 
     rxe_39 : str | None
-        RXE.39 (opt) - Initial Dispense Amount (NM)
+        RXE.39 (opt) - Initial Dispense Amount (NM) S4.A.4.39
 
     rxe_40 : CWE | None
-        RXE.40 (opt) - Dispensing Pharmacy (CWE)
+        RXE.40 (opt) - Dispensing Pharmacy (CWE) S4.A.1.32 | 9999 - no table for CE
 
     rxe_41 : XAD | None
-        RXE.41 (opt) - Dispensing Pharmacy Address (XAD)
+        RXE.41 (opt) - Dispensing Pharmacy Address (XAD) S4.A.1.33
 
     rxe_42 : PL | None
-        RXE.42 (opt) - Deliver-to Patient Location (PL)
+        RXE.42 (opt) - Deliver-to Patient Location (PL) S4.A.1.34
 
     rxe_43 : XAD | None
-        RXE.43 (opt) - Deliver-to Address (XAD)
+        RXE.43 (opt) - Deliver-to Address (XAD) S4.A.1.35
 
     rxe_44 : str | None
-        RXE.44 (opt) - Pharmacy Order Type (ID)
+        RXE.44 (opt) - Pharmacy Order Type (ID) S4.A.4.44 | 0480 - Pharmacy Order Types
 
     rxe_45 : list[XTN] | None
-        RXE.45 (opt, rep) - Pharmacy Phone Number (XTN)
+        RXE.45 (opt, rep) - Pharmacy Phone Number (XTN) S4.A.4.45
     """
 
     rxe_2: CWE = Field(

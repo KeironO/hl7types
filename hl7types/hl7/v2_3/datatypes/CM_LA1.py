@@ -15,7 +15,7 @@ from .HD import HD
 
 
 class CM_LA1(HL7Model):
-    """HL7 v2 CM_LA1 data type.
+    """Location with address information.
 
     Attributes
     ----------

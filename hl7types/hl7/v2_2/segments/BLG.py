@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class BLG(HL7Model):
-    """HL7 v2 BLG segment.
+    """BILLING (S4.3.2).
 
     Attributes
     ----------
     blg_1 : str | None
-        BLG.1 (opt) - When to Charge (CM)
+        BLG.1 (opt) - When to Charge (CM) S4.3.2.1 | 0100 - WHEN TO CHARGE
 
     blg_2 : str | None
-        BLG.2 (opt) - Charge Type (ID)
+        BLG.2 (opt) - Charge Type (ID) S4.3.2.2 | 0122 - CHARGE TYPE
 
     blg_3 : str | None
-        BLG.3 (opt) - Account ID (CK)
+        BLG.3 (opt) - Account ID (CK) S4.3.2.3
     """
 
     blg_1: Optional[str] = Field(

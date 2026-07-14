@@ -17,39 +17,39 @@ from ..datatypes.TS import TS
 
 
 class DRG(HL7Model):
-    """HL7 v2 DRG segment.
+    """Diagnosis Related Group (S6.4.3).
 
     Attributes
     ----------
     drg_1 : CE | None
-        DRG.1 (opt) - Diagnostic Related Group (CE)
+        DRG.1 (opt) - Diagnostic Related Group (CE) S6.4.2 | 0055 - DRG Code
 
     drg_2 : TS | None
-        DRG.2 (opt) - DRG Assigned Date/Time (TS)
+        DRG.2 (opt) - DRG Assigned Date/Time (TS) S6.4.3.2
 
     drg_3 : str | None
-        DRG.3 (opt) - DRG Approval Indicator (ID)
+        DRG.3 (opt) - DRG Approval Indicator (ID) S6.4.2 | 0136 - Yes/No Indicator
 
     drg_4 : str | None
-        DRG.4 (opt) - DRG Grouper Review Code (IS)
+        DRG.4 (opt) - DRG Grouper Review Code (IS) S6.4.2 | 0056 - DRG Grouper Review Code
 
     drg_5 : CE | None
-        DRG.5 (opt) - Outlier Type (CE)
+        DRG.5 (opt) - Outlier Type (CE) S6.4.2 | 0083 - Outlier Type
 
     drg_6 : str | None
-        DRG.6 (opt) - Outlier Days (NM)
+        DRG.6 (opt) - Outlier Days (NM) S6.4.2
 
     drg_7 : CP | None
-        DRG.7 (opt) - Outlier Cost (CP)
+        DRG.7 (opt) - Outlier Cost (CP) S6.4.2
 
     drg_8 : str | None
-        DRG.8 (opt) - DRG Payor (IS)
+        DRG.8 (opt) - DRG Payor (IS) S6.4.3.8 | 0229 - Outlier Type
 
     drg_9 : CP | None
-        DRG.9 (opt) - Outlier Reimbursement (CP)
+        DRG.9 (opt) - Outlier Reimbursement (CP) S6.4.3.9
 
     drg_10 : str | None
-        DRG.10 (opt) - Confidential Indicator (ID)
+        DRG.10 (opt) - Confidential Indicator (ID) S6.4.2 | 0136 - Yes/No Indicator
     """
 
     drg_1: Optional[CE] = Field(

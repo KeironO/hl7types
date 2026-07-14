@@ -15,33 +15,33 @@ from ..datatypes.CE import CE
 
 
 class OM3(HL7Model):
-    """HL7 v2 OM3 segment.
+    """CATEGORICAL TEST/OBSERVATION (S7.6.6).
 
     Attributes
     ----------
     om3_1 : str | None
-        OM3.1 (opt) - Segment Type ID (ST)
+        OM3.1 (opt) - Segment Type ID (ST) S7.6.9.1
 
     om3_2 : str | None
-        OM3.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+        OM3.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
 
     om3_3 : str | None
-        OM3.3 (opt) - Preferred Coding System (ID)
+        OM3.3 (opt) - Preferred Coding System (ID) S7.6.6.3
 
     om3_4 : list[CE] | None
-        OM3.4 (opt, rep) - Valid coded answers (CE)
+        OM3.4 (opt, rep) - Valid coded answers (CE) S7.6.6.4
 
     om3_5 : list[CE] | None
-        OM3.5 (opt, rep) - Normal test codes for categorical observations (CE)
+        OM3.5 (opt, rep) - Normal test codes for categorical observations (CE) S7.6.6.5
 
     om3_6 : CE | None
-        OM3.6 (opt) - Abnormal test codes for categorical observations (CE)
+        OM3.6 (opt) - Abnormal test codes for categorical observations (CE) S7.6.6.6
 
     om3_7 : CE | None
-        OM3.7 (opt) - Critical test codes for categorical observations (CE)
+        OM3.7 (opt) - Critical test codes for categorical observations (CE) S7.6.6.7
 
     om3_8 : str | None
-        OM3.8 (opt) - Data Type (ID)
+        OM3.8 (opt) - Data Type (ID) S7.6.6.8
     """
 
     om3_1: Optional[str] = Field(

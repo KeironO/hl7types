@@ -22,19 +22,19 @@ class SRR_S01_LOCATION_RESOURCE(HL7Model):
     """HL7 v2 SRR_S01.LOCATION_RESOURCE group.
 
     Attributes:
-        AIL (AIL): required
-        NTE (Optional[List[NTE]]): optional
+        AIL (AIL): AIL - appointment information - location resource segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     AIL: _AIL = Field(
         title="AIL",
-        description="Required",
+        description="AIL - appointment information - location resource segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

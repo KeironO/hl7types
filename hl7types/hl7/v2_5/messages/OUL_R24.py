@@ -30,57 +30,54 @@ _SFT = SFT
 
 
 class OUL_R24(HL7Model):
-    """HL7 v2 OUL_R24 message.
+    """OUL - Unsolicited Order Oriented Observation Message (S7.3.2).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        NTE (Optional[NTE]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        NTE (Optional[NTE]): Notes and Comments, optional
         PATIENT (Optional[OUL_R24_PATIENT]): optional
         VISIT (Optional[OUL_R24_VISIT]): optional
         ORDER (List[OUL_R24_ORDER]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OUL_R24_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     VISIT: Optional[_OUL_R24_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     ORDER: List[_OUL_R24_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

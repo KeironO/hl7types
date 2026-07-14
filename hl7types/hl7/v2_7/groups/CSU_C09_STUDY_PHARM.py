@@ -29,13 +29,11 @@ class CSU_C09_STUDY_PHARM(HL7Model):
     COMMON_ORDER: Optional[_CSU_C09_COMMON_ORDER] = Field(
         default=None,
         title="COMMON_ORDER",
-        description="Optional",
     )
 
     RX_ADMIN: List[_CSU_C09_RX_ADMIN] = Field(
         min_length=1,
         title="RX_ADMIN",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

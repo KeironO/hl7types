@@ -22,28 +22,27 @@ _MSH = MSH
 
 
 class MFN_M05(HL7Model):
-    """HL7 v2 MFN_M05 message.
+    """MFN/MFK - Patient location master file (S8).
 
     Attributes:
-        MSH (MSH): required
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        MFI (MFI): Master File Identification, required
         MF_LOCATION (List[MFN_M05_MF_LOCATION]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_LOCATION: List[_MFN_M05_MF_LOCATION] = Field(
         min_length=1,
         title="MF_LOCATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

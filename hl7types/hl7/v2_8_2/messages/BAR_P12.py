@@ -36,75 +36,74 @@ _UAC = UAC
 
 
 class BAR_P12(HL7Model):
-    """HL7 v2 BAR_P12 message.
+    """BAR/ACK - Update Diagnosis/Procedure (S6.4.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (PV1): required
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[DRG]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PV1 (PV1): Patient Visit, required
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
         PROCEDURE (Optional[List[BAR_P12_PROCEDURE]]): optional
-        OBX (Optional[OBX]): optional
+        OBX (Optional[OBX]): Observation/Result, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     PROCEDURE: Optional[List[_BAR_P12_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     OBX: Optional[_OBX] = Field(
         default=None,
         title="OBX",
-        description="Optional",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

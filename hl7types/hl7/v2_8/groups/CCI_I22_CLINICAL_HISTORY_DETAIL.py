@@ -28,13 +28,11 @@ class CCI_I22_CLINICAL_HISTORY_DETAIL(HL7Model):
 
     CLINICAL_HISTORY_OBJECT: _CCI_I22_CLINICAL_HISTORY_OBJECT = Field(
         title="CLINICAL_HISTORY_OBJECT",
-        description="Required",
     )
 
     CLINICAL_HISTORY_OBSERVATION: Optional[List[_CCI_I22_CLINICAL_HISTORY_OBSERVATION]] = Field(
         default=None,
         title="CLINICAL_HISTORY_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -19,12 +19,12 @@ class RSP_E22_PSL_ITEM_INFO(HL7Model):
     """HL7 v2 RSP_E22.PSL_ITEM_INFO group.
 
     Attributes:
-        PSL (PSL): required
+        PSL (PSL): Product/Service Line Item, required
     """
 
     PSL: _PSL = Field(
         title="PSL",
-        description="Required",
+        description="Product/Service Line Item",
     )
 
     model_config = {"populate_by_name": True}

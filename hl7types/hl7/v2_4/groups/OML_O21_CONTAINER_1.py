@@ -22,19 +22,19 @@ class OML_O21_CONTAINER_1(HL7Model):
     """HL7 v2 OML_O21.CONTAINER_1 group.
 
     Attributes:
-        SAC (SAC): required
-        OBX (Optional[List[OBX]]): optional
+        SAC (SAC): Specimen and container detail, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen and container detail",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

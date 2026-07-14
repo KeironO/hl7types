@@ -17,7 +17,7 @@ from .FN import FN
 
 
 class XPN(HL7Model):
-    """HL7 v2 XPN data type.
+    """Extended person name (S2.9.54).
 
     Attributes
     ----------

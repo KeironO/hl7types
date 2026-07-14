@@ -27,48 +27,48 @@ _PV1 = PV1
 
 
 class ADT_A24(HL7Model):
-    """HL7 v2 ADT_A24 message.
+    """ADT/ACK -  Link patient information.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (Optional[PV1]): optional
-        DB1 (Optional[List[DB1]]): optional
+        MSH (MSH): MSH - message header segment, required
+        EVN (EVN): EVN - event type segment, required
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        PV1 (Optional[PV1]): PV1 - patient visit segment-, optional
+        DB1 (Optional[List[DB1]]): DB1 - Disability segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVN - event type segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="PV1 - patient visit segment-",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="DB1 - Disability segment",
     )
 
     model_config = {"populate_by_name": True}

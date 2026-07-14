@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class DR(HL7Model):
-    """HL7 v2 DR data type.
+    """Date/time range (S2.A.20).
 
     Attributes
     ----------

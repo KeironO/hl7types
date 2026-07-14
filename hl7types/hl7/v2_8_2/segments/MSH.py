@@ -21,84 +21,84 @@ from ..datatypes.XON import XON
 
 
 class MSH(HL7Model):
-    """HL7 v2 MSH segment.
+    """Message Header (S2.14.9).
 
     Attributes
     ----------
     msh_1 : str
-        MSH.1 (req) - Field Separator (ST)
+        MSH.1 (req) - Field Separator (ST) S2.14.9.1
 
     msh_2 : str
-        MSH.2 (req) - Encoding Characters (ST)
+        MSH.2 (req) - Encoding Characters (ST) S2.14.9.2
 
     msh_3 : HD | None
-        MSH.3 (opt) - Sending Application (HD)
+        MSH.3 (opt) - Sending Application (HD) S2.14.9.3 | 0361 - Application
 
     msh_4 : HD | None
-        MSH.4 (opt) - Sending Facility (HD)
+        MSH.4 (opt) - Sending Facility (HD) S2.14.9.4 | 0362 - Facility
 
     msh_5 : HD | None
-        MSH.5 (opt) - Receiving Application (HD)
+        MSH.5 (opt) - Receiving Application (HD) S2.14.9.5 | 0361 - Application
 
     msh_6 : HD | None
-        MSH.6 (opt) - Receiving Facility (HD)
+        MSH.6 (opt) - Receiving Facility (HD) S2.14.9.6 | 0362 - Facility
 
     msh_7 : str
-        MSH.7 (req) - Date/Time of Message (DTM)
+        MSH.7 (req) - Date/Time of Message (DTM) S2.14.9.7
 
     msh_8 : str | None
-        MSH.8 (opt) - Security (ST)
+        MSH.8 (opt) - Security (ST) S2.14.9.8
 
     msh_9 : MSG
-        MSH.9 (req) - Message Type (MSG)
+        MSH.9 (req) - Message Type (MSG) S2.14.9.9
 
     msh_10 : str
-        MSH.10 (req) - Message Control ID (ST)
+        MSH.10 (req) - Message Control ID (ST) S2.14.9.10
 
     msh_11 : PT
-        MSH.11 (req) - Processing ID (PT)
+        MSH.11 (req) - Processing ID (PT) S2.14.9.11
 
     msh_12 : VID
-        MSH.12 (req) - Version ID (VID)
+        MSH.12 (req) - Version ID (VID) S2.14.9.12
 
     msh_13 : str | None
-        MSH.13 (opt) - Sequence Number (NM)
+        MSH.13 (opt) - Sequence Number (NM) S2.14.9.13
 
     msh_14 : str | None
-        MSH.14 (opt) - Continuation Pointer (ST)
+        MSH.14 (opt) - Continuation Pointer (ST) S2.14.4.1
 
     msh_15 : str | None
-        MSH.15 (opt) - Accept Acknowledgment Type (ID)
+        MSH.15 (opt) - Accept Acknowledgment Type (ID) S2.14.9.15 | 0155 - Accept/Application Acknowledgment Conditions
 
     msh_16 : str | None
-        MSH.16 (opt) - Application Acknowledgment Type (ID)
+        MSH.16 (opt) - Application Acknowledgment Type (ID) S2.14.9.16 | 0155 - Accept/Application Acknowledgment Conditions
 
     msh_17 : str | None
-        MSH.17 (opt) - Country Code (ID)
+        MSH.17 (opt) - Country Code (ID) S2.14.9.17 | 0399 - Country Code
 
     msh_18 : list[str] | None
-        MSH.18 (opt, rep) - Character Set (ID)
+        MSH.18 (opt, rep) - Character Set (ID) S2.14.9.18 | 0211 - Alternate Character Sets
 
     msh_19 : CWE | None
-        MSH.19 (opt) - Principal Language Of Message (CWE)
+        MSH.19 (opt) - Principal Language Of Message (CWE) S2.14.9.19
 
     msh_20 : str | None
-        MSH.20 (opt) - Alternate Character Set Handling Scheme (ID)
+        MSH.20 (opt) - Alternate Character Set Handling Scheme (ID) S2.14.9.20 | 0356 - Alternate Character Set Handling Scheme
 
     msh_21 : list[EI] | None
-        MSH.21 (opt, rep) - Message Profile Identifier (EI)
+        MSH.21 (opt, rep) - Message Profile Identifier (EI) S2.14.9.21
 
     msh_22 : XON | None
-        MSH.22 (opt) - Sending Responsible Organization (XON)
+        MSH.22 (opt) - Sending Responsible Organization (XON) S2.14.9.22
 
     msh_23 : XON | None
-        MSH.23 (opt) - Receiving Responsible Organization (XON)
+        MSH.23 (opt) - Receiving Responsible Organization (XON) S2.14.9.23
 
     msh_24 : HD | None
-        MSH.24 (opt) - Sending Network Address (HD)
+        MSH.24 (opt) - Sending Network Address (HD) S2.14.9.24
 
     msh_25 : HD | None
-        MSH.25 (opt) - Receiving Network Address (HD)
+        MSH.25 (opt) - Receiving Network Address (HD) S2.14.9.25
     """
 
     msh_1: str = Field(

@@ -29,13 +29,11 @@ class ORU_R03_PATIENT_RESULT(HL7Model):
     PATIENT: Optional[_ORU_R03_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER_OBSERVATION: List[_ORU_R03_ORDER_OBSERVATION] = Field(
         min_length=1,
         title="ORDER_OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

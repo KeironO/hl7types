@@ -20,69 +20,69 @@ from ..datatypes.VID import VID
 
 
 class MSH(HL7Model):
-    """HL7 v2 MSH segment.
+    """MSH - message header segment (S2.24.1).
 
     Attributes
     ----------
     msh_1 : str
-        MSH.1 (req) - Field Separator (ST)
+        MSH.1 (req) - Field Separator (ST) S11.6.1
 
     msh_2 : str
-        MSH.2 (req) - Encoding Characters (ST)
+        MSH.2 (req) - Encoding Characters (ST) S11.2.2
 
     msh_3 : HD | None
-        MSH.3 (opt) - Sending Application (HD)
+        MSH.3 (opt) - Sending Application (HD) S11.2.3 | 0361 - Sending/receiving application
 
     msh_4 : HD | None
-        MSH.4 (opt) - Sending Facility (HD)
+        MSH.4 (opt) - Sending Facility (HD) S11.2.4 | 0362 - Sending/receiving facility
 
     msh_5 : HD | None
-        MSH.5 (opt) - Receiving Application (HD)
+        MSH.5 (opt) - Receiving Application (HD) S11.6.6 | 0361 - Sending/receiving application
 
     msh_6 : HD | None
-        MSH.6 (opt) - Receiving Facility (HD)
+        MSH.6 (opt) - Receiving Facility (HD) S11.2.6 | 0362 - Sending/receiving facility
 
     msh_7 : TS | None
-        MSH.7 (opt) - Date/Time Of Message (TS)
+        MSH.7 (opt) - Date/Time Of Message (TS) S11.2.7
 
     msh_8 : str | None
-        MSH.8 (opt) - Security (ST)
+        MSH.8 (opt) - Security (ST) S11.6.3
 
     msh_9 : MSG
-        MSH.9 (req) - Message Type (MSG)
+        MSH.9 (req) - Message Type (MSG) S11.3.3 | 0076 - Message type
 
     msh_10 : str
-        MSH.10 (req) - Message Control ID (ST)
+        MSH.10 (req) - Message Control ID (ST) S2.24.2.2
 
     msh_11 : PT
-        MSH.11 (req) - Processing ID (PT)
+        MSH.11 (req) - Processing ID (PT) S2.24.1.11
 
     msh_12 : VID
-        MSH.12 (req) - Version ID (VID)
+        MSH.12 (req) - Version ID (VID) S2.24.1.12 | 0104 - Version ID
 
     msh_13 : str | None
-        MSH.13 (opt) - Sequence Number (NM)
+        MSH.13 (opt) - Sequence Number (NM) S2.24.1.13
 
     msh_14 : str | None
-        MSH.14 (opt) - Continuation Pointer (ST)
+        MSH.14 (opt) - Continuation Pointer (ST) S2.24.8.1
 
     msh_15 : str | None
-        MSH.15 (opt) - Accept Acknowledgment Type (ID)
+        MSH.15 (opt) - Accept Acknowledgment Type (ID) S2.24.1.15 | 0155 - Accept/application acknowledgment conditions
 
     msh_16 : str | None
-        MSH.16 (opt) - Application Acknowledgment Type (ID)
+        MSH.16 (opt) - Application Acknowledgment Type (ID) S2.24.1.16 | 0155 - Accept/application acknowledgment conditions
 
     msh_17 : str | None
-        MSH.17 (opt) - Country Code (ID)
+        MSH.17 (opt) - Country Code (ID) S2.24.1.17
 
     msh_18 : list[str] | None
-        MSH.18 (opt, rep) - Character Set (ID)
+        MSH.18 (opt, rep) - Character Set (ID) S2.24.1.18 | 0211 - Alternate character sets
 
     msh_19 : CE | None
-        MSH.19 (opt) - Principal Language Of Message (CE)
+        MSH.19 (opt) - Principal Language Of Message (CE) S2.24.1.19
 
     msh_20 : str | None
-        MSH.20 (opt) - Alternate Character Set Handling Scheme (ID)
+        MSH.20 (opt) - Alternate Character Set Handling Scheme (ID) S2.24.1.20 | 0356 - Alternate character set handling scheme
     """
 
     msh_1: str = Field(

@@ -29,13 +29,11 @@ class RRA_O18_RESPONSE(HL7Model):
     PATIENT: Optional[_RRA_O18_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RRA_O18_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

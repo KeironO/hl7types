@@ -30,55 +30,53 @@ _PID = PID
 
 
 class PEX_P07(HL7Model):
-    """HL7 v2 PEX_P07 message.
+    """PEX - Unsolicited initial individual product experience report (S7).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         VISIT (Optional[PEX_P07_VISIT]): optional
         EXPERIENCE (List[PEX_P07_EXPERIENCE]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VISIT: Optional[_PEX_P07_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     EXPERIENCE: List[_PEX_P07_EXPERIENCE] = Field(
         min_length=1,
         title="EXPERIENCE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

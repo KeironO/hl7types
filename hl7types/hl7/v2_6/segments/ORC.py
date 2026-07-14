@@ -24,102 +24,102 @@ from ..datatypes.XTN import XTN
 
 
 class ORC(HL7Model):
-    """HL7 v2 ORC segment.
+    """Common Order (S4.5.1).
 
     Attributes
     ----------
     orc_1 : str
-        ORC.1 (req) - Order Control (ID)
+        ORC.1 (req) - Order Control (ID) S4.5.1.1 | 0119 - Order control codes
 
     orc_2 : EI | None
-        ORC.2 (opt) - Placer Order Number (EI)
+        ORC.2 (opt) - Placer Order Number (EI) S10.6.1.24
 
     orc_3 : EI | None
-        ORC.3 (opt) - Filler Order Number (EI)
+        ORC.3 (opt) - Filler Order Number (EI) S10.6.1.25
 
     orc_4 : EI | None
-        ORC.4 (opt) - Placer Group Number (EI)
+        ORC.4 (opt) - Placer Group Number (EI) S10.6.1.4
 
     orc_5 : str | None
-        ORC.5 (opt) - Order Status (ID)
+        ORC.5 (opt) - Order Status (ID) S4.5.1.5 | 0038 - Order status
 
     orc_6 : str | None
-        ORC.6 (opt) - Response Flag (ID)
+        ORC.6 (opt) - Response Flag (ID) S4.5.1.6 | 0121 - Response flag
 
     orc_7 : list[TQ] | None
-        ORC.7 (opt, rep) - Quantity/Timing (TQ)
+        ORC.7 (opt, rep) - Quantity/Timing (TQ) S4.14.4.1
 
     orc_8 : EIP | None
-        ORC.8 (opt) - Parent (EIP)
+        ORC.8 (opt) - Parent (EIP) S4.5.1.8
 
     orc_9 : str | None
-        ORC.9 (opt) - Date/Time of Transaction (DTM)
+        ORC.9 (opt) - Date/Time of Transaction (DTM) S4.5.1.9
 
     orc_10 : list[XCN] | None
-        ORC.10 (opt, rep) - Entered By (XCN)
+        ORC.10 (opt, rep) - Entered By (XCN) S2.14.10.5
 
     orc_11 : list[XCN] | None
-        ORC.11 (opt, rep) - Verified By (XCN)
+        ORC.11 (opt, rep) - Verified By (XCN) S4.5.1.11
 
     orc_12 : list[XCN] | None
-        ORC.12 (opt, rep) - Ordering Provider (XCN)
+        ORC.12 (opt, rep) - Ordering Provider (XCN) S4.5.1.12
 
     orc_13 : PL | None
-        ORC.13 (opt) - Enterer's Location (PL)
+        ORC.13 (opt) - Enterer's Location (PL) S4.5.1.13
 
     orc_14 : list[XTN] | None
-        ORC.14 (opt, rep) - Call Back Phone Number (XTN)
+        ORC.14 (opt, rep) - Call Back Phone Number (XTN) S4.5.1.14
 
     orc_15 : str | None
-        ORC.15 (opt) - Order Effective Date/Time (DTM)
+        ORC.15 (opt) - Order Effective Date/Time (DTM) S4.5.1.15
 
     orc_16 : CWE | None
-        ORC.16 (opt) - Order Control Code Reason (CWE)
+        ORC.16 (opt) - Order Control Code Reason (CWE) S4.5.1.16 | 9999 - no table for CE
 
     orc_17 : CWE | None
-        ORC.17 (opt) - Entering Organization (CWE)
+        ORC.17 (opt) - Entering Organization (CWE) S4.5.1.17 | 9999 - no table for CE
 
     orc_18 : CWE | None
-        ORC.18 (opt) - Entering Device (CWE)
+        ORC.18 (opt) - Entering Device (CWE) S4.5.1.18 | 9999 - no table for CE
 
     orc_19 : list[XCN] | None
-        ORC.19 (opt, rep) - Action By (XCN)
+        ORC.19 (opt, rep) - Action By (XCN) S4.5.1.19
 
     orc_20 : CWE | None
-        ORC.20 (opt) - Advanced Beneficiary Notice Code (CWE)
+        ORC.20 (opt) - Advanced Beneficiary Notice Code (CWE) S4.5.1.20 | 0339 - Advanced Beneficiary Notice Code
 
     orc_21 : list[XON] | None
-        ORC.21 (opt, rep) - Ordering Facility Name (XON)
+        ORC.21 (opt, rep) - Ordering Facility Name (XON) S4.5.1.21
 
     orc_22 : list[XAD] | None
-        ORC.22 (opt, rep) - Ordering Facility Address (XAD)
+        ORC.22 (opt, rep) - Ordering Facility Address (XAD) S4.5.1.22
 
     orc_23 : list[XTN] | None
-        ORC.23 (opt, rep) - Ordering Facility Phone Number (XTN)
+        ORC.23 (opt, rep) - Ordering Facility Phone Number (XTN) S4.5.1.23
 
     orc_24 : list[XAD] | None
-        ORC.24 (opt, rep) - Ordering Provider Address (XAD)
+        ORC.24 (opt, rep) - Ordering Provider Address (XAD) S4.5.1.24
 
     orc_25 : CWE | None
-        ORC.25 (opt) - Order Status Modifier (CWE)
+        ORC.25 (opt) - Order Status Modifier (CWE) S4.5.1.25 | 9999 - no table for CE
 
     orc_26 : CWE | None
-        ORC.26 (opt) - Advanced Beneficiary Notice Override Reason (CWE)
+        ORC.26 (opt) - Advanced Beneficiary Notice Override Reason (CWE) S4.5.1.26 | 0552 - Advanced beneficiary notice override reason
 
     orc_27 : str | None
-        ORC.27 (opt) - Filler's Expected Availability Date/Time (DTM)
+        ORC.27 (opt) - Filler's Expected Availability Date/Time (DTM) S4.5.1.27
 
     orc_28 : CWE | None
-        ORC.28 (opt) - Confidentiality Code (CWE)
+        ORC.28 (opt) - Confidentiality Code (CWE) S4.5.1.28 | 0177 - Confidentiality code
 
     orc_29 : CWE | None
-        ORC.29 (opt) - Order Type (CWE)
+        ORC.29 (opt) - Order Type (CWE) S4.5.1.29 | 0482 - Order Type
 
     orc_30 : CNE | None
-        ORC.30 (opt) - Enterer Authorization Mode (CNE)
+        ORC.30 (opt) - Enterer Authorization Mode (CNE) S4.5.1.30 | 0483 - Authorization Mode
 
     orc_31 : CWE | None
-        ORC.31 (opt) - Parent Universal Service Identifier (CWE)
+        ORC.31 (opt) - Parent Universal Service Identifier (CWE) S4.5.1.31
     """
 
     orc_1: str = Field(

@@ -15,51 +15,51 @@ from ..datatypes.HD import HD
 
 
 class FHS(HL7Model):
-    """HL7 v2 FHS segment.
+    """File Header (S2.14.6).
 
     Attributes
     ----------
     fhs_1 : str
-        FHS.1 (req) - File Field Separator (ST)
+        FHS.1 (req) - File Field Separator (ST) S2.14.6.1
 
     fhs_2 : str
-        FHS.2 (req) - File Encoding Characters (ST)
+        FHS.2 (req) - File Encoding Characters (ST) S2.14.6.2
 
     fhs_3 : HD | None
-        FHS.3 (opt) - File Sending Application (HD)
+        FHS.3 (opt) - File Sending Application (HD) S2.14.6.3
 
     fhs_4 : HD | None
-        FHS.4 (opt) - File Sending Facility (HD)
+        FHS.4 (opt) - File Sending Facility (HD) S2.14.6.4
 
     fhs_5 : HD | None
-        FHS.5 (opt) - File Receiving Application (HD)
+        FHS.5 (opt) - File Receiving Application (HD) S2.14.6.5
 
     fhs_6 : HD | None
-        FHS.6 (opt) - File Receiving Facility (HD)
+        FHS.6 (opt) - File Receiving Facility (HD) S2.14.6.6
 
     fhs_7 : str | None
-        FHS.7 (opt) - File Creation Date/Time (DTM)
+        FHS.7 (opt) - File Creation Date/Time (DTM) S2.14.6.7
 
     fhs_8 : str | None
-        FHS.8 (opt) - File Security (ST)
+        FHS.8 (opt) - File Security (ST) S2.14.6.8
 
     fhs_9 : str | None
-        FHS.9 (opt) - File Name/ID (ST)
+        FHS.9 (opt) - File Name/ID (ST) S2.14.6.9
 
     fhs_10 : str | None
-        FHS.10 (opt) - File Header Comment (ST)
+        FHS.10 (opt) - File Header Comment (ST) S2.14.6.10
 
     fhs_11 : str | None
-        FHS.11 (opt) - File Control ID (ST)
+        FHS.11 (opt) - File Control ID (ST) S2.14.6.11
 
     fhs_12 : str | None
-        FHS.12 (opt) - Reference File Control ID (ST)
+        FHS.12 (opt) - Reference File Control ID (ST) S2.14.6.12
 
     fhs_13 : HD | None
-        FHS.13 (opt) - File Sending Network Address (HD)
+        FHS.13 (opt) - File Sending Network Address (HD) S2.14.6.13
 
     fhs_14 : HD | None
-        FHS.14 (opt) - File Receiving Network Address (HD)
+        FHS.14 (opt) - File Receiving Network Address (HD) S2.14.6.14
     """
 
     fhs_1: str = Field(

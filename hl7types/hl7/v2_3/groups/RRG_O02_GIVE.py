@@ -24,26 +24,26 @@ class RRG_O02_GIVE(HL7Model):
     """HL7 v2 RRG_O02.GIVE group.
 
     Attributes:
-        RXG (RXG): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXG (RXG): Pharmacy give segment, required
+        RXR (List[RXR]): Pharmacy route segment, required
+        RXC (Optional[List[RXC]]): Pharmacy component order segment, optional
     """
 
     RXG: _RXG = Field(
         title="RXG",
-        description="Required",
+        description="Pharmacy give segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy route segment",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy component order segment",
     )
 
     model_config = {"populate_by_name": True}

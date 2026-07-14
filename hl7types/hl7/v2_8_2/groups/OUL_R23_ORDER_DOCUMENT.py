@@ -24,25 +24,25 @@ class OUL_R23_ORDER_DOCUMENT(HL7Model):
     """HL7 v2 OUL_R23.ORDER_DOCUMENT group.
 
     Attributes:
-        OBX (OBX): required
-        PRT (Optional[List[PRT]]): optional
-        TXA (TXA): required
+        OBX (OBX): Observation/Result, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        TXA (TXA): Transcription Document Header, required
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TXA: _TXA = Field(
         title="TXA",
-        description="Required",
+        description="Transcription Document Header",
     )
 
     model_config = {"populate_by_name": True}

@@ -28,32 +28,30 @@ class PPG_PCG_ORDER_DETAIL(HL7Model):
 
     Attributes:
         OBR_SUPPGRP (PPG_PCG_OBR_SUPPGRP): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         ORDER_OBSERVATION (Optional[List[PPG_PCG_ORDER_OBSERVATION]]): optional
     """
 
     OBR_SUPPGRP: _PPG_PCG_OBR_SUPPGRP = Field(
         title="OBR_SUPPGRP",
-        description="Required",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ORDER_OBSERVATION: Optional[List[_PPG_PCG_ORDER_OBSERVATION]] = Field(
         default=None,
         title="ORDER_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

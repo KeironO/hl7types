@@ -15,15 +15,15 @@ from ..datatypes.PL import PL
 
 
 class NPU(HL7Model):
-    """HL7 v2 NPU segment.
+    """Bed status update (S3.3.7).
 
     Attributes
     ----------
     npu_1 : PL
-        NPU.1 (req) - Bed Location (PL)
+        NPU.1 (req) - Bed Location (PL) S3.3.7.1
 
     npu_2 : str | None
-        NPU.2 (opt) - Bed Status (IS)
+        NPU.2 (opt) - Bed Status (IS) S3.3.3 | 0116 - Bed Status
     """
 
     npu_1: PL = Field(

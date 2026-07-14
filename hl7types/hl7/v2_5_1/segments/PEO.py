@@ -19,84 +19,84 @@ from ..datatypes.XTN import XTN
 
 
 class PEO(HL7Model):
-    """HL7 v2 PEO segment.
+    """Product Experience Observation (S7.12.2).
 
     Attributes
     ----------
     peo_1 : list[CE] | None
-        PEO.1 (opt, rep) - Event Identifiers Used (CE)
+        PEO.1 (opt, rep) - Event Identifiers Used (CE) S7.12.2.1
 
     peo_2 : list[CE] | None
-        PEO.2 (opt, rep) - Event Symptom/Diagnosis Code (CE)
+        PEO.2 (opt, rep) - Event Symptom/Diagnosis Code (CE) S7.12.2.2
 
     peo_3 : TS
-        PEO.3 (req) - Event Onset Date/Time (TS)
+        PEO.3 (req) - Event Onset Date/Time (TS) S7.12.2.3
 
     peo_4 : TS | None
-        PEO.4 (opt) - Event Exacerbation Date/Time (TS)
+        PEO.4 (opt) - Event Exacerbation Date/Time (TS) S7.12.2.4
 
     peo_5 : TS | None
-        PEO.5 (opt) - Event Improved Date/Time (TS)
+        PEO.5 (opt) - Event Improved Date/Time (TS) S7.12.2.5
 
     peo_6 : TS | None
-        PEO.6 (opt) - Event Ended Data/Time (TS)
+        PEO.6 (opt) - Event Ended Data/Time (TS) S7.12.2.6
 
     peo_7 : list[XAD] | None
-        PEO.7 (opt, rep) - Event Location Occurred Address (XAD)
+        PEO.7 (opt, rep) - Event Location Occurred Address (XAD) S7.12.2.7
 
     peo_8 : list[str] | None
-        PEO.8 (opt, rep) - Event Qualification (ID)
+        PEO.8 (opt, rep) - Event Qualification (ID) S7.12.2.8 | 0237 - Event Qualification
 
     peo_9 : str | None
-        PEO.9 (opt) - Event Serious (ID)
+        PEO.9 (opt) - Event Serious (ID) S7.12.2.9 | 0238 - Event Seriousness
 
     peo_10 : str | None
-        PEO.10 (opt) - Event Expected (ID)
+        PEO.10 (opt) - Event Expected (ID) S7.12.2.10 | 0239 - Event Expected
 
     peo_11 : list[str] | None
-        PEO.11 (opt, rep) - Event Outcome (ID)
+        PEO.11 (opt, rep) - Event Outcome (ID) S7.12.2.11 | 0240 - Event Consequence
 
     peo_12 : str | None
-        PEO.12 (opt) - Patient Outcome (ID)
+        PEO.12 (opt) - Patient Outcome (ID) S7.12.2.12 | 0241 - Patient Outcome
 
     peo_13 : list[str] | None
-        PEO.13 (opt, rep) - Event Description From Others (FT)
+        PEO.13 (opt, rep) - Event Description From Others (FT) S7.12.2.13
 
     peo_14 : list[str] | None
-        PEO.14 (opt, rep) - Event From Original Reporter (FT)
+        PEO.14 (opt, rep) - Event From Original Reporter (FT) S7.12.2.14
 
     peo_15 : list[str] | None
-        PEO.15 (opt, rep) - Event Description From Patient (FT)
+        PEO.15 (opt, rep) - Event Description From Patient (FT) S7.12.2.15
 
     peo_16 : list[str] | None
-        PEO.16 (opt, rep) - Event Description From Practitioner (FT)
+        PEO.16 (opt, rep) - Event Description From Practitioner (FT) S7.12.2.16
 
     peo_17 : list[str] | None
-        PEO.17 (opt, rep) - Event Description From Autopsy (FT)
+        PEO.17 (opt, rep) - Event Description From Autopsy (FT) S7.12.2.17
 
     peo_18 : list[CE] | None
-        PEO.18 (opt, rep) - Cause Of Death (CE)
+        PEO.18 (opt, rep) - Cause Of Death (CE) S7.12.2.18
 
     peo_19 : list[XPN] | None
-        PEO.19 (opt, rep) - Primary Observer Name (XPN)
+        PEO.19 (opt, rep) - Primary Observer Name (XPN) S7.12.2.19
 
     peo_20 : list[XAD] | None
-        PEO.20 (opt, rep) - Primary Observer Address (XAD)
+        PEO.20 (opt, rep) - Primary Observer Address (XAD) S7.12.2.20
 
     peo_21 : list[XTN] | None
-        PEO.21 (opt, rep) - Primary Observer Telephone (XTN)
+        PEO.21 (opt, rep) - Primary Observer Telephone (XTN) S7.12.2.21
 
     peo_22 : str | None
-        PEO.22 (opt) - Primary Observer's Qualification (ID)
+        PEO.22 (opt) - Primary Observer's Qualification (ID) S7.12.2.22 | 0242 - Primary Observer's Qualification
 
     peo_23 : str | None
-        PEO.23 (opt) - Confirmation Provided By (ID)
+        PEO.23 (opt) - Confirmation Provided By (ID) S7.12.2.23 | 0242 - Primary Observer's Qualification
 
     peo_24 : TS | None
-        PEO.24 (opt) - Primary Observer Aware Date/Time (TS)
+        PEO.24 (opt) - Primary Observer Aware Date/Time (TS) S7.12.2.24
 
     peo_25 : str | None
-        PEO.25 (opt) - Primary Observer's identity May Be Divulged (ID)
+        PEO.25 (opt) - Primary Observer's identity May Be Divulged (ID) S7.12.2.25 | 0243 - Identity May Be Divulged
     """
 
     peo_1: Optional[List[CE]] = Field(

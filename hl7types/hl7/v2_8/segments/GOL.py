@@ -18,72 +18,72 @@ from ..datatypes.XPN import XPN
 
 
 class GOL(HL7Model):
-    """HL7 v2 GOL segment.
+    """Goal Detail (S12.4.1).
 
     Attributes
     ----------
     gol_1 : str
-        GOL.1 (req) - Action Code (ID)
+        GOL.1 (req) - Action Code (ID) S4.A.8.22 | 0206 - Segment Action Code
 
     gol_2 : str
-        GOL.2 (req) - Action Date/Time (DTM)
+        GOL.2 (req) - Action Date/Time (DTM) S12.4.1.2
 
     gol_3 : CWE
-        GOL.3 (req) - Goal ID (CWE)
+        GOL.3 (req) - Goal ID (CWE) S12.4.1.3
 
     gol_4 : EI
-        GOL.4 (req) - Goal Instance ID (EI)
+        GOL.4 (req) - Goal Instance ID (EI) S12.4.1.4
 
     gol_5 : EI | None
-        GOL.5 (opt) - Episode of Care ID (EI)
+        GOL.5 (opt) - Episode of Care ID (EI) S12.4.1.5
 
     gol_6 : str | None
-        GOL.6 (opt) - Goal List Priority (NM)
+        GOL.6 (opt) - Goal List Priority (NM) S12.4.1.6
 
     gol_7 : str | None
-        GOL.7 (opt) - Goal Established Date/Time (DTM)
+        GOL.7 (opt) - Goal Established Date/Time (DTM) S12.4.1.7
 
     gol_8 : str | None
-        GOL.8 (opt) - Expected Goal Achieve Date/Time (DTM)
+        GOL.8 (opt) - Expected Goal Achieve Date/Time (DTM) S12.4.1.8
 
     gol_9 : CWE | None
-        GOL.9 (opt) - Goal Classification (CWE)
+        GOL.9 (opt) - Goal Classification (CWE) S12.4.1.9
 
     gol_10 : CWE | None
-        GOL.10 (opt) - Goal Management Discipline (CWE)
+        GOL.10 (opt) - Goal Management Discipline (CWE) S12.4.1.10
 
     gol_11 : CWE | None
-        GOL.11 (opt) - Current Goal Review Status (CWE)
+        GOL.11 (opt) - Current Goal Review Status (CWE) S12.4.1.11
 
     gol_12 : str | None
-        GOL.12 (opt) - Current Goal Review Date/Time (DTM)
+        GOL.12 (opt) - Current Goal Review Date/Time (DTM) S12.4.1.12
 
     gol_13 : str | None
-        GOL.13 (opt) - Next Goal Review Date/Time (DTM)
+        GOL.13 (opt) - Next Goal Review Date/Time (DTM) S12.4.1.13
 
     gol_14 : str | None
-        GOL.14 (opt) - Previous Goal Review Date/Time (DTM)
+        GOL.14 (opt) - Previous Goal Review Date/Time (DTM) S12.4.1.14
 
     gol_16 : CWE | None
-        GOL.16 (opt) - Goal Evaluation (CWE)
+        GOL.16 (opt) - Goal Evaluation (CWE) S12.4.1.16
 
     gol_17 : list[str] | None
-        GOL.17 (opt, rep) - Goal Evaluation Comment (ST)
+        GOL.17 (opt, rep) - Goal Evaluation Comment (ST) S12.4.1.17
 
     gol_18 : CWE | None
-        GOL.18 (opt) - Goal Life Cycle Status (CWE)
+        GOL.18 (opt) - Goal Life Cycle Status (CWE) S12.4.1.18
 
     gol_19 : str | None
-        GOL.19 (opt) - Goal Life Cycle Status Date/Time (DTM)
+        GOL.19 (opt) - Goal Life Cycle Status Date/Time (DTM) S12.4.1.19
 
     gol_20 : list[CWE] | None
-        GOL.20 (opt, rep) - Goal Target Type (CWE)
+        GOL.20 (opt, rep) - Goal Target Type (CWE) S12.4.1.20
 
     gol_21 : list[XPN] | None
-        GOL.21 (opt, rep) - Goal Target Name (XPN)
+        GOL.21 (opt, rep) - Goal Target Name (XPN) S12.4.1.21
 
     gol_22 : CNE | None
-        GOL.22 (opt) - Mood Code (CNE)
+        GOL.22 (opt) - Mood Code (CNE) S12.4.1.22 | 0725 - Mood Codes
     """
 
     gol_1: str = Field(

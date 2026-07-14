@@ -15,15 +15,15 @@ from ..datatypes.ED import ED
 
 
 class UAC(HL7Model):
-    """HL7 v2 UAC segment.
+    """User Authentication Credential Segment (S2.14.15).
 
     Attributes
     ----------
     uac_1 : CWE
-        UAC.1 (req) - User Authentication Credential Type Code (CWE)
+        UAC.1 (req) - User Authentication Credential Type Code (CWE) S2.14.15.1 | 0615 - User Authentication Credential Type Code
 
     uac_2 : ED
-        UAC.2 (req) - User Authentication Credential (ED)
+        UAC.2 (req) - User Authentication Credential (ED) S2.14.15.2
     """
 
     uac_1: CWE = Field(

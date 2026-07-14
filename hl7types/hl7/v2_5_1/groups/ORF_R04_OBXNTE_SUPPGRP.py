@@ -22,20 +22,20 @@ class ORF_R04_OBXNTE_SUPPGRP(HL7Model):
     """HL7 v2 ORF_R04.OBXNTE_SUPPGRP group.
 
     Attributes:
-        OBX (Optional[OBX]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBX (Optional[OBX]): Observation/Result, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     OBX: Optional[_OBX] = Field(
         default=None,
         title="OBX",
-        description="Optional",
+        description="Observation/Result",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

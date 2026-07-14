@@ -23,96 +23,96 @@ from ..datatypes.XTN import XTN
 
 
 class STF(HL7Model):
-    """HL7 v2 STF segment.
+    """Staff Identification (S15.4.6).
 
     Attributes
     ----------
     stf_1 : CE | None
-        STF.1 (opt) - Primary Key Value - STF (CE)
+        STF.1 (opt) - Primary Key Value - STF (CE) S15.4.6.1 | 9999 - for unknown CE data elements
 
     stf_2 : list[CX] | None
-        STF.2 (opt, rep) - Staff ID Code (CX)
+        STF.2 (opt, rep) - Staff ID Code (CX) S15.4.6.2
 
     stf_3 : list[XPN] | None
-        STF.3 (opt, rep) - Staff Name (XPN)
+        STF.3 (opt, rep) - Staff Name (XPN) S15.4.6.3
 
     stf_4 : list[str] | None
-        STF.4 (opt, rep) - Staff Type (IS)
+        STF.4 (opt, rep) - Staff Type (IS) S15.4.6.4 | 0182 - Staff type
 
     stf_5 : str | None
-        STF.5 (opt) - Administrative Sex (IS)
+        STF.5 (opt) - Administrative Sex (IS) S15.4.6.5 | 0001 - Administrative sex
 
     stf_6 : TS | None
-        STF.6 (opt) - Date/Time Of Birth (TS)
+        STF.6 (opt) - Date/Time Of Birth (TS) S15.4.6.6
 
     stf_7 : str | None
-        STF.7 (opt) - Active/Inactive Flag (ID)
+        STF.7 (opt) - Active/Inactive Flag (ID) S15.4.6.7 | 0183 - Active/inactive
 
     stf_8 : list[CE] | None
-        STF.8 (opt, rep) - Department (CE)
+        STF.8 (opt, rep) - Department (CE) S15.4.6.8 | 0184 - Department
 
     stf_9 : list[CE] | None
-        STF.9 (opt, rep) - Hospital Service (CE)
+        STF.9 (opt, rep) - Hospital Service (CE) S15.4.6.9 | 0069 - Hospital service
 
     stf_10 : list[XTN] | None
-        STF.10 (opt, rep) - Phone (XTN)
+        STF.10 (opt, rep) - Phone (XTN) S15.4.6.10
 
     stf_11 : list[XAD] | None
-        STF.11 (opt, rep) - Office/Home Address (XAD)
+        STF.11 (opt, rep) - Office/Home Address (XAD) S15.4.6.11
 
     stf_12 : list[DIN] | None
-        STF.12 (opt, rep) - Institution Activation Date (DIN)
+        STF.12 (opt, rep) - Institution Activation Date (DIN) S15.4.6.12
 
     stf_13 : list[DIN] | None
-        STF.13 (opt, rep) - Institution Inactivation Date (DIN)
+        STF.13 (opt, rep) - Institution Inactivation Date (DIN) S15.4.6.13
 
     stf_14 : list[CE] | None
-        STF.14 (opt, rep) - Backup Person ID (CE)
+        STF.14 (opt, rep) - Backup Person ID (CE) S15.4.6.14
 
     stf_15 : list[str] | None
-        STF.15 (opt, rep) - E-Mail Address (ST)
+        STF.15 (opt, rep) - E-Mail Address (ST) S15.4.6.15
 
     stf_16 : CE | None
-        STF.16 (opt) - Preferred Method of Contact (CE)
+        STF.16 (opt) - Preferred Method of Contact (CE) S15.4.6.16 | 0185 - Preferred method of contact
 
     stf_17 : CE | None
-        STF.17 (opt) - Marital Status (CE)
+        STF.17 (opt) - Marital Status (CE) S15.4.6.17 | 0002 - Marital status
 
     stf_18 : str | None
-        STF.18 (opt) - Job Title (ST)
+        STF.18 (opt) - Job Title (ST) S15.4.6.18
 
     stf_19 : JCC | None
-        STF.19 (opt) - Job Code/Class (JCC)
+        STF.19 (opt) - Job Code/Class (JCC) S15.4.6.19 | 0327 - Job code/class
 
     stf_20 : CE | None
-        STF.20 (opt) - Employment Status Code (CE)
+        STF.20 (opt) - Employment Status Code (CE) S15.4.6.20 | 0066 - Employment status
 
     stf_21 : str | None
-        STF.21 (opt) - Additional Insured on  Auto (ID)
+        STF.21 (opt) - Additional Insured on  Auto (ID) S15.4.6.21 | 0136 - Yes/no indicator
 
     stf_22 : DLN | None
-        STF.22 (opt) - Driver's License Number - Staff (DLN)
+        STF.22 (opt) - Driver's License Number - Staff (DLN) S15.4.6.22
 
     stf_23 : str | None
-        STF.23 (opt) - Copy  Auto Ins (ID)
+        STF.23 (opt) - Copy  Auto Ins (ID) S15.4.6.23 | 0136 - Yes/no indicator
 
     stf_24 : str | None
-        STF.24 (opt) - Auto Ins. Expires (DT)
+        STF.24 (opt) - Auto Ins. Expires (DT) S15.4.6.24
 
     stf_25 : str | None
-        STF.25 (opt) - Date Last DMV Review (DT)
+        STF.25 (opt) - Date Last DMV Review (DT) S15.4.6.25
 
     stf_26 : str | None
-        STF.26 (opt) - Date Next DMV Review (DT)
+        STF.26 (opt) - Date Next DMV Review (DT) S15.4.6.26
 
     stf_27 : CE | None
-        STF.27 (opt) - Race (CE)
+        STF.27 (opt) - Race (CE) S15.4.6.27 | 0005 - Race
 
     stf_28 : CE | None
-        STF.28 (opt) - Ethnic Group (CE)
+        STF.28 (opt) - Ethnic Group (CE) S15.4.6.28 | 0189 - Ethnic group
 
     stf_29 : str | None
-        STF.29 (opt) - Re-activation Approval Indicator (ID)
+        STF.29 (opt) - Re-activation Approval Indicator (ID) S15.4.6.29 | 0136 - Yes/no indicator
     """
 
     stf_1: Optional[CE] = Field(

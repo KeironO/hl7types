@@ -30,46 +30,46 @@ class RSP_K32_QUERY_RESPONSE(HL7Model):
     """HL7 v2 RSP_K32.QUERY_RESPONSE group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        QRI (Optional[QRI]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
+        PV1 (PV1): Patient Visit, required
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        QRI (Optional[QRI]): Query Response Instance, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     QRI: Optional[_QRI] = Field(
         default=None,
         title="QRI",
-        description="Optional",
+        description="Query Response Instance",
     )
 
     model_config = {"populate_by_name": True}

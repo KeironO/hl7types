@@ -17,42 +17,42 @@ from ..datatypes.XCN import XCN
 
 
 class ACC(HL7Model):
-    """HL7 v2 ACC segment.
+    """Accident (S6.5.9).
 
     Attributes
     ----------
     acc_1 : str | None
-        ACC.1 (opt) - Accident Date/Time (DTM)
+        ACC.1 (opt) - Accident Date/Time (DTM) S6.5.9.1
 
     acc_2 : CWE | None
-        ACC.2 (opt) - Accident Code (CWE)
+        ACC.2 (opt) - Accident Code (CWE) S6.5.9.2 | 0050 - Accident Code
 
     acc_3 : str | None
-        ACC.3 (opt) - Accident Location (ST)
+        ACC.3 (opt) - Accident Location (ST) S6.5.9.3
 
     acc_4 : CWE | None
-        ACC.4 (opt) - Auto Accident State (CWE)
+        ACC.4 (opt) - Auto Accident State (CWE) S6.5.9.4 | 0347 - State/province
 
     acc_5 : str | None
-        ACC.5 (opt) - Accident Job Related Indicator (ID)
+        ACC.5 (opt) - Accident Job Related Indicator (ID) S6.5.9.5 | 0136 - Yes/no indicator
 
     acc_6 : str | None
-        ACC.6 (opt) - Accident Death Indicator (ID)
+        ACC.6 (opt) - Accident Death Indicator (ID) S6.5.9.6 | 0136 - Yes/no indicator
 
     acc_7 : XCN | None
-        ACC.7 (opt) - Entered By (XCN)
+        ACC.7 (opt) - Entered By (XCN) S2.14.10.5
 
     acc_8 : str | None
-        ACC.8 (opt) - Accident Description (ST)
+        ACC.8 (opt) - Accident Description (ST) S6.5.9.8
 
     acc_9 : str | None
-        ACC.9 (opt) - Brought In By (ST)
+        ACC.9 (opt) - Brought In By (ST) S6.5.9.9
 
     acc_10 : str | None
-        ACC.10 (opt) - Police Notified Indicator (ID)
+        ACC.10 (opt) - Police Notified Indicator (ID) S6.5.9.10 | 0136 - Yes/no indicator
 
     acc_11 : XAD | None
-        ACC.11 (opt) - Accident Address (XAD)
+        ACC.11 (opt) - Accident Address (XAD) S6.5.9.11
     """
 
     acc_1: Optional[str] = Field(

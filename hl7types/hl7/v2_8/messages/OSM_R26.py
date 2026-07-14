@@ -24,36 +24,35 @@ _UAC = UAC
 
 
 class OSM_R26(HL7Model):
-    """HL7 v2 OSM_R26 message.
+    """OSM - Unsolicited Specimen Shipment Manifest Message (S7.18.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         SHIPMENT (List[OSM_R26_SHIPMENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     SHIPMENT: List[_OSM_R26_SHIPMENT] = Field(
         min_length=1,
         title="SHIPMENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

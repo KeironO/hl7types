@@ -35,62 +35,61 @@ class EHC_E01_INVOICE_INFORMATION_SUBMIT(HL7Model):
     """HL7 v2 EHC_E01.INVOICE_INFORMATION_SUBMIT group.
 
     Attributes:
-        IVC (Optional[IVC]): optional
-        PYE (Optional[PYE]): optional
-        CTD (Optional[List[CTD]]): optional
-        AUT (Optional[AUT]): optional
-        LOC (Optional[List[LOC]]): optional
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
+        IVC (Optional[IVC]): Invoice Segment, optional
+        PYE (Optional[PYE]): Payee Information, optional
+        CTD (Optional[List[CTD]]): Contact Data, optional
+        AUT (Optional[AUT]): Authorization Information, optional
+        LOC (Optional[List[LOC]]): Location Identification, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
         PRODUCT_SERVICE_SECTION (Optional[List[EHC_E01_PRODUCT_SERVICE_SECTION]]): optional
     """
 
     IVC: Optional[_IVC] = Field(
         default=None,
         title="IVC",
-        description="Optional",
+        description="Invoice Segment",
     )
 
     PYE: Optional[_PYE] = Field(
         default=None,
         title="PYE",
-        description="Optional",
+        description="Payee Information",
     )
 
     CTD: Optional[List[_CTD]] = Field(
         default=None,
         title="CTD",
-        description="Optional, repeating",
+        description="Contact Data",
     )
 
     AUT: Optional[_AUT] = Field(
         default=None,
         title="AUT",
-        description="Optional",
+        description="Authorization Information",
     )
 
     LOC: Optional[List[_LOC]] = Field(
         default=None,
         title="LOC",
-        description="Optional, repeating",
+        description="Location Identification",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     PRODUCT_SERVICE_SECTION: Optional[List[_EHC_E01_PRODUCT_SERVICE_SECTION]] = Field(
         default=None,
         title="PRODUCT_SERVICE_SECTION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

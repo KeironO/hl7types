@@ -24,7 +24,6 @@ class ORR_O02_ORDER_DETAIL(HL7Model):
 
     CHOICE: _ORR_O02_CHOICE = Field(
         title="CHOICE",
-        description="Required",
     )
 
     model_config = {"populate_by_name": True}

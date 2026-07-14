@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class IN1(HL7Model):
-    """HL7 v2 IN1 segment.
+    """INSURANCE (S6.3.5).
 
     Attributes
     ----------
     in1_1 : str
-        IN1.1 (req) - SET ID - INSURANCE (SI)
+        IN1.1 (req) - SET ID - INSURANCE (SI) S6-10
 
     in1_2 : str
-        IN1.2 (req) - INSURANCE PLAN ID (ID)
+        IN1.2 (req) - INSURANCE PLAN ID (ID) | 0072 - INS. PLAN ID
 
     in1_3 : str
         IN1.3 (req) - INSURANCE COMPANY ID (ST)
@@ -60,13 +60,13 @@ class IN1(HL7Model):
         IN1.14 (opt) - AUTHORIZATION INFORMATION (ST)
 
     in1_15 : str | None
-        IN1.15 (opt) - PLAN TYPE (ID)
+        IN1.15 (opt) - PLAN TYPE (ID) | 0086 - INS. PLAN TYPE
 
     in1_16 : str | None
         IN1.16 (opt) - NAME OF INSURED (PN)
 
     in1_17 : str | None
-        IN1.17 (opt) - INSURED'S RELATIONSHIP TO PATIENT (ID)
+        IN1.17 (opt) - INSURED'S RELATIONSHIP TO PATIENT (ID) | 0063 - RELATIONSHIP
 
     in1_18 : str | None
         IN1.18 (opt) - INSURED'S DATE OF BIRTH (DT)
@@ -84,19 +84,19 @@ class IN1(HL7Model):
         IN1.22 (opt) - COORD OF BEN. PRIORITY (ST)
 
     in1_23 : str | None
-        IN1.23 (opt) - NOTICE OF ADMISSION CODE (ID)
+        IN1.23 (opt) - NOTICE OF ADMISSION CODE (ID) | 0081 - NOTICE OF ADMISSION
 
     in1_24 : str | None
         IN1.24 (opt) - NOTICE OF ADMISSION DATE (DT)
 
     in1_25 : str | None
-        IN1.25 (opt) - RPT OF ELIGIBILITY CODE (ID)
+        IN1.25 (opt) - RPT OF ELIGIBILITY CODE (ID) | 0094 - REPORT OF ELIGIBILITY
 
     in1_26 : str | None
         IN1.26 (opt) - RPT OF ELIGIBILITY DATE (DT)
 
     in1_27 : str | None
-        IN1.27 (opt) - RELEASE INFORMATION CODE (ID)
+        IN1.27 (opt) - RELEASE INFORMATION CODE (ID) | 0093 - RELEASE OF INFORMATION
 
     in1_28 : str | None
         IN1.28 (opt) - PRE-ADMIT CERT. (PAC) (ST)
@@ -108,10 +108,10 @@ class IN1(HL7Model):
         IN1.30 (opt) - VERIFICATION BY (CM)
 
     in1_31 : str | None
-        IN1.31 (opt) - TYPE OF AGREEMENT CODE (ID)
+        IN1.31 (opt) - TYPE OF AGREEMENT CODE (ID) | 0098 - TYPE OF AGREEMENT CODE
 
     in1_32 : str | None
-        IN1.32 (opt) - BILLING STATUS (ID)
+        IN1.32 (opt) - BILLING STATUS (ID) | 0022 - BILLING STATUS
 
     in1_33 : str | None
         IN1.33 (opt) - LIFETIME RESERVE DAYS (NM)
@@ -120,7 +120,7 @@ class IN1(HL7Model):
         IN1.34 (opt) - DELAY BEFORE L. R. DAY (NM)
 
     in1_35 : str | None
-        IN1.35 (opt) - COMPANY PLAN CODE (ST)
+        IN1.35 (opt) - COMPANY PLAN CODE (ST) | 0042 - INS. COMPANY PLAN CODE
 
     in1_36 : str | None
         IN1.36 (opt) - POLICY NUMBER (ST)
@@ -141,10 +141,10 @@ class IN1(HL7Model):
         IN1.41 (opt) - ROOM RATE - PRIVATE (NM)
 
     in1_42 : str | None
-        IN1.42 (opt) - INSURED'S EMPLOYMENT STATUS (ID)
+        IN1.42 (opt) - INSURED'S EMPLOYMENT STATUS (ID) | 0066 - EMPLOYMENT STATUS
 
     in1_43 : str | None
-        IN1.43 (opt) - INSURED'S SEX (ID)
+        IN1.43 (opt) - INSURED'S SEX (ID) | 0001 - SEX
 
     in1_44 : str | None
         IN1.44 (opt) - INSURED'S EMPLOYER ADDRESS (AD)

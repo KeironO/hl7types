@@ -26,41 +26,40 @@ _PID = PID
 
 
 class BAR_P01(HL7Model):
-    """HL7 v2 BAR_P01 message.
+    """BAR/ACK - Add patient account.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Demographic, optional
         VISIT (List[BAR_P01_VISIT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Demographic",
     )
 
     VISIT: List[_BAR_P01_VISIT] = Field(
         min_length=1,
         title="VISIT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

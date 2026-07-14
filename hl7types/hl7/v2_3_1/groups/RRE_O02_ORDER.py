@@ -23,19 +23,18 @@ class RRE_O02_ORDER(HL7Model):
     """HL7 v2 RRE_O02.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): ORC - common order segment, required
         ENCODING (Optional[RRE_O02_ENCODING]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     ENCODING: Optional[_RRE_O02_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

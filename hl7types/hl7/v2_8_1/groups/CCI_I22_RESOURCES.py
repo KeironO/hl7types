@@ -23,19 +23,18 @@ class CCI_I22_RESOURCES(HL7Model):
     """HL7 v2 CCI_I22.RESOURCES group.
 
     Attributes:
-        RGS (RGS): required
+        RGS (RGS): Resource Group, required
         RESOURCE_DETAIL (Optional[List[CCI_I22_RESOURCE_DETAIL]]): optional
     """
 
     RGS: _RGS = Field(
         title="RGS",
-        description="Required",
+        description="Resource Group",
     )
 
     RESOURCE_DETAIL: Optional[List[_CCI_I22_RESOURCE_DETAIL]] = Field(
         default=None,
         title="RESOURCE_DETAIL",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

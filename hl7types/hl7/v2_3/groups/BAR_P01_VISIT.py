@@ -47,104 +47,102 @@ class BAR_P01_VISIT(HL7Model):
     """HL7 v2 BAR_P01.VISIT group.
 
     Attributes:
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        DB1 (Optional[List[DB1]]): optional
-        OBX (Optional[List[OBX]]): optional
-        AL1 (Optional[List[AL1]]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[DRG]): optional
+        PV1 (Optional[PV1]): Patient visit, optional
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
+        DB1 (Optional[List[DB1]]): Disability Segment, optional
+        OBX (Optional[List[OBX]]): Observation segment, optional
+        AL1 (Optional[List[AL1]]): Patient allergy information, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
         PROCEDURE (Optional[List[BAR_P01_PROCEDURE]]): optional
-        GT1 (Optional[List[GT1]]): optional
-        NK1 (Optional[List[NK1]]): optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
+        NK1 (Optional[List[NK1]]): Next of kin, optional
         INSURANCE (Optional[List[BAR_P01_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
-        UB1 (Optional[UB1]): optional
-        UB2 (Optional[UB2]): optional
+        ACC (Optional[ACC]): Accident, optional
+        UB1 (Optional[UB1]): UB82  data, optional
+        UB2 (Optional[UB2]): UB92 data, optional
     """
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="Disability Segment",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient allergy information",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     PROCEDURE: Optional[List[_BAR_P01_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin",
     )
 
     INSURANCE: Optional[List[_BAR_P01_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     UB1: Optional[_UB1] = Field(
         default=None,
         title="UB1",
-        description="Optional",
+        description="UB82  data",
     )
 
     UB2: Optional[_UB2] = Field(
         default=None,
         title="UB2",
-        description="Optional",
+        description="UB92 data",
     )
 
     model_config = {"populate_by_name": True}

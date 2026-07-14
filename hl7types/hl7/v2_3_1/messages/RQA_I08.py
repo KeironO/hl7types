@@ -46,112 +46,106 @@ _RQA_I08_VISIT = RQA_I08_VISIT
 
 
 class RQA_I08(HL7Model):
-    """HL7 v2 RQA_I08 message.
+    """RQA/RPA - Request for treatment authorization information.
 
     Attributes:
-        MSH (MSH): required
-        RF1 (Optional[RF1]): optional
+        MSH (MSH): MSH - message header segment, required
+        RF1 (Optional[RF1]): Referral Infomation, optional
         AUTHORIZATION (Optional[RQA_I08_AUTHORIZATION]): optional
         PROVIDER (List[RQA_I08_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
+        PID (PID): PID - patient identification segment, required
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
         GUARANTOR_INSURANCE (Optional[RQA_I08_GUARANTOR_INSURANCE]): optional
-        ACC (Optional[ACC]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        ACC (Optional[ACC]): ACC - accident segment, optional
+        DG1 (Optional[List[DG1]]): DG1 - diagnosis segment, optional
+        DRG (Optional[List[DRG]]): DRG - diagnosis related group segment, optional
+        AL1 (Optional[List[AL1]]): AL1 - patient allergy information segment, optional
         PROCEDURE (Optional[List[RQA_I08_PROCEDURE]]): optional
         OBSERVATION (Optional[List[RQA_I08_OBSERVATION]]): optional
         VISIT (Optional[RQA_I08_VISIT]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
-        description="Optional",
+        description="Referral Infomation",
     )
 
     AUTHORIZATION: Optional[_RQA_I08_AUTHORIZATION] = Field(
         default=None,
         title="AUTHORIZATION",
-        description="Optional",
     )
 
     PROVIDER: List[_RQA_I08_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     GUARANTOR_INSURANCE: Optional[_RQA_I08_GUARANTOR_INSURANCE] = Field(
         default=None,
         title="GUARANTOR_INSURANCE",
-        description="Optional",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="ACC - accident segment",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DG1 - diagnosis segment",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="DRG - diagnosis related group segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="AL1 - patient allergy information segment",
     )
 
     PROCEDURE: Optional[List[_RQA_I08_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     OBSERVATION: Optional[List[_RQA_I08_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     VISIT: Optional[_RQA_I08_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

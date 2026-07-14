@@ -16,33 +16,33 @@ from ..datatypes.SN import SN
 
 
 class TCD(HL7Model):
-    """HL7 v2 TCD segment.
+    """Test Code Detail (S13.4.10).
 
     Attributes
     ----------
     tcd_1 : CWE
-        TCD.1 (req) - Universal Service Identifier (CWE)
+        TCD.1 (req) - Universal Service Identifier (CWE) S10.6.4.3
 
     tcd_2 : SN | None
-        TCD.2 (opt) - Auto-Dilution Factor (SN)
+        TCD.2 (opt) - Auto-Dilution Factor (SN) S13.4.10.2
 
     tcd_3 : SN | None
-        TCD.3 (opt) - Rerun Dilution Factor (SN)
+        TCD.3 (opt) - Rerun Dilution Factor (SN) S13.4.10.3
 
     tcd_4 : SN | None
-        TCD.4 (opt) - Pre-Dilution Factor (SN)
+        TCD.4 (opt) - Pre-Dilution Factor (SN) S13.4.10.4
 
     tcd_5 : SN | None
-        TCD.5 (opt) - Endogenous Content of Pre-Dilution Diluent (SN)
+        TCD.5 (opt) - Endogenous Content of Pre-Dilution Diluent (SN) S13.4.10.5
 
     tcd_6 : str | None
-        TCD.6 (opt) - Automatic Repeat Allowed (ID)
+        TCD.6 (opt) - Automatic Repeat Allowed (ID) S13.4.10.6 | 0136 - Yes/no Indicator
 
     tcd_7 : str | None
-        TCD.7 (opt) - Reflex Allowed (ID)
+        TCD.7 (opt) - Reflex Allowed (ID) S13.4.10.7 | 0136 - Yes/no Indicator
 
     tcd_8 : CWE | None
-        TCD.8 (opt) - Analyte Repeat Status (CWE)
+        TCD.8 (opt) - Analyte Repeat Status (CWE) S13.4.10.8 | 0389 - Analyte repeat status
     """
 
     tcd_1: CWE = Field(

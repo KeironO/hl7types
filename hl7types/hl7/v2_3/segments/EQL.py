@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class EQL(HL7Model):
-    """HL7 v2 EQL segment.
+    """Embedded Query Language (S2.24.16).
 
     Attributes
     ----------
     eql_1 : str | None
-        EQL.1 (opt) - Query tag (ST)
+        EQL.1 (opt) - Query tag (ST) S2.24.16
 
     eql_2 : str
-        EQL.2 (req) - Query/ Response Format Code (ID)
+        EQL.2 (req) - Query/ Response Format Code (ID) S2.24.16 | 0106 - Query/Response Format Code
 
     eql_3 : CE
-        EQL.3 (req) - EQL Query Name (CE)
+        EQL.3 (req) - EQL Query Name (CE) S2.24.16.3
 
     eql_4 : str
-        EQL.4 (req) - EQL Query Statement (ST)
+        EQL.4 (req) - EQL Query Statement (ST) S2.24.16.4
     """
 
     eql_1: Optional[str] = Field(

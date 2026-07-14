@@ -27,33 +27,31 @@ class CCM_I21_PATHWAY(HL7Model):
     """HL7 v2 CCM_I21.PATHWAY group.
 
     Attributes:
-        PTH (PTH): required
-        VAR (Optional[List[VAR]]): optional
+        PTH (PTH): Pathway, required
+        VAR (Optional[List[VAR]]): Variance, optional
         ROLE_PATHWAY (Optional[List[CCM_I21_ROLE_PATHWAY]]): optional
         PATHWAY_OBSERVATION (Optional[List[CCM_I21_PATHWAY_OBSERVATION]]): optional
     """
 
     PTH: _PTH = Field(
         title="PTH",
-        description="Required",
+        description="Pathway",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ROLE_PATHWAY: Optional[List[_CCM_I21_ROLE_PATHWAY]] = Field(
         default=None,
         title="ROLE_PATHWAY",
-        description="Optional, repeating",
     )
 
     PATHWAY_OBSERVATION: Optional[List[_CCM_I21_PATHWAY_OBSERVATION]] = Field(
         default=None,
         title="PATHWAY_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

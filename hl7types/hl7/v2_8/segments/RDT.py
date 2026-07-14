@@ -14,12 +14,12 @@ from ..datatypes.varies import varies
 
 
 class RDT(HL7Model):
-    """HL7 v2 RDT segment.
+    """Table Row Data (S5.5.8).
 
     Attributes
     ----------
     rdt_1 : varies
-        RDT.1 (req) - Column Value (varies)
+        RDT.1 (req) - Column Value (varies) S5.5.8.1
     """
 
     rdt_1: varies = Field(

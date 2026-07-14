@@ -22,126 +22,126 @@ from ..datatypes.XTN import XTN
 
 
 class NK1(HL7Model):
-    """HL7 v2 NK1 segment.
+    """Next of Kin / Associated Parties (S3.4.5).
 
     Attributes
     ----------
     nk1_1 : str
-        NK1.1 (req) - Set ID - NK1 (SI)
+        NK1.1 (req) - Set ID - NK1 (SI) S3.4.5.1
 
     nk1_2 : list[XPN] | None
-        NK1.2 (opt, rep) - Name (XPN)
+        NK1.2 (opt, rep) - Name (XPN) S3.4.5.2
 
     nk1_3 : CE | None
-        NK1.3 (opt) - Relationship (CE)
+        NK1.3 (opt) - Relationship (CE) S3.4.5.3 | 0063 - Relationship
 
     nk1_4 : list[XAD] | None
-        NK1.4 (opt, rep) - Address (XAD)
+        NK1.4 (opt, rep) - Address (XAD) S3.4.5.4
 
     nk1_5 : list[XTN] | None
-        NK1.5 (opt, rep) - Phone Number (XTN)
+        NK1.5 (opt, rep) - Phone Number (XTN) S3.4.5.5
 
     nk1_6 : list[XTN] | None
-        NK1.6 (opt, rep) - Business Phone Number (XTN)
+        NK1.6 (opt, rep) - Business Phone Number (XTN) S3.4.5.6
 
     nk1_7 : CE | None
-        NK1.7 (opt) - Contact Role (CE)
+        NK1.7 (opt) - Contact Role (CE) S11.6.4.1 | 0131 - Contact Role
 
     nk1_8 : str | None
-        NK1.8 (opt) - Start Date (DT)
+        NK1.8 (opt) - Start Date (DT) S3.4.5.8
 
     nk1_9 : str | None
-        NK1.9 (opt) - End Date (DT)
+        NK1.9 (opt) - End Date (DT) S3.4.5.9
 
     nk1_10 : str | None
-        NK1.10 (opt) - Next of Kin / Associated Parties Job Title (ST)
+        NK1.10 (opt) - Next of Kin / Associated Parties Job Title (ST) S3.4.5.10
 
     nk1_11 : JCC | None
-        NK1.11 (opt) - Next of Kin / Associated Parties Job Code/Class (JCC)
+        NK1.11 (opt) - Next of Kin / Associated Parties Job Code/Class (JCC) S3.4.5.11 | 0327 - Job code
 
     nk1_12 : CX | None
-        NK1.12 (opt) - Next of Kin / Associated Parties Employee Number (CX)
+        NK1.12 (opt) - Next of Kin / Associated Parties Employee Number (CX) S3.4.5.12
 
     nk1_13 : list[XON] | None
-        NK1.13 (opt, rep) - Organization Name - NK1 (XON)
+        NK1.13 (opt, rep) - Organization Name - NK1 (XON) S3.4.5.13
 
     nk1_14 : CE | None
-        NK1.14 (opt) - Marital Status (CE)
+        NK1.14 (opt) - Marital Status (CE) S15.4.8.17 | 0002 - Marital Status
 
     nk1_15 : str | None
-        NK1.15 (opt) - Administrative Sex (IS)
+        NK1.15 (opt) - Administrative Sex (IS) S15.4.8.5 | 0001 - Administrative Sex
 
     nk1_16 : TS | None
-        NK1.16 (opt) - Date/Time of Birth (TS)
+        NK1.16 (opt) - Date/Time of Birth (TS) S15.4.8.6
 
     nk1_17 : list[str] | None
-        NK1.17 (opt, rep) - Living Dependency (IS)
+        NK1.17 (opt, rep) - Living Dependency (IS) S3.4.10.1 | 0223 - Living Dependency
 
     nk1_18 : list[str] | None
-        NK1.18 (opt, rep) - Ambulatory Status (IS)
+        NK1.18 (opt, rep) - Ambulatory Status (IS) S3.4.3.15 | 0009 - Ambulatory Status
 
     nk1_19 : list[CE] | None
-        NK1.19 (opt, rep) - Citizenship (CE)
+        NK1.19 (opt, rep) - Citizenship (CE) S15.4.8.30 | 0171 - Citizenship
 
     nk1_20 : CE | None
-        NK1.20 (opt) - Primary Language (CE)
+        NK1.20 (opt) - Primary Language (CE) S3.4.2.15 | 0296 - Primary Language
 
     nk1_21 : str | None
-        NK1.21 (opt) - Living Arrangement (IS)
+        NK1.21 (opt) - Living Arrangement (IS) S3.4.10.2 | 0220 - Living Arrangement
 
     nk1_22 : CE | None
-        NK1.22 (opt) - Publicity Code (CE)
+        NK1.22 (opt) - Publicity Code (CE) S3.4.10.11 | 0215 - Publicity Code
 
     nk1_23 : str | None
-        NK1.23 (opt) - Protection Indicator (ID)
+        NK1.23 (opt) - Protection Indicator (ID) S3.4.10.12 | 0136 - Yes/no indicator
 
     nk1_24 : str | None
-        NK1.24 (opt) - Student Indicator (IS)
+        NK1.24 (opt) - Student Indicator (IS) S3.4.10.5 | 0231 - Student Status
 
     nk1_25 : CE | None
-        NK1.25 (opt) - Religion (CE)
+        NK1.25 (opt) - Religion (CE) S3.4.2.17 | 0006 - Religion
 
     nk1_26 : list[XPN] | None
-        NK1.26 (opt, rep) - Mother's Maiden Name (XPN)
+        NK1.26 (opt, rep) - Mother's Maiden Name (XPN) S3.4.2.6
 
     nk1_27 : CE | None
-        NK1.27 (opt) - Nationality (CE)
+        NK1.27 (opt) - Nationality (CE) S3.4.2.28 | 0212 - Nationality
 
     nk1_28 : list[CE] | None
-        NK1.28 (opt, rep) - Ethnic Group (CE)
+        NK1.28 (opt, rep) - Ethnic Group (CE) S15.4.8.28 | 0189 - Ethnic Group
 
     nk1_29 : list[CE] | None
-        NK1.29 (opt, rep) - Contact Reason (CE)
+        NK1.29 (opt, rep) - Contact Reason (CE) S3.4.5.29 | 0222 - Contact Reason
 
     nk1_30 : list[XPN] | None
-        NK1.30 (opt, rep) - Contact Person's Name (XPN)
+        NK1.30 (opt, rep) - Contact Person's Name (XPN) S3.4.5.30
 
     nk1_31 : list[XTN] | None
-        NK1.31 (opt, rep) - Contact Person's Telephone Number (XTN)
+        NK1.31 (opt, rep) - Contact Person's Telephone Number (XTN) S3.4.5.31
 
     nk1_32 : list[XAD] | None
-        NK1.32 (opt, rep) - Contact Person's Address (XAD)
+        NK1.32 (opt, rep) - Contact Person's Address (XAD) S3.4.5.32
 
     nk1_33 : list[CX] | None
-        NK1.33 (opt, rep) - Next of Kin/Associated Party's Identifiers (CX)
+        NK1.33 (opt, rep) - Next of Kin/Associated Party's Identifiers (CX) S3.4.5.33
 
     nk1_34 : str | None
-        NK1.34 (opt) - Job Status (IS)
+        NK1.34 (opt) - Job Status (IS) S3.4.5.34 | 0311 - Job Status
 
     nk1_35 : list[CE] | None
-        NK1.35 (opt, rep) - Race (CE)
+        NK1.35 (opt, rep) - Race (CE) S15.4.8.27 | 0005 - Race
 
     nk1_36 : str | None
-        NK1.36 (opt) - Handicap (IS)
+        NK1.36 (opt) - Handicap (IS) S3.4.10.6 | 0295 - Handicap
 
     nk1_37 : str | None
-        NK1.37 (opt) - Contact Person Social Security Number (ST)
+        NK1.37 (opt) - Contact Person Social Security Number (ST) S3.4.5.37
 
     nk1_38 : str | None
-        NK1.38 (opt) - Next of Kin Birth Place (ST)
+        NK1.38 (opt) - Next of Kin Birth Place (ST) S3.4.5.38
 
     nk1_39 : str | None
-        NK1.39 (opt) - VIP Indicator (IS)
+        NK1.39 (opt) - VIP Indicator (IS) S3.4.3.16 | 0099 - VIP Indicator
     """
 
     nk1_1: str = Field(

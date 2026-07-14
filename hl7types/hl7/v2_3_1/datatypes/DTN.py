@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class DTN(HL7Model):
-    """HL7 v2 DTN data type.
+    """Day type and number.
 
     Attributes
     ----------

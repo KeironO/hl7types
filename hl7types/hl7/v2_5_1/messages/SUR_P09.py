@@ -20,22 +20,21 @@ _SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP = SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPG
 
 
 class SUR_P09(HL7Model):
-    """HL7 v2 SUR_P09 message.
+    """SUR - Summary product experience report (S7.11.2).
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): Message Header, required
         FACPSHPDCPSHFACPDCNTEED_SUPPGRP (List[SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     FACPSHPDCPSHFACPDCNTEED_SUPPGRP: List[_SUR_P09_FACPSHPDCPSHFACPDCNTEED_SUPPGRP] = Field(
         min_length=1,
         title="FACPSHPDCPSHFACPDCNTEED_SUPPGRP",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

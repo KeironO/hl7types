@@ -25,27 +25,26 @@ class RSP_E03_QUERY_ACK(HL7Model):
     """HL7 v2 RSP_E03.QUERY_ACK group.
 
     Attributes:
-        QAK (Optional[QAK]): optional
-        QPD (Optional[QPD]): optional
+        QAK (Optional[QAK]): Query Acknowledgment, optional
+        QPD (Optional[QPD]): Query Parameter Definition, optional
         INVOICE_PROCESSING_RESULTS_INFO (Optional[List[RSP_E03_INVOICE_PROCESSING_RESULTS_INFO]]): optional
     """
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgment",
     )
 
     QPD: Optional[_QPD] = Field(
         default=None,
         title="QPD",
-        description="Optional",
+        description="Query Parameter Definition",
     )
 
     INVOICE_PROCESSING_RESULTS_INFO: Optional[List[_RSP_E03_INVOICE_PROCESSING_RESULTS_INFO]] = Field(
         default=None,
         title="INVOICE_PROCESSING_RESULTS_INFO",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

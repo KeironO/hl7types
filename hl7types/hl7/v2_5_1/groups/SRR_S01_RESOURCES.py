@@ -29,7 +29,7 @@ class SRR_S01_RESOURCES(HL7Model):
     """HL7 v2 SRR_S01.RESOURCES group.
 
     Attributes:
-        RGS (RGS): required
+        RGS (RGS): Resource Group, required
         SERVICE (Optional[List[SRR_S01_SERVICE]]): optional
         GENERAL_RESOURCE (Optional[List[SRR_S01_GENERAL_RESOURCE]]): optional
         LOCATION_RESOURCE (Optional[List[SRR_S01_LOCATION_RESOURCE]]): optional
@@ -38,31 +38,27 @@ class SRR_S01_RESOURCES(HL7Model):
 
     RGS: _RGS = Field(
         title="RGS",
-        description="Required",
+        description="Resource Group",
     )
 
     SERVICE: Optional[List[_SRR_S01_SERVICE]] = Field(
         default=None,
         title="SERVICE",
-        description="Optional, repeating",
     )
 
     GENERAL_RESOURCE: Optional[List[_SRR_S01_GENERAL_RESOURCE]] = Field(
         default=None,
         title="GENERAL_RESOURCE",
-        description="Optional, repeating",
     )
 
     LOCATION_RESOURCE: Optional[List[_SRR_S01_LOCATION_RESOURCE]] = Field(
         default=None,
         title="LOCATION_RESOURCE",
-        description="Optional, repeating",
     )
 
     PERSONNEL_RESOURCE: Optional[List[_SRR_S01_PERSONNEL_RESOURCE]] = Field(
         default=None,
         title="PERSONNEL_RESOURCE",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,18 +15,18 @@ from ..datatypes.CWE import CWE
 
 
 class CSS(HL7Model):
-    """HL7 v2 CSS segment.
+    """Clinical Study Data Schedule Segment (S7.8.3).
 
     Attributes
     ----------
     css_1 : CWE
-        CSS.1 (req) - Study Scheduled Time Point (CWE)
+        CSS.1 (req) - Study Scheduled Time Point (CWE) S7.8.3.1 | 9999 - no table for CE
 
     css_2 : str | None
-        CSS.2 (opt) - Study Scheduled Patient Time Point (DTM)
+        CSS.2 (opt) - Study Scheduled Patient Time Point (DTM) S7.8.3.2
 
     css_3 : list[CWE] | None
-        CSS.3 (opt, rep) - Study Quality Control Codes (CWE)
+        CSS.3 (opt, rep) - Study Quality Control Codes (CWE) S7.8.3.3 | 9999 - no table for CE
     """
 
     css_1: CWE = Field(

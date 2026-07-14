@@ -30,47 +30,47 @@ class EHC_E20_PSL_ITEM_INFO(HL7Model):
     """HL7 v2 EHC_E20.PSL_ITEM_INFO group.
 
     Attributes:
-        PSL (PSL): required
-        NTE (Optional[List[NTE]]): optional
-        ADJ (Optional[List[ADJ]]): optional
-        LOC (Optional[List[LOC]]): optional
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
+        PSL (PSL): Product/Service Line Item, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        ADJ (Optional[List[ADJ]]): Adjustment, optional
+        LOC (Optional[List[LOC]]): Location Identification, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     PSL: _PSL = Field(
         title="PSL",
-        description="Required",
+        description="Product/Service Line Item",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ADJ: Optional[List[_ADJ]] = Field(
         default=None,
         title="ADJ",
-        description="Optional, repeating",
+        description="Adjustment",
     )
 
     LOC: Optional[List[_LOC]] = Field(
         default=None,
         title="LOC",
-        description="Optional, repeating",
+        description="Location Identification",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

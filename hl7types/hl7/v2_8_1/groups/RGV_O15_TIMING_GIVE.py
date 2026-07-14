@@ -22,19 +22,19 @@ class RGV_O15_TIMING_GIVE(HL7Model):
     """HL7 v2 RGV_O15.TIMING_GIVE group.
 
     Attributes:
-        TQ1 (TQ1): required
-        TQ2 (Optional[List[TQ2]]): optional
+        TQ1 (TQ1): Timing/Quantity, required
+        TQ2 (Optional[List[TQ2]]): Timing/Quantity Relationship, optional
     """
 
     TQ1: _TQ1 = Field(
         title="TQ1",
-        description="Required",
+        description="Timing/Quantity",
     )
 
     TQ2: Optional[List[_TQ2]] = Field(
         default=None,
         title="TQ2",
-        description="Optional, repeating",
+        description="Timing/Quantity Relationship",
     )
 
     model_config = {"populate_by_name": True}

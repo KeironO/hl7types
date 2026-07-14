@@ -46,15 +46,15 @@ _UAC = UAC
 
 
 class CCM_I21(HL7Model):
-    """HL7 v2 CCM_I21 message.
+    """Collaborative Care Message (S11.5.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
         INSURANCE (Optional[List[CCM_I21_INSURANCE]]): optional
         APPOINTMENT_HISTORY (Optional[List[CCM_I21_APPOINTMENT_HISTORY]]): optional
         CLINICAL_HISTORY (Optional[List[CCM_I21_CLINICAL_HISTORY]]): optional
@@ -63,95 +63,87 @@ class CCM_I21(HL7Model):
         PROBLEM (Optional[List[CCM_I21_PROBLEM]]): optional
         GOAL (Optional[List[CCM_I21_GOAL]]): optional
         PATHWAY (Optional[List[CCM_I21_PATHWAY]]): optional
-        REL (Optional[List[REL]]): optional
+        REL (Optional[List[REL]]): Clinical Relationship Segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     INSURANCE: Optional[List[_CCM_I21_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     APPOINTMENT_HISTORY: Optional[List[_CCM_I21_APPOINTMENT_HISTORY]] = Field(
         default=None,
         title="APPOINTMENT_HISTORY",
-        description="Optional, repeating",
     )
 
     CLINICAL_HISTORY: Optional[List[_CCM_I21_CLINICAL_HISTORY]] = Field(
         default=None,
         title="CLINICAL_HISTORY",
-        description="Optional, repeating",
     )
 
     PATIENT_VISITS: List[_CCM_I21_PATIENT_VISITS] = Field(
         min_length=1,
         title="PATIENT_VISITS",
-        description="Required, repeating",
     )
 
     MEDICATION_HISTORY: Optional[List[_CCM_I21_MEDICATION_HISTORY]] = Field(
         default=None,
         title="MEDICATION_HISTORY",
-        description="Optional, repeating",
     )
 
     PROBLEM: Optional[List[_CCM_I21_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
-        description="Optional, repeating",
     )
 
     GOAL: Optional[List[_CCM_I21_GOAL]] = Field(
         default=None,
         title="GOAL",
-        description="Optional, repeating",
     )
 
     PATHWAY: Optional[List[_CCM_I21_PATHWAY]] = Field(
         default=None,
         title="PATHWAY",
-        description="Optional, repeating",
     )
 
     REL: Optional[List[_REL]] = Field(
         default=None,
         title="REL",
-        description="Optional, repeating",
+        description="Clinical Relationship Segment",
     )
 
     model_config = {"populate_by_name": True}

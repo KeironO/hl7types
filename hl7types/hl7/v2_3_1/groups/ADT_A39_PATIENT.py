@@ -26,32 +26,32 @@ class ADT_A39_PATIENT(HL7Model):
     """HL7 v2 ADT_A39.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        MRG (MRG): required
-        PV1 (Optional[PV1]): optional
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        MRG (MRG): MRG - merge patient information segment-, required
+        PV1 (Optional[PV1]): PV1 - patient visit segment-, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     MRG: _MRG = Field(
         title="MRG",
-        description="Required",
+        description="MRG - merge patient information segment-",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="PV1 - patient visit segment-",
     )
 
     model_config = {"populate_by_name": True}

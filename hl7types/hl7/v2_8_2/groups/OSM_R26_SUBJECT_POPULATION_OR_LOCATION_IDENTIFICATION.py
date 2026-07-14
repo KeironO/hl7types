@@ -29,40 +29,38 @@ class OSM_R26_SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION(HL7Model):
     """HL7 v2 OSM_R26.SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION group.
 
     Attributes:
-        PV1 (PV1): required
-        PRT (Optional[List[PRT]]): optional
+        PV1 (PV1): Patient Visit, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         PATIENT_VISIT_OBSERVATION (Optional[List[OSM_R26_PATIENT_VISIT_OBSERVATION]]): optional
         PATIENT_INFORMATION (Optional[OSM_R26_PATIENT_INFORMATION]): optional
-        NK1 (Optional[List[NK1]]): optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
     """
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     PATIENT_VISIT_OBSERVATION: Optional[List[_OSM_R26_PATIENT_VISIT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_VISIT_OBSERVATION",
-        description="Optional, repeating",
     )
 
     PATIENT_INFORMATION: Optional[_OSM_R26_PATIENT_INFORMATION] = Field(
         default=None,
         title="PATIENT_INFORMATION",
-        description="Optional",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     model_config = {"populate_by_name": True}

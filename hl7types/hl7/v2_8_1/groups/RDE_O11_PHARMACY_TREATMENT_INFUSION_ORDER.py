@@ -27,33 +27,32 @@ class RDE_O11_PHARMACY_TREATMENT_INFUSION_ORDER(HL7Model):
     """HL7 v2 RDE_O11.PHARMACY_TREATMENT_INFUSION_ORDER group.
 
     Attributes:
-        RXV (RXV): required
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        RXV (RXV): Pharmacy/Treatment Infusion, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         TIMING_ENCODED (List[RDE_O11_TIMING_ENCODED]): required
     """
 
     RXV: _RXV = Field(
         title="RXV",
-        description="Required",
+        description="Pharmacy/Treatment Infusion",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     TIMING_ENCODED: List[_RDE_O11_TIMING_ENCODED] = Field(
         min_length=1,
         title="TIMING_ENCODED",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -27,33 +27,32 @@ class ORL_O36_SPECIMEN(HL7Model):
     """HL7 v2 ORL_O36.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
-        OBX (Optional[List[OBX]]): optional
-        NTE (Optional[List[NTE]]): optional
+        SPM (SPM): Specimen, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         SPECIMEN_CONTAINER (List[ORL_O36_SPECIMEN_CONTAINER]): required
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     SPECIMEN_CONTAINER: List[_ORL_O36_SPECIMEN_CONTAINER] = Field(
         min_length=1,
         title="SPECIMEN_CONTAINER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

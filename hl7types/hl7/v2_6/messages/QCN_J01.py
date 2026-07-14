@@ -23,35 +23,35 @@ _UAC = UAC
 
 
 class QCN_J01(HL7Model):
-    """HL7 v2 QCN_J01 message.
+    """QCN/ACK - Cancel query/acknowledge message (S5.4.6).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        QID (QID): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        QID (QID): Query Identification, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     QID: _QID = Field(
         title="QID",
-        description="Required",
+        description="Query Identification",
     )
 
     model_config = {"populate_by_name": True}

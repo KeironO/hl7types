@@ -31,46 +31,45 @@ class ORI_O24_ORDER(HL7Model):
     """HL7 v2 ORI_O24.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[ORI_O24_TIMING]]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
-        ROL (Optional[List[ROL]]): optional
-        IPC (List[IPC]): required
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        ROL (Optional[List[ROL]]): Role, optional
+        IPC (List[IPC]): Imaging Procedure Control Segment, required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_ORI_O24_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     IPC: List[_IPC] = Field(
         min_length=1,
         title="IPC",
-        description="Required, repeating",
+        description="Imaging Procedure Control Segment",
     )
 
     model_config = {"populate_by_name": True}

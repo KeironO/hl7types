@@ -19,7 +19,7 @@ from .TS import TS
 
 
 class PPN(HL7Model):
-    """HL7 v2 PPN data type.
+    """Performing person time stamp (S2.9.31).
 
     Attributes
     ----------

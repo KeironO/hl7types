@@ -15,7 +15,7 @@ from .HD import HD
 
 
 class RP(HL7Model):
-    """HL7 v2 RP data type.
+    """Reference pointer (S2.A.1.65).
 
     Attributes
     ----------

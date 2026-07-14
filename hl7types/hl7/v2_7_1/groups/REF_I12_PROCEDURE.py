@@ -23,19 +23,18 @@ class REF_I12_PROCEDURE(HL7Model):
     """HL7 v2 REF_I12.PROCEDURE group.
 
     Attributes:
-        PR1 (PR1): required
+        PR1 (PR1): Procedures, required
         AUTHORIZATION_CONTACT (Optional[REF_I12_AUTHORIZATION_CONTACT]): optional
     """
 
     PR1: _PR1 = Field(
         title="PR1",
-        description="Required",
+        description="Procedures",
     )
 
     AUTHORIZATION_CONTACT: Optional[_REF_I12_AUTHORIZATION_CONTACT] = Field(
         default=None,
         title="AUTHORIZATION_CONTACT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

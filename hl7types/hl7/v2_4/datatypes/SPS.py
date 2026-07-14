@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class SPS(HL7Model):
-    """HL7 v2 SPS data type.
+    """Specimen source.
 
     Attributes
     ----------

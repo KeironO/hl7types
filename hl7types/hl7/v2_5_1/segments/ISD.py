@@ -15,18 +15,18 @@ from ..datatypes.CE import CE
 
 
 class ISD(HL7Model):
-    """HL7 v2 ISD segment.
+    """Interaction Status Detail (S13.4.2).
 
     Attributes
     ----------
     isd_1 : str
-        ISD.1 (req) - Reference Interaction Number (unique identifier) (NM)
+        ISD.1 (req) - Reference Interaction Number (unique identifier) (NM) S13.4.2.1
 
     isd_2 : CE | None
-        ISD.2 (opt) - Interaction Type Identifier (CE)
+        ISD.2 (opt) - Interaction Type Identifier (CE) S13.4.2.2 | 0368 - Remote control command
 
     isd_3 : CE
-        ISD.3 (req) - Interaction Active State (CE)
+        ISD.3 (req) - Interaction Active State (CE) S13.4.2.3 | 0387 - Command response
     """
 
     isd_1: str = Field(

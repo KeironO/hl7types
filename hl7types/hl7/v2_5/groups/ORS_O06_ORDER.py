@@ -29,39 +29,38 @@ class ORS_O06_ORDER(HL7Model):
     """HL7 v2 ORS_O06.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[ORS_O06_TIMING]]): optional
-        RQD (RQD): required
-        RQ1 (Optional[RQ1]): optional
-        NTE (Optional[List[NTE]]): optional
+        RQD (RQD): Requisition Detail, required
+        RQ1 (Optional[RQ1]): Requisition Detail-1, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_ORS_O06_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     RQD: _RQD = Field(
         title="RQD",
-        description="Required",
+        description="Requisition Detail",
     )
 
     RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
-        description="Optional",
+        description="Requisition Detail-1",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

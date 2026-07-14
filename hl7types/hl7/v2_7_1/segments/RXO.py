@@ -23,117 +23,117 @@ from ..datatypes.XTN import XTN
 
 
 class RXO(HL7Model):
-    """HL7 v2 RXO segment.
+    """Pharmacy/Treatment Order (S4.A.1).
 
     Attributes
     ----------
     rxo_1 : CWE | None
-        RXO.1 (opt) - Requested Give Code (CWE)
+        RXO.1 (opt) - Requested Give Code (CWE) S4.A.1.1 | 9999 - no table for CE
 
     rxo_2 : str | None
-        RXO.2 (opt) - Requested Give Amount - Minimum (NM)
+        RXO.2 (opt) - Requested Give Amount - Minimum (NM) S4.A.1.2
 
     rxo_3 : str | None
-        RXO.3 (opt) - Requested Give Amount - Maximum (NM)
+        RXO.3 (opt) - Requested Give Amount - Maximum (NM) S4.A.1.3
 
     rxo_4 : CWE | None
-        RXO.4 (opt) - Requested Give Units (CWE)
+        RXO.4 (opt) - Requested Give Units (CWE) S4.A.1.4 | 9999 - no table for CE
 
     rxo_5 : CWE | None
-        RXO.5 (opt) - Requested Dosage Form (CWE)
+        RXO.5 (opt) - Requested Dosage Form (CWE) S4.A.1.5 | 9999 - no table for CE
 
     rxo_6 : list[CWE] | None
-        RXO.6 (opt, rep) - Provider's Pharmacy/Treatment Instructions (CWE)
+        RXO.6 (opt, rep) - Provider's Pharmacy/Treatment Instructions (CWE) S4.A.1.6 | 9999 - no table for CE
 
     rxo_7 : list[CWE] | None
-        RXO.7 (opt, rep) - Provider's Administration Instructions (CWE)
+        RXO.7 (opt, rep) - Provider's Administration Instructions (CWE) S4.A.1.7 | 9999 - no table for CE
 
     rxo_8 : LA1 | None
-        RXO.8 (opt) - Deliver-To Location (LA1)
+        RXO.8 (opt) - Deliver-To Location (LA1) S4.A.1.8
 
     rxo_9 : str | None
-        RXO.9 (opt) - Allow Substitutions (ID)
+        RXO.9 (opt) - Allow Substitutions (ID) S4.A.1.9 | 0161 - Allow Substitution
 
     rxo_10 : CWE | None
-        RXO.10 (opt) - Requested Dispense Code (CWE)
+        RXO.10 (opt) - Requested Dispense Code (CWE) S4.A.1.10 | 9999 - no table for CE
 
     rxo_11 : str | None
-        RXO.11 (opt) - Requested Dispense Amount (NM)
+        RXO.11 (opt) - Requested Dispense Amount (NM) S4.A.1.11
 
     rxo_12 : CWE | None
-        RXO.12 (opt) - Requested Dispense Units (CWE)
+        RXO.12 (opt) - Requested Dispense Units (CWE) S4.A.1.12 | 9999 - no table for CE
 
     rxo_13 : str | None
-        RXO.13 (opt) - Number Of Refills (NM)
+        RXO.13 (opt) - Number Of Refills (NM) S4.A.1.13
 
     rxo_14 : list[XCN] | None
-        RXO.14 (opt, rep) - Ordering Provider's DEA Number (XCN)
+        RXO.14 (opt, rep) - Ordering Provider's DEA Number (XCN) S4.A.1.14
 
     rxo_15 : list[XCN] | None
-        RXO.15 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN)
+        RXO.15 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN) S4.A.1.15
 
     rxo_16 : str | None
-        RXO.16 (opt) - Needs Human Review (ID)
+        RXO.16 (opt) - Needs Human Review (ID) S4.A.1.16 | 0136 - Yes/no Indicator
 
     rxo_17 : str | None
-        RXO.17 (opt) - Requested Give Per (Time Unit) (ST)
+        RXO.17 (opt) - Requested Give Per (Time Unit) (ST) S4.A.1.17
 
     rxo_18 : str | None
-        RXO.18 (opt) - Requested Give Strength (NM)
+        RXO.18 (opt) - Requested Give Strength (NM) S4.A.1.18
 
     rxo_19 : CWE | None
-        RXO.19 (opt) - Requested Give Strength Units (CWE)
+        RXO.19 (opt) - Requested Give Strength Units (CWE) S4.A.1.19 | 9999 - no table for CE
 
     rxo_20 : list[CWE] | None
-        RXO.20 (opt, rep) - Indication (CWE)
+        RXO.20 (opt, rep) - Indication (CWE) S4.A.1.19 | 9999 - no table for CE
 
     rxo_21 : str | None
-        RXO.21 (opt) - Requested Give Rate Amount (ST)
+        RXO.21 (opt) - Requested Give Rate Amount (ST) S4.A.1.21
 
     rxo_22 : CWE | None
-        RXO.22 (opt) - Requested Give Rate Units (CWE)
+        RXO.22 (opt) - Requested Give Rate Units (CWE) S4.A.1.22 | 9999 - no table for CE
 
     rxo_23 : CQ | None
-        RXO.23 (opt) - Total Daily Dose (CQ)
+        RXO.23 (opt) - Total Daily Dose (CQ) S4.A.1.23
 
     rxo_24 : list[CWE] | None
-        RXO.24 (opt, rep) - Supplementary Code (CWE)
+        RXO.24 (opt, rep) - Supplementary Code (CWE) S4.A.1.24 | 9999 - no table for CE
 
     rxo_25 : str | None
-        RXO.25 (opt) - Requested Drug Strength Volume (NM)
+        RXO.25 (opt) - Requested Drug Strength Volume (NM) S4.A.1.25
 
     rxo_26 : CWE | None
-        RXO.26 (opt) - Requested Drug Strength Volume Units (CWE)
+        RXO.26 (opt) - Requested Drug Strength Volume Units (CWE) S4.A.1.26 | 9999 - no table for CE
 
     rxo_27 : str | None
-        RXO.27 (opt) - Pharmacy Order Type (ID)
+        RXO.27 (opt) - Pharmacy Order Type (ID) S4.A.1.27 | 0480 - Pharmacy Order Types
 
     rxo_28 : str | None
-        RXO.28 (opt) - Dispensing Interval (NM)
+        RXO.28 (opt) - Dispensing Interval (NM) S4.A.1.28
 
     rxo_29 : EI | None
-        RXO.29 (opt) - Medication Instance Identifier (EI)
+        RXO.29 (opt) - Medication Instance Identifier (EI) S4.A.1.29
 
     rxo_30 : EI | None
-        RXO.30 (opt) - Segment Instance Identifier (EI)
+        RXO.30 (opt) - Segment Instance Identifier (EI) S4.A.1.30
 
     rxo_31 : CNE | None
-        RXO.31 (opt) - Mood Code (CNE)
+        RXO.31 (opt) - Mood Code (CNE) S4.A.1.31 | 0725 - Mood Codes
 
     rxo_32 : CWE | None
-        RXO.32 (opt) - Dispensing Pharmacy (CWE)
+        RXO.32 (opt) - Dispensing Pharmacy (CWE) S4.A.1.32 | 9999 - no table for CE
 
     rxo_33 : XAD | None
-        RXO.33 (opt) - Dispensing Pharmacy Address (XAD)
+        RXO.33 (opt) - Dispensing Pharmacy Address (XAD) S4.A.1.33
 
     rxo_34 : PL | None
-        RXO.34 (opt) - Deliver-to Patient Location (PL)
+        RXO.34 (opt) - Deliver-to Patient Location (PL) S4.A.1.34
 
     rxo_35 : XAD | None
-        RXO.35 (opt) - Deliver-to Address (XAD)
+        RXO.35 (opt) - Deliver-to Address (XAD) S4.A.1.35
 
     rxo_36 : list[XTN] | None
-        RXO.36 (opt, rep) - Pharmacy Phone Number (XTN)
+        RXO.36 (opt, rep) - Pharmacy Phone Number (XTN) S4.A.1.36
     """
 
     rxo_1: Optional[CWE] = Field(

@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class ELD(HL7Model):
-    """HL7 v2 ELD data type.
+    """Error location and description (S2.A.1.27).
 
     Attributes
     ----------

@@ -33,53 +33,52 @@ class OPL_O37_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 OPL_O37.OBSERVATION_REQUEST group.
 
     Attributes:
-        ORC (ORC): required
-        OBR (OBR): required
-        ROL (Optional[List[ROL]]): optional
+        ORC (ORC): Common Order, required
+        OBR (OBR): Observation Request, required
+        ROL (Optional[List[ROL]]): Role, optional
         TIMING (Optional[List[OPL_O37_TIMING]]): optional
-        TCD (Optional[TCD]): optional
-        DG1 (Optional[List[DG1]]): optional
-        OBX (Optional[List[OBX]]): optional
+        TCD (Optional[TCD]): Test Code Detail, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     TIMING: Optional[List[_OPL_O37_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

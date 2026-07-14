@@ -28,32 +28,30 @@ class PPT_PCL_ORDER_DETAIL(HL7Model):
 
     Attributes:
         CHOICE (PPT_PCL_CHOICE): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         ORDER_OBSERVATION (Optional[List[PPT_PCL_ORDER_OBSERVATION]]): optional
     """
 
     CHOICE: _PPT_PCL_CHOICE = Field(
         title="CHOICE",
-        description="Required",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ORDER_OBSERVATION: Optional[List[_PPT_PCL_ORDER_OBSERVATION]] = Field(
         default=None,
         title="ORDER_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

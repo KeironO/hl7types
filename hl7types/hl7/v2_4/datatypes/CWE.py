@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CWE(HL7Model):
-    """HL7 v2 CWE data type.
+    """Coded with exceptions (S2.9.11).
 
     Attributes
     ----------

@@ -32,64 +32,62 @@ _UAC = UAC
 
 
 class OUL_R22(HL7Model):
-    """HL7 v2 OUL_R22 message.
+    """OUL - Unsolicited Specimen Oriented Observation Message (S7.3.10).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        NTE (Optional[NTE]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        NTE (Optional[NTE]): Notes and Comments, optional
         PATIENT (Optional[OUL_R22_PATIENT]): optional
-        NK1 (Optional[List[NK1]]): optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
         SPECIMEN (List[OUL_R22_SPECIMEN]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OUL_R22_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     SPECIMEN: List[_OUL_R22_SPECIMEN] = Field(
         min_length=1,
         title="SPECIMEN",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

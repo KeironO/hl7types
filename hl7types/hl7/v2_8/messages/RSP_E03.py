@@ -28,48 +28,47 @@ _UAC = UAC
 
 
 class RSP_E03(HL7Model):
-    """HL7 v2 RSP_E03 message.
+    """HealthCare Services Invoice Status (S15.3.7).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[List[UAC]]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[List[UAC]]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
         QUERY_ACK_IPR (RSP_E03_QUERY_ACK_IPR): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[List[_UAC]] = Field(
         default=None,
         title="UAC",
-        description="Optional, repeating",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     QUERY_ACK_IPR: _RSP_E03_QUERY_ACK_IPR = Field(
         title="QUERY_ACK_IPR",
-        description="Required",
     )
 
     model_config = {"populate_by_name": True}

@@ -19,7 +19,7 @@ from .SAD import SAD
 
 
 class XAD(HL7Model):
-    """HL7 v2 XAD data type.
+    """Extended address (S2.A.85).
 
     Attributes
     ----------

@@ -32,60 +32,59 @@ _SFT = SFT
 
 
 class BAR_P10(HL7Model):
-    """HL7 v2 BAR_P10 message.
+    """BAR/ACK - Transmit Ambulatory Payment Classification(APC) (S6.4.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (PV1): required
-        DG1 (Optional[List[DG1]]): optional
-        GP1 (GP1): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PV1 (PV1): Patient Visit, required
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        GP1 (GP1): Grouping/Reimbursement - Visit, required
         PROCEDURE (Optional[List[BAR_P10_PROCEDURE]]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     GP1: _GP1 = Field(
         title="GP1",
-        description="Required",
+        description="Grouping/Reimbursement - Visit",
     )
 
     PROCEDURE: Optional[List[_BAR_P10_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

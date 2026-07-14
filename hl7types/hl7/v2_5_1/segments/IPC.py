@@ -16,36 +16,36 @@ from ..datatypes.EI import EI
 
 
 class IPC(HL7Model):
-    """HL7 v2 IPC segment.
+    """Imaging Procedure Control Segment (S4.5.6).
 
     Attributes
     ----------
     ipc_1 : EI
-        IPC.1 (req) - Accession Identifier (EI)
+        IPC.1 (req) - Accession Identifier (EI) S13.4.3.2
 
     ipc_2 : EI
-        IPC.2 (req) - Requested Procedure ID (EI)
+        IPC.2 (req) - Requested Procedure ID (EI) S4.5.6.2
 
     ipc_3 : EI
-        IPC.3 (req) - Study Instance UID (EI)
+        IPC.3 (req) - Study Instance UID (EI) S4.5.6.3
 
     ipc_4 : EI
-        IPC.4 (req) - Scheduled Procedure Step ID (EI)
+        IPC.4 (req) - Scheduled Procedure Step ID (EI) S4.5.6.4
 
     ipc_5 : CE | None
-        IPC.5 (opt) - Modality (CE)
+        IPC.5 (opt) - Modality (CE) S4.5.6.5
 
     ipc_6 : list[CE] | None
-        IPC.6 (opt, rep) - Protocol Code (CE)
+        IPC.6 (opt, rep) - Protocol Code (CE) S4.5.6.6
 
     ipc_7 : EI | None
-        IPC.7 (opt) - Scheduled Station Name (EI)
+        IPC.7 (opt) - Scheduled Station Name (EI) S4.5.6.7
 
     ipc_8 : list[CE] | None
-        IPC.8 (opt, rep) - Scheduled Procedure Step Location (CE)
+        IPC.8 (opt, rep) - Scheduled Procedure Step Location (CE) S4.5.6.8
 
     ipc_9 : str | None
-        IPC.9 (opt) - Scheduled AE Title (ST)
+        IPC.9 (opt) - Scheduled AE Title (ST) S4.5.6.9
     """
 
     ipc_1: EI = Field(

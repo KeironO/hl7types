@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class QRF(HL7Model):
-    """HL7 v2 QRF segment.
+    """QUERY FILTER (S5.3.4).
 
     Attributes
     ----------

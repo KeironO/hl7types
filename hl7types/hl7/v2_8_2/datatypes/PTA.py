@@ -16,7 +16,7 @@ from .MOP import MOP
 
 
 class PTA(HL7Model):
-    """HL7 v2 PTA data type.
+    """Policy type and amount (S2.A.59).
 
     Attributes
     ----------

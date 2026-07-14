@@ -24,27 +24,27 @@ class NMQ_N01_CLOCK_AND_STATISTICS(HL7Model):
     """HL7 v2 NMQ_N01.CLOCK_AND_STATISTICS group.
 
     Attributes:
-        NCK (Optional[NCK]): optional
-        NST (Optional[NST]): optional
-        NSC (Optional[NSC]): optional
+        NCK (Optional[NCK]): System clock, optional
+        NST (Optional[NST]): Application control level statistics, optional
+        NSC (Optional[NSC]): Application status change, optional
     """
 
     NCK: Optional[_NCK] = Field(
         default=None,
         title="NCK",
-        description="Optional",
+        description="System clock",
     )
 
     NST: Optional[_NST] = Field(
         default=None,
         title="NST",
-        description="Optional",
+        description="Application control level statistics",
     )
 
     NSC: Optional[_NSC] = Field(
         default=None,
         title="NSC",
-        description="Optional",
+        description="Application status change",
     )
 
     model_config = {"populate_by_name": True}

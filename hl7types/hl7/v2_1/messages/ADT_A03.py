@@ -25,30 +25,30 @@ class ADT_A03(HL7Model):
     """HL7 v2 ADT_A03 message.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (PV1): required
+        MSH (MSH): MESSAGE HEADER, required
+        EVN (EVN): EVENT TYPE, required
+        PID (PID): PATIENT IDENTIFICATION, required
+        PV1 (PV1): PATIENT VISIT, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVENT TYPE",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PATIENT IDENTIFICATION",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PATIENT VISIT",
     )
 
     model_config = {"populate_by_name": True}

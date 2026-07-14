@@ -24,27 +24,27 @@ class MFN_M08_MF_NUMERIC_OBSERVATION(HL7Model):
     """HL7 v2 MFN_M08.MF_NUMERIC_OBSERVATION group.
 
     Attributes:
-        OM2 (Optional[OM2]): optional
-        OM3 (Optional[OM3]): optional
-        OM4 (Optional[OM4]): optional
+        OM2 (Optional[OM2]): Numeric observation, optional
+        OM3 (Optional[OM3]): Categorical test/observation, optional
+        OM4 (Optional[OM4]): Observations that require specimens, optional
     """
 
     OM2: Optional[_OM2] = Field(
         default=None,
         title="OM2",
-        description="Optional",
+        description="Numeric observation",
     )
 
     OM3: Optional[_OM3] = Field(
         default=None,
         title="OM3",
-        description="Optional",
+        description="Categorical test/observation",
     )
 
     OM4: Optional[_OM4] = Field(
         default=None,
         title="OM4",
-        description="Optional",
+        description="Observations that require specimens",
     )
 
     model_config = {"populate_by_name": True}

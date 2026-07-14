@@ -11,7 +11,7 @@ from hl7types.hl7 import HL7Model
 
 
 class ZL7(HL7Model):
-    """HL7 v2 ZL7 segment."""
+    """(proposed example only) (S8.6.1)."""
 
     pass
 

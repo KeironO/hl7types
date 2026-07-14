@@ -23,35 +23,35 @@ _SPR = SPR
 
 
 class SPQ_Q01(HL7Model):
-    """HL7 v2 SPQ_Q01 message.
+    """QRY/DSR - Query sent for immediate response.
 
     Attributes:
-        MSH (MSH): required
-        SPR (SPR): required
-        RDF (Optional[RDF]): optional
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message header segment, required
+        SPR (SPR): Stored Procedure Request Definition, required
+        RDF (Optional[RDF]): Table Row Definition, optional
+        DSC (Optional[DSC]): Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     SPR: _SPR = Field(
         title="SPR",
-        description="Required",
+        description="Stored Procedure Request Definition",
     )
 
     RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
-        description="Optional",
+        description="Table Row Definition",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

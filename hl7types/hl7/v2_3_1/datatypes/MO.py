@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class MO(HL7Model):
-    """HL7 v2 MO data type.
+    """Money (S2.8.25).
 
     Attributes
     ----------

@@ -16,7 +16,7 @@ from .HD import HD
 
 
 class PL(HL7Model):
-    """HL7 v2 PL data type.
+    """Person location (S2.A.53).
 
     Attributes
     ----------

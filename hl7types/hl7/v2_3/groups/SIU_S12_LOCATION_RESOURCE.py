@@ -22,19 +22,19 @@ class SIU_S12_LOCATION_RESOURCE(HL7Model):
     """HL7 v2 SIU_S12.LOCATION_RESOURCE group.
 
     Attributes:
-        AIL (AIL): required
-        NTE (Optional[List[NTE]]): optional
+        AIL (AIL): Appointment Information - Location Resource, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     AIL: _AIL = Field(
         title="AIL",
-        description="Required",
+        description="Appointment Information - Location Resource",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

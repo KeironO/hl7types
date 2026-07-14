@@ -21,225 +21,225 @@ from ..datatypes.XTN import XTN
 
 
 class IN2(HL7Model):
-    """HL7 v2 IN2 segment.
+    """Insurance additional info (S6.4.7).
 
     Attributes
     ----------
     in2_1 : CX | None
-        IN2.1 (opt) - Insured's Employee ID (CX)
+        IN2.1 (opt) - Insured's Employee ID (CX) S6.4.7.1
 
     in2_2 : str | None
-        IN2.2 (opt) - Insured's Social Security Number (ST)
+        IN2.2 (opt) - Insured's Social Security Number (ST) S6.4.7.2
 
     in2_3 : XCN | None
-        IN2.3 (opt) - Insured's Employer Name (XCN)
+        IN2.3 (opt) - Insured's Employer Name (XCN) S6.4.7.3
 
     in2_4 : str | None
-        IN2.4 (opt) - Employer Information Data (IS)
+        IN2.4 (opt) - Employer Information Data (IS) S6.4.7.4 | 0139 - Employer Information Data
 
     in2_5 : str | None
-        IN2.5 (opt) - Mail Claim Party (IS)
+        IN2.5 (opt) - Mail Claim Party (IS) S6.4.7.5 | 0137 - Mail Claim Party
 
     in2_6 : str | None
-        IN2.6 (opt) - Medicare Health Ins Card Number (ST)
+        IN2.6 (opt) - Medicare Health Ins Card Number (ST) S6.4.7.6
 
     in2_7 : XPN | None
-        IN2.7 (opt) - Medicaid Case Name (XPN)
+        IN2.7 (opt) - Medicaid Case Name (XPN) S6.4.7.7
 
     in2_8 : str | None
-        IN2.8 (opt) - Medicaid Case Number (ST)
+        IN2.8 (opt) - Medicaid Case Number (ST) S6.4.7.8
 
     in2_9 : XPN | None
-        IN2.9 (opt) - Champus Sponsor Name (XPN)
+        IN2.9 (opt) - Champus Sponsor Name (XPN) S6.4.7.9
 
     in2_10 : str | None
-        IN2.10 (opt) - Champus ID Number (ST)
+        IN2.10 (opt) - Champus ID Number (ST) S6.4.7.10
 
     in2_11 : CE | None
-        IN2.11 (opt) - Dependent of Champus Recipient (CE)
+        IN2.11 (opt) - Dependent of Champus Recipient (CE) S6.4.7.11
 
     in2_12 : str | None
-        IN2.12 (opt) - Champus Organization (ST)
+        IN2.12 (opt) - Champus Organization (ST) S6.4.7.12
 
     in2_13 : str | None
-        IN2.13 (opt) - Champus Station (ST)
+        IN2.13 (opt) - Champus Station (ST) S6.4.7.13
 
     in2_14 : str | None
-        IN2.14 (opt) - Champus Service (IS)
+        IN2.14 (opt) - Champus Service (IS) S6.4.7.14 | 0140 - Champus Service
 
     in2_15 : str | None
-        IN2.15 (opt) - Champus Rank/Grade (IS)
+        IN2.15 (opt) - Champus Rank/Grade (IS) S6.4.7.15 | 0141 - Champus Rank/Grade
 
     in2_16 : str | None
-        IN2.16 (opt) - Champus Status (IS)
+        IN2.16 (opt) - Champus Status (IS) S6.4.7.16 | 0142 - Champus Status
 
     in2_17 : str | None
-        IN2.17 (opt) - Champus Retire Date (DT)
+        IN2.17 (opt) - Champus Retire Date (DT) S6.4.7.17
 
     in2_18 : str | None
-        IN2.18 (opt) - Champus Non-Avail Cert on File (ID)
+        IN2.18 (opt) - Champus Non-Avail Cert on File (ID) S6.4.7.18 | 0136 - Yes/No Indicator
 
     in2_19 : str | None
-        IN2.19 (opt) - Baby Coverage (ID)
+        IN2.19 (opt) - Baby Coverage (ID) S6.4.7.19 | 0136 - Yes/No Indicator
 
     in2_20 : str | None
-        IN2.20 (opt) - Combine Baby Bill (ID)
+        IN2.20 (opt) - Combine Baby Bill (ID) S6.4.7.20 | 0136 - Yes/No Indicator
 
     in2_21 : str | None
-        IN2.21 (opt) - Blood Deductible (ST)
+        IN2.21 (opt) - Blood Deductible (ST) S6.4.7.21
 
     in2_22 : XPN | None
-        IN2.22 (opt) - Special Coverage Approval Name (XPN)
+        IN2.22 (opt) - Special Coverage Approval Name (XPN) S6.4.7.22
 
     in2_23 : str | None
-        IN2.23 (opt) - Special Coverage Approval Title (ST)
+        IN2.23 (opt) - Special Coverage Approval Title (ST) S6.4.7.23
 
     in2_24 : list[str] | None
-        IN2.24 (opt, rep) - Non-Covered Insurance Code (ST)
+        IN2.24 (opt, rep) - Non-Covered Insurance Code (ST) S6.4.7.24 | 0143 - Non-covered Insurance Code
 
     in2_25 : CX | None
-        IN2.25 (opt) - Payor ID (CX)
+        IN2.25 (opt) - Payor ID (CX) S6.4.7.25
 
     in2_26 : CX | None
-        IN2.26 (opt) - Payor Subscriber ID (CX)
+        IN2.26 (opt) - Payor Subscriber ID (CX) S6.4.7.26
 
     in2_27 : str | None
-        IN2.27 (opt) - Eligibility Source (IS)
+        IN2.27 (opt) - Eligibility Source (IS) S6.4.7.27 | 0144 - Eligibility Source
 
     in2_28 : list[str] | None
-        IN2.28 (opt, rep) - Room Coverage Type/Amount (CM)
+        IN2.28 (opt, rep) - Room Coverage Type/Amount (CM) S6.4.7.28
 
     in2_29 : list[str] | None
-        IN2.29 (opt, rep) - Policy Type/Amount (CM)
+        IN2.29 (opt, rep) - Policy Type/Amount (CM) S6.4.7.29
 
     in2_30 : str | None
-        IN2.30 (opt) - Daily Deductible (CM)
+        IN2.30 (opt) - Daily Deductible (CM) S6.4.7.30
 
     in2_31 : str | None
-        IN2.31 (opt) - Living Dependency (IS)
+        IN2.31 (opt) - Living Dependency (IS) S3.3.5 | 0223 - Living Dependency
 
     in2_32 : str | None
-        IN2.32 (opt) - Ambulatory Status (IS)
+        IN2.32 (opt) - Ambulatory Status (IS) S3.3.3 | 0009 - Ambulatory Status
 
     in2_33 : str | None
-        IN2.33 (opt) - Citizenship (IS)
+        IN2.33 (opt) - Citizenship (IS) S3.3.2 | 0171 - Country Code
 
     in2_34 : CE | None
-        IN2.34 (opt) - Primary Language (CE)
+        IN2.34 (opt) - Primary Language (CE) S3.3.2 | 0296 - Language
 
     in2_35 : str | None
-        IN2.35 (opt) - Living Arrangement (IS)
+        IN2.35 (opt) - Living Arrangement (IS) S3.3.5 | 0220 - Living Arrangements
 
     in2_36 : CE | None
-        IN2.36 (opt) - Publicity Indicator (CE)
+        IN2.36 (opt) - Publicity Indicator (CE) S3.3.5 | 0215 - Publicity Code
 
     in2_37 : str | None
-        IN2.37 (opt) - Protection Indicator (ID)
+        IN2.37 (opt) - Protection Indicator (ID) S3.3.5 | 0136 - Yes/No Indicator
 
     in2_38 : str | None
-        IN2.38 (opt) - Student Indicator (IS)
+        IN2.38 (opt) - Student Indicator (IS) S3.3.5 | 0231 - Student Status
 
     in2_39 : str | None
-        IN2.39 (opt) - Religion (IS)
+        IN2.39 (opt) - Religion (IS) S3.3.2 | 0006 - Religion
 
     in2_40 : XPN | None
-        IN2.40 (opt) - Mother’s Maiden Name (XPN)
+        IN2.40 (opt) - Mother’s Maiden Name (XPN) S3.3.5
 
     in2_41 : CE | None
-        IN2.41 (opt) - Nationality Code (CE)
+        IN2.41 (opt) - Nationality Code (CE) S3.3.2 | 0212 - Nationality
 
     in2_42 : str | None
-        IN2.42 (opt) - Ethnic Group (IS)
+        IN2.42 (opt) - Ethnic Group (IS) S3.3.2 | 0189 - Ethnic Group
 
     in2_43 : list[str] | None
-        IN2.43 (opt, rep) - Marital Status (IS)
+        IN2.43 (opt, rep) - Marital Status (IS) S3.3.2 | 0002 - Marital Status
 
     in2_44 : str | None
-        IN2.44 (opt) - Employment Start Date (DT)
+        IN2.44 (opt) - Employment Start Date (DT) S6.4.7.44
 
     in2_45 : str | None
-        IN2.45 (opt) - Employment Stop Date (DT)
+        IN2.45 (opt) - Employment Stop Date (DT) S6.4.5
 
     in2_46 : str | None
-        IN2.46 (opt) - Job Title (ST)
+        IN2.46 (opt) - Job Title (ST) S6.4.5
 
     in2_47 : JCC | None
-        IN2.47 (opt) - Job Code/Class (JCC)
+        IN2.47 (opt) - Job Code/Class (JCC) S6.4.5
 
     in2_48 : str | None
-        IN2.48 (opt) - Job Status (IS)
+        IN2.48 (opt) - Job Status (IS) S3.3.5 | 0311 - Job Status
 
     in2_49 : list[XPN] | None
-        IN2.49 (opt, rep) - Employer Contact Person Name (XPN)
+        IN2.49 (opt, rep) - Employer Contact Person Name (XPN) S6.4.7.49
 
     in2_50 : list[XTN] | None
-        IN2.50 (opt, rep) - Employer Contact Person Phone Number (XTN)
+        IN2.50 (opt, rep) - Employer Contact Person Phone Number (XTN) S6.4.7.50
 
     in2_51 : str | None
-        IN2.51 (opt) - Employer Contact Reason (IS)
+        IN2.51 (opt) - Employer Contact Reason (IS) S6.4.7.51 | 0222 - Contact Reason
 
     in2_52 : list[XPN] | None
-        IN2.52 (opt, rep) - Insured’s Contact Person’s Name (XPN)
+        IN2.52 (opt, rep) - Insured’s Contact Person’s Name (XPN) S6.4.7.52
 
     in2_53 : list[XTN] | None
-        IN2.53 (opt, rep) - Insured’s Contact Person Telephone Number (XTN)
+        IN2.53 (opt, rep) - Insured’s Contact Person Telephone Number (XTN) S6.4.7.53
 
     in2_54 : list[str] | None
-        IN2.54 (opt, rep) - Insured’s Contact Person Reason (IS)
+        IN2.54 (opt, rep) - Insured’s Contact Person Reason (IS) S6.4.7.54 | 0222 - Contact Reason
 
     in2_55 : str | None
-        IN2.55 (opt) - Relationship To The Patient Start Date (DT)
+        IN2.55 (opt) - Relationship To The Patient Start Date (DT) S6.4.7.55
 
     in2_56 : list[str] | None
-        IN2.56 (opt, rep) - Relationship To The Patient Stop Date (DT)
+        IN2.56 (opt, rep) - Relationship To The Patient Stop Date (DT) S6.4.7.56
 
     in2_57 : str | None
-        IN2.57 (opt) - Insurance Co. Contact Reason (IS)
+        IN2.57 (opt) - Insurance Co. Contact Reason (IS) S6.4.7.57 | 0232 - Insurance Company Contact Reason
 
     in2_58 : XTN | None
-        IN2.58 (opt) - Insurance Co. Contact Phone Number (XTN)
+        IN2.58 (opt) - Insurance Co. Contact Phone Number (XTN) S6.4.7.58
 
     in2_59 : str | None
-        IN2.59 (opt) - Policy Scope (IS)
+        IN2.59 (opt) - Policy Scope (IS) S6.4.7.59 | 0312 - Policy Scope
 
     in2_60 : str | None
-        IN2.60 (opt) - Policy Source (IS)
+        IN2.60 (opt) - Policy Source (IS) S6.4.7.60 | 0313 - Policy Source
 
     in2_61 : CX | None
-        IN2.61 (opt) - Patient Member Number (CX)
+        IN2.61 (opt) - Patient Member Number (CX) S6.4.7.61
 
     in2_62 : str | None
-        IN2.62 (opt) - Guarantor’s Relationship To Insured (IS)
+        IN2.62 (opt) - Guarantor’s Relationship To Insured (IS) S6.4.7.62 | 0063 - Relationship
 
     in2_63 : list[XTN] | None
-        IN2.63 (opt, rep) - Insured’s Telephone Number - Home (XTN)
+        IN2.63 (opt, rep) - Insured’s Telephone Number - Home (XTN) S6.4.7.63
 
     in2_64 : list[XTN] | None
-        IN2.64 (opt, rep) - Insured’s Employer Telephone Number (XTN)
+        IN2.64 (opt, rep) - Insured’s Employer Telephone Number (XTN) S6.4.7.64
 
     in2_65 : CE | None
-        IN2.65 (opt) - Military Handicapped Program (CE)
+        IN2.65 (opt) - Military Handicapped Program (CE) S6.4.7.65
 
     in2_66 : str | None
-        IN2.66 (opt) - Suspend Flag (ID)
+        IN2.66 (opt) - Suspend Flag (ID) S6.4.7.66 | 0136 - Yes/No Indicator
 
     in2_67 : str | None
-        IN2.67 (opt) - Co-pay Limit Flag (ID)
+        IN2.67 (opt) - Co-pay Limit Flag (ID) S6.4.7.67 | 0136 - Yes/No Indicator
 
     in2_68 : str | None
-        IN2.68 (opt) - Stoploss Limit Flag (ID)
+        IN2.68 (opt) - Stoploss Limit Flag (ID) S6.4.7.68 | 0136 - Yes/No Indicator
 
     in2_69 : list[XON] | None
-        IN2.69 (opt, rep) - Insured Organization Name And ID (XON)
+        IN2.69 (opt, rep) - Insured Organization Name And ID (XON) S6.4.7.69
 
     in2_70 : list[XON] | None
-        IN2.70 (opt, rep) - Insured Employer Organization Name And ID (XON)
+        IN2.70 (opt, rep) - Insured Employer Organization Name And ID (XON) S6.4.7.70
 
     in2_71 : str | None
-        IN2.71 (opt) - Race (IS)
+        IN2.71 (opt) - Race (IS) S3.3.2 | 0005 - Race
 
     in2_72 : str | None
-        IN2.72 (opt) - Patient Relationship to Insured (ID)
+        IN2.72 (opt) - Patient Relationship to Insured (ID) S6.4.7.72
     """
 
     in2_1: Optional[CX] = Field(
