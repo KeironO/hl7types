@@ -2,6 +2,14 @@
 
 All notable changes to hl7types are documented here.
 
+## [0.9.1] :  2026-07-14
+
+### Changes
+
+- Update changelog (#70)
+- Update issue templates
+- Small minor update (#75)
+
 ## [0.9.0] :  2026-06-27
 
 ### Changes
