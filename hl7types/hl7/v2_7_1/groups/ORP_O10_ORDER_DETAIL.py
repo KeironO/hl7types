@@ -29,40 +29,39 @@ class ORP_O10_ORDER_DETAIL(HL7Model):
     """HL7 v2 ORP_O10.ORDER_DETAIL group.
 
     Attributes:
-        RXO (RXO): required
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
-        RXR (List[RXR]): required
+        RXO (RXO): Pharmacy/Treatment Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
         COMPONENT (Optional[List[ORP_O10_COMPONENT]]): optional
     """
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="Pharmacy/Treatment Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     COMPONENT: Optional[List[_ORP_O10_COMPONENT]] = Field(
         default=None,
         title="COMPONENT",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

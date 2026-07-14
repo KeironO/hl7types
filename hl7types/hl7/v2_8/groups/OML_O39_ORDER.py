@@ -33,54 +33,52 @@ class OML_O39_ORDER(HL7Model):
     """HL7 v2 OML_O39.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[OML_O39_TIMING]]): optional
         OBSERVATION_REQUEST (Optional[OML_O39_OBSERVATION_REQUEST]): optional
-        FT1 (Optional[List[FT1]]): optional
-        CTI (Optional[List[CTI]]): optional
-        BLG (Optional[BLG]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_OML_O39_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     OBSERVATION_REQUEST: Optional[_OML_O39_OBSERVATION_REQUEST] = Field(
         default=None,
         title="OBSERVATION_REQUEST",
-        description="Optional",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

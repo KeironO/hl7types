@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class NA(HL7Model):
-    """HL7 v2 NA data type.
+    """Numeric array (S2.A.45).
 
     Attributes
     ----------

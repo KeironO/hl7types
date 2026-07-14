@@ -19,45 +19,45 @@ from ..datatypes.XON import XON
 
 
 class PMT(HL7Model):
-    """HL7 v2 PMT segment.
+    """Payment Information (S16.4.8).
 
     Attributes
     ----------
     pmt_1 : EI
-        PMT.1 (req) - Payment/Remittance Advice Number (EI)
+        PMT.1 (req) - Payment/Remittance Advice Number (EI) S16.4.8.1
 
     pmt_2 : str
-        PMT.2 (req) - Payment/Remittance Effective Date/Time (DTM)
+        PMT.2 (req) - Payment/Remittance Effective Date/Time (DTM) S16.4.8.2
 
     pmt_3 : str
-        PMT.3 (req) - Payment/Remittance Expiration Date/Time (DTM)
+        PMT.3 (req) - Payment/Remittance Expiration Date/Time (DTM) S16.4.8.3
 
     pmt_4 : CWE
-        PMT.4 (req) - Payment Method (CWE)
+        PMT.4 (req) - Payment Method (CWE) S16.4.8.4 | 0570 - Payment Method Code
 
     pmt_5 : str
-        PMT.5 (req) - Payment/Remittance Date/Time (DTM)
+        PMT.5 (req) - Payment/Remittance Date/Time (DTM) S16.4.8.5
 
     pmt_6 : CP
-        PMT.6 (req) - Payment/Remittance Amount (CP)
+        PMT.6 (req) - Payment/Remittance Amount (CP) S16.4.8.6
 
     pmt_7 : EI | None
-        PMT.7 (opt) - Check Number (EI)
+        PMT.7 (opt) - Check Number (EI) S16.4.8.7
 
     pmt_8 : XON | None
-        PMT.8 (opt) - Payee Bank Identification (XON)
+        PMT.8 (opt) - Payee Bank Identification (XON) S16.4.8.8
 
     pmt_9 : str | None
-        PMT.9 (opt) - Payee Transit Number (ST)
+        PMT.9 (opt) - Payee Transit Number (ST) S16.4.8.9
 
     pmt_10 : CX | None
-        PMT.10 (opt) - Payee Bank Account ID (CX)
+        PMT.10 (opt) - Payee Bank Account ID (CX) S16.4.8.10
 
     pmt_11 : XON
-        PMT.11 (req) - Payment Organization (XON)
+        PMT.11 (req) - Payment Organization (XON) S16.4.8.11
 
     pmt_12 : str | None
-        PMT.12 (opt) - ESR-Code-Line (ST)
+        PMT.12 (opt) - ESR-Code-Line (ST) S16.4.8.12
     """
 
     pmt_1: EI = Field(

@@ -30,56 +30,55 @@ _UAC = UAC
 
 
 class ROR_ROR(HL7Model):
-    """HL7 v2 ROR_ROR message.
+    """ROR - Pharmacy prescription order query response (S4.13.15).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         DEFINITION (List[ROR_ROR_DEFINITION]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     DEFINITION: List[_ROR_ROR_DEFINITION] = Field(
         min_length=1,
         title="DEFINITION",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

@@ -28,13 +28,11 @@ class CCR_I16_CLINICAL_ORDER_DETAIL(HL7Model):
 
     CLINICAL_ORDER_OBJECT: _CCR_I16_CLINICAL_ORDER_OBJECT = Field(
         title="CLINICAL_ORDER_OBJECT",
-        description="Required",
     )
 
     CLINICAL_ORDER_OBSERVATION: Optional[List[_CCR_I16_CLINICAL_ORDER_OBSERVATION]] = Field(
         default=None,
         title="CLINICAL_ORDER_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

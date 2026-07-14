@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class OM6(HL7Model):
-    """HL7 v2 OM6 segment.
+    """OBSERVATIONS that are calculated from other obersvations (S7.6.9).
 
     Attributes
     ----------
     om6_1 : str | None
-        OM6.1 (opt) - Segment Type ID (ST)
+        OM6.1 (opt) - Segment Type ID (ST) S7.6.9.1
 
     om6_2 : str | None
-        OM6.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+        OM6.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
 
     om6_3 : str | None
-        OM6.3 (opt) - Derivation Rule (TX)
+        OM6.3 (opt) - Derivation Rule (TX) S7.6.9.3
     """
 
     om6_1: Optional[str] = Field(

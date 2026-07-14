@@ -14,18 +14,18 @@ from ..datatypes.CE import CE
 
 
 class CM1(HL7Model):
-    """HL7 v2 CM1 segment.
+    """Clinical Study Phase Master (S8.11.3).
 
     Attributes
     ----------
     cm1_1 : str
-        CM1.1 (req) - Set ID - CM1 (SI)
+        CM1.1 (req) - Set ID - CM1 (SI) S8.11.3.1
 
     cm1_2 : CE
-        CM1.2 (req) - Study Phase Identifier (CE)
+        CM1.2 (req) - Study Phase Identifier (CE) S7.8.2.1
 
     cm1_3 : str
-        CM1.3 (req) - Description of Study Phase (ST)
+        CM1.3 (req) - Description of Study Phase (ST) S8.11.3.3
     """
 
     cm1_1: str = Field(

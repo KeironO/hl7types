@@ -28,39 +28,39 @@ class SPQ_Q08(HL7Model):
     """HL7 v2 SPQ_Q08 message.
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        SPR (SPR): required
-        RDF (Optional[RDF]): optional
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        SPR (SPR): Stored Procedure Request Definition, required
+        RDF (Optional[RDF]): Table Row Definition, optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     SPR: _SPR = Field(
         title="SPR",
-        description="Required",
+        description="Stored Procedure Request Definition",
     )
 
     RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
-        description="Optional",
+        description="Table Row Definition",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

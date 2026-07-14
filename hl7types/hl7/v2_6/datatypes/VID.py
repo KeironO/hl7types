@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class VID(HL7Model):
-    """HL7 v2 VID data type.
+    """Version identifier (S2.A.81).
 
     Attributes
     ----------

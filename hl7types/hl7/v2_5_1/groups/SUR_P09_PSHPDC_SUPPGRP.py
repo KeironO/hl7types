@@ -21,18 +21,18 @@ class SUR_P09_PSHPDC_SUPPGRP(HL7Model):
     """HL7 v2 SUR_P09.PSHPDC_SUPPGRP group.
 
     Attributes:
-        PSH (PSH): required
-        PDC (PDC): required
+        PSH (PSH): Product Summary Header, required
+        PDC (PDC): Product Detail Country, required
     """
 
     PSH: _PSH = Field(
         title="PSH",
-        description="Required",
+        description="Product Summary Header",
     )
 
     PDC: _PDC = Field(
         title="PDC",
-        description="Required",
+        description="Product Detail Country",
     )
 
     model_config = {"populate_by_name": True}

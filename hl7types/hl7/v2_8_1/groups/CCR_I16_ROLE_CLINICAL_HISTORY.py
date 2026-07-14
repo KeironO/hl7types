@@ -24,18 +24,17 @@ class CCR_I16_ROLE_CLINICAL_HISTORY(HL7Model):
 
     Attributes:
         ROLE_CLINICAL_HISTORY_OBJECT (CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT): required
-        VAR (Optional[List[VAR]]): optional
+        VAR (Optional[List[VAR]]): Variance, optional
     """
 
     ROLE_CLINICAL_HISTORY_OBJECT: _CCR_I16_ROLE_CLINICAL_HISTORY_OBJECT = Field(
         title="ROLE_CLINICAL_HISTORY_OBJECT",
-        description="Required",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     model_config = {"populate_by_name": True}

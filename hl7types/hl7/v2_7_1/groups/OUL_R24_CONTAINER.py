@@ -22,19 +22,19 @@ class OUL_R24_CONTAINER(HL7Model):
     """HL7 v2 OUL_R24.CONTAINER group.
 
     Attributes:
-        SAC (SAC): required
-        INV (Optional[INV]): optional
+        SAC (SAC): Specimen Container detail, required
+        INV (Optional[INV]): Inventory Detail, optional
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     INV: Optional[_INV] = Field(
         default=None,
         title="INV",
-        description="Optional",
+        description="Inventory Detail",
     )
 
     model_config = {"populate_by_name": True}

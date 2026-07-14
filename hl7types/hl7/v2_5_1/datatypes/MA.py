@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class MA(HL7Model):
-    """HL7 v2 MA data type.
+    """Multiplexed array (S2.A.1.40).
 
     Attributes
     ----------

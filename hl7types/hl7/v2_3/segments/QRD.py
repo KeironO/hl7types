@@ -18,45 +18,45 @@ from ..datatypes.XCN import XCN
 
 
 class QRD(HL7Model):
-    """HL7 v2 QRD segment.
+    """Query definition segment (S2.24.4).
 
     Attributes
     ----------
     qrd_1 : TS | None
-        QRD.1 (opt) - Query Date/Time (TS)
+        QRD.1 (opt) - Query Date/Time (TS) S2.24.4.1
 
     qrd_2 : str
-        QRD.2 (req) - Query Format Code (ID)
+        QRD.2 (req) - Query Format Code (ID) S2.24.4.2 | 0106 - Query/Response Format Code
 
     qrd_3 : str
-        QRD.3 (req) - Query Priority (ID)
+        QRD.3 (req) - Query Priority (ID) S2.24.4.3 | 0091 - Query Priority
 
     qrd_4 : str
-        QRD.4 (req) - Query ID (ST)
+        QRD.4 (req) - Query ID (ST) S2.24.4.4
 
     qrd_5 : str | None
-        QRD.5 (opt) - Deferred Response Type (ID)
+        QRD.5 (opt) - Deferred Response Type (ID) S2.24.4.5 | 0107 - Deferred Response Type
 
     qrd_6 : TS | None
-        QRD.6 (opt) - Deferred Response Date/Time (TS)
+        QRD.6 (opt) - Deferred Response Date/Time (TS) S2.24.4.6
 
     qrd_7 : CQ
-        QRD.7 (req) - Quantity Limited Request (CQ)
+        QRD.7 (req) - Quantity Limited Request (CQ) S2.24.4.7 | 0126 - Quantity Limited Request
 
     qrd_8 : list[XCN]
-        QRD.8 (req, rep) - Who Subject Filter (XCN)
+        QRD.8 (req, rep) - Who Subject Filter (XCN) S2.24.4.8
 
     qrd_9 : list[CE]
-        QRD.9 (req, rep) - What Subject Filter (CE)
+        QRD.9 (req, rep) - What Subject Filter (CE) S2.24.4.9 | 0048 - What Subject Filter
 
     qrd_10 : list[CE]
-        QRD.10 (req, rep) - What Department Data Code (CE)
+        QRD.10 (req, rep) - What Department Data Code (CE) S2.24.4.10
 
     qrd_11 : list[str] | None
-        QRD.11 (opt, rep) - What Data Code Value Qualifier (CM)
+        QRD.11 (opt, rep) - What Data Code Value Qualifier (CM) S2.24.4.11
 
     qrd_12 : str | None
-        QRD.12 (opt) - Query Results Level (ID)
+        QRD.12 (opt) - Query Results Level (ID) S2.24.4.12 | 0108 - Query Results Level
     """
 
     qrd_1: Optional[TS] = Field(

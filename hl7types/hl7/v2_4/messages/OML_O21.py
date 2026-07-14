@@ -24,36 +24,34 @@ _OML_O21_PATIENT = OML_O21_PATIENT
 
 
 class OML_O21(HL7Model):
-    """HL7 v2 OML_O21 message.
+    """OML - Laboratory order (S4).
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[OML_O21_PATIENT]): optional
         ORDER_GENERAL (List[OML_O21_ORDER_GENERAL]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OML_O21_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER_GENERAL: List[_OML_O21_ORDER_GENERAL] = Field(
         min_length=1,
         title="ORDER_GENERAL",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

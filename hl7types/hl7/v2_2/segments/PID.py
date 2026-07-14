@@ -17,90 +17,90 @@ from ..datatypes.TS import TS
 
 
 class PID(HL7Model):
-    """HL7 v2 PID segment.
+    """PATIENT IDENTIFICATION (S3.3.2).
 
     Attributes
     ----------
     pid_1 : str | None
-        PID.1 (opt) - Set ID - Patient ID (SI)
+        PID.1 (opt) - Set ID - Patient ID (SI) S3.3.2.1
 
     pid_2 : str | None
-        PID.2 (opt) - Patient ID (External ID) (CK)
+        PID.2 (opt) - Patient ID (External ID) (CK) S3.3.2.2
 
     pid_3 : list[str]
-        PID.3 (req, rep) - Patient ID (Internal ID) (CM)
+        PID.3 (req, rep) - Patient ID (Internal ID) (CM) S3.3.2.3
 
     pid_4 : str | None
-        PID.4 (opt) - Alternate Patient ID (ST)
+        PID.4 (opt) - Alternate Patient ID (ST) S3.3.2.4
 
     pid_5 : PN
-        PID.5 (req) - Patient Name (PN)
+        PID.5 (req) - Patient Name (PN) S3.3.2.5
 
     pid_6 : str | None
-        PID.6 (opt) - Mother's Maiden Name (ST)
+        PID.6 (opt) - Mother's Maiden Name (ST) S3.3.2.6
 
     pid_7 : TS | None
-        PID.7 (opt) - Date of Birth (TS)
+        PID.7 (opt) - Date of Birth (TS) S3.3.2.7
 
     pid_8 : str | None
-        PID.8 (opt) - Sex (ID)
+        PID.8 (opt) - Sex (ID) S3.3.2.8 | 0001 - SEX
 
     pid_9 : list[PN] | None
-        PID.9 (opt, rep) - Patient Alias (PN)
+        PID.9 (opt, rep) - Patient Alias (PN) S3.3.2.9
 
     pid_10 : str | None
-        PID.10 (opt) - Race (ID)
+        PID.10 (opt) - Race (ID) S3.3.2.10 | 0005 - RACE
 
     pid_11 : list[AD] | None
-        PID.11 (opt, rep) - Patient Address (AD)
+        PID.11 (opt, rep) - Patient Address (AD) S3.3.2.11
 
     pid_12 : str | None
-        PID.12 (opt) - County code (ID)
+        PID.12 (opt) - County code (ID) S3.3.2.12
 
     pid_13 : list[str] | None
-        PID.13 (opt, rep) - Phone Number - Home (TN)
+        PID.13 (opt, rep) - Phone Number - Home (TN) S3.3.2.13
 
     pid_14 : list[str] | None
-        PID.14 (opt, rep) - Phone Number - Business (TN)
+        PID.14 (opt, rep) - Phone Number - Business (TN) S3.3.2.14
 
     pid_15 : str | None
-        PID.15 (opt) - Language - Patient (ST)
+        PID.15 (opt) - Language - Patient (ST) S3.3.2.15
 
     pid_16 : str | None
-        PID.16 (opt) - Marital Status (ID)
+        PID.16 (opt) - Marital Status (ID) S3.3.2.16 | 0002 - MARITAL STATUS
 
     pid_17 : str | None
-        PID.17 (opt) - Religion (ID)
+        PID.17 (opt) - Religion (ID) S3.3.2.17 | 0006 - RELIGION
 
     pid_18 : str | None
-        PID.18 (opt) - Patient Account Number (CK)
+        PID.18 (opt) - Patient Account Number (CK) S3.3.2.18
 
     pid_19 : str | None
-        PID.19 (opt) - Social security number - patient (ST)
+        PID.19 (opt) - Social security number - patient (ST) S3.3.2.19
 
     pid_20 : str | None
-        PID.20 (opt) - Driver's license number - patient (CM)
+        PID.20 (opt) - Driver's license number - patient (CM) S3.3.2.20
 
     pid_21 : str | None
-        PID.21 (opt) - Mother's Identifier (CK)
+        PID.21 (opt) - Mother's Identifier (CK) S3.3.2.21
 
     pid_22 : str | None
-        PID.22 (opt) - Ethnic Group (ID)
+        PID.22 (opt) - Ethnic Group (ID) S3.3.2.22 | 0189 - Ethnic Group
 
     pid_23 : str | None
-        PID.23 (opt) - Birth Place (ST)
+        PID.23 (opt) - Birth Place (ST) S3.3.2.23
 
     pid_24 : str | None
-        PID.24 (opt) - Multiple Birth Indicator (ID)
+        PID.24 (opt) - Multiple Birth Indicator (ID) S3.3.2.24
 
     pid_25 : str | None
-        PID.25 (opt) - Birth Order (NM)
+        PID.25 (opt) - Birth Order (NM) S3.3.2.25
 
     pid_26 : list[str] | None
-        PID.26 (opt, rep) - Citizenship (ID)
+        PID.26 (opt, rep) - Citizenship (ID) S3.3.2.26 | 0171 - Country Code
 
     pid_27 : str | None
-        PID.27 (opt) - Veterans Military Status (ST)
+        PID.27 (opt) - Veterans Military Status (ST) S3.3.2.27
     """
 
     pid_1: Optional[str] = Field(

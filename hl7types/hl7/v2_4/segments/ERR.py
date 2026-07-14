@@ -15,12 +15,12 @@ from ..datatypes.ELD import ELD
 
 
 class ERR(HL7Model):
-    """HL7 v2 ERR segment.
+    """Error (S2.16.5).
 
     Attributes
     ----------
     err_1 : list[ELD]
-        ERR.1 (req, rep) - Error Code and Location (ELD)
+        ERR.1 (req, rep) - Error Code and Location (ELD) S2.16.5.1
     """
 
     err_1: List[ELD] = Field(

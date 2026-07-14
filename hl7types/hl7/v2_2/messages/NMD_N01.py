@@ -23,19 +23,18 @@ class NMD_N01(HL7Model):
     """HL7 v2 NMD_N01 message.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): MESSAGE HEADER, required
         CLOCK_AND_STATS_WITH_NOTES (List[NMD_N01_CLOCK_AND_STATS_WITH_NOTES]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     CLOCK_AND_STATS_WITH_NOTES: List[_NMD_N01_CLOCK_AND_STATS_WITH_NOTES] = Field(
         min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

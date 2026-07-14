@@ -20,102 +20,102 @@ from ..datatypes.XCN import XCN
 
 
 class RXE(HL7Model):
-    """HL7 v2 RXE segment.
+    """Pharmacy/Treatment Encoded Order (S4.14.4).
 
     Attributes
     ----------
     rxe_1 : TQ
-        RXE.1 (req) - Quantity/Timing (TQ)
+        RXE.1 (req) - Quantity/Timing (TQ) S7.4.1.27
 
     rxe_2 : CE
-        RXE.2 (req) - Give Code (CE)
+        RXE.2 (req) - Give Code (CE) S4.14.6.4 | 0292 - Vaccines administered
 
     rxe_3 : str
-        RXE.3 (req) - Give Amount - Minimum (NM)
+        RXE.3 (req) - Give Amount - Minimum (NM) S4.14.6.5
 
     rxe_4 : str | None
-        RXE.4 (opt) - Give Amount - Maximum (NM)
+        RXE.4 (opt) - Give Amount - Maximum (NM) S4.14.6.6
 
     rxe_5 : CE
-        RXE.5 (req) - Give Units (CE)
+        RXE.5 (req) - Give Units (CE) S4.14.6.7
 
     rxe_6 : CE | None
-        RXE.6 (opt) - Give Dosage Form (CE)
+        RXE.6 (opt) - Give Dosage Form (CE) S4.14.6.8
 
     rxe_7 : list[CE] | None
-        RXE.7 (opt, rep) - Provider's Administration Instructions (CE)
+        RXE.7 (opt, rep) - Provider's Administration Instructions (CE) S4
 
     rxe_8 : LA1 | None
-        RXE.8 (opt) - Deliver-To Location (LA1)
+        RXE.8 (opt) - Deliver-To Location (LA1) S4.14.4.8
 
     rxe_9 : str | None
-        RXE.9 (opt) - Substitution Status (ID)
+        RXE.9 (opt) - Substitution Status (ID) S4.14.6.10 | 0167 - Substitution status
 
     rxe_10 : str | None
-        RXE.10 (opt) - Dispense Amount (NM)
+        RXE.10 (opt) - Dispense Amount (NM) S4.14.4.10
 
     rxe_11 : CE | None
-        RXE.11 (opt) - Dispense Units (CE)
+        RXE.11 (opt) - Dispense Units (CE) S4.14.4.11
 
     rxe_12 : str | None
-        RXE.12 (opt) - Number of Refills (NM)
+        RXE.12 (opt) - Number of Refills (NM) S4.14.4.12
 
     rxe_13 : list[XCN] | None
-        RXE.13 (opt, rep) - Ordering Provider's DEA Number (XCN)
+        RXE.13 (opt, rep) - Ordering Provider's DEA Number (XCN) S4
 
     rxe_14 : list[XCN] | None
-        RXE.14 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN)
+        RXE.14 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN) S4.14.1.15
 
     rxe_15 : str | None
-        RXE.15 (opt) - Prescription Number (ST)
+        RXE.15 (opt) - Prescription Number (ST) S4.14.5.7
 
     rxe_16 : str | None
-        RXE.16 (opt) - Number of Refills Remaining (NM)
+        RXE.16 (opt) - Number of Refills Remaining (NM) S4.14.5.8
 
     rxe_17 : str | None
-        RXE.17 (opt) - Number of Refills/Doses Dispensed (NM)
+        RXE.17 (opt) - Number of Refills/Doses Dispensed (NM) S4.14.4.17
 
     rxe_18 : TS | None
-        RXE.18 (opt) - D/T of Most Recent Refill or Dose Dispensed (TS)
+        RXE.18 (opt) - D/T of Most Recent Refill or Dose Dispensed (TS) S4.14.4.18
 
     rxe_19 : CQ | None
-        RXE.19 (opt) - Total Daily Dose (CQ)
+        RXE.19 (opt) - Total Daily Dose (CQ) S4.14.5.12
 
     rxe_20 : str | None
-        RXE.20 (opt) - Needs Human Review (ID)
+        RXE.20 (opt) - Needs Human Review (ID) S4.14.6.12 | 0136 - Yes/no indicator
 
     rxe_21 : list[CE] | None
-        RXE.21 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CE)
+        RXE.21 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CE) S4.14.5.15
 
     rxe_22 : str | None
-        RXE.22 (opt) - Give Per (Time Unit) (ST)
+        RXE.22 (opt) - Give Per (Time Unit) (ST) S4.14.6.14
 
     rxe_23 : str | None
-        RXE.23 (opt) - Give Rate Amount (ST)
+        RXE.23 (opt) - Give Rate Amount (ST) S4.14.6.15
 
     rxe_24 : CE | None
-        RXE.24 (opt) - Give Rate Units (CE)
+        RXE.24 (opt) - Give Rate Units (CE) S4.14.6.16
 
     rxe_25 : str | None
-        RXE.25 (opt) - Give Strength (NM)
+        RXE.25 (opt) - Give Strength (NM) S4.14.6.17
 
     rxe_26 : CE | None
-        RXE.26 (opt) - Give Strength Units (CE)
+        RXE.26 (opt) - Give Strength Units (CE) S4.14.6.18
 
     rxe_27 : list[CE] | None
-        RXE.27 (opt, rep) - Give Indication (CE)
+        RXE.27 (opt, rep) - Give Indication (CE) S4.14.4.27
 
     rxe_28 : str | None
-        RXE.28 (opt) - Dispense Package Size (NM)
+        RXE.28 (opt) - Dispense Package Size (NM) S4.14.5.22
 
     rxe_29 : CE | None
-        RXE.29 (opt) - Dispense Package Size Unit (CE)
+        RXE.29 (opt) - Dispense Package Size Unit (CE) S4.14.5.23
 
     rxe_30 : str | None
-        RXE.30 (opt) - Dispense Package Method (ID)
+        RXE.30 (opt) - Dispense Package Method (ID) S4.14.5.24 | 0321 - Dispense method
 
     rxe_31 : list[CE] | None
-        RXE.31 (opt, rep) - Supplementary Code (CE)
+        RXE.31 (opt, rep) - Supplementary Code (CE) S4.14.5.25
     """
 
     rxe_1: TQ = Field(

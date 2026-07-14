@@ -27,31 +27,30 @@ class BAR_P01(HL7Model):
     """HL7 v2 BAR_P01 message.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
+        MSH (MSH): MESSAGE HEADER, required
+        EVN (EVN): EVENT TYPE, required
+        PID (PID): PATIENT IDENTIFICATION, required
         VISIT (List[BAR_P01_VISIT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVENT TYPE",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PATIENT IDENTIFICATION",
     )
 
     VISIT: List[_BAR_P01_VISIT] = Field(
         min_length=1,
         title="VISIT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

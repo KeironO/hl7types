@@ -22,19 +22,19 @@ class CRM_C01_PATIENT_VISIT(HL7Model):
     """HL7 v2 CRM_C01.PATIENT_VISIT group.
 
     Attributes:
-        PV1 (PV1): required
-        PRT (Optional[List[PRT]]): optional
+        PV1 (PV1): Patient Visit, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

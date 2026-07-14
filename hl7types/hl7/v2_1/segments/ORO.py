@@ -15,12 +15,12 @@ from ..datatypes.CE import CE
 
 
 class ORO(HL7Model):
-    """HL7 v2 ORO segment.
+    """ORDER OTHER.
 
     Attributes
     ----------
     oro_1 : CE | None
-        ORO.1 (opt) - ORDER ITEM ID (CE)
+        ORO.1 (opt) - ORDER ITEM ID (CE) S4-18
 
     oro_2 : str | None
         ORO.2 (opt) - SUBSTITUTE ALLOWED (ID)
@@ -29,7 +29,7 @@ class ORO(HL7Model):
         ORO.3 (opt, rep) - RESULTS COPIES TO (CN)
 
     oro_4 : str | None
-        ORO.4 (opt) - STOCK LOCATION (ID)
+        ORO.4 (opt) - STOCK LOCATION (ID) | 0012 - STOCK LOCATION
     """
 
     oro_1: Optional[CE] = Field(

@@ -22,29 +22,28 @@ _SFT = SFT
 
 
 class NMD_N02(HL7Model):
-    """HL7 v2 NMD_N02 message.
+    """NMD/ACK - Application management data message (unsolicited) (S14.3.2).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
         CLOCK_AND_STATS_WITH_NOTES (List[NMD_N02_CLOCK_AND_STATS_WITH_NOTES]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     CLOCK_AND_STATS_WITH_NOTES: List[_NMD_N02_CLOCK_AND_STATS_WITH_NOTES] = Field(
         min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -16,18 +16,18 @@ from ..datatypes.EI import EI
 
 
 class CTI(HL7Model):
-    """HL7 v2 CTI segment.
+    """Clinical Trial Identification (S7.8.4).
 
     Attributes
     ----------
     cti_1 : EI
-        CTI.1 (req) - Sponsor Study ID (EI)
+        CTI.1 (req) - Sponsor Study ID (EI) S8.11.2.2
 
     cti_2 : CE | None
-        CTI.2 (opt) - Study Phase Identifier (CE)
+        CTI.2 (opt) - Study Phase Identifier (CE) S8.11.3.2
 
     cti_3 : CE | None
-        CTI.3 (opt) - Study Scheduled Time Point (CE)
+        CTI.3 (opt) - Study Scheduled Time Point (CE) S7.8.4.3
     """
 
     cti_1: EI = Field(

@@ -42,96 +42,94 @@ _UAC = UAC
 
 
 class RCI_I05(HL7Model):
-    """HL7 v2 RCI_I05 message.
+    """RQC/RCI - Request for patient clinical information (S11.3.5).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (MSA): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        QRD (QRD): withdrawn, required
+        QRF (Optional[QRF]): withdrawn, optional
         PROVIDER (List[RCI_I05_PROVIDER]): required
-        PID (PID): required
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        PID (PID): Patient Identification, required
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[List[DRG]]): Diagnosis Related Group, optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
         OBSERVATION (Optional[RCI_I05_OBSERVATION]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="withdrawn",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="withdrawn",
     )
 
     PROVIDER: List[_RCI_I05_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="Diagnosis Related Group",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     OBSERVATION: Optional[_RCI_I05_OBSERVATION] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

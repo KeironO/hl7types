@@ -24,35 +24,33 @@ _PID = PID
 
 
 class PGL_PC6(HL7Model):
-    """HL7 v2 PGL_PC6 message.
+    """PGL - PC/Goal Add.
 
     Attributes:
-        MSH (MSH): required
-        PID (PID): required
+        MSH (MSH): Message header segment, required
+        PID (PID): Patient Identification, required
         PATIENT_VISIT (Optional[PGL_PC6_PATIENT_VISIT]): optional
         GOAL (List[PGL_PC6_GOAL]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PATIENT_VISIT: Optional[_PGL_PC6_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     GOAL: List[_PGL_PC6_GOAL] = Field(
         min_length=1,
         title="GOAL",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

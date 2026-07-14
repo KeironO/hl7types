@@ -29,39 +29,38 @@ class RRO_O02(HL7Model):
     """HL7 v2 RRO_O02 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): MSH - message header segment, required
+        MSA (MSA): MSA - message acknowledgment segment, required
+        ERR (Optional[ERR]): ERR - error segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         RESPONSE (Optional[RRO_O02_RESPONSE]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MSA - message acknowledgment segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="ERR - error segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     RESPONSE: Optional[_RRO_O02_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

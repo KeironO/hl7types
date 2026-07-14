@@ -19,108 +19,108 @@ from ..datatypes.XPN import XPN
 
 
 class DON(HL7Model):
-    """HL7 v2 DON segment.
+    """Donation (S4.17.1).
 
     Attributes
     ----------
     don_1 : EI | None
-        DON.1 (opt) - Donation Identification Number - DIN (EI)
+        DON.1 (opt) - Donation Identification Number - DIN (EI) S4.17.1.1
 
     don_2 : CNE | None
-        DON.2 (opt) - Donation Type (CNE)
+        DON.2 (opt) - Donation Type (CNE) S4.17.1.2
 
     don_3 : str
-        DON.3 (req) - Phlebotomy Start Date/Time (DTM)
+        DON.3 (req) - Phlebotomy Start Date/Time (DTM) S4.17.1.3
 
     don_4 : str
-        DON.4 (req) - Phlebotomy End Date/Time (DTM)
+        DON.4 (req) - Phlebotomy End Date/Time (DTM) S4.17.1.4
 
     don_5 : str
-        DON.5 (req) - Donation Duration (NM)
+        DON.5 (req) - Donation Duration (NM) S4.17.1.5
 
     don_6 : CNE
-        DON.6 (req) - Donation Duration Units (CNE)
+        DON.6 (req) - Donation Duration Units (CNE) S4.17.1.6 | 0932 - Donation Duration Units
 
     don_7 : list[CNE]
-        DON.7 (req, rep) - Intended Procedure Type (CNE)
+        DON.7 (req, rep) - Intended Procedure Type (CNE) S4.17.1.7 | 0933 - Intended Procedure Type
 
     don_8 : list[CNE]
-        DON.8 (req, rep) - Actual Procedure Type (CNE)
+        DON.8 (req, rep) - Actual Procedure Type (CNE) S4.17.1.8 | 0933 - Intended Procedure Type
 
     don_9 : str
-        DON.9 (req) - Donor Eligibility Flag (ID)
+        DON.9 (req) - Donor Eligibility Flag (ID) S4.17.1.9 | 0136 - Yes/no Indicator
 
     don_10 : list[CNE]
-        DON.10 (req, rep) - Donor Eligibility Procedure Type (CNE)
+        DON.10 (req, rep) - Donor Eligibility Procedure Type (CNE) S4.17.1.10 | 0933 - Intended Procedure Type
 
     don_11 : str
-        DON.11 (req) - Donor Eligibility Date (DTM)
+        DON.11 (req) - Donor Eligibility Date (DTM) S4.17.1.11
 
     don_12 : CNE
-        DON.12 (req) - Process Interruption (CNE)
+        DON.12 (req) - Process Interruption (CNE) S4.17.1.12 | 0923 - Process Interruption
 
     don_13 : CNE
-        DON.13 (req) - Process Interruption Reason (CNE)
+        DON.13 (req) - Process Interruption Reason (CNE) S4.17.1.13 | 0935 - Process Interruption Reason
 
     don_14 : list[CNE]
-        DON.14 (req, rep) - Phlebotomy Issue (CNE)
+        DON.14 (req, rep) - Phlebotomy Issue (CNE) S4.17.1.14 | 0925 - Phlebotomy Issue
 
     don_15 : str
-        DON.15 (req) - Intended Recipient Blood Relative (ID)
+        DON.15 (req) - Intended Recipient Blood Relative (ID) S4.17.1.15 | 0136 - Yes/no Indicator
 
     don_16 : XPN
-        DON.16 (req) - Intended Recipient Name (XPN)
+        DON.16 (req) - Intended Recipient Name (XPN) S4.17.1.16
 
     don_17 : str
-        DON.17 (req) - Intended Recipient DOB (DTM)
+        DON.17 (req) - Intended Recipient DOB (DTM) S4.17.1.17
 
     don_18 : XON
-        DON.18 (req) - Intended Recipient Facility (XON)
+        DON.18 (req) - Intended Recipient Facility (XON) S4.17.1.18
 
     don_19 : str
-        DON.19 (req) - Intended Recipient Procedure Date (DTM)
+        DON.19 (req) - Intended Recipient Procedure Date (DTM) S4.17.1.19
 
     don_20 : XPN
-        DON.20 (req) - Intended Recipient Ordering Provider (XPN)
+        DON.20 (req) - Intended Recipient Ordering Provider (XPN) S4.17.1.20
 
     don_21 : CNE
-        DON.21 (req) - Phlebotomy Status (CNE)
+        DON.21 (req) - Phlebotomy Status (CNE) S4.17.1.21 | 0926 - Phlebotomy Status
 
     don_22 : CNE
-        DON.22 (req) - Arm Stick (CNE)
+        DON.22 (req) - Arm Stick (CNE) S4.17.1.22 | 0927 - Arm Stick
 
     don_23 : XPN
-        DON.23 (req) - Bleed Start Phlebotomist (XPN)
+        DON.23 (req) - Bleed Start Phlebotomist (XPN) S4.17.1.23
 
     don_24 : XPN
-        DON.24 (req) - Bleed End Phlebotomist (XPN)
+        DON.24 (req) - Bleed End Phlebotomist (XPN) S4.17.1.24
 
     don_25 : str
-        DON.25 (req) - Aphaeresis Type Machine (ST)
+        DON.25 (req) - Aphaeresis Type Machine (ST) S4.17.1.25
 
     don_26 : str
-        DON.26 (req) - Aphaeresis Machine Serial Number (ST)
+        DON.26 (req) - Aphaeresis Machine Serial Number (ST) S4.17.1.26
 
     don_27 : str
-        DON.27 (req) - Donor Reaction (ID)
+        DON.27 (req) - Donor Reaction (ID) S4.17.1.27 | 0136 - Yes/no Indicator
 
     don_28 : XPN
-        DON.28 (req) - Final Review Staff ID (XPN)
+        DON.28 (req) - Final Review Staff ID (XPN) S4.17.1.28
 
     don_29 : str
-        DON.29 (req) - Final Review Date/Time (DTM)
+        DON.29 (req) - Final Review Date/Time (DTM) S4.17.1.29
 
     don_30 : str
-        DON.30 (req) - Number of Tubes Collected (NM)
+        DON.30 (req) - Number of Tubes Collected (NM) S4.17.1.30
 
     don_31 : list[EI]
-        DON.31 (req, rep) - Donation Sample Identifier (EI)
+        DON.31 (req, rep) - Donation Sample Identifier (EI) S4.17.1.31
 
     don_32 : XCN
-        DON.32 (req) - Donation Accept Staff (XCN)
+        DON.32 (req) - Donation Accept Staff (XCN) S4.17.1.32
 
     don_33 : list[XCN]
-        DON.33 (req, rep) - Donation Material Review Staff (XCN)
+        DON.33 (req, rep) - Donation Material Review Staff (XCN) S4.17.1.33
     """
 
     don_1: Optional[EI] = Field(

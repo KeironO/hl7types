@@ -18,7 +18,7 @@ from .TS import TS
 
 
 class XPN(HL7Model):
-    """HL7 v2 XPN data type.
+    """Extended person name (S2.A.88).
 
     Attributes
     ----------

@@ -27,33 +27,31 @@ class ORP_O10_ORDER(HL7Model):
     """HL7 v2 ORP_O10.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[ORP_O10_TIMING]]): optional
         ORDER_DETAIL (Optional[ORP_O10_ORDER_DETAIL]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_ORP_O10_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ORDER_DETAIL: Optional[_ORP_O10_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

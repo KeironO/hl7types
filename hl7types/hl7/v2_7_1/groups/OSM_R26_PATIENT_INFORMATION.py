@@ -22,19 +22,19 @@ class OSM_R26_PATIENT_INFORMATION(HL7Model):
     """HL7 v2 OSM_R26.PATIENT_INFORMATION group.
 
     Attributes:
-        PID (PID): required
-        PRT (Optional[List[PRT]]): optional
+        PID (PID): Patient Identification, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

@@ -26,42 +26,41 @@ _RGR_RGR_DEFINTION = RGR_RGR_DEFINTION
 
 
 class RGR_RGR(HL7Model):
-    """HL7 v2 RGR_RGR message.
+    """RGR - Pharmacy dose information query response (S4).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
         DEFINTION (List[RGR_RGR_DEFINTION]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     DEFINTION: List[_RGR_RGR_DEFINTION] = Field(
         min_length=1,
         title="DEFINTION",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

@@ -23,19 +23,18 @@ class EHC_E15_PRODUCT_SERVICE_GROUP(HL7Model):
     """HL7 v2 EHC_E15.PRODUCT_SERVICE_GROUP group.
 
     Attributes:
-        PSG (PSG): required
+        PSG (PSG): Product/Service Group, required
         PSL_ITEM_INFO (List[EHC_E15_PSL_ITEM_INFO]): required
     """
 
     PSG: _PSG = Field(
         title="PSG",
-        description="Required",
+        description="Product/Service Group",
     )
 
     PSL_ITEM_INFO: List[_EHC_E15_PSL_ITEM_INFO] = Field(
         min_length=1,
         title="PSL_ITEM_INFO",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

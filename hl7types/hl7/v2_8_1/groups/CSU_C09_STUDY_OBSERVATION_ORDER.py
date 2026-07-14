@@ -22,19 +22,19 @@ class CSU_C09_STUDY_OBSERVATION_ORDER(HL7Model):
     """HL7 v2 CSU_C09.STUDY_OBSERVATION_ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

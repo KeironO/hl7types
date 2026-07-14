@@ -23,19 +23,18 @@ class RPA_I08_PROCEDURE(HL7Model):
     """HL7 v2 RPA_I08.PROCEDURE group.
 
     Attributes:
-        PR1 (PR1): required
+        PR1 (PR1): Procedures, required
         AUTHORIZATION (Optional[RPA_I08_AUTHORIZATION]): optional
     """
 
     PR1: _PR1 = Field(
         title="PR1",
-        description="Required",
+        description="Procedures",
     )
 
     AUTHORIZATION: Optional[_RPA_I08_AUTHORIZATION] = Field(
         default=None,
         title="AUTHORIZATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

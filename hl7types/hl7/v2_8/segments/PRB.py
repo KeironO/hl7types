@@ -17,93 +17,93 @@ from ..datatypes.EI import EI
 
 
 class PRB(HL7Model):
-    """HL7 v2 PRB segment.
+    """Problem Details (S12.4.2).
 
     Attributes
     ----------
     prb_1 : str
-        PRB.1 (req) - Action Code (ID)
+        PRB.1 (req) - Action Code (ID) S4.A.8.22 | 0206 - Segment Action Code
 
     prb_2 : str
-        PRB.2 (req) - Action Date/Time (DTM)
+        PRB.2 (req) - Action Date/Time (DTM) S12.4.1.2
 
     prb_3 : CWE
-        PRB.3 (req) - Problem ID (CWE)
+        PRB.3 (req) - Problem ID (CWE) S12.4.2.3
 
     prb_4 : EI
-        PRB.4 (req) - Problem Instance ID (EI)
+        PRB.4 (req) - Problem Instance ID (EI) S12.4.2.4
 
     prb_5 : EI | None
-        PRB.5 (opt) - Episode of Care ID (EI)
+        PRB.5 (opt) - Episode of Care ID (EI) S12.4.1.5
 
     prb_6 : str | None
-        PRB.6 (opt) - Problem List Priority (NM)
+        PRB.6 (opt) - Problem List Priority (NM) S12.4.2.6
 
     prb_7 : str | None
-        PRB.7 (opt) - Problem Established Date/Time (DTM)
+        PRB.7 (opt) - Problem Established Date/Time (DTM) S12.4.2.7
 
     prb_8 : str | None
-        PRB.8 (opt) - Anticipated Problem Resolution Date/Time (DTM)
+        PRB.8 (opt) - Anticipated Problem Resolution Date/Time (DTM) S12.4.2.8
 
     prb_9 : str | None
-        PRB.9 (opt) - Actual Problem Resolution Date/Time (DTM)
+        PRB.9 (opt) - Actual Problem Resolution Date/Time (DTM) S12.4.2.9
 
     prb_10 : CWE | None
-        PRB.10 (opt) - Problem Classification (CWE)
+        PRB.10 (opt) - Problem Classification (CWE) S12.4.2.10
 
     prb_11 : list[CWE] | None
-        PRB.11 (opt, rep) - Problem Management Discipline (CWE)
+        PRB.11 (opt, rep) - Problem Management Discipline (CWE) S12.4.2.11
 
     prb_12 : CWE | None
-        PRB.12 (opt) - Problem Persistence (CWE)
+        PRB.12 (opt) - Problem Persistence (CWE) S12.4.2.12
 
     prb_13 : CWE | None
-        PRB.13 (opt) - Problem Confirmation Status (CWE)
+        PRB.13 (opt) - Problem Confirmation Status (CWE) S12.4.2.13
 
     prb_14 : CWE | None
-        PRB.14 (opt) - Problem Life Cycle Status (CWE)
+        PRB.14 (opt) - Problem Life Cycle Status (CWE) S12.4.2.14
 
     prb_15 : str | None
-        PRB.15 (opt) - Problem Life Cycle Status Date/Time (DTM)
+        PRB.15 (opt) - Problem Life Cycle Status Date/Time (DTM) S12.4.2.15
 
     prb_16 : str | None
-        PRB.16 (opt) - Problem Date of Onset (DTM)
+        PRB.16 (opt) - Problem Date of Onset (DTM) S12.4.2.16
 
     prb_17 : str | None
-        PRB.17 (opt) - Problem Onset Text (ST)
+        PRB.17 (opt) - Problem Onset Text (ST) S12.4.2.17
 
     prb_18 : CWE | None
-        PRB.18 (opt) - Problem Ranking (CWE)
+        PRB.18 (opt) - Problem Ranking (CWE) S12.4.2.18
 
     prb_19 : CWE | None
-        PRB.19 (opt) - Certainty of Problem (CWE)
+        PRB.19 (opt) - Certainty of Problem (CWE) S12.4.2.19
 
     prb_20 : str | None
-        PRB.20 (opt) - Probability of Problem (0-1) (NM)
+        PRB.20 (opt) - Probability of Problem (0-1) (NM) S12.4.2.20
 
     prb_21 : CWE | None
-        PRB.21 (opt) - Individual Awareness of Problem (CWE)
+        PRB.21 (opt) - Individual Awareness of Problem (CWE) S12.4.2.21
 
     prb_22 : CWE | None
-        PRB.22 (opt) - Problem Prognosis (CWE)
+        PRB.22 (opt) - Problem Prognosis (CWE) S12.4.2.22
 
     prb_23 : CWE | None
-        PRB.23 (opt) - Individual Awareness of Prognosis (CWE)
+        PRB.23 (opt) - Individual Awareness of Prognosis (CWE) S12.4.2.23
 
     prb_24 : str | None
-        PRB.24 (opt) - Family/Significant Other Awareness of Problem/Prognosis (ST)
+        PRB.24 (opt) - Family/Significant Other Awareness of Problem/Prognosis (ST) S12.4.2.24
 
     prb_25 : CWE | None
-        PRB.25 (opt) - Security/Sensitivity (CWE)
+        PRB.25 (opt) - Security/Sensitivity (CWE) S12.4.2.25
 
     prb_26 : CWE | None
-        PRB.26 (opt) - Problem Severity (CWE)
+        PRB.26 (opt) - Problem Severity (CWE) S12.4.2.26 | 0836 - Problem Severity
 
     prb_27 : CWE | None
-        PRB.27 (opt) - Problem Perspective (CWE)
+        PRB.27 (opt) - Problem Perspective (CWE) S12.4.2.27 | 0838 - Problem Perspective
 
     prb_28 : CNE | None
-        PRB.28 (opt) - Mood Code (CNE)
+        PRB.28 (opt) - Mood Code (CNE) S12.4.2.28 | 0725 - Mood Codes
     """
 
     prb_1: str = Field(

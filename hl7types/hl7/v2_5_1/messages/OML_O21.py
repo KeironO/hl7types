@@ -26,43 +26,41 @@ _SFT = SFT
 
 
 class OML_O21(HL7Model):
-    """HL7 v2 OML_O21 message.
+    """OML - Laboratory order (S4.4.10).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[OML_O21_PATIENT]): optional
         ORDER (List[OML_O21_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OML_O21_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_OML_O21_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

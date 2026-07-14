@@ -34,68 +34,66 @@ _UAC = UAC
 
 
 class RSP_O34(HL7Model):
-    """HL7 v2 RSP_O34 message.
+    """ORL - Laboratory order response message to a multiple order related to single sp (S15.3.7).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
-        QPD (QPD): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (QAK): Query Acknowledgment, required
+        QPD (QPD): Query Parameter Definition, required
         DONOR (Optional[RSP_O34_DONOR]): optional
         DONATION (Optional[RSP_O34_DONATION]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     DONOR: Optional[_RSP_O34_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     DONATION: Optional[_RSP_O34_DONATION] = Field(
         default=None,
         title="DONATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

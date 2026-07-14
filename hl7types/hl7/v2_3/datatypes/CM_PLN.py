@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_PLN(HL7Model):
-    """HL7 v2 CM_PLN data type.
+    """Practitioner id numbers (S8).
 
     Attributes
     ----------

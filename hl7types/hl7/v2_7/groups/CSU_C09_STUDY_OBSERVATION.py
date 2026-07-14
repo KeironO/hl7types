@@ -29,39 +29,38 @@ class CSU_C09_STUDY_OBSERVATION(HL7Model):
     """HL7 v2 CSU_C09.STUDY_OBSERVATION group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
-        OBR (OBR): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (Optional[ORC]): Common Order, optional
+        OBR (OBR): Observation Request, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING_QTY (Optional[List[CSU_C09_TIMING_QTY]]): optional
-        OBX (OBX): required
+        OBX (OBX): Observation/Result, required
     """
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING_QTY: Optional[List[_CSU_C09_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
-        description="Optional, repeating",
     )
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

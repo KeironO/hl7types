@@ -16,39 +16,39 @@ from ..datatypes.MO import MO
 
 
 class ILT(HL7Model):
-    """HL7 v2 ILT segment.
+    """Material Lot (S17.4.8).
 
     Attributes
     ----------
     ilt_1 : str
-        ILT.1 (req) - Set Id - ILT (SI)
+        ILT.1 (req) - Set Id - ILT (SI) S17.4.8.1
 
     ilt_2 : str
-        ILT.2 (req) - Inventory Lot Number (ST)
+        ILT.2 (req) - Inventory Lot Number (ST) S17.4.1.3
 
     ilt_3 : str | None
-        ILT.3 (opt) - Inventory Expiration Date (DTM)
+        ILT.3 (opt) - Inventory Expiration Date (DTM) S17.4.1.4
 
     ilt_4 : str | None
-        ILT.4 (opt) - Inventory Received Date (DTM)
+        ILT.4 (opt) - Inventory Received Date (DTM) S17.4.1.7
 
     ilt_5 : str | None
-        ILT.5 (opt) - Inventory Received Quantity (NM)
+        ILT.5 (opt) - Inventory Received Quantity (NM) S17.4.1.8
 
     ilt_6 : CWE | None
-        ILT.6 (opt) - Inventory Received Quantity Unit (CWE)
+        ILT.6 (opt) - Inventory Received Quantity Unit (CWE) S17.4.1.9
 
     ilt_7 : MO | None
-        ILT.7 (opt) - Inventory Received Item Cost (MO)
+        ILT.7 (opt) - Inventory Received Item Cost (MO) S17.4.1.10
 
     ilt_8 : str | None
-        ILT.8 (opt) - Inventory On Hand Date (DTM)
+        ILT.8 (opt) - Inventory On Hand Date (DTM) S17.4.1.11
 
     ilt_9 : str | None
-        ILT.9 (opt) - Inventory On Hand Quantity (NM)
+        ILT.9 (opt) - Inventory On Hand Quantity (NM) S17.4.1.12
 
     ilt_10 : CWE | None
-        ILT.10 (opt) - Inventory On Hand Quantity Unit (CWE)
+        ILT.10 (opt) - Inventory On Hand Quantity Unit (CWE) S17.4.1.13
     """
 
     ilt_1: str = Field(

@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class AUI(HL7Model):
-    """HL7 v2 AUI data type.
+    """Authorization information.
 
     Attributes
     ----------

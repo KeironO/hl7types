@@ -23,20 +23,19 @@ class CSU_C09_STUDY_PHASE(HL7Model):
     """HL7 v2 CSU_C09.STUDY_PHASE group.
 
     Attributes:
-        CSP (Optional[CSP]): optional
+        CSP (Optional[CSP]): Clinical Study Phase, optional
         STUDY_SCHEDULE (List[CSU_C09_STUDY_SCHEDULE]): required
     """
 
     CSP: Optional[_CSP] = Field(
         default=None,
         title="CSP",
-        description="Optional",
+        description="Clinical Study Phase",
     )
 
     STUDY_SCHEDULE: List[_CSU_C09_STUDY_SCHEDULE] = Field(
         min_length=1,
         title="STUDY_SCHEDULE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

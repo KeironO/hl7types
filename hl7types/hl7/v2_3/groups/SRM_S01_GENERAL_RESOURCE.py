@@ -24,26 +24,26 @@ class SRM_S01_GENERAL_RESOURCE(HL7Model):
     """HL7 v2 SRM_S01.GENERAL_RESOURCE group.
 
     Attributes:
-        AIG (AIG): required
-        APR (Optional[APR]): optional
-        NTE (Optional[List[NTE]]): optional
+        AIG (AIG): Appointment Information - General Resource, required
+        APR (Optional[APR]): Appointment Preferences, optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     AIG: _AIG = Field(
         title="AIG",
-        description="Required",
+        description="Appointment Information - General Resource",
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="Appointment Preferences",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

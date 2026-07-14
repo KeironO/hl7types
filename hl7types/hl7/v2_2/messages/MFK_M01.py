@@ -28,38 +28,38 @@ class MFK_M01(HL7Model):
     """HL7 v2 MFK_M01 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        MFI (MFI): required
-        MFA (Optional[List[MFA]]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (MSA): MESSAGE ACKNOWLEDGMENT, required
+        ERR (Optional[ERR]): ERROR, optional
+        MFI (MFI): MASTER FILE IDENTIFICATION, required
+        MFA (Optional[List[MFA]]): MASTER FILE ACKNOWLEDGEMENT, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="ERROR",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="MASTER FILE IDENTIFICATION",
     )
 
     MFA: Optional[List[_MFA]] = Field(
         default=None,
         title="MFA",
-        description="Optional, repeating",
+        description="MASTER FILE ACKNOWLEDGEMENT",
     )
 
     model_config = {"populate_by_name": True}

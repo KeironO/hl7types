@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CN_PERSON(HL7Model):
-    """HL7 v2 CN_PERSON data type.
+    """Cn für personen.
 
     Attributes
     ----------

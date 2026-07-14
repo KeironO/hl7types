@@ -23,19 +23,18 @@ class CQU_I19_RESOURCES(HL7Model):
     """HL7 v2 CQU_I19.RESOURCES group.
 
     Attributes:
-        RGS (RGS): required
+        RGS (RGS): Resource Group, required
         RESOURCE_DETAIL (Optional[List[CQU_I19_RESOURCE_DETAIL]]): optional
     """
 
     RGS: _RGS = Field(
         title="RGS",
-        description="Required",
+        description="Resource Group",
     )
 
     RESOURCE_DETAIL: Optional[List[_CQU_I19_RESOURCE_DETAIL]] = Field(
         default=None,
         title="RESOURCE_DETAIL",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

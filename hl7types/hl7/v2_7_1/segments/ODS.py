@@ -15,21 +15,21 @@ from ..datatypes.CWE import CWE
 
 
 class ODS(HL7Model):
-    """HL7 v2 ODS segment.
+    """Dietary Orders, Supplements, and Preferences (S4.7.1).
 
     Attributes
     ----------
     ods_1 : str
-        ODS.1 (req) - Type (ID)
+        ODS.1 (req) - Type (ID) S4.7.1.1 | 0159 - Diet Code Specification Type
 
     ods_2 : list[CWE] | None
-        ODS.2 (opt, rep) - Service Period (CWE)
+        ODS.2 (opt, rep) - Service Period (CWE) S4.7.1.2 | 9999 - no table for CE
 
     ods_3 : list[CWE]
-        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CWE)
+        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CWE) S4.7.1.3 | 9999 - no table for CE
 
     ods_4 : list[str] | None
-        ODS.4 (opt, rep) - Text Instruction (ST)
+        ODS.4 (opt, rep) - Text Instruction (ST) S4.7.1.4
     """
 
     ods_1: str = Field(

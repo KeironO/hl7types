@@ -29,40 +29,38 @@ class PPP_PCB_PATHWAY(HL7Model):
     """HL7 v2 PPP_PCB.PATHWAY group.
 
     Attributes:
-        PTH (PTH): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        PTH (PTH): Pathway, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         PATHWAY_ROLE (Optional[List[PPP_PCB_PATHWAY_ROLE]]): optional
         PROBLEM (Optional[List[PPP_PCB_PROBLEM]]): optional
     """
 
     PTH: _PTH = Field(
         title="PTH",
-        description="Required",
+        description="Pathway",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     PATHWAY_ROLE: Optional[List[_PPP_PCB_PATHWAY_ROLE]] = Field(
         default=None,
         title="PATHWAY_ROLE",
-        description="Optional, repeating",
     )
 
     PROBLEM: Optional[List[_PPP_PCB_PROBLEM]] = Field(
         default=None,
         title="PROBLEM",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

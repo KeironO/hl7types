@@ -33,53 +33,51 @@ class OMQ_O57_ORDER_PRIOR(HL7Model):
     """HL7 v2 OMQ_O57.ORDER_PRIOR group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
-        OBR (OBR): required
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        OBR (OBR): Observation Request, required
         TIMING_PRIOR (Optional[List[OMQ_O57_TIMING_PRIOR]]): optional
-        NTE (Optional[List[NTE]]): optional
-        CTD (Optional[CTD]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        CTD (Optional[CTD]): Contact Data, optional
         OBSERVATION_PRIOR (List[OMQ_O57_OBSERVATION_PRIOR]): required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     TIMING_PRIOR: Optional[List[_OMQ_O57_TIMING_PRIOR]] = Field(
         default=None,
         title="TIMING_PRIOR",
-        description="Optional, repeating",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     OBSERVATION_PRIOR: List[_OMQ_O57_OBSERVATION_PRIOR] = Field(
         min_length=1,
         title="OBSERVATION_PRIOR",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

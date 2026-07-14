@@ -32,60 +32,58 @@ _TXA = TXA
 
 
 class MDM_T02(HL7Model):
-    """HL7 v2 MDM_T02 message.
+    """MDM/ACK - Original document notification and content (S9.5.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (PV1): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PV1 (PV1): Patient Visit, required
         COMMON_ORDER (Optional[List[MDM_T02_COMMON_ORDER]]): optional
-        TXA (TXA): required
+        TXA (TXA): Transcription Document Header, required
         OBSERVATION (List[MDM_T02_OBSERVATION]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     COMMON_ORDER: Optional[List[_MDM_T02_COMMON_ORDER]] = Field(
         default=None,
         title="COMMON_ORDER",
-        description="Optional, repeating",
     )
 
     TXA: _TXA = Field(
         title="TXA",
-        description="Required",
+        description="Transcription Document Header",
     )
 
     OBSERVATION: List[_MDM_T02_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

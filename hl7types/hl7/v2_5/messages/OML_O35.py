@@ -26,43 +26,41 @@ _SFT = SFT
 
 
 class OML_O35(HL7Model):
-    """HL7 v2 OML_O35 message.
+    """OML - Laboratory order for multiple orders related to a single container of a sp (S4.4.6).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[OML_O35_PATIENT]): optional
         SPECIMEN (List[OML_O35_SPECIMEN]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OML_O35_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     SPECIMEN: List[_OML_O35_SPECIMEN] = Field(
         min_length=1,
         title="SPECIMEN",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

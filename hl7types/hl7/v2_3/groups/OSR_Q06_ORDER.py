@@ -26,33 +26,33 @@ class OSR_Q06_ORDER(HL7Model):
     """HL7 v2 OSR_Q06.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        OBR (Optional[OBR]): optional
-        NTE (Optional[List[NTE]]): optional
-        CTI (Optional[List[CTI]]): optional
+        ORC (ORC): Common order segment, required
+        OBR (Optional[OBR]): Observation request segment, optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common order segment",
     )
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation request segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

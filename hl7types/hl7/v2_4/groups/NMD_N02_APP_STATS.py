@@ -22,19 +22,19 @@ class NMD_N02_APP_STATS(HL7Model):
     """HL7 v2 NMD_N02.APP_STATS group.
 
     Attributes:
-        NST (NST): required
-        NTE (Optional[List[NTE]]): optional
+        NST (NST): Application control level statistics, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     NST: _NST = Field(
         title="NST",
-        description="Required",
+        description="Application control level statistics",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,18 +15,18 @@ from ..datatypes.CE import CE
 
 
 class ODT(HL7Model):
-    """HL7 v2 ODT segment.
+    """Diet Tray Instructions (S4.8.2).
 
     Attributes
     ----------
     odt_1 : CE
-        ODT.1 (req) - Tray Type (CE)
+        ODT.1 (req) - Tray Type (CE) S4.8.2.1 | 0160 - Tray type
 
     odt_2 : list[CE] | None
-        ODT.2 (opt, rep) - Service Period (CE)
+        ODT.2 (opt, rep) - Service Period (CE) S4.8.2.2
 
     odt_3 : str | None
-        ODT.3 (opt) - Text Instruction (ST)
+        ODT.3 (opt) - Text Instruction (ST) S4.8.2.3
     """
 
     odt_1: CE = Field(

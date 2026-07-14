@@ -24,26 +24,26 @@ class RAS_O01_ENCODING(HL7Model):
     """HL7 v2 RAS_O01.ENCODING group.
 
     Attributes:
-        RXE (RXE): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXE (RXE): Pharmacy encoded order segment, required
+        RXR (List[RXR]): Pharmacy route segment, required
+        RXC (Optional[List[RXC]]): Pharmacy component order segment, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy encoded order segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy route segment",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy component order segment",
     )
 
     model_config = {"populate_by_name": True}

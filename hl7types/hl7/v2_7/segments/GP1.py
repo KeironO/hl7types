@@ -16,24 +16,24 @@ from ..datatypes.CWE import CWE
 
 
 class GP1(HL7Model):
-    """HL7 v2 GP1 segment.
+    """Grouping/Reimbursement - Visit (S6.5.15).
 
     Attributes
     ----------
     gp1_1 : CWE
-        GP1.1 (req) - Type of Bill Code (CWE)
+        GP1.1 (req) - Type of Bill Code (CWE) S6.5.15.1 | 0455 - Type of Bill Code
 
     gp1_2 : list[CWE] | None
-        GP1.2 (opt, rep) - Revenue Code (CWE)
+        GP1.2 (opt, rep) - Revenue Code (CWE) S6.5.1.41 | 0456 - Revenue code
 
     gp1_3 : CWE | None
-        GP1.3 (opt) - Overall Claim Disposition Code (CWE)
+        GP1.3 (opt) - Overall Claim Disposition Code (CWE) S6.5.15.3 | 0457 - Overall Claim Disposition Code
 
     gp1_4 : list[CWE] | None
-        GP1.4 (opt, rep) - OCE Edits per Visit Code (CWE)
+        GP1.4 (opt, rep) - OCE Edits per Visit Code (CWE) S6.5.15.4 | 0458 - OCE Edit Code
 
     gp1_5 : CP | None
-        GP1.5 (opt) - Outlier Cost (CP)
+        GP1.5 (opt) - Outlier Cost (CP) S6.5.2.13
     """
 
     gp1_1: CWE = Field(

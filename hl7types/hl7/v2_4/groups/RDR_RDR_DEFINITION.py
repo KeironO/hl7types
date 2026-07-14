@@ -27,33 +27,31 @@ class RDR_RDR_DEFINITION(HL7Model):
     """HL7 v2 RDR_RDR.DEFINITION group.
 
     Attributes:
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        QRD (QRD): Original-Style Query Definition, required
+        QRF (Optional[QRF]): Original Style Query Filter, optional
         PATIENT (Optional[RDR_RDR_PATIENT]): optional
         ORDER (List[RDR_RDR_ORDER]): required
     """
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Original-Style Query Definition",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Original Style Query Filter",
     )
 
     PATIENT: Optional[_RDR_RDR_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RDR_RDR_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

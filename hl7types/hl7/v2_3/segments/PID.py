@@ -21,99 +21,99 @@ from ..datatypes.XTN import XTN
 
 
 class PID(HL7Model):
-    """HL7 v2 PID segment.
+    """Patient Identification (S3.3.2).
 
     Attributes
     ----------
     pid_1 : str | None
-        PID.1 (opt) - Set ID - Patient ID (SI)
+        PID.1 (opt) - Set ID - Patient ID (SI) S3.3.2.1
 
     pid_2 : CX | None
-        PID.2 (opt) - Patient ID (External ID) (CX)
+        PID.2 (opt) - Patient ID (External ID) (CX) S3.3.2.2
 
     pid_3 : list[CX]
-        PID.3 (req, rep) - Patient ID (Internal ID) (CX)
+        PID.3 (req, rep) - Patient ID (Internal ID) (CX) S3.3.2.3
 
     pid_4 : CX | None
-        PID.4 (opt) - Alternate Patient ID (CX)
+        PID.4 (opt) - Alternate Patient ID (CX) S3.3.2.4
 
     pid_5 : XPN
-        PID.5 (req) - Patient Name (XPN)
+        PID.5 (req) - Patient Name (XPN) S3.3.2.5
 
     pid_6 : XPN | None
-        PID.6 (opt) - Mother's Maiden Name (XPN)
+        PID.6 (opt) - Mother's Maiden Name (XPN) S3.3.2.6
 
     pid_7 : TS | None
-        PID.7 (opt) - Date of Birth (TS)
+        PID.7 (opt) - Date of Birth (TS) S3.3.2
 
     pid_8 : str | None
-        PID.8 (opt) - Sex (IS)
+        PID.8 (opt) - Sex (IS) S3.3.2 | 0001 - Sex
 
     pid_9 : list[XPN] | None
-        PID.9 (opt, rep) - Patient Alias (XPN)
+        PID.9 (opt, rep) - Patient Alias (XPN) S3.3.2
 
     pid_10 : str | None
-        PID.10 (opt) - Race (IS)
+        PID.10 (opt) - Race (IS) S3.3.2 | 0005 - Race
 
     pid_11 : list[XAD] | None
-        PID.11 (opt, rep) - Patient Address (XAD)
+        PID.11 (opt, rep) - Patient Address (XAD) S3.3.2.11
 
     pid_12 : str | None
-        PID.12 (opt) - County Code (IS)
+        PID.12 (opt) - County Code (IS) S3.3.2.12
 
     pid_13 : list[XTN] | None
-        PID.13 (opt, rep) - Phone Number - Home (XTN)
+        PID.13 (opt, rep) - Phone Number - Home (XTN) S3.3.2.13
 
     pid_14 : list[XTN] | None
-        PID.14 (opt, rep) - Phone Number - Business (XTN)
+        PID.14 (opt, rep) - Phone Number - Business (XTN) S3.3.2.14
 
     pid_15 : CE | None
-        PID.15 (opt) - Primary Language (CE)
+        PID.15 (opt) - Primary Language (CE) S3.3.2 | 0296 - Language
 
     pid_16 : list[str] | None
-        PID.16 (opt, rep) - Marital Status (IS)
+        PID.16 (opt, rep) - Marital Status (IS) S3.3.2 | 0002 - Marital Status
 
     pid_17 : str | None
-        PID.17 (opt) - Religion (IS)
+        PID.17 (opt) - Religion (IS) S3.3.2 | 0006 - Religion
 
     pid_18 : CX | None
-        PID.18 (opt) - Patient Account Number (CX)
+        PID.18 (opt) - Patient Account Number (CX) S3.3.2.18
 
     pid_19 : str | None
-        PID.19 (opt) - SSN Number - Patient (ST)
+        PID.19 (opt) - SSN Number - Patient (ST) S3.3.2.19
 
     pid_20 : DLN | None
-        PID.20 (opt) - Driver's License Number (DLN)
+        PID.20 (opt) - Driver's License Number (DLN) S3.3.2.20
 
     pid_21 : CX | None
-        PID.21 (opt) - Mother's Identifier (CX)
+        PID.21 (opt) - Mother's Identifier (CX) S3.3.2.21
 
     pid_22 : str | None
-        PID.22 (opt) - Ethnic Group (IS)
+        PID.22 (opt) - Ethnic Group (IS) S3.3.2 | 0189 - Ethnic Group
 
     pid_23 : str | None
-        PID.23 (opt) - Birth Place (ST)
+        PID.23 (opt) - Birth Place (ST) S3.3.2.23
 
     pid_24 : str | None
-        PID.24 (opt) - Multiple Birth Indicator (ID)
+        PID.24 (opt) - Multiple Birth Indicator (ID) S3.3.2.24 | 0136 - Yes/No Indicator
 
     pid_25 : str | None
-        PID.25 (opt) - Birth Order (NM)
+        PID.25 (opt) - Birth Order (NM) S3.3.2.25
 
     pid_26 : str | None
-        PID.26 (opt) - Citizenship (IS)
+        PID.26 (opt) - Citizenship (IS) S3.3.2 | 0171 - Country Code
 
     pid_27 : CE | None
-        PID.27 (opt) - Veterans Military Status (CE)
+        PID.27 (opt) - Veterans Military Status (CE) S3.3.2.27 | 0172 - Veterans Military Status
 
     pid_28 : CE | None
-        PID.28 (opt) - Nationality Code (CE)
+        PID.28 (opt) - Nationality Code (CE) S3.3.2 | 0212 - Nationality
 
     pid_29 : TS | None
-        PID.29 (opt) - Patient Death Date and Time (TS)
+        PID.29 (opt) - Patient Death Date and Time (TS) S3.3.2.29
 
     pid_30 : str | None
-        PID.30 (opt) - Patient Death Indicator (ID)
+        PID.30 (opt) - Patient Death Indicator (ID) S3.3.2.30 | 0136 - Yes/No Indicator
     """
 
     pid_1: Optional[str] = Field(

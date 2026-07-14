@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_AUI(HL7Model):
-    """HL7 v2 CM_AUI data type.
+    """Authorization information.
 
     Attributes
     ----------

@@ -27,33 +27,32 @@ class ORM_O01_ORDER(HL7Model):
     """HL7 v2 ORM_O01.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): ORC - common order segment, required
         ORDER_DETAIL (Optional[ORM_O01_ORDER_DETAIL]): optional
-        CTI (Optional[List[CTI]]): optional
-        BLG (Optional[BLG]): optional
+        CTI (Optional[List[CTI]]): CTI - clinical trial identification segment, optional
+        BLG (Optional[BLG]): BLG - billing segment, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     ORDER_DETAIL: Optional[_ORM_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="CTI - clinical trial identification segment",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="BLG - billing segment",
     )
 
     model_config = {"populate_by_name": True}

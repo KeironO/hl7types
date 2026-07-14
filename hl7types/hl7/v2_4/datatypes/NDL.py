@@ -17,7 +17,7 @@ from .TS import TS
 
 
 class NDL(HL7Model):
-    """HL7 v2 NDL data type.
+    """Observing practitioner.
 
     Attributes
     ----------

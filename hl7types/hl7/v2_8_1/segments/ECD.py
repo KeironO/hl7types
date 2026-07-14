@@ -15,21 +15,21 @@ from ..datatypes.CWE import CWE
 
 
 class ECD(HL7Model):
-    """HL7 v2 ECD segment.
+    """Equipment Command (S13.4.5).
 
     Attributes
     ----------
     ecd_1 : str
-        ECD.1 (req) - Reference Command Number (NM)
+        ECD.1 (req) - Reference Command Number (NM) S13.4.5.1
 
     ecd_2 : CWE
-        ECD.2 (req) - Remote Control Command (CWE)
+        ECD.2 (req) - Remote Control Command (CWE) S13.4.5.2 | 0368 - Remote Control Command
 
     ecd_3 : str | None
-        ECD.3 (opt) - Response Required (ID)
+        ECD.3 (opt) - Response Required (ID) S13.4.5.3 | 0136 - Yes/no Indicator
 
     ecd_5 : list[str] | None
-        ECD.5 (opt, rep) - Parameters (TX)
+        ECD.5 (opt, rep) - Parameters (TX) S13.4.5.5
     """
 
     ecd_1: str = Field(

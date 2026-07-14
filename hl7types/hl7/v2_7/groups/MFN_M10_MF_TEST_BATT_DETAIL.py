@@ -22,19 +22,19 @@ class MFN_M10_MF_TEST_BATT_DETAIL(HL7Model):
     """HL7 v2 MFN_M10.MF_TEST_BATT_DETAIL group.
 
     Attributes:
-        OM5 (OM5): required
-        OM4 (Optional[List[OM4]]): optional
+        OM5 (OM5): Observation Batteries (Sets), required
+        OM4 (Optional[List[OM4]]): Observations that Require Specimens, optional
     """
 
     OM5: _OM5 = Field(
         title="OM5",
-        description="Required",
+        description="Observation Batteries (Sets)",
     )
 
     OM4: Optional[List[_OM4]] = Field(
         default=None,
         title="OM4",
-        description="Optional, repeating",
+        description="Observations that Require Specimens",
     )
 
     model_config = {"populate_by_name": True}

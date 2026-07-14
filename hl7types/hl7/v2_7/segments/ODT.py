@@ -15,18 +15,18 @@ from ..datatypes.CWE import CWE
 
 
 class ODT(HL7Model):
-    """HL7 v2 ODT segment.
+    """Diet Tray Instructions (S4.8.2).
 
     Attributes
     ----------
     odt_1 : CWE
-        ODT.1 (req) - Tray Type (CWE)
+        ODT.1 (req) - Tray Type (CWE) S4.8.2.1 | 0160 - Tray Type
 
     odt_2 : list[CWE] | None
-        ODT.2 (opt, rep) - Service Period (CWE)
+        ODT.2 (opt, rep) - Service Period (CWE) S4.8.1.2 | 9999 - no table for CE
 
     odt_3 : str | None
-        ODT.3 (opt) - Text Instruction (ST)
+        ODT.3 (opt) - Text Instruction (ST) S4.8.1.4
     """
 
     odt_1: CWE = Field(

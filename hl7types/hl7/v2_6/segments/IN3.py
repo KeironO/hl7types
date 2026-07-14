@@ -21,84 +21,84 @@ from ..datatypes.XTN import XTN
 
 
 class IN3(HL7Model):
-    """HL7 v2 IN3 segment.
+    """Insurance Additional Information, Certification (S6.5.8).
 
     Attributes
     ----------
     in3_1 : str
-        IN3.1 (req) - Set ID - IN3 (SI)
+        IN3.1 (req) - Set ID - IN3 (SI) S6.5.8.1
 
     in3_2 : CX | None
-        IN3.2 (opt) - Certification Number (CX)
+        IN3.2 (opt) - Certification Number (CX) S6.5.8.2
 
     in3_3 : list[XCN] | None
-        IN3.3 (opt, rep) - Certified By (XCN)
+        IN3.3 (opt, rep) - Certified By (XCN) S6.5.8.3
 
     in3_4 : str | None
-        IN3.4 (opt) - Certification Required (ID)
+        IN3.4 (opt) - Certification Required (ID) S6.5.8.4 | 0136 - Yes/no indicator
 
     in3_5 : MOP | None
-        IN3.5 (opt) - Penalty (MOP)
+        IN3.5 (opt) - Penalty (MOP) S6.5.8.5
 
     in3_6 : str | None
-        IN3.6 (opt) - Certification Date/Time (DTM)
+        IN3.6 (opt) - Certification Date/Time (DTM) S6.5.8.6
 
     in3_7 : str | None
-        IN3.7 (opt) - Certification Modify Date/Time (DTM)
+        IN3.7 (opt) - Certification Modify Date/Time (DTM) S6.5.8.7
 
     in3_8 : list[XCN] | None
-        IN3.8 (opt, rep) - Operator (XCN)
+        IN3.8 (opt, rep) - Operator (XCN) S6.5.8.8
 
     in3_9 : str | None
-        IN3.9 (opt) - Certification Begin Date (DT)
+        IN3.9 (opt) - Certification Begin Date (DT) S6.5.8.9
 
     in3_10 : str | None
-        IN3.10 (opt) - Certification End Date (DT)
+        IN3.10 (opt) - Certification End Date (DT) S6.5.8.10
 
     in3_11 : DTN | None
-        IN3.11 (opt) - Days (DTN)
+        IN3.11 (opt) - Days (DTN) S6.5.8.11
 
     in3_12 : CWE | None
-        IN3.12 (opt) - Non-Concur Code/Description (CWE)
+        IN3.12 (opt) - Non-Concur Code/Description (CWE) S6.5.8.12 | 0233 - Non-Concur Code/Description
 
     in3_13 : str | None
-        IN3.13 (opt) - Non-Concur Effective Date/Time (DTM)
+        IN3.13 (opt) - Non-Concur Effective Date/Time (DTM) S6.5.8.13
 
     in3_14 : list[XCN] | None
-        IN3.14 (opt, rep) - Physician Reviewer (XCN)
+        IN3.14 (opt, rep) - Physician Reviewer (XCN) S6.5.8.14 | 0010 - Physician ID
 
     in3_15 : str | None
-        IN3.15 (opt) - Certification Contact (ST)
+        IN3.15 (opt) - Certification Contact (ST) S6.5.8.15
 
     in3_16 : list[XTN] | None
-        IN3.16 (opt, rep) - Certification Contact Phone Number (XTN)
+        IN3.16 (opt, rep) - Certification Contact Phone Number (XTN) S6.5.8.16
 
     in3_17 : CWE | None
-        IN3.17 (opt) - Appeal Reason (CWE)
+        IN3.17 (opt) - Appeal Reason (CWE) S6.5.8.17 | 0345 - Appeal Reason
 
     in3_18 : CWE | None
-        IN3.18 (opt) - Certification Agency (CWE)
+        IN3.18 (opt) - Certification Agency (CWE) S6.5.8.18 | 0346 - Certification Agency
 
     in3_19 : list[XTN] | None
-        IN3.19 (opt, rep) - Certification Agency Phone Number (XTN)
+        IN3.19 (opt, rep) - Certification Agency Phone Number (XTN) S6.5.8.19
 
     in3_20 : list[ICD] | None
-        IN3.20 (opt, rep) - Pre-Certification Requirement (ICD)
+        IN3.20 (opt, rep) - Pre-Certification Requirement (ICD) S6.5.8.20
 
     in3_21 : str | None
-        IN3.21 (opt) - Case Manager (ST)
+        IN3.21 (opt) - Case Manager (ST) S6.5.8.21
 
     in3_22 : str | None
-        IN3.22 (opt) - Second Opinion Date (DT)
+        IN3.22 (opt) - Second Opinion Date (DT) S6.5.8.22
 
     in3_23 : str | None
-        IN3.23 (opt) - Second Opinion Status (IS)
+        IN3.23 (opt) - Second Opinion Status (IS) S6.5.8.23 | 0151 - Second Opinion Status
 
     in3_24 : list[str] | None
-        IN3.24 (opt, rep) - Second Opinion Documentation Received (IS)
+        IN3.24 (opt, rep) - Second Opinion Documentation Received (IS) S6.5.8.24 | 0152 - Second Opinion Documentation Received
 
     in3_25 : list[XCN] | None
-        IN3.25 (opt, rep) - Second Opinion Physician (XCN)
+        IN3.25 (opt, rep) - Second Opinion Physician (XCN) S6.5.8.25 | 0010 - Physician ID
     """
 
     in3_1: str = Field(

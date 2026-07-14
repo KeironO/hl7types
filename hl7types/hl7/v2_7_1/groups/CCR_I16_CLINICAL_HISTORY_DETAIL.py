@@ -24,18 +24,17 @@ class CCR_I16_CLINICAL_HISTORY_DETAIL(HL7Model):
 
     Attributes:
         CLINICAL_HISTORY_OBJECT (CCR_I16_CLINICAL_HISTORY_OBJECT): required
-        OBX (Optional[List[OBX]]): optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     CLINICAL_HISTORY_OBJECT: _CCR_I16_CLINICAL_HISTORY_OBJECT = Field(
         title="CLINICAL_HISTORY_OBJECT",
-        description="Required",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

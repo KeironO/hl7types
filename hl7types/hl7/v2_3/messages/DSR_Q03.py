@@ -31,63 +31,63 @@ _QRF = QRF
 
 
 class DSR_Q03(HL7Model):
-    """HL7 v2 DSR_Q03 message.
+    """DSR/ACK - Deferred response to a query.
 
     Attributes:
-        MSH (MSH): required
-        MSA (Optional[MSA]): optional
-        ERR (Optional[ERR]): optional
-        QAK (Optional[QAK]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        DSP (List[DSP]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message header segment, required
+        MSA (Optional[MSA]): Message acknowledgement segment, optional
+        ERR (Optional[ERR]): Error segment, optional
+        QAK (Optional[QAK]): Query Acknowledgement, optional
+        QRD (QRD): Query definition segment, required
+        QRF (Optional[QRF]): Query filter segment, optional
+        DSP (List[DSP]): Display data segment, required
+        DSC (Optional[DSC]): Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: Optional[_MSA] = Field(
         default=None,
         title="MSA",
-        description="Optional",
+        description="Message acknowledgement segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error segment",
     )
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgement",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Query filter segment",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="Display data segment",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

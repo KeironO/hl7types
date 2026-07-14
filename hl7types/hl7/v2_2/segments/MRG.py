@@ -13,21 +13,21 @@ from hl7types.hl7 import HL7Model
 
 
 class MRG(HL7Model):
-    """HL7 v2 MRG segment.
+    """MERGE PATIENT INFORMATION (S3.3.8).
 
     Attributes
     ----------
     mrg_1 : str
-        MRG.1 (req) - Prior Patient ID - Internal (CM)
+        MRG.1 (req) - Prior Patient ID - Internal (CM) S3.3.8.1
 
     mrg_2 : str | None
-        MRG.2 (opt) - Prior Alternate Patient ID (CM)
+        MRG.2 (opt) - Prior Alternate Patient ID (CM) S3.3.8.2
 
     mrg_3 : str | None
-        MRG.3 (opt) - Prior Patient Account Number (CK)
+        MRG.3 (opt) - Prior Patient Account Number (CK) S3.3.8.3
 
     mrg_4 : str | None
-        MRG.4 (opt) - Prior Patient ID - External (CK)
+        MRG.4 (opt) - Prior Patient ID - External (CK) S3.3.8.4
     """
 
     mrg_1: str = Field(

@@ -24,26 +24,26 @@ class OML_O21_OBSERVATION(HL7Model):
     """HL7 v2 OML_O21.OBSERVATION group.
 
     Attributes:
-        OBX (OBX): required
-        TCD (Optional[TCD]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBX (OBX): Observation/Result, required
+        TCD (Optional[TCD]): Test Code Detail, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

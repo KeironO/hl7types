@@ -16,51 +16,51 @@ from ..datatypes.XCN import XCN
 
 
 class ABS(HL7Model):
-    """HL7 v2 ABS segment.
+    """Abstract (S6.5.12).
 
     Attributes
     ----------
     abs_1 : XCN | None
-        ABS.1 (opt) - Discharge Care Provider (XCN)
+        ABS.1 (opt) - Discharge Care Provider (XCN) S6.5.12.1 | 0010 - Physician ID
 
     abs_2 : CWE | None
-        ABS.2 (opt) - Transfer Medical Service Code (CWE)
+        ABS.2 (opt) - Transfer Medical Service Code (CWE) S6.5.12.2 | 0069 - Hospital Service
 
     abs_3 : CWE | None
-        ABS.3 (opt) - Severity of Illness Code (CWE)
+        ABS.3 (opt) - Severity of Illness Code (CWE) S6.5.12.3 | 0421 - Severity of Illness Code
 
     abs_4 : str | None
-        ABS.4 (opt) - Date/Time of Attestation (DTM)
+        ABS.4 (opt) - Date/Time of Attestation (DTM) S6.5.12.4
 
     abs_5 : XCN | None
-        ABS.5 (opt) - Attested By (XCN)
+        ABS.5 (opt) - Attested By (XCN) S6.5.12.5
 
     abs_6 : CWE | None
-        ABS.6 (opt) - Triage Code (CWE)
+        ABS.6 (opt) - Triage Code (CWE) S6.5.12.6 | 0422 - Triage Code
 
     abs_7 : str | None
-        ABS.7 (opt) - Abstract Completion Date/Time (DTM)
+        ABS.7 (opt) - Abstract Completion Date/Time (DTM) S6.5.12.7
 
     abs_8 : XCN | None
-        ABS.8 (opt) - Abstracted By (XCN)
+        ABS.8 (opt) - Abstracted By (XCN) S6.5.12.8
 
     abs_9 : CWE | None
-        ABS.9 (opt) - Case Category Code (CWE)
+        ABS.9 (opt) - Case Category Code (CWE) S6.5.12.9 | 0423 - Case Category Code
 
     abs_10 : str | None
-        ABS.10 (opt) - Caesarian Section Indicator (ID)
+        ABS.10 (opt) - Caesarian Section Indicator (ID) S6.5.12.10 | 0136 - Yes/no Indicator
 
     abs_11 : CWE | None
-        ABS.11 (opt) - Gestation Category Code (CWE)
+        ABS.11 (opt) - Gestation Category Code (CWE) S6.5.12.11 | 0424 - Gestation Category Code
 
     abs_12 : str | None
-        ABS.12 (opt) - Gestation Period - Weeks (NM)
+        ABS.12 (opt) - Gestation Period - Weeks (NM) S6.5.12.12
 
     abs_13 : CWE | None
-        ABS.13 (opt) - Newborn Code (CWE)
+        ABS.13 (opt) - Newborn Code (CWE) S6.5.12.13 | 0425 - Newborn Code
 
     abs_14 : str | None
-        ABS.14 (opt) - Stillborn Indicator (ID)
+        ABS.14 (opt) - Stillborn Indicator (ID) S6.5.12.14 | 0136 - Yes/no Indicator
     """
 
     abs_1: Optional[XCN] = Field(

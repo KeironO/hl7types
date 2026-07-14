@@ -26,7 +26,6 @@ class ORB_O28_RESPONSE(HL7Model):
     PATIENT: Optional[_ORB_O28_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

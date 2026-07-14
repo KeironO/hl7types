@@ -16,7 +16,7 @@ from .MO import MO
 
 
 class UVC(HL7Model):
-    """HL7 v2 UVC data type.
+    """Ub value code and amount (S2.A.79).
 
     Attributes
     ----------

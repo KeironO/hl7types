@@ -25,26 +25,24 @@ class OML_O39_SPECIMEN_IN_PACKAGE(HL7Model):
     """HL7 v2 OML_O39.SPECIMEN_IN_PACKAGE group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         SPECIMEN_OBSERVATION (Optional[List[OML_O39_SPECIMEN_OBSERVATION]]): optional
         SPECIMEN_CONTAINER_IN_PACKAGE (Optional[List[OML_O39_SPECIMEN_CONTAINER_IN_PACKAGE]]): optional
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OML_O39_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     SPECIMEN_CONTAINER_IN_PACKAGE: Optional[List[_OML_O39_SPECIMEN_CONTAINER_IN_PACKAGE]] = Field(
         default=None,
         title="SPECIMEN_CONTAINER_IN_PACKAGE",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,19 +22,19 @@ class ORL_O22_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 ORL_O22.OBSERVATION_REQUEST group.
 
     Attributes:
-        OBR (OBR): required
-        SAC (Optional[List[SAC]]): optional
+        OBR (OBR): Observation Request, required
+        SAC (Optional[List[SAC]]): Specimen and container detail, optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     SAC: Optional[List[_SAC]] = Field(
         default=None,
         title="SAC",
-        description="Optional, repeating",
+        description="Specimen and container detail",
     )
 
     model_config = {"populate_by_name": True}

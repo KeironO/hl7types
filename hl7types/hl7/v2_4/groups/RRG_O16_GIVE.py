@@ -24,26 +24,26 @@ class RRG_O16_GIVE(HL7Model):
     """HL7 v2 RRG_O16.GIVE group.
 
     Attributes:
-        RXG (RXG): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXG (RXG): Pharmacy/Treatment Give, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
     """
 
     RXG: _RXG = Field(
         title="RXG",
-        description="Required",
+        description="Pharmacy/Treatment Give",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     model_config = {"populate_by_name": True}

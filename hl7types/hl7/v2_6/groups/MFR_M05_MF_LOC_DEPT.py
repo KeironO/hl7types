@@ -24,26 +24,26 @@ class MFR_M05_MF_LOC_DEPT(HL7Model):
     """HL7 v2 MFR_M05.MF_LOC_DEPT group.
 
     Attributes:
-        LDP (LDP): required
-        LCH (Optional[List[LCH]]): optional
-        LCC (Optional[List[LCC]]): optional
+        LDP (LDP): Location Department, required
+        LCH (Optional[List[LCH]]): Location Characteristic, optional
+        LCC (Optional[List[LCC]]): Location Charge Code, optional
     """
 
     LDP: _LDP = Field(
         title="LDP",
-        description="Required",
+        description="Location Department",
     )
 
     LCH: Optional[List[_LCH]] = Field(
         default=None,
         title="LCH",
-        description="Optional, repeating",
+        description="Location Characteristic",
     )
 
     LCC: Optional[List[_LCC]] = Field(
         default=None,
         title="LCC",
-        description="Optional, repeating",
+        description="Location Charge Code",
     )
 
     model_config = {"populate_by_name": True}

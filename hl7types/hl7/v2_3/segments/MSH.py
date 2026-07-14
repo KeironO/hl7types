@@ -18,66 +18,66 @@ from ..datatypes.TS import TS
 
 
 class MSH(HL7Model):
-    """HL7 v2 MSH segment.
+    """Message header segment (S2.24.1).
 
     Attributes
     ----------
     msh_1 : str
-        MSH.1 (req) - Field Separator (ST)
+        MSH.1 (req) - Field Separator (ST) S2.24.1.1
 
     msh_2 : str
-        MSH.2 (req) - Encoding Characters (ST)
+        MSH.2 (req) - Encoding Characters (ST) S2.24.1.2
 
     msh_3 : HD | None
-        MSH.3 (opt) - Sending Application (HD)
+        MSH.3 (opt) - Sending Application (HD) S2.24.1.3
 
     msh_4 : HD | None
-        MSH.4 (opt) - Sending Facility (HD)
+        MSH.4 (opt) - Sending Facility (HD) S2.24.1.4
 
     msh_5 : HD | None
-        MSH.5 (opt) - Receiving Application (HD)
+        MSH.5 (opt) - Receiving Application (HD) S2.24.1.5
 
     msh_6 : HD | None
-        MSH.6 (opt) - Receiving Facility (HD)
+        MSH.6 (opt) - Receiving Facility (HD) S2.24.1.6
 
     msh_7 : TS | None
-        MSH.7 (opt) - Date / Time of Message (TS)
+        MSH.7 (opt) - Date / Time of Message (TS) S2.24.1.7
 
     msh_8 : str | None
-        MSH.8 (opt) - Security (ST)
+        MSH.8 (opt) - Security (ST) S2.24.1.8
 
     msh_9 : str
-        MSH.9 (req) - Message Type (CM)
+        MSH.9 (req) - Message Type (CM) S2.24.1.9
 
     msh_10 : str
-        MSH.10 (req) - Message Control ID (ST)
+        MSH.10 (req) - Message Control ID (ST) S2.24.1
 
     msh_11 : PT
-        MSH.11 (req) - Processing ID (PT)
+        MSH.11 (req) - Processing ID (PT) S2.24.1.11
 
     msh_12 : str
-        MSH.12 (req) - Version ID (ID)
+        MSH.12 (req) - Version ID (ID) S2.24.1.12 | 0104 - Version ID
 
     msh_13 : str | None
-        MSH.13 (opt) - Sequence Number (NM)
+        MSH.13 (opt) - Sequence Number (NM) S2.24.1.13
 
     msh_14 : str | None
-        MSH.14 (opt) - Continuation Pointer (ST)
+        MSH.14 (opt) - Continuation Pointer (ST) S2.24.1
 
     msh_15 : str | None
-        MSH.15 (opt) - Accept Acknowledgement Type (ID)
+        MSH.15 (opt) - Accept Acknowledgement Type (ID) S2.24.1.15 | 0155 - Accept/Application Acknowledgement Conditions
 
     msh_16 : str | None
-        MSH.16 (opt) - Application Acknowledgement Type (ID)
+        MSH.16 (opt) - Application Acknowledgement Type (ID) S2.24.1.16 | 0155 - Accept/Application Acknowledgement Conditions
 
     msh_17 : str | None
-        MSH.17 (opt) - Country Code (ID)
+        MSH.17 (opt) - Country Code (ID) S2.24.1.17
 
     msh_18 : str | None
-        MSH.18 (opt) - Character Set (ID)
+        MSH.18 (opt) - Character Set (ID) S2.24.1.18 | 0211 - Alternate Character Sets
 
     msh_19 : CE | None
-        MSH.19 (opt) - Principal Language of Message (CE)
+        MSH.19 (opt) - Principal Language of Message (CE) S2.24.1.19
     """
 
     msh_1: str = Field(

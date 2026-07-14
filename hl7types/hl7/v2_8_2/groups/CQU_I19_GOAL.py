@@ -27,33 +27,31 @@ class CQU_I19_GOAL(HL7Model):
     """HL7 v2 CQU_I19.GOAL group.
 
     Attributes:
-        GOL (GOL): required
-        VAR (Optional[List[VAR]]): optional
+        GOL (GOL): Goal Detail, required
+        VAR (Optional[List[VAR]]): Variance, optional
         ROLE_GOAL (Optional[List[CQU_I19_ROLE_GOAL]]): optional
         GOAL_OBSERVATION (Optional[List[CQU_I19_GOAL_OBSERVATION]]): optional
     """
 
     GOL: _GOL = Field(
         title="GOL",
-        description="Required",
+        description="Goal Detail",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ROLE_GOAL: Optional[List[_CQU_I19_ROLE_GOAL]] = Field(
         default=None,
         title="ROLE_GOAL",
-        description="Optional, repeating",
     )
 
     GOAL_OBSERVATION: Optional[List[_CQU_I19_GOAL_OBSERVATION]] = Field(
         default=None,
         title="GOAL_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

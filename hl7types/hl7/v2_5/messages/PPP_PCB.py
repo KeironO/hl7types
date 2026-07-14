@@ -26,42 +26,40 @@ _SFT = SFT
 
 
 class PPP_PCB(HL7Model):
-    """HL7 v2 PPP_PCB message.
+    """PPP - PC/ pathway (problem-oriented) add (S12.3.3).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        PID (PID): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        PID (PID): Patient Identification, required
         PATIENT_VISIT (Optional[PPP_PCB_PATIENT_VISIT]): optional
         PATHWAY (List[PPP_PCB_PATHWAY]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PATIENT_VISIT: Optional[_PPP_PCB_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PATHWAY: List[_PPP_PCB_PATHWAY] = Field(
         min_length=1,
         title="PATHWAY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

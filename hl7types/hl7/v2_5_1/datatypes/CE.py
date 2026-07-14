@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CE(HL7Model):
-    """HL7 v2 CE data type.
+    """Coded element (S2.A.1.6).
 
     Attributes
     ----------

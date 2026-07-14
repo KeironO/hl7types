@@ -30,48 +30,50 @@ class ORM_O01_CHOICE(HL7Model):
     """HL7 v2 ORM_O01.CHOICE group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        RQD (Optional[RQD]): optional
-        RQ1 (Optional[RQ1]): optional
-        ODS (Optional[ODS]): optional
-        ODT (Optional[ODT]): optional
-        RXO (Optional[RXO]): optional
+        OBR (Optional[OBR]): OBR - observation request segment, optional
+        RQD (Optional[RQD]): RQD - requisition detail segment, optional
+        RQ1 (Optional[RQ1]): RQ1 - requisition detail-1 segment, optional
+        ODS (Optional[ODS]): ODS - dietary orders, supplements, and preferences segment, optional
+        ODT (Optional[ODT]): ODT - diet tray instructions segment, optional
+        RXO (Optional[RXO]): RXO - pharmacy/treatment order segment, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="OBR - observation request segment",
     )
 
     RQD: Optional[_RQD] = Field(
         default=None,
         title="RQD",
-        description="Optional",
+        description="RQD - requisition detail segment",
     )
 
     RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
-        description="Optional",
+        description="RQ1 - requisition detail-1 segment",
     )
 
     ODS: Optional[_ODS] = Field(
         default=None,
         title="ODS",
-        description="Optional",
+        description=(
+            "ODS - dietary orders, supplements, and preferences segment"
+        ),
     )
 
     ODT: Optional[_ODT] = Field(
         default=None,
         title="ODT",
-        description="Optional",
+        description="ODT - diet tray instructions segment",
     )
 
     RXO: Optional[_RXO] = Field(
         default=None,
         title="RXO",
-        description="Optional",
+        description="RXO - pharmacy/treatment order segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,33 +17,33 @@ from ..datatypes.EI import EI
 
 
 class IPR(HL7Model):
-    """HL7 v2 IPR segment.
+    """Invoice Processing Results (S16.4.9).
 
     Attributes
     ----------
     ipr_1 : EI
-        IPR.1 (req) - IPR Identifier (EI)
+        IPR.1 (req) - IPR Identifier (EI) S16.4.9.1
 
     ipr_2 : EI
-        IPR.2 (req) - Provider Cross Reference Identifier (EI)
+        IPR.2 (req) - Provider Cross Reference Identifier (EI) S16.4.9.2
 
     ipr_3 : EI
-        IPR.3 (req) - Payer Cross Reference Identifier (EI)
+        IPR.3 (req) - Payer Cross Reference Identifier (EI) S16.4.9.3
 
     ipr_4 : CWE
-        IPR.4 (req) - IPR Status (CWE)
+        IPR.4 (req) - IPR Status (CWE) S16.4.9.4 | 0571 - Invoice Processing Results Status
 
     ipr_5 : str
-        IPR.5 (req) - IPR Date/Time (DTM)
+        IPR.5 (req) - IPR Date/Time (DTM) S16.4.9.5
 
     ipr_6 : CP | None
-        IPR.6 (opt) - Adjudicated/Paid Amount (CP)
+        IPR.6 (opt) - Adjudicated/Paid Amount (CP) S16.4.9.6
 
     ipr_7 : str | None
-        IPR.7 (opt) - Expected Payment Date/Time (DTM)
+        IPR.7 (opt) - Expected Payment Date/Time (DTM) S16.4.9.7
 
     ipr_8 : str
-        IPR.8 (req) - IPR Checksum (ST)
+        IPR.8 (req) - IPR Checksum (ST) S16.4.9.8
     """
 
     ipr_1: EI = Field(

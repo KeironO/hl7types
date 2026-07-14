@@ -16,18 +16,18 @@ from ..datatypes.TS import TS
 
 
 class CSS(HL7Model):
-    """HL7 v2 CSS segment.
+    """Clinical Study Data Schedule (S7.7.3).
 
     Attributes
     ----------
     css_1 : CE | None
-        CSS.1 (opt) - Study Scheduled Time Point (CE)
+        CSS.1 (opt) - Study Scheduled Time Point (CE) S7.7.3
 
     css_2 : TS | None
-        CSS.2 (opt) - Study Scheduled Patient Time Point (TS)
+        CSS.2 (opt) - Study Scheduled Patient Time Point (TS) S7.7.3.2
 
     css_3 : list[CE] | None
-        CSS.3 (opt, rep) - Study Quality Control Codes (CE)
+        CSS.3 (opt, rep) - Study Quality Control Codes (CE) S7.7.3.3
     """
 
     css_1: Optional[CE] = Field(

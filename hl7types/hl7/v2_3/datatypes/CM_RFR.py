@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_RFR(HL7Model):
-    """HL7 v2 CM_RFR data type.
+    """Reference range.
 
     Attributes
     ----------

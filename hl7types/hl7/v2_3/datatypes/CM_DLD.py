@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class CM_DLD(HL7Model):
-    """HL7 v2 CM_DLD data type.
+    """Discharge location.
 
     Attributes
     ----------

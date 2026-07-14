@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class ELD(HL7Model):
-    """HL7 v2 ELD data type.
+    """Error (S2).
 
     Attributes
     ----------

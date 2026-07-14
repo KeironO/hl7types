@@ -17,54 +17,54 @@ from ..datatypes.MO import MO
 
 
 class IIM(HL7Model):
-    """HL7 v2 IIM segment.
+    """Inventory Item Master (S17.4.1).
 
     Attributes
     ----------
     iim_1 : CWE
-        IIM.1 (req) - Primary Key Value - IIM (CWE)
+        IIM.1 (req) - Primary Key Value - IIM (CWE) S17.4.1.1
 
     iim_2 : CWE
-        IIM.2 (req) - Service Item Code (CWE)
+        IIM.2 (req) - Service Item Code (CWE) S17.4.1.2
 
     iim_3 : str | None
-        IIM.3 (opt) - Inventory Lot Number (ST)
+        IIM.3 (opt) - Inventory Lot Number (ST) S17.4.1.3
 
     iim_4 : str | None
-        IIM.4 (opt) - Inventory Expiration Date (DTM)
+        IIM.4 (opt) - Inventory Expiration Date (DTM) S17.4.1.4
 
     iim_5 : CWE | None
-        IIM.5 (opt) - Inventory Manufacturer Name (CWE)
+        IIM.5 (opt) - Inventory Manufacturer Name (CWE) S17.4.1.5
 
     iim_6 : CWE | None
-        IIM.6 (opt) - Inventory Location (CWE)
+        IIM.6 (opt) - Inventory Location (CWE) S17.4.1.6
 
     iim_7 : str | None
-        IIM.7 (opt) - Inventory Received Date (DTM)
+        IIM.7 (opt) - Inventory Received Date (DTM) S17.4.1.7
 
     iim_8 : str | None
-        IIM.8 (opt) - Inventory Received Quantity (NM)
+        IIM.8 (opt) - Inventory Received Quantity (NM) S17.4.1.8
 
     iim_9 : CWE | None
-        IIM.9 (opt) - Inventory Received Quantity Unit (CWE)
+        IIM.9 (opt) - Inventory Received Quantity Unit (CWE) S17.4.1.9
 
     iim_10 : MO | None
-        IIM.10 (opt) - Inventory Received Item Cost (MO)
+        IIM.10 (opt) - Inventory Received Item Cost (MO) S17.4.1.10
 
     iim_11 : str | None
-        IIM.11 (opt) - Inventory On Hand Date (DTM)
+        IIM.11 (opt) - Inventory On Hand Date (DTM) S17.4.1.11
 
     iim_12 : str | None
-        IIM.12 (opt) - Inventory On Hand Quantity (NM)
+        IIM.12 (opt) - Inventory On Hand Quantity (NM) S17.4.1.12
 
     iim_13 : CWE | None
-        IIM.13 (opt) - Inventory On Hand Quantity Unit (CWE)
+        IIM.13 (opt) - Inventory On Hand Quantity Unit (CWE) S17.4.1.13
 
     iim_14 : CNE | None
-        IIM.14 (opt) - Procedure Code (CNE)
+        IIM.14 (opt) - Procedure Code (CNE) S17.4.1.14 | 0088 - Procedure Code
 
     iim_15 : list[CNE] | None
-        IIM.15 (opt, rep) - Procedure Code Modifier (CNE)
+        IIM.15 (opt, rep) - Procedure Code Modifier (CNE) S17.4.1.15 | 0340 - Procedure Code Modifier
     """
 
     iim_1: CWE = Field(

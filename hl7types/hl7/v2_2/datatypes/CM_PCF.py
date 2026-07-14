@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class CM_PCF(HL7Model):
-    """HL7 v2 CM_PCF data type.
+    """Pre-certification required.
 
     Attributes
     ----------

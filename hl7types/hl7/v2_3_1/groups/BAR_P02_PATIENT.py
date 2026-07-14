@@ -26,33 +26,33 @@ class BAR_P02_PATIENT(HL7Model):
     """HL7 v2 BAR_P02.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (Optional[PV1]): optional
-        DB1 (Optional[List[DB1]]): optional
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        PV1 (Optional[PV1]): PV1 - patient visit segment-, optional
+        DB1 (Optional[List[DB1]]): DB1 - Disability segment, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="PV1 - patient visit segment-",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="DB1 - Disability segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class SPS(HL7Model):
-    """HL7 v2 SPS data type.
+    """Specimen source (S2.A.72).
 
     Attributes
     ----------

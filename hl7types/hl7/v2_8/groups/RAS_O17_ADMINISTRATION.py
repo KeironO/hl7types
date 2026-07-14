@@ -27,33 +27,32 @@ class RAS_O17_ADMINISTRATION(HL7Model):
     """HL7 v2 RAS_O17.ADMINISTRATION group.
 
     Attributes:
-        RXA (List[RXA]): required
-        PRT (Optional[List[PRT]]): optional
-        RXR (RXR): required
+        RXA (List[RXA]): Pharmacy/Treatment Administration, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        RXR (RXR): Pharmacy/Treatment Route, required
         OBSERVATION (Optional[List[RAS_O17_OBSERVATION]]): optional
     """
 
     RXA: List[_RXA] = Field(
         min_length=1,
         title="RXA",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Administration",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="Pharmacy/Treatment Route",
     )
 
     OBSERVATION: Optional[List[_RAS_O17_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,45 +17,45 @@ from ..datatypes.TS import TS
 
 
 class AIL(HL7Model):
-    """HL7 v2 AIL segment.
+    """AIL - appointment information - location resource segment (S10.5.6).
 
     Attributes
     ----------
     ail_1 : str
-        AIL.1 (req) - Set ID - AIL (SI)
+        AIL.1 (req) - Set ID - AIL (SI) S10.5.6.1
 
     ail_2 : str | None
-        AIL.2 (opt) - Segment Action Code (ID)
+        AIL.2 (opt) - Segment Action Code (ID) S10.5.7.2 | 0206 - Segment action code
 
     ail_3 : PL | None
-        AIL.3 (opt) - Location Resource ID (PL)
+        AIL.3 (opt) - Location Resource ID (PL) S10.5.6.3
 
     ail_4 : CE
-        AIL.4 (req) - Location Type-AIL (CE)
+        AIL.4 (req) - Location Type-AIL (CE) S10.5.6.4
 
     ail_5 : CE | None
-        AIL.5 (opt) - Location Group (CE)
+        AIL.5 (opt) - Location Group (CE) S10.5.6.5
 
     ail_6 : TS | None
-        AIL.6 (opt) - Start Date/Time (TS)
+        AIL.6 (opt) - Start Date/Time (TS) S10.5.7.6
 
     ail_7 : str | None
-        AIL.7 (opt) - Start Date/Time Offset (NM)
+        AIL.7 (opt) - Start Date/Time Offset (NM) S10.5.7.7
 
     ail_8 : CE | None
-        AIL.8 (opt) - Start Date/Time Offset Units (CE)
+        AIL.8 (opt) - Start Date/Time Offset Units (CE) S10.5.7.8
 
     ail_9 : str | None
-        AIL.9 (opt) - Duration (NM)
+        AIL.9 (opt) - Duration (NM) S10.5.7.9
 
     ail_10 : CE | None
-        AIL.10 (opt) - Duration Units (CE)
+        AIL.10 (opt) - Duration Units (CE) S10.5.7.10
 
     ail_11 : str | None
-        AIL.11 (opt) - Allow Substitution Code (IS)
+        AIL.11 (opt) - Allow Substitution Code (IS) S10.5.7.11 | 0279 - Allow substitution codes
 
     ail_12 : CE | None
-        AIL.12 (opt) - Filler Status Code (CE)
+        AIL.12 (opt) - Filler Status Code (CE) S10.5.7.12 | 0278 - Filler status codes
     """
 
     ail_1: str = Field(

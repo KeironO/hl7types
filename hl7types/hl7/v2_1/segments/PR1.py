@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class PR1(HL7Model):
-    """HL7 v2 PR1 segment.
+    """PROCEDURES (S6.3.7).
 
     Attributes
     ----------
     pr1_1 : list[str]
-        PR1.1 (req, rep) - SET ID - PROCEDURE (SI)
+        PR1.1 (req, rep) - SET ID - PROCEDURE (SI) S6-15
 
     pr1_2 : str
-        PR1.2 (req) - PROCEDURE CODING METHOD. (ID)
+        PR1.2 (req) - PROCEDURE CODING METHOD. (ID) | 0089 - PROCEDURE CODING METHOD
 
     pr1_3 : str
-        PR1.3 (req) - PROCEDURE CODE (ID)
+        PR1.3 (req) - PROCEDURE CODE (ID) | 0088 - PROCEDURE CODE
 
     pr1_4 : str | None
         PR1.4 (opt) - PROCEDURE DESCRIPTION (ST)
@@ -33,28 +33,28 @@ class PR1(HL7Model):
         PR1.5 (req) - PROCEDURE DATE/TIME (TS)
 
     pr1_6 : str
-        PR1.6 (req) - PROCEDURE TYPE (ID)
+        PR1.6 (req) - PROCEDURE TYPE (ID) | 0090 - PROCEDURE TYPE
 
     pr1_7 : str | None
         PR1.7 (opt) - PROCEDURE MINUTES (NM)
 
     pr1_8 : str | None
-        PR1.8 (opt) - ANESTHESIOLOGIST (CN)
+        PR1.8 (opt) - ANESTHESIOLOGIST (CN) | 0010 - PHYSICIAN ID
 
     pr1_9 : str | None
-        PR1.9 (opt) - ANESTHESIA CODE (ID)
+        PR1.9 (opt) - ANESTHESIA CODE (ID) | 0019 - ANESTHESIA CODE
 
     pr1_10 : str | None
         PR1.10 (opt) - ANESTHESIA MINUTES (NM)
 
     pr1_11 : str | None
-        PR1.11 (opt) - SURGEON (CN)
+        PR1.11 (opt) - SURGEON (CN) | 0010 - PHYSICIAN ID
 
     pr1_12 : str | None
-        PR1.12 (opt) - RESIDENT CODE (CN)
+        PR1.12 (opt) - RESIDENT CODE (CN) | 0010 - PHYSICIAN ID
 
     pr1_13 : str | None
-        PR1.13 (opt) - CONSENT CODE (ID)
+        PR1.13 (opt) - CONSENT CODE (ID) | 0059 - CONSENT CODE
     """
 
     pr1_1: List[str] = Field(

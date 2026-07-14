@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CQ_QUANTITY(HL7Model):
-    """HL7 v2 CQ_QUANTITY data type.
+    """Cq für mengenangaben.
 
     Attributes
     ----------

@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_OCD(HL7Model):
-    """HL7 v2 CM_OCD data type.
+    """Occurence.
 
     Attributes
     ----------

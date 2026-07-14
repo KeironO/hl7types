@@ -48,119 +48,113 @@ _RF1 = RF1
 
 
 class REF_I12(HL7Model):
-    """HL7 v2 REF_I12 message.
+    """REF/RRI -  Patient referral.
 
     Attributes:
-        MSH (MSH): required
-        RF1 (Optional[RF1]): optional
+        MSH (MSH): Message header segment, required
+        RF1 (Optional[RF1]): Referral Information Segment, optional
         AUTHORIZATION (Optional[REF_I12_AUTHORIZATION]): optional
         PROVIDER (List[REF_I12_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
-        GT1 (Optional[List[GT1]]): optional
+        PID (PID): Patient Identification, required
+        NK1 (Optional[List[NK1]]): Next of kin, optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[REF_I12_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        ACC (Optional[ACC]): Accident, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[List[DRG]]): Diagnosis Related Group, optional
+        AL1 (Optional[List[AL1]]): Patient allergy information, optional
         PROCEDURE (Optional[List[REF_I12_PROCEDURE]]): optional
         RESULTS (Optional[List[REF_I12_RESULTS]]): optional
         VISIT (Optional[REF_I12_VISIT]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
-        description="Optional",
+        description="Referral Information Segment",
     )
 
     AUTHORIZATION: Optional[_REF_I12_AUTHORIZATION] = Field(
         default=None,
         title="AUTHORIZATION",
-        description="Optional",
     )
 
     PROVIDER: List[_REF_I12_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_REF_I12_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="Diagnosis Related Group",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient allergy information",
     )
 
     PROCEDURE: Optional[List[_REF_I12_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     RESULTS: Optional[List[_REF_I12_RESULTS]] = Field(
         default=None,
         title="RESULTS",
-        description="Optional, repeating",
     )
 
     VISIT: Optional[_REF_I12_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

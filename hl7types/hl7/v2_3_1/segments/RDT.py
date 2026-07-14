@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class RDT(HL7Model):
-    """HL7 v2 RDT segment.
+    """RDT - table row data segment (S2.24.19).
 
     Attributes
     ----------
     rdt_1 : str | None
-        RDT.1 (opt) - Column Value (*)
+        RDT.1 (opt) - Column Value (*) S2.24.19.1
     """
 
     rdt_1: Optional[str] = Field(

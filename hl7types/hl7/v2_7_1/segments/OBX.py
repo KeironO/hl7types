@@ -21,87 +21,87 @@ from ..datatypes.varies import varies
 
 
 class OBX(HL7Model):
-    """HL7 v2 OBX segment.
+    """Observation/Result (S7.4.2).
 
     Attributes
     ----------
     obx_1 : str | None
-        OBX.1 (opt) - Set ID - OBX (SI)
+        OBX.1 (opt) - Set ID - OBX (SI) S7.16.3.1
 
     obx_2 : str
-        OBX.2 (req) - Value Type (ID)
+        OBX.2 (req) - Value Type (ID) S7.16.3.2 | 0125 - Value Type
 
     obx_3 : CWE
-        OBX.3 (req) - Observation Identifier (CWE)
+        OBX.3 (req) - Observation Identifier (CWE) S7.16.3.3 | 9999 - no table for CE
 
     obx_4 : str
-        OBX.4 (req) - Observation Sub-ID (ST)
+        OBX.4 (req) - Observation Sub-ID (ST) S7.16.3.4
 
     obx_5 : list[varies] | None
-        OBX.5 (opt, rep) - Observation Value (varies)
+        OBX.5 (opt, rep) - Observation Value (varies) S7.4.2.5
 
     obx_6 : CWE | None
-        OBX.6 (opt) - Units (CWE)
+        OBX.6 (opt) - Units (CWE) S13.4.9.13 | 9999 - no table for CE
 
     obx_7 : str | None
-        OBX.7 (opt) - References Range (ST)
+        OBX.7 (opt) - References Range (ST) S7.16.3.7
 
     obx_8 : list[CWE] | None
-        OBX.8 (opt, rep) - Interpretation Codes (CWE)
+        OBX.8 (opt, rep) - Interpretation Codes (CWE) S7.16.3.8 | 0078 - Interpretation Codes
 
     obx_9 : str | None
-        OBX.9 (opt) - Probability (NM)
+        OBX.9 (opt) - Probability (NM) S7.16.3.9
 
     obx_10 : list[str] | None
-        OBX.10 (opt, rep) - Nature of Abnormal Test (ID)
+        OBX.10 (opt, rep) - Nature of Abnormal Test (ID) S7.16.3.10 | 0080 - Nature of Abnormal Testing
 
     obx_11 : str
-        OBX.11 (req) - Observation Result Status (ID)
+        OBX.11 (req) - Observation Result Status (ID) S7.16.3.11 | 0085 - Observation Result Status Codes Interpretation
 
     obx_12 : str | None
-        OBX.12 (opt) - Effective Date of Reference Range (DTM)
+        OBX.12 (opt) - Effective Date of Reference Range (DTM) S7.16.3.12
 
     obx_13 : str | None
-        OBX.13 (opt) - User Defined Access Checks (ST)
+        OBX.13 (opt) - User Defined Access Checks (ST) S7.16.3.13
 
     obx_14 : str | None
-        OBX.14 (opt) - Date/Time of the Observation (DTM)
+        OBX.14 (opt) - Date/Time of the Observation (DTM) S7.16.3.14
 
     obx_15 : CWE | None
-        OBX.15 (opt) - Producer's ID (CWE)
+        OBX.15 (opt) - Producer's ID (CWE) S7.16.3.15 | 9999 - no table for CE
 
     obx_16 : list[XCN] | None
-        OBX.16 (opt, rep) - Responsible Observer (XCN)
+        OBX.16 (opt, rep) - Responsible Observer (XCN) S7.16.3.16
 
     obx_17 : list[CWE] | None
-        OBX.17 (opt, rep) - Observation Method (CWE)
+        OBX.17 (opt, rep) - Observation Method (CWE) S7.16.3.17 | 9999 - no table for CE
 
     obx_18 : list[EI] | None
-        OBX.18 (opt, rep) - Equipment Instance Identifier (EI)
+        OBX.18 (opt, rep) - Equipment Instance Identifier (EI) S13.4.1.1
 
     obx_19 : str | None
-        OBX.19 (opt) - Date/Time of the Analysis (DTM)
+        OBX.19 (opt) - Date/Time of the Analysis (DTM) S7.16.3.19
 
     obx_20 : list[CWE] | None
-        OBX.20 (opt, rep) - Observation Site (CWE)
+        OBX.20 (opt, rep) - Observation Site (CWE) S7.16.3.20 | 0163 - Body Site
 
     obx_21 : EI | None
-        OBX.21 (opt) - Observation Instance Identifier (EI)
+        OBX.21 (opt) - Observation Instance Identifier (EI) S7.16.3.21
 
     obx_22 : CNE | None
-        OBX.22 (opt) - Mood Code (CNE)
+        OBX.22 (opt) - Mood Code (CNE) S12.4.1.22 | 0725 - Mood Codes
 
     obx_23 : XON | None
-        OBX.23 (opt) - Performing Organization Name (XON)
+        OBX.23 (opt) - Performing Organization Name (XON) S7.16.3.23
 
     obx_24 : XAD | None
-        OBX.24 (opt) - Performing Organization Address (XAD)
+        OBX.24 (opt) - Performing Organization Address (XAD) S7.16.3.24
 
     obx_25 : XCN | None
-        OBX.25 (opt) - Performing Organization Medical Director (XCN)
+        OBX.25 (opt) - Performing Organization Medical Director (XCN) S7.16.3.25
 
     obx_26 : str | None
-        OBX.26 (opt) - Patient Results Release Category (ID)
+        OBX.26 (opt) - Patient Results Release Category (ID) S7.4.2.26 | 0909 - Patient Results Release Categorization Scheme
     """
 
     obx_1: Optional[str] = Field(

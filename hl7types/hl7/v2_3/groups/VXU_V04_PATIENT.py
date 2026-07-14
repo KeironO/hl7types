@@ -22,19 +22,19 @@ class VXU_V04_PATIENT(HL7Model):
     """HL7 v2 VXU_V04.PATIENT group.
 
     Attributes:
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
+        PV1 (PV1): Patient visit, required
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
     """
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     model_config = {"populate_by_name": True}

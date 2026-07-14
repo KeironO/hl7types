@@ -15,27 +15,27 @@ from ..datatypes.CE import CE
 
 
 class RXC(HL7Model):
-    """HL7 v2 RXC segment.
+    """Pharmacy component order segment (S4.8.4).
 
     Attributes
     ----------
     rxc_1 : str
-        RXC.1 (req) - RX Component Type (ID)
+        RXC.1 (req) - RX Component Type (ID) S4.8.4.1 | 0166 - RX Component Type
 
     rxc_2 : CE
-        RXC.2 (req) - Component Code (CE)
+        RXC.2 (req) - Component Code (CE) S4.8.4.2
 
     rxc_3 : str
-        RXC.3 (req) - Component Amount (NM)
+        RXC.3 (req) - Component Amount (NM) S4.8.4.3
 
     rxc_4 : CE
-        RXC.4 (req) - Component Units (CE)
+        RXC.4 (req) - Component Units (CE) S4.8.4.4
 
     rxc_5 : str | None
-        RXC.5 (opt) - Component Strength (NM)
+        RXC.5 (opt) - Component Strength (NM) S4.8.4.5
 
     rxc_6 : CE | None
-        RXC.6 (opt) - Component Strength Units (CE)
+        RXC.6 (opt) - Component Strength Units (CE) S4.8.4.6
     """
 
     rxc_1: str = Field(

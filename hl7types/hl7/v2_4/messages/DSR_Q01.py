@@ -31,62 +31,62 @@ _QRF = QRF
 
 
 class DSR_Q01(HL7Model):
-    """HL7 v2 DSR_Q01 message.
+    """QRY/DSR - Query sent for immediate response (S6).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (Optional[QAK]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        DSP (List[DSP]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (Optional[QAK]): Query Acknowledgment, optional
+        QRD (QRD): Original-Style Query Definition, required
+        QRF (Optional[QRF]): Original Style Query Filter, optional
+        DSP (List[DSP]): Display Data, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Original-Style Query Definition",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Original Style Query Filter",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="Display Data",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

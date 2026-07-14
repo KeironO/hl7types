@@ -27,33 +27,31 @@ class OML_O33_SPECIMEN(HL7Model):
     """HL7 v2 OML_O33.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         SPECIMEN_OBSERVATION (Optional[List[OML_O33_SPECIMEN_OBSERVATION]]): optional
-        SAC (Optional[List[SAC]]): optional
+        SAC (Optional[List[SAC]]): Specimen Container detail, optional
         ORDER (List[OML_O33_ORDER]): required
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OML_O33_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     SAC: Optional[List[_SAC]] = Field(
         default=None,
         title="SAC",
-        description="Optional, repeating",
+        description="Specimen Container detail",
     )
 
     ORDER: List[_OML_O33_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

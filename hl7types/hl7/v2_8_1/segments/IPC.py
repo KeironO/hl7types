@@ -16,36 +16,36 @@ from ..datatypes.EI import EI
 
 
 class IPC(HL7Model):
-    """HL7 v2 IPC segment.
+    """Imaging Procedure Control Segment (S4.5.6).
 
     Attributes
     ----------
     ipc_1 : EI
-        IPC.1 (req) - Accession Identifier (EI)
+        IPC.1 (req) - Accession Identifier (EI) S13.4.3.2
 
     ipc_2 : EI
-        IPC.2 (req) - Requested Procedure ID (EI)
+        IPC.2 (req) - Requested Procedure ID (EI) S4.5.6.2
 
     ipc_3 : EI
-        IPC.3 (req) - Study Instance UID (EI)
+        IPC.3 (req) - Study Instance UID (EI) S4.5.6.3
 
     ipc_4 : EI
-        IPC.4 (req) - Scheduled Procedure Step ID (EI)
+        IPC.4 (req) - Scheduled Procedure Step ID (EI) S4.5.6.4
 
     ipc_5 : CWE | None
-        IPC.5 (opt) - Modality (CWE)
+        IPC.5 (opt) - Modality (CWE) S4.5.6.5 | 9999 - no table for CE
 
     ipc_6 : list[CWE] | None
-        IPC.6 (opt, rep) - Protocol Code (CWE)
+        IPC.6 (opt, rep) - Protocol Code (CWE) S4.5.6.6 | 9999 - no table for CE
 
     ipc_7 : EI | None
-        IPC.7 (opt) - Scheduled Station Name (EI)
+        IPC.7 (opt) - Scheduled Station Name (EI) S4.5.6.7
 
     ipc_8 : list[CWE] | None
-        IPC.8 (opt, rep) - Scheduled Procedure Step Location (CWE)
+        IPC.8 (opt, rep) - Scheduled Procedure Step Location (CWE) S4.5.6.8 | 9999 - no table for CE
 
     ipc_9 : str | None
-        IPC.9 (opt) - Scheduled Station AE Title (ST)
+        IPC.9 (opt) - Scheduled Station AE Title (ST) S4.5.6.9
     """
 
     ipc_1: EI = Field(

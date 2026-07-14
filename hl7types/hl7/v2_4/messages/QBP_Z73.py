@@ -20,27 +20,27 @@ _RCP = RCP
 
 
 class QBP_Z73(HL7Model):
-    """HL7 v2 QBP_Z73 message.
+    """Information about Phone Calls (S15).
 
     Attributes:
-        MSH (MSH): required
-        QPD (QPD): required
-        RCP (RCP): required
+        MSH (MSH): Message Header, required
+        QPD (QPD): Query Parameter Definition, required
+        RCP (RCP): Response Control Parameter, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     model_config = {"populate_by_name": True}

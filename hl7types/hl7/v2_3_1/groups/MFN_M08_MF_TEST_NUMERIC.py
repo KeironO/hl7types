@@ -25,26 +25,27 @@ class MFN_M08_MF_TEST_NUMERIC(HL7Model):
     """HL7 v2 MFN_M08.MF_TEST_NUMERIC group.
 
     Attributes:
-        MFE (MFE): required
-        OM1 (Optional[OM1]): optional
+        MFE (MFE): MFE - master file entry segment, required
+        OM1 (Optional[OM1]): OM1 - general segment (fields that apply to most observations), optional
         MF_NUMERIC_OBSERVATION (Optional[MFN_M08_MF_NUMERIC_OBSERVATION]): optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="MFE - master file entry segment",
     )
 
     OM1: Optional[_OM1] = Field(
         default=None,
         title="OM1",
-        description="Optional",
+        description=(
+            "OM1 - general segment (fields that apply to most observations)"
+        ),
     )
 
     MF_NUMERIC_OBSERVATION: Optional[_MFN_M08_MF_NUMERIC_OBSERVATION] = Field(
         default=None,
         title="MF_NUMERIC_OBSERVATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

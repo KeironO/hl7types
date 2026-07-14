@@ -29,40 +29,39 @@ class OPL_O37_PATIENT(HL7Model):
     """HL7 v2 OPL_O37.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        OBX (Optional[List[OBX]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
         INSURANCE (Optional[List[OPL_O37_INSURANCE]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     INSURANCE: Optional[List[_OPL_O37_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     model_config = {"populate_by_name": True}

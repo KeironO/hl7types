@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_EIP(HL7Model):
-    """HL7 v2 CM_EIP data type.
+    """Parent order.
 
     Attributes
     ----------

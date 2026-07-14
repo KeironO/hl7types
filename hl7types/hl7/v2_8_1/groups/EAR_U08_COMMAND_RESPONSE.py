@@ -25,25 +25,24 @@ class EAR_U08_COMMAND_RESPONSE(HL7Model):
     """HL7 v2 EAR_U08.COMMAND_RESPONSE group.
 
     Attributes:
-        ECD (ECD): required
+        ECD (ECD): Equipment Command, required
         SPECIMEN_CONTAINER (Optional[EAR_U08_SPECIMEN_CONTAINER]): optional
-        ECR (ECR): required
+        ECR (ECR): Equipment Command Response, required
     """
 
     ECD: _ECD = Field(
         title="ECD",
-        description="Required",
+        description="Equipment Command",
     )
 
     SPECIMEN_CONTAINER: Optional[_EAR_U08_SPECIMEN_CONTAINER] = Field(
         default=None,
         title="SPECIMEN_CONTAINER",
-        description="Optional",
     )
 
     ECR: _ECR = Field(
         title="ECR",
-        description="Required",
+        description="Equipment Command Response",
     )
 
     model_config = {"populate_by_name": True}

@@ -25,26 +25,25 @@ class RCI_I05_OBSERVATION(HL7Model):
     """HL7 v2 RCI_I05.OBSERVATION group.
 
     Attributes:
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         RESULTS (Optional[List[RCI_I05_RESULTS]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     RESULTS: Optional[List[_RCI_I05_RESULTS]] = Field(
         default=None,
         title="RESULTS",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

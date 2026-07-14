@@ -25,26 +25,24 @@ class OML_O21_SPECIMEN(HL7Model):
     """HL7 v2 OML_O21.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         SPECIMEN_OBSERVATION (Optional[List[OML_O21_SPECIMEN_OBSERVATION]]): optional
         CONTAINER (Optional[List[OML_O21_CONTAINER]]): optional
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OML_O21_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     CONTAINER: Optional[List[_OML_O21_CONTAINER]] = Field(
         default=None,
         title="CONTAINER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

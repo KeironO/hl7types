@@ -22,19 +22,19 @@ class NMR_N01_APP_STATUS(HL7Model):
     """HL7 v2 NMR_N01.APP_STATUS group.
 
     Attributes:
-        NSC (NSC): required
-        NTE (Optional[List[NTE]]): optional
+        NSC (NSC): Application Status Change, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     NSC: _NSC = Field(
         title="NSC",
-        description="Required",
+        description="Application Status Change",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

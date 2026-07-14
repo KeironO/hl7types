@@ -19,12 +19,12 @@ class RSP_K23_QUERY_RESPONSE(HL7Model):
     """HL7 v2 RSP_K23.QUERY_RESPONSE group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient Identification, required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     model_config = {"populate_by_name": True}

@@ -23,35 +23,35 @@ _QAK = QAK
 
 
 class QCK_Q02(HL7Model):
-    """HL7 v2 QCK_Q02 message.
+    """QRY/QCK - Query sent for deferred response (S5).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (Optional[QAK]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (Optional[QAK]): Query Acknowledgment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgment",
     )
 
     model_config = {"populate_by_name": True}

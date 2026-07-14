@@ -26,33 +26,33 @@ class RDS_O13_PATIENT_VISIT(HL7Model):
     """HL7 v2 RDS_O13.PATIENT_VISIT group.
 
     Attributes:
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        PRT (Optional[List[PRT]]): optional
-        ARV (Optional[List[ARV]]): optional
+        PV1 (PV1): Patient Visit, required
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
     """
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     model_config = {"populate_by_name": True}

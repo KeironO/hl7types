@@ -25,27 +25,26 @@ class RAS_O01_ORDER_DETAIL_SUPPLEMENT(HL7Model):
     """HL7 v2 RAS_O01.ORDER_DETAIL_SUPPLEMENT group.
 
     Attributes:
-        NTE (List[NTE]): required
-        RXR (List[RXR]): required
+        NTE (List[NTE]): Notes and comments segment, required
+        RXR (List[RXR]): Pharmacy route segment, required
         COMPONENTS (Optional[RAS_O01_COMPONENTS]): optional
     """
 
     NTE: List[_NTE] = Field(
         min_length=1,
         title="NTE",
-        description="Required, repeating",
+        description="Notes and comments segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy route segment",
     )
 
     COMPONENTS: Optional[_RAS_O01_COMPONENTS] = Field(
         default=None,
         title="COMPONENTS",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

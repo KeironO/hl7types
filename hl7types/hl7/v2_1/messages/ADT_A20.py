@@ -23,24 +23,24 @@ class ADT_A20(HL7Model):
     """HL7 v2 ADT_A20 message.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        NPU (NPU): required
+        MSH (MSH): MESSAGE HEADER, required
+        EVN (EVN): EVENT TYPE, required
+        NPU (NPU): NON-PATIENT UPDATE, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVENT TYPE",
     )
 
     NPU: _NPU = Field(
         title="NPU",
-        description="Required",
+        description="NON-PATIENT UPDATE",
     )
 
     model_config = {"populate_by_name": True}

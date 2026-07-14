@@ -23,19 +23,18 @@ class ORL_O34_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 ORL_O34.OBSERVATION_REQUEST group.
 
     Attributes:
-        OBR (OBR): required
+        OBR (OBR): Observation Request, required
         SPMSAC_SUPPGRP2 (Optional[List[ORL_O34_SPMSAC_SUPPGRP2]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     SPMSAC_SUPPGRP2: Optional[List[_ORL_O34_SPMSAC_SUPPGRP2]] = Field(
         default=None,
         title="SPMSAC_SUPPGRP2",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

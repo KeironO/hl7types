@@ -17,117 +17,117 @@ from ..datatypes.TS import TS
 
 
 class OBR(HL7Model):
-    """HL7 v2 OBR segment.
+    """OBSERVATION REQUEST (S7.3.1).
 
     Attributes
     ----------
     obr_1 : str | None
-        OBR.1 (opt) - Set ID - Observation Request (SI)
+        OBR.1 (opt) - Set ID - Observation Request (SI) S4.5.1.1
 
     obr_2 : str | None
-        OBR.2 (opt) - Placer Order Number (CM)
+        OBR.2 (opt) - Placer Order Number (CM) S4.5.1.2
 
     obr_3 : str | None
-        OBR.3 (opt) - Filler Order Number (CM)
+        OBR.3 (opt) - Filler Order Number (CM) S6.4.1.23
 
     obr_4 : CE
-        OBR.4 (req) - Universal Service ID (CE)
+        OBR.4 (req) - Universal Service ID (CE) S4.5.1.4
 
     obr_5 : str | None
-        OBR.5 (opt) - Priority (not used) (ID)
+        OBR.5 (opt) - Priority (not used) (ID) S4.5.1.5
 
     obr_6 : TS | None
-        OBR.6 (opt) - Requested date / time (not used) (TS)
+        OBR.6 (opt) - Requested date / time (not used) (TS) S4.5.1.6
 
     obr_7 : TS | None
-        OBR.7 (opt) - Observation date / time (TS)
+        OBR.7 (opt) - Observation date / time (TS) S4.5.1.7
 
     obr_8 : TS | None
-        OBR.8 (opt) - Observation end date / time (TS)
+        OBR.8 (opt) - Observation end date / time (TS) S4.5.1.8
 
     obr_9 : str | None
-        OBR.9 (opt) - Collection Volume (CQ)
+        OBR.9 (opt) - Collection Volume (CQ) S4.5.1.9
 
     obr_10 : list[str] | None
-        OBR.10 (opt, rep) - Collector Identifier (CN)
+        OBR.10 (opt, rep) - Collector Identifier (CN) S4.5.1.10
 
     obr_11 : str | None
-        OBR.11 (opt) - Specimen action code (ID)
+        OBR.11 (opt) - Specimen action code (ID) S4.5.1.11 | 0065 - ACTION CODE
 
     obr_12 : CE | None
-        OBR.12 (opt) - Danger Code (CE)
+        OBR.12 (opt) - Danger Code (CE) S4-30
 
     obr_13 : str | None
-        OBR.13 (opt) - Relevant clinical information (ST)
+        OBR.13 (opt) - Relevant clinical information (ST) S4.5.1.13
 
     obr_14 : TS | None
-        OBR.14 (opt) - Specimen received date / time (TS)
+        OBR.14 (opt) - Specimen received date / time (TS) S4.5.1.14
 
     obr_15 : str | None
-        OBR.15 (opt) - Specimen source (CM)
+        OBR.15 (opt) - Specimen source (CM) S4.5.1.15 | 0070 - SOURCE OF SPECIMEN
 
     obr_16 : str | None
-        OBR.16 (opt) - Ordering Provider (CN)
+        OBR.16 (opt) - Ordering Provider (CN) S4.5.1.16
 
     obr_17 : list[str] | None
-        OBR.17 (opt, rep) - Order Callback Phone Number (TN)
+        OBR.17 (opt, rep) - Order Callback Phone Number (TN) S4.5.1.17
 
     obr_18 : str | None
-        OBR.18 (opt) - Placer field 1 (ST)
+        OBR.18 (opt) - Placer field 1 (ST) S4.5.1.18
 
     obr_19 : str | None
-        OBR.19 (opt) - Placer field 2 (ST)
+        OBR.19 (opt) - Placer field 2 (ST) S4.5.1.19
 
     obr_20 : str | None
-        OBR.20 (opt) - Filler Field 1 (ST)
+        OBR.20 (opt) - Filler Field 1 (ST) S4.5.1.20
 
     obr_21 : str | None
-        OBR.21 (opt) - Filler Field 2 (ST)
+        OBR.21 (opt) - Filler Field 2 (ST) S4.5.1.21
 
     obr_22 : TS | None
-        OBR.22 (opt) - Results report / status change - date / time (TS)
+        OBR.22 (opt) - Results report / status change - date / time (TS) S4.5.1.22
 
     obr_23 : str | None
-        OBR.23 (opt) - Charge to Practice (CM)
+        OBR.23 (opt) - Charge to Practice (CM) S4.5.1.23
 
     obr_24 : str | None
-        OBR.24 (opt) - Diagnostic service section ID (ID)
+        OBR.24 (opt) - Diagnostic service section ID (ID) S4.5.1.24 | 0074 - DIAGNOSTIC SERVICE SECTION ID
 
     obr_25 : str | None
-        OBR.25 (opt) - Result Status (ID)
+        OBR.25 (opt) - Result Status (ID) S4.5.1.25 | 0123 - RESULT STATUS - OBR
 
     obr_26 : str | None
-        OBR.26 (opt) - Parent Result (CM)
+        OBR.26 (opt) - Parent Result (CM) S4.5.1.26
 
     obr_27 : list[TQ] | None
-        OBR.27 (opt, rep) - Quantity / timing (TQ)
+        OBR.27 (opt, rep) - Quantity / timing (TQ) S4.8.12.3
 
     obr_28 : list[str] | None
-        OBR.28 (opt, rep) - Result Copies To (CN)
+        OBR.28 (opt, rep) - Result Copies To (CN) S4.5.1.28
 
     obr_29 : str | None
-        OBR.29 (opt) - Parent Number (CM)
+        OBR.29 (opt) - Parent Number (CM) S4.5.1.29
 
     obr_30 : str | None
-        OBR.30 (opt) - Transportation Mode (ID)
+        OBR.30 (opt) - Transportation Mode (ID) S4.5.1.30 | 0124 - TRANSPORTATION MODE
 
     obr_31 : list[CE] | None
-        OBR.31 (opt, rep) - Reason for Study (CE)
+        OBR.31 (opt, rep) - Reason for Study (CE) S4.5.1.31
 
     obr_32 : str | None
-        OBR.32 (opt) - Principal Result Interpreter (CM)
+        OBR.32 (opt) - Principal Result Interpreter (CM) S4.5.1.32
 
     obr_33 : list[str] | None
-        OBR.33 (opt, rep) - Assistant Result Interpreter (CM)
+        OBR.33 (opt, rep) - Assistant Result Interpreter (CM) S4.5.1.33
 
     obr_34 : list[str] | None
-        OBR.34 (opt, rep) - Technician (CM)
+        OBR.34 (opt, rep) - Technician (CM) S4.5.1.34
 
     obr_35 : list[str] | None
-        OBR.35 (opt, rep) - Transcriptionist (CM)
+        OBR.35 (opt, rep) - Transcriptionist (CM) S4.5.1.35
 
     obr_36 : TS | None
-        OBR.36 (opt) - Scheduled date / time (TS)
+        OBR.36 (opt) - Scheduled date / time (TS) S4.5.1.36
     """
 
     obr_1: Optional[str] = Field(

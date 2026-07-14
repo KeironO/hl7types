@@ -22,19 +22,19 @@ class EAC_U07_SPECIMEN_CONTAINER(HL7Model):
     """HL7 v2 EAC_U07.SPECIMEN_CONTAINER group.
 
     Attributes:
-        SAC (SAC): required
-        SPM (Optional[List[SPM]]): optional
+        SAC (SAC): Specimen Container detail, required
+        SPM (Optional[List[SPM]]): Specimen, optional
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     SPM: Optional[List[_SPM]] = Field(
         default=None,
         title="SPM",
-        description="Optional, repeating",
+        description="Specimen",
     )
 
     model_config = {"populate_by_name": True}

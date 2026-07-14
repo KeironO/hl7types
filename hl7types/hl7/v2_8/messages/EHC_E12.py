@@ -38,81 +38,80 @@ _UAC = UAC
 
 
 class EHC_E12(HL7Model):
-    """HL7 v2 EHC_E12 message.
+    """Request Additional Information (S16.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[List[UAC]]): optional
-        RFI (RFI): required
-        CTD (Optional[List[CTD]]): optional
-        IVC (IVC): required
-        PSS (PSS): required
-        PSG (PSG): required
-        PID (Optional[PID]): optional
-        PSL (Optional[List[PSL]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[List[UAC]]): User Authentication Credential Segment, optional
+        RFI (RFI): Request for Information, required
+        CTD (Optional[List[CTD]]): Contact Data, optional
+        IVC (IVC): Invoice Segment, required
+        PSS (PSS): Product/Service Section, required
+        PSG (PSG): Product/Service Group, required
+        PID (Optional[PID]): Patient Identification, optional
+        PSL (Optional[List[PSL]]): Product/Service Line Item, optional
         REQUEST (List[EHC_E12_REQUEST]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[List[_UAC]] = Field(
         default=None,
         title="UAC",
-        description="Optional, repeating",
+        description="User Authentication Credential Segment",
     )
 
     RFI: _RFI = Field(
         title="RFI",
-        description="Required",
+        description="Request for Information",
     )
 
     CTD: Optional[List[_CTD]] = Field(
         default=None,
         title="CTD",
-        description="Optional, repeating",
+        description="Contact Data",
     )
 
     IVC: _IVC = Field(
         title="IVC",
-        description="Required",
+        description="Invoice Segment",
     )
 
     PSS: _PSS = Field(
         title="PSS",
-        description="Required",
+        description="Product/Service Section",
     )
 
     PSG: _PSG = Field(
         title="PSG",
-        description="Required",
+        description="Product/Service Group",
     )
 
     PID: Optional[_PID] = Field(
         default=None,
         title="PID",
-        description="Optional",
+        description="Patient Identification",
     )
 
     PSL: Optional[List[_PSL]] = Field(
         default=None,
         title="PSL",
-        description="Optional, repeating",
+        description="Product/Service Line Item",
     )
 
     REQUEST: List[_EHC_E12_REQUEST] = Field(
         min_length=1,
         title="REQUEST",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

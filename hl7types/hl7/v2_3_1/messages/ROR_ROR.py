@@ -29,39 +29,38 @@ class ROR_ROR(HL7Model):
     """HL7 v2 ROR_ROR message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
+        MSH (MSH): MSH - message header segment, required
+        MSA (MSA): MSA - message acknowledgment segment, required
+        ERR (Optional[ERR]): ERR - error segment, optional
         DEFINITION (List[ROR_ROR_DEFINITION]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MSA - message acknowledgment segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="ERR - error segment",
     )
 
     DEFINITION: List[_ROR_ROR_DEFINITION] = Field(
         min_length=1,
         title="DEFINITION",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -21,18 +21,18 @@ class ADT_A45_MERGE_INFO(HL7Model):
     """HL7 v2 ADT_A45.MERGE_INFO group.
 
     Attributes:
-        MRG (MRG): required
-        PV1 (PV1): required
+        MRG (MRG): MRG - merge patient information segment-, required
+        PV1 (PV1): PV1 - patient visit segment-, required
     """
 
     MRG: _MRG = Field(
         title="MRG",
-        description="Required",
+        description="MRG - merge patient information segment-",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PV1 - patient visit segment-",
     )
 
     model_config = {"populate_by_name": True}

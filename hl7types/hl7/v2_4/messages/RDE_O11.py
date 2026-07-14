@@ -24,36 +24,34 @@ _RDE_O11_PATIENT = RDE_O11_PATIENT
 
 
 class RDE_O11(HL7Model):
-    """HL7 v2 RDE_O11 message.
+    """RDE - Pharmacy/treatment encoded order (S4).
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[RDE_O11_PATIENT]): optional
         ORDER (List[RDE_O11_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_RDE_O11_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RDE_O11_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

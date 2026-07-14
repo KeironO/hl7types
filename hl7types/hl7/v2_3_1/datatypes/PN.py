@@ -15,7 +15,7 @@ from .FN import FN
 
 
 class PN(HL7Model):
-    """HL7 v2 PN data type.
+    """Person name (S2.8.29).
 
     Attributes
     ----------

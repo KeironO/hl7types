@@ -18,36 +18,36 @@ from ..datatypes.XCN import XCN
 
 
 class PDA(HL7Model):
-    """HL7 v2 PDA segment.
+    """Patient Death and Autopsy (S3.4.13).
 
     Attributes
     ----------
     pda_1 : list[CWE] | None
-        PDA.1 (opt, rep) - Death Cause Code (CWE)
+        PDA.1 (opt, rep) - Death Cause Code (CWE) S3.4.13.1
 
     pda_2 : PL | None
-        PDA.2 (opt) - Death Location (PL)
+        PDA.2 (opt) - Death Location (PL) S3.4.13.2
 
     pda_3 : str | None
-        PDA.3 (opt) - Death Certified Indicator (ID)
+        PDA.3 (opt) - Death Certified Indicator (ID) S3.4.13.3 | 0136 - Yes/no Indicator
 
     pda_4 : str | None
-        PDA.4 (opt) - Death Certificate Signed Date/Time (DTM)
+        PDA.4 (opt) - Death Certificate Signed Date/Time (DTM) S3.4.13.4
 
     pda_5 : XCN | None
-        PDA.5 (opt) - Death Certified By (XCN)
+        PDA.5 (opt) - Death Certified By (XCN) S3.4.13.5
 
     pda_6 : str | None
-        PDA.6 (opt) - Autopsy Indicator (ID)
+        PDA.6 (opt) - Autopsy Indicator (ID) S3.4.13.6 | 0136 - Yes/no Indicator
 
     pda_7 : DR | None
-        PDA.7 (opt) - Autopsy Start and End Date/Time (DR)
+        PDA.7 (opt) - Autopsy Start and End Date/Time (DR) S3.4.13.7
 
     pda_8 : XCN | None
-        PDA.8 (opt) - Autopsy Performed By (XCN)
+        PDA.8 (opt) - Autopsy Performed By (XCN) S3.4.13.8
 
     pda_9 : str | None
-        PDA.9 (opt) - Coroner Indicator (ID)
+        PDA.9 (opt) - Coroner Indicator (ID) S3.4.13.9 | 0136 - Yes/no Indicator
     """
 
     pda_1: Optional[List[CWE]] = Field(

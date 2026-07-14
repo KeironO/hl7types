@@ -22,20 +22,20 @@ class RSP_Z82_TREATMENT(HL7Model):
     """HL7 v2 RSP_Z82.TREATMENT group.
 
     Attributes:
-        RXC (List[RXC]): required
-        NTE (Optional[List[NTE]]): optional
+        RXC (List[RXC]): Pharmacy/Treatment Component Order, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     RXC: List[_RXC] = Field(
         min_length=1,
         title="RXC",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -28,12 +28,12 @@ _UAC = UAC
 
 
 class DPR_O48(HL7Model):
-    """HL7 v2 DPR_O48 message.
+    """Donation Procedure Message (S4.16.15).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         DONOR (Optional[DPR_O48_DONOR]): optional
         DONATION_ORDER (List[DPR_O48_DONATION_ORDER]): required
         DONATION (Optional[DPR_O48_DONATION]): optional
@@ -41,37 +41,34 @@ class DPR_O48(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     DONOR: Optional[_DPR_O48_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     DONATION_ORDER: List[_DPR_O48_DONATION_ORDER] = Field(
         min_length=1,
         title="DONATION_ORDER",
-        description="Required, repeating",
     )
 
     DONATION: Optional[_DPR_O48_DONATION] = Field(
         default=None,
         title="DONATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

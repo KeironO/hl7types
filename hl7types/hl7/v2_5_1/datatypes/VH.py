@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class VH(HL7Model):
-    """HL7 v2 VH data type.
+    """Visiting hours (S2.A.1.80).
 
     Attributes
     ----------

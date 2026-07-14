@@ -28,49 +28,48 @@ _RPL_I02_PROVIDER = RPL_I02_PROVIDER
 
 
 class RPL_I02(HL7Model):
-    """HL7 v2 RPL_I02 message.
+    """RQI/RPL - Request/receipt of patient selection display list.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
+        MSH (MSH): MSH - message header segment, required
+        MSA (MSA): MSA - message acknowledgment segment, required
         PROVIDER (List[RPL_I02_PROVIDER]): required
-        NTE (Optional[List[NTE]]): optional
-        DSP (Optional[List[DSP]]): optional
-        DSC (Optional[DSC]): optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        DSP (Optional[List[DSP]]): DSP - display data segment, optional
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MSA - message acknowledgment segment",
     )
 
     PROVIDER: List[_RPL_I02_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     DSP: Optional[List[_DSP]] = Field(
         default=None,
         title="DSP",
-        description="Optional, repeating",
+        description="DSP - display data segment",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

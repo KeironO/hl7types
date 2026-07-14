@@ -27,33 +27,32 @@ class CQU_I19_PATHWAY(HL7Model):
     """HL7 v2 CQU_I19.PATHWAY group.
 
     Attributes:
-        PTH (PTH): required
-        VAR (Optional[List[VAR]]): optional
+        PTH (PTH): Pathway, required
+        VAR (Optional[List[VAR]]): Variance, optional
         ROLE_PATHWAY (Optional[List[CQU_I19_ROLE_PATHWAY]]): optional
-        OBX (Optional[List[OBX]]): optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     PTH: _PTH = Field(
         title="PTH",
-        description="Required",
+        description="Pathway",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ROLE_PATHWAY: Optional[List[_CQU_I19_ROLE_PATHWAY]] = Field(
         default=None,
         title="ROLE_PATHWAY",
-        description="Optional, repeating",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

@@ -43,88 +43,84 @@ class OMG_O19_ORDER(HL7Model):
     """HL7 v2 OMG_O19.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[OMG_O19_TIMING]]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
-        CTD (Optional[CTD]): optional
-        DG1 (Optional[List[DG1]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        CTD (Optional[CTD]): Contact Data, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[OMG_O19_OBSERVATION]]): optional
         SPECIMEN (Optional[List[OMG_O19_SPECIMEN]]): optional
         PRIOR_RESULT (Optional[List[OMG_O19_PRIOR_RESULT]]): optional
-        FT1 (Optional[List[FT1]]): optional
-        CTI (Optional[List[CTI]]): optional
-        BLG (Optional[BLG]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_OMG_O19_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_OMG_O19_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     SPECIMEN: Optional[List[_OMG_O19_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
-        description="Optional, repeating",
     )
 
     PRIOR_RESULT: Optional[List[_OMG_O19_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
-        description="Optional, repeating",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

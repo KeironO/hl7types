@@ -38,82 +38,79 @@ _VXR_V03_PATIENT_VISIT = VXR_V03_PATIENT_VISIT
 
 
 class VXR_V03(HL7Model):
-    """HL7 v2 VXR_V03 message.
+    """VXR - Vaccination record response (S4).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        QRD (QRD): Original-Style Query Definition, required
+        QRF (Optional[QRF]): Original Style Query Filter, optional
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
+        NK1 (Optional[List[NK1]]): Next of kin / associated parties, optional
         PATIENT_VISIT (Optional[VXR_V03_PATIENT_VISIT]): optional
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[VXR_V03_INSURANCE]]): optional
         ORDER (Optional[List[VXR_V03_ORDER]]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Original-Style Query Definition",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Original Style Query Filter",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin / associated parties",
     )
 
     PATIENT_VISIT: Optional[_VXR_V03_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_VXR_V03_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_VXR_V03_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

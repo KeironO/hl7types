@@ -27,33 +27,32 @@ class RDR_RDR_ENCODING(HL7Model):
     """HL7 v2 RDR_RDR.ENCODING group.
 
     Attributes:
-        RXE (RXE): required
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
         TIMING_ENCODED (Optional[List[RDR_RDR_TIMING_ENCODED]]): optional
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     TIMING_ENCODED: Optional[List[_RDR_RDR_TIMING_ENCODED]] = Field(
         default=None,
         title="TIMING_ENCODED",
-        description="Optional, repeating",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     model_config = {"populate_by_name": True}

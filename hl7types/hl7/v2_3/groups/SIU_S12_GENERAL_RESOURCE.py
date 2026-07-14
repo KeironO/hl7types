@@ -22,19 +22,19 @@ class SIU_S12_GENERAL_RESOURCE(HL7Model):
     """HL7 v2 SIU_S12.GENERAL_RESOURCE group.
 
     Attributes:
-        AIG (AIG): required
-        NTE (Optional[List[NTE]]): optional
+        AIG (AIG): Appointment Information - General Resource, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     AIG: _AIG = Field(
         title="AIG",
-        description="Required",
+        description="Appointment Information - General Resource",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class MSA(HL7Model):
-    """HL7 v2 MSA segment.
+    """MESSAGE ACKNOWLEDGMENT (S2.5.7).
 
     Attributes
     ----------
     msa_1 : str
-        MSA.1 (req) - ACKNOWLEDGMENT CODE (ID)
+        MSA.1 (req) - ACKNOWLEDGMENT CODE (ID) S2-45 | 0008 - ACKNOWLEDGMENT CODE
 
     msa_2 : str
         MSA.2 (req) - MESSAGE CONTROL ID (ST)
@@ -30,7 +30,7 @@ class MSA(HL7Model):
         MSA.4 (opt) - EXPECTED SEQUENCE NUMBER (NM)
 
     msa_5 : str | None
-        MSA.5 (opt) - DELAYED ACKNOWLEDGMENT TYPE (ID)
+        MSA.5 (opt) - DELAYED ACKNOWLEDGMENT TYPE (ID) | 0102 - DELAYED ACKNOWLEDGMENT TYPE
     """
 
     msa_1: str = Field(

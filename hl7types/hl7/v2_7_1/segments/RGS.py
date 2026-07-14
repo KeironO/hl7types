@@ -15,18 +15,18 @@ from ..datatypes.CWE import CWE
 
 
 class RGS(HL7Model):
-    """HL7 v2 RGS segment.
+    """Resource Group (S10.6.3).
 
     Attributes
     ----------
     rgs_1 : str
-        RGS.1 (req) - Set ID - RGS (SI)
+        RGS.1 (req) - Set ID - RGS (SI) S10.6.3.1
 
     rgs_2 : str | None
-        RGS.2 (opt) - Segment Action Code (ID)
+        RGS.2 (opt) - Segment Action Code (ID) S10.6.3.2 | 0206 - Segment action code
 
     rgs_3 : CWE | None
-        RGS.3 (opt) - Resource Group ID (CWE)
+        RGS.3 (opt) - Resource Group ID (CWE) S10.6.3.3
     """
 
     rgs_1: str = Field(

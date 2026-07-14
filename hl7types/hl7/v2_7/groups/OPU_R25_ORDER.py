@@ -31,47 +31,45 @@ class OPU_R25_ORDER(HL7Model):
     """HL7 v2 OPU_R25.ORDER group.
 
     Attributes:
-        OBR (OBR): required
-        ORC (Optional[ORC]): optional
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
+        OBR (OBR): Observation Request, required
+        ORC (Optional[ORC]): Common Order, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING_QTY (Optional[List[OPU_R25_TIMING_QTY]]): optional
         RESULT (List[OPU_R25_RESULT]): required
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING_QTY: Optional[List[_OPU_R25_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
-        description="Optional, repeating",
     )
 
     RESULT: List[_OPU_R25_RESULT] = Field(
         min_length=1,
         title="RESULT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -29,39 +29,37 @@ class ORF_R04(HL7Model):
     """HL7 v2 ORF_R04 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (MSA): MESSAGE ACKNOWLEDGMENT, required
         QUERY_RESPONSE (List[ORF_R04_QUERY_RESPONSE]): required
         ORDER (List[ORF_R04_ORDER]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): CONTINUATION POINTER, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     QUERY_RESPONSE: List[_ORF_R04_QUERY_RESPONSE] = Field(
         min_length=1,
         title="QUERY_RESPONSE",
-        description="Required, repeating",
     )
 
     ORDER: List[_ORF_R04_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="CONTINUATION POINTER",
     )
 
     model_config = {"populate_by_name": True}

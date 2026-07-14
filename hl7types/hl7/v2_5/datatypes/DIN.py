@@ -16,7 +16,7 @@ from .TS import TS
 
 
 class DIN(HL7Model):
-    """HL7 v2 DIN data type.
+    """Date and institution name (S2.A.16).
 
     Attributes
     ----------

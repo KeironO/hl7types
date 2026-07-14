@@ -24,26 +24,26 @@ class PGL_PC6_ORDER_OBSERVATION(HL7Model):
     """HL7 v2 PGL_PC6.ORDER_OBSERVATION group.
 
     Attributes:
-        OBX (OBX): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        OBX (OBX): OBX - observation/result segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="OBX - observation/result segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     model_config = {"populate_by_name": True}

@@ -27,33 +27,32 @@ class EAC_U07_COMMAND(HL7Model):
     """HL7 v2 EAC_U07.COMMAND group.
 
     Attributes:
-        ECD (ECD): required
-        TQ1 (Optional[TQ1]): optional
+        ECD (ECD): Equipment Command, required
+        TQ1 (Optional[TQ1]): Timing/Quantity, optional
         SPECIMEN_CONTAINER (Optional[EAC_U07_SPECIMEN_CONTAINER]): optional
-        CNS (Optional[CNS]): optional
+        CNS (Optional[CNS]): Clear Notification, optional
     """
 
     ECD: _ECD = Field(
         title="ECD",
-        description="Required",
+        description="Equipment Command",
     )
 
     TQ1: Optional[_TQ1] = Field(
         default=None,
         title="TQ1",
-        description="Optional",
+        description="Timing/Quantity",
     )
 
     SPECIMEN_CONTAINER: Optional[_EAC_U07_SPECIMEN_CONTAINER] = Field(
         default=None,
         title="SPECIMEN_CONTAINER",
-        description="Optional",
     )
 
     CNS: Optional[_CNS] = Field(
         default=None,
         title="CNS",
-        description="Optional",
+        description="Clear Notification",
     )
 
     model_config = {"populate_by_name": True}

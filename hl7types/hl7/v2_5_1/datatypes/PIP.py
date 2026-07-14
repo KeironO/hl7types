@@ -16,7 +16,7 @@ from .EI import EI
 
 
 class PIP(HL7Model):
-    """HL7 v2 PIP data type.
+    """Practitioner institutional privileges (S2.A.1.52).
 
     Attributes
     ----------

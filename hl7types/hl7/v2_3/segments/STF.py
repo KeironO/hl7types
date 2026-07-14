@@ -20,87 +20,87 @@ from ..datatypes.XPN import XPN
 
 
 class STF(HL7Model):
-    """HL7 v2 STF segment.
+    """Staff identification segment (S8.6.2).
 
     Attributes
     ----------
     stf_1 : CE
-        STF.1 (req) - STF - Primary Key Value (CE)
+        STF.1 (req) - STF - Primary Key Value (CE) S8.6.2.1
 
     stf_2 : list[CE] | None
-        STF.2 (opt, rep) - Staff ID Code (CE)
+        STF.2 (opt, rep) - Staff ID Code (CE) S8.6.2.2
 
     stf_3 : XPN | None
-        STF.3 (opt) - Staff Name (XPN)
+        STF.3 (opt) - Staff Name (XPN) S8.6.2.3
 
     stf_4 : list[str] | None
-        STF.4 (opt, rep) - Staff Type (ID)
+        STF.4 (opt, rep) - Staff Type (ID) S8.6.2.4 | 0182 - Staff Type
 
     stf_5 : str | None
-        STF.5 (opt) - Sex (IS)
+        STF.5 (opt) - Sex (IS) S3.3.2 | 0001 - Sex
 
     stf_6 : TS | None
-        STF.6 (opt) - Date of Birth (TS)
+        STF.6 (opt) - Date of Birth (TS) S3.3.2
 
     stf_7 : str | None
-        STF.7 (opt) - Active/Inactive Flag (ID)
+        STF.7 (opt) - Active/Inactive Flag (ID) S8.6.2 | 0183 - Active/Inactive
 
     stf_8 : list[CE] | None
-        STF.8 (opt, rep) - Department (CE)
+        STF.8 (opt, rep) - Department (CE) S8.6.2.8 | 0184 - Department
 
     stf_9 : list[CE] | None
-        STF.9 (opt, rep) - Service (CE)
+        STF.9 (opt, rep) - Service (CE) S8.6.2.9
 
     stf_10 : list[str] | None
-        STF.10 (opt, rep) - Phone (TN)
+        STF.10 (opt, rep) - Phone (TN) S8.6.2.10
 
     stf_11 : list[AD] | None
-        STF.11 (opt, rep) - Office/Home Address (AD)
+        STF.11 (opt, rep) - Office/Home Address (AD) S8.6.2.11
 
     stf_12 : list[str] | None
-        STF.12 (opt, rep) - Activation Date (CM)
+        STF.12 (opt, rep) - Activation Date (CM) S8.6.2.12
 
     stf_13 : list[str] | None
-        STF.13 (opt, rep) - Inactivation Date (CM)
+        STF.13 (opt, rep) - Inactivation Date (CM) S8.6.2.13
 
     stf_14 : list[CE] | None
-        STF.14 (opt, rep) - Backup Person ID (CE)
+        STF.14 (opt, rep) - Backup Person ID (CE) S8.6.2.14
 
     stf_15 : list[str] | None
-        STF.15 (opt, rep) - E-mail Address (ST)
+        STF.15 (opt, rep) - E-mail Address (ST) S8.6.2.15
 
     stf_16 : CE | None
-        STF.16 (opt) - Preferred Method of Contact (CE)
+        STF.16 (opt) - Preferred Method of Contact (CE) S8.6.2.16 | 0185 - Preferred Method of Contact
 
     stf_17 : list[str] | None
-        STF.17 (opt, rep) - Marital Status (IS)
+        STF.17 (opt, rep) - Marital Status (IS) S3.3.2 | 0002 - Marital Status
 
     stf_18 : str | None
-        STF.18 (opt) - Job Title (ST)
+        STF.18 (opt) - Job Title (ST) S6.4.5
 
     stf_19 : JCC | None
-        STF.19 (opt) - Job Code/Class (JCC)
+        STF.19 (opt) - Job Code/Class (JCC) S6.4.5
 
     stf_20 : str | None
-        STF.20 (opt) - Employment Status (IS)
+        STF.20 (opt) - Employment Status (IS) S8.6.2.20 | 0066 - Employment Status
 
     stf_21 : str | None
-        STF.21 (opt) - Additional Insured on Auto (ID)
+        STF.21 (opt) - Additional Insured on Auto (ID) S8.6.2.21 | 0136 - Yes/No Indicator
 
     stf_22 : DLN | None
-        STF.22 (opt) - Driver's License Number (DLN)
+        STF.22 (opt) - Driver's License Number (DLN) S3.3.2.20
 
     stf_23 : str | None
-        STF.23 (opt) - Copy Auto Ins (ID)
+        STF.23 (opt) - Copy Auto Ins (ID) S8.6.2.23 | 0136 - Yes/No Indicator
 
     stf_24 : str | None
-        STF.24 (opt) - Auto Ins. Expires (DT)
+        STF.24 (opt) - Auto Ins. Expires (DT) S8.6.2.24
 
     stf_25 : str | None
-        STF.25 (opt) - Date Last DMV Review (DT)
+        STF.25 (opt) - Date Last DMV Review (DT) S8.6.2.25
 
     stf_26 : str | None
-        STF.26 (opt) - Date Next DMV Review (DT)
+        STF.26 (opt) - Date Next DMV Review (DT) S8.6.2.26
     """
 
     stf_1: CE = Field(

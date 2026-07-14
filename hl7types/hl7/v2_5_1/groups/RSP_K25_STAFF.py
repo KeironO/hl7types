@@ -32,54 +32,54 @@ class RSP_K25_STAFF(HL7Model):
     """HL7 v2 RSP_K25.STAFF group.
 
     Attributes:
-        STF (STF): required
-        PRA (Optional[List[PRA]]): optional
-        ORG (Optional[List[ORG]]): optional
-        AFF (Optional[List[AFF]]): optional
-        LAN (Optional[List[LAN]]): optional
-        EDU (Optional[List[EDU]]): optional
-        CER (Optional[List[CER]]): optional
+        STF (STF): Staff Identification, required
+        PRA (Optional[List[PRA]]): Practitioner Detail, optional
+        ORG (Optional[List[ORG]]): Practitioner Organization Unit, optional
+        AFF (Optional[List[AFF]]): Professional Affiliation, optional
+        LAN (Optional[List[LAN]]): Language Detail, optional
+        EDU (Optional[List[EDU]]): Educational Detail, optional
+        CER (Optional[List[CER]]): Certificate Detail, optional
     """
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[List[_PRA]] = Field(
         default=None,
         title="PRA",
-        description="Optional, repeating",
+        description="Practitioner Detail",
     )
 
     ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
-        description="Optional, repeating",
+        description="Practitioner Organization Unit",
     )
 
     AFF: Optional[List[_AFF]] = Field(
         default=None,
         title="AFF",
-        description="Optional, repeating",
+        description="Professional Affiliation",
     )
 
     LAN: Optional[List[_LAN]] = Field(
         default=None,
         title="LAN",
-        description="Optional, repeating",
+        description="Language Detail",
     )
 
     EDU: Optional[List[_EDU]] = Field(
         default=None,
         title="EDU",
-        description="Optional, repeating",
+        description="Educational Detail",
     )
 
     CER: Optional[List[_CER]] = Field(
         default=None,
         title="CER",
-        description="Optional, repeating",
+        description="Certificate Detail",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,15 +15,15 @@ from ..datatypes.RCD import RCD
 
 
 class RDF(HL7Model):
-    """HL7 v2 RDF segment.
+    """RDF - table row definition segment (S2.24.18).
 
     Attributes
     ----------
     rdf_1 : str
-        RDF.1 (req) - Number of Columns per Row (NM)
+        RDF.1 (req) - Number of Columns per Row (NM) S2.24.18.1
 
     rdf_2 : list[RCD]
-        RDF.2 (req, rep) - Column Description (RCD)
+        RDF.2 (req, rep) - Column Description (RCD) S2.24.18.2
     """
 
     rdf_1: str = Field(

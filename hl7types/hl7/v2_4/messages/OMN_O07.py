@@ -24,36 +24,34 @@ _OMN_O07_PATIENT = OMN_O07_PATIENT
 
 
 class OMN_O07(HL7Model):
-    """HL7 v2 OMN_O07 message.
+    """OMN - Non-stock requisition order (S4).
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[OMN_O07_PATIENT]): optional
         ORDER (List[OMN_O07_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OMN_O07_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_OMN_O07_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class RI(HL7Model):
-    """HL7 v2 RI data type.
+    """Repeat interval (S2.A.64).
 
     Attributes
     ----------

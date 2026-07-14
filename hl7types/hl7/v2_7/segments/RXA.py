@@ -19,93 +19,93 @@ from ..datatypes.XCN import XCN
 
 
 class RXA(HL7Model):
-    """HL7 v2 RXA segment.
+    """Pharmacy/Treatment Administration (S4.A.4.6).
 
     Attributes
     ----------
     rxa_1 : str
-        RXA.1 (req) - Give Sub-ID Counter (NM)
+        RXA.1 (req) - Give Sub-ID Counter (NM) S4.A.4.5.1
 
     rxa_2 : str
-        RXA.2 (req) - Administration Sub-ID Counter (NM)
+        RXA.2 (req) - Administration Sub-ID Counter (NM) S4.A.4.6.2
 
     rxa_3 : str
-        RXA.3 (req) - Date/Time Start of Administration (DTM)
+        RXA.3 (req) - Date/Time Start of Administration (DTM) S4.A.4.6.3
 
     rxa_4 : str
-        RXA.4 (req) - Date/Time End of Administration (DTM)
+        RXA.4 (req) - Date/Time End of Administration (DTM) S4.A.4.6.4
 
     rxa_5 : CWE
-        RXA.5 (req) - Administered Code (CWE)
+        RXA.5 (req) - Administered Code (CWE) S4.A.4.6.5 | 0292 - Vaccines administered
 
     rxa_6 : str
-        RXA.6 (req) - Administered Amount (NM)
+        RXA.6 (req) - Administered Amount (NM) S4.A.4.6.6
 
     rxa_7 : CWE | None
-        RXA.7 (opt) - Administered Units (CWE)
+        RXA.7 (opt) - Administered Units (CWE) S4.A.4.6.7 | 9999 - no table for CE
 
     rxa_8 : CWE | None
-        RXA.8 (opt) - Administered Dosage Form (CWE)
+        RXA.8 (opt) - Administered Dosage Form (CWE) S4.A.4.6.8 | 9999 - no table for CE
 
     rxa_9 : list[CWE] | None
-        RXA.9 (opt, rep) - Administration Notes (CWE)
+        RXA.9 (opt, rep) - Administration Notes (CWE) S4.A.4.5.9 | 9999 - no table for CE
 
     rxa_10 : list[XCN] | None
-        RXA.10 (opt, rep) - Administering Provider (XCN)
+        RXA.10 (opt, rep) - Administering Provider (XCN) S4.A.4.6.10
 
     rxa_11 : LA2 | None
-        RXA.11 (opt) - Administered-at Location (LA2)
+        RXA.11 (opt) - Administered-at Location (LA2) S4.A.4.6.11
 
     rxa_12 : str | None
-        RXA.12 (opt) - Administered Per (Time Unit) (ST)
+        RXA.12 (opt) - Administered Per (Time Unit) (ST) S4.A.4.6.12
 
     rxa_13 : str | None
-        RXA.13 (opt) - Administered Strength (NM)
+        RXA.13 (opt) - Administered Strength (NM) S4.A.4.6.13
 
     rxa_14 : CWE | None
-        RXA.14 (opt) - Administered Strength Units (CWE)
+        RXA.14 (opt) - Administered Strength Units (CWE) S4.A.4.6.14 | 9999 - no table for CE
 
     rxa_15 : list[str] | None
-        RXA.15 (opt, rep) - Substance Lot Number (ST)
+        RXA.15 (opt, rep) - Substance Lot Number (ST) S13.4.11.2
 
     rxa_16 : list[str] | None
-        RXA.16 (opt, rep) - Substance Expiration Date (DTM)
+        RXA.16 (opt, rep) - Substance Expiration Date (DTM) S4.A.4.4.19
 
     rxa_17 : list[CWE] | None
-        RXA.17 (opt, rep) - Substance Manufacturer Name (CWE)
+        RXA.17 (opt, rep) - Substance Manufacturer Name (CWE) S4.A.4.4.20 | 0227 - Manufacturers of Vaccines (code=MVX)
 
     rxa_18 : list[CWE] | None
-        RXA.18 (opt, rep) - Substance/Treatment Refusal Reason (CWE)
+        RXA.18 (opt, rep) - Substance/Treatment Refusal Reason (CWE) S4.A.4.6.18 | 9999 - no table for CE
 
     rxa_19 : list[CWE] | None
-        RXA.19 (opt, rep) - Indication (CWE)
+        RXA.19 (opt, rep) - Indication (CWE) S4.A.4.0.20 | 9999 - no table for CE
 
     rxa_20 : str | None
-        RXA.20 (opt) - Completion Status (ID)
+        RXA.20 (opt) - Completion Status (ID) S4.A.4.6.20 | 0322 - Completion Status
 
     rxa_21 : str | None
-        RXA.21 (opt) - Action Code - RXA (ID)
+        RXA.21 (opt) - Action Code - RXA (ID) S4.A.4.6.21 | 0206 - Segment action code
 
     rxa_22 : str | None
-        RXA.22 (opt) - System Entry Date/Time (DTM)
+        RXA.22 (opt) - System Entry Date/Time (DTM) S4.A.4.6.22
 
     rxa_23 : str | None
-        RXA.23 (opt) - Administered Drug Strength Volume (NM)
+        RXA.23 (opt) - Administered Drug Strength Volume (NM) S4.A.4.6.23
 
     rxa_24 : CWE | None
-        RXA.24 (opt) - Administered Drug Strength Volume Units (CWE)
+        RXA.24 (opt) - Administered Drug Strength Volume Units (CWE) S4.A.4.6.24 | 9999 - no table for CE
 
     rxa_25 : CWE | None
-        RXA.25 (opt) - Administered Barcode Identifier (CWE)
+        RXA.25 (opt) - Administered Barcode Identifier (CWE) S4.A.4.6.25 | 9999 - no table for CE
 
     rxa_26 : str | None
-        RXA.26 (opt) - Pharmacy Order Type (ID)
+        RXA.26 (opt) - Pharmacy Order Type (ID) S4.A.4.6.26 | 0480 - Pharmacy Order Types
 
     rxa_27 : PL | None
-        RXA.27 (opt) - Administer-at (PL)
+        RXA.27 (opt) - Administer-at (PL) S4.A.4.6.27
 
     rxa_28 : XAD | None
-        RXA.28 (opt) - Administered-at Address (XAD)
+        RXA.28 (opt) - Administered-at Address (XAD) S4.A.4.6.28
     """
 
     rxa_1: str = Field(

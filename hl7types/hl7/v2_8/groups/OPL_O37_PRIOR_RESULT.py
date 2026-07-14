@@ -29,41 +29,38 @@ class OPL_O37_PRIOR_RESULT(HL7Model):
     """HL7 v2 OPL_O37.PRIOR_RESULT group.
 
     Attributes:
-        NK1 (List[NK1]): required
+        NK1 (List[NK1]): Next of Kin / Associated Parties, required
         PATIENT_PRIOR (Optional[OPL_O37_PATIENT_PRIOR]): optional
         PATIENT_VISIT_PRIOR (Optional[OPL_O37_PATIENT_VISIT_PRIOR]): optional
-        AL1 (Optional[AL1]): optional
+        AL1 (Optional[AL1]): Patient Allergy Information, optional
         ORDER_PRIOR (List[OPL_O37_ORDER_PRIOR]): required
     """
 
     NK1: List[_NK1] = Field(
         min_length=1,
         title="NK1",
-        description="Required, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     PATIENT_PRIOR: Optional[_OPL_O37_PATIENT_PRIOR] = Field(
         default=None,
         title="PATIENT_PRIOR",
-        description="Optional",
     )
 
     PATIENT_VISIT_PRIOR: Optional[_OPL_O37_PATIENT_VISIT_PRIOR] = Field(
         default=None,
         title="PATIENT_VISIT_PRIOR",
-        description="Optional",
     )
 
     AL1: Optional[_AL1] = Field(
         default=None,
         title="AL1",
-        description="Optional",
+        description="Patient Allergy Information",
     )
 
     ORDER_PRIOR: List[_OPL_O37_ORDER_PRIOR] = Field(
         min_length=1,
         title="ORDER_PRIOR",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

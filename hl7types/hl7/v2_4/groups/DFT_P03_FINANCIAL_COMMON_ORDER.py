@@ -25,7 +25,7 @@ class DFT_P03_FINANCIAL_COMMON_ORDER(HL7Model):
     """HL7 v2 DFT_P03.FINANCIAL_COMMON_ORDER group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
+        ORC (Optional[ORC]): Common Order, optional
         FINANCIAL_ORDER (Optional[DFT_P03_FINANCIAL_ORDER]): optional
         FINANCIAL_OBSERVATION (Optional[List[DFT_P03_FINANCIAL_OBSERVATION]]): optional
     """
@@ -33,19 +33,17 @@ class DFT_P03_FINANCIAL_COMMON_ORDER(HL7Model):
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     FINANCIAL_ORDER: Optional[_DFT_P03_FINANCIAL_ORDER] = Field(
         default=None,
         title="FINANCIAL_ORDER",
-        description="Optional",
     )
 
     FINANCIAL_OBSERVATION: Optional[List[_DFT_P03_FINANCIAL_OBSERVATION]] = Field(
         default=None,
         title="FINANCIAL_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

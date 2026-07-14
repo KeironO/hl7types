@@ -30,46 +30,46 @@ class UDM_Q05(HL7Model):
     """HL7 v2 UDM_Q05 message.
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        URD (URD): required
-        URS (Optional[URS]): optional
-        DSP (List[DSP]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        URD (URD): Results/update Definition, required
+        URS (Optional[URS]): Unsolicited Selection, optional
+        DSP (List[DSP]): Display Data, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     URD: _URD = Field(
         title="URD",
-        description="Required",
+        description="Results/update Definition",
     )
 
     URS: Optional[_URS] = Field(
         default=None,
         title="URS",
-        description="Optional",
+        description="Unsolicited Selection",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="Display Data",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class MRG(HL7Model):
-    """HL7 v2 MRG segment.
+    """MERGE PATIENT INFORMATION.
 
     Attributes
     ----------
     mrg_1 : str
-        MRG.1 (req) - PRIOR PATIENT ID - INTERNAL (CK)
+        MRG.1 (req) - PRIOR PATIENT ID - INTERNAL (CK) S3-13 | 0061 - CHECK DIGIT SCHEME
 
     mrg_2 : str | None
-        MRG.2 (opt) - PRIOR ALTERNATE PATIENT ID (CK)
+        MRG.2 (opt) - PRIOR ALTERNATE PATIENT ID (CK) | 0061 - CHECK DIGIT SCHEME
 
     mrg_3 : str | None
-        MRG.3 (opt) - PRIOR PATIENT ACCOUNT NUMBER (CK)
+        MRG.3 (opt) - PRIOR PATIENT ACCOUNT NUMBER (CK) | 0061 - CHECK DIGIT SCHEME
     """
 
     mrg_1: str = Field(

@@ -24,26 +24,26 @@ class RSP_Z82_VISIT(HL7Model):
     """HL7 v2 RSP_Z82.VISIT group.
 
     Attributes:
-        AL1 (List[AL1]): required
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
+        AL1 (List[AL1]): Patient Allergy Information, required
+        PV1 (PV1): Patient Visit, required
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
     """
 
     AL1: List[_AL1] = Field(
         min_length=1,
         title="AL1",
-        description="Required, repeating",
+        description="Patient Allergy Information",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     model_config = {"populate_by_name": True}

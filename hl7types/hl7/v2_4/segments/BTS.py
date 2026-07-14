@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class BTS(HL7Model):
-    """HL7 v2 BTS segment.
+    """Batch Trailer (S2.16.3).
 
     Attributes
     ----------
     bts_1 : str | None
-        BTS.1 (opt) - Batch Message Count (ST)
+        BTS.1 (opt) - Batch Message Count (ST) S2.16.3.1
 
     bts_2 : str | None
-        BTS.2 (opt) - Batch Comment (ST)
+        BTS.2 (opt) - Batch Comment (ST) S2.16.3.2
 
     bts_3 : list[str] | None
-        BTS.3 (opt, rep) - Batch Totals (NM)
+        BTS.3 (opt, rep) - Batch Totals (NM) S2.16.3.3
     """
 
     bts_1: Optional[str] = Field(

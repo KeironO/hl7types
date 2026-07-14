@@ -26,41 +26,40 @@ _PID = PID
 
 
 class ADT_A45(HL7Model):
-    """HL7 v2 ADT_A45 message.
+    """ADT/ACK - Move visit information - visit number (S3).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
         MERGE_INFO (List[ADT_A45_MERGE_INFO]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     MERGE_INFO: List[_ADT_A45_MERGE_INFO] = Field(
         min_length=1,
         title="MERGE_INFO",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class RX1(HL7Model):
-    """HL7 v2 RX1 segment.
+    """PHARMACY ORDER.
 
     Attributes
     ----------
     rx1_1 : str | None
-        RX1.1 (opt) - UNUSED (ST)
+        RX1.1 (opt) - UNUSED (ST) S4-14
 
     rx1_2 : str | None
         RX1.2 (opt) - UNUSED (ST)
 
     rx1_3 : str | None
-        RX1.3 (opt) - ROUTE (ST)
+        RX1.3 (opt) - ROUTE (ST) | 0033 - ROUTE
 
     rx1_4 : str | None
-        RX1.4 (opt) - SITE ADMINISTERED (ST)
+        RX1.4 (opt) - SITE ADMINISTERED (ST) | 0034 - SITE ADMINISTERED
 
     rx1_5 : str | None
         RX1.5 (opt) - IV SOLUTION RATE (CQ)
@@ -59,7 +59,7 @@ class RX1(HL7Model):
         RX1.13 (opt) - UNUSED (ST)
 
     rx1_14 : CE | None
-        RX1.14 (opt) - DRUG ID (CE)
+        RX1.14 (opt) - DRUG ID (CE) | 0057 - DRUG CODE
 
     rx1_15 : list[str] | None
         RX1.15 (opt, rep) - COMPONENT DRUG IDS (ID)
@@ -71,7 +71,7 @@ class RX1(HL7Model):
         RX1.17 (opt) - SUBSTITUTION STATUS (ID)
 
     rx1_18 : str | None
-        RX1.18 (opt) - RX ORDER STATUS (ID)
+        RX1.18 (opt) - RX ORDER STATUS (ID) | 0038 - ORDER STATUS
 
     rx1_19 : str | None
         RX1.19 (opt) - NUMBER OF REFILLS (NM)

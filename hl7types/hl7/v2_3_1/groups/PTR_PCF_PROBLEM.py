@@ -33,9 +33,9 @@ class PTR_PCF_PROBLEM(HL7Model):
     """HL7 v2 PTR_PCF.PROBLEM group.
 
     Attributes:
-        PRB (PRB): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        PRB (PRB): Problem Detail, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         PROBLEM_ROLE (Optional[List[PTR_PCF_PROBLEM_ROLE]]): optional
         PROBLEM_OBSERVATION (Optional[List[PTR_PCF_PROBLEM_OBSERVATION]]): optional
         GOAL (Optional[List[PTR_PCF_GOAL]]): optional
@@ -44,43 +44,39 @@ class PTR_PCF_PROBLEM(HL7Model):
 
     PRB: _PRB = Field(
         title="PRB",
-        description="Required",
+        description="Problem Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     PROBLEM_ROLE: Optional[List[_PTR_PCF_PROBLEM_ROLE]] = Field(
         default=None,
         title="PROBLEM_ROLE",
-        description="Optional, repeating",
     )
 
     PROBLEM_OBSERVATION: Optional[List[_PTR_PCF_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
-        description="Optional, repeating",
     )
 
     GOAL: Optional[List[_PTR_PCF_GOAL]] = Field(
         default=None,
         title="GOAL",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_PTR_PCF_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -58,7 +58,6 @@ class FieldInfo:
     required: bool
     title: str
     description: str
-    max_length: int | None
 
 
 def _human_version(ver: str) -> str:
@@ -83,6 +82,20 @@ def _type_rst(annotation: str, version: str) -> str:
         return name
 
     return _TYPE_NAME_RE.sub(replace, annotation)
+
+
+def _parse_alias_file(path: Path) -> tuple[str, str] | None:
+    """Return (alias_name, canonical_name) if the file is a thin alias module."""
+    try:
+        tree = ast.parse(path.read_text(encoding="utf-8"))
+    except SyntaxError:
+        return None
+    for node in ast.walk(tree):
+        if isinstance(node, ast.ImportFrom) and node.names:
+            alias = node.names[0]
+            if alias.asname and alias.name != alias.asname:
+                return alias.asname, alias.name
+    return None
 
 
 def _parse_file(path: Path) -> tuple[str, str, list[FieldInfo]] | None:
@@ -123,10 +136,6 @@ def _parse_file(path: Path) -> tuple[str, str, list[FieldInfo]] | None:
                 n = kwargs.get(key)
                 return n.value if isinstance(n, ast.Constant) and isinstance(n.value, str) else ""
 
-            def _int(key: str) -> int | None:
-                n = kwargs.get(key)
-                return n.value if isinstance(n, ast.Constant) and isinstance(n.value, int) else None
-
             fields.append(
                 FieldInfo(
                     name=fname,
@@ -135,12 +144,21 @@ def _parse_file(path: Path) -> tuple[str, str, list[FieldInfo]] | None:
                     required=required,
                     title=_str("title"),
                     description=_str("description"),
-                    max_length=_int("max_length"),
                 )
             )
 
         if fields:
             return cls_name, summary, fields
+
+        # Subclass with no own fields (e.g. ADT_A04(ADT_A01)) — follow base class.
+        if node.bases:
+            base_name = ast.unparse(node.bases[0])
+            base_path = path.parent / f"{base_name}.py"
+            if base_path.exists():
+                base = _parse_file(base_path)
+                if base is not None:
+                    _, _, inherited = base
+                    return cls_name, summary, inherited
 
     return None
 
@@ -150,52 +168,50 @@ def _class_to_rst(
 ) -> list[str]:
     label = _ref_label(version, cls_name)
     module = f"hl7types.hl7.{version}.{category}.{cls_name}"
+    heading = f"{cls_name} {summary}" if summary else cls_name
     lines = [
         f".. _{label}:",
+        "",
+        heading,
+        "~" * len(heading),
         "",
         f".. py:class:: {module}.{cls_name}",
         "   :noindex:",
         "",
     ]
-    if summary:
-        lines += [f"   {summary}", ""]
 
-    lines += [
-        cls_name,
-        "~" * len(cls_name),
-        "",
-    ]
+    show_alias = any(fi.alias for fi in fields)
+    header = ["   * - Field"]
+    if show_alias:
+        header.append("     - HL7")
+    header += ["     - Type", "     - Required", "     - Description"]
 
-    lines += [
-        ".. list-table::",
-        "   :header-rows: 1",
-        "   :widths: auto",
-        "",
-        "   * - Field",
-        "     - HL7",
-        "     - Type",
-        "     - Required",
-        "     - Max Length",
-        "     - Description",
-    ]
+    lines += [".. list-table::", "   :header-rows: 1", "   :widths: auto", ""] + header
     for fi in fields:
         req = "required" if fi.required else "optional"
-        if fi.title and fi.description:
-            desc = f"{fi.title}: {fi.description}"
-        else:
-            desc = fi.title or fi.description or ""
+        desc = fi.description or fi.title or ""
         type_cell = _type_rst(fi.annotation, version)
-        max_len = str(fi.max_length) if fi.max_length is not None else ""
-        lines += [
-            f"   * - ``{fi.name}``",
-            f"     - {fi.alias}",
-            f"     - {type_cell}",
-            f"     - {req}",
-            f"     - {max_len}",
-            f"     - {desc}",
-        ]
+        row = [f"   * - ``{fi.name}``"]
+        if show_alias:
+            row.append(f"     - {fi.alias}")
+        row += [f"     - {type_cell}", f"     - {req}", f"     - {desc}"]
+        lines += row
     lines.append("")
     return lines
+
+
+def _alias_to_rst(alias: str, canonical: str, version: str) -> list[str]:
+    label = _ref_label(version, alias)
+    canonical_ref = f":ref:`{canonical} <{_ref_label(version, canonical)}>`"
+    return [
+        f".. _{label}:",
+        "",
+        alias,
+        "~" * len(alias),
+        "",
+        f"Alias for {canonical_ref}.",
+        "",
+    ]
 
 
 def _generate_category_page(version: str, category: str, out_dir: Path) -> Path | None:
@@ -204,6 +220,12 @@ def _generate_category_page(version: str, category: str, out_dir: Path) -> Path 
         return None
 
     paths = sorted(p for p in cat_dir.glob("*.py") if p.stem != "__init__")
+    out_path = out_dir / f"{version}_{category}.rst"
+
+    if out_path.exists():
+        out_mtime = out_path.stat().st_mtime
+        if all(p.stat().st_mtime < out_mtime for p in paths):
+            return out_path
 
     ver_human = _human_version(version)
     cat_title = _CATEGORY_TITLES.get(category, category.title())
@@ -213,12 +235,15 @@ def _generate_category_page(version: str, category: str, out_dir: Path) -> Path 
     print(f"  hl7_autodoc: {version}/{category} ({len(paths)} files)", flush=True)
     for p in paths:
         result = _parse_file(p)
-        if result is None:
+        if result is not None:
+            cls_name, summary, fields = result
+            lines += _class_to_rst(cls_name, summary, fields, version, category)
             continue
-        cls_name, summary, fields = result
-        lines += _class_to_rst(cls_name, summary, fields, version, category)
+        alias_result = _parse_alias_file(p)
+        if alias_result is not None:
+            alias, canonical = alias_result
+            lines += _alias_to_rst(alias, canonical, version)
 
-    out_path = out_dir / f"{version}_{category}.rst"
     out_path.write_text("\n".join(lines), encoding="utf-8")
     return out_path
 

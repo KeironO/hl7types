@@ -18,75 +18,75 @@ from ..datatypes.XCN import XCN
 
 
 class RXA(HL7Model):
-    """HL7 v2 RXA segment.
+    """RXA - pharmacy/treatment administration segment (S4.13).
 
     Attributes
     ----------
     rxa_1 : str
-        RXA.1 (req) - Give Sub-ID Counter (NM)
+        RXA.1 (req) - Give Sub-ID Counter (NM) S4.8.14.1
 
     rxa_2 : str
-        RXA.2 (req) - Administration Sub-ID Counter (NM)
+        RXA.2 (req) - Administration Sub-ID Counter (NM) S4.8.14.2
 
     rxa_3 : TS
-        RXA.3 (req) - Date/Time Start of Administration (TS)
+        RXA.3 (req) - Date/Time Start of Administration (TS) S4.8.14.3
 
     rxa_4 : TS
-        RXA.4 (req) - Date/Time End of Administration (TS)
+        RXA.4 (req) - Date/Time End of Administration (TS) S4.8.14.4
 
     rxa_5 : CE
-        RXA.5 (req) - Administered Code (CE)
+        RXA.5 (req) - Administered Code (CE) S4.8.14.5 | 0292 - Vaccines administered
 
     rxa_6 : str
-        RXA.6 (req) - Administered Amount (NM)
+        RXA.6 (req) - Administered Amount (NM) S4.8.14.6
 
     rxa_7 : CE | None
-        RXA.7 (opt) - Administered Units (CE)
+        RXA.7 (opt) - Administered Units (CE) S4.8.14.7
 
     rxa_8 : CE | None
-        RXA.8 (opt) - Administered Dosage Form (CE)
+        RXA.8 (opt) - Administered Dosage Form (CE) S4.8.14.8
 
     rxa_9 : list[CE] | None
-        RXA.9 (opt, rep) - Administration Notes (CE)
+        RXA.9 (opt, rep) - Administration Notes (CE) S4.8.14.9
 
     rxa_10 : list[XCN] | None
-        RXA.10 (opt, rep) - Administering Provider (XCN)
+        RXA.10 (opt, rep) - Administering Provider (XCN) S4.8.14.10
 
     rxa_11 : LA2 | None
-        RXA.11 (opt) - Administered-at Location (LA2)
+        RXA.11 (opt) - Administered-at Location (LA2) S4.8.14.11
 
     rxa_12 : str | None
-        RXA.12 (opt) - Administered Per (Time Unit) (ST)
+        RXA.12 (opt) - Administered Per (Time Unit) (ST) S4.8.14.12
 
     rxa_13 : str | None
-        RXA.13 (opt) - Administered Strength (NM)
+        RXA.13 (opt) - Administered Strength (NM) S4.8.14.13
 
     rxa_14 : CE | None
-        RXA.14 (opt) - Administered Strength Units (CE)
+        RXA.14 (opt) - Administered Strength Units (CE) S4.8.14.14
 
     rxa_15 : list[str] | None
-        RXA.15 (opt, rep) - Substance Lot Number (ST)
+        RXA.15 (opt, rep) - Substance Lot Number (ST) S4.8.14.15
 
     rxa_16 : list[TS] | None
-        RXA.16 (opt, rep) - Substance Expiration Date (TS)
+        RXA.16 (opt, rep) - Substance Expiration Date (TS) S4.8.14.16
 
     rxa_17 : list[CE] | None
-        RXA.17 (opt, rep) - Substance Manufacturer Name (CE)
+        RXA.17 (opt, rep) - Substance Manufacturer Name (CE) S4.8.14.17 | 0227 - Manufacturers of vaccines (code=MVX)
 
     rxa_18 : list[CE] | None
-        RXA.18 (opt, rep) - Substance Refusal Reason (CE)
+        RXA.18 (opt, rep) - Substance Refusal Reason (CE) S4.8.14.18
 
     rxa_19 : list[CE] | None
-        RXA.19 (opt, rep) - Indication (CE)
+        RXA.19 (opt, rep) - Indication (CE) S4.8.14.19
 
     rxa_20 : str | None
-        RXA.20 (opt) - Completion Status (ID)
+        RXA.20 (opt) - Completion Status (ID) S4.8.14.20 | 0322 - Completion status
 
     rxa_21 : str | None
-        RXA.21 (opt) - Action Code-RXA (ID)
+        RXA.21 (opt) - Action Code-RXA (ID) S4.8.14.21 | 0323 - Action code
 
     rxa_22 : TS | None
-        RXA.22 (opt) - System Entry Date/Time (TS)
+        RXA.22 (opt) - System Entry Date/Time (TS) S4.8.14.22
     """
 
     rxa_1: str = Field(

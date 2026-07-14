@@ -30,46 +30,46 @@ class DSR_Q03(HL7Model):
     """HL7 v2 DSR_Q03 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (Optional[MSA]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        DSP (List[DSP]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (Optional[MSA]): MESSAGE ACKNOWLEDGMENT, optional
+        QRD (QRD): QUERY DEFINITION, required
+        QRF (Optional[QRF]): QUERY FILTER, optional
+        DSP (List[DSP]): DISPLAY DATA, required
+        DSC (Optional[DSC]): CONTINUATION POINTER, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: Optional[_MSA] = Field(
         default=None,
         title="MSA",
-        description="Optional",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QUERY DEFINITION",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QUERY FILTER",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="DISPLAY DATA",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="CONTINUATION POINTER",
     )
 
     model_config = {"populate_by_name": True}

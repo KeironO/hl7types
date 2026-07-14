@@ -26,43 +26,41 @@ _SFT = SFT
 
 
 class RDS_O13(HL7Model):
-    """HL7 v2 RDS_O13 message.
+    """RDS - Pharmacy/treatment dispense (S4.13.7).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[RDS_O13_PATIENT]): optional
         ORDER (List[RDS_O13_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_RDS_O13_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RDS_O13_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

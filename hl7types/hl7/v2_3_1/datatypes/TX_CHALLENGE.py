@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class TX_CHALLENGE(HL7Model):
-    """HL7 v2 TX_CHALLENGE data type.
+    """Challenge information (S8.7.3.44).
 
     Attributes
     ----------

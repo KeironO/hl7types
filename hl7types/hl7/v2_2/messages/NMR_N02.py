@@ -29,39 +29,38 @@ class NMR_N02(HL7Model):
     """HL7 v2 NMR_N02 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QRD (Optional[QRD]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (MSA): MESSAGE ACKNOWLEDGMENT, required
+        ERR (Optional[ERR]): ERROR, optional
+        QRD (Optional[QRD]): QUERY DEFINITION, optional
         CLOCK_AND_STATS_WITH_NOTES_ALT (List[NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="ERROR",
     )
 
     QRD: Optional[_QRD] = Field(
         default=None,
         title="QRD",
-        description="Optional",
+        description="QUERY DEFINITION",
     )
 
     CLOCK_AND_STATS_WITH_NOTES_ALT: List[_NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT] = Field(
         min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES_ALT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

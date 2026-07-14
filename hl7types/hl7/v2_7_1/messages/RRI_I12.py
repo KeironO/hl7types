@@ -48,119 +48,114 @@ _UAC = UAC
 
 
 class RRI_I12(HL7Model):
-    """HL7 v2 RRI_I12 message.
+    """REF/RRI - Patient referral (S11.4.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (Optional[MSA]): optional
-        RF1 (Optional[RF1]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (Optional[MSA]): Message Acknowledgment, optional
+        RF1 (Optional[RF1]): Referral Information, optional
         AUTHORIZATION_CONTACT (Optional[RRI_I12_AUTHORIZATION_CONTACT]): optional
         PROVIDER_CONTACT (List[RRI_I12_PROVIDER_CONTACT]): required
-        PID (PID): required
-        ACC (Optional[ACC]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        PID (PID): Patient Identification, required
+        ACC (Optional[ACC]): Accident, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[List[DRG]]): Diagnosis Related Group, optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
         PROCEDURE (Optional[List[RRI_I12_PROCEDURE]]): optional
         OBSERVATION (Optional[List[RRI_I12_OBSERVATION]]): optional
         PATIENT_VISIT (Optional[RRI_I12_PATIENT_VISIT]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: Optional[_MSA] = Field(
         default=None,
         title="MSA",
-        description="Optional",
+        description="Message Acknowledgment",
     )
 
     RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
-        description="Optional",
+        description="Referral Information",
     )
 
     AUTHORIZATION_CONTACT: Optional[_RRI_I12_AUTHORIZATION_CONTACT] = Field(
         default=None,
         title="AUTHORIZATION_CONTACT",
-        description="Optional",
     )
 
     PROVIDER_CONTACT: List[_RRI_I12_PROVIDER_CONTACT] = Field(
         min_length=1,
         title="PROVIDER_CONTACT",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="Diagnosis Related Group",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     PROCEDURE: Optional[List[_RRI_I12_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     OBSERVATION: Optional[List[_RRI_I12_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     PATIENT_VISIT: Optional[_RRI_I12_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

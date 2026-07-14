@@ -23,19 +23,18 @@ class PEX_P07_EXPERIENCE(HL7Model):
     """HL7 v2 PEX_P07.EXPERIENCE group.
 
     Attributes:
-        PES (PES): required
+        PES (PES): PES - product experience sender segment, required
         PEX_OBSERVATION (List[PEX_P07_PEX_OBSERVATION]): required
     """
 
     PES: _PES = Field(
         title="PES",
-        description="Required",
+        description="PES - product experience sender segment",
     )
 
     PEX_OBSERVATION: List[_PEX_P07_PEX_OBSERVATION] = Field(
         min_length=1,
         title="PEX_OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

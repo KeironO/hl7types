@@ -31,47 +31,45 @@ class DFT_P03_FINANCIAL(HL7Model):
     """HL7 v2 DFT_P03.FINANCIAL group.
 
     Attributes:
-        FT1 (FT1): required
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
-        NTE (Optional[NTE]): optional
+        FT1 (FT1): Financial Transaction, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
+        NTE (Optional[NTE]): Notes and Comments, optional
         FINANCIAL_PROCEDURE (Optional[List[DFT_P03_FINANCIAL_PROCEDURE]]): optional
         FINANCIAL_COMMON_ORDER (Optional[List[DFT_P03_FINANCIAL_COMMON_ORDER]]): optional
     """
 
     FT1: _FT1 = Field(
         title="FT1",
-        description="Required",
+        description="Financial Transaction",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     FINANCIAL_PROCEDURE: Optional[List[_DFT_P03_FINANCIAL_PROCEDURE]] = Field(
         default=None,
         title="FINANCIAL_PROCEDURE",
-        description="Optional, repeating",
     )
 
     FINANCIAL_COMMON_ORDER: Optional[List[_DFT_P03_FINANCIAL_COMMON_ORDER]] = Field(
         default=None,
         title="FINANCIAL_COMMON_ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

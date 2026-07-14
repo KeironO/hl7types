@@ -38,82 +38,80 @@ _RCI_I05_PROVIDER = RCI_I05_PROVIDER
 
 
 class RCI_I05(HL7Model):
-    """HL7 v2 RCI_I05 message.
+    """RQC/RCI - Request for patient clinical information.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): MSH - message header segment, required
+        MSA (MSA): MSA - message acknowledgment segment, required
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
         PROVIDER (List[RCI_I05_PROVIDER]): required
-        PID (PID): required
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        PID (PID): PID - patient identification segment, required
+        DG1 (Optional[List[DG1]]): DG1 - diagnosis segment, optional
+        DRG (Optional[List[DRG]]): DRG - diagnosis related group segment, optional
+        AL1 (Optional[List[AL1]]): AL1 - patient allergy information segment, optional
         OBSERVATION (Optional[List[RCI_I05_OBSERVATION]]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MSA - message acknowledgment segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     PROVIDER: List[_RCI_I05_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DG1 - diagnosis segment",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="DRG - diagnosis related group segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="AL1 - patient allergy information segment",
     )
 
     OBSERVATION: Optional[List[_RCI_I05_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -39,74 +39,70 @@ class RDS_O13_ORDER(HL7Model):
     """HL7 v2 RDS_O13.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[RDS_O13_TIMING]]): optional
         ORDER_DETAIL (Optional[RDS_O13_ORDER_DETAIL]): optional
         ENCODING (Optional[RDS_O13_ENCODING]): optional
-        RXD (RXD): required
-        NTE (Optional[List[NTE]]): optional
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXD (RXD): Pharmacy/Treatment Dispense, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
         OBSERVATION (Optional[List[RDS_O13_OBSERVATION]]): optional
-        FT1 (Optional[List[FT1]]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_RDS_O13_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ORDER_DETAIL: Optional[_RDS_O13_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     ENCODING: Optional[_RDS_O13_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     RXD: _RXD = Field(
         title="RXD",
-        description="Required",
+        description="Pharmacy/Treatment Dispense",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     OBSERVATION: Optional[List[_RDS_O13_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,19 +22,19 @@ class MFN_M16_STERILIZATION(HL7Model):
     """HL7 v2 MFN_M16.STERILIZATION group.
 
     Attributes:
-        STZ (STZ): required
-        NTE (Optional[List[NTE]]): optional
+        STZ (STZ): Sterilization Parameter, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     STZ: _STZ = Field(
         title="STZ",
-        description="Required",
+        description="Sterilization Parameter",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

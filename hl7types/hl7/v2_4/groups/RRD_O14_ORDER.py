@@ -23,19 +23,18 @@ class RRD_O14_ORDER(HL7Model):
     """HL7 v2 RRD_O14.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         DISPENSE (Optional[RRD_O14_DISPENSE]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     DISPENSE: Optional[_RRD_O14_DISPENSE] = Field(
         default=None,
         title="DISPENSE",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

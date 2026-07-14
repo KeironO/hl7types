@@ -28,49 +28,47 @@ _UAC = UAC
 
 
 class PPR_PC1(HL7Model):
-    """HL7 v2 PPR_PC1 message.
+    """PPR - PC/ problem add (S12.3.2).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        PID (PID): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        PID (PID): Patient Identification, required
         PATIENT_VISIT (Optional[PPR_PC1_PATIENT_VISIT]): optional
         PROBLEM (List[PPR_PC1_PROBLEM]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PATIENT_VISIT: Optional[_PPR_PC1_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PROBLEM: List[_PPR_PC1_PROBLEM] = Field(
         min_length=1,
         title="PROBLEM",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

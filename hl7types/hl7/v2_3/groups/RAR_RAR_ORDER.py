@@ -25,26 +25,25 @@ class RAR_RAR_ORDER(HL7Model):
     """HL7 v2 RAR_RAR.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common order segment, required
         ENCODING (Optional[RAR_RAR_ENCODING]): optional
-        RXA (List[RXA]): required
+        RXA (List[RXA]): Pharmacy administration segment, required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common order segment",
     )
 
     ENCODING: Optional[_RAR_RAR_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     RXA: List[_RXA] = Field(
         min_length=1,
         title="RXA",
-        description="Required, repeating",
+        description="Pharmacy administration segment",
     )
 
     model_config = {"populate_by_name": True}

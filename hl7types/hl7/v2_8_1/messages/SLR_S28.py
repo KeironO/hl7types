@@ -23,36 +23,36 @@ _UAC = UAC
 
 
 class SLR_S28(HL7Model):
-    """HL7 v2 SLR_S28 message.
+    """SLR/SLS - Request new sterilization lot (S17.5.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        SLT (List[SLT]): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        SLT (List[SLT]): Sterilization Lot, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     SLT: List[_SLT] = Field(
         min_length=1,
         title="SLT",
-        description="Required, repeating",
+        description="Sterilization Lot",
     )
 
     model_config = {"populate_by_name": True}

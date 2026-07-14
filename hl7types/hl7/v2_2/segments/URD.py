@@ -15,30 +15,30 @@ from ..datatypes.TS import TS
 
 
 class URD(HL7Model):
-    """HL7 v2 URD segment.
+    """RESULTS/UPDATE DEFINITION (S2.10.6).
 
     Attributes
     ----------
     urd_1 : TS | None
-        URD.1 (opt) - R/U date / time (TS)
+        URD.1 (opt) - R/U date / time (TS) S2.10.6.1
 
     urd_2 : str | None
-        URD.2 (opt) - Report Priority (ID)
+        URD.2 (opt) - Report Priority (ID) S2.10.6.2 | 0109 - REPORT PRIORITY
 
     urd_3 : list[str]
-        URD.3 (req, rep) - R/U Who Subject Definition (ST)
+        URD.3 (req, rep) - R/U Who Subject Definition (ST) S2.10.6.3
 
     urd_4 : list[str] | None
-        URD.4 (opt, rep) - R/U What Subject Definition (ID)
+        URD.4 (opt, rep) - R/U What Subject Definition (ID) S2.10.6.4 | 0048 - WHAT SUBJECT FILTER
 
     urd_5 : list[str] | None
-        URD.5 (opt, rep) - R/U What Department Code (ST)
+        URD.5 (opt, rep) - R/U What Department Code (ST) S2.10.6.5
 
     urd_6 : list[str] | None
-        URD.6 (opt, rep) - R/U display / print locations (ST)
+        URD.6 (opt, rep) - R/U display / print locations (ST) S2.10.6.6
 
     urd_7 : str | None
-        URD.7 (opt) - R/U Results Level (ID)
+        URD.7 (opt) - R/U Results Level (ID) S2.10.6.7 | 0108 - QUERY RESULTS LEVEL
     """
 
     urd_1: Optional[TS] = Field(

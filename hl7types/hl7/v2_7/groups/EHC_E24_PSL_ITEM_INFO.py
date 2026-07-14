@@ -25,26 +25,25 @@ class EHC_E24_PSL_ITEM_INFO(HL7Model):
     """HL7 v2 EHC_E24.PSL_ITEM_INFO group.
 
     Attributes:
-        PSL (PSL): required
-        AUT (Optional[AUT]): optional
+        PSL (PSL): Product/Service Line Item, required
+        AUT (Optional[AUT]): Authorization Information, optional
         PAYER_ADJUSTMENT (Optional[List[EHC_E24_PAYER_ADJUSTMENT]]): optional
     """
 
     PSL: _PSL = Field(
         title="PSL",
-        description="Required",
+        description="Product/Service Line Item",
     )
 
     AUT: Optional[_AUT] = Field(
         default=None,
         title="AUT",
-        description="Optional",
+        description="Authorization Information",
     )
 
     PAYER_ADJUSTMENT: Optional[List[_EHC_E24_PAYER_ADJUSTMENT]] = Field(
         default=None,
         title="PAYER_ADJUSTMENT",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

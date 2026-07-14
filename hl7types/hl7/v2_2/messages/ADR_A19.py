@@ -31,45 +31,44 @@ class ADR_A19(HL7Model):
     """HL7 v2 ADR_A19 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QRD (QRD): required
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (MSA): MESSAGE ACKNOWLEDGMENT, required
+        ERR (Optional[ERR]): ERROR, optional
+        QRD (QRD): QUERY DEFINITION, required
         QUERY_RESPONSE (List[ADR_A19_QUERY_RESPONSE]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): CONTINUATION POINTER, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="ERROR",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QUERY DEFINITION",
     )
 
     QUERY_RESPONSE: List[_ADR_A19_QUERY_RESPONSE] = Field(
         min_length=1,
         title="QUERY_RESPONSE",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="CONTINUATION POINTER",
     )
 
     model_config = {"populate_by_name": True}

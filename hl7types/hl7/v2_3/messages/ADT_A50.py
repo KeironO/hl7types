@@ -27,46 +27,46 @@ _PV1 = PV1
 
 
 class ADT_A50(HL7Model):
-    """HL7 v2 ADT_A50 message.
+    """ADT/ACK - Change visit number.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        MRG (MRG): required
-        PV1 (PV1): required
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Demographic, optional
+        MRG (MRG): Merge patient information, required
+        PV1 (PV1): Patient visit, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Demographic",
     )
 
     MRG: _MRG = Field(
         title="MRG",
-        description="Required",
+        description="Merge patient information",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient visit",
     )
 
     model_config = {"populate_by_name": True}

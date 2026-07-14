@@ -27,33 +27,31 @@ class RER_RER_DEFINITION(HL7Model):
     """HL7 v2 RER_RER.DEFINITION group.
 
     Attributes:
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
         PATIENT (Optional[RER_RER_PATIENT]): optional
         ORDER (List[RER_RER_ORDER]): required
     """
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     PATIENT: Optional[_RER_RER_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RER_RER_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

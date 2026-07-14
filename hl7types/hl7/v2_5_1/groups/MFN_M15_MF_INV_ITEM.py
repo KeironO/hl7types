@@ -21,18 +21,18 @@ class MFN_M15_MF_INV_ITEM(HL7Model):
     """HL7 v2 MFN_M15.MF_INV_ITEM group.
 
     Attributes:
-        MFE (MFE): required
-        IIM (IIM): required
+        MFE (MFE): Master File Entry, required
+        IIM (IIM): Inventory Item Master, required
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     IIM: _IIM = Field(
         title="IIM",
-        description="Required",
+        description="Inventory Item Master",
     )
 
     model_config = {"populate_by_name": True}

@@ -19,12 +19,12 @@ class MFN_M01_MF(HL7Model):
     """HL7 v2 MFN_M01.MF group.
 
     Attributes:
-        MFE (MFE): required
+        MFE (MFE): Master file entry segment, required
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master file entry segment",
     )
 
     model_config = {"populate_by_name": True}

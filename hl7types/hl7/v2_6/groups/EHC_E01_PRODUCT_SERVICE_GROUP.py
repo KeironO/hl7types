@@ -33,9 +33,9 @@ class EHC_E01_PRODUCT_SERVICE_GROUP(HL7Model):
     """HL7 v2 EHC_E01.PRODUCT_SERVICE_GROUP group.
 
     Attributes:
-        PSG (PSG): required
-        LOC (Optional[List[LOC]]): optional
-        ROL (Optional[List[ROL]]): optional
+        PSG (PSG): Product/Service Group, required
+        LOC (Optional[List[LOC]]): Location Identification, optional
+        ROL (Optional[List[ROL]]): Role, optional
         PATIENT_INFO (Optional[List[EHC_E01_PATIENT_INFO]]): optional
         PRODUCT_SERVICE_LINE_ITEM (List[EHC_E01_PRODUCT_SERVICE_LINE_ITEM]): required
         PROCEDURE (Optional[List[EHC_E01_PROCEDURE]]): optional
@@ -44,43 +44,39 @@ class EHC_E01_PRODUCT_SERVICE_GROUP(HL7Model):
 
     PSG: _PSG = Field(
         title="PSG",
-        description="Required",
+        description="Product/Service Group",
     )
 
     LOC: Optional[List[_LOC]] = Field(
         default=None,
         title="LOC",
-        description="Optional, repeating",
+        description="Location Identification",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     PATIENT_INFO: Optional[List[_EHC_E01_PATIENT_INFO]] = Field(
         default=None,
         title="PATIENT_INFO",
-        description="Optional, repeating",
     )
 
     PRODUCT_SERVICE_LINE_ITEM: List[_EHC_E01_PRODUCT_SERVICE_LINE_ITEM] = Field(
         min_length=1,
         title="PRODUCT_SERVICE_LINE_ITEM",
-        description="Required, repeating",
     )
 
     PROCEDURE: Optional[List[_EHC_E01_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     INVOICE_PROCESSING: Optional[List[_EHC_E01_INVOICE_PROCESSING]] = Field(
         default=None,
         title="INVOICE_PROCESSING",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

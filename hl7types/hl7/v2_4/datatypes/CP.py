@@ -16,7 +16,7 @@ from .MO import MO
 
 
 class CP(HL7Model):
-    """HL7 v2 CP data type.
+    """Composite price (S2.9.9).
 
     Attributes
     ----------

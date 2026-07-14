@@ -18,45 +18,45 @@ from ..datatypes.XTN import XTN
 
 
 class FAC(HL7Model):
-    """HL7 v2 FAC segment.
+    """Facility (S7.12.6).
 
     Attributes
     ----------
     fac_1 : EI
-        FAC.1 (req) - Facility ID-FAC (EI)
+        FAC.1 (req) - Facility ID-FAC (EI) S7.12.6.1
 
     fac_2 : str | None
-        FAC.2 (opt) - Facility Type (ID)
+        FAC.2 (opt) - Facility Type (ID) S7.12.6.2 | 0331 - Facility Type
 
     fac_3 : list[XAD]
-        FAC.3 (req, rep) - Facility Address (XAD)
+        FAC.3 (req, rep) - Facility Address (XAD) S7.12.6.3
 
     fac_4 : XTN
-        FAC.4 (req) - Facility Telecommunication (XTN)
+        FAC.4 (req) - Facility Telecommunication (XTN) S7.12.6.4
 
     fac_5 : list[XCN] | None
-        FAC.5 (opt, rep) - Contact Person (XCN)
+        FAC.5 (opt, rep) - Contact Person (XCN) S7.12.6.5
 
     fac_6 : list[str] | None
-        FAC.6 (opt, rep) - Contact Title (ST)
+        FAC.6 (opt, rep) - Contact Title (ST) S7.12.6.6
 
     fac_7 : list[XAD] | None
-        FAC.7 (opt, rep) - Contact Address (XAD)
+        FAC.7 (opt, rep) - Contact Address (XAD) S11.8.4.3
 
     fac_8 : list[XTN] | None
-        FAC.8 (opt, rep) - Contact Telecommunication (XTN)
+        FAC.8 (opt, rep) - Contact Telecommunication (XTN) S7.12.6.8
 
     fac_9 : list[XCN]
-        FAC.9 (req, rep) - Signature Authority (XCN)
+        FAC.9 (req, rep) - Signature Authority (XCN) S7.12.6.9
 
     fac_10 : str | None
-        FAC.10 (opt) - Signature Authority Title (ST)
+        FAC.10 (opt) - Signature Authority Title (ST) S7.12.6.10
 
     fac_11 : list[XAD] | None
-        FAC.11 (opt, rep) - Signature Authority Address (XAD)
+        FAC.11 (opt, rep) - Signature Authority Address (XAD) S7.12.6.11
 
     fac_12 : XTN | None
-        FAC.12 (opt) - Signature Authority Telecommunication (XTN)
+        FAC.12 (opt) - Signature Authority Telecommunication (XTN) S7.12.6.12
     """
 
     fac_1: EI = Field(

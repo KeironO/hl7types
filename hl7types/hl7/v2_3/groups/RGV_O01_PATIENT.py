@@ -27,33 +27,32 @@ class RGV_O01_PATIENT(HL7Model):
     """HL7 v2 RGV_O01.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        NTE (Optional[List[NTE]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        PID (PID): Patient Identification, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
+        AL1 (Optional[List[AL1]]): Patient allergy information, optional
         PATIENT_VISIT (Optional[RGV_O01_PATIENT_VISIT]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient allergy information",
     )
 
     PATIENT_VISIT: Optional[_RGV_O01_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

@@ -28,48 +28,47 @@ _SFT = SFT
 
 
 class ADT_A45(HL7Model):
-    """HL7 v2 ADT_A45 message.
+    """ADT/ACK - Move visit information - visit number (S3.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
         MERGE_INFO (List[ADT_A45_MERGE_INFO]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     MERGE_INFO: List[_ADT_A45_MERGE_INFO] = Field(
         min_length=1,
         title="MERGE_INFO",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

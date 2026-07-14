@@ -25,44 +25,44 @@ _SFT = SFT
 
 
 class QBP_Q15(HL7Model):
-    """HL7 v2 QBP_Q15 message.
+    """QBP - Query by parameter requesting an RDY display response (S3.3.56).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        QPD (QPD): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        QPD (QPD): Query Parameter Definition, required
         anyhl7segment (Optional[Any]): optional
-        RCP (RCP): required
-        DSC (Optional[DSC]): optional
+        RCP (RCP): Response Control Parameter, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     anyhl7segment: Optional[Any] = None
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

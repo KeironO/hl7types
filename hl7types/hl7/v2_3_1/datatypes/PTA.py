@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class PTA(HL7Model):
-    """HL7 v2 PTA data type.
+    """Policy type (S6.4.7.29).
 
     Attributes
     ----------

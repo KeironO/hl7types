@@ -38,82 +38,81 @@ _PV2 = PV2
 
 
 class ADT_A03(HL7Model):
-    """HL7 v2 ADT_A03 message.
+    """ADT/ACK -  Discharge a patient.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        DB1 (Optional[List[DB1]]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[DRG]): optional
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Demographic, optional
+        PV1 (PV1): Patient visit, required
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
+        DB1 (Optional[List[DB1]]): Disability Segment, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
         PROCEDURE (Optional[List[ADT_A03_PROCEDURE]]): optional
-        OBX (Optional[List[OBX]]): optional
+        OBX (Optional[List[OBX]]): Observation segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Demographic",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="Disability Segment",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     PROCEDURE: Optional[List[_ADT_A03_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation segment",
     )
 
     model_config = {"populate_by_name": True}

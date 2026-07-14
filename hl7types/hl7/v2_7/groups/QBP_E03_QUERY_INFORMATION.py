@@ -22,20 +22,20 @@ class QBP_E03_QUERY_INFORMATION(HL7Model):
     """HL7 v2 QBP_E03.QUERY_INFORMATION group.
 
     Attributes:
-        QPD (Optional[QPD]): optional
-        RCP (Optional[RCP]): optional
+        QPD (Optional[QPD]): Query Parameter Definition, optional
+        RCP (Optional[RCP]): Response Control Parameter, optional
     """
 
     QPD: Optional[_QPD] = Field(
         default=None,
         title="QPD",
-        description="Optional",
+        description="Query Parameter Definition",
     )
 
     RCP: Optional[_RCP] = Field(
         default=None,
         title="RCP",
-        description="Optional",
+        description="Response Control Parameter",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,19 +22,19 @@ class NMQ_N01_QRY_WITH_DETAIL(HL7Model):
     """HL7 v2 NMQ_N01.QRY_WITH_DETAIL group.
 
     Attributes:
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
     """
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     model_config = {"populate_by_name": True}

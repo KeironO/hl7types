@@ -25,27 +25,26 @@ class ORR_O02_PATIENT(HL7Model):
     """HL7 v2 ORR_O02.PATIENT group.
 
     Attributes:
-        PID (Optional[PID]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (Optional[PID]): PATIENT IDENTIFICATION, optional
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
         ORDER (List[ORR_O02_ORDER]): required
     """
 
     PID: Optional[_PID] = Field(
         default=None,
         title="PID",
-        description="Optional",
+        description="PATIENT IDENTIFICATION",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     ORDER: List[_ORR_O02_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

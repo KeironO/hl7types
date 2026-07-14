@@ -16,57 +16,57 @@ from ..datatypes.TS import TS
 
 
 class DG1(HL7Model):
-    """HL7 v2 DG1 segment.
+    """DIAGNOSIS (S6.4.2).
 
     Attributes
     ----------
     dg1_1 : str
-        DG1.1 (req) - Set ID - diagnosis (SI)
+        DG1.1 (req) - Set ID - diagnosis (SI) S6.4.2.1
 
     dg1_2 : str
-        DG1.2 (req) - Diagnosis coding method (ID)
+        DG1.2 (req) - Diagnosis coding method (ID) S6.4.2.2 | 0053 - DIAGNOSIS CODING METHOD
 
     dg1_3 : str | None
-        DG1.3 (opt) - Diagnosis code (ID)
+        DG1.3 (opt) - Diagnosis code (ID) S6.4.2.3 | 0051 - DIAGNOSIS CODE
 
     dg1_4 : str | None
-        DG1.4 (opt) - Diagnosis description (ST)
+        DG1.4 (opt) - Diagnosis description (ST) S6.4.2.4
 
     dg1_5 : TS | None
-        DG1.5 (opt) - Diagnosis date / time (TS)
+        DG1.5 (opt) - Diagnosis date / time (TS) S6.4.2.5
 
     dg1_6 : str
-        DG1.6 (req) - Diagnosis / DRG type (ID)
+        DG1.6 (req) - Diagnosis / DRG type (ID) S6.4.2.6 | 0052 - DIAGNOSIS TYPE
 
     dg1_7 : CE | None
-        DG1.7 (opt) - Major diagnostic category (CE)
+        DG1.7 (opt) - Major diagnostic category (CE) S6.4.2.7 | 0118 - MAJOR DIAGNOSTIC CATEGORY
 
     dg1_8 : str | None
-        DG1.8 (opt) - Diagnostic related group (ID)
+        DG1.8 (opt) - Diagnostic related group (ID) S6.4.2.8 | 0055 - DRG CODE
 
     dg1_9 : str | None
-        DG1.9 (opt) - DRG approval indicator (ID)
+        DG1.9 (opt) - DRG approval indicator (ID) S6.4.2.9
 
     dg1_10 : str | None
-        DG1.10 (opt) - DRG grouper review code (ID)
+        DG1.10 (opt) - DRG grouper review code (ID) S6.4.2.10 | 0056 - DRG GROUPER REVIEW CODE
 
     dg1_11 : str | None
-        DG1.11 (opt) - Outlier type (ID)
+        DG1.11 (opt) - Outlier type (ID) S6.4.2.11 | 0083 - OUTLIER TYPE
 
     dg1_12 : str | None
-        DG1.12 (opt) - Outlier days (NM)
+        DG1.12 (opt) - Outlier days (NM) S6.4.2.12
 
     dg1_13 : str | None
-        DG1.13 (opt) - Outlier cost (NM)
+        DG1.13 (opt) - Outlier cost (NM) S6.4.2.13
 
     dg1_14 : str | None
-        DG1.14 (opt) - Grouper version and type (ST)
+        DG1.14 (opt) - Grouper version and type (ST) S6.4.2.14
 
     dg1_15 : str | None
-        DG1.15 (opt) - Diagnosis / DRG priority (NM)
+        DG1.15 (opt) - Diagnosis / DRG priority (NM) S6.4.2.15
 
     dg1_16 : str | None
-        DG1.16 (opt) - Diagnosing clinician (CN)
+        DG1.16 (opt) - Diagnosing clinician (CN) S6.4.2.16
     """
 
     dg1_1: str = Field(

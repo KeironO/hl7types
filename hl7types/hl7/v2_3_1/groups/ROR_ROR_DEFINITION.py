@@ -27,33 +27,31 @@ class ROR_ROR_DEFINITION(HL7Model):
     """HL7 v2 ROR_ROR.DEFINITION group.
 
     Attributes:
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
         PATIENT (Optional[ROR_ROR_PATIENT]): optional
         ORDER (List[ROR_ROR_ORDER]): required
     """
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     PATIENT: Optional[_ROR_ROR_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_ROR_ROR_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

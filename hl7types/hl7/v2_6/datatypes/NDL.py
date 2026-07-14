@@ -17,7 +17,7 @@ from .HD import HD
 
 
 class NDL(HL7Model):
-    """HL7 v2 NDL data type.
+    """Name with date and location (S2.A.46).
 
     Attributes
     ----------

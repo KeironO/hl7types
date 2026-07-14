@@ -32,19 +32,16 @@ class RSP_Z90_QUERY_RESPONSE(HL7Model):
     PATIENT: Optional[_RSP_Z90_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     COMMON_ORDER: List[_RSP_Z90_COMMON_ORDER] = Field(
         min_length=1,
         title="COMMON_ORDER",
-        description="Required, repeating",
     )
 
     SPECIMEN: Optional[List[_RSP_Z90_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -27,49 +27,49 @@ _UAC = UAC
 
 
 class ORA_R41(HL7Model):
-    """HL7 v2 ORA_R41 message.
+    """Observation Report Alert Acknowledgement (S7.3.13).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        PRT (Optional[List[PRT]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

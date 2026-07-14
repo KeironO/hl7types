@@ -16,30 +16,30 @@ from ..datatypes.XCN import XCN
 
 
 class URD(HL7Model):
-    """HL7 v2 URD segment.
+    """Results/update Definition (S5.10.4.3).
 
     Attributes
     ----------
     urd_1 : str | None
-        URD.1 (opt) - R/U Date/Time (DTM)
+        URD.1 (opt) - R/U Date/Time (DTM) S5.10.4.3.1
 
     urd_2 : str | None
-        URD.2 (opt) - Report Priority (ID)
+        URD.2 (opt) - Report Priority (ID) S5.10.4.3.2 | 0109 - Report priority
 
     urd_3 : list[XCN]
-        URD.3 (req, rep) - R/U Who Subject Definition (XCN)
+        URD.3 (req, rep) - R/U Who Subject Definition (XCN) S5.10.4.3.3
 
     urd_4 : list[CWE] | None
-        URD.4 (opt, rep) - R/U What Subject Definition (CWE)
+        URD.4 (opt, rep) - R/U What Subject Definition (CWE) S5.10.4.3.4 | 0048 - What subject filter
 
     urd_5 : list[CWE] | None
-        URD.5 (opt, rep) - R/U What Department Code (CWE)
+        URD.5 (opt, rep) - R/U What Department Code (CWE) S5.10.4.3.5
 
     urd_6 : list[str] | None
-        URD.6 (opt, rep) - R/U Display/Print Locations (ST)
+        URD.6 (opt, rep) - R/U Display/Print Locations (ST) S5.10.4.3.6
 
     urd_7 : str | None
-        URD.7 (opt) - R/U Results Level (ID)
+        URD.7 (opt) - R/U Results Level (ID) S5.10.4.3.7 | 0108 - Query results level
     """
 
     urd_1: Optional[str] = Field(

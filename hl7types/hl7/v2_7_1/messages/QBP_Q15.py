@@ -27,48 +27,48 @@ _UAC = UAC
 
 
 class QBP_Q15(HL7Model):
-    """HL7 v2 QBP_Q15 message.
+    """QBP - Query by parameter requesting an RDY display response (S15.3.7).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        QPD (QPD): required
-        RCP (RCP): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        QPD (QPD): Query Parameter Definition, required
+        RCP (RCP): Response Control Parameter, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

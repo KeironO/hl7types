@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CNE(HL7Model):
-    """HL7 v2 CNE data type.
+    """Coded with no exceptions (S2.A.1.8).
 
     Attributes
     ----------

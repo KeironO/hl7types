@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class CQ(HL7Model):
-    """HL7 v2 CQ data type.
+    """Composite quantity with units (S2.A.11).
 
     Attributes
     ----------

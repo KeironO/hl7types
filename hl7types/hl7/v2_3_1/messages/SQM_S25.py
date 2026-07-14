@@ -26,42 +26,41 @@ _SQM_S25_REQUEST = SQM_S25_REQUEST
 
 
 class SQM_S25(HL7Model):
-    """HL7 v2 SQM_S25 message.
+    """SQM/SQR - Schedule query message and response.
 
     Attributes:
-        MSH (MSH): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): MSH - message header segment, required
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
         REQUEST (Optional[SQM_S25_REQUEST]): optional
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     REQUEST: Optional[_SQM_S25_REQUEST] = Field(
         default=None,
         title="REQUEST",
-        description="Optional",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

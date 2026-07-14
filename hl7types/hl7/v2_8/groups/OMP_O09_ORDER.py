@@ -41,81 +41,78 @@ class OMP_O09_ORDER(HL7Model):
     """HL7 v2 OMP_O09.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[OMP_O09_TIMING]]): optional
-        RXO (RXO): required
-        PRT (Optional[List[PRT]]): optional
-        NTE (Optional[List[NTE]]): optional
-        RXR (List[RXR]): required
+        RXO (RXO): Pharmacy/Treatment Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
         COMPONENT (Optional[List[OMP_O09_COMPONENT]]): optional
-        CDO (Optional[List[CDO]]): optional
+        CDO (Optional[List[CDO]]): Cumulative Dosage, optional
         OBSERVATION (Optional[List[OMP_O09_OBSERVATION]]): optional
-        FT1 (Optional[List[FT1]]): optional
-        BLG (Optional[BLG]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_OMP_O09_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="Pharmacy/Treatment Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     COMPONENT: Optional[List[_OMP_O09_COMPONENT]] = Field(
         default=None,
         title="COMPONENT",
-        description="Optional, repeating",
     )
 
     CDO: Optional[List[_CDO]] = Field(
         default=None,
         title="CDO",
-        description="Optional, repeating",
+        description="Cumulative Dosage",
     )
 
     OBSERVATION: Optional[List[_OMP_O09_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

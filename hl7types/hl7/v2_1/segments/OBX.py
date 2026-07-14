@@ -15,15 +15,15 @@ from ..datatypes.CE import CE
 
 
 class OBX(HL7Model):
-    """HL7 v2 OBX segment.
+    """RESULT (S7.3.1).
 
     Attributes
     ----------
     obx_1 : str | None
-        OBX.1 (opt) - SET ID - OBSERVATION SIMPLE (SI)
+        OBX.1 (opt) - SET ID - OBSERVATION SIMPLE (SI) S7-14
 
     obx_2 : str | None
-        OBX.2 (opt) - VALUE TYPE (ID)
+        OBX.2 (opt) - VALUE TYPE (ID) | 0125 - VALUE TYPE
 
     obx_3 : CE
         OBX.3 (req) - OBSERVATION IDENTIFIER (CE)
@@ -41,16 +41,16 @@ class OBX(HL7Model):
         OBX.7 (opt) - REFERENCES RANGE (ST)
 
     obx_8 : list[str] | None
-        OBX.8 (opt, rep) - ABNORMAL FLAGS (ST)
+        OBX.8 (opt, rep) - ABNORMAL FLAGS (ST) | 0078 - ABNORMAL FLAGS
 
     obx_9 : str | None
         OBX.9 (opt) - PROBABILITY (NM)
 
     obx_10 : str | None
-        OBX.10 (opt) - NATURE OF ABNORMAL TEST (ID)
+        OBX.10 (opt) - NATURE OF ABNORMAL TEST (ID) | 0080 - NATURE OF ABNORMAL TESTING
 
     obx_11 : str | None
-        OBX.11 (opt) - OBSERV RESULT STATUS (ID)
+        OBX.11 (opt) - OBSERV RESULT STATUS (ID) | 0085 - OBSERVATION RESULT STATUS
 
     obx_12 : str | None
         OBX.12 (opt) - DATE LAST OBS NORMAL VALUES (TS)

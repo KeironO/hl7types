@@ -25,42 +25,42 @@ _UAC = UAC
 
 
 class LSU_U12(HL7Model):
-    """HL7 v2 LSU_U12 message.
+    """LSU/ACK - Automated equipment log/service update (S13.3.12).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EQU (EQU): required
-        EQP (List[EQP]): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EQU (EQU): Equipment Detail, required
+        EQP (List[EQP]): Equipment/log Service, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     EQP: List[_EQP] = Field(
         min_length=1,
         title="EQP",
-        description="Required, repeating",
+        description="Equipment/log Service",
     )
 
     model_config = {"populate_by_name": True}

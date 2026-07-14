@@ -18,96 +18,96 @@ from ..datatypes.XAD import XAD
 
 
 class RXG(HL7Model):
-    """HL7 v2 RXG segment.
+    """Pharmacy/Treatment Give (S4.A.4.5).
 
     Attributes
     ----------
     rxg_1 : str
-        RXG.1 (req) - Give Sub-ID Counter (NM)
+        RXG.1 (req) - Give Sub-ID Counter (NM) S4.A.4.5.1
 
     rxg_2 : str | None
-        RXG.2 (opt) - Dispense Sub-ID Counter (NM)
+        RXG.2 (opt) - Dispense Sub-ID Counter (NM) S4.A.4.4.1
 
     rxg_4 : CWE
-        RXG.4 (req) - Give Code (CWE)
+        RXG.4 (req) - Give Code (CWE) S4.A.4.3.2 | 0292 - Vaccines administered
 
     rxg_5 : str
-        RXG.5 (req) - Give Amount - Minimum (NM)
+        RXG.5 (req) - Give Amount - Minimum (NM) S4.A.4.3.3
 
     rxg_6 : str | None
-        RXG.6 (opt) - Give Amount - Maximum (NM)
+        RXG.6 (opt) - Give Amount - Maximum (NM) S4.A.4.3.4
 
     rxg_7 : CWE
-        RXG.7 (req) - Give Units (CWE)
+        RXG.7 (req) - Give Units (CWE) S4.A.4.3.5 | 9999 - no table for CE
 
     rxg_8 : CWE | None
-        RXG.8 (opt) - Give Dosage Form (CWE)
+        RXG.8 (opt) - Give Dosage Form (CWE) S4.A.4.3.6 | 9999 - no table for CE
 
     rxg_9 : list[CWE] | None
-        RXG.9 (opt, rep) - Administration Notes (CWE)
+        RXG.9 (opt, rep) - Administration Notes (CWE) S4.A.4.5.9 | 9999 - no table for CE
 
     rxg_10 : str | None
-        RXG.10 (opt) - Substitution Status (ID)
+        RXG.10 (opt) - Substitution Status (ID) S4.A.4.3.9 | 0167 - Substitution Status
 
     rxg_11 : LA2 | None
-        RXG.11 (opt) - Dispense-to Location (LA2)
+        RXG.11 (opt) - Dispense-to Location (LA2) S4.A.4.4.13
 
     rxg_12 : str | None
-        RXG.12 (opt) - Needs Human Review (ID)
+        RXG.12 (opt) - Needs Human Review (ID) S4.A.4.0.16 | 0136 - Yes/no Indicator
 
     rxg_13 : list[CWE] | None
-        RXG.13 (opt, rep) - Pharmacy/Treatment Supplier's Special Administration Instructions (CWE)
+        RXG.13 (opt, rep) - Pharmacy/Treatment Supplier's Special Administration Instructions (CWE) S4.A.4.5.13 | 9999 - no table for CE
 
     rxg_14 : str | None
-        RXG.14 (opt) - Give Per (Time Unit) (ST)
+        RXG.14 (opt) - Give Per (Time Unit) (ST) S4.A.4.3.22
 
     rxg_15 : str | None
-        RXG.15 (opt) - Give Rate Amount (ST)
+        RXG.15 (opt) - Give Rate Amount (ST) S4.A.4.3.23
 
     rxg_16 : CWE | None
-        RXG.16 (opt) - Give Rate Units (CWE)
+        RXG.16 (opt) - Give Rate Units (CWE) S4.A.4.3.24 | 9999 - no table for CE
 
     rxg_17 : str | None
-        RXG.17 (opt) - Give Strength (NM)
+        RXG.17 (opt) - Give Strength (NM) S4.A.4.3.25
 
     rxg_18 : CWE | None
-        RXG.18 (opt) - Give Strength Units (CWE)
+        RXG.18 (opt) - Give Strength Units (CWE) S4.A.4.3.26 | 9999 - no table for CE
 
     rxg_19 : list[str] | None
-        RXG.19 (opt, rep) - Substance Lot Number (ST)
+        RXG.19 (opt, rep) - Substance Lot Number (ST) S13.4.11.2
 
     rxg_20 : list[str] | None
-        RXG.20 (opt, rep) - Substance Expiration Date (DTM)
+        RXG.20 (opt, rep) - Substance Expiration Date (DTM) S4.A.4.4.19
 
     rxg_21 : list[CWE] | None
-        RXG.21 (opt, rep) - Substance Manufacturer Name (CWE)
+        RXG.21 (opt, rep) - Substance Manufacturer Name (CWE) S4.A.4.4.20 | 0227 - Manufacturers of Vaccines (code=MVX)
 
     rxg_22 : list[CWE] | None
-        RXG.22 (opt, rep) - Indication (CWE)
+        RXG.22 (opt, rep) - Indication (CWE) S4.A.4.0.20 | 9999 - no table for CE
 
     rxg_23 : str | None
-        RXG.23 (opt) - Give Drug Strength Volume (NM)
+        RXG.23 (opt) - Give Drug Strength Volume (NM) S4.A.4.5.23
 
     rxg_24 : CWE | None
-        RXG.24 (opt) - Give Drug Strength Volume Units (CWE)
+        RXG.24 (opt) - Give Drug Strength Volume Units (CWE) S4.A.4.5.24 | 9999 - no table for CE
 
     rxg_25 : CWE | None
-        RXG.25 (opt) - Give Barcode Identifier (CWE)
+        RXG.25 (opt) - Give Barcode Identifier (CWE) S4.A.4.5.25 | 9999 - no table for CE
 
     rxg_26 : str | None
-        RXG.26 (opt) - Pharmacy Order Type (ID)
+        RXG.26 (opt) - Pharmacy Order Type (ID) S4.A.4.5.26 | 0480 - Pharmacy Order Types
 
     rxg_27 : CWE | None
-        RXG.27 (opt) - Dispense to Pharmacy (CWE)
+        RXG.27 (opt) - Dispense to Pharmacy (CWE) S4.A.4.4.30 | 9999 - no table for CE
 
     rxg_28 : XAD | None
-        RXG.28 (opt) - Dispense to Pharmacy Address (XAD)
+        RXG.28 (opt) - Dispense to Pharmacy Address (XAD) S4.A.4.4.31
 
     rxg_29 : PL | None
-        RXG.29 (opt) - Deliver-to Patient Location (PL)
+        RXG.29 (opt) - Deliver-to Patient Location (PL) S4.A.4.0.34
 
     rxg_30 : XAD | None
-        RXG.30 (opt) - Deliver-to Address (XAD)
+        RXG.30 (opt) - Deliver-to Address (XAD) S4.A.4.0.35
     """
 
     rxg_1: str = Field(

@@ -28,40 +28,40 @@ class DFT_P11_INSURANCE(HL7Model):
     """HL7 v2 DFT_P11.INSURANCE group.
 
     Attributes:
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
-        IN3 (Optional[List[IN3]]): optional
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
+        IN1 (IN1): Insurance, required
+        IN2 (Optional[IN2]): Insurance Additional Information, optional
+        IN3 (Optional[List[IN3]]): Insurance Additional Information, Certification, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="Insurance",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="Insurance Additional Information",
     )
 
     IN3: Optional[List[_IN3]] = Field(
         default=None,
         title="IN3",
-        description="Optional, repeating",
+        description="Insurance Additional Information, Certification",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

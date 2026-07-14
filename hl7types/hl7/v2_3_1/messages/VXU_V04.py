@@ -30,13 +30,13 @@ _VXU_V04_PATIENT = VXU_V04_PATIENT
 
 
 class VXU_V04(HL7Model):
-    """HL7 v2 VXU_V04 message.
+    """VXU - Unsolicited vaccination record update.
 
     Attributes:
-        MSH (MSH): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
+        MSH (MSH): MSH - message header segment, required
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
         PATIENT (Optional[VXU_V04_PATIENT]): optional
         INSURANCE (Optional[List[VXU_V04_INSURANCE]]): optional
         ORDER (Optional[List[VXU_V04_ORDER]]): optional
@@ -44,42 +44,39 @@ class VXU_V04(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     PATIENT: Optional[_VXU_V04_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     INSURANCE: Optional[List[_VXU_V04_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_VXU_V04_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

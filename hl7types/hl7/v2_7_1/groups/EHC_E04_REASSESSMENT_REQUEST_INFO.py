@@ -25,27 +25,26 @@ class EHC_E04_REASSESSMENT_REQUEST_INFO(HL7Model):
     """HL7 v2 EHC_E04.REASSESSMENT_REQUEST_INFO group.
 
     Attributes:
-        IVC (Optional[IVC]): optional
-        NTE (Optional[List[NTE]]): optional
+        IVC (Optional[IVC]): Invoice Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PRODUCT_SERVICE_SECTION (Optional[List[EHC_E04_PRODUCT_SERVICE_SECTION]]): optional
     """
 
     IVC: Optional[_IVC] = Field(
         default=None,
         title="IVC",
-        description="Optional",
+        description="Invoice Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRODUCT_SERVICE_SECTION: Optional[List[_EHC_E04_PRODUCT_SERVICE_SECTION]] = Field(
         default=None,
         title="PRODUCT_SERVICE_SECTION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

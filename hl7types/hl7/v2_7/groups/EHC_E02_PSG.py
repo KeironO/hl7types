@@ -22,19 +22,19 @@ class EHC_E02_PSG(HL7Model):
     """HL7 v2 EHC_E02.PSG group.
 
     Attributes:
-        PSG (PSG): required
-        PSL (Optional[List[PSL]]): optional
+        PSG (PSG): Product/Service Group, required
+        PSL (Optional[List[PSL]]): Product/Service Line Item, optional
     """
 
     PSG: _PSG = Field(
         title="PSG",
-        description="Required",
+        description="Product/Service Group",
     )
 
     PSL: Optional[List[_PSL]] = Field(
         default=None,
         title="PSL",
-        description="Optional, repeating",
+        description="Product/Service Line Item",
     )
 
     model_config = {"populate_by_name": True}

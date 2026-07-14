@@ -15,30 +15,30 @@ from ..datatypes.EI import EI
 
 
 class SDD(HL7Model):
-    """HL7 v2 SDD segment.
+    """Sterilization Device Data (S17.7.3).
 
     Attributes
     ----------
     sdd_1 : EI | None
-        SDD.1 (opt) - Lot Number (EI)
+        SDD.1 (opt) - Lot Number (EI) S17.7.3.1
 
     sdd_2 : EI | None
-        SDD.2 (opt) - Device Number (EI)
+        SDD.2 (opt) - Device Number (EI) S17.7.3.2
 
     sdd_3 : str | None
-        SDD.3 (opt) - Device Name (ST)
+        SDD.3 (opt) - Device Name (ST) S17.7.3.3
 
     sdd_4 : str | None
-        SDD.4 (opt) - Device Data State (IS)
+        SDD.4 (opt) - Device Data State (IS) S17.7.3.4 | 0667 - Device Data State
 
     sdd_5 : str | None
-        SDD.5 (opt) - Load Status (IS)
+        SDD.5 (opt) - Load Status (IS) S17.7.3.5 | 0669 - Load Status
 
     sdd_6 : str | None
-        SDD.6 (opt) - Control Code (NM)
+        SDD.6 (opt) - Control Code (NM) S17.7.3.6
 
     sdd_7 : str | None
-        SDD.7 (opt) - Operator Name (ST)
+        SDD.7 (opt) - Operator Name (ST) S17.7.3.7
     """
 
     sdd_1: Optional[EI] = Field(

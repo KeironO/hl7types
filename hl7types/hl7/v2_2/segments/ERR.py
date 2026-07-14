@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class ERR(HL7Model):
-    """HL7 v2 ERR segment.
+    """ERROR (S2.10.3).
 
     Attributes
     ----------
     err_1 : list[str]
-        ERR.1 (req, rep) - Error Code and Location (CM)
+        ERR.1 (req, rep) - Error Code and Location (CM) S2.10.3.1 | 0060 - ERROR CODE
     """
 
     err_1: List[str] = Field(

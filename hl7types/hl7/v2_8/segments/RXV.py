@@ -16,75 +16,75 @@ from ..datatypes.CWE import CWE
 
 
 class RXV(HL7Model):
-    """HL7 v2 RXV segment.
+    """Pharmacy/Treatment Infusion (S4.A.8).
 
     Attributes
     ----------
     rxv_1 : str | None
-        RXV.1 (opt) - Set ID - RXV (SI)
+        RXV.1 (opt) - Set ID - RXV (SI) S4.A.8.1
 
     rxv_2 : str
-        RXV.2 (req) - Bolus Type (ID)
+        RXV.2 (req) - Bolus Type (ID) S4.A.8.2 | 0917 - Bolus Type
 
     rxv_3 : str | None
-        RXV.3 (opt) - Bolus Dose Amount (NM)
+        RXV.3 (opt) - Bolus Dose Amount (NM) S4.A.8.3
 
     rxv_4 : CWE | None
-        RXV.4 (opt) - Bolus Dose Amount Units (CWE)
+        RXV.4 (opt) - Bolus Dose Amount Units (CWE) S4.A.8.4 | 9999 - no table for CE
 
     rxv_5 : str | None
-        RXV.5 (opt) - Bolus Dose Volume (NM)
+        RXV.5 (opt) - Bolus Dose Volume (NM) S4.A.8.5
 
     rxv_6 : CWE | None
-        RXV.6 (opt) - Bolus Dose Volume Units (CWE)
+        RXV.6 (opt) - Bolus Dose Volume Units (CWE) S4.A.8.6 | 9999 - no table for CE
 
     rxv_7 : str
-        RXV.7 (req) - PCA Type (ID)
+        RXV.7 (req) - PCA Type (ID) S4.A.8.7 | 0918 - PCA Type
 
     rxv_8 : str | None
-        RXV.8 (opt) - PCA Dose Amount (NM)
+        RXV.8 (opt) - PCA Dose Amount (NM) S4.A.8.8
 
     rxv_9 : CWE | None
-        RXV.9 (opt) - PCA Dose Amount Units (CWE)
+        RXV.9 (opt) - PCA Dose Amount Units (CWE) S4.A.8.9 | 9999 - no table for CE
 
     rxv_10 : str | None
-        RXV.10 (opt) - PCA Dose Amount Volume (NM)
+        RXV.10 (opt) - PCA Dose Amount Volume (NM) S4.A.8.10
 
     rxv_11 : CWE | None
-        RXV.11 (opt) - PCA Dose Amount Volume Units (CWE)
+        RXV.11 (opt) - PCA Dose Amount Volume Units (CWE) S4.A.8.11 | 9999 - no table for CE
 
     rxv_12 : str | None
-        RXV.12 (opt) - Max Dose Amount (NM)
+        RXV.12 (opt) - Max Dose Amount (NM) S4.A.8.12
 
     rxv_13 : CWE | None
-        RXV.13 (opt) - Max Dose Amount Units (CWE)
+        RXV.13 (opt) - Max Dose Amount Units (CWE) S4.A.8.13 | 9999 - no table for CE
 
     rxv_14 : str | None
-        RXV.14 (opt) - Max Dose Amount Volume (NM)
+        RXV.14 (opt) - Max Dose Amount Volume (NM) S4.A.8.14
 
     rxv_15 : CWE | None
-        RXV.15 (opt) - Max Dose Amount Volume Units (CWE)
+        RXV.15 (opt) - Max Dose Amount Volume Units (CWE) S4.A.8.15 | 9999 - no table for CE
 
     rxv_16 : CQ
-        RXV.16 (req) - Max Dose per Time (CQ)
+        RXV.16 (req) - Max Dose per Time (CQ) S4.A.8.16
 
     rxv_17 : CQ | None
-        RXV.17 (opt) - Lockout Interval (CQ)
+        RXV.17 (opt) - Lockout Interval (CQ) S4.A.8.17
 
     rxv_18 : CWE | None
-        RXV.18 (opt) - Syringe Manufacturer (CWE)
+        RXV.18 (opt) - Syringe Manufacturer (CWE) S4.A.8.18
 
     rxv_19 : CWE | None
-        RXV.19 (opt) - Syringe Model Number (CWE)
+        RXV.19 (opt) - Syringe Model Number (CWE) S4.A.8.19
 
     rxv_20 : str | None
-        RXV.20 (opt) - Syringe Size (NM)
+        RXV.20 (opt) - Syringe Size (NM) S4.A.8.20
 
     rxv_21 : CWE | None
-        RXV.21 (opt) - Syringe Size Units (CWE)
+        RXV.21 (opt) - Syringe Size Units (CWE) S4.A.8.21
 
     rxv_22 : str | None
-        RXV.22 (opt) - Action Code (ID)
+        RXV.22 (opt) - Action Code (ID) S4.A.8.22 | 0206 - Segment Action Code
     """
 
     rxv_1: Optional[str] = Field(

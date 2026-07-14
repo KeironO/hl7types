@@ -22,20 +22,20 @@ class PPG_PCG_OBRRXO_SUPPGRP(HL7Model):
     """HL7 v2 PPG_PCG.OBRRXO_SUPPGRP group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        RXO (Optional[RXO]): optional
+        OBR (Optional[OBR]): Observation Request, optional
+        RXO (Optional[RXO]): Pharmacy/Treatment Order, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation Request",
     )
 
     RXO: Optional[_RXO] = Field(
         default=None,
         title="RXO",
-        description="Optional",
+        description="Pharmacy/Treatment Order",
     )
 
     model_config = {"populate_by_name": True}

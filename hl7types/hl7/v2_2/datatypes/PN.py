@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class PN(HL7Model):
-    """HL7 v2 PN data type.
+    """Person name (S2.4.5.8).
 
     Attributes
     ----------

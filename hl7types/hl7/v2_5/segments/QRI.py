@@ -15,18 +15,18 @@ from ..datatypes.CE import CE
 
 
 class QRI(HL7Model):
-    """HL7 v2 QRI segment.
+    """Query Response Instance (S5.5.5).
 
     Attributes
     ----------
     qri_1 : str | None
-        QRI.1 (opt) - Candidate Confidence (NM)
+        QRI.1 (opt) - Candidate Confidence (NM) S5.5.5.1
 
     qri_2 : list[str] | None
-        QRI.2 (opt, rep) - Match Reason Code (IS)
+        QRI.2 (opt, rep) - Match Reason Code (IS) S5.5.5.2 | 0392 - Match reason
 
     qri_3 : CE | None
-        QRI.3 (opt) - Algorithm Descriptor (CE)
+        QRI.3 (opt) - Algorithm Descriptor (CE) S5.5.5.3 | 0393 - Match algorithms
     """
 
     qri_1: Optional[str] = Field(

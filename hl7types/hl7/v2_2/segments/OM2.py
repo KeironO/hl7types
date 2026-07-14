@@ -15,42 +15,42 @@ from ..datatypes.CE import CE
 
 
 class OM2(HL7Model):
-    """HL7 v2 OM2 segment.
+    """NUMERIC OBSERVATION (S7.6.5).
 
     Attributes
     ----------
     om2_1 : str | None
-        OM2.1 (opt) - Segment Type ID (ST)
+        OM2.1 (opt) - Segment Type ID (ST) S7.6.9.1
 
     om2_2 : str | None
-        OM2.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+        OM2.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
 
     om2_3 : CE | None
-        OM2.3 (opt) - Units of Measure (CE)
+        OM2.3 (opt) - Units of Measure (CE) S7.6.5.3
 
     om2_4 : str | None
-        OM2.4 (opt) - Range of Decimal Precision (NM)
+        OM2.4 (opt) - Range of Decimal Precision (NM) S7.6.5.4
 
     om2_5 : CE | None
-        OM2.5 (opt) - Corresponding SI Units of Measure (CE)
+        OM2.5 (opt) - Corresponding SI Units of Measure (CE) S7.6.5.5
 
     om2_6 : list[str]
-        OM2.6 (req, rep) - SI Conversion Factor (TX)
+        OM2.6 (req, rep) - SI Conversion Factor (TX) S7.6.5.6
 
     om2_7 : list[str] | None
-        OM2.7 (opt, rep) - Reference (normal) range - ordinal & continuous observations (CM)
+        OM2.7 (opt, rep) - Reference (normal) range - ordinal & continuous observations (CM) S7.6.5.7
 
     om2_8 : str | None
-        OM2.8 (opt) - Critical range for ordinal and continuous observations (CM)
+        OM2.8 (opt) - Critical range for ordinal and continuous observations (CM) S7.6.5.8
 
     om2_9 : str | None
-        OM2.9 (opt) - Absolute range for ordinal and continuous observations (CM)
+        OM2.9 (opt) - Absolute range for ordinal and continuous observations (CM) S7.6.5.9
 
     om2_10 : list[str] | None
-        OM2.10 (opt, rep) - Delta Check Criteria (CM)
+        OM2.10 (opt, rep) - Delta Check Criteria (CM) S7.6.5.10
 
     om2_11 : str | None
-        OM2.11 (opt) - Minimum Meaningful Increments (NM)
+        OM2.11 (opt) - Minimum Meaningful Increments (NM) S7.6.5.11
     """
 
     om2_1: Optional[str] = Field(

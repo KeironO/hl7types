@@ -25,26 +25,25 @@ class OUL_R23_CONTAINER(HL7Model):
     """HL7 v2 OUL_R23.CONTAINER group.
 
     Attributes:
-        SAC (SAC): required
-        INV (Optional[INV]): optional
+        SAC (SAC): Specimen Container detail, required
+        INV (Optional[INV]): Inventory Detail, optional
         ORDER (List[OUL_R23_ORDER]): required
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     INV: Optional[_INV] = Field(
         default=None,
         title="INV",
-        description="Optional",
+        description="Inventory Detail",
     )
 
     ORDER: List[_OUL_R23_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

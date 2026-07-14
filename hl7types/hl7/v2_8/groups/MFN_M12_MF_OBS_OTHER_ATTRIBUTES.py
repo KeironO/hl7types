@@ -22,19 +22,19 @@ class MFN_M12_MF_OBS_OTHER_ATTRIBUTES(HL7Model):
     """HL7 v2 MFN_M12.MF_OBS_OTHER_ATTRIBUTES group.
 
     Attributes:
-        OM7 (OM7): required
-        PRT (Optional[List[PRT]]): optional
+        OM7 (OM7): Additional Basic Attributes, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     OM7: _OM7 = Field(
         title="OM7",
-        description="Required",
+        description="Additional Basic Attributes",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

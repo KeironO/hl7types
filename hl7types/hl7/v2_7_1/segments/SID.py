@@ -15,21 +15,21 @@ from ..datatypes.CWE import CWE
 
 
 class SID(HL7Model):
-    """HL7 v2 SID segment.
+    """Substance Identifier (S13.4.11).
 
     Attributes
     ----------
     sid_1 : CWE | None
-        SID.1 (opt) - Application/Method Identifier (CWE)
+        SID.1 (opt) - Application/Method Identifier (CWE) S13.4.11.1 | 9999 - no table for CE
 
     sid_2 : str | None
-        SID.2 (opt) - Substance Lot Number (ST)
+        SID.2 (opt) - Substance Lot Number (ST) S13.4.11.2
 
     sid_3 : str | None
-        SID.3 (opt) - Substance Container Identifier (ST)
+        SID.3 (opt) - Substance Container Identifier (ST) S13.4.11.3
 
     sid_4 : CWE | None
-        SID.4 (opt) - Substance Manufacturer Identifier (CWE)
+        SID.4 (opt) - Substance Manufacturer Identifier (CWE) S13.4.11.4 | 0385 - Manufacturer Identifier
     """
 
     sid_1: Optional[CWE] = Field(

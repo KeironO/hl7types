@@ -22,19 +22,19 @@ class SSU_U03_SPECIMEN(HL7Model):
     """HL7 v2 SSU_U03.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
-        OBX (Optional[List[OBX]]): optional
+        SPM (SPM): Specimen, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

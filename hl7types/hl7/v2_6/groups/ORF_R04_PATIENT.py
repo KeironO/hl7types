@@ -24,26 +24,26 @@ class ORF_R04_PATIENT(HL7Model):
     """HL7 v2 ORF_R04.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        NTE (Optional[List[NTE]]): optional
-        OBX (Optional[List[OBX]]): optional
+        PID (PID): Patient Identification, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

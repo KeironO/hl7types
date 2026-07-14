@@ -25,25 +25,26 @@ class MFN_M10_MF_TEST_BATTERIES(HL7Model):
     """HL7 v2 MFN_M10.MF_TEST_BATTERIES group.
 
     Attributes:
-        MFE (MFE): required
-        OM1 (OM1): required
+        MFE (MFE): MFE - master file entry segment, required
+        OM1 (OM1): OM1 - general segment (fields that apply to most observations), required
         MF_TEST_BATT_DETAIL (Optional[MFN_M10_MF_TEST_BATT_DETAIL]): optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="MFE - master file entry segment",
     )
 
     OM1: _OM1 = Field(
         title="OM1",
-        description="Required",
+        description=(
+            "OM1 - general segment (fields that apply to most observations)"
+        ),
     )
 
     MF_TEST_BATT_DETAIL: Optional[_MFN_M10_MF_TEST_BATT_DETAIL] = Field(
         default=None,
         title="MF_TEST_BATT_DETAIL",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

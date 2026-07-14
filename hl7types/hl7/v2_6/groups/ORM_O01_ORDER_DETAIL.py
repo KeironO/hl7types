@@ -30,39 +30,37 @@ class ORM_O01_ORDER_DETAIL(HL7Model):
 
     Attributes:
         CHOICE (ORM_O01_CHOICE): required
-        NTE (Optional[List[NTE]]): optional
-        CTD (Optional[CTD]): optional
-        DG1 (Optional[List[DG1]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        CTD (Optional[CTD]): Contact Data, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[ORM_O01_OBSERVATION]]): optional
     """
 
     CHOICE: _ORM_O01_CHOICE = Field(
         title="CHOICE",
-        description="Required",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_ORM_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

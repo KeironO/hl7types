@@ -20,13 +20,13 @@ class MFR_M03_MF_TEST(HL7Model):
     """HL7 v2 MFR_M03.MF_TEST group.
 
     Attributes:
-        MFE (MFE): required
+        MFE (MFE): MASTER FILE ENTRY, required
         anyzsegment (Optional[Any]): optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="MASTER FILE ENTRY",
     )
 
     anyzsegment: Optional[Any] = None

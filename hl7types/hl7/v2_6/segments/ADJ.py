@@ -19,54 +19,54 @@ from ..datatypes.XON import XON
 
 
 class ADJ(HL7Model):
-    """HL7 v2 ADJ segment.
+    """Adjustment (S16.4.7).
 
     Attributes
     ----------
     adj_1 : EI
-        ADJ.1 (req) - Provider Adjustment Number (EI)
+        ADJ.1 (req) - Provider Adjustment Number (EI) S16.4.7.1
 
     adj_2 : EI
-        ADJ.2 (req) - Payer Adjustment Number (EI)
+        ADJ.2 (req) - Payer Adjustment Number (EI) S16.4.7.2
 
     adj_3 : str
-        ADJ.3 (req) - Adjustment Sequence Number (SI)
+        ADJ.3 (req) - Adjustment Sequence Number (SI) S16.4.7.3
 
     adj_4 : str
-        ADJ.4 (req) - Adjustment Category (IS)
+        ADJ.4 (req) - Adjustment Category (IS) S16.4.7.4 | 0564 - Adjustment Category Code
 
     adj_5 : CP | None
-        ADJ.5 (opt) - Adjustment Amount (CP)
+        ADJ.5 (opt) - Adjustment Amount (CP) S16.4.7.5
 
     adj_6 : CQ | None
-        ADJ.6 (opt) - Adjustment Quantity (CQ)
+        ADJ.6 (opt) - Adjustment Quantity (CQ) S16.4.7.6 | 0560 - Quantity Units
 
     adj_7 : CWE | None
-        ADJ.7 (opt) - Adjustment Reason PA (CWE)
+        ADJ.7 (opt) - Adjustment Reason PA (CWE) S16.4.7.7 | 0565 - Provider Adjustment Reason Code
 
     adj_8 : str | None
-        ADJ.8 (opt) - Adjustment Description (ST)
+        ADJ.8 (opt) - Adjustment Description (ST) S16.4.7.8
 
     adj_9 : str | None
-        ADJ.9 (opt) - Original Value (NM)
+        ADJ.9 (opt) - Original Value (NM) S16.4.7.9
 
     adj_10 : str | None
-        ADJ.10 (opt) - Substitute Value (NM)
+        ADJ.10 (opt) - Substitute Value (NM) S16.4.7.10
 
     adj_11 : str | None
-        ADJ.11 (opt) - Adjustment Action (IS)
+        ADJ.11 (opt) - Adjustment Action (IS) S16.4.7.11 | 0569 - Adjustment Action
 
     adj_12 : EI | None
-        ADJ.12 (opt) - Provider Adjustment Number Cross Reference (EI)
+        ADJ.12 (opt) - Provider Adjustment Number Cross Reference (EI) S16.4.7.12
 
     adj_13 : EI | None
-        ADJ.13 (opt) - Provider Product/Service Line Item Number Cross Reference (EI)
+        ADJ.13 (opt) - Provider Product/Service Line Item Number Cross Reference (EI) S16.4.7.13
 
     adj_14 : str
-        ADJ.14 (req) - Adjustment Date (DTM)
+        ADJ.14 (req) - Adjustment Date (DTM) S16.4.7.14
 
     adj_15 : XON | None
-        ADJ.15 (opt) - Responsible Organization (XON)
+        ADJ.15 (opt) - Responsible Organization (XON) S16.4.7.15
     """
 
     adj_1: EI = Field(

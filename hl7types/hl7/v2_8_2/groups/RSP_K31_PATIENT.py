@@ -31,47 +31,45 @@ class RSP_K31_PATIENT(HL7Model):
     """HL7 v2 RSP_K31.PATIENT group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient Identification, required
         ADDITIONAL_DEMOGRAPHICS (Optional[RSP_K31_ADDITIONAL_DEMOGRAPHICS]): optional
-        NTE (Optional[List[NTE]]): optional
-        ARV (Optional[List[ARV]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
         PATIENT_VISIT (Optional[RSP_K31_PATIENT_VISIT]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     ADDITIONAL_DEMOGRAPHICS: Optional[_RSP_K31_ADDITIONAL_DEMOGRAPHICS] = Field(
         default=None,
         title="ADDITIONAL_DEMOGRAPHICS",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     PATIENT_VISIT: Optional[_RSP_K31_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

@@ -20,102 +20,102 @@ from ..datatypes.XON import XON
 
 
 class CER(HL7Model):
-    """HL7 v2 CER segment.
+    """Certificate Detail (S15.4.2).
 
     Attributes
     ----------
     cer_1 : str
-        CER.1 (req) - Set ID - CER (SI)
+        CER.1 (req) - Set ID - CER (SI) S15.4.2.1
 
     cer_2 : str | None
-        CER.2 (opt) - Serial Number (ST)
+        CER.2 (opt) - Serial Number (ST) S15.4.2.2
 
     cer_3 : str | None
-        CER.3 (opt) - Version (ST)
+        CER.3 (opt) - Version (ST) S15.4.2.3
 
     cer_4 : XON | None
-        CER.4 (opt) - Granting Authority (XON)
+        CER.4 (opt) - Granting Authority (XON) S15.4.2.4
 
     cer_5 : XCN | None
-        CER.5 (opt) - Issuing Authority (XCN)
+        CER.5 (opt) - Issuing Authority (XCN) S15.4.2.5
 
     cer_6 : ED | None
-        CER.6 (opt) - Signature of Issuing Authority (ED)
+        CER.6 (opt) - Signature of Issuing Authority (ED) S15.4.2.6
 
     cer_7 : str | None
-        CER.7 (opt) - Granting Country (ID)
+        CER.7 (opt) - Granting Country (ID) S15.4.2.7 | 0399 - Country code
 
     cer_8 : CWE | None
-        CER.8 (opt) - Granting State/Province (CWE)
+        CER.8 (opt) - Granting State/Province (CWE) S15.4.2.8 | 0347 - State/province
 
     cer_9 : CWE | None
-        CER.9 (opt) - Granting County/Parish (CWE)
+        CER.9 (opt) - Granting County/Parish (CWE) S15.4.2.9 | 0289 - County/parish
 
     cer_10 : CWE | None
-        CER.10 (opt) - Certificate Type (CWE)
+        CER.10 (opt) - Certificate Type (CWE) S15.4.2.10
 
     cer_11 : CWE | None
-        CER.11 (opt) - Certificate Domain (CWE)
+        CER.11 (opt) - Certificate Domain (CWE) S15.4.2.11
 
     cer_12 : str | None
-        CER.12 (opt) - Subject ID (ID)
+        CER.12 (opt) - Subject ID (ID) S15.4.2.12
 
     cer_13 : str
-        CER.13 (req) - Subject Name (ST)
+        CER.13 (req) - Subject Name (ST) S15.4.2.13
 
     cer_14 : list[CWE] | None
-        CER.14 (opt, rep) - Subject Directory Attribute Extension (Health Professional Data) (CWE)
+        CER.14 (opt, rep) - Subject Directory Attribute Extension (Health Professional Data) (CWE) S15.4.2.14
 
     cer_15 : CWE | None
-        CER.15 (opt) - Subject Public Key Info (CWE)
+        CER.15 (opt) - Subject Public Key Info (CWE) S15.4.2.15
 
     cer_16 : CWE | None
-        CER.16 (opt) - Authority Key Identifier (CWE)
+        CER.16 (opt) - Authority Key Identifier (CWE) S15.4.2.16
 
     cer_17 : str | None
-        CER.17 (opt) - Basic Constraint (ID)
+        CER.17 (opt) - Basic Constraint (ID) S15.4.2.17 | 0136 - Yes/no indicator
 
     cer_18 : list[CWE] | None
-        CER.18 (opt, rep) - CRL Distribution Point (CWE)
+        CER.18 (opt, rep) - CRL Distribution Point (CWE) S15.4.2.18
 
     cer_19 : str | None
-        CER.19 (opt) - Jurisdiction Country (ID)
+        CER.19 (opt) - Jurisdiction Country (ID) S15.4.2.19 | 0399 - Country code
 
     cer_20 : CWE | None
-        CER.20 (opt) - Jurisdiction State/Province (CWE)
+        CER.20 (opt) - Jurisdiction State/Province (CWE) S15.4.2.20 | 0347 - State/province
 
     cer_21 : CWE | None
-        CER.21 (opt) - Jurisdiction County/Parish (CWE)
+        CER.21 (opt) - Jurisdiction County/Parish (CWE) S15.4.2.21 | 0289 - County/parish
 
     cer_22 : list[CWE] | None
-        CER.22 (opt, rep) - Jurisdiction Breadth (CWE)
+        CER.22 (opt, rep) - Jurisdiction Breadth (CWE) S15.4.2.22 | 0547 - Jurisdictional Breadth
 
     cer_23 : TS | None
-        CER.23 (opt) - Granting Date (TS)
+        CER.23 (opt) - Granting Date (TS) S15.4.2.23
 
     cer_24 : TS | None
-        CER.24 (opt) - Issuing Date (TS)
+        CER.24 (opt) - Issuing Date (TS) S15.4.2.24
 
     cer_25 : TS | None
-        CER.25 (opt) - Activation Date (TS)
+        CER.25 (opt) - Activation Date (TS) S15.4.2.25
 
     cer_26 : TS | None
-        CER.26 (opt) - Inactivation Date (TS)
+        CER.26 (opt) - Inactivation Date (TS) S15.4.2.26
 
     cer_27 : TS | None
-        CER.27 (opt) - Expiration Date (TS)
+        CER.27 (opt) - Expiration Date (TS) S15.4.2.27
 
     cer_28 : TS | None
-        CER.28 (opt) - Renewal Date (TS)
+        CER.28 (opt) - Renewal Date (TS) S15.4.2.28
 
     cer_29 : TS | None
-        CER.29 (opt) - Revocation Date (TS)
+        CER.29 (opt) - Revocation Date (TS) S15.4.2.29
 
     cer_30 : CE | None
-        CER.30 (opt) - Revocation Reason Code (CE)
+        CER.30 (opt) - Revocation Reason Code (CE) S15.4.2.30
 
     cer_31 : CWE | None
-        CER.31 (opt) - Certificate Status (CWE)
+        CER.31 (opt) - Certificate Status (CWE) S15.4.2.31 | 0536 - Certificate Status
     """
 
     cer_1: str = Field(

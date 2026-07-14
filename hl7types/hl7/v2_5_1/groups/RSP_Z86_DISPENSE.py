@@ -24,26 +24,26 @@ class RSP_Z86_DISPENSE(HL7Model):
     """HL7 v2 RSP_Z86.DISPENSE group.
 
     Attributes:
-        RXD (RXD): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXD (RXD): Pharmacy/Treatment Dispense, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
     """
 
     RXD: _RXD = Field(
         title="RXD",
-        description="Required",
+        description="Pharmacy/Treatment Dispense",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     model_config = {"populate_by_name": True}

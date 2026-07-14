@@ -17,7 +17,7 @@ from .TS import TS
 
 
 class CM_NDL(HL7Model):
-    """HL7 v2 CM_NDL data type.
+    """Observing practitioner.
 
     Attributes
     ----------

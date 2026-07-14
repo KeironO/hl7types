@@ -38,72 +38,72 @@ class QBP_Qnn(HL7Model):
     """HL7 v2 QBP_Qnn message.
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        QPD (QPD): required
-        RDF (Optional[RDF]): optional
-        RCP (RCP): required
-        DSC (Optional[DSC]): optional
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        QPD (QPD): Query Parameter Definition, required
+        RDF (Optional[RDF]): Table Row Definition, optional
+        RCP (RCP): Response Control Parameter, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (QAK): Query Acknowledgment, required
         anyhl7segment (Any): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
-        description="Optional",
+        description="Table Row Definition",
     )
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     anyhl7segment: Any

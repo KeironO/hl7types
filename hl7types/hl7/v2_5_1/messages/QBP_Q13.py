@@ -27,48 +27,48 @@ _SFT = SFT
 
 
 class QBP_Q13(HL7Model):
-    """HL7 v2 QBP_Q13 message.
+    """QBP - Query by parameter requesting an  RTB - tabular response (S15.3.7).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        QPD (QPD): required
-        RDF (Optional[RDF]): optional
-        RCP (RCP): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        QPD (QPD): Query Parameter Definition, required
+        RDF (Optional[RDF]): Table Row Definition, optional
+        RCP (RCP): Response Control Parameter, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
-        description="Optional",
+        description="Table Row Definition",
     )
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

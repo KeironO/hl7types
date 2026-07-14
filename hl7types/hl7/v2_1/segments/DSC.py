@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class DSC(HL7Model):
-    """HL7 v2 DSC segment.
+    """CONTINUATION POINTER (S5.3.1).
 
     Attributes
     ----------

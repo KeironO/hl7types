@@ -16,18 +16,18 @@ from ..datatypes.CX import CX
 
 
 class BLG(HL7Model):
-    """HL7 v2 BLG segment.
+    """BLG - billing segment (S4.3.2).
 
     Attributes
     ----------
     blg_1 : CCD | None
-        BLG.1 (opt) - When to Charge (CCD)
+        BLG.1 (opt) - When to Charge (CCD) S4.3.2.1 | 0100 - When to charge
 
     blg_2 : str | None
-        BLG.2 (opt) - Charge Type (ID)
+        BLG.2 (opt) - Charge Type (ID) S4.3.2.2 | 0122 - Charge type
 
     blg_3 : CX | None
-        BLG.3 (opt) - Account ID (CX)
+        BLG.3 (opt) - Account ID (CX) S4.3.2.3
     """
 
     blg_1: Optional[CCD] = Field(

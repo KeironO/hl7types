@@ -22,19 +22,19 @@ class SQM_S25_LOCATION_RESOURCE(HL7Model):
     """HL7 v2 SQM_S25.LOCATION_RESOURCE group.
 
     Attributes:
-        AIL (AIL): required
-        APR (Optional[APR]): optional
+        AIL (AIL): AIL - appointment information - location resource segment, required
+        APR (Optional[APR]): APR - appointment preferences segment, optional
     """
 
     AIL: _AIL = Field(
         title="AIL",
-        description="Required",
+        description="AIL - appointment information - location resource segment",
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="APR - appointment preferences segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -24,26 +24,26 @@ class OML_O35_PATIENT_PRIOR(HL7Model):
     """HL7 v2 OML_O35.PATIENT_PRIOR group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PRT (Optional[List[PRT]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

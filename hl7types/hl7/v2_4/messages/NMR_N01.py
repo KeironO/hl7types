@@ -26,42 +26,41 @@ _QRD = QRD
 
 
 class NMR_N01(HL7Model):
-    """HL7 v2 NMR_N01 message.
+    """NMQ/NMR - Application management query message (S14).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QRD (Optional[QRD]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QRD (Optional[QRD]): Original-Style Query Definition, optional
         CLOCK_AND_STATS_WITH_NOTES_ALT (List[NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QRD: Optional[_QRD] = Field(
         default=None,
         title="QRD",
-        description="Optional",
+        description="Original-Style Query Definition",
     )
 
     CLOCK_AND_STATS_WITH_NOTES_ALT: List[_NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT] = Field(
         min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES_ALT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

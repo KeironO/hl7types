@@ -34,67 +34,66 @@ _SFT = SFT
 
 
 class RSP_K31(HL7Model):
-    """HL7 v2 RSP_K31 message.
+    """RSP - Dispense History (S15.3.7).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        SFT (Optional[List[SFT]]): optional
-        QAK (QAK): required
-        QPD (QPD): required
-        RCP (RCP): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        QAK (QAK): Query Acknowledgment, required
+        QPD (QPD): Query Parameter Definition, required
+        RCP (RCP): Response Control Parameter, required
         RESPONSE (List[RSP_K31_RESPONSE]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     RCP: _RCP = Field(
         title="RCP",
-        description="Required",
+        description="Response Control Parameter",
     )
 
     RESPONSE: List[_RSP_K31_RESPONSE] = Field(
         min_length=1,
         title="RESPONSE",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

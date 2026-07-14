@@ -23,35 +23,35 @@ _SFT = SFT
 
 
 class ACK(HL7Model):
-    """HL7 v2 ACK message.
+    """General acknowledgment message (S2.14.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     model_config = {"populate_by_name": True}

@@ -21,18 +21,18 @@ class SUR_P09_PRODUCT(HL7Model):
     """HL7 v2 SUR_P09.PRODUCT group.
 
     Attributes:
-        PSH (PSH): required
-        PDC (PDC): required
+        PSH (PSH): PSH - product summary header segment, required
+        PDC (PDC): PDC - product detail country segment, required
     """
 
     PSH: _PSH = Field(
         title="PSH",
-        description="Required",
+        description="PSH - product summary header segment",
     )
 
     PDC: _PDC = Field(
         title="PDC",
-        description="Required",
+        description="PDC - product detail country segment",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class PT(HL7Model):
-    """HL7 v2 PT data type.
+    """Processing type (S2.8.29).
 
     Attributes
     ----------

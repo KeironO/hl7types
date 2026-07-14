@@ -18,57 +18,57 @@ from ..datatypes.TS import TS
 
 
 class STF(HL7Model):
-    """HL7 v2 STF segment.
+    """staff identification segment (S9.1.1).
 
     Attributes
     ----------
     stf_1 : CE
-        STF.1 (req) - STF - primary key value (CE)
+        STF.1 (req) - STF - primary key value (CE) S9.1.1.1
 
     stf_2 : list[CE] | None
-        STF.2 (opt, rep) - Staff ID Code (CE)
+        STF.2 (opt, rep) - Staff ID Code (CE) S9.1.1.2
 
     stf_3 : PN | None
-        STF.3 (opt) - Staff Name (PN)
+        STF.3 (opt) - Staff Name (PN) S9.1.1.3
 
     stf_4 : list[str] | None
-        STF.4 (opt, rep) - Staff Type (ID)
+        STF.4 (opt, rep) - Staff Type (ID) S9.1.1.4 | 0182 - Staff Type
 
     stf_5 : str | None
-        STF.5 (opt) - Sex (ID)
+        STF.5 (opt) - Sex (ID) S3.3.2.8 | 0001 - SEX
 
     stf_6 : TS | None
-        STF.6 (opt) - Date of Birth (TS)
+        STF.6 (opt) - Date of Birth (TS) S3.3.2.7
 
     stf_7 : str | None
-        STF.7 (opt) - Active / inactive (ID)
+        STF.7 (opt) - Active / inactive (ID) S9.1.1.7 | 0183 - Active/Inactive
 
     stf_8 : list[CE] | None
-        STF.8 (opt, rep) - Department (CE)
+        STF.8 (opt, rep) - Department (CE) S9.1.1.8 | 0184 - Department
 
     stf_9 : list[CE] | None
-        STF.9 (opt, rep) - Service (CE)
+        STF.9 (opt, rep) - Service (CE) S9.1.1.9
 
     stf_10 : list[str] | None
-        STF.10 (opt, rep) - Phone (TN)
+        STF.10 (opt, rep) - Phone (TN) S9.1.1.10
 
     stf_11 : list[AD] | None
-        STF.11 (opt, rep) - Office / home address (AD)
+        STF.11 (opt, rep) - Office / home address (AD) S9.1.1.11
 
     stf_12 : list[str] | None
-        STF.12 (opt, rep) - Activation Date (CM)
+        STF.12 (opt, rep) - Activation Date (CM) S9.1.1.12
 
     stf_13 : list[str] | None
-        STF.13 (opt, rep) - Inactivation Date (CM)
+        STF.13 (opt, rep) - Inactivation Date (CM) S9.1.1.13
 
     stf_14 : list[CE] | None
-        STF.14 (opt, rep) - Backup Person ID (CE)
+        STF.14 (opt, rep) - Backup Person ID (CE) S9.1.1.14
 
     stf_15 : list[str] | None
-        STF.15 (opt, rep) - E-mail Address (ST)
+        STF.15 (opt, rep) - E-mail Address (ST) S9.1.1.15
 
     stf_16 : str | None
-        STF.16 (opt) - Preferred method of Contact (ID)
+        STF.16 (opt) - Preferred method of Contact (ID) S9.1.1.16 | 0185 - Preferred Method Of Contrct
     """
 
     stf_1: CE = Field(

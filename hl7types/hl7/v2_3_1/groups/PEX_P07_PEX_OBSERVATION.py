@@ -23,19 +23,18 @@ class PEX_P07_PEX_OBSERVATION(HL7Model):
     """HL7 v2 PEX_P07.PEX_OBSERVATION group.
 
     Attributes:
-        PEO (PEO): required
+        PEO (PEO): PEO - product experience observation segment, required
         PEX_CAUSE (List[PEX_P07_PEX_CAUSE]): required
     """
 
     PEO: _PEO = Field(
         title="PEO",
-        description="Required",
+        description="PEO - product experience observation segment",
     )
 
     PEX_CAUSE: List[_PEX_P07_PEX_CAUSE] = Field(
         min_length=1,
         title="PEX_CAUSE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

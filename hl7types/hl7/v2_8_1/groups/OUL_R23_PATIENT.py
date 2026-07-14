@@ -33,54 +33,52 @@ class OUL_R23_PATIENT(HL7Model):
     """HL7 v2 OUL_R23.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PRT (Optional[List[PRT]]): optional
-        ARV (Optional[List[ARV]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT_OBSERVATION (Optional[List[OUL_R23_PATIENT_OBSERVATION]]): optional
         VISIT (Optional[OUL_R23_VISIT]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT_OBSERVATION: Optional[List[_OUL_R23_PATIENT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_OBSERVATION",
-        description="Optional, repeating",
     )
 
     VISIT: Optional[_OUL_R23_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

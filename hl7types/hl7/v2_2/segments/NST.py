@@ -15,12 +15,12 @@ from ..datatypes.TS import TS
 
 
 class NST(HL7Model):
-    """HL7 v2 NST segment.
+    """Statistics.
 
     Attributes
     ----------
     nst_1 : str
-        NST.1 (req) - Statistics Available (ID)
+        NST.1 (req) - Statistics Available (ID) SC-4 | 0136 - Y/N Indicator
 
     nst_2 : str | None
         NST.2 (opt) - Source Identifier (ST)

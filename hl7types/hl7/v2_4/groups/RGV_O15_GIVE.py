@@ -27,33 +27,32 @@ class RGV_O15_GIVE(HL7Model):
     """HL7 v2 RGV_O15.GIVE group.
 
     Attributes:
-        RXG (RXG): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXG (RXG): Pharmacy/Treatment Give, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
         OBSERVATION (List[RGV_O15_OBSERVATION]): required
     """
 
     RXG: _RXG = Field(
         title="RXG",
-        description="Required",
+        description="Pharmacy/Treatment Give",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     OBSERVATION: List[_RGV_O15_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

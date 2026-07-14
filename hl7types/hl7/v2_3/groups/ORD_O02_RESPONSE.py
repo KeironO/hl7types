@@ -32,19 +32,16 @@ class ORD_O02_RESPONSE(HL7Model):
     PATIENT: Optional[_ORD_O02_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER_DIET: List[_ORD_O02_ORDER_DIET] = Field(
         min_length=1,
         title="ORDER_DIET",
-        description="Required, repeating",
     )
 
     ORDER_TRAY: Optional[List[_ORD_O02_ORDER_TRAY]] = Field(
         default=None,
         title="ORDER_TRAY",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

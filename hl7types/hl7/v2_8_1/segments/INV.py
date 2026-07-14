@@ -16,66 +16,66 @@ from ..datatypes.CWE import CWE
 
 
 class INV(HL7Model):
-    """HL7 v2 INV segment.
+    """Inventory Detail (S13.4.4).
 
     Attributes
     ----------
     inv_1 : CWE
-        INV.1 (req) - Substance Identifier (CWE)
+        INV.1 (req) - Substance Identifier (CWE) S13.4.4.1 | 0451 - Substance Identifier
 
     inv_2 : list[CWE]
-        INV.2 (req, rep) - Substance Status (CWE)
+        INV.2 (req, rep) - Substance Status (CWE) S13.4.4.2 | 0383 - Substance Status
 
     inv_3 : CWE | None
-        INV.3 (opt) - Substance Type (CWE)
+        INV.3 (opt) - Substance Type (CWE) S13.4.4.3 | 0384 - Substance Type
 
     inv_4 : CWE | None
-        INV.4 (opt) - Inventory Container Identifier (CWE)
+        INV.4 (opt) - Inventory Container Identifier (CWE) S13.4.4.4 | 9999 - no table for CE
 
     inv_5 : CWE | None
-        INV.5 (opt) - Container Carrier Identifier (CWE)
+        INV.5 (opt) - Container Carrier Identifier (CWE) S13.4.4.5 | 9999 - no table for CE
 
     inv_6 : CWE | None
-        INV.6 (opt) - Position on Carrier (CWE)
+        INV.6 (opt) - Position on Carrier (CWE) S13.4.4.6 | 9999 - no table for CE
 
     inv_7 : str | None
-        INV.7 (opt) - Initial Quantity (NM)
+        INV.7 (opt) - Initial Quantity (NM) S13.4.4.7
 
     inv_8 : str | None
-        INV.8 (opt) - Current Quantity (NM)
+        INV.8 (opt) - Current Quantity (NM) S13.4.4.8
 
     inv_9 : str | None
-        INV.9 (opt) - Available Quantity (NM)
+        INV.9 (opt) - Available Quantity (NM) S13.4.4.9
 
     inv_10 : str | None
-        INV.10 (opt) - Consumption Quantity (NM)
+        INV.10 (opt) - Consumption Quantity (NM) S13.4.4.10
 
     inv_11 : CWE | None
-        INV.11 (opt) - Quantity Units (CWE)
+        INV.11 (opt) - Quantity Units (CWE) S13.4.4.11 | 9999 - no table for CE
 
     inv_12 : str | None
-        INV.12 (opt) - Expiration Date/Time (DTM)
+        INV.12 (opt) - Expiration Date/Time (DTM) S13.4.4.12
 
     inv_13 : str | None
-        INV.13 (opt) - First Used Date/Time (DTM)
+        INV.13 (opt) - First Used Date/Time (DTM) S13.4.4.13
 
     inv_15 : list[CWE] | None
-        INV.15 (opt, rep) - Test/Fluid Identifier(s) (CWE)
+        INV.15 (opt, rep) - Test/Fluid Identifier(s) (CWE) S13.4.4.15 | 9999 - no table for CE
 
     inv_16 : str | None
-        INV.16 (opt) - Manufacturer Lot Number (ST)
+        INV.16 (opt) - Manufacturer Lot Number (ST) S13.4.4.16
 
     inv_17 : CWE | None
-        INV.17 (opt) - Manufacturer Identifier (CWE)
+        INV.17 (opt) - Manufacturer Identifier (CWE) S13.4.4.17 | 0385 - Manufacturer Identifier
 
     inv_18 : CWE | None
-        INV.18 (opt) - Supplier Identifier (CWE)
+        INV.18 (opt) - Supplier Identifier (CWE) S13.4.4.18 | 0386 - Supplier Identifier
 
     inv_19 : CQ | None
-        INV.19 (opt) - On Board Stability Time (CQ)
+        INV.19 (opt) - On Board Stability Time (CQ) S13.4.4.19
 
     inv_20 : CQ | None
-        INV.20 (opt) - Target Value (CQ)
+        INV.20 (opt) - Target Value (CQ) S13.4.4.20
     """
 
     inv_1: CWE = Field(

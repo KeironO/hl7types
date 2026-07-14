@@ -18,45 +18,45 @@ from ..datatypes.SPD import SPD
 
 
 class PRA(HL7Model):
-    """HL7 v2 PRA segment.
+    """Practitioner Detail (S15.4.6).
 
     Attributes
     ----------
     pra_1 : CWE | None
-        PRA.1 (opt) - Primary Key Value - PRA (CWE)
+        PRA.1 (opt) - Primary Key Value - PRA (CWE) S15.4.6.1 | 9999 - no table for CE
 
     pra_2 : list[CWE] | None
-        PRA.2 (opt, rep) - Practitioner Group (CWE)
+        PRA.2 (opt, rep) - Practitioner Group (CWE) S15.4.6.2 | 0358 - Practitioner Group
 
     pra_3 : list[CWE] | None
-        PRA.3 (opt, rep) - Practitioner Category (CWE)
+        PRA.3 (opt, rep) - Practitioner Category (CWE) S15.4.6.3 | 0186 - Practitioner Category
 
     pra_4 : str | None
-        PRA.4 (opt) - Provider Billing (ID)
+        PRA.4 (opt) - Provider Billing (ID) S15.4.6.4 | 0187 - Provider Billing
 
     pra_5 : list[SPD] | None
-        PRA.5 (opt, rep) - Specialty (SPD)
+        PRA.5 (opt, rep) - Specialty (SPD) S15.4.6.5 | 0337 - Certification Status
 
     pra_6 : list[PLN] | None
-        PRA.6 (opt, rep) - Practitioner ID Numbers (PLN)
+        PRA.6 (opt, rep) - Practitioner ID Numbers (PLN) S15.4.6.6 | 0338 - Practitioner ID Number Type
 
     pra_7 : list[PIP] | None
-        PRA.7 (opt, rep) - Privileges (PIP)
+        PRA.7 (opt, rep) - Privileges (PIP) S15.4.6.7
 
     pra_8 : str | None
-        PRA.8 (opt) - Date Entered Practice (DT)
+        PRA.8 (opt) - Date Entered Practice (DT) S15.4.6.8
 
     pra_9 : CWE | None
-        PRA.9 (opt) - Institution (CWE)
+        PRA.9 (opt) - Institution (CWE) S15.4.6.9 | 0537 - Institution
 
     pra_10 : str | None
-        PRA.10 (opt) - Date Left Practice (DT)
+        PRA.10 (opt) - Date Left Practice (DT) S15.4.6.10
 
     pra_11 : list[CWE] | None
-        PRA.11 (opt, rep) - Government Reimbursement Billing Eligibility (CWE)
+        PRA.11 (opt, rep) - Government Reimbursement Billing Eligibility (CWE) S15.4.6.11 | 0401 - Government Reimbursement Program
 
     pra_12 : str | None
-        PRA.12 (opt) - Set ID - PRA (SI)
+        PRA.12 (opt) - Set ID - PRA (SI) S15.4.6.12
     """
 
     pra_1: Optional[CWE] = Field(

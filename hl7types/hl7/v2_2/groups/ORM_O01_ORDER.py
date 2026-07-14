@@ -25,26 +25,25 @@ class ORM_O01_ORDER(HL7Model):
     """HL7 v2 ORM_O01.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): COMMOM ORDER, required
         ORDER_DETAIL (Optional[ORM_O01_ORDER_DETAIL]): optional
-        BLG (Optional[BLG]): optional
+        BLG (Optional[BLG]): BILLING, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="COMMOM ORDER",
     )
 
     ORDER_DETAIL: Optional[_ORM_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="BILLING",
     )
 
     model_config = {"populate_by_name": True}

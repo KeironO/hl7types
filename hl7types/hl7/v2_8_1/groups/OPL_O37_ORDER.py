@@ -33,55 +33,52 @@ class OPL_O37_ORDER(HL7Model):
     """HL7 v2 OPL_O37.ORDER group.
 
     Attributes:
-        NK1 (List[NK1]): required
+        NK1 (List[NK1]): Next of Kin / Associated Parties, required
         PATIENT (Optional[OPL_O37_PATIENT]): optional
         SPECIMEN (List[OPL_O37_SPECIMEN]): required
         PRIOR_RESULT (Optional[OPL_O37_PRIOR_RESULT]): optional
-        FT1 (Optional[List[FT1]]): optional
-        CTI (Optional[List[CTI]]): optional
-        BLG (Optional[BLG]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     NK1: List[_NK1] = Field(
         min_length=1,
         title="NK1",
-        description="Required, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     PATIENT: Optional[_OPL_O37_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     SPECIMEN: List[_OPL_O37_SPECIMEN] = Field(
         min_length=1,
         title="SPECIMEN",
-        description="Required, repeating",
     )
 
     PRIOR_RESULT: Optional[_OPL_O37_PRIOR_RESULT] = Field(
         default=None,
         title="PRIOR_RESULT",
-        description="Optional",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

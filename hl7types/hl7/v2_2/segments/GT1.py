@@ -16,72 +16,72 @@ from ..datatypes.PN import PN
 
 
 class GT1(HL7Model):
-    """HL7 v2 GT1 segment.
+    """GUARANTOR (S6.4.4).
 
     Attributes
     ----------
     gt1_1 : str
-        GT1.1 (req) - Set ID - guarantor (SI)
+        GT1.1 (req) - Set ID - guarantor (SI) S6.4.4.1
 
     gt1_2 : str | None
-        GT1.2 (opt) - Guarantor number (CK)
+        GT1.2 (opt) - Guarantor number (CK) S6.4.4.2
 
     gt1_3 : PN
-        GT1.3 (req) - Guarantor name (PN)
+        GT1.3 (req) - Guarantor name (PN) S6.4.4.3
 
     gt1_4 : PN | None
-        GT1.4 (opt) - Guarantor spouse name (PN)
+        GT1.4 (opt) - Guarantor spouse name (PN) S6.4.4.4
 
     gt1_5 : AD | None
-        GT1.5 (opt) - Guarantor address (AD)
+        GT1.5 (opt) - Guarantor address (AD) S6.4.4.5
 
     gt1_6 : list[str] | None
-        GT1.6 (opt, rep) - Guarantor phone number - home (TN)
+        GT1.6 (opt, rep) - Guarantor phone number - home (TN) S6.4.4.6
 
     gt1_7 : list[str] | None
-        GT1.7 (opt, rep) - Guarantor phone number - business (TN)
+        GT1.7 (opt, rep) - Guarantor phone number - business (TN) S6.4.4.7
 
     gt1_8 : str | None
-        GT1.8 (opt) - Guarantor date of birth (DT)
+        GT1.8 (opt) - Guarantor date of birth (DT) S6.4.4.8
 
     gt1_9 : str | None
-        GT1.9 (opt) - Guarantor sex (ID)
+        GT1.9 (opt) - Guarantor sex (ID) S6.4.4.9 | 0001 - SEX
 
     gt1_10 : str | None
-        GT1.10 (opt) - Guarantor type (ID)
+        GT1.10 (opt) - Guarantor type (ID) S6.4.4.10 | 0068 - GUARANTOR TYPE
 
     gt1_11 : str | None
-        GT1.11 (opt) - Guarantor relationship (ID)
+        GT1.11 (opt) - Guarantor relationship (ID) S6.4.4.11 | 0063 - RELATIONSHIP
 
     gt1_12 : str | None
-        GT1.12 (opt) - Guarantor social security number (ST)
+        GT1.12 (opt) - Guarantor social security number (ST) S6.4.4.12
 
     gt1_13 : str | None
-        GT1.13 (opt) - Guarantor date - begin (DT)
+        GT1.13 (opt) - Guarantor date - begin (DT) S6.4.4.13
 
     gt1_14 : str | None
-        GT1.14 (opt) - Guarantor date - end (DT)
+        GT1.14 (opt) - Guarantor date - end (DT) S6.4.4.14
 
     gt1_15 : str | None
-        GT1.15 (opt) - Guarantor priority (NM)
+        GT1.15 (opt) - Guarantor priority (NM) S6.4.4.15
 
     gt1_16 : str | None
-        GT1.16 (opt) - Guarantor employer name (ST)
+        GT1.16 (opt) - Guarantor employer name (ST) S6.4.4.16
 
     gt1_17 : AD | None
-        GT1.17 (opt) - Guarantor employer address (AD)
+        GT1.17 (opt) - Guarantor employer address (AD) S6.4.4.17
 
     gt1_18 : list[str] | None
-        GT1.18 (opt, rep) - Guarantor employ phone number (TN)
+        GT1.18 (opt, rep) - Guarantor employ phone number (TN) S6.4.4.18
 
     gt1_19 : str | None
-        GT1.19 (opt) - Guarantor employee ID number (ST)
+        GT1.19 (opt) - Guarantor employee ID number (ST) S6.4.4.19
 
     gt1_20 : str | None
-        GT1.20 (opt) - Guarantor employment status (ID)
+        GT1.20 (opt) - Guarantor employment status (ID) S6.4.4.20 | 0066 - EMPLOYMENT STATUS
 
     gt1_21 : str | None
-        GT1.21 (opt) - Guarantor organization (ST)
+        GT1.21 (opt) - Guarantor organization (ST) S6.4.4.21
     """
 
     gt1_1: str = Field(

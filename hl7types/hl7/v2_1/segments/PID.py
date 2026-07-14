@@ -13,18 +13,18 @@ from hl7types.hl7 import HL7Model
 
 
 class PID(HL7Model):
-    """HL7 v2 PID segment.
+    """PATIENT IDENTIFICATION (S3.3.3).
 
     Attributes
     ----------
     pid_1 : str | None
-        PID.1 (opt) - SET ID - PATIENT ID (SI)
+        PID.1 (opt) - SET ID - PATIENT ID (SI) S3-14
 
     pid_2 : str | None
-        PID.2 (opt) - PATIENT ID EXTERNAL (EXTERNAL ID) (CK)
+        PID.2 (opt) - PATIENT ID EXTERNAL (EXTERNAL ID) (CK) | 0061 - CHECK DIGIT SCHEME
 
     pid_3 : str
-        PID.3 (req) - PATIENT ID INTERNAL (INTERNAL ID) (CK)
+        PID.3 (req) - PATIENT ID INTERNAL (INTERNAL ID) (CK) | 0061 - CHECK DIGIT SCHEME
 
     pid_4 : str | None
         PID.4 (opt) - ALTERNATE PATIENT ID (ST)
@@ -39,13 +39,13 @@ class PID(HL7Model):
         PID.7 (opt) - DATE OF BIRTH (DT)
 
     pid_8 : str | None
-        PID.8 (opt) - SEX (ID)
+        PID.8 (opt) - SEX (ID) | 0001 - SEX
 
     pid_9 : list[str] | None
         PID.9 (opt, rep) - PATIENT ALIAS (PN)
 
     pid_10 : str | None
-        PID.10 (opt) - ETHNIC GROUP (ID)
+        PID.10 (opt) - ETHNIC GROUP (ID) | 0005 - ETHNIC GROUP
 
     pid_11 : str | None
         PID.11 (opt) - PATIENT ADDRESS (AD)
@@ -63,13 +63,13 @@ class PID(HL7Model):
         PID.15 (opt) - LANGUAGE - PATIENT (ST)
 
     pid_16 : str | None
-        PID.16 (opt) - MARITAL STATUS (ID)
+        PID.16 (opt) - MARITAL STATUS (ID) | 0002 - MARITAL STATUS
 
     pid_17 : str | None
-        PID.17 (opt) - RELIGION (ID)
+        PID.17 (opt) - RELIGION (ID) | 0006 - RELIGION
 
     pid_18 : str | None
-        PID.18 (opt) - PATIENT ACCOUNT NUMBER (CK)
+        PID.18 (opt) - PATIENT ACCOUNT NUMBER (CK) | 0061 - CHECK DIGIT SCHEME
 
     pid_19 : str | None
         PID.19 (opt) - SSN NUMBER - PATIENT (ST)

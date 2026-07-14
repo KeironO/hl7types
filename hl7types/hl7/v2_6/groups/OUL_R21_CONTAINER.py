@@ -22,19 +22,19 @@ class OUL_R21_CONTAINER(HL7Model):
     """HL7 v2 OUL_R21.CONTAINER group.
 
     Attributes:
-        SAC (SAC): required
-        SID (Optional[SID]): optional
+        SAC (SAC): Specimen Container detail, required
+        SID (Optional[SID]): Substance Identifier, optional
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     SID: Optional[_SID] = Field(
         default=None,
         title="SID",
-        description="Optional",
+        description="Substance Identifier",
     )
 
     model_config = {"populate_by_name": True}

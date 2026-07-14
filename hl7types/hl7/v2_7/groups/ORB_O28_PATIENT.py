@@ -23,19 +23,18 @@ class ORB_O28_PATIENT(HL7Model):
     """HL7 v2 ORB_O28.PATIENT group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient Identification, required
         ORDER (Optional[List[ORB_O28_ORDER]]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     ORDER: Optional[List[_ORB_O28_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

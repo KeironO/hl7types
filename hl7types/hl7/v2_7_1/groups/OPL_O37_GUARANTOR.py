@@ -22,19 +22,19 @@ class OPL_O37_GUARANTOR(HL7Model):
     """HL7 v2 OPL_O37.GUARANTOR group.
 
     Attributes:
-        GT1 (GT1): required
-        NTE (Optional[List[NTE]]): optional
+        GT1 (GT1): Guarantor, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     GT1: _GT1 = Field(
         title="GT1",
-        description="Required",
+        description="Guarantor",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

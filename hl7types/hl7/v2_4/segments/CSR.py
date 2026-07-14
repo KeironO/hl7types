@@ -19,57 +19,57 @@ from ..datatypes.XCN import XCN
 
 
 class CSR(HL7Model):
-    """HL7 v2 CSR segment.
+    """Clinical Study Registration (S7.8.1).
 
     Attributes
     ----------
     csr_1 : EI
-        CSR.1 (req) - Sponsor Study ID (EI)
+        CSR.1 (req) - Sponsor Study ID (EI) S8.11.2.2
 
     csr_2 : EI | None
-        CSR.2 (opt) - Alternate Study ID (EI)
+        CSR.2 (opt) - Alternate Study ID (EI) S8.11.2.3
 
     csr_3 : CE | None
-        CSR.3 (opt) - Institution Registering the Patient (CE)
+        CSR.3 (opt) - Institution Registering the Patient (CE) S7.8.1.3
 
     csr_4 : CX
-        CSR.4 (req) - Sponsor Patient ID (CX)
+        CSR.4 (req) - Sponsor Patient ID (CX) S7.8.1.4
 
     csr_5 : CX | None
-        CSR.5 (opt) - Alternate Patient ID - CSR (CX)
+        CSR.5 (opt) - Alternate Patient ID - CSR (CX) S7.8.1.5
 
     csr_6 : TS
-        CSR.6 (req) - Date/Time Of Patient Study Registration (TS)
+        CSR.6 (req) - Date/Time Of Patient Study Registration (TS) S7.8.1.6
 
     csr_7 : list[XCN] | None
-        CSR.7 (opt, rep) - Person Performing Study Registration (XCN)
+        CSR.7 (opt, rep) - Person Performing Study Registration (XCN) S7.8.1.7
 
     csr_8 : list[XCN]
-        CSR.8 (req, rep) - Study Authorizing Provider (XCN)
+        CSR.8 (req, rep) - Study Authorizing Provider (XCN) S7.8.1.8
 
     csr_9 : TS | None
-        CSR.9 (opt) - Date/time Patient Study Consent Signed (TS)
+        CSR.9 (opt) - Date/time Patient Study Consent Signed (TS) S7.8.1.9
 
     csr_10 : CE | None
-        CSR.10 (opt) - Patient Study Eligibility Status (CE)
+        CSR.10 (opt) - Patient Study Eligibility Status (CE) S7.8.1.10
 
     csr_11 : list[TS] | None
-        CSR.11 (opt, rep) - Study Randomization Date/time (TS)
+        CSR.11 (opt, rep) - Study Randomization Date/time (TS) S7.8.1.11
 
     csr_12 : list[CE] | None
-        CSR.12 (opt, rep) - Randomized Study Arm (CE)
+        CSR.12 (opt, rep) - Randomized Study Arm (CE) S7.8.1.12
 
     csr_13 : list[CE] | None
-        CSR.13 (opt, rep) - Stratum for Study Randomization (CE)
+        CSR.13 (opt, rep) - Stratum for Study Randomization (CE) S7.8.1.13
 
     csr_14 : CE | None
-        CSR.14 (opt) - Patient Evaluability Status (CE)
+        CSR.14 (opt) - Patient Evaluability Status (CE) S7.8.1.14
 
     csr_15 : TS | None
-        CSR.15 (opt) - Date/time Ended Study (TS)
+        CSR.15 (opt) - Date/time Ended Study (TS) S7.8.1.15
 
     csr_16 : CE | None
-        CSR.16 (opt) - Reason Ended Study (CE)
+        CSR.16 (opt) - Reason Ended Study (CE) S7.8.1.16
     """
 
     csr_1: EI = Field(

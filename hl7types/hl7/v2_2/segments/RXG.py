@@ -16,57 +16,57 @@ from ..datatypes.TQ import TQ
 
 
 class RXG(HL7Model):
-    """HL7 v2 RXG segment.
+    """PHARMACY GIVE (S4.8.12).
 
     Attributes
     ----------
     rxg_1 : str
-        RXG.1 (req) - Give Sub-ID Counter (NM)
+        RXG.1 (req) - Give Sub-ID Counter (NM) S4.8.14.1
 
     rxg_2 : str | None
-        RXG.2 (opt) - Dispense Sub-ID Counter (NM)
+        RXG.2 (opt) - Dispense Sub-ID Counter (NM) S4.8.12.2
 
     rxg_3 : list[TQ] | None
-        RXG.3 (opt, rep) - Quantity / timing (TQ)
+        RXG.3 (opt, rep) - Quantity / timing (TQ) S4.8.12.3
 
     rxg_4 : CE
-        RXG.4 (req) - Give Code (CE)
+        RXG.4 (req) - Give Code (CE) S4.8.12.4
 
     rxg_5 : str
-        RXG.5 (req) - Give Amount - Minimum (NM)
+        RXG.5 (req) - Give Amount - Minimum (NM) S4.8.12.5
 
     rxg_6 : str | None
-        RXG.6 (opt) - Give Amount - Maximum (NM)
+        RXG.6 (opt) - Give Amount - Maximum (NM) S4.8.12.6
 
     rxg_7 : CE
-        RXG.7 (req) - Give Units (CE)
+        RXG.7 (req) - Give Units (CE) S4.8.12.7
 
     rxg_8 : CE | None
-        RXG.8 (opt) - Give Dosage Form (CE)
+        RXG.8 (opt) - Give Dosage Form (CE) S4.8.12.8
 
     rxg_9 : str | None
-        RXG.9 (opt) - Administration Notes (ST)
+        RXG.9 (opt) - Administration Notes (ST) S4.8.14.9
 
     rxg_10 : str | None
-        RXG.10 (opt) - Substitution Status (ID)
+        RXG.10 (opt) - Substitution Status (ID) S4.8.12.10 | 0167 - SUBSTITUTION STATUS
 
     rxg_11 : str | None
-        RXG.11 (opt) - Deliver-to location (CM)
+        RXG.11 (opt) - Deliver-to location (CM) S4.8.12.11
 
     rxg_12 : str | None
-        RXG.12 (opt) - Needs Human Review (ID)
+        RXG.12 (opt) - Needs Human Review (ID) S4.8.12.12
 
     rxg_13 : list[CE] | None
-        RXG.13 (opt, rep) - Pharmacy Special Administration Instructions (CE)
+        RXG.13 (opt, rep) - Pharmacy Special Administration Instructions (CE) S4.8.12.9
 
     rxg_14 : str | None
-        RXG.14 (opt) - Give Per (Time Unit) (ST)
+        RXG.14 (opt) - Give Per (Time Unit) (ST) S4.8.12.14
 
     rxg_15 : CE | None
-        RXG.15 (opt) - Give Rate Amount (CE)
+        RXG.15 (opt) - Give Rate Amount (CE) S4.8.12.15
 
     rxg_16 : CE | None
-        RXG.16 (opt) - Give Rate Units (CE)
+        RXG.16 (opt) - Give Rate Units (CE) S4.8.12.16
     """
 
     rxg_1: str = Field(

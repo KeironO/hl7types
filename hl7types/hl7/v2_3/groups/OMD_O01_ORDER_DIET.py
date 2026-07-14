@@ -23,19 +23,18 @@ class OMD_O01_ORDER_DIET(HL7Model):
     """HL7 v2 OMD_O01.ORDER_DIET group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common order segment, required
         DIET (Optional[OMD_O01_DIET]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common order segment",
     )
 
     DIET: Optional[_OMD_O01_DIET] = Field(
         default=None,
         title="DIET",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

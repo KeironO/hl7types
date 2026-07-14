@@ -22,19 +22,19 @@ class RRA_O18_TREATMENT(HL7Model):
     """HL7 v2 RRA_O18.TREATMENT group.
 
     Attributes:
-        RXA (RXA): required
-        PRT (Optional[List[PRT]]): optional
+        RXA (RXA): Pharmacy/Treatment Administration, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="Pharmacy/Treatment Administration",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

@@ -18,7 +18,7 @@ from .HD import HD
 
 
 class XCN(HL7Model):
-    """HL7 v2 XCN data type.
+    """Extended composite id number and name for persons (S2.9.52).
 
     Attributes
     ----------

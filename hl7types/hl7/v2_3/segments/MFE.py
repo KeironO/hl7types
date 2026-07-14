@@ -16,21 +16,21 @@ from ..datatypes.TS import TS
 
 
 class MFE(HL7Model):
-    """HL7 v2 MFE segment.
+    """Master file entry segment (S8.4.2).
 
     Attributes
     ----------
     mfe_1 : str
-        MFE.1 (req) - Record-Level Event Code (ID)
+        MFE.1 (req) - Record-Level Event Code (ID) S8.4.2 | 0180 - Record Level Event Code
 
     mfe_2 : str | None
-        MFE.2 (opt) - MFN Control ID (ST)
+        MFE.2 (opt) - MFN Control ID (ST) S8.4.2
 
     mfe_3 : TS | None
-        MFE.3 (opt) - Effective Date/Time (TS)
+        MFE.3 (opt) - Effective Date/Time (TS) S8.4.1
 
     mfe_4 : list[CE]
-        MFE.4 (req, rep) - Primary Key Value (CE)
+        MFE.4 (req, rep) - Primary Key Value (CE) S8.4.2.4
     """
 
     mfe_1: str = Field(

@@ -16,24 +16,24 @@ from ..datatypes.XPN import XPN
 
 
 class MRG(HL7Model):
-    """HL7 v2 MRG segment.
+    """Merge Patient Information (S3.4.10).
 
     Attributes
     ----------
     mrg_1 : list[CX]
-        MRG.1 (req, rep) - Prior Patient Identifier List (CX)
+        MRG.1 (req, rep) - Prior Patient Identifier List (CX) S3.4.10.1 | 0061 - Check Digit Scheme
 
     mrg_3 : CX | None
-        MRG.3 (opt) - Prior Patient Account Number (CX)
+        MRG.3 (opt) - Prior Patient Account Number (CX) S3.4.10.3 | 0061 - Check Digit Scheme
 
     mrg_5 : CX | None
-        MRG.5 (opt) - Prior Visit Number (CX)
+        MRG.5 (opt) - Prior Visit Number (CX) S3.4.10.5 | 0061 - Check Digit Scheme
 
     mrg_6 : CX | None
-        MRG.6 (opt) - Prior Alternate Visit ID (CX)
+        MRG.6 (opt) - Prior Alternate Visit ID (CX) S3.4.10.6 | 0061 - Check Digit Scheme
 
     mrg_7 : list[XPN] | None
-        MRG.7 (opt, rep) - Prior Patient Name (XPN)
+        MRG.7 (opt, rep) - Prior Patient Name (XPN) S3.4.10.7 | 0200 - Name Type
     """
 
     mrg_1: List[CX] = Field(

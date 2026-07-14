@@ -24,26 +24,26 @@ class RSP_O34_DONATION(HL7Model):
     """HL7 v2 RSP_O34.DONATION group.
 
     Attributes:
-        DON (DON): required
-        OBX (Optional[List[OBX]]): optional
-        NTE (Optional[List[NTE]]): optional
+        DON (DON): Donation, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     DON: _DON = Field(
         title="DON",
-        description="Required",
+        description="Donation",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

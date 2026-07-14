@@ -24,27 +24,27 @@ class RSP_E03_QUERY_ACK_IPR(HL7Model):
     """HL7 v2 RSP_E03.QUERY_ACK_IPR group.
 
     Attributes:
-        QAK (Optional[QAK]): optional
-        QPD (Optional[QPD]): optional
-        IPR (Optional[List[IPR]]): optional
+        QAK (Optional[QAK]): Query Acknowledgment, optional
+        QPD (Optional[QPD]): Query Parameter Definition, optional
+        IPR (Optional[List[IPR]]): Invoice Processing Results, optional
     """
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgment",
     )
 
     QPD: Optional[_QPD] = Field(
         default=None,
         title="QPD",
-        description="Optional",
+        description="Query Parameter Definition",
     )
 
     IPR: Optional[List[_IPR]] = Field(
         default=None,
         title="IPR",
-        description="Optional, repeating",
+        description="Invoice Processing Results",
     )
 
     model_config = {"populate_by_name": True}

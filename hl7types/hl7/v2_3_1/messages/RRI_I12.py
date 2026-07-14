@@ -44,105 +44,100 @@ _RRI_I12_PROVIDER_CONTACT = RRI_I12_PROVIDER_CONTACT
 
 
 class RRI_I12(HL7Model):
-    """HL7 v2 RRI_I12 message.
+    """REF/RRI -  Patient referral.
 
     Attributes:
-        MSH (MSH): required
-        MSA (Optional[MSA]): optional
-        RF1 (Optional[RF1]): optional
+        MSH (MSH): MSH - message header segment, required
+        MSA (Optional[MSA]): MSA - message acknowledgment segment, optional
+        RF1 (Optional[RF1]): Referral Infomation, optional
         AUTHORIZATION_CONTACT (Optional[RRI_I12_AUTHORIZATION_CONTACT]): optional
         PROVIDER_CONTACT (List[RRI_I12_PROVIDER_CONTACT]): required
-        PID (PID): required
-        ACC (Optional[ACC]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        PID (PID): PID - patient identification segment, required
+        ACC (Optional[ACC]): ACC - accident segment, optional
+        DG1 (Optional[List[DG1]]): DG1 - diagnosis segment, optional
+        DRG (Optional[List[DRG]]): DRG - diagnosis related group segment, optional
+        AL1 (Optional[List[AL1]]): AL1 - patient allergy information segment, optional
         PROCEDURE (Optional[List[RRI_I12_PROCEDURE]]): optional
         OBSERVATION (Optional[List[RRI_I12_OBSERVATION]]): optional
         PATIENT_VISIT (Optional[RRI_I12_PATIENT_VISIT]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: Optional[_MSA] = Field(
         default=None,
         title="MSA",
-        description="Optional",
+        description="MSA - message acknowledgment segment",
     )
 
     RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
-        description="Optional",
+        description="Referral Infomation",
     )
 
     AUTHORIZATION_CONTACT: Optional[_RRI_I12_AUTHORIZATION_CONTACT] = Field(
         default=None,
         title="AUTHORIZATION_CONTACT",
-        description="Optional",
     )
 
     PROVIDER_CONTACT: List[_RRI_I12_PROVIDER_CONTACT] = Field(
         min_length=1,
         title="PROVIDER_CONTACT",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="ACC - accident segment",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DG1 - diagnosis segment",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="DRG - diagnosis related group segment",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="AL1 - patient allergy information segment",
     )
 
     PROCEDURE: Optional[List[_RRI_I12_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     OBSERVATION: Optional[List[_RRI_I12_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     PATIENT_VISIT: Optional[_RRI_I12_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

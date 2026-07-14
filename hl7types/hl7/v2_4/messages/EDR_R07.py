@@ -27,48 +27,48 @@ _QAK = QAK
 
 
 class EDR_R07(HL7Model):
-    """HL7 v2 EDR_R07 message.
+    """Enhanced Display Response (S5).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
-        DSP (List[DSP]): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (QAK): Query Acknowledgment, required
+        DSP (List[DSP]): Display Data, required
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     DSP: List[_DSP] = Field(
         min_length=1,
         title="DSP",
-        description="Required, repeating",
+        description="Display Data",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

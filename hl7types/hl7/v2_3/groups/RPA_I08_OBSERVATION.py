@@ -25,26 +25,25 @@ class RPA_I08_OBSERVATION(HL7Model):
     """HL7 v2 RPA_I08.OBSERVATION group.
 
     Attributes:
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): Observation request segment, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
         RESULTS (Optional[List[RPA_I08_RESULTS]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation request segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     RESULTS: Optional[List[_RPA_I08_RESULTS]] = Field(
         default=None,
         title="RESULTS",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -20,108 +20,108 @@ from ..datatypes.XON import XON
 
 
 class ITM(HL7Model):
-    """HL7 v2 ITM segment.
+    """Material Item (S17.4.2).
 
     Attributes
     ----------
     itm_1 : EI
-        ITM.1 (req) - Item Identifier (EI)
+        ITM.1 (req) - Item Identifier (EI) S17.4.2.1
 
     itm_2 : str | None
-        ITM.2 (opt) - Item Description (ST)
+        ITM.2 (opt) - Item Description (ST) S17.4.2.2
 
     itm_3 : CWE | None
-        ITM.3 (opt) - Item Status (CWE)
+        ITM.3 (opt) - Item Status (CWE) S17.4.2.3 | 0776 - Item Status
 
     itm_4 : CWE | None
-        ITM.4 (opt) - Item Type (CWE)
+        ITM.4 (opt) - Item Type (CWE) S17.4.2.4 | 0778 - Item Type
 
     itm_5 : CWE | None
-        ITM.5 (opt) - Item Category (CWE)
+        ITM.5 (opt) - Item Category (CWE) S17.4.2.5
 
     itm_6 : CNE | None
-        ITM.6 (opt) - Subject to Expiration Indicator (CNE)
+        ITM.6 (opt) - Subject to Expiration Indicator (CNE) S17.4.2.6 | 0532 - Expanded Yes/no Indicator
 
     itm_7 : EI | None
-        ITM.7 (opt) - Manufacturer Identifier (EI)
+        ITM.7 (opt) - Manufacturer Identifier (EI) S17.4.2.7
 
     itm_8 : str | None
-        ITM.8 (opt) - Manufacturer Name (ST)
+        ITM.8 (opt) - Manufacturer Name (ST) S17.4.2.8
 
     itm_9 : str | None
-        ITM.9 (opt) - Manufacturer Catalog Number (ST)
+        ITM.9 (opt) - Manufacturer Catalog Number (ST) S17.4.2.9
 
     itm_10 : CWE | None
-        ITM.10 (opt) - Manufacturer Labeler Identification Code (CWE)
+        ITM.10 (opt) - Manufacturer Labeler Identification Code (CWE) S17.4.2.10
 
     itm_11 : CNE | None
-        ITM.11 (opt) - Patient Chargeable Indicator (CNE)
+        ITM.11 (opt) - Patient Chargeable Indicator (CNE) S17.4.2.11 | 0532 - Expanded Yes/no Indicator
 
     itm_12 : CWE | None
-        ITM.12 (opt) - Transaction Code (CWE)
+        ITM.12 (opt) - Transaction Code (CWE) S17.4.2.12 | 0132 - Transaction Code
 
     itm_13 : CP | None
-        ITM.13 (opt) - Transaction amount - unit (CP)
+        ITM.13 (opt) - Transaction amount - unit (CP) S17.4.2.13
 
     itm_14 : CNE | None
-        ITM.14 (opt) - Stocked Item Indicator (CNE)
+        ITM.14 (opt) - Stocked Item Indicator (CNE) S17.4.2.14 | 0532 - Expanded Yes/no Indicator
 
     itm_15 : CWE | None
-        ITM.15 (opt) - Supply Risk Codes (CWE)
+        ITM.15 (opt) - Supply Risk Codes (CWE) S17.4.2.15 | 0871 - Supply Risk Codes
 
     itm_16 : list[XON] | None
-        ITM.16 (opt, rep) - Approving Regulatory Agency (XON)
+        ITM.16 (opt, rep) - Approving Regulatory Agency (XON) S17.4.2.16 | 0790 - Approving Regulatory Agency
 
     itm_17 : CNE | None
-        ITM.17 (opt) - Latex Indicator (CNE)
+        ITM.17 (opt) - Latex Indicator (CNE) S17.4.2.17 | 0532 - Expanded Yes/no Indicator
 
     itm_18 : list[CWE] | None
-        ITM.18 (opt, rep) - Ruling Act (CWE)
+        ITM.18 (opt, rep) - Ruling Act (CWE) S17.4.2.18 | 0793 - Ruling Act
 
     itm_19 : CWE | None
-        ITM.19 (opt) - Item Natural Account Code (CWE)
+        ITM.19 (opt) - Item Natural Account Code (CWE) S17.4.2.19 | 0320 - Item Natural Account Code
 
     itm_20 : str | None
-        ITM.20 (opt) - Approved To Buy Quantity (NM)
+        ITM.20 (opt) - Approved To Buy Quantity (NM) S17.4.2.20
 
     itm_21 : MO | None
-        ITM.21 (opt) - Approved To Buy Price (MO)
+        ITM.21 (opt) - Approved To Buy Price (MO) S17.4.2.21
 
     itm_22 : CNE | None
-        ITM.22 (opt) - Taxable Item Indicator (CNE)
+        ITM.22 (opt) - Taxable Item Indicator (CNE) S17.4.2.22 | 0532 - Expanded Yes/no Indicator
 
     itm_23 : CNE | None
-        ITM.23 (opt) - Freight Charge Indicator (CNE)
+        ITM.23 (opt) - Freight Charge Indicator (CNE) S17.4.2.23 | 0532 - Expanded Yes/no Indicator
 
     itm_24 : CNE | None
-        ITM.24 (opt) - Item Set Indicator (CNE)
+        ITM.24 (opt) - Item Set Indicator (CNE) S17.4.2.24 | 0532 - Expanded Yes/no Indicator
 
     itm_25 : EI | None
-        ITM.25 (opt) - Item Set Identifier (EI)
+        ITM.25 (opt) - Item Set Identifier (EI) S17.4.2.25
 
     itm_26 : CNE | None
-        ITM.26 (opt) - Track Department Usage Indicator (CNE)
+        ITM.26 (opt) - Track Department Usage Indicator (CNE) S17.4.2.26 | 0532 - Expanded Yes/no Indicator
 
     itm_27 : CNE | None
-        ITM.27 (opt) - Procedure Code (CNE)
+        ITM.27 (opt) - Procedure Code (CNE) S17.4.1.14 | 0088 - Procedure Code
 
     itm_28 : list[CNE] | None
-        ITM.28 (opt, rep) - Procedure Code Modifier (CNE)
+        ITM.28 (opt, rep) - Procedure Code Modifier (CNE) S17.4.1.15 | 0340 - Procedure Code Modifier
 
     itm_29 : CWE | None
-        ITM.29 (opt) - Special Handling Code (CWE)
+        ITM.29 (opt) - Special Handling Code (CWE) S13.4.3.43 | 0376 - Special Handling Code
 
     itm_30 : CNE | None
-        ITM.30 (opt) - Hazardous Indicator (CNE)
+        ITM.30 (opt) - Hazardous Indicator (CNE) S17.4.2.30 | 0532 - Expanded Yes/no Indicator
 
     itm_31 : CNE | None
-        ITM.31 (opt) - Sterile Indicator (CNE)
+        ITM.31 (opt) - Sterile Indicator (CNE) S17.4.2.31 | 0532 - Expanded Yes/no Indicator
 
     itm_32 : EI | None
-        ITM.32 (opt) - Material Data Safety Sheet Number (EI)
+        ITM.32 (opt) - Material Data Safety Sheet Number (EI) S17.4.2.32
 
     itm_33 : CWE | None
-        ITM.33 (opt) - United Nations Standard Products and Services Code (UNSPSC) (CWE)
+        ITM.33 (opt) - United Nations Standard Products and Services Code (UNSPSC) (CWE) S17.4.2.33 | 0396 - Coding System
     """
 
     itm_1: EI = Field(

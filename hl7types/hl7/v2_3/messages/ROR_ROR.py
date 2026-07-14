@@ -26,42 +26,41 @@ _ROR_ROR_DEFINITION = ROR_ROR_DEFINITION
 
 
 class ROR_ROR(HL7Model):
-    """HL7 v2 ROR_ROR message.
+    """ROR - Pharmacy prescription order query response.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
+        MSH (MSH): Message header segment, required
+        MSA (MSA): Message acknowledgement segment, required
+        ERR (Optional[ERR]): Error segment, optional
         DEFINITION (List[ROR_ROR_DEFINITION]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message acknowledgement segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error segment",
     )
 
     DEFINITION: List[_ROR_ROR_DEFINITION] = Field(
         min_length=1,
         title="DEFINITION",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

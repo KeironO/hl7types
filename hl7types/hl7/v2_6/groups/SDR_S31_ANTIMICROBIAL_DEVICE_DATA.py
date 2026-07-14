@@ -22,20 +22,20 @@ class SDR_S31_ANTIMICROBIAL_DEVICE_DATA(HL7Model):
     """HL7 v2 SDR_S31.ANTIMICROBIAL_DEVICE_DATA group.
 
     Attributes:
-        SDD (Optional[SDD]): optional
-        SCD (Optional[List[SCD]]): optional
+        SDD (Optional[SDD]): Sterilization Device Data, optional
+        SCD (Optional[List[SCD]]): Anti-Microbial Cycle Data, optional
     """
 
     SDD: Optional[_SDD] = Field(
         default=None,
         title="SDD",
-        description="Optional",
+        description="Sterilization Device Data",
     )
 
     SCD: Optional[List[_SCD]] = Field(
         default=None,
         title="SCD",
-        description="Optional, repeating",
+        description="Anti-Microbial Cycle Data",
     )
 
     model_config = {"populate_by_name": True}

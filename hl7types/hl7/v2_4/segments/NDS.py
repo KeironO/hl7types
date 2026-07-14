@@ -15,21 +15,21 @@ from ..datatypes.TS import TS
 
 
 class NDS(HL7Model):
-    """HL7 v2 NDS segment.
+    """Notification Detail (S13.4.7).
 
     Attributes
     ----------
     nds_1 : str
-        NDS.1 (req) - Notification Reference Number (NM)
+        NDS.1 (req) - Notification Reference Number (NM) S13.4.7.1
 
     nds_2 : TS
-        NDS.2 (req) - Notification Date/Time (TS)
+        NDS.2 (req) - Notification Date/Time (TS) S13.4.7.2
 
     nds_3 : CE
-        NDS.3 (req) - Notification Alert Severity (CE)
+        NDS.3 (req) - Notification Alert Severity (CE) S13.4.7.3 | 0367 - Alert level
 
     nds_4 : CE
-        NDS.4 (req) - Notification Code (CE)
+        NDS.4 (req) - Notification Code (CE) S13.4.7.4
     """
 
     nds_1: str = Field(

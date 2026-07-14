@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class FTS(HL7Model):
-    """HL7 v2 FTS segment.
+    """FILE TRAILER (S2.5.6).
 
     Attributes
     ----------
     fts_1 : str | None
-        FTS.1 (opt) - FILE BATCH COUNT (ST)
+        FTS.1 (opt) - FILE BATCH COUNT (ST) S2-44
 
     fts_2 : str | None
         FTS.2 (opt) - FILE TRAILER COMMENT (ST)

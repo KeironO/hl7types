@@ -14,21 +14,21 @@ from ..datatypes.CWE import CWE
 
 
 class NDS(HL7Model):
-    """HL7 v2 NDS segment.
+    """Notification Detail (S13.4.7).
 
     Attributes
     ----------
     nds_1 : str
-        NDS.1 (req) - Notification Reference Number (NM)
+        NDS.1 (req) - Notification Reference Number (NM) S13.4.7.1
 
     nds_2 : str
-        NDS.2 (req) - Notification Date/Time (DTM)
+        NDS.2 (req) - Notification Date/Time (DTM) S13.4.7.2
 
     nds_3 : CWE
-        NDS.3 (req) - Notification Alert Severity (CWE)
+        NDS.3 (req) - Notification Alert Severity (CWE) S13.4.7.3 | 0367 - Alert level
 
     nds_4 : CWE
-        NDS.4 (req) - Notification Code (CWE)
+        NDS.4 (req) - Notification Code (CWE) S13.4.7.4 | 9999 - no table for CE
     """
 
     nds_1: str = Field(

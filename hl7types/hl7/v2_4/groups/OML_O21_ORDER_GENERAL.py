@@ -29,13 +29,11 @@ class OML_O21_ORDER_GENERAL(HL7Model):
     CONTAINER_1: Optional[_OML_O21_CONTAINER_1] = Field(
         default=None,
         title="CONTAINER_1",
-        description="Optional",
     )
 
     ORDER: List[_OML_O21_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

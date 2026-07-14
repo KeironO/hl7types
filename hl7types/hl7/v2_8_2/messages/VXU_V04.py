@@ -40,18 +40,18 @@ _VXU_V04_PERSON_OBSERVATION = VXU_V04_PERSON_OBSERVATION
 
 
 class VXU_V04(HL7Model):
-    """HL7 v2 VXU_V04 message.
+    """VXU - Unsolicited vaccination record update (S4.A.6).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
-        ARV (Optional[List[ARV]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
         PATIENT_VISIT (Optional[VXU_V04_PATIENT_VISIT]): optional
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[VXU_V04_INSURANCE]]): optional
         PERSON_OBSERVATION (Optional[List[VXU_V04_PERSON_OBSERVATION]]): optional
         ORDER (Optional[List[VXU_V04_ORDER]]): optional
@@ -59,72 +59,68 @@ class VXU_V04(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     PATIENT_VISIT: Optional[_VXU_V04_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_VXU_V04_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     PERSON_OBSERVATION: Optional[List[_VXU_V04_PERSON_OBSERVATION]] = Field(
         default=None,
         title="PERSON_OBSERVATION",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_VXU_V04_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

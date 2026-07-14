@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class RPT(HL7Model):
-    """HL7 v2 RPT data type.
+    """Repeat pattern (S2.A.66).
 
     Attributes
     ----------

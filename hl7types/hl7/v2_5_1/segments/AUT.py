@@ -18,39 +18,39 @@ from ..datatypes.TS import TS
 
 
 class AUT(HL7Model):
-    """HL7 v2 AUT segment.
+    """Authorization Information (S11.6.2).
 
     Attributes
     ----------
     aut_1 : CE | None
-        AUT.1 (opt) - Authorizing Payor, Plan ID (CE)
+        AUT.1 (opt) - Authorizing Payor, Plan ID (CE) S11.6.2.1 | 0072 - Insurance Plan ID
 
     aut_2 : CE
-        AUT.2 (req) - Authorizing Payor, Company ID (CE)
+        AUT.2 (req) - Authorizing Payor, Company ID (CE) S11.6.2.2 | 0285 - Insurance company ID codes
 
     aut_3 : str | None
-        AUT.3 (opt) - Authorizing Payor, Company Name (ST)
+        AUT.3 (opt) - Authorizing Payor, Company Name (ST) S11.6.2.3
 
     aut_4 : TS | None
-        AUT.4 (opt) - Authorization Effective Date (TS)
+        AUT.4 (opt) - Authorization Effective Date (TS) S11.6.2.4
 
     aut_5 : TS | None
-        AUT.5 (opt) - Authorization Expiration Date (TS)
+        AUT.5 (opt) - Authorization Expiration Date (TS) S11.6.2.5
 
     aut_6 : EI | None
-        AUT.6 (opt) - Authorization Identifier (EI)
+        AUT.6 (opt) - Authorization Identifier (EI) S11.6.2.6
 
     aut_7 : CP | None
-        AUT.7 (opt) - Reimbursement Limit (CP)
+        AUT.7 (opt) - Reimbursement Limit (CP) S11.6.2.7
 
     aut_8 : str | None
-        AUT.8 (opt) - Requested Number of Treatments (NM)
+        AUT.8 (opt) - Requested Number of Treatments (NM) S11.6.2.8
 
     aut_9 : str | None
-        AUT.9 (opt) - Authorized Number of Treatments (NM)
+        AUT.9 (opt) - Authorized Number of Treatments (NM) S11.6.2.9
 
     aut_10 : TS | None
-        AUT.10 (opt) - Process Date (TS)
+        AUT.10 (opt) - Process Date (TS) S11.6.1.9
     """
 
     aut_1: Optional[CE] = Field(

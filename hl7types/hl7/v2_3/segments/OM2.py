@@ -15,39 +15,39 @@ from ..datatypes.CE import CE
 
 
 class OM2(HL7Model):
-    """HL7 v2 OM2 segment.
+    """Numeric observation (S8.7.4).
 
     Attributes
     ----------
     om2_1 : str | None
-        OM2.1 (opt) - Sequence Number - Test/ Observation Master File (NM)
+        OM2.1 (opt) - Sequence Number - Test/ Observation Master File (NM) S8.7.3
 
     om2_2 : CE | None
-        OM2.2 (opt) - Units of Measure (CE)
+        OM2.2 (opt) - Units of Measure (CE) S8.7.4.2
 
     om2_3 : list[str] | None
-        OM2.3 (opt, rep) - Range of Decimal Precision (NM)
+        OM2.3 (opt, rep) - Range of Decimal Precision (NM) S8.7.4.3
 
     om2_4 : CE | None
-        OM2.4 (opt) - Corresponding SI Units of Measure (CE)
+        OM2.4 (opt) - Corresponding SI Units of Measure (CE) S8.7.4.4
 
     om2_5 : str | None
-        OM2.5 (opt) - SI Conversion Factor (TX)
+        OM2.5 (opt) - SI Conversion Factor (TX) S8.7.4.5
 
     om2_6 : str | None
-        OM2.6 (opt) - Reference (Normal) Range - Ordinal & Continuous Obs (CM)
+        OM2.6 (opt) - Reference (Normal) Range - Ordinal & Continuous Obs (CM) S8.7.4.6
 
     om2_7 : str | None
-        OM2.7 (opt) - Critical Range for Ordinal & Continuous Obs (CM)
+        OM2.7 (opt) - Critical Range for Ordinal & Continuous Obs (CM) S8.7.4.7
 
     om2_8 : str | None
-        OM2.8 (opt) - Absolute Range for Ordinal & Continuous Obs (CM)
+        OM2.8 (opt) - Absolute Range for Ordinal & Continuous Obs (CM) S8.7.4.8
 
     om2_9 : list[str] | None
-        OM2.9 (opt, rep) - Delta Check Criteria (CM)
+        OM2.9 (opt, rep) - Delta Check Criteria (CM) S8.7.4.9
 
     om2_10 : str | None
-        OM2.10 (opt) - Minimum Meaningful Increments (NM)
+        OM2.10 (opt) - Minimum Meaningful Increments (NM) S8.7.4.10
     """
 
     om2_1: Optional[str] = Field(

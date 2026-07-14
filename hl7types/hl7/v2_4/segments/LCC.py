@@ -16,21 +16,21 @@ from ..datatypes.PL import PL
 
 
 class LCC(HL7Model):
-    """HL7 v2 LCC segment.
+    """Location Charge Code (S8.9.6).
 
     Attributes
     ----------
     lcc_1 : PL
-        LCC.1 (req) - Primary Key Value - LCC (PL)
+        LCC.1 (req) - Primary Key Value - LCC (PL) S8.9.6.1
 
     lcc_2 : CE
-        LCC.2 (req) - Location Department (CE)
+        LCC.2 (req) - Location Department (CE) S8.9.6.2 | 0264 - Location department
 
     lcc_3 : list[CE] | None
-        LCC.3 (opt, rep) - Accommodation Type (CE)
+        LCC.3 (opt, rep) - Accommodation Type (CE) S8.9.6.3 | 0129 - Accommodation code
 
     lcc_4 : list[CE]
-        LCC.4 (req, rep) - Charge Code (CE)
+        LCC.4 (req, rep) - Charge Code (CE) S8.9.6.4 | 0132 - Transaction code
     """
 
     lcc_1: PL = Field(

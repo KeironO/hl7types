@@ -32,61 +32,60 @@ _UAC = UAC
 
 
 class RSP_O33(HL7Model):
-    """HL7 v2 RSP_O33 message.
+    """OML - Laboratory order for multiple orders related to a single specimen (S15.3.7).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
-        QPD (QPD): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (QAK): Query Acknowledgment, required
+        QPD (QPD): Query Parameter Definition, required
         DONOR (Optional[RSP_O33_DONOR]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     DONOR: Optional[_RSP_O33_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

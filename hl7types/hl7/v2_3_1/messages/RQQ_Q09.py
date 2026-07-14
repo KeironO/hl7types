@@ -21,28 +21,28 @@ _MSH = MSH
 
 
 class RQQ_Q09(HL7Model):
-    """HL7 v2 RQQ_Q09 message.
+    """RQQ - event replay query.
 
     Attributes:
-        MSH (MSH): required
-        ERQ (ERQ): required
-        DSC (Optional[DSC]): optional
+        MSH (MSH): MSH - message header segment, required
+        ERQ (ERQ): ERQ - event replay query segment, required
+        DSC (Optional[DSC]): DSC - Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     ERQ: _ERQ = Field(
         title="ERQ",
-        description="Required",
+        description="ERQ - event replay query segment",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="DSC - Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

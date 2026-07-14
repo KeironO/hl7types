@@ -3,1839 +3,1343 @@ v2.1 Messages
 
 .. _hl7-v2_1-ACK:
 
+ACK General acknowledgment message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. py:class:: hl7types.hl7.v2_1.messages.ACK.ACK
    :noindex:
-
-   HL7 v2 ACK message.
-
-ACK
-~~~
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_1-MSA>`
      - required
-     - 
-     - MSA: Required
+     - MESSAGE ACKNOWLEDGMENT
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_1-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - ERROR
 
 .. _hl7-v2_1-ADR_A19:
+
+ADR_A19 HL7 v2 ADR_A19 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADR_A19.ADR_A19
    :noindex:
 
-   HL7 v2 ADR_A19 message.
-
-ADR_A19
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_1-MSA>`
      - required
-     - 
-     - MSA: Required
+     - MESSAGE ACKNOWLEDGMENT
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_1-QRD>`
      - required
-     - 
-     - QRD: Required
+     - QUERY DEFINITION
    * - ``QUERY_RESPONSE``
-     - 
      - List[:ref:`ADR_A19_QUERY_RESPONSE <hl7-v2_1-ADR_A19_QUERY_RESPONSE>`]
      - required
-     - 
-     - QUERY_RESPONSE: Required, repeating
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_1-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - CONTINUATION POINTER
 
 .. _hl7-v2_1-ADT_A01:
+
+ADT_A01 HL7 v2 ADT_A01 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A01.ADT_A01
    :noindex:
 
-   HL7 v2 ADT_A01 message.
-
-ADT_A01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``NK1``
-     - 
      - :ref:`NK1 <hl7-v2_1-NK1>`
      - required
-     - 
-     - NK1: Required
+     - NEXT OF KIN
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A02:
+
+ADT_A02 HL7 v2 ADT_A02 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A02.ADT_A02
    :noindex:
 
-   HL7 v2 ADT_A02 message.
-
-ADT_A02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A03:
+
+ADT_A03 HL7 v2 ADT_A03 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A03.ADT_A03
    :noindex:
 
-   HL7 v2 ADT_A03 message.
-
-ADT_A03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A04:
+
+ADT_A04 HL7 v2 ADT_A04 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A04.ADT_A04
    :noindex:
 
-   HL7 v2 ADT_A04 message.
-
-ADT_A04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``NK1``
-     - 
      - :ref:`NK1 <hl7-v2_1-NK1>`
      - required
-     - 
-     - NK1: Required
+     - NEXT OF KIN
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A05:
+
+ADT_A05 HL7 v2 ADT_A05 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A05.ADT_A05
    :noindex:
 
-   HL7 v2 ADT_A05 message.
-
-ADT_A05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``NK1``
-     - 
      - :ref:`NK1 <hl7-v2_1-NK1>`
      - required
-     - 
-     - NK1: Required
+     - NEXT OF KIN
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A06:
+
+ADT_A06 HL7 v2 ADT_A06 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A06.ADT_A06
    :noindex:
 
-   HL7 v2 ADT_A06 message.
-
-ADT_A06
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A07:
+
+ADT_A07 HL7 v2 ADT_A07 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A07.ADT_A07
    :noindex:
 
-   HL7 v2 ADT_A07 message.
-
-ADT_A07
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A08:
+
+ADT_A08 HL7 v2 ADT_A08 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A08.ADT_A08
    :noindex:
 
-   HL7 v2 ADT_A08 message.
-
-ADT_A08
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``NK1``
-     - 
      - :ref:`NK1 <hl7-v2_1-NK1>`
      - required
-     - 
-     - NK1: Required
+     - NEXT OF KIN
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A09:
+
+ADT_A09 HL7 v2 ADT_A09 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A09.ADT_A09
    :noindex:
 
-   HL7 v2 ADT_A09 message.
-
-ADT_A09
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A10:
+
+ADT_A10 HL7 v2 ADT_A10 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A10.ADT_A10
    :noindex:
 
-   HL7 v2 ADT_A10 message.
-
-ADT_A10
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A11:
+
+ADT_A11 HL7 v2 ADT_A11 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A11.ADT_A11
    :noindex:
 
-   HL7 v2 ADT_A11 message.
-
-ADT_A11
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A12:
+
+ADT_A12 HL7 v2 ADT_A12 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A12.ADT_A12
    :noindex:
 
-   HL7 v2 ADT_A12 message.
-
-ADT_A12
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A13:
+
+ADT_A13 HL7 v2 ADT_A13 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A13.ADT_A13
    :noindex:
 
-   HL7 v2 ADT_A13 message.
-
-ADT_A13
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A14:
+
+ADT_A14 HL7 v2 ADT_A14 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A14.ADT_A14
    :noindex:
 
-   HL7 v2 ADT_A14 message.
-
-ADT_A14
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``NK1``
-     - 
      - :ref:`NK1 <hl7-v2_1-NK1>`
      - required
-     - 
-     - NK1: Required
+     - NEXT OF KIN
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A15:
+
+ADT_A15 HL7 v2 ADT_A15 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A15.ADT_A15
    :noindex:
 
-   HL7 v2 ADT_A15 message.
-
-ADT_A15
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A16:
+
+ADT_A16 HL7 v2 ADT_A16 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A16.ADT_A16
    :noindex:
 
-   HL7 v2 ADT_A16 message.
-
-ADT_A16
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_1-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - DIAGNOSIS
 
 .. _hl7-v2_1-ADT_A17:
+
+ADT_A17 HL7 v2 ADT_A17 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A17.ADT_A17
    :noindex:
 
-   HL7 v2 ADT_A17 message.
-
-ADT_A17
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PATIENT``
-     - 
      - List[:ref:`ADT_A17_PATIENT <hl7-v2_1-ADT_A17_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
 
 .. _hl7-v2_1-ADT_A18:
+
+ADT_A18 HL7 v2 ADT_A18 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A18.ADT_A18
    :noindex:
 
-   HL7 v2 ADT_A18 message.
-
-ADT_A18
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``MRG``
-     - 
      - :ref:`MRG <hl7-v2_1-MRG>`
      - required
-     - 
-     - MRG: Required
+     - MERGE PATIENT INFORMATION
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_1-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A20:
+
+ADT_A20 HL7 v2 ADT_A20 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A20.ADT_A20
    :noindex:
 
-   HL7 v2 ADT_A20 message.
-
-ADT_A20
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``NPU``
-     - 
      - :ref:`NPU <hl7-v2_1-NPU>`
      - required
-     - 
-     - NPU: Required
+     - NON-PATIENT UPDATE
 
 .. _hl7-v2_1-ADT_A21:
+
+ADT_A21 HL7 v2 ADT_A21 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A21.ADT_A21
    :noindex:
 
-   HL7 v2 ADT_A21 message.
-
-ADT_A21
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A22:
+
+ADT_A22 HL7 v2 ADT_A22 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A22.ADT_A22
    :noindex:
 
-   HL7 v2 ADT_A22 message.
-
-ADT_A22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A23:
+
+ADT_A23 HL7 v2 ADT_A23 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A23.ADT_A23
    :noindex:
 
-   HL7 v2 ADT_A23 message.
-
-ADT_A23
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-ADT_A24:
+
+ADT_A24 HL7 v2 ADT_A24 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ADT_A24.ADT_A24
    :noindex:
 
-   HL7 v2 ADT_A24 message.
-
-ADT_A24
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_1-PV1>`
      - required
-     - 
-     - PV1: Required
+     - PATIENT VISIT
 
 .. _hl7-v2_1-BAR_P01:
+
+BAR_P01 HL7 v2 BAR_P01 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.BAR_P01.BAR_P01
    :noindex:
 
-   HL7 v2 BAR_P01 message.
-
-BAR_P01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``VISIT``
-     - 
      - List[:ref:`BAR_P01_VISIT <hl7-v2_1-BAR_P01_VISIT>`]
      - required
-     - 
-     - VISIT: Required, repeating
+     - VISIT
 
 .. _hl7-v2_1-BAR_P02:
+
+BAR_P02 HL7 v2 BAR_P02 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.BAR_P02.BAR_P02
    :noindex:
 
-   HL7 v2 BAR_P02 message.
-
-BAR_P02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PATIENT``
-     - 
      - List[:ref:`BAR_P02_PATIENT <hl7-v2_1-BAR_P02_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
 
 .. _hl7-v2_1-DFT_P03:
+
+DFT_P03 HL7 v2 DFT_P03 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.DFT_P03.DFT_P03
    :noindex:
 
-   HL7 v2 DFT_P03 message.
-
-DFT_P03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_1-EVN>`
      - required
-     - 
-     - EVN: Required
+     - EVENT TYPE
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_1-PID>`
      - required
-     - 
-     - PID: Required
+     - PATIENT IDENTIFICATION
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_1-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - PATIENT VISIT
    * - ``FT1``
-     - 
      - Optional[List[:ref:`FT1 <hl7-v2_1-FT1>`]]
      - optional
-     - 
-     - FT1: Optional, repeating
+     - FINANCIAL TRANSACTION
 
 .. _hl7-v2_1-DSR_Q01:
+
+DSR_Q01 HL7 v2 DSR_Q01 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.DSR_Q01.DSR_Q01
    :noindex:
 
-   HL7 v2 DSR_Q01 message.
-
-DSR_Q01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_1-MSA>`
      - required
-     - 
-     - MSA: Required
+     - MESSAGE ACKNOWLEDGMENT
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_1-QRD>`
      - required
-     - 
-     - QRD: Required
+     - QUERY DEFINITION
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_1-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - QUERY FILTER
    * - ``DSP``
-     - 
      - List[:ref:`DSP <hl7-v2_1-DSP>`]
      - required
-     - 
-     - DSP: Required, repeating
+     - DISPLAY DATA
    * - ``DSC``
-     - 
      - :ref:`DSC <hl7-v2_1-DSC>`
      - required
-     - 
-     - DSC: Required
+     - CONTINUATION POINTER
 
 .. _hl7-v2_1-DSR_Q03:
+
+DSR_Q03 HL7 v2 DSR_Q03 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.DSR_Q03.DSR_Q03
    :noindex:
 
-   HL7 v2 DSR_Q03 message.
-
-DSR_Q03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_1-QRD>`
      - required
-     - 
-     - QRD: Required
+     - QUERY DEFINITION
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_1-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - QUERY FILTER
    * - ``DSP``
-     - 
      - List[:ref:`DSP <hl7-v2_1-DSP>`]
      - required
-     - 
-     - DSP: Required, repeating
+     - DISPLAY DATA
    * - ``DSC``
-     - 
      - :ref:`DSC <hl7-v2_1-DSC>`
      - required
-     - 
-     - DSC: Required
+     - CONTINUATION POINTER
 
 .. _hl7-v2_1-MCF_Q02:
+
+MCF_Q02 HL7 v2 MCF_Q02 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.MCF_Q02.MCF_Q02
    :noindex:
 
-   HL7 v2 MCF_Q02 message.
-
-MCF_Q02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_1-MSA>`
      - required
-     - 
-     - MSA: Required
+     - MESSAGE ACKNOWLEDGMENT
 
 .. _hl7-v2_1-ORM_O01:
+
+ORM_O01 HL7 v2 ORM_O01 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ORM_O01.ORM_O01
    :noindex:
 
-   HL7 v2 ORM_O01 message.
-
-ORM_O01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - NOTES AND COMMENTS
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ORM_O01_PATIENT <hl7-v2_1-ORM_O01_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`ORM_O01_ORDER <hl7-v2_1-ORM_O01_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_1-ORR_O02:
+
+ORR_O02 HL7 v2 ORR_O02 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ORR_O02.ORR_O02
    :noindex:
 
-   HL7 v2 ORR_O02 message.
-
-ORR_O02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_1-MSA>`
      - required
-     - 
-     - MSA: Required
+     - MESSAGE ACKNOWLEDGMENT
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_1-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - NOTES AND COMMENTS
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ORR_O02_PATIENT <hl7-v2_1-ORR_O02_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
 
 .. _hl7-v2_1-ORU_R01:
+
+ORU_R01 HL7 v2 ORU_R01 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ORU_R01.ORU_R01
    :noindex:
 
-   HL7 v2 ORU_R01 message.
-
-ORU_R01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``PATIENT_RESULT``
-     - 
      - List[:ref:`ORU_R01_PATIENT_RESULT <hl7-v2_1-ORU_R01_PATIENT_RESULT>`]
      - required
-     - 
-     - PATIENT_RESULT: Required, repeating
+     - PATIENT_RESULT
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_1-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - CONTINUATION POINTER
 
 .. _hl7-v2_1-ORU_R03:
+
+ORU_R03 HL7 v2 ORU_R03 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.ORU_R03.ORU_R03
    :noindex:
 
-   HL7 v2 ORU_R03 message.
-
-ORU_R03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``PATIENT_RESULT``
-     - 
      - List[:ref:`ORU_R03_PATIENT_RESULT <hl7-v2_1-ORU_R03_PATIENT_RESULT>`]
      - required
-     - 
-     - PATIENT_RESULT: Required, repeating
+     - PATIENT_RESULT
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_1-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - CONTINUATION POINTER
 
 .. _hl7-v2_1-QRY_A19:
+
+QRY_A19 HL7 v2 QRY_A19 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.QRY_A19.QRY_A19
    :noindex:
 
-   HL7 v2 QRY_A19 message.
-
-QRY_A19
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_1-QRD>`
      - required
-     - 
-     - QRD: Required
+     - QUERY DEFINITION
 
 .. _hl7-v2_1-QRY_Q01:
+
+QRY_Q01 HL7 v2 QRY_Q01 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.QRY_Q01.QRY_Q01
    :noindex:
 
-   HL7 v2 QRY_Q01 message.
-
-QRY_Q01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_1-QRD>`
      - required
-     - 
-     - QRD: Required
+     - QUERY DEFINITION
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_1-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - QUERY FILTER
    * - ``DSC``
-     - 
      - :ref:`DSC <hl7-v2_1-DSC>`
      - required
-     - 
-     - DSC: Required
+     - CONTINUATION POINTER
 
 .. _hl7-v2_1-QRY_Q02:
+
+QRY_Q02 HL7 v2 QRY_Q02 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.QRY_Q02.QRY_Q02
    :noindex:
 
-   HL7 v2 QRY_Q02 message.
-
-QRY_Q02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_1-QRD>`
      - required
-     - 
-     - QRD: Required
+     - QUERY DEFINITION
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_1-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - QUERY FILTER
    * - ``DSC``
-     - 
      - :ref:`DSC <hl7-v2_1-DSC>`
      - required
-     - 
-     - DSC: Required
+     - CONTINUATION POINTER
 
 .. _hl7-v2_1-UDM_Q05:
+
+UDM_Q05 HL7 v2 UDM_Q05 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.messages.UDM_Q05.UDM_Q05
    :noindex:
 
-   HL7 v2 UDM_Q05 message.
-
-UDM_Q05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_1-MSH>`
      - required
-     - 
-     - MSH: Required
+     - MESSAGE HEADER
    * - ``URD``
-     - 
      - :ref:`URD <hl7-v2_1-URD>`
      - required
-     - 
-     - URD: Required
+     - RESULTS/UPDATE DEFINITION
    * - ``URS``
-     - 
      - Optional[:ref:`URS <hl7-v2_1-URS>`]
      - optional
-     - 
-     - URS: Optional
+     - UNSOLICITED SELECTION
    * - ``DSP``
-     - 
      - List[:ref:`DSP <hl7-v2_1-DSP>`]
      - required
-     - 
-     - DSP: Required, repeating
+     - DISPLAY DATA
    * - ``DSC``
-     - 
      - :ref:`DSC <hl7-v2_1-DSC>`
      - required
-     - 
-     - DSC: Required
+     - CONTINUATION POINTER

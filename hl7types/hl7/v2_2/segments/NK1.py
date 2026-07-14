@@ -17,48 +17,48 @@ from ..datatypes.PN import PN
 
 
 class NK1(HL7Model):
-    """HL7 v2 NK1 segment.
+    """NEXT OF KIN (S3.3.5).
 
     Attributes
     ----------
     nk1_1 : str
-        NK1.1 (req) - Set ID - Next of Kin (SI)
+        NK1.1 (req) - Set ID - Next of Kin (SI) S3.3.5.1
 
     nk1_2 : PN | None
-        NK1.2 (opt) - Name (PN)
+        NK1.2 (opt) - Name (PN) S3.3.5.2
 
     nk1_3 : CE | None
-        NK1.3 (opt) - Relationship (CE)
+        NK1.3 (opt) - Relationship (CE) S3.3.5.3 | 0063 - RELATIONSHIP
 
     nk1_4 : AD | None
-        NK1.4 (opt) - Address (AD)
+        NK1.4 (opt) - Address (AD) S3.3.5.4
 
     nk1_5 : list[str] | None
-        NK1.5 (opt, rep) - Phone Number (TN)
+        NK1.5 (opt, rep) - Phone Number (TN) S3.3.5.5
 
     nk1_6 : str | None
-        NK1.6 (opt) - Business Phone Number (TN)
+        NK1.6 (opt) - Business Phone Number (TN) S3.3.5.6
 
     nk1_7 : CE | None
-        NK1.7 (opt) - Contact Role (CE)
+        NK1.7 (opt) - Contact Role (CE) S3.3.5.7 | 0131 - CONTRACT ROLE
 
     nk1_8 : str | None
-        NK1.8 (opt) - Start Date (DT)
+        NK1.8 (opt) - Start Date (DT) S3.3.5.8
 
     nk1_9 : str | None
-        NK1.9 (opt) - End Date (DT)
+        NK1.9 (opt) - End Date (DT) S3.3.5.9
 
     nk1_10 : str | None
-        NK1.10 (opt) - Next of Kin (ST)
+        NK1.10 (opt) - Next of Kin (ST) S3.3.5.10
 
     nk1_11 : str | None
-        NK1.11 (opt) - Next of kin job code / class (CM)
+        NK1.11 (opt) - Next of kin job code / class (CM) S3.3.5.11
 
     nk1_12 : str | None
-        NK1.12 (opt) - Next of Kin Employee Number (ST)
+        NK1.12 (opt) - Next of Kin Employee Number (ST) S3.3.5.12
 
     nk1_13 : str | None
-        NK1.13 (opt) - Organization Name (ST)
+        NK1.13 (opt) - Organization Name (ST) S3.3.5.13
     """
 
     nk1_1: str = Field(

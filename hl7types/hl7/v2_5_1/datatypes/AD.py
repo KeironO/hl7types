@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class AD(HL7Model):
-    """HL7 v2 AD data type.
+    """Address (S2.A.1.1).
 
     Attributes
     ----------

@@ -36,75 +36,74 @@ _SFT = SFT
 
 
 class MFR_M06(HL7Model):
-    """HL7 v2 MFR_M06 message.
+    """MFN/MFK - Clinical study with phases and schedules master file (S8.10.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        QAK (Optional[QAK]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        QAK (Optional[QAK]): Query Acknowledgment, optional
+        QRD (QRD): Original-Style Query Definition, required
+        QRF (Optional[QRF]): Original style query filter, optional
+        MFI (MFI): Master File Identification, required
         MF_QUERY (List[MFR_M06_MF_QUERY]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Original-Style Query Definition",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Original style query filter",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_QUERY: List[_MFR_M06_MF_QUERY] = Field(
         min_length=1,
         title="MF_QUERY",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

@@ -20,99 +20,99 @@ from ..datatypes.XPN import XPN
 
 
 class IAM(HL7Model):
-    """HL7 v2 IAM segment.
+    """Patient Adverse Reaction Information (S3.4.7).
 
     Attributes
     ----------
     iam_1 : str
-        IAM.1 (req) - Set ID - IAM (SI)
+        IAM.1 (req) - Set ID - IAM (SI) S3.4.7.1
 
     iam_2 : CWE | None
-        IAM.2 (opt) - Allergen Type Code (CWE)
+        IAM.2 (opt) - Allergen Type Code (CWE) S3.4.6.2 | 0127 - Allergen Type
 
     iam_3 : CWE
-        IAM.3 (req) - Allergen Code/Mnemonic/Description (CWE)
+        IAM.3 (req) - Allergen Code/Mnemonic/Description (CWE) S3.4.6.3
 
     iam_4 : CWE | None
-        IAM.4 (opt) - Allergy Severity Code (CWE)
+        IAM.4 (opt) - Allergy Severity Code (CWE) S3.4.6.4 | 0128 - Allergy Severity
 
     iam_5 : list[str] | None
-        IAM.5 (opt, rep) - Allergy Reaction Code (ST)
+        IAM.5 (opt, rep) - Allergy Reaction Code (ST) S3.4.6.5
 
     iam_6 : CNE
-        IAM.6 (req) - Allergy Action Code (CNE)
+        IAM.6 (req) - Allergy Action Code (CNE) S3.4.7.6 | 0206 - Segment Action Code
 
     iam_7 : EI | None
-        IAM.7 (opt) - Allergy Unique Identifier (EI)
+        IAM.7 (opt) - Allergy Unique Identifier (EI) S3.4.7.7
 
     iam_8 : str | None
-        IAM.8 (opt) - Action Reason (ST)
+        IAM.8 (opt) - Action Reason (ST) S3.4.7.8
 
     iam_9 : CWE | None
-        IAM.9 (opt) - Sensitivity to Causative Agent Code (CWE)
+        IAM.9 (opt) - Sensitivity to Causative Agent Code (CWE) S3.4.7.9 | 0436 - Sensitivity to Causative Agent Code
 
     iam_10 : CWE | None
-        IAM.10 (opt) - Allergen Group Code/Mnemonic/Description (CWE)
+        IAM.10 (opt) - Allergen Group Code/Mnemonic/Description (CWE) S3.4.7.10
 
     iam_11 : str | None
-        IAM.11 (opt) - Onset Date (DT)
+        IAM.11 (opt) - Onset Date (DT) S3.4.7.11
 
     iam_12 : str | None
-        IAM.12 (opt) - Onset Date Text (ST)
+        IAM.12 (opt) - Onset Date Text (ST) S3.4.7.12
 
     iam_13 : str | None
-        IAM.13 (opt) - Reported Date/Time (DTM)
+        IAM.13 (opt) - Reported Date/Time (DTM) S3.4.7.13
 
     iam_14 : XPN | None
-        IAM.14 (opt) - Reported By (XPN)
+        IAM.14 (opt) - Reported By (XPN) S3.4.7.14
 
     iam_15 : CWE | None
-        IAM.15 (opt) - Relationship to Patient Code (CWE)
+        IAM.15 (opt) - Relationship to Patient Code (CWE) S3.4.7.15 | 0063 - Relationship
 
     iam_16 : CWE | None
-        IAM.16 (opt) - Alert Device Code (CWE)
+        IAM.16 (opt) - Alert Device Code (CWE) S3.4.7.16 | 0437 - Alert Device Code
 
     iam_17 : CWE | None
-        IAM.17 (opt) - Allergy Clinical Status Code (CWE)
+        IAM.17 (opt) - Allergy Clinical Status Code (CWE) S3.4.7.17 | 0438 - Allergy Clinical Status
 
     iam_18 : XCN | None
-        IAM.18 (opt) - Statused by Person (XCN)
+        IAM.18 (opt) - Statused by Person (XCN) S3.4.7.18
 
     iam_19 : XON | None
-        IAM.19 (opt) - Statused by Organization (XON)
+        IAM.19 (opt) - Statused by Organization (XON) S3.4.7.19
 
     iam_20 : str | None
-        IAM.20 (opt) - Statused at Date/Time (DTM)
+        IAM.20 (opt) - Statused at Date/Time (DTM) S3.4.7.20
 
     iam_21 : XCN | None
-        IAM.21 (opt) - Inactivated by Person (XCN)
+        IAM.21 (opt) - Inactivated by Person (XCN) S3.4.7.21
 
     iam_22 : str | None
-        IAM.22 (opt) - Inactivated Date/Time (DTM)
+        IAM.22 (opt) - Inactivated Date/Time (DTM) S3.4.7.22
 
     iam_23 : XCN | None
-        IAM.23 (opt) - Initially Recorded by Person (XCN)
+        IAM.23 (opt) - Initially Recorded by Person (XCN) S3.4.7.23
 
     iam_24 : str | None
-        IAM.24 (opt) - Initially Recorded Date/Time (DTM)
+        IAM.24 (opt) - Initially Recorded Date/Time (DTM) S3.4.7.24
 
     iam_25 : XCN | None
-        IAM.25 (opt) - Modified by Person (XCN)
+        IAM.25 (opt) - Modified by Person (XCN) S3.4.7.25
 
     iam_26 : str | None
-        IAM.26 (opt) - Modified Date/Time (DTM)
+        IAM.26 (opt) - Modified Date/Time (DTM) S3.4.7.26
 
     iam_27 : CWE | None
-        IAM.27 (opt) - Clinician Identified Code (CWE)
+        IAM.27 (opt) - Clinician Identified Code (CWE) S3.4.7.27
 
     iam_28 : XON | None
-        IAM.28 (opt) - Initially Recorded by Organization (XON)
+        IAM.28 (opt) - Initially Recorded by Organization (XON) S3.4.7.28
 
     iam_29 : XON | None
-        IAM.29 (opt) - Modified by Organization (XON)
+        IAM.29 (opt) - Modified by Organization (XON) S3.4.7.29
 
     iam_30 : XON | None
-        IAM.30 (opt) - Inactivated by Organization (XON)
+        IAM.30 (opt) - Inactivated by Organization (XON) S3.4.7.30
     """
 
     iam_1: str = Field(

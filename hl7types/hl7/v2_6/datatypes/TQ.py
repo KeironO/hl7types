@@ -19,7 +19,7 @@ from .RI import RI
 
 
 class TQ(HL7Model):
-    """HL7 v2 TQ data type.
+    """Timing quantity (S2.A.76).
 
     Attributes
     ----------

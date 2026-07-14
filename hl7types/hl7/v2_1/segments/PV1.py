@@ -13,81 +13,81 @@ from hl7types.hl7 import HL7Model
 
 
 class PV1(HL7Model):
-    """HL7 v2 PV1 segment.
+    """PATIENT VISIT (S3.3.4).
 
     Attributes
     ----------
     pv1_1 : str | None
-        PV1.1 (opt) - SET ID - PATIENT VISIT (SI)
+        PV1.1 (opt) - SET ID - PATIENT VISIT (SI) S3-18
 
     pv1_2 : str
-        PV1.2 (req) - PATIENT CLASS (ID)
+        PV1.2 (req) - PATIENT CLASS (ID) | 0004 - PATIENT CLASS
 
     pv1_3 : str
-        PV1.3 (req) - ASSIGNED PATIENT LOCATION (ID)
+        PV1.3 (req) - ASSIGNED PATIENT LOCATION (ID) | 0079 - LOCATION
 
     pv1_4 : str | None
-        PV1.4 (opt) - ADMISSION TYPE (ID)
+        PV1.4 (opt) - ADMISSION TYPE (ID) | 0007 - ADMISSION TYPE
 
     pv1_5 : str | None
         PV1.5 (opt) - PRE-ADMIT NUMBER (ST)
 
     pv1_6 : str | None
-        PV1.6 (opt) - PRIOR PATIENT LOCATION (ID)
+        PV1.6 (opt) - PRIOR PATIENT LOCATION (ID) | 0079 - LOCATION
 
     pv1_7 : str | None
-        PV1.7 (opt) - ATTENDING DOCTOR (CN)
+        PV1.7 (opt) - ATTENDING DOCTOR (CN) | 0010 - PHYSICIAN ID
 
     pv1_8 : str | None
-        PV1.8 (opt) - REFERRING DOCTOR (CN)
+        PV1.8 (opt) - REFERRING DOCTOR (CN) | 0010 - PHYSICIAN ID
 
     pv1_9 : list[str] | None
-        PV1.9 (opt, rep) - CONSULTING DOCTOR (CN)
+        PV1.9 (opt, rep) - CONSULTING DOCTOR (CN) | 0010 - PHYSICIAN ID
 
     pv1_10 : str | None
-        PV1.10 (opt) - HOSPITAL SERVICE (ID)
+        PV1.10 (opt) - HOSPITAL SERVICE (ID) | 0069 - HOSPITAL SERVICE
 
     pv1_11 : str | None
-        PV1.11 (opt) - TEMPORARY LOCATION (ID)
+        PV1.11 (opt) - TEMPORARY LOCATION (ID) | 0079 - LOCATION
 
     pv1_12 : str | None
-        PV1.12 (opt) - PRE-ADMIT TEST INDICATOR (ID)
+        PV1.12 (opt) - PRE-ADMIT TEST INDICATOR (ID) | 0087 - PRE-ADMIT TESTING
 
     pv1_13 : str | None
-        PV1.13 (opt) - RE-ADMISSION INDICATOR (ID)
+        PV1.13 (opt) - RE-ADMISSION INDICATOR (ID) | 0092 - RE-ADMISSION INDICATOR
 
     pv1_14 : str | None
-        PV1.14 (opt) - ADMIT SOURCE (ID)
+        PV1.14 (opt) - ADMIT SOURCE (ID) | 0023 - ADMIT SOURCE
 
     pv1_15 : str | None
-        PV1.15 (opt) - AMBULATORY STATUS (ID)
+        PV1.15 (opt) - AMBULATORY STATUS (ID) | 0009 - AMBULATORY STATUS
 
     pv1_16 : str | None
-        PV1.16 (opt) - VIP INDICATOR (ID)
+        PV1.16 (opt) - VIP INDICATOR (ID) | 0099 - VIP INDICATOR
 
     pv1_17 : str | None
-        PV1.17 (opt) - ADMITTING DOCTOR (CN)
+        PV1.17 (opt) - ADMITTING DOCTOR (CN) | 0010 - PHYSICIAN ID
 
     pv1_18 : str | None
-        PV1.18 (opt) - PATIENT TYPE (ID)
+        PV1.18 (opt) - PATIENT TYPE (ID) | 0018 - PATIENT TYPE
 
     pv1_19 : str | None
         PV1.19 (opt) - VISIT NUMBER (NM)
 
     pv1_20 : list[str] | None
-        PV1.20 (opt, rep) - FINANCIAL CLASS (ID)
+        PV1.20 (opt, rep) - FINANCIAL CLASS (ID) | 0064 - FINANCIAL CLASS
 
     pv1_21 : str | None
-        PV1.21 (opt) - CHARGE PRICE INDICATOR (ID)
+        PV1.21 (opt) - CHARGE PRICE INDICATOR (ID) | 0032 - CHARGE/PRICE INDICATOR
 
     pv1_22 : str | None
-        PV1.22 (opt) - COURTESY CODE (ID)
+        PV1.22 (opt) - COURTESY CODE (ID) | 0045 - COURTESY CODE
 
     pv1_23 : str | None
-        PV1.23 (opt) - CREDIT RATING (ID)
+        PV1.23 (opt) - CREDIT RATING (ID) | 0046 - CREDIT RATING
 
     pv1_24 : list[str] | None
-        PV1.24 (opt, rep) - CONTRACT CODE (ID)
+        PV1.24 (opt, rep) - CONTRACT CODE (ID) | 0044 - CONTRACT CODE
 
     pv1_25 : list[str] | None
         PV1.25 (opt, rep) - CONTRACT EFFECTIVE DATE (DT)
@@ -99,16 +99,16 @@ class PV1(HL7Model):
         PV1.27 (opt, rep) - CONTRACT PERIOD (NM)
 
     pv1_28 : str | None
-        PV1.28 (opt) - INTEREST CODE (ID)
+        PV1.28 (opt) - INTEREST CODE (ID) | 0073 - INTEREST RATE CODE
 
     pv1_29 : str | None
-        PV1.29 (opt) - TRANSFER TO BAD DEBT CODE (ID)
+        PV1.29 (opt) - TRANSFER TO BAD DEBT CODE (ID) | 0110 - TRANSFER TO BAD DEBT CODE
 
     pv1_30 : str | None
         PV1.30 (opt) - TRANSFER TO BAD DEBT DATE (DT)
 
     pv1_31 : str | None
-        PV1.31 (opt) - BAD DEBT AGENCY CODE (ST)
+        PV1.31 (opt) - BAD DEBT AGENCY CODE (ST) | 0021 - BAD DEBT AGENCY CODE
 
     pv1_32 : str | None
         PV1.32 (opt) - BAD DEBT TRANSFER AMOUNT (NM)
@@ -117,34 +117,34 @@ class PV1(HL7Model):
         PV1.33 (opt) - BAD DEBT RECOVERY AMOUNT (NM)
 
     pv1_34 : str | None
-        PV1.34 (opt) - DELETE ACCOUNT INDICATOR (ID)
+        PV1.34 (opt) - DELETE ACCOUNT INDICATOR (ID) | 0111 - DELETE ACCOUNT CODE
 
     pv1_35 : str | None
         PV1.35 (opt) - DELETE ACCOUNT DATE (DT)
 
     pv1_36 : str | None
-        PV1.36 (opt) - DISCHARGE DISPOSITION (ID)
+        PV1.36 (opt) - DISCHARGE DISPOSITION (ID) | 0112 - DISCHARGED DISPOSITION
 
     pv1_37 : str | None
-        PV1.37 (opt) - DISCHARGED TO LOCATION (ID)
+        PV1.37 (opt) - DISCHARGED TO LOCATION (ID) | 0113 - DISCHARGED TO LOCATION
 
     pv1_38 : str | None
-        PV1.38 (opt) - DIET TYPE (ID)
+        PV1.38 (opt) - DIET TYPE (ID) | 0114 - DIET TYPE
 
     pv1_39 : str | None
-        PV1.39 (opt) - SERVICING FACILITY (ID)
+        PV1.39 (opt) - SERVICING FACILITY (ID) | 0115 - SERVICING FACILITY
 
     pv1_40 : str | None
-        PV1.40 (opt) - BED STATUS (ID)
+        PV1.40 (opt) - BED STATUS (ID) | 0116 - BED STATUS
 
     pv1_41 : str | None
-        PV1.41 (opt) - ACCOUNT STATUS (ID)
+        PV1.41 (opt) - ACCOUNT STATUS (ID) | 0117 - ACCOUNT STATUS
 
     pv1_42 : str | None
-        PV1.42 (opt) - PENDING LOCATION (ID)
+        PV1.42 (opt) - PENDING LOCATION (ID) | 0079 - LOCATION
 
     pv1_43 : str | None
-        PV1.43 (opt) - PRIOR TEMPORARY LOCATION (ID)
+        PV1.43 (opt) - PRIOR TEMPORARY LOCATION (ID) | 0079 - LOCATION
 
     pv1_44 : str | None
         PV1.44 (opt) - ADMIT DATE/TIME (TS)

@@ -39,74 +39,72 @@ class OMB_O27_ORDER(HL7Model):
     """HL7 v2 OMB_O27.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[OMB_O27_TIMING]]): optional
-        BPO (BPO): required
-        SPM (Optional[SPM]): optional
-        NTE (Optional[List[NTE]]): optional
-        DG1 (Optional[List[DG1]]): optional
+        BPO (BPO): Blood product order, required
+        SPM (Optional[SPM]): Specimen, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[OMB_O27_OBSERVATION]]): optional
-        FT1 (Optional[List[FT1]]): optional
-        BLG (Optional[BLG]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        BLG (Optional[BLG]): Billing, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_OMB_O27_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     BPO: _BPO = Field(
         title="BPO",
-        description="Required",
+        description="Blood product order",
     )
 
     SPM: Optional[_SPM] = Field(
         default=None,
         title="SPM",
-        description="Optional",
+        description="Specimen",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_OMB_O27_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     BLG: Optional[_BLG] = Field(
         default=None,
         title="BLG",
-        description="Optional",
+        description="Billing",
     )
 
     model_config = {"populate_by_name": True}

@@ -24,36 +24,35 @@ _UAC = UAC
 
 
 class DRG_O43(HL7Model):
-    """HL7 v2 DRG_O43 message.
+    """General Order Message with Document Payload Acknowledgement Message (S4.16.10).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         DONOR (Optional[DRG_O43_DONOR]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     DONOR: Optional[_DRG_O43_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

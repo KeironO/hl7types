@@ -17,84 +17,84 @@ from ..datatypes.TS import TS
 
 
 class PRB(HL7Model):
-    """HL7 v2 PRB segment.
+    """Problem Details (S12.4.2).
 
     Attributes
     ----------
     prb_1 : str
-        PRB.1 (req) - Action Code (ID)
+        PRB.1 (req) - Action Code (ID) S12.4.1.1 | 0287 - Problem/goal action code
 
     prb_2 : TS
-        PRB.2 (req) - Action Date/Time (TS)
+        PRB.2 (req) - Action Date/Time (TS) S12.4.1.2
 
     prb_3 : CE
-        PRB.3 (req) - Problem ID (CE)
+        PRB.3 (req) - Problem ID (CE) S12.4.2.3
 
     prb_4 : EI
-        PRB.4 (req) - Problem Instance ID (EI)
+        PRB.4 (req) - Problem Instance ID (EI) S12.4.2.4
 
     prb_5 : EI | None
-        PRB.5 (opt) - Episode of Care ID (EI)
+        PRB.5 (opt) - Episode of Care ID (EI) S12.4.1.5
 
     prb_6 : str | None
-        PRB.6 (opt) - Problem List Priority (NM)
+        PRB.6 (opt) - Problem List Priority (NM) S12.4.2.6
 
     prb_7 : TS | None
-        PRB.7 (opt) - Problem Established Date/Time (TS)
+        PRB.7 (opt) - Problem Established Date/Time (TS) S12.4.2.7
 
     prb_8 : TS | None
-        PRB.8 (opt) - Anticipated Problem Resolution Date/Time (TS)
+        PRB.8 (opt) - Anticipated Problem Resolution Date/Time (TS) S12.4.2.8
 
     prb_9 : TS | None
-        PRB.9 (opt) - Actual Problem Resolution Date/Time (TS)
+        PRB.9 (opt) - Actual Problem Resolution Date/Time (TS) S12.4.2.9
 
     prb_10 : CE | None
-        PRB.10 (opt) - Problem Classification (CE)
+        PRB.10 (opt) - Problem Classification (CE) S12.4.2.10
 
     prb_11 : list[CE] | None
-        PRB.11 (opt, rep) - Problem Management Discipline (CE)
+        PRB.11 (opt, rep) - Problem Management Discipline (CE) S12.4.2.11
 
     prb_12 : CE | None
-        PRB.12 (opt) - Problem Persistence (CE)
+        PRB.12 (opt) - Problem Persistence (CE) S12.4.2.12
 
     prb_13 : CE | None
-        PRB.13 (opt) - Problem Confirmation Status (CE)
+        PRB.13 (opt) - Problem Confirmation Status (CE) S12.4.2.13
 
     prb_14 : CE | None
-        PRB.14 (opt) - Problem Life Cycle Status (CE)
+        PRB.14 (opt) - Problem Life Cycle Status (CE) S12.4.2.14
 
     prb_15 : TS | None
-        PRB.15 (opt) - Problem Life Cycle Status Date/Time (TS)
+        PRB.15 (opt) - Problem Life Cycle Status Date/Time (TS) S12.4.2.15
 
     prb_16 : TS | None
-        PRB.16 (opt) - Problem Date of Onset (TS)
+        PRB.16 (opt) - Problem Date of Onset (TS) S12.4.2.16
 
     prb_17 : str | None
-        PRB.17 (opt) - Problem Onset Text (ST)
+        PRB.17 (opt) - Problem Onset Text (ST) S12.4.2.17
 
     prb_18 : CE | None
-        PRB.18 (opt) - Problem Ranking (CE)
+        PRB.18 (opt) - Problem Ranking (CE) S12.4.2.18
 
     prb_19 : CE | None
-        PRB.19 (opt) - Certainty of Problem (CE)
+        PRB.19 (opt) - Certainty of Problem (CE) S12.4.2.19
 
     prb_20 : str | None
-        PRB.20 (opt) - Probability of Problem (0-1) (NM)
+        PRB.20 (opt) - Probability of Problem (0-1) (NM) S12.4.2.20
 
     prb_21 : CE | None
-        PRB.21 (opt) - Individual Awareness of Problem (CE)
+        PRB.21 (opt) - Individual Awareness of Problem (CE) S12.4.2.21
 
     prb_22 : CE | None
-        PRB.22 (opt) - Problem Prognosis (CE)
+        PRB.22 (opt) - Problem Prognosis (CE) S12.4.2.22
 
     prb_23 : CE | None
-        PRB.23 (opt) - Individual Awareness of Prognosis (CE)
+        PRB.23 (opt) - Individual Awareness of Prognosis (CE) S12.4.2.23
 
     prb_24 : str | None
-        PRB.24 (opt) - Family/Significant Other Awareness of Problem/Prognosis (ST)
+        PRB.24 (opt) - Family/Significant Other Awareness of Problem/Prognosis (ST) S12.4.2.24
 
     prb_25 : CE | None
-        PRB.25 (opt) - Security/Sensitivity (CE)
+        PRB.25 (opt) - Security/Sensitivity (CE) S12.4.2.25
     """
 
     prb_1: str = Field(

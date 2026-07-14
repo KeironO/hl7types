@@ -21,28 +21,28 @@ _SFT = SFT
 
 
 class QCN_J01(HL7Model):
-    """HL7 v2 QCN_J01 message.
+    """QCN/ACK - Cancel query/acknowledge message (S5.4.6).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        QID (QID): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        QID (QID): Query Identification, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     QID: _QID = Field(
         title="QID",
-        description="Required",
+        description="Query Identification",
     )
 
     model_config = {"populate_by_name": True}

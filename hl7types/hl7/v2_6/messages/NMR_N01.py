@@ -30,56 +30,55 @@ _UAC = UAC
 
 
 class NMR_N01(HL7Model):
-    """HL7 v2 NMR_N01 message.
+    """NMQ/NMR - Application management query message (S14.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        QRD (Optional[QRD]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        QRD (Optional[QRD]): Original-Style Query Definition, optional
         CLOCK_AND_STATS_WITH_NOTES_ALT (List[NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     QRD: Optional[_QRD] = Field(
         default=None,
         title="QRD",
-        description="Optional",
+        description="Original-Style Query Definition",
     )
 
     CLOCK_AND_STATS_WITH_NOTES_ALT: List[_NMR_N01_CLOCK_AND_STATS_WITH_NOTES_ALT] = Field(
         min_length=1,
         title="CLOCK_AND_STATS_WITH_NOTES_ALT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

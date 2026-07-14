@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_BATCH_TOTAL(HL7Model):
-    """HL7 v2 CM_BATCH_TOTAL data type.
+    """Cm for batch totals.
 
     Attributes
     ----------

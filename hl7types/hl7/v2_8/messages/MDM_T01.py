@@ -34,67 +34,66 @@ _UAC = UAC
 
 
 class MDM_T01(HL7Model):
-    """HL7 v2 MDM_T01 message.
+    """MDM/ACK - Original document notification (S9.6.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PV1 (PV1): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PV1 (PV1): Patient Visit, required
         COMMON_ORDER (Optional[List[MDM_T01_COMMON_ORDER]]): optional
-        TXA (TXA): required
-        CON (Optional[List[CON]]): optional
+        TXA (TXA): Transcription Document Header, required
+        CON (Optional[List[CON]]): Consent Segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     COMMON_ORDER: Optional[List[_MDM_T01_COMMON_ORDER]] = Field(
         default=None,
         title="COMMON_ORDER",
-        description="Optional, repeating",
     )
 
     TXA: _TXA = Field(
         title="TXA",
-        description="Required",
+        description="Transcription Document Header",
     )
 
     CON: Optional[List[_CON]] = Field(
         default=None,
         title="CON",
-        description="Optional, repeating",
+        description="Consent Segment",
     )
 
     model_config = {"populate_by_name": True}

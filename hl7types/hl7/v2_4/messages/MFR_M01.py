@@ -34,68 +34,67 @@ _QRF = QRF
 
 
 class MFR_M01(HL7Model):
-    """HL7 v2 MFR_M01 message.
+    """MFN/MFK - Master file not otherwise specified (for backward compatibility only) (S8).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (Optional[QAK]): optional
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (Optional[QAK]): Query Acknowledgment, optional
+        QRD (QRD): Original-Style Query Definition, required
+        QRF (Optional[QRF]): Original Style Query Filter, optional
+        MFI (MFI): Master File Identification, required
         MF_QUERY (List[MFR_M01_MF_QUERY]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: Optional[_QAK] = Field(
         default=None,
         title="QAK",
-        description="Optional",
+        description="Query Acknowledgment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Original-Style Query Definition",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Original Style Query Filter",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_QUERY: List[_MFR_M01_MF_QUERY] = Field(
         min_length=1,
         title="MF_QUERY",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

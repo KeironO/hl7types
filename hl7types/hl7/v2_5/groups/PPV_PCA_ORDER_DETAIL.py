@@ -28,32 +28,30 @@ class PPV_PCA_ORDER_DETAIL(HL7Model):
 
     Attributes:
         OBRanyHL7Segment_SUPPGRP (PPV_PCA_OBRanyHL7Segment_SUPPGRP): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         ORDER_OBSERVATION (Optional[List[PPV_PCA_ORDER_OBSERVATION]]): optional
     """
 
     OBRanyHL7Segment_SUPPGRP: _PPV_PCA_OBRanyHL7Segment_SUPPGRP = Field(
         title="OBRanyHL7Segment_SUPPGRP",
-        description="Required",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ORDER_OBSERVATION: Optional[List[_PPV_PCA_ORDER_OBSERVATION]] = Field(
         default=None,
         title="ORDER_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

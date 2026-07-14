@@ -26,43 +26,41 @@ _UAC = UAC
 
 
 class DER_O44(HL7Model):
-    """HL7 v2 DER_O44 message.
+    """Donor Registration - Minimal Message (S4.16.11).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         DONOR (Optional[DER_O44_DONOR]): optional
         DONOR_ORDER (List[DER_O44_DONOR_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     DONOR: Optional[_DER_O44_DONOR] = Field(
         default=None,
         title="DONOR",
-        description="Optional",
     )
 
     DONOR_ORDER: List[_DER_O44_DONOR_ORDER] = Field(
         min_length=1,
         title="DONOR_ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

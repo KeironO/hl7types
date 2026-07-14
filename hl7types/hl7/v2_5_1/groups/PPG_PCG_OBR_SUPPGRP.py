@@ -20,13 +20,13 @@ class PPG_PCG_OBR_SUPPGRP(HL7Model):
     """HL7 v2 PPG_PCG.OBR_SUPPGRP group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
+        OBR (Optional[OBR]): Observation Request, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="Observation Request",
     )
 
     model_config = {"populate_by_name": True}

@@ -34,70 +34,68 @@ _UAC = UAC
 
 
 class OPU_R25(HL7Model):
-    """HL7 v2 OPU_R25 message.
+    """OPU - Unsolicited Population/Location-Based Laboratory Observation Message (S7.3.11).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        NTE (Optional[NTE]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        PRT (Optional[List[PRT]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        NTE (Optional[NTE]): Notes and Comments, optional
+        PV1 (PV1): Patient Visit, required
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
         PATIENT_VISIT_OBSERVATION (Optional[List[OPU_R25_PATIENT_VISIT_OBSERVATION]]): optional
         ACCESSION_DETAIL (List[OPU_R25_ACCESSION_DETAIL]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     PATIENT_VISIT_OBSERVATION: Optional[List[_OPU_R25_PATIENT_VISIT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_VISIT_OBSERVATION",
-        description="Optional, repeating",
     )
 
     ACCESSION_DETAIL: List[_OPU_R25_ACCESSION_DETAIL] = Field(
         min_length=1,
         title="ACCESSION_DETAIL",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

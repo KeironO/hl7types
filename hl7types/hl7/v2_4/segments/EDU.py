@@ -18,33 +18,33 @@ from ..datatypes.XON import XON
 
 
 class EDU(HL7Model):
-    """HL7 v2 EDU segment.
+    """Educational Detail (S15.4.2).
 
     Attributes
     ----------
     edu_1 : str
-        EDU.1 (req) - Set ID - EDU (SI)
+        EDU.1 (req) - Set ID - EDU (SI) S15.4.2.1
 
     edu_2 : str | None
-        EDU.2 (opt) - Academic Degree (IS)
+        EDU.2 (opt) - Academic Degree (IS) S15.4.2.2 | 0360 - Degree
 
     edu_3 : DR | None
-        EDU.3 (opt) - Academic Degree Program Date Range (DR)
+        EDU.3 (opt) - Academic Degree Program Date Range (DR) S15.4.2.3
 
     edu_4 : DR | None
-        EDU.4 (opt) - Academic Degree Program Participation Date Range (DR)
+        EDU.4 (opt) - Academic Degree Program Participation Date Range (DR) S15.4.2.4
 
     edu_5 : str | None
-        EDU.5 (opt) - Academic Degree Granted Date (DT)
+        EDU.5 (opt) - Academic Degree Granted Date (DT) S15.4.2.5
 
     edu_6 : XON | None
-        EDU.6 (opt) - School (XON)
+        EDU.6 (opt) - School (XON) S15.4.2.6
 
     edu_7 : CE | None
-        EDU.7 (opt) - School Type Code (CE)
+        EDU.7 (opt) - School Type Code (CE) S15.4.2.7 | 0402 - School type
 
     edu_8 : XAD | None
-        EDU.8 (opt) - School Address (XAD)
+        EDU.8 (opt) - School Address (XAD) S15.4.2.8
     """
 
     edu_1: str = Field(

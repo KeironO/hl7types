@@ -17,48 +17,48 @@ from ..datatypes.varies import varies
 
 
 class OMC(HL7Model):
-    """HL7 v2 OMC segment.
+    """Supporting Clinical Information (S8.8.16).
 
     Attributes
     ----------
     omc_1 : str | None
-        OMC.1 (opt) - Sequence Number - Test/Observation Master File (NM)
+        OMC.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
 
     omc_2 : str | None
-        OMC.2 (opt) - Segment Action Code (ID)
+        OMC.2 (opt) - Segment Action Code (ID) S8.8.16.2 | 0206 - Segment Action Code
 
     omc_3 : EI | None
-        OMC.3 (opt) - Segment Unique Key (EI)
+        OMC.3 (opt) - Segment Unique Key (EI) S8.8.16.3
 
     omc_4 : CWE
-        OMC.4 (req) - Clinical Information Request (CWE)
+        OMC.4 (req) - Clinical Information Request (CWE) S8.8.16.4 | 9999 - no table for CE
 
     omc_5 : list[CWE]
-        OMC.5 (req, rep) - Collection Event/Process Step (CWE)
+        OMC.5 (req, rep) - Collection Event/Process Step (CWE) S8.8.16.5 | 0938 - Collection Event/Process Step Limit
 
     omc_6 : CWE
-        OMC.6 (req) - Communication Location (CWE)
+        OMC.6 (req) - Communication Location (CWE) S8.8.16.6 | 0939 - Communication Location
 
     omc_7 : str | None
-        OMC.7 (opt) - Answer Required (ID)
+        OMC.7 (opt) - Answer Required (ID) S8.8.16.7 | 0136 - Yes/no Indicator
 
     omc_8 : str | None
-        OMC.8 (opt) - Hint/Help Text (ST)
+        OMC.8 (opt) - Hint/Help Text (ST) S8.8.16.8
 
     omc_9 : varies | None
-        OMC.9 (opt) - Type of Answer (varies)
+        OMC.9 (opt) - Type of Answer (varies) S8.8.16.9 | 0125 - Value Type
 
     omc_10 : str | None
-        OMC.10 (opt) - Multiple Answers Allowed (ID)
+        OMC.10 (opt) - Multiple Answers Allowed (ID) S8.8.16.10 | 0136 - Yes/no Indicator
 
     omc_11 : list[CWE] | None
-        OMC.11 (opt, rep) - Answer Choices (CWE)
+        OMC.11 (opt, rep) - Answer Choices (CWE) S8.8.16.11 | 9999 - no table for CE
 
     omc_12 : str | None
-        OMC.12 (opt) - Character Limit (NM)
+        OMC.12 (opt) - Character Limit (NM) S8.8.16.12
 
     omc_13 : str | None
-        OMC.13 (opt) - Number of Decimals (NM)
+        OMC.13 (opt) - Number of Decimals (NM) S8.8.16.13
     """
 
     omc_1: Optional[str] = Field(

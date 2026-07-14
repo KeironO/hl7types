@@ -29,13 +29,11 @@ class RSP_K31_RESPONSE(HL7Model):
     PATIENT: Optional[_RSP_K31_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_RSP_K31_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

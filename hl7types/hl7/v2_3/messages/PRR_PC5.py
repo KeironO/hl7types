@@ -26,41 +26,40 @@ _QRD = QRD
 
 
 class PRR_PC5(HL7Model):
-    """HL7 v2 PRR_PC5 message.
+    """PPR - PC/Problem Reponse.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QRD (QRD): required
+        MSH (MSH): Message header segment, required
+        MSA (MSA): Message acknowledgement segment, required
+        ERR (Optional[ERR]): Error segment, optional
+        QRD (QRD): Query definition segment, required
         PATIENT (List[PRR_PC5_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message acknowledgement segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Query definition segment",
     )
 
     PATIENT: List[_PRR_PC5_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

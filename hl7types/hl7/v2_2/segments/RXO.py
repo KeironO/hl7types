@@ -15,60 +15,60 @@ from ..datatypes.CE import CE
 
 
 class RXO(HL7Model):
-    """HL7 v2 RXO segment.
+    """PHARMACY PRESCRIPTION ORDER (S4.8.2).
 
     Attributes
     ----------
     rxo_1 : CE
-        RXO.1 (req) - Requested Give Code (CE)
+        RXO.1 (req) - Requested Give Code (CE) S4.8.2.1
 
     rxo_2 : str
-        RXO.2 (req) - Requested Give Amount - Minimum (NM)
+        RXO.2 (req) - Requested Give Amount - Minimum (NM) S4.8.2.2
 
     rxo_3 : str | None
-        RXO.3 (opt) - Requested Give Amount - Maximum (NM)
+        RXO.3 (opt) - Requested Give Amount - Maximum (NM) S4.8.2.3
 
     rxo_4 : CE
-        RXO.4 (req) - Requested Give Units (CE)
+        RXO.4 (req) - Requested Give Units (CE) S4.8.2.4
 
     rxo_5 : CE | None
-        RXO.5 (opt) - Requested Dosage Form (CE)
+        RXO.5 (opt) - Requested Dosage Form (CE) S4.8.2.5
 
     rxo_6 : list[CE] | None
-        RXO.6 (opt, rep) - Provider's Pharmacy Instructions (CE)
+        RXO.6 (opt, rep) - Provider's Pharmacy Instructions (CE) S4.8.2.6
 
     rxo_7 : list[CE] | None
-        RXO.7 (opt, rep) - Provider's Administration Instructions (CE)
+        RXO.7 (opt, rep) - Provider's Administration Instructions (CE) S4.8.7.7
 
     rxo_8 : str | None
-        RXO.8 (opt) - Deliver-to location (CM)
+        RXO.8 (opt) - Deliver-to location (CM) S4.8.12.11
 
     rxo_9 : str | None
-        RXO.9 (opt) - Allow Substitutions (ID)
+        RXO.9 (opt) - Allow Substitutions (ID) S4.8.2.9 | 0161 - ALLOW SUBSTITUTION
 
     rxo_10 : CE | None
-        RXO.10 (opt) - Requested Dispense Code (CE)
+        RXO.10 (opt) - Requested Dispense Code (CE) S4.8.2.10
 
     rxo_11 : str | None
-        RXO.11 (opt) - Requested Dispense Amount (NM)
+        RXO.11 (opt) - Requested Dispense Amount (NM) S4.8.2.11
 
     rxo_12 : CE | None
-        RXO.12 (opt) - Requested Dispense Units (CE)
+        RXO.12 (opt) - Requested Dispense Units (CE) S4.8.2.12
 
     rxo_13 : str | None
-        RXO.13 (opt) - Number of Refills (NM)
+        RXO.13 (opt) - Number of Refills (NM) S4.8.7.12
 
     rxo_14 : str | None
-        RXO.14 (opt) - Ordering Provider's DEA Number (CN)
+        RXO.14 (opt) - Ordering Provider's DEA Number (CN) S4.8.7.13
 
     rxo_15 : str | None
-        RXO.15 (opt) - Pharmacist Verifier ID (CN)
+        RXO.15 (opt) - Pharmacist Verifier ID (CN) S4.8.7.14
 
     rxo_16 : str | None
-        RXO.16 (opt) - Needs Human Review (ID)
+        RXO.16 (opt) - Needs Human Review (ID) S4.8.12.12
 
     rxo_17 : str | None
-        RXO.17 (opt) - Requested Give Per (Time Unit) (ST)
+        RXO.17 (opt) - Requested Give Per (Time Unit) (ST) S4.8.2.17
     """
 
     rxo_1: CE = Field(

@@ -22,19 +22,19 @@ class BAR_P01_PROCEDURE(HL7Model):
     """HL7 v2 BAR_P01.PROCEDURE group.
 
     Attributes:
-        PR1 (PR1): required
-        ROL (Optional[List[ROL]]): optional
+        PR1 (PR1): PR1 - procedures segment, required
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     PR1: _PR1 = Field(
         title="PR1",
-        description="Required",
+        description="PR1 - procedures segment",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

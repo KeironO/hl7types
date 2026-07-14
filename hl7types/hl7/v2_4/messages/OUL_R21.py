@@ -28,50 +28,47 @@ _OUL_R21_VISIT = OUL_R21_VISIT
 
 
 class OUL_R21(HL7Model):
-    """HL7 v2 OUL_R21 message.
+    """OUL - Unsolicited laboratory observation (S7).
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[NTE]): optional
+        MSH (MSH): Message Header, required
+        NTE (Optional[NTE]): Notes and Comments, optional
         PATIENT (Optional[OUL_R21_PATIENT]): optional
         VISIT (Optional[OUL_R21_VISIT]): optional
         ORDER_OBSERVATION (List[OUL_R21_ORDER_OBSERVATION]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     NTE: Optional[_NTE] = Field(
         default=None,
         title="NTE",
-        description="Optional",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OUL_R21_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     VISIT: Optional[_OUL_R21_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     ORDER_OBSERVATION: List[_OUL_R21_ORDER_OBSERVATION] = Field(
         min_length=1,
         title="ORDER_OBSERVATION",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

@@ -26,33 +26,33 @@ class ORF_R04_QUERY_RESPONSE(HL7Model):
     """HL7 v2 ORF_R04.QUERY_RESPONSE group.
 
     Attributes:
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        PID (Optional[PID]): optional
-        NTE (Optional[List[NTE]]): optional
+        QRD (QRD): QUERY DEFINITION, required
+        QRF (Optional[QRF]): QUERY FILTER, optional
+        PID (Optional[PID]): PATIENT IDENTIFICATION, optional
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
     """
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QUERY DEFINITION",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QUERY FILTER",
     )
 
     PID: Optional[_PID] = Field(
         default=None,
         title="PID",
-        description="Optional",
+        description="PATIENT IDENTIFICATION",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     model_config = {"populate_by_name": True}

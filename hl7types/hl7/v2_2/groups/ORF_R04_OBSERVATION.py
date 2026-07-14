@@ -22,20 +22,20 @@ class ORF_R04_OBSERVATION(HL7Model):
     """HL7 v2 ORF_R04.OBSERVATION group.
 
     Attributes:
-        OBX (Optional[OBX]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBX (Optional[OBX]): OBSERVATION RESULT, optional
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
     """
 
     OBX: Optional[_OBX] = Field(
         default=None,
         title="OBX",
-        description="Optional",
+        description="OBSERVATION RESULT",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     model_config = {"populate_by_name": True}

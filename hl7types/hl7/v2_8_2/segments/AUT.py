@@ -22,96 +22,96 @@ from ..datatypes.XTN import XTN
 
 
 class AUT(HL7Model):
-    """HL7 v2 AUT segment.
+    """Authorization Information (S11.8.2).
 
     Attributes
     ----------
     aut_1 : CWE | None
-        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE)
+        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE) S11.8.2.1 | 0072 - Insurance Plan ID
 
     aut_2 : CWE
-        AUT.2 (req) - Authorizing Payor, Company ID (CWE)
+        AUT.2 (req) - Authorizing Payor, Company ID (CWE) S11.8.2.2 | 0285 - Insurance Company ID Codes
 
     aut_3 : str | None
-        AUT.3 (opt) - Authorizing Payor, Company Name (ST)
+        AUT.3 (opt) - Authorizing Payor, Company Name (ST) S11.8.2.3
 
     aut_4 : str | None
-        AUT.4 (opt) - Authorization Effective Date (DTM)
+        AUT.4 (opt) - Authorization Effective Date (DTM) S11.8.2.4
 
     aut_5 : str | None
-        AUT.5 (opt) - Authorization Expiration Date (DTM)
+        AUT.5 (opt) - Authorization Expiration Date (DTM) S11.8.2.5
 
     aut_6 : EI | None
-        AUT.6 (opt) - Authorization Identifier (EI)
+        AUT.6 (opt) - Authorization Identifier (EI) S11.8.2.6
 
     aut_7 : CP | None
-        AUT.7 (opt) - Reimbursement Limit (CP)
+        AUT.7 (opt) - Reimbursement Limit (CP) S11.8.2.7
 
     aut_8 : CQ | None
-        AUT.8 (opt) - Requested Number of Treatments (CQ)
+        AUT.8 (opt) - Requested Number of Treatments (CQ) S11.8.2.8
 
     aut_9 : CQ | None
-        AUT.9 (opt) - Authorized Number of Treatments (CQ)
+        AUT.9 (opt) - Authorized Number of Treatments (CQ) S11.8.2.9
 
     aut_10 : str | None
-        AUT.10 (opt) - Process Date (DTM)
+        AUT.10 (opt) - Process Date (DTM) S11.8.1.9
 
     aut_11 : list[CWE] | None
-        AUT.11 (opt, rep) - Requested Discipline(s) (CWE)
+        AUT.11 (opt, rep) - Requested Discipline(s) (CWE) S11.8.2.11
 
     aut_12 : list[CWE] | None
-        AUT.12 (opt, rep) - Authorized Discipline(s) (CWE)
+        AUT.12 (opt, rep) - Authorized Discipline(s) (CWE) S11.8.2.12
 
     aut_13 : CWE
-        AUT.13 (req) - Authorization Referral Type (CWE)
+        AUT.13 (req) - Authorization Referral Type (CWE) S11.8.2.13
 
     aut_14 : CWE | None
-        AUT.14 (opt) - Approval Status (CWE)
+        AUT.14 (opt) - Approval Status (CWE) S11.8.2.14
 
     aut_15 : str | None
-        AUT.15 (opt) - Planned Treatment Stop Date (DTM)
+        AUT.15 (opt) - Planned Treatment Stop Date (DTM) S11.8.2.15
 
     aut_16 : CWE | None
-        AUT.16 (opt) - Clinical Service (CWE)
+        AUT.16 (opt) - Clinical Service (CWE) S11.8.2.16
 
     aut_17 : str | None
-        AUT.17 (opt) - Reason Text (ST)
+        AUT.17 (opt) - Reason Text (ST) S11.8.2.17
 
     aut_18 : CQ | None
-        AUT.18 (opt) - Number of Authorized Treatments/Units (CQ)
+        AUT.18 (opt) - Number of Authorized Treatments/Units (CQ) S11.8.2.18
 
     aut_19 : CQ | None
-        AUT.19 (opt) - Number of Used Treatments/Units (CQ)
+        AUT.19 (opt) - Number of Used Treatments/Units (CQ) S11.8.2.19
 
     aut_20 : CQ | None
-        AUT.20 (opt) - Number of Schedule Treatments/Units (CQ)
+        AUT.20 (opt) - Number of Schedule Treatments/Units (CQ) S11.8.2.20
 
     aut_21 : CWE | None
-        AUT.21 (opt) - Encounter Type (CWE)
+        AUT.21 (opt) - Encounter Type (CWE) S11.8.2.21
 
     aut_22 : MO | None
-        AUT.22 (opt) - Remaining Benefit Amount (MO)
+        AUT.22 (opt) - Remaining Benefit Amount (MO) S11.8.2.22
 
     aut_23 : XON | None
-        AUT.23 (opt) - Authorized Provider (XON)
+        AUT.23 (opt) - Authorized Provider (XON) S11.8.2.23
 
     aut_24 : XCN | None
-        AUT.24 (opt) - Authorized Health Professional (XCN)
+        AUT.24 (opt) - Authorized Health Professional (XCN) S11.8.2.24
 
     aut_25 : str | None
-        AUT.25 (opt) - Source Text (ST)
+        AUT.25 (opt) - Source Text (ST) S11.8.2.25
 
     aut_26 : str | None
-        AUT.26 (opt) - Source Date (DTM)
+        AUT.26 (opt) - Source Date (DTM) S11.8.2.26
 
     aut_27 : XTN | None
-        AUT.27 (opt) - Source Phone (XTN)
+        AUT.27 (opt) - Source Phone (XTN) S11.8.2.27
 
     aut_28 : str | None
-        AUT.28 (opt) - Comment (ST)
+        AUT.28 (opt) - Comment (ST) S11.8.2.28
 
     aut_29 : str | None
-        AUT.29 (opt) - Action Code (ID)
+        AUT.29 (opt) - Action Code (ID) S11.8.2.29 | 0206 - Segment Action Code
     """
 
     aut_1: Optional[CWE] = Field(

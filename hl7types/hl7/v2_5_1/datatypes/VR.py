@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class VR(HL7Model):
-    """HL7 v2 VR data type.
+    """Value range (S2.A.1.82).
 
     Attributes
     ----------

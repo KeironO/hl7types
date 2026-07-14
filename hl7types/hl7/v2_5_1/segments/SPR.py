@@ -16,21 +16,21 @@ from ..datatypes.QIP import QIP
 
 
 class SPR(HL7Model):
-    """HL7 v2 SPR segment.
+    """Stored Procedure Request Definition (S5.10.5.5).
 
     Attributes
     ----------
     spr_1 : str | None
-        SPR.1 (opt) - Query Tag (ST)
+        SPR.1 (opt) - Query Tag (ST) S5.10.5.1.1
 
     spr_2 : str
-        SPR.2 (req) - Query/Response Format Code (ID)
+        SPR.2 (req) - Query/Response Format Code (ID) S5.10.5.1.2 | 0106 - Query/response format code
 
     spr_3 : CE
-        SPR.3 (req) - Stored Procedure Name (CE)
+        SPR.3 (req) - Stored Procedure Name (CE) S5.10.5.5.3
 
     spr_4 : list[QIP] | None
-        SPR.4 (opt, rep) - Input Parameter List (QIP)
+        SPR.4 (opt, rep) - Input Parameter List (QIP) S5.10.5.2.3
     """
 
     spr_1: Optional[str] = Field(

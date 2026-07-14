@@ -15,78 +15,78 @@ from ..datatypes.CE import CE
 
 
 class FT1(HL7Model):
-    """HL7 v2 FT1 segment.
+    """FINANCIAL TRANSACTION (S6.4.1).
 
     Attributes
     ----------
     ft1_1 : str | None
-        FT1.1 (opt) - Set ID - financial transaction (SI)
+        FT1.1 (opt) - Set ID - financial transaction (SI) S6.4.1.1
 
     ft1_2 : str | None
-        FT1.2 (opt) - Transaction ID (ST)
+        FT1.2 (opt) - Transaction ID (ST) S6.4.1.2
 
     ft1_3 : str | None
-        FT1.3 (opt) - Transaction batch ID (ST)
+        FT1.3 (opt) - Transaction batch ID (ST) S6.4.1.3
 
     ft1_4 : str
-        FT1.4 (req) - Transaction date (DT)
+        FT1.4 (req) - Transaction date (DT) S6.4.1.4
 
     ft1_5 : str | None
-        FT1.5 (opt) - Transaction posting date (DT)
+        FT1.5 (opt) - Transaction posting date (DT) S6.4.1.5
 
     ft1_6 : str
-        FT1.6 (req) - Transaction type (ID)
+        FT1.6 (req) - Transaction type (ID) S6.4.1.6 | 0017 - TRANSACTION TYPE
 
     ft1_7 : CE
-        FT1.7 (req) - Transaction code (CE)
+        FT1.7 (req) - Transaction code (CE) S6.4.1.7 | 0132 - TRANSACTION CODE
 
     ft1_8 : str | None
-        FT1.8 (opt) - Transaction description (ST)
+        FT1.8 (opt) - Transaction description (ST) S6.4.1.8
 
     ft1_9 : str | None
-        FT1.9 (opt) - Transaction description - alternate (ST)
+        FT1.9 (opt) - Transaction description - alternate (ST) S6.4.1.9
 
     ft1_10 : str | None
-        FT1.10 (opt) - Transaction quantity (NM)
+        FT1.10 (opt) - Transaction quantity (NM) S6.4.1.10
 
     ft1_11 : str | None
-        FT1.11 (opt) - Transaction amount - extended (NM)
+        FT1.11 (opt) - Transaction amount - extended (NM) S6.4.1.11
 
     ft1_12 : str | None
-        FT1.12 (opt) - Transaction amount - unit (NM)
+        FT1.12 (opt) - Transaction amount - unit (NM) S6.4.1.12
 
     ft1_13 : CE | None
-        FT1.13 (opt) - Department code (CE)
+        FT1.13 (opt) - Department code (CE) S6.4.1.13 | 0049 - DEPARTMENT CODE
 
     ft1_14 : str
-        FT1.14 (req) - Insurance plan ID (ID)
+        FT1.14 (req) - Insurance plan ID (ID) S6.4.1.14 | 0072 - INS. PLAN ID
 
     ft1_15 : str | None
-        FT1.15 (opt) - Insurance amount (NM)
+        FT1.15 (opt) - Insurance amount (NM) S6.4.1.15
 
     ft1_16 : str | None
-        FT1.16 (opt) - Assigned Patient Location (CM)
+        FT1.16 (opt) - Assigned Patient Location (CM) S3.3.3.3 | 0079 - LOCATION
 
     ft1_17 : str | None
-        FT1.17 (opt) - Fee schedule (ID)
+        FT1.17 (opt) - Fee schedule (ID) S6.4.1.17 | 0024 - FEE SCHEDULE
 
     ft1_18 : str | None
-        FT1.18 (opt) - Patient type (ID)
+        FT1.18 (opt) - Patient type (ID) S3.3.3.18 | 0018 - PATIENT TYPE
 
     ft1_19 : list[CE] | None
-        FT1.19 (opt, rep) - Diagnosis code (CE)
+        FT1.19 (opt, rep) - Diagnosis code (CE) S6.4.1.19 | 0051 - DIAGNOSIS CODE
 
     ft1_20 : str | None
-        FT1.20 (opt) - Performed by code (CN)
+        FT1.20 (opt) - Performed by code (CN) S6.4.1.20 | 0084 - PERFORMED BY
 
     ft1_21 : str | None
-        FT1.21 (opt) - Ordered by code (CN)
+        FT1.21 (opt) - Ordered by code (CN) S6.4.1.21
 
     ft1_22 : str | None
-        FT1.22 (opt) - Unit cost (NM)
+        FT1.22 (opt) - Unit cost (NM) S6.4.1.22
 
     ft1_23 : str | None
-        FT1.23 (opt) - Filler Order Number (CM)
+        FT1.23 (opt) - Filler Order Number (CM) S6.4.1.23
     """
 
     ft1_1: Optional[str] = Field(

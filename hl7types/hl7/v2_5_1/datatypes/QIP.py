@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class QIP(HL7Model):
-    """HL7 v2 QIP data type.
+    """Query input parameter list (S2.A.1.59).
 
     Attributes
     ----------

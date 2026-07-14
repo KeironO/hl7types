@@ -25,26 +25,24 @@ class PPV_PCA_PATIENT(HL7Model):
     """HL7 v2 PPV_PCA.PATIENT group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient Identification, required
         PATIENT_VISIT (Optional[PPV_PCA_PATIENT_VISIT]): optional
         GOAL (List[PPV_PCA_GOAL]): required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PATIENT_VISIT: Optional[_PPV_PCA_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     GOAL: List[_PPV_PCA_GOAL] = Field(
         min_length=1,
         title="GOAL",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

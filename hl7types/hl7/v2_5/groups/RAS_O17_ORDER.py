@@ -31,47 +31,43 @@ class RAS_O17_ORDER(HL7Model):
     """HL7 v2 RAS_O17.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[RAS_O17_TIMING]]): optional
         ORDER_DETAIL (Optional[RAS_O17_ORDER_DETAIL]): optional
         ENCODING (Optional[RAS_O17_ENCODING]): optional
         ADMINISTRATION (List[RAS_O17_ADMINISTRATION]): required
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_RAS_O17_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     ORDER_DETAIL: Optional[_RAS_O17_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     ENCODING: Optional[_RAS_O17_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     ADMINISTRATION: List[_RAS_O17_ADMINISTRATION] = Field(
         min_length=1,
         title="ADMINISTRATION",
-        description="Required, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

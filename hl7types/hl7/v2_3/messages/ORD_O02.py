@@ -29,39 +29,38 @@ class ORD_O02(HL7Model):
     """HL7 v2 ORD_O02 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message header segment, required
+        MSA (MSA): Message acknowledgement segment, required
+        ERR (Optional[ERR]): Error segment, optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
         RESPONSE (Optional[ORD_O02_RESPONSE]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message acknowledgement segment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     RESPONSE: Optional[_ORD_O02_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

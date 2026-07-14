@@ -15,54 +15,54 @@ from ..datatypes.CE import CE
 
 
 class OM4(HL7Model):
-    """HL7 v2 OM4 segment.
+    """OBSERVATION that require specimens (S7.6.7).
 
     Attributes
     ----------
     om4_1 : str | None
-        OM4.1 (opt) - Segment Type ID (ST)
+        OM4.1 (opt) - Segment Type ID (ST) S7.6.9.1
 
     om4_2 : str | None
-        OM4.2 (opt) - Sequence Number - Test/ Observation Master File (NM)
+        OM4.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
 
     om4_3 : str | None
-        OM4.3 (opt) - Derived Specimen (ID)
+        OM4.3 (opt) - Derived Specimen (ID) S7.6.7.3 | 0170 - DERIVED SPECIMEN
 
     om4_4 : str | None
-        OM4.4 (opt) - Container Description (TX)
+        OM4.4 (opt) - Container Description (TX) S7.6.7.4
 
     om4_5 : str | None
-        OM4.5 (opt) - Container Volume (NM)
+        OM4.5 (opt) - Container Volume (NM) S7.6.7.5
 
     om4_6 : CE | None
-        OM4.6 (opt) - Container Units (CE)
+        OM4.6 (opt) - Container Units (CE) S7.6.7.6
 
     om4_7 : CE | None
-        OM4.7 (opt) - Specimen (CE)
+        OM4.7 (opt) - Specimen (CE) S7.6.7.7
 
     om4_8 : CE | None
-        OM4.8 (opt) - Additive (CE)
+        OM4.8 (opt) - Additive (CE) S7.6.7.8
 
     om4_9 : str | None
-        OM4.9 (opt) - Preparation (TX)
+        OM4.9 (opt) - Preparation (TX) S7.6.7.9
 
     om4_10 : str | None
-        OM4.10 (opt) - Special Handling Requirements (TX)
+        OM4.10 (opt) - Special Handling Requirements (TX) S7.6.7.10
 
     om4_11 : str | None
-        OM4.11 (opt) - Normal Collection Volume (CQ)
+        OM4.11 (opt) - Normal Collection Volume (CQ) S7.6.7.11
 
     om4_12 : str | None
-        OM4.12 (opt) - Minimum Collection Volume (CQ)
+        OM4.12 (opt) - Minimum Collection Volume (CQ) S7.6.7.12
 
     om4_13 : str | None
-        OM4.13 (opt) - Specimen Requirements (TX)
+        OM4.13 (opt) - Specimen Requirements (TX) S7.6.7.13
 
     om4_14 : list[str] | None
-        OM4.14 (opt, rep) - Specimen Priorities (ID)
+        OM4.14 (opt, rep) - Specimen Priorities (ID) S7.6.7.14 | 0027 - PRIORITY (COMPONENT 6 QTY/TIMING[735])
 
     om4_15 : str | None
-        OM4.15 (opt) - Specimen Retention Time (CQ)
+        OM4.15 (opt) - Specimen Retention Time (CQ) S7.6.7.15
     """
 
     om4_1: Optional[str] = Field(

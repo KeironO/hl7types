@@ -37,67 +37,65 @@ class OMI_O23_ORDER(HL7Model):
     """HL7 v2 OMI_O23.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[OMI_O23_TIMING]]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
-        ROL (Optional[List[ROL]]): optional
-        CTD (Optional[CTD]): optional
-        DG1 (Optional[List[DG1]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        ROL (Optional[List[ROL]]): Role, optional
+        CTD (Optional[CTD]): Contact Data, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[OMI_O23_OBSERVATION]]): optional
-        IPC (List[IPC]): required
+        IPC (List[IPC]): Imaging Procedure Control Segment, required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_OMI_O23_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_OMI_O23_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     IPC: List[_IPC] = Field(
         min_length=1,
         title="IPC",
-        description="Required, repeating",
+        description="Imaging Procedure Control Segment",
     )
 
     model_config = {"populate_by_name": True}

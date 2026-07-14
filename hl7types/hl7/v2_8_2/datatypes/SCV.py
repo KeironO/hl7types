@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class SCV(HL7Model):
-    """HL7 v2 SCV data type.
+    """Scheduling class value pair (S2.A.69).
 
     Attributes
     ----------

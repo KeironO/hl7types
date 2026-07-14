@@ -16,54 +16,54 @@ from ..datatypes.TS import TS
 
 
 class RXD(HL7Model):
-    """HL7 v2 RXD segment.
+    """PHARMACY DISPENSE (S4.8.10).
 
     Attributes
     ----------
     rxd_1 : str | None
-        RXD.1 (opt) - Dispense Sub-ID Counter (NM)
+        RXD.1 (opt) - Dispense Sub-ID Counter (NM) S4.8.12.2
 
     rxd_2 : CE
-        RXD.2 (req) - Dispense / give code (CE)
+        RXD.2 (req) - Dispense / give code (CE) S4.8.10.2
 
     rxd_3 : TS | None
-        RXD.3 (opt) - Date / time dispensed (TS)
+        RXD.3 (opt) - Date / time dispensed (TS) S4.8.10.3
 
     rxd_4 : str
-        RXD.4 (req) - Actual Dispense Amount (NM)
+        RXD.4 (req) - Actual Dispense Amount (NM) S4.8.10.4
 
     rxd_5 : CE | None
-        RXD.5 (opt) - Actual Dispense Units (CE)
+        RXD.5 (opt) - Actual Dispense Units (CE) S4.8.10.5
 
     rxd_6 : CE | None
-        RXD.6 (opt) - Actual Dosage Form (CE)
+        RXD.6 (opt) - Actual Dosage Form (CE) S4.8.10.6
 
     rxd_7 : str
-        RXD.7 (req) - Prescription Number (ST)
+        RXD.7 (req) - Prescription Number (ST) S4.8.10.7
 
     rxd_8 : str | None
-        RXD.8 (opt) - Number of Refills Remaining (NM)
+        RXD.8 (opt) - Number of Refills Remaining (NM) S4.8.10.8
 
     rxd_9 : list[str] | None
-        RXD.9 (opt, rep) - Dispense Notes (ST)
+        RXD.9 (opt, rep) - Dispense Notes (ST) S4.8.10.9
 
     rxd_10 : str | None
-        RXD.10 (opt) - Dispensing Provider (CN)
+        RXD.10 (opt) - Dispensing Provider (CN) S4.8.10.10
 
     rxd_11 : str | None
-        RXD.11 (opt) - Substitution Status (ID)
+        RXD.11 (opt) - Substitution Status (ID) S4.8.12.10 | 0167 - SUBSTITUTION STATUS
 
     rxd_12 : str | None
-        RXD.12 (opt) - Total Daily Dose (CQ)
+        RXD.12 (opt) - Total Daily Dose (CQ) S4.8.7.19
 
     rxd_13 : str | None
-        RXD.13 (opt) - Deliver-to location (CM)
+        RXD.13 (opt) - Deliver-to location (CM) S4.8.12.11
 
     rxd_14 : str | None
-        RXD.14 (opt) - Needs Human Review (ID)
+        RXD.14 (opt) - Needs Human Review (ID) S4.8.12.12
 
     rxd_15 : CE | None
-        RXD.15 (opt) - Pharmacy Special Dispensing Instructions (CE)
+        RXD.15 (opt) - Pharmacy Special Dispensing Instructions (CE) S4.8.10.15
     """
 
     rxd_1: Optional[str] = Field(

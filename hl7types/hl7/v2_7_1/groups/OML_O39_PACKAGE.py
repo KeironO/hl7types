@@ -23,19 +23,18 @@ class OML_O39_PACKAGE(HL7Model):
     """HL7 v2 OML_O39.PACKAGE group.
 
     Attributes:
-        PAC (PAC): required
+        PAC (PAC): Shipment Package, required
         SPECIMEN_IN_PACKAGE (Optional[List[OML_O39_SPECIMEN_IN_PACKAGE]]): optional
     """
 
     PAC: _PAC = Field(
         title="PAC",
-        description="Required",
+        description="Shipment Package",
     )
 
     SPECIMEN_IN_PACKAGE: Optional[List[_OML_O39_SPECIMEN_IN_PACKAGE]] = Field(
         default=None,
         title="SPECIMEN_IN_PACKAGE",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

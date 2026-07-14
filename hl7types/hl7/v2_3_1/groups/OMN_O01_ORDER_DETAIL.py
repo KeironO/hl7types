@@ -27,33 +27,32 @@ class OMN_O01_ORDER_DETAIL(HL7Model):
     """HL7 v2 OMN_O01.ORDER_DETAIL group.
 
     Attributes:
-        RQD (RQD): required
-        RQ1 (Optional[RQ1]): optional
-        NTE (Optional[List[NTE]]): optional
+        RQD (RQD): RQD - requisition detail segment, required
+        RQ1 (Optional[RQ1]): RQ1 - requisition detail-1 segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         OBSERVATION (Optional[List[OMN_O01_OBSERVATION]]): optional
     """
 
     RQD: _RQD = Field(
         title="RQD",
-        description="Required",
+        description="RQD - requisition detail segment",
     )
 
     RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
-        description="Optional",
+        description="RQ1 - requisition detail-1 segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     OBSERVATION: Optional[List[_OMN_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -19,150 +19,150 @@ from ..datatypes.XTN import XTN
 
 
 class OM1(HL7Model):
-    """HL7 v2 OM1 segment.
+    """General Segment (S8.8.8).
 
     Attributes
     ----------
     om1_1 : str
-        OM1.1 (req) - Sequence Number - Test/Observation Master File (NM)
+        OM1.1 (req) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
 
     om1_2 : CE
-        OM1.2 (req) - Producer's Service/Test/Observation ID (CE)
+        OM1.2 (req) - Producer's Service/Test/Observation ID (CE) S8.8.8.2 | 9999 - no table for CE
 
     om1_3 : list[str] | None
-        OM1.3 (opt, rep) - Permitted Data Types (ID)
+        OM1.3 (opt, rep) - Permitted Data Types (ID) S8.8.8.3 | 0125 - Value type
 
     om1_4 : str
-        OM1.4 (req) - Specimen Required (ID)
+        OM1.4 (req) - Specimen Required (ID) S8.8.8.4 | 0136 - Yes/no indicator
 
     om1_5 : CE
-        OM1.5 (req) - Producer ID (CE)
+        OM1.5 (req) - Producer ID (CE) S8.8.8.5 | 9999 - no table for CE
 
     om1_6 : str | None
-        OM1.6 (opt) - Observation Description (TX)
+        OM1.6 (opt) - Observation Description (TX) S8.8.8.6
 
     om1_7 : CE | None
-        OM1.7 (opt) - Other Service/Test/Observation IDs for the Observation (CE)
+        OM1.7 (opt) - Other Service/Test/Observation IDs for the Observation (CE) S8.8.8.7 | 9999 - no table for CE
 
     om1_8 : list[str]
-        OM1.8 (req, rep) - Other Names (ST)
+        OM1.8 (req, rep) - Other Names (ST) S8.8.8.8
 
     om1_9 : str | None
-        OM1.9 (opt) - Preferred Report Name for the Observation (ST)
+        OM1.9 (opt) - Preferred Report Name for the Observation (ST) S8.8.8.9
 
     om1_10 : str | None
-        OM1.10 (opt) - Preferred Short Name or Mnemonic for Observation (ST)
+        OM1.10 (opt) - Preferred Short Name or Mnemonic for Observation (ST) S8.8.8.10
 
     om1_11 : str | None
-        OM1.11 (opt) - Preferred Long Name for the Observation (ST)
+        OM1.11 (opt) - Preferred Long Name for the Observation (ST) S8.8.8.11
 
     om1_12 : str | None
-        OM1.12 (opt) - Orderability (ID)
+        OM1.12 (opt) - Orderability (ID) S8.8.8.12 | 0136 - Yes/no indicator
 
     om1_13 : list[CE] | None
-        OM1.13 (opt, rep) - Identity of Instrument Used to Perform this Study (CE)
+        OM1.13 (opt, rep) - Identity of Instrument Used to Perform this Study (CE) S8.8.8.13 | 9999 - no table for CE
 
     om1_14 : list[CE] | None
-        OM1.14 (opt, rep) - Coded Representation of Method (CE)
+        OM1.14 (opt, rep) - Coded Representation of Method (CE) S8.8.8.14 | 9999 - no table for CE
 
     om1_15 : str | None
-        OM1.15 (opt) - Portable Device Indicator (ID)
+        OM1.15 (opt) - Portable Device Indicator (ID) S8.8.8.15 | 0136 - Yes/no indicator
 
     om1_16 : list[CE] | None
-        OM1.16 (opt, rep) - Observation Producing Department/Section (CE)
+        OM1.16 (opt, rep) - Observation Producing Department/Section (CE) S8.8.8.16 | 9999 - no table for CE
 
     om1_17 : XTN | None
-        OM1.17 (opt) - Telephone Number of Section (XTN)
+        OM1.17 (opt) - Telephone Number of Section (XTN) S8.8.8.17
 
     om1_18 : str
-        OM1.18 (req) - Nature of Service/Test/Observation (IS)
+        OM1.18 (req) - Nature of Service/Test/Observation (IS) S8.8.8.18 | 0174 - Nature of Service/Test/Observation
 
     om1_19 : CE | None
-        OM1.19 (opt) - Report Subheader (CE)
+        OM1.19 (opt) - Report Subheader (CE) S8.8.8.19 | 9999 - no table for CE
 
     om1_20 : str | None
-        OM1.20 (opt) - Report Display Order (ST)
+        OM1.20 (opt) - Report Display Order (ST) S8.8.8.20
 
     om1_21 : TS | None
-        OM1.21 (opt) - Date/Time Stamp for any change in Definition for the Observation (TS)
+        OM1.21 (opt) - Date/Time Stamp for any change in Definition for the Observation (TS) S8.8.8.21
 
     om1_22 : TS | None
-        OM1.22 (opt) - Effective Date/Time of Change (TS)
+        OM1.22 (opt) - Effective Date/Time of Change (TS) S8.8.14.19
 
     om1_23 : str | None
-        OM1.23 (opt) - Typical Turn-Around Time (NM)
+        OM1.23 (opt) - Typical Turn-Around Time (NM) S8.8.8.23
 
     om1_24 : str | None
-        OM1.24 (opt) - Processing Time (NM)
+        OM1.24 (opt) - Processing Time (NM) S8.8.8.24
 
     om1_25 : list[str] | None
-        OM1.25 (opt, rep) - Processing Priority (ID)
+        OM1.25 (opt, rep) - Processing Priority (ID) S8.8.8.25 | 0168 - Processing priority
 
     om1_26 : str | None
-        OM1.26 (opt) - Reporting Priority (ID)
+        OM1.26 (opt) - Reporting Priority (ID) S8.8.8.26 | 0169 - Reporting priority
 
     om1_27 : list[CE] | None
-        OM1.27 (opt, rep) - Outside Site(s) Where Observation may be Performed (CE)
+        OM1.27 (opt, rep) - Outside Site(s) Where Observation may be Performed (CE) S8.8.8.27 | 9999 - no table for CE
 
     om1_28 : list[XAD] | None
-        OM1.28 (opt, rep) - Address of Outside Site(s) (XAD)
+        OM1.28 (opt, rep) - Address of Outside Site(s) (XAD) S8.8.8.28
 
     om1_29 : XTN | None
-        OM1.29 (opt) - Phone Number of Outside Site (XTN)
+        OM1.29 (opt) - Phone Number of Outside Site (XTN) S8.8.8.29
 
     om1_30 : CWE | None
-        OM1.30 (opt) - Confidentiality Code (CWE)
+        OM1.30 (opt) - Confidentiality Code (CWE) S4.5.1.28 | 0177 - Confidentiality code
 
     om1_31 : CE | None
-        OM1.31 (opt) - Observations Required to Interpret the Observation (CE)
+        OM1.31 (opt) - Observations Required to Interpret the Observation (CE) S8.8.8.31 | 9999 - no table for CE
 
     om1_32 : str | None
-        OM1.32 (opt) - Interpretation of Observations (TX)
+        OM1.32 (opt) - Interpretation of Observations (TX) S8.8.8.32
 
     om1_33 : CE | None
-        OM1.33 (opt) - Contraindications to Observations (CE)
+        OM1.33 (opt) - Contraindications to Observations (CE) S8.8.8.33 | 9999 - no table for CE
 
     om1_34 : list[CE] | None
-        OM1.34 (opt, rep) - Reflex Tests/Observations (CE)
+        OM1.34 (opt, rep) - Reflex Tests/Observations (CE) S8.8.8.34 | 9999 - no table for CE
 
     om1_35 : str | None
-        OM1.35 (opt) - Rules that Trigger Reflex Testing (TX)
+        OM1.35 (opt) - Rules that Trigger Reflex Testing (TX) S8.8.8.35
 
     om1_36 : CE | None
-        OM1.36 (opt) - Fixed Canned Message (CE)
+        OM1.36 (opt) - Fixed Canned Message (CE) S8.8.8.36 | 9999 - no table for CE
 
     om1_37 : str | None
-        OM1.37 (opt) - Patient Preparation (TX)
+        OM1.37 (opt) - Patient Preparation (TX) S8.8.8.37
 
     om1_38 : CE | None
-        OM1.38 (opt) - Procedure Medication (CE)
+        OM1.38 (opt) - Procedure Medication (CE) S8.8.8.38 | 9999 - no table for CE
 
     om1_39 : str | None
-        OM1.39 (opt) - Factors that may Affect the Observation (TX)
+        OM1.39 (opt) - Factors that may Affect the Observation (TX) S8.8.8.39
 
     om1_40 : list[str] | None
-        OM1.40 (opt, rep) - Service/Test/Observation Performance Schedule (ST)
+        OM1.40 (opt, rep) - Service/Test/Observation Performance Schedule (ST) S8.8.8.40
 
     om1_41 : str | None
-        OM1.41 (opt) - Description of Test Methods (TX)
+        OM1.41 (opt) - Description of Test Methods (TX) S8.8.8.41
 
     om1_42 : CE | None
-        OM1.42 (opt) - Kind of Quantity Observed (CE)
+        OM1.42 (opt) - Kind of Quantity Observed (CE) S8.8.8.42 | 0254 - Kind of quantity
 
     om1_43 : CE | None
-        OM1.43 (opt) - Point Versus Interval (CE)
+        OM1.43 (opt) - Point Versus Interval (CE) S8.8.8.43 | 0255 - Duration categories
 
     om1_44 : str | None
-        OM1.44 (opt) - Challenge Information (TX)
+        OM1.44 (opt) - Challenge Information (TX) S8.8.8.44 | 0256 - Time delay post challenge
 
     om1_45 : CE | None
-        OM1.45 (opt) - Relationship Modifier (CE)
+        OM1.45 (opt) - Relationship Modifier (CE) S8.8.8.45 | 0258 - Relationship modifier
 
     om1_46 : CE | None
-        OM1.46 (opt) - Target Anatomic Site Of Test (CE)
+        OM1.46 (opt) - Target Anatomic Site Of Test (CE) S8.8.8.46 | 9999 - no table for CE
 
     om1_47 : CE | None
-        OM1.47 (opt) - Modality Of Imaging Measurement (CE)
+        OM1.47 (opt) - Modality Of Imaging Measurement (CE) S8.8.8.47 | 0259 - Modality
     """
 
     om1_1: str = Field(

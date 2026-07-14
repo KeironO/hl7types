@@ -24,35 +24,34 @@ _SRR_S01_SCHEDULE = SRR_S01_SCHEDULE
 
 
 class SRR_S01(HL7Model):
-    """HL7 v2 SRR_S01 message.
+    """SRM/SRR - Request new appointment booking (S10).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
         SCHEDULE (Optional[SRR_S01_SCHEDULE]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     SCHEDULE: Optional[_SRR_S01_SCHEDULE] = Field(
         default=None,
         title="SCHEDULE",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

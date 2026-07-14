@@ -57,137 +57,135 @@ class ADR_A19_QUERY_RESPONSE(HL7Model):
     """HL7 v2 ADR_A19.QUERY_RESPONSE group.
 
     Attributes:
-        EVN (Optional[EVN]): optional
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        ARV (Optional[List[ARV]]): optional
-        ROL (Optional[List[ROL]]): optional
-        NK1 (Optional[List[NK1]]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        DB1 (Optional[List[DB1]]): optional
-        OBX (Optional[List[OBX]]): optional
-        AL1 (Optional[List[AL1]]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[DRG]): optional
+        EVN (Optional[EVN]): Event Type, optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
+        ROL (Optional[List[ROL]]): Role, optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
+        PV1 (PV1): Patient Visit, required
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        DB1 (Optional[List[DB1]]): Disability, optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
         PROCEDURE (Optional[List[ADR_A19_PROCEDURE]]): optional
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[ADR_A19_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
-        UB1 (Optional[UB1]): optional
-        UB2 (Optional[UB2]): optional
+        ACC (Optional[ACC]): Accident, optional
+        UB1 (Optional[UB1]): UB82, optional
+        UB2 (Optional[UB2]): UB92 Data, optional
     """
 
     EVN: Optional[_EVN] = Field(
         default=None,
         title="EVN",
-        description="Optional",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="Disability",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     PROCEDURE: Optional[List[_ADR_A19_PROCEDURE]] = Field(
         default=None,
         title="PROCEDURE",
-        description="Optional, repeating",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_ADR_A19_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     UB1: Optional[_UB1] = Field(
         default=None,
         title="UB1",
-        description="Optional",
+        description="UB82",
     )
 
     UB2: Optional[_UB2] = Field(
         default=None,
         title="UB2",
-        description="Optional",
+        description="UB92 Data",
     )
 
     model_config = {"populate_by_name": True}

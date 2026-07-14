@@ -27,33 +27,31 @@ class OSM_R26_SHIPMENT(HL7Model):
     """HL7 v2 OSM_R26.SHIPMENT group.
 
     Attributes:
-        SHP (SHP): required
-        PRT (List[PRT]): required
+        SHP (SHP): Shipment, required
+        PRT (List[PRT]): Participation Information, required
         SHIPPING_OBSERVATION (Optional[List[OSM_R26_SHIPPING_OBSERVATION]]): optional
         PACKAGE (List[OSM_R26_PACKAGE]): required
     """
 
     SHP: _SHP = Field(
         title="SHP",
-        description="Required",
+        description="Shipment",
     )
 
     PRT: List[_PRT] = Field(
         min_length=1,
         title="PRT",
-        description="Required, repeating",
+        description="Participation Information",
     )
 
     SHIPPING_OBSERVATION: Optional[List[_OSM_R26_SHIPPING_OBSERVATION]] = Field(
         default=None,
         title="SHIPPING_OBSERVATION",
-        description="Optional, repeating",
     )
 
     PACKAGE: List[_OSM_R26_PACKAGE] = Field(
         min_length=1,
         title="PACKAGE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

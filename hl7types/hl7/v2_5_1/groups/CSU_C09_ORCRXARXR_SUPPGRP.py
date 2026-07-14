@@ -23,20 +23,19 @@ class CSU_C09_ORCRXARXR_SUPPGRP(HL7Model):
     """HL7 v2 CSU_C09.ORCRXARXR_SUPPGRP group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
+        ORC (Optional[ORC]): Common Order, optional
         RXARXR_SUPPGRP (List[CSU_C09_RXARXR_SUPPGRP]): required
     """
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     RXARXR_SUPPGRP: List[_CSU_C09_RXARXR_SUPPGRP] = Field(
         min_length=1,
         title="RXARXR_SUPPGRP",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -24,26 +24,26 @@ class CSU_C09_STUDY_OBSERVATION(HL7Model):
     """HL7 v2 CSU_C09.STUDY_OBSERVATION group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
-        OBR (OBR): required
-        OBX (List[OBX]): required
+        ORC (Optional[ORC]): ORC - common order segment, optional
+        OBR (OBR): OBR - observation request segment, required
+        OBX (List[OBX]): OBX - observation/result segment, required
     """
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="ORC - common order segment",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="OBR - observation request segment",
     )
 
     OBX: List[_OBX] = Field(
         min_length=1,
         title="OBX",
-        description="Required, repeating",
+        description="OBX - observation/result segment",
     )
 
     model_config = {"populate_by_name": True}

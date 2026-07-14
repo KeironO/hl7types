@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CM_ABS_RANGE(HL7Model):
-    """HL7 v2 CM_ABS_RANGE data type.
+    """Absolute range.
 
     Attributes
     ----------

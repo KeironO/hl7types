@@ -29,7 +29,7 @@ class SIU_S12_RESOURCES(HL7Model):
     """HL7 v2 SIU_S12.RESOURCES group.
 
     Attributes:
-        RGS (RGS): required
+        RGS (RGS): Resource Group, required
         SERVICE (Optional[List[SIU_S12_SERVICE]]): optional
         GENERAL_RESOURCE (Optional[List[SIU_S12_GENERAL_RESOURCE]]): optional
         LOCATION_RESOURCE (Optional[List[SIU_S12_LOCATION_RESOURCE]]): optional
@@ -38,31 +38,27 @@ class SIU_S12_RESOURCES(HL7Model):
 
     RGS: _RGS = Field(
         title="RGS",
-        description="Required",
+        description="Resource Group",
     )
 
     SERVICE: Optional[List[_SIU_S12_SERVICE]] = Field(
         default=None,
         title="SERVICE",
-        description="Optional, repeating",
     )
 
     GENERAL_RESOURCE: Optional[List[_SIU_S12_GENERAL_RESOURCE]] = Field(
         default=None,
         title="GENERAL_RESOURCE",
-        description="Optional, repeating",
     )
 
     LOCATION_RESOURCE: Optional[List[_SIU_S12_LOCATION_RESOURCE]] = Field(
         default=None,
         title="LOCATION_RESOURCE",
-        description="Optional, repeating",
     )
 
     PERSONNEL_RESOURCE: Optional[List[_SIU_S12_PERSONNEL_RESOURCE]] = Field(
         default=None,
         title="PERSONNEL_RESOURCE",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

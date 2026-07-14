@@ -22,19 +22,19 @@ class SQM_S25_SERVICE(HL7Model):
     """HL7 v2 SQM_S25.SERVICE group.
 
     Attributes:
-        AIS (AIS): required
-        APR (Optional[APR]): optional
+        AIS (AIS): AIS - appointment information - service segment, required
+        APR (Optional[APR]): APR - appointment preferences segment, optional
     """
 
     AIS: _AIS = Field(
         title="AIS",
-        description="Required",
+        description="AIS - appointment information - service segment",
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="APR - appointment preferences segment",
     )
 
     model_config = {"populate_by_name": True}

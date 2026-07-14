@@ -23,19 +23,18 @@ class RRG_O02_ORDER(HL7Model):
     """HL7 v2 RRG_O02.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): ORC - common order segment, required
         GIVE (Optional[RRG_O02_GIVE]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     GIVE: Optional[_RRG_O02_GIVE] = Field(
         default=None,
         title="GIVE",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

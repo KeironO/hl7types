@@ -29,55 +29,55 @@ _UAC = UAC
 
 
 class PMU_B08(HL7Model):
-    """HL7 v2 PMU_B08 message.
+    """PMU/ACK - Revoke Certificate/Permission (S15.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EVN (EVN): required
-        STF (STF): required
-        PRA (Optional[PRA]): optional
-        CER (Optional[List[CER]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EVN (EVN): Event Type, required
+        STF (STF): Staff Identification, required
+        PRA (Optional[PRA]): Practitioner Detail, optional
+        CER (Optional[List[CER]]): Certificate Detail, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[_PRA] = Field(
         default=None,
         title="PRA",
-        description="Optional",
+        description="Practitioner Detail",
     )
 
     CER: Optional[List[_CER]] = Field(
         default=None,
         title="CER",
-        description="Optional, repeating",
+        description="Certificate Detail",
     )
 
     model_config = {"populate_by_name": True}

@@ -29,40 +29,38 @@ class EHC_E20_PAT_INFO(HL7Model):
     """HL7 v2 EHC_E20.PAT_INFO group.
 
     Attributes:
-        PID (PID): required
-        ACC (Optional[List[ACC]]): optional
+        PID (PID): Patient Identification, required
+        ACC (Optional[List[ACC]]): Accident, optional
         INSURANCE (List[EHC_E20_INSURANCE]): required
         DIAGNOSIS (Optional[List[EHC_E20_DIAGNOSIS]]): optional
-        OBX (Optional[List[OBX]]): optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     ACC: Optional[List[_ACC]] = Field(
         default=None,
         title="ACC",
-        description="Optional, repeating",
+        description="Accident",
     )
 
     INSURANCE: List[_EHC_E20_INSURANCE] = Field(
         min_length=1,
         title="INSURANCE",
-        description="Required, repeating",
     )
 
     DIAGNOSIS: Optional[List[_EHC_E20_DIAGNOSIS]] = Field(
         default=None,
         title="DIAGNOSIS",
-        description="Optional, repeating",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

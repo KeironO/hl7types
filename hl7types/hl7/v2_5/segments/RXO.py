@@ -19,93 +19,93 @@ from ..datatypes.XCN import XCN
 
 
 class RXO(HL7Model):
-    """HL7 v2 RXO segment.
+    """Pharmacy/Treatment Order (S4.14.1).
 
     Attributes
     ----------
     rxo_1 : CE | None
-        RXO.1 (opt) - Requested Give Code (CE)
+        RXO.1 (opt) - Requested Give Code (CE) S4.14.1.1
 
     rxo_2 : str | None
-        RXO.2 (opt) - Requested Give Amount - Minimum (NM)
+        RXO.2 (opt) - Requested Give Amount - Minimum (NM) S4.14.1.2
 
     rxo_3 : str | None
-        RXO.3 (opt) - Requested Give Amount - Maximum (NM)
+        RXO.3 (opt) - Requested Give Amount - Maximum (NM) S4.14.1.3
 
     rxo_4 : CE | None
-        RXO.4 (opt) - Requested Give Units (CE)
+        RXO.4 (opt) - Requested Give Units (CE) S4.14.1.4
 
     rxo_5 : CE | None
-        RXO.5 (opt) - Requested Dosage Form (CE)
+        RXO.5 (opt) - Requested Dosage Form (CE) S4.14.1.5
 
     rxo_6 : list[CE] | None
-        RXO.6 (opt, rep) - Provider's Pharmacy/Treatment Instructions (CE)
+        RXO.6 (opt, rep) - Provider's Pharmacy/Treatment Instructions (CE) S4.14.1.6
 
     rxo_7 : list[CE] | None
-        RXO.7 (opt, rep) - Provider's Administration Instructions (CE)
+        RXO.7 (opt, rep) - Provider's Administration Instructions (CE) S4.14.1.7
 
     rxo_8 : LA1 | None
-        RXO.8 (opt) - Deliver-To Location (LA1)
+        RXO.8 (opt) - Deliver-To Location (LA1) S4.14.1.8
 
     rxo_9 : str | None
-        RXO.9 (opt) - Allow Substitutions (ID)
+        RXO.9 (opt) - Allow Substitutions (ID) S4.14.1.9 | 0161 - Allow Substitution
 
     rxo_10 : CE | None
-        RXO.10 (opt) - Requested Dispense Code (CE)
+        RXO.10 (opt) - Requested Dispense Code (CE) S4.14.1.10
 
     rxo_11 : str | None
-        RXO.11 (opt) - Requested Dispense Amount (NM)
+        RXO.11 (opt) - Requested Dispense Amount (NM) S4.14.1.11
 
     rxo_12 : CE | None
-        RXO.12 (opt) - Requested Dispense Units (CE)
+        RXO.12 (opt) - Requested Dispense Units (CE) S4.14.1.12
 
     rxo_13 : str | None
-        RXO.13 (opt) - Number Of Refills (NM)
+        RXO.13 (opt) - Number Of Refills (NM) S4.14.1.13
 
     rxo_14 : list[XCN] | None
-        RXO.14 (opt, rep) - Ordering Provider's DEA Number (XCN)
+        RXO.14 (opt, rep) - Ordering Provider's DEA Number (XCN) S4.14.1.14
 
     rxo_15 : list[XCN] | None
-        RXO.15 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN)
+        RXO.15 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN) S4.14.1.15
 
     rxo_16 : str | None
-        RXO.16 (opt) - Needs Human Review (ID)
+        RXO.16 (opt) - Needs Human Review (ID) S4.14.1.16 | 0136 - Yes/no indicator
 
     rxo_17 : str | None
-        RXO.17 (opt) - Requested Give Per (Time Unit) (ST)
+        RXO.17 (opt) - Requested Give Per (Time Unit) (ST) S4.14.1.17
 
     rxo_18 : str | None
-        RXO.18 (opt) - Requested Give Strength (NM)
+        RXO.18 (opt) - Requested Give Strength (NM) S4.14.1.18
 
     rxo_19 : CE | None
-        RXO.19 (opt) - Requested Give Strength Units (CE)
+        RXO.19 (opt) - Requested Give Strength Units (CE) S4.14.1.19
 
     rxo_20 : list[CE] | None
-        RXO.20 (opt, rep) - Indication (CE)
+        RXO.20 (opt, rep) - Indication (CE) S4.14.1.20
 
     rxo_21 : str | None
-        RXO.21 (opt) - Requested Give Rate Amount (ST)
+        RXO.21 (opt) - Requested Give Rate Amount (ST) S4.14.1.21
 
     rxo_22 : CE | None
-        RXO.22 (opt) - Requested Give Rate Units (CE)
+        RXO.22 (opt) - Requested Give Rate Units (CE) S4.14.1.22
 
     rxo_23 : CQ | None
-        RXO.23 (opt) - Total Daily Dose (CQ)
+        RXO.23 (opt) - Total Daily Dose (CQ) S4.14.1.23
 
     rxo_24 : list[CE] | None
-        RXO.24 (opt, rep) - Supplementary Code (CE)
+        RXO.24 (opt, rep) - Supplementary Code (CE) S4.14.1.24
 
     rxo_25 : str | None
-        RXO.25 (opt) - Requested Drug Strength Volume (NM)
+        RXO.25 (opt) - Requested Drug Strength Volume (NM) S4.14.1.25
 
     rxo_26 : CWE | None
-        RXO.26 (opt) - Requested Drug Strength Volume Units (CWE)
+        RXO.26 (opt) - Requested Drug Strength Volume Units (CWE) S4.14.1.26
 
     rxo_27 : str | None
-        RXO.27 (opt) - Pharmacy Order Type (ID)
+        RXO.27 (opt) - Pharmacy Order Type (ID) S4.14.1.27 | 0480 - Pharmacy Order Types
 
     rxo_28 : str | None
-        RXO.28 (opt) - Dispensing Interval (NM)
+        RXO.28 (opt) - Dispensing Interval (NM) S4.14.1.28
     """
 
     rxo_1: Optional[CE] = Field(

@@ -15,12 +15,12 @@ from ..datatypes.TS import TS
 
 
 class NCK(HL7Model):
-    """HL7 v2 NCK segment.
+    """System Clock (SC.2.1.2).
 
     Attributes
     ----------
     nck_1 : TS | None
-        NCK.1 (opt) - System Date/Time (TS)
+        NCK.1 (opt) - System Date/Time (TS) SC.2.1.1
     """
 
     nck_1: Optional[TS] = Field(

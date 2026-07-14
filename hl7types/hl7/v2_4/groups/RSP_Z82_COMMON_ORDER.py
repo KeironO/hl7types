@@ -33,53 +33,50 @@ class RSP_Z82_COMMON_ORDER(HL7Model):
     """HL7 v2 RSP_Z82.COMMON_ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         ORDER_DETAIL (Optional[RSP_Z82_ORDER_DETAIL]): optional
         ENCODED_ORDER (Optional[RSP_Z82_ENCODED_ORDER]): optional
-        RXD (RXD): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXD (RXD): Pharmacy/Treatment Dispense, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
         OBSERVATION (List[RSP_Z82_OBSERVATION]): required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     ORDER_DETAIL: Optional[_RSP_Z82_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     ENCODED_ORDER: Optional[_RSP_Z82_ENCODED_ORDER] = Field(
         default=None,
         title="ENCODED_ORDER",
-        description="Optional",
     )
 
     RXD: _RXD = Field(
         title="RXD",
-        description="Required",
+        description="Pharmacy/Treatment Dispense",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     OBSERVATION: List[_RSP_Z82_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

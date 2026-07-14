@@ -13,21 +13,21 @@ from hl7types.hl7 import HL7Model
 
 
 class RFI(HL7Model):
-    """HL7 v2 RFI segment.
+    """Request for Information (S16.4.1).
 
     Attributes
     ----------
     rfi_1 : str
-        RFI.1 (req) - Request Date (DTM)
+        RFI.1 (req) - Request Date (DTM) S16.4.1.1
 
     rfi_2 : str
-        RFI.2 (req) - Response Due Date (DTM)
+        RFI.2 (req) - Response Due Date (DTM) S16.4.1.2
 
     rfi_3 : str | None
-        RFI.3 (opt) - Patient Consent (ID)
+        RFI.3 (opt) - Patient Consent (ID) S16.4.1.3 | 0136 - Yes/no Indicator
 
     rfi_4 : str | None
-        RFI.4 (opt) - Date Additional Information Was Submitted (DTM)
+        RFI.4 (opt) - Date Additional Information Was Submitted (DTM) S16.4.1.4
     """
 
     rfi_1: str = Field(

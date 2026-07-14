@@ -14,7 +14,7 @@ from hl7types.hl7._validators import _apply_dt_fallback
 
 
 class FC(HL7Model):
-    """HL7 v2 FC data type.
+    """Financial class (S2.A.29).
 
     Attributes
     ----------

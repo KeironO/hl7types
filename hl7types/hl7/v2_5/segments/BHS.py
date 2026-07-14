@@ -16,45 +16,45 @@ from ..datatypes.TS import TS
 
 
 class BHS(HL7Model):
-    """HL7 v2 BHS segment.
+    """Batch Header (S2.15.2).
 
     Attributes
     ----------
     bhs_1 : str
-        BHS.1 (req) - Batch Field Separator (ST)
+        BHS.1 (req) - Batch Field Separator (ST) S2.15.2.1
 
     bhs_2 : str
-        BHS.2 (req) - Batch Encoding Characters (ST)
+        BHS.2 (req) - Batch Encoding Characters (ST) S2.15.2.2
 
     bhs_3 : HD | None
-        BHS.3 (opt) - Batch Sending Application (HD)
+        BHS.3 (opt) - Batch Sending Application (HD) S2.15.2.3
 
     bhs_4 : HD | None
-        BHS.4 (opt) - Batch Sending Facility (HD)
+        BHS.4 (opt) - Batch Sending Facility (HD) S2.15.2.4
 
     bhs_5 : HD | None
-        BHS.5 (opt) - Batch Receiving Application (HD)
+        BHS.5 (opt) - Batch Receiving Application (HD) S2.15.2.5
 
     bhs_6 : HD | None
-        BHS.6 (opt) - Batch Receiving Facility (HD)
+        BHS.6 (opt) - Batch Receiving Facility (HD) S2.15.2.6
 
     bhs_7 : TS | None
-        BHS.7 (opt) - Batch Creation Date/Time (TS)
+        BHS.7 (opt) - Batch Creation Date/Time (TS) S2.15.2.7
 
     bhs_8 : str | None
-        BHS.8 (opt) - Batch Security (ST)
+        BHS.8 (opt) - Batch Security (ST) S2.15.2.8
 
     bhs_9 : str | None
-        BHS.9 (opt) - Batch Name/ID/Type (ST)
+        BHS.9 (opt) - Batch Name/ID/Type (ST) S2.15.2.9
 
     bhs_10 : str | None
-        BHS.10 (opt) - Batch Comment (ST)
+        BHS.10 (opt) - Batch Comment (ST) S2.15.2.10
 
     bhs_11 : str | None
-        BHS.11 (opt) - Batch Control ID (ST)
+        BHS.11 (opt) - Batch Control ID (ST) S2.15.2.11
 
     bhs_12 : str | None
-        BHS.12 (opt) - Reference Batch Control ID (ST)
+        BHS.12 (opt) - Reference Batch Control ID (ST) S2.15.2.12
     """
 
     bhs_1: str = Field(

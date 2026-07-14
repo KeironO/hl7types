@@ -24,26 +24,26 @@ class EHC_E15_ADJUSTMENT_PAYEE(HL7Model):
     """HL7 v2 EHC_E15.ADJUSTMENT_PAYEE group.
 
     Attributes:
-        ADJ (ADJ): required
-        PRT (Optional[PRT]): optional
-        ROL (Optional[ROL]): optional
+        ADJ (ADJ): Adjustment, required
+        PRT (Optional[PRT]): Participation Information, optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     ADJ: _ADJ = Field(
         title="ADJ",
-        description="Required",
+        description="Adjustment",
     )
 
     PRT: Optional[_PRT] = Field(
         default=None,
         title="PRT",
-        description="Optional",
+        description="Participation Information",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

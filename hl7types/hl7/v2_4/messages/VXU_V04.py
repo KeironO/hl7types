@@ -32,63 +32,60 @@ _VXU_V04_PATIENT = VXU_V04_PATIENT
 
 
 class VXU_V04(HL7Model):
-    """HL7 v2 VXU_V04 message.
+    """VXU - Unsolicited vaccination record update (S4).
 
     Attributes:
-        MSH (MSH): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
+        MSH (MSH): Message Header, required
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
+        NK1 (Optional[List[NK1]]): Next of kin / associated parties, optional
         PATIENT (Optional[VXU_V04_PATIENT]): optional
-        GT1 (Optional[List[GT1]]): optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[VXU_V04_INSURANCE]]): optional
         ORDER (Optional[List[VXU_V04_ORDER]]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin / associated parties",
     )
 
     PATIENT: Optional[_VXU_V04_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_VXU_V04_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_VXU_V04_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

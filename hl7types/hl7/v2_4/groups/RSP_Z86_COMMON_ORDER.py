@@ -33,7 +33,7 @@ class RSP_Z86_COMMON_ORDER(HL7Model):
     """HL7 v2 RSP_Z86.COMMON_ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         ORDER_DETAIL (Optional[RSP_Z86_ORDER_DETAIL]): optional
         ENCODED_ORDER (Optional[RSP_Z86_ENCODED_ORDER]): optional
         DISPENSE (Optional[RSP_Z86_DISPENSE]): optional
@@ -44,43 +44,37 @@ class RSP_Z86_COMMON_ORDER(HL7Model):
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     ORDER_DETAIL: Optional[_RSP_Z86_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     ENCODED_ORDER: Optional[_RSP_Z86_ENCODED_ORDER] = Field(
         default=None,
         title="ENCODED_ORDER",
-        description="Optional",
     )
 
     DISPENSE: Optional[_RSP_Z86_DISPENSE] = Field(
         default=None,
         title="DISPENSE",
-        description="Optional",
     )
 
     GIVE: Optional[_RSP_Z86_GIVE] = Field(
         default=None,
         title="GIVE",
-        description="Optional",
     )
 
     ADMINISTRATION: Optional[_RSP_Z86_ADMINISTRATION] = Field(
         default=None,
         title="ADMINISTRATION",
-        description="Optional",
     )
 
     OBSERVATION: List[_RSP_Z86_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

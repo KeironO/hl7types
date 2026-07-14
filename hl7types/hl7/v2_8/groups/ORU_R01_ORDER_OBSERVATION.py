@@ -40,74 +40,70 @@ class ORU_R01_ORDER_OBSERVATION(HL7Model):
 
     Attributes:
         COMMON_ORDER (Optional[ORU_R01_COMMON_ORDER]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING_QTY (Optional[List[ORU_R01_TIMING_QTY]]): optional
-        CTD (Optional[CTD]): optional
+        CTD (Optional[CTD]): Contact Data, optional
         OBSERVATION (Optional[List[ORU_R01_OBSERVATION]]): optional
-        FT1 (Optional[List[FT1]]): optional
-        CTI (Optional[List[CTI]]): optional
+        FT1 (Optional[List[FT1]]): Financial Transaction, optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
         SPECIMEN (Optional[List[ORU_R01_SPECIMEN]]): optional
     """
 
     COMMON_ORDER: Optional[_ORU_R01_COMMON_ORDER] = Field(
         default=None,
         title="COMMON_ORDER",
-        description="Optional",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING_QTY: Optional[List[_ORU_R01_TIMING_QTY]] = Field(
         default=None,
         title="TIMING_QTY",
-        description="Optional, repeating",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     OBSERVATION: Optional[List[_ORU_R01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     FT1: Optional[List[_FT1]] = Field(
         default=None,
         title="FT1",
-        description="Optional, repeating",
+        description="Financial Transaction",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     SPECIMEN: Optional[List[_ORU_R01_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,7 +15,7 @@ from .CNE import CNE
 
 
 class OSP(HL7Model):
-    """HL7 v2 OSP data type.
+    """Occurrence span code and date (S2.A.51).
 
     Attributes
     ----------

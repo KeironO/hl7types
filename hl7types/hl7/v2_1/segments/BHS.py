@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class BHS(HL7Model):
-    """HL7 v2 BHS segment.
+    """BATCH HEADER (S2.5.2).
 
     Attributes
     ----------
     bhs_1 : str
-        BHS.1 (req) - BATCH FIELD SEPARATOR (ST)
+        BHS.1 (req) - BATCH FIELD SEPARATOR (ST) S2-40
 
     bhs_2 : str
         BHS.2 (req) - BATCH ENCODING CHARACTERS (ST)

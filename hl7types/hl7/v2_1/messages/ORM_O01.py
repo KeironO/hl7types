@@ -27,33 +27,31 @@ class ORM_O01(HL7Model):
     """HL7 v2 ORM_O01 message.
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
         PATIENT (Optional[ORM_O01_PATIENT]): optional
         ORDER (List[ORM_O01_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     PATIENT: Optional[_ORM_O01_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_ORM_O01_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

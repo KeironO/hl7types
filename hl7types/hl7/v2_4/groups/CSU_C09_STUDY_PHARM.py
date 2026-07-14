@@ -23,20 +23,19 @@ class CSU_C09_STUDY_PHARM(HL7Model):
     """HL7 v2 CSU_C09.STUDY_PHARM group.
 
     Attributes:
-        ORC (Optional[ORC]): optional
+        ORC (Optional[ORC]): Common Order, optional
         RX_ADMIN (List[CSU_C09_RX_ADMIN]): required
     """
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     RX_ADMIN: List[_CSU_C09_RX_ADMIN] = Field(
         min_length=1,
         title="RX_ADMIN",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

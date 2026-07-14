@@ -29,54 +29,54 @@ _ROL = ROL
 
 
 class ADT_A61(HL7Model):
-    """HL7 v2 ADT_A61 message.
+    """ADT/ACK - Change consulting doctor (S3).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (PV1): required
-        ROL (Optional[List[ROL]]): optional
-        PV2 (Optional[PV2]): optional
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
+        PV1 (PV1): Patient visit, required
+        ROL (Optional[List[ROL]]): Role, optional
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="Patient visit",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     model_config = {"populate_by_name": True}

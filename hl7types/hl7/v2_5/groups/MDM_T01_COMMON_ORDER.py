@@ -27,32 +27,31 @@ class MDM_T01_COMMON_ORDER(HL7Model):
     """HL7 v2 MDM_T01.COMMON_ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         TIMING (Optional[List[MDM_T01_TIMING]]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     TIMING: Optional[List[_MDM_T01_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

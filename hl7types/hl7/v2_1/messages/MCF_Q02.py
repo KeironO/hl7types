@@ -21,18 +21,18 @@ class MCF_Q02(HL7Model):
     """HL7 v2 MCF_Q02 message.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
+        MSH (MSH): MESSAGE HEADER, required
+        MSA (MSA): MESSAGE ACKNOWLEDGMENT, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MESSAGE ACKNOWLEDGMENT",
     )
 
     model_config = {"populate_by_name": True}

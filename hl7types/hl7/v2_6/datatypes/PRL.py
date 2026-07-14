@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class PRL(HL7Model):
-    """HL7 v2 PRL data type.
+    """Parent result link (S2.A.56).
 
     Attributes
     ----------

@@ -22,28 +22,27 @@ _MSH = MSH
 
 
 class MFN_M12(HL7Model):
-    """HL7 v2 MFN_M12 message.
+    """MFN/MFK - Master file notification message (S8).
 
     Attributes:
-        MSH (MSH): required
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        MFI (MFI): Master File Identification, required
         MF_OBS_ATTRIBUTES (List[MFN_M12_MF_OBS_ATTRIBUTES]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_OBS_ATTRIBUTES: List[_MFN_M12_MF_OBS_ATTRIBUTES] = Field(
         min_length=1,
         title="MF_OBS_ATTRIBUTES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

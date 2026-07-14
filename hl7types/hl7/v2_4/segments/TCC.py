@@ -18,51 +18,51 @@ from ..datatypes.SPS import SPS
 
 
 class TCC(HL7Model):
-    """HL7 v2 TCC segment.
+    """Test Code Configuration (S13.4.9).
 
     Attributes
     ----------
     tcc_1 : CE
-        TCC.1 (req) - Universal Service Identifier (CE)
+        TCC.1 (req) - Universal Service Identifier (CE) S13.4.10.1
 
     tcc_2 : EI
-        TCC.2 (req) - Test Application Identifier (EI)
+        TCC.2 (req) - Test Application Identifier (EI) S13.4.9.2
 
     tcc_3 : SPS | None
-        TCC.3 (opt) - Specimen Source (SPS)
+        TCC.3 (opt) - Specimen Source (SPS) S13.4.9.3 | 0070 - Specimen source codes
 
     tcc_4 : SN | None
-        TCC.4 (opt) - Auto-Dilution Factor Default (SN)
+        TCC.4 (opt) - Auto-Dilution Factor Default (SN) S13.4.9.4
 
     tcc_5 : SN | None
-        TCC.5 (opt) - Rerun Dilution Factor Default (SN)
+        TCC.5 (opt) - Rerun Dilution Factor Default (SN) S13.4.9.5
 
     tcc_6 : SN | None
-        TCC.6 (opt) - Pre-Dilution Factor Default (SN)
+        TCC.6 (opt) - Pre-Dilution Factor Default (SN) S13.4.9.6
 
     tcc_7 : SN | None
-        TCC.7 (opt) - Endogenous Content of Pre-Dilution Diluent (SN)
+        TCC.7 (opt) - Endogenous Content of Pre-Dilution Diluent (SN) S13.4.10.5
 
     tcc_8 : str | None
-        TCC.8 (opt) - Inventory Limits Warning Level (NM)
+        TCC.8 (opt) - Inventory Limits Warning Level (NM) S13.4.9.8
 
     tcc_9 : str | None
-        TCC.9 (opt) - Automatic Rerun Allowed (ID)
+        TCC.9 (opt) - Automatic Rerun Allowed (ID) S13.4.9.9 | 0136 - Yes/no indicator
 
     tcc_10 : str | None
-        TCC.10 (opt) - Automatic Repeat Allowed (ID)
+        TCC.10 (opt) - Automatic Repeat Allowed (ID) S13.4.10.6 | 0136 - Yes/no indicator
 
     tcc_11 : str | None
-        TCC.11 (opt) - Automatic Reflex Allowed (ID)
+        TCC.11 (opt) - Automatic Reflex Allowed (ID) S13.4.9.11 | 0136 - Yes/no indicator
 
     tcc_12 : SN | None
-        TCC.12 (opt) - Equipment Dynamic Range (SN)
+        TCC.12 (opt) - Equipment Dynamic Range (SN) S13.4.9.12
 
     tcc_13 : CE | None
-        TCC.13 (opt) - Units (CE)
+        TCC.13 (opt) - Units (CE) S13.4.9.13
 
     tcc_14 : CE | None
-        TCC.14 (opt) - Processing Type (CE)
+        TCC.14 (opt) - Processing Type (CE) S13.4.9.14 | 0388 - Processing type
     """
 
     tcc_1: CE = Field(

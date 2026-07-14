@@ -33,54 +33,52 @@ class EHC_E01_PATIENT_INFO(HL7Model):
     """HL7 v2 EHC_E01.PATIENT_INFO group.
 
     Attributes:
-        PID (PID): required
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        ACC (Optional[List[ACC]]): optional
+        PID (PID): Patient Identification, required
+        PV1 (Optional[PV1]): Patient Visit, optional
+        PV2 (Optional[PV2]): Patient Visit - Additional Information, optional
+        ACC (Optional[List[ACC]]): Accident, optional
         INSURANCE (List[EHC_E01_INSURANCE]): required
         DIAGNOSIS (Optional[List[EHC_E01_DIAGNOSIS]]): optional
-        OBX (Optional[List[OBX]]): optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient Visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient Visit - Additional Information",
     )
 
     ACC: Optional[List[_ACC]] = Field(
         default=None,
         title="ACC",
-        description="Optional, repeating",
+        description="Accident",
     )
 
     INSURANCE: List[_EHC_E01_INSURANCE] = Field(
         min_length=1,
         title="INSURANCE",
-        description="Required, repeating",
     )
 
     DIAGNOSIS: Optional[List[_EHC_E01_DIAGNOSIS]] = Field(
         default=None,
         title="DIAGNOSIS",
-        description="Optional, repeating",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

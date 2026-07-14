@@ -49,107 +49,106 @@ class ADT_A31(HL7Model):
     """HL7 v2 ADT_A31 message.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
-        PV1 (PV1): required
-        PV2 (Optional[PV2]): optional
-        OBX (Optional[List[OBX]]): optional
-        AL1 (Optional[List[AL1]]): optional
-        DG1 (Optional[List[DG1]]): optional
-        PR1 (Optional[List[PR1]]): optional
-        GT1 (Optional[List[GT1]]): optional
+        MSH (MSH): MESSAGE HEADER, required
+        EVN (EVN): EVENT TYPE, required
+        PID (PID): PATIENT IDENTIFICATION, required
+        NK1 (Optional[List[NK1]]): NEXT OF KIN, optional
+        PV1 (PV1): PATIENT VISIT, required
+        PV2 (Optional[PV2]): PATIENT VISIT - additional information, optional
+        OBX (Optional[List[OBX]]): OBSERVATION RESULT, optional
+        AL1 (Optional[List[AL1]]): PATIENT ALLERGY INFORMATION, optional
+        DG1 (Optional[List[DG1]]): DIAGNOSIS, optional
+        PR1 (Optional[List[PR1]]): PROCEDURES, optional
+        GT1 (Optional[List[GT1]]): GUARANTOR, optional
         INSURANCE (Optional[List[ADT_A31_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
-        UB1 (Optional[UB1]): optional
-        UB2 (Optional[UB2]): optional
+        ACC (Optional[ACC]): ACCIDENT, optional
+        UB1 (Optional[UB1]): UB82 DATA, optional
+        UB2 (Optional[UB2]): UB92 DATA, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVENT TYPE",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PATIENT IDENTIFICATION",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NEXT OF KIN",
     )
 
     PV1: _PV1 = Field(
         title="PV1",
-        description="Required",
+        description="PATIENT VISIT",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="PATIENT VISIT - additional information",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBSERVATION RESULT",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="PATIENT ALLERGY INFORMATION",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="DIAGNOSIS",
     )
 
     PR1: Optional[List[_PR1]] = Field(
         default=None,
         title="PR1",
-        description="Optional, repeating",
+        description="PROCEDURES",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="GUARANTOR",
     )
 
     INSURANCE: Optional[List[_ADT_A31_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="ACCIDENT",
     )
 
     UB1: Optional[_UB1] = Field(
         default=None,
         title="UB1",
-        description="Optional",
+        description="UB82 DATA",
     )
 
     UB2: Optional[_UB2] = Field(
         default=None,
         title="UB2",
-        description="Optional",
+        description="UB92 DATA",
     )
 
     model_config = {"populate_by_name": True}

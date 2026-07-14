@@ -16,24 +16,24 @@ from ..datatypes.NR import NR
 
 
 class DMI(HL7Model):
-    """HL7 v2 DMI segment.
+    """DRG Master File Information (S8.13.2).
 
     Attributes
     ----------
     dmi_1 : CNE | None
-        DMI.1 (opt) - Diagnostic Related Group (CNE)
+        DMI.1 (opt) - Diagnostic Related Group (CNE) S6.5.3.1 | 0055 - Diagnosis Related Group
 
     dmi_2 : CNE | None
-        DMI.2 (opt) - Major Diagnostic Category (CNE)
+        DMI.2 (opt) - Major Diagnostic Category (CNE) S8.13.2.2 | 0118 - Major Diagnostic Category
 
     dmi_3 : NR | None
-        DMI.3 (opt) - Lower and Upper Trim Points (NR)
+        DMI.3 (opt) - Lower and Upper Trim Points (NR) S8.13.2.3
 
     dmi_4 : str | None
-        DMI.4 (opt) - Average Length of Stay (NM)
+        DMI.4 (opt) - Average Length of Stay (NM) S8.13.2.4
 
     dmi_5 : str | None
-        DMI.5 (opt) - Relative Weight (NM)
+        DMI.5 (opt) - Relative Weight (NM) S8.13.2.5
     """
 
     dmi_1: Optional[CNE] = Field(

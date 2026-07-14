@@ -25,25 +25,24 @@ class ADT_A17(HL7Model):
     """HL7 v2 ADT_A17 message.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
+        MSH (MSH): MESSAGE HEADER, required
+        EVN (EVN): EVENT TYPE, required
         PATIENT (List[ADT_A17_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="EVENT TYPE",
     )
 
     PATIENT: List[_ADT_A17_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

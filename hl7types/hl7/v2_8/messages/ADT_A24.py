@@ -31,62 +31,62 @@ _UAC = UAC
 
 
 class ADT_A24(HL7Model):
-    """HL7 v2 ADT_A24 message.
+    """ADT/ACK -  Link patient information (S3.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PV1 (Optional[PV1]): optional
-        DB1 (Optional[List[DB1]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        PV1 (Optional[PV1]): Patient Visit, optional
+        DB1 (Optional[List[DB1]]): Disability, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient Visit",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="Disability",
     )
 
     model_config = {"populate_by_name": True}

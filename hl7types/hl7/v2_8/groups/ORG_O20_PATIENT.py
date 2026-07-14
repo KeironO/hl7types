@@ -26,33 +26,33 @@ class ORG_O20_PATIENT(HL7Model):
     """HL7 v2 ORG_O20.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
-        ARV (Optional[List[ARV]]): optional
+        PID (PID): Patient Identification, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     model_config = {"populate_by_name": True}

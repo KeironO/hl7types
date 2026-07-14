@@ -25,27 +25,26 @@ class OMD_O03_DIET(HL7Model):
     """HL7 v2 OMD_O03.DIET group.
 
     Attributes:
-        ODS (List[ODS]): required
-        NTE (Optional[List[NTE]]): optional
+        ODS (List[ODS]): Dietary Orders, Supplements, and Preferences, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         OBSERVATION (Optional[List[OMD_O03_OBSERVATION]]): optional
     """
 
     ODS: List[_ODS] = Field(
         min_length=1,
         title="ODS",
-        description="Required, repeating",
+        description="Dietary Orders, Supplements, and Preferences",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     OBSERVATION: Optional[List[_OMD_O03_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

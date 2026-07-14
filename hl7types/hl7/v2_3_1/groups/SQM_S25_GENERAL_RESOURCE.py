@@ -22,19 +22,19 @@ class SQM_S25_GENERAL_RESOURCE(HL7Model):
     """HL7 v2 SQM_S25.GENERAL_RESOURCE group.
 
     Attributes:
-        AIG (AIG): required
-        APR (Optional[APR]): optional
+        AIG (AIG): AIG - appointment information - general resource segment, required
+        APR (Optional[APR]): APR - appointment preferences segment, optional
     """
 
     AIG: _AIG = Field(
         title="AIG",
-        description="Required",
+        description="AIG - appointment information - general resource segment",
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="APR - appointment preferences segment",
     )
 
     model_config = {"populate_by_name": True}

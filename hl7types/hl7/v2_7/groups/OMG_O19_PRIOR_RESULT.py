@@ -29,32 +29,29 @@ class OMG_O19_PRIOR_RESULT(HL7Model):
     Attributes:
         PATIENT_PRIOR (Optional[OMG_O19_PATIENT_PRIOR]): optional
         PATIENT_VISIT_PRIOR (Optional[OMG_O19_PATIENT_VISIT_PRIOR]): optional
-        AL1 (Optional[List[AL1]]): optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
         ORDER_PRIOR (List[OMG_O19_ORDER_PRIOR]): required
     """
 
     PATIENT_PRIOR: Optional[_OMG_O19_PATIENT_PRIOR] = Field(
         default=None,
         title="PATIENT_PRIOR",
-        description="Optional",
     )
 
     PATIENT_VISIT_PRIOR: Optional[_OMG_O19_PATIENT_VISIT_PRIOR] = Field(
         default=None,
         title="PATIENT_VISIT_PRIOR",
-        description="Optional",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     ORDER_PRIOR: List[_OMG_O19_ORDER_PRIOR] = Field(
         min_length=1,
         title="ORDER_PRIOR",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

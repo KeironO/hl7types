@@ -24,36 +24,34 @@ _OMP_O09_PATIENT = OMP_O09_PATIENT
 
 
 class OMP_O09(HL7Model):
-    """HL7 v2 OMP_O09 message.
+    """OMP - Pharmacy/treatment order (S4).
 
     Attributes:
-        MSH (MSH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[OMP_O09_PATIENT]): optional
         ORDER (List[OMP_O09_ORDER]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OMP_O09_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: List[_OMP_O09_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

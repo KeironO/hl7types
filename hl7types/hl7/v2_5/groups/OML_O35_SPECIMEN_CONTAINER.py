@@ -23,19 +23,18 @@ class OML_O35_SPECIMEN_CONTAINER(HL7Model):
     """HL7 v2 OML_O35.SPECIMEN_CONTAINER group.
 
     Attributes:
-        SAC (SAC): required
+        SAC (SAC): Specimen Container detail, required
         ORDER (List[OML_O35_ORDER]): required
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     ORDER: List[_OML_O35_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

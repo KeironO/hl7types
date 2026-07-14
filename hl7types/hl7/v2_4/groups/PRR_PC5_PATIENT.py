@@ -25,26 +25,24 @@ class PRR_PC5_PATIENT(HL7Model):
     """HL7 v2 PRR_PC5.PATIENT group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient identification, required
         PATIENT_VISIT (Optional[PRR_PC5_PATIENT_VISIT]): optional
         PROBLEM (List[PRR_PC5_PROBLEM]): required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PATIENT_VISIT: Optional[_PRR_PC5_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PROBLEM: List[_PRR_PC5_PROBLEM] = Field(
         min_length=1,
         title="PROBLEM",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

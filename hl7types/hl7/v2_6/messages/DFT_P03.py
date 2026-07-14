@@ -48,119 +48,115 @@ _UAC = UAC
 
 
 class DFT_P03(HL7Model):
-    """HL7 v2 DFT_P03 message.
+    """DFT/ACK - Post detail financial transaction (S6.4.3).
 
     Attributes:
-        MSH (List[MSH]): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        ROL (Optional[List[ROL]]): optional
+        MSH (List[MSH]): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        ROL (Optional[List[ROL]]): Role, optional
         VISIT (Optional[DFT_P03_VISIT]): optional
-        DB1 (Optional[List[DB1]]): optional
+        DB1 (Optional[List[DB1]]): Disability, optional
         COMMON_ORDER (Optional[List[DFT_P03_COMMON_ORDER]]): optional
         FINANCIAL (List[DFT_P03_FINANCIAL]): required
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[DRG]): optional
-        GT1 (Optional[List[GT1]]): optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[DRG]): Diagnosis Related Group, optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[DFT_P03_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
+        ACC (Optional[ACC]): Accident, optional
     """
 
     MSH: List[_MSH] = Field(
         min_length=1,
         title="MSH",
-        description="Required, repeating",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     VISIT: Optional[_DFT_P03_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     DB1: Optional[List[_DB1]] = Field(
         default=None,
         title="DB1",
-        description="Optional, repeating",
+        description="Disability",
     )
 
     COMMON_ORDER: Optional[List[_DFT_P03_COMMON_ORDER]] = Field(
         default=None,
         title="COMMON_ORDER",
-        description="Optional, repeating",
     )
 
     FINANCIAL: List[_DFT_P03_FINANCIAL] = Field(
         min_length=1,
         title="FINANCIAL",
-        description="Required, repeating",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[_DRG] = Field(
         default=None,
         title="DRG",
-        description="Optional",
+        description="Diagnosis Related Group",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_DFT_P03_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     model_config = {"populate_by_name": True}

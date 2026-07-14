@@ -29,40 +29,38 @@ class RDO_O01_ORDER_DETAIL(HL7Model):
     """HL7 v2 RDO_O01.ORDER_DETAIL group.
 
     Attributes:
-        RXO (RXO): required
-        NTE (Optional[List[NTE]]): optional
-        RXR (List[RXR]): required
+        RXO (RXO): RXO - pharmacy/treatment order segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
+        RXR (List[RXR]): RXR - pharmacy/treatment route segment, required
         COMPONENT (Optional[RDO_O01_COMPONENT]): optional
         OBSERVATION (Optional[List[RDO_O01_OBSERVATION]]): optional
     """
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="RXO - pharmacy/treatment order segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="RXR - pharmacy/treatment route segment",
     )
 
     COMPONENT: Optional[_RDO_O01_COMPONENT] = Field(
         default=None,
         title="COMPONENT",
-        description="Optional",
     )
 
     OBSERVATION: Optional[List[_RDO_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

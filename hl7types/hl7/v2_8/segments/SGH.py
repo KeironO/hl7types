@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class SGH(HL7Model):
-    """HL7 v2 SGH segment.
+    """Segment Group Header (S2.14.13).
 
     Attributes
     ----------
     sgh_1 : str
-        SGH.1 (req) - Set ID - SGH (SI)
+        SGH.1 (req) - Set ID - SGH (SI) S2.14.13.1
 
     sgh_2 : str | None
-        SGH.2 (opt) - Segment Group Name (ST)
+        SGH.2 (opt) - Segment Group Name (ST) S2.14.13.2
     """
 
     sgh_1: str = Field(

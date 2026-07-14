@@ -17,24 +17,24 @@ from ..datatypes.XON import XON
 
 
 class AFF(HL7Model):
-    """HL7 v2 AFF segment.
+    """Professional Affiliation (S15.4.1).
 
     Attributes
     ----------
     aff_1 : str
-        AFF.1 (req) - Set ID - AFF (SI)
+        AFF.1 (req) - Set ID - AFF (SI) S15.4.1.1
 
     aff_2 : XON
-        AFF.2 (req) - Professional Organization (XON)
+        AFF.2 (req) - Professional Organization (XON) S15.4.1.2
 
     aff_3 : XAD | None
-        AFF.3 (opt) - Professional Organization Address (XAD)
+        AFF.3 (opt) - Professional Organization Address (XAD) S15.4.1.3
 
     aff_4 : list[DR] | None
-        AFF.4 (opt, rep) - Professional Organization Affiliation Date Range (DR)
+        AFF.4 (opt, rep) - Professional Organization Affiliation Date Range (DR) S15.4.1.4
 
     aff_5 : str | None
-        AFF.5 (opt) - Professional Affiliation Additional Information (ST)
+        AFF.5 (opt) - Professional Affiliation Additional Information (ST) S15.4.1.5
     """
 
     aff_1: str = Field(

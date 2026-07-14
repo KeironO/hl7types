@@ -22,19 +22,19 @@ class BPS_O29_PRODUCT(HL7Model):
     """HL7 v2 BPS_O29.PRODUCT group.
 
     Attributes:
-        BPX (BPX): required
-        NTE (Optional[List[NTE]]): optional
+        BPX (BPX): Blood product dispense status, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     BPX: _BPX = Field(
         title="BPX",
-        description="Required",
+        description="Blood product dispense status",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -28,49 +28,48 @@ _UAC = UAC
 
 
 class MFN_M04(HL7Model):
-    """HL7 v2 MFN_M04 message.
+    """MFN/MFK - Master files charge description (S8.10.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        MFI (MFI): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        MFI (MFI): Master File Identification, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         MF_CDM (List[MFN_M04_MF_CDM]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     MF_CDM: List[_MFN_M04_MF_CDM] = Field(
         min_length=1,
         title="MF_CDM",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

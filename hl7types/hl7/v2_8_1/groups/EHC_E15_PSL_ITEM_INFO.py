@@ -22,19 +22,19 @@ class EHC_E15_PSL_ITEM_INFO(HL7Model):
     """HL7 v2 EHC_E15.PSL_ITEM_INFO group.
 
     Attributes:
-        PSL (PSL): required
-        ADJ (Optional[List[ADJ]]): optional
+        PSL (PSL): Product/Service Line Item, required
+        ADJ (Optional[List[ADJ]]): Adjustment, optional
     """
 
     PSL: _PSL = Field(
         title="PSL",
-        description="Required",
+        description="Product/Service Line Item",
     )
 
     ADJ: Optional[List[_ADJ]] = Field(
         default=None,
         title="ADJ",
-        description="Optional, repeating",
+        description="Adjustment",
     )
 
     model_config = {"populate_by_name": True}

@@ -19,51 +19,51 @@ from ..datatypes.XAD import XAD
 
 
 class BPO(HL7Model):
-    """HL7 v2 BPO segment.
+    """Blood product order (S4.21.1).
 
     Attributes
     ----------
     bpo_1 : str
-        BPO.1 (req) - Set ID - BPO (SI)
+        BPO.1 (req) - Set ID - BPO (SI) S4.21.1.1
 
     bpo_2 : CWE
-        BPO.2 (req) - BP Universal Service ID (CWE)
+        BPO.2 (req) - BP Universal Service ID (CWE) S4.21.1.2
 
     bpo_3 : list[CWE] | None
-        BPO.3 (opt, rep) - BP  Processing Requirements (CWE)
+        BPO.3 (opt, rep) - BP  Processing Requirements (CWE) S4.21.1.3 | 0508 - Blood Product Processing Requirements
 
     bpo_4 : str
-        BPO.4 (req) - BP Quantity (NM)
+        BPO.4 (req) - BP Quantity (NM) S4.21.1.4
 
     bpo_5 : str | None
-        BPO.5 (opt) - BP Amount (NM)
+        BPO.5 (opt) - BP Amount (NM) S4.21.1.5
 
     bpo_6 : CE | None
-        BPO.6 (opt) - BP Units (CE)
+        BPO.6 (opt) - BP Units (CE) S4.21.1.6
 
     bpo_7 : TS | None
-        BPO.7 (opt) - BP Intended Use Date/Time (TS)
+        BPO.7 (opt) - BP Intended Use Date/Time (TS) S4.21.1.7
 
     bpo_8 : PL | None
-        BPO.8 (opt) - BP Intended Dispense From Location (PL)
+        BPO.8 (opt) - BP Intended Dispense From Location (PL) S4.21.1.8
 
     bpo_9 : XAD | None
-        BPO.9 (opt) - BP Intended Dispense From Address (XAD)
+        BPO.9 (opt) - BP Intended Dispense From Address (XAD) S4.21.1.9
 
     bpo_10 : TS | None
-        BPO.10 (opt) - BP Requested Dispense Date/Time (TS)
+        BPO.10 (opt) - BP Requested Dispense Date/Time (TS) S4.21.1.10
 
     bpo_11 : PL | None
-        BPO.11 (opt) - BP Requested Dispense To Location (PL)
+        BPO.11 (opt) - BP Requested Dispense To Location (PL) S4.21.1.11
 
     bpo_12 : XAD | None
-        BPO.12 (opt) - BP Requested Dispense To Address (XAD)
+        BPO.12 (opt) - BP Requested Dispense To Address (XAD) S4.21.1.12
 
     bpo_13 : list[CWE] | None
-        BPO.13 (opt, rep) - BP Indication for Use (CWE)
+        BPO.13 (opt, rep) - BP Indication for Use (CWE) S4.21.1.13 | 0509 - Indication For Use
 
     bpo_14 : str | None
-        BPO.14 (opt) - BP Informed Consent Indicator (ID)
+        BPO.14 (opt) - BP Informed Consent Indicator (ID) S4.21.1.14 | 0136 - Yes/no indicator
     """
 
     bpo_1: str = Field(

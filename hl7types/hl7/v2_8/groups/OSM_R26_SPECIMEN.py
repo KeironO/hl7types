@@ -31,8 +31,8 @@ class OSM_R26_SPECIMEN(HL7Model):
     """HL7 v2 OSM_R26.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
-        PRT (Optional[List[PRT]]): optional
+        SPM (SPM): Specimen, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         SPECIMEN_OBSERVATION (Optional[List[OSM_R26_SPECIMEN_OBSERVATION]]): optional
         CONTAINER (Optional[List[OSM_R26_CONTAINER]]): optional
         SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION (Optional[OSM_R26_SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION]): optional
@@ -41,37 +41,33 @@ class OSM_R26_SPECIMEN(HL7Model):
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OSM_R26_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     CONTAINER: Optional[List[_OSM_R26_CONTAINER]] = Field(
         default=None,
         title="CONTAINER",
-        description="Optional, repeating",
     )
 
     SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION: Optional[_OSM_R26_SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION] = Field(
         default=None,
         title="SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION",
-        description="Optional",
     )
 
     SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION: Optional[_OSM_R26_SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION] = Field(
         default=None,
         title="SUBJECT_POPULATION_OR_LOCATION_IDENTIFICATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

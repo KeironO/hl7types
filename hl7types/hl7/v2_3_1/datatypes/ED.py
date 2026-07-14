@@ -15,7 +15,7 @@ from .HD import HD
 
 
 class ED(HL7Model):
-    """HL7 v2 ED data type.
+    """Encapsulated data (S2.8.16).
 
     Attributes
     ----------

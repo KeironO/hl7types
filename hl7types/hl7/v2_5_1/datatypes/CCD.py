@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class CCD(HL7Model):
-    """HL7 v2 CCD data type.
+    """Charge code and date (S2.A.1.3).
 
     Attributes
     ----------

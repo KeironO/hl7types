@@ -18,45 +18,45 @@ from ..datatypes.XCN import XCN
 
 
 class QRD(HL7Model):
-    """HL7 v2 QRD segment.
+    """Original-Style Query Definition (S5.10.4.1).
 
     Attributes
     ----------
     qrd_1 : str
-        QRD.1 (req) - Query Date/Time (DTM)
+        QRD.1 (req) - Query Date/Time (DTM) S5.10.4.1.1
 
     qrd_2 : str
-        QRD.2 (req) - Query Format Code (ID)
+        QRD.2 (req) - Query Format Code (ID) S5.10.4.1.2 | 0106 - Query/response format code
 
     qrd_3 : str
-        QRD.3 (req) - Query Priority (ID)
+        QRD.3 (req) - Query Priority (ID) S5.10.4.1.3 | 0091 - Query priority
 
     qrd_4 : str
-        QRD.4 (req) - Query ID (ST)
+        QRD.4 (req) - Query ID (ST) S5.10.4.1.4
 
     qrd_5 : str | None
-        QRD.5 (opt) - Deferred Response Type (ID)
+        QRD.5 (opt) - Deferred Response Type (ID) S5.10.4.1.5 | 0107 - Deferred response type
 
     qrd_6 : str | None
-        QRD.6 (opt) - Deferred Response Date/Time (DTM)
+        QRD.6 (opt) - Deferred Response Date/Time (DTM) S5.10.4.1.6
 
     qrd_7 : CQ
-        QRD.7 (req) - Quantity Limited Request (CQ)
+        QRD.7 (req) - Quantity Limited Request (CQ) S5.10.4.1.7 | 0126 - Quantity limited request
 
     qrd_8 : list[XCN]
-        QRD.8 (req, rep) - Who Subject Filter (XCN)
+        QRD.8 (req, rep) - Who Subject Filter (XCN) S5.10.4.1.8
 
     qrd_9 : list[CWE]
-        QRD.9 (req, rep) - What Subject Filter (CWE)
+        QRD.9 (req, rep) - What Subject Filter (CWE) S5.10.4.1.9 | 0048 - What subject filter
 
     qrd_10 : list[CWE]
-        QRD.10 (req, rep) - What Department Data Code (CWE)
+        QRD.10 (req, rep) - What Department Data Code (CWE) S5.10.4.1.10
 
     qrd_11 : list[VR] | None
-        QRD.11 (opt, rep) - What Data Code Value Qual. (VR)
+        QRD.11 (opt, rep) - What Data Code Value Qual. (VR) S5.10.4.1.11
 
     qrd_12 : str | None
-        QRD.12 (opt) - Query Results Level (ID)
+        QRD.12 (opt) - Query Results Level (ID) S5.10.4.1.12 | 0108 - Query results level
     """
 
     qrd_1: str = Field(

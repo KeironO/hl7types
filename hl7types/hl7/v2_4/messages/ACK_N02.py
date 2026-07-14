@@ -18,21 +18,21 @@ _MSH = MSH
 
 
 class ACK_N02(HL7Model):
-    """HL7 v2 ACK_N02 message.
+    """NMD/ACK - Application management data message (unsolicited) (S3).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     model_config = {"populate_by_name": True}

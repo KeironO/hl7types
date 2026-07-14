@@ -22,19 +22,19 @@ class CCU_I20_MEDICATION_ADMINISTRATION_OBSERVATION(HL7Model):
     """HL7 v2 CCU_I20.MEDICATION_ADMINISTRATION_OBSERVATION group.
 
     Attributes:
-        OBX (OBX): required
-        PRT (Optional[List[PRT]]): optional
+        OBX (OBX): Observation/Result, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

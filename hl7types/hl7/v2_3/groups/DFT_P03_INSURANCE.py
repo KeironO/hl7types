@@ -24,26 +24,26 @@ class DFT_P03_INSURANCE(HL7Model):
     """HL7 v2 DFT_P03.INSURANCE group.
 
     Attributes:
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
-        IN3 (Optional[IN3]): optional
+        IN1 (IN1): Insurance, required
+        IN2 (Optional[IN2]): Insurance additional info, optional
+        IN3 (Optional[IN3]): Insurance additional info - certification, optional
     """
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="Insurance",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="Insurance additional info",
     )
 
     IN3: Optional[_IN3] = Field(
         default=None,
         title="IN3",
-        description="Optional",
+        description="Insurance additional info - certification",
     )
 
     model_config = {"populate_by_name": True}

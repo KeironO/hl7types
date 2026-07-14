@@ -18,33 +18,33 @@ from ..datatypes.SPD import SPD
 
 
 class PRA(HL7Model):
-    """HL7 v2 PRA segment.
+    """PRA - practitioner detail segment (S8.6.3).
 
     Attributes
     ----------
     pra_1 : CE
-        PRA.1 (req) - Primary Key Value - PRA (CE)
+        PRA.1 (req) - Primary Key Value - PRA (CE) S8.6.3.1
 
     pra_2 : list[CE] | None
-        PRA.2 (opt, rep) - Practitioner Group (CE)
+        PRA.2 (opt, rep) - Practitioner Group (CE) S8.6.3.2 | 0358 - Practitioner Group
 
     pra_3 : list[str] | None
-        PRA.3 (opt, rep) - Practitioner Category (IS)
+        PRA.3 (opt, rep) - Practitioner Category (IS) S8.6.3.3 | 0186 - Practioner Category
 
     pra_4 : str | None
-        PRA.4 (opt) - Provider Billing (ID)
+        PRA.4 (opt) - Provider Billing (ID) S8.6.3.4 | 0187 - Provider billing
 
     pra_5 : list[SPD] | None
-        PRA.5 (opt, rep) - Specialty (SPD)
+        PRA.5 (opt, rep) - Specialty (SPD) S8.6.3.5 | 0337 - Certification Status
 
     pra_6 : list[PLN] | None
-        PRA.6 (opt, rep) - Practitioner ID Numbers (PLN)
+        PRA.6 (opt, rep) - Practitioner ID Numbers (PLN) S8.6.3.6 | 0338 - Practitioner ID number type
 
     pra_7 : list[PIP] | None
-        PRA.7 (opt, rep) - Privileges (PIP)
+        PRA.7 (opt, rep) - Privileges (PIP) S8.6.3.7
 
     pra_8 : str | None
-        PRA.8 (opt) - Date Entered Practice (DT)
+        PRA.8 (opt) - Date Entered Practice (DT) S8.6.3.8
     """
 
     pra_1: CE = Field(

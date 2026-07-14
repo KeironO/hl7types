@@ -21,28 +21,28 @@ _ROL = ROL
 
 
 class ESR_U02(HL7Model):
-    """HL7 v2 ESR_U02 message.
+    """ESR/ACK - Automated equipment status request (S13).
 
     Attributes:
-        MSH (MSH): required
-        EQU (EQU): required
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        EQU (EQU): Equipment Detail, required
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

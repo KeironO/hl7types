@@ -13,24 +13,24 @@ from hl7types.hl7 import HL7Model
 
 
 class MSA(HL7Model):
-    """HL7 v2 MSA segment.
+    """Message Acknowledgment (S2.14.8).
 
     Attributes
     ----------
     msa_1 : str
-        MSA.1 (req) - Acknowledgment Code (ID)
+        MSA.1 (req) - Acknowledgment Code (ID) S2.14.8.1 | 0008 - Acknowledgment Code
 
     msa_2 : str
-        MSA.2 (req) - Message Control ID (ST)
+        MSA.2 (req) - Message Control ID (ST) S2.14.9.10
 
     msa_4 : str | None
-        MSA.4 (opt) - Expected Sequence Number (NM)
+        MSA.4 (opt) - Expected Sequence Number (NM) S2.14.8.4
 
     msa_7 : str | None
-        MSA.7 (opt) - Message Waiting Number (NM)
+        MSA.7 (opt) - Message Waiting Number (NM) S2.14.8.7
 
     msa_8 : str | None
-        MSA.8 (opt) - Message Waiting Priority (ID)
+        MSA.8 (opt) - Message Waiting Priority (ID) S2.14.8.8 | 0520 - Message Waiting Priority
     """
 
     msa_1: str = Field(

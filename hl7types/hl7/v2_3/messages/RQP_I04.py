@@ -28,49 +28,48 @@ _RQP_I04_PROVIDER = RQP_I04_PROVIDER
 
 
 class RQP_I04(HL7Model):
-    """HL7 v2 RQP_I04 message.
+    """RQP/RPI - Request for patient demographic data.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): Message header segment, required
         PROVIDER (List[RQP_I04_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
-        GT1 (Optional[List[GT1]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient Identification, required
+        NK1 (Optional[List[NK1]]): Next of kin, optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     PROVIDER: List[_RQP_I04_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

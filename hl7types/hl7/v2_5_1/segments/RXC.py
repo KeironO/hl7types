@@ -16,36 +16,36 @@ from ..datatypes.CWE import CWE
 
 
 class RXC(HL7Model):
-    """HL7 v2 RXC segment.
+    """Pharmacy/Treatment Component Order (S4.14.3).
 
     Attributes
     ----------
     rxc_1 : str
-        RXC.1 (req) - RX Component Type (ID)
+        RXC.1 (req) - RX Component Type (ID) S4.14.3.1 | 0166 - RX Component Type
 
     rxc_2 : CE
-        RXC.2 (req) - Component Code (CE)
+        RXC.2 (req) - Component Code (CE) S4.14.3.2
 
     rxc_3 : str
-        RXC.3 (req) - Component Amount (NM)
+        RXC.3 (req) - Component Amount (NM) S4.14.3.3
 
     rxc_4 : CE
-        RXC.4 (req) - Component Units (CE)
+        RXC.4 (req) - Component Units (CE) S4.14.3.4
 
     rxc_5 : str | None
-        RXC.5 (opt) - Component Strength (NM)
+        RXC.5 (opt) - Component Strength (NM) S4.14.3.5
 
     rxc_6 : CE | None
-        RXC.6 (opt) - Component Strength Units (CE)
+        RXC.6 (opt) - Component Strength Units (CE) S4.14.3.6
 
     rxc_7 : list[CE] | None
-        RXC.7 (opt, rep) - Supplementary Code (CE)
+        RXC.7 (opt, rep) - Supplementary Code (CE) S4.14.1.24
 
     rxc_8 : str | None
-        RXC.8 (opt) - Component Drug Strength Volume (NM)
+        RXC.8 (opt) - Component Drug Strength Volume (NM) S4.14.3.8
 
     rxc_9 : CWE | None
-        RXC.9 (opt) - Component Drug Strength Volume Units (CWE)
+        RXC.9 (opt) - Component Drug Strength Volume Units (CWE) S4.14.3.9
     """
 
     rxc_1: str = Field(

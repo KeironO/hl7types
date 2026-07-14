@@ -33,53 +33,51 @@ class OMG_O19_ORDER_PRIOR(HL7Model):
     """HL7 v2 OMG_O19.ORDER_PRIOR group.
 
     Attributes:
-        ORC (ORC): required
-        OBR (OBR): required
+        ORC (ORC): Common Order, required
+        OBR (OBR): Observation Request, required
         TIMING_PRIOR (Optional[List[OMG_O19_TIMING_PRIOR]]): optional
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
-        CTD (Optional[CTD]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        CTD (Optional[CTD]): Contact Data, optional
         OBSERVATION_PRIOR (List[OMG_O19_OBSERVATION_PRIOR]): required
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     TIMING_PRIOR: Optional[List[_OMG_O19_TIMING_PRIOR]] = Field(
         default=None,
         title="TIMING_PRIOR",
-        description="Optional, repeating",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     CTD: Optional[_CTD] = Field(
         default=None,
         title="CTD",
-        description="Optional",
+        description="Contact Data",
     )
 
     OBSERVATION_PRIOR: List[_OMG_O19_OBSERVATION_PRIOR] = Field(
         min_length=1,
         title="OBSERVATION_PRIOR",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

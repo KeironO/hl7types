@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class RMC(HL7Model):
-    """HL7 v2 RMC data type.
+    """Room coverage (S6.4.7.28).
 
     Attributes
     ----------

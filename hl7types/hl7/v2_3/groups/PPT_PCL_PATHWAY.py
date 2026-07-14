@@ -29,40 +29,38 @@ class PPT_PCL_PATHWAY(HL7Model):
     """HL7 v2 PPT_PCL.PATHWAY group.
 
     Attributes:
-        PTH (PTH): required
-        NTE (Optional[List[NTE]]): optional
-        VAR (Optional[List[VAR]]): optional
+        PTH (PTH): Pathway, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
+        VAR (Optional[List[VAR]]): Variance, optional
         PATHWAY_ROLE (Optional[List[PPT_PCL_PATHWAY_ROLE]]): optional
         GOAL (Optional[List[PPT_PCL_GOAL]]): optional
     """
 
     PTH: _PTH = Field(
         title="PTH",
-        description="Required",
+        description="Pathway",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     PATHWAY_ROLE: Optional[List[_PPT_PCL_PATHWAY_ROLE]] = Field(
         default=None,
         title="PATHWAY_ROLE",
-        description="Optional, repeating",
     )
 
     GOAL: Optional[List[_PPT_PCL_GOAL]] = Field(
         default=None,
         title="GOAL",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

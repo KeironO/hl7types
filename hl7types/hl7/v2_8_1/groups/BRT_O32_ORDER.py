@@ -29,40 +29,39 @@ class BRT_O32_ORDER(HL7Model):
     """HL7 v2 BRT_O32.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[BRT_O32_TIMING]]): optional
-        BPO (Optional[BPO]): optional
-        BTX (Optional[List[BTX]]): optional
+        BPO (Optional[BPO]): Blood product order, optional
+        BTX (Optional[List[BTX]]): Blood Product Transfusion/Disposition, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_BRT_O32_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     BPO: Optional[_BPO] = Field(
         default=None,
         title="BPO",
-        description="Optional",
+        description="Blood product order",
     )
 
     BTX: Optional[List[_BTX]] = Field(
         default=None,
         title="BTX",
-        description="Optional, repeating",
+        description="Blood Product Transfusion/Disposition",
     )
 
     model_config = {"populate_by_name": True}

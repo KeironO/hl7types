@@ -22,19 +22,19 @@ class SQR_S25_GENERAL_RESOURCE(HL7Model):
     """HL7 v2 SQR_S25.GENERAL_RESOURCE group.
 
     Attributes:
-        AIG (AIG): required
-        NTE (Optional[List[NTE]]): optional
+        AIG (AIG): AIG - appointment information - general resource segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     AIG: _AIG = Field(
         title="AIG",
-        description="Required",
+        description="AIG - appointment information - general resource segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

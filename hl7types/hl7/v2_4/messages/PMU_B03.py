@@ -20,27 +20,27 @@ _STF = STF
 
 
 class PMU_B03(HL7Model):
-    """HL7 v2 PMU_B03 message.
+    """PMU/ACK - Delete personnel re cord (S15).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        STF (STF): required
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
+        STF (STF): Staff Identification, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     model_config = {"populate_by_name": True}

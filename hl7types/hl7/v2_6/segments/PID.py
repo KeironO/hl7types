@@ -21,126 +21,126 @@ from ..datatypes.XTN import XTN
 
 
 class PID(HL7Model):
-    """HL7 v2 PID segment.
+    """Patient Identification (S3.4.2).
 
     Attributes
     ----------
     pid_1 : str | None
-        PID.1 (opt) - Set ID - PID (SI)
+        PID.1 (opt) - Set ID - PID (SI) S3.4.2.1
 
     pid_2 : CX | None
-        PID.2 (opt) - Patient ID (CX)
+        PID.2 (opt) - Patient ID (CX) S3.4.2.2
 
     pid_3 : list[CX]
-        PID.3 (req, rep) - Patient Identifier List (CX)
+        PID.3 (req, rep) - Patient Identifier List (CX) S17.7.4.33
 
     pid_4 : list[CX] | None
-        PID.4 (opt, rep) - Alternate Patient ID - PID (CX)
+        PID.4 (opt, rep) - Alternate Patient ID - PID (CX) S3.4.2.4
 
     pid_5 : list[XPN]
-        PID.5 (req, rep) - Patient Name (XPN)
+        PID.5 (req, rep) - Patient Name (XPN) S3.4.2.5 | 0200 - Name type
 
     pid_6 : list[XPN] | None
-        PID.6 (opt, rep) - Mother's Maiden Name (XPN)
+        PID.6 (opt, rep) - Mother's Maiden Name (XPN) S3.4.2.6
 
     pid_7 : str | None
-        PID.7 (opt) - Date/Time of Birth (DTM)
+        PID.7 (opt) - Date/Time of Birth (DTM) S15.4.8.6
 
     pid_8 : str | None
-        PID.8 (opt) - Administrative Sex (IS)
+        PID.8 (opt) - Administrative Sex (IS) S15.4.8.5 | 0001 - Administrative Sex
 
     pid_9 : list[XPN] | None
-        PID.9 (opt, rep) - Patient Alias (XPN)
+        PID.9 (opt, rep) - Patient Alias (XPN) S3.4.2.9
 
     pid_10 : list[CWE] | None
-        PID.10 (opt, rep) - Race (CWE)
+        PID.10 (opt, rep) - Race (CWE) S15.4.8.27 | 0005 - Race
 
     pid_11 : list[XAD] | None
-        PID.11 (opt, rep) - Patient Address (XAD)
+        PID.11 (opt, rep) - Patient Address (XAD) S3.4.2.11
 
     pid_12 : str | None
-        PID.12 (opt) - County Code (IS)
+        PID.12 (opt) - County Code (IS) S3.4.2.12 | 0289 - County/parish
 
     pid_13 : list[XTN] | None
-        PID.13 (opt, rep) - Phone Number - Home (XTN)
+        PID.13 (opt, rep) - Phone Number - Home (XTN) S3.4.2.13
 
     pid_14 : list[XTN] | None
-        PID.14 (opt, rep) - Phone Number - Business (XTN)
+        PID.14 (opt, rep) - Phone Number - Business (XTN) S3.4.2.14
 
     pid_15 : CWE | None
-        PID.15 (opt) - Primary Language (CWE)
+        PID.15 (opt) - Primary Language (CWE) S3.4.2.15 | 0296 - Primary Language
 
     pid_16 : CWE | None
-        PID.16 (opt) - Marital Status (CWE)
+        PID.16 (opt) - Marital Status (CWE) S15.4.8.17 | 0002 - Marital Status
 
     pid_17 : CWE | None
-        PID.17 (opt) - Religion (CWE)
+        PID.17 (opt) - Religion (CWE) S3.4.2.17 | 0006 - Religion
 
     pid_18 : CX | None
-        PID.18 (opt) - Patient Account Number (CX)
+        PID.18 (opt) - Patient Account Number (CX) S3.4.2.18
 
     pid_19 : str | None
-        PID.19 (opt) - SSN Number - Patient (ST)
+        PID.19 (opt) - SSN Number - Patient (ST) S3.4.2.19
 
     pid_20 : DLN | None
-        PID.20 (opt) - Driver's License Number - Patient (DLN)
+        PID.20 (opt) - Driver's License Number - Patient (DLN) S3.4.2.20
 
     pid_21 : list[CX] | None
-        PID.21 (opt, rep) - Mother's Identifier (CX)
+        PID.21 (opt, rep) - Mother's Identifier (CX) S3.4.2.21
 
     pid_22 : list[CWE] | None
-        PID.22 (opt, rep) - Ethnic Group (CWE)
+        PID.22 (opt, rep) - Ethnic Group (CWE) S15.4.8.28 | 0189 - Ethnic Group
 
     pid_23 : str | None
-        PID.23 (opt) - Birth Place (ST)
+        PID.23 (opt) - Birth Place (ST) S3.4.2.23
 
     pid_24 : str | None
-        PID.24 (opt) - Multiple Birth Indicator (ID)
+        PID.24 (opt) - Multiple Birth Indicator (ID) S3.4.2.24 | 0136 - Yes/no indicator
 
     pid_25 : str | None
-        PID.25 (opt) - Birth Order (NM)
+        PID.25 (opt) - Birth Order (NM) S3.4.2.25
 
     pid_26 : list[CWE] | None
-        PID.26 (opt, rep) - Citizenship (CWE)
+        PID.26 (opt, rep) - Citizenship (CWE) S15.4.8.30 | 0171 - Citizenship
 
     pid_27 : CWE | None
-        PID.27 (opt) - Veterans Military Status (CWE)
+        PID.27 (opt) - Veterans Military Status (CWE) S3.4.2.27 | 0172 - Veterans Military Status
 
     pid_28 : CWE | None
-        PID.28 (opt) - Nationality (CWE)
+        PID.28 (opt) - Nationality (CWE) S3.4.2.28 | 0212 - Nationality
 
     pid_29 : str | None
-        PID.29 (opt) - Patient Death Date and Time (DTM)
+        PID.29 (opt) - Patient Death Date and Time (DTM) S3.4.2.29
 
     pid_30 : str | None
-        PID.30 (opt) - Patient Death Indicator (ID)
+        PID.30 (opt) - Patient Death Indicator (ID) S3.4.2.30 | 0136 - Yes/no indicator
 
     pid_31 : str | None
-        PID.31 (opt) - Identity Unknown Indicator (ID)
+        PID.31 (opt) - Identity Unknown Indicator (ID) S3.4.2.31 | 0136 - Yes/no indicator
 
     pid_32 : list[str] | None
-        PID.32 (opt, rep) - Identity Reliability Code (IS)
+        PID.32 (opt, rep) - Identity Reliability Code (IS) S3.4.2.32 | 0445 - Identity Reliability Code
 
     pid_33 : str | None
-        PID.33 (opt) - Last Update Date/Time (DTM)
+        PID.33 (opt) - Last Update Date/Time (DTM) S3.4.2.33
 
     pid_34 : HD | None
-        PID.34 (opt) - Last Update Facility (HD)
+        PID.34 (opt) - Last Update Facility (HD) S3.4.2.34
 
     pid_35 : CWE | None
-        PID.35 (opt) - Species Code (CWE)
+        PID.35 (opt) - Species Code (CWE) S3.4.2.35 | 0446 - Species Code
 
     pid_36 : CWE | None
-        PID.36 (opt) - Breed Code (CWE)
+        PID.36 (opt) - Breed Code (CWE) S3.4.2.36 | 0447 - Breed Code
 
     pid_37 : str | None
-        PID.37 (opt) - Strain (ST)
+        PID.37 (opt) - Strain (ST) S3.4.2.37
 
     pid_38 : list[CWE] | None
-        PID.38 (opt, rep) - Production Class Code (CWE)
+        PID.38 (opt, rep) - Production Class Code (CWE) S3.4.2.38 | 0429 - Production Class Code
 
     pid_39 : list[CWE] | None
-        PID.39 (opt, rep) - Tribal Citizenship (CWE)
+        PID.39 (opt, rep) - Tribal Citizenship (CWE) S3.4.2.39 | 0171 - Citizenship
     """
 
     pid_1: Optional[str] = Field(

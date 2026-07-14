@@ -26,32 +26,32 @@ class ORN_O02_ORDER(HL7Model):
     """HL7 v2 ORN_O02.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        RQD (RQD): required
-        RQ1 (Optional[RQ1]): optional
-        NTE (Optional[List[NTE]]): optional
+        ORC (ORC): Common order segment, required
+        RQD (RQD): Requisition detail, required
+        RQ1 (Optional[RQ1]): Requisition detail-1 segment, optional
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common order segment",
     )
 
     RQD: _RQD = Field(
         title="RQD",
-        description="Required",
+        description="Requisition detail",
     )
 
     RQ1: Optional[_RQ1] = Field(
         default=None,
         title="RQ1",
-        description="Optional",
+        description="Requisition detail-1 segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

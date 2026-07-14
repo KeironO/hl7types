@@ -24,27 +24,27 @@ class ORM_O01_CHOICE(HL7Model):
     """HL7 v2 ORM_O01.CHOICE group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        ORO (Optional[ORO]): optional
-        RX1 (Optional[RX1]): optional
+        OBR (Optional[OBR]): OBSERVATION REQUEST, optional
+        ORO (Optional[ORO]): ORDER OTHER, optional
+        RX1 (Optional[RX1]): PHARMACY ORDER, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="OBSERVATION REQUEST",
     )
 
     ORO: Optional[_ORO] = Field(
         default=None,
         title="ORO",
-        description="Optional",
+        description="ORDER OTHER",
     )
 
     RX1: Optional[_RX1] = Field(
         default=None,
         title="RX1",
-        description="Optional",
+        description="PHARMACY ORDER",
     )
 
     model_config = {"populate_by_name": True}

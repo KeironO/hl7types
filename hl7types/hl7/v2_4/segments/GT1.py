@@ -24,174 +24,174 @@ from ..datatypes.XTN import XTN
 
 
 class GT1(HL7Model):
-    """HL7 v2 GT1 segment.
+    """Guarantor (S6.5.5).
 
     Attributes
     ----------
     gt1_1 : str
-        GT1.1 (req) - Set ID - GT1 (SI)
+        GT1.1 (req) - Set ID - GT1 (SI) S6.5.5.1
 
     gt1_2 : list[CX] | None
-        GT1.2 (opt, rep) - Guarantor Number (CX)
+        GT1.2 (opt, rep) - Guarantor Number (CX) S6.5.5.2
 
     gt1_3 : list[XPN]
-        GT1.3 (req, rep) - Guarantor Name (XPN)
+        GT1.3 (req, rep) - Guarantor Name (XPN) S6.5.5.3
 
     gt1_4 : list[XPN] | None
-        GT1.4 (opt, rep) - Guarantor Spouse Name (XPN)
+        GT1.4 (opt, rep) - Guarantor Spouse Name (XPN) S6.5.5.4
 
     gt1_5 : list[XAD] | None
-        GT1.5 (opt, rep) - Guarantor Address (XAD)
+        GT1.5 (opt, rep) - Guarantor Address (XAD) S6.5.5.5
 
     gt1_6 : list[XTN] | None
-        GT1.6 (opt, rep) - Guarantor Ph Num - Home (XTN)
+        GT1.6 (opt, rep) - Guarantor Ph Num - Home (XTN) S6.5.5.6
 
     gt1_7 : list[XTN] | None
-        GT1.7 (opt, rep) - Guarantor Ph Num - Business (XTN)
+        GT1.7 (opt, rep) - Guarantor Ph Num - Business (XTN) S6.5.5.7
 
     gt1_8 : TS | None
-        GT1.8 (opt) - Guarantor Date/Time Of Birth (TS)
+        GT1.8 (opt) - Guarantor Date/Time Of Birth (TS) S6.5.5.8
 
     gt1_9 : str | None
-        GT1.9 (opt) - Guarantor Administrative Sex (IS)
+        GT1.9 (opt) - Guarantor Administrative Sex (IS) S6.5.5.9 | 0001 - Administrative sex
 
     gt1_10 : str | None
-        GT1.10 (opt) - Guarantor Type (IS)
+        GT1.10 (opt) - Guarantor Type (IS) S6.5.5.10 | 0068 - Guarantor type
 
     gt1_11 : CE | None
-        GT1.11 (opt) - Guarantor Relationship (CE)
+        GT1.11 (opt) - Guarantor Relationship (CE) S6.5.5.11 | 0063 - Relationship
 
     gt1_12 : str | None
-        GT1.12 (opt) - Guarantor SSN (ST)
+        GT1.12 (opt) - Guarantor SSN (ST) S6.5.5.12
 
     gt1_13 : str | None
-        GT1.13 (opt) - Guarantor Date - Begin (DT)
+        GT1.13 (opt) - Guarantor Date - Begin (DT) S6.5.5.13
 
     gt1_14 : str | None
-        GT1.14 (opt) - Guarantor Date - End (DT)
+        GT1.14 (opt) - Guarantor Date - End (DT) S6.5.5.14
 
     gt1_15 : str | None
-        GT1.15 (opt) - Guarantor Priority (NM)
+        GT1.15 (opt) - Guarantor Priority (NM) S6.5.5.15
 
     gt1_16 : list[XPN] | None
-        GT1.16 (opt, rep) - Guarantor Employer Name (XPN)
+        GT1.16 (opt, rep) - Guarantor Employer Name (XPN) S6.5.5.16
 
     gt1_17 : list[XAD] | None
-        GT1.17 (opt, rep) - Guarantor Employer Address (XAD)
+        GT1.17 (opt, rep) - Guarantor Employer Address (XAD) S6.5.5.17
 
     gt1_18 : list[XTN] | None
-        GT1.18 (opt, rep) - Guarantor Employer Phone Number (XTN)
+        GT1.18 (opt, rep) - Guarantor Employer Phone Number (XTN) S6.5.5.18
 
     gt1_19 : list[CX] | None
-        GT1.19 (opt, rep) - Guarantor Employee ID Number (CX)
+        GT1.19 (opt, rep) - Guarantor Employee ID Number (CX) S6.5.5.19
 
     gt1_20 : str | None
-        GT1.20 (opt) - Guarantor Employment Status (IS)
+        GT1.20 (opt) - Guarantor Employment Status (IS) S6.5.5.20 | 0066 - Employment status
 
     gt1_21 : list[XON] | None
-        GT1.21 (opt, rep) - Guarantor Organization Name (XON)
+        GT1.21 (opt, rep) - Guarantor Organization Name (XON) S6.5.5.21
 
     gt1_22 : str | None
-        GT1.22 (opt) - Guarantor Billing Hold Flag (ID)
+        GT1.22 (opt) - Guarantor Billing Hold Flag (ID) S6.5.5.22 | 0136 - Yes/no indicator
 
     gt1_23 : CE | None
-        GT1.23 (opt) - Guarantor Credit Rating Code (CE)
+        GT1.23 (opt) - Guarantor Credit Rating Code (CE) S6.5.5.23 | 0341 - Guarantor credit rating code
 
     gt1_24 : TS | None
-        GT1.24 (opt) - Guarantor Death Date And Time (TS)
+        GT1.24 (opt) - Guarantor Death Date And Time (TS) S6.5.5.24
 
     gt1_25 : str | None
-        GT1.25 (opt) - Guarantor Death Flag (ID)
+        GT1.25 (opt) - Guarantor Death Flag (ID) S6.5.5.25 | 0136 - Yes/no indicator
 
     gt1_26 : CE | None
-        GT1.26 (opt) - Guarantor Charge Adjustment Code (CE)
+        GT1.26 (opt) - Guarantor Charge Adjustment Code (CE) S6.5.5.26 | 0218 - Patient charge adjustment
 
     gt1_27 : CP | None
-        GT1.27 (opt) - Guarantor Household Annual Income (CP)
+        GT1.27 (opt) - Guarantor Household Annual Income (CP) S6.5.5.27
 
     gt1_28 : str | None
-        GT1.28 (opt) - Guarantor Household Size (NM)
+        GT1.28 (opt) - Guarantor Household Size (NM) S6.5.5.28
 
     gt1_29 : list[CX] | None
-        GT1.29 (opt, rep) - Guarantor Employer ID Number (CX)
+        GT1.29 (opt, rep) - Guarantor Employer ID Number (CX) S6.5.5.29
 
     gt1_30 : CE | None
-        GT1.30 (opt) - Guarantor Marital Status Code (CE)
+        GT1.30 (opt) - Guarantor Marital Status Code (CE) S6.5.5.30 | 0002 - Marital status
 
     gt1_31 : str | None
-        GT1.31 (opt) - Guarantor Hire Effective Date (DT)
+        GT1.31 (opt) - Guarantor Hire Effective Date (DT) S6.5.5.31
 
     gt1_32 : str | None
-        GT1.32 (opt) - Employment Stop Date (DT)
+        GT1.32 (opt) - Employment Stop Date (DT) S6.5.7.45
 
     gt1_33 : str | None
-        GT1.33 (opt) - Living Dependency (IS)
+        GT1.33 (opt) - Living Dependency (IS) S6.5.7.31 | 0223 - Living dependency
 
     gt1_34 : list[str] | None
-        GT1.34 (opt, rep) - Ambulatory Status (IS)
+        GT1.34 (opt, rep) - Ambulatory Status (IS) S6.5.7.32 | 0009 - Ambulatory status
 
     gt1_35 : list[CE] | None
-        GT1.35 (opt, rep) - Citizenship (CE)
+        GT1.35 (opt, rep) - Citizenship (CE) S6.5.7.33 | 0171 - Citizenship
 
     gt1_36 : CE | None
-        GT1.36 (opt) - Primary Language (CE)
+        GT1.36 (opt) - Primary Language (CE) S6.5.7.34 | 0296 - Primary language
 
     gt1_37 : str | None
-        GT1.37 (opt) - Living Arrangement (IS)
+        GT1.37 (opt) - Living Arrangement (IS) S6.5.7.35 | 0220 - Living arrangement
 
     gt1_38 : CE | None
-        GT1.38 (opt) - Publicity Code (CE)
+        GT1.38 (opt) - Publicity Code (CE) S6.5.7.36 | 0215 - Publicity code
 
     gt1_39 : str | None
-        GT1.39 (opt) - Protection Indicator (ID)
+        GT1.39 (opt) - Protection Indicator (ID) S6.5.7.37 | 0136 - Yes/no indicator
 
     gt1_40 : str | None
-        GT1.40 (opt) - Student Indicator (IS)
+        GT1.40 (opt) - Student Indicator (IS) S6.5.7.38 | 0231 - Student status
 
     gt1_41 : CE | None
-        GT1.41 (opt) - Religion (CE)
+        GT1.41 (opt) - Religion (CE) S6.5.7.39 | 0006 - Religion
 
     gt1_42 : list[XPN] | None
-        GT1.42 (opt, rep) - Mother's Maiden Name (XPN)
+        GT1.42 (opt, rep) - Mother's Maiden Name (XPN) S6.5.7.40
 
     gt1_43 : CE | None
-        GT1.43 (opt) - Nationality (CE)
+        GT1.43 (opt) - Nationality (CE) S6.5.7.41 | 0212 - Nationality
 
     gt1_44 : list[CE] | None
-        GT1.44 (opt, rep) - Ethnic Group (CE)
+        GT1.44 (opt, rep) - Ethnic Group (CE) S15.4.6.28 | 0189 - Ethnic group
 
     gt1_45 : list[XPN] | None
-        GT1.45 (opt, rep) - Contact Person's Name (XPN)
+        GT1.45 (opt, rep) - Contact Person's Name (XPN) S6.5.5.45
 
     gt1_46 : list[XTN] | None
-        GT1.46 (opt, rep) - Contact Person's Telephone Number (XTN)
+        GT1.46 (opt, rep) - Contact Person's Telephone Number (XTN) S6.5.5.46
 
     gt1_47 : CE | None
-        GT1.47 (opt) - Contact Reason (CE)
+        GT1.47 (opt) - Contact Reason (CE) S6.5.5.47 | 0222 - Contact reason
 
     gt1_48 : str | None
-        GT1.48 (opt) - Contact Relationship (IS)
+        GT1.48 (opt) - Contact Relationship (IS) S6.5.5.48 | 0063 - Relationship
 
     gt1_49 : str | None
-        GT1.49 (opt) - Job Title (ST)
+        GT1.49 (opt) - Job Title (ST) S15.4.6.18
 
     gt1_50 : JCC | None
-        GT1.50 (opt) - Job Code/Class (JCC)
+        GT1.50 (opt) - Job Code/Class (JCC) S15.4.6.19 | 0327 - Job code/class
 
     gt1_51 : list[XON] | None
-        GT1.51 (opt, rep) - Guarantor Employer's Organization Name (XON)
+        GT1.51 (opt, rep) - Guarantor Employer's Organization Name (XON) S6.5.5.51
 
     gt1_52 : str | None
-        GT1.52 (opt) - Handicap (IS)
+        GT1.52 (opt) - Handicap (IS) S6.5.6.48 | 0295 - Handicap
 
     gt1_53 : str | None
-        GT1.53 (opt) - Job Status (IS)
+        GT1.53 (opt) - Job Status (IS) S6.5.7.48 | 0311 - Job status
 
     gt1_54 : FC | None
-        GT1.54 (opt) - Guarantor Financial Class (FC)
+        GT1.54 (opt) - Guarantor Financial Class (FC) S6.5.5.54 | 0064 - Financial class
 
     gt1_55 : list[CE] | None
-        GT1.55 (opt, rep) - Guarantor Race (CE)
+        GT1.55 (opt, rep) - Guarantor Race (CE) S6.5.5.55 | 0005 - Race
     """
 
     gt1_1: str = Field(

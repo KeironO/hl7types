@@ -33,54 +33,52 @@ class OML_O35_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 OML_O35.OBSERVATION_REQUEST group.
 
     Attributes:
-        OBR (OBR): required
-        TCD (Optional[TCD]): optional
-        NTE (Optional[List[NTE]]): optional
-        ROL (Optional[List[ROL]]): optional
-        DG1 (Optional[List[DG1]]): optional
+        OBR (OBR): Observation Request, required
+        TCD (Optional[TCD]): Test Code Detail, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        ROL (Optional[List[ROL]]): Role, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
         OBSERVATION (Optional[List[OML_O35_OBSERVATION]]): optional
         PRIOR_RESULT (Optional[List[OML_O35_PRIOR_RESULT]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     OBSERVATION: Optional[List[_OML_O35_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     PRIOR_RESULT: Optional[List[_OML_O35_PRIOR_RESULT]] = Field(
         default=None,
         title="PRIOR_RESULT",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

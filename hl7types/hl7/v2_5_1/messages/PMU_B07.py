@@ -28,48 +28,47 @@ _STF = STF
 
 
 class PMU_B07(HL7Model):
-    """HL7 v2 PMU_B07 message.
+    """PMU/ACK - Grant Certificate/Permission (S15.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EVN (EVN): required
-        STF (STF): required
-        PRA (Optional[PRA]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EVN (EVN): Event Type, required
+        STF (STF): Staff Identification, required
+        PRA (Optional[PRA]): Practitioner Detail, optional
         CERTIFICATE (Optional[List[PMU_B07_CERTIFICATE]]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[_PRA] = Field(
         default=None,
         title="PRA",
-        description="Optional",
+        description="Practitioner Detail",
     )
 
     CERTIFICATE: Optional[List[_PMU_B07_CERTIFICATE]] = Field(
         default=None,
         title="CERTIFICATE",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

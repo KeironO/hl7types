@@ -22,19 +22,19 @@ class MFN_M09_MF_TEST_CAT_DETAIL(HL7Model):
     """HL7 v2 MFN_M09.MF_TEST_CAT_DETAIL group.
 
     Attributes:
-        OM3 (OM3): required
-        OM4 (Optional[List[OM4]]): optional
+        OM3 (OM3): Categorical Service/Test/Observation, required
+        OM4 (Optional[List[OM4]]): Observations that Require Specimens, optional
     """
 
     OM3: _OM3 = Field(
         title="OM3",
-        description="Required",
+        description="Categorical Service/Test/Observation",
     )
 
     OM4: Optional[List[_OM4]] = Field(
         default=None,
         title="OM4",
-        description="Optional, repeating",
+        description="Observations that Require Specimens",
     )
 
     model_config = {"populate_by_name": True}

@@ -15,30 +15,30 @@ from ..datatypes.CX import CX
 
 
 class MRG(HL7Model):
-    """HL7 v2 MRG segment.
+    """Merge patient information (S3.3.8).
 
     Attributes
     ----------
     mrg_1 : list[CX]
-        MRG.1 (req, rep) - Prior Patient ID - Internal (CX)
+        MRG.1 (req, rep) - Prior Patient ID - Internal (CX) S3.3.8.1
 
     mrg_2 : list[CX] | None
-        MRG.2 (opt, rep) - Prior Alternate Patient ID (CX)
+        MRG.2 (opt, rep) - Prior Alternate Patient ID (CX) S3.3.8.2
 
     mrg_3 : CX | None
-        MRG.3 (opt) - Prior Patient Account Number (CX)
+        MRG.3 (opt) - Prior Patient Account Number (CX) S3.3.8.3
 
     mrg_4 : CX | None
-        MRG.4 (opt) - Prior Patient ID - External (CX)
+        MRG.4 (opt) - Prior Patient ID - External (CX) S3.3.8.4
 
     mrg_5 : CX | None
-        MRG.5 (opt) - Prior Visit Number (CX)
+        MRG.5 (opt) - Prior Visit Number (CX) S3.3.8.5
 
     mrg_6 : CX | None
-        MRG.6 (opt) - Prior Alternate Visit ID (CX)
+        MRG.6 (opt) - Prior Alternate Visit ID (CX) S3.3.8.6
 
     mrg_7 : CX | None
-        MRG.7 (opt) - Prior Patient Name (CX)
+        MRG.7 (opt) - Prior Patient Name (CX) S3.3.8.7
     """
 
     mrg_1: List[CX] = Field(

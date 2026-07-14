@@ -3,13653 +3,15542 @@ v2.8 Messages
 
 .. _hl7-v2_8-ACK:
 
+ACK General acknowledgment message (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. py:class:: hl7types.hl7.v2_8.messages.ACK.ACK
    :noindex:
-
-   HL7 v2 ACK message.
-
-ACK
-~~~
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
 
 .. _hl7-v2_8-ADT_A01:
+
+ADT_A01 ADT/ACK - Admit/visit notification (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A01.ADT_A01
    :noindex:
 
-   HL7 v2 ADT_A01 message.
-
-ADT_A01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`ADT_A01_PROCEDURE <hl7-v2_8-ADT_A01_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`ADT_A01_INSURANCE <hl7-v2_8-ADT_A01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``UB1``
-     - 
      - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
      - optional
-     - 
-     - UB1: Optional
+     - UB1
    * - ``UB2``
-     - 
      - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
      - optional
-     - 
-     - UB2: Optional
+     - Uniform Billing Data
    * - ``PDA``
-     - 
      - Optional[:ref:`PDA <hl7-v2_8-PDA>`]
      - optional
-     - 
-     - PDA: Optional
+     - Patient Death and Autopsy
 
 .. _hl7-v2_8-ADT_A02:
+
+ADT_A02 ADT/ACK - Transfer a patient (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A02.ADT_A02
    :noindex:
 
-   HL7 v2 ADT_A02 message.
-
-ADT_A02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
    * - ``PDA``
-     - 
      - Optional[:ref:`PDA <hl7-v2_8-PDA>`]
      - optional
-     - 
-     - PDA: Optional
+     - Patient Death and Autopsy
 
 .. _hl7-v2_8-ADT_A03:
+
+ADT_A03 ADT/ACK -  Discharge/end visit (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A03.ADT_A03
    :noindex:
 
-   HL7 v2 ADT_A03 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A03
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A03_PROCEDURE <hl7-v2_8-ADT_A03_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`ADT_A03_INSURANCE <hl7-v2_8-ADT_A03_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``PDA``
+     - Optional[:ref:`PDA <hl7-v2_8-PDA>`]
+     - optional
+     - Patient Death and Autopsy
+
+.. _hl7-v2_8-ADT_A04:
+
+ADT_A04 ADT/ACK -  Register a patient (S3.3.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A04.ADT_A04
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
-   * - ``AL1``
-     - 
-     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
-     - optional
-     - 
-     - AL1: Optional, repeating
-   * - ``DG1``
-     - 
-     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
-     - optional
-     - 
-     - DG1: Optional, repeating
-   * - ``DRG``
-     - 
-     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
-     - optional
-     - 
-     - DRG: Optional
-   * - ``PROCEDURE``
-     - 
-     - Optional[List[:ref:`ADT_A03_PROCEDURE <hl7-v2_8-ADT_A03_PROCEDURE>`]]
-     - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A01_PROCEDURE <hl7-v2_8-ADT_A01_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
-     - Optional[List[:ref:`ADT_A03_INSURANCE <hl7-v2_8-ADT_A03_INSURANCE>`]]
+     - Optional[List[:ref:`ADT_A01_INSURANCE <hl7-v2_8-ADT_A01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
+   * - ``UB1``
+     - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
+     - optional
+     - UB1
+   * - ``UB2``
+     - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
+     - optional
+     - Uniform Billing Data
    * - ``PDA``
-     - 
      - Optional[:ref:`PDA <hl7-v2_8-PDA>`]
      - optional
-     - 
-     - PDA: Optional
+     - Patient Death and Autopsy
 
 .. _hl7-v2_8-ADT_A05:
+
+ADT_A05 ADT/ACK -  Pre-admit a patient (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A05.ADT_A05
    :noindex:
 
-   HL7 v2 ADT_A05 message.
-
-ADT_A05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`ADT_A05_PROCEDURE <hl7-v2_8-ADT_A05_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`ADT_A05_INSURANCE <hl7-v2_8-ADT_A05_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``UB1``
-     - 
      - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
      - optional
-     - 
-     - UB1: Optional
+     - UB1
    * - ``UB2``
-     - 
      - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
      - optional
-     - 
-     - UB2: Optional
+     - Uniform Billing Data
 
 .. _hl7-v2_8-ADT_A06:
+
+ADT_A06 ADT/ACK -  Change an outpatient to an inpatient (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A06.ADT_A06
    :noindex:
 
-   HL7 v2 ADT_A06 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A06
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``MRG``
+     - Optional[:ref:`MRG <hl7-v2_8-MRG>`]
+     - optional
+     - Merge Patient Information
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A06_PROCEDURE <hl7-v2_8-ADT_A06_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`ADT_A06_INSURANCE <hl7-v2_8-ADT_A06_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``UB1``
+     - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
+     - optional
+     - UB1
+   * - ``UB2``
+     - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
+     - optional
+     - Uniform Billing Data
+
+.. _hl7-v2_8-ADT_A07:
+
+ADT_A07 ADT/ACK -  Change an inpatient to an outpatient (S3.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A07.ADT_A07
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``MRG``
-     - 
      - Optional[:ref:`MRG <hl7-v2_8-MRG>`]
      - optional
-     - 
-     - MRG: Optional
+     - Merge Patient Information
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`ADT_A06_PROCEDURE <hl7-v2_8-ADT_A06_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`ADT_A06_INSURANCE <hl7-v2_8-ADT_A06_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``UB1``
-     - 
      - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
      - optional
-     - 
-     - UB1: Optional
+     - UB1
    * - ``UB2``
-     - 
      - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
      - optional
-     - 
-     - UB2: Optional
+     - Uniform Billing Data
+
+.. _hl7-v2_8-ADT_A08:
+
+ADT_A08 ADT/ACK -  Update patient information (S3.3.8).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A08.ADT_A08
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A01_PROCEDURE <hl7-v2_8-ADT_A01_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`ADT_A01_INSURANCE <hl7-v2_8-ADT_A01_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``UB1``
+     - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
+     - optional
+     - UB1
+   * - ``UB2``
+     - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
+     - optional
+     - Uniform Billing Data
+   * - ``PDA``
+     - Optional[:ref:`PDA <hl7-v2_8-PDA>`]
+     - optional
+     - Patient Death and Autopsy
 
 .. _hl7-v2_8-ADT_A09:
+
+ADT_A09 ADT/ACK -  Patient departing - tracking (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A09.ADT_A09
    :noindex:
 
-   HL7 v2 ADT_A09 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A09
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+
+.. _hl7-v2_8-ADT_A10:
+
+ADT_A10 ADT/ACK -  Patient arriving - tracking (S3.3.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A10.ADT_A10
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
+
+.. _hl7-v2_8-ADT_A11:
+
+ADT_A11 ADT/ACK -  Cancel admit/visit notification (S3.3.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A11.ADT_A11
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
 
 .. _hl7-v2_8-ADT_A12:
+
+ADT_A12 ADT/ACK -  Cancel transfer (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A12.ADT_A12
    :noindex:
 
-   HL7 v2 ADT_A12 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A12
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``DG1``
+     - Optional[:ref:`DG1 <hl7-v2_8-DG1>`]
+     - optional
+     - Diagnosis
+
+.. _hl7-v2_8-ADT_A13:
+
+ADT_A13 ADT/ACK -  Cancel discharge/end visit (S3.3.13).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A13.ADT_A13
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
-   * - ``DG1``
-     - 
-     - Optional[:ref:`DG1 <hl7-v2_8-DG1>`]
+     - Observation/Result
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - DG1: Optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A01_PROCEDURE <hl7-v2_8-ADT_A01_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`ADT_A01_INSURANCE <hl7-v2_8-ADT_A01_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``UB1``
+     - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
+     - optional
+     - UB1
+   * - ``UB2``
+     - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
+     - optional
+     - Uniform Billing Data
+   * - ``PDA``
+     - Optional[:ref:`PDA <hl7-v2_8-PDA>`]
+     - optional
+     - Patient Death and Autopsy
+
+.. _hl7-v2_8-ADT_A14:
+
+ADT_A14 ADT/ACK -  Pending admit (S3.3.14).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A14.ADT_A14
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A05_PROCEDURE <hl7-v2_8-ADT_A05_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`ADT_A05_INSURANCE <hl7-v2_8-ADT_A05_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``UB1``
+     - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
+     - optional
+     - UB1
+   * - ``UB2``
+     - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
+     - optional
+     - Uniform Billing Data
 
 .. _hl7-v2_8-ADT_A15:
+
+ADT_A15 ADT/ACK -  Pending transfer (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A15.ADT_A15
    :noindex:
 
-   HL7 v2 ADT_A15 message.
-
-ADT_A15
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
 
 .. _hl7-v2_8-ADT_A16:
+
+ADT_A16 ADT/ACK -  Pending discharge (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A16.ADT_A16
    :noindex:
 
-   HL7 v2 ADT_A16 message.
-
-ADT_A16
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`ADT_A16_PROCEDURE <hl7-v2_8-ADT_A16_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`ADT_A16_INSURANCE <hl7-v2_8-ADT_A16_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
 
 .. _hl7-v2_8-ADT_A17:
+
+ADT_A17 ADT/ACK -  Swap patients (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A17.ADT_A17
    :noindex:
 
-   HL7 v2 ADT_A17 message.
-
-ADT_A17
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
 
 .. _hl7-v2_8-ADT_A20:
+
+ADT_A20 ADT/ACK -  Bed status update (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A20.ADT_A20
    :noindex:
 
-   HL7 v2 ADT_A20 message.
-
-ADT_A20
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``NPU``
-     - 
      - :ref:`NPU <hl7-v2_8-NPU>`
      - required
-     - 
-     - NPU: Required
-
-.. _hl7-v2_8-ADT_A21:
-
-.. py:class:: hl7types.hl7.v2_8.messages.ADT_A21.ADT_A21
-   :noindex:
-
-   HL7 v2 ADT_A21 message.
-
-ADT_A21
-~~~~~~~
-
-.. list-table::
-   :header-rows: 1
-   :widths: auto
-
-   * - Field
-     - HL7
-     - Type
-     - Required
-     - Max Length
-     - Description
-   * - ``MSH``
-     - 
-     - :ref:`MSH <hl7-v2_8-MSH>`
-     - required
-     - 
-     - MSH: Required
-   * - ``SFT``
-     - 
-     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
-     - optional
-     - 
-     - SFT: Optional, repeating
-   * - ``UAC``
-     - 
-     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
-     - optional
-     - 
-     - UAC: Optional
-   * - ``EVN``
-     - 
-     - :ref:`EVN <hl7-v2_8-EVN>`
-     - required
-     - 
-     - EVN: Required
-   * - ``PID``
-     - 
-     - :ref:`PID <hl7-v2_8-PID>`
-     - required
-     - 
-     - PID: Required
-   * - ``PD1``
-     - 
-     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
-     - optional
-     - 
-     - PD1: Optional
-   * - ``PV1``
-     - 
-     - :ref:`PV1 <hl7-v2_8-PV1>`
-     - required
-     - 
-     - PV1: Required
-   * - ``PV2``
-     - 
-     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
-     - optional
-     - 
-     - PV2: Optional
-   * - ``DB1``
-     - 
-     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
-     - optional
-     - 
-     - DB1: Optional, repeating
-   * - ``OBX``
-     - 
-     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
-     - optional
-     - 
-     - OBX: Optional, repeating
+     - Bed Status Update
 
 .. _hl7-v2_8-ADT_A24:
+
+ADT_A24 ADT/ACK -  Link patient information (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A24.ADT_A24
    :noindex:
 
-   HL7 v2 ADT_A24 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A24
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PV1``
+     - Optional[:ref:`PV1 <hl7-v2_8-PV1>`]
+     - optional
+     - Patient Visit
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+
+.. _hl7-v2_8-ADT_A28:
+
+ADT_A28 ADT/ACK -  Add person information (S3.3.28).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A28.ADT_A28
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
-   * - ``PV1``
-     - 
-     - Optional[:ref:`PV1 <hl7-v2_8-PV1>`]
+     - Patient Additional Demographic
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - PV1: Optional
+     - Access Restriction
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A05_PROCEDURE <hl7-v2_8-ADT_A05_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`ADT_A05_INSURANCE <hl7-v2_8-ADT_A05_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``UB1``
+     - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
+     - optional
+     - UB1
+   * - ``UB2``
+     - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
+     - optional
+     - Uniform Billing Data
+
+.. _hl7-v2_8-ADT_A31:
+
+ADT_A31 ADT/ACK -  Update person information (S3.3.31).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A31.ADT_A31
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+   * - ``DB1``
+     - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
+     - optional
+     - Disability
+   * - ``OBX``
+     - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
+     - optional
+     - Observation/Result
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
+     - optional
+     - Diagnosis Related Group
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`ADT_A05_PROCEDURE <hl7-v2_8-ADT_A05_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`ADT_A05_INSURANCE <hl7-v2_8-ADT_A05_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``UB1``
+     - Optional[:ref:`UB1 <hl7-v2_8-UB1>`]
+     - optional
+     - UB1
+   * - ``UB2``
+     - Optional[:ref:`UB2 <hl7-v2_8-UB2>`]
+     - optional
+     - Uniform Billing Data
 
 .. _hl7-v2_8-ADT_A37:
+
+ADT_A37 ADT/ACK -  Unlink patient information (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A37.ADT_A37
    :noindex:
 
-   HL7 v2 ADT_A37 message.
-
-ADT_A37
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_8-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient Visit
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
 
 .. _hl7-v2_8-ADT_A38:
+
+ADT_A38 ADT/ACK - Cancel pre-admit (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A38.ADT_A38
    :noindex:
 
-   HL7 v2 ADT_A38 message.
-
-ADT_A38
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_8-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation/Result
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
 
 .. _hl7-v2_8-ADT_A39:
+
+ADT_A39 HL7 v2 ADT_A39 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A39.ADT_A39
    :noindex:
 
-   HL7 v2 ADT_A39 message.
-
-ADT_A39
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PATIENT``
-     - 
      - List[:ref:`ADT_A39_PATIENT <hl7-v2_8-ADT_A39_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
 
 .. _hl7-v2_8-ADT_A43:
+
+ADT_A43 ADT/ACK - Move patient information - patient identifier list (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A43.ADT_A43
    :noindex:
 
-   HL7 v2 ADT_A43 message.
-
-ADT_A43
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PATIENT``
-     - 
      - List[:ref:`ADT_A43_PATIENT <hl7-v2_8-ADT_A43_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
 
 .. _hl7-v2_8-ADT_A44:
+
+ADT_A44 ADT/ACK - Move account information - patient account number (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A44.ADT_A44
    :noindex:
 
-   HL7 v2 ADT_A44 message.
-
-ADT_A44
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PATIENT``
-     - 
      - List[:ref:`ADT_A44_PATIENT <hl7-v2_8-ADT_A44_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
 
 .. _hl7-v2_8-ADT_A45:
+
+ADT_A45 ADT/ACK - Move visit information - visit number (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A45.ADT_A45
    :noindex:
 
-   HL7 v2 ADT_A45 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A45
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``MERGE_INFO``
+     - List[:ref:`ADT_A45_MERGE_INFO <hl7-v2_8-ADT_A45_MERGE_INFO>`]
+     - required
+     - MERGE_INFO
+
+.. _hl7-v2_8-ADT_A47:
+
+ADT_A47 ADT/ACK - Change patient identifier list (S3.3.47).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A47.ADT_A47
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
-   * - ``PID``
-     - 
-     - :ref:`PID <hl7-v2_8-PID>`
+     - Event Type
+   * - ``PATIENT``
+     - List[:ref:`ADT_A44_PATIENT <hl7-v2_8-ADT_A44_PATIENT>`]
      - required
-     - 
-     - PID: Required
-   * - ``PD1``
-     - 
-     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - PATIENT
+
+.. _hl7-v2_8-ADT_A49:
+
+ADT_A49 ADT/ACK - Change patient account number (S3.3.49).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A49.ADT_A49
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - PD1: Optional
-   * - ``MERGE_INFO``
-     - 
-     - List[:ref:`ADT_A45_MERGE_INFO <hl7-v2_8-ADT_A45_MERGE_INFO>`]
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - MERGE_INFO: Required, repeating
+     - Event Type
+   * - ``PATIENT``
+     - List[:ref:`ADT_A43_PATIENT <hl7-v2_8-ADT_A43_PATIENT>`]
+     - required
+     - PATIENT
 
 .. _hl7-v2_8-ADT_A50:
+
+ADT_A50 ADT/ACK - Change visit number (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A50.ADT_A50
    :noindex:
 
-   HL7 v2 ADT_A50 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A50
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``MRG``
+     - :ref:`MRG <hl7-v2_8-MRG>`
+     - required
+     - Merge Patient Information
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+
+.. _hl7-v2_8-ADT_A51:
+
+ADT_A51 ADT/ACK - Change alternate visit ID (S3.3.51).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A51.ADT_A51
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``MRG``
-     - 
      - :ref:`MRG <hl7-v2_8-MRG>`
      - required
-     - 
-     - MRG: Required
+     - Merge Patient Information
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
 
 .. _hl7-v2_8-ADT_A52:
+
+ADT_A52 ADT/ACK - Cancel leave of absence for a patient (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A52.ADT_A52
    :noindex:
 
-   HL7 v2 ADT_A52 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A52
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+
+.. _hl7-v2_8-ADT_A53:
+
+ADT_A53 ADT/ACK - Cancel patient returns from a leave of absence (S3.3.53).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A53.ADT_A53
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
 
 .. _hl7-v2_8-ADT_A54:
+
+ADT_A54 ADT/ACK - Change attending doctor (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A54.ADT_A54
    :noindex:
 
-   HL7 v2 ADT_A54 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A54
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+
+.. _hl7-v2_8-ADT_A55:
+
+ADT_A55 ADT/ACK - Cancel change attending doctor (S3.3.55).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A55.ADT_A55
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
 
 .. _hl7-v2_8-ADT_A60:
+
+ADT_A60 ADT/ACK - Update allergy information (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A60.ADT_A60
    :noindex:
 
-   HL7 v2 ADT_A60 message.
-
-ADT_A60
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``VISIT``
-     - 
      - Optional[:ref:`ADT_A60_VISIT <hl7-v2_8-ADT_A60_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``ADVERSE_REACTION_GROUP``
-     - 
      - Optional[List[:ref:`ADT_A60_ADVERSE_REACTION_GROUP <hl7-v2_8-ADT_A60_ADVERSE_REACTION_GROUP>`]]
      - optional
-     - 
-     - ADVERSE_REACTION_GROUP: Optional, repeating
+     - ADVERSE_REACTION_GROUP
 
 .. _hl7-v2_8-ADT_A61:
+
+ADT_A61 ADT/ACK - Change consulting doctor (S3.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ADT_A61.ADT_A61
    :noindex:
 
-   HL7 v2 ADT_A61 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ADT_A61
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``PV2``
+     - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
+     - optional
+     - Patient Visit - Additional Information
+
+.. _hl7-v2_8-ADT_A62:
+
+ADT_A62 ADT/ACK - Cancel change consulting doctor (S3.3.62).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ADT_A62.ADT_A62
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
 
 .. _hl7-v2_8-BAR_P01:
+
+BAR_P01 BAR/ACK - Add patient accounts (S6.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BAR_P01.BAR_P01
    :noindex:
 
-   HL7 v2 BAR_P01 message.
-
-BAR_P01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``VISIT``
-     - 
      - List[:ref:`BAR_P01_VISIT <hl7-v2_8-BAR_P01_VISIT>`]
      - required
-     - 
-     - VISIT: Required, repeating
+     - VISIT
 
 .. _hl7-v2_8-BAR_P02:
+
+BAR_P02 BAR/ACK - Purge patient accounts (S6.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BAR_P02.BAR_P02
    :noindex:
 
-   HL7 v2 BAR_P02 message.
-
-BAR_P02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PATIENT``
-     - 
      - List[:ref:`BAR_P02_PATIENT <hl7-v2_8-BAR_P02_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
 
 .. _hl7-v2_8-BAR_P05:
+
+BAR_P05 BAR/ACK - Update account (S6.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BAR_P05.BAR_P05
    :noindex:
 
-   HL7 v2 BAR_P05 message.
-
-BAR_P05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``VISIT``
-     - 
      - List[:ref:`BAR_P05_VISIT <hl7-v2_8-BAR_P05_VISIT>`]
      - required
-     - 
-     - VISIT: Required, repeating
+     - VISIT
 
 .. _hl7-v2_8-BAR_P06:
+
+BAR_P06 BAR/ACK - End account (S6.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BAR_P06.BAR_P06
    :noindex:
 
-   HL7 v2 BAR_P06 message.
-
-BAR_P06
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PATIENT``
-     - 
      - List[:ref:`BAR_P06_PATIENT <hl7-v2_8-BAR_P06_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
 
 .. _hl7-v2_8-BAR_P10:
+
+BAR_P10 BAR/ACK -Transmit Ambulatory Payment  Classification(APC) (S6.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BAR_P10.BAR_P10
    :noindex:
 
-   HL7 v2 BAR_P10 message.
-
-BAR_P10
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``GP1``
-     - 
      - :ref:`GP1 <hl7-v2_8-GP1>`
      - required
-     - 
-     - GP1: Required
+     - Grouping/Reimbursement - Visit
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`BAR_P10_PROCEDURE <hl7-v2_8-BAR_P10_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
 
 .. _hl7-v2_8-BAR_P12:
+
+BAR_P12 BAR/ACK - Update Diagnosis/Procedure (S6.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BAR_P12.BAR_P12
    :noindex:
 
-   HL7 v2 BAR_P12 message.
-
-BAR_P12
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`BAR_P12_PROCEDURE <hl7-v2_8-BAR_P12_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``OBX``
-     - 
      - Optional[:ref:`OBX <hl7-v2_8-OBX>`]
      - optional
-     - 
-     - OBX: Optional
+     - Observation/Result
 
 .. _hl7-v2_8-BPS_O29:
+
+BPS_O29 BPS - Blood product dispense status (S4.13.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BPS_O29.BPS_O29
    :noindex:
 
-   HL7 v2 BPS_O29 message.
-
-BPS_O29
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`BPS_O29_PATIENT <hl7-v2_8-BPS_O29_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`BPS_O29_ORDER <hl7-v2_8-BPS_O29_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-BRP_O30:
+
+BRP_O30 BRP - Blood product dispense status acknowledgment (S4.13.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BRP_O30.BRP_O30
    :noindex:
 
-   HL7 v2 BRP_O30 message.
-
-BRP_O30
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`BRP_O30_RESPONSE <hl7-v2_8-BRP_O30_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-BRT_O32:
+
+BRT_O32 BRT - Blood product transfusion/disposition acknowledgment (S4.13.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BRT_O32.BRT_O32
    :noindex:
 
-   HL7 v2 BRT_O32 message.
-
-BRT_O32
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`BRT_O32_RESPONSE <hl7-v2_8-BRT_O32_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-BTS_O31:
+
+BTS_O31 BTS - Blood product transfusion/disposition (S4.13.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.BTS_O31.BTS_O31
    :noindex:
 
-   HL7 v2 BTS_O31 message.
-
-BTS_O31
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`BTS_O31_PATIENT <hl7-v2_8-BTS_O31_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`BTS_O31_ORDER <hl7-v2_8-BTS_O31_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-CCF_I22:
+
+CCF_I22 Collaborative Care Fetch / Collaborative Care Information (S11.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CCF_I22.CCF_I22
    :noindex:
 
-   HL7 v2 CCF_I22 message.
-
-CCF_I22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
 
 .. _hl7-v2_8-CCI_I22:
+
+CCI_I22 Collaborative Care Fetch / Collaborative Care Information (S11.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CCI_I22.CCI_I22
    :noindex:
 
-   HL7 v2 CCI_I22 message.
-
-CCI_I22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`CCI_I22_INSURANCE <hl7-v2_8-CCI_I22_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``APPOINTMENT_HISTORY``
-     - 
      - Optional[List[:ref:`CCI_I22_APPOINTMENT_HISTORY <hl7-v2_8-CCI_I22_APPOINTMENT_HISTORY>`]]
      - optional
-     - 
-     - APPOINTMENT_HISTORY: Optional, repeating
+     - APPOINTMENT_HISTORY
    * - ``CLINICAL_HISTORY``
-     - 
      - Optional[List[:ref:`CCI_I22_CLINICAL_HISTORY <hl7-v2_8-CCI_I22_CLINICAL_HISTORY>`]]
      - optional
-     - 
-     - CLINICAL_HISTORY: Optional, repeating
+     - CLINICAL_HISTORY
    * - ``PATIENT_VISITS``
-     - 
      - List[:ref:`CCI_I22_PATIENT_VISITS <hl7-v2_8-CCI_I22_PATIENT_VISITS>`]
      - required
-     - 
-     - PATIENT_VISITS: Required, repeating
+     - PATIENT_VISITS
    * - ``MEDICATION_HISTORY``
-     - 
      - Optional[List[:ref:`CCI_I22_MEDICATION_HISTORY <hl7-v2_8-CCI_I22_MEDICATION_HISTORY>`]]
      - optional
-     - 
-     - MEDICATION_HISTORY: Optional, repeating
+     - MEDICATION_HISTORY
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`CCI_I22_PROBLEM <hl7-v2_8-CCI_I22_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`CCI_I22_GOAL <hl7-v2_8-CCI_I22_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``PATHWAY``
-     - 
      - Optional[List[:ref:`CCI_I22_PATHWAY <hl7-v2_8-CCI_I22_PATHWAY>`]]
      - optional
-     - 
-     - PATHWAY: Optional, repeating
+     - PATHWAY
    * - ``REL``
-     - 
      - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
      - optional
-     - 
-     - REL: Optional, repeating
+     - Clinical Relationship Segment
 
 .. _hl7-v2_8-CCM_I21:
+
+CCM_I21 Collaborative Care Message (S11.6.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CCM_I21.CCM_I21
    :noindex:
 
-   HL7 v2 CCM_I21 message.
-
-CCM_I21
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`CCM_I21_INSURANCE <hl7-v2_8-CCM_I21_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``APPOINTMENT_HISTORY``
-     - 
      - Optional[List[:ref:`CCM_I21_APPOINTMENT_HISTORY <hl7-v2_8-CCM_I21_APPOINTMENT_HISTORY>`]]
      - optional
-     - 
-     - APPOINTMENT_HISTORY: Optional, repeating
+     - APPOINTMENT_HISTORY
    * - ``CLINICAL_HISTORY``
-     - 
      - Optional[List[:ref:`CCM_I21_CLINICAL_HISTORY <hl7-v2_8-CCM_I21_CLINICAL_HISTORY>`]]
      - optional
-     - 
-     - CLINICAL_HISTORY: Optional, repeating
+     - CLINICAL_HISTORY
    * - ``PATIENT_VISITS``
-     - 
      - List[:ref:`CCM_I21_PATIENT_VISITS <hl7-v2_8-CCM_I21_PATIENT_VISITS>`]
      - required
-     - 
-     - PATIENT_VISITS: Required, repeating
+     - PATIENT_VISITS
    * - ``MEDICATION_HISTORY``
-     - 
      - Optional[List[:ref:`CCM_I21_MEDICATION_HISTORY <hl7-v2_8-CCM_I21_MEDICATION_HISTORY>`]]
      - optional
-     - 
-     - MEDICATION_HISTORY: Optional, repeating
+     - MEDICATION_HISTORY
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`CCM_I21_PROBLEM <hl7-v2_8-CCM_I21_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`CCM_I21_GOAL <hl7-v2_8-CCM_I21_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``PATHWAY``
-     - 
      - Optional[List[:ref:`CCM_I21_PATHWAY <hl7-v2_8-CCM_I21_PATHWAY>`]]
      - optional
-     - 
-     - PATHWAY: Optional, repeating
+     - PATHWAY
    * - ``REL``
-     - 
      - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
      - optional
-     - 
-     - REL: Optional, repeating
+     - Clinical Relationship Segment
 
 .. _hl7-v2_8-CCQ_I19:
+
+CCQ_I19 Collaborative Care Query/Collaborative Care Query Update (S11.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CCQ_I19.CCQ_I19
    :noindex:
 
-   HL7 v2 CCQ_I19 message.
-
-CCQ_I19
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``RF1``
-     - 
      - :ref:`RF1 <hl7-v2_8-RF1>`
      - required
-     - 
-     - RF1: Required
+     - Referral Information
    * - ``PROVIDER_CONTACT``
-     - 
      - Optional[List[:ref:`CCQ_I19_PROVIDER_CONTACT <hl7-v2_8-CCQ_I19_PROVIDER_CONTACT>`]]
      - optional
-     - 
-     - PROVIDER_CONTACT: Optional, repeating
+     - PROVIDER_CONTACT
    * - ``REL``
-     - 
      - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
      - optional
-     - 
-     - REL: Optional, repeating
+     - Clinical Relationship Segment
 
 .. _hl7-v2_8-CCR_I16:
+
+CCR_I16 Collaborative Care Referral (S11.6.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CCR_I16.CCR_I16
    :noindex:
 
-   HL7 v2 CCR_I16 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-CCR_I16
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - List[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - required
+     - Referral Information
+   * - ``PROVIDER_CONTACT``
+     - List[:ref:`CCR_I16_PROVIDER_CONTACT <hl7-v2_8-CCR_I16_PROVIDER_CONTACT>`]
+     - required
+     - PROVIDER_CONTACT
+   * - ``CLINICAL_ORDER``
+     - Optional[List[:ref:`CCR_I16_CLINICAL_ORDER <hl7-v2_8-CCR_I16_CLINICAL_ORDER>`]]
+     - optional
+     - CLINICAL_ORDER
+   * - ``PATIENT``
+     - List[:ref:`CCR_I16_PATIENT <hl7-v2_8-CCR_I16_PATIENT>`]
+     - required
+     - PATIENT
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``INSURANCE``
+     - Optional[List[:ref:`CCR_I16_INSURANCE <hl7-v2_8-CCR_I16_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``APPOINTMENT_HISTORY``
+     - Optional[List[:ref:`CCR_I16_APPOINTMENT_HISTORY <hl7-v2_8-CCR_I16_APPOINTMENT_HISTORY>`]]
+     - optional
+     - APPOINTMENT_HISTORY
+   * - ``CLINICAL_HISTORY``
+     - Optional[List[:ref:`CCR_I16_CLINICAL_HISTORY <hl7-v2_8-CCR_I16_CLINICAL_HISTORY>`]]
+     - optional
+     - CLINICAL_HISTORY
+   * - ``PATIENT_VISITS``
+     - List[:ref:`CCR_I16_PATIENT_VISITS <hl7-v2_8-CCR_I16_PATIENT_VISITS>`]
+     - required
+     - PATIENT_VISITS
+   * - ``MEDICATION_HISTORY``
+     - Optional[List[:ref:`CCR_I16_MEDICATION_HISTORY <hl7-v2_8-CCR_I16_MEDICATION_HISTORY>`]]
+     - optional
+     - MEDICATION_HISTORY
+   * - ``PROBLEM``
+     - Optional[List[:ref:`CCR_I16_PROBLEM <hl7-v2_8-CCR_I16_PROBLEM>`]]
+     - optional
+     - PROBLEM
+   * - ``GOAL``
+     - Optional[List[:ref:`CCR_I16_GOAL <hl7-v2_8-CCR_I16_GOAL>`]]
+     - optional
+     - GOAL
+   * - ``PATHWAY``
+     - Optional[List[:ref:`CCR_I16_PATHWAY <hl7-v2_8-CCR_I16_PATHWAY>`]]
+     - optional
+     - PATHWAY
+   * - ``REL``
+     - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
+     - optional
+     - Clinical Relationship Segment
+
+.. _hl7-v2_8-CCR_I17:
+
+CCR_I17 Modify Collaborative Care Referral (S11.6.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CCR_I17.CCR_I17
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``RF1``
-     - 
      - List[:ref:`RF1 <hl7-v2_8-RF1>`]
      - required
-     - 
-     - RF1: Required, repeating
+     - Referral Information
    * - ``PROVIDER_CONTACT``
-     - 
      - List[:ref:`CCR_I16_PROVIDER_CONTACT <hl7-v2_8-CCR_I16_PROVIDER_CONTACT>`]
      - required
-     - 
-     - PROVIDER_CONTACT: Required, repeating
+     - PROVIDER_CONTACT
    * - ``CLINICAL_ORDER``
-     - 
      - Optional[List[:ref:`CCR_I16_CLINICAL_ORDER <hl7-v2_8-CCR_I16_CLINICAL_ORDER>`]]
      - optional
-     - 
-     - CLINICAL_ORDER: Optional, repeating
+     - CLINICAL_ORDER
    * - ``PATIENT``
-     - 
      - List[:ref:`CCR_I16_PATIENT <hl7-v2_8-CCR_I16_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`CCR_I16_INSURANCE <hl7-v2_8-CCR_I16_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``APPOINTMENT_HISTORY``
-     - 
      - Optional[List[:ref:`CCR_I16_APPOINTMENT_HISTORY <hl7-v2_8-CCR_I16_APPOINTMENT_HISTORY>`]]
      - optional
-     - 
-     - APPOINTMENT_HISTORY: Optional, repeating
+     - APPOINTMENT_HISTORY
    * - ``CLINICAL_HISTORY``
-     - 
      - Optional[List[:ref:`CCR_I16_CLINICAL_HISTORY <hl7-v2_8-CCR_I16_CLINICAL_HISTORY>`]]
      - optional
-     - 
-     - CLINICAL_HISTORY: Optional, repeating
+     - CLINICAL_HISTORY
    * - ``PATIENT_VISITS``
-     - 
      - List[:ref:`CCR_I16_PATIENT_VISITS <hl7-v2_8-CCR_I16_PATIENT_VISITS>`]
      - required
-     - 
-     - PATIENT_VISITS: Required, repeating
+     - PATIENT_VISITS
    * - ``MEDICATION_HISTORY``
-     - 
      - Optional[List[:ref:`CCR_I16_MEDICATION_HISTORY <hl7-v2_8-CCR_I16_MEDICATION_HISTORY>`]]
      - optional
-     - 
-     - MEDICATION_HISTORY: Optional, repeating
+     - MEDICATION_HISTORY
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`CCR_I16_PROBLEM <hl7-v2_8-CCR_I16_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`CCR_I16_GOAL <hl7-v2_8-CCR_I16_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``PATHWAY``
-     - 
      - Optional[List[:ref:`CCR_I16_PATHWAY <hl7-v2_8-CCR_I16_PATHWAY>`]]
      - optional
-     - 
-     - PATHWAY: Optional, repeating
+     - PATHWAY
    * - ``REL``
-     - 
      - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
      - optional
-     - 
-     - REL: Optional, repeating
+     - Clinical Relationship Segment
+
+.. _hl7-v2_8-CCR_I18:
+
+CCR_I18 Cancel Collaborative Care Referral (S11.6.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CCR_I18.CCR_I18
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - List[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - required
+     - Referral Information
+   * - ``PROVIDER_CONTACT``
+     - List[:ref:`CCR_I16_PROVIDER_CONTACT <hl7-v2_8-CCR_I16_PROVIDER_CONTACT>`]
+     - required
+     - PROVIDER_CONTACT
+   * - ``CLINICAL_ORDER``
+     - Optional[List[:ref:`CCR_I16_CLINICAL_ORDER <hl7-v2_8-CCR_I16_CLINICAL_ORDER>`]]
+     - optional
+     - CLINICAL_ORDER
+   * - ``PATIENT``
+     - List[:ref:`CCR_I16_PATIENT <hl7-v2_8-CCR_I16_PATIENT>`]
+     - required
+     - PATIENT
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``INSURANCE``
+     - Optional[List[:ref:`CCR_I16_INSURANCE <hl7-v2_8-CCR_I16_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``APPOINTMENT_HISTORY``
+     - Optional[List[:ref:`CCR_I16_APPOINTMENT_HISTORY <hl7-v2_8-CCR_I16_APPOINTMENT_HISTORY>`]]
+     - optional
+     - APPOINTMENT_HISTORY
+   * - ``CLINICAL_HISTORY``
+     - Optional[List[:ref:`CCR_I16_CLINICAL_HISTORY <hl7-v2_8-CCR_I16_CLINICAL_HISTORY>`]]
+     - optional
+     - CLINICAL_HISTORY
+   * - ``PATIENT_VISITS``
+     - List[:ref:`CCR_I16_PATIENT_VISITS <hl7-v2_8-CCR_I16_PATIENT_VISITS>`]
+     - required
+     - PATIENT_VISITS
+   * - ``MEDICATION_HISTORY``
+     - Optional[List[:ref:`CCR_I16_MEDICATION_HISTORY <hl7-v2_8-CCR_I16_MEDICATION_HISTORY>`]]
+     - optional
+     - MEDICATION_HISTORY
+   * - ``PROBLEM``
+     - Optional[List[:ref:`CCR_I16_PROBLEM <hl7-v2_8-CCR_I16_PROBLEM>`]]
+     - optional
+     - PROBLEM
+   * - ``GOAL``
+     - Optional[List[:ref:`CCR_I16_GOAL <hl7-v2_8-CCR_I16_GOAL>`]]
+     - optional
+     - GOAL
+   * - ``PATHWAY``
+     - Optional[List[:ref:`CCR_I16_PATHWAY <hl7-v2_8-CCR_I16_PATHWAY>`]]
+     - optional
+     - PATHWAY
+   * - ``REL``
+     - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
+     - optional
+     - Clinical Relationship Segment
 
 .. _hl7-v2_8-CCU_I20:
+
+CCU_I20 Asynchronous Collaborative Care Update (S11.6.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CCU_I20.CCU_I20
    :noindex:
 
-   HL7 v2 CCU_I20 message.
-
-CCU_I20
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``RF1``
-     - 
      - :ref:`RF1 <hl7-v2_8-RF1>`
      - required
-     - 
-     - RF1: Required
+     - Referral Information
    * - ``PROVIDER_CONTACT``
-     - 
      - Optional[List[:ref:`CCU_I20_PROVIDER_CONTACT <hl7-v2_8-CCU_I20_PROVIDER_CONTACT>`]]
      - optional
-     - 
-     - PROVIDER_CONTACT: Optional, repeating
+     - PROVIDER_CONTACT
    * - ``PATIENT``
-     - 
      - Optional[List[:ref:`CCU_I20_PATIENT <hl7-v2_8-CCU_I20_PATIENT>`]]
      - optional
-     - 
-     - PATIENT: Optional, repeating
+     - PATIENT
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`CCU_I20_INSURANCE <hl7-v2_8-CCU_I20_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``APPOINTMENT_HISTORY``
-     - 
      - Optional[List[:ref:`CCU_I20_APPOINTMENT_HISTORY <hl7-v2_8-CCU_I20_APPOINTMENT_HISTORY>`]]
      - optional
-     - 
-     - APPOINTMENT_HISTORY: Optional, repeating
+     - APPOINTMENT_HISTORY
    * - ``CLINICAL_HISTORY``
-     - 
      - Optional[List[:ref:`CCU_I20_CLINICAL_HISTORY <hl7-v2_8-CCU_I20_CLINICAL_HISTORY>`]]
      - optional
-     - 
-     - CLINICAL_HISTORY: Optional, repeating
+     - CLINICAL_HISTORY
    * - ``PATIENT_VISITS``
-     - 
      - List[:ref:`CCU_I20_PATIENT_VISITS <hl7-v2_8-CCU_I20_PATIENT_VISITS>`]
      - required
-     - 
-     - PATIENT_VISITS: Required, repeating
+     - PATIENT_VISITS
    * - ``MEDICATION_HISTORY``
-     - 
      - Optional[List[:ref:`CCU_I20_MEDICATION_HISTORY <hl7-v2_8-CCU_I20_MEDICATION_HISTORY>`]]
      - optional
-     - 
-     - MEDICATION_HISTORY: Optional, repeating
+     - MEDICATION_HISTORY
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`CCU_I20_PROBLEM <hl7-v2_8-CCU_I20_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`CCU_I20_GOAL <hl7-v2_8-CCU_I20_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``PATHWAY``
-     - 
      - Optional[List[:ref:`CCU_I20_PATHWAY <hl7-v2_8-CCU_I20_PATHWAY>`]]
      - optional
-     - 
-     - PATHWAY: Optional, repeating
+     - PATHWAY
    * - ``REL``
-     - 
      - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
      - optional
-     - 
-     - REL: Optional, repeating
+     - Clinical Relationship Segment
 
 .. _hl7-v2_8-CQU_I19:
+
+CQU_I19 Collaborative Care Query/Collaborative Care Query Update (S11.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CQU_I19.CQU_I19
    :noindex:
 
-   HL7 v2 CQU_I19 message.
-
-CQU_I19
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``RF1``
-     - 
      - :ref:`RF1 <hl7-v2_8-RF1>`
      - required
-     - 
-     - RF1: Required
+     - Referral Information
    * - ``PROVIDER_CONTACT``
-     - 
      - Optional[List[:ref:`CQU_I19_PROVIDER_CONTACT <hl7-v2_8-CQU_I19_PROVIDER_CONTACT>`]]
      - optional
-     - 
-     - PROVIDER_CONTACT: Optional, repeating
+     - PROVIDER_CONTACT
    * - ``PATIENT``
-     - 
      - Optional[List[:ref:`CQU_I19_PATIENT <hl7-v2_8-CQU_I19_PATIENT>`]]
      - optional
-     - 
-     - PATIENT: Optional, repeating
+     - PATIENT
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`CQU_I19_INSURANCE <hl7-v2_8-CQU_I19_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``APPOINTMENT_HISTORY``
-     - 
      - Optional[List[:ref:`CQU_I19_APPOINTMENT_HISTORY <hl7-v2_8-CQU_I19_APPOINTMENT_HISTORY>`]]
      - optional
-     - 
-     - APPOINTMENT_HISTORY: Optional, repeating
+     - APPOINTMENT_HISTORY
    * - ``CLINICAL_HISTORY``
-     - 
      - Optional[List[:ref:`CQU_I19_CLINICAL_HISTORY <hl7-v2_8-CQU_I19_CLINICAL_HISTORY>`]]
      - optional
-     - 
-     - CLINICAL_HISTORY: Optional, repeating
+     - CLINICAL_HISTORY
    * - ``PATIENT_VISITS``
-     - 
      - List[:ref:`CQU_I19_PATIENT_VISITS <hl7-v2_8-CQU_I19_PATIENT_VISITS>`]
      - required
-     - 
-     - PATIENT_VISITS: Required, repeating
+     - PATIENT_VISITS
    * - ``MEDICATION_HISTORY``
-     - 
      - Optional[List[:ref:`CQU_I19_MEDICATION_HISTORY <hl7-v2_8-CQU_I19_MEDICATION_HISTORY>`]]
      - optional
-     - 
-     - MEDICATION_HISTORY: Optional, repeating
+     - MEDICATION_HISTORY
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`CQU_I19_PROBLEM <hl7-v2_8-CQU_I19_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`CQU_I19_GOAL <hl7-v2_8-CQU_I19_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``PATHWAY``
-     - 
      - Optional[List[:ref:`CQU_I19_PATHWAY <hl7-v2_8-CQU_I19_PATHWAY>`]]
      - optional
-     - 
-     - PATHWAY: Optional, repeating
+     - PATHWAY
    * - ``REL``
-     - 
      - Optional[List[:ref:`REL <hl7-v2_8-REL>`]]
      - optional
-     - 
-     - REL: Optional, repeating
+     - Clinical Relationship Segment
 
 .. _hl7-v2_8-CRM_C01:
+
+CRM_C01 CRM - Register a patient on a clinical trial (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CRM_C01.CRM_C01
    :noindex:
 
-   HL7 v2 CRM_C01 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-CRM_C01
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CRM_C02:
+
+CRM_C02 CRM - Cancel a patient registration on clinical trial (for clerical mistakes onl (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CRM_C02.CRM_C02
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PATIENT``
-     - 
      - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
+
+.. _hl7-v2_8-CRM_C03:
+
+CRM_C03 CRM - Correct/update registration information (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CRM_C03.CRM_C03
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CRM_C04:
+
+CRM_C04 CRM - Patient has gone off a clinical trial (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CRM_C04.CRM_C04
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CRM_C05:
+
+CRM_C05 CRM - Patient enters phase of clinical trial (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CRM_C05.CRM_C05
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CRM_C06:
+
+CRM_C06 CRM - Cancel patient entering a phase (clerical mistake) (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CRM_C06.CRM_C06
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CRM_C07:
+
+CRM_C07 CRM - Correct/update phase information (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CRM_C07.CRM_C07
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CRM_C08:
+
+CRM_C08 CRM - Patient has gone off phase of clinical trial (S7.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CRM_C08.CRM_C08
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CRM_C01_PATIENT <hl7-v2_8-CRM_C01_PATIENT>`]
+     - required
+     - PATIENT
 
 .. _hl7-v2_8-CSU_C09:
+
+CSU_C09 CSU - Automated time intervals for reporting, like monthly (S7.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.CSU_C09.CSU_C09
    :noindex:
 
-   HL7 v2 CSU_C09 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-CSU_C09
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CSU_C09_PATIENT <hl7-v2_8-CSU_C09_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CSU_C10:
+
+CSU_C10 CSU - Patient completes the clinical trial (S7.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CSU_C10.CSU_C10
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PATIENT``
-     - 
      - List[:ref:`CSU_C09_PATIENT <hl7-v2_8-CSU_C09_PATIENT>`]
      - required
-     - 
-     - PATIENT: Required, repeating
+     - PATIENT
+
+.. _hl7-v2_8-CSU_C11:
+
+CSU_C11 CSU - Patient completes a phase of the clinical trial (S7.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CSU_C11.CSU_C11
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CSU_C09_PATIENT <hl7-v2_8-CSU_C09_PATIENT>`]
+     - required
+     - PATIENT
+
+.. _hl7-v2_8-CSU_C12:
+
+CSU_C12 CSU - Update/correction of patient order/result information (S7.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.CSU_C12.CSU_C12
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT``
+     - List[:ref:`CSU_C09_PATIENT <hl7-v2_8-CSU_C09_PATIENT>`]
+     - required
+     - PATIENT
 
 .. _hl7-v2_8-DBC_O41:
+
+DBC_O41 DBC - Create Donor Record Message (S4.16.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DBC_O41.DBC_O41
    :noindex:
 
-   HL7 v2 DBC_O41 message.
-
-DBC_O41
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DBC_O41_DONOR <hl7-v2_8-DBC_O41_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
 
 .. _hl7-v2_8-DBC_O42:
+
+DBC_O42 DBU - Update Donor Record Message (S4.16.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DBC_O42.DBC_O42
    :noindex:
 
-   HL7 v2 DBC_O42 message.
-
-DBC_O42
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DBC_O42_DONOR <hl7-v2_8-DBC_O42_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
 
 .. _hl7-v2_8-DEL_O46:
+
+DEL_O46 Donor Eligiblity Message (S4.16.13).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DEL_O46.DEL_O46
    :noindex:
 
-   HL7 v2 DEL_O46 message.
-
-DEL_O46
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DEL_O46_DONOR <hl7-v2_8-DEL_O46_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
    * - ``DON``
-     - 
      - :ref:`DON <hl7-v2_8-DON>`
      - required
-     - 
-     - DON: Required
+     - Donation
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
 
 .. _hl7-v2_8-DEO_O45:
+
+DEO_O45 Donor Eligibility Observations Message (S4.16.12).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DEO_O45.DEO_O45
    :noindex:
 
-   HL7 v2 DEO_O45 message.
-
-DEO_O45
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DEO_O45_DONOR <hl7-v2_8-DEO_O45_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
    * - ``DONOR_ORDER``
-     - 
      - List[:ref:`DEO_O45_DONOR_ORDER <hl7-v2_8-DEO_O45_DONOR_ORDER>`]
      - required
-     - 
-     - DONOR_ORDER: Required, repeating
+     - DONOR_ORDER
 
 .. _hl7-v2_8-DER_O44:
+
+DER_O44 Donor Registration - Minimal Message (S4.16.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DER_O44.DER_O44
    :noindex:
 
-   HL7 v2 DER_O44 message.
-
-DER_O44
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DER_O44_DONOR <hl7-v2_8-DER_O44_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
    * - ``DONOR_ORDER``
-     - 
      - List[:ref:`DER_O44_DONOR_ORDER <hl7-v2_8-DER_O44_DONOR_ORDER>`]
      - required
-     - 
-     - DONOR_ORDER: Required, repeating
+     - DONOR_ORDER
 
 .. _hl7-v2_8-DFT_P03:
+
+DFT_P03 DFT/ACK - Post detail financial transaction (S6.4.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DFT_P03.DFT_P03
    :noindex:
 
-   HL7 v2 DFT_P03 message.
-
-DFT_P03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``VISIT``
-     - 
      - Optional[:ref:`DFT_P03_VISIT <hl7-v2_8-DFT_P03_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``COMMON_ORDER``
-     - 
      - Optional[List[:ref:`DFT_P03_COMMON_ORDER <hl7-v2_8-DFT_P03_COMMON_ORDER>`]]
      - optional
-     - 
-     - COMMON_ORDER: Optional, repeating
+     - COMMON_ORDER
    * - ``FINANCIAL``
-     - 
      - List[:ref:`DFT_P03_FINANCIAL <hl7-v2_8-DFT_P03_FINANCIAL>`]
      - required
-     - 
-     - FINANCIAL: Required, repeating
+     - FINANCIAL
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`DFT_P03_INSURANCE <hl7-v2_8-DFT_P03_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
 
 .. _hl7-v2_8-DFT_P11:
+
+DFT_P11 DFT/ACK - Post Detail Financial Transactions - New (S6.4.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DFT_P11.DFT_P11
    :noindex:
 
-   HL7 v2 DFT_P11 message.
-
-DFT_P11
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
    * - ``VISIT``
-     - 
      - Optional[:ref:`DFT_P11_VISIT <hl7-v2_8-DFT_P11_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_8-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability
    * - ``COMMON_ORDER``
-     - 
      - Optional[List[:ref:`DFT_P11_COMMON_ORDER <hl7-v2_8-DFT_P11_COMMON_ORDER>`]]
      - optional
-     - 
-     - COMMON_ORDER: Optional, repeating
+     - COMMON_ORDER
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_8-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`DFT_P11_INSURANCE <hl7-v2_8-DFT_P11_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``FINANCIAL``
-     - 
      - List[:ref:`DFT_P11_FINANCIAL <hl7-v2_8-DFT_P11_FINANCIAL>`]
      - required
-     - 
-     - FINANCIAL: Required, repeating
+     - FINANCIAL
 
 .. _hl7-v2_8-DPR_O48:
+
+DPR_O48 Donation Procedure Message (S4.16.15).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DPR_O48.DPR_O48
    :noindex:
 
-   HL7 v2 DPR_O48 message.
-
-DPR_O48
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DPR_O48_DONOR <hl7-v2_8-DPR_O48_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
    * - ``DONATION_ORDER``
-     - 
      - List[:ref:`DPR_O48_DONATION_ORDER <hl7-v2_8-DPR_O48_DONATION_ORDER>`]
      - required
-     - 
-     - DONATION_ORDER: Required, repeating
+     - DONATION_ORDER
    * - ``DONATION``
-     - 
      - Optional[:ref:`DPR_O48_DONATION <hl7-v2_8-DPR_O48_DONATION>`]
      - optional
-     - 
-     - DONATION: Optional
+     - DONATION
 
 .. _hl7-v2_8-DRC_O47:
+
+DRC_O47 Donor Request to Collect Message (S4.16.14).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DRC_O47.DRC_O47
    :noindex:
 
-   HL7 v2 DRC_O47 message.
-
-DRC_O47
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DRC_O47_DONOR <hl7-v2_8-DRC_O47_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
    * - ``DONATION_ORDER``
-     - 
      - List[:ref:`DRC_O47_DONATION_ORDER <hl7-v2_8-DRC_O47_DONATION_ORDER>`]
      - required
-     - 
-     - DONATION_ORDER: Required, repeating
+     - DONATION_ORDER
 
 .. _hl7-v2_8-DRG_O43:
+
+DRG_O43 General Order Message with Document Payload Acknowledgement Message (S4.16.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.DRG_O43.DRG_O43
    :noindex:
 
-   HL7 v2 DRG_O43 message.
-
-DRG_O43
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DONOR``
-     - 
      - Optional[:ref:`DRG_O43_DONOR <hl7-v2_8-DRG_O43_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
 
 .. _hl7-v2_8-EAC_U07:
+
+EAC_U07 EAC/ACK - Automated equipment command (S13.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EAC_U07.EAC_U07
    :noindex:
 
-   HL7 v2 EAC_U07 message.
-
-EAC_U07
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``COMMAND``
-     - 
      - List[:ref:`EAC_U07_COMMAND <hl7-v2_8-EAC_U07_COMMAND>`]
      - required
-     - 
-     - COMMAND: Required, repeating
+     - COMMAND
 
 .. _hl7-v2_8-EAN_U09:
+
+EAN_U09 EAN/ACK - Automated equipment notification (S13.3.9).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EAN_U09.EAN_U09
    :noindex:
 
-   HL7 v2 EAN_U09 message.
-
-EAN_U09
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``NOTIFICATION``
-     - 
      - List[:ref:`EAN_U09_NOTIFICATION <hl7-v2_8-EAN_U09_NOTIFICATION>`]
      - required
-     - 
-     - NOTIFICATION: Required, repeating
+     - NOTIFICATION
 
 .. _hl7-v2_8-EAR_U08:
+
+EAR_U08 EAR/ACK - Automated equipment response (S13.3.8).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EAR_U08.EAR_U08
    :noindex:
 
-   HL7 v2 EAR_U08 message.
-
-EAR_U08
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``COMMAND_RESPONSE``
-     - 
      - List[:ref:`EAR_U08_COMMAND_RESPONSE <hl7-v2_8-EAR_U08_COMMAND_RESPONSE>`]
      - required
-     - 
-     - COMMAND_RESPONSE: Required, repeating
+     - COMMAND_RESPONSE
 
 .. _hl7-v2_8-EHC_E01:
+
+EHC_E01 Submit HealthCare Services Invoice (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E01.EHC_E01
    :noindex:
 
-   HL7 v2 EHC_E01 message.
-
-EHC_E01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``INVOICE_INFORMATION_SUBMIT``
-     - 
      - :ref:`EHC_E01_INVOICE_INFORMATION_SUBMIT <hl7-v2_8-EHC_E01_INVOICE_INFORMATION_SUBMIT>`
      - required
-     - 
-     - INVOICE_INFORMATION_SUBMIT: Required
+     - INVOICE_INFORMATION_SUBMIT
 
 .. _hl7-v2_8-EHC_E02:
+
+EHC_E02 Cancel HealthCare Services Invoice (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E02.EHC_E02
    :noindex:
 
-   HL7 v2 EHC_E02 message.
-
-EHC_E02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``INVOICE_INFORMATION_CANCEL``
-     - 
      - :ref:`EHC_E02_INVOICE_INFORMATION_CANCEL <hl7-v2_8-EHC_E02_INVOICE_INFORMATION_CANCEL>`
      - required
-     - 
-     - INVOICE_INFORMATION_CANCEL: Required
+     - INVOICE_INFORMATION_CANCEL
 
 .. _hl7-v2_8-EHC_E04:
+
+EHC_E04 Re-Assess HealthCare Services Invoice Request (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E04.EHC_E04
    :noindex:
 
-   HL7 v2 EHC_E04 message.
-
-EHC_E04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``REASSESSMENT_REQUEST_INFO``
-     - 
      - :ref:`EHC_E04_REASSESSMENT_REQUEST_INFO <hl7-v2_8-EHC_E04_REASSESSMENT_REQUEST_INFO>`
      - required
-     - 
-     - REASSESSMENT_REQUEST_INFO: Required
+     - REASSESSMENT_REQUEST_INFO
 
 .. _hl7-v2_8-EHC_E10:
+
+EHC_E10 Edit/Adjudication Results (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E10.EHC_E10
    :noindex:
 
-   HL7 v2 EHC_E10 message.
-
-EHC_E10
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``INVOICE_PROCESSING_RESULTS_INFO``
-     - 
      - List[:ref:`EHC_E10_INVOICE_PROCESSING_RESULTS_INFO <hl7-v2_8-EHC_E10_INVOICE_PROCESSING_RESULTS_INFO>`]
      - required
-     - 
-     - INVOICE_PROCESSING_RESULTS_INFO: Required, repeating
+     - INVOICE_PROCESSING_RESULTS_INFO
 
 .. _hl7-v2_8-EHC_E12:
+
+EHC_E12 Request Additional Information (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E12.EHC_E12
    :noindex:
 
-   HL7 v2 EHC_E12 message.
-
-EHC_E12
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``RFI``
-     - 
      - :ref:`RFI <hl7-v2_8-RFI>`
      - required
-     - 
-     - RFI: Required
+     - Request for Information
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_8-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
    * - ``IVC``
-     - 
      - :ref:`IVC <hl7-v2_8-IVC>`
      - required
-     - 
-     - IVC: Required
+     - Invoice Segment
    * - ``PSS``
-     - 
      - :ref:`PSS <hl7-v2_8-PSS>`
      - required
-     - 
-     - PSS: Required
+     - Product/Service Section
    * - ``PSG``
-     - 
      - :ref:`PSG <hl7-v2_8-PSG>`
      - required
-     - 
-     - PSG: Required
+     - Product/Service Group
    * - ``PID``
-     - 
      - Optional[:ref:`PID <hl7-v2_8-PID>`]
      - optional
-     - 
-     - PID: Optional
+     - Patient Identification
    * - ``PSL``
-     - 
      - Optional[List[:ref:`PSL <hl7-v2_8-PSL>`]]
      - optional
-     - 
-     - PSL: Optional, repeating
+     - Product/Service Line Item
    * - ``REQUEST``
-     - 
      - List[:ref:`EHC_E12_REQUEST <hl7-v2_8-EHC_E12_REQUEST>`]
      - required
-     - 
-     - REQUEST: Required, repeating
+     - REQUEST
 
 .. _hl7-v2_8-EHC_E13:
+
+EHC_E13 Additional Information Response (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E13.EHC_E13
    :noindex:
 
-   HL7 v2 EHC_E13 message.
-
-EHC_E13
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``RFI``
-     - 
      - :ref:`RFI <hl7-v2_8-RFI>`
      - required
-     - 
-     - RFI: Required
+     - Request for Information
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_8-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
    * - ``IVC``
-     - 
      - :ref:`IVC <hl7-v2_8-IVC>`
      - required
-     - 
-     - IVC: Required
+     - Invoice Segment
    * - ``PSS``
-     - 
      - :ref:`PSS <hl7-v2_8-PSS>`
      - required
-     - 
-     - PSS: Required
+     - Product/Service Section
    * - ``PSG``
-     - 
      - :ref:`PSG <hl7-v2_8-PSG>`
      - required
-     - 
-     - PSG: Required
+     - Product/Service Group
    * - ``PID``
-     - 
      - Optional[:ref:`PID <hl7-v2_8-PID>`]
      - optional
-     - 
-     - PID: Optional
+     - Patient Identification
    * - ``PSL``
-     - 
      - Optional[:ref:`PSL <hl7-v2_8-PSL>`]
      - optional
-     - 
-     - PSL: Optional
+     - Product/Service Line Item
    * - ``REQUEST``
-     - 
      - List[:ref:`EHC_E13_REQUEST <hl7-v2_8-EHC_E13_REQUEST>`]
      - required
-     - 
-     - REQUEST: Required, repeating
+     - REQUEST
 
 .. _hl7-v2_8-EHC_E15:
+
+EHC_E15 Payment/Remittance Advice (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E15.EHC_E15
    :noindex:
 
-   HL7 v2 EHC_E15 message.
-
-EHC_E15
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``PAYMENT_REMITTANCE_HEADER_INFO``
-     - 
      - :ref:`EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO <hl7-v2_8-EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO>`
      - required
-     - 
-     - PAYMENT_REMITTANCE_HEADER_INFO: Required
+     - PAYMENT_REMITTANCE_HEADER_INFO
    * - ``PAYMENT_REMITTANCE_DETAIL_INFO``
-     - 
      - Optional[List[:ref:`EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO <hl7-v2_8-EHC_E15_PAYMENT_REMITTANCE_DETAIL_INFO>`]]
      - optional
-     - 
-     - PAYMENT_REMITTANCE_DETAIL_INFO: Optional, repeating
+     - PAYMENT_REMITTANCE_DETAIL_INFO
    * - ``ADJUSTMENT_PAYEE``
-     - 
      - Optional[List[:ref:`EHC_E15_ADJUSTMENT_PAYEE <hl7-v2_8-EHC_E15_ADJUSTMENT_PAYEE>`]]
      - optional
-     - 
-     - ADJUSTMENT_PAYEE: Optional, repeating
+     - ADJUSTMENT_PAYEE
 
 .. _hl7-v2_8-EHC_E20:
+
+EHC_E20 Submit Authorization Request (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E20.EHC_E20
    :noindex:
 
-   HL7 v2 EHC_E20 message.
-
-EHC_E20
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``AUTHORIZATION_REQUEST``
-     - 
      - :ref:`EHC_E20_AUTHORIZATION_REQUEST <hl7-v2_8-EHC_E20_AUTHORIZATION_REQUEST>`
      - required
-     - 
-     - AUTHORIZATION_REQUEST: Required
+     - AUTHORIZATION_REQUEST
 
 .. _hl7-v2_8-EHC_E21:
+
+EHC_E21 Cancel Authorization Request (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E21.EHC_E21
    :noindex:
 
-   HL7 v2 EHC_E21 message.
-
-EHC_E21
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``AUTHORIZATION_REQUEST``
-     - 
      - :ref:`EHC_E21_AUTHORIZATION_REQUEST <hl7-v2_8-EHC_E21_AUTHORIZATION_REQUEST>`
      - required
-     - 
-     - AUTHORIZATION_REQUEST: Required
+     - AUTHORIZATION_REQUEST
 
 .. _hl7-v2_8-EHC_E24:
+
+EHC_E24 Authorization Response (S16.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.EHC_E24.EHC_E24
    :noindex:
 
-   HL7 v2 EHC_E24 message.
-
-EHC_E24
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``AUTHORIZATION_RESPONSE_INFO``
-     - 
      - :ref:`EHC_E24_AUTHORIZATION_RESPONSE_INFO <hl7-v2_8-EHC_E24_AUTHORIZATION_RESPONSE_INFO>`
      - required
-     - 
-     - AUTHORIZATION_RESPONSE_INFO: Required
+     - AUTHORIZATION_RESPONSE_INFO
 
 .. _hl7-v2_8-ESR_U02:
+
+ESR_U02 ESR/ACK - Automated equipment status request (S13.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ESR_U02.ESR_U02
    :noindex:
 
-   HL7 v2 ESR_U02 message.
-
-ESR_U02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
 
 .. _hl7-v2_8-ESU_U01:
+
+ESU_U01 ESU/ACK - Automated equipment status update (S13.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ESU_U01.ESU_U01
    :noindex:
 
-   HL7 v2 ESU_U01 message.
-
-ESU_U01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``ISD``
-     - 
      - Optional[List[:ref:`ISD <hl7-v2_8-ISD>`]]
      - optional
-     - 
-     - ISD: Optional, repeating
+     - Interaction Status Detail
 
 .. _hl7-v2_8-INR_U06:
+
+INR_U06 INR/ACK - Automated equipment inventory request (S13.3.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.INR_U06.INR_U06
    :noindex:
 
-   HL7 v2 INR_U06 message.
-
-INR_U06
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``INV``
-     - 
      - List[:ref:`INV <hl7-v2_8-INV>`]
      - required
-     - 
-     - INV: Required, repeating
+     - Inventory Detail
 
 .. _hl7-v2_8-INU_U05:
+
+INU_U05 INU/ACK  - Automated equipment inventory update (S13.3.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.INU_U05.INU_U05
    :noindex:
 
-   HL7 v2 INU_U05 message.
-
-INU_U05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``INV``
-     - 
      - List[:ref:`INV <hl7-v2_8-INV>`]
      - required
-     - 
-     - INV: Required, repeating
+     - Inventory Detail
 
 .. _hl7-v2_8-LSU_U12:
+
+LSU_U12 LSU/ACK - Automated equipment log/service update (S13.3.12).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.LSU_U12.LSU_U12
    :noindex:
 
-   HL7 v2 LSU_U12 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-LSU_U12
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EQU``
+     - :ref:`EQU <hl7-v2_8-EQU>`
+     - required
+     - Equipment Detail
+   * - ``EQP``
+     - List[:ref:`EQP <hl7-v2_8-EQP>`]
+     - required
+     - Equipment/log Service
+
+.. _hl7-v2_8-LSU_U13:
+
+LSU_U13 LSR/ACK - Automated equipment log/service request (S13.3.13).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.LSU_U13.LSU_U13
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``EQP``
-     - 
      - List[:ref:`EQP <hl7-v2_8-EQP>`]
      - required
-     - 
-     - EQP: Required, repeating
+     - Equipment/log Service
 
 .. _hl7-v2_8-MDM_T01:
+
+MDM_T01 MDM/ACK - Original document notification (S9.6.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MDM_T01.MDM_T01
    :noindex:
 
-   HL7 v2 MDM_T01 message.
-
-MDM_T01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``COMMON_ORDER``
-     - 
      - Optional[List[:ref:`MDM_T01_COMMON_ORDER <hl7-v2_8-MDM_T01_COMMON_ORDER>`]]
      - optional
-     - 
-     - COMMON_ORDER: Optional, repeating
+     - COMMON_ORDER
    * - ``TXA``
-     - 
      - :ref:`TXA <hl7-v2_8-TXA>`
      - required
-     - 
-     - TXA: Required
+     - Transcription Document Header
    * - ``CON``
-     - 
      - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
      - optional
-     - 
-     - CON: Optional, repeating
+     - Consent Segment
 
 .. _hl7-v2_8-MDM_T02:
+
+MDM_T02 MDM/ACK - Original document notification and content (S9.6.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MDM_T02.MDM_T02
    :noindex:
 
-   HL7 v2 MDM_T02 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-MDM_T02
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T02_COMMON_ORDER <hl7-v2_8-MDM_T02_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
+   * - ``OBSERVATION``
+     - List[:ref:`MDM_T02_OBSERVATION <hl7-v2_8-MDM_T02_OBSERVATION>`]
+     - required
+     - OBSERVATION
+
+.. _hl7-v2_8-MDM_T03:
+
+MDM_T03 MDM/ACK - Document status change notification (S9.6.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T03.MDM_T03
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``COMMON_ORDER``
-     - 
-     - Optional[List[:ref:`MDM_T02_COMMON_ORDER <hl7-v2_8-MDM_T02_COMMON_ORDER>`]]
+     - Optional[List[:ref:`MDM_T01_COMMON_ORDER <hl7-v2_8-MDM_T01_COMMON_ORDER>`]]
      - optional
-     - 
-     - COMMON_ORDER: Optional, repeating
+     - COMMON_ORDER
    * - ``TXA``
-     - 
      - :ref:`TXA <hl7-v2_8-TXA>`
      - required
-     - 
-     - TXA: Required
+     - Transcription Document Header
    * - ``CON``
-     - 
      - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
      - optional
-     - 
-     - CON: Optional, repeating
+     - Consent Segment
+
+.. _hl7-v2_8-MDM_T04:
+
+MDM_T04 MDM/ACK - Document status change notification and content (S9.6.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T04.MDM_T04
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T02_COMMON_ORDER <hl7-v2_8-MDM_T02_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
    * - ``OBSERVATION``
-     - 
      - List[:ref:`MDM_T02_OBSERVATION <hl7-v2_8-MDM_T02_OBSERVATION>`]
      - required
-     - 
-     - OBSERVATION: Required, repeating
+     - OBSERVATION
+
+.. _hl7-v2_8-MDM_T05:
+
+MDM_T05 MDM/ACK - Document addendum notification (S9.6.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T05.MDM_T05
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T01_COMMON_ORDER <hl7-v2_8-MDM_T01_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
+
+.. _hl7-v2_8-MDM_T06:
+
+MDM_T06 MDM/ACK - Document addendum notification and content (S9.6.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T06.MDM_T06
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T02_COMMON_ORDER <hl7-v2_8-MDM_T02_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
+   * - ``OBSERVATION``
+     - List[:ref:`MDM_T02_OBSERVATION <hl7-v2_8-MDM_T02_OBSERVATION>`]
+     - required
+     - OBSERVATION
+
+.. _hl7-v2_8-MDM_T07:
+
+MDM_T07 MDM/ACK - Document edit notification (S9.6.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T07.MDM_T07
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T01_COMMON_ORDER <hl7-v2_8-MDM_T01_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
+
+.. _hl7-v2_8-MDM_T08:
+
+MDM_T08 MDM/ACK - Document edit notification and content (S9.6.8).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T08.MDM_T08
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T02_COMMON_ORDER <hl7-v2_8-MDM_T02_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
+   * - ``OBSERVATION``
+     - List[:ref:`MDM_T02_OBSERVATION <hl7-v2_8-MDM_T02_OBSERVATION>`]
+     - required
+     - OBSERVATION
+
+.. _hl7-v2_8-MDM_T09:
+
+MDM_T09 MDM/ACK - Document replacement notification (S9.6.9).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T09.MDM_T09
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T01_COMMON_ORDER <hl7-v2_8-MDM_T01_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
+
+.. _hl7-v2_8-MDM_T10:
+
+MDM_T10 MDM/ACK - Document replacement notification and content (S9.6.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T10.MDM_T10
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T02_COMMON_ORDER <hl7-v2_8-MDM_T02_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
+   * - ``OBSERVATION``
+     - List[:ref:`MDM_T02_OBSERVATION <hl7-v2_8-MDM_T02_OBSERVATION>`]
+     - required
+     - OBSERVATION
+
+.. _hl7-v2_8-MDM_T11:
+
+MDM_T11 MDM/ACK - Document cancel notification (S9.6.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MDM_T11.MDM_T11
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PV1``
+     - :ref:`PV1 <hl7-v2_8-PV1>`
+     - required
+     - Patient Visit
+   * - ``COMMON_ORDER``
+     - Optional[List[:ref:`MDM_T01_COMMON_ORDER <hl7-v2_8-MDM_T01_COMMON_ORDER>`]]
+     - optional
+     - COMMON_ORDER
+   * - ``TXA``
+     - :ref:`TXA <hl7-v2_8-TXA>`
+     - required
+     - Transcription Document Header
+   * - ``CON``
+     - Optional[List[:ref:`CON <hl7-v2_8-CON>`]]
+     - optional
+     - Consent Segment
 
 .. _hl7-v2_8-MFK_M01:
+
+MFK_M01 HL7 v2 MFK_M01 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFK_M01.MFK_M01
    :noindex:
 
-   HL7 v2 MFK_M01 message.
-
-MFK_M01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MFA``
-     - 
      - Optional[List[:ref:`MFA <hl7-v2_8-MFA>`]]
      - optional
-     - 
-     - MFA: Optional, repeating
+     - Master File Acknowledgment
 
 .. _hl7-v2_8-MFN_M02:
+
+MFN_M02 MFN/MFK - Master file - staff practitioner (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M02.MFN_M02
    :noindex:
 
-   HL7 v2 MFN_M02 message.
-
-MFN_M02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_STAFF``
-     - 
      - List[:ref:`MFN_M02_MF_STAFF <hl7-v2_8-MFN_M02_MF_STAFF>`]
      - required
-     - 
-     - MF_STAFF: Required, repeating
+     - MF_STAFF
 
 .. _hl7-v2_8-MFN_M04:
+
+MFN_M04 MFN/MFK - Master files charge description (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M04.MFN_M04
    :noindex:
 
-   HL7 v2 MFN_M04 message.
-
-MFN_M04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_CDM``
-     - 
      - List[:ref:`MFN_M04_MF_CDM <hl7-v2_8-MFN_M04_MF_CDM>`]
      - required
-     - 
-     - MF_CDM: Required, repeating
+     - MF_CDM
 
 .. _hl7-v2_8-MFN_M05:
+
+MFN_M05 MFN/MFK - Patient location master file (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M05.MFN_M05
    :noindex:
 
-   HL7 v2 MFN_M05 message.
-
-MFN_M05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_LOCATION``
-     - 
      - List[:ref:`MFN_M05_MF_LOCATION <hl7-v2_8-MFN_M05_MF_LOCATION>`]
      - required
-     - 
-     - MF_LOCATION: Required, repeating
+     - MF_LOCATION
 
 .. _hl7-v2_8-MFN_M06:
+
+MFN_M06 MFN/MFK - Clinical study with phases and schedules master file (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M06.MFN_M06
    :noindex:
 
-   HL7 v2 MFN_M06 message.
-
-MFN_M06
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_CLIN_STUDY``
-     - 
      - List[:ref:`MFN_M06_MF_CLIN_STUDY <hl7-v2_8-MFN_M06_MF_CLIN_STUDY>`]
      - required
-     - 
-     - MF_CLIN_STUDY: Required, repeating
+     - MF_CLIN_STUDY
 
 .. _hl7-v2_8-MFN_M07:
+
+MFN_M07 MFN/MFK - Clinical study without phases but with schedules master file (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M07.MFN_M07
    :noindex:
 
-   HL7 v2 MFN_M07 message.
-
-MFN_M07
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_CLIN_STUDY_SCHED``
-     - 
      - List[:ref:`MFN_M07_MF_CLIN_STUDY_SCHED <hl7-v2_8-MFN_M07_MF_CLIN_STUDY_SCHED>`]
      - required
-     - 
-     - MF_CLIN_STUDY_SCHED: Required, repeating
+     - MF_CLIN_STUDY_SCHED
 
 .. _hl7-v2_8-MFN_M08:
+
+MFN_M08 MFN/MFK - Test/observation (numeric) master file (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M08.MFN_M08
    :noindex:
 
-   HL7 v2 MFN_M08 message.
-
-MFN_M08
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_TEST_NUMERIC``
-     - 
      - List[:ref:`MFN_M08_MF_TEST_NUMERIC <hl7-v2_8-MFN_M08_MF_TEST_NUMERIC>`]
      - required
-     - 
-     - MF_TEST_NUMERIC: Required, repeating
+     - MF_TEST_NUMERIC
 
 .. _hl7-v2_8-MFN_M09:
+
+MFN_M09 MFN/MFK - Test/observation (categorical) master file (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M09.MFN_M09
    :noindex:
 
-   HL7 v2 MFN_M09 message.
-
-MFN_M09
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_TEST_CATEGORICAL``
-     - 
      - List[:ref:`MFN_M09_MF_TEST_CATEGORICAL <hl7-v2_8-MFN_M09_MF_TEST_CATEGORICAL>`]
      - required
-     - 
-     - MF_TEST_CATEGORICAL: Required, repeating
+     - MF_TEST_CATEGORICAL
 
 .. _hl7-v2_8-MFN_M10:
+
+MFN_M10 MFN/MFK - Test /observation batteries master file (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M10.MFN_M10
    :noindex:
 
-   HL7 v2 MFN_M10 message.
-
-MFN_M10
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_TEST_BATTERIES``
-     - 
      - List[:ref:`MFN_M10_MF_TEST_BATTERIES <hl7-v2_8-MFN_M10_MF_TEST_BATTERIES>`]
      - required
-     - 
-     - MF_TEST_BATTERIES: Required, repeating
+     - MF_TEST_BATTERIES
 
 .. _hl7-v2_8-MFN_M11:
+
+MFN_M11 MFN/MFK - Test/calculated observations master file (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M11.MFN_M11
    :noindex:
 
-   HL7 v2 MFN_M11 message.
-
-MFN_M11
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_TEST_CALCULATED``
-     - 
      - List[:ref:`MFN_M11_MF_TEST_CALCULATED <hl7-v2_8-MFN_M11_MF_TEST_CALCULATED>`]
      - required
-     - 
-     - MF_TEST_CALCULATED: Required, repeating
+     - MF_TEST_CALCULATED
 
 .. _hl7-v2_8-MFN_M12:
+
+MFN_M12 MFN/MFK - Master file notification message (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M12.MFN_M12
    :noindex:
 
-   HL7 v2 MFN_M12 message.
-
-MFN_M12
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_OBS_ATTRIBUTES``
-     - 
      - List[:ref:`MFN_M12_MF_OBS_ATTRIBUTES <hl7-v2_8-MFN_M12_MF_OBS_ATTRIBUTES>`]
      - required
-     - 
-     - MF_OBS_ATTRIBUTES: Required, repeating
+     - MF_OBS_ATTRIBUTES
 
 .. _hl7-v2_8-MFN_M13:
+
+MFN_M13 MFN/MFK - Master file notification - general (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M13.MFN_M13
    :noindex:
 
-   HL7 v2 MFN_M13 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-MFN_M13
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MFI``
+     - :ref:`MFI <hl7-v2_8-MFI>`
+     - required
+     - Master File Identification
+   * - ``MFE``
+     - List[:ref:`MFE <hl7-v2_8-MFE>`]
+     - required
+     - Master File Entry
+
+.. _hl7-v2_8-MFN_M14:
+
+MFN_M14 MFN/MFK - Master file notification - site defined (S8.4.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.MFN_M14.MFN_M14
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
-   * - ``MFE``
-     - 
-     - List[:ref:`MFE <hl7-v2_8-MFE>`]
+     - Master File Identification
+   * - ``MF_SITE_DEFINED``
+     - List[MFN_ZnnMF_SITE_DEFINED]
      - required
-     - 
-     - MFE: Required, repeating
+     - MF_SITE_DEFINED
 
 .. _hl7-v2_8-MFN_M15:
+
+MFN_M15 MFN/MFK - Inventory item master file notification (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M15.MFN_M15
    :noindex:
 
-   HL7 v2 MFN_M15 message.
-
-MFN_M15
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_INV_ITEM``
-     - 
      - List[:ref:`MFN_M15_MF_INV_ITEM <hl7-v2_8-MFN_M15_MF_INV_ITEM>`]
      - required
-     - 
-     - MF_INV_ITEM: Required, repeating
+     - MF_INV_ITEM
 
 .. _hl7-v2_8-MFN_M16:
+
+MFN_M16 MFN/MFK - Master File Notification Inventory Item Enhanced (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M16.MFN_M16
    :noindex:
 
-   HL7 v2 MFN_M16 message.
-
-MFN_M16
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MATERIAL_ITEM_RECORD``
-     - 
      - List[:ref:`MFN_M16_MATERIAL_ITEM_RECORD <hl7-v2_8-MFN_M16_MATERIAL_ITEM_RECORD>`]
      - required
-     - 
-     - MATERIAL_ITEM_RECORD: Required, repeating
+     - MATERIAL_ITEM_RECORD
 
 .. _hl7-v2_8-MFN_M17:
+
+MFN_M17 DRG Master File Message (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_M17.MFN_M17
    :noindex:
 
-   HL7 v2 MFN_M17 message.
-
-MFN_M17
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_DRG``
-     - 
      - List[:ref:`MFN_M17_MF_DRG <hl7-v2_8-MFN_M17_MF_DRG>`]
      - required
-     - 
-     - MF_DRG: Required, repeating
+     - MF_DRG
 
 .. _hl7-v2_8-MFN_Znn:
+
+MFN_Znn Master files notification (S8.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.MFN_Znn.MFN_Znn
    :noindex:
 
-   HL7 v2 MFN_Znn message.
-
-MFN_Znn
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MFI``
-     - 
      - :ref:`MFI <hl7-v2_8-MFI>`
      - required
-     - 
-     - MFI: Required
+     - Master File Identification
    * - ``MF_SITE_DEFINED``
-     - 
      - List[MFN_ZnnMF_SITE_DEFINED]
      - required
-     - 
-     - MF_SITE_DEFINED: Required, repeating
+     - MF_SITE_DEFINED
 
 .. _hl7-v2_8-NMD_N02:
+
+NMD_N02 NMD/ACK - Application management data message (unsolicited) (S14.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.NMD_N02.NMD_N02
    :noindex:
 
-   HL7 v2 NMD_N02 message.
-
-NMD_N02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``CLOCK_AND_STATS_WITH_NOTES``
-     - 
      - List[:ref:`NMD_N02_CLOCK_AND_STATS_WITH_NOTES <hl7-v2_8-NMD_N02_CLOCK_AND_STATS_WITH_NOTES>`]
      - required
-     - 
-     - CLOCK_AND_STATS_WITH_NOTES: Required, repeating
+     - CLOCK_AND_STATS_WITH_NOTES
 
 .. _hl7-v2_8-OMB_O27:
+
+OMB_O27 OMB - Blood product order (S4.13.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMB_O27.OMB_O27
    :noindex:
 
-   HL7 v2 OMB_O27 message.
-
-OMB_O27
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMB_O27_PATIENT <hl7-v2_8-OMB_O27_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OMB_O27_ORDER <hl7-v2_8-OMB_O27_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OMD_O03:
+
+OMD_O03 OMD - Diet order (S4.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMD_O03.OMD_O03
    :noindex:
 
-   HL7 v2 OMD_O03 message.
-
-OMD_O03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMD_O03_PATIENT <hl7-v2_8-OMD_O03_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER_DIET``
-     - 
      - List[:ref:`OMD_O03_ORDER_DIET <hl7-v2_8-OMD_O03_ORDER_DIET>`]
      - required
-     - 
-     - ORDER_DIET: Required, repeating
+     - ORDER_DIET
    * - ``ORDER_TRAY``
-     - 
      - Optional[List[:ref:`OMD_O03_ORDER_TRAY <hl7-v2_8-OMD_O03_ORDER_TRAY>`]]
      - optional
-     - 
-     - ORDER_TRAY: Optional, repeating
+     - ORDER_TRAY
 
 .. _hl7-v2_8-OMG_O19:
+
+OMG_O19 OMG - General clinical order (S4.4.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMG_O19.OMG_O19
    :noindex:
 
-   HL7 v2 OMG_O19 message.
-
-OMG_O19
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMG_O19_PATIENT <hl7-v2_8-OMG_O19_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OMG_O19_ORDER <hl7-v2_8-OMG_O19_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OMI_O23:
+
+OMI_O23 OMI - Imaging order (S4.4.14).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMI_O23.OMI_O23
    :noindex:
 
-   HL7 v2 OMI_O23 message.
-
-OMI_O23
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMI_O23_PATIENT <hl7-v2_8-OMI_O23_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OMI_O23_ORDER <hl7-v2_8-OMI_O23_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OML_O21:
+
+OML_O21 OML - Laboratory order (S4.4.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OML_O21.OML_O21
    :noindex:
 
-   HL7 v2 OML_O21 message.
-
-OML_O21
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OML_O21_PATIENT <hl7-v2_8-OML_O21_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OML_O21_ORDER <hl7-v2_8-OML_O21_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OML_O33:
+
+OML_O33 OML - Laboratory order for multiple orders related to a single specimen (S4.4.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OML_O33.OML_O33
    :noindex:
 
-   HL7 v2 OML_O33 message.
-
-OML_O33
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OML_O33_PATIENT <hl7-v2_8-OML_O33_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``SPECIMEN``
-     - 
      - List[:ref:`OML_O33_SPECIMEN <hl7-v2_8-OML_O33_SPECIMEN>`]
      - required
-     - 
-     - SPECIMEN: Required, repeating
+     - SPECIMEN
 
 .. _hl7-v2_8-OML_O35:
+
+OML_O35 OML - Laboratory order for multiple orders related to a single container of a sp (S4.4.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OML_O35.OML_O35
    :noindex:
 
-   HL7 v2 OML_O35 message.
-
-OML_O35
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OML_O35_PATIENT <hl7-v2_8-OML_O35_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``SPECIMEN``
-     - 
      - List[:ref:`OML_O35_SPECIMEN <hl7-v2_8-OML_O35_SPECIMEN>`]
      - required
-     - 
-     - SPECIMEN: Required, repeating
+     - SPECIMEN
 
 .. _hl7-v2_8-OML_O39:
+
+OML_O39 Specimen shipment centric laboratory order (S4.4.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OML_O39.OML_O39
    :noindex:
 
-   HL7 v2 OML_O39 message.
-
-OML_O39
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OML_O39_PATIENT <hl7-v2_8-OML_O39_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OML_O39_ORDER <hl7-v2_8-OML_O39_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OMN_O07:
+
+OMN_O07 OMN - Non-stock requisition order (S4.10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMN_O07.OMN_O07
    :noindex:
 
-   HL7 v2 OMN_O07 message.
-
-OMN_O07
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMN_O07_PATIENT <hl7-v2_8-OMN_O07_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OMN_O07_ORDER <hl7-v2_8-OMN_O07_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OMP_O09:
+
+OMP_O09 OMP - Pharmacy/treatment order (S4.A.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMP_O09.OMP_O09
    :noindex:
 
-   HL7 v2 OMP_O09 message.
-
-OMP_O09
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMP_O09_PATIENT <hl7-v2_8-OMP_O09_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OMP_O09_ORDER <hl7-v2_8-OMP_O09_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OMQ_O57:
+
+OMQ_O57 HL7 v2 OMQ_O57 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMQ_O57.OMQ_O57
    :noindex:
 
-   HL7 v2 OMQ_O57 message.
-
-OMQ_O57
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMQ_O57_PATIENT <hl7-v2_8-OMQ_O57_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OMQ_O57_ORDER <hl7-v2_8-OMQ_O57_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OMS_O05:
+
+OMS_O05 OMS - Stock requisition order (S4.10.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OMS_O05.OMS_O05
    :noindex:
 
-   HL7 v2 OMS_O05 message.
-
-OMS_O05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OMS_O05_PATIENT <hl7-v2_8-OMS_O05_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OMS_O05_ORDER <hl7-v2_8-OMS_O05_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OPL_O37:
+
+OPL_O37 OPL - Population/Location-Based Laboratory Order Message (S4.4.16).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OPL_O37.OPL_O37
    :noindex:
 
-   HL7 v2 OPL_O37 message.
-
-OPL_O37
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PRT``
-     - 
      - List[:ref:`PRT <hl7-v2_8-PRT>`]
      - required
-     - 
-     - PRT: Required, repeating
+     - Participation Information
    * - ``GUARANTOR``
-     - 
      - Optional[:ref:`OPL_O37_GUARANTOR <hl7-v2_8-OPL_O37_GUARANTOR>`]
      - optional
-     - 
-     - GUARANTOR: Optional
+     - GUARANTOR
    * - ``ORDER``
-     - 
      - List[:ref:`OPL_O37_ORDER <hl7-v2_8-OPL_O37_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-OPR_O38:
+
+OPR_O38 OPR - Population/Location-Based Laboratory Order Acknowledgment Message (S4.4.17).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OPR_O38.OPR_O38
    :noindex:
 
-   HL7 v2 OPR_O38 message.
-
-OPR_O38
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`OPR_O38_RESPONSE <hl7-v2_8-OPR_O38_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-OPU_R25:
+
+OPU_R25 OPU - Unsolicited Population/Location-Based Laboratory Observation Message (S7.3.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OPU_R25.OPU_R25
    :noindex:
 
-   HL7 v2 OPU_R25 message.
-
-OPU_R25
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[:ref:`NTE <hl7-v2_8-NTE>`]
      - optional
-     - 
-     - NTE: Optional
+     - Notes and Comments
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_8-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient Visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_8-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient Visit - Additional Information
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``PATIENT_VISIT_OBSERVATION``
-     - 
      - Optional[List[:ref:`OPU_R25_PATIENT_VISIT_OBSERVATION <hl7-v2_8-OPU_R25_PATIENT_VISIT_OBSERVATION>`]]
      - optional
-     - 
-     - PATIENT_VISIT_OBSERVATION: Optional, repeating
+     - PATIENT_VISIT_OBSERVATION
    * - ``ACCESSION_DETAIL``
-     - 
      - List[:ref:`OPU_R25_ACCESSION_DETAIL <hl7-v2_8-OPU_R25_ACCESSION_DETAIL>`]
      - required
-     - 
-     - ACCESSION_DETAIL: Required, repeating
+     - ACCESSION_DETAIL
 
 .. _hl7-v2_8-ORA_R33:
+
+ORA_R33 ORA - Observation Report Acknowledgement (S7.3.13).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORA_R33.ORA_R33
    :noindex:
 
-   HL7 v2 ORA_R33 message.
-
-ORA_R33
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``ORC``
-     - 
      - Optional[:ref:`ORC <hl7-v2_8-ORC>`]
      - optional
-     - 
-     - ORC: Optional
+     - Common Order
 
 .. _hl7-v2_8-ORA_R41:
+
+ORA_R41 Observation Report Alert Acknowledgement (S7.3.13).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORA_R41.ORA_R41
    :noindex:
 
-   HL7 v2 ORA_R41 message.
-
-ORA_R41
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
 
 .. _hl7-v2_8-ORB_O28:
+
+ORB_O28 ORB - Blood product order acknowledgment (S4.13.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORB_O28.ORB_O28
    :noindex:
 
-   HL7 v2 ORB_O28 message.
-
-ORB_O28
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORB_O28_RESPONSE <hl7-v2_8-ORB_O28_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORD_O04:
+
+ORD_O04 ORD - Diet order acknowledgment (S4.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORD_O04.ORD_O04
    :noindex:
 
-   HL7 v2 ORD_O04 message.
-
-ORD_O04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORD_O04_RESPONSE <hl7-v2_8-ORD_O04_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORG_O20:
+
+ORG_O20 ORG/ORL - General clinical order response (S4.4.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORG_O20.ORG_O20
    :noindex:
 
-   HL7 v2 ORG_O20 message.
-
-ORG_O20
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORG_O20_RESPONSE <hl7-v2_8-ORG_O20_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORI_O24:
+
+ORI_O24 ORI - Imaging order response message to any OMI (S4.4.15).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORI_O24.ORI_O24
    :noindex:
 
-   HL7 v2 ORI_O24 message.
-
-ORI_O24
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORI_O24_RESPONSE <hl7-v2_8-ORI_O24_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORL_O22:
+
+ORL_O22 ORL - General laboratory order response message to any OML (S4.4.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORL_O22.ORL_O22
    :noindex:
 
-   HL7 v2 ORL_O22 message.
-
-ORL_O22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORL_O22_RESPONSE <hl7-v2_8-ORL_O22_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORL_O34:
+
+ORL_O34 ORL - Laboratory order response message to a multiple order related to single sp (S4.4.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORL_O34.ORL_O34
    :noindex:
 
-   HL7 v2 ORL_O34 message.
-
-ORL_O34
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORL_O34_RESPONSE <hl7-v2_8-ORL_O34_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORL_O36:
+
+ORL_O36 ORL - Laboratory order response message to a single container of a specimen OML (S4.4.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORL_O36.ORL_O36
    :noindex:
 
-   HL7 v2 ORL_O36 message.
-
-ORL_O36
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORL_O36_RESPONSE <hl7-v2_8-ORL_O36_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORL_O40:
+
+ORL_O40 Specimen Shipment Centric Laboratory Order Acknowledgment Message (S4.4.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORL_O40.ORL_O40
    :noindex:
 
-   HL7 v2 ORL_O40 message.
-
-ORL_O40
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORL_O40_RESPONSE <hl7-v2_8-ORL_O40_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORN_O08:
+
+ORN_O08 ORN - Non-stock requisition acknowledgment (S4.10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORN_O08.ORN_O08
    :noindex:
 
-   HL7 v2 ORN_O08 message.
-
-ORN_O08
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORN_O08_RESPONSE <hl7-v2_8-ORN_O08_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORP_O10:
+
+ORP_O10 ORP - Pharmacy/treatment order acknowledgment (S4.A.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORP_O10.ORP_O10
    :noindex:
 
-   HL7 v2 ORP_O10 message.
-
-ORP_O10
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORP_O10_RESPONSE <hl7-v2_8-ORP_O10_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORS_O06:
+
+ORS_O06 ORS - Stock requisition acknowledgment (S4.10.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORS_O06.ORS_O06
    :noindex:
 
-   HL7 v2 ORS_O06 message.
-
-ORS_O06
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORS_O06_RESPONSE <hl7-v2_8-ORS_O06_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-ORU_R01:
+
+ORU_R01 ORU/ACK - Unsolicited transmission of an observation message (S7.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORU_R01.ORU_R01
    :noindex:
 
-   HL7 v2 ORU_R01 message.
-
-ORU_R01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PATIENT_RESULT``
-     - 
      - List[:ref:`ORU_R01_PATIENT_RESULT <hl7-v2_8-ORU_R01_PATIENT_RESULT>`]
      - required
-     - 
-     - PATIENT_RESULT: Required, repeating
+     - PATIENT_RESULT
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-ORU_R30:
+
+ORU_R30 ORU - Unsolicited Point-Of-Care Observation Message Without Existing Order - Pla (S7.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORU_R30.ORU_R30
    :noindex:
 
-   HL7 v2 ORU_R30 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-ORU_R30
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PRT``
+     - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
+     - optional
+     - Participation Information
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``PATIENT_OBSERVATION``
+     - Optional[List[:ref:`ORU_R30_PATIENT_OBSERVATION <hl7-v2_8-ORU_R30_PATIENT_OBSERVATION>`]]
+     - optional
+     - PATIENT_OBSERVATION
+   * - ``VISIT``
+     - Optional[:ref:`ORU_R30_VISIT <hl7-v2_8-ORU_R30_VISIT>`]
+     - optional
+     - VISIT
+   * - ``ORC``
+     - :ref:`ORC <hl7-v2_8-ORC>`
+     - required
+     - Common Order
+   * - ``OBR``
+     - :ref:`OBR <hl7-v2_8-OBR>`
+     - required
+     - Observation Request
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``TIMING_QTY``
+     - Optional[List[:ref:`ORU_R30_TIMING_QTY <hl7-v2_8-ORU_R30_TIMING_QTY>`]]
+     - optional
+     - TIMING_QTY
+   * - ``OBSERVATION``
+     - List[:ref:`ORU_R30_OBSERVATION <hl7-v2_8-ORU_R30_OBSERVATION>`]
+     - required
+     - OBSERVATION
+
+.. _hl7-v2_8-ORU_R31:
+
+ORU_R31 ORU - Unsolicited New Point-Of-Care Observation Message - Search For An Order (S7.3.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ORU_R31.ORU_R31
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``PATIENT_OBSERVATION``
-     - 
      - Optional[List[:ref:`ORU_R30_PATIENT_OBSERVATION <hl7-v2_8-ORU_R30_PATIENT_OBSERVATION>`]]
      - optional
-     - 
-     - PATIENT_OBSERVATION: Optional, repeating
+     - PATIENT_OBSERVATION
    * - ``VISIT``
-     - 
      - Optional[:ref:`ORU_R30_VISIT <hl7-v2_8-ORU_R30_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_8-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common Order
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_8-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation Request
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``TIMING_QTY``
-     - 
      - Optional[List[:ref:`ORU_R30_TIMING_QTY <hl7-v2_8-ORU_R30_TIMING_QTY>`]]
      - optional
-     - 
-     - TIMING_QTY: Optional, repeating
+     - TIMING_QTY
    * - ``OBSERVATION``
-     - 
      - List[:ref:`ORU_R30_OBSERVATION <hl7-v2_8-ORU_R30_OBSERVATION>`]
      - required
-     - 
-     - OBSERVATION: Required, repeating
+     - OBSERVATION
+
+.. _hl7-v2_8-ORU_R32:
+
+ORU_R32 ORU - Unsolicited Pre-Ordered Point-Of-Care Observation (S7.3.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ORU_R32.ORU_R32
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PRT``
+     - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
+     - optional
+     - Participation Information
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``PATIENT_OBSERVATION``
+     - Optional[List[:ref:`ORU_R30_PATIENT_OBSERVATION <hl7-v2_8-ORU_R30_PATIENT_OBSERVATION>`]]
+     - optional
+     - PATIENT_OBSERVATION
+   * - ``VISIT``
+     - Optional[:ref:`ORU_R30_VISIT <hl7-v2_8-ORU_R30_VISIT>`]
+     - optional
+     - VISIT
+   * - ``ORC``
+     - :ref:`ORC <hl7-v2_8-ORC>`
+     - required
+     - Common Order
+   * - ``OBR``
+     - :ref:`OBR <hl7-v2_8-OBR>`
+     - required
+     - Observation Request
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``TIMING_QTY``
+     - Optional[List[:ref:`ORU_R30_TIMING_QTY <hl7-v2_8-ORU_R30_TIMING_QTY>`]]
+     - optional
+     - TIMING_QTY
+   * - ``OBSERVATION``
+     - List[:ref:`ORU_R30_OBSERVATION <hl7-v2_8-ORU_R30_OBSERVATION>`]
+     - required
+     - OBSERVATION
+
+.. _hl7-v2_8-ORU_R40:
+
+ORU_R40 ORU - Unsolicited Report Alarm (S7.3.12).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.ORU_R40.ORU_R40
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PATIENT_RESULT``
+     - List[:ref:`ORU_R01_PATIENT_RESULT <hl7-v2_8-ORU_R01_PATIENT_RESULT>`]
+     - required
+     - PATIENT_RESULT
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-ORX_O58:
+
+ORX_O58 HL7 v2 ORX_O58 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.ORX_O58.ORX_O58
    :noindex:
 
-   HL7 v2 ORX_O58 message.
-
-ORX_O58
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`ORX_O58_RESPONSE <hl7-v2_8-ORX_O58_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-OSM_R26:
+
+OSM_R26 OSM - Unsolicited Specimen Shipment Manifest Message (S7.18.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OSM_R26.OSM_R26
    :noindex:
 
-   HL7 v2 OSM_R26 message.
-
-OSM_R26
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``SHIPMENT``
-     - 
      - List[:ref:`OSM_R26_SHIPMENT <hl7-v2_8-OSM_R26_SHIPMENT>`]
      - required
-     - 
-     - SHIPMENT: Required, repeating
+     - SHIPMENT
 
 .. _hl7-v2_8-OSU_O51:
+
+OSU_O51 HL7 v2 OSU_O51 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OSU_O51.OSU_O51
    :noindex:
 
-   HL7 v2 OSU_O51 message.
-
-OSU_O51
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PID``
-     - 
      - Optional[:ref:`PID <hl7-v2_8-PID>`]
      - optional
-     - 
-     - PID: Optional
+     - Patient Identification
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``ORDER_STATUS``
-     - 
      - List[:ref:`OSU_O51_ORDER_STATUS <hl7-v2_8-OSU_O51_ORDER_STATUS>`]
      - required
-     - 
-     - ORDER_STATUS: Required, repeating
+     - ORDER_STATUS
 
 .. _hl7-v2_8-OUL_R22:
+
+OUL_R22 OUL - Unsolicited Specimen Oriented Observation Message (S7.3.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OUL_R22.OUL_R22
    :noindex:
 
-   HL7 v2 OUL_R22 message.
-
-OUL_R22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[:ref:`NTE <hl7-v2_8-NTE>`]
      - optional
-     - 
-     - NTE: Optional
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OUL_R22_PATIENT <hl7-v2_8-OUL_R22_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``SPECIMEN``
-     - 
      - List[:ref:`OUL_R22_SPECIMEN <hl7-v2_8-OUL_R22_SPECIMEN>`]
      - required
-     - 
-     - SPECIMEN: Required, repeating
+     - SPECIMEN
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-OUL_R23:
+
+OUL_R23 OUL - Unsolicited Specimen Container Oriented Observation Message (S7.3.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OUL_R23.OUL_R23
    :noindex:
 
-   HL7 v2 OUL_R23 message.
-
-OUL_R23
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[:ref:`NTE <hl7-v2_8-NTE>`]
      - optional
-     - 
-     - NTE: Optional
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OUL_R23_PATIENT <hl7-v2_8-OUL_R23_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``SPECIMEN``
-     - 
      - List[:ref:`OUL_R23_SPECIMEN <hl7-v2_8-OUL_R23_SPECIMEN>`]
      - required
-     - 
-     - SPECIMEN: Required, repeating
+     - SPECIMEN
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-OUL_R24:
+
+OUL_R24 OUL - Unsolicited Order Oriented Observation Message (S7.3.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.OUL_R24.OUL_R24
    :noindex:
 
-   HL7 v2 OUL_R24 message.
-
-OUL_R24
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[:ref:`NTE <hl7-v2_8-NTE>`]
      - optional
-     - 
-     - NTE: Optional
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OUL_R24_PATIENT <hl7-v2_8-OUL_R24_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``ORDER``
-     - 
      - List[:ref:`OUL_R24_ORDER <hl7-v2_8-OUL_R24_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-PEX_P07:
+
+PEX_P07 PEX - Unsolicited initial individual product experience report (S7.11.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PEX_P07.PEX_P07
    :noindex:
 
-   HL7 v2 PEX_P07 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-PEX_P07
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PD1``
+     - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
+     - optional
+     - Patient Additional Demographic
+   * - ``PRT``
+     - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
+     - optional
+     - Participation Information
+   * - ``ARV``
+     - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
+     - optional
+     - Access Restriction
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``VISIT``
+     - Optional[:ref:`PEX_P07_VISIT <hl7-v2_8-PEX_P07_VISIT>`]
+     - optional
+     - VISIT
+   * - ``EXPERIENCE``
+     - List[:ref:`PEX_P07_EXPERIENCE <hl7-v2_8-PEX_P07_EXPERIENCE>`]
+     - required
+     - EXPERIENCE
+
+.. _hl7-v2_8-PEX_P08:
+
+PEX_P08 PEX - Unsolicited update individual product experience report (S7.11.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PEX_P08.PEX_P08
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``VISIT``
-     - 
      - Optional[:ref:`PEX_P07_VISIT <hl7-v2_8-PEX_P07_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``EXPERIENCE``
-     - 
      - List[:ref:`PEX_P07_EXPERIENCE <hl7-v2_8-PEX_P07_EXPERIENCE>`]
      - required
-     - 
-     - EXPERIENCE: Required, repeating
+     - EXPERIENCE
 
 .. _hl7-v2_8-PGL_PC6:
+
+PGL_PC6 PGL - PC/ goal add (S12.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PGL_PC6.PGL_PC6
    :noindex:
 
-   HL7 v2 PGL_PC6 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-PGL_PC6
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PGL_PC6_PATIENT_VISIT <hl7-v2_8-PGL_PC6_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``GOAL``
+     - List[:ref:`PGL_PC6_GOAL <hl7-v2_8-PGL_PC6_GOAL>`]
+     - required
+     - GOAL
+
+.. _hl7-v2_8-PGL_PC7:
+
+PGL_PC7 PGL - PC/ goal update (S12.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PGL_PC7.PGL_PC7
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PGL_PC6_PATIENT_VISIT <hl7-v2_8-PGL_PC6_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``GOAL``
-     - 
      - List[:ref:`PGL_PC6_GOAL <hl7-v2_8-PGL_PC6_GOAL>`]
      - required
-     - 
-     - GOAL: Required, repeating
+     - GOAL
+
+.. _hl7-v2_8-PGL_PC8:
+
+PGL_PC8 PGL - PC/ goal delete (S12.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PGL_PC8.PGL_PC8
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PGL_PC6_PATIENT_VISIT <hl7-v2_8-PGL_PC6_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``GOAL``
+     - List[:ref:`PGL_PC6_GOAL <hl7-v2_8-PGL_PC6_GOAL>`]
+     - required
+     - GOAL
 
 .. _hl7-v2_8-PMU_B01:
+
+PMU_B01 PMU/ACK - Add personnel record (S15.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PMU_B01.PMU_B01
    :noindex:
 
-   HL7 v2 PMU_B01 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-PMU_B01
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``STF``
+     - :ref:`STF <hl7-v2_8-STF>`
+     - required
+     - Staff Identification
+   * - ``PRA``
+     - Optional[List[:ref:`PRA <hl7-v2_8-PRA>`]]
+     - optional
+     - Practitioner Detail
+   * - ``ORG``
+     - Optional[List[:ref:`ORG <hl7-v2_8-ORG>`]]
+     - optional
+     - Practitioner Organization Unit
+   * - ``AFF``
+     - Optional[List[:ref:`AFF <hl7-v2_8-AFF>`]]
+     - optional
+     - Professional Affiliation
+   * - ``LAN``
+     - Optional[List[:ref:`LAN <hl7-v2_8-LAN>`]]
+     - optional
+     - Language Detail
+   * - ``EDU``
+     - Optional[List[:ref:`EDU <hl7-v2_8-EDU>`]]
+     - optional
+     - Educational Detail
+   * - ``CER``
+     - Optional[List[:ref:`CER <hl7-v2_8-CER>`]]
+     - optional
+     - Certificate Detail
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``PRT``
+     - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
+     - optional
+     - Participation Information
+   * - ``ROL``
+     - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
+     - optional
+     - Role
+
+.. _hl7-v2_8-PMU_B02:
+
+PMU_B02 PMU/ACK - Update personnel record (S15.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PMU_B02.PMU_B02
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``STF``
-     - 
      - :ref:`STF <hl7-v2_8-STF>`
      - required
-     - 
-     - STF: Required
+     - Staff Identification
    * - ``PRA``
-     - 
      - Optional[List[:ref:`PRA <hl7-v2_8-PRA>`]]
      - optional
-     - 
-     - PRA: Optional, repeating
+     - Practitioner Detail
    * - ``ORG``
-     - 
      - Optional[List[:ref:`ORG <hl7-v2_8-ORG>`]]
      - optional
-     - 
-     - ORG: Optional, repeating
+     - Practitioner Organization Unit
    * - ``AFF``
-     - 
      - Optional[List[:ref:`AFF <hl7-v2_8-AFF>`]]
      - optional
-     - 
-     - AFF: Optional, repeating
+     - Professional Affiliation
    * - ``LAN``
-     - 
      - Optional[List[:ref:`LAN <hl7-v2_8-LAN>`]]
      - optional
-     - 
-     - LAN: Optional, repeating
+     - Language Detail
    * - ``EDU``
-     - 
      - Optional[List[:ref:`EDU <hl7-v2_8-EDU>`]]
      - optional
-     - 
-     - EDU: Optional, repeating
+     - Educational Detail
    * - ``CER``
-     - 
      - Optional[List[:ref:`CER <hl7-v2_8-CER>`]]
      - optional
-     - 
-     - CER: Optional, repeating
+     - Certificate Detail
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``PRT``
-     - 
      - Optional[List[:ref:`PRT <hl7-v2_8-PRT>`]]
      - optional
-     - 
-     - PRT: Optional, repeating
+     - Participation Information
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_8-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
 
 .. _hl7-v2_8-PMU_B03:
+
+PMU_B03 PMU/ACK - Delete personnel re cord (S15.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PMU_B03.PMU_B03
    :noindex:
 
-   HL7 v2 PMU_B03 message.
-
-PMU_B03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``STF``
-     - 
      - :ref:`STF <hl7-v2_8-STF>`
      - required
-     - 
-     - STF: Required
+     - Staff Identification
 
 .. _hl7-v2_8-PMU_B04:
+
+PMU_B04 PMU/ACK - Active practicing person (S15.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PMU_B04.PMU_B04
    :noindex:
 
-   HL7 v2 PMU_B04 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-PMU_B04
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``STF``
+     - :ref:`STF <hl7-v2_8-STF>`
+     - required
+     - Staff Identification
+   * - ``PRA``
+     - Optional[List[:ref:`PRA <hl7-v2_8-PRA>`]]
+     - optional
+     - Practitioner Detail
+   * - ``ORG``
+     - Optional[List[:ref:`ORG <hl7-v2_8-ORG>`]]
+     - optional
+     - Practitioner Organization Unit
+
+.. _hl7-v2_8-PMU_B05:
+
+PMU_B05 PMU/ACK - Deactivate practicing person (S15.3.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PMU_B05.PMU_B05
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``STF``
-     - 
      - :ref:`STF <hl7-v2_8-STF>`
      - required
-     - 
-     - STF: Required
+     - Staff Identification
    * - ``PRA``
-     - 
      - Optional[List[:ref:`PRA <hl7-v2_8-PRA>`]]
      - optional
-     - 
-     - PRA: Optional, repeating
+     - Practitioner Detail
    * - ``ORG``
-     - 
      - Optional[List[:ref:`ORG <hl7-v2_8-ORG>`]]
      - optional
-     - 
-     - ORG: Optional, repeating
+     - Practitioner Organization Unit
+
+.. _hl7-v2_8-PMU_B06:
+
+PMU_B06 PMU/ACK - Terminate practicing person (S15.3.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PMU_B06.PMU_B06
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EVN``
+     - :ref:`EVN <hl7-v2_8-EVN>`
+     - required
+     - Event Type
+   * - ``STF``
+     - :ref:`STF <hl7-v2_8-STF>`
+     - required
+     - Staff Identification
+   * - ``PRA``
+     - Optional[List[:ref:`PRA <hl7-v2_8-PRA>`]]
+     - optional
+     - Practitioner Detail
+   * - ``ORG``
+     - Optional[List[:ref:`ORG <hl7-v2_8-ORG>`]]
+     - optional
+     - Practitioner Organization Unit
 
 .. _hl7-v2_8-PMU_B07:
+
+PMU_B07 PMU/ACK - Grant Certificate/Permission (S15.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PMU_B07.PMU_B07
    :noindex:
 
-   HL7 v2 PMU_B07 message.
-
-PMU_B07
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``STF``
-     - 
      - :ref:`STF <hl7-v2_8-STF>`
      - required
-     - 
-     - STF: Required
+     - Staff Identification
    * - ``PRA``
-     - 
      - Optional[:ref:`PRA <hl7-v2_8-PRA>`]
      - optional
-     - 
-     - PRA: Optional
+     - Practitioner Detail
    * - ``CERTIFICATE``
-     - 
      - Optional[List[:ref:`PMU_B07_CERTIFICATE <hl7-v2_8-PMU_B07_CERTIFICATE>`]]
      - optional
-     - 
-     - CERTIFICATE: Optional, repeating
+     - CERTIFICATE
 
 .. _hl7-v2_8-PMU_B08:
+
+PMU_B08 PMU/ACK - Revoke Certificate/Permission (S15.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PMU_B08.PMU_B08
    :noindex:
 
-   HL7 v2 PMU_B08 message.
-
-PMU_B08
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EVN``
-     - 
      - :ref:`EVN <hl7-v2_8-EVN>`
      - required
-     - 
-     - EVN: Required
+     - Event Type
    * - ``STF``
-     - 
      - :ref:`STF <hl7-v2_8-STF>`
      - required
-     - 
-     - STF: Required
+     - Staff Identification
    * - ``PRA``
-     - 
      - Optional[:ref:`PRA <hl7-v2_8-PRA>`]
      - optional
-     - 
-     - PRA: Optional
+     - Practitioner Detail
    * - ``CER``
-     - 
      - Optional[List[:ref:`CER <hl7-v2_8-CER>`]]
      - optional
-     - 
-     - CER: Optional, repeating
+     - Certificate Detail
 
 .. _hl7-v2_8-PPG_PCG:
+
+PPG_PCG PPG - PC/ pathway (goal-oriented) add (S12.3.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PPG_PCG.PPG_PCG
    :noindex:
 
-   HL7 v2 PPG_PCG message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-PPG_PCG
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PPG_PCG_PATIENT_VISIT <hl7-v2_8-PPG_PCG_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``PATHWAY``
+     - List[:ref:`PPG_PCG_PATHWAY <hl7-v2_8-PPG_PCG_PATHWAY>`]
+     - required
+     - PATHWAY
+
+.. _hl7-v2_8-PPG_PCH:
+
+PPG_PCH PPG - PC/ pathway (goal-oriented) update (S12.3.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PPG_PCH.PPG_PCH
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PPG_PCG_PATIENT_VISIT <hl7-v2_8-PPG_PCG_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``PATHWAY``
-     - 
      - List[:ref:`PPG_PCG_PATHWAY <hl7-v2_8-PPG_PCG_PATHWAY>`]
      - required
-     - 
-     - PATHWAY: Required, repeating
+     - PATHWAY
+
+.. _hl7-v2_8-PPG_PCJ:
+
+PPG_PCJ PPG - PC/ pathway (goal-oriented) delete (S12.3.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PPG_PCJ.PPG_PCJ
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PPG_PCG_PATIENT_VISIT <hl7-v2_8-PPG_PCG_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``PATHWAY``
+     - List[:ref:`PPG_PCG_PATHWAY <hl7-v2_8-PPG_PCG_PATHWAY>`]
+     - required
+     - PATHWAY
 
 .. _hl7-v2_8-PPP_PCB:
+
+PPP_PCB PPP - PC/ pathway (problem-oriented) add (S12.3.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PPP_PCB.PPP_PCB
    :noindex:
 
-   HL7 v2 PPP_PCB message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-PPP_PCB
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PPP_PCB_PATIENT_VISIT <hl7-v2_8-PPP_PCB_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``PATHWAY``
+     - List[:ref:`PPP_PCB_PATHWAY <hl7-v2_8-PPP_PCB_PATHWAY>`]
+     - required
+     - PATHWAY
+
+.. _hl7-v2_8-PPP_PCC:
+
+PPP_PCC PPP - PC/ pathway (problem-oriented) update (S12.3.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PPP_PCC.PPP_PCC
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PPP_PCB_PATIENT_VISIT <hl7-v2_8-PPP_PCB_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``PATHWAY``
-     - 
      - List[:ref:`PPP_PCB_PATHWAY <hl7-v2_8-PPP_PCB_PATHWAY>`]
      - required
-     - 
-     - PATHWAY: Required, repeating
+     - PATHWAY
+
+.. _hl7-v2_8-PPP_PCD:
+
+PPP_PCD PPP - PC/ pathway (problem-oriented) delete (S12.3.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PPP_PCD.PPP_PCD
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PPP_PCB_PATIENT_VISIT <hl7-v2_8-PPP_PCB_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``PATHWAY``
+     - List[:ref:`PPP_PCB_PATHWAY <hl7-v2_8-PPP_PCB_PATHWAY>`]
+     - required
+     - PATHWAY
 
 .. _hl7-v2_8-PPR_PC1:
+
+PPR_PC1 PPR - PC/ problem add (S12.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.PPR_PC1.PPR_PC1
    :noindex:
 
-   HL7 v2 PPR_PC1 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-PPR_PC1
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PPR_PC1_PATIENT_VISIT <hl7-v2_8-PPR_PC1_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``PROBLEM``
+     - List[:ref:`PPR_PC1_PROBLEM <hl7-v2_8-PPR_PC1_PROBLEM>`]
+     - required
+     - PROBLEM
+
+.. _hl7-v2_8-PPR_PC2:
+
+PPR_PC2 PPR - PC/ problem update (S12.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PPR_PC2.PPR_PC2
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PPR_PC1_PATIENT_VISIT <hl7-v2_8-PPR_PC1_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``PROBLEM``
-     - 
      - List[:ref:`PPR_PC1_PROBLEM <hl7-v2_8-PPR_PC1_PROBLEM>`]
      - required
-     - 
-     - PROBLEM: Required, repeating
+     - PROBLEM
+
+.. _hl7-v2_8-PPR_PC3:
+
+PPR_PC3 PPR - PC/ problem delete (S12.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.PPR_PC3.PPR_PC3
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`PPR_PC1_PATIENT_VISIT <hl7-v2_8-PPR_PC1_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``PROBLEM``
+     - List[:ref:`PPR_PC1_PROBLEM <hl7-v2_8-PPR_PC1_PROBLEM>`]
+     - required
+     - PROBLEM
 
 .. _hl7-v2_8-QBP_E03:
+
+QBP_E03 HealthCare Services Invoice Status (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_E03.QBP_E03
    :noindex:
 
-   HL7 v2 QBP_E03 message.
-
-QBP_E03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``QUERY_INFORMATION``
-     - 
      - :ref:`QBP_E03_QUERY_INFORMATION <hl7-v2_8-QBP_E03_QUERY_INFORMATION>`
      - required
-     - 
-     - QUERY_INFORMATION: Required
+     - QUERY_INFORMATION
 
 .. _hl7-v2_8-QBP_E22:
+
+QBP_E22 Authorization Request Status (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_E22.QBP_E22
    :noindex:
 
-   HL7 v2 QBP_E22 message.
-
-QBP_E22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``QUERY``
-     - 
      - :ref:`QBP_E22_QUERY <hl7-v2_8-QBP_E22_QUERY>`
      - required
-     - 
-     - QUERY: Required
+     - QUERY
 
 .. _hl7-v2_8-QBP_O33:
+
+QBP_O33 OML - Laboratory order for multiple orders related to a single specimen (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_O33.QBP_O33
    :noindex:
 
-   HL7 v2 QBP_O33 message.
-
-QBP_O33
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
 
 .. _hl7-v2_8-QBP_O34:
+
+QBP_O34 ORL - Laboratory order response message to a multiple order related to single sp (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_O34.QBP_O34
    :noindex:
 
-   HL7 v2 QBP_O34 message.
-
-QBP_O34
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
 
 .. _hl7-v2_8-QBP_Q11:
+
+QBP_Q11 QBP - Query by parameter requesting an RSP segment pattern response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_Q11.QBP_Q11
    :noindex:
 
-   HL7 v2 QBP_Q11 message.
-
-QBP_Q11
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``QBP``
-     - 
      - Optional[:ref:`QBP_Q11_QBP <hl7-v2_8-QBP_Q11_QBP>`]
      - optional
-     - 
-     - QBP: Optional
+     - QBP
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-QBP_Q13:
+
+QBP_Q13 HL7 v2 QBP_Q13 message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_Q13.QBP_Q13
    :noindex:
 
-   HL7 v2 QBP_Q13 message.
-
-QBP_Q13
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``PID``
-     - 
      - Optional[:ref:`PID <hl7-v2_8-PID>`]
      - optional
-     - 
-     - PID: Optional
+     - Patient Identification
    * - ``RDF``
-     - 
      - Optional[:ref:`RDF <hl7-v2_8-RDF>`]
      - optional
-     - 
-     - RDF: Optional
+     - Table Row Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-QBP_Q15:
+
+QBP_Q15 QBP - Query by parameter requesting an RDY display response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_Q15.QBP_Q15
    :noindex:
 
-   HL7 v2 QBP_Q15 message.
-
-QBP_Q15
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-QBP_Q21:
+
+QBP_Q21 QBP - Get person demographics (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_Q21.QBP_Q21
    :noindex:
 
-   HL7 v2 QBP_Q21 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-QBP_Q21
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Q22:
+
+QBP_Q22 QBP - Find candidates (S3.3.57).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q22.QBP_Q22
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Q23:
+
+QBP_Q23 QBP - Get corresponding identifiers (S3.3.58).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q23.QBP_Q23
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Q24:
+
+QBP_Q24 QBP - Allocate identifiers (S3.3.59).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q24.QBP_Q24
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Q25:
+
+QBP_Q25 QBP - Personnel Information by Segment Query (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q25.QBP_Q25
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Q31:
+
+QBP_Q31 QBP Query Dispense history (S4.A.20).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q31.QBP_Q31
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``QBP``
+     - Optional[:ref:`QBP_Q11_QBP <hl7-v2_8-QBP_Q11_QBP>`]
+     - optional
+     - QBP
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Q32:
+
+QBP_Q32 Find Candidates including Visit Information (S3.3.63).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q32.QBP_Q32
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Q33:
+
+QBP_Q33 Get Donor Record Candidates Message (S4.16.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q33.QBP_Q33
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+
+.. _hl7-v2_8-QBP_Q34:
+
+QBP_Q34 Get Donor Record Message (S4.16.8).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Q34.QBP_Q34
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
 
 .. _hl7-v2_8-QBP_Qnn:
+
+QBP_Qnn HL7 v2 QBP_Qnn message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_Qnn.QBP_Qnn
    :noindex:
 
-   HL7 v2 QBP_Qnn message.
-
-QBP_Qnn
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RDF``
-     - 
      - Optional[:ref:`RDF <hl7-v2_8-RDF>`]
      - optional
-     - 
-     - RDF: Optional
+     - Table Row Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-QBP_Z73:
+
+QBP_Z73 Information about Phone Calls (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QBP_Z73.QBP_Z73
    :noindex:
 
-   HL7 v2 QBP_Z73 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-QBP_Z73
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+
+.. _hl7-v2_8-QBP_Z87:
+
+QBP_Z87 Dispense Information (S5.9.2.1.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Z87.QBP_Z87
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
+   * - ``QBP``
+     - Optional[:ref:`QBP_Q11_QBP <hl7-v2_8-QBP_Q11_QBP>`]
+     - optional
+     - QBP
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QBP_Z89:
+
+QBP_Z89 Lab Results History (S5.9.2.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QBP_Z89.QBP_Z89
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``QBP``
+     - Optional[:ref:`QBP_Q11_QBP <hl7-v2_8-QBP_Q11_QBP>`]
+     - optional
+     - QBP
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-QCN_J01:
+
+QCN_J01 QCN/ACK - Cancel query/acknowledge message (S5.4.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QCN_J01.QCN_J01
    :noindex:
 
-   HL7 v2 QCN_J01 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-QCN_J01
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QID``
+     - :ref:`QID <hl7-v2_8-QID>`
+     - required
+     - Query Identification
+
+.. _hl7-v2_8-QCN_J02:
+
+QCN_J02 QSX/ACK - Cancel subscription/acknowledge message (S5.4.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QCN_J02.QCN_J02
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QID``
-     - 
      - :ref:`QID <hl7-v2_8-QID>`
      - required
-     - 
-     - QID: Required
+     - Query Identification
 
 .. _hl7-v2_8-QSB_Q16:
+
+QSB_Q16 QSB - Create subscription (S5.4.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QSB_Q16.QSB_Q16
    :noindex:
 
-   HL7 v2 QSB_Q16 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-QSB_Q16
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``RCP``
+     - :ref:`RCP <hl7-v2_8-RCP>`
+     - required
+     - Response Control Parameter
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-QSB_Z83:
+
+QSB_Z83 ORU Subscription (S5.7.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.QSB_Z83.QSB_Z83
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-QVR_Q17:
+
+QVR_Q17 QVR - Query for previous events (S5.4.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.QVR_Q17.QVR_Q17
    :noindex:
 
-   HL7 v2 QVR_Q17 message.
-
-QVR_Q17
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``QBP``
-     - 
      - Optional[:ref:`QVR_Q17_QBP <hl7-v2_8-QVR_Q17_QBP>`]
      - optional
-     - 
-     - QBP: Optional
+     - QBP
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RAS_O17:
+
+RAS_O17 RAS - Pharmacy/treatment administration (S4.A.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RAS_O17.RAS_O17
    :noindex:
 
-   HL7 v2 RAS_O17 message.
-
-RAS_O17
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RAS_O17_PATIENT <hl7-v2_8-RAS_O17_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RAS_O17_ORDER <hl7-v2_8-RAS_O17_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-RDE_O11:
+
+RDE_O11 RDE - Pharmacy/treatment encoded order (S4.A.13).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RDE_O11.RDE_O11
    :noindex:
 
-   HL7 v2 RDE_O11 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RDE_O11
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[:ref:`RDE_O11_PATIENT <hl7-v2_8-RDE_O11_PATIENT>`]
+     - optional
+     - PATIENT
+   * - ``ORDER``
+     - List[:ref:`RDE_O11_ORDER <hl7-v2_8-RDE_O11_ORDER>`]
+     - required
+     - ORDER
+
+.. _hl7-v2_8-RDE_O25:
+
+RDE_O25 RDE - Pharmacy/treatment refill authorization request (S4.A.13).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RDE_O25.RDE_O25
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RDE_O11_PATIENT <hl7-v2_8-RDE_O11_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RDE_O11_ORDER <hl7-v2_8-RDE_O11_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-RDR_RDR:
+
+RDR_RDR Pharmacy/treatment Dispense Information (S5.9.1.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RDR_RDR.RDR_RDR
    :noindex:
 
-   HL7 v2 RDR_RDR message.
-
-RDR_RDR
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[:ref:`SFT <hl7-v2_8-SFT>`]
      - optional
-     - 
-     - SFT: Optional
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``DEFINITION``
-     - 
      - List[:ref:`RDR_RDR_DEFINITION <hl7-v2_8-RDR_RDR_DEFINITION>`]
      - required
-     - 
-     - DEFINITION: Required, repeating
+     - DEFINITION
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RDS_O13:
+
+RDS_O13 RDS - Pharmacy/treatment dispense (S4.A.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RDS_O13.RDS_O13
    :noindex:
 
-   HL7 v2 RDS_O13 message.
-
-RDS_O13
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RDS_O13_PATIENT <hl7-v2_8-RDS_O13_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RDS_O13_ORDER <hl7-v2_8-RDS_O13_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-RDY_K15:
+
+RDY_K15 RDY - Display response in response to QBP^Q15 (S5.3.2.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RDY_K15.RDY_K15
    :noindex:
 
-   HL7 v2 RDY_K15 message.
-
-RDY_K15
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``DSP``
-     - 
      - Optional[List[:ref:`DSP <hl7-v2_8-DSP>`]]
      - optional
-     - 
-     - DSP: Optional, repeating
+     - Display Data
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RDY_Z80:
+
+RDY_Z80 Dispense Information (Response) (S5.3.2.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RDY_Z80.RDY_Z80
    :noindex:
 
-   HL7 v2 RDY_Z80 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RDY_Z80
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``DSP``
+     - Optional[List[:ref:`DSP <hl7-v2_8-DSP>`]]
+     - optional
+     - Display Data
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RDY_Z98:
+
+RDY_Z98 Dispense History (Response) (S5.9.5.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RDY_Z98.RDY_Z98
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``DSP``
-     - 
      - Optional[List[:ref:`DSP <hl7-v2_8-DSP>`]]
      - optional
-     - 
-     - DSP: Optional, repeating
+     - Display Data
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-REF_I12:
+
+REF_I12 REF/RRI - Patient referral (S11.5.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.REF_I12.REF_I12
    :noindex:
 
-   HL7 v2 REF_I12 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-REF_I12
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - optional
+     - Referral Information
+   * - ``AUTHORIZATION_CONTACT1``
+     - Optional[:ref:`REF_I12_AUTHORIZATION_CONTACT1 <hl7-v2_8-REF_I12_AUTHORIZATION_CONTACT1>`]
+     - optional
+     - AUTHORIZATION_CONTACT1
+   * - ``PROVIDER_CONTACT``
+     - List[:ref:`REF_I12_PROVIDER_CONTACT <hl7-v2_8-REF_I12_PROVIDER_CONTACT>`]
+     - required
+     - PROVIDER_CONTACT
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`REF_I12_INSURANCE <hl7-v2_8-REF_I12_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
+     - optional
+     - Diagnosis Related Group
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`REF_I12_PROCEDURE <hl7-v2_8-REF_I12_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``OBSERVATION``
+     - Optional[List[:ref:`REF_I12_OBSERVATION <hl7-v2_8-REF_I12_OBSERVATION>`]]
+     - optional
+     - OBSERVATION
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`REF_I12_PATIENT_VISIT <hl7-v2_8-REF_I12_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+
+.. _hl7-v2_8-REF_I13:
+
+REF_I13 REF/RRI - Modify patient referral (S11.5.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.REF_I13.REF_I13
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``RF1``
-     - 
      - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
      - optional
-     - 
-     - RF1: Optional
+     - Referral Information
    * - ``AUTHORIZATION_CONTACT1``
-     - 
      - Optional[:ref:`REF_I12_AUTHORIZATION_CONTACT1 <hl7-v2_8-REF_I12_AUTHORIZATION_CONTACT1>`]
      - optional
-     - 
-     - AUTHORIZATION_CONTACT1: Optional
+     - AUTHORIZATION_CONTACT1
    * - ``PROVIDER_CONTACT``
-     - 
      - List[:ref:`REF_I12_PROVIDER_CONTACT <hl7-v2_8-REF_I12_PROVIDER_CONTACT>`]
      - required
-     - 
-     - PROVIDER_CONTACT: Required, repeating
+     - PROVIDER_CONTACT
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`REF_I12_INSURANCE <hl7-v2_8-REF_I12_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
      - optional
-     - 
-     - DRG: Optional, repeating
+     - Diagnosis Related Group
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`REF_I12_PROCEDURE <hl7-v2_8-REF_I12_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`REF_I12_OBSERVATION <hl7-v2_8-REF_I12_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`REF_I12_PATIENT_VISIT <hl7-v2_8-REF_I12_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
+
+.. _hl7-v2_8-REF_I14:
+
+REF_I14 REF/RRI - Cancel patient referral (S11.5.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.REF_I14.REF_I14
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - optional
+     - Referral Information
+   * - ``AUTHORIZATION_CONTACT1``
+     - Optional[:ref:`REF_I12_AUTHORIZATION_CONTACT1 <hl7-v2_8-REF_I12_AUTHORIZATION_CONTACT1>`]
+     - optional
+     - AUTHORIZATION_CONTACT1
+   * - ``PROVIDER_CONTACT``
+     - List[:ref:`REF_I12_PROVIDER_CONTACT <hl7-v2_8-REF_I12_PROVIDER_CONTACT>`]
+     - required
+     - PROVIDER_CONTACT
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`REF_I12_INSURANCE <hl7-v2_8-REF_I12_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
+     - optional
+     - Diagnosis Related Group
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`REF_I12_PROCEDURE <hl7-v2_8-REF_I12_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``OBSERVATION``
+     - Optional[List[:ref:`REF_I12_OBSERVATION <hl7-v2_8-REF_I12_OBSERVATION>`]]
+     - optional
+     - OBSERVATION
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`REF_I12_PATIENT_VISIT <hl7-v2_8-REF_I12_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+
+.. _hl7-v2_8-REF_I15:
+
+REF_I15 REF/RRI - Request patient referral status (S11.5.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.REF_I15.REF_I15
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - optional
+     - Referral Information
+   * - ``AUTHORIZATION_CONTACT1``
+     - Optional[:ref:`REF_I12_AUTHORIZATION_CONTACT1 <hl7-v2_8-REF_I12_AUTHORIZATION_CONTACT1>`]
+     - optional
+     - AUTHORIZATION_CONTACT1
+   * - ``PROVIDER_CONTACT``
+     - List[:ref:`REF_I12_PROVIDER_CONTACT <hl7-v2_8-REF_I12_PROVIDER_CONTACT>`]
+     - required
+     - PROVIDER_CONTACT
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GT1``
+     - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
+     - optional
+     - Guarantor
+   * - ``INSURANCE``
+     - Optional[List[:ref:`REF_I12_INSURANCE <hl7-v2_8-REF_I12_INSURANCE>`]]
+     - optional
+     - INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
+     - optional
+     - Diagnosis Related Group
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`REF_I12_PROCEDURE <hl7-v2_8-REF_I12_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``OBSERVATION``
+     - Optional[List[:ref:`REF_I12_OBSERVATION <hl7-v2_8-REF_I12_OBSERVATION>`]]
+     - optional
+     - OBSERVATION
+   * - ``PATIENT_VISIT``
+     - Optional[:ref:`REF_I12_PATIENT_VISIT <hl7-v2_8-REF_I12_PATIENT_VISIT>`]
+     - optional
+     - PATIENT_VISIT
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
 
 .. _hl7-v2_8-RGV_O15:
+
+RGV_O15 RGV - Pharmacy/treatment give (S4.A.9).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RGV_O15.RGV_O15
    :noindex:
 
-   HL7 v2 RGV_O15 message.
-
-RGV_O15
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RGV_O15_PATIENT <hl7-v2_8-RGV_O15_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RGV_O15_ORDER <hl7-v2_8-RGV_O15_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_8-RPA_I08:
+
+RPA_I08 RQA/RPA - Request for treatment authorization information (S11.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RPA_I08.RPA_I08
    :noindex:
 
-   HL7 v2 RPA_I08 message.
-
-RPA_I08
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``RF1``
-     - 
      - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
      - optional
-     - 
-     - RF1: Optional
+     - Referral Information
    * - ``AUTHORIZATION``
-     - 
      - Optional[:ref:`RPA_I08_AUTHORIZATION <hl7-v2_8-RPA_I08_AUTHORIZATION>`]
      - optional
-     - 
-     - AUTHORIZATION: Optional
+     - AUTHORIZATION
    * - ``PROVIDER``
-     - 
      - List[:ref:`RPA_I08_PROVIDER <hl7-v2_8-RPA_I08_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`RPA_I08_INSURANCE <hl7-v2_8-RPA_I08_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
      - optional
-     - 
-     - DRG: Optional, repeating
+     - Diagnosis Related Group
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``PROCEDURE``
-     - 
      - List[:ref:`RPA_I08_PROCEDURE <hl7-v2_8-RPA_I08_PROCEDURE>`]
      - required
-     - 
-     - PROCEDURE: Required, repeating
+     - PROCEDURE
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`RPA_I08_OBSERVATION <hl7-v2_8-RPA_I08_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
    * - ``VISIT``
-     - 
      - Optional[:ref:`RPA_I08_VISIT <hl7-v2_8-RPA_I08_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
 
 .. _hl7-v2_8-RPI_I01:
+
+RPI_I01 RQI/RPI - Request for insurance information (S11.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RPI_I01.RPI_I01
    :noindex:
 
-   HL7 v2 RPI_I01 message.
-
-RPI_I01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``PROVIDER``
-     - 
      - List[:ref:`RPI_I01_PROVIDER <hl7-v2_8-RPI_I01_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``GUARANTOR_INSURANCE``
-     - 
      - Optional[:ref:`RPI_I01_GUARANTOR_INSURANCE <hl7-v2_8-RPI_I01_GUARANTOR_INSURANCE>`]
      - optional
-     - 
-     - GUARANTOR_INSURANCE: Optional
+     - GUARANTOR_INSURANCE
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
 
 .. _hl7-v2_8-RPI_I04:
+
+RPI_I04 RQD/RPI - Request for patient demographic data (S11.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RPI_I04.RPI_I04
    :noindex:
 
-   HL7 v2 RPI_I04 message.
-
-RPI_I04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``PROVIDER``
-     - 
      - List[:ref:`RPI_I04_PROVIDER <hl7-v2_8-RPI_I04_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``GUARANTOR_INSURANCE``
-     - 
      - Optional[:ref:`RPI_I04_GUARANTOR_INSURANCE <hl7-v2_8-RPI_I04_GUARANTOR_INSURANCE>`]
      - optional
-     - 
-     - GUARANTOR_INSURANCE: Optional
+     - GUARANTOR_INSURANCE
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
 
 .. _hl7-v2_8-RPL_I02:
+
+RPL_I02 RQI/RPL - Request/receipt of patient selection display list (S11.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RPL_I02.RPL_I02
    :noindex:
 
-   HL7 v2 RPL_I02 message.
-
-RPL_I02
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``PROVIDER``
-     - 
      - List[:ref:`RPL_I02_PROVIDER <hl7-v2_8-RPL_I02_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``DSP``
-     - 
      - Optional[List[:ref:`DSP <hl7-v2_8-DSP>`]]
      - optional
-     - 
-     - DSP: Optional, repeating
+     - Display Data
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RPR_I03:
+
+RPR_I03 RQI/RPR - Request/receipt of patient selection list (S11.3.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RPR_I03.RPR_I03
    :noindex:
 
-   HL7 v2 RPR_I03 message.
-
-RPR_I03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``PROVIDER``
-     - 
      - List[:ref:`RPR_I03_PROVIDER <hl7-v2_8-RPR_I03_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``PID``
-     - 
      - Optional[List[:ref:`PID <hl7-v2_8-PID>`]]
      - optional
-     - 
-     - PID: Optional, repeating
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
 
 .. _hl7-v2_8-RQA_I08:
+
+RQA_I08 RQA/RPA - Request for treatment authorization information (S11.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RQA_I08.RQA_I08
    :noindex:
 
-   HL7 v2 RQA_I08 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RQA_I08
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - optional
+     - Referral Information
+   * - ``AUTHORIZATION``
+     - Optional[:ref:`RQA_I08_AUTHORIZATION <hl7-v2_8-RQA_I08_AUTHORIZATION>`]
+     - optional
+     - AUTHORIZATION
+   * - ``PROVIDER``
+     - List[:ref:`RQA_I08_PROVIDER <hl7-v2_8-RQA_I08_PROVIDER>`]
+     - required
+     - PROVIDER
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GUARANTOR_INSURANCE``
+     - Optional[:ref:`RQA_I08_GUARANTOR_INSURANCE <hl7-v2_8-RQA_I08_GUARANTOR_INSURANCE>`]
+     - optional
+     - GUARANTOR_INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
+     - optional
+     - Diagnosis Related Group
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`RQA_I08_PROCEDURE <hl7-v2_8-RQA_I08_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``OBSERVATION``
+     - Optional[List[:ref:`RQA_I08_OBSERVATION <hl7-v2_8-RQA_I08_OBSERVATION>`]]
+     - optional
+     - OBSERVATION
+   * - ``VISIT``
+     - Optional[:ref:`RQA_I08_VISIT <hl7-v2_8-RQA_I08_VISIT>`]
+     - optional
+     - VISIT
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+
+.. _hl7-v2_8-RQA_I09:
+
+RQA_I09 RQA/RPA - Request for modification to an authorization (S11.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RQA_I09.RQA_I09
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``RF1``
-     - 
      - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
      - optional
-     - 
-     - RF1: Optional
+     - Referral Information
    * - ``AUTHORIZATION``
-     - 
      - Optional[:ref:`RQA_I08_AUTHORIZATION <hl7-v2_8-RQA_I08_AUTHORIZATION>`]
      - optional
-     - 
-     - AUTHORIZATION: Optional
+     - AUTHORIZATION
    * - ``PROVIDER``
-     - 
      - List[:ref:`RQA_I08_PROVIDER <hl7-v2_8-RQA_I08_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``GUARANTOR_INSURANCE``
-     - 
      - Optional[:ref:`RQA_I08_GUARANTOR_INSURANCE <hl7-v2_8-RQA_I08_GUARANTOR_INSURANCE>`]
      - optional
-     - 
-     - GUARANTOR_INSURANCE: Optional
+     - GUARANTOR_INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
      - optional
-     - 
-     - DRG: Optional, repeating
+     - Diagnosis Related Group
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`RQA_I08_PROCEDURE <hl7-v2_8-RQA_I08_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`RQA_I08_OBSERVATION <hl7-v2_8-RQA_I08_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
    * - ``VISIT``
-     - 
      - Optional[:ref:`RQA_I08_VISIT <hl7-v2_8-RQA_I08_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
+
+.. _hl7-v2_8-RQA_I10:
+
+RQA_I10 RQA/RPA - Request for resubmission of an authorization (S11.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RQA_I10.RQA_I10
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - optional
+     - Referral Information
+   * - ``AUTHORIZATION``
+     - Optional[:ref:`RQA_I08_AUTHORIZATION <hl7-v2_8-RQA_I08_AUTHORIZATION>`]
+     - optional
+     - AUTHORIZATION
+   * - ``PROVIDER``
+     - List[:ref:`RQA_I08_PROVIDER <hl7-v2_8-RQA_I08_PROVIDER>`]
+     - required
+     - PROVIDER
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GUARANTOR_INSURANCE``
+     - Optional[:ref:`RQA_I08_GUARANTOR_INSURANCE <hl7-v2_8-RQA_I08_GUARANTOR_INSURANCE>`]
+     - optional
+     - GUARANTOR_INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
+     - optional
+     - Diagnosis Related Group
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`RQA_I08_PROCEDURE <hl7-v2_8-RQA_I08_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``OBSERVATION``
+     - Optional[List[:ref:`RQA_I08_OBSERVATION <hl7-v2_8-RQA_I08_OBSERVATION>`]]
+     - optional
+     - OBSERVATION
+   * - ``VISIT``
+     - Optional[:ref:`RQA_I08_VISIT <hl7-v2_8-RQA_I08_VISIT>`]
+     - optional
+     - VISIT
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+
+.. _hl7-v2_8-RQA_I11:
+
+RQA_I11 RQA/RPA - Request for cancellation of an authorization (S11.4.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RQA_I11.RQA_I11
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``RF1``
+     - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
+     - optional
+     - Referral Information
+   * - ``AUTHORIZATION``
+     - Optional[:ref:`RQA_I08_AUTHORIZATION <hl7-v2_8-RQA_I08_AUTHORIZATION>`]
+     - optional
+     - AUTHORIZATION
+   * - ``PROVIDER``
+     - List[:ref:`RQA_I08_PROVIDER <hl7-v2_8-RQA_I08_PROVIDER>`]
+     - required
+     - PROVIDER
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GUARANTOR_INSURANCE``
+     - Optional[:ref:`RQA_I08_GUARANTOR_INSURANCE <hl7-v2_8-RQA_I08_GUARANTOR_INSURANCE>`]
+     - optional
+     - GUARANTOR_INSURANCE
+   * - ``ACC``
+     - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
+     - optional
+     - Accident
+   * - ``DG1``
+     - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
+     - optional
+     - Diagnosis
+   * - ``DRG``
+     - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
+     - optional
+     - Diagnosis Related Group
+   * - ``AL1``
+     - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
+     - optional
+     - Patient Allergy Information
+   * - ``PROCEDURE``
+     - Optional[List[:ref:`RQA_I08_PROCEDURE <hl7-v2_8-RQA_I08_PROCEDURE>`]]
+     - optional
+     - PROCEDURE
+   * - ``OBSERVATION``
+     - Optional[List[:ref:`RQA_I08_OBSERVATION <hl7-v2_8-RQA_I08_OBSERVATION>`]]
+     - optional
+     - OBSERVATION
+   * - ``VISIT``
+     - Optional[:ref:`RQA_I08_VISIT <hl7-v2_8-RQA_I08_VISIT>`]
+     - optional
+     - VISIT
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
 
 .. _hl7-v2_8-RQI_I01:
+
+RQI_I01 RQI/RPI - Request for insurance information (S11.3.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RQI_I01.RQI_I01
    :noindex:
 
-   HL7 v2 RQI_I01 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RQI_I01
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PROVIDER``
+     - List[:ref:`RQI_I01_PROVIDER <hl7-v2_8-RQI_I01_PROVIDER>`]
+     - required
+     - PROVIDER
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GUARANTOR_INSURANCE``
+     - Optional[:ref:`RQI_I01_GUARANTOR_INSURANCE <hl7-v2_8-RQI_I01_GUARANTOR_INSURANCE>`]
+     - optional
+     - GUARANTOR_INSURANCE
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+
+.. _hl7-v2_8-RQI_I02:
+
+RQI_I02 RQI/RPL - Request/receipt of patient selection display list (S11.3.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RQI_I02.RQI_I02
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PROVIDER``
-     - 
      - List[:ref:`RQI_I01_PROVIDER <hl7-v2_8-RQI_I01_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``GUARANTOR_INSURANCE``
-     - 
      - Optional[:ref:`RQI_I01_GUARANTOR_INSURANCE <hl7-v2_8-RQI_I01_GUARANTOR_INSURANCE>`]
      - optional
-     - 
-     - GUARANTOR_INSURANCE: Optional
+     - GUARANTOR_INSURANCE
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
+
+.. _hl7-v2_8-RQI_I03:
+
+RQI_I03 RQI/RPR - Request/receipt of patient selection list (S11.3.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RQI_I03.RQI_I03
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PROVIDER``
+     - List[:ref:`RQI_I01_PROVIDER <hl7-v2_8-RQI_I01_PROVIDER>`]
+     - required
+     - PROVIDER
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GUARANTOR_INSURANCE``
+     - Optional[:ref:`RQI_I01_GUARANTOR_INSURANCE <hl7-v2_8-RQI_I01_GUARANTOR_INSURANCE>`]
+     - optional
+     - GUARANTOR_INSURANCE
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+
+.. _hl7-v2_8-RQI_I07:
+
+RQI_I07 PIN/ACK - Unsolicited insurance information (S11.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RQI_I07.RQI_I07
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``PROVIDER``
+     - List[:ref:`RQI_I01_PROVIDER <hl7-v2_8-RQI_I01_PROVIDER>`]
+     - required
+     - PROVIDER
+   * - ``PID``
+     - :ref:`PID <hl7-v2_8-PID>`
+     - required
+     - Patient Identification
+   * - ``NK1``
+     - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
+     - optional
+     - Next of Kin / Associated Parties
+   * - ``GUARANTOR_INSURANCE``
+     - Optional[:ref:`RQI_I01_GUARANTOR_INSURANCE <hl7-v2_8-RQI_I01_GUARANTOR_INSURANCE>`]
+     - optional
+     - GUARANTOR_INSURANCE
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
 
 .. _hl7-v2_8-RQP_I04:
+
+RQP_I04 RQD/RPI - Request for patient demographic data (S11.3.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RQP_I04.RQP_I04
    :noindex:
 
-   HL7 v2 RQP_I04 message.
-
-RQP_I04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PROVIDER``
-     - 
      - List[:ref:`RQP_I04_PROVIDER <hl7-v2_8-RQP_I04_PROVIDER>`]
      - required
-     - 
-     - PROVIDER: Required, repeating
+     - PROVIDER
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
 
 .. _hl7-v2_8-RRA_O18:
+
+RRA_O18 RRA - Pharmacy/treatment administration acknowledgment (S4.A.12).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RRA_O18.RRA_O18
    :noindex:
 
-   HL7 v2 RRA_O18 message.
-
-RRA_O18
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`RRA_O18_RESPONSE <hl7-v2_8-RRA_O18_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-RRD_O14:
+
+RRD_O14 RRD - Pharmacy/treatment dispense acknowledgment (S4.A.8).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RRD_O14.RRD_O14
    :noindex:
 
-   HL7 v2 RRD_O14 message.
-
-RRD_O14
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`RRD_O14_RESPONSE <hl7-v2_8-RRD_O14_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-RRE_O12:
+
+RRE_O12 RRE - Pharmacy/treatment encoded order acknowledgment (S4.A.14).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RRE_O12.RRE_O12
    :noindex:
 
-   HL7 v2 RRE_O12 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RRE_O12
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
+     - optional
+     - Error
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``RESPONSE``
+     - Optional[:ref:`RRE_O12_RESPONSE <hl7-v2_8-RRE_O12_RESPONSE>`]
+     - optional
+     - RESPONSE
+
+.. _hl7-v2_8-RRE_O26:
+
+RRE_O26 RRE - Pharmacy/Treatment Refill Authorization Acknowledgement (S4.A.14).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RRE_O26.RRE_O26
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`RRE_O12_RESPONSE <hl7-v2_8-RRE_O12_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-RRG_O16:
+
+RRG_O16 RRG - Pharmacy/treatment give acknowledgment (S4.A.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RRG_O16.RRG_O16
    :noindex:
 
-   HL7 v2 RRG_O16 message.
-
-RRG_O16
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`RRG_O16_RESPONSE <hl7-v2_8-RRG_O16_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
 
 .. _hl7-v2_8-RRI_I12:
+
+RRI_I12 REF/RRI - Patient referral (S11.5.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RRI_I12.RRI_I12
    :noindex:
 
-   HL7 v2 RRI_I12 message.
-
-RRI_I12
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - Optional[:ref:`MSA <hl7-v2_8-MSA>`]
      - optional
-     - 
-     - MSA: Optional
+     - Message Acknowledgment
    * - ``RF1``
-     - 
      - Optional[:ref:`RF1 <hl7-v2_8-RF1>`]
      - optional
-     - 
-     - RF1: Optional
+     - Referral Information
    * - ``AUTHORIZATION_CONTACT2``
-     - 
      - Optional[:ref:`RRI_I12_AUTHORIZATION_CONTACT2 <hl7-v2_8-RRI_I12_AUTHORIZATION_CONTACT2>`]
      - optional
-     - 
-     - AUTHORIZATION_CONTACT2: Optional
+     - AUTHORIZATION_CONTACT2
    * - ``PROVIDER_CONTACT``
-     - 
      - List[:ref:`RRI_I12_PROVIDER_CONTACT <hl7-v2_8-RRI_I12_PROVIDER_CONTACT>`]
      - required
-     - 
-     - PROVIDER_CONTACT: Required, repeating
+     - PROVIDER_CONTACT
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_8-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_8-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[List[:ref:`DRG <hl7-v2_8-DRG>`]]
      - optional
-     - 
-     - DRG: Optional, repeating
+     - Diagnosis Related Group
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_8-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient Allergy Information
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`RRI_I12_PROCEDURE <hl7-v2_8-RRI_I12_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`RRI_I12_OBSERVATION <hl7-v2_8-RRI_I12_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`RRI_I12_PATIENT_VISIT <hl7-v2_8-RRI_I12_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
 
 .. _hl7-v2_8-RSP_E03:
+
+RSP_E03 HealthCare Services Invoice Status (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_E03.RSP_E03
    :noindex:
 
-   HL7 v2 RSP_E03 message.
-
-RSP_E03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``QUERY_ACK_IPR``
-     - 
      - :ref:`RSP_E03_QUERY_ACK_IPR <hl7-v2_8-RSP_E03_QUERY_ACK_IPR>`
      - required
-     - 
-     - QUERY_ACK_IPR: Required
+     - QUERY_ACK_IPR
 
 .. _hl7-v2_8-RSP_E22:
+
+RSP_E22 Authorization Request Status (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_E22.RSP_E22
    :noindex:
 
-   HL7 v2 RSP_E22 message.
-
-RSP_E22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[List[:ref:`UAC <hl7-v2_8-UAC>`]]
      - optional
-     - 
-     - UAC: Optional, repeating
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``QUERY_ACK``
-     - 
      - :ref:`RSP_E22_QUERY_ACK <hl7-v2_8-RSP_E22_QUERY_ACK>`
      - required
-     - 
-     - QUERY_ACK: Required
+     - QUERY_ACK
 
 .. _hl7-v2_8-RSP_K11:
+
+RSP_K11 RSP - Segment pattern response in response to QBP^Q11 (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_K11.RSP_K11
    :noindex:
 
-   HL7 v2 RSP_K11 message.
-
-RSP_K11
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``SEGMENT_PATTERN``
-     - 
      - Optional[:ref:`RSP_K11_SEGMENT_PATTERN <hl7-v2_8-RSP_K11_SEGMENT_PATTERN>`]
      - optional
-     - 
-     - SEGMENT_PATTERN: Optional
+     - SEGMENT_PATTERN
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_K21:
+
+RSP_K21 RSP - Get person demographics response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_K21.RSP_K21
    :noindex:
 
-   HL7 v2 RSP_K21 message.
-
-RSP_K21
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``QUERY_RESPONSE``
-     - 
      - Optional[:ref:`RSP_K21_QUERY_RESPONSE <hl7-v2_8-RSP_K21_QUERY_RESPONSE>`]
      - optional
-     - 
-     - QUERY_RESPONSE: Optional
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_K22:
+
+RSP_K22 RSP - Find candidates response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_K22.RSP_K22
    :noindex:
 
-   HL7 v2 RSP_K22 message.
-
-RSP_K22
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``QUERY_RESPONSE``
-     - 
      - Optional[List[:ref:`RSP_K22_QUERY_RESPONSE <hl7-v2_8-RSP_K22_QUERY_RESPONSE>`]]
      - optional
-     - 
-     - QUERY_RESPONSE: Optional, repeating
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_K23:
+
+RSP_K23 RSP - Get corresponding identifiers response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_K23.RSP_K23
    :noindex:
 
-   HL7 v2 RSP_K23 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RSP_K23
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``QUERY_RESPONSE``
+     - Optional[:ref:`RSP_K23_QUERY_RESPONSE <hl7-v2_8-RSP_K23_QUERY_RESPONSE>`]
+     - optional
+     - QUERY_RESPONSE
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RSP_K24:
+
+RSP_K24 RSP - Allocate identifiers response (S3.3.59).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RSP_K24.RSP_K24
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``QUERY_RESPONSE``
-     - 
      - Optional[:ref:`RSP_K23_QUERY_RESPONSE <hl7-v2_8-RSP_K23_QUERY_RESPONSE>`]
      - optional
-     - 
-     - QUERY_RESPONSE: Optional
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_K25:
+
+RSP_K25 RSP - Personnel Information by Segment Response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_K25.RSP_K25
    :noindex:
 
-   HL7 v2 RSP_K25 message.
-
-RSP_K25
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``STAFF``
-     - 
      - List[:ref:`RSP_K25_STAFF <hl7-v2_8-RSP_K25_STAFF>`]
      - required
-     - 
-     - STAFF: Required, repeating
+     - STAFF
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_K31:
+
+RSP_K31 RSP -Dispense History Response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_K31.RSP_K31
    :noindex:
 
-   HL7 v2 RSP_K31 message.
-
-RSP_K31
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``RESPONSE``
-     - 
      - List[:ref:`RSP_K31_RESPONSE <hl7-v2_8-RSP_K31_RESPONSE>`]
      - required
-     - 
-     - RESPONSE: Required, repeating
+     - RESPONSE
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_K32:
+
+RSP_K32 Find Candidates including Visit Information Response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_K32.RSP_K32
    :noindex:
 
-   HL7 v2 RSP_K32 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RSP_K32
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``QUERY_RESPONSE``
+     - Optional[List[:ref:`RSP_K32_QUERY_RESPONSE <hl7-v2_8-RSP_K32_QUERY_RESPONSE>`]]
+     - optional
+     - QUERY_RESPONSE
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RSP_K33:
+
+RSP_K33 Get Donor Record Candidates Response Message (S4.16.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RSP_K33.RSP_K33
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
-   * - ``QUERY_RESPONSE``
-     - 
-     - Optional[List[:ref:`RSP_K32_QUERY_RESPONSE <hl7-v2_8-RSP_K32_QUERY_RESPONSE>`]]
+     - Query Parameter Definition
+   * - ``DONOR``
+     - Optional[:ref:`RSP_O33_DONOR <hl7-v2_8-RSP_O33_DONOR>`]
      - optional
-     - 
-     - QUERY_RESPONSE: Optional, repeating
-   * - ``DSC``
-     - 
-     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - DONOR
+
+.. _hl7-v2_8-RSP_K34:
+
+RSP_K34 Segment Pattern Response Message (S4.16.9).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RSP_K34.RSP_K34
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - DSC: Optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``DONOR``
+     - Optional[:ref:`RSP_O34_DONOR <hl7-v2_8-RSP_O34_DONOR>`]
+     - optional
+     - DONOR
+   * - ``DONATION``
+     - Optional[:ref:`RSP_O34_DONATION <hl7-v2_8-RSP_O34_DONATION>`]
+     - optional
+     - DONATION
 
 .. _hl7-v2_8-RSP_O33:
+
+RSP_O33 OML - Laboratory order for multiple orders related to a single specimen (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_O33.RSP_O33
    :noindex:
 
-   HL7 v2 RSP_O33 message.
-
-RSP_O33
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``DONOR``
-     - 
      - Optional[:ref:`RSP_O33_DONOR <hl7-v2_8-RSP_O33_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
 
 .. _hl7-v2_8-RSP_O34:
+
+RSP_O34 ORL - Laboratory order response message to a multiple order related to single sp (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_O34.RSP_O34
    :noindex:
 
-   HL7 v2 RSP_O34 message.
-
-RSP_O34
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``DONOR``
-     - 
      - Optional[:ref:`RSP_O34_DONOR <hl7-v2_8-RSP_O34_DONOR>`]
      - optional
-     - 
-     - DONOR: Optional
+     - DONOR
    * - ``DONATION``
-     - 
      - Optional[:ref:`RSP_O34_DONATION <hl7-v2_8-RSP_O34_DONATION>`]
      - optional
-     - 
-     - DONATION: Optional
+     - DONATION
 
 .. _hl7-v2_8-RSP_Z82:
+
+RSP_Z82 Dispense History (Response) (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_Z82.RSP_Z82
    :noindex:
 
-   HL7 v2 RSP_Z82 message.
-
-RSP_Z82
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``QUERY_RESPONSE``
-     - 
      - List[:ref:`RSP_Z82_QUERY_RESPONSE <hl7-v2_8-RSP_Z82_QUERY_RESPONSE>`]
      - required
-     - 
-     - QUERY_RESPONSE: Required, repeating
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_Z84:
+
+RSP_Z84 Who Am I (Response) (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_Z84.RSP_Z84
    :noindex:
 
-   HL7 v2 RSP_Z84 message.
-
-RSP_Z84
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``ROW_DEFINITION``
-     - 
      - Optional[:ref:`RSP_Z84_ROW_DEFINITION <hl7-v2_8-RSP_Z84_ROW_DEFINITION>`]
      - optional
-     - 
-     - ROW_DEFINITION: Optional
+     - ROW_DEFINITION
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_Z86:
+
+RSP_Z86 Pharmacy Information Comprehensive (Response) (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_Z86.RSP_Z86
    :noindex:
 
-   HL7 v2 RSP_Z86 message.
-
-RSP_Z86
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``QUERY_RESPONSE``
-     - 
      - List[:ref:`RSP_Z86_QUERY_RESPONSE <hl7-v2_8-RSP_Z86_QUERY_RESPONSE>`]
      - required
-     - 
-     - QUERY_RESPONSE: Required, repeating
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_Z88:
+
+RSP_Z88 Dispense Information (Response) (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_Z88.RSP_Z88
    :noindex:
 
-   HL7 v2 RSP_Z88 message.
-
-RSP_Z88
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``QUERY_RESPONSE``
-     - 
      - List[:ref:`RSP_Z88_QUERY_RESPONSE <hl7-v2_8-RSP_Z88_QUERY_RESPONSE>`]
      - required
-     - 
-     - QUERY_RESPONSE: Required, repeating
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - :ref:`DSC <hl7-v2_8-DSC>`
      - required
-     - 
-     - DSC: Required
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_Z90:
+
+RSP_Z90 Lab Results History (Response) (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_Z90.RSP_Z90
    :noindex:
 
-   HL7 v2 RSP_Z90 message.
-
-RSP_Z90
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``RCP``
-     - 
      - :ref:`RCP <hl7-v2_8-RCP>`
      - required
-     - 
-     - RCP: Required
+     - Response Control Parameter
    * - ``QUERY_RESPONSE``
-     - 
      - List[:ref:`RSP_Z90_QUERY_RESPONSE <hl7-v2_8-RSP_Z90_QUERY_RESPONSE>`]
      - required
-     - 
-     - QUERY_RESPONSE: Required, repeating
+     - QUERY_RESPONSE
    * - ``DSC``
-     - 
      - :ref:`DSC <hl7-v2_8-DSC>`
      - required
-     - 
-     - DSC: Required
+     - Continuation Pointer
 
 .. _hl7-v2_8-RSP_Znn:
+
+RSP_Znn Segment pattern response (S15.3.7).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RSP_Znn.RSP_Znn
    :noindex:
 
-   HL7 v2 RSP_Znn message.
-
-RSP_Znn
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RTB_K13:
+
+RTB_K13 RTB - Tabular response in response to QBP^Q13 (S4.6.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RTB_K13.RTB_K13
    :noindex:
 
-   HL7 v2 RTB_K13 message.
-
-RTB_K13
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``ROW_DEFINITION``
-     - 
      - Optional[:ref:`RTB_K13_ROW_DEFINITION <hl7-v2_8-RTB_K13_ROW_DEFINITION>`]
      - optional
-     - 
-     - ROW_DEFINITION: Optional
+     - ROW_DEFINITION
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RTB_Knn:
+
+RTB_Knn HL7 v2 RTB_Knn message.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RTB_Knn.RTB_Knn
    :noindex:
 
-   HL7 v2 RTB_Knn message.
-
-RTB_Knn
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
      - optional
-     - 
-     - ERR: Optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-RTB_Z74:
+
+RTB_Z74 Information about Phone Calls (Response) (S4.6.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.RTB_Z74.RTB_Z74
    :noindex:
 
-   HL7 v2 RTB_Z74 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-RTB_Z74
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
+     - optional
+     - Error
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``ROW_DEFINITION``
+     - Optional[:ref:`RTB_Z74_ROW_DEFINITION <hl7-v2_8-RTB_Z74_ROW_DEFINITION>`]
+     - optional
+     - ROW_DEFINITION
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RTB_Z76:
+
+RTB_Z76 Tabular Patient List (Response) (S5.9.7.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RTB_Z76.RTB_Z76
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
-   * - ``MSA``
-     - 
-     - :ref:`MSA <hl7-v2_8-MSA>`
-     - required
-     - 
-     - MSA: Required
-   * - ``ERR``
-     - 
-     - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
-     - optional
-     - 
-     - ERR: Optional, repeating
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
    * - ``QAK``
-     - 
      - :ref:`QAK <hl7-v2_8-QAK>`
      - required
-     - 
-     - QAK: Required
+     - Query Acknowledgment
    * - ``QPD``
-     - 
      - :ref:`QPD <hl7-v2_8-QPD>`
      - required
-     - 
-     - QPD: Required
+     - Query Parameter Definition
    * - ``ROW_DEFINITION``
-     - 
-     - Optional[:ref:`RTB_Z74_ROW_DEFINITION <hl7-v2_8-RTB_Z74_ROW_DEFINITION>`]
+     - Optional[:ref:`RTB_K13_ROW_DEFINITION <hl7-v2_8-RTB_K13_ROW_DEFINITION>`]
      - optional
-     - 
-     - ROW_DEFINITION: Optional
+     - ROW_DEFINITION
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RTB_Z78:
+
+RTB_Z78 Tabular Patient List (Response) (S5.9.7.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RTB_Z78.RTB_Z78
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``ROW_DEFINITION``
+     - Optional[:ref:`RTB_K13_ROW_DEFINITION <hl7-v2_8-RTB_K13_ROW_DEFINITION>`]
+     - optional
+     - ROW_DEFINITION
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RTB_Z92:
+
+RTB_Z92 Who Am I (Response) (S5.9.3.1.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RTB_Z92.RTB_Z92
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``ROW_DEFINITION``
+     - Optional[:ref:`RTB_K13_ROW_DEFINITION <hl7-v2_8-RTB_K13_ROW_DEFINITION>`]
+     - optional
+     - ROW_DEFINITION
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RTB_Z94:
+
+RTB_Z94 Tabular Dispense History (Response) (S5.9.3.2.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RTB_Z94.RTB_Z94
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``ROW_DEFINITION``
+     - Optional[:ref:`RTB_K13_ROW_DEFINITION <hl7-v2_8-RTB_K13_ROW_DEFINITION>`]
+     - optional
+     - ROW_DEFINITION
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
+
+.. _hl7-v2_8-RTB_Z96:
+
+RTB_Z96 Tabular Dispense History (Response) (S5.9.4.1.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.RTB_Z96.RTB_Z96
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``MSA``
+     - :ref:`MSA <hl7-v2_8-MSA>`
+     - required
+     - Message Acknowledgment
+   * - ``ERR``
+     - Optional[:ref:`ERR <hl7-v2_8-ERR>`]
+     - optional
+     - Error
+   * - ``QAK``
+     - :ref:`QAK <hl7-v2_8-QAK>`
+     - required
+     - Query Acknowledgment
+   * - ``QPD``
+     - :ref:`QPD <hl7-v2_8-QPD>`
+     - required
+     - Query Parameter Definition
+   * - ``ROW_DEFINITION``
+     - Optional[:ref:`RTB_K13_ROW_DEFINITION <hl7-v2_8-RTB_K13_ROW_DEFINITION>`]
+     - optional
+     - ROW_DEFINITION
+   * - ``DSC``
+     - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
+     - optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-SDR_S31:
+
+SDR_S31 SDR/SDS - Request anti-microbial device data (S17.5.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SDR_S31.SDR_S31
    :noindex:
 
-   HL7 v2 SDR_S31 message.
-
-SDR_S31
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``ANTI_MICROBIAL_DEVICE_DATA``
-     - 
      - :ref:`SDR_S31_ANTI_MICROBIAL_DEVICE_DATA <hl7-v2_8-SDR_S31_ANTI_MICROBIAL_DEVICE_DATA>`
      - required
-     - 
-     - ANTI_MICROBIAL_DEVICE_DATA: Required
+     - ANTI_MICROBIAL_DEVICE_DATA
 
 .. _hl7-v2_8-SDR_S32:
+
+SDR_S32 SMD/SMS - Request anti-microbial device cycle data (S17.5.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SDR_S32.SDR_S32
    :noindex:
 
-   HL7 v2 SDR_S32 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-SDR_S32
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``ANTI_MICROBIAL_DEVICE_CYCLE_DATA``
+     - :ref:`SDR_S32_ANTI_MICROBIAL_DEVICE_CYCLE_DATA <hl7-v2_8-SDR_S32_ANTI_MICROBIAL_DEVICE_CYCLE_DATA>`
+     - required
+     - ANTI_MICROBIAL_DEVICE_CYCLE_DATA
+
+.. _hl7-v2_8-SDR_S36:
+
+SDR_S36 SDN/ACK - Notification of anti-microbial device data (S17.6.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SDR_S36.SDR_S36
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
+   * - ``ANTI_MICROBIAL_DEVICE_DATA``
+     - :ref:`SDR_S31_ANTI_MICROBIAL_DEVICE_DATA <hl7-v2_8-SDR_S31_ANTI_MICROBIAL_DEVICE_DATA>`
+     - required
+     - ANTI_MICROBIAL_DEVICE_DATA
+
+.. _hl7-v2_8-SDR_S37:
+
+SDR_S37 SCN/ACK - Notification of anti-microbial device cycle data (S17.6.5).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SDR_S37.SDR_S37
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
    * - ``ANTI_MICROBIAL_DEVICE_CYCLE_DATA``
-     - 
      - :ref:`SDR_S32_ANTI_MICROBIAL_DEVICE_CYCLE_DATA <hl7-v2_8-SDR_S32_ANTI_MICROBIAL_DEVICE_CYCLE_DATA>`
      - required
-     - 
-     - ANTI_MICROBIAL_DEVICE_CYCLE_DATA: Required
+     - ANTI_MICROBIAL_DEVICE_CYCLE_DATA
 
 .. _hl7-v2_8-SIU_S12:
+
+SIU_S12 SIU/ACK - Notification of new appointment booking (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SIU_S12.SIU_S12
    :noindex:
 
-   HL7 v2 SIU_S12 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-SIU_S12
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S13:
+
+SIU_S13 SIU/ACK - Notification of appointment rescheduling (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S13.SIU_S13
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SCH``
-     - 
      - :ref:`SCH <hl7-v2_8-SCH>`
      - required
-     - 
-     - SCH: Required
+     - Scheduling Activity Information
    * - ``TQ1``
-     - 
      - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
      - optional
-     - 
-     - TQ1: Optional, repeating
+     - Timing/Quantity
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
      - optional
-     - 
-     - PATIENT: Optional, repeating
+     - PATIENT
    * - ``RESOURCES``
-     - 
      - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
      - required
-     - 
-     - RESOURCES: Required, repeating
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S14:
+
+SIU_S14 SIU/ACK - Notification of appointment modification (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S14.SIU_S14
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S15:
+
+SIU_S15 SIU/ACK - Notification of appointment cancellation (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S15.SIU_S15
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S16:
+
+SIU_S16 SIU/ACK - Notification of appointment discontinuation (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S16.SIU_S16
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S17:
+
+SIU_S17 SIU/ACK - Notification of appointment deletion (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S17.SIU_S17
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S18:
+
+SIU_S18 SIU/ACK - Notification of addition of service/resource on appointment (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S18.SIU_S18
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S19:
+
+SIU_S19 SIU/ACK - Notification of modification of service/resource on appointment (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S19.SIU_S19
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S20:
+
+SIU_S20 SIU/ACK - Notification of cancellation of service/resource on appointment (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S20.SIU_S20
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S21:
+
+SIU_S21 SIU/ACK - Notification of discontinuation of service/resource on appointment (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S21.SIU_S21
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S22:
+
+SIU_S22 SIU/ACK - Notification of deletion of service/resource on appointment (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S22.SIU_S22
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S23:
+
+SIU_S23 SIU/ACK - Notification of blocked schedule time slot(s) (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S23.SIU_S23
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S24:
+
+SIU_S24 SIU/ACK - Notification of opened ("unblocked"") schedule time slot(s)" (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S24.SIU_S24
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S26:
+
+SIU_S26 SIU/ACK Notification that patient did not show up for schedule appointment (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S26.SIU_S26
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SIU_S27:
+
+SIU_S27 SIU/ACK - Broadcast Notification of Scheduled Appointments (S10.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SIU_S27.SIU_S27
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SCH``
+     - :ref:`SCH <hl7-v2_8-SCH>`
+     - required
+     - Scheduling Activity Information
+   * - ``TQ1``
+     - Optional[List[:ref:`TQ1 <hl7-v2_8-TQ1>`]]
+     - optional
+     - Timing/Quantity
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SIU_S12_PATIENT <hl7-v2_8-SIU_S12_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SIU_S12_RESOURCES <hl7-v2_8-SIU_S12_RESOURCES>`]
+     - required
+     - RESOURCES
 
 .. _hl7-v2_8-SLR_S28:
+
+SLR_S28 SLR/SLS - Request new sterilization lot (S17.5.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SLR_S28.SLR_S28
    :noindex:
 
-   HL7 v2 SLR_S28 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-SLR_S28
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``SLT``
+     - List[:ref:`SLT <hl7-v2_8-SLT>`]
+     - required
+     - Sterilization Lot
+
+.. _hl7-v2_8-SLR_S29:
+
+SLR_S29 SLR/SLS - Request Sterilization lot deletion (S17.5.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SLR_S29.SLR_S29
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``SLT``
-     - 
      - List[:ref:`SLT <hl7-v2_8-SLT>`]
      - required
-     - 
-     - SLT: Required, repeating
+     - Sterilization Lot
+
+.. _hl7-v2_8-SLR_S30:
+
+SLR_S30 STI/STS - Request item (S17.5.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SLR_S30.SLR_S30
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``SLT``
+     - List[:ref:`SLT <hl7-v2_8-SLT>`]
+     - required
+     - Sterilization Lot
+
+.. _hl7-v2_8-SLR_S34:
+
+SLR_S34 SLN/ACK - Notification of sterilization lot (S17.6.2).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SLR_S34.SLR_S34
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``SLT``
+     - List[:ref:`SLT <hl7-v2_8-SLT>`]
+     - required
+     - Sterilization Lot
+
+.. _hl7-v2_8-SLR_S35:
+
+SLR_S35 SLN/ACK - Notification of sterilization lot deletion (S17.6.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SLR_S35.SLR_S35
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``SLT``
+     - List[:ref:`SLT <hl7-v2_8-SLT>`]
+     - required
+     - Sterilization Lot
 
 .. _hl7-v2_8-SRM_S01:
+
+SRM_S01 SRM/SRR - Request new appointment booking (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SRM_S01.SRM_S01
    :noindex:
 
-   HL7 v2 SRM_S01 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-SRM_S01
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S02:
+
+SRM_S02 SRM/SRR - Request appointment rescheduling (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S02.SRM_S02
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``ARQ``
-     - 
      - :ref:`ARQ <hl7-v2_8-ARQ>`
      - required
-     - 
-     - ARQ: Required
+     - Appointment Request
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_8-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and Comments
    * - ``PATIENT``
-     - 
      - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
      - optional
-     - 
-     - PATIENT: Optional, repeating
+     - PATIENT
    * - ``RESOURCES``
-     - 
      - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
      - required
-     - 
-     - RESOURCES: Required, repeating
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S03:
+
+SRM_S03 SRM/SRR - Request appointment modification (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S03.SRM_S03
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S04:
+
+SRM_S04 SRM/SRR - Request appointment cancellation (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S04.SRM_S04
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S05:
+
+SRM_S05 SRM/SRR - Request appointment discontinuation (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S05.SRM_S05
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S06:
+
+SRM_S06 SRM/SRR - Request appointment deletion (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S06.SRM_S06
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S07:
+
+SRM_S07 SRM/SRR - Request addition of service/resource on appointment (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S07.SRM_S07
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S08:
+
+SRM_S08 SRM/SRR - Request modification of service/resource on appointment (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S08.SRM_S08
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S09:
+
+SRM_S09 SRM/SRR - Request cancellation of service/resource on appointment (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S09.SRM_S09
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S10:
+
+SRM_S10 SRM/SRR - Request discontinuation of service/resource on appointment (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S10.SRM_S10
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
+
+.. _hl7-v2_8-SRM_S11:
+
+SRM_S11 SRM/SRR - Request deletion of service/resource on appointment (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.SRM_S11.SRM_S11
+   :noindex:
+
+.. list-table::
+   :header-rows: 1
+   :widths: auto
+
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``ARQ``
+     - :ref:`ARQ <hl7-v2_8-ARQ>`
+     - required
+     - Appointment Request
+   * - ``APR``
+     - Optional[:ref:`APR <hl7-v2_8-APR>`]
+     - optional
+     - Appointment Preferences
+   * - ``NTE``
+     - Optional[List[:ref:`NTE <hl7-v2_8-NTE>`]]
+     - optional
+     - Notes and Comments
+   * - ``PATIENT``
+     - Optional[List[:ref:`SRM_S01_PATIENT <hl7-v2_8-SRM_S01_PATIENT>`]]
+     - optional
+     - PATIENT
+   * - ``RESOURCES``
+     - List[:ref:`SRM_S01_RESOURCES <hl7-v2_8-SRM_S01_RESOURCES>`]
+     - required
+     - RESOURCES
 
 .. _hl7-v2_8-SRR_S01:
+
+SRR_S01 SRM/SRR - Request new appointment booking (S10.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SRR_S01.SRR_S01
    :noindex:
 
-   HL7 v2 SRR_S01 message.
-
-SRR_S01
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``MSA``
-     - 
      - :ref:`MSA <hl7-v2_8-MSA>`
      - required
-     - 
-     - MSA: Required
+     - Message Acknowledgment
    * - ``ERR``
-     - 
      - Optional[List[:ref:`ERR <hl7-v2_8-ERR>`]]
      - optional
-     - 
-     - ERR: Optional, repeating
+     - Error
    * - ``SCHEDULE``
-     - 
      - Optional[:ref:`SRR_S01_SCHEDULE <hl7-v2_8-SRR_S01_SCHEDULE>`]
      - optional
-     - 
-     - SCHEDULE: Optional
+     - SCHEDULE
 
 .. _hl7-v2_8-SSR_U04:
+
+SSR_U04 SSR/ACK - specimen status request (S13.3.4).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SSR_U04.SSR_U04
    :noindex:
 
-   HL7 v2 SSR_U04 message.
-
-SSR_U04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``SPECIMEN_CONTAINER``
-     - 
      - List[:ref:`SSR_U04_SPECIMEN_CONTAINER <hl7-v2_8-SSR_U04_SPECIMEN_CONTAINER>`]
      - required
-     - 
-     - SPECIMEN_CONTAINER: Required, repeating
+     - SPECIMEN_CONTAINER
 
 .. _hl7-v2_8-SSU_U03:
+
+SSU_U03 SSU/ACK - Specimen status update (S13.3.3).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.SSU_U03.SSU_U03
    :noindex:
 
-   HL7 v2 SSU_U03 message.
-
-SSU_U03
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``SPECIMEN_CONTAINER``
-     - 
      - List[:ref:`SSU_U03_SPECIMEN_CONTAINER <hl7-v2_8-SSU_U03_SPECIMEN_CONTAINER>`]
      - required
-     - 
-     - SPECIMEN_CONTAINER: Required, repeating
+     - SPECIMEN_CONTAINER
 
 .. _hl7-v2_8-STC_S33:
+
+STC_S33 STC/ACK - Notification of sterilization configuration (S17.6.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.STC_S33.STC_S33
    :noindex:
 
-   HL7 v2 STC_S33 message.
-
-STC_S33
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``SCP``
-     - 
      - List[:ref:`SCP <hl7-v2_8-SCP>`]
      - required
-     - 
-     - SCP: Required, repeating
+     - Sterilizer Configuration (Anti-Microbial Devices)
 
 .. _hl7-v2_8-TCU_U10:
+
+TCU_U10 TCU/ACK - Automated equipment test code settings update (S13.3.10).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.TCU_U10.TCU_U10
    :noindex:
 
-   HL7 v2 TCU_U10 message.
+.. list-table::
+   :header-rows: 1
+   :widths: auto
 
-TCU_U10
-~~~~~~~
+   * - Field
+     - Type
+     - Required
+     - Description
+   * - ``MSH``
+     - :ref:`MSH <hl7-v2_8-MSH>`
+     - required
+     - Message Header
+   * - ``SFT``
+     - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
+     - optional
+     - Software Segment
+   * - ``UAC``
+     - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
+     - optional
+     - User Authentication Credential Segment
+   * - ``EQU``
+     - :ref:`EQU <hl7-v2_8-EQU>`
+     - required
+     - Equipment Detail
+   * - ``TEST_CONFIGURATION``
+     - List[:ref:`TCU_U10_TEST_CONFIGURATION <hl7-v2_8-TCU_U10_TEST_CONFIGURATION>`]
+     - required
+     - TEST_CONFIGURATION
+
+.. _hl7-v2_8-TCU_U11:
+
+TCU_U11 TCR/ACK - Automated equipment test code settings request (S13.3.11).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. py:class:: hl7types.hl7.v2_8.messages.TCU_U11.TCU_U11
+   :noindex:
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``EQU``
-     - 
      - :ref:`EQU <hl7-v2_8-EQU>`
      - required
-     - 
-     - EQU: Required
+     - Equipment Detail
    * - ``TEST_CONFIGURATION``
-     - 
      - List[:ref:`TCU_U10_TEST_CONFIGURATION <hl7-v2_8-TCU_U10_TEST_CONFIGURATION>`]
      - required
-     - 
-     - TEST_CONFIGURATION: Required, repeating
+     - TEST_CONFIGURATION
 
 .. _hl7-v2_8-UDM_Q05:
+
+UDM_Q05 UDM/ACK - Unsolicited display update message (S5.10.1.1).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.UDM_Q05.UDM_Q05
    :noindex:
 
-   HL7 v2 UDM_Q05 message.
-
-UDM_Q05
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``URD``
-     - 
      - :ref:`URD <hl7-v2_8-URD>`
      - required
-     - 
-     - URD: Required
+     - withdrawn
    * - ``URS``
-     - 
      - Optional[:ref:`URS <hl7-v2_8-URS>`]
      - optional
-     - 
-     - URS: Optional
+     - withdrawn
    * - ``DSP``
-     - 
      - List[:ref:`DSP <hl7-v2_8-DSP>`]
      - required
-     - 
-     - DSP: Required, repeating
+     - Display Data
    * - ``DSC``
-     - 
      - Optional[:ref:`DSC <hl7-v2_8-DSC>`]
      - optional
-     - 
-     - DSC: Optional
+     - Continuation Pointer
 
 .. _hl7-v2_8-VXU_V04:
+
+VXU_V04 VXU - Unsolicited vaccination record update (S4.A.6).
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_8.messages.VXU_V04.VXU_V04
    :noindex:
 
-   HL7 v2 VXU_V04 message.
-
-VXU_V04
-~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MSH``
-     - 
      - :ref:`MSH <hl7-v2_8-MSH>`
      - required
-     - 
-     - MSH: Required
+     - Message Header
    * - ``SFT``
-     - 
      - Optional[List[:ref:`SFT <hl7-v2_8-SFT>`]]
      - optional
-     - 
-     - SFT: Optional, repeating
+     - Software Segment
    * - ``UAC``
-     - 
      - Optional[:ref:`UAC <hl7-v2_8-UAC>`]
      - optional
-     - 
-     - UAC: Optional
+     - User Authentication Credential Segment
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_8-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_8-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Additional Demographic
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_8-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of Kin / Associated Parties
    * - ``ARV``
-     - 
      - Optional[List[:ref:`ARV <hl7-v2_8-ARV>`]]
      - optional
-     - 
-     - ARV: Optional, repeating
+     - Access Restriction
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`VXU_V04_PATIENT_VISIT <hl7-v2_8-VXU_V04_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_8-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`VXU_V04_INSURANCE <hl7-v2_8-VXU_V04_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``PERSON_OBSERVATION``
-     - 
      - Optional[List[:ref:`VXU_V04_PERSON_OBSERVATION <hl7-v2_8-VXU_V04_PERSON_OBSERVATION>`]]
      - optional
-     - 
-     - PERSON_OBSERVATION: Optional, repeating
+     - PERSON_OBSERVATION
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`VXU_V04_ORDER <hl7-v2_8-VXU_V04_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER

@@ -23,19 +23,18 @@ class MFN_M09_MF_TEST_CATEGORICAL(HL7Model):
     """HL7 v2 MFN_M09.MF_TEST_CATEGORICAL group.
 
     Attributes:
-        MFE (MFE): required
+        MFE (MFE): Master file entry segment, required
         MF_TEST_CAT_DETAIL (Optional[MFN_M09_MF_TEST_CAT_DETAIL]): optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master file entry segment",
     )
 
     MF_TEST_CAT_DETAIL: Optional[_MFN_M09_MF_TEST_CAT_DETAIL] = Field(
         default=None,
         title="MF_TEST_CAT_DETAIL",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

@@ -19,12 +19,12 @@ class EHC_E24_PAYER_ADJUSTMENT(HL7Model):
     """HL7 v2 EHC_E24.PAYER_ADJUSTMENT group.
 
     Attributes:
-        ADJ (ADJ): required
+        ADJ (ADJ): Adjustment, required
     """
 
     ADJ: _ADJ = Field(
         title="ADJ",
-        description="Required",
+        description="Adjustment",
     )
 
     model_config = {"populate_by_name": True}

@@ -25,41 +25,41 @@ _MSH = MSH
 
 
 class MFK_M01(HL7Model):
-    """HL7 v2 MFK_M01 message.
+    """MFN/MFK - Master file not otherwise specified (for backward compatibility only) (S8).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        MFI (MFI): required
-        MFA (Optional[List[MFA]]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        MFI (MFI): Master File Identification, required
+        MFA (Optional[List[MFA]]): Master File Acknowledgment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MFA: Optional[List[_MFA]] = Field(
         default=None,
         title="MFA",
-        description="Optional, repeating",
+        description="Master File Acknowledgment",
     )
 
     model_config = {"populate_by_name": True}

@@ -16,51 +16,51 @@ from ..datatypes.CWE import CWE
 
 
 class AIG(HL7Model):
-    """HL7 v2 AIG segment.
+    """Appointment Information - General Resource (S10.6.5).
 
     Attributes
     ----------
     aig_1 : str
-        AIG.1 (req) - Set ID - AIG (SI)
+        AIG.1 (req) - Set ID - AIG (SI) S10.6.5.1
 
     aig_2 : str | None
-        AIG.2 (opt) - Segment Action Code (ID)
+        AIG.2 (opt) - Segment Action Code (ID) S10.6.3.2 | 0206 - Segment action code
 
     aig_3 : CWE | None
-        AIG.3 (opt) - Resource ID (CWE)
+        AIG.3 (opt) - Resource ID (CWE) S10.6.5.3
 
     aig_4 : CWE
-        AIG.4 (req) - Resource Type (CWE)
+        AIG.4 (req) - Resource Type (CWE) S10.6.5.4
 
     aig_5 : list[CWE] | None
-        AIG.5 (opt, rep) - Resource Group (CWE)
+        AIG.5 (opt, rep) - Resource Group (CWE) S10.6.5.5
 
     aig_6 : str | None
-        AIG.6 (opt) - Resource Quantity (NM)
+        AIG.6 (opt) - Resource Quantity (NM) S10.6.5.6
 
     aig_7 : CNE | None
-        AIG.7 (opt) - Resource Quantity Units (CNE)
+        AIG.7 (opt) - Resource Quantity Units (CNE) S10.6.5.7
 
     aig_8 : str | None
-        AIG.8 (opt) - Start Date/Time (DTM)
+        AIG.8 (opt) - Start Date/Time (DTM) S10.6.4.4
 
     aig_9 : str | None
-        AIG.9 (opt) - Start Date/Time Offset (NM)
+        AIG.9 (opt) - Start Date/Time Offset (NM) S10.6.4.5
 
     aig_10 : CNE | None
-        AIG.10 (opt) - Start Date/Time Offset Units (CNE)
+        AIG.10 (opt) - Start Date/Time Offset Units (CNE) S10.6.4.6
 
     aig_11 : str | None
-        AIG.11 (opt) - Duration (NM)
+        AIG.11 (opt) - Duration (NM) S10.6.4.7
 
     aig_12 : CNE | None
-        AIG.12 (opt) - Duration Units (CNE)
+        AIG.12 (opt) - Duration Units (CNE) S10.6.4.8
 
     aig_13 : str | None
-        AIG.13 (opt) - Allow Substitution Code (IS)
+        AIG.13 (opt) - Allow Substitution Code (IS) S10.6.4.9 | 0279 - Allow Substitution Codes
 
     aig_14 : CWE | None
-        AIG.14 (opt) - Filler Status Code (CWE)
+        AIG.14 (opt) - Filler Status Code (CWE) S10.6.2.25 | 0278 - Filler status codes
     """
 
     aig_1: str = Field(

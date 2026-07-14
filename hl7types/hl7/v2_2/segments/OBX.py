@@ -16,57 +16,57 @@ from ..datatypes.TS import TS
 
 
 class OBX(HL7Model):
-    """HL7 v2 OBX segment.
+    """OBSERVATION RESULT (S7.3.2).
 
     Attributes
     ----------
     obx_1 : str | None
-        OBX.1 (opt) - Set ID - Observational Simple (SI)
+        OBX.1 (opt) - Set ID - Observational Simple (SI) S7.3.2.1
 
     obx_2 : str
-        OBX.2 (req) - Value Type (ID)
+        OBX.2 (req) - Value Type (ID) S7.3.2.2 | 0125 - VALUE TYPE
 
     obx_3 : CE
-        OBX.3 (req) - Observation Identifier (CE)
+        OBX.3 (req) - Observation Identifier (CE) S7.3.2.3
 
     obx_4 : str | None
-        OBX.4 (opt) - Observation Sub-ID (ST)
+        OBX.4 (opt) - Observation Sub-ID (ST) S7.3.2.4
 
     obx_5 : str | None
-        OBX.5 (opt) - Observation Value (*)
+        OBX.5 (opt) - Observation Value (*) S7.3.2.5
 
     obx_6 : CE | None
-        OBX.6 (opt) - Units (CE)
+        OBX.6 (opt) - Units (CE) S7.3.2.6
 
     obx_7 : str | None
-        OBX.7 (opt) - References Range (ST)
+        OBX.7 (opt) - References Range (ST) S7.3.2.7
 
     obx_8 : list[str] | None
-        OBX.8 (opt, rep) - Abnormal Flags (ID)
+        OBX.8 (opt, rep) - Abnormal Flags (ID) S7.3.2.8 | 0078 - ABNORMAL FLAGS
 
     obx_9 : str | None
-        OBX.9 (opt) - Probability (NM)
+        OBX.9 (opt) - Probability (NM) S7.3.2.9
 
     obx_10 : str | None
-        OBX.10 (opt) - Nature of Abnormal Test (ID)
+        OBX.10 (opt) - Nature of Abnormal Test (ID) S7.3.2.10 | 0080 - NATURE OF ABNORMAL TESTING
 
     obx_11 : str
-        OBX.11 (req) - Observation result status (ID)
+        OBX.11 (req) - Observation result status (ID) S7.3.2.11 | 0085 - OBSERVATION RESULT STATUS CODES INTERPRETATION
 
     obx_12 : TS | None
-        OBX.12 (opt) - Effective date last observation normal values (TS)
+        OBX.12 (opt) - Effective date last observation normal values (TS) S7.3.2.12
 
     obx_13 : str | None
-        OBX.13 (opt) - User Defined Access Checks (ST)
+        OBX.13 (opt) - User Defined Access Checks (ST) S7.3.2.13
 
     obx_14 : TS | None
-        OBX.14 (opt) - Date / time of the observation (TS)
+        OBX.14 (opt) - Date / time of the observation (TS) S7.3.2.14
 
     obx_15 : CE | None
-        OBX.15 (opt) - Producer's ID (CE)
+        OBX.15 (opt) - Producer's ID (CE) S7.3.2.15
 
     obx_16 : str | None
-        OBX.16 (opt) - Responsible Observer (CN)
+        OBX.16 (opt) - Responsible Observer (CN) S7.3.2.16
     """
 
     obx_1: Optional[str] = Field(

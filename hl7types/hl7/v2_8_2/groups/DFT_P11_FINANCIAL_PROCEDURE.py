@@ -24,26 +24,26 @@ class DFT_P11_FINANCIAL_PROCEDURE(HL7Model):
     """HL7 v2 DFT_P11.FINANCIAL_PROCEDURE group.
 
     Attributes:
-        PR1 (PR1): required
-        PRT (Optional[List[PRT]]): optional
-        ROL (Optional[List[ROL]]): optional
+        PR1 (PR1): Procedures, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     PR1: _PR1 = Field(
         title="PR1",
-        description="Required",
+        description="Procedures",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

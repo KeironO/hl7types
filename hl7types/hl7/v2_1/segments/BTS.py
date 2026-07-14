@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class BTS(HL7Model):
-    """HL7 v2 BTS segment.
+    """BATCH TRAILER (S2.5.3).
 
     Attributes
     ----------
     bts_1 : str | None
-        BTS.1 (opt) - BATCH MESSAGE COUNT (ST)
+        BTS.1 (opt) - BATCH MESSAGE COUNT (ST) S2-41
 
     bts_2 : str | None
         BTS.2 (opt) - BATCH COMMENT (ST)

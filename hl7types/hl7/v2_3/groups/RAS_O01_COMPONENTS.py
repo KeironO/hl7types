@@ -22,20 +22,20 @@ class RAS_O01_COMPONENTS(HL7Model):
     """HL7 v2 RAS_O01.COMPONENTS group.
 
     Attributes:
-        RXC (List[RXC]): required
-        NTE (Optional[List[NTE]]): optional
+        RXC (List[RXC]): Pharmacy component order segment, required
+        NTE (Optional[List[NTE]]): Notes and comments segment, optional
     """
 
     RXC: List[_RXC] = Field(
         min_length=1,
         title="RXC",
-        description="Required, repeating",
+        description="Pharmacy component order segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

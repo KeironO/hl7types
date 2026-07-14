@@ -27,33 +27,31 @@ class CCU_I20_PROBLEM(HL7Model):
     """HL7 v2 CCU_I20.PROBLEM group.
 
     Attributes:
-        PRB (PRB): required
-        VAR (Optional[List[VAR]]): optional
+        PRB (PRB): Problem Details, required
+        VAR (Optional[List[VAR]]): Variance, optional
         ROLE_PROBLEM (Optional[List[CCU_I20_ROLE_PROBLEM]]): optional
         PROBLEM_OBSERVATION (Optional[List[CCU_I20_PROBLEM_OBSERVATION]]): optional
     """
 
     PRB: _PRB = Field(
         title="PRB",
-        description="Required",
+        description="Problem Details",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ROLE_PROBLEM: Optional[List[_CCU_I20_ROLE_PROBLEM]] = Field(
         default=None,
         title="ROLE_PROBLEM",
-        description="Optional, repeating",
     )
 
     PROBLEM_OBSERVATION: Optional[List[_CCU_I20_PROBLEM_OBSERVATION]] = Field(
         default=None,
         title="PROBLEM_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

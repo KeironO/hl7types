@@ -22,75 +22,75 @@ from ..datatypes.XTN import XTN
 
 
 class PRT(HL7Model):
-    """HL7 v2 PRT segment.
+    """Participation Information (S7.4.4).
 
     Attributes
     ----------
     prt_1 : EI | None
-        PRT.1 (opt) - Participation Instance ID (EI)
+        PRT.1 (opt) - Participation Instance ID (EI) S7.4.4.1
 
     prt_2 : str
-        PRT.2 (req) - Action Code (ID)
+        PRT.2 (req) - Action Code (ID) S4.A.9.2 | 0206 - Segment Action Code
 
     prt_3 : CWE | None
-        PRT.3 (opt) - Action Reason (CWE)
+        PRT.3 (opt) - Action Reason (CWE) S7.4.4.3
 
     prt_4 : CWE
-        PRT.4 (req) - Participation (CWE)
+        PRT.4 (req) - Participation (CWE) S7.4.4.4 | 0912 - Participation
 
     prt_5 : list[XCN] | None
-        PRT.5 (opt, rep) - Participation Person (XCN)
+        PRT.5 (opt, rep) - Participation Person (XCN) S7.4.4.5
 
     prt_6 : CWE | None
-        PRT.6 (opt) - Participation Person Provider Type (CWE)
+        PRT.6 (opt) - Participation Person Provider Type (CWE) S7.4.4.6
 
     prt_7 : CWE | None
-        PRT.7 (opt) - Participant Organization Unit Type (CWE)
+        PRT.7 (opt) - Participant Organization Unit Type (CWE) S7.4.4.7 | 0406 - Organization Unit Type
 
     prt_8 : list[XON] | None
-        PRT.8 (opt, rep) - Participation Organization (XON)
+        PRT.8 (opt, rep) - Participation Organization (XON) S7.4.4.8
 
     prt_9 : list[PL] | None
-        PRT.9 (opt, rep) - Participant Location (PL)
+        PRT.9 (opt, rep) - Participant Location (PL) S7.4.4.9
 
     prt_10 : list[EI] | None
-        PRT.10 (opt, rep) - Participation Device (EI)
+        PRT.10 (opt, rep) - Participation Device (EI) S7.4.4.10
 
     prt_11 : str | None
-        PRT.11 (opt) - Participation Begin Date/Time (arrival time) (DTM)
+        PRT.11 (opt) - Participation Begin Date/Time (arrival time) (DTM) S7.4.4.11
 
     prt_12 : str | None
-        PRT.12 (opt) - Participation End Date/Time (departure time) (DTM)
+        PRT.12 (opt) - Participation End Date/Time (departure time) (DTM) S7.4.4.12
 
     prt_13 : CWE | None
-        PRT.13 (opt) - Participation Qualitative Duration (CWE)
+        PRT.13 (opt) - Participation Qualitative Duration (CWE) S7.4.4.13
 
     prt_14 : list[XAD] | None
-        PRT.14 (opt, rep) - Participation Address (XAD)
+        PRT.14 (opt, rep) - Participation Address (XAD) S7.4.4.14
 
     prt_15 : list[XTN] | None
-        PRT.15 (opt, rep) - Participant Telecommunication Address (XTN)
+        PRT.15 (opt, rep) - Participant Telecommunication Address (XTN) S7.4.4.15
 
     prt_16 : EI | None
-        PRT.16 (opt) - Participant Device Identifier (EI)
+        PRT.16 (opt) - Participant Device Identifier (EI) S7.4.4.16
 
     prt_17 : str | None
-        PRT.17 (opt) - Participant Device Manufacture Date (DTM)
+        PRT.17 (opt) - Participant Device Manufacture Date (DTM) S7.4.4.17
 
     prt_18 : str | None
-        PRT.18 (opt) - Participant Device Expiry Date (DTM)
+        PRT.18 (opt) - Participant Device Expiry Date (DTM) S7.4.4.18
 
     prt_19 : str | None
-        PRT.19 (opt) - Participant Device Lot Number (ST)
+        PRT.19 (opt) - Participant Device Lot Number (ST) S7.4.4.19
 
     prt_20 : str | None
-        PRT.20 (opt) - Participant Device Serial Number (ST)
+        PRT.20 (opt) - Participant Device Serial Number (ST) S7.4.4.20
 
     prt_21 : EI | None
-        PRT.21 (opt) - Participant Device Donation Identification (EI)
+        PRT.21 (opt) - Participant Device Donation Identification (EI) S7.4.4.21
 
     prt_22 : CNE | None
-        PRT.22 (opt) - Participation Device Type (CNE)
+        PRT.22 (opt) - Participation Device Type (CNE) S7.4.4.22
     """
 
     prt_1: Optional[EI] = Field(

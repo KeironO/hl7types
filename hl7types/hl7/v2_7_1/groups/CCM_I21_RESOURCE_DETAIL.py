@@ -24,18 +24,17 @@ class CCM_I21_RESOURCE_DETAIL(HL7Model):
 
     Attributes:
         RESOURCE_OBJECT (CCM_I21_RESOURCE_OBJECT): required
-        OBX (Optional[List[OBX]]): optional
+        OBX (Optional[List[OBX]]): Observation/Result, optional
     """
 
     RESOURCE_OBJECT: _CCM_I21_RESOURCE_OBJECT = Field(
         title="RESOURCE_OBJECT",
-        description="Required",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     model_config = {"populate_by_name": True}

@@ -28,49 +28,47 @@ _PIN_I07_PROVIDER = PIN_I07_PROVIDER
 
 
 class PIN_I07(HL7Model):
-    """HL7 v2 PIN_I07 message.
+    """PIN/ACK - Unsolicited insurance information.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): MSH - message header segment, required
         PROVIDER (List[PIN_I07_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
+        PID (PID): PID - patient identification segment, required
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
         GUARANTOR_INSURANCE (Optional[PIN_I07_GUARANTOR_INSURANCE]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     PROVIDER: List[_PIN_I07_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     GUARANTOR_INSURANCE: Optional[_PIN_I07_GUARANTOR_INSURANCE] = Field(
         default=None,
         title="GUARANTOR_INSURANCE",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

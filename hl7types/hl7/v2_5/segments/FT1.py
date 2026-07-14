@@ -24,102 +24,102 @@ from ..datatypes.XCN import XCN
 
 
 class FT1(HL7Model):
-    """HL7 v2 FT1 segment.
+    """Financial Transaction (S6.5.1).
 
     Attributes
     ----------
     ft1_1 : str | None
-        FT1.1 (opt) - Set ID - FT1 (SI)
+        FT1.1 (opt) - Set ID - FT1 (SI) S6.5.1.1
 
     ft1_2 : str | None
-        FT1.2 (opt) - Transaction ID (ST)
+        FT1.2 (opt) - Transaction ID (ST) S6.5.1.2
 
     ft1_3 : str | None
-        FT1.3 (opt) - Transaction Batch ID (ST)
+        FT1.3 (opt) - Transaction Batch ID (ST) S6.5.1.3
 
     ft1_4 : DR
-        FT1.4 (req) - Transaction Date (DR)
+        FT1.4 (req) - Transaction Date (DR) S6.5.1.4
 
     ft1_5 : TS | None
-        FT1.5 (opt) - Transaction Posting Date (TS)
+        FT1.5 (opt) - Transaction Posting Date (TS) S6.5.1.5
 
     ft1_6 : str
-        FT1.6 (req) - Transaction Type (IS)
+        FT1.6 (req) - Transaction Type (IS) S6.5.1.6 | 0017 - Transaction Type
 
     ft1_7 : CE
-        FT1.7 (req) - Transaction Code (CE)
+        FT1.7 (req) - Transaction Code (CE) S6.5.1.7 | 0132 - Transaction Code
 
     ft1_8 : str | None
-        FT1.8 (opt) - Transaction Description (ST)
+        FT1.8 (opt) - Transaction Description (ST) S6.5.1.8
 
     ft1_9 : str | None
-        FT1.9 (opt) - Transaction Description - Alt (ST)
+        FT1.9 (opt) - Transaction Description - Alt (ST) S6.5.1.9
 
     ft1_10 : str | None
-        FT1.10 (opt) - Transaction Quantity (NM)
+        FT1.10 (opt) - Transaction Quantity (NM) S6.5.1.10
 
     ft1_11 : CP | None
-        FT1.11 (opt) - Transaction Amount - Extended (CP)
+        FT1.11 (opt) - Transaction Amount - Extended (CP) S6.5.1.11
 
     ft1_12 : CP | None
-        FT1.12 (opt) - Transaction Amount - Unit (CP)
+        FT1.12 (opt) - Transaction Amount - Unit (CP) S6.5.1.12
 
     ft1_13 : CE | None
-        FT1.13 (opt) - Department Code (CE)
+        FT1.13 (opt) - Department Code (CE) S6.5.1.13 | 0049 - Department Code
 
     ft1_14 : CE | None
-        FT1.14 (opt) - Insurance Plan ID (CE)
+        FT1.14 (opt) - Insurance Plan ID (CE) S6.5.1.14 | 0072 - Insurance Plan ID
 
     ft1_15 : CP | None
-        FT1.15 (opt) - Insurance Amount (CP)
+        FT1.15 (opt) - Insurance Amount (CP) S6.5.1.15
 
     ft1_16 : PL | None
-        FT1.16 (opt) - Assigned Patient Location (PL)
+        FT1.16 (opt) - Assigned Patient Location (PL) S3.4.3.3
 
     ft1_17 : str | None
-        FT1.17 (opt) - Fee Schedule (IS)
+        FT1.17 (opt) - Fee Schedule (IS) S6.5.1.17 | 0024 - Fee Schedule
 
     ft1_18 : str | None
-        FT1.18 (opt) - Patient Type (IS)
+        FT1.18 (opt) - Patient Type (IS) S3.4.3.18 | 0018 - Patient Type
 
     ft1_19 : list[CE] | None
-        FT1.19 (opt, rep) - Diagnosis Code - FT1 (CE)
+        FT1.19 (opt, rep) - Diagnosis Code - FT1 (CE) S6.5.1.19 | 0051 - Diagnosis Code
 
     ft1_20 : list[XCN] | None
-        FT1.20 (opt, rep) - Performed By Code (XCN)
+        FT1.20 (opt, rep) - Performed By Code (XCN) S6.5.1.20 | 0084 - Performed by
 
     ft1_21 : list[XCN] | None
-        FT1.21 (opt, rep) - Ordered By Code (XCN)
+        FT1.21 (opt, rep) - Ordered By Code (XCN) S6.5.1.21
 
     ft1_22 : CP | None
-        FT1.22 (opt) - Unit Cost (CP)
+        FT1.22 (opt) - Unit Cost (CP) S6.5.1.22
 
     ft1_23 : EI | None
-        FT1.23 (opt) - Filler Order Number (EI)
+        FT1.23 (opt) - Filler Order Number (EI) S4.5.1.3
 
     ft1_24 : list[XCN] | None
-        FT1.24 (opt, rep) - Entered By Code (XCN)
+        FT1.24 (opt, rep) - Entered By Code (XCN) S6.5.1.24
 
     ft1_25 : CE | None
-        FT1.25 (opt) - Procedure Code (CE)
+        FT1.25 (opt) - Procedure Code (CE) S4.5.3.44 | 0088 - Procedure Code
 
     ft1_26 : list[CE] | None
-        FT1.26 (opt, rep) - Procedure Code Modifier (CE)
+        FT1.26 (opt, rep) - Procedure Code Modifier (CE) S4.5.3.45 | 0340 - Procedure Code Modifier
 
     ft1_27 : CE | None
-        FT1.27 (opt) - Advanced Beneficiary Notice Code (CE)
+        FT1.27 (opt) - Advanced Beneficiary Notice Code (CE) S4.5.1.20 | 0339 - Advanced Beneficiary Notice Code
 
     ft1_28 : CWE | None
-        FT1.28 (opt) - Medically Necessary Duplicate Procedure Reason. (CWE)
+        FT1.28 (opt) - Medically Necessary Duplicate Procedure Reason. (CWE) S4.5.3.48 | 0476 - Medically Necessary Duplicate Procedure Reason
 
     ft1_29 : CNE | None
-        FT1.29 (opt) - NDC Code (CNE)
+        FT1.29 (opt) - NDC Code (CNE) S6.5.1.29 | 0549 - NDC Codes
 
     ft1_30 : CX | None
-        FT1.30 (opt) - Payment Reference ID (CX)
+        FT1.30 (opt) - Payment Reference ID (CX) S6.5.1.30
 
     ft1_31 : list[str] | None
-        FT1.31 (opt, rep) - Transaction Reference Key (SI)
+        FT1.31 (opt, rep) - Transaction Reference Key (SI) S6.5.1.31
     """
 
     ft1_1: Optional[str] = Field(

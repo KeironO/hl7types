@@ -33,53 +33,51 @@ class RDE_O01_ORDER(HL7Model):
     """HL7 v2 RDE_O01.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): ORC - common order segment, required
         ORDER_DETAIL (Optional[RDE_O01_ORDER_DETAIL]): optional
-        RXE (RXE): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXE (RXE): RXE - pharmacy/treatment encoded order segment, required
+        RXR (List[RXR]): RXR - pharmacy/treatment route segment, required
+        RXC (Optional[List[RXC]]): RXC - pharmacy/treatment component order segment, optional
         OBSERVATION (Optional[List[RDE_O01_OBSERVATION]]): optional
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): CTI - clinical trial identification segment, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     ORDER_DETAIL: Optional[_RDE_O01_ORDER_DETAIL] = Field(
         default=None,
         title="ORDER_DETAIL",
-        description="Optional",
     )
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="RXE - pharmacy/treatment encoded order segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="RXR - pharmacy/treatment route segment",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="RXC - pharmacy/treatment component order segment",
     )
 
     OBSERVATION: Optional[List[_RDE_O01_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="CTI - clinical trial identification segment",
     )
 
     model_config = {"populate_by_name": True}

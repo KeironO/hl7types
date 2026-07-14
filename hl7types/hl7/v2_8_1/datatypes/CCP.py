@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CCP(HL7Model):
-    """HL7 v2 CCP data type.
+    """Channel calibration parameters (S2.A.4).
 
     Attributes
     ----------

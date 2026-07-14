@@ -24,36 +24,35 @@ _UAC = UAC
 
 
 class CRM_C01(HL7Model):
-    """HL7 v2 CRM_C01 message.
+    """CRM - Register a patient on a clinical trial (S7.7.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
         PATIENT (List[CRM_C01_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     PATIENT: List[_CRM_C01_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

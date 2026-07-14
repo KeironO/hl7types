@@ -22,19 +22,19 @@ class RTB_Q13_ROW_DEFINITION(HL7Model):
     """HL7 v2 RTB_Q13.ROW_DEFINITION group.
 
     Attributes:
-        RDF (RDF): required
-        RDT (Optional[List[RDT]]): optional
+        RDF (RDF): Table Row Definition, required
+        RDT (Optional[List[RDT]]): Table Row Data, optional
     """
 
     RDF: _RDF = Field(
         title="RDF",
-        description="Required",
+        description="Table Row Definition",
     )
 
     RDT: Optional[List[_RDT]] = Field(
         default=None,
         title="RDT",
-        description="Optional, repeating",
+        description="Table Row Data",
     )
 
     model_config = {"populate_by_name": True}

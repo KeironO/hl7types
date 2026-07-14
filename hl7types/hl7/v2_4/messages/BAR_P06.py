@@ -22,28 +22,27 @@ _MSH = MSH
 
 
 class BAR_P06(HL7Model):
-    """HL7 v2 BAR_P06 message.
+    """BAR/ACK - End account (S6).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
         PATIENT (List[BAR_P06_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PATIENT: List[_BAR_P06_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

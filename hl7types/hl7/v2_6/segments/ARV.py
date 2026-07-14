@@ -17,27 +17,27 @@ from ..datatypes.DR import DR
 
 
 class ARV(HL7Model):
-    """HL7 v2 ARV segment.
+    """Access Restriction (S3.4.13).
 
     Attributes
     ----------
     arv_1 : str | None
-        ARV.1 (opt) - Set ID (SI)
+        ARV.1 (opt) - Set ID (SI) S3.4.13.1
 
     arv_2 : CNE
-        ARV.2 (req) - Access Restriction Action Code (CNE)
+        ARV.2 (req) - Access Restriction Action Code (CNE) S3.4.13.2 | 0206 - Segment action code
 
     arv_3 : CWE
-        ARV.3 (req) - Access Restriction Value (CWE)
+        ARV.3 (req) - Access Restriction Value (CWE) S3.4.13.3 | 0717 - Access Restriction Value
 
     arv_4 : list[CWE] | None
-        ARV.4 (opt, rep) - Access Restriction Reason (CWE)
+        ARV.4 (opt, rep) - Access Restriction Reason (CWE) S3.4.13.4 | 0719 - Access Restriction Reason Code
 
     arv_5 : list[str] | None
-        ARV.5 (opt, rep) - Special Access Restriction Instructions (ST)
+        ARV.5 (opt, rep) - Special Access Restriction Instructions (ST) S3.4.13.5
 
     arv_6 : DR | None
-        ARV.6 (opt) - Access Restriction Date Range (DR)
+        ARV.6 (opt) - Access Restriction Date Range (DR) S3.4.13.6
     """
 
     arv_1: Optional[str] = Field(

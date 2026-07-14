@@ -29,40 +29,39 @@ class DEO_O45_DONOR(HL7Model):
     """HL7 v2 DEO_O45.DONOR group.
 
     Attributes:
-        PID (PID): required
-        OBX (Optional[List[OBX]]): optional
-        ARV (Optional[List[ARV]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient Identification, required
+        OBX (Optional[List[OBX]]): Observation/Result, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         DONOR_REGISTRATION (Optional[DEO_O45_DONOR_REGISTRATION]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="Observation/Result",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     DONOR_REGISTRATION: Optional[_DEO_O45_DONOR_REGISTRATION] = Field(
         default=None,
         title="DONOR_REGISTRATION",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class DSC(HL7Model):
-    """HL7 v2 DSC segment.
+    """DSC - Continuation pointer segment (S2.24.8).
 
     Attributes
     ----------
     dsc_1 : str | None
-        DSC.1 (opt) - Continuation Pointer (ST)
+        DSC.1 (opt) - Continuation Pointer (ST) S2.24.8.1
     """
 
     dsc_1: Optional[str] = Field(

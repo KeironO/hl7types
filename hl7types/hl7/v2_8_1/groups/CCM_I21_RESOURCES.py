@@ -23,19 +23,18 @@ class CCM_I21_RESOURCES(HL7Model):
     """HL7 v2 CCM_I21.RESOURCES group.
 
     Attributes:
-        RGS (RGS): required
+        RGS (RGS): Resource Group, required
         RESOURCE_DETAIL (Optional[List[CCM_I21_RESOURCE_DETAIL]]): optional
     """
 
     RGS: _RGS = Field(
         title="RGS",
-        description="Required",
+        description="Resource Group",
     )
 
     RESOURCE_DETAIL: Optional[List[_CCM_I21_RESOURCE_DETAIL]] = Field(
         default=None,
         title="RESOURCE_DETAIL",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -3,14280 +3,10618 @@ v2.3 Groups
 
 .. _hl7-v2_3-ADT_A01_INSURANCE:
 
+ADT_A01_INSURANCE HL7 v2 ADT_A01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A01_INSURANCE.ADT_A01_INSURANCE
    :noindex:
-
-   HL7 v2 ADT_A01.INSURANCE group.
-
-ADT_A01_INSURANCE
-~~~~~~~~~~~~~~~~~
 
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-ADT_A01_PROCEDURE:
+
+ADT_A01_PROCEDURE HL7 v2 ADT_A01.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A01_PROCEDURE.ADT_A01_PROCEDURE
    :noindex:
 
-   HL7 v2 ADT_A01.PROCEDURE group.
-
-ADT_A01_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_3-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
 
 .. _hl7-v2_3-ADT_A03_PROCEDURE:
+
+ADT_A03_PROCEDURE HL7 v2 ADT_A03.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A03_PROCEDURE.ADT_A03_PROCEDURE
    :noindex:
 
-   HL7 v2 ADT_A03.PROCEDURE group.
-
-ADT_A03_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_3-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
 
 .. _hl7-v2_3-ADT_A06_INSURANCE:
+
+ADT_A06_INSURANCE HL7 v2 ADT_A06.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A06_INSURANCE.ADT_A06_INSURANCE
    :noindex:
 
-   HL7 v2 ADT_A06.INSURANCE group.
-
-ADT_A06_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-ADT_A06_PROCEDURE:
+
+ADT_A06_PROCEDURE HL7 v2 ADT_A06.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A06_PROCEDURE.ADT_A06_PROCEDURE
    :noindex:
 
-   HL7 v2 ADT_A06.PROCEDURE group.
-
-ADT_A06_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_3-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
 
 .. _hl7-v2_3-ADT_A39_PATIENT:
+
+ADT_A39_PATIENT HL7 v2 ADT_A39.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A39_PATIENT.ADT_A39_PATIENT
    :noindex:
 
-   HL7 v2 ADT_A39.PATIENT group.
-
-ADT_A39_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``MRG``
-     - 
      - :ref:`MRG <hl7-v2_3-MRG>`
      - required
-     - 
-     - MRG: Required
+     - Merge patient information
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
 
 .. _hl7-v2_3-ADT_A43_PATIENT:
+
+ADT_A43_PATIENT HL7 v2 ADT_A43.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A43_PATIENT.ADT_A43_PATIENT
    :noindex:
 
-   HL7 v2 ADT_A43.PATIENT group.
-
-ADT_A43_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``MRG``
-     - 
      - :ref:`MRG <hl7-v2_3-MRG>`
      - required
-     - 
-     - MRG: Required
+     - Merge patient information
 
 .. _hl7-v2_3-ADT_A45_MERGE_INFO:
+
+ADT_A45_MERGE_INFO HL7 v2 ADT_A45.MERGE_INFO group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ADT_A45_MERGE_INFO.ADT_A45_MERGE_INFO
    :noindex:
 
-   HL7 v2 ADT_A45.MERGE_INFO group.
-
-ADT_A45_MERGE_INFO
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MRG``
-     - 
      - :ref:`MRG <hl7-v2_3-MRG>`
      - required
-     - 
-     - MRG: Required
+     - Merge patient information
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
 
 .. _hl7-v2_3-ARD_A19_INSURANCE:
+
+ARD_A19_INSURANCE HL7 v2 ARD_A19.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ARD_A19_INSURANCE.ARD_A19_INSURANCE
    :noindex:
 
-   HL7 v2 ARD_A19.INSURANCE group.
-
-ARD_A19_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-ARD_A19_PROCEDURE:
+
+ARD_A19_PROCEDURE HL7 v2 ARD_A19.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ARD_A19_PROCEDURE.ARD_A19_PROCEDURE
    :noindex:
 
-   HL7 v2 ARD_A19.PROCEDURE group.
-
-ARD_A19_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_3-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
 
 .. _hl7-v2_3-ARD_A19_QUERY_RESPONSE:
+
+ARD_A19_QUERY_RESPONSE HL7 v2 ARD_A19.QUERY_RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ARD_A19_QUERY_RESPONSE.ARD_A19_QUERY_RESPONSE
    :noindex:
 
-   HL7 v2 ARD_A19.QUERY_RESPONSE group.
-
-ARD_A19_QUERY_RESPONSE
-~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``EVN``
-     - 
      - Optional[:ref:`EVN <hl7-v2_3-EVN>`]
      - optional
-     - 
-     - EVN: Optional
+     - Event type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_3-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of kin
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_3-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability Segment
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_3-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation segment
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_3-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_3-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`ARD_A19_PROCEDURE <hl7-v2_3-ARD_A19_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_3-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`ARD_A19_INSURANCE <hl7-v2_3-ARD_A19_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_3-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``UB1``
-     - 
      - Optional[:ref:`UB1 <hl7-v2_3-UB1>`]
      - optional
-     - 
-     - UB1: Optional
+     - UB82  data
    * - ``UB2``
-     - 
      - Optional[:ref:`UB2 <hl7-v2_3-UB2>`]
      - optional
-     - 
-     - UB2: Optional
+     - UB92 data
 
 .. _hl7-v2_3-BAR_P01_INSURANCE:
+
+BAR_P01_INSURANCE HL7 v2 BAR_P01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.BAR_P01_INSURANCE.BAR_P01_INSURANCE
    :noindex:
 
-   HL7 v2 BAR_P01.INSURANCE group.
-
-BAR_P01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-BAR_P01_PROCEDURE:
+
+BAR_P01_PROCEDURE HL7 v2 BAR_P01.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.BAR_P01_PROCEDURE.BAR_P01_PROCEDURE
    :noindex:
 
-   HL7 v2 BAR_P01.PROCEDURE group.
-
-BAR_P01_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_3-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
 
 .. _hl7-v2_3-BAR_P01_VISIT:
+
+BAR_P01_VISIT HL7 v2 BAR_P01.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.BAR_P01_VISIT.BAR_P01_VISIT
    :noindex:
 
-   HL7 v2 BAR_P01.VISIT group.
-
-BAR_P01_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_3-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability Segment
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_3-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation segment
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_3-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``DRG``
-     - 
      - Optional[:ref:`DRG <hl7-v2_3-DRG>`]
      - optional
-     - 
-     - DRG: Optional
+     - Diagnosis Related Group
    * - ``PROCEDURE``
-     - 
      - Optional[List[:ref:`BAR_P01_PROCEDURE <hl7-v2_3-BAR_P01_PROCEDURE>`]]
      - optional
-     - 
-     - PROCEDURE: Optional, repeating
+     - PROCEDURE
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_3-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_3-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of kin
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`BAR_P01_INSURANCE <hl7-v2_3-BAR_P01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``ACC``
-     - 
      - Optional[:ref:`ACC <hl7-v2_3-ACC>`]
      - optional
-     - 
-     - ACC: Optional
+     - Accident
    * - ``UB1``
-     - 
      - Optional[:ref:`UB1 <hl7-v2_3-UB1>`]
      - optional
-     - 
-     - UB1: Optional
+     - UB82  data
    * - ``UB2``
-     - 
      - Optional[:ref:`UB2 <hl7-v2_3-UB2>`]
      - optional
-     - 
-     - UB2: Optional
+     - UB92 data
 
 .. _hl7-v2_3-BAR_P02_PATIENT:
+
+BAR_P02_PATIENT HL7 v2 BAR_P02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.BAR_P02_PATIENT.BAR_P02_PATIENT
    :noindex:
 
-   HL7 v2 BAR_P02.PATIENT group.
-
-BAR_P02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
    * - ``DB1``
-     - 
      - Optional[List[:ref:`DB1 <hl7-v2_3-DB1>`]]
      - optional
-     - 
-     - DB1: Optional, repeating
+     - Disability Segment
 
 .. _hl7-v2_3-BAR_P06_PATIENT:
+
+BAR_P06_PATIENT HL7 v2 BAR_P06.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.BAR_P06_PATIENT.BAR_P06_PATIENT
    :noindex:
 
-   HL7 v2 BAR_P06.PATIENT group.
-
-BAR_P06_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
 
 .. _hl7-v2_3-CRM_C01_PATIENT:
+
+CRM_C01_PATIENT HL7 v2 CRM_C01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CRM_C01_PATIENT.CRM_C01_PATIENT
    :noindex:
 
-   HL7 v2 CRM_C01.PATIENT group.
-
-CRM_C01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
    * - ``CSR``
-     - 
      - :ref:`CSR <hl7-v2_3-CSR>`
      - required
-     - 
-     - CSR: Required
+     - Clinical Study Registration
    * - ``CSP``
-     - 
      - Optional[List[:ref:`CSP <hl7-v2_3-CSP>`]]
      - optional
-     - 
-     - CSP: Optional, repeating
+     - Clinical Study Phase
 
 .. _hl7-v2_3-CSU_C09_PATIENT:
+
+CSU_C09_PATIENT HL7 v2 CSU_C09.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CSU_C09_PATIENT.CSU_C09_PATIENT
    :noindex:
 
-   HL7 v2 CSU_C09.PATIENT group.
-
-CSU_C09_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VISIT``
-     - 
      - Optional[:ref:`CSU_C09_VISIT <hl7-v2_3-CSU_C09_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
    * - ``CSR``
-     - 
      - :ref:`CSR <hl7-v2_3-CSR>`
      - required
-     - 
-     - CSR: Required
+     - Clinical Study Registration
    * - ``STUDY_PHASE``
-     - 
      - List[:ref:`CSU_C09_STUDY_PHASE <hl7-v2_3-CSU_C09_STUDY_PHASE>`]
      - required
-     - 
-     - STUDY_PHASE: Required, repeating
+     - STUDY_PHASE
 
 .. _hl7-v2_3-CSU_C09_RX_ADMIN:
+
+CSU_C09_RX_ADMIN HL7 v2 CSU_C09.RX_ADMIN group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CSU_C09_RX_ADMIN.CSU_C09_RX_ADMIN
    :noindex:
 
-   HL7 v2 CSU_C09.RX_ADMIN group.
-
-CSU_C09_RX_ADMIN
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXA``
-     - 
      - :ref:`RXA <hl7-v2_3-RXA>`
      - required
-     - 
-     - RXA: Required
+     - Pharmacy administration segment
    * - ``RXR``
-     - 
      - :ref:`RXR <hl7-v2_3-RXR>`
      - required
-     - 
-     - RXR: Required
+     - Pharmacy route segment
 
 .. _hl7-v2_3-CSU_C09_STUDY_OBSERVATION:
+
+CSU_C09_STUDY_OBSERVATION HL7 v2 CSU_C09.STUDY_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CSU_C09_STUDY_OBSERVATION.CSU_C09_STUDY_OBSERVATION
    :noindex:
 
-   HL7 v2 CSU_C09.STUDY_OBSERVATION group.
-
-CSU_C09_STUDY_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - Optional[:ref:`ORC <hl7-v2_3-ORC>`]
      - optional
-     - 
-     - ORC: Optional
+     - Common order segment
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``OBX``
-     - 
      - List[:ref:`OBX <hl7-v2_3-OBX>`]
      - required
-     - 
-     - OBX: Required, repeating
+     - Observation segment
 
 .. _hl7-v2_3-CSU_C09_STUDY_PHARM:
+
+CSU_C09_STUDY_PHARM HL7 v2 CSU_C09.STUDY_PHARM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CSU_C09_STUDY_PHARM.CSU_C09_STUDY_PHARM
    :noindex:
 
-   HL7 v2 CSU_C09.STUDY_PHARM group.
-
-CSU_C09_STUDY_PHARM
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - Optional[:ref:`ORC <hl7-v2_3-ORC>`]
      - optional
-     - 
-     - ORC: Optional
+     - Common order segment
    * - ``RX_ADMIN``
-     - 
      - List[:ref:`CSU_C09_RX_ADMIN <hl7-v2_3-CSU_C09_RX_ADMIN>`]
      - required
-     - 
-     - RX_ADMIN: Required, repeating
+     - RX_ADMIN
 
 .. _hl7-v2_3-CSU_C09_STUDY_PHASE:
+
+CSU_C09_STUDY_PHASE HL7 v2 CSU_C09.STUDY_PHASE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CSU_C09_STUDY_PHASE.CSU_C09_STUDY_PHASE
    :noindex:
 
-   HL7 v2 CSU_C09.STUDY_PHASE group.
-
-CSU_C09_STUDY_PHASE
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``CSP``
-     - 
      - Optional[:ref:`CSP <hl7-v2_3-CSP>`]
      - optional
-     - 
-     - CSP: Optional
+     - Clinical Study Phase
    * - ``STUDY_SCHEDULE``
-     - 
      - List[:ref:`CSU_C09_STUDY_SCHEDULE <hl7-v2_3-CSU_C09_STUDY_SCHEDULE>`]
      - required
-     - 
-     - STUDY_SCHEDULE: Required, repeating
+     - STUDY_SCHEDULE
 
 .. _hl7-v2_3-CSU_C09_STUDY_SCHEDULE:
+
+CSU_C09_STUDY_SCHEDULE HL7 v2 CSU_C09.STUDY_SCHEDULE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CSU_C09_STUDY_SCHEDULE.CSU_C09_STUDY_SCHEDULE
    :noindex:
 
-   HL7 v2 CSU_C09.STUDY_SCHEDULE group.
-
-CSU_C09_STUDY_SCHEDULE
-~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``CSS``
-     - 
      - Optional[:ref:`CSS <hl7-v2_3-CSS>`]
      - optional
-     - 
-     - CSS: Optional
+     - Clinical Study Data Schedule
    * - ``STUDY_OBSERVATION``
-     - 
      - Optional[List[:ref:`CSU_C09_STUDY_OBSERVATION <hl7-v2_3-CSU_C09_STUDY_OBSERVATION>`]]
      - optional
-     - 
-     - STUDY_OBSERVATION: Optional, repeating
+     - STUDY_OBSERVATION
    * - ``STUDY_PHARM``
-     - 
      - List[:ref:`CSU_C09_STUDY_PHARM <hl7-v2_3-CSU_C09_STUDY_PHARM>`]
      - required
-     - 
-     - STUDY_PHARM: Required, repeating
+     - STUDY_PHARM
 
 .. _hl7-v2_3-CSU_C09_VISIT:
+
+CSU_C09_VISIT HL7 v2 CSU_C09.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.CSU_C09_VISIT.CSU_C09_VISIT
    :noindex:
 
-   HL7 v2 CSU_C09.VISIT group.
-
-CSU_C09_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-DFT_P03_FINANCIAL:
+
+DFT_P03_FINANCIAL HL7 v2 DFT_P03.FINANCIAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.DFT_P03_FINANCIAL.DFT_P03_FINANCIAL
    :noindex:
 
-   HL7 v2 DFT_P03.FINANCIAL group.
-
-DFT_P03_FINANCIAL
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``FT1``
-     - 
      - :ref:`FT1 <hl7-v2_3-FT1>`
      - required
-     - 
-     - FT1: Required
+     - Financial transaction
    * - ``FINANCIAL_PROCEDURE``
-     - 
      - Optional[List[:ref:`DFT_P03_FINANCIAL_PROCEDURE <hl7-v2_3-DFT_P03_FINANCIAL_PROCEDURE>`]]
      - optional
-     - 
-     - FINANCIAL_PROCEDURE: Optional, repeating
+     - FINANCIAL_PROCEDURE
 
 .. _hl7-v2_3-DFT_P03_FINANCIAL_PROCEDURE:
+
+DFT_P03_FINANCIAL_PROCEDURE HL7 v2 DFT_P03.FINANCIAL_PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.DFT_P03_FINANCIAL_PROCEDURE.DFT_P03_FINANCIAL_PROCEDURE
    :noindex:
 
-   HL7 v2 DFT_P03.FINANCIAL_PROCEDURE group.
-
-DFT_P03_FINANCIAL_PROCEDURE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``ROL``
-     - 
      - Optional[List[:ref:`ROL <hl7-v2_3-ROL>`]]
      - optional
-     - 
-     - ROL: Optional, repeating
+     - Role
 
 .. _hl7-v2_3-DFT_P03_INSURANCE:
+
+DFT_P03_INSURANCE HL7 v2 DFT_P03.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.DFT_P03_INSURANCE.DFT_P03_INSURANCE
    :noindex:
 
-   HL7 v2 DFT_P03.INSURANCE group.
-
-DFT_P03_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-DOC_T12_RESULT:
+
+DOC_T12_RESULT HL7 v2 DOC_T12.RESULT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.DOC_T12_RESULT.DOC_T12_RESULT
    :noindex:
 
-   HL7 v2 DOC_T12.RESULT group.
-
-DOC_T12_RESULT
-~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``EVN``
-     - 
      - Optional[:ref:`EVN <hl7-v2_3-EVN>`]
      - optional
-     - 
-     - EVN: Optional
+     - Event type
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``TXA``
-     - 
      - :ref:`TXA <hl7-v2_3-TXA>`
      - required
-     - 
-     - TXA: Required
+     - Document notification segment
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_3-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation segment
 
 .. _hl7-v2_3-MFN_M01_MF:
+
+MFN_M01_MF HL7 v2 MFN_M01.MF group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M01_MF.MFN_M01_MF
    :noindex:
 
-   HL7 v2 MFN_M01.MF group.
-
-MFN_M01_MF
-~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
 
 .. _hl7-v2_3-MFN_M02_MF_STAFF:
+
+MFN_M02_MF_STAFF HL7 v2 MFN_M02.MF_STAFF group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M02_MF_STAFF.MFN_M02_MF_STAFF
    :noindex:
 
-   HL7 v2 MFN_M02.MF_STAFF group.
-
-MFN_M02_MF_STAFF
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``STF``
-     - 
      - :ref:`STF <hl7-v2_3-STF>`
      - required
-     - 
-     - STF: Required
+     - Staff identification segment
    * - ``PRA``
-     - 
      - Optional[:ref:`PRA <hl7-v2_3-PRA>`]
      - optional
-     - 
-     - PRA: Optional
+     - Practitioner detail segment
 
 .. _hl7-v2_3-MFN_M03_MF_TEST:
+
+MFN_M03_MF_TEST HL7 v2 MFN_M03.MF_TEST group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M03_MF_TEST.MFN_M03_MF_TEST
    :noindex:
 
-   HL7 v2 MFN_M03.MF_TEST group.
-
-MFN_M03_MF_TEST
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``OM1``
-     - 
      - :ref:`OM1 <hl7-v2_3-OM1>`
      - required
-     - 
-     - OM1: Required
+     - General - fields that apply to most observations
 
 .. _hl7-v2_3-MFN_M05_MF_LOCATION:
+
+MFN_M05_MF_LOCATION HL7 v2 MFN_M05.MF_LOCATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M05_MF_LOCATION.MFN_M05_MF_LOCATION
    :noindex:
 
-   HL7 v2 MFN_M05.MF_LOCATION group.
-
-MFN_M05_MF_LOCATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``LOC``
-     - 
      - :ref:`LOC <hl7-v2_3-LOC>`
      - required
-     - 
-     - LOC: Required
+     - Location Identification
    * - ``LCH``
-     - 
      - Optional[List[:ref:`LCH <hl7-v2_3-LCH>`]]
      - optional
-     - 
-     - LCH: Optional, repeating
+     - Location Characteristic
    * - ``LRL``
-     - 
      - Optional[List[:ref:`LRL <hl7-v2_3-LRL>`]]
      - optional
-     - 
-     - LRL: Optional, repeating
+     - Location Relationship
    * - ``MF_LOC_DEPT``
-     - 
      - List[:ref:`MFN_M05_MF_LOC_DEPT <hl7-v2_3-MFN_M05_MF_LOC_DEPT>`]
      - required
-     - 
-     - MF_LOC_DEPT: Required, repeating
+     - MF_LOC_DEPT
 
 .. _hl7-v2_3-MFN_M05_MF_LOC_DEPT:
+
+MFN_M05_MF_LOC_DEPT HL7 v2 MFN_M05.MF_LOC_DEPT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M05_MF_LOC_DEPT.MFN_M05_MF_LOC_DEPT
    :noindex:
 
-   HL7 v2 MFN_M05.MF_LOC_DEPT group.
-
-MFN_M05_MF_LOC_DEPT
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``LDP``
-     - 
      - :ref:`LDP <hl7-v2_3-LDP>`
      - required
-     - 
-     - LDP: Required
+     - Location Department
    * - ``LCH``
-     - 
      - Optional[List[:ref:`LCH <hl7-v2_3-LCH>`]]
      - optional
-     - 
-     - LCH: Optional, repeating
+     - Location Characteristic
    * - ``LCC``
-     - 
      - Optional[List[:ref:`LCC <hl7-v2_3-LCC>`]]
      - optional
-     - 
-     - LCC: Optional, repeating
+     - Location Charge Code
 
 .. _hl7-v2_3-MFN_M06_MF_CDM:
+
+MFN_M06_MF_CDM HL7 v2 MFN_M06.MF_CDM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M06_MF_CDM.MFN_M06_MF_CDM
    :noindex:
 
-   HL7 v2 MFN_M06.MF_CDM group.
-
-MFN_M06_MF_CDM
-~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``CDM``
-     - 
      - :ref:`CDM <hl7-v2_3-CDM>`
      - required
-     - 
-     - CDM: Required
+     - Charge Description Master
    * - ``PRC``
-     - 
      - Optional[List[:ref:`PRC <hl7-v2_3-PRC>`]]
      - optional
-     - 
-     - PRC: Optional, repeating
+     - Pricing
 
 .. _hl7-v2_3-MFN_M07_MF_CLIN_STUDY:
+
+MFN_M07_MF_CLIN_STUDY HL7 v2 MFN_M07.MF_CLIN_STUDY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M07_MF_CLIN_STUDY.MFN_M07_MF_CLIN_STUDY
    :noindex:
 
-   HL7 v2 MFN_M07.MF_CLIN_STUDY group.
-
-MFN_M07_MF_CLIN_STUDY
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``CM0``
-     - 
      - :ref:`CM0 <hl7-v2_3-CM0>`
      - required
-     - 
-     - CM0: Required
+     - Clinical Study Master
    * - ``MF_PHASE_SCHED_DETAIL``
-     - 
      - Optional[List[:ref:`MFN_M07_MF_PHASE_SCHED_DETAIL <hl7-v2_3-MFN_M07_MF_PHASE_SCHED_DETAIL>`]]
      - optional
-     - 
-     - MF_PHASE_SCHED_DETAIL: Optional, repeating
+     - MF_PHASE_SCHED_DETAIL
 
 .. _hl7-v2_3-MFN_M07_MF_PHASE_SCHED_DETAIL:
+
+MFN_M07_MF_PHASE_SCHED_DETAIL HL7 v2 MFN_M07.MF_PHASE_SCHED_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M07_MF_PHASE_SCHED_DETAIL.MFN_M07_MF_PHASE_SCHED_DETAIL
    :noindex:
 
-   HL7 v2 MFN_M07.MF_PHASE_SCHED_DETAIL group.
-
-MFN_M07_MF_PHASE_SCHED_DETAIL
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``CM1``
-     - 
      - :ref:`CM1 <hl7-v2_3-CM1>`
      - required
-     - 
-     - CM1: Required
+     - Clinical Study Phase Master
    * - ``CM2``
-     - 
      - Optional[List[:ref:`CM2 <hl7-v2_3-CM2>`]]
      - optional
-     - 
-     - CM2: Optional, repeating
+     - Clinical Study Schedule Master
 
 .. _hl7-v2_3-MFN_M08_MF_NUMERIC_OBSERVATION:
+
+MFN_M08_MF_NUMERIC_OBSERVATION HL7 v2 MFN_M08.MF_NUMERIC_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M08_MF_NUMERIC_OBSERVATION.MFN_M08_MF_NUMERIC_OBSERVATION
    :noindex:
 
-   HL7 v2 MFN_M08.MF_NUMERIC_OBSERVATION group.
-
-MFN_M08_MF_NUMERIC_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OM2``
-     - 
      - Optional[:ref:`OM2 <hl7-v2_3-OM2>`]
      - optional
-     - 
-     - OM2: Optional
+     - Numeric observation
    * - ``OM3``
-     - 
      - Optional[:ref:`OM3 <hl7-v2_3-OM3>`]
      - optional
-     - 
-     - OM3: Optional
+     - Categorical test/observation
    * - ``OM4``
-     - 
      - Optional[:ref:`OM4 <hl7-v2_3-OM4>`]
      - optional
-     - 
-     - OM4: Optional
+     - Observations that require specimens
 
 .. _hl7-v2_3-MFN_M08_MF_TEST_NUMERIC:
+
+MFN_M08_MF_TEST_NUMERIC HL7 v2 MFN_M08.MF_TEST_NUMERIC group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M08_MF_TEST_NUMERIC.MFN_M08_MF_TEST_NUMERIC
    :noindex:
 
-   HL7 v2 MFN_M08.MF_TEST_NUMERIC group.
-
-MFN_M08_MF_TEST_NUMERIC
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``OM1``
-     - 
      - :ref:`OM1 <hl7-v2_3-OM1>`
      - required
-     - 
-     - OM1: Required
+     - General - fields that apply to most observations
    * - ``MF_NUMERIC_OBSERVATION``
-     - 
      - Optional[:ref:`MFN_M08_MF_NUMERIC_OBSERVATION <hl7-v2_3-MFN_M08_MF_NUMERIC_OBSERVATION>`]
      - optional
-     - 
-     - MF_NUMERIC_OBSERVATION: Optional
+     - MF_NUMERIC_OBSERVATION
 
 .. _hl7-v2_3-MFN_M09_MF_TEST_CATEGORICAL:
+
+MFN_M09_MF_TEST_CATEGORICAL HL7 v2 MFN_M09.MF_TEST_CATEGORICAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M09_MF_TEST_CATEGORICAL.MFN_M09_MF_TEST_CATEGORICAL
    :noindex:
 
-   HL7 v2 MFN_M09.MF_TEST_CATEGORICAL group.
-
-MFN_M09_MF_TEST_CATEGORICAL
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``MF_TEST_CAT_DETAIL``
-     - 
      - Optional[:ref:`MFN_M09_MF_TEST_CAT_DETAIL <hl7-v2_3-MFN_M09_MF_TEST_CAT_DETAIL>`]
      - optional
-     - 
-     - MF_TEST_CAT_DETAIL: Optional
+     - MF_TEST_CAT_DETAIL
 
 .. _hl7-v2_3-MFN_M09_MF_TEST_CAT_DETAIL:
+
+MFN_M09_MF_TEST_CAT_DETAIL HL7 v2 MFN_M09.MF_TEST_CAT_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M09_MF_TEST_CAT_DETAIL.MFN_M09_MF_TEST_CAT_DETAIL
    :noindex:
 
-   HL7 v2 MFN_M09.MF_TEST_CAT_DETAIL group.
-
-MFN_M09_MF_TEST_CAT_DETAIL
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OM3``
-     - 
      - :ref:`OM3 <hl7-v2_3-OM3>`
      - required
-     - 
-     - OM3: Required
+     - Categorical test/observation
    * - ``OM4``
-     - 
      - Optional[List[:ref:`OM4 <hl7-v2_3-OM4>`]]
      - optional
-     - 
-     - OM4: Optional, repeating
+     - Observations that require specimens
 
 .. _hl7-v2_3-MFN_M10_MF_TEST_BATTERIES:
+
+MFN_M10_MF_TEST_BATTERIES HL7 v2 MFN_M10.MF_TEST_BATTERIES group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M10_MF_TEST_BATTERIES.MFN_M10_MF_TEST_BATTERIES
    :noindex:
 
-   HL7 v2 MFN_M10.MF_TEST_BATTERIES group.
-
-MFN_M10_MF_TEST_BATTERIES
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MF_TEST_BATT_DETAIL``
-     - 
      - Optional[:ref:`MFN_M10_MF_TEST_BATT_DETAIL <hl7-v2_3-MFN_M10_MF_TEST_BATT_DETAIL>`]
      - optional
-     - 
-     - MF_TEST_BATT_DETAIL: Optional
+     - MF_TEST_BATT_DETAIL
 
 .. _hl7-v2_3-MFN_M10_MF_TEST_BATT_DETAIL:
+
+MFN_M10_MF_TEST_BATT_DETAIL HL7 v2 MFN_M10.MF_TEST_BATT_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M10_MF_TEST_BATT_DETAIL.MFN_M10_MF_TEST_BATT_DETAIL
    :noindex:
 
-   HL7 v2 MFN_M10.MF_TEST_BATT_DETAIL group.
-
-MFN_M10_MF_TEST_BATT_DETAIL
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OM5``
-     - 
      - :ref:`OM5 <hl7-v2_3-OM5>`
      - required
-     - 
-     - OM5: Required
+     - Observation batteries
    * - ``OM4``
-     - 
      - Optional[List[:ref:`OM4 <hl7-v2_3-OM4>`]]
      - optional
-     - 
-     - OM4: Optional, repeating
+     - Observations that require specimens
 
 .. _hl7-v2_3-MFN_M11_MF_TEST_CALCULATED:
+
+MFN_M11_MF_TEST_CALCULATED HL7 v2 MFN_M11.MF_TEST_CALCULATED group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M11_MF_TEST_CALCULATED.MFN_M11_MF_TEST_CALCULATED
    :noindex:
 
-   HL7 v2 MFN_M11.MF_TEST_CALCULATED group.
-
-MFN_M11_MF_TEST_CALCULATED
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``MFE``
-     - 
      - :ref:`MFE <hl7-v2_3-MFE>`
      - required
-     - 
-     - MFE: Required
+     - Master file entry segment
    * - ``OM1``
-     - 
      - :ref:`OM1 <hl7-v2_3-OM1>`
      - required
-     - 
-     - OM1: Required
+     - General - fields that apply to most observations
    * - ``MF_TEST_CALC_DETAIL``
-     - 
      - Optional[:ref:`MFN_M11_MF_TEST_CALC_DETAIL <hl7-v2_3-MFN_M11_MF_TEST_CALC_DETAIL>`]
      - optional
-     - 
-     - MF_TEST_CALC_DETAIL: Optional
+     - MF_TEST_CALC_DETAIL
 
 .. _hl7-v2_3-MFN_M11_MF_TEST_CALC_DETAIL:
+
+MFN_M11_MF_TEST_CALC_DETAIL HL7 v2 MFN_M11.MF_TEST_CALC_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.MFN_M11_MF_TEST_CALC_DETAIL.MFN_M11_MF_TEST_CALC_DETAIL
    :noindex:
 
-   HL7 v2 MFN_M11.MF_TEST_CALC_DETAIL group.
-
-MFN_M11_MF_TEST_CALC_DETAIL
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OM6``
-     - 
      - :ref:`OM6 <hl7-v2_3-OM6>`
      - required
-     - 
-     - OM6: Required
+     - Observations that are calculated from other observations
    * - ``OM2``
-     - 
      - :ref:`OM2 <hl7-v2_3-OM2>`
      - required
-     - 
-     - OM2: Required
+     - Numeric observation
 
 .. _hl7-v2_3-OMD_O01_DIET:
+
+OMD_O01_DIET HL7 v2 OMD_O01.DIET group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMD_O01_DIET.OMD_O01_DIET
    :noindex:
 
-   HL7 v2 OMD_O01.DIET group.
-
-OMD_O01_DIET
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ODS``
-     - 
      - List[:ref:`ODS <hl7-v2_3-ODS>`]
      - required
-     - 
-     - ODS: Required, repeating
+     - Dietary orders, supplements, and preferences
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``OBSERVATION``
-     - 
      - List[:ref:`OMD_O01_OBSERVATION <hl7-v2_3-OMD_O01_OBSERVATION>`]
      - required
-     - 
-     - OBSERVATION: Required, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-OMD_O01_INSURANCE:
+
+OMD_O01_INSURANCE HL7 v2 OMD_O01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMD_O01_INSURANCE.OMD_O01_INSURANCE
    :noindex:
 
-   HL7 v2 OMD_O01.INSURANCE group.
-
-OMD_O01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-OMD_O01_OBSERVATION:
+
+OMD_O01_OBSERVATION HL7 v2 OMD_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMD_O01_OBSERVATION.OMD_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 OMD_O01.OBSERVATION group.
-
-OMD_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-OMD_O01_ORDER_DIET:
+
+OMD_O01_ORDER_DIET HL7 v2 OMD_O01.ORDER_DIET group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMD_O01_ORDER_DIET.OMD_O01_ORDER_DIET
    :noindex:
 
-   HL7 v2 OMD_O01.ORDER_DIET group.
-
-OMD_O01_ORDER_DIET
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``DIET``
-     - 
      - Optional[:ref:`OMD_O01_DIET <hl7-v2_3-OMD_O01_DIET>`]
      - optional
-     - 
-     - DIET: Optional
+     - DIET
 
 .. _hl7-v2_3-OMD_O01_ORDER_TRAY:
+
+OMD_O01_ORDER_TRAY HL7 v2 OMD_O01.ORDER_TRAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMD_O01_ORDER_TRAY.OMD_O01_ORDER_TRAY
    :noindex:
 
-   HL7 v2 OMD_O01.ORDER_TRAY group.
-
-OMD_O01_ORDER_TRAY
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ODT``
-     - 
      - List[:ref:`ODT <hl7-v2_3-ODT>`]
      - required
-     - 
-     - ODT: Required, repeating
+     - Diet tray instructions segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-OMD_O01_PATIENT:
+
+OMD_O01_PATIENT HL7 v2 OMD_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMD_O01_PATIENT.OMD_O01_PATIENT
    :noindex:
 
-   HL7 v2 OMD_O01.PATIENT group.
-
-OMD_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`OMD_O01_PATIENT_VISIT <hl7-v2_3-OMD_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`OMD_O01_INSURANCE <hl7-v2_3-OMD_O01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``GT1``
-     - 
      - Optional[:ref:`GT1 <hl7-v2_3-GT1>`]
      - optional
-     - 
-     - GT1: Optional
+     - Guarantor
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
 
 .. _hl7-v2_3-OMD_O01_PATIENT_VISIT:
+
+OMD_O01_PATIENT_VISIT HL7 v2 OMD_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMD_O01_PATIENT_VISIT.OMD_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 OMD_O01.PATIENT_VISIT group.
-
-OMD_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-OMN_O01_INSURANCE:
+
+OMN_O01_INSURANCE HL7 v2 OMN_O01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMN_O01_INSURANCE.OMN_O01_INSURANCE
    :noindex:
 
-   HL7 v2 OMN_O01.INSURANCE group.
-
-OMN_O01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-OMN_O01_OBSERVATION:
+
+OMN_O01_OBSERVATION HL7 v2 OMN_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMN_O01_OBSERVATION.OMN_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 OMN_O01.OBSERVATION group.
-
-OMN_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-OMN_O01_ORDER:
+
+OMN_O01_ORDER HL7 v2 OMN_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMN_O01_ORDER.OMN_O01_ORDER
    :noindex:
 
-   HL7 v2 OMN_O01.ORDER group.
-
-OMN_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`OMN_O01_ORDER_DETAIL <hl7-v2_3-OMN_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``BLG``
-     - 
      - Optional[:ref:`BLG <hl7-v2_3-BLG>`]
      - optional
-     - 
-     - BLG: Optional
+     - Billing Segment
 
 .. _hl7-v2_3-OMN_O01_ORDER_DETAIL:
+
+OMN_O01_ORDER_DETAIL HL7 v2 OMN_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMN_O01_ORDER_DETAIL.OMN_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 OMN_O01.ORDER_DETAIL group.
-
-OMN_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RQD``
-     - 
      - :ref:`RQD <hl7-v2_3-RQD>`
      - required
-     - 
-     - RQD: Required
+     - Requisition detail
    * - ``RQ1``
-     - 
      - Optional[:ref:`RQ1 <hl7-v2_3-RQ1>`]
      - optional
-     - 
-     - RQ1: Optional
+     - Requisition detail-1 segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`OMN_O01_OBSERVATION <hl7-v2_3-OMN_O01_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-OMN_O01_PATIENT:
+
+OMN_O01_PATIENT HL7 v2 OMN_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMN_O01_PATIENT.OMN_O01_PATIENT
    :noindex:
 
-   HL7 v2 OMN_O01.PATIENT group.
-
-OMN_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`OMN_O01_PATIENT_VISIT <hl7-v2_3-OMN_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`OMN_O01_INSURANCE <hl7-v2_3-OMN_O01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``GT1``
-     - 
      - Optional[:ref:`GT1 <hl7-v2_3-GT1>`]
      - optional
-     - 
-     - GT1: Optional
+     - Guarantor
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
 
 .. _hl7-v2_3-OMN_O01_PATIENT_VISIT:
+
+OMN_O01_PATIENT_VISIT HL7 v2 OMN_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMN_O01_PATIENT_VISIT.OMN_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 OMN_O01.PATIENT_VISIT group.
-
-OMN_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-OMS_O01_INSURANCE:
+
+OMS_O01_INSURANCE HL7 v2 OMS_O01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMS_O01_INSURANCE.OMS_O01_INSURANCE
    :noindex:
 
-   HL7 v2 OMS_O01.INSURANCE group.
-
-OMS_O01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-OMS_O01_OBSERVATION:
+
+OMS_O01_OBSERVATION HL7 v2 OMS_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMS_O01_OBSERVATION.OMS_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 OMS_O01.OBSERVATION group.
-
-OMS_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-OMS_O01_ORDER:
+
+OMS_O01_ORDER HL7 v2 OMS_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMS_O01_ORDER.OMS_O01_ORDER
    :noindex:
 
-   HL7 v2 OMS_O01.ORDER group.
-
-OMS_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`OMS_O01_ORDER_DETAIL <hl7-v2_3-OMS_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``BLG``
-     - 
      - Optional[:ref:`BLG <hl7-v2_3-BLG>`]
      - optional
-     - 
-     - BLG: Optional
+     - Billing Segment
 
 .. _hl7-v2_3-OMS_O01_ORDER_DETAIL:
+
+OMS_O01_ORDER_DETAIL HL7 v2 OMS_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMS_O01_ORDER_DETAIL.OMS_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 OMS_O01.ORDER_DETAIL group.
-
-OMS_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RQD``
-     - 
      - :ref:`RQD <hl7-v2_3-RQD>`
      - required
-     - 
-     - RQD: Required
+     - Requisition detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`OMS_O01_OBSERVATION <hl7-v2_3-OMS_O01_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-OMS_O01_PATIENT:
+
+OMS_O01_PATIENT HL7 v2 OMS_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMS_O01_PATIENT.OMS_O01_PATIENT
    :noindex:
 
-   HL7 v2 OMS_O01.PATIENT group.
-
-OMS_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`OMS_O01_PATIENT_VISIT <hl7-v2_3-OMS_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`OMS_O01_INSURANCE <hl7-v2_3-OMS_O01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``GT1``
-     - 
      - Optional[:ref:`GT1 <hl7-v2_3-GT1>`]
      - optional
-     - 
-     - GT1: Optional
+     - Guarantor
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
 
 .. _hl7-v2_3-OMS_O01_PATIENT_VISIT:
+
+OMS_O01_PATIENT_VISIT HL7 v2 OMS_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OMS_O01_PATIENT_VISIT.OMS_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 OMS_O01.PATIENT_VISIT group.
-
-OMS_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-ORD_O02_ORDER_DIET:
+
+ORD_O02_ORDER_DIET HL7 v2 ORD_O02.ORDER_DIET group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORD_O02_ORDER_DIET.ORD_O02_ORDER_DIET
    :noindex:
 
-   HL7 v2 ORD_O02.ORDER_DIET group.
-
-ORD_O02_ORDER_DIET
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ODS``
-     - 
      - Optional[List[:ref:`ODS <hl7-v2_3-ODS>`]]
      - optional
-     - 
-     - ODS: Optional, repeating
+     - Dietary orders, supplements, and preferences
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORD_O02_ORDER_TRAY:
+
+ORD_O02_ORDER_TRAY HL7 v2 ORD_O02.ORDER_TRAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORD_O02_ORDER_TRAY.ORD_O02_ORDER_TRAY
    :noindex:
 
-   HL7 v2 ORD_O02.ORDER_TRAY group.
-
-ORD_O02_ORDER_TRAY
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ODT``
-     - 
      - Optional[List[:ref:`ODT <hl7-v2_3-ODT>`]]
      - optional
-     - 
-     - ODT: Optional, repeating
+     - Diet tray instructions segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORD_O02_PATIENT:
+
+ORD_O02_PATIENT HL7 v2 ORD_O02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORD_O02_PATIENT.ORD_O02_PATIENT
    :noindex:
 
-   HL7 v2 ORD_O02.PATIENT group.
-
-ORD_O02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORD_O02_RESPONSE:
+
+ORD_O02_RESPONSE HL7 v2 ORD_O02.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORD_O02_RESPONSE.ORD_O02_RESPONSE
    :noindex:
 
-   HL7 v2 ORD_O02.RESPONSE group.
-
-ORD_O02_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ORD_O02_PATIENT <hl7-v2_3-ORD_O02_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER_DIET``
-     - 
      - List[:ref:`ORD_O02_ORDER_DIET <hl7-v2_3-ORD_O02_ORDER_DIET>`]
      - required
-     - 
-     - ORDER_DIET: Required, repeating
+     - ORDER_DIET
    * - ``ORDER_TRAY``
-     - 
      - Optional[List[:ref:`ORD_O02_ORDER_TRAY <hl7-v2_3-ORD_O02_ORDER_TRAY>`]]
      - optional
-     - 
-     - ORDER_TRAY: Optional, repeating
+     - ORDER_TRAY
 
 .. _hl7-v2_3-ORF_R04_OBSERVATION:
+
+ORF_R04_OBSERVATION HL7 v2 ORF_R04.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORF_R04_OBSERVATION.ORF_R04_OBSERVATION
    :noindex:
 
-   HL7 v2 ORF_R04.OBSERVATION group.
-
-ORF_R04_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - Optional[:ref:`OBX <hl7-v2_3-OBX>`]
      - optional
-     - 
-     - OBX: Optional
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORF_R04_ORDER:
+
+ORF_R04_ORDER HL7 v2 ORF_R04.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORF_R04_ORDER.ORF_R04_ORDER
    :noindex:
 
-   HL7 v2 ORF_R04.ORDER group.
-
-ORF_R04_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - Optional[:ref:`ORC <hl7-v2_3-ORC>`]
      - optional
-     - 
-     - ORC: Optional
+     - Common order segment
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``OBSERVATION``
-     - 
      - List[:ref:`ORF_R04_OBSERVATION <hl7-v2_3-ORF_R04_OBSERVATION>`]
      - required
-     - 
-     - OBSERVATION: Required, repeating
+     - OBSERVATION
    * - ``CTI``
-     - 
      - Optional[List[:ref:`CTI <hl7-v2_3-CTI>`]]
      - optional
-     - 
-     - CTI: Optional, repeating
+     - Clinical Trial Identification
 
 .. _hl7-v2_3-ORF_R04_PATIENT:
+
+ORF_R04_PATIENT HL7 v2 ORF_R04.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORF_R04_PATIENT.ORF_R04_PATIENT
    :noindex:
 
-   HL7 v2 ORF_R04.PATIENT group.
-
-ORF_R04_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORF_R04_QUERY_RESPONSE:
+
+ORF_R04_QUERY_RESPONSE HL7 v2 ORF_R04.QUERY_RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORF_R04_QUERY_RESPONSE.ORF_R04_QUERY_RESPONSE
    :noindex:
 
-   HL7 v2 ORF_R04.QUERY_RESPONSE group.
-
-ORF_R04_QUERY_RESPONSE
-~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ORF_R04_PATIENT <hl7-v2_3-ORF_R04_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`ORF_R04_ORDER <hl7-v2_3-ORF_R04_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-ORM_O01_CHOICE:
+
+ORM_O01_CHOICE HL7 v2 ORM_O01.CHOICE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORM_O01_CHOICE.ORM_O01_CHOICE
    :noindex:
 
-   HL7 v2 ORM_O01.CHOICE group.
-
-ORM_O01_CHOICE
-~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - Optional[:ref:`OBR <hl7-v2_3-OBR>`]
      - optional
-     - 
-     - OBR: Optional
+     - Observation request segment
    * - ``RQD``
-     - 
      - Optional[:ref:`RQD <hl7-v2_3-RQD>`]
      - optional
-     - 
-     - RQD: Optional
+     - Requisition detail
    * - ``RQ1``
-     - 
      - Optional[:ref:`RQ1 <hl7-v2_3-RQ1>`]
      - optional
-     - 
-     - RQ1: Optional
+     - Requisition detail-1 segment
    * - ``RXO``
-     - 
      - Optional[:ref:`RXO <hl7-v2_3-RXO>`]
      - optional
-     - 
-     - RXO: Optional
+     - Pharmacy prescription order segment
    * - ``ODS``
-     - 
      - Optional[:ref:`ODS <hl7-v2_3-ODS>`]
      - optional
-     - 
-     - ODS: Optional
+     - Dietary orders, supplements, and preferences
    * - ``ODT``
-     - 
      - Optional[:ref:`ODT <hl7-v2_3-ODT>`]
      - optional
-     - 
-     - ODT: Optional
+     - Diet tray instructions segment
 
 .. _hl7-v2_3-ORM_O01_INSURANCE:
+
+ORM_O01_INSURANCE HL7 v2 ORM_O01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORM_O01_INSURANCE.ORM_O01_INSURANCE
    :noindex:
 
-   HL7 v2 ORM_O01.INSURANCE group.
-
-ORM_O01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-ORM_O01_OBSERVATION:
+
+ORM_O01_OBSERVATION HL7 v2 ORM_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORM_O01_OBSERVATION.ORM_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 ORM_O01.OBSERVATION group.
-
-ORM_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORM_O01_ORDER:
+
+ORM_O01_ORDER HL7 v2 ORM_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORM_O01_ORDER.ORM_O01_ORDER
    :noindex:
 
-   HL7 v2 ORM_O01.ORDER group.
-
-ORM_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`ORM_O01_ORDER_DETAIL <hl7-v2_3-ORM_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``CTI``
-     - 
      - Optional[:ref:`CTI <hl7-v2_3-CTI>`]
      - optional
-     - 
-     - CTI: Optional
+     - Clinical Trial Identification
    * - ``BLG``
-     - 
      - Optional[:ref:`BLG <hl7-v2_3-BLG>`]
      - optional
-     - 
-     - BLG: Optional
+     - Billing Segment
 
 .. _hl7-v2_3-ORM_O01_ORDER_DETAIL:
+
+ORM_O01_ORDER_DETAIL HL7 v2 ORM_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORM_O01_ORDER_DETAIL.ORM_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 ORM_O01.ORDER_DETAIL group.
-
-ORM_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``CHOICE``
-     - 
      - :ref:`ORM_O01_CHOICE <hl7-v2_3-ORM_O01_CHOICE>`
      - required
-     - 
-     - CHOICE: Required
+     - CHOICE
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_3-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`ORM_O01_OBSERVATION <hl7-v2_3-ORM_O01_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-ORM_O01_PATIENT:
+
+ORM_O01_PATIENT HL7 v2 ORM_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORM_O01_PATIENT.ORM_O01_PATIENT
    :noindex:
 
-   HL7 v2 ORM_O01.PATIENT group.
-
-ORM_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`ORM_O01_PATIENT_VISIT <hl7-v2_3-ORM_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`ORM_O01_INSURANCE <hl7-v2_3-ORM_O01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``GT1``
-     - 
      - Optional[:ref:`GT1 <hl7-v2_3-GT1>`]
      - optional
-     - 
-     - GT1: Optional
+     - Guarantor
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
 
 .. _hl7-v2_3-ORM_O01_PATIENT_VISIT:
+
+ORM_O01_PATIENT_VISIT HL7 v2 ORM_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORM_O01_PATIENT_VISIT.ORM_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 ORM_O01.PATIENT_VISIT group.
-
-ORM_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-ORN_O02_ORDER:
+
+ORN_O02_ORDER HL7 v2 ORN_O02.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORN_O02_ORDER.ORN_O02_ORDER
    :noindex:
 
-   HL7 v2 ORN_O02.ORDER group.
-
-ORN_O02_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``RQD``
-     - 
      - :ref:`RQD <hl7-v2_3-RQD>`
      - required
-     - 
-     - RQD: Required
+     - Requisition detail
    * - ``RQ1``
-     - 
      - Optional[:ref:`RQ1 <hl7-v2_3-RQ1>`]
      - optional
-     - 
-     - RQ1: Optional
+     - Requisition detail-1 segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORN_O02_PATIENT:
+
+ORN_O02_PATIENT HL7 v2 ORN_O02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORN_O02_PATIENT.ORN_O02_PATIENT
    :noindex:
 
-   HL7 v2 ORN_O02.PATIENT group.
-
-ORN_O02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORN_O02_RESPONSE:
+
+ORN_O02_RESPONSE HL7 v2 ORN_O02.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORN_O02_RESPONSE.ORN_O02_RESPONSE
    :noindex:
 
-   HL7 v2 ORN_O02.RESPONSE group.
-
-ORN_O02_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ORN_O02_PATIENT <hl7-v2_3-ORN_O02_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`ORN_O02_ORDER <hl7-v2_3-ORN_O02_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-ORR_O02_CHOICE:
+
+ORR_O02_CHOICE HL7 v2 ORR_O02.CHOICE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORR_O02_CHOICE.ORR_O02_CHOICE
    :noindex:
 
-   HL7 v2 ORR_O02.CHOICE group.
-
-ORR_O02_CHOICE
-~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - Optional[:ref:`OBR <hl7-v2_3-OBR>`]
      - optional
-     - 
-     - OBR: Optional
+     - Observation request segment
    * - ``RQD``
-     - 
      - Optional[:ref:`RQD <hl7-v2_3-RQD>`]
      - optional
-     - 
-     - RQD: Optional
+     - Requisition detail
    * - ``RQ1``
-     - 
      - Optional[:ref:`RQ1 <hl7-v2_3-RQ1>`]
      - optional
-     - 
-     - RQ1: Optional
+     - Requisition detail-1 segment
    * - ``RXO``
-     - 
      - Optional[:ref:`RXO <hl7-v2_3-RXO>`]
      - optional
-     - 
-     - RXO: Optional
+     - Pharmacy prescription order segment
    * - ``ODS``
-     - 
      - Optional[:ref:`ODS <hl7-v2_3-ODS>`]
      - optional
-     - 
-     - ODS: Optional
+     - Dietary orders, supplements, and preferences
    * - ``ODT``
-     - 
      - Optional[:ref:`ODT <hl7-v2_3-ODT>`]
      - optional
-     - 
-     - ODT: Optional
+     - Diet tray instructions segment
 
 .. _hl7-v2_3-ORR_O02_ORDER:
+
+ORR_O02_ORDER HL7 v2 ORR_O02.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORR_O02_ORDER.ORR_O02_ORDER
    :noindex:
 
-   HL7 v2 ORR_O02.ORDER group.
-
-ORR_O02_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``CHOICE``
-     - 
      - :ref:`ORR_O02_CHOICE <hl7-v2_3-ORR_O02_CHOICE>`
      - required
-     - 
-     - CHOICE: Required
+     - CHOICE
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``CTI``
-     - 
      - Optional[List[:ref:`CTI <hl7-v2_3-CTI>`]]
      - optional
-     - 
-     - CTI: Optional, repeating
+     - Clinical Trial Identification
 
 .. _hl7-v2_3-ORR_O02_PATIENT:
+
+ORR_O02_PATIENT HL7 v2 ORR_O02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORR_O02_PATIENT.ORR_O02_PATIENT
    :noindex:
 
-   HL7 v2 ORR_O02.PATIENT group.
-
-ORR_O02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORR_O02_RESPONSE:
+
+ORR_O02_RESPONSE HL7 v2 ORR_O02.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORR_O02_RESPONSE.ORR_O02_RESPONSE
    :noindex:
 
-   HL7 v2 ORR_O02.RESPONSE group.
-
-ORR_O02_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ORR_O02_PATIENT <hl7-v2_3-ORR_O02_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`ORR_O02_ORDER <hl7-v2_3-ORR_O02_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-ORU_R01_OBSERVATION:
+
+ORU_R01_OBSERVATION HL7 v2 ORU_R01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORU_R01_OBSERVATION.ORU_R01_OBSERVATION
    :noindex:
 
-   HL7 v2 ORU_R01.OBSERVATION group.
-
-ORU_R01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - Optional[:ref:`OBX <hl7-v2_3-OBX>`]
      - optional
-     - 
-     - OBX: Optional
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-ORU_R01_ORDER_OBSERVATION:
+
+ORU_R01_ORDER_OBSERVATION HL7 v2 ORU_R01.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORU_R01_ORDER_OBSERVATION.ORU_R01_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 ORU_R01.ORDER_OBSERVATION group.
-
-ORU_R01_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - Optional[:ref:`ORC <hl7-v2_3-ORC>`]
      - optional
-     - 
-     - ORC: Optional
+     - Common order segment
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``OBSERVATION``
-     - 
      - List[:ref:`ORU_R01_OBSERVATION <hl7-v2_3-ORU_R01_OBSERVATION>`]
      - required
-     - 
-     - OBSERVATION: Required, repeating
+     - OBSERVATION
    * - ``CTI``
-     - 
      - Optional[List[:ref:`CTI <hl7-v2_3-CTI>`]]
      - optional
-     - 
-     - CTI: Optional, repeating
+     - Clinical Trial Identification
 
 .. _hl7-v2_3-ORU_R01_PATIENT:
+
+ORU_R01_PATIENT HL7 v2 ORU_R01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORU_R01_PATIENT.ORU_R01_PATIENT
    :noindex:
 
-   HL7 v2 ORU_R01.PATIENT group.
-
-ORU_R01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VISIT``
-     - 
      - Optional[:ref:`ORU_R01_VISIT <hl7-v2_3-ORU_R01_VISIT>`]
      - optional
-     - 
-     - VISIT: Optional
+     - VISIT
 
 .. _hl7-v2_3-ORU_R01_RESPONSE:
+
+ORU_R01_RESPONSE HL7 v2 ORU_R01.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORU_R01_RESPONSE.ORU_R01_RESPONSE
    :noindex:
 
-   HL7 v2 ORU_R01.RESPONSE group.
-
-ORU_R01_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ORU_R01_PATIENT <hl7-v2_3-ORU_R01_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER_OBSERVATION``
-     - 
      - List[:ref:`ORU_R01_ORDER_OBSERVATION <hl7-v2_3-ORU_R01_ORDER_OBSERVATION>`]
      - required
-     - 
-     - ORDER_OBSERVATION: Required, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-ORU_R01_VISIT:
+
+ORU_R01_VISIT HL7 v2 ORU_R01.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ORU_R01_VISIT.ORU_R01_VISIT
    :noindex:
 
-   HL7 v2 ORU_R01.VISIT group.
-
-ORU_R01_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-OSR_Q06_ORDER:
+
+OSR_Q06_ORDER HL7 v2 OSR_Q06.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OSR_Q06_ORDER.OSR_Q06_ORDER
    :noindex:
 
-   HL7 v2 OSR_Q06.ORDER group.
-
-OSR_Q06_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``OBR``
-     - 
      - Optional[:ref:`OBR <hl7-v2_3-OBR>`]
      - optional
-     - 
-     - OBR: Optional
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``CTI``
-     - 
      - Optional[List[:ref:`CTI <hl7-v2_3-CTI>`]]
      - optional
-     - 
-     - CTI: Optional, repeating
+     - Clinical Trial Identification
 
 .. _hl7-v2_3-OSR_Q06_PATIENT:
+
+OSR_Q06_PATIENT HL7 v2 OSR_Q06.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OSR_Q06_PATIENT.OSR_Q06_PATIENT
    :noindex:
 
-   HL7 v2 OSR_Q06.PATIENT group.
-
-OSR_Q06_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-OSR_Q06_RESPONSE:
+
+OSR_Q06_RESPONSE HL7 v2 OSR_Q06.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.OSR_Q06_RESPONSE.OSR_Q06_RESPONSE
    :noindex:
 
-   HL7 v2 OSR_Q06.RESPONSE group.
-
-OSR_Q06_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`OSR_Q06_PATIENT <hl7-v2_3-OSR_Q06_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`OSR_Q06_ORDER <hl7-v2_3-OSR_Q06_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-PEX_P07_ASSOCIATED_PERSON:
+
+PEX_P07_ASSOCIATED_PERSON HL7 v2 PEX_P07.ASSOCIATED_PERSON group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_ASSOCIATED_PERSON.PEX_P07_ASSOCIATED_PERSON
    :noindex:
 
-   HL7 v2 PEX_P07.ASSOCIATED_PERSON group.
-
-PEX_P07_ASSOCIATED_PERSON
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``NK1``
-     - 
      - :ref:`NK1 <hl7-v2_3-NK1>`
      - required
-     - 
-     - NK1: Required
+     - Next of kin
    * - ``ASSOCIATED_RX_ORDER``
-     - 
      - Optional[:ref:`PEX_P07_ASSOCIATED_RX_ORDER <hl7-v2_3-PEX_P07_ASSOCIATED_RX_ORDER>`]
      - optional
-     - 
-     - ASSOCIATED_RX_ORDER: Optional
+     - ASSOCIATED_RX_ORDER
    * - ``ASSOCIATED_RX_ADMIN``
-     - 
      - Optional[List[:ref:`PEX_P07_ASSOCIATED_RX_ADMIN <hl7-v2_3-PEX_P07_ASSOCIATED_RX_ADMIN>`]]
      - optional
-     - 
-     - ASSOCIATED_RX_ADMIN: Optional, repeating
+     - ASSOCIATED_RX_ADMIN
    * - ``PRB``
-     - 
      - Optional[List[:ref:`PRB <hl7-v2_3-PRB>`]]
      - optional
-     - 
-     - PRB: Optional, repeating
+     - Problem Detail
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_3-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation segment
 
 .. _hl7-v2_3-PEX_P07_ASSOCIATED_RX_ADMIN:
+
+PEX_P07_ASSOCIATED_RX_ADMIN HL7 v2 PEX_P07.ASSOCIATED_RX_ADMIN group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_ASSOCIATED_RX_ADMIN.PEX_P07_ASSOCIATED_RX_ADMIN
    :noindex:
 
-   HL7 v2 PEX_P07.ASSOCIATED_RX_ADMIN group.
-
-PEX_P07_ASSOCIATED_RX_ADMIN
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXA``
-     - 
      - :ref:`RXA <hl7-v2_3-RXA>`
      - required
-     - 
-     - RXA: Required
+     - Pharmacy administration segment
    * - ``RXR``
-     - 
      - Optional[:ref:`RXR <hl7-v2_3-RXR>`]
      - optional
-     - 
-     - RXR: Optional
+     - Pharmacy route segment
 
 .. _hl7-v2_3-PEX_P07_ASSOCIATED_RX_ORDER:
+
+PEX_P07_ASSOCIATED_RX_ORDER HL7 v2 PEX_P07.ASSOCIATED_RX_ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_ASSOCIATED_RX_ORDER.PEX_P07_ASSOCIATED_RX_ORDER
    :noindex:
 
-   HL7 v2 PEX_P07.ASSOCIATED_RX_ORDER group.
-
-PEX_P07_ASSOCIATED_RX_ORDER
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - Optional[List[:ref:`RXR <hl7-v2_3-RXR>`]]
      - optional
-     - 
-     - RXR: Optional, repeating
+     - Pharmacy route segment
 
 .. _hl7-v2_3-PEX_P07_EXPERIENCE:
+
+PEX_P07_EXPERIENCE HL7 v2 PEX_P07.EXPERIENCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_EXPERIENCE.PEX_P07_EXPERIENCE
    :noindex:
 
-   HL7 v2 PEX_P07.EXPERIENCE group.
-
-PEX_P07_EXPERIENCE
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PES``
-     - 
      - :ref:`PES <hl7-v2_3-PES>`
      - required
-     - 
-     - PES: Required
+     - Product Experience Sender
    * - ``PEX_OBSERVATION``
-     - 
      - List[:ref:`PEX_P07_PEX_OBSERVATION <hl7-v2_3-PEX_P07_PEX_OBSERVATION>`]
      - required
-     - 
-     - PEX_OBSERVATION: Required, repeating
+     - PEX_OBSERVATION
 
 .. _hl7-v2_3-PEX_P07_PEX_CAUSE:
+
+PEX_P07_PEX_CAUSE HL7 v2 PEX_P07.PEX_CAUSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_PEX_CAUSE.PEX_P07_PEX_CAUSE
    :noindex:
 
-   HL7 v2 PEX_P07.PEX_CAUSE group.
-
-PEX_P07_PEX_CAUSE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PCR``
-     - 
      - :ref:`PCR <hl7-v2_3-PCR>`
      - required
-     - 
-     - PCR: Required
+     - Possible Causal Relationship
    * - ``RX_ORDER``
-     - 
      - Optional[:ref:`PEX_P07_RX_ORDER <hl7-v2_3-PEX_P07_RX_ORDER>`]
      - optional
-     - 
-     - RX_ORDER: Optional
+     - RX_ORDER
    * - ``RX_ADMINISTRATION``
-     - 
      - Optional[List[:ref:`PEX_P07_RX_ADMINISTRATION <hl7-v2_3-PEX_P07_RX_ADMINISTRATION>`]]
      - optional
-     - 
-     - RX_ADMINISTRATION: Optional, repeating
+     - RX_ADMINISTRATION
    * - ``PRB``
-     - 
      - Optional[List[:ref:`PRB <hl7-v2_3-PRB>`]]
      - optional
-     - 
-     - PRB: Optional, repeating
+     - Problem Detail
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_3-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``ASSOCIATED_PERSON``
-     - 
      - Optional[:ref:`PEX_P07_ASSOCIATED_PERSON <hl7-v2_3-PEX_P07_ASSOCIATED_PERSON>`]
      - optional
-     - 
-     - ASSOCIATED_PERSON: Optional
+     - ASSOCIATED_PERSON
    * - ``STUDY``
-     - 
      - Optional[List[:ref:`PEX_P07_STUDY <hl7-v2_3-PEX_P07_STUDY>`]]
      - optional
-     - 
-     - STUDY: Optional, repeating
+     - STUDY
 
 .. _hl7-v2_3-PEX_P07_PEX_OBSERVATION:
+
+PEX_P07_PEX_OBSERVATION HL7 v2 PEX_P07.PEX_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_PEX_OBSERVATION.PEX_P07_PEX_OBSERVATION
    :noindex:
 
-   HL7 v2 PEX_P07.PEX_OBSERVATION group.
-
-PEX_P07_PEX_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PEO``
-     - 
      - :ref:`PEO <hl7-v2_3-PEO>`
      - required
-     - 
-     - PEO: Required
+     - Product Experience Observation
    * - ``PEX_CAUSE``
-     - 
      - List[:ref:`PEX_P07_PEX_CAUSE <hl7-v2_3-PEX_P07_PEX_CAUSE>`]
      - required
-     - 
-     - PEX_CAUSE: Required, repeating
+     - PEX_CAUSE
 
 .. _hl7-v2_3-PEX_P07_RX_ADMINISTRATION:
+
+PEX_P07_RX_ADMINISTRATION HL7 v2 PEX_P07.RX_ADMINISTRATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_RX_ADMINISTRATION.PEX_P07_RX_ADMINISTRATION
    :noindex:
 
-   HL7 v2 PEX_P07.RX_ADMINISTRATION group.
-
-PEX_P07_RX_ADMINISTRATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXA``
-     - 
      - :ref:`RXA <hl7-v2_3-RXA>`
      - required
-     - 
-     - RXA: Required
+     - Pharmacy administration segment
    * - ``RXR``
-     - 
      - Optional[:ref:`RXR <hl7-v2_3-RXR>`]
      - optional
-     - 
-     - RXR: Optional
+     - Pharmacy route segment
 
 .. _hl7-v2_3-PEX_P07_RX_ORDER:
+
+PEX_P07_RX_ORDER HL7 v2 PEX_P07.RX_ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_RX_ORDER.PEX_P07_RX_ORDER
    :noindex:
 
-   HL7 v2 PEX_P07.RX_ORDER group.
-
-PEX_P07_RX_ORDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - Optional[List[:ref:`RXR <hl7-v2_3-RXR>`]]
      - optional
-     - 
-     - RXR: Optional, repeating
+     - Pharmacy route segment
 
 .. _hl7-v2_3-PEX_P07_STUDY:
+
+PEX_P07_STUDY HL7 v2 PEX_P07.STUDY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_STUDY.PEX_P07_STUDY
    :noindex:
 
-   HL7 v2 PEX_P07.STUDY group.
-
-PEX_P07_STUDY
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``CSR``
-     - 
      - :ref:`CSR <hl7-v2_3-CSR>`
      - required
-     - 
-     - CSR: Required
+     - Clinical Study Registration
    * - ``CSP``
-     - 
      - Optional[List[:ref:`CSP <hl7-v2_3-CSP>`]]
      - optional
-     - 
-     - CSP: Optional, repeating
+     - Clinical Study Phase
 
 .. _hl7-v2_3-PEX_P07_VISIT:
+
+PEX_P07_VISIT HL7 v2 PEX_P07.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PEX_P07_VISIT.PEX_P07_VISIT
    :noindex:
 
-   HL7 v2 PEX_P07.VISIT group.
-
-PEX_P07_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PGL_PC6_GOAL:
+
+PGL_PC6_GOAL HL7 v2 PGL_PC6.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_GOAL.PGL_PC6_GOAL
    :noindex:
 
-   HL7 v2 PGL_PC6.GOAL group.
-
-PGL_PC6_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PGL_PC6_GOAL_ROLE <hl7-v2_3-PGL_PC6_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``PATHWAY``
-     - 
      - Optional[List[:ref:`PGL_PC6_PATHWAY <hl7-v2_3-PGL_PC6_PATHWAY>`]]
      - optional
-     - 
-     - PATHWAY: Optional, repeating
+     - PATHWAY
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`PGL_PC6_OBSERVATION <hl7-v2_3-PGL_PC6_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`PGL_PC6_PROBLEM <hl7-v2_3-PGL_PC6_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PGL_PC6_ORDER <hl7-v2_3-PGL_PC6_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PGL_PC6_GOAL_ROLE:
+
+PGL_PC6_GOAL_ROLE HL7 v2 PGL_PC6.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_GOAL_ROLE.PGL_PC6_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PGL_PC6.GOAL_ROLE group.
-
-PGL_PC6_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PGL_PC6_OBSERVATION:
+
+PGL_PC6_OBSERVATION HL7 v2 PGL_PC6.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_OBSERVATION.PGL_PC6_OBSERVATION
    :noindex:
 
-   HL7 v2 PGL_PC6.OBSERVATION group.
-
-PGL_PC6_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PGL_PC6_ORDER:
+
+PGL_PC6_ORDER HL7 v2 PGL_PC6.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_ORDER.PGL_PC6_ORDER
    :noindex:
 
-   HL7 v2 PGL_PC6.ORDER group.
-
-PGL_PC6_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PGL_PC6_ORDER_DETAIL <hl7-v2_3-PGL_PC6_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PGL_PC6_ORDER_DETAIL:
+
+PGL_PC6_ORDER_DETAIL HL7 v2 PGL_PC6.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_ORDER_DETAIL.PGL_PC6_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PGL_PC6.ORDER_DETAIL group.
-
-PGL_PC6_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PGL_PC6_ORDER_OBSERVATION <hl7-v2_3-PGL_PC6_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PGL_PC6_ORDER_OBSERVATION:
+
+PGL_PC6_ORDER_OBSERVATION HL7 v2 PGL_PC6.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_ORDER_OBSERVATION.PGL_PC6_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PGL_PC6.ORDER_OBSERVATION group.
-
-PGL_PC6_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PGL_PC6_PATHWAY:
+
+PGL_PC6_PATHWAY HL7 v2 PGL_PC6.PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_PATHWAY.PGL_PC6_PATHWAY
    :noindex:
 
-   HL7 v2 PGL_PC6.PATHWAY group.
-
-PGL_PC6_PATHWAY
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PGL_PC6_PATIENT_VISIT:
+
+PGL_PC6_PATIENT_VISIT HL7 v2 PGL_PC6.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_PATIENT_VISIT.PGL_PC6_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PGL_PC6.PATIENT_VISIT group.
-
-PGL_PC6_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PGL_PC6_PROBLEM:
+
+PGL_PC6_PROBLEM HL7 v2 PGL_PC6.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_PROBLEM.PGL_PC6_PROBLEM
    :noindex:
 
-   HL7 v2 PGL_PC6.PROBLEM group.
-
-PGL_PC6_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PGL_PC6_PROBLEM_ROLE <hl7-v2_3-PGL_PC6_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PGL_PC6_PROBLEM_OBSERVATION <hl7-v2_3-PGL_PC6_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
 
 .. _hl7-v2_3-PGL_PC6_PROBLEM_OBSERVATION:
+
+PGL_PC6_PROBLEM_OBSERVATION HL7 v2 PGL_PC6.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_PROBLEM_OBSERVATION.PGL_PC6_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PGL_PC6.PROBLEM_OBSERVATION group.
-
-PGL_PC6_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PGL_PC6_PROBLEM_ROLE:
+
+PGL_PC6_PROBLEM_ROLE HL7 v2 PGL_PC6.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PGL_PC6_PROBLEM_ROLE.PGL_PC6_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PGL_PC6.PROBLEM_ROLE group.
-
-PGL_PC6_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PIN_I07_GUARANTOR_INSURANCE:
+
+PIN_I07_GUARANTOR_INSURANCE HL7 v2 PIN_I07.GUARANTOR_INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PIN_I07_GUARANTOR_INSURANCE.PIN_I07_GUARANTOR_INSURANCE
    :noindex:
 
-   HL7 v2 PIN_I07.GUARANTOR_INSURANCE group.
-
-PIN_I07_GUARANTOR_INSURANCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_3-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - List[:ref:`PIN_I07_INSURANCE <hl7-v2_3-PIN_I07_INSURANCE>`]
      - required
-     - 
-     - INSURANCE: Required, repeating
+     - INSURANCE
 
 .. _hl7-v2_3-PIN_I07_INSURANCE:
+
+PIN_I07_INSURANCE HL7 v2 PIN_I07.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PIN_I07_INSURANCE.PIN_I07_INSURANCE
    :noindex:
 
-   HL7 v2 PIN_I07.INSURANCE group.
-
-PIN_I07_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-PIN_I07_PROVIDER:
+
+PIN_I07_PROVIDER HL7 v2 PIN_I07.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PIN_I07_PROVIDER.PIN_I07_PROVIDER
    :noindex:
 
-   HL7 v2 PIN_I07.PROVIDER group.
-
-PIN_I07_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-PPG_PCG_GOAL:
+
+PPG_PCG_GOAL HL7 v2 PPG_PCG.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_GOAL.PPG_PCG_GOAL
    :noindex:
 
-   HL7 v2 PPG_PCG.GOAL group.
-
-PPG_PCG_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PPG_PCG_GOAL_ROLE <hl7-v2_3-PPG_PCG_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``GOAL_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPG_PCG_GOAL_OBSERVATION <hl7-v2_3-PPG_PCG_GOAL_OBSERVATION>`]]
      - optional
-     - 
-     - GOAL_OBSERVATION: Optional, repeating
+     - GOAL_OBSERVATION
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`PPG_PCG_PROBLEM <hl7-v2_3-PPG_PCG_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PPG_PCG_ORDER <hl7-v2_3-PPG_PCG_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PPG_PCG_GOAL_OBSERVATION:
+
+PPG_PCG_GOAL_OBSERVATION HL7 v2 PPG_PCG.GOAL_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_GOAL_OBSERVATION.PPG_PCG_GOAL_OBSERVATION
    :noindex:
 
-   HL7 v2 PPG_PCG.GOAL_OBSERVATION group.
-
-PPG_PCG_GOAL_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPG_PCG_GOAL_ROLE:
+
+PPG_PCG_GOAL_ROLE HL7 v2 PPG_PCG.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_GOAL_ROLE.PPG_PCG_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PPG_PCG.GOAL_ROLE group.
-
-PPG_PCG_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPG_PCG_ORDER:
+
+PPG_PCG_ORDER HL7 v2 PPG_PCG.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_ORDER.PPG_PCG_ORDER
    :noindex:
 
-   HL7 v2 PPG_PCG.ORDER group.
-
-PPG_PCG_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PPG_PCG_ORDER_DETAIL <hl7-v2_3-PPG_PCG_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PPG_PCG_ORDER_DETAIL:
+
+PPG_PCG_ORDER_DETAIL HL7 v2 PPG_PCG.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_ORDER_DETAIL.PPG_PCG_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PPG_PCG.ORDER_DETAIL group.
-
-PPG_PCG_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPG_PCG_ORDER_OBSERVATION <hl7-v2_3-PPG_PCG_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PPG_PCG_ORDER_OBSERVATION:
+
+PPG_PCG_ORDER_OBSERVATION HL7 v2 PPG_PCG.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_ORDER_OBSERVATION.PPG_PCG_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PPG_PCG.ORDER_OBSERVATION group.
-
-PPG_PCG_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPG_PCG_PATHWAY:
+
+PPG_PCG_PATHWAY HL7 v2 PPG_PCG.PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_PATHWAY.PPG_PCG_PATHWAY
    :noindex:
 
-   HL7 v2 PPG_PCG.PATHWAY group.
-
-PPG_PCG_PATHWAY
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PATHWAY_ROLE``
-     - 
      - Optional[List[:ref:`PPG_PCG_PATHWAY_ROLE <hl7-v2_3-PPG_PCG_PATHWAY_ROLE>`]]
      - optional
-     - 
-     - PATHWAY_ROLE: Optional, repeating
+     - PATHWAY_ROLE
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`PPG_PCG_GOAL <hl7-v2_3-PPG_PCG_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
 
 .. _hl7-v2_3-PPG_PCG_PATHWAY_ROLE:
+
+PPG_PCG_PATHWAY_ROLE HL7 v2 PPG_PCG.PATHWAY_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_PATHWAY_ROLE.PPG_PCG_PATHWAY_ROLE
    :noindex:
 
-   HL7 v2 PPG_PCG.PATHWAY_ROLE group.
-
-PPG_PCG_PATHWAY_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPG_PCG_PATIENT_VISIT:
+
+PPG_PCG_PATIENT_VISIT HL7 v2 PPG_PCG.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_PATIENT_VISIT.PPG_PCG_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PPG_PCG.PATIENT_VISIT group.
-
-PPG_PCG_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PPG_PCG_PROBLEM:
+
+PPG_PCG_PROBLEM HL7 v2 PPG_PCG.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_PROBLEM.PPG_PCG_PROBLEM
    :noindex:
 
-   HL7 v2 PPG_PCG.PROBLEM group.
-
-PPG_PCG_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PPG_PCG_PROBLEM_ROLE <hl7-v2_3-PPG_PCG_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPG_PCG_PROBLEM_OBSERVATION <hl7-v2_3-PPG_PCG_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
 
 .. _hl7-v2_3-PPG_PCG_PROBLEM_OBSERVATION:
+
+PPG_PCG_PROBLEM_OBSERVATION HL7 v2 PPG_PCG.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_PROBLEM_OBSERVATION.PPG_PCG_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PPG_PCG.PROBLEM_OBSERVATION group.
-
-PPG_PCG_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPG_PCG_PROBLEM_ROLE:
+
+PPG_PCG_PROBLEM_ROLE HL7 v2 PPG_PCG.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPG_PCG_PROBLEM_ROLE.PPG_PCG_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PPG_PCG.PROBLEM_ROLE group.
-
-PPG_PCG_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPP_PCB_GOAL:
+
+PPP_PCB_GOAL HL7 v2 PPP_PCB.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_GOAL.PPP_PCB_GOAL
    :noindex:
 
-   HL7 v2 PPP_PCB.GOAL group.
-
-PPP_PCB_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PPP_PCB_GOAL_ROLE <hl7-v2_3-PPP_PCB_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``GOAL_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPP_PCB_GOAL_OBSERVATION <hl7-v2_3-PPP_PCB_GOAL_OBSERVATION>`]]
      - optional
-     - 
-     - GOAL_OBSERVATION: Optional, repeating
+     - GOAL_OBSERVATION
 
 .. _hl7-v2_3-PPP_PCB_GOAL_OBSERVATION:
+
+PPP_PCB_GOAL_OBSERVATION HL7 v2 PPP_PCB.GOAL_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_GOAL_OBSERVATION.PPP_PCB_GOAL_OBSERVATION
    :noindex:
 
-   HL7 v2 PPP_PCB.GOAL_OBSERVATION group.
-
-PPP_PCB_GOAL_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPP_PCB_GOAL_ROLE:
+
+PPP_PCB_GOAL_ROLE HL7 v2 PPP_PCB.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_GOAL_ROLE.PPP_PCB_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PPP_PCB.GOAL_ROLE group.
-
-PPP_PCB_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPP_PCB_ORDER:
+
+PPP_PCB_ORDER HL7 v2 PPP_PCB.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_ORDER.PPP_PCB_ORDER
    :noindex:
 
-   HL7 v2 PPP_PCB.ORDER group.
-
-PPP_PCB_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PPP_PCB_ORDER_DETAIL <hl7-v2_3-PPP_PCB_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PPP_PCB_ORDER_DETAIL:
+
+PPP_PCB_ORDER_DETAIL HL7 v2 PPP_PCB.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_ORDER_DETAIL.PPP_PCB_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PPP_PCB.ORDER_DETAIL group.
-
-PPP_PCB_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPP_PCB_ORDER_OBSERVATION <hl7-v2_3-PPP_PCB_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PPP_PCB_ORDER_OBSERVATION:
+
+PPP_PCB_ORDER_OBSERVATION HL7 v2 PPP_PCB.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_ORDER_OBSERVATION.PPP_PCB_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PPP_PCB.ORDER_OBSERVATION group.
-
-PPP_PCB_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPP_PCB_PATHWAY:
+
+PPP_PCB_PATHWAY HL7 v2 PPP_PCB.PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_PATHWAY.PPP_PCB_PATHWAY
    :noindex:
 
-   HL7 v2 PPP_PCB.PATHWAY group.
-
-PPP_PCB_PATHWAY
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PATHWAY_ROLE``
-     - 
      - Optional[List[:ref:`PPP_PCB_PATHWAY_ROLE <hl7-v2_3-PPP_PCB_PATHWAY_ROLE>`]]
      - optional
-     - 
-     - PATHWAY_ROLE: Optional, repeating
+     - PATHWAY_ROLE
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`PPP_PCB_PROBLEM <hl7-v2_3-PPP_PCB_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
 
 .. _hl7-v2_3-PPP_PCB_PATHWAY_ROLE:
+
+PPP_PCB_PATHWAY_ROLE HL7 v2 PPP_PCB.PATHWAY_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_PATHWAY_ROLE.PPP_PCB_PATHWAY_ROLE
    :noindex:
 
-   HL7 v2 PPP_PCB.PATHWAY_ROLE group.
-
-PPP_PCB_PATHWAY_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPP_PCB_PATIENT_VISIT:
+
+PPP_PCB_PATIENT_VISIT HL7 v2 PPP_PCB.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_PATIENT_VISIT.PPP_PCB_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PPP_PCB.PATIENT_VISIT group.
-
-PPP_PCB_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PPP_PCB_PROBLEM:
+
+PPP_PCB_PROBLEM HL7 v2 PPP_PCB.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_PROBLEM.PPP_PCB_PROBLEM
    :noindex:
 
-   HL7 v2 PPP_PCB.PROBLEM group.
-
-PPP_PCB_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PPP_PCB_PROBLEM_ROLE <hl7-v2_3-PPP_PCB_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPP_PCB_PROBLEM_OBSERVATION <hl7-v2_3-PPP_PCB_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`PPP_PCB_GOAL <hl7-v2_3-PPP_PCB_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PPP_PCB_ORDER <hl7-v2_3-PPP_PCB_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PPP_PCB_PROBLEM_OBSERVATION:
+
+PPP_PCB_PROBLEM_OBSERVATION HL7 v2 PPP_PCB.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_PROBLEM_OBSERVATION.PPP_PCB_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PPP_PCB.PROBLEM_OBSERVATION group.
-
-PPP_PCB_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPP_PCB_PROBLEM_ROLE:
+
+PPP_PCB_PROBLEM_ROLE HL7 v2 PPP_PCB.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPP_PCB_PROBLEM_ROLE.PPP_PCB_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PPP_PCB.PROBLEM_ROLE group.
-
-PPP_PCB_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPR_PC1_GOAL:
+
+PPR_PC1_GOAL HL7 v2 PPR_PC1.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_GOAL.PPR_PC1_GOAL
    :noindex:
 
-   HL7 v2 PPR_PC1.GOAL group.
-
-PPR_PC1_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PPR_PC1_GOAL_ROLE <hl7-v2_3-PPR_PC1_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``GOAL_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPR_PC1_GOAL_OBSERVATION <hl7-v2_3-PPR_PC1_GOAL_OBSERVATION>`]]
      - optional
-     - 
-     - GOAL_OBSERVATION: Optional, repeating
+     - GOAL_OBSERVATION
 
 .. _hl7-v2_3-PPR_PC1_GOAL_OBSERVATION:
+
+PPR_PC1_GOAL_OBSERVATION HL7 v2 PPR_PC1.GOAL_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_GOAL_OBSERVATION.PPR_PC1_GOAL_OBSERVATION
    :noindex:
 
-   HL7 v2 PPR_PC1.GOAL_OBSERVATION group.
-
-PPR_PC1_GOAL_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPR_PC1_GOAL_ROLE:
+
+PPR_PC1_GOAL_ROLE HL7 v2 PPR_PC1.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_GOAL_ROLE.PPR_PC1_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PPR_PC1.GOAL_ROLE group.
-
-PPR_PC1_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPR_PC1_ORDER:
+
+PPR_PC1_ORDER HL7 v2 PPR_PC1.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_ORDER.PPR_PC1_ORDER
    :noindex:
 
-   HL7 v2 PPR_PC1.ORDER group.
-
-PPR_PC1_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PPR_PC1_ORDER_DETAIL <hl7-v2_3-PPR_PC1_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PPR_PC1_ORDER_DETAIL:
+
+PPR_PC1_ORDER_DETAIL HL7 v2 PPR_PC1.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_ORDER_DETAIL.PPR_PC1_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PPR_PC1.ORDER_DETAIL group.
-
-PPR_PC1_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPR_PC1_ORDER_OBSERVATION <hl7-v2_3-PPR_PC1_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PPR_PC1_ORDER_OBSERVATION:
+
+PPR_PC1_ORDER_OBSERVATION HL7 v2 PPR_PC1.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_ORDER_OBSERVATION.PPR_PC1_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PPR_PC1.ORDER_OBSERVATION group.
-
-PPR_PC1_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPR_PC1_PATHWAY:
+
+PPR_PC1_PATHWAY HL7 v2 PPR_PC1.PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_PATHWAY.PPR_PC1_PATHWAY
    :noindex:
 
-   HL7 v2 PPR_PC1.PATHWAY group.
-
-PPR_PC1_PATHWAY
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPR_PC1_PATIENT_VISIT:
+
+PPR_PC1_PATIENT_VISIT HL7 v2 PPR_PC1.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_PATIENT_VISIT.PPR_PC1_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PPR_PC1.PATIENT_VISIT group.
-
-PPR_PC1_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PPR_PC1_PROBLEM:
+
+PPR_PC1_PROBLEM HL7 v2 PPR_PC1.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_PROBLEM.PPR_PC1_PROBLEM
    :noindex:
 
-   HL7 v2 PPR_PC1.PROBLEM group.
-
-PPR_PC1_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PPR_PC1_PROBLEM_ROLE <hl7-v2_3-PPR_PC1_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PATHWAY``
-     - 
      - Optional[List[:ref:`PPR_PC1_PATHWAY <hl7-v2_3-PPR_PC1_PATHWAY>`]]
      - optional
-     - 
-     - PATHWAY: Optional, repeating
+     - PATHWAY
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPR_PC1_PROBLEM_OBSERVATION <hl7-v2_3-PPR_PC1_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`PPR_PC1_GOAL <hl7-v2_3-PPR_PC1_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PPR_PC1_ORDER <hl7-v2_3-PPR_PC1_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PPR_PC1_PROBLEM_OBSERVATION:
+
+PPR_PC1_PROBLEM_OBSERVATION HL7 v2 PPR_PC1.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_PROBLEM_OBSERVATION.PPR_PC1_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PPR_PC1.PROBLEM_OBSERVATION group.
-
-PPR_PC1_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPR_PC1_PROBLEM_ROLE:
+
+PPR_PC1_PROBLEM_ROLE HL7 v2 PPR_PC1.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPR_PC1_PROBLEM_ROLE.PPR_PC1_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PPR_PC1.PROBLEM_ROLE group.
-
-PPR_PC1_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPT_PCL_GOAL:
+
+PPT_PCL_GOAL HL7 v2 PPT_PCL.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_GOAL.PPT_PCL_GOAL
    :noindex:
 
-   HL7 v2 PPT_PCL.GOAL group.
-
-PPT_PCL_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PPT_PCL_GOAL_ROLE <hl7-v2_3-PPT_PCL_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``GOAL_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPT_PCL_GOAL_OBSERVATION <hl7-v2_3-PPT_PCL_GOAL_OBSERVATION>`]]
      - optional
-     - 
-     - GOAL_OBSERVATION: Optional, repeating
+     - GOAL_OBSERVATION
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`PPT_PCL_PROBLEM <hl7-v2_3-PPT_PCL_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PPT_PCL_ORDER <hl7-v2_3-PPT_PCL_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PPT_PCL_GOAL_OBSERVATION:
+
+PPT_PCL_GOAL_OBSERVATION HL7 v2 PPT_PCL.GOAL_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_GOAL_OBSERVATION.PPT_PCL_GOAL_OBSERVATION
    :noindex:
 
-   HL7 v2 PPT_PCL.GOAL_OBSERVATION group.
-
-PPT_PCL_GOAL_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPT_PCL_GOAL_ROLE:
+
+PPT_PCL_GOAL_ROLE HL7 v2 PPT_PCL.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_GOAL_ROLE.PPT_PCL_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PPT_PCL.GOAL_ROLE group.
-
-PPT_PCL_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPT_PCL_ORDER:
+
+PPT_PCL_ORDER HL7 v2 PPT_PCL.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_ORDER.PPT_PCL_ORDER
    :noindex:
 
-   HL7 v2 PPT_PCL.ORDER group.
-
-PPT_PCL_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PPT_PCL_ORDER_DETAIL <hl7-v2_3-PPT_PCL_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PPT_PCL_ORDER_DETAIL:
+
+PPT_PCL_ORDER_DETAIL HL7 v2 PPT_PCL.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_ORDER_DETAIL.PPT_PCL_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PPT_PCL.ORDER_DETAIL group.
-
-PPT_PCL_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPT_PCL_ORDER_OBSERVATION <hl7-v2_3-PPT_PCL_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PPT_PCL_ORDER_OBSERVATION:
+
+PPT_PCL_ORDER_OBSERVATION HL7 v2 PPT_PCL.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_ORDER_OBSERVATION.PPT_PCL_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PPT_PCL.ORDER_OBSERVATION group.
-
-PPT_PCL_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPT_PCL_PATHWAY:
+
+PPT_PCL_PATHWAY HL7 v2 PPT_PCL.PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_PATHWAY.PPT_PCL_PATHWAY
    :noindex:
 
-   HL7 v2 PPT_PCL.PATHWAY group.
-
-PPT_PCL_PATHWAY
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PATHWAY_ROLE``
-     - 
      - Optional[List[:ref:`PPT_PCL_PATHWAY_ROLE <hl7-v2_3-PPT_PCL_PATHWAY_ROLE>`]]
      - optional
-     - 
-     - PATHWAY_ROLE: Optional, repeating
+     - PATHWAY_ROLE
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`PPT_PCL_GOAL <hl7-v2_3-PPT_PCL_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
 
 .. _hl7-v2_3-PPT_PCL_PATHWAY_ROLE:
+
+PPT_PCL_PATHWAY_ROLE HL7 v2 PPT_PCL.PATHWAY_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_PATHWAY_ROLE.PPT_PCL_PATHWAY_ROLE
    :noindex:
 
-   HL7 v2 PPT_PCL.PATHWAY_ROLE group.
-
-PPT_PCL_PATHWAY_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPT_PCL_PATIENT:
+
+PPT_PCL_PATIENT HL7 v2 PPT_PCL.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_PATIENT.PPT_PCL_PATIENT
    :noindex:
 
-   HL7 v2 PPT_PCL.PATIENT group.
-
-PPT_PCL_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PPT_PCL_PATIENT_VISIT <hl7-v2_3-PPT_PCL_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``PATHWAY``
-     - 
      - List[:ref:`PPT_PCL_PATHWAY <hl7-v2_3-PPT_PCL_PATHWAY>`]
      - required
-     - 
-     - PATHWAY: Required, repeating
+     - PATHWAY
 
 .. _hl7-v2_3-PPT_PCL_PATIENT_VISIT:
+
+PPT_PCL_PATIENT_VISIT HL7 v2 PPT_PCL.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_PATIENT_VISIT.PPT_PCL_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PPT_PCL.PATIENT_VISIT group.
-
-PPT_PCL_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PPT_PCL_PROBLEM:
+
+PPT_PCL_PROBLEM HL7 v2 PPT_PCL.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_PROBLEM.PPT_PCL_PROBLEM
    :noindex:
 
-   HL7 v2 PPT_PCL.PROBLEM group.
-
-PPT_PCL_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PPT_PCL_PROBLEM_ROLE <hl7-v2_3-PPT_PCL_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPT_PCL_PROBLEM_OBSERVATION <hl7-v2_3-PPT_PCL_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
 
 .. _hl7-v2_3-PPT_PCL_PROBLEM_OBSERVATION:
+
+PPT_PCL_PROBLEM_OBSERVATION HL7 v2 PPT_PCL.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_PROBLEM_OBSERVATION.PPT_PCL_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PPT_PCL.PROBLEM_OBSERVATION group.
-
-PPT_PCL_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPT_PCL_PROBLEM_ROLE:
+
+PPT_PCL_PROBLEM_ROLE HL7 v2 PPT_PCL.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPT_PCL_PROBLEM_ROLE.PPT_PCL_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PPT_PCL.PROBLEM_ROLE group.
-
-PPT_PCL_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPV_PCA_GOAL:
+
+PPV_PCA_GOAL HL7 v2 PPV_PCA.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_GOAL.PPV_PCA_GOAL
    :noindex:
 
-   HL7 v2 PPV_PCA.GOAL group.
-
-PPV_PCA_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PPV_PCA_GOAL_ROLE <hl7-v2_3-PPV_PCA_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``GOAL_PATHWAY``
-     - 
      - Optional[List[:ref:`PPV_PCA_GOAL_PATHWAY <hl7-v2_3-PPV_PCA_GOAL_PATHWAY>`]]
      - optional
-     - 
-     - GOAL_PATHWAY: Optional, repeating
+     - GOAL_PATHWAY
    * - ``GOAL_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPV_PCA_GOAL_OBSERVATION <hl7-v2_3-PPV_PCA_GOAL_OBSERVATION>`]]
      - optional
-     - 
-     - GOAL_OBSERVATION: Optional, repeating
+     - GOAL_OBSERVATION
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`PPV_PCA_PROBLEM <hl7-v2_3-PPV_PCA_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PPV_PCA_ORDER <hl7-v2_3-PPV_PCA_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PPV_PCA_GOAL_OBSERVATION:
+
+PPV_PCA_GOAL_OBSERVATION HL7 v2 PPV_PCA.GOAL_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_GOAL_OBSERVATION.PPV_PCA_GOAL_OBSERVATION
    :noindex:
 
-   HL7 v2 PPV_PCA.GOAL_OBSERVATION group.
-
-PPV_PCA_GOAL_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPV_PCA_GOAL_PATHWAY:
+
+PPV_PCA_GOAL_PATHWAY HL7 v2 PPV_PCA.GOAL_PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_GOAL_PATHWAY.PPV_PCA_GOAL_PATHWAY
    :noindex:
 
-   HL7 v2 PPV_PCA.GOAL_PATHWAY group.
-
-PPV_PCA_GOAL_PATHWAY
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPV_PCA_GOAL_ROLE:
+
+PPV_PCA_GOAL_ROLE HL7 v2 PPV_PCA.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_GOAL_ROLE.PPV_PCA_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PPV_PCA.GOAL_ROLE group.
-
-PPV_PCA_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPV_PCA_ORDER:
+
+PPV_PCA_ORDER HL7 v2 PPV_PCA.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_ORDER.PPV_PCA_ORDER
    :noindex:
 
-   HL7 v2 PPV_PCA.ORDER group.
-
-PPV_PCA_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PPV_PCA_ORDER_DETAIL <hl7-v2_3-PPV_PCA_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PPV_PCA_ORDER_DETAIL:
+
+PPV_PCA_ORDER_DETAIL HL7 v2 PPV_PCA.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_ORDER_DETAIL.PPV_PCA_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PPV_PCA.ORDER_DETAIL group.
-
-PPV_PCA_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPV_PCA_ORDER_OBSERVATION <hl7-v2_3-PPV_PCA_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PPV_PCA_ORDER_OBSERVATION:
+
+PPV_PCA_ORDER_OBSERVATION HL7 v2 PPV_PCA.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_ORDER_OBSERVATION.PPV_PCA_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PPV_PCA.ORDER_OBSERVATION group.
-
-PPV_PCA_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PPV_PCA_PATIENT:
+
+PPV_PCA_PATIENT HL7 v2 PPV_PCA.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_PATIENT.PPV_PCA_PATIENT
    :noindex:
 
-   HL7 v2 PPV_PCA.PATIENT group.
-
-PPV_PCA_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PPV_PCA_PATIENT_VISIT <hl7-v2_3-PPV_PCA_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``GOAL``
-     - 
      - List[:ref:`PPV_PCA_GOAL <hl7-v2_3-PPV_PCA_GOAL>`]
      - required
-     - 
-     - GOAL: Required, repeating
+     - GOAL
 
 .. _hl7-v2_3-PPV_PCA_PATIENT_VISIT:
+
+PPV_PCA_PATIENT_VISIT HL7 v2 PPV_PCA.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_PATIENT_VISIT.PPV_PCA_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PPV_PCA.PATIENT_VISIT group.
-
-PPV_PCA_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PPV_PCA_PROBLEM:
+
+PPV_PCA_PROBLEM HL7 v2 PPV_PCA.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_PROBLEM.PPV_PCA_PROBLEM
    :noindex:
 
-   HL7 v2 PPV_PCA.PROBLEM group.
-
-PPV_PCA_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PPV_PCA_PROBLEM_ROLE <hl7-v2_3-PPV_PCA_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PPV_PCA_PROBLEM_OBSERVATION <hl7-v2_3-PPV_PCA_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
 
 .. _hl7-v2_3-PPV_PCA_PROBLEM_OBSERVATION:
+
+PPV_PCA_PROBLEM_OBSERVATION HL7 v2 PPV_PCA.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_PROBLEM_OBSERVATION.PPV_PCA_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PPV_PCA.PROBLEM_OBSERVATION group.
-
-PPV_PCA_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PPV_PCA_PROBLEM_ROLE:
+
+PPV_PCA_PROBLEM_ROLE HL7 v2 PPV_PCA.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PPV_PCA_PROBLEM_ROLE.PPV_PCA_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PPV_PCA.PROBLEM_ROLE group.
-
-PPV_PCA_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PRR_PC5_GOAL:
+
+PRR_PC5_GOAL HL7 v2 PRR_PC5.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_GOAL.PRR_PC5_GOAL
    :noindex:
 
-   HL7 v2 PRR_PC5.GOAL group.
-
-PRR_PC5_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PRR_PC5_GOAL_ROLE <hl7-v2_3-PRR_PC5_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``GOAL_OBSERVATION``
-     - 
      - Optional[List[:ref:`PRR_PC5_GOAL_OBSERVATION <hl7-v2_3-PRR_PC5_GOAL_OBSERVATION>`]]
      - optional
-     - 
-     - GOAL_OBSERVATION: Optional, repeating
+     - GOAL_OBSERVATION
 
 .. _hl7-v2_3-PRR_PC5_GOAL_OBSERVATION:
+
+PRR_PC5_GOAL_OBSERVATION HL7 v2 PRR_PC5.GOAL_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_GOAL_OBSERVATION.PRR_PC5_GOAL_OBSERVATION
    :noindex:
 
-   HL7 v2 PRR_PC5.GOAL_OBSERVATION group.
-
-PRR_PC5_GOAL_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PRR_PC5_GOAL_ROLE:
+
+PRR_PC5_GOAL_ROLE HL7 v2 PRR_PC5.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_GOAL_ROLE.PRR_PC5_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PRR_PC5.GOAL_ROLE group.
-
-PRR_PC5_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PRR_PC5_ORDER:
+
+PRR_PC5_ORDER HL7 v2 PRR_PC5.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_ORDER.PRR_PC5_ORDER
    :noindex:
 
-   HL7 v2 PRR_PC5.ORDER group.
-
-PRR_PC5_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PRR_PC5_ORDER_DETAIL <hl7-v2_3-PRR_PC5_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PRR_PC5_ORDER_DETAIL:
+
+PRR_PC5_ORDER_DETAIL HL7 v2 PRR_PC5.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_ORDER_DETAIL.PRR_PC5_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PRR_PC5.ORDER_DETAIL group.
-
-PRR_PC5_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PRR_PC5_ORDER_OBSERVATION <hl7-v2_3-PRR_PC5_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PRR_PC5_ORDER_OBSERVATION:
+
+PRR_PC5_ORDER_OBSERVATION HL7 v2 PRR_PC5.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_ORDER_OBSERVATION.PRR_PC5_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PRR_PC5.ORDER_OBSERVATION group.
-
-PRR_PC5_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PRR_PC5_PATIENT:
+
+PRR_PC5_PATIENT HL7 v2 PRR_PC5.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_PATIENT.PRR_PC5_PATIENT
    :noindex:
 
-   HL7 v2 PRR_PC5.PATIENT group.
-
-PRR_PC5_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PRR_PC5_PATIENT_VISIT <hl7-v2_3-PRR_PC5_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``PROBLEM``
-     - 
      - List[:ref:`PRR_PC5_PROBLEM <hl7-v2_3-PRR_PC5_PROBLEM>`]
      - required
-     - 
-     - PROBLEM: Required, repeating
+     - PROBLEM
 
 .. _hl7-v2_3-PRR_PC5_PATIENT_VISIT:
+
+PRR_PC5_PATIENT_VISIT HL7 v2 PRR_PC5.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_PATIENT_VISIT.PRR_PC5_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PRR_PC5.PATIENT_VISIT group.
-
-PRR_PC5_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PRR_PC5_PROBLEM:
+
+PRR_PC5_PROBLEM HL7 v2 PRR_PC5.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_PROBLEM.PRR_PC5_PROBLEM
    :noindex:
 
-   HL7 v2 PRR_PC5.PROBLEM group.
-
-PRR_PC5_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PRR_PC5_PROBLEM_ROLE <hl7-v2_3-PRR_PC5_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PROBLEM_PATHWAY``
-     - 
      - Optional[List[:ref:`PRR_PC5_PROBLEM_PATHWAY <hl7-v2_3-PRR_PC5_PROBLEM_PATHWAY>`]]
      - optional
-     - 
-     - PROBLEM_PATHWAY: Optional, repeating
+     - PROBLEM_PATHWAY
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PRR_PC5_PROBLEM_OBSERVATION <hl7-v2_3-PRR_PC5_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`PRR_PC5_GOAL <hl7-v2_3-PRR_PC5_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PRR_PC5_ORDER <hl7-v2_3-PRR_PC5_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PRR_PC5_PROBLEM_OBSERVATION:
+
+PRR_PC5_PROBLEM_OBSERVATION HL7 v2 PRR_PC5.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_PROBLEM_OBSERVATION.PRR_PC5_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PRR_PC5.PROBLEM_OBSERVATION group.
-
-PRR_PC5_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PRR_PC5_PROBLEM_PATHWAY:
+
+PRR_PC5_PROBLEM_PATHWAY HL7 v2 PRR_PC5.PROBLEM_PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_PROBLEM_PATHWAY.PRR_PC5_PROBLEM_PATHWAY
    :noindex:
 
-   HL7 v2 PRR_PC5.PROBLEM_PATHWAY group.
-
-PRR_PC5_PROBLEM_PATHWAY
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PRR_PC5_PROBLEM_ROLE:
+
+PRR_PC5_PROBLEM_ROLE HL7 v2 PRR_PC5.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PRR_PC5_PROBLEM_ROLE.PRR_PC5_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PRR_PC5.PROBLEM_ROLE group.
-
-PRR_PC5_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PTR_PCF_GOAL:
+
+PTR_PCF_GOAL HL7 v2 PTR_PCF.GOAL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_GOAL.PTR_PCF_GOAL
    :noindex:
 
-   HL7 v2 PTR_PCF.GOAL group.
-
-PTR_PCF_GOAL
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GOL``
-     - 
      - :ref:`GOL <hl7-v2_3-GOL>`
      - required
-     - 
-     - GOL: Required
+     - Goal Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``GOAL_ROLE``
-     - 
      - Optional[List[:ref:`PTR_PCF_GOAL_ROLE <hl7-v2_3-PTR_PCF_GOAL_ROLE>`]]
      - optional
-     - 
-     - GOAL_ROLE: Optional, repeating
+     - GOAL_ROLE
    * - ``GOAL_OBSERVATION``
-     - 
      - Optional[List[:ref:`PTR_PCF_GOAL_OBSERVATION <hl7-v2_3-PTR_PCF_GOAL_OBSERVATION>`]]
      - optional
-     - 
-     - GOAL_OBSERVATION: Optional, repeating
+     - GOAL_OBSERVATION
 
 .. _hl7-v2_3-PTR_PCF_GOAL_OBSERVATION:
+
+PTR_PCF_GOAL_OBSERVATION HL7 v2 PTR_PCF.GOAL_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_GOAL_OBSERVATION.PTR_PCF_GOAL_OBSERVATION
    :noindex:
 
-   HL7 v2 PTR_PCF.GOAL_OBSERVATION group.
-
-PTR_PCF_GOAL_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PTR_PCF_GOAL_ROLE:
+
+PTR_PCF_GOAL_ROLE HL7 v2 PTR_PCF.GOAL_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_GOAL_ROLE.PTR_PCF_GOAL_ROLE
    :noindex:
 
-   HL7 v2 PTR_PCF.GOAL_ROLE group.
-
-PTR_PCF_GOAL_ROLE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PTR_PCF_ORDER:
+
+PTR_PCF_ORDER HL7 v2 PTR_PCF.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_ORDER.PTR_PCF_ORDER
    :noindex:
 
-   HL7 v2 PTR_PCF.ORDER group.
-
-PTR_PCF_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`PTR_PCF_ORDER_DETAIL <hl7-v2_3-PTR_PCF_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-PTR_PCF_ORDER_DETAIL:
+
+PTR_PCF_ORDER_DETAIL HL7 v2 PTR_PCF.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_ORDER_DETAIL.PTR_PCF_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 PTR_PCF.ORDER_DETAIL group.
-
-PTR_PCF_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``ORDER_OBSERVATION``
-     - 
      - Optional[List[:ref:`PTR_PCF_ORDER_OBSERVATION <hl7-v2_3-PTR_PCF_ORDER_OBSERVATION>`]]
      - optional
-     - 
-     - ORDER_OBSERVATION: Optional, repeating
+     - ORDER_OBSERVATION
 
 .. _hl7-v2_3-PTR_PCF_ORDER_OBSERVATION:
+
+PTR_PCF_ORDER_OBSERVATION HL7 v2 PTR_PCF.ORDER_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_ORDER_OBSERVATION.PTR_PCF_ORDER_OBSERVATION
    :noindex:
 
-   HL7 v2 PTR_PCF.ORDER_OBSERVATION group.
-
-PTR_PCF_ORDER_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PTR_PCF_PATHWAY:
+
+PTR_PCF_PATHWAY HL7 v2 PTR_PCF.PATHWAY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_PATHWAY.PTR_PCF_PATHWAY
    :noindex:
 
-   HL7 v2 PTR_PCF.PATHWAY group.
-
-PTR_PCF_PATHWAY
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PTH``
-     - 
      - :ref:`PTH <hl7-v2_3-PTH>`
      - required
-     - 
-     - PTH: Required
+     - Pathway
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PATHWAY_ROLE``
-     - 
      - Optional[List[:ref:`PTR_PCF_PATHWAY_ROLE <hl7-v2_3-PTR_PCF_PATHWAY_ROLE>`]]
      - optional
-     - 
-     - PATHWAY_ROLE: Optional, repeating
+     - PATHWAY_ROLE
    * - ``PROBLEM``
-     - 
      - Optional[List[:ref:`PTR_PCF_PROBLEM <hl7-v2_3-PTR_PCF_PROBLEM>`]]
      - optional
-     - 
-     - PROBLEM: Optional, repeating
+     - PROBLEM
 
 .. _hl7-v2_3-PTR_PCF_PATHWAY_ROLE:
+
+PTR_PCF_PATHWAY_ROLE HL7 v2 PTR_PCF.PATHWAY_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_PATHWAY_ROLE.PTR_PCF_PATHWAY_ROLE
    :noindex:
 
-   HL7 v2 PTR_PCF.PATHWAY_ROLE group.
-
-PTR_PCF_PATHWAY_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-PTR_PCF_PATIENT:
+
+PTR_PCF_PATIENT HL7 v2 PTR_PCF.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_PATIENT.PTR_PCF_PATIENT
    :noindex:
 
-   HL7 v2 PTR_PCF.PATIENT group.
-
-PTR_PCF_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`PTR_PCF_PATIENT_VISIT <hl7-v2_3-PTR_PCF_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``PATHWAY``
-     - 
      - List[:ref:`PTR_PCF_PATHWAY <hl7-v2_3-PTR_PCF_PATHWAY>`]
      - required
-     - 
-     - PATHWAY: Required, repeating
+     - PATHWAY
 
 .. _hl7-v2_3-PTR_PCF_PATIENT_VISIT:
+
+PTR_PCF_PATIENT_VISIT HL7 v2 PTR_PCF.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_PATIENT_VISIT.PTR_PCF_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 PTR_PCF.PATIENT_VISIT group.
-
-PTR_PCF_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-PTR_PCF_PROBLEM:
+
+PTR_PCF_PROBLEM HL7 v2 PTR_PCF.PROBLEM group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_PROBLEM.PTR_PCF_PROBLEM
    :noindex:
 
-   HL7 v2 PTR_PCF.PROBLEM group.
-
-PTR_PCF_PROBLEM
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRB``
-     - 
      - :ref:`PRB <hl7-v2_3-PRB>`
      - required
-     - 
-     - PRB: Required
+     - Problem Detail
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
    * - ``PROBLEM_ROLE``
-     - 
      - Optional[List[:ref:`PTR_PCF_PROBLEM_ROLE <hl7-v2_3-PTR_PCF_PROBLEM_ROLE>`]]
      - optional
-     - 
-     - PROBLEM_ROLE: Optional, repeating
+     - PROBLEM_ROLE
    * - ``PROBLEM_OBSERVATION``
-     - 
      - Optional[List[:ref:`PTR_PCF_PROBLEM_OBSERVATION <hl7-v2_3-PTR_PCF_PROBLEM_OBSERVATION>`]]
      - optional
-     - 
-     - PROBLEM_OBSERVATION: Optional, repeating
+     - PROBLEM_OBSERVATION
    * - ``GOAL``
-     - 
      - Optional[List[:ref:`PTR_PCF_GOAL <hl7-v2_3-PTR_PCF_GOAL>`]]
      - optional
-     - 
-     - GOAL: Optional, repeating
+     - GOAL
    * - ``ORDER``
-     - 
      - Optional[List[:ref:`PTR_PCF_ORDER <hl7-v2_3-PTR_PCF_ORDER>`]]
      - optional
-     - 
-     - ORDER: Optional, repeating
+     - ORDER
 
 .. _hl7-v2_3-PTR_PCF_PROBLEM_OBSERVATION:
+
+PTR_PCF_PROBLEM_OBSERVATION HL7 v2 PTR_PCF.PROBLEM_OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_PROBLEM_OBSERVATION.PTR_PCF_PROBLEM_OBSERVATION
    :noindex:
 
-   HL7 v2 PTR_PCF.PROBLEM_OBSERVATION group.
-
-PTR_PCF_PROBLEM_OBSERVATION
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-PTR_PCF_PROBLEM_ROLE:
+
+PTR_PCF_PROBLEM_ROLE HL7 v2 PTR_PCF.PROBLEM_ROLE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.PTR_PCF_PROBLEM_ROLE.PTR_PCF_PROBLEM_ROLE
    :noindex:
 
-   HL7 v2 PTR_PCF.PROBLEM_ROLE group.
-
-PTR_PCF_PROBLEM_ROLE
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ROL``
-     - 
      - :ref:`ROL <hl7-v2_3-ROL>`
      - required
-     - 
-     - ROL: Required
+     - Role
    * - ``VAR``
-     - 
      - Optional[List[:ref:`VAR <hl7-v2_3-VAR>`]]
      - optional
-     - 
-     - VAR: Optional, repeating
+     - Variance
 
 .. _hl7-v2_3-RAR_RAR_DEFINITION:
+
+RAR_RAR_DEFINITION HL7 v2 RAR_RAR.DEFINITION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAR_RAR_DEFINITION.RAR_RAR_DEFINITION
    :noindex:
 
-   HL7 v2 RAR_RAR.DEFINITION group.
-
-RAR_RAR_DEFINITION
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_3-QRD>`
      - required
-     - 
-     - QRD: Required
+     - Query definition segment
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_3-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - Query filter segment
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RAR_RAR_PATIENT <hl7-v2_3-RAR_RAR_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RAR_RAR_ORDER <hl7-v2_3-RAR_RAR_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-RAR_RAR_ENCODING:
+
+RAR_RAR_ENCODING HL7 v2 RAR_RAR.ENCODING group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAR_RAR_ENCODING.RAR_RAR_ENCODING
    :noindex:
 
-   HL7 v2 RAR_RAR.ENCODING group.
-
-RAR_RAR_ENCODING
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RAR_RAR_ORDER:
+
+RAR_RAR_ORDER HL7 v2 RAR_RAR.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAR_RAR_ORDER.RAR_RAR_ORDER
    :noindex:
 
-   HL7 v2 RAR_RAR.ORDER group.
-
-RAR_RAR_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ENCODING``
-     - 
      - Optional[:ref:`RAR_RAR_ENCODING <hl7-v2_3-RAR_RAR_ENCODING>`]
      - optional
-     - 
-     - ENCODING: Optional
+     - ENCODING
    * - ``RXA``
-     - 
      - List[:ref:`RXA <hl7-v2_3-RXA>`]
      - required
-     - 
-     - RXA: Required, repeating
+     - Pharmacy administration segment
 
 .. _hl7-v2_3-RAR_RAR_PATIENT:
+
+RAR_RAR_PATIENT HL7 v2 RAR_RAR.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAR_RAR_PATIENT.RAR_RAR_PATIENT
    :noindex:
 
-   HL7 v2 RAR_RAR.PATIENT group.
-
-RAR_RAR_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RAS_O01_COMPONENTS:
+
+RAS_O01_COMPONENTS HL7 v2 RAS_O01.COMPONENTS group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_COMPONENTS.RAS_O01_COMPONENTS
    :noindex:
 
-   HL7 v2 RAS_O01.COMPONENTS group.
-
-RAS_O01_COMPONENTS
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXC``
-     - 
      - List[:ref:`RXC <hl7-v2_3-RXC>`]
      - required
-     - 
-     - RXC: Required, repeating
+     - Pharmacy component order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RAS_O01_ENCODING:
+
+RAS_O01_ENCODING HL7 v2 RAS_O01.ENCODING group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_ENCODING.RAS_O01_ENCODING
    :noindex:
 
-   HL7 v2 RAS_O01.ENCODING group.
-
-RAS_O01_ENCODING
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RAS_O01_OBSERVATION:
+
+RAS_O01_OBSERVATION HL7 v2 RAS_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_OBSERVATION.RAS_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 RAS_O01.OBSERVATION group.
-
-RAS_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RAS_O01_ORDER:
+
+RAS_O01_ORDER HL7 v2 RAS_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_ORDER.RAS_O01_ORDER
    :noindex:
 
-   HL7 v2 RAS_O01.ORDER group.
-
-RAS_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`RAS_O01_ORDER_DETAIL <hl7-v2_3-RAS_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``ENCODING``
-     - 
      - Optional[:ref:`RAS_O01_ENCODING <hl7-v2_3-RAS_O01_ENCODING>`]
      - optional
-     - 
-     - ENCODING: Optional
+     - ENCODING
    * - ``RXA``
-     - 
      - List[:ref:`RXA <hl7-v2_3-RXA>`]
      - required
-     - 
-     - RXA: Required, repeating
+     - Pharmacy administration segment
    * - ``RXR``
-     - 
      - :ref:`RXR <hl7-v2_3-RXR>`
      - required
-     - 
-     - RXR: Required
+     - Pharmacy route segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`RAS_O01_OBSERVATION <hl7-v2_3-RAS_O01_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
    * - ``CTI``
-     - 
      - Optional[List[:ref:`CTI <hl7-v2_3-CTI>`]]
      - optional
-     - 
-     - CTI: Optional, repeating
+     - Clinical Trial Identification
 
 .. _hl7-v2_3-RAS_O01_ORDER_DETAIL:
+
+RAS_O01_ORDER_DETAIL HL7 v2 RAS_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_ORDER_DETAIL.RAS_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 RAS_O01.ORDER_DETAIL group.
-
-RAS_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXO``
-     - 
      - :ref:`RXO <hl7-v2_3-RXO>`
      - required
-     - 
-     - RXO: Required
+     - Pharmacy prescription order segment
    * - ``ORDER_DETAIL_SUPPLEMENT``
-     - 
      - Optional[:ref:`RAS_O01_ORDER_DETAIL_SUPPLEMENT <hl7-v2_3-RAS_O01_ORDER_DETAIL_SUPPLEMENT>`]
      - optional
-     - 
-     - ORDER_DETAIL_SUPPLEMENT: Optional
+     - ORDER_DETAIL_SUPPLEMENT
 
 .. _hl7-v2_3-RAS_O01_ORDER_DETAIL_SUPPLEMENT:
+
+RAS_O01_ORDER_DETAIL_SUPPLEMENT HL7 v2 RAS_O01.ORDER_DETAIL_SUPPLEMENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_ORDER_DETAIL_SUPPLEMENT.RAS_O01_ORDER_DETAIL_SUPPLEMENT
    :noindex:
 
-   HL7 v2 RAS_O01.ORDER_DETAIL_SUPPLEMENT group.
-
-RAS_O01_ORDER_DETAIL_SUPPLEMENT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``NTE``
-     - 
      - List[:ref:`NTE <hl7-v2_3-NTE>`]
      - required
-     - 
-     - NTE: Required, repeating
+     - Notes and comments segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``COMPONENTS``
-     - 
      - Optional[:ref:`RAS_O01_COMPONENTS <hl7-v2_3-RAS_O01_COMPONENTS>`]
      - optional
-     - 
-     - COMPONENTS: Optional
+     - COMPONENTS
 
 .. _hl7-v2_3-RAS_O01_PATIENT:
+
+RAS_O01_PATIENT HL7 v2 RAS_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_PATIENT.RAS_O01_PATIENT
    :noindex:
 
-   HL7 v2 RAS_O01.PATIENT group.
-
-RAS_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`RAS_O01_PATIENT_VISIT <hl7-v2_3-RAS_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
 
 .. _hl7-v2_3-RAS_O01_PATIENT_VISIT:
+
+RAS_O01_PATIENT_VISIT HL7 v2 RAS_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RAS_O01_PATIENT_VISIT.RAS_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 RAS_O01.PATIENT_VISIT group.
-
-RAS_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-RCI_I05_OBSERVATION:
+
+RCI_I05_OBSERVATION HL7 v2 RCI_I05.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RCI_I05_OBSERVATION.RCI_I05_OBSERVATION
    :noindex:
 
-   HL7 v2 RCI_I05.OBSERVATION group.
-
-RCI_I05_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``RESULTS``
-     - 
      - Optional[List[:ref:`RCI_I05_RESULTS <hl7-v2_3-RCI_I05_RESULTS>`]]
      - optional
-     - 
-     - RESULTS: Optional, repeating
+     - RESULTS
 
 .. _hl7-v2_3-RCI_I05_PROVIDER:
+
+RCI_I05_PROVIDER HL7 v2 RCI_I05.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RCI_I05_PROVIDER.RCI_I05_PROVIDER
    :noindex:
 
-   HL7 v2 RCI_I05.PROVIDER group.
-
-RCI_I05_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RCI_I05_RESULTS:
+
+RCI_I05_RESULTS HL7 v2 RCI_I05.RESULTS group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RCI_I05_RESULTS.RCI_I05_RESULTS
    :noindex:
 
-   HL7 v2 RCI_I05.RESULTS group.
-
-RCI_I05_RESULTS
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RCL_I06_PROVIDER:
+
+RCL_I06_PROVIDER HL7 v2 RCL_I06.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RCL_I06_PROVIDER.RCL_I06_PROVIDER
    :noindex:
 
-   HL7 v2 RCL_I06.PROVIDER group.
-
-RCL_I06_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RDE_O01_COMPONENT:
+
+RDE_O01_COMPONENT HL7 v2 RDE_O01.COMPONENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDE_O01_COMPONENT.RDE_O01_COMPONENT
    :noindex:
 
-   HL7 v2 RDE_O01.COMPONENT group.
-
-RDE_O01_COMPONENT
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXC``
-     - 
      - List[:ref:`RXC <hl7-v2_3-RXC>`]
      - required
-     - 
-     - RXC: Required, repeating
+     - Pharmacy component order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RDE_O01_INSURANCE:
+
+RDE_O01_INSURANCE HL7 v2 RDE_O01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDE_O01_INSURANCE.RDE_O01_INSURANCE
    :noindex:
 
-   HL7 v2 RDE_O01.INSURANCE group.
-
-RDE_O01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-RDE_O01_OBSERVATION:
+
+RDE_O01_OBSERVATION HL7 v2 RDE_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDE_O01_OBSERVATION.RDE_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 RDE_O01.OBSERVATION group.
-
-RDE_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - Optional[:ref:`OBX <hl7-v2_3-OBX>`]
      - optional
-     - 
-     - OBX: Optional
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RDE_O01_ORDER:
+
+RDE_O01_ORDER HL7 v2 RDE_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDE_O01_ORDER.RDE_O01_ORDER
    :noindex:
 
-   HL7 v2 RDE_O01.ORDER group.
-
-RDE_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`RDE_O01_ORDER_DETAIL <hl7-v2_3-RDE_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
    * - ``OBSERVATION``
-     - 
      - List[:ref:`RDE_O01_OBSERVATION <hl7-v2_3-RDE_O01_OBSERVATION>`]
      - required
-     - 
-     - OBSERVATION: Required, repeating
+     - OBSERVATION
    * - ``CTI``
-     - 
      - Optional[:ref:`CTI <hl7-v2_3-CTI>`]
      - optional
-     - 
-     - CTI: Optional
+     - Clinical Trial Identification
 
 .. _hl7-v2_3-RDE_O01_ORDER_DETAIL:
+
+RDE_O01_ORDER_DETAIL HL7 v2 RDE_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDE_O01_ORDER_DETAIL.RDE_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 RDE_O01.ORDER_DETAIL group.
-
-RDE_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXO``
-     - 
      - :ref:`RXO <hl7-v2_3-RXO>`
      - required
-     - 
-     - RXO: Required
+     - Pharmacy prescription order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``COMPONENT``
-     - 
      - Optional[:ref:`RDE_O01_COMPONENT <hl7-v2_3-RDE_O01_COMPONENT>`]
      - optional
-     - 
-     - COMPONENT: Optional
+     - COMPONENT
 
 .. _hl7-v2_3-RDE_O01_PATIENT:
+
+RDE_O01_PATIENT HL7 v2 RDE_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDE_O01_PATIENT.RDE_O01_PATIENT
    :noindex:
 
-   HL7 v2 RDE_O01.PATIENT group.
-
-RDE_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`RDE_O01_PATIENT_VISIT <hl7-v2_3-RDE_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`RDE_O01_INSURANCE <hl7-v2_3-RDE_O01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``GT1``
-     - 
      - Optional[:ref:`GT1 <hl7-v2_3-GT1>`]
      - optional
-     - 
-     - GT1: Optional
+     - Guarantor
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
 
 .. _hl7-v2_3-RDE_O01_PATIENT_VISIT:
+
+RDE_O01_PATIENT_VISIT HL7 v2 RDE_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDE_O01_PATIENT_VISIT.RDE_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 RDE_O01.PATIENT_VISIT group.
-
-RDE_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-RDO_O01_COMPONENT:
+
+RDO_O01_COMPONENT HL7 v2 RDO_O01.COMPONENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDO_O01_COMPONENT.RDO_O01_COMPONENT
    :noindex:
 
-   HL7 v2 RDO_O01.COMPONENT group.
-
-RDO_O01_COMPONENT
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXC``
-     - 
      - List[:ref:`RXC <hl7-v2_3-RXC>`]
      - required
-     - 
-     - RXC: Required, repeating
+     - Pharmacy component order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RDO_O01_INSURANCE:
+
+RDO_O01_INSURANCE HL7 v2 RDO_O01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDO_O01_INSURANCE.RDO_O01_INSURANCE
    :noindex:
 
-   HL7 v2 RDO_O01.INSURANCE group.
-
-RDO_O01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-RDO_O01_OBSERVATION:
+
+RDO_O01_OBSERVATION HL7 v2 RDO_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDO_O01_OBSERVATION.RDO_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 RDO_O01.OBSERVATION group.
-
-RDO_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RDO_O01_ORDER:
+
+RDO_O01_ORDER HL7 v2 RDO_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDO_O01_ORDER.RDO_O01_ORDER
    :noindex:
 
-   HL7 v2 RDO_O01.ORDER group.
-
-RDO_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`RDO_O01_ORDER_DETAIL <hl7-v2_3-RDO_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``BLG``
-     - 
      - Optional[:ref:`BLG <hl7-v2_3-BLG>`]
      - optional
-     - 
-     - BLG: Optional
+     - Billing Segment
 
 .. _hl7-v2_3-RDO_O01_ORDER_DETAIL:
+
+RDO_O01_ORDER_DETAIL HL7 v2 RDO_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDO_O01_ORDER_DETAIL.RDO_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 RDO_O01.ORDER_DETAIL group.
-
-RDO_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXO``
-     - 
      - :ref:`RXO <hl7-v2_3-RXO>`
      - required
-     - 
-     - RXO: Required
+     - Pharmacy prescription order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``COMPONENT``
-     - 
      - Optional[:ref:`RDO_O01_COMPONENT <hl7-v2_3-RDO_O01_COMPONENT>`]
      - optional
-     - 
-     - COMPONENT: Optional
+     - COMPONENT
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`RDO_O01_OBSERVATION <hl7-v2_3-RDO_O01_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-RDO_O01_PATIENT:
+
+RDO_O01_PATIENT HL7 v2 RDO_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDO_O01_PATIENT.RDO_O01_PATIENT
    :noindex:
 
-   HL7 v2 RDO_O01.PATIENT group.
-
-RDO_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`RDO_O01_PATIENT_VISIT <hl7-v2_3-RDO_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
    * - ``INSURANCE``
-     - 
      - Optional[List[:ref:`RDO_O01_INSURANCE <hl7-v2_3-RDO_O01_INSURANCE>`]]
      - optional
-     - 
-     - INSURANCE: Optional, repeating
+     - INSURANCE
    * - ``GT1``
-     - 
      - Optional[:ref:`GT1 <hl7-v2_3-GT1>`]
      - optional
-     - 
-     - GT1: Optional
+     - Guarantor
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
 
 .. _hl7-v2_3-RDO_O01_PATIENT_VISIT:
+
+RDO_O01_PATIENT_VISIT HL7 v2 RDO_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDO_O01_PATIENT_VISIT.RDO_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 RDO_O01.PATIENT_VISIT group.
-
-RDO_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-RDR_RDR_DEFINITION:
+
+RDR_RDR_DEFINITION HL7 v2 RDR_RDR.DEFINITION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDR_RDR_DEFINITION.RDR_RDR_DEFINITION
    :noindex:
 
-   HL7 v2 RDR_RDR.DEFINITION group.
-
-RDR_RDR_DEFINITION
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_3-QRD>`
      - required
-     - 
-     - QRD: Required
+     - Query definition segment
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_3-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - Query filter segment
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RDR_RDR_PATIENT <hl7-v2_3-RDR_RDR_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RDR_RDR_ORDER <hl7-v2_3-RDR_RDR_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-RDR_RDR_DISPENSE:
+
+RDR_RDR_DISPENSE HL7 v2 RDR_RDR.DISPENSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDR_RDR_DISPENSE.RDR_RDR_DISPENSE
    :noindex:
 
-   HL7 v2 RDR_RDR.DISPENSE group.
-
-RDR_RDR_DISPENSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXD``
-     - 
      - :ref:`RXD <hl7-v2_3-RXD>`
      - required
-     - 
-     - RXD: Required
+     - Pharmacy dispense segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RDR_RDR_ENCODING:
+
+RDR_RDR_ENCODING HL7 v2 RDR_RDR.ENCODING group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDR_RDR_ENCODING.RDR_RDR_ENCODING
    :noindex:
 
-   HL7 v2 RDR_RDR.ENCODING group.
-
-RDR_RDR_ENCODING
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - :ref:`RXR <hl7-v2_3-RXR>`
      - required
-     - 
-     - RXR: Required
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RDR_RDR_ORDER:
+
+RDR_RDR_ORDER HL7 v2 RDR_RDR.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDR_RDR_ORDER.RDR_RDR_ORDER
    :noindex:
 
-   HL7 v2 RDR_RDR.ORDER group.
-
-RDR_RDR_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ENCODING``
-     - 
      - Optional[:ref:`RDR_RDR_ENCODING <hl7-v2_3-RDR_RDR_ENCODING>`]
      - optional
-     - 
-     - ENCODING: Optional
+     - ENCODING
    * - ``DISPENSE``
-     - 
      - List[:ref:`RDR_RDR_DISPENSE <hl7-v2_3-RDR_RDR_DISPENSE>`]
      - required
-     - 
-     - DISPENSE: Required, repeating
+     - DISPENSE
 
 .. _hl7-v2_3-RDR_RDR_PATIENT:
+
+RDR_RDR_PATIENT HL7 v2 RDR_RDR.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDR_RDR_PATIENT.RDR_RDR_PATIENT
    :noindex:
 
-   HL7 v2 RDR_RDR.PATIENT group.
-
-RDR_RDR_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RDS_O01_COMPONENT:
+
+RDS_O01_COMPONENT HL7 v2 RDS_O01.COMPONENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_COMPONENT.RDS_O01_COMPONENT
    :noindex:
 
-   HL7 v2 RDS_O01.COMPONENT group.
-
-RDS_O01_COMPONENT
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXC``
-     - 
      - List[:ref:`RXC <hl7-v2_3-RXC>`]
      - required
-     - 
-     - RXC: Required, repeating
+     - Pharmacy component order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RDS_O01_ENCODING:
+
+RDS_O01_ENCODING HL7 v2 RDS_O01.ENCODING group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_ENCODING.RDS_O01_ENCODING
    :noindex:
 
-   HL7 v2 RDS_O01.ENCODING group.
-
-RDS_O01_ENCODING
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RDS_O01_OBSERVATION:
+
+RDS_O01_OBSERVATION HL7 v2 RDS_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_OBSERVATION.RDS_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 RDS_O01.OBSERVATION group.
-
-RDS_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RDS_O01_ORDER:
+
+RDS_O01_ORDER HL7 v2 RDS_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_ORDER.RDS_O01_ORDER
    :noindex:
 
-   HL7 v2 RDS_O01.ORDER group.
-
-RDS_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`RDS_O01_ORDER_DETAIL <hl7-v2_3-RDS_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``ENCODING``
-     - 
      - Optional[:ref:`RDS_O01_ENCODING <hl7-v2_3-RDS_O01_ENCODING>`]
      - optional
-     - 
-     - ENCODING: Optional
+     - ENCODING
    * - ``RXD``
-     - 
      - :ref:`RXD <hl7-v2_3-RXD>`
      - required
-     - 
-     - RXD: Required
+     - Pharmacy dispense segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
    * - ``OBSERVATION``
-     - 
      - List[:ref:`RDS_O01_OBSERVATION <hl7-v2_3-RDS_O01_OBSERVATION>`]
      - required
-     - 
-     - OBSERVATION: Required, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-RDS_O01_ORDER_DETAIL:
+
+RDS_O01_ORDER_DETAIL HL7 v2 RDS_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_ORDER_DETAIL.RDS_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 RDS_O01.ORDER_DETAIL group.
-
-RDS_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXO``
-     - 
      - :ref:`RXO <hl7-v2_3-RXO>`
      - required
-     - 
-     - RXO: Required
+     - Pharmacy prescription order segment
    * - ``ORDER_DETAIL_SUPPLEMENT``
-     - 
      - Optional[:ref:`RDS_O01_ORDER_DETAIL_SUPPLEMENT <hl7-v2_3-RDS_O01_ORDER_DETAIL_SUPPLEMENT>`]
      - optional
-     - 
-     - ORDER_DETAIL_SUPPLEMENT: Optional
+     - ORDER_DETAIL_SUPPLEMENT
 
 .. _hl7-v2_3-RDS_O01_ORDER_DETAIL_SUPPLEMENT:
+
+RDS_O01_ORDER_DETAIL_SUPPLEMENT HL7 v2 RDS_O01.ORDER_DETAIL_SUPPLEMENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_ORDER_DETAIL_SUPPLEMENT.RDS_O01_ORDER_DETAIL_SUPPLEMENT
    :noindex:
 
-   HL7 v2 RDS_O01.ORDER_DETAIL_SUPPLEMENT group.
-
-RDS_O01_ORDER_DETAIL_SUPPLEMENT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``NTE``
-     - 
      - List[:ref:`NTE <hl7-v2_3-NTE>`]
      - required
-     - 
-     - NTE: Required, repeating
+     - Notes and comments segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``COMPONENT``
-     - 
      - Optional[:ref:`RDS_O01_COMPONENT <hl7-v2_3-RDS_O01_COMPONENT>`]
      - optional
-     - 
-     - COMPONENT: Optional
+     - COMPONENT
 
 .. _hl7-v2_3-RDS_O01_PATIENT:
+
+RDS_O01_PATIENT HL7 v2 RDS_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_PATIENT.RDS_O01_PATIENT
    :noindex:
 
-   HL7 v2 RDS_O01.PATIENT group.
-
-RDS_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PD1``
-     - 
      - Optional[:ref:`PD1 <hl7-v2_3-PD1>`]
      - optional
-     - 
-     - PD1: Optional
+     - Patient Demographic
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`RDS_O01_PATIENT_VISIT <hl7-v2_3-RDS_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
 
 .. _hl7-v2_3-RDS_O01_PATIENT_VISIT:
+
+RDS_O01_PATIENT_VISIT HL7 v2 RDS_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RDS_O01_PATIENT_VISIT.RDS_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 RDS_O01.PATIENT_VISIT group.
-
-RDS_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-REF_I12_AUTCTD_SUPPGRP2:
+
+REF_I12_AUTCTD_SUPPGRP2 HL7 v2 REF_I12.AUTCTD_SUPPGRP2 group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_AUTCTD_SUPPGRP2.REF_I12_AUTCTD_SUPPGRP2
    :noindex:
 
-   HL7 v2 REF_I12.AUTCTD_SUPPGRP2 group.
-
-REF_I12_AUTCTD_SUPPGRP2
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-REF_I12_AUTHORIZATION:
+
+REF_I12_AUTHORIZATION HL7 v2 REF_I12.AUTHORIZATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_AUTHORIZATION.REF_I12_AUTHORIZATION
    :noindex:
 
-   HL7 v2 REF_I12.AUTHORIZATION group.
-
-REF_I12_AUTHORIZATION
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-REF_I12_INSURANCE:
+
+REF_I12_INSURANCE HL7 v2 REF_I12.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_INSURANCE.REF_I12_INSURANCE
    :noindex:
 
-   HL7 v2 REF_I12.INSURANCE group.
-
-REF_I12_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-REF_I12_OBSERVATION:
+
+REF_I12_OBSERVATION HL7 v2 REF_I12.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_OBSERVATION.REF_I12_OBSERVATION
    :noindex:
 
-   HL7 v2 REF_I12.OBSERVATION group.
-
-REF_I12_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-REF_I12_PROCEDURE:
+
+REF_I12_PROCEDURE HL7 v2 REF_I12.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_PROCEDURE.REF_I12_PROCEDURE
    :noindex:
 
-   HL7 v2 REF_I12.PROCEDURE group.
-
-REF_I12_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``AUTCTD_SUPPGRP2``
-     - 
      - Optional[:ref:`REF_I12_AUTCTD_SUPPGRP2 <hl7-v2_3-REF_I12_AUTCTD_SUPPGRP2>`]
      - optional
-     - 
-     - AUTCTD_SUPPGRP2: Optional
+     - AUTCTD_SUPPGRP2
 
 .. _hl7-v2_3-REF_I12_PROVIDER:
+
+REF_I12_PROVIDER HL7 v2 REF_I12.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_PROVIDER.REF_I12_PROVIDER
    :noindex:
 
-   HL7 v2 REF_I12.PROVIDER group.
-
-REF_I12_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-REF_I12_RESULTS:
+
+REF_I12_RESULTS HL7 v2 REF_I12.RESULTS group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_RESULTS.REF_I12_RESULTS
    :noindex:
 
-   HL7 v2 REF_I12.RESULTS group.
-
-REF_I12_RESULTS
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`REF_I12_OBSERVATION <hl7-v2_3-REF_I12_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-REF_I12_VISIT:
+
+REF_I12_VISIT HL7 v2 REF_I12.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.REF_I12_VISIT.REF_I12_VISIT
    :noindex:
 
-   HL7 v2 REF_I12.VISIT group.
-
-REF_I12_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-RER_RER_DEFINITION:
+
+RER_RER_DEFINITION HL7 v2 RER_RER.DEFINITION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RER_RER_DEFINITION.RER_RER_DEFINITION
    :noindex:
 
-   HL7 v2 RER_RER.DEFINITION group.
-
-RER_RER_DEFINITION
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_3-QRD>`
      - required
-     - 
-     - QRD: Required
+     - Query definition segment
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_3-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - Query filter segment
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RER_RER_PATIENT <hl7-v2_3-RER_RER_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RER_RER_ORDER <hl7-v2_3-RER_RER_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-RER_RER_ORDER:
+
+RER_RER_ORDER HL7 v2 RER_RER.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RER_RER_ORDER.RER_RER_ORDER
    :noindex:
 
-   HL7 v2 RER_RER.ORDER group.
-
-RER_RER_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RER_RER_PATIENT:
+
+RER_RER_PATIENT HL7 v2 RER_RER.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RER_RER_PATIENT.RER_RER_PATIENT
    :noindex:
 
-   HL7 v2 RER_RER.PATIENT group.
-
-RER_RER_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RGR_RGR_DEFINITION:
+
+RGR_RGR_DEFINITION HL7 v2 RGR_RGR.DEFINITION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGR_RGR_DEFINITION.RGR_RGR_DEFINITION
    :noindex:
 
-   HL7 v2 RGR_RGR.DEFINITION group.
-
-RGR_RGR_DEFINITION
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_3-QRD>`
      - required
-     - 
-     - QRD: Required
+     - Query definition segment
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_3-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - Query filter segment
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RGR_RGR_PATIENT <hl7-v2_3-RGR_RGR_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RGR_RGR_ORDER <hl7-v2_3-RGR_RGR_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-RGR_RGR_ENCODING:
+
+RGR_RGR_ENCODING HL7 v2 RGR_RGR.ENCODING group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGR_RGR_ENCODING.RGR_RGR_ENCODING
    :noindex:
 
-   HL7 v2 RGR_RGR.ENCODING group.
-
-RGR_RGR_ENCODING
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RGR_RGR_ORDER:
+
+RGR_RGR_ORDER HL7 v2 RGR_RGR.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGR_RGR_ORDER.RGR_RGR_ORDER
    :noindex:
 
-   HL7 v2 RGR_RGR.ORDER group.
-
-RGR_RGR_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ENCODING``
-     - 
      - Optional[:ref:`RGR_RGR_ENCODING <hl7-v2_3-RGR_RGR_ENCODING>`]
      - optional
-     - 
-     - ENCODING: Optional
+     - ENCODING
    * - ``RXG``
-     - 
      - List[:ref:`RXG <hl7-v2_3-RXG>`]
      - required
-     - 
-     - RXG: Required, repeating
+     - Pharmacy give segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RGR_RGR_PATIENT:
+
+RGR_RGR_PATIENT HL7 v2 RGR_RGR.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGR_RGR_PATIENT.RGR_RGR_PATIENT
    :noindex:
 
-   HL7 v2 RGR_RGR.PATIENT group.
-
-RGR_RGR_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RGV_O01_COMPONENTS:
+
+RGV_O01_COMPONENTS HL7 v2 RGV_O01.COMPONENTS group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_COMPONENTS.RGV_O01_COMPONENTS
    :noindex:
 
-   HL7 v2 RGV_O01.COMPONENTS group.
-
-RGV_O01_COMPONENTS
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXC``
-     - 
      - List[:ref:`RXC <hl7-v2_3-RXC>`]
      - required
-     - 
-     - RXC: Required, repeating
+     - Pharmacy component order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RGV_O01_ENCODING:
+
+RGV_O01_ENCODING HL7 v2 RGV_O01.ENCODING group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_ENCODING.RGV_O01_ENCODING
    :noindex:
 
-   HL7 v2 RGV_O01.ENCODING group.
-
-RGV_O01_ENCODING
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXE``
-     - 
      - :ref:`RXE <hl7-v2_3-RXE>`
      - required
-     - 
-     - RXE: Required
+     - Pharmacy encoded order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RGV_O01_GIVE:
+
+RGV_O01_GIVE HL7 v2 RGV_O01.GIVE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_GIVE.RGV_O01_GIVE
    :noindex:
 
-   HL7 v2 RGV_O01.GIVE group.
-
-RGV_O01_GIVE
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXG``
-     - 
      - :ref:`RXG <hl7-v2_3-RXG>`
      - required
-     - 
-     - RXG: Required
+     - Pharmacy give segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`RGV_O01_OBSERVATION <hl7-v2_3-RGV_O01_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-RGV_O01_OBSERVATION:
+
+RGV_O01_OBSERVATION HL7 v2 RGV_O01.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_OBSERVATION.RGV_O01_OBSERVATION
    :noindex:
 
-   HL7 v2 RGV_O01.OBSERVATION group.
-
-RGV_O01_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RGV_O01_ORDER:
+
+RGV_O01_ORDER HL7 v2 RGV_O01.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_ORDER.RGV_O01_ORDER
    :noindex:
 
-   HL7 v2 RGV_O01.ORDER group.
-
-RGV_O01_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`RGV_O01_ORDER_DETAIL <hl7-v2_3-RGV_O01_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
    * - ``ENCODING``
-     - 
      - Optional[:ref:`RGV_O01_ENCODING <hl7-v2_3-RGV_O01_ENCODING>`]
      - optional
-     - 
-     - ENCODING: Optional
+     - ENCODING
    * - ``GIVE``
-     - 
      - List[:ref:`RGV_O01_GIVE <hl7-v2_3-RGV_O01_GIVE>`]
      - required
-     - 
-     - GIVE: Required, repeating
+     - GIVE
 
 .. _hl7-v2_3-RGV_O01_ORDER_DETAIL:
+
+RGV_O01_ORDER_DETAIL HL7 v2 RGV_O01.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_ORDER_DETAIL.RGV_O01_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 RGV_O01.ORDER_DETAIL group.
-
-RGV_O01_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXO``
-     - 
      - :ref:`RXO <hl7-v2_3-RXO>`
      - required
-     - 
-     - RXO: Required
+     - Pharmacy prescription order segment
    * - ``ORDER_DETAIL_SUPPLEMENT``
-     - 
      - Optional[:ref:`RGV_O01_ORDER_DETAIL_SUPPLEMENT <hl7-v2_3-RGV_O01_ORDER_DETAIL_SUPPLEMENT>`]
      - optional
-     - 
-     - ORDER_DETAIL_SUPPLEMENT: Optional
+     - ORDER_DETAIL_SUPPLEMENT
 
 .. _hl7-v2_3-RGV_O01_ORDER_DETAIL_SUPPLEMENT:
+
+RGV_O01_ORDER_DETAIL_SUPPLEMENT HL7 v2 RGV_O01.ORDER_DETAIL_SUPPLEMENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_ORDER_DETAIL_SUPPLEMENT.RGV_O01_ORDER_DETAIL_SUPPLEMENT
    :noindex:
 
-   HL7 v2 RGV_O01.ORDER_DETAIL_SUPPLEMENT group.
-
-RGV_O01_ORDER_DETAIL_SUPPLEMENT
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``NTE``
-     - 
      - List[:ref:`NTE <hl7-v2_3-NTE>`]
      - required
-     - 
-     - NTE: Required, repeating
+     - Notes and comments segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``COMPONENTS``
-     - 
      - Optional[:ref:`RGV_O01_COMPONENTS <hl7-v2_3-RGV_O01_COMPONENTS>`]
      - optional
-     - 
-     - COMPONENTS: Optional
+     - COMPONENTS
 
 .. _hl7-v2_3-RGV_O01_PATIENT:
+
+RGV_O01_PATIENT HL7 v2 RGV_O01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_PATIENT.RGV_O01_PATIENT
    :noindex:
 
-   HL7 v2 RGV_O01.PATIENT group.
-
-RGV_O01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``AL1``
-     - 
      - Optional[List[:ref:`AL1 <hl7-v2_3-AL1>`]]
      - optional
-     - 
-     - AL1: Optional, repeating
+     - Patient allergy information
    * - ``PATIENT_VISIT``
-     - 
      - Optional[:ref:`RGV_O01_PATIENT_VISIT <hl7-v2_3-RGV_O01_PATIENT_VISIT>`]
      - optional
-     - 
-     - PATIENT_VISIT: Optional
+     - PATIENT_VISIT
 
 .. _hl7-v2_3-RGV_O01_PATIENT_VISIT:
+
+RGV_O01_PATIENT_VISIT HL7 v2 RGV_O01.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RGV_O01_PATIENT_VISIT.RGV_O01_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 RGV_O01.PATIENT_VISIT group.
-
-RGV_O01_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-ROR_ROR_DEFINITION:
+
+ROR_ROR_DEFINITION HL7 v2 ROR_ROR.DEFINITION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ROR_ROR_DEFINITION.ROR_ROR_DEFINITION
    :noindex:
 
-   HL7 v2 ROR_ROR.DEFINITION group.
-
-ROR_ROR_DEFINITION
-~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``QRD``
-     - 
      - :ref:`QRD <hl7-v2_3-QRD>`
      - required
-     - 
-     - QRD: Required
+     - Query definition segment
    * - ``QRF``
-     - 
      - Optional[:ref:`QRF <hl7-v2_3-QRF>`]
      - optional
-     - 
-     - QRF: Optional
+     - Query filter segment
    * - ``PATIENT``
-     - 
      - Optional[:ref:`ROR_ROR_PATIENT <hl7-v2_3-ROR_ROR_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`ROR_ROR_ORDER <hl7-v2_3-ROR_ROR_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-ROR_ROR_ORDER:
+
+ROR_ROR_ORDER HL7 v2 ROR_ROR.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ROR_ROR_ORDER.ROR_ROR_ORDER
    :noindex:
 
-   HL7 v2 ROR_ROR.ORDER group.
-
-ROR_ROR_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``RXO``
-     - 
      - :ref:`RXO <hl7-v2_3-RXO>`
      - required
-     - 
-     - RXO: Required
+     - Pharmacy prescription order segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-ROR_ROR_PATIENT:
+
+ROR_ROR_PATIENT HL7 v2 ROR_ROR.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.ROR_ROR_PATIENT.ROR_ROR_PATIENT
    :noindex:
 
-   HL7 v2 ROR_ROR.PATIENT group.
-
-ROR_ROR_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RPA_I08_AUTCTD_SUPPGRP2:
+
+RPA_I08_AUTCTD_SUPPGRP2 HL7 v2 RPA_I08.AUTCTD_SUPPGRP2 group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_AUTCTD_SUPPGRP2.RPA_I08_AUTCTD_SUPPGRP2
    :noindex:
 
-   HL7 v2 RPA_I08.AUTCTD_SUPPGRP2 group.
-
-RPA_I08_AUTCTD_SUPPGRP2
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-RPA_I08_AUTHORIZATION:
+
+RPA_I08_AUTHORIZATION HL7 v2 RPA_I08.AUTHORIZATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_AUTHORIZATION.RPA_I08_AUTHORIZATION
    :noindex:
 
-   HL7 v2 RPA_I08.AUTHORIZATION group.
-
-RPA_I08_AUTHORIZATION
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-RPA_I08_INSURANCE:
+
+RPA_I08_INSURANCE HL7 v2 RPA_I08.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_INSURANCE.RPA_I08_INSURANCE
    :noindex:
 
-   HL7 v2 RPA_I08.INSURANCE group.
-
-RPA_I08_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-RPA_I08_OBSERVATION:
+
+RPA_I08_OBSERVATION HL7 v2 RPA_I08.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_OBSERVATION.RPA_I08_OBSERVATION
    :noindex:
 
-   HL7 v2 RPA_I08.OBSERVATION group.
-
-RPA_I08_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``RESULTS``
-     - 
      - Optional[List[:ref:`RPA_I08_RESULTS <hl7-v2_3-RPA_I08_RESULTS>`]]
      - optional
-     - 
-     - RESULTS: Optional, repeating
+     - RESULTS
 
 .. _hl7-v2_3-RPA_I08_PROCEDURE:
+
+RPA_I08_PROCEDURE HL7 v2 RPA_I08.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_PROCEDURE.RPA_I08_PROCEDURE
    :noindex:
 
-   HL7 v2 RPA_I08.PROCEDURE group.
-
-RPA_I08_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``AUTCTD_SUPPGRP2``
-     - 
      - Optional[:ref:`RPA_I08_AUTCTD_SUPPGRP2 <hl7-v2_3-RPA_I08_AUTCTD_SUPPGRP2>`]
      - optional
-     - 
-     - AUTCTD_SUPPGRP2: Optional
+     - AUTCTD_SUPPGRP2
 
 .. _hl7-v2_3-RPA_I08_PROVIDER:
+
+RPA_I08_PROVIDER HL7 v2 RPA_I08.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_PROVIDER.RPA_I08_PROVIDER
    :noindex:
 
-   HL7 v2 RPA_I08.PROVIDER group.
-
-RPA_I08_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RPA_I08_RESULTS:
+
+RPA_I08_RESULTS HL7 v2 RPA_I08.RESULTS group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_RESULTS.RPA_I08_RESULTS
    :noindex:
 
-   HL7 v2 RPA_I08.RESULTS group.
-
-RPA_I08_RESULTS
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RPA_I08_VISIT:
+
+RPA_I08_VISIT HL7 v2 RPA_I08.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPA_I08_VISIT.RPA_I08_VISIT
    :noindex:
 
-   HL7 v2 RPA_I08.VISIT group.
-
-RPA_I08_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RPI_I01_GUARANTOR_INSURANCE:
+
+RPI_I01_GUARANTOR_INSURANCE HL7 v2 RPI_I01.GUARANTOR_INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPI_I01_GUARANTOR_INSURANCE.RPI_I01_GUARANTOR_INSURANCE
    :noindex:
 
-   HL7 v2 RPI_I01.GUARANTOR_INSURANCE group.
-
-RPI_I01_GUARANTOR_INSURANCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_3-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - List[:ref:`RPI_I01_INSURANCE <hl7-v2_3-RPI_I01_INSURANCE>`]
      - required
-     - 
-     - INSURANCE: Required, repeating
+     - INSURANCE
 
 .. _hl7-v2_3-RPI_I01_INSURANCE:
+
+RPI_I01_INSURANCE HL7 v2 RPI_I01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPI_I01_INSURANCE.RPI_I01_INSURANCE
    :noindex:
 
-   HL7 v2 RPI_I01.INSURANCE group.
-
-RPI_I01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-RPI_I01_PROVIDER:
+
+RPI_I01_PROVIDER HL7 v2 RPI_I01.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPI_I01_PROVIDER.RPI_I01_PROVIDER
    :noindex:
 
-   HL7 v2 RPI_I01.PROVIDER group.
-
-RPI_I01_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RPL_I02_PROVIDER:
+
+RPL_I02_PROVIDER HL7 v2 RPL_I02.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RPL_I02_PROVIDER.RPL_I02_PROVIDER
    :noindex:
 
-   HL7 v2 RPL_I02.PROVIDER group.
-
-RPL_I02_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RQA_I08_AUTCTD_SUPPGRP2:
+
+RQA_I08_AUTCTD_SUPPGRP2 HL7 v2 RQA_I08.AUTCTD_SUPPGRP2 group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_AUTCTD_SUPPGRP2.RQA_I08_AUTCTD_SUPPGRP2
    :noindex:
 
-   HL7 v2 RQA_I08.AUTCTD_SUPPGRP2 group.
-
-RQA_I08_AUTCTD_SUPPGRP2
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-RQA_I08_AUTHORIZATION:
+
+RQA_I08_AUTHORIZATION HL7 v2 RQA_I08.AUTHORIZATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_AUTHORIZATION.RQA_I08_AUTHORIZATION
    :noindex:
 
-   HL7 v2 RQA_I08.AUTHORIZATION group.
-
-RQA_I08_AUTHORIZATION
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-RQA_I08_GUARANTOR_INSURANCE:
+
+RQA_I08_GUARANTOR_INSURANCE HL7 v2 RQA_I08.GUARANTOR_INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_GUARANTOR_INSURANCE.RQA_I08_GUARANTOR_INSURANCE
    :noindex:
 
-   HL7 v2 RQA_I08.GUARANTOR_INSURANCE group.
-
-RQA_I08_GUARANTOR_INSURANCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_3-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - List[:ref:`RQA_I08_INSURANCE <hl7-v2_3-RQA_I08_INSURANCE>`]
      - required
-     - 
-     - INSURANCE: Required, repeating
+     - INSURANCE
 
 .. _hl7-v2_3-RQA_I08_INSURANCE:
+
+RQA_I08_INSURANCE HL7 v2 RQA_I08.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_INSURANCE.RQA_I08_INSURANCE
    :noindex:
 
-   HL7 v2 RQA_I08.INSURANCE group.
-
-RQA_I08_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-RQA_I08_OBSERVATION:
+
+RQA_I08_OBSERVATION HL7 v2 RQA_I08.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_OBSERVATION.RQA_I08_OBSERVATION
    :noindex:
 
-   HL7 v2 RQA_I08.OBSERVATION group.
-
-RQA_I08_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``RESULTS``
-     - 
      - Optional[List[:ref:`RQA_I08_RESULTS <hl7-v2_3-RQA_I08_RESULTS>`]]
      - optional
-     - 
-     - RESULTS: Optional, repeating
+     - RESULTS
 
 .. _hl7-v2_3-RQA_I08_PROCEDURE:
+
+RQA_I08_PROCEDURE HL7 v2 RQA_I08.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_PROCEDURE.RQA_I08_PROCEDURE
    :noindex:
 
-   HL7 v2 RQA_I08.PROCEDURE group.
-
-RQA_I08_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``AUTCTD_SUPPGRP2``
-     - 
      - Optional[:ref:`RQA_I08_AUTCTD_SUPPGRP2 <hl7-v2_3-RQA_I08_AUTCTD_SUPPGRP2>`]
      - optional
-     - 
-     - AUTCTD_SUPPGRP2: Optional
+     - AUTCTD_SUPPGRP2
 
 .. _hl7-v2_3-RQA_I08_PROVIDER:
+
+RQA_I08_PROVIDER HL7 v2 RQA_I08.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_PROVIDER.RQA_I08_PROVIDER
    :noindex:
 
-   HL7 v2 RQA_I08.PROVIDER group.
-
-RQA_I08_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RQA_I08_RESULTS:
+
+RQA_I08_RESULTS HL7 v2 RQA_I08.RESULTS group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_RESULTS.RQA_I08_RESULTS
    :noindex:
 
-   HL7 v2 RQA_I08.RESULTS group.
-
-RQA_I08_RESULTS
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RQA_I08_VISIT:
+
+RQA_I08_VISIT HL7 v2 RQA_I08.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQA_I08_VISIT.RQA_I08_VISIT
    :noindex:
 
-   HL7 v2 RQA_I08.VISIT group.
-
-RQA_I08_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-RQC_I05_PROVIDER:
+
+RQC_I05_PROVIDER HL7 v2 RQC_I05.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQC_I05_PROVIDER.RQC_I05_PROVIDER
    :noindex:
 
-   HL7 v2 RQC_I05.PROVIDER group.
-
-RQC_I05_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RQC_I06_PROVIDER:
+
+RQC_I06_PROVIDER HL7 v2 RQC_I06.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQC_I06_PROVIDER.RQC_I06_PROVIDER
    :noindex:
 
-   HL7 v2 RQC_I06.PROVIDER group.
-
-RQC_I06_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RQI_I01_GUARANTOR_INSURANCE:
+
+RQI_I01_GUARANTOR_INSURANCE HL7 v2 RQI_I01.GUARANTOR_INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQI_I01_GUARANTOR_INSURANCE.RQI_I01_GUARANTOR_INSURANCE
    :noindex:
 
-   HL7 v2 RQI_I01.GUARANTOR_INSURANCE group.
-
-RQI_I01_GUARANTOR_INSURANCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``GT1``
-     - 
      - Optional[List[:ref:`GT1 <hl7-v2_3-GT1>`]]
      - optional
-     - 
-     - GT1: Optional, repeating
+     - Guarantor
    * - ``INSURANCE``
-     - 
      - List[:ref:`RQI_I01_INSURANCE <hl7-v2_3-RQI_I01_INSURANCE>`]
      - required
-     - 
-     - INSURANCE: Required, repeating
+     - INSURANCE
 
 .. _hl7-v2_3-RQI_I01_INSURANCE:
+
+RQI_I01_INSURANCE HL7 v2 RQI_I01.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQI_I01_INSURANCE.RQI_I01_INSURANCE
    :noindex:
 
-   HL7 v2 RQI_I01.INSURANCE group.
-
-RQI_I01_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-RQI_I01_PROVIDER:
+
+RQI_I01_PROVIDER HL7 v2 RQI_I01.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQI_I01_PROVIDER.RQI_I01_PROVIDER
    :noindex:
 
-   HL7 v2 RQI_I01.PROVIDER group.
-
-RQI_I01_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RQP_I04_PROVIDER:
+
+RQP_I04_PROVIDER HL7 v2 RQP_I04.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RQP_I04_PROVIDER.RQP_I04_PROVIDER
    :noindex:
 
-   HL7 v2 RQP_I04.PROVIDER group.
-
-RQP_I04_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RRA_O02_ADMINISTRATION:
+
+RRA_O02_ADMINISTRATION HL7 v2 RRA_O02.ADMINISTRATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRA_O02_ADMINISTRATION.RRA_O02_ADMINISTRATION
    :noindex:
 
-   HL7 v2 RRA_O02.ADMINISTRATION group.
-
-RRA_O02_ADMINISTRATION
-~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXA``
-     - 
      - :ref:`RXA <hl7-v2_3-RXA>`
      - required
-     - 
-     - RXA: Required
+     - Pharmacy administration segment
    * - ``RXR``
-     - 
      - :ref:`RXR <hl7-v2_3-RXR>`
      - required
-     - 
-     - RXR: Required
+     - Pharmacy route segment
 
 .. _hl7-v2_3-RRA_O02_ORDER:
+
+RRA_O02_ORDER HL7 v2 RRA_O02.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRA_O02_ORDER.RRA_O02_ORDER
    :noindex:
 
-   HL7 v2 RRA_O02.ORDER group.
-
-RRA_O02_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ADMINISTRATION``
-     - 
      - Optional[List[:ref:`RRA_O02_ADMINISTRATION <hl7-v2_3-RRA_O02_ADMINISTRATION>`]]
      - optional
-     - 
-     - ADMINISTRATION: Optional, repeating
+     - ADMINISTRATION
 
 .. _hl7-v2_3-RRA_O02_PATIENT:
+
+RRA_O02_PATIENT HL7 v2 RRA_O02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRA_O02_PATIENT.RRA_O02_PATIENT
    :noindex:
 
-   HL7 v2 RRA_O02.PATIENT group.
-
-RRA_O02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RRA_O02_RESPONSE:
+
+RRA_O02_RESPONSE HL7 v2 RRA_O02.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRA_O02_RESPONSE.RRA_O02_RESPONSE
    :noindex:
 
-   HL7 v2 RRA_O02.RESPONSE group.
-
-RRA_O02_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RRA_O02_PATIENT <hl7-v2_3-RRA_O02_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RRA_O02_ORDER <hl7-v2_3-RRA_O02_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-RRD_O02_DISPENSE:
+
+RRD_O02_DISPENSE HL7 v2 RRD_O02.DISPENSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRD_O02_DISPENSE.RRD_O02_DISPENSE
    :noindex:
 
-   HL7 v2 RRD_O02.DISPENSE group.
-
-RRD_O02_DISPENSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXD``
-     - 
      - :ref:`RXD <hl7-v2_3-RXD>`
      - required
-     - 
-     - RXD: Required
+     - Pharmacy dispense segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RRD_O02_ORDER:
+
+RRD_O02_ORDER HL7 v2 RRD_O02.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRD_O02_ORDER.RRD_O02_ORDER
    :noindex:
 
-   HL7 v2 RRD_O02.ORDER group.
-
-RRD_O02_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``DISPENSE``
-     - 
      - Optional[:ref:`RRD_O02_DISPENSE <hl7-v2_3-RRD_O02_DISPENSE>`]
      - optional
-     - 
-     - DISPENSE: Optional
+     - DISPENSE
 
 .. _hl7-v2_3-RRD_O02_PATIENT:
+
+RRD_O02_PATIENT HL7 v2 RRD_O02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRD_O02_PATIENT.RRD_O02_PATIENT
    :noindex:
 
-   HL7 v2 RRD_O02.PATIENT group.
-
-RRD_O02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RESPONSE``
-     - 
      - Optional[:ref:`RRD_O02_RESPONSE <hl7-v2_3-RRD_O02_RESPONSE>`]
      - optional
-     - 
-     - RESPONSE: Optional
+     - RESPONSE
    * - ``ORDER``
-     - 
      - List[:ref:`RRD_O02_ORDER <hl7-v2_3-RRD_O02_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-RRD_O02_RESPONSE:
+
+RRD_O02_RESPONSE HL7 v2 RRD_O02.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRD_O02_RESPONSE.RRD_O02_RESPONSE
    :noindex:
 
-   HL7 v2 RRD_O02.RESPONSE group.
-
-RRD_O02_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RRG_O02_GIVE:
+
+RRG_O02_GIVE HL7 v2 RRG_O02.GIVE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRG_O02_GIVE.RRG_O02_GIVE
    :noindex:
 
-   HL7 v2 RRG_O02.GIVE group.
-
-RRG_O02_GIVE
-~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXG``
-     - 
      - :ref:`RXG <hl7-v2_3-RXG>`
      - required
-     - 
-     - RXG: Required
+     - Pharmacy give segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RRG_O02_ORDER:
+
+RRG_O02_ORDER HL7 v2 RRG_O02.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRG_O02_ORDER.RRG_O02_ORDER
    :noindex:
 
-   HL7 v2 RRG_O02.ORDER group.
-
-RRG_O02_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``GIVE``
-     - 
      - Optional[:ref:`RRG_O02_GIVE <hl7-v2_3-RRG_O02_GIVE>`]
      - optional
-     - 
-     - GIVE: Optional
+     - GIVE
 
 .. _hl7-v2_3-RRG_O02_PATIENT:
+
+RRG_O02_PATIENT HL7 v2 RRG_O02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRG_O02_PATIENT.RRG_O02_PATIENT
    :noindex:
 
-   HL7 v2 RRG_O02.PATIENT group.
-
-RRG_O02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RRG_O02_RESPONSE:
+
+RRG_O02_RESPONSE HL7 v2 RRG_O02.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRG_O02_RESPONSE.RRG_O02_RESPONSE
    :noindex:
 
-   HL7 v2 RRG_O02.RESPONSE group.
-
-RRG_O02_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RRG_O02_PATIENT <hl7-v2_3-RRG_O02_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RRG_O02_ORDER <hl7-v2_3-RRG_O02_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-RRI_I12_AUTCTD_SUPPGRP2:
+
+RRI_I12_AUTCTD_SUPPGRP2 HL7 v2 RRI_I12.AUTCTD_SUPPGRP2 group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRI_I12_AUTCTD_SUPPGRP2.RRI_I12_AUTCTD_SUPPGRP2
    :noindex:
 
-   HL7 v2 RRI_I12.AUTCTD_SUPPGRP2 group.
-
-RRI_I12_AUTCTD_SUPPGRP2
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-RRI_I12_AUTHORIZATION:
+
+RRI_I12_AUTHORIZATION HL7 v2 RRI_I12.AUTHORIZATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRI_I12_AUTHORIZATION.RRI_I12_AUTHORIZATION
    :noindex:
 
-   HL7 v2 RRI_I12.AUTHORIZATION group.
-
-RRI_I12_AUTHORIZATION
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AUT``
-     - 
      - :ref:`AUT <hl7-v2_3-AUT>`
      - required
-     - 
-     - AUT: Required
+     - Authorization Information
    * - ``CTD``
-     - 
      - Optional[:ref:`CTD <hl7-v2_3-CTD>`]
      - optional
-     - 
-     - CTD: Optional
+     - Contact Data
 
 .. _hl7-v2_3-RRI_I12_OBSERVATION:
+
+RRI_I12_OBSERVATION HL7 v2 RRI_I12.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRI_I12_OBSERVATION.RRI_I12_OBSERVATION
    :noindex:
 
-   HL7 v2 RRI_I12.OBSERVATION group.
-
-RRI_I12_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RRI_I12_PROCEDURE:
+
+RRI_I12_PROCEDURE HL7 v2 RRI_I12.PROCEDURE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRI_I12_PROCEDURE.RRI_I12_PROCEDURE
    :noindex:
 
-   HL7 v2 RRI_I12.PROCEDURE group.
-
-RRI_I12_PROCEDURE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PR1``
-     - 
      - :ref:`PR1 <hl7-v2_3-PR1>`
      - required
-     - 
-     - PR1: Required
+     - Procedures
    * - ``AUTCTD_SUPPGRP2``
-     - 
      - Optional[:ref:`RRI_I12_AUTCTD_SUPPGRP2 <hl7-v2_3-RRI_I12_AUTCTD_SUPPGRP2>`]
      - optional
-     - 
-     - AUTCTD_SUPPGRP2: Optional
+     - AUTCTD_SUPPGRP2
 
 .. _hl7-v2_3-RRI_I12_PROVIDER:
+
+RRI_I12_PROVIDER HL7 v2 RRI_I12.PROVIDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRI_I12_PROVIDER.RRI_I12_PROVIDER
    :noindex:
 
-   HL7 v2 RRI_I12.PROVIDER group.
-
-RRI_I12_PROVIDER
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PRD``
-     - 
      - :ref:`PRD <hl7-v2_3-PRD>`
      - required
-     - 
-     - PRD: Required
+     - Provider Data
    * - ``CTD``
-     - 
      - Optional[List[:ref:`CTD <hl7-v2_3-CTD>`]]
      - optional
-     - 
-     - CTD: Optional, repeating
+     - Contact Data
 
 .. _hl7-v2_3-RRI_I12_RESULTS:
+
+RRI_I12_RESULTS HL7 v2 RRI_I12.RESULTS group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRI_I12_RESULTS.RRI_I12_RESULTS
    :noindex:
 
-   HL7 v2 RRI_I12.RESULTS group.
-
-RRI_I12_RESULTS
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBR``
-     - 
      - :ref:`OBR <hl7-v2_3-OBR>`
      - required
-     - 
-     - OBR: Required
+     - Observation request segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`RRI_I12_OBSERVATION <hl7-v2_3-RRI_I12_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-RRI_I12_VISIT:
+
+RRI_I12_VISIT HL7 v2 RRI_I12.VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRI_I12_VISIT.RRI_I12_VISIT
    :noindex:
 
-   HL7 v2 RRI_I12.VISIT group.
-
-RRI_I12_VISIT
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-RRO_O02_ORDER:
+
+RRO_O02_ORDER HL7 v2 RRO_O02.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRO_O02_ORDER.RRO_O02_ORDER
    :noindex:
 
-   HL7 v2 RRO_O02.ORDER group.
-
-RRO_O02_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - :ref:`ORC <hl7-v2_3-ORC>`
      - required
-     - 
-     - ORC: Required
+     - Common order segment
    * - ``ORDER_DETAIL``
-     - 
      - Optional[:ref:`RRO_O02_ORDER_DETAIL <hl7-v2_3-RRO_O02_ORDER_DETAIL>`]
      - optional
-     - 
-     - ORDER_DETAIL: Optional
+     - ORDER_DETAIL
 
 .. _hl7-v2_3-RRO_O02_ORDER_DETAIL:
+
+RRO_O02_ORDER_DETAIL HL7 v2 RRO_O02.ORDER_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRO_O02_ORDER_DETAIL.RRO_O02_ORDER_DETAIL
    :noindex:
 
-   HL7 v2 RRO_O02.ORDER_DETAIL group.
-
-RRO_O02_ORDER_DETAIL
-~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RXO``
-     - 
      - :ref:`RXO <hl7-v2_3-RXO>`
      - required
-     - 
-     - RXO: Required
+     - Pharmacy prescription order segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``RXR``
-     - 
      - List[:ref:`RXR <hl7-v2_3-RXR>`]
      - required
-     - 
-     - RXR: Required, repeating
+     - Pharmacy route segment
    * - ``RXC``
-     - 
      - Optional[List[:ref:`RXC <hl7-v2_3-RXC>`]]
      - optional
-     - 
-     - RXC: Optional, repeating
+     - Pharmacy component order segment
 
 .. _hl7-v2_3-RRO_O02_PATIENT:
+
+RRO_O02_PATIENT HL7 v2 RRO_O02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRO_O02_PATIENT.RRO_O02_PATIENT
    :noindex:
 
-   HL7 v2 RRO_O02.PATIENT group.
-
-RRO_O02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-RRO_O02_RESPONSE:
+
+RRO_O02_RESPONSE HL7 v2 RRO_O02.RESPONSE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.RRO_O02_RESPONSE.RRO_O02_RESPONSE
    :noindex:
 
-   HL7 v2 RRO_O02.RESPONSE group.
-
-RRO_O02_RESPONSE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PATIENT``
-     - 
      - Optional[:ref:`RRO_O02_PATIENT <hl7-v2_3-RRO_O02_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``ORDER``
-     - 
      - List[:ref:`RRO_O02_ORDER <hl7-v2_3-RRO_O02_ORDER>`]
      - required
-     - 
-     - ORDER: Required, repeating
+     - ORDER
 
 .. _hl7-v2_3-SIU_S12_GENERAL_RESOURCE:
+
+SIU_S12_GENERAL_RESOURCE HL7 v2 SIU_S12.GENERAL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SIU_S12_GENERAL_RESOURCE.SIU_S12_GENERAL_RESOURCE
    :noindex:
 
-   HL7 v2 SIU_S12.GENERAL_RESOURCE group.
-
-SIU_S12_GENERAL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIG``
-     - 
      - :ref:`AIG <hl7-v2_3-AIG>`
      - required
-     - 
-     - AIG: Required
+     - Appointment Information - General Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SIU_S12_LOCATION_RESOURCE:
+
+SIU_S12_LOCATION_RESOURCE HL7 v2 SIU_S12.LOCATION_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SIU_S12_LOCATION_RESOURCE.SIU_S12_LOCATION_RESOURCE
    :noindex:
 
-   HL7 v2 SIU_S12.LOCATION_RESOURCE group.
-
-SIU_S12_LOCATION_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIL``
-     - 
      - :ref:`AIL <hl7-v2_3-AIL>`
      - required
-     - 
-     - AIL: Required
+     - Appointment Information - Location Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SIU_S12_PATIENT:
+
+SIU_S12_PATIENT HL7 v2 SIU_S12.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SIU_S12_PATIENT.SIU_S12_PATIENT
    :noindex:
 
-   HL7 v2 SIU_S12.PATIENT group.
-
-SIU_S12_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_3-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation segment
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_3-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
 
 .. _hl7-v2_3-SIU_S12_PERSONNEL_RESOURCE:
+
+SIU_S12_PERSONNEL_RESOURCE HL7 v2 SIU_S12.PERSONNEL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SIU_S12_PERSONNEL_RESOURCE.SIU_S12_PERSONNEL_RESOURCE
    :noindex:
 
-   HL7 v2 SIU_S12.PERSONNEL_RESOURCE group.
-
-SIU_S12_PERSONNEL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIP``
-     - 
      - :ref:`AIP <hl7-v2_3-AIP>`
      - required
-     - 
-     - AIP: Required
+     - Appointment Information - Personnel Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SIU_S12_RESOURCES:
+
+SIU_S12_RESOURCES HL7 v2 SIU_S12.RESOURCES group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SIU_S12_RESOURCES.SIU_S12_RESOURCES
    :noindex:
 
-   HL7 v2 SIU_S12.RESOURCES group.
-
-SIU_S12_RESOURCES
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RGS``
-     - 
      - :ref:`RGS <hl7-v2_3-RGS>`
      - required
-     - 
-     - RGS: Required
+     - Resource Group
    * - ``SERVICE``
-     - 
      - Optional[List[:ref:`SIU_S12_SERVICE <hl7-v2_3-SIU_S12_SERVICE>`]]
      - optional
-     - 
-     - SERVICE: Optional, repeating
+     - SERVICE
    * - ``GENERAL_RESOURCE``
-     - 
      - Optional[List[:ref:`SIU_S12_GENERAL_RESOURCE <hl7-v2_3-SIU_S12_GENERAL_RESOURCE>`]]
      - optional
-     - 
-     - GENERAL_RESOURCE: Optional, repeating
+     - GENERAL_RESOURCE
    * - ``LOCATION_RESOURCE``
-     - 
      - Optional[List[:ref:`SIU_S12_LOCATION_RESOURCE <hl7-v2_3-SIU_S12_LOCATION_RESOURCE>`]]
      - optional
-     - 
-     - LOCATION_RESOURCE: Optional, repeating
+     - LOCATION_RESOURCE
    * - ``PERSONNEL_RESOURCE``
-     - 
      - Optional[List[:ref:`SIU_S12_PERSONNEL_RESOURCE <hl7-v2_3-SIU_S12_PERSONNEL_RESOURCE>`]]
      - optional
-     - 
-     - PERSONNEL_RESOURCE: Optional, repeating
+     - PERSONNEL_RESOURCE
 
 .. _hl7-v2_3-SIU_S12_SERVICE:
+
+SIU_S12_SERVICE HL7 v2 SIU_S12.SERVICE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SIU_S12_SERVICE.SIU_S12_SERVICE
    :noindex:
 
-   HL7 v2 SIU_S12.SERVICE group.
-
-SIU_S12_SERVICE
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIS``
-     - 
      - :ref:`AIS <hl7-v2_3-AIS>`
      - required
-     - 
-     - AIS: Required
+     - Appointment Information - Service
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SQM_S25_GENERAL_RESOURCE:
+
+SQM_S25_GENERAL_RESOURCE HL7 v2 SQM_S25.GENERAL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQM_S25_GENERAL_RESOURCE.SQM_S25_GENERAL_RESOURCE
    :noindex:
 
-   HL7 v2 SQM_S25.GENERAL_RESOURCE group.
-
-SQM_S25_GENERAL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIG``
-     - 
      - :ref:`AIG <hl7-v2_3-AIG>`
      - required
-     - 
-     - AIG: Required
+     - Appointment Information - General Resource
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
 
 .. _hl7-v2_3-SQM_S25_LOCATION_RESOURCE:
+
+SQM_S25_LOCATION_RESOURCE HL7 v2 SQM_S25.LOCATION_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQM_S25_LOCATION_RESOURCE.SQM_S25_LOCATION_RESOURCE
    :noindex:
 
-   HL7 v2 SQM_S25.LOCATION_RESOURCE group.
-
-SQM_S25_LOCATION_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIL``
-     - 
      - :ref:`AIL <hl7-v2_3-AIL>`
      - required
-     - 
-     - AIL: Required
+     - Appointment Information - Location Resource
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
 
 .. _hl7-v2_3-SQM_S25_PERSONNEL_RESOURCE:
+
+SQM_S25_PERSONNEL_RESOURCE HL7 v2 SQM_S25.PERSONNEL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQM_S25_PERSONNEL_RESOURCE.SQM_S25_PERSONNEL_RESOURCE
    :noindex:
 
-   HL7 v2 SQM_S25.PERSONNEL_RESOURCE group.
-
-SQM_S25_PERSONNEL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIP``
-     - 
      - :ref:`AIP <hl7-v2_3-AIP>`
      - required
-     - 
-     - AIP: Required
+     - Appointment Information - Personnel Resource
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
 
 .. _hl7-v2_3-SQM_S25_REQUEST:
+
+SQM_S25_REQUEST HL7 v2 SQM_S25.REQUEST group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQM_S25_REQUEST.SQM_S25_REQUEST
    :noindex:
 
-   HL7 v2 SQM_S25.REQUEST group.
-
-SQM_S25_REQUEST
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ARQ``
-     - 
      - :ref:`ARQ <hl7-v2_3-ARQ>`
      - required
-     - 
-     - ARQ: Required
+     - Appointment Request
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
    * - ``PID``
-     - 
      - Optional[:ref:`PID <hl7-v2_3-PID>`]
      - optional
-     - 
-     - PID: Optional
+     - Patient Identification
    * - ``RESOURCES``
-     - 
      - List[:ref:`SQM_S25_RESOURCES <hl7-v2_3-SQM_S25_RESOURCES>`]
      - required
-     - 
-     - RESOURCES: Required, repeating
+     - RESOURCES
 
 .. _hl7-v2_3-SQM_S25_RESOURCES:
+
+SQM_S25_RESOURCES HL7 v2 SQM_S25.RESOURCES group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQM_S25_RESOURCES.SQM_S25_RESOURCES
    :noindex:
 
-   HL7 v2 SQM_S25.RESOURCES group.
-
-SQM_S25_RESOURCES
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RGS``
-     - 
      - :ref:`RGS <hl7-v2_3-RGS>`
      - required
-     - 
-     - RGS: Required
+     - Resource Group
    * - ``SERVICE``
-     - 
      - Optional[List[:ref:`SQM_S25_SERVICE <hl7-v2_3-SQM_S25_SERVICE>`]]
      - optional
-     - 
-     - SERVICE: Optional, repeating
+     - SERVICE
    * - ``GENERAL_RESOURCE``
-     - 
      - Optional[List[:ref:`SQM_S25_GENERAL_RESOURCE <hl7-v2_3-SQM_S25_GENERAL_RESOURCE>`]]
      - optional
-     - 
-     - GENERAL_RESOURCE: Optional, repeating
+     - GENERAL_RESOURCE
    * - ``PERSONNEL_RESOURCE``
-     - 
      - Optional[List[:ref:`SQM_S25_PERSONNEL_RESOURCE <hl7-v2_3-SQM_S25_PERSONNEL_RESOURCE>`]]
      - optional
-     - 
-     - PERSONNEL_RESOURCE: Optional, repeating
+     - PERSONNEL_RESOURCE
    * - ``LOCATION_RESOURCE``
-     - 
      - Optional[List[:ref:`SQM_S25_LOCATION_RESOURCE <hl7-v2_3-SQM_S25_LOCATION_RESOURCE>`]]
      - optional
-     - 
-     - LOCATION_RESOURCE: Optional, repeating
+     - LOCATION_RESOURCE
 
 .. _hl7-v2_3-SQM_S25_SERVICE:
+
+SQM_S25_SERVICE HL7 v2 SQM_S25.SERVICE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQM_S25_SERVICE.SQM_S25_SERVICE
    :noindex:
 
-   HL7 v2 SQM_S25.SERVICE group.
-
-SQM_S25_SERVICE
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIS``
-     - 
      - :ref:`AIS <hl7-v2_3-AIS>`
      - required
-     - 
-     - AIS: Required
+     - Appointment Information - Service
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
 
 .. _hl7-v2_3-SQR_S25_GENERAL_RESOURCE:
+
+SQR_S25_GENERAL_RESOURCE HL7 v2 SQR_S25.GENERAL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQR_S25_GENERAL_RESOURCE.SQR_S25_GENERAL_RESOURCE
    :noindex:
 
-   HL7 v2 SQR_S25.GENERAL_RESOURCE group.
-
-SQR_S25_GENERAL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIG``
-     - 
      - :ref:`AIG <hl7-v2_3-AIG>`
      - required
-     - 
-     - AIG: Required
+     - Appointment Information - General Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SQR_S25_LOCATION_RESOURCE:
+
+SQR_S25_LOCATION_RESOURCE HL7 v2 SQR_S25.LOCATION_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQR_S25_LOCATION_RESOURCE.SQR_S25_LOCATION_RESOURCE
    :noindex:
 
-   HL7 v2 SQR_S25.LOCATION_RESOURCE group.
-
-SQR_S25_LOCATION_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIL``
-     - 
      - :ref:`AIL <hl7-v2_3-AIL>`
      - required
-     - 
-     - AIL: Required
+     - Appointment Information - Location Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SQR_S25_PATIENT:
+
+SQR_S25_PATIENT HL7 v2 SQR_S25.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQR_S25_PATIENT.SQR_S25_PATIENT
    :noindex:
 
-   HL7 v2 SQR_S25.PATIENT group.
-
-SQR_S25_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
    * - ``DG1``
-     - 
      - Optional[:ref:`DG1 <hl7-v2_3-DG1>`]
      - optional
-     - 
-     - DG1: Optional
+     - Diagnosis
 
 .. _hl7-v2_3-SQR_S25_PERSONNEL_RESOURCE:
+
+SQR_S25_PERSONNEL_RESOURCE HL7 v2 SQR_S25.PERSONNEL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQR_S25_PERSONNEL_RESOURCE.SQR_S25_PERSONNEL_RESOURCE
    :noindex:
 
-   HL7 v2 SQR_S25.PERSONNEL_RESOURCE group.
-
-SQR_S25_PERSONNEL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIP``
-     - 
      - :ref:`AIP <hl7-v2_3-AIP>`
      - required
-     - 
-     - AIP: Required
+     - Appointment Information - Personnel Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SQR_S25_RESOURCES:
+
+SQR_S25_RESOURCES HL7 v2 SQR_S25.RESOURCES group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQR_S25_RESOURCES.SQR_S25_RESOURCES
    :noindex:
 
-   HL7 v2 SQR_S25.RESOURCES group.
-
-SQR_S25_RESOURCES
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RGS``
-     - 
      - :ref:`RGS <hl7-v2_3-RGS>`
      - required
-     - 
-     - RGS: Required
+     - Resource Group
    * - ``SERVICE``
-     - 
      - Optional[List[:ref:`SQR_S25_SERVICE <hl7-v2_3-SQR_S25_SERVICE>`]]
      - optional
-     - 
-     - SERVICE: Optional, repeating
+     - SERVICE
    * - ``GENERAL_RESOURCE``
-     - 
      - Optional[List[:ref:`SQR_S25_GENERAL_RESOURCE <hl7-v2_3-SQR_S25_GENERAL_RESOURCE>`]]
      - optional
-     - 
-     - GENERAL_RESOURCE: Optional, repeating
+     - GENERAL_RESOURCE
    * - ``PERSONNEL_RESOURCE``
-     - 
      - Optional[List[:ref:`SQR_S25_PERSONNEL_RESOURCE <hl7-v2_3-SQR_S25_PERSONNEL_RESOURCE>`]]
      - optional
-     - 
-     - PERSONNEL_RESOURCE: Optional, repeating
+     - PERSONNEL_RESOURCE
    * - ``LOCATION_RESOURCE``
-     - 
      - Optional[List[:ref:`SQR_S25_LOCATION_RESOURCE <hl7-v2_3-SQR_S25_LOCATION_RESOURCE>`]]
      - optional
-     - 
-     - LOCATION_RESOURCE: Optional, repeating
+     - LOCATION_RESOURCE
 
 .. _hl7-v2_3-SQR_S25_SCHEDULE:
+
+SQR_S25_SCHEDULE HL7 v2 SQR_S25.SCHEDULE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQR_S25_SCHEDULE.SQR_S25_SCHEDULE
    :noindex:
 
-   HL7 v2 SQR_S25.SCHEDULE group.
-
-SQR_S25_SCHEDULE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``SCH``
-     - 
      - :ref:`SCH <hl7-v2_3-SCH>`
      - required
-     - 
-     - SCH: Required
+     - Schedule Activity Information
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT``
-     - 
      - Optional[:ref:`SQR_S25_PATIENT <hl7-v2_3-SQR_S25_PATIENT>`]
      - optional
-     - 
-     - PATIENT: Optional
+     - PATIENT
    * - ``RESOURCES``
-     - 
      - List[:ref:`SQR_S25_RESOURCES <hl7-v2_3-SQR_S25_RESOURCES>`]
      - required
-     - 
-     - RESOURCES: Required, repeating
+     - RESOURCES
 
 .. _hl7-v2_3-SQR_S25_SERVICE:
+
+SQR_S25_SERVICE HL7 v2 SQR_S25.SERVICE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SQR_S25_SERVICE.SQR_S25_SERVICE
    :noindex:
 
-   HL7 v2 SQR_S25.SERVICE group.
-
-SQR_S25_SERVICE
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIS``
-     - 
      - :ref:`AIS <hl7-v2_3-AIS>`
      - required
-     - 
-     - AIS: Required
+     - Appointment Information - Service
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRM_S01_GENERAL_RESOURCE:
+
+SRM_S01_GENERAL_RESOURCE HL7 v2 SRM_S01.GENERAL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRM_S01_GENERAL_RESOURCE.SRM_S01_GENERAL_RESOURCE
    :noindex:
 
-   HL7 v2 SRM_S01.GENERAL_RESOURCE group.
-
-SRM_S01_GENERAL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIG``
-     - 
      - :ref:`AIG <hl7-v2_3-AIG>`
      - required
-     - 
-     - AIG: Required
+     - Appointment Information - General Resource
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRM_S01_LOCATION_RESOURCE:
+
+SRM_S01_LOCATION_RESOURCE HL7 v2 SRM_S01.LOCATION_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRM_S01_LOCATION_RESOURCE.SRM_S01_LOCATION_RESOURCE
    :noindex:
 
-   HL7 v2 SRM_S01.LOCATION_RESOURCE group.
-
-SRM_S01_LOCATION_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIL``
-     - 
      - :ref:`AIL <hl7-v2_3-AIL>`
      - required
-     - 
-     - AIL: Required
+     - Appointment Information - Location Resource
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRM_S01_PATIENT:
+
+SRM_S01_PATIENT HL7 v2 SRM_S01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRM_S01_PATIENT.SRM_S01_PATIENT
    :noindex:
 
-   HL7 v2 SRM_S01.PATIENT group.
-
-SRM_S01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
    * - ``OBX``
-     - 
      - Optional[List[:ref:`OBX <hl7-v2_3-OBX>`]]
      - optional
-     - 
-     - OBX: Optional, repeating
+     - Observation segment
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_3-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
 
 .. _hl7-v2_3-SRM_S01_PERSONNEL_RESOURCE:
+
+SRM_S01_PERSONNEL_RESOURCE HL7 v2 SRM_S01.PERSONNEL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRM_S01_PERSONNEL_RESOURCE.SRM_S01_PERSONNEL_RESOURCE
    :noindex:
 
-   HL7 v2 SRM_S01.PERSONNEL_RESOURCE group.
-
-SRM_S01_PERSONNEL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIP``
-     - 
      - :ref:`AIP <hl7-v2_3-AIP>`
      - required
-     - 
-     - AIP: Required
+     - Appointment Information - Personnel Resource
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRM_S01_RESOURCES:
+
+SRM_S01_RESOURCES HL7 v2 SRM_S01.RESOURCES group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRM_S01_RESOURCES.SRM_S01_RESOURCES
    :noindex:
 
-   HL7 v2 SRM_S01.RESOURCES group.
-
-SRM_S01_RESOURCES
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RGS``
-     - 
      - :ref:`RGS <hl7-v2_3-RGS>`
      - required
-     - 
-     - RGS: Required
+     - Resource Group
    * - ``SERVICE``
-     - 
      - Optional[List[:ref:`SRM_S01_SERVICE <hl7-v2_3-SRM_S01_SERVICE>`]]
      - optional
-     - 
-     - SERVICE: Optional, repeating
+     - SERVICE
    * - ``GENERAL_RESOURCE``
-     - 
      - Optional[List[:ref:`SRM_S01_GENERAL_RESOURCE <hl7-v2_3-SRM_S01_GENERAL_RESOURCE>`]]
      - optional
-     - 
-     - GENERAL_RESOURCE: Optional, repeating
+     - GENERAL_RESOURCE
    * - ``LOCATION_RESOURCE``
-     - 
      - Optional[List[:ref:`SRM_S01_LOCATION_RESOURCE <hl7-v2_3-SRM_S01_LOCATION_RESOURCE>`]]
      - optional
-     - 
-     - LOCATION_RESOURCE: Optional, repeating
+     - LOCATION_RESOURCE
    * - ``PERSONNEL_RESOURCE``
-     - 
      - Optional[List[:ref:`SRM_S01_PERSONNEL_RESOURCE <hl7-v2_3-SRM_S01_PERSONNEL_RESOURCE>`]]
      - optional
-     - 
-     - PERSONNEL_RESOURCE: Optional, repeating
+     - PERSONNEL_RESOURCE
 
 .. _hl7-v2_3-SRM_S01_SERVICE:
+
+SRM_S01_SERVICE HL7 v2 SRM_S01.SERVICE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRM_S01_SERVICE.SRM_S01_SERVICE
    :noindex:
 
-   HL7 v2 SRM_S01.SERVICE group.
-
-SRM_S01_SERVICE
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIS``
-     - 
      - :ref:`AIS <hl7-v2_3-AIS>`
      - required
-     - 
-     - AIS: Required
+     - Appointment Information - Service
    * - ``APR``
-     - 
      - Optional[:ref:`APR <hl7-v2_3-APR>`]
      - optional
-     - 
-     - APR: Optional
+     - Appointment Preferences
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRR_S01_GENERAL_RESOURCE:
+
+SRR_S01_GENERAL_RESOURCE HL7 v2 SRR_S01.GENERAL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRR_S01_GENERAL_RESOURCE.SRR_S01_GENERAL_RESOURCE
    :noindex:
 
-   HL7 v2 SRR_S01.GENERAL_RESOURCE group.
-
-SRR_S01_GENERAL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIG``
-     - 
      - :ref:`AIG <hl7-v2_3-AIG>`
      - required
-     - 
-     - AIG: Required
+     - Appointment Information - General Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRR_S01_LOCATION_RESOURCE:
+
+SRR_S01_LOCATION_RESOURCE HL7 v2 SRR_S01.LOCATION_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRR_S01_LOCATION_RESOURCE.SRR_S01_LOCATION_RESOURCE
    :noindex:
 
-   HL7 v2 SRR_S01.LOCATION_RESOURCE group.
-
-SRR_S01_LOCATION_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIL``
-     - 
      - :ref:`AIL <hl7-v2_3-AIL>`
      - required
-     - 
-     - AIL: Required
+     - Appointment Information - Location Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRR_S01_PATIENT:
+
+SRR_S01_PATIENT HL7 v2 SRR_S01.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRR_S01_PATIENT.SRR_S01_PATIENT
    :noindex:
 
-   HL7 v2 SRR_S01.PATIENT group.
-
-SRR_S01_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``PV1``
-     - 
      - Optional[:ref:`PV1 <hl7-v2_3-PV1>`]
      - optional
-     - 
-     - PV1: Optional
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
    * - ``DG1``
-     - 
      - Optional[List[:ref:`DG1 <hl7-v2_3-DG1>`]]
      - optional
-     - 
-     - DG1: Optional, repeating
+     - Diagnosis
 
 .. _hl7-v2_3-SRR_S01_PERSONNEL_RESOURCE:
+
+SRR_S01_PERSONNEL_RESOURCE HL7 v2 SRR_S01.PERSONNEL_RESOURCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRR_S01_PERSONNEL_RESOURCE.SRR_S01_PERSONNEL_RESOURCE
    :noindex:
 
-   HL7 v2 SRR_S01.PERSONNEL_RESOURCE group.
-
-SRR_S01_PERSONNEL_RESOURCE
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIP``
-     - 
      - :ref:`AIP <hl7-v2_3-AIP>`
      - required
-     - 
-     - AIP: Required
+     - Appointment Information - Personnel Resource
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SRR_S01_RESOURCES:
+
+SRR_S01_RESOURCES HL7 v2 SRR_S01.RESOURCES group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRR_S01_RESOURCES.SRR_S01_RESOURCES
    :noindex:
 
-   HL7 v2 SRR_S01.RESOURCES group.
-
-SRR_S01_RESOURCES
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``RGS``
-     - 
      - :ref:`RGS <hl7-v2_3-RGS>`
      - required
-     - 
-     - RGS: Required
+     - Resource Group
    * - ``SERVICE``
-     - 
      - Optional[List[:ref:`SRR_S01_SERVICE <hl7-v2_3-SRR_S01_SERVICE>`]]
      - optional
-     - 
-     - SERVICE: Optional, repeating
+     - SERVICE
    * - ``GENERAL_RESOURCE``
-     - 
      - Optional[List[:ref:`SRR_S01_GENERAL_RESOURCE <hl7-v2_3-SRR_S01_GENERAL_RESOURCE>`]]
      - optional
-     - 
-     - GENERAL_RESOURCE: Optional, repeating
+     - GENERAL_RESOURCE
    * - ``LOCATION_RESOURCE``
-     - 
      - Optional[List[:ref:`SRR_S01_LOCATION_RESOURCE <hl7-v2_3-SRR_S01_LOCATION_RESOURCE>`]]
      - optional
-     - 
-     - LOCATION_RESOURCE: Optional, repeating
+     - LOCATION_RESOURCE
    * - ``PERSONNEL_RESOURCE``
-     - 
      - Optional[List[:ref:`SRR_S01_PERSONNEL_RESOURCE <hl7-v2_3-SRR_S01_PERSONNEL_RESOURCE>`]]
      - optional
-     - 
-     - PERSONNEL_RESOURCE: Optional, repeating
+     - PERSONNEL_RESOURCE
 
 .. _hl7-v2_3-SRR_S01_SCHEDULE:
+
+SRR_S01_SCHEDULE HL7 v2 SRR_S01.SCHEDULE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRR_S01_SCHEDULE.SRR_S01_SCHEDULE
    :noindex:
 
-   HL7 v2 SRR_S01.SCHEDULE group.
-
-SRR_S01_SCHEDULE
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``SCH``
-     - 
      - :ref:`SCH <hl7-v2_3-SCH>`
      - required
-     - 
-     - SCH: Required
+     - Schedule Activity Information
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
    * - ``PATIENT``
-     - 
      - Optional[List[:ref:`SRR_S01_PATIENT <hl7-v2_3-SRR_S01_PATIENT>`]]
      - optional
-     - 
-     - PATIENT: Optional, repeating
+     - PATIENT
    * - ``RESOURCES``
-     - 
      - List[:ref:`SRR_S01_RESOURCES <hl7-v2_3-SRR_S01_RESOURCES>`]
      - required
-     - 
-     - RESOURCES: Required, repeating
+     - RESOURCES
 
 .. _hl7-v2_3-SRR_S01_SERVICE:
+
+SRR_S01_SERVICE HL7 v2 SRR_S01.SERVICE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SRR_S01_SERVICE.SRR_S01_SERVICE
    :noindex:
 
-   HL7 v2 SRR_S01.SERVICE group.
-
-SRR_S01_SERVICE
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``AIS``
-     - 
      - :ref:`AIS <hl7-v2_3-AIS>`
      - required
-     - 
-     - AIS: Required
+     - Appointment Information - Service
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-SUR_P09_FACILITY:
+
+SUR_P09_FACILITY HL7 v2 SUR_P09.FACILITY group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SUR_P09_FACILITY.SUR_P09_FACILITY
    :noindex:
 
-   HL7 v2 SUR_P09.FACILITY group.
-
-SUR_P09_FACILITY
-~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``FAC``
-     - 
      - :ref:`FAC <hl7-v2_3-FAC>`
      - required
-     - 
-     - FAC: Required
+     - Facility
    * - ``PRODUCT``
-     - 
      - List[:ref:`SUR_P09_PRODUCT <hl7-v2_3-SUR_P09_PRODUCT>`]
      - required
-     - 
-     - PRODUCT: Required, repeating
+     - PRODUCT
    * - ``PSH``
-     - 
      - :ref:`PSH <hl7-v2_3-PSH>`
      - required
-     - 
-     - PSH: Required
+     - Product Summary Header
    * - ``FACILITY_DETAIL``
-     - 
      - List[:ref:`SUR_P09_FACILITY_DETAIL <hl7-v2_3-SUR_P09_FACILITY_DETAIL>`]
      - required
-     - 
-     - FACILITY_DETAIL: Required, repeating
+     - FACILITY_DETAIL
 
 .. _hl7-v2_3-SUR_P09_FACILITY_DETAIL:
+
+SUR_P09_FACILITY_DETAIL HL7 v2 SUR_P09.FACILITY_DETAIL group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SUR_P09_FACILITY_DETAIL.SUR_P09_FACILITY_DETAIL
    :noindex:
 
-   HL7 v2 SUR_P09.FACILITY_DETAIL group.
-
-SUR_P09_FACILITY_DETAIL
-~~~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``FAC``
-     - 
      - :ref:`FAC <hl7-v2_3-FAC>`
      - required
-     - 
-     - FAC: Required
+     - Facility
    * - ``PDC``
-     - 
      - :ref:`PDC <hl7-v2_3-PDC>`
      - required
-     - 
-     - PDC: Required
+     - Product Detail Country
    * - ``NTE``
-     - 
      - :ref:`NTE <hl7-v2_3-NTE>`
      - required
-     - 
-     - NTE: Required
+     - Notes and comments segment
 
 .. _hl7-v2_3-SUR_P09_PRODUCT:
+
+SUR_P09_PRODUCT HL7 v2 SUR_P09.PRODUCT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.SUR_P09_PRODUCT.SUR_P09_PRODUCT
    :noindex:
 
-   HL7 v2 SUR_P09.PRODUCT group.
-
-SUR_P09_PRODUCT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PSH``
-     - 
      - :ref:`PSH <hl7-v2_3-PSH>`
      - required
-     - 
-     - PSH: Required
+     - Product Summary Header
    * - ``PDC``
-     - 
      - :ref:`PDC <hl7-v2_3-PDC>`
      - required
-     - 
-     - PDC: Required
+     - Product Detail Country
 
 .. _hl7-v2_3-VXR_V03_INSURANCE:
+
+VXR_V03_INSURANCE HL7 v2 VXR_V03.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXR_V03_INSURANCE.VXR_V03_INSURANCE
    :noindex:
 
-   HL7 v2 VXR_V03.INSURANCE group.
-
-VXR_V03_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-VXR_V03_OBSERVATION:
+
+VXR_V03_OBSERVATION HL7 v2 VXR_V03.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXR_V03_OBSERVATION.VXR_V03_OBSERVATION
    :noindex:
 
-   HL7 v2 VXR_V03.OBSERVATION group.
-
-VXR_V03_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-VXR_V03_ORDER:
+
+VXR_V03_ORDER HL7 v2 VXR_V03.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXR_V03_ORDER.VXR_V03_ORDER
    :noindex:
 
-   HL7 v2 VXR_V03.ORDER group.
-
-VXR_V03_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - Optional[:ref:`ORC <hl7-v2_3-ORC>`]
      - optional
-     - 
-     - ORC: Optional
+     - Common order segment
    * - ``RXA``
-     - 
      - :ref:`RXA <hl7-v2_3-RXA>`
      - required
-     - 
-     - RXA: Required
+     - Pharmacy administration segment
    * - ``RXR``
-     - 
      - Optional[:ref:`RXR <hl7-v2_3-RXR>`]
      - optional
-     - 
-     - RXR: Optional
+     - Pharmacy route segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`VXR_V03_OBSERVATION <hl7-v2_3-VXR_V03_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-VXR_V03_PATIENT_VISIT:
+
+VXR_V03_PATIENT_VISIT HL7 v2 VXR_V03.PATIENT_VISIT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXR_V03_PATIENT_VISIT.VXR_V03_PATIENT_VISIT
    :noindex:
 
-   HL7 v2 VXR_V03.PATIENT_VISIT group.
-
-VXR_V03_PATIENT_VISIT
-~~~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-VXU_V04_INSURANCE:
+
+VXU_V04_INSURANCE HL7 v2 VXU_V04.INSURANCE group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXU_V04_INSURANCE.VXU_V04_INSURANCE
    :noindex:
 
-   HL7 v2 VXU_V04.INSURANCE group.
-
-VXU_V04_INSURANCE
-~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``IN1``
-     - 
      - :ref:`IN1 <hl7-v2_3-IN1>`
      - required
-     - 
-     - IN1: Required
+     - Insurance
    * - ``IN2``
-     - 
      - Optional[:ref:`IN2 <hl7-v2_3-IN2>`]
      - optional
-     - 
-     - IN2: Optional
+     - Insurance additional info
    * - ``IN3``
-     - 
      - Optional[:ref:`IN3 <hl7-v2_3-IN3>`]
      - optional
-     - 
-     - IN3: Optional
+     - Insurance additional info - certification
 
 .. _hl7-v2_3-VXU_V04_OBSERVATION:
+
+VXU_V04_OBSERVATION HL7 v2 VXU_V04.OBSERVATION group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXU_V04_OBSERVATION.VXU_V04_OBSERVATION
    :noindex:
 
-   HL7 v2 VXU_V04.OBSERVATION group.
-
-VXU_V04_OBSERVATION
-~~~~~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``OBX``
-     - 
      - :ref:`OBX <hl7-v2_3-OBX>`
      - required
-     - 
-     - OBX: Required
+     - Observation segment
    * - ``NTE``
-     - 
      - Optional[List[:ref:`NTE <hl7-v2_3-NTE>`]]
      - optional
-     - 
-     - NTE: Optional, repeating
+     - Notes and comments segment
 
 .. _hl7-v2_3-VXU_V04_ORDER:
+
+VXU_V04_ORDER HL7 v2 VXU_V04.ORDER group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXU_V04_ORDER.VXU_V04_ORDER
    :noindex:
 
-   HL7 v2 VXU_V04.ORDER group.
-
-VXU_V04_ORDER
-~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``ORC``
-     - 
      - Optional[:ref:`ORC <hl7-v2_3-ORC>`]
      - optional
-     - 
-     - ORC: Optional
+     - Common order segment
    * - ``RXA``
-     - 
      - :ref:`RXA <hl7-v2_3-RXA>`
      - required
-     - 
-     - RXA: Required
+     - Pharmacy administration segment
    * - ``RXR``
-     - 
      - Optional[:ref:`RXR <hl7-v2_3-RXR>`]
      - optional
-     - 
-     - RXR: Optional
+     - Pharmacy route segment
    * - ``OBSERVATION``
-     - 
      - Optional[List[:ref:`VXU_V04_OBSERVATION <hl7-v2_3-VXU_V04_OBSERVATION>`]]
      - optional
-     - 
-     - OBSERVATION: Optional, repeating
+     - OBSERVATION
 
 .. _hl7-v2_3-VXU_V04_PATIENT:
+
+VXU_V04_PATIENT HL7 v2 VXU_V04.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXU_V04_PATIENT.VXU_V04_PATIENT
    :noindex:
 
-   HL7 v2 VXU_V04.PATIENT group.
-
-VXU_V04_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PV1``
-     - 
      - :ref:`PV1 <hl7-v2_3-PV1>`
      - required
-     - 
-     - PV1: Required
+     - Patient visit
    * - ``PV2``
-     - 
      - Optional[:ref:`PV2 <hl7-v2_3-PV2>`]
      - optional
-     - 
-     - PV2: Optional
+     - Patient visit - additional information
 
 .. _hl7-v2_3-VXX_V02_PATIENT:
+
+VXX_V02_PATIENT HL7 v2 VXX_V02.PATIENT group.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_3.groups.VXX_V02_PATIENT.VXX_V02_PATIENT
    :noindex:
 
-   HL7 v2 VXX_V02.PATIENT group.
-
-VXX_V02_PATIENT
-~~~~~~~~~~~~~~~
-
 .. list-table::
    :header-rows: 1
    :widths: auto
 
    * - Field
-     - HL7
      - Type
      - Required
-     - Max Length
      - Description
    * - ``PID``
-     - 
      - :ref:`PID <hl7-v2_3-PID>`
      - required
-     - 
-     - PID: Required
+     - Patient Identification
    * - ``NK1``
-     - 
      - Optional[List[:ref:`NK1 <hl7-v2_3-NK1>`]]
      - optional
-     - 
-     - NK1: Optional, repeating
+     - Next of kin

@@ -19,69 +19,69 @@ from ..datatypes.XON import XON
 
 
 class BTX(HL7Model):
-    """HL7 v2 BTX segment.
+    """Blood Product Transfusion/Disposition (S4.14.3).
 
     Attributes
     ----------
     btx_1 : str
-        BTX.1 (req) - Set ID - BTX (SI)
+        BTX.1 (req) - Set ID - BTX (SI) S4.14.3.1
 
     btx_2 : EI | None
-        BTX.2 (opt) - BC Donation ID (EI)
+        BTX.2 (opt) - BC Donation ID (EI) S4.14.3.2
 
     btx_3 : CNE | None
-        BTX.3 (opt) - BC Component (CNE)
+        BTX.3 (opt) - BC Component (CNE) S4.14.3.3 | 9999 - no table for CE
 
     btx_4 : CNE | None
-        BTX.4 (opt) - BC Blood Group (CNE)
+        BTX.4 (opt) - BC Blood Group (CNE) S4.14.3.4 | 9999 - no table for CE
 
     btx_5 : CWE | None
-        BTX.5 (opt) - CP Commercial Product (CWE)
+        BTX.5 (opt) - CP Commercial Product (CWE) S4.14.3.5 | 0512 - Commercial Product
 
     btx_6 : XON | None
-        BTX.6 (opt) - CP Manufacturer (XON)
+        BTX.6 (opt) - CP Manufacturer (XON) S4.14.3.6
 
     btx_7 : EI | None
-        BTX.7 (opt) - CP Lot Number (EI)
+        BTX.7 (opt) - CP Lot Number (EI) S4.14.3.7
 
     btx_8 : str
-        BTX.8 (req) - BP Quantity (NM)
+        BTX.8 (req) - BP Quantity (NM) S4.14.3.8
 
     btx_9 : str | None
-        BTX.9 (opt) - BP Amount (NM)
+        BTX.9 (opt) - BP Amount (NM) S4.14.3.9
 
     btx_10 : CWE | None
-        BTX.10 (opt) - BP Units (CWE)
+        BTX.10 (opt) - BP Units (CWE) S4.14.3.10 | 9999 - no table for CE
 
     btx_11 : CWE
-        BTX.11 (req) - BP Transfusion/Disposition Status (CWE)
+        BTX.11 (req) - BP Transfusion/Disposition Status (CWE) S4.14.3.11 | 0513 - Blood Product Transfusion/Disposition Status
 
     btx_12 : str
-        BTX.12 (req) - BP Message Status (ID)
+        BTX.12 (req) - BP Message Status (ID) S4.14.3.12 | 0511 - BP Observation Status Codes Interpretation
 
     btx_13 : str
-        BTX.13 (req) - BP Date/Time of Status (DTM)
+        BTX.13 (req) - BP Date/Time of Status (DTM) S4.14.3.13
 
     btx_14 : XCN | None
-        BTX.14 (opt) - BP Transfusion Administrator (XCN)
+        BTX.14 (opt) - BP Transfusion Administrator (XCN) S4.14.3.14
 
     btx_15 : XCN | None
-        BTX.15 (opt) - BP Transfusion Verifier (XCN)
+        BTX.15 (opt) - BP Transfusion Verifier (XCN) S4.14.3.15
 
     btx_16 : str | None
-        BTX.16 (opt) - BP Transfusion Start Date/Time of Status (DTM)
+        BTX.16 (opt) - BP Transfusion Start Date/Time of Status (DTM) S4.14.3.16
 
     btx_17 : str | None
-        BTX.17 (opt) - BP Transfusion End Date/Time of Status (DTM)
+        BTX.17 (opt) - BP Transfusion End Date/Time of Status (DTM) S4.14.3.17
 
     btx_18 : list[CWE] | None
-        BTX.18 (opt, rep) - BP Adverse Reaction Type (CWE)
+        BTX.18 (opt, rep) - BP Adverse Reaction Type (CWE) S4.14.3.18 | 0514 - Transfusion Adverse Reaction
 
     btx_19 : CWE | None
-        BTX.19 (opt) - BP Transfusion Interrupted Reason (CWE)
+        BTX.19 (opt) - BP Transfusion Interrupted Reason (CWE) S4.14.3.19 | 0515 - Transfusion Interrupted Reason
 
     btx_20 : EI | None
-        BTX.20 (opt) - BP Unique ID (EI)
+        BTX.20 (opt) - BP Unique ID (EI) S4.14.3.20
     """
 
     btx_1: str = Field(

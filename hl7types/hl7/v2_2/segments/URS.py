@@ -15,33 +15,33 @@ from ..datatypes.TS import TS
 
 
 class URS(HL7Model):
-    """HL7 v2 URS segment.
+    """UNSOLICITED SELECTION (S2.10.7).
 
     Attributes
     ----------
     urs_1 : list[str]
-        URS.1 (req, rep) - R/U Where Subject Definition (ST)
+        URS.1 (req, rep) - R/U Where Subject Definition (ST) S2.10.7.1
 
     urs_2 : TS | None
-        URS.2 (opt) - R/U when data start date / time (TS)
+        URS.2 (opt) - R/U when data start date / time (TS) S2.10.7.2
 
     urs_3 : TS | None
-        URS.3 (opt) - R/U when data end date / time (TS)
+        URS.3 (opt) - R/U when data end date / time (TS) S2.10.7.3
 
     urs_4 : list[str] | None
-        URS.4 (opt, rep) - R/U What User Qualifier (ST)
+        URS.4 (opt, rep) - R/U What User Qualifier (ST) S2.10.7.4
 
     urs_5 : list[str] | None
-        URS.5 (opt, rep) - R/U Other Results Subject Definition (ST)
+        URS.5 (opt, rep) - R/U Other Results Subject Definition (ST) S2.10.7.5
 
     urs_6 : list[str] | None
-        URS.6 (opt, rep) - R/U which date / time qualifier (ID)
+        URS.6 (opt, rep) - R/U which date / time qualifier (ID) S2.10.7.6 | 0156 - DATE/TIME QUALIFIER
 
     urs_7 : list[str] | None
-        URS.7 (opt, rep) - R/U which date / time status qualifier (ID)
+        URS.7 (opt, rep) - R/U which date / time status qualifier (ID) S2.10.7.7 | 0157 - WHIHC DATE/TIME STATUS QUALIFIER
 
     urs_8 : list[str] | None
-        URS.8 (opt, rep) - R/U date / time selection qualifier (ID)
+        URS.8 (opt, rep) - R/U date / time selection qualifier (ID) S2.10.7.8 | 0158 - DATE/TIME SELECTION QUALIFIER
     """
 
     urs_1: List[str] = Field(

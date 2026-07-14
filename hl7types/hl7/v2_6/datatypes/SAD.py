@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class SAD(HL7Model):
-    """HL7 v2 SAD data type.
+    """Street address (S2.A.67).
 
     Attributes
     ----------

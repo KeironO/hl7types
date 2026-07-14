@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class HD(HL7Model):
-    """HL7 v2 HD data type.
+    """Hierarchic designator (S2.9.21).
 
     Attributes
     ----------

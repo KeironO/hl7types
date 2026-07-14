@@ -16,24 +16,24 @@ from ..datatypes.TS import TS
 
 
 class EQP(HL7Model):
-    """HL7 v2 EQP segment.
+    """Equipment/log Service (S13.4.12).
 
     Attributes
     ----------
     eqp_1 : CE
-        EQP.1 (req) - Event type (CE)
+        EQP.1 (req) - Event type (CE) S13.4.12.1 | 0450 - Event type
 
     eqp_2 : str | None
-        EQP.2 (opt) - File Name (ST)
+        EQP.2 (opt) - File Name (ST) S13.4.12.2
 
     eqp_3 : TS
-        EQP.3 (req) - Start Date/Time (TS)
+        EQP.3 (req) - Start Date/Time (TS) S10.6.4.4
 
     eqp_4 : TS | None
-        EQP.4 (opt) - End Date/Time (TS)
+        EQP.4 (opt) - End Date/Time (TS) S13.4.12.4
 
     eqp_5 : str
-        EQP.5 (req) - Transaction Data (FT)
+        EQP.5 (req) - Transaction Data (FT) S13.4.12.5
     """
 
     eqp_1: CE = Field(

@@ -48,22 +48,22 @@ _RPA_I08_VISIT = RPA_I08_VISIT
 
 
 class RPA_I08(HL7Model):
-    """HL7 v2 RPA_I08 message.
+    """RQA/RPA - Request for treatment authorization information.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        RF1 (Optional[RF1]): optional
+        MSH (MSH): Message header segment, required
+        MSA (MSA): Message acknowledgement segment, required
+        RF1 (Optional[RF1]): Referral Information Segment, optional
         AUTHORIZATION (Optional[RPA_I08_AUTHORIZATION]): optional
         PROVIDER (List[RPA_I08_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
-        GT1 (Optional[List[GT1]]): optional
+        PID (PID): Patient Identification, required
+        NK1 (Optional[List[NK1]]): Next of kin, optional
+        GT1 (Optional[List[GT1]]): Guarantor, optional
         INSURANCE (Optional[List[RPA_I08_INSURANCE]]): optional
-        ACC (Optional[ACC]): optional
-        DG1 (Optional[List[DG1]]): optional
-        DRG (Optional[List[DRG]]): optional
-        AL1 (Optional[List[AL1]]): optional
+        ACC (Optional[ACC]): Accident, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
+        DRG (Optional[List[DRG]]): Diagnosis Related Group, optional
+        AL1 (Optional[List[AL1]]): Patient allergy information, optional
         PROCEDURE (List[RPA_I08_PROCEDURE]): required
         OBSERVATION (Optional[List[RPA_I08_OBSERVATION]]): optional
         VISIT (Optional[RPA_I08_VISIT]): optional
@@ -71,95 +71,89 @@ class RPA_I08(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message acknowledgement segment",
     )
 
     RF1: Optional[_RF1] = Field(
         default=None,
         title="RF1",
-        description="Optional",
+        description="Referral Information Segment",
     )
 
     AUTHORIZATION: Optional[_RPA_I08_AUTHORIZATION] = Field(
         default=None,
         title="AUTHORIZATION",
-        description="Optional",
     )
 
     PROVIDER: List[_RPA_I08_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin",
     )
 
     GT1: Optional[List[_GT1]] = Field(
         default=None,
         title="GT1",
-        description="Optional, repeating",
+        description="Guarantor",
     )
 
     INSURANCE: Optional[List[_RPA_I08_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ACC: Optional[_ACC] = Field(
         default=None,
         title="ACC",
-        description="Optional",
+        description="Accident",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     DRG: Optional[List[_DRG]] = Field(
         default=None,
         title="DRG",
-        description="Optional, repeating",
+        description="Diagnosis Related Group",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient allergy information",
     )
 
     PROCEDURE: List[_RPA_I08_PROCEDURE] = Field(
         min_length=1,
         title="PROCEDURE",
-        description="Required, repeating",
     )
 
     OBSERVATION: Optional[List[_RPA_I08_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     VISIT: Optional[_RPA_I08_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

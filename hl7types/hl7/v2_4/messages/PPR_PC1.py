@@ -24,35 +24,33 @@ _PPR_PC1_PROBLEM = PPR_PC1_PROBLEM
 
 
 class PPR_PC1(HL7Model):
-    """HL7 v2 PPR_PC1 message.
+    """PPR - PC/ Problem Add (S12).
 
     Attributes:
-        MSH (MSH): required
-        PID (PID): required
+        MSH (MSH): Message Header, required
+        PID (PID): Patient identification, required
         PATIENT_VISIT (Optional[PPR_PC1_PATIENT_VISIT]): optional
         PROBLEM (List[PPR_PC1_PROBLEM]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PATIENT_VISIT: Optional[_PPR_PC1_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PROBLEM: List[_PPR_PC1_PROBLEM] = Field(
         min_length=1,
         title="PROBLEM",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

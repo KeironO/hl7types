@@ -25,26 +25,24 @@ class PTR_PCF_PATIENT(HL7Model):
     """HL7 v2 PTR_PCF.PATIENT group.
 
     Attributes:
-        PID (PID): required
+        PID (PID): Patient identification, required
         PATIENT_VISIT (Optional[PTR_PCF_PATIENT_VISIT]): optional
         PATHWAY (List[PTR_PCF_PATHWAY]): required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PATIENT_VISIT: Optional[_PTR_PCF_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     PATHWAY: List[_PTR_PCF_PATHWAY] = Field(
         min_length=1,
         title="PATHWAY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

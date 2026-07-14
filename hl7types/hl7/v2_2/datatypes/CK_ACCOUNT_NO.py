@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class CK_ACCOUNT_NO(HL7Model):
-    """HL7 v2 CK_ACCOUNT_NO data type.
+    """Abrechnungsnummer.
 
     Attributes
     ----------

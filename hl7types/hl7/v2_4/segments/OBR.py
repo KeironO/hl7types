@@ -26,150 +26,150 @@ from ..datatypes.XTN import XTN
 
 
 class OBR(HL7Model):
-    """HL7 v2 OBR segment.
+    """Observation Request (S7.4.1).
 
     Attributes
     ----------
     obr_1 : str | None
-        OBR.1 (opt) - Set ID - OBR (SI)
+        OBR.1 (opt) - Set ID - OBR (SI) S7.4.1.1
 
     obr_2 : EI | None
-        OBR.2 (opt) - Placer Order Number (EI)
+        OBR.2 (opt) - Placer Order Number (EI) S10.6.2.26
 
     obr_3 : EI | None
-        OBR.3 (opt) - Filler Order Number (EI)
+        OBR.3 (opt) - Filler Order Number (EI) S10.6.2.27
 
     obr_4 : CE
-        OBR.4 (req) - Universal Service Identifier (CE)
+        OBR.4 (req) - Universal Service Identifier (CE) S13.4.10.1
 
     obr_5 : str | None
-        OBR.5 (opt) - Priority (ID)
+        OBR.5 (opt) - Priority (ID) S7.4.1.5
 
     obr_6 : TS | None
-        OBR.6 (opt) - Requested Date/Time (TS)
+        OBR.6 (opt) - Requested Date/Time (TS) S7.4.1.6
 
     obr_7 : TS | None
-        OBR.7 (opt) - Observation Date/Time # (TS)
+        OBR.7 (opt) - Observation Date/Time # (TS) S7.4.1.7
 
     obr_8 : TS | None
-        OBR.8 (opt) - Observation End Date/Time # (TS)
+        OBR.8 (opt) - Observation End Date/Time # (TS) S7.4.1.8
 
     obr_9 : CQ | None
-        OBR.9 (opt) - Collection Volume * (CQ)
+        OBR.9 (opt) - Collection Volume * (CQ) S7.4.1.9
 
     obr_10 : list[XCN] | None
-        OBR.10 (opt, rep) - Collector Identifier * (XCN)
+        OBR.10 (opt, rep) - Collector Identifier * (XCN) S7.4.1.10
 
     obr_11 : str | None
-        OBR.11 (opt) - Specimen Action Code * (ID)
+        OBR.11 (opt) - Specimen Action Code * (ID) S7.4.1.11 | 0065 - Specimen action code
 
     obr_12 : CE | None
-        OBR.12 (opt) - Danger Code (CE)
+        OBR.12 (opt) - Danger Code (CE) S7.4.1.12
 
     obr_13 : str | None
-        OBR.13 (opt) - Relevant Clinical Info. (ST)
+        OBR.13 (opt) - Relevant Clinical Info. (ST) S7.4.1.13
 
     obr_14 : TS | None
-        OBR.14 (opt) - Specimen Received Date/Time * (TS)
+        OBR.14 (opt) - Specimen Received Date/Time * (TS) S7.4.1.14
 
     obr_15 : SPS | None
-        OBR.15 (opt) - Specimen Source (SPS)
+        OBR.15 (opt) - Specimen Source (SPS) S13.4.9.3 | 0070 - Specimen source codes
 
     obr_16 : list[XCN] | None
-        OBR.16 (opt, rep) - Ordering Provider (XCN)
+        OBR.16 (opt, rep) - Ordering Provider (XCN) S7.4.1.16
 
     obr_17 : list[XTN] | None
-        OBR.17 (opt, rep) - Order Callback Phone Number (XTN)
+        OBR.17 (opt, rep) - Order Callback Phone Number (XTN) S7.4.1.17
 
     obr_18 : str | None
-        OBR.18 (opt) - Placer Field 1 (ST)
+        OBR.18 (opt) - Placer Field 1 (ST) S7.4.1.18
 
     obr_19 : str | None
-        OBR.19 (opt) - Placer Field 2 (ST)
+        OBR.19 (opt) - Placer Field 2 (ST) S7.4.1.19
 
     obr_20 : str | None
-        OBR.20 (opt) - Filler Field 1 + (ST)
+        OBR.20 (opt) - Filler Field 1 + (ST) S7.4.1.20
 
     obr_21 : str | None
-        OBR.21 (opt) - Filler Field 2 + (ST)
+        OBR.21 (opt) - Filler Field 2 + (ST) S7.4.1.21
 
     obr_22 : TS | None
-        OBR.22 (opt) - Results Rpt/Status Chng - Date/Time + (TS)
+        OBR.22 (opt) - Results Rpt/Status Chng - Date/Time + (TS) S7.4.1.22
 
     obr_23 : MOC | None
-        OBR.23 (opt) - Charge to Practice + (MOC)
+        OBR.23 (opt) - Charge to Practice + (MOC) S7.4.1.23
 
     obr_24 : str | None
-        OBR.24 (opt) - Diagnostic Serv Sect ID (ID)
+        OBR.24 (opt) - Diagnostic Serv Sect ID (ID) S7.4.1.24 | 0074 - Diagnostic service section ID
 
     obr_25 : str | None
-        OBR.25 (opt) - Result Status + (ID)
+        OBR.25 (opt) - Result Status + (ID) S7.4.1.25 | 0123 - Result status
 
     obr_26 : PRL | None
-        OBR.26 (opt) - Parent Result + (PRL)
+        OBR.26 (opt) - Parent Result + (PRL) S7.4.1.26
 
     obr_27 : list[TQ] | None
-        OBR.27 (opt, rep) - Quantity/Timing (TQ)
+        OBR.27 (opt, rep) - Quantity/Timing (TQ) S7.4.1.27
 
     obr_28 : list[XCN] | None
-        OBR.28 (opt, rep) - Result Copies To (XCN)
+        OBR.28 (opt, rep) - Result Copies To (XCN) S7.4.1.28
 
     obr_29 : EIP | None
-        OBR.29 (opt) - Parent (EIP)
+        OBR.29 (opt) - Parent (EIP) S7.4.1.29
 
     obr_30 : str | None
-        OBR.30 (opt) - Transportation Mode (ID)
+        OBR.30 (opt) - Transportation Mode (ID) S7.4.1.30 | 0124 - Transportation mode
 
     obr_31 : list[CE] | None
-        OBR.31 (opt, rep) - Reason for Study (CE)
+        OBR.31 (opt, rep) - Reason for Study (CE) S7.4.1.31
 
     obr_32 : NDL | None
-        OBR.32 (opt) - Principal Result Interpreter + (NDL)
+        OBR.32 (opt) - Principal Result Interpreter + (NDL) S7.4.1.32
 
     obr_33 : list[NDL] | None
-        OBR.33 (opt, rep) - Assistant Result Interpreter + (NDL)
+        OBR.33 (opt, rep) - Assistant Result Interpreter + (NDL) S7.4.1.33
 
     obr_34 : list[NDL] | None
-        OBR.34 (opt, rep) - Technician + (NDL)
+        OBR.34 (opt, rep) - Technician + (NDL) S7.4.1.34
 
     obr_35 : list[NDL] | None
-        OBR.35 (opt, rep) - Transcriptionist + (NDL)
+        OBR.35 (opt, rep) - Transcriptionist + (NDL) S7.4.1.35
 
     obr_36 : TS | None
-        OBR.36 (opt) - Scheduled Date/Time + (TS)
+        OBR.36 (opt) - Scheduled Date/Time + (TS) S7.4.1.36
 
     obr_37 : str | None
-        OBR.37 (opt) - Number of Sample Containers * (NM)
+        OBR.37 (opt) - Number of Sample Containers * (NM) S7.4.1.37
 
     obr_38 : list[CE] | None
-        OBR.38 (opt, rep) - Transport Logistics of Collected Sample * (CE)
+        OBR.38 (opt, rep) - Transport Logistics of Collected Sample * (CE) S7.4.1.38
 
     obr_39 : list[CE] | None
-        OBR.39 (opt, rep) - Collector's Comment * (CE)
+        OBR.39 (opt, rep) - Collector's Comment * (CE) S7.4.1.39
 
     obr_40 : CE | None
-        OBR.40 (opt) - Transport Arrangement Responsibility (CE)
+        OBR.40 (opt) - Transport Arrangement Responsibility (CE) S7.4.1.40
 
     obr_41 : str | None
-        OBR.41 (opt) - Transport Arranged (ID)
+        OBR.41 (opt) - Transport Arranged (ID) S7.4.1.41 | 0224 - Transport arranged
 
     obr_42 : str | None
-        OBR.42 (opt) - Escort Required (ID)
+        OBR.42 (opt) - Escort Required (ID) S7.4.1.42 | 0225 - Escort required
 
     obr_43 : list[CE] | None
-        OBR.43 (opt, rep) - Planned Patient Transport Comment (CE)
+        OBR.43 (opt, rep) - Planned Patient Transport Comment (CE) S7.4.1.43
 
     obr_44 : CE | None
-        OBR.44 (opt) - Procedure Code (CE)
+        OBR.44 (opt) - Procedure Code (CE) S8.10.2.7 | 0088 - Procedure Code
 
     obr_45 : list[CE] | None
-        OBR.45 (opt, rep) - Procedure Code Modifier (CE)
+        OBR.45 (opt, rep) - Procedure Code Modifier (CE) S7.4.1.45 | 0340 - Procedure Code modifier
 
     obr_46 : list[CE] | None
-        OBR.46 (opt, rep) - Placer Supplemental Service Information (CE)
+        OBR.46 (opt, rep) - Placer Supplemental Service Information (CE) S10.6.4.11 | 0411 - Supplemental service information values
 
     obr_47 : list[CE] | None
-        OBR.47 (opt, rep) - Filler Supplemental Service Information (CE)
+        OBR.47 (opt, rep) - Filler Supplemental Service Information (CE) S10.6.4.12 | 0411 - Supplemental service information values
     """
 
     obr_1: Optional[str] = Field(

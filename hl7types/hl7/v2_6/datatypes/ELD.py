@@ -15,7 +15,7 @@ from .CWE import CWE
 
 
 class ELD(HL7Model):
-    """HL7 v2 ELD data type.
+    """Error location and description (S2.A.27).
 
     Attributes
     ----------

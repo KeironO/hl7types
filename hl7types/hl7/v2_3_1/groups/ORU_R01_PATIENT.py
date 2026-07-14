@@ -29,40 +29,39 @@ class ORU_R01_PATIENT(HL7Model):
     """HL7 v2 ORU_R01.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         VISIT (Optional[ORU_R01_VISIT]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     VISIT: Optional[_ORU_R01_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

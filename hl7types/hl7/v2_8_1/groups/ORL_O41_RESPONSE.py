@@ -29,13 +29,11 @@ class ORL_O41_RESPONSE(HL7Model):
     PATIENT: Optional[_ORL_O41_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER: Optional[List[_ORL_O41_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

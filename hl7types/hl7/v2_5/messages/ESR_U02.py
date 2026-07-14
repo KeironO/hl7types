@@ -23,35 +23,35 @@ _SFT = SFT
 
 
 class ESR_U02(HL7Model):
-    """HL7 v2 ESR_U02 message.
+    """ESR/ACK - Automated equipment status request (S13.3.2).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EQU (EQU): required
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EQU (EQU): Equipment Detail, required
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

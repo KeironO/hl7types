@@ -27,7 +27,7 @@ class OPL_O37_SPECIMEN(HL7Model):
     """HL7 v2 OPL_O37.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         SPECIMEN_OBSERVATION (Optional[List[OPL_O37_SPECIMEN_OBSERVATION]]): optional
         CONTAINER (Optional[List[OPL_O37_CONTAINER]]): optional
         OBSERVATION_REQUEST (List[OPL_O37_OBSERVATION_REQUEST]): required
@@ -35,25 +35,22 @@ class OPL_O37_SPECIMEN(HL7Model):
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OPL_O37_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     CONTAINER: Optional[List[_OPL_O37_CONTAINER]] = Field(
         default=None,
         title="CONTAINER",
-        description="Optional, repeating",
     )
 
     OBSERVATION_REQUEST: List[_OPL_O37_OBSERVATION_REQUEST] = Field(
         min_length=1,
         title="OBSERVATION_REQUEST",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

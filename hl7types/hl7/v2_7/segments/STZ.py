@@ -15,21 +15,21 @@ from ..datatypes.CWE import CWE
 
 
 class STZ(HL7Model):
-    """HL7 v2 STZ segment.
+    """Sterilization Parameter (S17.4.3).
 
     Attributes
     ----------
     stz_1 : CWE | None
-        STZ.1 (opt) - Sterilization Type (CWE)
+        STZ.1 (opt) - Sterilization Type (CWE) S17.4.3.1 | 0806 - Sterilization Type
 
     stz_2 : CWE | None
-        STZ.2 (opt) - Sterilization Cycle (CWE)
+        STZ.2 (opt) - Sterilization Cycle (CWE) S17.4.3.2 | 0702 - Cycle Type
 
     stz_3 : CWE | None
-        STZ.3 (opt) - Maintenance Cycle (CWE)
+        STZ.3 (opt) - Maintenance Cycle (CWE) S17.4.3.3 | 0809 - Maintenance Cycle
 
     stz_4 : CWE | None
-        STZ.4 (opt) - Maintenance Type (CWE)
+        STZ.4 (opt) - Maintenance Type (CWE) S17.4.3.4 | 0811 - Maintenance Type
     """
 
     stz_1: Optional[CWE] = Field(

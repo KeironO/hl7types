@@ -30,54 +30,53 @@ _RSP_K13_ROW_DEFINITION = RSP_K13_ROW_DEFINITION
 
 
 class RSP_K13(HL7Model):
-    """HL7 v2 RSP_K13 message.
+    """query by parameter/tabular response (S15).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
-        QAK (QAK): required
-        QPD (QPD): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
+        QAK (QAK): Query Acknowledgment, required
+        QPD (QPD): Query Parameter Definition, required
         ROW_DEFINITION (Optional[RSP_K13_ROW_DEFINITION]): optional
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     ROW_DEFINITION: Optional[_RSP_K13_ROW_DEFINITION] = Field(
         default=None,
         title="ROW_DEFINITION",
-        description="Optional",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

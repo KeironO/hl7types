@@ -13,57 +13,57 @@ from hl7types.hl7 import HL7Model
 
 
 class UB2(HL7Model):
-    """HL7 v2 UB2 segment.
+    """UB92 DATA (S6.4.10).
 
     Attributes
     ----------
     ub2_1 : str | None
-        UB2.1 (opt) - Set ID - UB92 (SI)
+        UB2.1 (opt) - Set ID - UB92 (SI) S6.4.10.1
 
     ub2_2 : str | None
-        UB2.2 (opt) - Co-insurance days (9) (ST)
+        UB2.2 (opt) - Co-insurance days (9) (ST) S6.4.10.2
 
     ub2_3 : list[str] | None
-        UB2.3 (opt, rep) - Condition code (24-30) (ID)
+        UB2.3 (opt, rep) - Condition code (24-30) (ID) S6.4.10.3 | 0043 - CONDITION CODE
 
     ub2_4 : str | None
-        UB2.4 (opt) - Covered days (7) (ST)
+        UB2.4 (opt) - Covered days (7) (ST) S6.4.10.4
 
     ub2_5 : str | None
-        UB2.5 (opt) - Non-covered days (8) (ST)
+        UB2.5 (opt) - Non-covered days (8) (ST) S6.4.10.5
 
     ub2_6 : list[str] | None
-        UB2.6 (opt, rep) - Value amount and code (39-41) (CM)
+        UB2.6 (opt, rep) - Value amount and code (39-41) (CM) S6.4.10.6
 
     ub2_7 : list[str] | None
-        UB2.7 (opt, rep) - Occurrence code and date (32-35) (CM)
+        UB2.7 (opt, rep) - Occurrence code and date (32-35) (CM) S6.4.10.7
 
     ub2_8 : list[str] | None
-        UB2.8 (opt, rep) - Occurrence span code / dates (36) (CM)
+        UB2.8 (opt, rep) - Occurrence span code / dates (36) (CM) S6.4.10.8
 
     ub2_9 : list[str] | None
-        UB2.9 (opt, rep) - UB92 locator 2 (state) (ST)
+        UB2.9 (opt, rep) - UB92 locator 2 (state) (ST) S6.4.10.9
 
     ub2_10 : list[str] | None
-        UB2.10 (opt, rep) - UB92 locator 11 (state) (ST)
+        UB2.10 (opt, rep) - UB92 locator 11 (state) (ST) S6.4.10.10
 
     ub2_11 : str | None
-        UB2.11 (opt) - UB92 locator 31 (national) (ST)
+        UB2.11 (opt) - UB92 locator 31 (national) (ST) S6.4.10.11
 
     ub2_12 : list[str] | None
-        UB2.12 (opt, rep) - Document control number (37) (ST)
+        UB2.12 (opt, rep) - Document control number (37) (ST) S6.4.10.12
 
     ub2_13 : list[str] | None
-        UB2.13 (opt, rep) - UB92 locator 49 (national) (ST)
+        UB2.13 (opt, rep) - UB92 locator 49 (national) (ST) S6.4.10.13
 
     ub2_14 : list[str] | None
-        UB2.14 (opt, rep) - UB92 locator 56 (state) (ST)
+        UB2.14 (opt, rep) - UB92 locator 56 (state) (ST) S6.4.10.14
 
     ub2_15 : str | None
-        UB2.15 (opt) - UB92 locator 57 (national) (ST)
+        UB2.15 (opt) - UB92 locator 57 (national) (ST) S6.4.10.15
 
     ub2_16 : list[str] | None
-        UB2.16 (opt, rep) - UB92 Locator 78 (state) (ST)
+        UB2.16 (opt, rep) - UB92 Locator 78 (state) (ST) S6.4.10.16
     """
 
     ub2_1: Optional[str] = Field(

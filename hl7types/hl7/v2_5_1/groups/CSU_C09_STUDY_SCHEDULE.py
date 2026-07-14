@@ -25,7 +25,7 @@ class CSU_C09_STUDY_SCHEDULE(HL7Model):
     """HL7 v2 CSU_C09.STUDY_SCHEDULE group.
 
     Attributes:
-        CSS (Optional[CSS]): optional
+        CSS (Optional[CSS]): Clinical Study Data Schedule Segment, optional
         STUDY_OBSERVATION (List[CSU_C09_STUDY_OBSERVATION]): required
         ORCRXARXR_SUPPGRP (List[CSU_C09_ORCRXARXR_SUPPGRP]): required
     """
@@ -33,19 +33,17 @@ class CSU_C09_STUDY_SCHEDULE(HL7Model):
     CSS: Optional[_CSS] = Field(
         default=None,
         title="CSS",
-        description="Optional",
+        description="Clinical Study Data Schedule Segment",
     )
 
     STUDY_OBSERVATION: List[_CSU_C09_STUDY_OBSERVATION] = Field(
         min_length=1,
         title="STUDY_OBSERVATION",
-        description="Required, repeating",
     )
 
     ORCRXARXR_SUPPGRP: List[_CSU_C09_ORCRXARXR_SUPPGRP] = Field(
         min_length=1,
         title="ORCRXARXR_SUPPGRP",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -24,26 +24,26 @@ class OPU_R25_PATIENT_VISIT_OBSERVATION(HL7Model):
     """HL7 v2 OPU_R25.PATIENT_VISIT_OBSERVATION group.
 
     Attributes:
-        OBX (OBX): required
-        NTE (Optional[List[NTE]]): optional
-        PRT (Optional[List[PRT]]): optional
+        OBX (OBX): Observation/Result, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

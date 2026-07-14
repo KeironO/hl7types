@@ -28,12 +28,12 @@ _SFT = SFT
 
 
 class OMD_O03(HL7Model):
-    """HL7 v2 OMD_O03 message.
+    """OMD - Diet order (S4.7.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT (Optional[OMD_O03_PATIENT]): optional
         ORDER_DIET (List[OMD_O03_ORDER_DIET]): required
         ORDER_TRAY (Optional[List[OMD_O03_ORDER_TRAY]]): optional
@@ -41,37 +41,34 @@ class OMD_O03(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT: Optional[_OMD_O03_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     ORDER_DIET: List[_OMD_O03_ORDER_DIET] = Field(
         min_length=1,
         title="ORDER_DIET",
-        description="Required, repeating",
     )
 
     ORDER_TRAY: Optional[List[_OMD_O03_ORDER_TRAY]] = Field(
         default=None,
         title="ORDER_TRAY",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -31,46 +31,44 @@ class VXU_V04_ORDER(HL7Model):
     """HL7 v2 VXU_V04.ORDER group.
 
     Attributes:
-        ORC (ORC): required
-        PRT (Optional[List[PRT]]): optional
+        ORC (ORC): Common Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         TIMING (Optional[List[VXU_V04_TIMING]]): optional
-        RXA (RXA): required
-        RXR (Optional[RXR]): optional
+        RXA (RXA): Pharmacy/Treatment Administration, required
+        RXR (Optional[RXR]): Pharmacy/Treatment Route, optional
         OBSERVATION (Optional[List[VXU_V04_OBSERVATION]]): optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     TIMING: Optional[List[_VXU_V04_TIMING]] = Field(
         default=None,
         title="TIMING",
-        description="Optional, repeating",
     )
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="Pharmacy/Treatment Administration",
     )
 
     RXR: Optional[_RXR] = Field(
         default=None,
         title="RXR",
-        description="Optional",
+        description="Pharmacy/Treatment Route",
     )
 
     OBSERVATION: Optional[List[_VXU_V04_OBSERVATION]] = Field(
         default=None,
         title="OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

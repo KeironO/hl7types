@@ -19,63 +19,63 @@ from ..datatypes.TS import TS
 
 
 class PRC(HL7Model):
-    """HL7 v2 PRC segment.
+    """Pricing (S8.9.3).
 
     Attributes
     ----------
     prc_1 : CE
-        PRC.1 (req) - Primary Key Value (CE)
+        PRC.1 (req) - Primary Key Value (CE) S8.9.3.1 | 0132 - Transaction Code
 
     prc_2 : list[EI]
-        PRC.2 (req, rep) - Facility ID (EI)
+        PRC.2 (req, rep) - Facility ID (EI) S7.11.6.1
 
     prc_3 : list[CE] | None
-        PRC.3 (opt, rep) - Department (CE)
+        PRC.3 (opt, rep) - Department (CE) S8.9.3.3
 
     prc_4 : list[str] | None
-        PRC.4 (opt, rep) - Valid Patient Classes (ID)
+        PRC.4 (opt, rep) - Valid Patient Classes (ID) S8.8.5.5 | 0004 - Patient Class
 
     prc_5 : list[CP] | None
-        PRC.5 (opt, rep) - Price (CP)
+        PRC.5 (opt, rep) - Price (CP) S8.9.3.5
 
     prc_6 : list[str] | None
-        PRC.6 (opt, rep) - Formula (ST)
+        PRC.6 (opt, rep) - Formula (ST) S8.9.3.6
 
     prc_7 : str | None
-        PRC.7 (opt) - Minimum Quantity (NM)
+        PRC.7 (opt) - Minimum Quantity (NM) S8.9.3.7
 
     prc_8 : str | None
-        PRC.8 (opt) - Maximum Quantity (NM)
+        PRC.8 (opt) - Maximum Quantity (NM) S8.9.3.8
 
     prc_9 : MO | None
-        PRC.9 (opt) - Minimum Price (MO)
+        PRC.9 (opt) - Minimum Price (MO) S8.9.3.9
 
     prc_10 : MO | None
-        PRC.10 (opt) - Maximum Price (MO)
+        PRC.10 (opt) - Maximum Price (MO) S8.9.3.10
 
     prc_11 : TS | None
-        PRC.11 (opt) - Effective Start Date (TS)
+        PRC.11 (opt) - Effective Start Date (TS) S8.9.3.11
 
     prc_12 : TS | None
-        PRC.12 (opt) - Effective End Date (TS)
+        PRC.12 (opt) - Effective End Date (TS) S8.9.3.12
 
     prc_13 : str | None
-        PRC.13 (opt) - Price Override Flag (ID)
+        PRC.13 (opt) - Price Override Flag (ID) S8.9.3.13 | 0268 - Override
 
     prc_14 : list[CE] | None
-        PRC.14 (opt, rep) - Billing Category (CE)
+        PRC.14 (opt, rep) - Billing Category (CE) S8.9.3.14 | 0293 - Billing Category
 
     prc_15 : str | None
-        PRC.15 (opt) - Chargeable Flag (ID)
+        PRC.15 (opt) - Chargeable Flag (ID) S8.9.3.15 | 0136 - Yes/No Indicator
 
     prc_16 : str | None
-        PRC.16 (opt) - Active/Inactive Flag (ID)
+        PRC.16 (opt) - Active/Inactive Flag (ID) S8.6.2 | 0183 - Active/Inactive
 
     prc_17 : MO | None
-        PRC.17 (opt) - Cost (MO)
+        PRC.17 (opt) - Cost (MO) S8.9.3.17
 
     prc_18 : str | None
-        PRC.18 (opt) - Charge On Indicator (ID)
+        PRC.18 (opt) - Charge On Indicator (ID) S8.9.3.18 | 0269 - Charge on Indicator
     """
 
     prc_1: CE = Field(

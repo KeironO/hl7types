@@ -16,7 +16,7 @@ from .CWE import CWE
 
 
 class FC(HL7Model):
-    """HL7 v2 FC data type.
+    """Financial class (S2.A.29).
 
     Attributes
     ----------

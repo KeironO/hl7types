@@ -25,25 +25,24 @@ class RSP_E22_AUTHORIZATION_INFO(HL7Model):
     """HL7 v2 RSP_E22.AUTHORIZATION_INFO group.
 
     Attributes:
-        IVC (IVC): required
-        PSG (PSG): required
+        IVC (IVC): Invoice Segment, required
+        PSG (PSG): Product/Service Group, required
         PSL_ITEM_INFO (List[RSP_E22_PSL_ITEM_INFO]): required
     """
 
     IVC: _IVC = Field(
         title="IVC",
-        description="Required",
+        description="Invoice Segment",
     )
 
     PSG: _PSG = Field(
         title="PSG",
-        description="Required",
+        description="Product/Service Group",
     )
 
     PSL_ITEM_INFO: List[_RSP_E22_PSL_ITEM_INFO] = Field(
         min_length=1,
         title="PSL_ITEM_INFO",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

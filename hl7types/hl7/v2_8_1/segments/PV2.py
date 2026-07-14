@@ -18,159 +18,159 @@ from ..datatypes.XON import XON
 
 
 class PV2(HL7Model):
-    """HL7 v2 PV2 segment.
+    """Patient Visit - Additional Information (S3.4.4).
 
     Attributes
     ----------
     pv2_1 : PL | None
-        PV2.1 (opt) - Prior Pending Location (PL)
+        PV2.1 (opt) - Prior Pending Location (PL) S3.4.4.1
 
     pv2_2 : CWE | None
-        PV2.2 (opt) - Accommodation Code (CWE)
+        PV2.2 (opt) - Accommodation Code (CWE) S3.4.4.2 | 0129 - Accommodation Code
 
     pv2_3 : CWE | None
-        PV2.3 (opt) - Admit Reason (CWE)
+        PV2.3 (opt) - Admit Reason (CWE) S3.4.4.3
 
     pv2_4 : CWE | None
-        PV2.4 (opt) - Transfer Reason (CWE)
+        PV2.4 (opt) - Transfer Reason (CWE) S3.4.4.4
 
     pv2_5 : list[str] | None
-        PV2.5 (opt, rep) - Patient Valuables (ST)
+        PV2.5 (opt, rep) - Patient Valuables (ST) S3.4.4.5
 
     pv2_6 : str | None
-        PV2.6 (opt) - Patient Valuables Location (ST)
+        PV2.6 (opt) - Patient Valuables Location (ST) S3.4.4.6
 
     pv2_7 : list[CWE] | None
-        PV2.7 (opt, rep) - Visit User Code (CWE)
+        PV2.7 (opt, rep) - Visit User Code (CWE) S3.4.4.7 | 0130 - Visit User Code
 
     pv2_8 : str | None
-        PV2.8 (opt) - Expected Admit Date/Time (DTM)
+        PV2.8 (opt) - Expected Admit Date/Time (DTM) S3.4.4.8
 
     pv2_9 : str | None
-        PV2.9 (opt) - Expected Discharge Date/Time (DTM)
+        PV2.9 (opt) - Expected Discharge Date/Time (DTM) S3.4.4.9
 
     pv2_10 : str | None
-        PV2.10 (opt) - Estimated Length of Inpatient Stay (NM)
+        PV2.10 (opt) - Estimated Length of Inpatient Stay (NM) S3.4.4.10
 
     pv2_11 : str | None
-        PV2.11 (opt) - Actual Length of Inpatient Stay (NM)
+        PV2.11 (opt) - Actual Length of Inpatient Stay (NM) S3.4.4.11
 
     pv2_12 : str | None
-        PV2.12 (opt) - Visit Description (ST)
+        PV2.12 (opt) - Visit Description (ST) S3.4.4.12
 
     pv2_13 : list[XCN] | None
-        PV2.13 (opt, rep) - Referral Source Code (XCN)
+        PV2.13 (opt, rep) - Referral Source Code (XCN) S3.4.4.13
 
     pv2_14 : str | None
-        PV2.14 (opt) - Previous Service Date (DT)
+        PV2.14 (opt) - Previous Service Date (DT) S3.4.4.14
 
     pv2_15 : str | None
-        PV2.15 (opt) - Employment Illness Related Indicator (ID)
+        PV2.15 (opt) - Employment Illness Related Indicator (ID) S3.4.4.15 | 0136 - Yes/no Indicator
 
     pv2_16 : CWE | None
-        PV2.16 (opt) - Purge Status Code (CWE)
+        PV2.16 (opt) - Purge Status Code (CWE) S3.4.4.16 | 0213 - Purge Status Code
 
     pv2_17 : str | None
-        PV2.17 (opt) - Purge Status Date (DT)
+        PV2.17 (opt) - Purge Status Date (DT) S3.4.4.17
 
     pv2_18 : CWE | None
-        PV2.18 (opt) - Special Program Code (CWE)
+        PV2.18 (opt) - Special Program Code (CWE) S3.4.4.18 | 0214 - Special Program Code
 
     pv2_19 : str | None
-        PV2.19 (opt) - Retention Indicator (ID)
+        PV2.19 (opt) - Retention Indicator (ID) S3.4.4.19 | 0136 - Yes/no Indicator
 
     pv2_20 : str | None
-        PV2.20 (opt) - Expected Number of Insurance Plans (NM)
+        PV2.20 (opt) - Expected Number of Insurance Plans (NM) S3.4.4.20
 
     pv2_21 : CWE | None
-        PV2.21 (opt) - Visit Publicity Code (CWE)
+        PV2.21 (opt) - Visit Publicity Code (CWE) S3.4.4.21 | 0215 - Publicity Code
 
     pv2_22 : str | None
-        PV2.22 (opt) - Visit Protection Indicator (ID)
+        PV2.22 (opt) - Visit Protection Indicator (ID) S3.4.4.22 | 0136 - Yes/no Indicator
 
     pv2_23 : list[XON] | None
-        PV2.23 (opt, rep) - Clinic Organization Name (XON)
+        PV2.23 (opt, rep) - Clinic Organization Name (XON) S3.4.4.23
 
     pv2_24 : CWE | None
-        PV2.24 (opt) - Patient Status Code (CWE)
+        PV2.24 (opt) - Patient Status Code (CWE) S3.4.4.24 | 0216 - Patient Status Code
 
     pv2_25 : CWE | None
-        PV2.25 (opt) - Visit Priority Code (CWE)
+        PV2.25 (opt) - Visit Priority Code (CWE) S3.4.4.25 | 0217 - Visit Priority Code
 
     pv2_26 : str | None
-        PV2.26 (opt) - Previous Treatment Date (DT)
+        PV2.26 (opt) - Previous Treatment Date (DT) S3.4.4.26
 
     pv2_27 : CWE | None
-        PV2.27 (opt) - Expected Discharge Disposition (CWE)
+        PV2.27 (opt) - Expected Discharge Disposition (CWE) S3.4.4.27 | 0112 - Discharge Disposition
 
     pv2_28 : str | None
-        PV2.28 (opt) - Signature on File Date (DT)
+        PV2.28 (opt) - Signature on File Date (DT) S3.4.4.28
 
     pv2_29 : str | None
-        PV2.29 (opt) - First Similar Illness Date (DT)
+        PV2.29 (opt) - First Similar Illness Date (DT) S3.4.4.29
 
     pv2_30 : CWE | None
-        PV2.30 (opt) - Patient Charge Adjustment Code (CWE)
+        PV2.30 (opt) - Patient Charge Adjustment Code (CWE) S3.4.4.30 | 0218 - Patient Charge Adjustment
 
     pv2_31 : CWE | None
-        PV2.31 (opt) - Recurring Service Code (CWE)
+        PV2.31 (opt) - Recurring Service Code (CWE) S3.4.4.31 | 0219 - Recurring Service Code
 
     pv2_32 : str | None
-        PV2.32 (opt) - Billing Media Code (ID)
+        PV2.32 (opt) - Billing Media Code (ID) S3.4.4.32 | 0136 - Yes/no Indicator
 
     pv2_33 : str | None
-        PV2.33 (opt) - Expected Surgery Date and Time (DTM)
+        PV2.33 (opt) - Expected Surgery Date and Time (DTM) S3.4.4.33
 
     pv2_34 : str | None
-        PV2.34 (opt) - Military Partnership Code (ID)
+        PV2.34 (opt) - Military Partnership Code (ID) S3.4.4.34 | 0136 - Yes/no Indicator
 
     pv2_35 : str | None
-        PV2.35 (opt) - Military Non-Availability Code (ID)
+        PV2.35 (opt) - Military Non-Availability Code (ID) S3.4.4.35 | 0136 - Yes/no Indicator
 
     pv2_36 : str | None
-        PV2.36 (opt) - Newborn Baby Indicator (ID)
+        PV2.36 (opt) - Newborn Baby Indicator (ID) S3.4.4.36 | 0136 - Yes/no Indicator
 
     pv2_37 : str | None
-        PV2.37 (opt) - Baby Detained Indicator (ID)
+        PV2.37 (opt) - Baby Detained Indicator (ID) S3.4.4.37 | 0136 - Yes/no Indicator
 
     pv2_38 : CWE | None
-        PV2.38 (opt) - Mode of Arrival Code (CWE)
+        PV2.38 (opt) - Mode of Arrival Code (CWE) S3.4.4.38 | 0430 - Mode of Arrival Code
 
     pv2_39 : list[CWE] | None
-        PV2.39 (opt, rep) - Recreational Drug Use Code (CWE)
+        PV2.39 (opt, rep) - Recreational Drug Use Code (CWE) S3.4.4.39 | 0431 - Recreational Drug Use Code
 
     pv2_40 : CWE | None
-        PV2.40 (opt) - Admission Level of Care Code (CWE)
+        PV2.40 (opt) - Admission Level of Care Code (CWE) S3.4.4.40 | 0432 - Admission Level of Care Code
 
     pv2_41 : list[CWE] | None
-        PV2.41 (opt, rep) - Precaution Code (CWE)
+        PV2.41 (opt, rep) - Precaution Code (CWE) S3.4.4.41 | 0433 - Precaution Code
 
     pv2_42 : CWE | None
-        PV2.42 (opt) - Patient Condition Code (CWE)
+        PV2.42 (opt) - Patient Condition Code (CWE) S3.4.4.42 | 0434 - Patient Condition Code
 
     pv2_43 : CWE | None
-        PV2.43 (opt) - Living Will Code (CWE)
+        PV2.43 (opt) - Living Will Code (CWE) S3.4.11.7 | 0315 - Living Will Code
 
     pv2_44 : CWE | None
-        PV2.44 (opt) - Organ Donor Code (CWE)
+        PV2.44 (opt) - Organ Donor Code (CWE) S3.4.11.8 | 0316 - Organ Donor Code
 
     pv2_45 : list[CWE] | None
-        PV2.45 (opt, rep) - Advance Directive Code (CWE)
+        PV2.45 (opt, rep) - Advance Directive Code (CWE) S3.4.11.15 | 0435 - Advance Directive Code
 
     pv2_46 : str | None
-        PV2.46 (opt) - Patient Status Effective Date (DT)
+        PV2.46 (opt) - Patient Status Effective Date (DT) S3.4.4.46
 
     pv2_47 : str | None
-        PV2.47 (opt) - Expected LOA Return Date/Time (DTM)
+        PV2.47 (opt) - Expected LOA Return Date/Time (DTM) S3.4.4.47
 
     pv2_48 : str | None
-        PV2.48 (opt) - Expected Pre-admission Testing Date/Time (DTM)
+        PV2.48 (opt) - Expected Pre-admission Testing Date/Time (DTM) S3.4.4.48
 
     pv2_49 : list[CWE] | None
-        PV2.49 (opt, rep) - Notify Clergy Code (CWE)
+        PV2.49 (opt, rep) - Notify Clergy Code (CWE) S3.4.4.49 | 0534 - Notify Clergy Code
 
     pv2_50 : str | None
-        PV2.50 (opt) - Advance Directive Last Verified Date (DT)
+        PV2.50 (opt) - Advance Directive Last Verified Date (DT) S3.4.11.22
     """
 
     pv2_1: Optional[PL] = Field(

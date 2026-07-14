@@ -24,26 +24,26 @@ class RRD_O02_DISPENSE(HL7Model):
     """HL7 v2 RRD_O02.DISPENSE group.
 
     Attributes:
-        RXD (RXD): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXD (RXD): Pharmacy dispense segment, required
+        RXR (List[RXR]): Pharmacy route segment, required
+        RXC (Optional[List[RXC]]): Pharmacy component order segment, optional
     """
 
     RXD: _RXD = Field(
         title="RXD",
-        description="Required",
+        description="Pharmacy dispense segment",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy route segment",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy component order segment",
     )
 
     model_config = {"populate_by_name": True}

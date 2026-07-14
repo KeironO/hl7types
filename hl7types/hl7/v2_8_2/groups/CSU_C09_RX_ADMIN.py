@@ -24,25 +24,25 @@ class CSU_C09_RX_ADMIN(HL7Model):
     """HL7 v2 CSU_C09.RX_ADMIN group.
 
     Attributes:
-        RXA (RXA): required
-        RXR (RXR): required
-        PRT (Optional[List[PRT]]): optional
+        RXA (RXA): Pharmacy/Treatment Administration, required
+        RXR (RXR): Pharmacy/Treatment Route, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
     """
 
     RXA: _RXA = Field(
         title="RXA",
-        description="Required",
+        description="Pharmacy/Treatment Administration",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="Pharmacy/Treatment Route",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     model_config = {"populate_by_name": True}

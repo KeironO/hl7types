@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class ORC(HL7Model):
-    """HL7 v2 ORC segment.
+    """COMMON ORDER.
 
     Attributes
     ----------
     orc_1 : str
-        ORC.1 (req) - ORDER CONTROL (ST)
+        ORC.1 (req) - ORDER CONTROL (ST) S4-4 | 0119 - ORDER CONTROL
 
     orc_2 : str | None
         ORC.2 (opt) - PLACER ORDER # (CM)
@@ -30,10 +30,10 @@ class ORC(HL7Model):
         ORC.4 (opt) - PLACER GROUP # (CM)
 
     orc_5 : str | None
-        ORC.5 (opt) - ORDER STATUS (ST)
+        ORC.5 (opt) - ORDER STATUS (ST) | 0038 - ORDER STATUS
 
     orc_6 : str | None
-        ORC.6 (opt) - RESPONSE FLAG (ST)
+        ORC.6 (opt) - RESPONSE FLAG (ST) | 0121 - RESPONSE FLAG
 
     orc_7 : str | None
         ORC.7 (opt) - TIMING/QUANTITY (CM)

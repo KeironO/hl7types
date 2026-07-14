@@ -24,26 +24,26 @@ class ADT_A60_ADVERSE_REACTION_GROUP(HL7Model):
     """HL7 v2 ADT_A60.ADVERSE_REACTION_GROUP group.
 
     Attributes:
-        IAM (IAM): required
-        NTE (Optional[List[NTE]]): optional
-        IAR (Optional[List[IAR]]): optional
+        IAM (IAM): Patient Adverse Reaction Information, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
+        IAR (Optional[List[IAR]]): allergy reaction, optional
     """
 
     IAM: _IAM = Field(
         title="IAM",
-        description="Required",
+        description="Patient Adverse Reaction Information",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     IAR: Optional[List[_IAR]] = Field(
         default=None,
         title="IAR",
-        description="Optional, repeating",
+        description="allergy reaction",
     )
 
     model_config = {"populate_by_name": True}

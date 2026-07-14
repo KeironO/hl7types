@@ -15,7 +15,7 @@ from .HD import HD
 
 
 class LA2(HL7Model):
-    """HL7 v2 LA2 data type.
+    """Location with address variation 2 (S2.A.39).
 
     Attributes
     ----------

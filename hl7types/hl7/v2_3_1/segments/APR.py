@@ -15,24 +15,24 @@ from ..datatypes.SCV import SCV
 
 
 class APR(HL7Model):
-    """HL7 v2 APR segment.
+    """APR - appointment preferences segment (S10.5.8).
 
     Attributes
     ----------
     apr_1 : list[SCV] | None
-        APR.1 (opt, rep) - Time Selection Criteria (SCV)
+        APR.1 (opt, rep) - Time Selection Criteria (SCV) S10.5.8.1 | 0294 - Time selection criteria parameter class codes
 
     apr_2 : list[SCV] | None
-        APR.2 (opt, rep) - Resource Selection Criteria (SCV)
+        APR.2 (opt, rep) - Resource Selection Criteria (SCV) S10.5.8.2 | 0294 - Time selection criteria parameter class codes
 
     apr_3 : list[SCV] | None
-        APR.3 (opt, rep) - Location Selection Criteria (SCV)
+        APR.3 (opt, rep) - Location Selection Criteria (SCV) S10.5.8.3 | 0294 - Time selection criteria parameter class codes
 
     apr_4 : str | None
-        APR.4 (opt) - Slot Spacing Criteria (NM)
+        APR.4 (opt) - Slot Spacing Criteria (NM) S10.5.8.4
 
     apr_5 : list[SCV] | None
-        APR.5 (opt, rep) - Filler Override Criteria (SCV)
+        APR.5 (opt, rep) - Filler Override Criteria (SCV) S10.5.8.5
     """
 
     apr_1: Optional[List[SCV]] = Field(

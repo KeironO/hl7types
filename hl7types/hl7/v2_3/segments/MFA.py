@@ -16,24 +16,24 @@ from ..datatypes.TS import TS
 
 
 class MFA(HL7Model):
-    """HL7 v2 MFA segment.
+    """Master file acknowledgement segment (S8.4.3).
 
     Attributes
     ----------
     mfa_1 : str
-        MFA.1 (req) - Record-Level Event Code (ID)
+        MFA.1 (req) - Record-Level Event Code (ID) S8.4.2 | 0180 - Record Level Event Code
 
     mfa_2 : str | None
-        MFA.2 (opt) - MFN Control ID (ST)
+        MFA.2 (opt) - MFN Control ID (ST) S8.4.2
 
     mfa_3 : TS | None
-        MFA.3 (opt) - Event Completion Date/Time (TS)
+        MFA.3 (opt) - Event Completion Date/Time (TS) S8.4.3.3
 
     mfa_4 : CE
-        MFA.4 (req) - Error Return Code and/or Text (CE)
+        MFA.4 (req) - Error Return Code and/or Text (CE) S8.4.3.4 | 0181 - MFN Record Level Error Return
 
     mfa_5 : list[CE]
-        MFA.5 (req, rep) - Primary Key Value (CE)
+        MFA.5 (req, rep) - Primary Key Value (CE) S8.4.2.4
     """
 
     mfa_1: str = Field(

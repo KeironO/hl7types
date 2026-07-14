@@ -28,48 +28,47 @@ _SQR_S25_SCHEDULE = SQR_S25_SCHEDULE
 
 
 class SQR_S25(HL7Model):
-    """HL7 v2 SQR_S25 message.
+    """SQM/SQR - Schedule query message and response (S10.5.3).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        QAK (QAK): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        QAK (QAK): Query Acknowledgment, required
         SCHEDULE (Optional[List[SQR_S25_SCHEDULE]]): optional
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     SCHEDULE: Optional[List[_SQR_S25_SCHEDULE]] = Field(
         default=None,
         title="SCHEDULE",
-        description="Optional, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

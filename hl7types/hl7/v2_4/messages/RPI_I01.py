@@ -30,55 +30,53 @@ _RPI_I01_PROVIDER = RPI_I01_PROVIDER
 
 
 class RPI_I01(HL7Model):
-    """HL7 v2 RPI_I01 message.
+    """RQI/RPI - Request for insurance information (S11).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
         PROVIDER (List[RPI_I01_PROVIDER]): required
-        PID (PID): required
-        NK1 (Optional[List[NK1]]): optional
+        PID (PID): Patient identification, required
+        NK1 (Optional[List[NK1]]): Next of kin / associated parties, optional
         GUARANTOR_INSURANCE (Optional[RPI_I01_GUARANTOR_INSURANCE]): optional
-        NTE (Optional[List[NTE]]): optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     PROVIDER: List[_RPI_I01_PROVIDER] = Field(
         min_length=1,
         title="PROVIDER",
-        description="Required, repeating",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin / associated parties",
     )
 
     GUARANTOR_INSURANCE: Optional[_RPI_I01_GUARANTOR_INSURANCE] = Field(
         default=None,
         title="GUARANTOR_INSURANCE",
-        description="Optional",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

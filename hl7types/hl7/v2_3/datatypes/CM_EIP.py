@@ -15,7 +15,7 @@ from .EI import EI
 
 
 class CM_EIP(HL7Model):
-    """HL7 v2 CM_EIP data type.
+    """Parent order.
 
     Attributes
     ----------

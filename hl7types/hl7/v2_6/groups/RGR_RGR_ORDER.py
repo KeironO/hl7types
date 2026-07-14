@@ -29,40 +29,39 @@ class RGR_RGR_ORDER(HL7Model):
     """HL7 v2 RGR_RGR.ORDER group.
 
     Attributes:
-        ORC (ORC): required
+        ORC (ORC): Common Order, required
         ENCODING (Optional[RGR_RGR_ENCODING]): optional
-        RXG (List[RXG]): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXG (List[RXG]): Pharmacy/Treatment Give, required
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="Common Order",
     )
 
     ENCODING: Optional[_RGR_RGR_ENCODING] = Field(
         default=None,
         title="ENCODING",
-        description="Optional",
     )
 
     RXG: List[_RXG] = Field(
         min_length=1,
         title="RXG",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Give",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     model_config = {"populate_by_name": True}

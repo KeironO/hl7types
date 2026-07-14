@@ -25,42 +25,42 @@ _SFT = SFT
 
 
 class INU_U05(HL7Model):
-    """HL7 v2 INU_U05 message.
+    """INU/ACK  - Automated equipment inventory update (S13.3.5).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        EQU (EQU): required
-        INV (List[INV]): required
-        ROL (Optional[ROL]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        EQU (EQU): Equipment Detail, required
+        INV (List[INV]): Inventory Detail, required
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     INV: List[_INV] = Field(
         min_length=1,
         title="INV",
-        description="Required, repeating",
+        description="Inventory Detail",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

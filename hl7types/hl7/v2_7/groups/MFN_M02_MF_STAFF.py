@@ -36,67 +36,67 @@ class MFN_M02_MF_STAFF(HL7Model):
     """HL7 v2 MFN_M02.MF_STAFF group.
 
     Attributes:
-        MFE (MFE): required
-        STF (STF): required
-        PRA (Optional[List[PRA]]): optional
-        ORG (Optional[List[ORG]]): optional
-        AFF (Optional[List[AFF]]): optional
-        LAN (Optional[List[LAN]]): optional
-        EDU (Optional[List[EDU]]): optional
-        CER (Optional[List[CER]]): optional
-        NTE (Optional[List[NTE]]): optional
+        MFE (MFE): Master File Entry, required
+        STF (STF): Staff Identification, required
+        PRA (Optional[List[PRA]]): Practitioner Detail, optional
+        ORG (Optional[List[ORG]]): Practitioner Organization Unit s, optional
+        AFF (Optional[List[AFF]]): Professional Affiliation, optional
+        LAN (Optional[List[LAN]]): Language Detail, optional
+        EDU (Optional[List[EDU]]): Educational Detail, optional
+        CER (Optional[List[CER]]): Certificate Detail, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[List[_PRA]] = Field(
         default=None,
         title="PRA",
-        description="Optional, repeating",
+        description="Practitioner Detail",
     )
 
     ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
-        description="Optional, repeating",
+        description="Practitioner Organization Unit s",
     )
 
     AFF: Optional[List[_AFF]] = Field(
         default=None,
         title="AFF",
-        description="Optional, repeating",
+        description="Professional Affiliation",
     )
 
     LAN: Optional[List[_LAN]] = Field(
         default=None,
         title="LAN",
-        description="Optional, repeating",
+        description="Language Detail",
     )
 
     EDU: Optional[List[_EDU]] = Field(
         default=None,
         title="EDU",
-        description="Optional, repeating",
+        description="Educational Detail",
     )
 
     CER: Optional[List[_CER]] = Field(
         default=None,
         title="CER",
-        description="Optional, repeating",
+        description="Certificate Detail",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

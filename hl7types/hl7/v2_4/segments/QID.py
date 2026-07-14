@@ -14,15 +14,15 @@ from ..datatypes.CE import CE
 
 
 class QID(HL7Model):
-    """HL7 v2 QID segment.
+    """Query Identification (S5.5.3).
 
     Attributes
     ----------
     qid_1 : str
-        QID.1 (req) - Query Tag (ST)
+        QID.1 (req) - Query Tag (ST) S5.10.5.8.1
 
     qid_2 : CE
-        QID.2 (req) - Message Query Name (CE)
+        QID.2 (req) - Message Query Name (CE) S5.5.3.2 | 0471 - Query name
     """
 
     qid_1: str = Field(

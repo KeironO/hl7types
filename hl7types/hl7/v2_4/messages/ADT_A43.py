@@ -22,28 +22,27 @@ _MSH = MSH
 
 
 class ADT_A43(HL7Model):
-    """HL7 v2 ADT_A43 message.
+    """ADT/ACK - Move patient information - patient identifier list (S3).
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
+        MSH (MSH): Message Header, required
+        EVN (EVN): Event Type, required
         PATIENT (List[ADT_A43_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PATIENT: List[_ADT_A43_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

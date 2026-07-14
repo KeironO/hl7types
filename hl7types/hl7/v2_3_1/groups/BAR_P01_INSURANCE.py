@@ -24,26 +24,28 @@ class BAR_P01_INSURANCE(HL7Model):
     """HL7 v2 BAR_P01.INSURANCE group.
 
     Attributes:
-        IN1 (IN1): required
-        IN2 (Optional[IN2]): optional
-        IN3 (Optional[List[IN3]]): optional
+        IN1 (IN1): IN1 - insurance segment, required
+        IN2 (Optional[IN2]): IN2 - insurance additional information segment, optional
+        IN3 (Optional[List[IN3]]): IN3 - insurance additional information, certification segment, optional
     """
 
     IN1: _IN1 = Field(
         title="IN1",
-        description="Required",
+        description="IN1 - insurance segment",
     )
 
     IN2: Optional[_IN2] = Field(
         default=None,
         title="IN2",
-        description="Optional",
+        description="IN2 - insurance additional information segment",
     )
 
     IN3: Optional[List[_IN3]] = Field(
         default=None,
         title="IN3",
-        description="Optional, repeating",
+        description=(
+            "IN3 - insurance additional information, certification segment"
+        ),
     )
 
     model_config = {"populate_by_name": True}

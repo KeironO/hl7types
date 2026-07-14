@@ -16,7 +16,7 @@ from .NR import NR
 
 
 class RFR(HL7Model):
-    """HL7 v2 RFR data type.
+    """Reference range (S2.A.62).
 
     Attributes
     ----------

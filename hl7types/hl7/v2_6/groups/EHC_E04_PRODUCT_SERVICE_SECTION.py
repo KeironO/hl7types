@@ -23,19 +23,18 @@ class EHC_E04_PRODUCT_SERVICE_SECTION(HL7Model):
     """HL7 v2 EHC_E04.PRODUCT_SERVICE_SECTION group.
 
     Attributes:
-        PSS (PSS): required
+        PSS (PSS): Product/Service Section, required
         PRODUCT_SERVICE_GROUP (Optional[List[EHC_E04_PRODUCT_SERVICE_GROUP]]): optional
     """
 
     PSS: _PSS = Field(
         title="PSS",
-        description="Required",
+        description="Product/Service Section",
     )
 
     PRODUCT_SERVICE_GROUP: Optional[List[_EHC_E04_PRODUCT_SERVICE_GROUP]] = Field(
         default=None,
         title="PRODUCT_SERVICE_GROUP",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

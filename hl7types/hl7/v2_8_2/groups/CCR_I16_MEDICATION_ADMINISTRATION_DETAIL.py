@@ -25,26 +25,25 @@ class CCR_I16_MEDICATION_ADMINISTRATION_DETAIL(HL7Model):
     """HL7 v2 CCR_I16.MEDICATION_ADMINISTRATION_DETAIL group.
 
     Attributes:
-        RXA (List[RXA]): required
-        RXR (RXR): required
+        RXA (List[RXA]): Pharmacy/Treatment Administration, required
+        RXR (RXR): Pharmacy/Treatment Route, required
         MEDICATION_ADMINISTRATION_OBSERVATION (Optional[List[CCR_I16_MEDICATION_ADMINISTRATION_OBSERVATION]]): optional
     """
 
     RXA: List[_RXA] = Field(
         min_length=1,
         title="RXA",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Administration",
     )
 
     RXR: _RXR = Field(
         title="RXR",
-        description="Required",
+        description="Pharmacy/Treatment Route",
     )
 
     MEDICATION_ADMINISTRATION_OBSERVATION: Optional[List[_CCR_I16_MEDICATION_ADMINISTRATION_OBSERVATION]] = Field(
         default=None,
         title="MEDICATION_ADMINISTRATION_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

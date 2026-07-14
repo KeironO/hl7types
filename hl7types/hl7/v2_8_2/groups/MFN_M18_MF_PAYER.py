@@ -23,19 +23,18 @@ class MFN_M18_MF_PAYER(HL7Model):
     """HL7 v2 MFN_M18.MF_PAYER group.
 
     Attributes:
-        MFE (MFE): required
+        MFE (MFE): Master File Entry, required
         PAYER_MF_ENTRY (List[MFN_M18_PAYER_MF_ENTRY]): required
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     PAYER_MF_ENTRY: List[_MFN_M18_PAYER_MF_ENTRY] = Field(
         min_length=1,
         title="PAYER_MF_ENTRY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

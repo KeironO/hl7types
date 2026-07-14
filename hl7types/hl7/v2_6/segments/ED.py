@@ -11,7 +11,7 @@ from hl7types.hl7 import HL7Model
 
 
 class ED(HL7Model):
-    """HL7 v2 ED segment."""
+    """Encapsulated Data (wrong segment) (S7.11.2)."""
 
     pass
 

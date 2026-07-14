@@ -17,72 +17,72 @@ from ..datatypes.XON import XON
 
 
 class PD1(HL7Model):
-    """HL7 v2 PD1 segment.
+    """Patient Additional Demographic (S3.4.11).
 
     Attributes
     ----------
     pd1_1 : list[CWE] | None
-        PD1.1 (opt, rep) - Living Dependency (CWE)
+        PD1.1 (opt, rep) - Living Dependency (CWE) S3.4.11.1 | 0223 - Living Dependency
 
     pd1_2 : CWE | None
-        PD1.2 (opt) - Living Arrangement (CWE)
+        PD1.2 (opt) - Living Arrangement (CWE) S3.4.11.2 | 0220 - Living Arrangement
 
     pd1_3 : list[XON] | None
-        PD1.3 (opt, rep) - Patient Primary Facility (XON)
+        PD1.3 (opt, rep) - Patient Primary Facility (XON) S3.4.11.3 | 0204 - Organizational Name Type
 
     pd1_5 : CWE | None
-        PD1.5 (opt) - Student Indicator (CWE)
+        PD1.5 (opt) - Student Indicator (CWE) S3.4.11.5 | 0231 - Student Status
 
     pd1_6 : CWE | None
-        PD1.6 (opt) - Handicap (CWE)
+        PD1.6 (opt) - Handicap (CWE) S3.4.11.6 | 0295 - Handicap
 
     pd1_7 : CWE | None
-        PD1.7 (opt) - Living Will Code (CWE)
+        PD1.7 (opt) - Living Will Code (CWE) S3.4.11.7 | 0315 - Living Will Code
 
     pd1_8 : CWE | None
-        PD1.8 (opt) - Organ Donor Code (CWE)
+        PD1.8 (opt) - Organ Donor Code (CWE) S3.4.11.8 | 0316 - Organ Donor Code
 
     pd1_9 : str | None
-        PD1.9 (opt) - Separate Bill (ID)
+        PD1.9 (opt) - Separate Bill (ID) S3.4.11.9 | 0136 - Yes/no Indicator
 
     pd1_10 : list[CX] | None
-        PD1.10 (opt, rep) - Duplicate Patient (CX)
+        PD1.10 (opt, rep) - Duplicate Patient (CX) S3.4.11.10
 
     pd1_11 : CWE | None
-        PD1.11 (opt) - Publicity Code (CWE)
+        PD1.11 (opt) - Publicity Code (CWE) S3.4.11.11 | 0215 - Publicity Code
 
     pd1_12 : str | None
-        PD1.12 (opt) - Protection Indicator (ID)
+        PD1.12 (opt) - Protection Indicator (ID) S3.4.11.12 | 0136 - Yes/no Indicator
 
     pd1_13 : str | None
-        PD1.13 (opt) - Protection Indicator Effective Date (DT)
+        PD1.13 (opt) - Protection Indicator Effective Date (DT) S3.4.11.13
 
     pd1_14 : list[XON] | None
-        PD1.14 (opt, rep) - Place of Worship (XON)
+        PD1.14 (opt, rep) - Place of Worship (XON) S3.4.11.14
 
     pd1_15 : list[CWE] | None
-        PD1.15 (opt, rep) - Advance Directive Code (CWE)
+        PD1.15 (opt, rep) - Advance Directive Code (CWE) S3.4.11.15 | 0435 - Advance Directive Code
 
     pd1_16 : CWE | None
-        PD1.16 (opt) - Immunization Registry Status (CWE)
+        PD1.16 (opt) - Immunization Registry Status (CWE) S3.4.11.16 | 0441 - Immunization Registry Status
 
     pd1_17 : str | None
-        PD1.17 (opt) - Immunization Registry Status Effective Date (DT)
+        PD1.17 (opt) - Immunization Registry Status Effective Date (DT) S3.4.11.17
 
     pd1_18 : str | None
-        PD1.18 (opt) - Publicity Code Effective Date (DT)
+        PD1.18 (opt) - Publicity Code Effective Date (DT) S3.4.11.18
 
     pd1_19 : CWE | None
-        PD1.19 (opt) - Military Branch (CWE)
+        PD1.19 (opt) - Military Branch (CWE) S3.4.11.19 | 0140 - Military Service
 
     pd1_20 : CWE | None
-        PD1.20 (opt) - Military Rank/Grade (CWE)
+        PD1.20 (opt) - Military Rank/Grade (CWE) S3.4.11.20 | 0141 - Military Rank/Grade
 
     pd1_21 : CWE | None
-        PD1.21 (opt) - Military Status (CWE)
+        PD1.21 (opt) - Military Status (CWE) S3.4.11.21 | 0142 - Military Status
 
     pd1_22 : str | None
-        PD1.22 (opt) - Advance Directive Last Verified Date (DT)
+        PD1.22 (opt) - Advance Directive Last Verified Date (DT) S3.4.11.22
     """
 
     pd1_1: Optional[List[CWE]] = Field(

@@ -24,168 +24,168 @@ from ..datatypes.XTN import XTN
 
 
 class IN1(HL7Model):
-    """HL7 v2 IN1 segment.
+    """Insurance (S6.5.6).
 
     Attributes
     ----------
     in1_1 : str
-        IN1.1 (req) - Set ID - IN1 (SI)
+        IN1.1 (req) - Set ID - IN1 (SI) S6.5.6.1
 
     in1_2 : CE
-        IN1.2 (req) - Insurance Plan ID (CE)
+        IN1.2 (req) - Insurance Plan ID (CE) S6.5.1.14 | 0072 - Insurance Plan ID
 
     in1_3 : list[CX]
-        IN1.3 (req, rep) - Insurance Company ID (CX)
+        IN1.3 (req, rep) - Insurance Company ID (CX) S6.5.6.3
 
     in1_4 : list[XON] | None
-        IN1.4 (opt, rep) - Insurance Company Name (XON)
+        IN1.4 (opt, rep) - Insurance Company Name (XON) S6.5.6.4
 
     in1_5 : list[XAD] | None
-        IN1.5 (opt, rep) - Insurance Company Address (XAD)
+        IN1.5 (opt, rep) - Insurance Company Address (XAD) S6.5.6.5
 
     in1_6 : list[XPN] | None
-        IN1.6 (opt, rep) - Insurance Co Contact Person (XPN)
+        IN1.6 (opt, rep) - Insurance Co Contact Person (XPN) S6.5.6.6
 
     in1_7 : list[XTN] | None
-        IN1.7 (opt, rep) - Insurance Co Phone Number (XTN)
+        IN1.7 (opt, rep) - Insurance Co Phone Number (XTN) S6.5.6.7
 
     in1_8 : str | None
-        IN1.8 (opt) - Group Number (ST)
+        IN1.8 (opt) - Group Number (ST) S6.5.6.8
 
     in1_9 : list[XON] | None
-        IN1.9 (opt, rep) - Group Name (XON)
+        IN1.9 (opt, rep) - Group Name (XON) S6.5.6.9
 
     in1_10 : list[CX] | None
-        IN1.10 (opt, rep) - Insured's Group Emp ID (CX)
+        IN1.10 (opt, rep) - Insured's Group Emp ID (CX) S6.5.6.10
 
     in1_11 : list[XON] | None
-        IN1.11 (opt, rep) - Insured's Group Emp Name (XON)
+        IN1.11 (opt, rep) - Insured's Group Emp Name (XON) S6.5.6.11
 
     in1_12 : str | None
-        IN1.12 (opt) - Plan Effective Date (DT)
+        IN1.12 (opt) - Plan Effective Date (DT) S6.5.6.12
 
     in1_13 : str | None
-        IN1.13 (opt) - Plan Expiration Date (DT)
+        IN1.13 (opt) - Plan Expiration Date (DT) S6.5.6.13
 
     in1_14 : AUI | None
-        IN1.14 (opt) - Authorization Information (AUI)
+        IN1.14 (opt) - Authorization Information (AUI) S6.5.6.14
 
     in1_15 : str | None
-        IN1.15 (opt) - Plan Type (IS)
+        IN1.15 (opt) - Plan Type (IS) S6.5.6.15 | 0086 - Plan ID
 
     in1_16 : list[XPN] | None
-        IN1.16 (opt, rep) - Name Of Insured (XPN)
+        IN1.16 (opt, rep) - Name Of Insured (XPN) S6.5.6.16
 
     in1_17 : CE | None
-        IN1.17 (opt) - Insured's Relationship To Patient (CE)
+        IN1.17 (opt) - Insured's Relationship To Patient (CE) S6.5.6.17 | 0063 - Relationship
 
     in1_18 : TS | None
-        IN1.18 (opt) - Insured's Date Of Birth (TS)
+        IN1.18 (opt) - Insured's Date Of Birth (TS) S6.5.6.18
 
     in1_19 : list[XAD] | None
-        IN1.19 (opt, rep) - Insured's Address (XAD)
+        IN1.19 (opt, rep) - Insured's Address (XAD) S6.5.6.19
 
     in1_20 : str | None
-        IN1.20 (opt) - Assignment Of Benefits (IS)
+        IN1.20 (opt) - Assignment Of Benefits (IS) S6.5.6.20 | 0135 - Assignment of Benefits
 
     in1_21 : str | None
-        IN1.21 (opt) - Coordination Of Benefits (IS)
+        IN1.21 (opt) - Coordination Of Benefits (IS) S6.5.6.21 | 0173 - Coordination of Benefits
 
     in1_22 : str | None
-        IN1.22 (opt) - Coord Of Ben. Priority (ST)
+        IN1.22 (opt) - Coord Of Ben. Priority (ST) S6.5.6.22
 
     in1_23 : str | None
-        IN1.23 (opt) - Notice Of Admission Flag (ID)
+        IN1.23 (opt) - Notice Of Admission Flag (ID) S6.5.6.23 | 0136 - Yes/no indicator
 
     in1_24 : str | None
-        IN1.24 (opt) - Notice Of Admission Date (DT)
+        IN1.24 (opt) - Notice Of Admission Date (DT) S6.5.6.24
 
     in1_25 : str | None
-        IN1.25 (opt) - Report Of Eligibility Flag (ID)
+        IN1.25 (opt) - Report Of Eligibility Flag (ID) S6.5.6.25 | 0136 - Yes/no indicator
 
     in1_26 : str | None
-        IN1.26 (opt) - Report Of Eligibility Date (DT)
+        IN1.26 (opt) - Report Of Eligibility Date (DT) S6.5.6.26
 
     in1_27 : str | None
-        IN1.27 (opt) - Release Information Code (IS)
+        IN1.27 (opt) - Release Information Code (IS) S6.5.6.27 | 0093 - Release Information
 
     in1_28 : str | None
-        IN1.28 (opt) - Pre-Admit Cert (PAC) (ST)
+        IN1.28 (opt) - Pre-Admit Cert (PAC) (ST) S6.5.6.28
 
     in1_29 : TS | None
-        IN1.29 (opt) - Verification Date/Time (TS)
+        IN1.29 (opt) - Verification Date/Time (TS) S6.5.6.29
 
     in1_30 : list[XCN] | None
-        IN1.30 (opt, rep) - Verification By (XCN)
+        IN1.30 (opt, rep) - Verification By (XCN) S6.5.6.30
 
     in1_31 : str | None
-        IN1.31 (opt) - Type Of Agreement Code (IS)
+        IN1.31 (opt) - Type Of Agreement Code (IS) S6.5.6.31 | 0098 - Type of Agreement
 
     in1_32 : str | None
-        IN1.32 (opt) - Billing Status (IS)
+        IN1.32 (opt) - Billing Status (IS) S6.5.6.32 | 0022 - Billing Status
 
     in1_33 : str | None
-        IN1.33 (opt) - Lifetime Reserve Days (NM)
+        IN1.33 (opt) - Lifetime Reserve Days (NM) S6.5.6.33
 
     in1_34 : str | None
-        IN1.34 (opt) - Delay Before L.R. Day (NM)
+        IN1.34 (opt) - Delay Before L.R. Day (NM) S6.5.6.34
 
     in1_35 : str | None
-        IN1.35 (opt) - Company Plan Code (IS)
+        IN1.35 (opt) - Company Plan Code (IS) S6.5.6.35 | 0042 - Company Plan Code
 
     in1_36 : str | None
-        IN1.36 (opt) - Policy Number (ST)
+        IN1.36 (opt) - Policy Number (ST) S6.5.6.36
 
     in1_37 : CP | None
-        IN1.37 (opt) - Policy Deductible (CP)
+        IN1.37 (opt) - Policy Deductible (CP) S6.5.6.37
 
     in1_38 : CP | None
-        IN1.38 (opt) - Policy Limit - Amount (CP)
+        IN1.38 (opt) - Policy Limit - Amount (CP) S6.5.6.38
 
     in1_39 : str | None
-        IN1.39 (opt) - Policy Limit - Days (NM)
+        IN1.39 (opt) - Policy Limit - Days (NM) S6.5.6.39
 
     in1_40 : CP | None
-        IN1.40 (opt) - Room Rate - Semi-Private (CP)
+        IN1.40 (opt) - Room Rate - Semi-Private (CP) S6.5.6.40
 
     in1_41 : CP | None
-        IN1.41 (opt) - Room Rate - Private (CP)
+        IN1.41 (opt) - Room Rate - Private (CP) S6.5.6.41
 
     in1_42 : CE | None
-        IN1.42 (opt) - Insured's Employment Status (CE)
+        IN1.42 (opt) - Insured's Employment Status (CE) S6.5.6.42 | 0066 - Employment Status
 
     in1_43 : str | None
-        IN1.43 (opt) - Insured's Administrative Sex (IS)
+        IN1.43 (opt) - Insured's Administrative Sex (IS) S6.5.6.43 | 0001 - Administrative Sex
 
     in1_44 : list[XAD] | None
-        IN1.44 (opt, rep) - Insured's Employer's Address (XAD)
+        IN1.44 (opt, rep) - Insured's Employer's Address (XAD) S6.5.6.44
 
     in1_45 : str | None
-        IN1.45 (opt) - Verification Status (ST)
+        IN1.45 (opt) - Verification Status (ST) S6.5.6.45
 
     in1_46 : str | None
-        IN1.46 (opt) - Prior Insurance Plan ID (IS)
+        IN1.46 (opt) - Prior Insurance Plan ID (IS) S6.5.6.46 | 0072 - Insurance Plan ID
 
     in1_47 : str | None
-        IN1.47 (opt) - Coverage Type (IS)
+        IN1.47 (opt) - Coverage Type (IS) S6.5.6.47 | 0309 - Coverage Type
 
     in1_48 : str | None
-        IN1.48 (opt) - Handicap (IS)
+        IN1.48 (opt) - Handicap (IS) S3.4.5.36 | 0295 - Handicap
 
     in1_49 : list[CX] | None
-        IN1.49 (opt, rep) - Insured's ID Number (CX)
+        IN1.49 (opt, rep) - Insured's ID Number (CX) S6.5.6.49
 
     in1_50 : str | None
-        IN1.50 (opt) - Signature Code (IS)
+        IN1.50 (opt) - Signature Code (IS) S6.5.6.50 | 0535 - Signature Code
 
     in1_51 : str | None
-        IN1.51 (opt) - Signature Code Date (DT)
+        IN1.51 (opt) - Signature Code Date (DT) S6.5.6.51
 
     in1_52 : str | None
-        IN1.52 (opt) - Insured_s Birth Place (ST)
+        IN1.52 (opt) - Insured_s Birth Place (ST) S6.5.6.52
 
     in1_53 : str | None
-        IN1.53 (opt) - VIP Indicator (IS)
+        IN1.53 (opt) - VIP Indicator (IS) S6.5.6.53 | 0099 - VIP Indicator
     """
 
     in1_1: str = Field(

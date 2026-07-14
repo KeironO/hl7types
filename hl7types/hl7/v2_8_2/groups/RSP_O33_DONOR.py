@@ -22,19 +22,19 @@ class RSP_O33_DONOR(HL7Model):
     """HL7 v2 RSP_O33.DONOR group.
 
     Attributes:
-        PID (PID): required
-        ARV (Optional[List[ARV]]): optional
+        PID (PID): Patient Identification, required
+        ARV (Optional[List[ARV]]): Access Restriction, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     model_config = {"populate_by_name": True}

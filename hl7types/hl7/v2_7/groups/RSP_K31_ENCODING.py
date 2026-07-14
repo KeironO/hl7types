@@ -29,40 +29,39 @@ class RSP_K31_ENCODING(HL7Model):
     """HL7 v2 RSP_K31.ENCODING group.
 
     Attributes:
-        RXE (RXE): required
-        NTE (Optional[List[NTE]]): optional
+        RXE (RXE): Pharmacy/Treatment Encoded Order, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         TIMING_ENCODED (List[RSP_K31_TIMING_ENCODED]): required
-        RXR (List[RXR]): required
-        RXC (Optional[List[RXC]]): optional
+        RXR (List[RXR]): Pharmacy/Treatment Route, required
+        RXC (Optional[List[RXC]]): Pharmacy/Treatment Component Order, optional
     """
 
     RXE: _RXE = Field(
         title="RXE",
-        description="Required",
+        description="Pharmacy/Treatment Encoded Order",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     TIMING_ENCODED: List[_RSP_K31_TIMING_ENCODED] = Field(
         min_length=1,
         title="TIMING_ENCODED",
-        description="Required, repeating",
     )
 
     RXR: List[_RXR] = Field(
         min_length=1,
         title="RXR",
-        description="Required, repeating",
+        description="Pharmacy/Treatment Route",
     )
 
     RXC: Optional[List[_RXC]] = Field(
         default=None,
         title="RXC",
-        description="Optional, repeating",
+        description="Pharmacy/Treatment Component Order",
     )
 
     model_config = {"populate_by_name": True}

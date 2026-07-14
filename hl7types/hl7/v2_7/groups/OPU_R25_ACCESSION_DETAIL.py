@@ -25,7 +25,7 @@ class OPU_R25_ACCESSION_DETAIL(HL7Model):
     """HL7 v2 OPU_R25.ACCESSION_DETAIL group.
 
     Attributes:
-        NK1 (List[NK1]): required
+        NK1 (List[NK1]): Next of Kin / Associated Parties, required
         PATIENT (Optional[OPU_R25_PATIENT]): optional
         SPECIMEN (List[OPU_R25_SPECIMEN]): required
     """
@@ -33,19 +33,17 @@ class OPU_R25_ACCESSION_DETAIL(HL7Model):
     NK1: List[_NK1] = Field(
         min_length=1,
         title="NK1",
-        description="Required, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     PATIENT: Optional[_OPU_R25_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     SPECIMEN: List[_OPU_R25_SPECIMEN] = Field(
         min_length=1,
         title="SPECIMEN",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

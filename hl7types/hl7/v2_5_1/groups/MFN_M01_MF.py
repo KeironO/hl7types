@@ -20,13 +20,13 @@ class MFN_M01_MF(HL7Model):
     """HL7 v2 MFN_M01.MF group.
 
     Attributes:
-        MFE (MFE): required
+        MFE (MFE): Master File Entry, required
         anyhl7segment (Optional[Any]): optional
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     anyhl7segment: Optional[Any] = None

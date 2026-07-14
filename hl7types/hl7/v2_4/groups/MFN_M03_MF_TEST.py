@@ -22,19 +22,19 @@ class MFN_M03_MF_TEST(HL7Model):
     """HL7 v2 MFN_M03.MF_TEST group.
 
     Attributes:
-        MFE (MFE): required
-        OM1 (OM1): required
+        MFE (MFE): Master File Entry, required
+        OM1 (OM1): General Segment, required
         anyhl7segment (Any): required
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     OM1: _OM1 = Field(
         title="OM1",
-        description="Required",
+        description="General Segment",
     )
 
     anyhl7segment: Any

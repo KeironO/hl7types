@@ -23,19 +23,18 @@ class ORL_O44_SPECIMEN_SHIPMENT(HL7Model):
     """HL7 v2 ORL_O44.SPECIMEN_SHIPMENT group.
 
     Attributes:
-        SHP (SHP): required
+        SHP (SHP): Shipment, required
         PACKAGE (List[ORL_O44_PACKAGE]): required
     """
 
     SHP: _SHP = Field(
         title="SHP",
-        description="Required",
+        description="Shipment",
     )
 
     PACKAGE: List[_ORL_O44_PACKAGE] = Field(
         min_length=1,
         title="PACKAGE",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

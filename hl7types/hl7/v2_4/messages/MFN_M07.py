@@ -22,28 +22,27 @@ _MSH = MSH
 
 
 class MFN_M07(HL7Model):
-    """HL7 v2 MFN_M07 message.
+    """MFN/MFK - Clinical study without phases but with schedules master file (S8).
 
     Attributes:
-        MSH (MSH): required
-        MFI (MFI): required
+        MSH (MSH): Message Header, required
+        MFI (MFI): Master File Identification, required
         MF_CLIN_STUDY_SCHED (List[MFN_M07_MF_CLIN_STUDY_SCHED]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MFI: _MFI = Field(
         title="MFI",
-        description="Required",
+        description="Master File Identification",
     )
 
     MF_CLIN_STUDY_SCHED: List[_MFN_M07_MF_CLIN_STUDY_SCHED] = Field(
         min_length=1,
         title="MF_CLIN_STUDY_SCHED",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

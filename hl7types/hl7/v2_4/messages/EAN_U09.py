@@ -24,35 +24,34 @@ _ROL = ROL
 
 
 class EAN_U09(HL7Model):
-    """HL7 v2 EAN_U09 message.
+    """EAN/ACK - Automated equipment notification (S13).
 
     Attributes:
-        MSH (MSH): required
-        EQU (EQU): required
+        MSH (MSH): Message Header, required
+        EQU (EQU): Equipment Detail, required
         NOTIFICATION (List[EAN_U09_NOTIFICATION]): required
-        ROL (Optional[ROL]): optional
+        ROL (Optional[ROL]): Role, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     EQU: _EQU = Field(
         title="EQU",
-        description="Required",
+        description="Equipment Detail",
     )
 
     NOTIFICATION: List[_EAN_U09_NOTIFICATION] = Field(
         min_length=1,
         title="NOTIFICATION",
-        description="Required, repeating",
     )
 
     ROL: Optional[_ROL] = Field(
         default=None,
         title="ROL",
-        description="Optional",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

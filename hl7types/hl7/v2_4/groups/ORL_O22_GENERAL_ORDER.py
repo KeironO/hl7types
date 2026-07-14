@@ -29,13 +29,11 @@ class ORL_O22_GENERAL_ORDER(HL7Model):
     CONTAINER: Optional[_ORL_O22_CONTAINER] = Field(
         default=None,
         title="CONTAINER",
-        description="Optional",
     )
 
     ORDER: Optional[List[_ORL_O22_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

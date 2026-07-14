@@ -19,108 +19,108 @@ from ..datatypes.XPN import XPN
 
 
 class DRG(HL7Model):
-    """HL7 v2 DRG segment.
+    """Diagnosis Related Group (S6.5.3).
 
     Attributes
     ----------
     drg_1 : CNE | None
-        DRG.1 (opt) - Diagnostic Related Group (CNE)
+        DRG.1 (opt) - Diagnostic Related Group (CNE) S6.5.3.1 | 0055 - Diagnosis Related Group
 
     drg_2 : str | None
-        DRG.2 (opt) - DRG Assigned Date/Time (DTM)
+        DRG.2 (opt) - DRG Assigned Date/Time (DTM) S6.5.3.2
 
     drg_3 : str | None
-        DRG.3 (opt) - DRG Approval Indicator (ID)
+        DRG.3 (opt) - DRG Approval Indicator (ID) S6.5.3.3 | 0136 - Yes/no Indicator
 
     drg_4 : CWE | None
-        DRG.4 (opt) - DRG Grouper Review Code (CWE)
+        DRG.4 (opt) - DRG Grouper Review Code (CWE) S6.5.3.4 | 0056 - DRG Grouper Review Code
 
     drg_5 : CWE | None
-        DRG.5 (opt) - Outlier Type (CWE)
+        DRG.5 (opt) - Outlier Type (CWE) S6.5.3.5 | 0083 - Outlier Type
 
     drg_6 : str | None
-        DRG.6 (opt) - Outlier Days (NM)
+        DRG.6 (opt) - Outlier Days (NM) S6.5.2.12
 
     drg_7 : CP | None
-        DRG.7 (opt) - Outlier Cost (CP)
+        DRG.7 (opt) - Outlier Cost (CP) S6.5.2.13
 
     drg_8 : CWE | None
-        DRG.8 (opt) - DRG Payor (CWE)
+        DRG.8 (opt) - DRG Payor (CWE) S6.5.3.8 | 0229 - DRG Payor
 
     drg_9 : CP | None
-        DRG.9 (opt) - Outlier Reimbursement (CP)
+        DRG.9 (opt) - Outlier Reimbursement (CP) S6.5.3.9
 
     drg_10 : str | None
-        DRG.10 (opt) - Confidential Indicator (ID)
+        DRG.10 (opt) - Confidential Indicator (ID) S6.5.2.18 | 0136 - Yes/no Indicator
 
     drg_11 : CWE | None
-        DRG.11 (opt) - DRG Transfer Type (CWE)
+        DRG.11 (opt) - DRG Transfer Type (CWE) S6.5.3.11 | 0415 - DRG Transfer Type
 
     drg_12 : XPN | None
-        DRG.12 (opt) - Name of Coder (XPN)
+        DRG.12 (opt) - Name of Coder (XPN) S6.5.3.12
 
     drg_13 : CWE | None
-        DRG.13 (opt) - Grouper Status (CWE)
+        DRG.13 (opt) - Grouper Status (CWE) S6.5.3.13 | 0734 - Grouper Status
 
     drg_14 : CWE | None
-        DRG.14 (opt) - PCCL Value Code (CWE)
+        DRG.14 (opt) - PCCL Value Code (CWE) S6.5.3.14 | 0728 - CCL Value
 
     drg_15 : str | None
-        DRG.15 (opt) - Effective Weight (NM)
+        DRG.15 (opt) - Effective Weight (NM) S6.5.3.15
 
     drg_16 : MO | None
-        DRG.16 (opt) - Monetary Amount (MO)
+        DRG.16 (opt) - Monetary Amount (MO) S6.5.3.16
 
     drg_17 : CWE | None
-        DRG.17 (opt) - Status Patient (CWE)
+        DRG.17 (opt) - Status Patient (CWE) S6.5.3.17 | 0739 - Status Patient
 
     drg_18 : str | None
-        DRG.18 (opt) - Grouper Software Name (ST)
+        DRG.18 (opt) - Grouper Software Name (ST) S6.5.3.18
 
     drg_19 : str | None
-        DRG.19 (opt) - Grouper Software Version (ST)
+        DRG.19 (opt) - Grouper Software Version (ST) S6.5.3.19
 
     drg_20 : CWE | None
-        DRG.20 (opt) - Status Financial Calculation (CWE)
+        DRG.20 (opt) - Status Financial Calculation (CWE) S6.5.3.20 | 0742 - DRG Status Financial Calculation
 
     drg_21 : MO | None
-        DRG.21 (opt) - Relative Discount/Surcharge (MO)
+        DRG.21 (opt) - Relative Discount/Surcharge (MO) S6.5.3.21
 
     drg_22 : MO | None
-        DRG.22 (opt) - Basic Charge (MO)
+        DRG.22 (opt) - Basic Charge (MO) S6.5.3.22
 
     drg_23 : MO | None
-        DRG.23 (opt) - Total Charge (MO)
+        DRG.23 (opt) - Total Charge (MO) S6.5.3.23
 
     drg_24 : MO | None
-        DRG.24 (opt) - Discount/Surcharge (MO)
+        DRG.24 (opt) - Discount/Surcharge (MO) S6.5.3.24
 
     drg_25 : str | None
-        DRG.25 (opt) - Calculated Days (NM)
+        DRG.25 (opt) - Calculated Days (NM) S6.5.3.25
 
     drg_26 : CWE | None
-        DRG.26 (opt) - Status Gender (CWE)
+        DRG.26 (opt) - Status Gender (CWE) S6.5.3.26 | 0749 - DRG Grouping Status
 
     drg_27 : CWE | None
-        DRG.27 (opt) - Status Age (CWE)
+        DRG.27 (opt) - Status Age (CWE) S6.5.3.27 | 0749 - DRG Grouping Status
 
     drg_28 : CWE | None
-        DRG.28 (opt) - Status Length of Stay (CWE)
+        DRG.28 (opt) - Status Length of Stay (CWE) S6.5.3.28 | 0749 - DRG Grouping Status
 
     drg_29 : CWE | None
-        DRG.29 (opt) - Status Same Day Flag (CWE)
+        DRG.29 (opt) - Status Same Day Flag (CWE) S6.5.3.29 | 0749 - DRG Grouping Status
 
     drg_30 : CWE | None
-        DRG.30 (opt) - Status Separation Mode (CWE)
+        DRG.30 (opt) - Status Separation Mode (CWE) S6.5.3.30 | 0749 - DRG Grouping Status
 
     drg_31 : CWE | None
-        DRG.31 (opt) - Status Weight at Birth (CWE)
+        DRG.31 (opt) - Status Weight at Birth (CWE) S6.5.3.31 | 0755 - Status Weight At Birth
 
     drg_32 : CWE | None
-        DRG.32 (opt) - Status Respiration Minutes (CWE)
+        DRG.32 (opt) - Status Respiration Minutes (CWE) S6.5.3.32 | 0757 - Status Respiration Minutes
 
     drg_33 : CWE | None
-        DRG.33 (opt) - Status Admission (CWE)
+        DRG.33 (opt) - Status Admission (CWE) S6.5.3.33 | 0759 - Status Admission
     """
 
     drg_1: Optional[CNE] = Field(

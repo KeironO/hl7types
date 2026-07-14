@@ -18,27 +18,27 @@ from ..datatypes.XON import XON
 
 
 class LRL(HL7Model):
-    """HL7 v2 LRL segment.
+    """Location Relationship (S8.9.4).
 
     Attributes
     ----------
     lrl_1 : PL
-        LRL.1 (req) - Primary Key Value - LRL (PL)
+        LRL.1 (req) - Primary Key Value - LRL (PL) S8.9.4.1
 
     lrl_2 : str | None
-        LRL.2 (opt) - Segment Action Code (ID)
+        LRL.2 (opt) - Segment Action Code (ID) S10.6.7.2 | 0206 - Segment action code
 
     lrl_3 : EI | None
-        LRL.3 (opt) - Segment Unique Key (EI)
+        LRL.3 (opt) - Segment Unique Key (EI) S8.9.4.3
 
     lrl_4 : CE
-        LRL.4 (req) - Location Relationship ID (CE)
+        LRL.4 (req) - Location Relationship ID (CE) S8.9.4.4 | 0325 - Location relationship ID
 
     lrl_5 : list[XON] | None
-        LRL.5 (opt, rep) - Organizational Location Relationship Value (XON)
+        LRL.5 (opt, rep) - Organizational Location Relationship Value (XON) S8.9.4.5
 
     lrl_6 : PL | None
-        LRL.6 (opt) - Patient Location Relationship Value (PL)
+        LRL.6 (opt) - Patient Location Relationship Value (PL) S8.9.4.6
     """
 
     lrl_1: PL = Field(

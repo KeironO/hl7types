@@ -25,26 +25,25 @@ class RGV_O15_ORDER_DETAIL(HL7Model):
     """HL7 v2 RGV_O15.ORDER_DETAIL group.
 
     Attributes:
-        RXO (RXO): required
-        PRT (Optional[List[PRT]]): optional
+        RXO (RXO): Pharmacy/Treatment Order, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         ORDER_DETAIL_SUPPLEMENT (Optional[RGV_O15_ORDER_DETAIL_SUPPLEMENT]): optional
     """
 
     RXO: _RXO = Field(
         title="RXO",
-        description="Required",
+        description="Pharmacy/Treatment Order",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ORDER_DETAIL_SUPPLEMENT: Optional[_RGV_O15_ORDER_DETAIL_SUPPLEMENT] = Field(
         default=None,
         title="ORDER_DETAIL_SUPPLEMENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

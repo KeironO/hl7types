@@ -28,49 +28,47 @@ _SRM_S01_RESOURCES = SRM_S01_RESOURCES
 
 
 class SRM_S01(HL7Model):
-    """HL7 v2 SRM_S01 message.
+    """SRM/SRR - Request new appointment booking.
 
     Attributes:
-        MSH (MSH): required
-        ARQ (ARQ): required
-        APR (Optional[APR]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): MSH - message header segment, required
+        ARQ (ARQ): ARQ - appointment request segment, required
+        APR (Optional[APR]): APR - appointment preferences segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         PATIENT (Optional[List[SRM_S01_PATIENT]]): optional
         RESOURCES (List[SRM_S01_RESOURCES]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     ARQ: _ARQ = Field(
         title="ARQ",
-        description="Required",
+        description="ARQ - appointment request segment",
     )
 
     APR: Optional[_APR] = Field(
         default=None,
         title="APR",
-        description="Optional",
+        description="APR - appointment preferences segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     PATIENT: Optional[List[_SRM_S01_PATIENT]] = Field(
         default=None,
         title="PATIENT",
-        description="Optional, repeating",
     )
 
     RESOURCES: List[_SRM_S01_RESOURCES] = Field(
         min_length=1,
         title="RESOURCES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -16,36 +16,36 @@ from ..datatypes.HD import HD
 
 
 class NSC(HL7Model):
-    """HL7 v2 NSC segment.
+    """Application Status Change (S14.4.2).
 
     Attributes
     ----------
     nsc_1 : CWE
-        NSC.1 (req) - Application Change Type (CWE)
+        NSC.1 (req) - Application Change Type (CWE) S14.4.2.1 | 0409 - Application Change Type
 
     nsc_2 : str | None
-        NSC.2 (opt) - Current CPU (ST)
+        NSC.2 (opt) - Current CPU (ST) S14.4.2.2
 
     nsc_3 : str | None
-        NSC.3 (opt) - Current Fileserver (ST)
+        NSC.3 (opt) - Current Fileserver (ST) S14.4.2.3
 
     nsc_4 : HD | None
-        NSC.4 (opt) - Current Application (HD)
+        NSC.4 (opt) - Current Application (HD) S14.4.2.4 | 0361 - Application
 
     nsc_5 : HD | None
-        NSC.5 (opt) - Current Facility (HD)
+        NSC.5 (opt) - Current Facility (HD) S14.4.2.5 | 0362 - Facility
 
     nsc_6 : str | None
-        NSC.6 (opt) - New CPU (ST)
+        NSC.6 (opt) - New CPU (ST) S14.4.2.6
 
     nsc_7 : str | None
-        NSC.7 (opt) - New Fileserver (ST)
+        NSC.7 (opt) - New Fileserver (ST) S14.4.2.7
 
     nsc_8 : HD | None
-        NSC.8 (opt) - New Application (HD)
+        NSC.8 (opt) - New Application (HD) S14.4.2.8 | 0361 - Application
 
     nsc_9 : HD | None
-        NSC.9 (opt) - New Facility (HD)
+        NSC.9 (opt) - New Facility (HD) S14.4.2.9 | 0362 - Facility
     """
 
     nsc_1: CWE = Field(

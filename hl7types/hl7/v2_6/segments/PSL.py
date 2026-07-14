@@ -21,153 +21,153 @@ from ..datatypes.XCN import XCN
 
 
 class PSL(HL7Model):
-    """HL7 v2 PSL segment.
+    """Product/Service Line Item (S16.4.6).
 
     Attributes
     ----------
     psl_1 : EI
-        PSL.1 (req) - Provider Product/Service Line Item Number (EI)
+        PSL.1 (req) - Provider Product/Service Line Item Number (EI) S16.4.6.1
 
     psl_2 : EI | None
-        PSL.2 (opt) - Payer Product/Service Line Item Number (EI)
+        PSL.2 (opt) - Payer Product/Service Line Item Number (EI) S16.4.6.2
 
     psl_3 : str
-        PSL.3 (req) - Product/Service Line Item Sequence Number (SI)
+        PSL.3 (req) - Product/Service Line Item Sequence Number (SI) S16.4.6.3
 
     psl_4 : EI | None
-        PSL.4 (opt) - Provider Tracking ID (EI)
+        PSL.4 (opt) - Provider Tracking ID (EI) S16.4.6.4
 
     psl_5 : EI | None
-        PSL.5 (opt) - Payer Tracking ID (EI)
+        PSL.5 (opt) - Payer Tracking ID (EI) S16.4.6.5
 
     psl_6 : CWE
-        PSL.6 (req) - Product/Service Line Item Status (CWE)
+        PSL.6 (req) - Product/Service Line Item Status (CWE) S16.4.6.6 | 0559 - Product/Service Status
 
     psl_7 : CWE
-        PSL.7 (req) - Product/Service Code (CWE)
+        PSL.7 (req) - Product/Service Code (CWE) S16.4.6.7 | 0879 - Product/Service Code
 
     psl_8 : list[CWE] | None
-        PSL.8 (opt, rep) - Product/Service Code Modifier (CWE)
+        PSL.8 (opt, rep) - Product/Service Code Modifier (CWE) S16.4.6.8 | 0880 - Product/Service Code Modifier
 
     psl_9 : str | None
-        PSL.9 (opt) - Product/Service Code Description (ST)
+        PSL.9 (opt) - Product/Service Code Description (ST) S16.4.6.9
 
     psl_10 : str | None
-        PSL.10 (opt) - Product/Service Effective Date (DTM)
+        PSL.10 (opt) - Product/Service Effective Date (DTM) S16.4.6.10
 
     psl_11 : str | None
-        PSL.11 (opt) - Product/Service Expiration Date (DTM)
+        PSL.11 (opt) - Product/Service Expiration Date (DTM) S16.4.6.11
 
     psl_12 : CQ | None
-        PSL.12 (opt) - Product/Service Quantity (CQ)
+        PSL.12 (opt) - Product/Service Quantity (CQ) S16.4.6.12 | 0560 - Quantity Units
 
     psl_13 : CP | None
-        PSL.13 (opt) - Product/Service Unit Cost (CP)
+        PSL.13 (opt) - Product/Service Unit Cost (CP) S16.4.6.13
 
     psl_14 : str | None
-        PSL.14 (opt) - Number of Items per Unit (NM)
+        PSL.14 (opt) - Number of Items per Unit (NM) S16.4.6.14
 
     psl_15 : CP | None
-        PSL.15 (opt) - Product/Service Gross Amount (CP)
+        PSL.15 (opt) - Product/Service Gross Amount (CP) S16.4.6.15
 
     psl_16 : CP | None
-        PSL.16 (opt) - Product/Service Billed Amount (CP)
+        PSL.16 (opt) - Product/Service Billed Amount (CP) S16.4.6.16
 
     psl_17 : list[str] | None
-        PSL.17 (opt, rep) - Product/Service Clarification Code Type (IS)
+        PSL.17 (opt, rep) - Product/Service Clarification Code Type (IS) S16.4.6.17 | 0561 - Product/Services Clarification Codes
 
     psl_18 : list[str] | None
-        PSL.18 (opt, rep) - Product/Service Clarification Code Value (ST)
+        PSL.18 (opt, rep) - Product/Service Clarification Code Value (ST) S16.4.6.18
 
     psl_19 : list[EI] | None
-        PSL.19 (opt, rep) - Health Document Reference Identifier (EI)
+        PSL.19 (opt, rep) - Health Document Reference Identifier (EI) S16.4.6.19
 
     psl_20 : list[str] | None
-        PSL.20 (opt, rep) - Processing Consideration Code (IS)
+        PSL.20 (opt, rep) - Processing Consideration Code (IS) S16.4.6.20 | 0562 - Processing Consideration Codes
 
     psl_21 : str
-        PSL.21 (req) - Restricted Disclosure Indicator (ID)
+        PSL.21 (req) - Restricted Disclosure Indicator (ID) S16.4.6.21 | 0532 - Expanded yes/no indicator
 
     psl_22 : CWE | None
-        PSL.22 (opt) - Related Product/Service Code Indicator (CWE)
+        PSL.22 (opt) - Related Product/Service Code Indicator (CWE) S16.4.6.22 | 0879 - Product/Service Code
 
     psl_23 : CP | None
-        PSL.23 (opt) - Product/Service Amount for Physician (CP)
+        PSL.23 (opt) - Product/Service Amount for Physician (CP) S16.4.6.23
 
     psl_24 : str | None
-        PSL.24 (opt) - Product/Service Cost Factor (NM)
+        PSL.24 (opt) - Product/Service Cost Factor (NM) S16.4.6.24
 
     psl_25 : CX | None
-        PSL.25 (opt) - Cost Center (CX)
+        PSL.25 (opt) - Cost Center (CX) S16.4.2.20
 
     psl_26 : DR | None
-        PSL.26 (opt) - Billing Period (DR)
+        PSL.26 (opt) - Billing Period (DR) S16.4.6.26
 
     psl_27 : str | None
-        PSL.27 (opt) - Days without Billing (NM)
+        PSL.27 (opt) - Days without Billing (NM) S16.4.6.27
 
     psl_28 : str | None
-        PSL.28 (opt) - Session-No (NM)
+        PSL.28 (opt) - Session-No (NM) S16.4.6.28
 
     psl_29 : XCN | None
-        PSL.29 (opt) - Executing Physician ID (XCN)
+        PSL.29 (opt) - Executing Physician ID (XCN) S16.4.6.29
 
     psl_30 : XCN | None
-        PSL.30 (opt) - Responsible Physician ID (XCN)
+        PSL.30 (opt) - Responsible Physician ID (XCN) S16.4.6.30
 
     psl_31 : CWE | None
-        PSL.31 (opt) - Role Executing Physician (CWE)
+        PSL.31 (opt) - Role Executing Physician (CWE) S16.4.6.31 | 0881 - Role Executing Physician
 
     psl_32 : CWE | None
-        PSL.32 (opt) - Medical Role Executing Physician (CWE)
+        PSL.32 (opt) - Medical Role Executing Physician (CWE) S16.4.6.32 | 0882 - Medical Role Executing Physician
 
     psl_33 : CWE | None
-        PSL.33 (opt) - Side of body (CWE)
+        PSL.33 (opt) - Side of body (CWE) S16.4.6.33 | 0894 - Side of body
 
     psl_34 : str | None
-        PSL.34 (opt) - Number of TP's PP (NM)
+        PSL.34 (opt) - Number of TP's PP (NM) S16.4.6.34
 
     psl_35 : CP | None
-        PSL.35 (opt) - TP-Value PP (CP)
+        PSL.35 (opt) - TP-Value PP (CP) S16.4.6.35
 
     psl_36 : str | None
-        PSL.36 (opt) - Internal Scaling Factor PP (NM)
+        PSL.36 (opt) - Internal Scaling Factor PP (NM) S16.4.6.36
 
     psl_37 : str | None
-        PSL.37 (opt) - External Scaling Factor PP (NM)
+        PSL.37 (opt) - External Scaling Factor PP (NM) S16.4.6.37
 
     psl_38 : CP | None
-        PSL.38 (opt) - Amount PP (CP)
+        PSL.38 (opt) - Amount PP (CP) S16.4.6.38
 
     psl_39 : str | None
-        PSL.39 (opt) - Number of TP's Technical Part (NM)
+        PSL.39 (opt) - Number of TP's Technical Part (NM) S16.4.6.39
 
     psl_40 : CP | None
-        PSL.40 (opt) - TP-Value Technical Part (CP)
+        PSL.40 (opt) - TP-Value Technical Part (CP) S16.4.6.40
 
     psl_41 : str | None
-        PSL.41 (opt) - Internal Scaling Factor Technical Part (NM)
+        PSL.41 (opt) - Internal Scaling Factor Technical Part (NM) S16.4.6.41
 
     psl_42 : str | None
-        PSL.42 (opt) - External Scaling Factor Technical Part (NM)
+        PSL.42 (opt) - External Scaling Factor Technical Part (NM) S16.4.6.42
 
     psl_43 : CP | None
-        PSL.43 (opt) - Amount Technical Part (CP)
+        PSL.43 (opt) - Amount Technical Part (CP) S16.4.6.43
 
     psl_44 : CP | None
-        PSL.44 (opt) - Total Amount Professional Part + Technical Part (CP)
+        PSL.44 (opt) - Total Amount Professional Part + Technical Part (CP) S16.4.6.44
 
     psl_45 : str | None
-        PSL.45 (opt) - VAT-Rate (NM)
+        PSL.45 (opt) - VAT-Rate (NM) S16.4.6.45
 
     psl_46 : str | None
-        PSL.46 (opt) - Main-Service (ID)
+        PSL.46 (opt) - Main-Service (ID) S16.4.6.46
 
     psl_47 : str | None
-        PSL.47 (opt) - Validation (ID)
+        PSL.47 (opt) - Validation (ID) S16.4.6.47 | 0136 - Yes/no indicator
 
     psl_48 : str | None
-        PSL.48 (opt) - Comment (ST)
+        PSL.48 (opt) - Comment (ST) S16.4.6.48
     """
 
     psl_1: EI = Field(

@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class RXR(HL7Model):
-    """HL7 v2 RXR segment.
+    """PHARMACY ROUTE (S4.8.3).
 
     Attributes
     ----------
     rxr_1 : CE
-        RXR.1 (req) - Route (CE)
+        RXR.1 (req) - Route (CE) S4.8.3.1 | 0162 - ROUTE OF ADMINISTRATION
 
     rxr_2 : CE | None
-        RXR.2 (opt) - Site (CE)
+        RXR.2 (opt) - Site (CE) S4.8.3.2 | 0163 - ADMINISTRIVE SITE
 
     rxr_3 : CE | None
-        RXR.3 (opt) - Administration Device (CE)
+        RXR.3 (opt) - Administration Device (CE) S4.8.3.3 | 0164 - ADMINISTRATION DEVICE
 
     rxr_4 : CE | None
-        RXR.4 (opt) - Administration Method (CE)
+        RXR.4 (opt) - Administration Method (CE) S4.8.3.4 | 0165 - ADMINISTRATION METHOD
     """
 
     rxr_1: CE = Field(

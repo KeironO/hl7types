@@ -22,20 +22,20 @@ class PRR_PC5_CHOICE(HL7Model):
     """HL7 v2 PRR_PC5.CHOICE group.
 
     Attributes:
-        OBR (Optional[OBR]): optional
-        RXO (Optional[RXO]): optional
+        OBR (Optional[OBR]): OBR - observation request segment, optional
+        RXO (Optional[RXO]): RXO - pharmacy/treatment order segment, optional
     """
 
     OBR: Optional[_OBR] = Field(
         default=None,
         title="OBR",
-        description="Optional",
+        description="OBR - observation request segment",
     )
 
     RXO: Optional[_RXO] = Field(
         default=None,
         title="RXO",
-        description="Optional",
+        description="RXO - pharmacy/treatment order segment",
     )
 
     model_config = {"populate_by_name": True}

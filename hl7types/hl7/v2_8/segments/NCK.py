@@ -12,12 +12,12 @@ from hl7types.hl7 import HL7Model
 
 
 class NCK(HL7Model):
-    """HL7 v2 NCK segment.
+    """System Clock (S14.4.1).
 
     Attributes
     ----------
     nck_1 : str
-        NCK.1 (req) - System Date/Time (DTM)
+        NCK.1 (req) - System Date/Time (DTM) S14.4.1.1
     """
 
     nck_1: str = Field(

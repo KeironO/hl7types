@@ -29,41 +29,40 @@ class EHC_E02_INVOICE_INFORMATION(HL7Model):
     """HL7 v2 EHC_E02.INVOICE_INFORMATION group.
 
     Attributes:
-        IVC (Optional[IVC]): optional
-        PYE (Optional[PYE]): optional
-        CTD (Optional[List[CTD]]): optional
-        NTE (Optional[List[NTE]]): optional
+        IVC (Optional[IVC]): Invoice Segment, optional
+        PYE (Optional[PYE]): Payee Information, optional
+        CTD (Optional[List[CTD]]): Contact Data, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PRODUCT_SERVICE_SECTION (Optional[List[EHC_E02_PRODUCT_SERVICE_SECTION]]): optional
     """
 
     IVC: Optional[_IVC] = Field(
         default=None,
         title="IVC",
-        description="Optional",
+        description="Invoice Segment",
     )
 
     PYE: Optional[_PYE] = Field(
         default=None,
         title="PYE",
-        description="Optional",
+        description="Payee Information",
     )
 
     CTD: Optional[List[_CTD]] = Field(
         default=None,
         title="CTD",
-        description="Optional, repeating",
+        description="Contact Data",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PRODUCT_SERVICE_SECTION: Optional[List[_EHC_E02_PRODUCT_SERVICE_SECTION]] = Field(
         default=None,
         title="PRODUCT_SERVICE_SECTION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

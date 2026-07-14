@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class NSC(HL7Model):
-    """HL7 v2 NSC segment.
+    """STATUS CHANGE.
 
     Attributes
     ----------

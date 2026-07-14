@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class QSC(HL7Model):
-    """HL7 v2 QSC data type.
+    """Query selection criteria (S2.8.33).
 
     Attributes
     ----------

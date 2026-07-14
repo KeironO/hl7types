@@ -24,26 +24,26 @@ class ORD_O02_ORDER_TRAY(HL7Model):
     """HL7 v2 ORD_O02.ORDER_TRAY group.
 
     Attributes:
-        ORC (ORC): required
-        ODT (Optional[List[ODT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        ORC (ORC): ORC - common order segment, required
+        ODT (Optional[List[ODT]]): ODT - diet tray instructions segment, optional
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
     """
 
     ORC: _ORC = Field(
         title="ORC",
-        description="Required",
+        description="ORC - common order segment",
     )
 
     ODT: Optional[List[_ODT]] = Field(
         default=None,
         title="ODT",
-        description="Optional, repeating",
+        description="ODT - diet tray instructions segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     model_config = {"populate_by_name": True}

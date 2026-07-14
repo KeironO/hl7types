@@ -18,78 +18,78 @@ from ..datatypes.XCN import XCN
 
 
 class TXA(HL7Model):
-    """HL7 v2 TXA segment.
+    """Transcription Document Header (S9.6.1).
 
     Attributes
     ----------
     txa_1 : str
-        TXA.1 (req) - Set ID- TXA (SI)
+        TXA.1 (req) - Set ID- TXA (SI) S9.6.1.1
 
     txa_2 : str
-        TXA.2 (req) - Document Type (IS)
+        TXA.2 (req) - Document Type (IS) S9.6.1.2 | 0270 - Document Type
 
     txa_3 : str | None
-        TXA.3 (opt) - Document Content Presentation (ID)
+        TXA.3 (opt) - Document Content Presentation (ID) S9.6.1.3 | 0191 - Type of referenced data
 
     txa_4 : TS | None
-        TXA.4 (opt) - Activity Date/Time (TS)
+        TXA.4 (opt) - Activity Date/Time (TS) S9.6.1.4
 
     txa_5 : list[XCN] | None
-        TXA.5 (opt, rep) - Primary Activity Provider Code/Name (XCN)
+        TXA.5 (opt, rep) - Primary Activity Provider Code/Name (XCN) S9.6.1.5
 
     txa_6 : TS | None
-        TXA.6 (opt) - Origination Date/Time (TS)
+        TXA.6 (opt) - Origination Date/Time (TS) S9.6.1.6
 
     txa_7 : TS | None
-        TXA.7 (opt) - Transcription Date/Time (TS)
+        TXA.7 (opt) - Transcription Date/Time (TS) S9.6.1.7
 
     txa_8 : list[TS] | None
-        TXA.8 (opt, rep) - Edit Date/Time (TS)
+        TXA.8 (opt, rep) - Edit Date/Time (TS) S9.6.1.8
 
     txa_9 : list[XCN] | None
-        TXA.9 (opt, rep) - Originator Code/Name (XCN)
+        TXA.9 (opt, rep) - Originator Code/Name (XCN) S9.6.1.9
 
     txa_10 : list[XCN] | None
-        TXA.10 (opt, rep) - Assigned Document Authenticator (XCN)
+        TXA.10 (opt, rep) - Assigned Document Authenticator (XCN) S9.6.1.10
 
     txa_11 : list[XCN] | None
-        TXA.11 (opt, rep) - Transcriptionist Code/Name (XCN)
+        TXA.11 (opt, rep) - Transcriptionist Code/Name (XCN) S9.6.1.11
 
     txa_12 : EI
-        TXA.12 (req) - Unique Document Number (EI)
+        TXA.12 (req) - Unique Document Number (EI) S9.6.1.12
 
     txa_13 : EI | None
-        TXA.13 (opt) - Parent Document Number (EI)
+        TXA.13 (opt) - Parent Document Number (EI) S9.6.1.13
 
     txa_14 : list[EI] | None
-        TXA.14 (opt, rep) - Placer Order Number (EI)
+        TXA.14 (opt, rep) - Placer Order Number (EI) S4.5.1.2
 
     txa_15 : EI | None
-        TXA.15 (opt) - Filler Order Number (EI)
+        TXA.15 (opt) - Filler Order Number (EI) S4.5.1.3
 
     txa_16 : str | None
-        TXA.16 (opt) - Unique Document File Name (ST)
+        TXA.16 (opt) - Unique Document File Name (ST) S9.6.1.16
 
     txa_17 : str
-        TXA.17 (req) - Document Completion Status (ID)
+        TXA.17 (req) - Document Completion Status (ID) S9.6.1.17 | 0271 - Document completion status
 
     txa_18 : str | None
-        TXA.18 (opt) - Document Confidentiality Status (ID)
+        TXA.18 (opt) - Document Confidentiality Status (ID) S9.6.1.18 | 0272 - Document Confidentiality Status
 
     txa_19 : str | None
-        TXA.19 (opt) - Document Availability Status (ID)
+        TXA.19 (opt) - Document Availability Status (ID) S9.6.1.19 | 0273 - Document Availability Status
 
     txa_20 : str | None
-        TXA.20 (opt) - Document Storage Status (ID)
+        TXA.20 (opt) - Document Storage Status (ID) S9.6.1.20 | 0275 - Document Storage Status
 
     txa_21 : str | None
-        TXA.21 (opt) - Document Change Reason (ST)
+        TXA.21 (opt) - Document Change Reason (ST) S9.6.1.21
 
     txa_22 : list[PPN] | None
-        TXA.22 (opt, rep) - Authentication Person, Time Stamp (PPN)
+        TXA.22 (opt, rep) - Authentication Person, Time Stamp (PPN) S9.6.1.22
 
     txa_23 : list[XCN] | None
-        TXA.23 (opt, rep) - Distributed Copies (Code and Name of Recipients) (XCN)
+        TXA.23 (opt, rep) - Distributed Copies (Code and Name of Recipients) (XCN) S9.6.1.23
     """
 
     txa_1: str = Field(

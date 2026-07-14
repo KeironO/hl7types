@@ -22,19 +22,19 @@ class BAR_P10_PROCEDURE(HL7Model):
     """HL7 v2 BAR_P10.PROCEDURE group.
 
     Attributes:
-        PR1 (PR1): required
-        GP2 (Optional[GP2]): optional
+        PR1 (PR1): Procedures, required
+        GP2 (Optional[GP2]): Grouping/Reimbursement - Procedure Line Item, optional
     """
 
     PR1: _PR1 = Field(
         title="PR1",
-        description="Required",
+        description="Procedures",
     )
 
     GP2: Optional[_GP2] = Field(
         default=None,
         title="GP2",
-        description="Optional",
+        description="Grouping/Reimbursement - Procedure Line Item",
     )
 
     model_config = {"populate_by_name": True}

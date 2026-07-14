@@ -15,27 +15,27 @@ from ..datatypes.CE import CE
 
 
 class MSA(HL7Model):
-    """HL7 v2 MSA segment.
+    """Message Acknowledgment (S2.15.8).
 
     Attributes
     ----------
     msa_1 : str
-        MSA.1 (req) - Acknowledgment Code (ID)
+        MSA.1 (req) - Acknowledgment Code (ID) S2.15.8.1 | 0008 - Acknowledgment code
 
     msa_2 : str
-        MSA.2 (req) - Message Control ID (ST)
+        MSA.2 (req) - Message Control ID (ST) S2.15.8.2
 
     msa_3 : str | None
-        MSA.3 (opt) - Text Message (ST)
+        MSA.3 (opt) - Text Message (ST) S2.15.8.3
 
     msa_4 : str | None
-        MSA.4 (opt) - Expected Sequence Number (NM)
+        MSA.4 (opt) - Expected Sequence Number (NM) S2.15.8.4
 
     msa_5 : str | None
-        MSA.5 (opt) - Delayed Acknowledgment Type (NUL)
+        MSA.5 (opt) - Delayed Acknowledgment Type (NUL) S2.15.8.5
 
     msa_6 : CE | None
-        MSA.6 (opt) - Error Condition (CE)
+        MSA.6 (opt) - Error Condition (CE) S2.15.8.6 | 0357 - Message error condition codes
     """
 
     msa_1: str = Field(

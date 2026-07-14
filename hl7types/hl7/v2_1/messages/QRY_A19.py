@@ -21,18 +21,18 @@ class QRY_A19(HL7Model):
     """HL7 v2 QRY_A19 message.
 
     Attributes:
-        MSH (MSH): required
-        QRD (QRD): required
+        MSH (MSH): MESSAGE HEADER, required
+        QRD (QRD): QUERY DEFINITION, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MESSAGE HEADER",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QUERY DEFINITION",
     )
 
     model_config = {"populate_by_name": True}

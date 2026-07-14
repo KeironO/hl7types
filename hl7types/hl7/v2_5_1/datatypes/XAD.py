@@ -17,7 +17,7 @@ from .TS import TS
 
 
 class XAD(HL7Model):
-    """HL7 v2 XAD data type.
+    """Extended address (S2.A.1.85).
 
     Attributes
     ----------

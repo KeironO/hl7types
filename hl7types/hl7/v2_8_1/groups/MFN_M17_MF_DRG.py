@@ -21,18 +21,18 @@ class MFN_M17_MF_DRG(HL7Model):
     """HL7 v2 MFN_M17.MF_DRG group.
 
     Attributes:
-        MFE (MFE): required
-        DMI (DMI): required
+        MFE (MFE): Master File Entry, required
+        DMI (DMI): DRG Master File Information, required
     """
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     DMI: _DMI = Field(
         title="DMI",
-        description="Required",
+        description="DRG Master File Information",
     )
 
     model_config = {"populate_by_name": True}

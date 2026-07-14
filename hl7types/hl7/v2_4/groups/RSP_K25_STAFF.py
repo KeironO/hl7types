@@ -30,47 +30,47 @@ class RSP_K25_STAFF(HL7Model):
     """HL7 v2 RSP_K25.STAFF group.
 
     Attributes:
-        STF (STF): required
-        PRA (Optional[PRA]): optional
-        ORG (Optional[List[ORG]]): optional
-        AFF (Optional[List[AFF]]): optional
-        LAN (Optional[List[LAN]]): optional
-        EDU (Optional[List[EDU]]): optional
+        STF (STF): Staff Identification, required
+        PRA (Optional[PRA]): Practitioner Detail, optional
+        ORG (Optional[List[ORG]]): Practitioner Organization Unit, optional
+        AFF (Optional[List[AFF]]): Professional Affiliation, optional
+        LAN (Optional[List[LAN]]): Language Detail, optional
+        EDU (Optional[List[EDU]]): Educational Detail, optional
     """
 
     STF: _STF = Field(
         title="STF",
-        description="Required",
+        description="Staff Identification",
     )
 
     PRA: Optional[_PRA] = Field(
         default=None,
         title="PRA",
-        description="Optional",
+        description="Practitioner Detail",
     )
 
     ORG: Optional[List[_ORG]] = Field(
         default=None,
         title="ORG",
-        description="Optional, repeating",
+        description="Practitioner Organization Unit",
     )
 
     AFF: Optional[List[_AFF]] = Field(
         default=None,
         title="AFF",
-        description="Optional, repeating",
+        description="Professional Affiliation",
     )
 
     LAN: Optional[List[_LAN]] = Field(
         default=None,
         title="LAN",
-        description="Optional, repeating",
+        description="Language Detail",
     )
 
     EDU: Optional[List[_EDU]] = Field(
         default=None,
         title="EDU",
-        description="Optional, repeating",
+        description="Educational Detail",
     )
 
     model_config = {"populate_by_name": True}

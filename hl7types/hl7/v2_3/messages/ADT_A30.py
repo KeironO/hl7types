@@ -25,40 +25,40 @@ _PID = PID
 
 
 class ADT_A30(HL7Model):
-    """HL7 v2 ADT_A30 message.
+    """ADT/ACK -  Merge person information.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        MRG (MRG): required
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Demographic, optional
+        MRG (MRG): Merge patient information, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Demographic",
     )
 
     MRG: _MRG = Field(
         title="MRG",
-        description="Required",
+        description="Merge patient information",
     )
 
     model_config = {"populate_by_name": True}

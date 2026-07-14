@@ -22,19 +22,19 @@ class NMD_N01_APP_STATUS(HL7Model):
     """HL7 v2 NMD_N01.APP_STATUS group.
 
     Attributes:
-        NSC (NSC): required
-        NTE (Optional[List[NTE]]): optional
+        NSC (NSC): STATUS CHANGE, required
+        NTE (Optional[List[NTE]]): NOTES AND COMMENTS, optional
     """
 
     NSC: _NSC = Field(
         title="NSC",
-        description="Required",
+        description="STATUS CHANGE",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NOTES AND COMMENTS",
     )
 
     model_config = {"populate_by_name": True}

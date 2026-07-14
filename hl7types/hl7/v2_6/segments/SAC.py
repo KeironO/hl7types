@@ -19,141 +19,141 @@ from ..datatypes.SPS import SPS
 
 
 class SAC(HL7Model):
-    """HL7 v2 SAC segment.
+    """Specimen Container detail (S13.4.3).
 
     Attributes
     ----------
     sac_1 : EI | None
-        SAC.1 (opt) - External Accession Identifier (EI)
+        SAC.1 (opt) - External Accession Identifier (EI) S13.4.3.1
 
     sac_2 : EI | None
-        SAC.2 (opt) - Accession Identifier (EI)
+        SAC.2 (opt) - Accession Identifier (EI) S13.4.3.2
 
     sac_3 : EI | None
-        SAC.3 (opt) - Container Identifier (EI)
+        SAC.3 (opt) - Container Identifier (EI) S13.4.3.3
 
     sac_4 : EI | None
-        SAC.4 (opt) - Primary (Parent) Container Identifier (EI)
+        SAC.4 (opt) - Primary (Parent) Container Identifier (EI) S13.4.3.4
 
     sac_5 : EI | None
-        SAC.5 (opt) - Equipment Container Identifier (EI)
+        SAC.5 (opt) - Equipment Container Identifier (EI) S13.4.3.5
 
     sac_6 : SPS | None
-        SAC.6 (opt) - Specimen Source (SPS)
+        SAC.6 (opt) - Specimen Source (SPS) S13.4.9.3
 
     sac_7 : str | None
-        SAC.7 (opt) - Registration Date/Time (DTM)
+        SAC.7 (opt) - Registration Date/Time (DTM) S13.4.3.7
 
     sac_8 : CWE | None
-        SAC.8 (opt) - Container Status (CWE)
+        SAC.8 (opt) - Container Status (CWE) S13.4.3.8 | 0370 - Container status
 
     sac_9 : CWE | None
-        SAC.9 (opt) - Carrier Type (CWE)
+        SAC.9 (opt) - Carrier Type (CWE) S13.4.3.9 | 0378 - Carrier type
 
     sac_10 : EI | None
-        SAC.10 (opt) - Carrier Identifier (EI)
+        SAC.10 (opt) - Carrier Identifier (EI) S13.4.3.10
 
     sac_11 : NA | None
-        SAC.11 (opt) - Position in Carrier (NA)
+        SAC.11 (opt) - Position in Carrier (NA) S13.4.3.11
 
     sac_12 : CWE | None
-        SAC.12 (opt) - Tray Type - SAC (CWE)
+        SAC.12 (opt) - Tray Type - SAC (CWE) S13.4.3.12 | 0379 - Tray type
 
     sac_13 : EI | None
-        SAC.13 (opt) - Tray Identifier (EI)
+        SAC.13 (opt) - Tray Identifier (EI) S13.4.3.13
 
     sac_14 : NA | None
-        SAC.14 (opt) - Position in Tray (NA)
+        SAC.14 (opt) - Position in Tray (NA) S13.4.3.14
 
     sac_15 : list[CWE] | None
-        SAC.15 (opt, rep) - Location (CWE)
+        SAC.15 (opt, rep) - Location (CWE) S13.4.3.15 | 9999 - no table for CE
 
     sac_16 : str | None
-        SAC.16 (opt) - Container Height (NM)
+        SAC.16 (opt) - Container Height (NM) S13.4.3.16
 
     sac_17 : str | None
-        SAC.17 (opt) - Container Diameter (NM)
+        SAC.17 (opt) - Container Diameter (NM) S13.4.3.17
 
     sac_18 : str | None
-        SAC.18 (opt) - Barrier Delta (NM)
+        SAC.18 (opt) - Barrier Delta (NM) S13.4.3.18
 
     sac_19 : str | None
-        SAC.19 (opt) - Bottom Delta (NM)
+        SAC.19 (opt) - Bottom Delta (NM) S13.4.3.19
 
     sac_20 : CWE | None
-        SAC.20 (opt) - Container Height/Diameter/Delta Units (CWE)
+        SAC.20 (opt) - Container Height/Diameter/Delta Units (CWE) S13.4.3.20 | 9999 - no table for CE
 
     sac_21 : str | None
-        SAC.21 (opt) - Container Volume (NM)
+        SAC.21 (opt) - Container Volume (NM) S13.4.3.21
 
     sac_22 : str | None
-        SAC.22 (opt) - Available Specimen Volume (NM)
+        SAC.22 (opt) - Available Specimen Volume (NM) S13.4.3.22
 
     sac_23 : str | None
-        SAC.23 (opt) - Initial Specimen Volume (NM)
+        SAC.23 (opt) - Initial Specimen Volume (NM) S13.4.3.23
 
     sac_24 : CWE | None
-        SAC.24 (opt) - Volume Units (CWE)
+        SAC.24 (opt) - Volume Units (CWE) S13.4.3.24 | 9999 - no table for CE
 
     sac_25 : CWE | None
-        SAC.25 (opt) - Separator Type (CWE)
+        SAC.25 (opt) - Separator Type (CWE) S13.4.3.25 | 0380 - Separator type
 
     sac_26 : CWE | None
-        SAC.26 (opt) - Cap Type (CWE)
+        SAC.26 (opt) - Cap Type (CWE) S13.4.3.26 | 0381 - Cap type
 
     sac_27 : list[CWE] | None
-        SAC.27 (opt, rep) - Additive (CWE)
+        SAC.27 (opt, rep) - Additive (CWE) S13.4.3.27 | 0371 - Additive/Preservative
 
     sac_28 : CWE | None
-        SAC.28 (opt) - Specimen Component (CWE)
+        SAC.28 (opt) - Specimen Component (CWE) S13.4.3.28 | 0372 - Specimen component
 
     sac_29 : SN | None
-        SAC.29 (opt) - Dilution Factor (SN)
+        SAC.29 (opt) - Dilution Factor (SN) S13.4.3.29
 
     sac_30 : CWE | None
-        SAC.30 (opt) - Treatment (CWE)
+        SAC.30 (opt) - Treatment (CWE) S13.4.3.30 | 0373 - Treatment
 
     sac_31 : SN | None
-        SAC.31 (opt) - Temperature (SN)
+        SAC.31 (opt) - Temperature (SN) S13.4.3.31
 
     sac_32 : str | None
-        SAC.32 (opt) - Hemolysis Index (NM)
+        SAC.32 (opt) - Hemolysis Index (NM) S13.4.3.32
 
     sac_33 : CWE | None
-        SAC.33 (opt) - Hemolysis Index Units (CWE)
+        SAC.33 (opt) - Hemolysis Index Units (CWE) S13.4.3.33 | 9999 - no table for CE
 
     sac_34 : str | None
-        SAC.34 (opt) - Lipemia Index (NM)
+        SAC.34 (opt) - Lipemia Index (NM) S13.4.3.34
 
     sac_35 : CWE | None
-        SAC.35 (opt) - Lipemia Index Units (CWE)
+        SAC.35 (opt) - Lipemia Index Units (CWE) S13.4.3.35 | 9999 - no table for CE
 
     sac_36 : str | None
-        SAC.36 (opt) - Icterus Index (NM)
+        SAC.36 (opt) - Icterus Index (NM) S13.4.3.36
 
     sac_37 : CWE | None
-        SAC.37 (opt) - Icterus Index Units (CWE)
+        SAC.37 (opt) - Icterus Index Units (CWE) S13.4.3.37 | 9999 - no table for CE
 
     sac_38 : str | None
-        SAC.38 (opt) - Fibrin Index (NM)
+        SAC.38 (opt) - Fibrin Index (NM) S13.4.3.38
 
     sac_39 : CWE | None
-        SAC.39 (opt) - Fibrin Index Units (CWE)
+        SAC.39 (opt) - Fibrin Index Units (CWE) S13.4.3.39 | 9999 - no table for CE
 
     sac_40 : list[CWE] | None
-        SAC.40 (opt, rep) - System Induced Contaminants (CWE)
+        SAC.40 (opt, rep) - System Induced Contaminants (CWE) S13.4.3.40 | 0374 - System induced contaminants
 
     sac_41 : list[CWE] | None
-        SAC.41 (opt, rep) - Drug Interference (CWE)
+        SAC.41 (opt, rep) - Drug Interference (CWE) S13.4.3.41 | 0382 - Drug interference
 
     sac_42 : CWE | None
-        SAC.42 (opt) - Artificial Blood (CWE)
+        SAC.42 (opt) - Artificial Blood (CWE) S13.4.3.42 | 0375 - Artificial blood
 
     sac_43 : list[CWE] | None
-        SAC.43 (opt, rep) - Special Handling Code (CWE)
+        SAC.43 (opt, rep) - Special Handling Code (CWE) S13.4.3.43 | 0376 - Special Handling Code
 
     sac_44 : list[CWE] | None
-        SAC.44 (opt, rep) - Other Environmental Factors (CWE)
+        SAC.44 (opt, rep) - Other Environmental Factors (CWE) S13.4.3.44 | 0377 - Other environmental factors
     """
 
     sac_1: Optional[EI] = Field(

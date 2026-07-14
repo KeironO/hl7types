@@ -15,39 +15,39 @@ from ..datatypes.CWE import CWE
 
 
 class RQD(HL7Model):
-    """HL7 v2 RQD segment.
+    """Requisition Detail (S4.11.1).
 
     Attributes
     ----------
     rqd_1 : str | None
-        RQD.1 (opt) - Requisition Line Number (SI)
+        RQD.1 (opt) - Requisition Line Number (SI) S4.11.1.1
 
     rqd_2 : CWE | None
-        RQD.2 (opt) - Item Code - Internal (CWE)
+        RQD.2 (opt) - Item Code - Internal (CWE) S4.11.1.2 | 9999 - no table for CE
 
     rqd_3 : CWE | None
-        RQD.3 (opt) - Item Code - External (CWE)
+        RQD.3 (opt) - Item Code - External (CWE) S4.11.1.3 | 9999 - no table for CE
 
     rqd_4 : CWE | None
-        RQD.4 (opt) - Hospital Item Code (CWE)
+        RQD.4 (opt) - Hospital Item Code (CWE) S4.11.1.4 | 9999 - no table for CE
 
     rqd_5 : str | None
-        RQD.5 (opt) - Requisition Quantity (NM)
+        RQD.5 (opt) - Requisition Quantity (NM) S4.11.1.5
 
     rqd_6 : CWE | None
-        RQD.6 (opt) - Requisition Unit of Measure (CWE)
+        RQD.6 (opt) - Requisition Unit of Measure (CWE) S4.11.1.6 | 9999 - no table for CE
 
     rqd_7 : str | None
-        RQD.7 (opt) - Cost Center Account Number (IS)
+        RQD.7 (opt) - Cost Center Account Number (IS) S17.4.6.2 | 0319 - Department Cost Center
 
     rqd_8 : str | None
-        RQD.8 (opt) - Item Natural Account Code (IS)
+        RQD.8 (opt) - Item Natural Account Code (IS) S17.4.2.19 | 0320 - Item Natural Account Code
 
     rqd_9 : CWE | None
-        RQD.9 (opt) - Deliver To ID (CWE)
+        RQD.9 (opt) - Deliver To ID (CWE) S4.11.1.9 | 9999 - no table for CE
 
     rqd_10 : str | None
-        RQD.10 (opt) - Date Needed (DT)
+        RQD.10 (opt) - Date Needed (DT) S4.11.1.10
     """
 
     rqd_1: Optional[str] = Field(

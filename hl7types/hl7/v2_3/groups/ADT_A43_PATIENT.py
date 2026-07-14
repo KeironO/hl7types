@@ -24,25 +24,25 @@ class ADT_A43_PATIENT(HL7Model):
     """HL7 v2 ADT_A43.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        MRG (MRG): required
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Demographic, optional
+        MRG (MRG): Merge patient information, required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Demographic",
     )
 
     MRG: _MRG = Field(
         title="MRG",
-        description="Required",
+        description="Merge patient information",
     )
 
     model_config = {"populate_by_name": True}

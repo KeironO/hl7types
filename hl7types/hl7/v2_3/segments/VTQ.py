@@ -16,24 +16,24 @@ from ..datatypes.QSC import QSC
 
 
 class VTQ(HL7Model):
-    """HL7 v2 VTQ segment.
+    """Virtual Table Query Request (S2.24.17).
 
     Attributes
     ----------
     vtq_1 : str | None
-        VTQ.1 (opt) - Query tag (ST)
+        VTQ.1 (opt) - Query tag (ST) S2.24.16
 
     vtq_2 : str
-        VTQ.2 (req) - Query/ Response Format Code (ID)
+        VTQ.2 (req) - Query/ Response Format Code (ID) S2.24.16 | 0106 - Query/Response Format Code
 
     vtq_3 : CE
-        VTQ.3 (req) - VT Query Name (CE)
+        VTQ.3 (req) - VT Query Name (CE) S2.24.17.3
 
     vtq_4 : CE
-        VTQ.4 (req) - Virtual Table Name (CE)
+        VTQ.4 (req) - Virtual Table Name (CE) S2.24.17.4
 
     vtq_5 : list[QSC] | None
-        VTQ.5 (opt, rep) - Selection Criteria (QSC)
+        VTQ.5 (opt, rep) - Selection Criteria (QSC) S2.24.17.5
     """
 
     vtq_1: Optional[str] = Field(

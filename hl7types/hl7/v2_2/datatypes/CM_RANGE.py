@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class CM_RANGE(HL7Model):
-    """HL7 v2 CM_RANGE data type.
+    """Wertebereich.
 
     Attributes
     ----------

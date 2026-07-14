@@ -15,27 +15,27 @@ from ..datatypes.CE import CE
 
 
 class AL1(HL7Model):
-    """HL7 v2 AL1 segment.
+    """Patient allergy information (S3.3.6).
 
     Attributes
     ----------
     al1_1 : str
-        AL1.1 (req) - Set ID - AL1 (SI)
+        AL1.1 (req) - Set ID - AL1 (SI) S3.3.6.1
 
     al1_2 : str | None
-        AL1.2 (opt) - Allergy Type (ID)
+        AL1.2 (opt) - Allergy Type (ID) S3.3.6.2 | 0127 - Allergy Type
 
     al1_3 : CE
-        AL1.3 (req) - Allergy Code/Mnemonic/ Description (CE)
+        AL1.3 (req) - Allergy Code/Mnemonic/ Description (CE) S3.3.6.3
 
     al1_4 : str | None
-        AL1.4 (opt) - Allergy Severity (ID)
+        AL1.4 (opt) - Allergy Severity (ID) S3.3.6.4 | 0128 - Allergy Severity
 
     al1_5 : str | None
-        AL1.5 (opt) - Allergy Reaction (ST)
+        AL1.5 (opt) - Allergy Reaction (ST) S3.3.6.5
 
     al1_6 : str | None
-        AL1.6 (opt) - Identification Date (DT)
+        AL1.6 (opt) - Identification Date (DT) S3.3.6.6
     """
 
     al1_1: str = Field(

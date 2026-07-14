@@ -16,45 +16,45 @@ from ..datatypes.EI import EI
 
 
 class RF1(HL7Model):
-    """HL7 v2 RF1 segment.
+    """Referral Information (S11.8.1).
 
     Attributes
     ----------
     rf1_1 : CWE | None
-        RF1.1 (opt) - Referral Status (CWE)
+        RF1.1 (opt) - Referral Status (CWE) S11.8.1.1 | 0283 - Referral Status
 
     rf1_2 : CWE | None
-        RF1.2 (opt) - Referral Priority (CWE)
+        RF1.2 (opt) - Referral Priority (CWE) S11.8.1.2 | 0280 - Referral Priority
 
     rf1_3 : CWE | None
-        RF1.3 (opt) - Referral Type (CWE)
+        RF1.3 (opt) - Referral Type (CWE) S11.8.1.3 | 0281 - Referral Type
 
     rf1_4 : list[CWE] | None
-        RF1.4 (opt, rep) - Referral Disposition (CWE)
+        RF1.4 (opt, rep) - Referral Disposition (CWE) S11.8.1.4 | 0282 - Referral Disposition
 
     rf1_5 : CWE | None
-        RF1.5 (opt) - Referral Category (CWE)
+        RF1.5 (opt) - Referral Category (CWE) S11.8.1.5 | 0284 - Referral Category
 
     rf1_6 : EI
-        RF1.6 (req) - Originating Referral Identifier (EI)
+        RF1.6 (req) - Originating Referral Identifier (EI) S11.8.1.6
 
     rf1_7 : str | None
-        RF1.7 (opt) - Effective Date (DTM)
+        RF1.7 (opt) - Effective Date (DTM) S11.8.1.7
 
     rf1_8 : str | None
-        RF1.8 (opt) - Expiration Date (DTM)
+        RF1.8 (opt) - Expiration Date (DTM) S11.8.1.8
 
     rf1_9 : str | None
-        RF1.9 (opt) - Process Date (DTM)
+        RF1.9 (opt) - Process Date (DTM) S11.8.1.9
 
     rf1_10 : list[CWE] | None
-        RF1.10 (opt, rep) - Referral Reason (CWE)
+        RF1.10 (opt, rep) - Referral Reason (CWE) S11.8.1.10 | 0336 - Referral Reason
 
     rf1_11 : list[EI] | None
-        RF1.11 (opt, rep) - External Referral Identifier (EI)
+        RF1.11 (opt, rep) - External Referral Identifier (EI) S11.8.1.11
 
     rf1_12 : CWE | None
-        RF1.12 (opt) - Referral Documentation Completion Status (CWE)
+        RF1.12 (opt) - Referral Documentation Completion Status (CWE) S11.8.1.12 | 0865 - Referral Documentation Completion Status
     """
 
     rf1_1: Optional[CWE] = Field(

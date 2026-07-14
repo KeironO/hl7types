@@ -24,18 +24,17 @@ class CCU_I20_ROLE_GOAL(HL7Model):
 
     Attributes:
         ROLE_GOAL_OBJECT (CCU_I20_ROLE_GOAL_OBJECT): required
-        VAR (Optional[List[VAR]]): optional
+        VAR (Optional[List[VAR]]): Variance, optional
     """
 
     ROLE_GOAL_OBJECT: _CCU_I20_ROLE_GOAL_OBJECT = Field(
         title="ROLE_GOAL_OBJECT",
-        description="Required",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     model_config = {"populate_by_name": True}

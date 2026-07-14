@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class PCF(HL7Model):
-    """HL7 v2 PCF data type.
+    """Pre-certification required (S6.4.8.20).
 
     Attributes
     ----------

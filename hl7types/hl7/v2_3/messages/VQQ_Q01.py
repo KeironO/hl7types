@@ -23,35 +23,35 @@ _VTQ = VTQ
 
 
 class VQQ_Q01(HL7Model):
-    """HL7 v2 VQQ_Q01 message.
+    """QRY/DSR - Query sent for immediate response.
 
     Attributes:
-        MSH (MSH): required
-        VTQ (VTQ): required
-        RDF (Optional[RDF]): optional
-        DSC (Optional[DSC]): optional
+        MSH (MSH): Message header segment, required
+        VTQ (VTQ): Virtual Table Query Request, required
+        RDF (Optional[RDF]): Table Row Definition, optional
+        DSC (Optional[DSC]): Continuation pointer segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     VTQ: _VTQ = Field(
         title="VTQ",
-        description="Required",
+        description="Virtual Table Query Request",
     )
 
     RDF: Optional[_RDF] = Field(
         default=None,
         title="RDF",
-        description="Optional",
+        description="Table Row Definition",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation pointer segment",
     )
 
     model_config = {"populate_by_name": True}

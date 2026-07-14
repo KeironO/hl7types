@@ -27,33 +27,31 @@ class CCR_I16_PROBLEM(HL7Model):
     """HL7 v2 CCR_I16.PROBLEM group.
 
     Attributes:
-        PRB (PRB): required
-        VAR (Optional[List[VAR]]): optional
+        PRB (PRB): Problem Details, required
+        VAR (Optional[List[VAR]]): Variance, optional
         ROLE_PROBLEM (Optional[List[CCR_I16_ROLE_PROBLEM]]): optional
         ROLE_OBSERVATION (Optional[List[CCR_I16_ROLE_OBSERVATION]]): optional
     """
 
     PRB: _PRB = Field(
         title="PRB",
-        description="Required",
+        description="Problem Details",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     ROLE_PROBLEM: Optional[List[_CCR_I16_ROLE_PROBLEM]] = Field(
         default=None,
         title="ROLE_PROBLEM",
-        description="Optional, repeating",
     )
 
     ROLE_OBSERVATION: Optional[List[_CCR_I16_ROLE_OBSERVATION]] = Field(
         default=None,
         title="ROLE_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

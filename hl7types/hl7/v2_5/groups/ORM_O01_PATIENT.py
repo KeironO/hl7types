@@ -33,54 +33,52 @@ class ORM_O01_PATIENT(HL7Model):
     """HL7 v2 ORM_O01.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         PATIENT_VISIT (Optional[ORM_O01_PATIENT_VISIT]): optional
         INSURANCE (Optional[List[ORM_O01_INSURANCE]]): optional
-        GT1 (Optional[GT1]): optional
-        AL1 (Optional[List[AL1]]): optional
+        GT1 (Optional[GT1]): Guarantor, optional
+        AL1 (Optional[List[AL1]]): Patient Allergy Information, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     PATIENT_VISIT: Optional[_ORM_O01_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     INSURANCE: Optional[List[_ORM_O01_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     GT1: Optional[_GT1] = Field(
         default=None,
         title="GT1",
-        description="Optional",
+        description="Guarantor",
     )
 
     AL1: Optional[List[_AL1]] = Field(
         default=None,
         title="AL1",
-        description="Optional, repeating",
+        description="Patient Allergy Information",
     )
 
     model_config = {"populate_by_name": True}

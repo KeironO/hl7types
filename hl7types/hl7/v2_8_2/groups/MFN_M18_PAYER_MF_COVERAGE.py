@@ -22,19 +22,19 @@ class MFN_M18_PAYER_MF_COVERAGE(HL7Model):
     """HL7 v2 MFN_M18.PAYER_MF_COVERAGE group.
 
     Attributes:
-        MCP (MCP): required
-        DPS (Optional[List[DPS]]): optional
+        MCP (MCP): Master File Coverage, required
+        DPS (Optional[List[DPS]]): Diagnosis and Procedure Code, optional
     """
 
     MCP: _MCP = Field(
         title="MCP",
-        description="Required",
+        description="Master File Coverage",
     )
 
     DPS: Optional[List[_DPS]] = Field(
         default=None,
         title="DPS",
-        description="Optional, repeating",
+        description="Diagnosis and Procedure Code",
     )
 
     model_config = {"populate_by_name": True}

@@ -23,19 +23,18 @@ class CCU_I20_APPOINTMENT_HISTORY(HL7Model):
     """HL7 v2 CCU_I20.APPOINTMENT_HISTORY group.
 
     Attributes:
-        SCH (SCH): required
+        SCH (SCH): Scheduling Activity Information, required
         RESOURCES (Optional[List[CCU_I20_RESOURCES]]): optional
     """
 
     SCH: _SCH = Field(
         title="SCH",
-        description="Required",
+        description="Scheduling Activity Information",
     )
 
     RESOURCES: Optional[List[_CCU_I20_RESOURCES]] = Field(
         default=None,
         title="RESOURCES",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

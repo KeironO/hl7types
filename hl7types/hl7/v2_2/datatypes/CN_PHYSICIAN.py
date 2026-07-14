@@ -15,7 +15,7 @@ from .AD import AD
 
 
 class CN_PHYSICIAN(HL7Model):
-    """HL7 v2 CN_PHYSICIAN data type.
+    """Cn für ärzte.
 
     Attributes
     ----------

@@ -20,27 +20,27 @@ _NPU = NPU
 
 
 class ADT_A20(HL7Model):
-    """HL7 v2 ADT_A20 message.
+    """ADT/ACK -  Nursing/Census application updates.
 
     Attributes:
-        MSH (MSH): required
-        EVN (EVN): required
-        NPU (NPU): required
+        MSH (MSH): Message header segment, required
+        EVN (EVN): Event type, required
+        NPU (NPU): Bed status update, required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event type",
     )
 
     NPU: _NPU = Field(
         title="NPU",
-        description="Required",
+        description="Bed status update",
     )
 
     model_config = {"populate_by_name": True}

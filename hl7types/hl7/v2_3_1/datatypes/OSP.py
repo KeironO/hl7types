@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class OSP(HL7Model):
-    """HL7 v2 OSP data type.
+    """Occurence span (S6.5.11.8).
 
     Attributes
     ----------

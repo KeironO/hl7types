@@ -28,13 +28,11 @@ class CCU_I20_RESOURCE_DETAIL(HL7Model):
 
     RESOURCE_OBJECT: _CCU_I20_RESOURCE_OBJECT = Field(
         title="RESOURCE_OBJECT",
-        description="Required",
     )
 
     RESOURCE_OBSERVATION: Optional[List[_CCU_I20_RESOURCE_OBSERVATION]] = Field(
         default=None,
         title="RESOURCE_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

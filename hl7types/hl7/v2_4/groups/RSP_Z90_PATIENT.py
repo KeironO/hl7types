@@ -29,40 +29,39 @@ class RSP_Z90_PATIENT(HL7Model):
     """HL7 v2 RSP_Z90.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
+        NK1 (Optional[List[NK1]]): Next of kin / associated parties, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         VISIT (Optional[RSP_Z90_VISIT]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of kin / associated parties",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     VISIT: Optional[_RSP_Z90_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,24 +17,24 @@ from ..datatypes.PL import PL
 
 
 class LCH(HL7Model):
-    """HL7 v2 LCH segment.
+    """Location Characteristic (S8.8.3).
 
     Attributes
     ----------
     lch_1 : PL
-        LCH.1 (req) - Primary Key Value (PL)
+        LCH.1 (req) - Primary Key Value (PL) S8.8.4.1
 
     lch_2 : str | None
-        LCH.2 (opt) - Segment Action Code (ID)
+        LCH.2 (opt) - Segment Action Code (ID) S8.8.3 | 0206 - Segment Action Code
 
     lch_3 : EI | None
-        LCH.3 (opt) - Segment Unique Key (EI)
+        LCH.3 (opt) - Segment Unique Key (EI) S8.8.3
 
     lch_4 : CE
-        LCH.4 (req) - Location Characteristic ID (CE)
+        LCH.4 (req) - Location Characteristic ID (CE) S8.8.3.4 | 0324 - Location Characteristic ID
 
     lch_5 : CE
-        LCH.5 (req) - Location Characteristic Value (CE)
+        LCH.5 (req) - Location Characteristic Value (CE) S7.11.4.5
     """
 
     lch_1: PL = Field(

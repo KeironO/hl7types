@@ -448,7 +448,6 @@ def _resolve_msg_cls_from_xml(
     msg_code = _sub_text("MSH.9", "MSG.1")
     trigger = _sub_text("MSH.9", "MSG.2")
     structure = _sub_text("MSH.9", "MSG.3")
-
     if not structure and msg_code and trigger:
         structure = f"{msg_code}_{trigger}"
     elif not structure:

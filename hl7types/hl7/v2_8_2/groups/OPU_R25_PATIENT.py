@@ -29,40 +29,39 @@ class OPU_R25_PATIENT(HL7Model):
     """HL7 v2 OPU_R25.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        PRT (Optional[List[PRT]]): optional
-        ARV (Optional[List[ARV]]): optional
+        PID (PID): Patient Identification, required
+        PD1 (Optional[PD1]): Patient Additional Demographic, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
         PATIENT_OBSERVATION (Optional[List[OPU_R25_PATIENT_OBSERVATION]]): optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="Patient Additional Demographic",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     PATIENT_OBSERVATION: Optional[List[_OPU_R25_PATIENT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

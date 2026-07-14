@@ -22,19 +22,19 @@ class ORL_O34_OBSERVATION_REQUEST(HL7Model):
     """HL7 v2 ORL_O34.OBSERVATION_REQUEST group.
 
     Attributes:
-        OBR (OBR): required
-        ROL (Optional[List[ROL]]): optional
+        OBR (OBR): Observation Request, required
+        ROL (Optional[List[ROL]]): Role, optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     ROL: Optional[List[_ROL]] = Field(
         default=None,
         title="ROL",
-        description="Optional, repeating",
+        description="Role",
     )
 
     model_config = {"populate_by_name": True}

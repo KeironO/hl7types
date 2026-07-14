@@ -32,61 +32,60 @@ _SFT = SFT
 
 
 class RTB_Z74(HL7Model):
-    """HL7 v2 RTB_Z74 message.
+    """Information about Phone Calls (Response) (S4.6.2).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        SFT (Optional[List[SFT]]): optional
-        QAK (QAK): required
-        QPD (QPD): required
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        QAK (QAK): Query Acknowledgment, required
+        QPD (QPD): Query Parameter Definition, required
         ROW_DEFINITION (Optional[RTB_Z74_ROW_DEFINITION]): optional
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     QAK: _QAK = Field(
         title="QAK",
-        description="Required",
+        description="Query Acknowledgment",
     )
 
     QPD: _QPD = Field(
         title="QPD",
-        description="Required",
+        description="Query Parameter Definition",
     )
 
     ROW_DEFINITION: Optional[_RTB_Z74_ROW_DEFINITION] = Field(
         default=None,
         title="ROW_DEFINITION",
-        description="Optional",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

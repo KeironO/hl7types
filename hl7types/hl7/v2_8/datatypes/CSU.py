@@ -14,7 +14,7 @@ from hl7types.hl7._validators import _apply_dt_fallback
 
 
 class CSU(HL7Model):
-    """HL7 v2 CSU data type.
+    """Channel sensitivity and units (S2.A.12).
 
     Attributes
     ----------

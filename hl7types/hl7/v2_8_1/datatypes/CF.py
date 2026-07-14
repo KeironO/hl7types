@@ -14,7 +14,7 @@ from hl7types.hl7._validators import _apply_dt_fallback
 
 
 class CF(HL7Model):
-    """HL7 v2 CF data type.
+    """Coded element with formatted values (S2.A.7).
 
     Attributes
     ----------

@@ -26,42 +26,41 @@ _RAR_RAR_DEFINITION = RAR_RAR_DEFINITION
 
 
 class RAR_RAR(HL7Model):
-    """HL7 v2 RAR_RAR message.
+    """RAR - Pharmacy administration information query response (S4).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[ERR]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[ERR]): Error, optional
         DEFINITION (List[RAR_RAR_DEFINITION]): required
-        DSC (Optional[DSC]): optional
+        DSC (Optional[DSC]): Continuation Pointer, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[_ERR] = Field(
         default=None,
         title="ERR",
-        description="Optional",
+        description="Error",
     )
 
     DEFINITION: List[_RAR_RAR_DEFINITION] = Field(
         min_length=1,
         title="DEFINITION",
-        description="Required, repeating",
     )
 
     DSC: Optional[_DSC] = Field(
         default=None,
         title="DSC",
-        description="Optional",
+        description="Continuation Pointer",
     )
 
     model_config = {"populate_by_name": True}

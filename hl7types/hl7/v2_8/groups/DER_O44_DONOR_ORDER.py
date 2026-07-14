@@ -22,19 +22,19 @@ class DER_O44_DONOR_ORDER(HL7Model):
     """HL7 v2 DER_O44.DONOR_ORDER group.
 
     Attributes:
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,19 +22,19 @@ class BAR_P06_PATIENT(HL7Model):
     """HL7 v2 BAR_P06.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PV1 (Optional[PV1]): optional
+        PID (PID): Patient Identification, required
+        PV1 (Optional[PV1]): Patient Visit, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient Visit",
     )
 
     model_config = {"populate_by_name": True}

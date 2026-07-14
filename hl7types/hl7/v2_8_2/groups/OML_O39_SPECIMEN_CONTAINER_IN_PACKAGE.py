@@ -23,19 +23,18 @@ class OML_O39_SPECIMEN_CONTAINER_IN_PACKAGE(HL7Model):
     """HL7 v2 OML_O39.SPECIMEN_CONTAINER_IN_PACKAGE group.
 
     Attributes:
-        SAC (SAC): required
+        SAC (SAC): Specimen Container detail, required
         CONTAINER_OBSERVATION (Optional[List[OML_O39_CONTAINER_OBSERVATION]]): optional
     """
 
     SAC: _SAC = Field(
         title="SAC",
-        description="Required",
+        description="Specimen Container detail",
     )
 
     CONTAINER_OBSERVATION: Optional[List[_OML_O39_CONTAINER_OBSERVATION]] = Field(
         default=None,
         title="CONTAINER_OBSERVATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

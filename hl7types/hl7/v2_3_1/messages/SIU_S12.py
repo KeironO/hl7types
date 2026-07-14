@@ -26,42 +26,40 @@ _SIU_S12_RESOURCES = SIU_S12_RESOURCES
 
 
 class SIU_S12(HL7Model):
-    """HL7 v2 SIU_S12 message.
+    """SIU/ACK - Notification of new appointment booking.
 
     Attributes:
-        MSH (MSH): required
-        SCH (SCH): required
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): MSH - message header segment, required
+        SCH (SCH): SCH - schedule activity information segment, required
+        NTE (Optional[List[NTE]]): NTE - notes and comments segment, optional
         PATIENT (Optional[List[SIU_S12_PATIENT]]): optional
         RESOURCES (List[SIU_S12_RESOURCES]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     SCH: _SCH = Field(
         title="SCH",
-        description="Required",
+        description="SCH - schedule activity information segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="NTE - notes and comments segment",
     )
 
     PATIENT: Optional[List[_SIU_S12_PATIENT]] = Field(
         default=None,
         title="PATIENT",
-        description="Optional, repeating",
     )
 
     RESOURCES: List[_SIU_S12_RESOURCES] = Field(
         min_length=1,
         title="RESOURCES",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,30 +17,30 @@ from ..datatypes.SRT import SRT
 
 
 class RCP(HL7Model):
-    """HL7 v2 RCP segment.
+    """Response Control Parameter (S5.5.6).
 
     Attributes
     ----------
     rcp_1 : str | None
-        RCP.1 (opt) - Query Priority (ID)
+        RCP.1 (opt) - Query Priority (ID) S5.10.4.1.3 | 0091 - Query priority
 
     rcp_2 : CQ | None
-        RCP.2 (opt) - Quantity Limited Request (CQ)
+        RCP.2 (opt) - Quantity Limited Request (CQ) S5.10.4.1.7 | 0126 - Quantity limited request
 
     rcp_3 : CNE | None
-        RCP.3 (opt) - Response Modality (CNE)
+        RCP.3 (opt) - Response Modality (CNE) S5.5.6.3 | 0394 - Response modality
 
     rcp_4 : str | None
-        RCP.4 (opt) - Execution and Delivery Time (DTM)
+        RCP.4 (opt) - Execution and Delivery Time (DTM) S5.5.6.4
 
     rcp_5 : str | None
-        RCP.5 (opt) - Modify Indicator (ID)
+        RCP.5 (opt) - Modify Indicator (ID) S5.5.6.5 | 0395 - Modify indicator
 
     rcp_6 : list[SRT] | None
-        RCP.6 (opt, rep) - Sort-by Field (SRT)
+        RCP.6 (opt, rep) - Sort-by Field (SRT) S5.5.6.6
 
     rcp_7 : list[str] | None
-        RCP.7 (opt, rep) - Segment group inclusion (ID)
+        RCP.7 (opt, rep) - Segment group inclusion (ID) S5.5.6.7 | 0391 - Segment group
     """
 
     rcp_1: Optional[str] = Field(

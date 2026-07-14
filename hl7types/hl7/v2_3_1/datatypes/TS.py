@@ -14,7 +14,7 @@ from hl7types.hl7._validators import _apply_dt_fallback
 
 
 class TS(HL7Model):
-    """HL7 v2 TS data type.
+    """Time stamp (S2.8.44).
 
     Attributes
     ----------

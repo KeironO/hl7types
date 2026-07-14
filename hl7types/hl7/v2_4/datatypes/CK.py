@@ -15,7 +15,7 @@ from .HD import HD
 
 
 class CK(HL7Model):
-    """HL7 v2 CK data type.
+    """Composite id with check digit (S2.9.5).
 
     Attributes
     ----------

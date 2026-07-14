@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class CM2(HL7Model):
-    """HL7 v2 CM2 segment.
+    """Clinical Study Schedule Master (S8.11.4).
 
     Attributes
     ----------
     cm2_1 : str | None
-        CM2.1 (opt) - Set ID- CM2 (SI)
+        CM2.1 (opt) - Set ID- CM2 (SI) S8.11.4.1
 
     cm2_2 : CE
-        CM2.2 (req) - Scheduled Time Point (CE)
+        CM2.2 (req) - Scheduled Time Point (CE) S8.11.4.2
 
     cm2_3 : str | None
-        CM2.3 (opt) - Description of Time Point (ST)
+        CM2.3 (opt) - Description of Time Point (ST) S8.11.4.3
 
     cm2_4 : list[CE]
-        CM2.4 (req, rep) - Events Scheduled This Time Point (CE)
+        CM2.4 (req, rep) - Events Scheduled This Time Point (CE) S8.11.4.4
     """
 
     cm2_1: Optional[str] = Field(

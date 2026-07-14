@@ -13,7 +13,7 @@ from hl7types.hl7 import HL7Model
 
 
 class FN(HL7Model):
-    """HL7 v2 FN data type.
+    """Familiy name (S2.9.19).
 
     Attributes
     ----------

@@ -24,26 +24,26 @@ class MFN_M16_MATERIAL_LOCATION(HL7Model):
     """HL7 v2 MFN_M16.MATERIAL_LOCATION group.
 
     Attributes:
-        IVT (IVT): required
-        ILT (Optional[List[ILT]]): optional
-        NTE (Optional[List[NTE]]): optional
+        IVT (IVT): Material Location, required
+        ILT (Optional[List[ILT]]): Material Lot, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     IVT: _IVT = Field(
         title="IVT",
-        description="Required",
+        description="Material Location",
     )
 
     ILT: Optional[List[_ILT]] = Field(
         default=None,
         title="ILT",
-        description="Optional, repeating",
+        description="Material Lot",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -17,78 +17,78 @@ from ..datatypes.TS import TS
 
 
 class PCR(HL7Model):
-    """HL7 v2 PCR segment.
+    """Possible Causal Relationship (S7.12.3).
 
     Attributes
     ----------
     pcr_1 : CE
-        PCR.1 (req) - Implicated Product (CE)
+        PCR.1 (req) - Implicated Product (CE) S7.12.3.1
 
     pcr_2 : str | None
-        PCR.2 (opt) - Generic Product (IS)
+        PCR.2 (opt) - Generic Product (IS) S7.12.3.2 | 0249 - Generic Product
 
     pcr_3 : CE | None
-        PCR.3 (opt) - Product Class (CE)
+        PCR.3 (opt) - Product Class (CE) S7.12.3.3
 
     pcr_4 : CQ | None
-        PCR.4 (opt) - Total Duration Of Therapy (CQ)
+        PCR.4 (opt) - Total Duration Of Therapy (CQ) S7.12.3.4
 
     pcr_5 : TS | None
-        PCR.5 (opt) - Product Manufacture Date (TS)
+        PCR.5 (opt) - Product Manufacture Date (TS) S7.12.3.5
 
     pcr_6 : TS | None
-        PCR.6 (opt) - Product Expiration Date (TS)
+        PCR.6 (opt) - Product Expiration Date (TS) S7.12.3.6
 
     pcr_7 : TS | None
-        PCR.7 (opt) - Product Implantation Date (TS)
+        PCR.7 (opt) - Product Implantation Date (TS) S7.12.3.7
 
     pcr_8 : TS | None
-        PCR.8 (opt) - Product Explantation Date (TS)
+        PCR.8 (opt) - Product Explantation Date (TS) S7.12.3.8
 
     pcr_9 : str | None
-        PCR.9 (opt) - Single Use Device (IS)
+        PCR.9 (opt) - Single Use Device (IS) S7.12.3.9 | 0244 - Single Use Device
 
     pcr_10 : CE | None
-        PCR.10 (opt) - Indication For Product Use (CE)
+        PCR.10 (opt) - Indication For Product Use (CE) S7.12.3.10
 
     pcr_11 : str | None
-        PCR.11 (opt) - Product Problem (IS)
+        PCR.11 (opt) - Product Problem (IS) S7.12.3.11 | 0245 - Product Problem
 
     pcr_12 : list[str] | None
-        PCR.12 (opt, rep) - Product Serial/Lot Number (ST)
+        PCR.12 (opt, rep) - Product Serial/Lot Number (ST) S7.12.3.12
 
     pcr_13 : str | None
-        PCR.13 (opt) - Product Available For Inspection (IS)
+        PCR.13 (opt) - Product Available For Inspection (IS) S7.12.3.13 | 0246 - Product Available for Inspection
 
     pcr_14 : CE | None
-        PCR.14 (opt) - Product Evaluation Performed (CE)
+        PCR.14 (opt) - Product Evaluation Performed (CE) S7.12.3.14
 
     pcr_15 : CE | None
-        PCR.15 (opt) - Product Evaluation Status (CE)
+        PCR.15 (opt) - Product Evaluation Status (CE) S7.12.3.15 | 0247 - Status of Evaluation
 
     pcr_16 : CE | None
-        PCR.16 (opt) - Product Evaluation Results (CE)
+        PCR.16 (opt) - Product Evaluation Results (CE) S7.12.3.16
 
     pcr_17 : str | None
-        PCR.17 (opt) - Evaluated Product Source (ID)
+        PCR.17 (opt) - Evaluated Product Source (ID) S7.12.3.17 | 0248 - Product source
 
     pcr_18 : TS | None
-        PCR.18 (opt) - Date Product Returned To Manufacturer (TS)
+        PCR.18 (opt) - Date Product Returned To Manufacturer (TS) S7.12.3.18
 
     pcr_19 : str | None
-        PCR.19 (opt) - Device Operator Qualifications (ID)
+        PCR.19 (opt) - Device Operator Qualifications (ID) S7.12.3.19 | 0242 - Primary Observer's Qualification
 
     pcr_20 : str | None
-        PCR.20 (opt) - Relatedness Assessment (ID)
+        PCR.20 (opt) - Relatedness Assessment (ID) S7.12.3.20 | 0250 - Relatedness Assessment
 
     pcr_21 : list[str] | None
-        PCR.21 (opt, rep) - Action Taken In Response To The Event (ID)
+        PCR.21 (opt, rep) - Action Taken In Response To The Event (ID) S7.12.3.21 | 0251 - Action Taken in Response to the Event
 
     pcr_22 : list[str] | None
-        PCR.22 (opt, rep) - Event Causality Observations (ID)
+        PCR.22 (opt, rep) - Event Causality Observations (ID) S7.12.3.22 | 0252 - Causality Observations
 
     pcr_23 : list[str] | None
-        PCR.23 (opt, rep) - Indirect Exposure Mechanism (ID)
+        PCR.23 (opt, rep) - Indirect Exposure Mechanism (ID) S7.12.3.23 | 0253 - Indirect exposure mechanism
     """
 
     pcr_1: CE = Field(

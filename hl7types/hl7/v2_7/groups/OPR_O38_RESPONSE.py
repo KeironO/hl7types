@@ -26,7 +26,6 @@ class OPR_O38_RESPONSE(HL7Model):
     ORDER: List[_OPR_O38_ORDER] = Field(
         min_length=1,
         title="ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

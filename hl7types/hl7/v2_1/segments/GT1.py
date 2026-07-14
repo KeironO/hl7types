@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class GT1(HL7Model):
-    """HL7 v2 GT1 segment.
+    """GUARANTOR (S6.3.4).
 
     Attributes
     ----------
     gt1_1 : str
-        GT1.1 (req) - SET ID - GUARANTOR (SI)
+        GT1.1 (req) - SET ID - GUARANTOR (SI) S6-8
 
     gt1_2 : str | None
         GT1.2 (opt) - GUARANTOR NUMBER (ID)
@@ -42,13 +42,13 @@ class GT1(HL7Model):
         GT1.8 (opt) - GUARANTOR DATE OF BIRTH (DT)
 
     gt1_9 : str | None
-        GT1.9 (opt) - GUARANTOR SEX (ID)
+        GT1.9 (opt) - GUARANTOR SEX (ID) | 0001 - SEX
 
     gt1_10 : str | None
-        GT1.10 (opt) - GUARANTOR TYPE (ID)
+        GT1.10 (opt) - GUARANTOR TYPE (ID) | 0068 - GUARANTOR TYPE
 
     gt1_11 : str | None
-        GT1.11 (opt) - GUARANTOR RELATIONSHIP (ID)
+        GT1.11 (opt) - GUARANTOR RELATIONSHIP (ID) | 0063 - RELATIONSHIP
 
     gt1_12 : str | None
         GT1.12 (opt) - GUARANTOR SSN (ST)
@@ -75,7 +75,7 @@ class GT1(HL7Model):
         GT1.19 (opt) - GUARANTOR EMPLOYEE ID NUM (ST)
 
     gt1_20 : str | None
-        GT1.20 (opt) - GUARANTOR EMPLOYMENT STATUS (ID)
+        GT1.20 (opt) - GUARANTOR EMPLOYMENT STATUS (ID) | 0066 - EMPLOYMENT STATUS
     """
 
     gt1_1: str = Field(

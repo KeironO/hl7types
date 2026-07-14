@@ -29,13 +29,11 @@ class ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(HL7Model):
     PIDNTE_SUPPGRP: Optional[_ORF_R04_PIDNTE_SUPPGRP] = Field(
         default=None,
         title="PIDNTE_SUPPGRP",
-        description="Optional",
     )
 
     ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP: List[_ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP] = Field(
         min_length=1,
         title="ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

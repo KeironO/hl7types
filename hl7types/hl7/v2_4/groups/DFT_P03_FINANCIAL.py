@@ -25,26 +25,24 @@ class DFT_P03_FINANCIAL(HL7Model):
     """HL7 v2 DFT_P03.FINANCIAL group.
 
     Attributes:
-        FT1 (FT1): required
+        FT1 (FT1): Financial Transaction, required
         FINANCIAL_PROCEDURE (Optional[List[DFT_P03_FINANCIAL_PROCEDURE]]): optional
         FINANCIAL_COMMON_ORDER (Optional[List[DFT_P03_FINANCIAL_COMMON_ORDER]]): optional
     """
 
     FT1: _FT1 = Field(
         title="FT1",
-        description="Required",
+        description="Financial Transaction",
     )
 
     FINANCIAL_PROCEDURE: Optional[List[_DFT_P03_FINANCIAL_PROCEDURE]] = Field(
         default=None,
         title="FINANCIAL_PROCEDURE",
-        description="Optional, repeating",
     )
 
     FINANCIAL_COMMON_ORDER: Optional[List[_DFT_P03_FINANCIAL_COMMON_ORDER]] = Field(
         default=None,
         title="FINANCIAL_COMMON_ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

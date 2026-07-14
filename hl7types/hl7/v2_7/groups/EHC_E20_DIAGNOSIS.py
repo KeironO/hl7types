@@ -22,19 +22,19 @@ class EHC_E20_DIAGNOSIS(HL7Model):
     """HL7 v2 EHC_E20.DIAGNOSIS group.
 
     Attributes:
-        DG1 (DG1): required
-        NTE (Optional[List[NTE]]): optional
+        DG1 (DG1): Diagnosis, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     DG1: _DG1 = Field(
         title="DG1",
-        description="Required",
+        description="Diagnosis",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

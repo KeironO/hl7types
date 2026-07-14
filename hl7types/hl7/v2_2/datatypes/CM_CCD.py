@@ -15,7 +15,7 @@ from .TS import TS
 
 
 class CM_CCD(HL7Model):
-    """HL7 v2 CM_CCD data type.
+    """Charge time.
 
     Attributes
     ----------

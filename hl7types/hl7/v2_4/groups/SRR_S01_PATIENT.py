@@ -26,33 +26,33 @@ class SRR_S01_PATIENT(HL7Model):
     """HL7 v2 SRR_S01.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PV1 (Optional[PV1]): optional
-        PV2 (Optional[PV2]): optional
-        DG1 (Optional[List[DG1]]): optional
+        PID (PID): Patient identification, required
+        PV1 (Optional[PV1]): Patient visit, optional
+        PV2 (Optional[PV2]): Patient visit - additional information, optional
+        DG1 (Optional[List[DG1]]): Diagnosis, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PV1: Optional[_PV1] = Field(
         default=None,
         title="PV1",
-        description="Optional",
+        description="Patient visit",
     )
 
     PV2: Optional[_PV2] = Field(
         default=None,
         title="PV2",
-        description="Optional",
+        description="Patient visit - additional information",
     )
 
     DG1: Optional[List[_DG1]] = Field(
         default=None,
         title="DG1",
-        description="Optional, repeating",
+        description="Diagnosis",
     )
 
     model_config = {"populate_by_name": True}

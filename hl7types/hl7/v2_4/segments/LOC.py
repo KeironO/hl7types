@@ -19,36 +19,36 @@ from ..datatypes.XTN import XTN
 
 
 class LOC(HL7Model):
-    """HL7 v2 LOC segment.
+    """Location Identification (S8.9.2).
 
     Attributes
     ----------
     loc_1 : PL
-        LOC.1 (req) - Primary Key Value - LOC (PL)
+        LOC.1 (req) - Primary Key Value - LOC (PL) S8.9.2.1
 
     loc_2 : str | None
-        LOC.2 (opt) - Location Description (ST)
+        LOC.2 (opt) - Location Description (ST) S8.9.2.2
 
     loc_3 : list[str]
-        LOC.3 (req, rep) - Location Type - LOC (IS)
+        LOC.3 (req, rep) - Location Type - LOC (IS) S8.9.2.3 | 0260 - Patient location type
 
     loc_4 : list[XON] | None
-        LOC.4 (opt, rep) - Organization Name - LOC (XON)
+        LOC.4 (opt, rep) - Organization Name - LOC (XON) S8.9.2.4
 
     loc_5 : list[XAD] | None
-        LOC.5 (opt, rep) - Location Address (XAD)
+        LOC.5 (opt, rep) - Location Address (XAD) S8.9.2.5
 
     loc_6 : list[XTN] | None
-        LOC.6 (opt, rep) - Location Phone (XTN)
+        LOC.6 (opt, rep) - Location Phone (XTN) S8.9.2.6
 
     loc_7 : list[CE] | None
-        LOC.7 (opt, rep) - License Number (CE)
+        LOC.7 (opt, rep) - License Number (CE) S8.9.2.7 | 0461 - License number
 
     loc_8 : list[str] | None
-        LOC.8 (opt, rep) - Location Equipment (IS)
+        LOC.8 (opt, rep) - Location Equipment (IS) S8.9.2.8 | 0261 - Location equipment
 
     loc_9 : str | None
-        LOC.9 (opt) - Location Service Code (IS)
+        LOC.9 (opt) - Location Service Code (IS) S8.9.2.9 | 0442 - Location service code
     """
 
     loc_1: PL = Field(

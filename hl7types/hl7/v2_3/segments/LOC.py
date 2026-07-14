@@ -19,33 +19,33 @@ from ..datatypes.XTN import XTN
 
 
 class LOC(HL7Model):
-    """HL7 v2 LOC segment.
+    """Location Identification (S8.8.2).
 
     Attributes
     ----------
     loc_1 : PL
-        LOC.1 (req) - Primary Key Value (PL)
+        LOC.1 (req) - Primary Key Value (PL) S8.8.4.1
 
     loc_2 : str | None
-        LOC.2 (opt) - Location Description (ST)
+        LOC.2 (opt) - Location Description (ST) S8.8.2.2
 
     loc_3 : list[str]
-        LOC.3 (req, rep) - Location Type (IS)
+        LOC.3 (req, rep) - Location Type (IS) S8.8.2.3 | 0260 - Patient Location Type
 
     loc_4 : XON | None
-        LOC.4 (opt) - Organization Name (XON)
+        LOC.4 (opt) - Organization Name (XON) S8.8.2.4
 
     loc_5 : XAD | None
-        LOC.5 (opt) - Location Address (XAD)
+        LOC.5 (opt) - Location Address (XAD) S8.8.2.5
 
     loc_6 : list[XTN] | None
-        LOC.6 (opt, rep) - Location Phone (XTN)
+        LOC.6 (opt, rep) - Location Phone (XTN) S8.8.2.6
 
     loc_7 : list[CE] | None
-        LOC.7 (opt, rep) - License Number (CE)
+        LOC.7 (opt, rep) - License Number (CE) S8.8.2.7
 
     loc_8 : list[str] | None
-        LOC.8 (opt, rep) - Location Equipment (ID)
+        LOC.8 (opt, rep) - Location Equipment (ID) S8.8.2.8 | 0261 - Location Equipment
     """
 
     loc_1: PL = Field(

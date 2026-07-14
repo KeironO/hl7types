@@ -15,21 +15,21 @@ from ..datatypes.CE import CE
 
 
 class ODS(HL7Model):
-    """HL7 v2 ODS segment.
+    """Dietary orders, supplements, and preferences (S4.6.1).
 
     Attributes
     ----------
     ods_1 : str
-        ODS.1 (req) - Type (ID)
+        ODS.1 (req) - Type (ID) S4.6.1 | 0159 - Diet Type
 
     ods_2 : list[CE] | None
-        ODS.2 (opt, rep) - Service Period (CE)
+        ODS.2 (opt, rep) - Service Period (CE) S4.6.1.2
 
     ods_3 : list[CE]
-        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CE)
+        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CE) S4.6.1.3
 
     ods_4 : str | None
-        ODS.4 (opt) - Text Instruction (ST)
+        ODS.4 (opt) - Text Instruction (ST) S4.6.1
     """
 
     ods_1: str = Field(

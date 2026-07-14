@@ -26,33 +26,33 @@ class OUL_R22_OBXTCDSIDNTE_SUPPGRP(HL7Model):
     """HL7 v2 OUL_R22.OBXTCDSIDNTE_SUPPGRP group.
 
     Attributes:
-        OBX (OBX): required
-        TCD (Optional[TCD]): optional
-        SID (Optional[List[SID]]): optional
-        NTE (Optional[List[NTE]]): optional
+        OBX (OBX): Observation/Result, required
+        TCD (Optional[TCD]): Test Code Detail, optional
+        SID (Optional[List[SID]]): Substance Identifier, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
     """
 
     OBX: _OBX = Field(
         title="OBX",
-        description="Required",
+        description="Observation/Result",
     )
 
     TCD: Optional[_TCD] = Field(
         default=None,
         title="TCD",
-        description="Optional",
+        description="Test Code Detail",
     )
 
     SID: Optional[List[_SID]] = Field(
         default=None,
         title="SID",
-        description="Optional, repeating",
+        description="Substance Identifier",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     model_config = {"populate_by_name": True}

@@ -13,15 +13,15 @@ from hl7types.hl7 import HL7Model
 
 
 class NPU(HL7Model):
-    """HL7 v2 NPU segment.
+    """BED STATUS UPDATE (S3.3.7).
 
     Attributes
     ----------
     npu_1 : str
-        NPU.1 (req) - Bed Location (CM)
+        NPU.1 (req) - Bed Location (CM) S3.3.7.1 | 0079 - LOCATION
 
     npu_2 : str | None
-        NPU.2 (opt) - Bed Status (ID)
+        NPU.2 (opt) - Bed Status (ID) S3.3.7.2 | 0116 - BED STATUS
     """
 
     npu_1: str = Field(

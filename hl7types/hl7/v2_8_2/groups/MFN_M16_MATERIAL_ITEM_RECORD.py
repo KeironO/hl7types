@@ -31,9 +31,9 @@ class MFN_M16_MATERIAL_ITEM_RECORD(HL7Model):
     """HL7 v2 MFN_M16.MATERIAL_ITEM_RECORD group.
 
     Attributes:
-        MFE (MFE): required
-        ITM (ITM): required
-        NTE (Optional[List[NTE]]): optional
+        MFE (MFE): Master File Entry, required
+        ITM (ITM): Material Item, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         STERILIZATION (Optional[List[MFN_M16_STERILIZATION]]): optional
         PURCHASING_VENDOR (Optional[List[MFN_M16_PURCHASING_VENDOR]]): optional
         MATERIAL_LOCATION (Optional[List[MFN_M16_MATERIAL_LOCATION]]): optional
@@ -41,36 +41,33 @@ class MFN_M16_MATERIAL_ITEM_RECORD(HL7Model):
 
     MFE: _MFE = Field(
         title="MFE",
-        description="Required",
+        description="Master File Entry",
     )
 
     ITM: _ITM = Field(
         title="ITM",
-        description="Required",
+        description="Material Item",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     STERILIZATION: Optional[List[_MFN_M16_STERILIZATION]] = Field(
         default=None,
         title="STERILIZATION",
-        description="Optional, repeating",
     )
 
     PURCHASING_VENDOR: Optional[List[_MFN_M16_PURCHASING_VENDOR]] = Field(
         default=None,
         title="PURCHASING_VENDOR",
-        description="Optional, repeating",
     )
 
     MATERIAL_LOCATION: Optional[List[_MFN_M16_MATERIAL_LOCATION]] = Field(
         default=None,
         title="MATERIAL_LOCATION",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

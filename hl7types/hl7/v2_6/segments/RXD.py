@@ -19,108 +19,108 @@ from ..datatypes.XCN import XCN
 
 
 class RXD(HL7Model):
-    """HL7 v2 RXD segment.
+    """Pharmacy/Treatment Dispense (S4.14.5).
 
     Attributes
     ----------
     rxd_1 : str
-        RXD.1 (req) - Dispense Sub-ID Counter (NM)
+        RXD.1 (req) - Dispense Sub-ID Counter (NM) S4.14.5.1
 
     rxd_2 : CWE
-        RXD.2 (req) - Dispense/Give Code (CWE)
+        RXD.2 (req) - Dispense/Give Code (CWE) S4.14.5.2 | 0292 - Vaccines administered
 
     rxd_3 : str
-        RXD.3 (req) - Date/Time Dispensed (DTM)
+        RXD.3 (req) - Date/Time Dispensed (DTM) S4.14.5.3
 
     rxd_4 : str
-        RXD.4 (req) - Actual Dispense Amount (NM)
+        RXD.4 (req) - Actual Dispense Amount (NM) S4.14.5.4
 
     rxd_5 : CWE | None
-        RXD.5 (opt) - Actual Dispense Units (CWE)
+        RXD.5 (opt) - Actual Dispense Units (CWE) S4.14.5.5 | 9999 - no table for CE
 
     rxd_6 : CWE | None
-        RXD.6 (opt) - Actual Dosage Form (CWE)
+        RXD.6 (opt) - Actual Dosage Form (CWE) S4.14.5.6 | 9999 - no table for CE
 
     rxd_7 : str
-        RXD.7 (req) - Prescription Number (ST)
+        RXD.7 (req) - Prescription Number (ST) S4.14.4.15
 
     rxd_8 : str | None
-        RXD.8 (opt) - Number of Refills Remaining (NM)
+        RXD.8 (opt) - Number of Refills Remaining (NM) S4.14.4.16
 
     rxd_9 : list[str] | None
-        RXD.9 (opt, rep) - Dispense Notes (ST)
+        RXD.9 (opt, rep) - Dispense Notes (ST) S4.14.5.9
 
     rxd_10 : list[XCN] | None
-        RXD.10 (opt, rep) - Dispensing Provider (XCN)
+        RXD.10 (opt, rep) - Dispensing Provider (XCN) S4.14.5.10
 
     rxd_11 : str | None
-        RXD.11 (opt) - Substitution Status (ID)
+        RXD.11 (opt) - Substitution Status (ID) S4.14.4.9 | 0167 - Substitution Status
 
     rxd_12 : CQ | None
-        RXD.12 (opt) - Total Daily Dose (CQ)
+        RXD.12 (opt) - Total Daily Dose (CQ) S4.14.1.23
 
     rxd_13 : LA2 | None
-        RXD.13 (opt) - Dispense-to Location (LA2)
+        RXD.13 (opt) - Dispense-to Location (LA2) S4.14.5.13
 
     rxd_14 : str | None
-        RXD.14 (opt) - Needs Human Review (ID)
+        RXD.14 (opt) - Needs Human Review (ID) S4.14.1.16 | 0136 - Yes/no indicator
 
     rxd_15 : list[CWE] | None
-        RXD.15 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CWE)
+        RXD.15 (opt, rep) - Pharmacy/Treatment Supplier's Special Dispensing Instructions (CWE) S4.14.4.21 | 9999 - no table for CE
 
     rxd_16 : str | None
-        RXD.16 (opt) - Actual Strength (NM)
+        RXD.16 (opt) - Actual Strength (NM) S4.14.5.16
 
     rxd_17 : CWE | None
-        RXD.17 (opt) - Actual Strength Unit (CWE)
+        RXD.17 (opt) - Actual Strength Unit (CWE) S4.14.5.17 | 9999 - no table for CE
 
     rxd_18 : list[str] | None
-        RXD.18 (opt, rep) - Substance Lot Number (ST)
+        RXD.18 (opt, rep) - Substance Lot Number (ST) S13.4.11.2
 
     rxd_19 : list[str] | None
-        RXD.19 (opt, rep) - Substance Expiration Date (DTM)
+        RXD.19 (opt, rep) - Substance Expiration Date (DTM) S4.14.5.19
 
     rxd_20 : list[CWE] | None
-        RXD.20 (opt, rep) - Substance Manufacturer Name (CWE)
+        RXD.20 (opt, rep) - Substance Manufacturer Name (CWE) S4.14.5.20 | 0227 - Manufacturers of Vaccines (code=MVX)
 
     rxd_21 : list[CWE] | None
-        RXD.21 (opt, rep) - Indication (CWE)
+        RXD.21 (opt, rep) - Indication (CWE) S4.14.1.20 | 9999 - no table for CE
 
     rxd_22 : str | None
-        RXD.22 (opt) - Dispense Package Size (NM)
+        RXD.22 (opt) - Dispense Package Size (NM) S4.14.4.28
 
     rxd_23 : CWE | None
-        RXD.23 (opt) - Dispense Package Size Unit (CWE)
+        RXD.23 (opt) - Dispense Package Size Unit (CWE) S4.14.4.29 | 9999 - no table for CE
 
     rxd_24 : str | None
-        RXD.24 (opt) - Dispense Package Method (ID)
+        RXD.24 (opt) - Dispense Package Method (ID) S4.14.4.30 | 0321 - Dispense Method
 
     rxd_25 : list[CWE] | None
-        RXD.25 (opt, rep) - Supplementary Code (CWE)
+        RXD.25 (opt, rep) - Supplementary Code (CWE) S4.14.1.24 | 9999 - no table for CE
 
     rxd_26 : CWE | None
-        RXD.26 (opt) - Initiating Location (CWE)
+        RXD.26 (opt) - Initiating Location (CWE) S4.14.5.26 | 9999 - no table for CE
 
     rxd_27 : CWE | None
-        RXD.27 (opt) - Packaging/Assembly Location (CWE)
+        RXD.27 (opt) - Packaging/Assembly Location (CWE) S4.14.5.27 | 9999 - no table for CE
 
     rxd_28 : str | None
-        RXD.28 (opt) - Actual Drug Strength Volume (NM)
+        RXD.28 (opt) - Actual Drug Strength Volume (NM) S4.14.5.28
 
     rxd_29 : CWE | None
-        RXD.29 (opt) - Actual Drug Strength Volume Units (CWE)
+        RXD.29 (opt) - Actual Drug Strength Volume Units (CWE) S4.14.5.29 | 9999 - no table for CE
 
     rxd_30 : CWE | None
-        RXD.30 (opt) - Dispense to Pharmacy (CWE)
+        RXD.30 (opt) - Dispense to Pharmacy (CWE) S4.14.5.30 | 9999 - no table for CE
 
     rxd_31 : XAD | None
-        RXD.31 (opt) - Dispense to Pharmacy Address (XAD)
+        RXD.31 (opt) - Dispense to Pharmacy Address (XAD) S4.14.5.31
 
     rxd_32 : str | None
-        RXD.32 (opt) - Pharmacy Order Type (ID)
+        RXD.32 (opt) - Pharmacy Order Type (ID) S4.14.5.32 | 0480 - Pharmacy Order Types
 
     rxd_33 : CWE | None
-        RXD.33 (opt) - Dispense Type (CWE)
+        RXD.33 (opt) - Dispense Type (CWE) S4.14.5.33 | 0484 - Dispense Type
     """
 
     rxd_1: str = Field(

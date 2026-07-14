@@ -20,22 +20,21 @@ _SUR_P09_FACILITY = SUR_P09_FACILITY
 
 
 class SUR_P09(HL7Model):
-    """HL7 v2 SUR_P09 message.
+    """SUR - Summary product experience report.
 
     Attributes:
-        MSH (MSH): required
+        MSH (MSH): Message header segment, required
         FACILITY (List[SUR_P09_FACILITY]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     FACILITY: List[_SUR_P09_FACILITY] = Field(
         min_length=1,
         title="FACILITY",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

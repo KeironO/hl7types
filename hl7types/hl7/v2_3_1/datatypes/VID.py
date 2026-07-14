@@ -15,7 +15,7 @@ from .CE import CE
 
 
 class VID(HL7Model):
-    """HL7 v2 VID data type.
+    """Version identifier (S2.8.47).
 
     Attributes
     ----------

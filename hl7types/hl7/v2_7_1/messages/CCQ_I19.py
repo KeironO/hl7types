@@ -28,49 +28,48 @@ _UAC = UAC
 
 
 class CCQ_I19(HL7Model):
-    """HL7 v2 CCQ_I19 message.
+    """Collaborative Care Query/Collaborative Care Query Update (S11.6.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        RF1 (RF1): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        RF1 (RF1): Referral Information, required
         PROVIDER_CONTACT (Optional[List[CCQ_I19_PROVIDER_CONTACT]]): optional
-        REL (Optional[List[REL]]): optional
+        REL (Optional[List[REL]]): Clinical Relationship Segment, optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     RF1: _RF1 = Field(
         title="RF1",
-        description="Required",
+        description="Referral Information",
     )
 
     PROVIDER_CONTACT: Optional[List[_CCQ_I19_PROVIDER_CONTACT]] = Field(
         default=None,
         title="PROVIDER_CONTACT",
-        description="Optional, repeating",
     )
 
     REL: Optional[List[_REL]] = Field(
         default=None,
         title="REL",
-        description="Optional, repeating",
+        description="Clinical Relationship Segment",
     )
 
     model_config = {"populate_by_name": True}

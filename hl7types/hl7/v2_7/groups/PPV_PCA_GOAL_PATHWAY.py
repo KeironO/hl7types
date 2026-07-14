@@ -22,19 +22,19 @@ class PPV_PCA_GOAL_PATHWAY(HL7Model):
     """HL7 v2 PPV_PCA.GOAL_PATHWAY group.
 
     Attributes:
-        PTH (PTH): required
-        VAR (Optional[List[VAR]]): optional
+        PTH (PTH): Pathway, required
+        VAR (Optional[List[VAR]]): Variance, optional
     """
 
     PTH: _PTH = Field(
         title="PTH",
-        description="Required",
+        description="Pathway",
     )
 
     VAR: Optional[List[_VAR]] = Field(
         default=None,
         title="VAR",
-        description="Optional, repeating",
+        description="Variance",
     )
 
     model_config = {"populate_by_name": True}

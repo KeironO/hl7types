@@ -25,26 +25,25 @@ class RQA_I08_OBSERVATION(HL7Model):
     """HL7 v2 RQA_I08.OBSERVATION group.
 
     Attributes:
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         RESULTS (Optional[List[RQA_I08_RESULTS]]): optional
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     RESULTS: Optional[List[_RQA_I08_RESULTS]] = Field(
         default=None,
         title="RESULTS",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

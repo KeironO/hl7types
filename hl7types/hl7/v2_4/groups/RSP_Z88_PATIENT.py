@@ -29,40 +29,38 @@ class RSP_Z88_PATIENT(HL7Model):
     """HL7 v2 RSP_Z88.PATIENT group.
 
     Attributes:
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NTE (Optional[List[NTE]]): optional
+        PID (PID): Patient identification, required
+        PD1 (Optional[PD1]): patient additional demographic, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         ALLERGY (Optional[RSP_Z88_ALLERGY]): optional
         COMMON_ORDER (List[RSP_Z88_COMMON_ORDER]): required
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient identification",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="patient additional demographic",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     ALLERGY: Optional[_RSP_Z88_ALLERGY] = Field(
         default=None,
         title="ALLERGY",
-        description="Optional",
     )
 
     COMMON_ORDER: List[_RSP_Z88_COMMON_ORDER] = Field(
         min_length=1,
         title="COMMON_ORDER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

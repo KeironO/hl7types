@@ -29,40 +29,39 @@ class OSM_R26_SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION(HL7Model):
     """HL7 v2 OSM_R26.SUBJECT_PERSON_OR_ANIMAL_IDENTIFICATION group.
 
     Attributes:
-        PID (PID): required
-        PRT (Optional[List[PRT]]): optional
-        ARV (Optional[List[ARV]]): optional
+        PID (PID): Patient Identification, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
+        ARV (Optional[List[ARV]]): Access Restriction, optional
         PATIENT_OBSERVATION (Optional[List[OSM_R26_PATIENT_OBSERVATION]]): optional
-        NK1 (Optional[List[NK1]]): optional
+        NK1 (Optional[List[NK1]]): Next of Kin / Associated Parties, optional
     """
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     PATIENT_OBSERVATION: Optional[List[_OSM_R26_PATIENT_OBSERVATION]] = Field(
         default=None,
         title="PATIENT_OBSERVATION",
-        description="Optional, repeating",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     model_config = {"populate_by_name": True}

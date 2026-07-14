@@ -26,41 +26,40 @@ _VXX_V02_PATIENT = VXX_V02_PATIENT
 
 
 class VXX_V02(HL7Model):
-    """HL7 v2 VXX_V02 message.
+    """VXX - Response to vaccination query returning multiple PID matches.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
+        MSH (MSH): Message header segment, required
+        MSA (MSA): Message acknowledgement segment, required
+        QRD (QRD): Query definition segment, required
+        QRF (Optional[QRF]): Query filter segment, optional
         PATIENT (List[VXX_V02_PATIENT]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message acknowledgement segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="Query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="Query filter segment",
     )
 
     PATIENT: List[_VXX_V02_PATIENT] = Field(
         min_length=1,
         title="PATIENT",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -27,34 +27,33 @@ class OPR_O38_ORDER(HL7Model):
     """HL7 v2 OPR_O38.ORDER group.
 
     Attributes:
-        NK1 (List[NK1]): required
-        PID (Optional[PID]): optional
-        PRT (Optional[List[PRT]]): optional
+        NK1 (List[NK1]): Next of Kin / Associated Parties, required
+        PID (Optional[PID]): Patient Identification, optional
+        PRT (Optional[List[PRT]]): Participation Information, optional
         SPECIMEN (Optional[List[OPR_O38_SPECIMEN]]): optional
     """
 
     NK1: List[_NK1] = Field(
         min_length=1,
         title="NK1",
-        description="Required, repeating",
+        description="Next of Kin / Associated Parties",
     )
 
     PID: Optional[_PID] = Field(
         default=None,
         title="PID",
-        description="Optional",
+        description="Patient Identification",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     SPECIMEN: Optional[List[_OPR_O38_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

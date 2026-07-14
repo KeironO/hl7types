@@ -30,56 +30,55 @@ _UAC = UAC
 
 
 class ORG_O20(HL7Model):
-    """HL7 v2 ORG_O20 message.
+    """ORG/ORL - General clinical order response (S4.3.5).
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        ERR (Optional[List[ERR]]): optional
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        NTE (Optional[List[NTE]]): optional
+        MSH (MSH): Message Header, required
+        MSA (MSA): Message Acknowledgment, required
+        ERR (Optional[List[ERR]]): Error, optional
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         RESPONSE (Optional[ORG_O20_RESPONSE]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="Message Acknowledgment",
     )
 
     ERR: Optional[List[_ERR]] = Field(
         default=None,
         title="ERR",
-        description="Optional, repeating",
+        description="Error",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     RESPONSE: Optional[_ORG_O20_RESPONSE] = Field(
         default=None,
         title="RESPONSE",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

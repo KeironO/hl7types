@@ -26,7 +26,6 @@ class RSP_Z86_QUERY_RESPONSE(HL7Model):
     PATIENT: Optional[_RSP_Z86_PATIENT] = Field(
         default=None,
         title="PATIENT",
-        description="Optional",
     )
 
     model_config = {"populate_by_name": True}

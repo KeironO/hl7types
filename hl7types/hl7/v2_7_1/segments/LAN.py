@@ -15,21 +15,21 @@ from ..datatypes.CWE import CWE
 
 
 class LAN(HL7Model):
-    """HL7 v2 LAN segment.
+    """Language Detail (S15.4.4).
 
     Attributes
     ----------
     lan_1 : str
-        LAN.1 (req) - Set ID - LAN (SI)
+        LAN.1 (req) - Set ID - LAN (SI) S15.4.4.1
 
     lan_2 : CWE
-        LAN.2 (req) - Language Code (CWE)
+        LAN.2 (req) - Language Code (CWE) S15.4.4.2 | 0296 - Primary Language
 
     lan_3 : list[CWE] | None
-        LAN.3 (opt, rep) - Language Ability Code (CWE)
+        LAN.3 (opt, rep) - Language Ability Code (CWE) S15.4.4.3 | 0403 - Language Ability
 
     lan_4 : CWE | None
-        LAN.4 (opt) - Language Proficiency Code (CWE)
+        LAN.4 (opt) - Language Proficiency Code (CWE) S15.4.4.4 | 0404 - Language Proficiency
     """
 
     lan_1: str = Field(

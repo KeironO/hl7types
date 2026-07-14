@@ -29,40 +29,38 @@ class PEX_P07_ASSOCIATED_PERSON(HL7Model):
     """HL7 v2 PEX_P07.ASSOCIATED_PERSON group.
 
     Attributes:
-        NK1 (NK1): required
+        NK1 (NK1): NK1 - next of kin / associated parties segment-, required
         ASSOCIATED_RX_ORDER (Optional[PEX_P07_ASSOCIATED_RX_ORDER]): optional
         ASSOCIATED_RX_ADMIN (Optional[List[PEX_P07_ASSOCIATED_RX_ADMIN]]): optional
-        PRB (Optional[List[PRB]]): optional
-        OBX (Optional[List[OBX]]): optional
+        PRB (Optional[List[PRB]]): Problem Detail, optional
+        OBX (Optional[List[OBX]]): OBX - observation/result segment, optional
     """
 
     NK1: _NK1 = Field(
         title="NK1",
-        description="Required",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     ASSOCIATED_RX_ORDER: Optional[_PEX_P07_ASSOCIATED_RX_ORDER] = Field(
         default=None,
         title="ASSOCIATED_RX_ORDER",
-        description="Optional",
     )
 
     ASSOCIATED_RX_ADMIN: Optional[List[_PEX_P07_ASSOCIATED_RX_ADMIN]] = Field(
         default=None,
         title="ASSOCIATED_RX_ADMIN",
-        description="Optional, repeating",
     )
 
     PRB: Optional[List[_PRB]] = Field(
         default=None,
         title="PRB",
-        description="Optional, repeating",
+        description="Problem Detail",
     )
 
     OBX: Optional[List[_OBX]] = Field(
         default=None,
         title="OBX",
-        description="Optional, repeating",
+        description="OBX - observation/result segment",
     )
 
     model_config = {"populate_by_name": True}

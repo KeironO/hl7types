@@ -13,12 +13,12 @@ from hl7types.hl7 import HL7Model
 
 
 class FHS(HL7Model):
-    """HL7 v2 FHS segment.
+    """FILE HEADER (S2.5.5).
 
     Attributes
     ----------
     fhs_1 : str
-        FHS.1 (req) - FILE FIELD SEPARATOR (ST)
+        FHS.1 (req) - FILE FIELD SEPARATOR (ST) S2-43
 
     fhs_2 : str
         FHS.2 (req) - FILE ENCODING CHARACTERS (ST)

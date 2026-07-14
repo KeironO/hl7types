@@ -25,26 +25,24 @@ class OUL_R23_SPECIMEN(HL7Model):
     """HL7 v2 OUL_R23.SPECIMEN group.
 
     Attributes:
-        SPM (SPM): required
+        SPM (SPM): Specimen, required
         SPECIMEN_OBSERVATION (Optional[List[OUL_R23_SPECIMEN_OBSERVATION]]): optional
         CONTAINER (List[OUL_R23_CONTAINER]): required
     """
 
     SPM: _SPM = Field(
         title="SPM",
-        description="Required",
+        description="Specimen",
     )
 
     SPECIMEN_OBSERVATION: Optional[List[_OUL_R23_SPECIMEN_OBSERVATION]] = Field(
         default=None,
         title="SPECIMEN_OBSERVATION",
-        description="Optional, repeating",
     )
 
     CONTAINER: List[_OUL_R23_CONTAINER] = Field(
         min_length=1,
         title="CONTAINER",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

@@ -16,7 +16,7 @@ from .CWE import CWE
 
 
 class ICD(HL7Model):
-    """HL7 v2 ICD data type.
+    """Insurance certification definition (S2.A.34).
 
     Attributes
     ----------

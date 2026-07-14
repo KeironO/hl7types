@@ -16,27 +16,27 @@ from ..datatypes.HD import HD
 
 
 class MFI(HL7Model):
-    """HL7 v2 MFI segment.
+    """Master File Identification (S8.5.1).
 
     Attributes
     ----------
     mfi_1 : CWE
-        MFI.1 (req) - Master File Identifier (CWE)
+        MFI.1 (req) - Master File Identifier (CWE) S8.5.1.1 | 0175 - Master file identifier code
 
     mfi_2 : list[HD] | None
-        MFI.2 (opt, rep) - Master File Application Identifier (HD)
+        MFI.2 (opt, rep) - Master File Application Identifier (HD) S8.5.1.2 | 0361 - Application
 
     mfi_3 : str
-        MFI.3 (req) - File-Level Event Code (ID)
+        MFI.3 (req) - File-Level Event Code (ID) S8.5.1.3 | 0178 - File level event code
 
     mfi_4 : str | None
-        MFI.4 (opt) - Entered Date/Time (DTM)
+        MFI.4 (opt) - Entered Date/Time (DTM) S2.14.10.6
 
     mfi_5 : str | None
-        MFI.5 (opt) - Effective Date/Time (DTM)
+        MFI.5 (opt) - Effective Date/Time (DTM) S8.5.1.5
 
     mfi_6 : str
-        MFI.6 (req) - Response Level Code (ID)
+        MFI.6 (req) - Response Level Code (ID) S8.5.1.6 | 0179 - Response level
     """
 
     mfi_1: CWE = Field(

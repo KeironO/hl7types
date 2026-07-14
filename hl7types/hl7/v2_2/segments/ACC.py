@@ -15,18 +15,18 @@ from ..datatypes.TS import TS
 
 
 class ACC(HL7Model):
-    """HL7 v2 ACC segment.
+    """ACCIDENT (S6.4.8).
 
     Attributes
     ----------
     acc_1 : TS | None
-        ACC.1 (opt) - Accident date / time (TS)
+        ACC.1 (opt) - Accident date / time (TS) S6.4.8.1
 
     acc_2 : str | None
-        ACC.2 (opt) - Accident code (ID)
+        ACC.2 (opt) - Accident code (ID) S6.4.8.2 | 0050 - ACCIDENT CODE
 
     acc_3 : str | None
-        ACC.3 (opt) - Accident location (ST)
+        ACC.3 (opt) - Accident location (ST) S6.4.8.3
     """
 
     acc_1: Optional[TS] = Field(

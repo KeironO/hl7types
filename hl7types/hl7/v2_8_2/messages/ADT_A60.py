@@ -32,62 +32,60 @@ _UAC = UAC
 
 
 class ADT_A60(HL7Model):
-    """HL7 v2 ADT_A60 message.
+    """ADT/ACK - Update allergy information (S3.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        EVN (EVN): required
-        PID (PID): required
-        ARV (Optional[List[ARV]]): optional
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        EVN (EVN): Event Type, required
+        PID (PID): Patient Identification, required
+        ARV (Optional[List[ARV]]): Access Restriction, optional
         VISIT (Optional[ADT_A60_VISIT]): optional
         ADVERSE_REACTION_GROUP (Optional[List[ADT_A60_ADVERSE_REACTION_GROUP]]): optional
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     EVN: _EVN = Field(
         title="EVN",
-        description="Required",
+        description="Event Type",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     ARV: Optional[List[_ARV]] = Field(
         default=None,
         title="ARV",
-        description="Optional, repeating",
+        description="Access Restriction",
     )
 
     VISIT: Optional[_ADT_A60_VISIT] = Field(
         default=None,
         title="VISIT",
-        description="Optional",
     )
 
     ADVERSE_REACTION_GROUP: Optional[List[_ADT_A60_ADVERSE_REACTION_GROUP]] = Field(
         default=None,
         title="ADVERSE_REACTION_GROUP",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

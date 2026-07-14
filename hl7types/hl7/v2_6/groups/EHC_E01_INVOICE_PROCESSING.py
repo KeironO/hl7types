@@ -19,12 +19,12 @@ class EHC_E01_INVOICE_PROCESSING(HL7Model):
     """HL7 v2 EHC_E01.INVOICE_PROCESSING group.
 
     Attributes:
-        IPR (IPR): required
+        IPR (IPR): Invoice Processing Results, required
     """
 
     IPR: _IPR = Field(
         title="IPR",
-        description="Required",
+        description="Invoice Processing Results",
     )
 
     model_config = {"populate_by_name": True}

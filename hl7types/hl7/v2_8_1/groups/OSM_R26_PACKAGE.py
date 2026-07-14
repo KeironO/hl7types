@@ -25,26 +25,25 @@ class OSM_R26_PACKAGE(HL7Model):
     """HL7 v2 OSM_R26.PACKAGE group.
 
     Attributes:
-        PAC (PAC): required
-        PRT (Optional[List[PRT]]): optional
+        PAC (PAC): Shipment Package, required
+        PRT (Optional[List[PRT]]): Participation Information, optional
         SPECIMEN (Optional[List[OSM_R26_SPECIMEN]]): optional
     """
 
     PAC: _PAC = Field(
         title="PAC",
-        description="Required",
+        description="Shipment Package",
     )
 
     PRT: Optional[List[_PRT]] = Field(
         default=None,
         title="PRT",
-        description="Optional, repeating",
+        description="Participation Information",
     )
 
     SPECIMEN: Optional[List[_OSM_R26_SPECIMEN]] = Field(
         default=None,
         title="SPECIMEN",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

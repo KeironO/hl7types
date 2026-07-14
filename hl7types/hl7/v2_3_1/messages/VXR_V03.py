@@ -36,16 +36,16 @@ _VXR_V03_PATIENT_VISIT = VXR_V03_PATIENT_VISIT
 
 
 class VXR_V03(HL7Model):
-    """HL7 v2 VXR_V03 message.
+    """VXR - Vaccination record response.
 
     Attributes:
-        MSH (MSH): required
-        MSA (MSA): required
-        QRD (QRD): required
-        QRF (Optional[QRF]): optional
-        PID (PID): required
-        PD1 (Optional[PD1]): optional
-        NK1 (Optional[List[NK1]]): optional
+        MSH (MSH): MSH - message header segment, required
+        MSA (MSA): MSA - message acknowledgment segment, required
+        QRD (QRD): QRD - original-style query definition segment, required
+        QRF (Optional[QRF]): QRF - original style query filter segment, optional
+        PID (PID): PID - patient identification segment, required
+        PD1 (Optional[PD1]): PD1 - patient additional demographic segment, optional
+        NK1 (Optional[List[NK1]]): NK1 - next of kin / associated parties segment-, optional
         PATIENT_VISIT (Optional[VXR_V03_PATIENT_VISIT]): optional
         INSURANCE (Optional[List[VXR_V03_INSURANCE]]): optional
         ORDER (Optional[List[VXR_V03_ORDER]]): optional
@@ -53,58 +53,55 @@ class VXR_V03(HL7Model):
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="MSH - message header segment",
     )
 
     MSA: _MSA = Field(
         title="MSA",
-        description="Required",
+        description="MSA - message acknowledgment segment",
     )
 
     QRD: _QRD = Field(
         title="QRD",
-        description="Required",
+        description="QRD - original-style query definition segment",
     )
 
     QRF: Optional[_QRF] = Field(
         default=None,
         title="QRF",
-        description="Optional",
+        description="QRF - original style query filter segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="PID - patient identification segment",
     )
 
     PD1: Optional[_PD1] = Field(
         default=None,
         title="PD1",
-        description="Optional",
+        description="PD1 - patient additional demographic segment",
     )
 
     NK1: Optional[List[_NK1]] = Field(
         default=None,
         title="NK1",
-        description="Optional, repeating",
+        description="NK1 - next of kin / associated parties segment-",
     )
 
     PATIENT_VISIT: Optional[_VXR_V03_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     INSURANCE: Optional[List[_VXR_V03_INSURANCE]] = Field(
         default=None,
         title="INSURANCE",
-        description="Optional, repeating",
     )
 
     ORDER: Optional[List[_VXR_V03_ORDER]] = Field(
         default=None,
         title="ORDER",
-        description="Optional, repeating",
     )
 
     model_config = {"populate_by_name": True}

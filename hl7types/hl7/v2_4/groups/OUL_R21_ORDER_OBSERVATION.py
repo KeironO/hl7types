@@ -32,46 +32,44 @@ class OUL_R21_ORDER_OBSERVATION(HL7Model):
 
     Attributes:
         CONTAINER (Optional[OUL_R21_CONTAINER]): optional
-        ORC (Optional[ORC]): optional
-        OBR (OBR): required
-        NTE (Optional[List[NTE]]): optional
+        ORC (Optional[ORC]): Common Order, optional
+        OBR (OBR): Observation Request, required
+        NTE (Optional[List[NTE]]): Notes and Comments, optional
         OBSERVATION (List[OUL_R21_OBSERVATION]): required
-        CTI (Optional[List[CTI]]): optional
+        CTI (Optional[List[CTI]]): Clinical Trial Identification, optional
     """
 
     CONTAINER: Optional[_OUL_R21_CONTAINER] = Field(
         default=None,
         title="CONTAINER",
-        description="Optional",
     )
 
     ORC: Optional[_ORC] = Field(
         default=None,
         title="ORC",
-        description="Optional",
+        description="Common Order",
     )
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     NTE: Optional[List[_NTE]] = Field(
         default=None,
         title="NTE",
-        description="Optional, repeating",
+        description="Notes and Comments",
     )
 
     OBSERVATION: List[_OUL_R21_OBSERVATION] = Field(
         min_length=1,
         title="OBSERVATION",
-        description="Required, repeating",
     )
 
     CTI: Optional[List[_CTI]] = Field(
         default=None,
         title="CTI",
-        description="Optional, repeating",
+        description="Clinical Trial Identification",
     )
 
     model_config = {"populate_by_name": True}

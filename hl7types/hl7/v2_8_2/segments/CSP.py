@@ -15,21 +15,21 @@ from ..datatypes.CWE import CWE
 
 
 class CSP(HL7Model):
-    """HL7 v2 CSP segment.
+    """Clinical Study Phase (S7.8.2).
 
     Attributes
     ----------
     csp_1 : CWE
-        CSP.1 (req) - Study Phase Identifier (CWE)
+        CSP.1 (req) - Study Phase Identifier (CWE) S8.11.3.2
 
     csp_2 : str
-        CSP.2 (req) - Date/time Study Phase Began (DTM)
+        CSP.2 (req) - Date/time Study Phase Began (DTM) S7.8.2.2
 
     csp_3 : str | None
-        CSP.3 (opt) - Date/time Study Phase Ended (DTM)
+        CSP.3 (opt) - Date/time Study Phase Ended (DTM) S7.8.2.3
 
     csp_4 : CWE | None
-        CSP.4 (opt) - Study Phase Evaluability (CWE)
+        CSP.4 (opt) - Study Phase Evaluability (CWE) S7.8.2.4 | 9999 - no table for CE
     """
 
     csp_1: CWE = Field(

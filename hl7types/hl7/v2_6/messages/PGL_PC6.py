@@ -28,49 +28,47 @@ _UAC = UAC
 
 
 class PGL_PC6(HL7Model):
-    """HL7 v2 PGL_PC6 message.
+    """PGL - PC/ goal add (S12.3.1).
 
     Attributes:
-        MSH (MSH): required
-        SFT (Optional[List[SFT]]): optional
-        UAC (Optional[UAC]): optional
-        PID (PID): required
+        MSH (MSH): Message Header, required
+        SFT (Optional[List[SFT]]): Software Segment, optional
+        UAC (Optional[UAC]): User Authentication Credential Segment, optional
+        PID (PID): Patient Identification, required
         PATIENT_VISIT (Optional[PGL_PC6_PATIENT_VISIT]): optional
         GOAL (List[PGL_PC6_GOAL]): required
     """
 
     MSH: _MSH = Field(
         title="MSH",
-        description="Required",
+        description="Message Header",
     )
 
     SFT: Optional[List[_SFT]] = Field(
         default=None,
         title="SFT",
-        description="Optional, repeating",
+        description="Software Segment",
     )
 
     UAC: Optional[_UAC] = Field(
         default=None,
         title="UAC",
-        description="Optional",
+        description="User Authentication Credential Segment",
     )
 
     PID: _PID = Field(
         title="PID",
-        description="Required",
+        description="Patient Identification",
     )
 
     PATIENT_VISIT: Optional[_PGL_PC6_PATIENT_VISIT] = Field(
         default=None,
         title="PATIENT_VISIT",
-        description="Optional",
     )
 
     GOAL: List[_PGL_PC6_GOAL] = Field(
         min_length=1,
         title="GOAL",
-        description="Required, repeating",
     )
 
     model_config = {"populate_by_name": True}

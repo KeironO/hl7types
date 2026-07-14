@@ -19,12 +19,12 @@ class ORG_O20_OBSERVATION_GROUP(HL7Model):
     """HL7 v2 ORG_O20.OBSERVATION_GROUP group.
 
     Attributes:
-        OBR (OBR): required
+        OBR (OBR): Observation Request, required
     """
 
     OBR: _OBR = Field(
         title="OBR",
-        description="Required",
+        description="Observation Request",
     )
 
     model_config = {"populate_by_name": True}
