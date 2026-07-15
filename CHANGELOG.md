@@ -2,6 +2,19 @@
 
 All notable changes to hl7types are documented here.
 
+## [0.9.2] :  2026-07-15
+
+### Changes
+
+- Update changelog (#76)
+- Clean up of docstring (#78)
+
+### Chores
+
+- Chore(deps-dev): bump ruff from 0.15.20 to 0.15.21 (#73)
+- Chore(deps-dev): bump hatchling from 1.30.1 to 1.31.0 (#72)
+- Chore(deps): bump typing-extensions from 4.15.0 to 4.16.0 (#71)
+
 ## [0.9.1] :  2026-07-14
 
 ### Changes
