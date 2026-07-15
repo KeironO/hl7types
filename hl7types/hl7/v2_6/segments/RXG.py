@@ -24,94 +24,94 @@ class RXG(HL7Model):
     Attributes
     ----------
     rxg_1 : str
-        RXG.1 (req) - Give Sub-ID Counter (NM) S4.14.6.1
+        RXG.1 - Give Sub-ID Counter (NM) R S4.14.6.1
 
     rxg_2 : str | None
-        RXG.2 (opt) - Dispense Sub-ID Counter (NM) S4.14.5.1
+        RXG.2 - Dispense Sub-ID Counter (NM) O S4.14.5.1
 
     rxg_3 : TQ | None
-        RXG.3 (opt) - Quantity/Timing (TQ) S4.14.4.1
+        RXG.3 - Quantity/Timing (TQ) O S4.14.4.1
 
     rxg_4 : CWE
-        RXG.4 (req) - Give Code (CWE) S4.14.4.2 | 0292 - Vaccines administered
+        RXG.4 - Give Code (CWE) R S4.14.4.2 | 0292 - Vaccines administered
 
     rxg_5 : str
-        RXG.5 (req) - Give Amount - Minimum (NM) S4.14.4.3
+        RXG.5 - Give Amount - Minimum (NM) R S4.14.4.3
 
     rxg_6 : str | None
-        RXG.6 (opt) - Give Amount - Maximum (NM) S4.14.4.4
+        RXG.6 - Give Amount - Maximum (NM) O S4.14.4.4
 
     rxg_7 : CWE
-        RXG.7 (req) - Give Units (CWE) S4.14.4.5 | 9999 - no table for CE
+        RXG.7 - Give Units (CWE) R S4.14.4.5 | 9999 - no table for CE
 
     rxg_8 : CWE | None
-        RXG.8 (opt) - Give Dosage Form (CWE) S4.14.4.6 | 9999 - no table for CE
+        RXG.8 - Give Dosage Form (CWE) O S4.14.4.6 | 9999 - no table for CE
 
     rxg_9 : list[CWE] | None
-        RXG.9 (opt, rep) - Administration Notes (CWE) S4.14.6.9 | 9999 - no table for CE
+        RXG.9 - Administration Notes (CWE) O rep S4.14.6.9 | 9999 - no table for CE
 
     rxg_10 : str | None
-        RXG.10 (opt) - Substitution Status (ID) S4.14.4.9 | 0167 - Substitution Status
+        RXG.10 - Substitution Status (ID) O S4.14.4.9 | 0167 - Substitution Status
 
     rxg_11 : LA2 | None
-        RXG.11 (opt) - Dispense-to Location (LA2) S4.14.5.13
+        RXG.11 - Dispense-to Location (LA2) O S4.14.5.13
 
     rxg_12 : str | None
-        RXG.12 (opt) - Needs Human Review (ID) S4.14.1.16 | 0136 - Yes/no indicator
+        RXG.12 - Needs Human Review (ID) O S4.14.1.16 | 0136 - Yes/no indicator
 
     rxg_13 : list[CWE] | None
-        RXG.13 (opt, rep) - Pharmacy/Treatment Supplier's Special Administration Instructions (CWE) S4.14.6.13 | 9999 - no table for CE
+        RXG.13 - Pharmacy/Treatment Supplier's Special Administration Instructions (CWE) O rep S4.14.6.13 | 9999 - no table for CE
 
     rxg_14 : str | None
-        RXG.14 (opt) - Give Per (Time Unit) (ST) S4.14.4.22
+        RXG.14 - Give Per (Time Unit) (ST) C S4.14.4.22
 
     rxg_15 : str | None
-        RXG.15 (opt) - Give Rate Amount (ST) S4.14.4.23
+        RXG.15 - Give Rate Amount (ST) O S4.14.4.23
 
     rxg_16 : CWE | None
-        RXG.16 (opt) - Give Rate Units (CWE) S4.14.4.24 | 9999 - no table for CE
+        RXG.16 - Give Rate Units (CWE) O S4.14.4.24 | 9999 - no table for CE
 
     rxg_17 : str | None
-        RXG.17 (opt) - Give Strength (NM) S4.14.4.25
+        RXG.17 - Give Strength (NM) O S4.14.4.25
 
     rxg_18 : CWE | None
-        RXG.18 (opt) - Give Strength Units (CWE) S4.14.4.26 | 9999 - no table for CE
+        RXG.18 - Give Strength Units (CWE) O S4.14.4.26 | 9999 - no table for CE
 
     rxg_19 : list[str] | None
-        RXG.19 (opt, rep) - Substance Lot Number (ST) S13.4.11.2
+        RXG.19 - Substance Lot Number (ST) O rep S13.4.11.2
 
     rxg_20 : list[str] | None
-        RXG.20 (opt, rep) - Substance Expiration Date (DTM) S4.14.5.19
+        RXG.20 - Substance Expiration Date (DTM) O rep S4.14.5.19
 
     rxg_21 : list[CWE] | None
-        RXG.21 (opt, rep) - Substance Manufacturer Name (CWE) S4.14.5.20 | 0227 - Manufacturers of Vaccines (code=MVX)
+        RXG.21 - Substance Manufacturer Name (CWE) O rep S4.14.5.20 | 0227 - Manufacturers of Vaccines (code=MVX)
 
     rxg_22 : list[CWE] | None
-        RXG.22 (opt, rep) - Indication (CWE) S4.14.1.20 | 9999 - no table for CE
+        RXG.22 - Indication (CWE) O rep S4.14.1.20 | 9999 - no table for CE
 
     rxg_23 : str | None
-        RXG.23 (opt) - Give Drug Strength Volume (NM) S4.14.6.23
+        RXG.23 - Give Drug Strength Volume (NM) O S4.14.6.23
 
     rxg_24 : CWE | None
-        RXG.24 (opt) - Give Drug Strength Volume Units (CWE) S4.14.6.24 | 9999 - no table for CE
+        RXG.24 - Give Drug Strength Volume Units (CWE) O S4.14.6.24 | 9999 - no table for CE
 
     rxg_25 : CWE | None
-        RXG.25 (opt) - Give Barcode Identifier (CWE) S4.14.6.25 | 9999 - no table for CE
+        RXG.25 - Give Barcode Identifier (CWE) O S4.14.6.25 | 9999 - no table for CE
 
     rxg_26 : str | None
-        RXG.26 (opt) - Pharmacy Order Type (ID) S4.14.6.26 | 0480 - Pharmacy Order Types
+        RXG.26 - Pharmacy Order Type (ID) O S4.14.6.26 | 0480 - Pharmacy Order Types
 
     rxg_27 : CWE | None
-        RXG.27 (opt) - Dispense to Pharmacy (CWE) S4.14.5.30 | 9999 - no table for CE
+        RXG.27 - Dispense to Pharmacy (CWE) O S4.14.5.30 | 9999 - no table for CE
 
     rxg_28 : XAD | None
-        RXG.28 (opt) - Dispense to Pharmacy Address (XAD) S4.14.5.31
+        RXG.28 - Dispense to Pharmacy Address (XAD) O S4.14.5.31
 
     rxg_29 : PL | None
-        RXG.29 (opt) - Deliver-to Patient Location (PL) S4.14.1.34
+        RXG.29 - Deliver-to Patient Location (PL) O S4.14.1.34
 
     rxg_30 : XAD | None
-        RXG.30 (opt) - Deliver-to Address (XAD) S4.14.1.35
+        RXG.30 - Deliver-to Address (XAD) O S4.14.1.35
     """
 
     rxg_1: str = Field(
@@ -122,7 +122,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.1",
         title="Give Sub-ID Counter",
-        description="Item #342",
+        description="R | Item #00342 | LEN:4",
     )
 
     rxg_2: Optional[str] = Field(
@@ -134,7 +134,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.2",
         title="Dispense Sub-ID Counter",
-        description="Item #334",
+        description="O | Item #00334 | LEN:4",
     )
 
     rxg_3: Optional[TQ] = Field(
@@ -146,7 +146,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.3",
         title="Quantity/Timing",
-        description="Item #221",
+        description="O | Item #00221",
     )
 
     rxg_4: CWE = Field(
@@ -157,7 +157,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.4",
         title="Give Code",
-        description="Item #317 | Table HL70292",
+        description="R | Item #00317 | Table 0292 - Vaccines administered",
     )
 
     rxg_5: str = Field(
@@ -168,7 +168,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.5",
         title="Give Amount - Minimum",
-        description="Item #318",
+        description="R | Item #00318 | LEN:20",
     )
 
     rxg_6: Optional[str] = Field(
@@ -180,7 +180,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.6",
         title="Give Amount - Maximum",
-        description="Item #319",
+        description="O | Item #00319 | LEN:20",
     )
 
     rxg_7: CWE = Field(
@@ -191,7 +191,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.7",
         title="Give Units",
-        description="Item #320 | Table HL79999",
+        description="R | Item #00320 | Table 9999 - no table for CE",
     )
 
     rxg_8: Optional[CWE] = Field(
@@ -203,7 +203,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.8",
         title="Give Dosage Form",
-        description="Item #321 | Table HL79999",
+        description="O | Item #00321 | Table 9999 - no table for CE",
     )
 
     rxg_9: Optional[List[CWE]] = Field(
@@ -215,7 +215,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.9",
         title="Administration Notes",
-        description="Item #351 | Table HL79999",
+        description="O | Item #00351 | Table 9999 - no table for CE",
     )
 
     rxg_10: Optional[str] = Field(
@@ -227,7 +227,9 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.10",
         title="Substitution Status",
-        description="Item #322 | Table HL70167",
+        description=(
+            "O | Item #00322 | Table 0167 - Substitution Status | LEN:1"
+        ),
     )
 
     rxg_11: Optional[LA2] = Field(
@@ -239,7 +241,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.11",
         title="Dispense-to Location",
-        description="Item #1303",
+        description="O | Item #01303",
     )
 
     rxg_12: Optional[str] = Field(
@@ -251,7 +253,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.12",
         title="Needs Human Review",
-        description="Item #307 | Table HL70136",
+        description="O | Item #00307 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     rxg_13: Optional[List[CWE]] = Field(
@@ -265,7 +267,7 @@ class RXG(HL7Model):
         title=(
             "Pharmacy/Treatment Supplier's Special Administration Instructions"
         ),
-        description="Item #343 | Table HL79999",
+        description="O | Item #00343 | Table 9999 - no table for CE",
     )
 
     rxg_14: Optional[str] = Field(
@@ -277,7 +279,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.14",
         title="Give Per (Time Unit)",
-        description="Item #331",
+        description="C | Item #00331 | LEN:20",
     )
 
     rxg_15: Optional[str] = Field(
@@ -289,7 +291,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.15",
         title="Give Rate Amount",
-        description="Item #332",
+        description="O | Item #00332 | LEN:6",
     )
 
     rxg_16: Optional[CWE] = Field(
@@ -301,7 +303,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.16",
         title="Give Rate Units",
-        description="Item #333 | Table HL79999",
+        description="O | Item #00333 | Table 9999 - no table for CE",
     )
 
     rxg_17: Optional[str] = Field(
@@ -313,7 +315,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.17",
         title="Give Strength",
-        description="Item #1126",
+        description="O | Item #01126 | LEN:20",
     )
 
     rxg_18: Optional[CWE] = Field(
@@ -325,7 +327,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.18",
         title="Give Strength Units",
-        description="Item #1127 | Table HL79999",
+        description="O | Item #01127 | Table 9999 - no table for CE",
     )
 
     rxg_19: Optional[List[str]] = Field(
@@ -337,7 +339,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.19",
         title="Substance Lot Number",
-        description="Item #1129",
+        description="O | Item #01129 | LEN:20",
     )
 
     rxg_20: Optional[List[str]] = Field(
@@ -349,7 +351,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.20",
         title="Substance Expiration Date",
-        description="Item #1130",
+        description="O | Item #01130 | LEN:24",
     )
 
     rxg_21: Optional[List[CWE]] = Field(
@@ -361,7 +363,9 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.21",
         title="Substance Manufacturer Name",
-        description="Item #1131 | Table HL70227",
+        description=(
+            "O | Item #01131 | Table 0227 - Manufacturers of Vaccines (code=MVX)"
+        ),
     )
 
     rxg_22: Optional[List[CWE]] = Field(
@@ -373,7 +377,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.22",
         title="Indication",
-        description="Item #1123 | Table HL79999",
+        description="O | Item #01123 | Table 9999 - no table for CE",
     )
 
     rxg_23: Optional[str] = Field(
@@ -385,7 +389,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.23",
         title="Give Drug Strength Volume",
-        description="Item #1692",
+        description="O | Item #01692 | LEN:5",
     )
 
     rxg_24: Optional[CWE] = Field(
@@ -397,7 +401,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.24",
         title="Give Drug Strength Volume Units",
-        description="Item #1693 | Table HL79999",
+        description="O | Item #01693 | Table 9999 - no table for CE",
     )
 
     rxg_25: Optional[CWE] = Field(
@@ -409,7 +413,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.25",
         title="Give Barcode Identifier",
-        description="Item #1694 | Table HL79999",
+        description="O | Item #01694 | Table 9999 - no table for CE",
     )
 
     rxg_26: Optional[str] = Field(
@@ -421,7 +425,9 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.26",
         title="Pharmacy Order Type",
-        description="Item #1695 | Table HL70480",
+        description=(
+            "O | Item #01695 | Table 0480 - Pharmacy Order Types | LEN:1"
+        ),
     )
 
     rxg_27: Optional[CWE] = Field(
@@ -433,7 +439,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.27",
         title="Dispense to Pharmacy",
-        description="Item #1688 | Table HL79999",
+        description="O | Item #01688 | Table 9999 - no table for CE",
     )
 
     rxg_28: Optional[XAD] = Field(
@@ -445,7 +451,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.28",
         title="Dispense to Pharmacy Address",
-        description="Item #1689",
+        description="O | Item #01689",
     )
 
     rxg_29: Optional[PL] = Field(
@@ -457,7 +463,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.29",
         title="Deliver-to Patient Location",
-        description="Item #1683",
+        description="O | Item #01683",
     )
 
     rxg_30: Optional[XAD] = Field(
@@ -469,7 +475,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.30",
         title="Deliver-to Address",
-        description="Item #1684",
+        description="O | Item #01684",
     )
 
     @field_validator("rxg_1", "rxg_2", "rxg_5", "rxg_6", "rxg_17", "rxg_23", mode='before')

@@ -21,16 +21,16 @@ class SPR(HL7Model):
     Attributes
     ----------
     spr_1 : str | None
-        SPR.1 (opt) - Query Tag (ST) S5.10.5.1.1
+        SPR.1 - Query Tag (ST) O S5.10.5.1.1
 
     spr_2 : str
-        SPR.2 (req) - Query/Response Format Code (ID) S5.10.5.1.2 | 0106 - Query/response format code
+        SPR.2 - Query/Response Format Code (ID) R S5.10.5.1.2 | 0106 - Query/response format code
 
     spr_3 : CE
-        SPR.3 (req) - Stored Procedure Name (CE) S5.10.5.5.3
+        SPR.3 - Stored Procedure Name (CE) R S5.10.5.5.3
 
     spr_4 : list[QIP] | None
-        SPR.4 (opt, rep) - Input Parameter List (QIP) S5.10.5.2.3
+        SPR.4 - Input Parameter List (QIP) O rep S5.10.5.2.3
     """
 
     spr_1: Optional[str] = Field(
@@ -42,7 +42,7 @@ class SPR(HL7Model):
         ),
         serialization_alias="SPR.1",
         title="Query Tag",
-        description="Item #696",
+        description="O | Item #00696 | LEN:32",
     )
 
     spr_2: str = Field(
@@ -53,7 +53,9 @@ class SPR(HL7Model):
         ),
         serialization_alias="SPR.2",
         title="Query/Response Format Code",
-        description="Item #697 | Table HL70106",
+        description=(
+            "R | Item #00697 | Table 0106 - Query/response format code | LEN:1"
+        ),
     )
 
     spr_3: CE = Field(
@@ -64,7 +66,7 @@ class SPR(HL7Model):
         ),
         serialization_alias="SPR.3",
         title="Stored Procedure Name",
-        description="Item #704",
+        description="R | Item #00704",
     )
 
     spr_4: Optional[List[QIP]] = Field(
@@ -76,7 +78,7 @@ class SPR(HL7Model):
         ),
         serialization_alias="SPR.4",
         title="Input Parameter List",
-        description="Item #705",
+        description="O | Item #00705",
     )
 
     model_config = {"populate_by_name": True}

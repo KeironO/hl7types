@@ -18,10 +18,10 @@ class FTS(HL7Model):
     Attributes
     ----------
     fts_1 : str | None
-        FTS.1 (opt) - File Batch Count (NM) S2.10.12.1
+        FTS.1 - File Batch Count (NM) NA S2.10.12.1
 
     fts_2 : str | None
-        FTS.2 (opt) - File Trailer Comment (ST) S2.10.12.2
+        FTS.2 - File Trailer Comment (ST) NA S2.10.12.2
     """
 
     fts_1: Optional[str] = Field(
@@ -33,7 +33,7 @@ class FTS(HL7Model):
         ),
         serialization_alias="FTS.1",
         title="File Batch Count",
-        description="Item #79",
+        description="NA | Item #00079 | LEN:10",
     )
 
     fts_2: Optional[str] = Field(
@@ -45,7 +45,7 @@ class FTS(HL7Model):
         ),
         serialization_alias="FTS.2",
         title="File Trailer Comment",
-        description="Item #80",
+        description="NA | Item #00080 | LEN:80",
     )
 
     @field_validator("fts_1", mode='before')

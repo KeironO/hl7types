@@ -22,22 +22,22 @@ class PTH(HL7Model):
     Attributes
     ----------
     pth_1 : str
-        PTH.1 (req) - Action Code (ID) S12.3.1 | 0287 - Action Code
+        PTH.1 - Action Code (ID) R S12.3.1 | 0287 - Action Code
 
     pth_2 : CE
-        PTH.2 (req) - Pathway ID (CE) S12.3.4.2
+        PTH.2 - Pathway ID (CE) R S12.3.4.2
 
     pth_3 : EI
-        PTH.3 (req) - Pathway Instance ID (EI) S12.3.4.3
+        PTH.3 - Pathway Instance ID (EI) R S12.3.4.3
 
     pth_4 : TS
-        PTH.4 (req) - Pathway Established Date/Time (TS) S12.3.4.4
+        PTH.4 - Pathway Established Date/Time (TS) R S12.3.4.4
 
     pth_5 : CE | None
-        PTH.5 (opt) - Pathway Lifecycle Status (CE) S12.3.4.5
+        PTH.5 - Pathway Lifecycle Status (CE) O S12.3.4.5
 
     pth_6 : TS | None
-        PTH.6 (opt) - Change Pathway Lifecycle Status Date/Time (TS) S12.3.4.6
+        PTH.6 - Change Pathway Lifecycle Status Date/Time (TS) C S12.3.4.6
     """
 
     pth_1: str = Field(
@@ -48,7 +48,7 @@ class PTH(HL7Model):
         ),
         serialization_alias="PTH.1",
         title="Action Code",
-        description="Item #816 | Table HL70287",
+        description="R | Item #00816 | Table 0287 - Action Code | LEN:2",
     )
 
     pth_2: CE = Field(
@@ -59,7 +59,7 @@ class PTH(HL7Model):
         ),
         serialization_alias="PTH.2",
         title="Pathway ID",
-        description="Item #1207",
+        description="R | Item #01207",
     )
 
     pth_3: EI = Field(
@@ -70,7 +70,7 @@ class PTH(HL7Model):
         ),
         serialization_alias="PTH.3",
         title="Pathway Instance ID",
-        description="Item #1208",
+        description="R | Item #01208",
     )
 
     pth_4: TS = Field(
@@ -81,7 +81,7 @@ class PTH(HL7Model):
         ),
         serialization_alias="PTH.4",
         title="Pathway Established Date/Time",
-        description="Item #1209",
+        description="R | Item #01209",
     )
 
     pth_5: Optional[CE] = Field(
@@ -93,7 +93,7 @@ class PTH(HL7Model):
         ),
         serialization_alias="PTH.5",
         title="Pathway Lifecycle Status",
-        description="Item #1210",
+        description="O | Item #01210",
     )
 
     pth_6: Optional[TS] = Field(
@@ -105,7 +105,7 @@ class PTH(HL7Model):
         ),
         serialization_alias="PTH.6",
         title="Change Pathway Lifecycle Status Date/Time",
-        description="Item #1211",
+        description="C | Item #01211",
     )
 
     model_config = {"populate_by_name": True}

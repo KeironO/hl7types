@@ -20,37 +20,37 @@ class OM2(HL7Model):
     Attributes
     ----------
     om2_1 : str | None
-        OM2.1 (opt) - Segment Type ID (ST) S7.6.9.1
+        OM2.1 - Segment Type ID (ST) NA S7.6.9.1
 
     om2_2 : str | None
-        OM2.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
+        OM2.2 - Sequence Number - Test/ Observation Master File (NM) NA S7.6.9.2
 
     om2_3 : CE | None
-        OM2.3 (opt) - Units of Measure (CE) S7.6.5.3
+        OM2.3 - Units of Measure (CE) NA S7.6.5.3
 
     om2_4 : str | None
-        OM2.4 (opt) - Range of Decimal Precision (NM) S7.6.5.4
+        OM2.4 - Range of Decimal Precision (NM) NA S7.6.5.4
 
     om2_5 : CE | None
-        OM2.5 (opt) - Corresponding SI Units of Measure (CE) S7.6.5.5
+        OM2.5 - Corresponding SI Units of Measure (CE) NA S7.6.5.5
 
     om2_6 : list[str]
-        OM2.6 (req, rep) - SI Conversion Factor (TX) S7.6.5.6
+        OM2.6 - SI Conversion Factor (TX) R rep S7.6.5.6
 
     om2_7 : list[str] | None
-        OM2.7 (opt, rep) - Reference (normal) range - ordinal & continuous observations (CM) S7.6.5.7
+        OM2.7 - Reference (normal) range - ordinal & continuous observations (CM) NA rep S7.6.5.7
 
     om2_8 : str | None
-        OM2.8 (opt) - Critical range for ordinal and continuous observations (CM) S7.6.5.8
+        OM2.8 - Critical range for ordinal and continuous observations (CM) NA S7.6.5.8
 
     om2_9 : str | None
-        OM2.9 (opt) - Absolute range for ordinal and continuous observations (CM) S7.6.5.9
+        OM2.9 - Absolute range for ordinal and continuous observations (CM) NA S7.6.5.9
 
     om2_10 : list[str] | None
-        OM2.10 (opt, rep) - Delta Check Criteria (CM) S7.6.5.10
+        OM2.10 - Delta Check Criteria (CM) NA rep S7.6.5.10
 
     om2_11 : str | None
-        OM2.11 (opt) - Minimum Meaningful Increments (NM) S7.6.5.11
+        OM2.11 - Minimum Meaningful Increments (NM) NA S7.6.5.11
     """
 
     om2_1: Optional[str] = Field(
@@ -62,7 +62,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.1",
         title="Segment Type ID",
-        description="Item #585",
+        description="NA | Item #00585 | LEN:3",
     )
 
     om2_2: Optional[str] = Field(
@@ -74,7 +74,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.2",
         title="Sequence Number - Test/ Observation Master File",
-        description="Item #586",
+        description="NA | Item #00586 | LEN:4",
     )
 
     om2_3: Optional[CE] = Field(
@@ -86,7 +86,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.3",
         title="Units of Measure",
-        description="Item #627",
+        description="NA | Item #00627",
     )
 
     om2_4: Optional[str] = Field(
@@ -98,7 +98,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.4",
         title="Range of Decimal Precision",
-        description="Item #628",
+        description="NA | Item #00628 | LEN:10",
     )
 
     om2_5: Optional[CE] = Field(
@@ -110,7 +110,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.5",
         title="Corresponding SI Units of Measure",
-        description="Item #629",
+        description="NA | Item #00629",
     )
 
     om2_6: List[str] = Field(
@@ -122,7 +122,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.6",
         title="SI Conversion Factor",
-        description="Item #630",
+        description="R | Item #00630",
     )
 
     om2_7: Optional[List[str]] = Field(
@@ -134,7 +134,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.7",
         title="Reference (normal) range - ordinal & continuous observations",
-        description="Item #631",
+        description="NA | Item #00631",
     )
 
     om2_8: Optional[str] = Field(
@@ -146,7 +146,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.8",
         title="Critical range for ordinal and continuous observations",
-        description="Item #632",
+        description="NA | Item #00632",
     )
 
     om2_9: Optional[str] = Field(
@@ -158,7 +158,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.9",
         title="Absolute range for ordinal and continuous observations",
-        description="Item #633",
+        description="NA | Item #00633",
     )
 
     om2_10: Optional[List[str]] = Field(
@@ -170,7 +170,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.10",
         title="Delta Check Criteria",
-        description="Item #634",
+        description="NA | Item #00634",
     )
 
     om2_11: Optional[str] = Field(
@@ -182,7 +182,7 @@ class OM2(HL7Model):
         ),
         serialization_alias="OM2.11",
         title="Minimum Meaningful Increments",
-        description="Item #635",
+        description="NA | Item #00635 | LEN:20",
     )
 
     @field_validator("om2_2", "om2_4", "om2_11", mode='before')

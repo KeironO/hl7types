@@ -24,70 +24,70 @@ class GOL(HL7Model):
     Attributes
     ----------
     gol_1 : str
-        GOL.1 (req) - Action Code (ID) S12.4.1.1 | 0287 - Problem/goal action code
+        GOL.1 - Action Code (ID) R S12.4.1.1 | 0287 - Problem/goal action code
 
     gol_2 : str
-        GOL.2 (req) - Action Date/Time (DTM) S12.4.1.2
+        GOL.2 - Action Date/Time (DTM) R S12.4.1.2
 
     gol_3 : CWE
-        GOL.3 (req) - Goal ID (CWE) S12.4.1.3
+        GOL.3 - Goal ID (CWE) R S12.4.1.3
 
     gol_4 : EI
-        GOL.4 (req) - Goal Instance ID (EI) S12.4.1.4
+        GOL.4 - Goal Instance ID (EI) R S12.4.1.4
 
     gol_5 : EI | None
-        GOL.5 (opt) - Episode of Care ID (EI) S12.4.1.5
+        GOL.5 - Episode of Care ID (EI) O S12.4.1.5
 
     gol_6 : str | None
-        GOL.6 (opt) - Goal List Priority (NM) S12.4.1.6
+        GOL.6 - Goal List Priority (NM) O S12.4.1.6
 
     gol_7 : str | None
-        GOL.7 (opt) - Goal Established Date/Time (DTM) S12.4.1.7
+        GOL.7 - Goal Established Date/Time (DTM) O S12.4.1.7
 
     gol_8 : str | None
-        GOL.8 (opt) - Expected Goal Achieve Date/Time (DTM) S12.4.1.8
+        GOL.8 - Expected Goal Achieve Date/Time (DTM) O S12.4.1.8
 
     gol_9 : CWE | None
-        GOL.9 (opt) - Goal Classification (CWE) S12.4.1.9
+        GOL.9 - Goal Classification (CWE) O S12.4.1.9
 
     gol_10 : CWE | None
-        GOL.10 (opt) - Goal Management Discipline (CWE) S12.4.1.10
+        GOL.10 - Goal Management Discipline (CWE) O S12.4.1.10
 
     gol_11 : CWE | None
-        GOL.11 (opt) - Current Goal Review Status (CWE) S12.4.1.11
+        GOL.11 - Current Goal Review Status (CWE) O S12.4.1.11
 
     gol_12 : str | None
-        GOL.12 (opt) - Current Goal Review Date/Time (DTM) S12.4.1.12
+        GOL.12 - Current Goal Review Date/Time (DTM) O S12.4.1.12
 
     gol_13 : str | None
-        GOL.13 (opt) - Next Goal Review Date/Time (DTM) S12.4.1.13
+        GOL.13 - Next Goal Review Date/Time (DTM) O S12.4.1.13
 
     gol_14 : str | None
-        GOL.14 (opt) - Previous Goal Review Date/Time (DTM) S12.4.1.14
+        GOL.14 - Previous Goal Review Date/Time (DTM) O S12.4.1.14
 
     gol_15 : TQ | None
-        GOL.15 (opt) - Goal Review Interval (TQ) S12.4.1.15
+        GOL.15 - Goal Review Interval (TQ) O S12.4.1.15
 
     gol_16 : CWE | None
-        GOL.16 (opt) - Goal Evaluation (CWE) S12.4.1.16
+        GOL.16 - Goal Evaluation (CWE) O S12.4.1.16
 
     gol_17 : list[str] | None
-        GOL.17 (opt, rep) - Goal Evaluation Comment (ST) S12.4.1.17
+        GOL.17 - Goal Evaluation Comment (ST) O rep S12.4.1.17
 
     gol_18 : CWE | None
-        GOL.18 (opt) - Goal Life Cycle Status (CWE) S12.4.1.18
+        GOL.18 - Goal Life Cycle Status (CWE) O S12.4.1.18
 
     gol_19 : str | None
-        GOL.19 (opt) - Goal Life Cycle Status Date/Time (DTM) S12.4.1.19
+        GOL.19 - Goal Life Cycle Status Date/Time (DTM) O S12.4.1.19
 
     gol_20 : list[CWE] | None
-        GOL.20 (opt, rep) - Goal Target Type (CWE) S12.4.1.20
+        GOL.20 - Goal Target Type (CWE) O rep S12.4.1.20
 
     gol_21 : list[XPN] | None
-        GOL.21 (opt, rep) - Goal Target Name (XPN) S12.4.1.21
+        GOL.21 - Goal Target Name (XPN) O rep S12.4.1.21
 
     gol_22 : CNE | None
-        GOL.22 (opt) - Mood Code (CNE) S7.4.2.22 | 0725 - Mood Codes
+        GOL.22 - Mood Code (CNE) C S7.4.2.22 | 0725 - Mood Codes
     """
 
     gol_1: str = Field(
@@ -98,7 +98,9 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.1",
         title="Action Code",
-        description="Item #816 | Table HL70287",
+        description=(
+            "R | Item #00816 | Table 0287 - Problem/goal action code | LEN:2"
+        ),
     )
 
     gol_2: str = Field(
@@ -109,7 +111,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.2",
         title="Action Date/Time",
-        description="Item #817",
+        description="R | Item #00817 | LEN:24",
     )
 
     gol_3: CWE = Field(
@@ -120,7 +122,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.3",
         title="Goal ID",
-        description="Item #818",
+        description="R | Item #00818",
     )
 
     gol_4: EI = Field(
@@ -131,7 +133,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.4",
         title="Goal Instance ID",
-        description="Item #819",
+        description="R | Item #00819",
     )
 
     gol_5: Optional[EI] = Field(
@@ -143,7 +145,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.5",
         title="Episode of Care ID",
-        description="Item #820",
+        description="O | Item #00820",
     )
 
     gol_6: Optional[str] = Field(
@@ -155,7 +157,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.6",
         title="Goal List Priority",
-        description="Item #821",
+        description="O | Item #00821 | LEN:60",
     )
 
     gol_7: Optional[str] = Field(
@@ -167,7 +169,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.7",
         title="Goal Established Date/Time",
-        description="Item #822",
+        description="O | Item #00822 | LEN:24",
     )
 
     gol_8: Optional[str] = Field(
@@ -179,7 +181,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.8",
         title="Expected Goal Achieve Date/Time",
-        description="Item #824",
+        description="O | Item #00824 | LEN:24",
     )
 
     gol_9: Optional[CWE] = Field(
@@ -191,7 +193,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.9",
         title="Goal Classification",
-        description="Item #825",
+        description="O | Item #00825",
     )
 
     gol_10: Optional[CWE] = Field(
@@ -203,7 +205,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.10",
         title="Goal Management Discipline",
-        description="Item #826",
+        description="O | Item #00826",
     )
 
     gol_11: Optional[CWE] = Field(
@@ -215,7 +217,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.11",
         title="Current Goal Review Status",
-        description="Item #827",
+        description="O | Item #00827",
     )
 
     gol_12: Optional[str] = Field(
@@ -227,7 +229,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.12",
         title="Current Goal Review Date/Time",
-        description="Item #828",
+        description="O | Item #00828 | LEN:24",
     )
 
     gol_13: Optional[str] = Field(
@@ -239,7 +241,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.13",
         title="Next Goal Review Date/Time",
-        description="Item #829",
+        description="O | Item #00829 | LEN:24",
     )
 
     gol_14: Optional[str] = Field(
@@ -251,7 +253,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.14",
         title="Previous Goal Review Date/Time",
-        description="Item #830",
+        description="O | Item #00830 | LEN:24",
     )
 
     gol_15: Optional[TQ] = Field(
@@ -263,7 +265,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.15",
         title="Goal Review Interval",
-        description="Item #831",
+        description="O | Item #00831",
     )
 
     gol_16: Optional[CWE] = Field(
@@ -275,7 +277,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.16",
         title="Goal Evaluation",
-        description="Item #832",
+        description="O | Item #00832",
     )
 
     gol_17: Optional[List[str]] = Field(
@@ -287,7 +289,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.17",
         title="Goal Evaluation Comment",
-        description="Item #833",
+        description="O | Item #00833 | LEN:300",
     )
 
     gol_18: Optional[CWE] = Field(
@@ -299,7 +301,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.18",
         title="Goal Life Cycle Status",
-        description="Item #834",
+        description="O | Item #00834",
     )
 
     gol_19: Optional[str] = Field(
@@ -311,7 +313,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.19",
         title="Goal Life Cycle Status Date/Time",
-        description="Item #835",
+        description="O | Item #00835 | LEN:24",
     )
 
     gol_20: Optional[List[CWE]] = Field(
@@ -323,7 +325,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.20",
         title="Goal Target Type",
-        description="Item #836",
+        description="O | Item #00836",
     )
 
     gol_21: Optional[List[XPN]] = Field(
@@ -335,7 +337,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.21",
         title="Goal Target Name",
-        description="Item #837",
+        description="O | Item #00837",
     )
 
     gol_22: Optional[CNE] = Field(
@@ -347,7 +349,7 @@ class GOL(HL7Model):
         ),
         serialization_alias="GOL.22",
         title="Mood Code",
-        description="Item #2182 | Table HL70725",
+        description="C | Item #02182 | Table 0725 - Mood Codes",
     )
 
     @field_validator("gol_2", "gol_7", "gol_8", "gol_12", "gol_13", "gol_14", "gol_19", mode='before')

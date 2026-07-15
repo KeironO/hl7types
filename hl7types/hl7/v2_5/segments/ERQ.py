@@ -21,13 +21,13 @@ class ERQ(HL7Model):
     Attributes
     ----------
     erq_1 : str | None
-        ERQ.1 (opt) - Query Tag (ST) S5.5.2.1
+        ERQ.1 - Query Tag (ST) O S5.5.2.1
 
     erq_2 : CE
-        ERQ.2 (req) - Event Identifier (CE) S5.10.5.2.2
+        ERQ.2 - Event Identifier (CE) R S5.10.5.2.2
 
     erq_3 : list[QIP] | None
-        ERQ.3 (opt, rep) - Input Parameter List (QIP) S5.10.5.2.3
+        ERQ.3 - Input Parameter List (QIP) O rep S5.10.5.2.3
     """
 
     erq_1: Optional[str] = Field(
@@ -39,7 +39,7 @@ class ERQ(HL7Model):
         ),
         serialization_alias="ERQ.1",
         title="Query Tag",
-        description="Item #696",
+        description="O | Item #00696 | LEN:32",
     )
 
     erq_2: CE = Field(
@@ -50,7 +50,7 @@ class ERQ(HL7Model):
         ),
         serialization_alias="ERQ.2",
         title="Event Identifier",
-        description="Item #706",
+        description="R | Item #00706",
     )
 
     erq_3: Optional[List[QIP]] = Field(
@@ -62,7 +62,7 @@ class ERQ(HL7Model):
         ),
         serialization_alias="ERQ.3",
         title="Input Parameter List",
-        description="Item #705",
+        description="O | Item #00705",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,46 +22,46 @@ class BPO(HL7Model):
     Attributes
     ----------
     bpo_1 : str
-        BPO.1 (req) - Set ID - BPO (SI) S4.21.1.1
+        BPO.1 - Set ID - BPO (SI) R S4.21.1.1
 
     bpo_2 : CWE
-        BPO.2 (req) - BP Universal Service Identifier (CWE) S4.21.1.2 | 9999 - no table for CE
+        BPO.2 - BP Universal Service Identifier (CWE) R S4.21.1.2 | 9999 - no table for CE
 
     bpo_3 : list[CWE] | None
-        BPO.3 (opt, rep) - BP  Processing Requirements (CWE) S4.21.1.3 | 0508 - Blood Product Processing Requirements
+        BPO.3 - BP  Processing Requirements (CWE) O rep S4.21.1.3 | 0508 - Blood Product Processing Requirements
 
     bpo_4 : str
-        BPO.4 (req) - BP Quantity (NM) S4.21.1.4
+        BPO.4 - BP Quantity (NM) R S4.21.1.4
 
     bpo_5 : str | None
-        BPO.5 (opt) - BP Amount (NM) S4.21.1.5
+        BPO.5 - BP Amount (NM) O S4.21.1.5
 
     bpo_6 : CWE | None
-        BPO.6 (opt) - BP Units (CWE) S4.21.1.6 | 9999 - no table for CE
+        BPO.6 - BP Units (CWE) O S4.21.1.6 | 9999 - no table for CE
 
     bpo_7 : str | None
-        BPO.7 (opt) - BP Intended Use Date/Time (DTM) S4.21.1.7
+        BPO.7 - BP Intended Use Date/Time (DTM) O S4.21.1.7
 
     bpo_8 : PL | None
-        BPO.8 (opt) - BP Intended Dispense From Location (PL) S4.21.1.8
+        BPO.8 - BP Intended Dispense From Location (PL) O S4.21.1.8
 
     bpo_9 : XAD | None
-        BPO.9 (opt) - BP Intended Dispense From Address (XAD) S4.21.1.9
+        BPO.9 - BP Intended Dispense From Address (XAD) O S4.21.1.9
 
     bpo_10 : str | None
-        BPO.10 (opt) - BP Requested Dispense Date/Time (DTM) S4.21.1.10
+        BPO.10 - BP Requested Dispense Date/Time (DTM) O S4.21.1.10
 
     bpo_11 : PL | None
-        BPO.11 (opt) - BP Requested Dispense To Location (PL) S4.21.1.11
+        BPO.11 - BP Requested Dispense To Location (PL) O S4.21.1.11
 
     bpo_12 : XAD | None
-        BPO.12 (opt) - BP Requested Dispense To Address (XAD) S4.21.1.12
+        BPO.12 - BP Requested Dispense To Address (XAD) O S4.21.1.12
 
     bpo_13 : list[CWE] | None
-        BPO.13 (opt, rep) - BP Indication for Use (CWE) S4.21.1.13 | 0509 - Indication For Use
+        BPO.13 - BP Indication for Use (CWE) O rep S4.21.1.13 | 0509 - Indication For Use
 
     bpo_14 : str | None
-        BPO.14 (opt) - BP Informed Consent Indicator (ID) S4.21.1.14 | 0136 - Yes/no indicator
+        BPO.14 - BP Informed Consent Indicator (ID) O S4.21.1.14 | 0136 - Yes/no indicator
     """
 
     bpo_1: str = Field(
@@ -72,7 +72,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.1",
         title="Set ID - BPO",
-        description="Item #1700",
+        description="R | Item #01700 | LEN:4",
     )
 
     bpo_2: CWE = Field(
@@ -83,7 +83,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.2",
         title="BP Universal Service Identifier",
-        description="Item #1701 | Table HL79999",
+        description="R | Item #01701 | Table 9999 - no table for CE",
     )
 
     bpo_3: Optional[List[CWE]] = Field(
@@ -95,7 +95,9 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.3",
         title="BP  Processing Requirements",
-        description="Item #1702 | Table HL70508",
+        description=(
+            "O | Item #01702 | Table 0508 - Blood Product Processing Requirements"
+        ),
     )
 
     bpo_4: str = Field(
@@ -106,7 +108,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.4",
         title="BP Quantity",
-        description="Item #1703",
+        description="R | Item #01703 | LEN:5",
     )
 
     bpo_5: Optional[str] = Field(
@@ -118,7 +120,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.5",
         title="BP Amount",
-        description="Item #1704",
+        description="O | Item #01704 | LEN:5",
     )
 
     bpo_6: Optional[CWE] = Field(
@@ -130,7 +132,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.6",
         title="BP Units",
-        description="Item #1705 | Table HL79999",
+        description="O | Item #01705 | Table 9999 - no table for CE",
     )
 
     bpo_7: Optional[str] = Field(
@@ -142,7 +144,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.7",
         title="BP Intended Use Date/Time",
-        description="Item #1706",
+        description="O | Item #01706 | LEN:24",
     )
 
     bpo_8: Optional[PL] = Field(
@@ -154,7 +156,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.8",
         title="BP Intended Dispense From Location",
-        description="Item #1707",
+        description="O | Item #01707",
     )
 
     bpo_9: Optional[XAD] = Field(
@@ -166,7 +168,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.9",
         title="BP Intended Dispense From Address",
-        description="Item #1708",
+        description="O | Item #01708",
     )
 
     bpo_10: Optional[str] = Field(
@@ -178,7 +180,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.10",
         title="BP Requested Dispense Date/Time",
-        description="Item #1709",
+        description="O | Item #01709 | LEN:24",
     )
 
     bpo_11: Optional[PL] = Field(
@@ -190,7 +192,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.11",
         title="BP Requested Dispense To Location",
-        description="Item #1710",
+        description="O | Item #01710",
     )
 
     bpo_12: Optional[XAD] = Field(
@@ -202,7 +204,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.12",
         title="BP Requested Dispense To Address",
-        description="Item #1711",
+        description="O | Item #01711",
     )
 
     bpo_13: Optional[List[CWE]] = Field(
@@ -214,7 +216,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.13",
         title="BP Indication for Use",
-        description="Item #1712 | Table HL70509",
+        description="O | Item #01712 | Table 0509 - Indication For Use",
     )
 
     bpo_14: Optional[str] = Field(
@@ -226,7 +228,7 @@ class BPO(HL7Model):
         ),
         serialization_alias="BPO.14",
         title="BP Informed Consent Indicator",
-        description="Item #1713 | Table HL70136",
+        description="O | Item #01713 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     @field_validator("bpo_1", mode='before')

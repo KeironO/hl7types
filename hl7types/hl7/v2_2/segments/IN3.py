@@ -21,79 +21,79 @@ class IN3(HL7Model):
     Attributes
     ----------
     in3_1 : str
-        IN3.1 (req) - Set ID - insurance certification (SI) S6.4.7.1
+        IN3.1 - Set ID - insurance certification (SI) R S6.4.7.1
 
     in3_2 : str | None
-        IN3.2 (opt) - Certification number (ST) S6.4.7.2
+        IN3.2 - Certification number (ST) NA S6.4.7.2
 
     in3_3 : str | None
-        IN3.3 (opt) - Certified by (CN) S6.4.7.3
+        IN3.3 - Certified by (CN) NA S6.4.7.3
 
     in3_4 : str | None
-        IN3.4 (opt) - Certification required (ID) S6.4.7.4 | 0136 - Y/N Indicator
+        IN3.4 - Certification required (ID) NA S6.4.7.4 | 0136 - Y/N Indicator
 
     in3_5 : str | None
-        IN3.5 (opt) - Penalty (CM) S6.4.7.5 | 0148 - PENALTY TYPE
+        IN3.5 - Penalty (CM) NA S6.4.7.5 | 0148 - PENALTY TYPE
 
     in3_6 : TS | None
-        IN3.6 (opt) - Certification date / time (TS) S6.4.7.6
+        IN3.6 - Certification date / time (TS) NA S6.4.7.6
 
     in3_7 : TS | None
-        IN3.7 (opt) - Certification modify date / time (TS) S6.4.7.7
+        IN3.7 - Certification modify date / time (TS) NA S6.4.7.7
 
     in3_8 : str | None
-        IN3.8 (opt) - Operator (CN) S6.4.7.8
+        IN3.8 - Operator (CN) NA S6.4.7.8
 
     in3_9 : str | None
-        IN3.9 (opt) - Certification begin date (DT) S6.4.7.9
+        IN3.9 - Certification begin date (DT) NA S6.4.7.9
 
     in3_10 : str | None
-        IN3.10 (opt) - Certification end date (DT) S6.4.7.10
+        IN3.10 - Certification end date (DT) NA S6.4.7.10
 
     in3_11 : str | None
-        IN3.11 (opt) - Days (CM) S6.4.7.11 | 0149 - DAY TYPE
+        IN3.11 - Days (CM) NA S6.4.7.11 | 0149 - DAY TYPE
 
     in3_12 : CE | None
-        IN3.12 (opt) - Non-concur code / description (CE) S6.4.7.12
+        IN3.12 - Non-concur code / description (CE) NA S6.4.7.12
 
     in3_13 : TS | None
-        IN3.13 (opt) - Non-concur effective date / time (TS) S6.4.7.13
+        IN3.13 - Non-concur effective date / time (TS) NA S6.4.7.13
 
     in3_14 : str | None
-        IN3.14 (opt) - Physician reviewer (CN) S6.4.7.14
+        IN3.14 - Physician reviewer (CN) NA S6.4.7.14
 
     in3_15 : str | None
-        IN3.15 (opt) - Certification contact (ST) S6.4.7.15
+        IN3.15 - Certification contact (ST) NA S6.4.7.15
 
     in3_16 : list[str] | None
-        IN3.16 (opt, rep) - Certification contact phone number (TN) S6.4.7.16
+        IN3.16 - Certification contact phone number (TN) NA rep S6.4.7.16
 
     in3_17 : CE | None
-        IN3.17 (opt) - Appeal reason (CE) S6.4.7.17
+        IN3.17 - Appeal reason (CE) NA S6.4.7.17
 
     in3_18 : CE | None
-        IN3.18 (opt) - Certification agency (CE) S6.4.7.18
+        IN3.18 - Certification agency (CE) NA S6.4.7.18
 
     in3_19 : list[str] | None
-        IN3.19 (opt, rep) - Certification agency phone number (TN) S6.4.7.19
+        IN3.19 - Certification agency phone number (TN) NA rep S6.4.7.19
 
     in3_20 : list[str] | None
-        IN3.20 (opt, rep) - Pre-certification required / window (CM) S6.4.7.20 | 0150 - PRECERTIFICATION PATIENT TYPE
+        IN3.20 - Pre-certification required / window (CM) NA rep S6.4.7.20 | 0150 - PRECERTIFICATION PATIENT TYPE
 
     in3_21 : str | None
-        IN3.21 (opt) - Case manager (ST) S6.4.7.21
+        IN3.21 - Case manager (ST) NA S6.4.7.21
 
     in3_22 : str | None
-        IN3.22 (opt) - Second opinion date (DT) S6.4.7.22
+        IN3.22 - Second opinion date (DT) NA S6.4.7.22
 
     in3_23 : str | None
-        IN3.23 (opt) - Second opinion status (ID) S6.4.7.23 | 0151 - SECOND OPINION STATUS
+        IN3.23 - Second opinion status (ID) NA S6.4.7.23 | 0151 - SECOND OPINION STATUS
 
     in3_24 : str | None
-        IN3.24 (opt) - Second opinion documentation received (ID) S6.4.7.24 | 0152 - SECOND OPINION DOCUMENTATION RECEIVED
+        IN3.24 - Second opinion documentation received (ID) NA S6.4.7.24 | 0152 - SECOND OPINION DOCUMENTATION RECEIVED
 
     in3_25 : str | None
-        IN3.25 (opt) - Second opinion practitioner (CN) S6.4.7.25
+        IN3.25 - Second opinion practitioner (CN) NA S6.4.7.25
     """
 
     in3_1: str = Field(
@@ -104,7 +104,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.1",
         title="Set ID - insurance certification",
-        description="Item #502",
+        description="R | Item #00502 | LEN:4",
     )
 
     in3_2: Optional[str] = Field(
@@ -116,7 +116,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.2",
         title="Certification number",
-        description="Item #503",
+        description="NA | Item #00503 | LEN:25",
     )
 
     in3_3: Optional[str] = Field(
@@ -128,7 +128,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.3",
         title="Certified by",
-        description="Item #504",
+        description="NA | Item #00504",
     )
 
     in3_4: Optional[str] = Field(
@@ -140,7 +140,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.4",
         title="Certification required",
-        description="Item #505 | Table HL70136",
+        description="NA | Item #00505 | Table 0136 - Y/N Indicator | LEN:1",
     )
 
     in3_5: Optional[str] = Field(
@@ -152,7 +152,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.5",
         title="Penalty",
-        description="Item #506 | Table HL70148",
+        description="NA | Item #00506 | Table 0148 - PENALTY TYPE",
     )
 
     in3_6: Optional[TS] = Field(
@@ -164,7 +164,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.6",
         title="Certification date / time",
-        description="Item #507",
+        description="NA | Item #00507",
     )
 
     in3_7: Optional[TS] = Field(
@@ -176,7 +176,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.7",
         title="Certification modify date / time",
-        description="Item #508",
+        description="NA | Item #00508",
     )
 
     in3_8: Optional[str] = Field(
@@ -188,7 +188,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.8",
         title="Operator",
-        description="Item #509",
+        description="NA | Item #00509",
     )
 
     in3_9: Optional[str] = Field(
@@ -200,7 +200,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.9",
         title="Certification begin date",
-        description="Item #510",
+        description="NA | Item #00510 | LEN:8",
     )
 
     in3_10: Optional[str] = Field(
@@ -212,7 +212,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.10",
         title="Certification end date",
-        description="Item #511",
+        description="NA | Item #00511 | LEN:8",
     )
 
     in3_11: Optional[str] = Field(
@@ -224,7 +224,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.11",
         title="Days",
-        description="Item #512 | Table HL70149",
+        description="NA | Item #00512 | Table 0149 - DAY TYPE",
     )
 
     in3_12: Optional[CE] = Field(
@@ -236,7 +236,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.12",
         title="Non-concur code / description",
-        description="Item #513",
+        description="NA | Item #00513",
     )
 
     in3_13: Optional[TS] = Field(
@@ -248,7 +248,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.13",
         title="Non-concur effective date / time",
-        description="Item #514",
+        description="NA | Item #00514",
     )
 
     in3_14: Optional[str] = Field(
@@ -260,7 +260,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.14",
         title="Physician reviewer",
-        description="Item #515",
+        description="NA | Item #00515",
     )
 
     in3_15: Optional[str] = Field(
@@ -272,7 +272,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.15",
         title="Certification contact",
-        description="Item #516",
+        description="NA | Item #00516 | LEN:48",
     )
 
     in3_16: Optional[List[str]] = Field(
@@ -284,7 +284,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.16",
         title="Certification contact phone number",
-        description="Item #517",
+        description="NA | Item #00517 | LEN:40",
     )
 
     in3_17: Optional[CE] = Field(
@@ -296,7 +296,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.17",
         title="Appeal reason",
-        description="Item #518",
+        description="NA | Item #00518",
     )
 
     in3_18: Optional[CE] = Field(
@@ -308,7 +308,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.18",
         title="Certification agency",
-        description="Item #519",
+        description="NA | Item #00519",
     )
 
     in3_19: Optional[List[str]] = Field(
@@ -320,7 +320,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.19",
         title="Certification agency phone number",
-        description="Item #520",
+        description="NA | Item #00520 | LEN:40",
     )
 
     in3_20: Optional[List[str]] = Field(
@@ -332,7 +332,9 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.20",
         title="Pre-certification required / window",
-        description="Item #521 | Table HL70150",
+        description=(
+            "NA | Item #00521 | Table 0150 - PRECERTIFICATION PATIENT TYPE"
+        ),
     )
 
     in3_21: Optional[str] = Field(
@@ -344,7 +346,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.21",
         title="Case manager",
-        description="Item #522",
+        description="NA | Item #00522 | LEN:48",
     )
 
     in3_22: Optional[str] = Field(
@@ -356,7 +358,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.22",
         title="Second opinion date",
-        description="Item #523",
+        description="NA | Item #00523 | LEN:8",
     )
 
     in3_23: Optional[str] = Field(
@@ -368,7 +370,9 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.23",
         title="Second opinion status",
-        description="Item #524 | Table HL70151",
+        description=(
+            "NA | Item #00524 | Table 0151 - SECOND OPINION STATUS | LEN:1"
+        ),
     )
 
     in3_24: Optional[str] = Field(
@@ -380,7 +384,10 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.24",
         title="Second opinion documentation received",
-        description="Item #525 | Table HL70152",
+        description=(
+            "NA | Item #00525 | Table 0152 - SECOND OPINION DOCUMENTATION "
+            "RECEIVED | LEN:1"
+        ),
     )
 
     in3_25: Optional[str] = Field(
@@ -392,7 +399,7 @@ class IN3(HL7Model):
         ),
         serialization_alias="IN3.25",
         title="Second opinion practitioner",
-        description="Item #526",
+        description="NA | Item #00526",
     )
 
     @field_validator("in3_1", mode='before')

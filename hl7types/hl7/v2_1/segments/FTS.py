@@ -18,10 +18,10 @@ class FTS(HL7Model):
     Attributes
     ----------
     fts_1 : str | None
-        FTS.1 (opt) - FILE BATCH COUNT (ST) S2-44
+        FTS.1 - FILE BATCH COUNT (ST) O S2-44
 
     fts_2 : str | None
-        FTS.2 (opt) - FILE TRAILER COMMENT (ST)
+        FTS.2 - FILE TRAILER COMMENT (ST) O
     """
 
     fts_1: Optional[str] = Field(
@@ -33,7 +33,7 @@ class FTS(HL7Model):
         ),
         serialization_alias="FTS.1",
         title="FILE BATCH COUNT",
-        description="Item #667",
+        description="O | Item #00667 | LEN:10",
     )
 
     fts_2: Optional[str] = Field(
@@ -45,7 +45,7 @@ class FTS(HL7Model):
         ),
         serialization_alias="FTS.2",
         title="FILE TRAILER COMMENT",
-        description="Item #668",
+        description="O | Item #00668 | LEN:80",
     )
 
     model_config = {"populate_by_name": True}

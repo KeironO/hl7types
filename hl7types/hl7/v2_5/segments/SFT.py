@@ -21,22 +21,22 @@ class SFT(HL7Model):
     Attributes
     ----------
     sft_1 : XON
-        SFT.1 (req) - Software Vendor Organization (XON) S2.15.12.1
+        SFT.1 - Software Vendor Organization (XON) R S2.15.12.1
 
     sft_2 : str
-        SFT.2 (req) - Software Certified Version or Release Number (ST) S2.15.12.2
+        SFT.2 - Software Certified Version or Release Number (ST) R S2.15.12.2
 
     sft_3 : str
-        SFT.3 (req) - Software Product Name (ST) S2.15.12.3
+        SFT.3 - Software Product Name (ST) R S2.15.12.3
 
     sft_4 : str
-        SFT.4 (req) - Software Binary ID (ST) S2.15.12.4
+        SFT.4 - Software Binary ID (ST) R S2.15.12.4
 
     sft_5 : str | None
-        SFT.5 (opt) - Software Product Information (TX) S2.15.12.5
+        SFT.5 - Software Product Information (TX) O S2.15.12.5
 
     sft_6 : TS | None
-        SFT.6 (opt) - Software Install Date (TS) S2.15.12.6
+        SFT.6 - Software Install Date (TS) O S2.15.12.6
     """
 
     sft_1: XON = Field(
@@ -47,7 +47,7 @@ class SFT(HL7Model):
         ),
         serialization_alias="SFT.1",
         title="Software Vendor Organization",
-        description="Item #1834",
+        description="R | Item #01834",
     )
 
     sft_2: str = Field(
@@ -58,7 +58,7 @@ class SFT(HL7Model):
         ),
         serialization_alias="SFT.2",
         title="Software Certified Version or Release Number",
-        description="Item #1835",
+        description="R | Item #01835 | LEN:15",
     )
 
     sft_3: str = Field(
@@ -69,7 +69,7 @@ class SFT(HL7Model):
         ),
         serialization_alias="SFT.3",
         title="Software Product Name",
-        description="Item #1836",
+        description="R | Item #01836 | LEN:20",
     )
 
     sft_4: str = Field(
@@ -80,7 +80,7 @@ class SFT(HL7Model):
         ),
         serialization_alias="SFT.4",
         title="Software Binary ID",
-        description="Item #1837",
+        description="R | Item #01837 | LEN:20",
     )
 
     sft_5: Optional[str] = Field(
@@ -92,7 +92,7 @@ class SFT(HL7Model):
         ),
         serialization_alias="SFT.5",
         title="Software Product Information",
-        description="Item #1838",
+        description="O | Item #01838",
     )
 
     sft_6: Optional[TS] = Field(
@@ -104,7 +104,7 @@ class SFT(HL7Model):
         ),
         serialization_alias="SFT.6",
         title="Software Install Date",
-        description="Item #1839",
+        description="O | Item #01839",
     )
 
     model_config = {"populate_by_name": True}

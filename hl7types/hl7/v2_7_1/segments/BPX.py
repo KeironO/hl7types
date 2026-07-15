@@ -26,67 +26,67 @@ class BPX(HL7Model):
     Attributes
     ----------
     bpx_1 : str
-        BPX.1 (req) - Set ID - BPX (SI) S4.13.2.1
+        BPX.1 - Set ID - BPX (SI) R S4.13.2.1
 
     bpx_2 : CWE
-        BPX.2 (req) - BP Dispense Status (CWE) S4.13.2.2 | 0510 - Blood Product Dispense Status
+        BPX.2 - BP Dispense Status (CWE) R S4.13.2.2 | 0510 - Blood Product Dispense Status
 
     bpx_3 : str
-        BPX.3 (req) - BP Status (ID) S4.13.2.3 | 0511 - BP Observation Status Codes Interpretation
+        BPX.3 - BP Status (ID) R S4.13.2.3 | 0511 - BP Observation Status Codes Interpretation
 
     bpx_4 : str
-        BPX.4 (req) - BP Date/Time of Status (DTM) S4.13.2.4
+        BPX.4 - BP Date/Time of Status (DTM) R S4.13.2.4
 
     bpx_5 : EI | None
-        BPX.5 (opt) - BC Donation ID (EI) S4.13.2.5
+        BPX.5 - BC Donation ID (EI) C S4.13.2.5
 
     bpx_6 : CNE | None
-        BPX.6 (opt) - BC Component (CNE) S4.13.2.6 | 9999 - no table for CE
+        BPX.6 - BC Component (CNE) C S4.13.2.6 | 9999 - no table for CE
 
     bpx_7 : CNE | None
-        BPX.7 (opt) - BC Donation Type / Intended Use (CNE) S4.13.2.7 | 9999 - no table for CE
+        BPX.7 - BC Donation Type / Intended Use (CNE) O S4.13.2.7 | 9999 - no table for CE
 
     bpx_8 : CWE | None
-        BPX.8 (opt) - CP Commercial Product (CWE) S4.13.2.8 | 0512 - Commercial Product
+        BPX.8 - CP Commercial Product (CWE) C S4.13.2.8 | 0512 - Commercial Product
 
     bpx_9 : XON | None
-        BPX.9 (opt) - CP Manufacturer (XON) S4.13.2.9
+        BPX.9 - CP Manufacturer (XON) C S4.13.2.9
 
     bpx_10 : EI | None
-        BPX.10 (opt) - CP Lot Number (EI) S4.13.2.10
+        BPX.10 - CP Lot Number (EI) C S4.13.2.10
 
     bpx_11 : CNE | None
-        BPX.11 (opt) - BP Blood Group (CNE) S4.13.2.11 | 9999 - no table for CE
+        BPX.11 - BP Blood Group (CNE) O S4.13.2.11 | 9999 - no table for CE
 
     bpx_12 : list[CNE] | None
-        BPX.12 (opt, rep) - BC Special Testing (CNE) S4.13.2.12 | 9999 - no table for CE
+        BPX.12 - BC Special Testing (CNE) O rep S4.13.2.12 | 9999 - no table for CE
 
     bpx_13 : str | None
-        BPX.13 (opt) - BP Expiration Date/Time (DTM) S4.13.2.13
+        BPX.13 - BP Expiration Date/Time (DTM) O S4.13.2.13
 
     bpx_14 : str
-        BPX.14 (req) - BP Quantity (NM) S4.13.2.14
+        BPX.14 - BP Quantity (NM) R S4.13.2.14
 
     bpx_15 : str | None
-        BPX.15 (opt) - BP Amount (NM) S4.13.2.15
+        BPX.15 - BP Amount (NM) O S4.13.2.15
 
     bpx_16 : CWE | None
-        BPX.16 (opt) - BP Units (CWE) S4.13.2.16 | 9999 - no table for CE
+        BPX.16 - BP Units (CWE) O S4.13.2.16 | 9999 - no table for CE
 
     bpx_17 : EI | None
-        BPX.17 (opt) - BP Unique ID (EI) S4.13.2.17
+        BPX.17 - BP Unique ID (EI) O S4.13.2.17
 
     bpx_18 : PL | None
-        BPX.18 (opt) - BP Actual Dispensed To Location (PL) S4.13.2.18
+        BPX.18 - BP Actual Dispensed To Location (PL) O S4.13.2.18
 
     bpx_19 : XAD | None
-        BPX.19 (opt) - BP Actual Dispensed To Address (XAD) S4.13.2.19
+        BPX.19 - BP Actual Dispensed To Address (XAD) O S4.13.2.19
 
     bpx_20 : XCN | None
-        BPX.20 (opt) - BP Dispensed to Receiver (XCN) S4.13.2.20
+        BPX.20 - BP Dispensed to Receiver (XCN) O S4.13.2.20
 
     bpx_21 : XCN | None
-        BPX.21 (opt) - BP Dispensing Individual (XCN) S4.13.2.21
+        BPX.21 - BP Dispensing Individual (XCN) O S4.13.2.21
     """
 
     bpx_1: str = Field(
@@ -97,7 +97,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.1",
         title="Set ID - BPX",
-        description="Item #1714",
+        description="R | Item #01714 | LEN:4",
     )
 
     bpx_2: CWE = Field(
@@ -108,7 +108,9 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.2",
         title="BP Dispense Status",
-        description="Item #1715 | Table HL70510",
+        description=(
+            "R | Item #01715 | Table 0510 - Blood Product Dispense Status"
+        ),
     )
 
     bpx_3: str = Field(
@@ -119,7 +121,10 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.3",
         title="BP Status",
-        description="Item #1716 | Table HL70511",
+        description=(
+            "R | Item #01716 | Table 0511 - BP Observation Status Codes "
+            "Interpretation | LEN:1"
+        ),
     )
 
     bpx_4: str = Field(
@@ -130,7 +135,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.4",
         title="BP Date/Time of Status",
-        description="Item #1717",
+        description="R | Item #01717",
     )
 
     bpx_5: Optional[EI] = Field(
@@ -142,7 +147,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.5",
         title="BC Donation ID",
-        description="Item #1718",
+        description="C | Item #01718",
     )
 
     bpx_6: Optional[CNE] = Field(
@@ -154,7 +159,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.6",
         title="BC Component",
-        description="Item #1719 | Table HL79999",
+        description="C | Item #01719 | Table 9999 - no table for CE",
     )
 
     bpx_7: Optional[CNE] = Field(
@@ -166,7 +171,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.7",
         title="BC Donation Type / Intended Use",
-        description="Item #1720 | Table HL79999",
+        description="O | Item #01720 | Table 9999 - no table for CE",
     )
 
     bpx_8: Optional[CWE] = Field(
@@ -178,7 +183,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.8",
         title="CP Commercial Product",
-        description="Item #1721 | Table HL70512",
+        description="C | Item #01721 | Table 0512 - Commercial Product",
     )
 
     bpx_9: Optional[XON] = Field(
@@ -190,7 +195,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.9",
         title="CP Manufacturer",
-        description="Item #1722",
+        description="C | Item #01722",
     )
 
     bpx_10: Optional[EI] = Field(
@@ -202,7 +207,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.10",
         title="CP Lot Number",
-        description="Item #1723",
+        description="C | Item #01723",
     )
 
     bpx_11: Optional[CNE] = Field(
@@ -214,7 +219,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.11",
         title="BP Blood Group",
-        description="Item #1724 | Table HL79999",
+        description="O | Item #01724 | Table 9999 - no table for CE",
     )
 
     bpx_12: Optional[List[CNE]] = Field(
@@ -226,7 +231,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.12",
         title="BC Special Testing",
-        description="Item #1725 | Table HL79999",
+        description="O | Item #01725 | Table 9999 - no table for CE",
     )
 
     bpx_13: Optional[str] = Field(
@@ -238,7 +243,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.13",
         title="BP Expiration Date/Time",
-        description="Item #1726",
+        description="O | Item #01726",
     )
 
     bpx_14: str = Field(
@@ -249,7 +254,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.14",
         title="BP Quantity",
-        description="Item #1727",
+        description="R | Item #01727",
     )
 
     bpx_15: Optional[str] = Field(
@@ -261,7 +266,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.15",
         title="BP Amount",
-        description="Item #1728",
+        description="O | Item #01728",
     )
 
     bpx_16: Optional[CWE] = Field(
@@ -273,7 +278,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.16",
         title="BP Units",
-        description="Item #1729 | Table HL79999",
+        description="O | Item #01729 | Table 9999 - no table for CE",
     )
 
     bpx_17: Optional[EI] = Field(
@@ -285,7 +290,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.17",
         title="BP Unique ID",
-        description="Item #1730",
+        description="O | Item #01730",
     )
 
     bpx_18: Optional[PL] = Field(
@@ -297,7 +302,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.18",
         title="BP Actual Dispensed To Location",
-        description="Item #1731",
+        description="O | Item #01731",
     )
 
     bpx_19: Optional[XAD] = Field(
@@ -309,7 +314,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.19",
         title="BP Actual Dispensed To Address",
-        description="Item #1732",
+        description="O | Item #01732",
     )
 
     bpx_20: Optional[XCN] = Field(
@@ -321,7 +326,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.20",
         title="BP Dispensed to Receiver",
-        description="Item #1733",
+        description="O | Item #01733",
     )
 
     bpx_21: Optional[XCN] = Field(
@@ -333,7 +338,7 @@ class BPX(HL7Model):
         ),
         serialization_alias="BPX.21",
         title="BP Dispensing Individual",
-        description="Item #1734",
+        description="O | Item #01734",
     )
 
     @field_validator("bpx_1", mode='before')

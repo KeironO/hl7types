@@ -18,64 +18,64 @@ class PID(HL7Model):
     Attributes
     ----------
     pid_1 : str | None
-        PID.1 (opt) - SET ID - PATIENT ID (SI) S3-14
+        PID.1 - SET ID - PATIENT ID (SI) O S3-14
 
     pid_2 : str | None
-        PID.2 (opt) - PATIENT ID EXTERNAL (EXTERNAL ID) (CK) | 0061 - CHECK DIGIT SCHEME
+        PID.2 - PATIENT ID EXTERNAL (EXTERNAL ID) (CK) O | 0061 - CHECK DIGIT SCHEME
 
     pid_3 : str
-        PID.3 (req) - PATIENT ID INTERNAL (INTERNAL ID) (CK) | 0061 - CHECK DIGIT SCHEME
+        PID.3 - PATIENT ID INTERNAL (INTERNAL ID) (CK) R | 0061 - CHECK DIGIT SCHEME
 
     pid_4 : str | None
-        PID.4 (opt) - ALTERNATE PATIENT ID (ST)
+        PID.4 - ALTERNATE PATIENT ID (ST) O
 
     pid_5 : str
-        PID.5 (req) - PATIENT NAME (PN)
+        PID.5 - PATIENT NAME (PN) R
 
     pid_6 : str | None
-        PID.6 (opt) - MOTHER'S MAIDEN NAME (ST)
+        PID.6 - MOTHER'S MAIDEN NAME (ST) O
 
     pid_7 : str | None
-        PID.7 (opt) - DATE OF BIRTH (DT)
+        PID.7 - DATE OF BIRTH (DT) O
 
     pid_8 : str | None
-        PID.8 (opt) - SEX (ID) | 0001 - SEX
+        PID.8 - SEX (ID) O | 0001 - SEX
 
     pid_9 : list[str] | None
-        PID.9 (opt, rep) - PATIENT ALIAS (PN)
+        PID.9 - PATIENT ALIAS (PN) O rep
 
     pid_10 : str | None
-        PID.10 (opt) - ETHNIC GROUP (ID) | 0005 - ETHNIC GROUP
+        PID.10 - ETHNIC GROUP (ID) O | 0005 - ETHNIC GROUP
 
     pid_11 : str | None
-        PID.11 (opt) - PATIENT ADDRESS (AD)
+        PID.11 - PATIENT ADDRESS (AD) O
 
     pid_12 : str | None
-        PID.12 (opt) - COUNTY CODE (ID)
+        PID.12 - COUNTY CODE (ID) O
 
     pid_13 : list[str] | None
-        PID.13 (opt, rep) - PHONE NUMBER - HOME (TN)
+        PID.13 - PHONE NUMBER - HOME (TN) O rep
 
     pid_14 : list[str] | None
-        PID.14 (opt, rep) - PHONE NUMBER - BUSINESS (TN)
+        PID.14 - PHONE NUMBER - BUSINESS (TN) O rep
 
     pid_15 : str | None
-        PID.15 (opt) - LANGUAGE - PATIENT (ST)
+        PID.15 - LANGUAGE - PATIENT (ST) O
 
     pid_16 : str | None
-        PID.16 (opt) - MARITAL STATUS (ID) | 0002 - MARITAL STATUS
+        PID.16 - MARITAL STATUS (ID) O | 0002 - MARITAL STATUS
 
     pid_17 : str | None
-        PID.17 (opt) - RELIGION (ID) | 0006 - RELIGION
+        PID.17 - RELIGION (ID) O | 0006 - RELIGION
 
     pid_18 : str | None
-        PID.18 (opt) - PATIENT ACCOUNT NUMBER (CK) | 0061 - CHECK DIGIT SCHEME
+        PID.18 - PATIENT ACCOUNT NUMBER (CK) O | 0061 - CHECK DIGIT SCHEME
 
     pid_19 : str | None
-        PID.19 (opt) - SSN NUMBER - PATIENT (ST)
+        PID.19 - SSN NUMBER - PATIENT (ST) O
 
     pid_20 : str | None
-        PID.20 (opt) - DRIVER'S LIC NUM - PATIENT (CM)
+        PID.20 - DRIVER'S LIC NUM - PATIENT (CM) O
     """
 
     pid_1: Optional[str] = Field(
@@ -87,7 +87,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.1",
         title="SET ID - PATIENT ID",
-        description="Item #572",
+        description="O | Item #00572 | LEN:4",
     )
 
     pid_2: Optional[str] = Field(
@@ -99,7 +99,9 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.2",
         title="PATIENT ID EXTERNAL (EXTERNAL ID)",
-        description="Item #581 | Table HL70061",
+        description=(
+            "O | Item #00581 | Table 0061 - CHECK DIGIT SCHEME | LEN:16"
+        ),
     )
 
     pid_3: str = Field(
@@ -110,7 +112,9 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.3",
         title="PATIENT ID INTERNAL (INTERNAL ID)",
-        description="Item #34 | Table HL70061",
+        description=(
+            "R | Item #00034 | Table 0061 - CHECK DIGIT SCHEME | LEN:16"
+        ),
     )
 
     pid_4: Optional[str] = Field(
@@ -122,7 +126,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.4",
         title="ALTERNATE PATIENT ID",
-        description="Item #38",
+        description="O | Item #00038 | LEN:12",
     )
 
     pid_5: str = Field(
@@ -133,7 +137,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.5",
         title="PATIENT NAME",
-        description="Item #41",
+        description="R | Item #00041 | LEN:48",
     )
 
     pid_6: Optional[str] = Field(
@@ -145,7 +149,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.6",
         title="MOTHER'S MAIDEN NAME",
-        description="Item #582",
+        description="O | Item #00582 | LEN:30",
     )
 
     pid_7: Optional[str] = Field(
@@ -157,7 +161,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.7",
         title="DATE OF BIRTH",
-        description="Item #43",
+        description="O | Item #00043 | LEN:8",
     )
 
     pid_8: Optional[str] = Field(
@@ -169,7 +173,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.8",
         title="SEX",
-        description="Item #42 | Table HL70001",
+        description="O | Item #00042 | Table 0001 - SEX | LEN:1",
     )
 
     pid_9: Optional[List[str]] = Field(
@@ -181,7 +185,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.9",
         title="PATIENT ALIAS",
-        description="Item #597",
+        description="O | Item #00597 | LEN:48",
     )
 
     pid_10: Optional[str] = Field(
@@ -193,7 +197,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.10",
         title="ETHNIC GROUP",
-        description="Item #44 | Table HL70005",
+        description="O | Item #00044 | Table 0005 - ETHNIC GROUP | LEN:1",
     )
 
     pid_11: Optional[str] = Field(
@@ -205,7 +209,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.11",
         title="PATIENT ADDRESS",
-        description="Item #20",
+        description="O | Item #00020 | LEN:106",
     )
 
     pid_12: Optional[str] = Field(
@@ -217,7 +221,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.12",
         title="COUNTY CODE",
-        description="Item #26",
+        description="O | Item #00026 | LEN:4",
     )
 
     pid_13: Optional[List[str]] = Field(
@@ -229,7 +233,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.13",
         title="PHONE NUMBER - HOME",
-        description="Item #49",
+        description="O | Item #00049 | LEN:40",
     )
 
     pid_14: Optional[List[str]] = Field(
@@ -241,7 +245,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.14",
         title="PHONE NUMBER - BUSINESS",
-        description="Item #50",
+        description="O | Item #00050 | LEN:40",
     )
 
     pid_15: Optional[str] = Field(
@@ -253,7 +257,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.15",
         title="LANGUAGE - PATIENT",
-        description="Item #464",
+        description="O | Item #00464 | LEN:25",
     )
 
     pid_16: Optional[str] = Field(
@@ -265,7 +269,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.16",
         title="MARITAL STATUS",
-        description="Item #46 | Table HL70002",
+        description="O | Item #00046 | Table 0002 - MARITAL STATUS | LEN:1",
     )
 
     pid_17: Optional[str] = Field(
@@ -277,7 +281,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.17",
         title="RELIGION",
-        description="Item #45 | Table HL70006",
+        description="O | Item #00045 | Table 0006 - RELIGION | LEN:3",
     )
 
     pid_18: Optional[str] = Field(
@@ -289,7 +293,9 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.18",
         title="PATIENT ACCOUNT NUMBER",
-        description="Item #35 | Table HL70061",
+        description=(
+            "O | Item #00035 | Table 0061 - CHECK DIGIT SCHEME | LEN:20"
+        ),
     )
 
     pid_19: Optional[str] = Field(
@@ -301,7 +307,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.19",
         title="SSN NUMBER - PATIENT",
-        description="Item #457",
+        description="O | Item #00457 | LEN:16",
     )
 
     pid_20: Optional[str] = Field(
@@ -313,7 +319,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.20",
         title="DRIVER'S LIC NUM - PATIENT",
-        description="Item #453",
+        description="O | Item #00453 | LEN:25",
     )
 
     @field_validator("pid_1", mode='before')

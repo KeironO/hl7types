@@ -29,169 +29,169 @@ class GT1(HL7Model):
     Attributes
     ----------
     gt1_1 : str
-        GT1.1 (req) - Set ID - GT1 (SI) S6.4.5.1
+        GT1.1 - Set ID - GT1 (SI) R S6.4.5.1
 
     gt1_2 : list[CX] | None
-        GT1.2 (opt, rep) - Guarantor Number (CX) S6.4.5.2
+        GT1.2 - Guarantor Number (CX) O rep S6.4.5.2
 
     gt1_3 : list[XPN]
-        GT1.3 (req, rep) - Guarantor Name (XPN) S6.4.5.3
+        GT1.3 - Guarantor Name (XPN) R rep S6.4.5.3
 
     gt1_4 : list[XPN] | None
-        GT1.4 (opt, rep) - Guarantor Spouse Name (XPN) S6.4.5.4
+        GT1.4 - Guarantor Spouse Name (XPN) O rep S6.4.5.4
 
     gt1_5 : list[XAD] | None
-        GT1.5 (opt, rep) - Guarantor Address (XAD) S6.4.5.5
+        GT1.5 - Guarantor Address (XAD) O rep S6.4.5.5
 
     gt1_6 : list[XTN] | None
-        GT1.6 (opt, rep) - Guarantor Ph Num-Home (XTN) S6.4.5.6
+        GT1.6 - Guarantor Ph Num-Home (XTN) O rep S6.4.5.6
 
     gt1_7 : list[XTN] | None
-        GT1.7 (opt, rep) - Guarantor Ph Num-Business (XTN) S6.4.5.7
+        GT1.7 - Guarantor Ph Num-Business (XTN) O rep S6.4.5.7
 
     gt1_8 : TS | None
-        GT1.8 (opt) - Guarantor Date/Time Of Birth (TS) S6.4.5.8
+        GT1.8 - Guarantor Date/Time Of Birth (TS) O S6.4.5.8
 
     gt1_9 : str | None
-        GT1.9 (opt) - Guarantor Sex (IS) S6.4.5.9 | 0001 - Sex
+        GT1.9 - Guarantor Sex (IS) O S6.4.5.9 | 0001 - Sex
 
     gt1_10 : str | None
-        GT1.10 (opt) - Guarantor Type (IS) S6.4.5.10 | 0068 - Guarantor Type
+        GT1.10 - Guarantor Type (IS) O S6.4.5.10 | 0068 - Guarantor Type
 
     gt1_11 : CE | None
-        GT1.11 (opt) - Guarantor Relationship (CE) S6.4.5.11 | 0063 - Relationship
+        GT1.11 - Guarantor Relationship (CE) O S6.4.5.11 | 0063 - Relationship
 
     gt1_12 : str | None
-        GT1.12 (opt) - Guarantor SSN (ST) S6.4.5.12
+        GT1.12 - Guarantor SSN (ST) O S6.4.5.12
 
     gt1_13 : str | None
-        GT1.13 (opt) - Guarantor Date - Begin (DT) S6.4.5.13
+        GT1.13 - Guarantor Date - Begin (DT) O S6.4.5.13
 
     gt1_14 : str | None
-        GT1.14 (opt) - Guarantor Date - End (DT) S6.4.5.14
+        GT1.14 - Guarantor Date - End (DT) O S6.4.5.14
 
     gt1_15 : str | None
-        GT1.15 (opt) - Guarantor Priority (NM) S6.4.5.15
+        GT1.15 - Guarantor Priority (NM) O S6.4.5.15
 
     gt1_16 : list[XPN] | None
-        GT1.16 (opt, rep) - Guarantor Employer Name (XPN) S6.4.5.16
+        GT1.16 - Guarantor Employer Name (XPN) O rep S6.4.5.16
 
     gt1_17 : list[XAD] | None
-        GT1.17 (opt, rep) - Guarantor Employer Address (XAD) S6.4.5.17
+        GT1.17 - Guarantor Employer Address (XAD) O rep S6.4.5.17
 
     gt1_18 : list[XTN] | None
-        GT1.18 (opt, rep) - Guarantor Employer Phone Number (XTN) S6.4.5.18
+        GT1.18 - Guarantor Employer Phone Number (XTN) O rep S6.4.5.18
 
     gt1_19 : list[CX] | None
-        GT1.19 (opt, rep) - Guarantor Employee ID Number (CX) S6.4.5.19
+        GT1.19 - Guarantor Employee ID Number (CX) O rep S6.4.5.19
 
     gt1_20 : str | None
-        GT1.20 (opt) - Guarantor Employment Status (IS) S6.4.5.20 | 0066 - Employment Status
+        GT1.20 - Guarantor Employment Status (IS) O S6.4.5.20 | 0066 - Employment Status
 
     gt1_21 : list[XON] | None
-        GT1.21 (opt, rep) - Guarantor Organization Name (XON) S6.4.5.21
+        GT1.21 - Guarantor Organization Name (XON) O rep S6.4.5.21
 
     gt1_22 : str | None
-        GT1.22 (opt) - Guarantor Billing Hold Flag (ID) S6.4.5.22 | 0136 - Yes/no indicator
+        GT1.22 - Guarantor Billing Hold Flag (ID) O S6.4.5.22 | 0136 - Yes/no indicator
 
     gt1_23 : CE | None
-        GT1.23 (opt) - Guarantor Credit Rating Code (CE) S6.4.5.23 | 0341 - Guarantor Credit Rating Code
+        GT1.23 - Guarantor Credit Rating Code (CE) O S6.4.5.23 | 0341 - Guarantor Credit Rating Code
 
     gt1_24 : TS | None
-        GT1.24 (opt) - Guarantor Death Date And Time (TS) S6.4.5.24
+        GT1.24 - Guarantor Death Date And Time (TS) O S6.4.5.24
 
     gt1_25 : str | None
-        GT1.25 (opt) - Guarantor Death Flag (ID) S6.4.5.25 | 0136 - Yes/no indicator
+        GT1.25 - Guarantor Death Flag (ID) O S6.4.5.25 | 0136 - Yes/no indicator
 
     gt1_26 : CE | None
-        GT1.26 (opt) - Guarantor Charge Adjustment Code (CE) S6.4.5.26 | 0218 - Patient Charge Adjustment Code
+        GT1.26 - Guarantor Charge Adjustment Code (CE) O S6.4.5.26 | 0218 - Patient Charge Adjustment Code
 
     gt1_27 : CP | None
-        GT1.27 (opt) - Guarantor Household Annual Income (CP) S6.4.5.27
+        GT1.27 - Guarantor Household Annual Income (CP) O S6.4.5.27
 
     gt1_28 : str | None
-        GT1.28 (opt) - Guarantor Household Size (NM) S6.4.5.28
+        GT1.28 - Guarantor Household Size (NM) O S6.4.5.28
 
     gt1_29 : list[CX] | None
-        GT1.29 (opt, rep) - Guarantor Employer ID Number (CX) S6.4.5.29
+        GT1.29 - Guarantor Employer ID Number (CX) O rep S6.4.5.29
 
     gt1_30 : CE | None
-        GT1.30 (opt) - Guarantor Marital Status Code (CE) S6.4.5.30 | 0002 - Marital status
+        GT1.30 - Guarantor Marital Status Code (CE) O S6.4.5.30 | 0002 - Marital status
 
     gt1_31 : str | None
-        GT1.31 (opt) - Guarantor Hire Effective Date (DT) S6.4.5.31
+        GT1.31 - Guarantor Hire Effective Date (DT) O S6.4.5.31
 
     gt1_32 : str | None
-        GT1.32 (opt) - Employment Stop Date (DT) S6.4.7.45
+        GT1.32 - Employment Stop Date (DT) O S6.4.7.45
 
     gt1_33 : str | None
-        GT1.33 (opt) - Living Dependency (IS) S6.4.7.31 | 0223 - Living dependency
+        GT1.33 - Living Dependency (IS) O S6.4.7.31 | 0223 - Living dependency
 
     gt1_34 : list[str] | None
-        GT1.34 (opt, rep) - Ambulatory Status (IS) S6.4.7.32 | 0009 - Ambulatory status
+        GT1.34 - Ambulatory Status (IS) O rep S6.4.7.32 | 0009 - Ambulatory status
 
     gt1_35 : list[CE] | None
-        GT1.35 (opt, rep) - Citizenship (CE) S6.4.7.33 | 0171 - Citizenship
+        GT1.35 - Citizenship (CE) O rep S6.4.7.33 | 0171 - Citizenship
 
     gt1_36 : CE | None
-        GT1.36 (opt) - Primary Language (CE) S6.4.7.34 | 0296 - Primary Language
+        GT1.36 - Primary Language (CE) O S6.4.7.34 | 0296 - Primary Language
 
     gt1_37 : str | None
-        GT1.37 (opt) - Living Arrangement (IS) S6.4.7.35 | 0220 - Living arrangement
+        GT1.37 - Living Arrangement (IS) O S6.4.7.35 | 0220 - Living arrangement
 
     gt1_38 : CE | None
-        GT1.38 (opt) - Publicity Code (CE) S6.4.7.36 | 0215 - Publicity Code
+        GT1.38 - Publicity Code (CE) O S6.4.7.36 | 0215 - Publicity Code
 
     gt1_39 : str | None
-        GT1.39 (opt) - Protection Indicator (ID) S6.4.7.37 | 0136 - Yes/no indicator
+        GT1.39 - Protection Indicator (ID) O S6.4.7.37 | 0136 - Yes/no indicator
 
     gt1_40 : str | None
-        GT1.40 (opt) - Student Indicator (IS) S6.4.7.38 | 0231 - Student status
+        GT1.40 - Student Indicator (IS) O S6.4.7.38 | 0231 - Student status
 
     gt1_41 : CE | None
-        GT1.41 (opt) - Religion (CE) S6.4.7.39 | 0006 - Religion
+        GT1.41 - Religion (CE) O S6.4.7.39 | 0006 - Religion
 
     gt1_42 : list[XPN] | None
-        GT1.42 (opt, rep) - Mother’s Maiden Name (XPN) S6.4.7.40
+        GT1.42 - Mother’s Maiden Name (XPN) O rep S6.4.7.40
 
     gt1_43 : CE | None
-        GT1.43 (opt) - Nationality (CE) S6.4.7.41 | 0212 - Nationality
+        GT1.43 - Nationality (CE) O S6.4.7.41 | 0212 - Nationality
 
     gt1_44 : list[CE] | None
-        GT1.44 (opt, rep) - Ethnic Group (CE) S6.4.7.42 | 0189 - Ethnic Group
+        GT1.44 - Ethnic Group (CE) O rep S6.4.7.42 | 0189 - Ethnic Group
 
     gt1_45 : list[XPN] | None
-        GT1.45 (opt, rep) - Contact Person’s Name (XPN) S6.4.5.45
+        GT1.45 - Contact Person’s Name (XPN) O rep S6.4.5.45
 
     gt1_46 : list[XTN] | None
-        GT1.46 (opt, rep) - Contact Person’s Telephone Number (XTN) S6.4.5.46
+        GT1.46 - Contact Person’s Telephone Number (XTN) O rep S6.4.5.46
 
     gt1_47 : CE | None
-        GT1.47 (opt) - Contact Reason (CE) S6.4.5.47 | 0222 - Contact Reason
+        GT1.47 - Contact Reason (CE) O S6.4.5.47 | 0222 - Contact Reason
 
     gt1_48 : str | None
-        GT1.48 (opt) - Contact Relationship (IS) S6.4.5.48 | 0063 - Relationship
+        GT1.48 - Contact Relationship (IS) O S6.4.5.48 | 0063 - Relationship
 
     gt1_49 : str | None
-        GT1.49 (opt) - Job Title (ST) S8.6.2.18
+        GT1.49 - Job Title (ST) O S8.6.2.18
 
     gt1_50 : JCC | None
-        GT1.50 (opt) - Job Code/Class (JCC) S8.6.2.19 | 0327 - Job Code/Class
+        GT1.50 - Job Code/Class (JCC) O S8.6.2.19 | 0327 - Job Code/Class
 
     gt1_51 : list[XON] | None
-        GT1.51 (opt, rep) - Guarantor Employer’s Organization Name (XON) S6.4.5.51
+        GT1.51 - Guarantor Employer’s Organization Name (XON) O rep S6.4.5.51
 
     gt1_52 : str | None
-        GT1.52 (opt) - Handicap (IS) S6.4.6.48 | 0295 - Handicap
+        GT1.52 - Handicap (IS) O S6.4.6.48 | 0295 - Handicap
 
     gt1_53 : str | None
-        GT1.53 (opt) - Job Status (IS) S6.4.7.48 | 0311 - Job Status
+        GT1.53 - Job Status (IS) O S6.4.7.48 | 0311 - Job Status
 
     gt1_54 : FC | None
-        GT1.54 (opt) - Guarantor Financial Class (FC) S6.4.5.54 | 0064 - Financial Class
+        GT1.54 - Guarantor Financial Class (FC) O S6.4.5.54 | 0064 - Financial Class
 
     gt1_55 : list[CE] | None
-        GT1.55 (opt, rep) - Guarantor Race (CE) S6.4.5.55 | 0005 - Race
+        GT1.55 - Guarantor Race (CE) O rep S6.4.5.55 | 0005 - Race
     """
 
     gt1_1: str = Field(
@@ -202,7 +202,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.1",
         title="Set ID - GT1",
-        description="Item #405",
+        description="R | Item #00405 | LEN:4",
     )
 
     gt1_2: Optional[List[CX]] = Field(
@@ -214,7 +214,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.2",
         title="Guarantor Number",
-        description="Item #406",
+        description="O | Item #00406",
     )
 
     gt1_3: List[XPN] = Field(
@@ -226,7 +226,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.3",
         title="Guarantor Name",
-        description="Item #407",
+        description="R | Item #00407",
     )
 
     gt1_4: Optional[List[XPN]] = Field(
@@ -238,7 +238,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.4",
         title="Guarantor Spouse Name",
-        description="Item #408",
+        description="O | Item #00408",
     )
 
     gt1_5: Optional[List[XAD]] = Field(
@@ -250,7 +250,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.5",
         title="Guarantor Address",
-        description="Item #409",
+        description="O | Item #00409",
     )
 
     gt1_6: Optional[List[XTN]] = Field(
@@ -262,7 +262,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.6",
         title="Guarantor Ph Num-Home",
-        description="Item #410",
+        description="O | Item #00410",
     )
 
     gt1_7: Optional[List[XTN]] = Field(
@@ -274,7 +274,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.7",
         title="Guarantor Ph Num-Business",
-        description="Item #411",
+        description="O | Item #00411",
     )
 
     gt1_8: Optional[TS] = Field(
@@ -286,7 +286,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.8",
         title="Guarantor Date/Time Of Birth",
-        description="Item #412",
+        description="O | Item #00412",
     )
 
     gt1_9: Optional[str] = Field(
@@ -298,7 +298,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.9",
         title="Guarantor Sex",
-        description="Item #413 | Table HL70001",
+        description="O | Item #00413 | Table 0001 - Sex | LEN:1",
     )
 
     gt1_10: Optional[str] = Field(
@@ -310,7 +310,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.10",
         title="Guarantor Type",
-        description="Item #414 | Table HL70068",
+        description="O | Item #00414 | Table 0068 - Guarantor Type | LEN:2",
     )
 
     gt1_11: Optional[CE] = Field(
@@ -322,7 +322,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.11",
         title="Guarantor Relationship",
-        description="Item #415 | Table HL70063",
+        description="O | Item #00415 | Table 0063 - Relationship",
     )
 
     gt1_12: Optional[str] = Field(
@@ -334,7 +334,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.12",
         title="Guarantor SSN",
-        description="Item #416",
+        description="O | Item #00416 | LEN:11",
     )
 
     gt1_13: Optional[str] = Field(
@@ -346,7 +346,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.13",
         title="Guarantor Date - Begin",
-        description="Item #417",
+        description="O | Item #00417 | LEN:8",
     )
 
     gt1_14: Optional[str] = Field(
@@ -358,7 +358,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.14",
         title="Guarantor Date - End",
-        description="Item #418",
+        description="O | Item #00418 | LEN:8",
     )
 
     gt1_15: Optional[str] = Field(
@@ -370,7 +370,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.15",
         title="Guarantor Priority",
-        description="Item #419",
+        description="O | Item #00419 | LEN:2",
     )
 
     gt1_16: Optional[List[XPN]] = Field(
@@ -382,7 +382,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.16",
         title="Guarantor Employer Name",
-        description="Item #420",
+        description="O | Item #00420",
     )
 
     gt1_17: Optional[List[XAD]] = Field(
@@ -394,7 +394,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.17",
         title="Guarantor Employer Address",
-        description="Item #421",
+        description="O | Item #00421",
     )
 
     gt1_18: Optional[List[XTN]] = Field(
@@ -406,7 +406,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.18",
         title="Guarantor Employer Phone Number",
-        description="Item #422",
+        description="O | Item #00422",
     )
 
     gt1_19: Optional[List[CX]] = Field(
@@ -418,7 +418,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.19",
         title="Guarantor Employee ID Number",
-        description="Item #423",
+        description="O | Item #00423",
     )
 
     gt1_20: Optional[str] = Field(
@@ -430,7 +430,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.20",
         title="Guarantor Employment Status",
-        description="Item #424 | Table HL70066",
+        description="O | Item #00424 | Table 0066 - Employment Status | LEN:2",
     )
 
     gt1_21: Optional[List[XON]] = Field(
@@ -442,7 +442,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.21",
         title="Guarantor Organization Name",
-        description="Item #425",
+        description="O | Item #00425",
     )
 
     gt1_22: Optional[str] = Field(
@@ -454,7 +454,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.22",
         title="Guarantor Billing Hold Flag",
-        description="Item #773 | Table HL70136",
+        description="O | Item #00773 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     gt1_23: Optional[CE] = Field(
@@ -466,7 +466,9 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.23",
         title="Guarantor Credit Rating Code",
-        description="Item #774 | Table HL70341",
+        description=(
+            "O | Item #00774 | Table 0341 - Guarantor Credit Rating Code"
+        ),
     )
 
     gt1_24: Optional[TS] = Field(
@@ -478,7 +480,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.24",
         title="Guarantor Death Date And Time",
-        description="Item #775",
+        description="O | Item #00775",
     )
 
     gt1_25: Optional[str] = Field(
@@ -490,7 +492,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.25",
         title="Guarantor Death Flag",
-        description="Item #776 | Table HL70136",
+        description="O | Item #00776 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     gt1_26: Optional[CE] = Field(
@@ -502,7 +504,9 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.26",
         title="Guarantor Charge Adjustment Code",
-        description="Item #777 | Table HL70218",
+        description=(
+            "O | Item #00777 | Table 0218 - Patient Charge Adjustment Code"
+        ),
     )
 
     gt1_27: Optional[CP] = Field(
@@ -514,7 +518,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.27",
         title="Guarantor Household Annual Income",
-        description="Item #778",
+        description="O | Item #00778",
     )
 
     gt1_28: Optional[str] = Field(
@@ -526,7 +530,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.28",
         title="Guarantor Household Size",
-        description="Item #779",
+        description="O | Item #00779 | LEN:3",
     )
 
     gt1_29: Optional[List[CX]] = Field(
@@ -538,7 +542,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.29",
         title="Guarantor Employer ID Number",
-        description="Item #780",
+        description="O | Item #00780",
     )
 
     gt1_30: Optional[CE] = Field(
@@ -550,7 +554,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.30",
         title="Guarantor Marital Status Code",
-        description="Item #781 | Table HL70002",
+        description="O | Item #00781 | Table 0002 - Marital status",
     )
 
     gt1_31: Optional[str] = Field(
@@ -562,7 +566,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.31",
         title="Guarantor Hire Effective Date",
-        description="Item #782",
+        description="O | Item #00782 | LEN:8",
     )
 
     gt1_32: Optional[str] = Field(
@@ -574,7 +578,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.32",
         title="Employment Stop Date",
-        description="Item #783",
+        description="O | Item #00783 | LEN:8",
     )
 
     gt1_33: Optional[str] = Field(
@@ -586,7 +590,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.33",
         title="Living Dependency",
-        description="Item #755 | Table HL70223",
+        description="O | Item #00755 | Table 0223 - Living dependency | LEN:2",
     )
 
     gt1_34: Optional[List[str]] = Field(
@@ -598,7 +602,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.34",
         title="Ambulatory Status",
-        description="Item #145 | Table HL70009",
+        description="O | Item #00145 | Table 0009 - Ambulatory status | LEN:2",
     )
 
     gt1_35: Optional[List[CE]] = Field(
@@ -610,7 +614,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.35",
         title="Citizenship",
-        description="Item #129 | Table HL70171",
+        description="O | Item #00129 | Table 0171 - Citizenship",
     )
 
     gt1_36: Optional[CE] = Field(
@@ -622,7 +626,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.36",
         title="Primary Language",
-        description="Item #118 | Table HL70296",
+        description="O | Item #00118 | Table 0296 - Primary Language",
     )
 
     gt1_37: Optional[str] = Field(
@@ -634,7 +638,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.37",
         title="Living Arrangement",
-        description="Item #742 | Table HL70220",
+        description="O | Item #00742 | Table 0220 - Living arrangement | LEN:2",
     )
 
     gt1_38: Optional[CE] = Field(
@@ -646,7 +650,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.38",
         title="Publicity Code",
-        description="Item #743 | Table HL70215",
+        description="O | Item #00743 | Table 0215 - Publicity Code",
     )
 
     gt1_39: Optional[str] = Field(
@@ -658,7 +662,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.39",
         title="Protection Indicator",
-        description="Item #744 | Table HL70136",
+        description="O | Item #00744 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     gt1_40: Optional[str] = Field(
@@ -670,7 +674,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.40",
         title="Student Indicator",
-        description="Item #745 | Table HL70231",
+        description="O | Item #00745 | Table 0231 - Student status | LEN:2",
     )
 
     gt1_41: Optional[CE] = Field(
@@ -682,7 +686,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.41",
         title="Religion",
-        description="Item #120 | Table HL70006",
+        description="O | Item #00120 | Table 0006 - Religion",
     )
 
     gt1_42: Optional[List[XPN]] = Field(
@@ -694,7 +698,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.42",
         title="Mother’s Maiden Name",
-        description="Item #109",
+        description="O | Item #00109",
     )
 
     gt1_43: Optional[CE] = Field(
@@ -706,7 +710,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.43",
         title="Nationality",
-        description="Item #739 | Table HL70212",
+        description="O | Item #00739 | Table 0212 - Nationality",
     )
 
     gt1_44: Optional[List[CE]] = Field(
@@ -718,7 +722,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.44",
         title="Ethnic Group",
-        description="Item #125 | Table HL70189",
+        description="O | Item #00125 | Table 0189 - Ethnic Group",
     )
 
     gt1_45: Optional[List[XPN]] = Field(
@@ -730,7 +734,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.45",
         title="Contact Person’s Name",
-        description="Item #748",
+        description="O | Item #00748",
     )
 
     gt1_46: Optional[List[XTN]] = Field(
@@ -742,7 +746,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.46",
         title="Contact Person’s Telephone Number",
-        description="Item #749",
+        description="O | Item #00749",
     )
 
     gt1_47: Optional[CE] = Field(
@@ -754,7 +758,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.47",
         title="Contact Reason",
-        description="Item #747 | Table HL70222",
+        description="O | Item #00747 | Table 0222 - Contact Reason",
     )
 
     gt1_48: Optional[str] = Field(
@@ -766,7 +770,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.48",
         title="Contact Relationship",
-        description="Item #784 | Table HL70063",
+        description="O | Item #00784 | Table 0063 - Relationship | LEN:2",
     )
 
     gt1_49: Optional[str] = Field(
@@ -778,7 +782,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.49",
         title="Job Title",
-        description="Item #785",
+        description="O | Item #00785 | LEN:20",
     )
 
     gt1_50: Optional[JCC] = Field(
@@ -790,7 +794,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.50",
         title="Job Code/Class",
-        description="Item #786 | Table HL70327",
+        description="O | Item #00786 | Table 0327 - Job Code/Class",
     )
 
     gt1_51: Optional[List[XON]] = Field(
@@ -802,7 +806,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.51",
         title="Guarantor Employer’s Organization Name",
-        description="Item #1299",
+        description="O | Item #01299",
     )
 
     gt1_52: Optional[str] = Field(
@@ -814,7 +818,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.52",
         title="Handicap",
-        description="Item #753 | Table HL70295",
+        description="O | Item #00753 | Table 0295 - Handicap | LEN:2",
     )
 
     gt1_53: Optional[str] = Field(
@@ -826,7 +830,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.53",
         title="Job Status",
-        description="Item #752 | Table HL70311",
+        description="O | Item #00752 | Table 0311 - Job Status | LEN:2",
     )
 
     gt1_54: Optional[FC] = Field(
@@ -838,7 +842,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.54",
         title="Guarantor Financial Class",
-        description="Item #1231 | Table HL70064",
+        description="O | Item #01231 | Table 0064 - Financial Class",
     )
 
     gt1_55: Optional[List[CE]] = Field(
@@ -850,7 +854,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.55",
         title="Guarantor Race",
-        description="Item #1291 | Table HL70005",
+        description="O | Item #01291 | Table 0005 - Race",
     )
 
     @field_validator("gt1_1", mode='before')

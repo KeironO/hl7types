@@ -20,28 +20,28 @@ class OM3(HL7Model):
     Attributes
     ----------
     om3_1 : str | None
-        OM3.1 (opt) - Segment Type ID (ST) S7.6.9.1
+        OM3.1 - Segment Type ID (ST) NA S7.6.9.1
 
     om3_2 : str | None
-        OM3.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
+        OM3.2 - Sequence Number - Test/ Observation Master File (NM) NA S7.6.9.2
 
     om3_3 : str | None
-        OM3.3 (opt) - Preferred Coding System (ID) S7.6.6.3
+        OM3.3 - Preferred Coding System (ID) NA S7.6.6.3
 
     om3_4 : list[CE] | None
-        OM3.4 (opt, rep) - Valid coded answers (CE) S7.6.6.4
+        OM3.4 - Valid coded answers (CE) NA rep S7.6.6.4
 
     om3_5 : list[CE] | None
-        OM3.5 (opt, rep) - Normal test codes for categorical observations (CE) S7.6.6.5
+        OM3.5 - Normal test codes for categorical observations (CE) NA rep S7.6.6.5
 
     om3_6 : CE | None
-        OM3.6 (opt) - Abnormal test codes for categorical observations (CE) S7.6.6.6
+        OM3.6 - Abnormal test codes for categorical observations (CE) NA S7.6.6.6
 
     om3_7 : CE | None
-        OM3.7 (opt) - Critical test codes for categorical observations (CE) S7.6.6.7
+        OM3.7 - Critical test codes for categorical observations (CE) NA S7.6.6.7
 
     om3_8 : str | None
-        OM3.8 (opt) - Data Type (ID) S7.6.6.8
+        OM3.8 - Data Type (ID) NA S7.6.6.8
     """
 
     om3_1: Optional[str] = Field(
@@ -53,7 +53,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.1",
         title="Segment Type ID",
-        description="Item #585",
+        description="NA | Item #00585 | LEN:3",
     )
 
     om3_2: Optional[str] = Field(
@@ -65,7 +65,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.2",
         title="Sequence Number - Test/ Observation Master File",
-        description="Item #586",
+        description="NA | Item #00586 | LEN:4",
     )
 
     om3_3: Optional[str] = Field(
@@ -77,7 +77,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.3",
         title="Preferred Coding System",
-        description="Item #636",
+        description="NA | Item #00636 | LEN:5",
     )
 
     om3_4: Optional[List[CE]] = Field(
@@ -89,7 +89,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.4",
         title="Valid coded answers",
-        description="Item #637",
+        description="NA | Item #00637",
     )
 
     om3_5: Optional[List[CE]] = Field(
@@ -101,7 +101,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.5",
         title="Normal test codes for categorical observations",
-        description="Item #638",
+        description="NA | Item #00638",
     )
 
     om3_6: Optional[CE] = Field(
@@ -113,7 +113,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.6",
         title="Abnormal test codes for categorical observations",
-        description="Item #639",
+        description="NA | Item #00639",
     )
 
     om3_7: Optional[CE] = Field(
@@ -125,7 +125,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.7",
         title="Critical test codes for categorical observations",
-        description="Item #640",
+        description="NA | Item #00640",
     )
 
     om3_8: Optional[str] = Field(
@@ -137,7 +137,7 @@ class OM3(HL7Model):
         ),
         serialization_alias="OM3.8",
         title="Data Type",
-        description="Item #641",
+        description="NA | Item #00641 | LEN:2",
     )
 
     @field_validator("om3_2", mode='before')

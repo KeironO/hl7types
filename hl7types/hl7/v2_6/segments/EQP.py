@@ -20,19 +20,19 @@ class EQP(HL7Model):
     Attributes
     ----------
     eqp_1 : CWE
-        EQP.1 (req) - Event type (CWE) S13.4.12.1 | 0450 - Event type
+        EQP.1 - Event type (CWE) R S13.4.12.1 | 0450 - Event type
 
     eqp_2 : str | None
-        EQP.2 (opt) - File Name (ST) S13.4.12.2
+        EQP.2 - File Name (ST) O S13.4.12.2
 
     eqp_3 : str
-        EQP.3 (req) - Start Date/Time (DTM) S10.6.4.4
+        EQP.3 - Start Date/Time (DTM) R S10.6.4.4
 
     eqp_4 : str | None
-        EQP.4 (opt) - End Date/Time (DTM) S13.4.12.4
+        EQP.4 - End Date/Time (DTM) O S13.4.12.4
 
     eqp_5 : str
-        EQP.5 (req) - Transaction Data (FT) S13.4.12.5
+        EQP.5 - Transaction Data (FT) R S13.4.12.5
     """
 
     eqp_1: CWE = Field(
@@ -43,7 +43,7 @@ class EQP(HL7Model):
         ),
         serialization_alias="EQP.1",
         title="Event type",
-        description="Item #1430 | Table HL70450",
+        description="R | Item #01430 | Table 0450 - Event type",
     )
 
     eqp_2: Optional[str] = Field(
@@ -55,7 +55,7 @@ class EQP(HL7Model):
         ),
         serialization_alias="EQP.2",
         title="File Name",
-        description="Item #1431",
+        description="O | Item #01431 | LEN:20",
     )
 
     eqp_3: str = Field(
@@ -66,7 +66,7 @@ class EQP(HL7Model):
         ),
         serialization_alias="EQP.3",
         title="Start Date/Time",
-        description="Item #1202",
+        description="R | Item #01202 | LEN:24",
     )
 
     eqp_4: Optional[str] = Field(
@@ -78,7 +78,7 @@ class EQP(HL7Model):
         ),
         serialization_alias="EQP.4",
         title="End Date/Time",
-        description="Item #1432",
+        description="O | Item #01432 | LEN:24",
     )
 
     eqp_5: str = Field(
@@ -89,7 +89,7 @@ class EQP(HL7Model):
         ),
         serialization_alias="EQP.5",
         title="Transaction Data",
-        description="Item #1433",
+        description="R | Item #01433",
     )
 
     @field_validator("eqp_3", "eqp_4", mode='before')

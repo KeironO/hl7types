@@ -26,49 +26,49 @@ class PRT(HL7Model):
     Attributes
     ----------
     prt_1 : EI | None
-        PRT.1 (opt) - Participation Instance ID (EI) S7.4.4.1
+        PRT.1 - Participation Instance ID (EI) C S7.4.4.1
 
     prt_2 : str
-        PRT.2 (req) - Action Code (ID) S4.A.8.22 | 0206 - Segment Action Code
+        PRT.2 - Action Code (ID) R S4.A.8.22 | 0206 - Segment Action Code
 
     prt_3 : CWE | None
-        PRT.3 (opt) - Action Reason (CWE) S7.4.4.3
+        PRT.3 - Action Reason (CWE) O S7.4.4.3
 
     prt_4 : CWE
-        PRT.4 (req) - Participation (CWE) S7.4.4.4 | 0912 - Participation
+        PRT.4 - Participation (CWE) R S7.4.4.4 | 0912 - Participation
 
     prt_5 : list[XCN] | None
-        PRT.5 (opt, rep) - Participation Person (XCN) S7.4.4.5
+        PRT.5 - Participation Person (XCN) C rep S7.4.4.5
 
     prt_6 : CWE | None
-        PRT.6 (opt) - Participation Person Provider Type (CWE) S7.4.4.6
+        PRT.6 - Participation Person Provider Type (CWE) C S7.4.4.6
 
     prt_7 : CWE | None
-        PRT.7 (opt) - Participant Organization Unit Type (CWE) S7.4.4.7 | 0406 - Organization Unit Type
+        PRT.7 - Participant Organization Unit Type (CWE) C S7.4.4.7 | 0406 - Organization Unit Type
 
     prt_8 : list[XON] | None
-        PRT.8 (opt, rep) - Participation Organization (XON) S7.4.4.8
+        PRT.8 - Participation Organization (XON) C rep S7.4.4.8
 
     prt_9 : list[PL] | None
-        PRT.9 (opt, rep) - Participant Location (PL) S7.4.4.9
+        PRT.9 - Participant Location (PL) C rep S7.4.4.9
 
     prt_10 : list[EI] | None
-        PRT.10 (opt, rep) - Participation Device (EI) S7.4.4.10
+        PRT.10 - Participation Device (EI) C rep S7.4.4.10
 
     prt_11 : str | None
-        PRT.11 (opt) - Participation Begin Date/Time (arrival time) (DTM) S7.4.4.11
+        PRT.11 - Participation Begin Date/Time (arrival time) (DTM) O S7.4.4.11
 
     prt_12 : str | None
-        PRT.12 (opt) - Participation End Date/Time (departure time) (DTM) S7.4.4.12
+        PRT.12 - Participation End Date/Time (departure time) (DTM) O S7.4.4.12
 
     prt_13 : CWE | None
-        PRT.13 (opt) - Participation Qualitative Duration (CWE) S7.4.4.13
+        PRT.13 - Participation Qualitative Duration (CWE) O S7.4.4.13
 
     prt_14 : list[XAD] | None
-        PRT.14 (opt, rep) - Participation Address (XAD) S7.4.4.14
+        PRT.14 - Participation Address (XAD) C rep S7.4.4.14
 
     prt_15 : list[XTN] | None
-        PRT.15 (opt, rep) - Participant Telecommunication Address (XTN) S7.4.4.15
+        PRT.15 - Participant Telecommunication Address (XTN) O rep S7.4.4.15
     """
 
     prt_1: Optional[EI] = Field(
@@ -80,7 +80,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.1",
         title="Participation Instance ID",
-        description="Item #2379",
+        description="C | Item #02379",
     )
 
     prt_2: str = Field(
@@ -91,7 +91,9 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.2",
         title="Action Code",
-        description="Item #816 | Table HL70206",
+        description=(
+            "R | Item #00816 | Table 0206 - Segment Action Code | LEN:2"
+        ),
     )
 
     prt_3: Optional[CWE] = Field(
@@ -103,7 +105,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.3",
         title="Action Reason",
-        description="Item #2380",
+        description="O | Item #02380",
     )
 
     prt_4: CWE = Field(
@@ -114,7 +116,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.4",
         title="Participation",
-        description="Item #2381 | Table HL70912",
+        description="R | Item #02381 | Table 0912 - Participation",
     )
 
     prt_5: Optional[List[XCN]] = Field(
@@ -126,7 +128,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.5",
         title="Participation Person",
-        description="Item #2382",
+        description="C | Item #02382",
     )
 
     prt_6: Optional[CWE] = Field(
@@ -138,7 +140,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.6",
         title="Participation Person Provider Type",
-        description="Item #2383",
+        description="C | Item #02383",
     )
 
     prt_7: Optional[CWE] = Field(
@@ -150,7 +152,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.7",
         title="Participant Organization Unit Type",
-        description="Item #2384 | Table HL70406",
+        description="C | Item #02384 | Table 0406 - Organization Unit Type",
     )
 
     prt_8: Optional[List[XON]] = Field(
@@ -162,7 +164,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.8",
         title="Participation Organization",
-        description="Item #2385",
+        description="C | Item #02385",
     )
 
     prt_9: Optional[List[PL]] = Field(
@@ -174,7 +176,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.9",
         title="Participant Location",
-        description="Item #2386",
+        description="C | Item #02386",
     )
 
     prt_10: Optional[List[EI]] = Field(
@@ -186,7 +188,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.10",
         title="Participation Device",
-        description="Item #2348",
+        description="C | Item #02348",
     )
 
     prt_11: Optional[str] = Field(
@@ -198,7 +200,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.11",
         title="Participation Begin Date/Time (arrival time)",
-        description="Item #2387",
+        description="O | Item #02387",
     )
 
     prt_12: Optional[str] = Field(
@@ -210,7 +212,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.12",
         title="Participation End Date/Time (departure time)",
-        description="Item #2388",
+        description="O | Item #02388",
     )
 
     prt_13: Optional[CWE] = Field(
@@ -222,7 +224,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.13",
         title="Participation Qualitative Duration",
-        description="Item #2389",
+        description="O | Item #02389",
     )
 
     prt_14: Optional[List[XAD]] = Field(
@@ -234,7 +236,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.14",
         title="Participation Address",
-        description="Item #2390",
+        description="C | Item #02390",
     )
 
     prt_15: Optional[List[XTN]] = Field(
@@ -246,7 +248,7 @@ class PRT(HL7Model):
         ),
         serialization_alias="PRT.15",
         title="Participant Telecommunication Address",
-        description="Item #2391",
+        description="O | Item #02391",
     )
 
     @field_validator("prt_11", "prt_12", mode='before')

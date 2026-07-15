@@ -22,40 +22,40 @@ class ORG(HL7Model):
     Attributes
     ----------
     org_1 : str
-        ORG.1 (req) - Set ID - ORG (SI) S15.4.5.1
+        ORG.1 - Set ID - ORG (SI) R S15.4.5.1
 
     org_2 : CE | None
-        ORG.2 (opt) - Organization Unit Code (CE) S15.4.5.2 | 0405 - Organization Unit
+        ORG.2 - Organization Unit Code (CE) O S15.4.5.2 | 0405 - Organization Unit
 
     org_3 : CE | None
-        ORG.3 (opt) - Organization Unit Type Code (CE) S15.4.5.3 | 0474 - Organization Unit Type
+        ORG.3 - Organization Unit Type Code (CE) O S15.4.5.3 | 0474 - Organization Unit Type
 
     org_4 : str | None
-        ORG.4 (opt) - Primary Org Unit Indicator (ID) S15.4.5.4 | 0136 - Yes/no indicator
+        ORG.4 - Primary Org Unit Indicator (ID) O S15.4.5.4 | 0136 - Yes/no indicator
 
     org_5 : CX | None
-        ORG.5 (opt) - Practitioner Org Unit Identifier (CX) S15.4.5.5
+        ORG.5 - Practitioner Org Unit Identifier (CX) O S15.4.5.5
 
     org_6 : CE | None
-        ORG.6 (opt) - Health Care Provider Type Code (CE) S15.4.5.6 | 0452 - Health care provider type code
+        ORG.6 - Health Care Provider Type Code (CE) O S15.4.5.6 | 0452 - Health care provider type code
 
     org_7 : CE | None
-        ORG.7 (opt) - Health Care Provider Classification Code (CE) S15.4.5.7 | 0453 - Health care provider classification
+        ORG.7 - Health Care Provider Classification Code (CE) O S15.4.5.7 | 0453 - Health care provider classification
 
     org_8 : CE | None
-        ORG.8 (opt) - Health Care Provider Area of Specialization Code (CE) S15.4.5.8 | 0454 - Health care provider area of specialization
+        ORG.8 - Health Care Provider Area of Specialization Code (CE) O S15.4.5.8 | 0454 - Health care provider area of specialization
 
     org_9 : DR | None
-        ORG.9 (opt) - Effective Date Range (DR) S15.4.5.9
+        ORG.9 - Effective Date Range (DR) O S15.4.5.9
 
     org_10 : CE | None
-        ORG.10 (opt) - Employment Status Code (CE) S15.4.5.10 | 0066 - Employment Status
+        ORG.10 - Employment Status Code (CE) O S15.4.5.10 | 0066 - Employment Status
 
     org_11 : str | None
-        ORG.11 (opt) - Board Approval Indicator (ID) S15.4.5.11 | 0136 - Yes/no indicator
+        ORG.11 - Board Approval Indicator (ID) O S15.4.5.11 | 0136 - Yes/no indicator
 
     org_12 : str | None
-        ORG.12 (opt) - Primary Care Physician Indicator (ID) S15.4.5.12 | 0136 - Yes/no indicator
+        ORG.12 - Primary Care Physician Indicator (ID) O S15.4.5.12 | 0136 - Yes/no indicator
     """
 
     org_1: str = Field(
@@ -66,7 +66,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.1",
         title="Set ID - ORG",
-        description="Item #1459",
+        description="R | Item #01459 | LEN:60",
     )
 
     org_2: Optional[CE] = Field(
@@ -78,7 +78,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.2",
         title="Organization Unit Code",
-        description="Item #1460 | Table HL70405",
+        description="O | Item #01460 | Table 0405 - Organization Unit",
     )
 
     org_3: Optional[CE] = Field(
@@ -90,7 +90,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.3",
         title="Organization Unit Type Code",
-        description="Item #1625 | Table HL70474",
+        description="O | Item #01625 | Table 0474 - Organization Unit Type",
     )
 
     org_4: Optional[str] = Field(
@@ -102,7 +102,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.4",
         title="Primary Org Unit Indicator",
-        description="Item #1462 | Table HL70136",
+        description="O | Item #01462 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     org_5: Optional[CX] = Field(
@@ -114,7 +114,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.5",
         title="Practitioner Org Unit Identifier",
-        description="Item #1463",
+        description="O | Item #01463",
     )
 
     org_6: Optional[CE] = Field(
@@ -126,7 +126,9 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.6",
         title="Health Care Provider Type Code",
-        description="Item #1464 | Table HL70452",
+        description=(
+            "O | Item #01464 | Table 0452 - Health care provider type code"
+        ),
     )
 
     org_7: Optional[CE] = Field(
@@ -138,7 +140,9 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.7",
         title="Health Care Provider Classification Code",
-        description="Item #1614 | Table HL70453",
+        description=(
+            "O | Item #01614 | Table 0453 - Health care provider classification"
+        ),
     )
 
     org_8: Optional[CE] = Field(
@@ -150,7 +154,10 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.8",
         title="Health Care Provider Area of Specialization Code",
-        description="Item #1615 | Table HL70454",
+        description=(
+            "O | Item #01615 | Table 0454 - Health care provider area of "
+            "specialization"
+        ),
     )
 
     org_9: Optional[DR] = Field(
@@ -162,7 +169,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.9",
         title="Effective Date Range",
-        description="Item #1465",
+        description="O | Item #01465",
     )
 
     org_10: Optional[CE] = Field(
@@ -174,7 +181,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.10",
         title="Employment Status Code",
-        description="Item #1276 | Table HL70066",
+        description="O | Item #01276 | Table 0066 - Employment Status",
     )
 
     org_11: Optional[str] = Field(
@@ -186,7 +193,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.11",
         title="Board Approval Indicator",
-        description="Item #1467 | Table HL70136",
+        description="O | Item #01467 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     org_12: Optional[str] = Field(
@@ -198,7 +205,7 @@ class ORG(HL7Model):
         ),
         serialization_alias="ORG.12",
         title="Primary Care Physician Indicator",
-        description="Item #1468 | Table HL70136",
+        description="O | Item #01468 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     @field_validator("org_1", mode='before')

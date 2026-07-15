@@ -22,19 +22,19 @@ class LCH(HL7Model):
     Attributes
     ----------
     lch_1 : PL
-        LCH.1 (req) - Primary Key Value (PL) S8.8.4.1
+        LCH.1 - Primary Key Value (PL) R S8.8.4.1
 
     lch_2 : str | None
-        LCH.2 (opt) - Segment Action Code (ID) S8.8.3 | 0206 - Segment Action Code
+        LCH.2 - Segment Action Code (ID) O S8.8.3 | 0206 - Segment Action Code
 
     lch_3 : EI | None
-        LCH.3 (opt) - Segment Unique Key (EI) S8.8.3
+        LCH.3 - Segment Unique Key (EI) O S8.8.3
 
     lch_4 : CE
-        LCH.4 (req) - Location Characteristic ID (CE) S8.8.3.4 | 0324 - Location Characteristic ID
+        LCH.4 - Location Characteristic ID (CE) R S8.8.3.4 | 0324 - Location Characteristic ID
 
     lch_5 : CE
-        LCH.5 (req) - Location Characteristic Value (CE) S7.11.4.5
+        LCH.5 - Location Characteristic Value (CE) R S7.11.4.5
     """
 
     lch_1: PL = Field(
@@ -45,7 +45,7 @@ class LCH(HL7Model):
         ),
         serialization_alias="LCH.1",
         title="Primary Key Value",
-        description="Item #943",
+        description="R | Item #00943",
     )
 
     lch_2: Optional[str] = Field(
@@ -57,7 +57,9 @@ class LCH(HL7Model):
         ),
         serialization_alias="LCH.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description=(
+            "O | Item #00763 | Table 0206 - Segment Action Code | LEN:3"
+        ),
     )
 
     lch_3: Optional[EI] = Field(
@@ -69,7 +71,7 @@ class LCH(HL7Model):
         ),
         serialization_alias="LCH.3",
         title="Segment Unique Key",
-        description="Item #764",
+        description="O | Item #00764",
     )
 
     lch_4: CE = Field(
@@ -80,7 +82,7 @@ class LCH(HL7Model):
         ),
         serialization_alias="LCH.4",
         title="Location Characteristic ID",
-        description="Item #1295 | Table HL70324",
+        description="R | Item #01295 | Table 0324 - Location Characteristic ID",
     )
 
     lch_5: CE = Field(
@@ -91,7 +93,7 @@ class LCH(HL7Model):
         ),
         serialization_alias="LCH.5",
         title="Location Characteristic Value",
-        description="Item #1294",
+        description="R | Item #01294",
     )
 
     model_config = {"populate_by_name": True}

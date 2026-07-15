@@ -23,40 +23,40 @@ class PD1(HL7Model):
     Attributes
     ----------
     pd1_1 : str | None
-        PD1.1 (opt) - Living Dependency (IS) S3.3.5 | 0223 - Living Dependency
+        PD1.1 - Living Dependency (IS) O S3.3.5 | 0223 - Living Dependency
 
     pd1_2 : str | None
-        PD1.2 (opt) - Living Arrangement (IS) S3.3.5 | 0220 - Living Arrangements
+        PD1.2 - Living Arrangement (IS) O S3.3.5 | 0220 - Living Arrangements
 
     pd1_3 : list[XON] | None
-        PD1.3 (opt, rep) - Patient Primary Facility (XON) S3.3.9.3
+        PD1.3 - Patient Primary Facility (XON) O rep S3.3.9.3
 
     pd1_4 : list[XCN] | None
-        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN) S3.3.9.4
+        PD1.4 - Patient Primary Care Provider Name & ID No. (XCN) O rep S3.3.9.4
 
     pd1_5 : str | None
-        PD1.5 (opt) - Student Indicator (IS) S3.3.5 | 0231 - Student Status
+        PD1.5 - Student Indicator (IS) O S3.3.5 | 0231 - Student Status
 
     pd1_6 : str | None
-        PD1.6 (opt) - Handicap (IS) S3.3.5 | 0295 - Handicap
+        PD1.6 - Handicap (IS) O S3.3.5 | 0295 - Handicap
 
     pd1_7 : str | None
-        PD1.7 (opt) - Living Will (IS) S3.3.9.7 | 0315 - Living Will
+        PD1.7 - Living Will (IS) O S3.3.9.7 | 0315 - Living Will
 
     pd1_8 : str | None
-        PD1.8 (opt) - Organ Donor (IS) S3.3.9.8 | 0316 - Organ Donor
+        PD1.8 - Organ Donor (IS) O S3.3.9.8 | 0316 - Organ Donor
 
     pd1_9 : str | None
-        PD1.9 (opt) - Separate Bill (ID) S3.3.9.9 | 0136 - Yes/No Indicator
+        PD1.9 - Separate Bill (ID) O S3.3.9.9 | 0136 - Yes/No Indicator
 
     pd1_10 : list[CX] | None
-        PD1.10 (opt, rep) - Duplicate Patient (CX) S3.3.9.10
+        PD1.10 - Duplicate Patient (CX) O rep S3.3.9.10
 
     pd1_11 : CE | None
-        PD1.11 (opt) - Publicity Indicator (CE) S3.3.5 | 0215 - Publicity Code
+        PD1.11 - Publicity Indicator (CE) O S3.3.5 | 0215 - Publicity Code
 
     pd1_12 : str | None
-        PD1.12 (opt) - Protection Indicator (ID) S3.3.5 | 0136 - Yes/No Indicator
+        PD1.12 - Protection Indicator (ID) O S3.3.5 | 0136 - Yes/No Indicator
     """
 
     pd1_1: Optional[str] = Field(
@@ -68,7 +68,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.1",
         title="Living Dependency",
-        description="Item #755 | Table HL70223",
+        description="O | Item #00755 | Table 0223 - Living Dependency | LEN:2",
     )
 
     pd1_2: Optional[str] = Field(
@@ -80,7 +80,9 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.2",
         title="Living Arrangement",
-        description="Item #742 | Table HL70220",
+        description=(
+            "O | Item #00742 | Table 0220 - Living Arrangements | LEN:2"
+        ),
     )
 
     pd1_3: Optional[List[XON]] = Field(
@@ -92,7 +94,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.3",
         title="Patient Primary Facility",
-        description="Item #756",
+        description="O | Item #00756",
     )
 
     pd1_4: Optional[List[XCN]] = Field(
@@ -104,7 +106,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.4",
         title="Patient Primary Care Provider Name & ID No.",
-        description="Item #757",
+        description="O | Item #00757",
     )
 
     pd1_5: Optional[str] = Field(
@@ -116,7 +118,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.5",
         title="Student Indicator",
-        description="Item #745 | Table HL70231",
+        description="O | Item #00745 | Table 0231 - Student Status | LEN:2",
     )
 
     pd1_6: Optional[str] = Field(
@@ -128,7 +130,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.6",
         title="Handicap",
-        description="Item #753 | Table HL70310",
+        description="O | Item #00753 | Table 0295 - Handicap | LEN:2",
     )
 
     pd1_7: Optional[str] = Field(
@@ -140,7 +142,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.7",
         title="Living Will",
-        description="Item #759 | Table HL70315",
+        description="O | Item #00759 | Table 0315 - Living Will | LEN:2",
     )
 
     pd1_8: Optional[str] = Field(
@@ -152,7 +154,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.8",
         title="Organ Donor",
-        description="Item #760 | Table HL70316",
+        description="O | Item #00760 | Table 0316 - Organ Donor | LEN:2",
     )
 
     pd1_9: Optional[str] = Field(
@@ -164,7 +166,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.9",
         title="Separate Bill",
-        description="Item #761 | Table HL70136",
+        description="O | Item #00761 | Table 0136 - Yes/No Indicator | LEN:2",
     )
 
     pd1_10: Optional[List[CX]] = Field(
@@ -176,7 +178,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.10",
         title="Duplicate Patient",
-        description="Item #762",
+        description="O | Item #00762",
     )
 
     pd1_11: Optional[CE] = Field(
@@ -188,7 +190,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.11",
         title="Publicity Indicator",
-        description="Item #743 | Table HL70215",
+        description="O | Item #00743 | Table 0215 - Publicity Code",
     )
 
     pd1_12: Optional[str] = Field(
@@ -200,7 +202,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.12",
         title="Protection Indicator",
-        description="Item #744 | Table HL70136",
+        description="O | Item #00744 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     model_config = {"populate_by_name": True}

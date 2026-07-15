@@ -18,10 +18,10 @@ class QAK(HL7Model):
     Attributes
     ----------
     qak_1 : str | None
-        QAK.1 (opt) - Query Tag (ST) S2.24.22.1
+        QAK.1 - Query Tag (ST) C S2.24.22.1
 
     qak_2 : str | None
-        QAK.2 (opt) - Query Response Status (ID) S2.24.22.2 | 0208 - Query response status
+        QAK.2 - Query Response Status (ID) O S2.24.22.2 | 0208 - Query response status
     """
 
     qak_1: Optional[str] = Field(
@@ -33,7 +33,7 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.1",
         title="Query Tag",
-        description="Item #696",
+        description="C | Item #00696 | LEN:32",
     )
 
     qak_2: Optional[str] = Field(
@@ -45,7 +45,9 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.2",
         title="Query Response Status",
-        description="Item #708 | Table HL70208",
+        description=(
+            "O | Item #00708 | Table 0208 - Query response status | LEN:2"
+        ),
     )
 
     model_config = {"populate_by_name": True}

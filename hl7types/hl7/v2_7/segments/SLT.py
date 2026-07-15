@@ -20,19 +20,19 @@ class SLT(HL7Model):
     Attributes
     ----------
     slt_1 : EI | None
-        SLT.1 (opt) - Device Number (EI) S17.7.2.1
+        SLT.1 - Device Number (EI) O S17.7.2.1
 
     slt_2 : str | None
-        SLT.2 (opt) - Device Name (ST) S17.7.2.2
+        SLT.2 - Device Name (ST) O S17.7.2.2
 
     slt_3 : EI | None
-        SLT.3 (opt) - Lot Number (EI) S17.7.2.3
+        SLT.3 - Lot Number (EI) O S17.7.2.3
 
     slt_4 : EI | None
-        SLT.4 (opt) - Item Identifier (EI) S17.7.2.4
+        SLT.4 - Item Identifier (EI) O S17.7.2.4
 
     slt_5 : str | None
-        SLT.5 (opt) - Bar Code (ST) S17.7.2.5
+        SLT.5 - Bar Code (ST) O S17.7.2.5
     """
 
     slt_1: Optional[EI] = Field(
@@ -44,7 +44,7 @@ class SLT(HL7Model):
         ),
         serialization_alias="SLT.1",
         title="Device Number",
-        description="Item #2094",
+        description="O | Item #02094",
     )
 
     slt_2: Optional[str] = Field(
@@ -56,7 +56,7 @@ class SLT(HL7Model):
         ),
         serialization_alias="SLT.2",
         title="Device Name",
-        description="Item #2280",
+        description="O | Item #02280",
     )
 
     slt_3: Optional[EI] = Field(
@@ -68,7 +68,7 @@ class SLT(HL7Model):
         ),
         serialization_alias="SLT.3",
         title="Lot Number",
-        description="Item #2095",
+        description="O | Item #02095",
     )
 
     slt_4: Optional[EI] = Field(
@@ -80,7 +80,7 @@ class SLT(HL7Model):
         ),
         serialization_alias="SLT.4",
         title="Item Identifier",
-        description="Item #2096",
+        description="O | Item #02096",
     )
 
     slt_5: Optional[str] = Field(
@@ -92,7 +92,7 @@ class SLT(HL7Model):
         ),
         serialization_alias="SLT.5",
         title="Bar Code",
-        description="Item #2097",
+        description="O | Item #02097",
     )
 
     model_config = {"populate_by_name": True}

@@ -20,25 +20,25 @@ class RQ1(HL7Model):
     Attributes
     ----------
     rq1_1 : str | None
-        RQ1.1 (opt) - Anticipated Price (SI) S4.7.2.1
+        RQ1.1 - Anticipated Price (SI) NA S4.7.2.1
 
     rq1_2 : CE | None
-        RQ1.2 (opt) - Manufacturer ID (CE) S4.7.2.2
+        RQ1.2 - Manufacturer ID (CE) NA S4.7.2.2
 
     rq1_3 : str | None
-        RQ1.3 (opt) - Manufacturer's Catalog (ST) S4.7.2.3
+        RQ1.3 - Manufacturer's Catalog (ST) NA S4.7.2.3
 
     rq1_4 : CE | None
-        RQ1.4 (opt) - Vendor ID (CE) S4.7.2.4
+        RQ1.4 - Vendor ID (CE) NA S4.7.2.4
 
     rq1_5 : str | None
-        RQ1.5 (opt) - Vendor Catalog (ST) S4.7.2.5
+        RQ1.5 - Vendor Catalog (ST) NA S4.7.2.5
 
     rq1_6 : str | None
-        RQ1.6 (opt) - Taxable (ID) S4.7.2.6 | 0136 - Y/N Indicator
+        RQ1.6 - Taxable (ID) NA S4.7.2.6 | 0136 - Y/N Indicator
 
     rq1_7 : str | None
-        RQ1.7 (opt) - Substitute Allowed (ID) S4.7.2.7 | 0136 - Y/N Indicator
+        RQ1.7 - Substitute Allowed (ID) NA S4.7.2.7 | 0136 - Y/N Indicator
     """
 
     rq1_1: Optional[str] = Field(
@@ -50,7 +50,7 @@ class RQ1(HL7Model):
         ),
         serialization_alias="RQ1.1",
         title="Anticipated Price",
-        description="Item #285",
+        description="NA | Item #00285 | LEN:10",
     )
 
     rq1_2: Optional[CE] = Field(
@@ -62,7 +62,7 @@ class RQ1(HL7Model):
         ),
         serialization_alias="RQ1.2",
         title="Manufacturer ID",
-        description="Item #286",
+        description="NA | Item #00286",
     )
 
     rq1_3: Optional[str] = Field(
@@ -74,7 +74,7 @@ class RQ1(HL7Model):
         ),
         serialization_alias="RQ1.3",
         title="Manufacturer's Catalog",
-        description="Item #287",
+        description="NA | Item #00287 | LEN:16",
     )
 
     rq1_4: Optional[CE] = Field(
@@ -86,7 +86,7 @@ class RQ1(HL7Model):
         ),
         serialization_alias="RQ1.4",
         title="Vendor ID",
-        description="Item #288",
+        description="NA | Item #00288",
     )
 
     rq1_5: Optional[str] = Field(
@@ -98,7 +98,7 @@ class RQ1(HL7Model):
         ),
         serialization_alias="RQ1.5",
         title="Vendor Catalog",
-        description="Item #289",
+        description="NA | Item #00289 | LEN:16",
     )
 
     rq1_6: Optional[str] = Field(
@@ -110,7 +110,7 @@ class RQ1(HL7Model):
         ),
         serialization_alias="RQ1.6",
         title="Taxable",
-        description="Item #290 | Table HL70136",
+        description="NA | Item #00290 | Table 0136 - Y/N Indicator | LEN:1",
     )
 
     rq1_7: Optional[str] = Field(
@@ -122,7 +122,7 @@ class RQ1(HL7Model):
         ),
         serialization_alias="RQ1.7",
         title="Substitute Allowed",
-        description="Item #291 | Table HL70136",
+        description="NA | Item #00291 | Table 0136 - Y/N Indicator | LEN:1",
     )
 
     @field_validator("rq1_1", mode='before')

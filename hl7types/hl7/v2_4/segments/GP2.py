@@ -21,46 +21,46 @@ class GP2(HL7Model):
     Attributes
     ----------
     gp2_1 : str | None
-        GP2.1 (opt) - Revenue Code (IS) S6.5.16.1 | 0456 - Revenue code
+        GP2.1 - Revenue Code (IS) O S6.5.16.1 | 0456 - Revenue code
 
     gp2_2 : str | None
-        GP2.2 (opt) - Number of Service Units (NM) S6.5.16.2
+        GP2.2 - Number of Service Units (NM) O S6.5.16.2
 
     gp2_3 : CP | None
-        GP2.3 (opt) - Charge (CP) S6.5.16.3
+        GP2.3 - Charge (CP) O S6.5.16.3
 
     gp2_4 : str | None
-        GP2.4 (opt) - Reimbursement Action Code (IS) S6.5.16.4 | 0459 - Reimbursement Action Code
+        GP2.4 - Reimbursement Action Code (IS) O S6.5.16.4 | 0459 - Reimbursement Action Code
 
     gp2_5 : str | None
-        GP2.5 (opt) - Denial or Rejection Code (IS) S6.5.16.5 | 0460 - Denial or rejection code
+        GP2.5 - Denial or Rejection Code (IS) O S6.5.16.5 | 0460 - Denial or rejection code
 
     gp2_6 : list[str] | None
-        GP2.6 (opt, rep) - OCE Edit Code (IS) S6.5.16.6 | 0458 - OCE edit code
+        GP2.6 - OCE Edit Code (IS) O rep S6.5.16.6 | 0458 - OCE edit code
 
     gp2_7 : CE | None
-        GP2.7 (opt) - Ambulatory Payment Classification Code (CE) S6.5.16.7 | 0466 - Ambulatory payment classification code
+        GP2.7 - Ambulatory Payment Classification Code (CE) O S6.5.16.7 | 0466 - Ambulatory payment classification code
 
     gp2_8 : list[str] | None
-        GP2.8 (opt, rep) - Modifier Edit Code (IS) S6.5.16.8 | 0467 - Modifier edit code
+        GP2.8 - Modifier Edit Code (IS) O rep S6.5.16.8 | 0467 - Modifier edit code
 
     gp2_9 : str | None
-        GP2.9 (opt) - Payment Adjustment Code (IS) S6.5.16.9 | 0468 - Payment adjustment code
+        GP2.9 - Payment Adjustment Code (IS) O S6.5.16.9 | 0468 - Payment adjustment code
 
     gp2_10 : str | None
-        GP2.10 (opt) - Packaging Status Code (IS) S6.5.16.10 | 0469 - Packaging status code
+        GP2.10 - Packaging Status Code (IS) O S6.5.16.10 | 0469 - Packaging status code
 
     gp2_11 : CP | None
-        GP2.11 (opt) - Expected HCFA Payment Amount (CP) S6.5.16.11
+        GP2.11 - Expected HCFA Payment Amount (CP) O S6.5.16.11
 
     gp2_12 : str | None
-        GP2.12 (opt) - Reimbursement Type Code (IS) S6.5.16.12 | 0470 - Reimbursement type code
+        GP2.12 - Reimbursement Type Code (IS) O S6.5.16.12 | 0470 - Reimbursement type code
 
     gp2_13 : CP | None
-        GP2.13 (opt) - Co-Pay Amount (CP) S6.5.16.13
+        GP2.13 - Co-Pay Amount (CP) O S6.5.16.13
 
     gp2_14 : str | None
-        GP2.14 (opt) - Pay Rate per Unit (NM) S6.5.16.14
+        GP2.14 - Pay Rate per Unit (NM) O S6.5.16.14
     """
 
     gp2_1: Optional[str] = Field(
@@ -72,7 +72,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.1",
         title="Revenue Code",
-        description="Item #1600 | Table HL70456",
+        description="O | Item #01600 | Table 0456 - Revenue code | LEN:3",
     )
 
     gp2_2: Optional[str] = Field(
@@ -84,7 +84,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.2",
         title="Number of Service Units",
-        description="Item #1604",
+        description="O | Item #01604 | LEN:7",
     )
 
     gp2_3: Optional[CP] = Field(
@@ -96,7 +96,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.3",
         title="Charge",
-        description="Item #1605",
+        description="O | Item #01605",
     )
 
     gp2_4: Optional[str] = Field(
@@ -108,7 +108,9 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.4",
         title="Reimbursement Action Code",
-        description="Item #1606 | Table HL70459",
+        description=(
+            "O | Item #01606 | Table 0459 - Reimbursement Action Code | LEN:1"
+        ),
     )
 
     gp2_5: Optional[str] = Field(
@@ -120,7 +122,9 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.5",
         title="Denial or Rejection Code",
-        description="Item #1607 | Table HL70460",
+        description=(
+            "O | Item #01607 | Table 0460 - Denial or rejection code | LEN:1"
+        ),
     )
 
     gp2_6: Optional[List[str]] = Field(
@@ -132,7 +136,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.6",
         title="OCE Edit Code",
-        description="Item #1608 | Table HL70458",
+        description="O | Item #01608 | Table 0458 - OCE edit code | LEN:3",
     )
 
     gp2_7: Optional[CE] = Field(
@@ -144,7 +148,10 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.7",
         title="Ambulatory Payment Classification Code",
-        description="Item #1609 | Table HL70466",
+        description=(
+            "O | Item #01609 | Table 0466 - Ambulatory payment classification "
+            "code"
+        ),
     )
 
     gp2_8: Optional[List[str]] = Field(
@@ -156,7 +163,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.8",
         title="Modifier Edit Code",
-        description="Item #1610 | Table HL70467",
+        description="O | Item #01610 | Table 0467 - Modifier edit code | LEN:1",
     )
 
     gp2_9: Optional[str] = Field(
@@ -168,7 +175,9 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.9",
         title="Payment Adjustment Code",
-        description="Item #1611 | Table HL70468",
+        description=(
+            "O | Item #01611 | Table 0468 - Payment adjustment code | LEN:1"
+        ),
     )
 
     gp2_10: Optional[str] = Field(
@@ -180,7 +189,9 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.10",
         title="Packaging Status Code",
-        description="Item #1617 | Table HL70469",
+        description=(
+            "O | Item #01617 | Table 0469 - Packaging status code | LEN:1"
+        ),
     )
 
     gp2_11: Optional[CP] = Field(
@@ -192,7 +203,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.11",
         title="Expected HCFA Payment Amount",
-        description="Item #1618",
+        description="O | Item #01618",
     )
 
     gp2_12: Optional[str] = Field(
@@ -204,7 +215,9 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.12",
         title="Reimbursement Type Code",
-        description="Item #1619 | Table HL70470",
+        description=(
+            "O | Item #01619 | Table 0470 - Reimbursement type code | LEN:2"
+        ),
     )
 
     gp2_13: Optional[CP] = Field(
@@ -216,7 +229,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.13",
         title="Co-Pay Amount",
-        description="Item #1620",
+        description="O | Item #01620",
     )
 
     gp2_14: Optional[str] = Field(
@@ -228,7 +241,7 @@ class GP2(HL7Model):
         ),
         serialization_alias="GP2.14",
         title="Pay Rate per Unit",
-        description="Item #1621",
+        description="O | Item #01621 | LEN:4",
     )
 
     @field_validator("gp2_2", "gp2_14", mode='before')

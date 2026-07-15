@@ -25,136 +25,136 @@ class SAC(HL7Model):
     Attributes
     ----------
     sac_1 : EI | None
-        SAC.1 (opt) - External Accession Identifier (EI) S13.4.3.1
+        SAC.1 - External Accession Identifier (EI) O S13.4.3.1
 
     sac_2 : EI | None
-        SAC.2 (opt) - Accession Identifier (EI) S13.4.3.2
+        SAC.2 - Accession Identifier (EI) O S13.4.3.2
 
     sac_3 : EI | None
-        SAC.3 (opt) - Container Identifier (EI) S13.4.3.3
+        SAC.3 - Container Identifier (EI) C S13.4.3.3
 
     sac_4 : EI | None
-        SAC.4 (opt) - Primary (parent) Container Identifier (EI) S13.4.3.4
+        SAC.4 - Primary (parent) Container Identifier (EI) C S13.4.3.4
 
     sac_5 : EI | None
-        SAC.5 (opt) - Equipment Container Identifier (EI) S13.4.3.5
+        SAC.5 - Equipment Container Identifier (EI) O S13.4.3.5
 
     sac_6 : SPS | None
-        SAC.6 (opt) - Specimen Source (SPS) S13.4.9.3 | 0070 - Specimen source codes
+        SAC.6 - Specimen Source (SPS) O S13.4.9.3 | 0070 - Specimen source codes
 
     sac_7 : TS | None
-        SAC.7 (opt) - Registration Date/Time (TS) S13.4.3.7
+        SAC.7 - Registration Date/Time (TS) O S13.4.3.7
 
     sac_8 : CE | None
-        SAC.8 (opt) - Container Status (CE) S13.4.3.8 | 0370 - Container status
+        SAC.8 - Container Status (CE) O S13.4.3.8 | 0370 - Container status
 
     sac_9 : CE | None
-        SAC.9 (opt) - Carrier Type (CE) S13.4.3.9 | 0378 - Carrier type
+        SAC.9 - Carrier Type (CE) O S13.4.3.9 | 0378 - Carrier type
 
     sac_10 : EI | None
-        SAC.10 (opt) - Carrier Identifier (EI) S13.4.3.10
+        SAC.10 - Carrier Identifier (EI) O S13.4.3.10
 
     sac_11 : NA | None
-        SAC.11 (opt) - Position in Carrier (NA) S13.4.3.11
+        SAC.11 - Position in Carrier (NA) O S13.4.3.11
 
     sac_12 : CE | None
-        SAC.12 (opt) - Tray Type - SAC (CE) S13.4.3.12 | 0379 - Tray type
+        SAC.12 - Tray Type - SAC (CE) O S13.4.3.12 | 0379 - Tray type
 
     sac_13 : EI | None
-        SAC.13 (opt) - Tray Identifier (EI) S13.4.3.13
+        SAC.13 - Tray Identifier (EI) O S13.4.3.13
 
     sac_14 : NA | None
-        SAC.14 (opt) - Position in Tray (NA) S13.4.3.14
+        SAC.14 - Position in Tray (NA) O S13.4.3.14
 
     sac_15 : list[CE] | None
-        SAC.15 (opt, rep) - Location (CE) S13.4.3.15
+        SAC.15 - Location (CE) O rep S13.4.3.15
 
     sac_16 : str | None
-        SAC.16 (opt) - Container Height (NM) S13.4.3.16
+        SAC.16 - Container Height (NM) O S13.4.3.16
 
     sac_17 : str | None
-        SAC.17 (opt) - Container Diameter (NM) S13.4.3.17
+        SAC.17 - Container Diameter (NM) O S13.4.3.17
 
     sac_18 : str | None
-        SAC.18 (opt) - Barrier Delta (NM) S13.4.3.18
+        SAC.18 - Barrier Delta (NM) O S13.4.3.18
 
     sac_19 : str | None
-        SAC.19 (opt) - Bottom Delta (NM) S13.4.3.19
+        SAC.19 - Bottom Delta (NM) O S13.4.3.19
 
     sac_20 : CE | None
-        SAC.20 (opt) - Container Height/Diameter/Delta Units (CE) S13.4.3.20
+        SAC.20 - Container Height/Diameter/Delta Units (CE) O S13.4.3.20
 
     sac_21 : str | None
-        SAC.21 (opt) - Container Volume (NM) S13.4.3.21
+        SAC.21 - Container Volume (NM) O S13.4.3.21
 
     sac_22 : str | None
-        SAC.22 (opt) - Available Volume (NM) S13.4.3.22
+        SAC.22 - Available Volume (NM) O S13.4.3.22
 
     sac_23 : str | None
-        SAC.23 (opt) - Initial Specimen Volume (NM) S13.4.3.23
+        SAC.23 - Initial Specimen Volume (NM) O S13.4.3.23
 
     sac_24 : CE | None
-        SAC.24 (opt) - Volume  Units (CE) S13.4.3.24
+        SAC.24 - Volume  Units (CE) O S13.4.3.24
 
     sac_25 : CE | None
-        SAC.25 (opt) - Separator Type (CE) S13.4.3.25 | 0380 - Separator type
+        SAC.25 - Separator Type (CE) O S13.4.3.25 | 0380 - Separator type
 
     sac_26 : CE | None
-        SAC.26 (opt) - Cap Type (CE) S13.4.3.26 | 0381 - Cap type
+        SAC.26 - Cap Type (CE) O S13.4.3.26 | 0381 - Cap type
 
     sac_27 : list[CE] | None
-        SAC.27 (opt, rep) - Additive (CE) S13.4.3.27 | 0371 - Additive
+        SAC.27 - Additive (CE) O rep S13.4.3.27 | 0371 - Additive
 
     sac_28 : CE | None
-        SAC.28 (opt) - Specimen Component (CE) S13.4.3.28
+        SAC.28 - Specimen Component (CE) O S13.4.3.28
 
     sac_29 : SN | None
-        SAC.29 (opt) - Dilution Factor (SN) S13.4.3.29
+        SAC.29 - Dilution Factor (SN) O S13.4.3.29
 
     sac_30 : CE | None
-        SAC.30 (opt) - Treatment (CE) S13.4.3.30 | 0373 - Treatment
+        SAC.30 - Treatment (CE) O S13.4.3.30 | 0373 - Treatment
 
     sac_31 : SN | None
-        SAC.31 (opt) - Temperature (SN) S13.4.3.31
+        SAC.31 - Temperature (SN) O S13.4.3.31
 
     sac_32 : str | None
-        SAC.32 (opt) - Hemolysis Index (NM) S13.4.3.32
+        SAC.32 - Hemolysis Index (NM) O S13.4.3.32
 
     sac_33 : CE | None
-        SAC.33 (opt) - Hemolysis Index Units (CE) S13.4.3.33
+        SAC.33 - Hemolysis Index Units (CE) O S13.4.3.33
 
     sac_34 : str | None
-        SAC.34 (opt) - Lipemia Index (NM) S13.4.3.34
+        SAC.34 - Lipemia Index (NM) O S13.4.3.34
 
     sac_35 : CE | None
-        SAC.35 (opt) - Lipemia Index Units (CE) S13.4.3.35
+        SAC.35 - Lipemia Index Units (CE) O S13.4.3.35
 
     sac_36 : str | None
-        SAC.36 (opt) - Icterus Index (NM) S13.4.3.36
+        SAC.36 - Icterus Index (NM) O S13.4.3.36
 
     sac_37 : CE | None
-        SAC.37 (opt) - Icterus Index Units (CE) S13.4.3.37
+        SAC.37 - Icterus Index Units (CE) O S13.4.3.37
 
     sac_38 : str | None
-        SAC.38 (opt) - Fibrin Index (NM) S13.4.3.38
+        SAC.38 - Fibrin Index (NM) O S13.4.3.38
 
     sac_39 : CE | None
-        SAC.39 (opt) - Fibrin Index Units (CE) S13.4.3.39
+        SAC.39 - Fibrin Index Units (CE) O S13.4.3.39
 
     sac_40 : list[CE] | None
-        SAC.40 (opt, rep) - System Induced Contaminants (CE) S13.4.3.40 | 0374 - System induced contaminants
+        SAC.40 - System Induced Contaminants (CE) O rep S13.4.3.40 | 0374 - System induced contaminants
 
     sac_41 : list[CE] | None
-        SAC.41 (opt, rep) - Drug Interference (CE) S13.4.3.41 | 0382 - Drug interference
+        SAC.41 - Drug Interference (CE) O rep S13.4.3.41 | 0382 - Drug interference
 
     sac_42 : CE | None
-        SAC.42 (opt) - Artificial Blood (CE) S13.4.3.42 | 0375 - Artificial blood
+        SAC.42 - Artificial Blood (CE) O S13.4.3.42 | 0375 - Artificial blood
 
     sac_43 : list[CE] | None
-        SAC.43 (opt, rep) - Special Handling Considerations (CE) S13.4.3.43 | 0376 - Special handling considerations
+        SAC.43 - Special Handling Considerations (CE) O rep S13.4.3.43 | 0376 - Special handling considerations
 
     sac_44 : list[CE] | None
-        SAC.44 (opt, rep) - Other Environmental Factors (CE) S13.4.3.44 | 0377 - Other environmental factors
+        SAC.44 - Other Environmental Factors (CE) O rep S13.4.3.44 | 0377 - Other environmental factors
     """
 
     sac_1: Optional[EI] = Field(
@@ -166,7 +166,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.1",
         title="External Accession Identifier",
-        description="Item #1329",
+        description="O | Item #01329",
     )
 
     sac_2: Optional[EI] = Field(
@@ -178,7 +178,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.2",
         title="Accession Identifier",
-        description="Item #1330",
+        description="O | Item #01330",
     )
 
     sac_3: Optional[EI] = Field(
@@ -190,7 +190,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.3",
         title="Container Identifier",
-        description="Item #1331",
+        description="C | Item #01331",
     )
 
     sac_4: Optional[EI] = Field(
@@ -202,7 +202,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.4",
         title="Primary (parent) Container Identifier",
-        description="Item #1332",
+        description="C | Item #01332",
     )
 
     sac_5: Optional[EI] = Field(
@@ -214,7 +214,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.5",
         title="Equipment Container Identifier",
-        description="Item #1333",
+        description="O | Item #01333",
     )
 
     sac_6: Optional[SPS] = Field(
@@ -226,7 +226,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.6",
         title="Specimen Source",
-        description="Item #249 | Table HL70070",
+        description="O | Item #00249 | Table 0070 - Specimen source codes",
     )
 
     sac_7: Optional[TS] = Field(
@@ -238,7 +238,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.7",
         title="Registration Date/Time",
-        description="Item #1334",
+        description="O | Item #01334",
     )
 
     sac_8: Optional[CE] = Field(
@@ -250,7 +250,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.8",
         title="Container Status",
-        description="Item #1335 | Table HL70370",
+        description="O | Item #01335 | Table 0370 - Container status",
     )
 
     sac_9: Optional[CE] = Field(
@@ -262,7 +262,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.9",
         title="Carrier Type",
-        description="Item #1336 | Table HL70378",
+        description="O | Item #01336 | Table 0378 - Carrier type",
     )
 
     sac_10: Optional[EI] = Field(
@@ -274,7 +274,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.10",
         title="Carrier Identifier",
-        description="Item #1337",
+        description="O | Item #01337",
     )
 
     sac_11: Optional[NA] = Field(
@@ -286,7 +286,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.11",
         title="Position in Carrier",
-        description="Item #1338",
+        description="O | Item #01338",
     )
 
     sac_12: Optional[CE] = Field(
@@ -298,7 +298,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.12",
         title="Tray Type - SAC",
-        description="Item #1339 | Table HL70379",
+        description="O | Item #01339 | Table 0379 - Tray type",
     )
 
     sac_13: Optional[EI] = Field(
@@ -310,7 +310,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.13",
         title="Tray Identifier",
-        description="Item #1340",
+        description="O | Item #01340",
     )
 
     sac_14: Optional[NA] = Field(
@@ -322,7 +322,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.14",
         title="Position in Tray",
-        description="Item #1341",
+        description="O | Item #01341",
     )
 
     sac_15: Optional[List[CE]] = Field(
@@ -334,7 +334,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.15",
         title="Location",
-        description="Item #1342",
+        description="O | Item #01342",
     )
 
     sac_16: Optional[str] = Field(
@@ -346,7 +346,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.16",
         title="Container Height",
-        description="Item #1343",
+        description="O | Item #01343 | LEN:20",
     )
 
     sac_17: Optional[str] = Field(
@@ -358,7 +358,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.17",
         title="Container Diameter",
-        description="Item #1344",
+        description="O | Item #01344 | LEN:20",
     )
 
     sac_18: Optional[str] = Field(
@@ -370,7 +370,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.18",
         title="Barrier Delta",
-        description="Item #1345",
+        description="O | Item #01345 | LEN:20",
     )
 
     sac_19: Optional[str] = Field(
@@ -382,7 +382,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.19",
         title="Bottom Delta",
-        description="Item #1346",
+        description="O | Item #01346 | LEN:20",
     )
 
     sac_20: Optional[CE] = Field(
@@ -394,7 +394,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.20",
         title="Container Height/Diameter/Delta Units",
-        description="Item #1347",
+        description="O | Item #01347",
     )
 
     sac_21: Optional[str] = Field(
@@ -406,7 +406,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.21",
         title="Container Volume",
-        description="Item #644",
+        description="O | Item #00644 | LEN:20",
     )
 
     sac_22: Optional[str] = Field(
@@ -418,7 +418,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.22",
         title="Available Volume",
-        description="Item #1349",
+        description="O | Item #01349 | LEN:20",
     )
 
     sac_23: Optional[str] = Field(
@@ -430,7 +430,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.23",
         title="Initial Specimen Volume",
-        description="Item #1350",
+        description="O | Item #01350 | LEN:20",
     )
 
     sac_24: Optional[CE] = Field(
@@ -442,7 +442,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.24",
         title="Volume  Units",
-        description="Item #1351",
+        description="O | Item #01351",
     )
 
     sac_25: Optional[CE] = Field(
@@ -454,7 +454,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.25",
         title="Separator Type",
-        description="Item #1352 | Table HL70380",
+        description="O | Item #01352 | Table 0380 - Separator type",
     )
 
     sac_26: Optional[CE] = Field(
@@ -466,7 +466,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.26",
         title="Cap Type",
-        description="Item #1353 | Table HL70381",
+        description="O | Item #01353 | Table 0381 - Cap type",
     )
 
     sac_27: Optional[List[CE]] = Field(
@@ -478,7 +478,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.27",
         title="Additive",
-        description="Item #647 | Table HL70371",
+        description="O | Item #00647 | Table 0371 - Additive",
     )
 
     sac_28: Optional[CE] = Field(
@@ -490,7 +490,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.28",
         title="Specimen Component",
-        description="Item #1355",
+        description="O | Item #01355",
     )
 
     sac_29: Optional[SN] = Field(
@@ -502,7 +502,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.29",
         title="Dilution Factor",
-        description="Item #1356",
+        description="O | Item #01356",
     )
 
     sac_30: Optional[CE] = Field(
@@ -514,7 +514,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.30",
         title="Treatment",
-        description="Item #1357 | Table HL70373",
+        description="O | Item #01357 | Table 0373 - Treatment",
     )
 
     sac_31: Optional[SN] = Field(
@@ -526,7 +526,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.31",
         title="Temperature",
-        description="Item #1358",
+        description="O | Item #01358",
     )
 
     sac_32: Optional[str] = Field(
@@ -538,7 +538,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.32",
         title="Hemolysis Index",
-        description="Item #1359",
+        description="O | Item #01359 | LEN:20",
     )
 
     sac_33: Optional[CE] = Field(
@@ -550,7 +550,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.33",
         title="Hemolysis Index Units",
-        description="Item #1360",
+        description="O | Item #01360",
     )
 
     sac_34: Optional[str] = Field(
@@ -562,7 +562,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.34",
         title="Lipemia Index",
-        description="Item #1361",
+        description="O | Item #01361 | LEN:20",
     )
 
     sac_35: Optional[CE] = Field(
@@ -574,7 +574,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.35",
         title="Lipemia Index Units",
-        description="Item #1362",
+        description="O | Item #01362",
     )
 
     sac_36: Optional[str] = Field(
@@ -586,7 +586,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.36",
         title="Icterus Index",
-        description="Item #1363",
+        description="O | Item #01363 | LEN:20",
     )
 
     sac_37: Optional[CE] = Field(
@@ -598,7 +598,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.37",
         title="Icterus Index Units",
-        description="Item #1364",
+        description="O | Item #01364",
     )
 
     sac_38: Optional[str] = Field(
@@ -610,7 +610,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.38",
         title="Fibrin Index",
-        description="Item #1365",
+        description="O | Item #01365 | LEN:20",
     )
 
     sac_39: Optional[CE] = Field(
@@ -622,7 +622,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.39",
         title="Fibrin Index Units",
-        description="Item #1366",
+        description="O | Item #01366",
     )
 
     sac_40: Optional[List[CE]] = Field(
@@ -634,7 +634,9 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.40",
         title="System Induced Contaminants",
-        description="Item #1367 | Table HL70374",
+        description=(
+            "O | Item #01367 | Table 0374 - System induced contaminants"
+        ),
     )
 
     sac_41: Optional[List[CE]] = Field(
@@ -646,7 +648,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.41",
         title="Drug Interference",
-        description="Item #1368 | Table HL70382",
+        description="O | Item #01368 | Table 0382 - Drug interference",
     )
 
     sac_42: Optional[CE] = Field(
@@ -658,7 +660,7 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.42",
         title="Artificial Blood",
-        description="Item #1369 | Table HL70375",
+        description="O | Item #01369 | Table 0375 - Artificial blood",
     )
 
     sac_43: Optional[List[CE]] = Field(
@@ -670,7 +672,9 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.43",
         title="Special Handling Considerations",
-        description="Item #1370 | Table HL70376",
+        description=(
+            "O | Item #01370 | Table 0376 - Special handling considerations"
+        ),
     )
 
     sac_44: Optional[List[CE]] = Field(
@@ -682,7 +686,9 @@ class SAC(HL7Model):
         ),
         serialization_alias="SAC.44",
         title="Other Environmental Factors",
-        description="Item #1371 | Table HL70377",
+        description=(
+            "O | Item #01371 | Table 0377 - Other environmental factors"
+        ),
     )
 
     @field_validator("sac_16", "sac_17", "sac_18", "sac_19", "sac_21", "sac_22", "sac_23", "sac_32", "sac_34", "sac_36", "sac_38", mode='before')

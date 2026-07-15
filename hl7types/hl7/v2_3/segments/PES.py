@@ -25,43 +25,43 @@ class PES(HL7Model):
     Attributes
     ----------
     pes_1 : XON | None
-        PES.1 (opt) - Sender Organization Name (XON) S7.11.1.1
+        PES.1 - Sender Organization Name (XON) O S7.11.1.1
 
     pes_2 : list[XCN] | None
-        PES.2 (opt, rep) - Sender Individual Name (XCN) S7.11.1.2
+        PES.2 - Sender Individual Name (XCN) O rep S7.11.1.2
 
     pes_3 : list[XAD] | None
-        PES.3 (opt, rep) - Sender Address (XAD) S7.11.1.3
+        PES.3 - Sender Address (XAD) O rep S7.11.1.3
 
     pes_4 : list[XTN] | None
-        PES.4 (opt, rep) - Sender Telephone (XTN) S7.11.1.4
+        PES.4 - Sender Telephone (XTN) O rep S7.11.1.4
 
     pes_5 : EI | None
-        PES.5 (opt) - Sender Event Identifier (EI) S7.11.1.5
+        PES.5 - Sender Event Identifier (EI) O S7.11.1.5
 
     pes_6 : str | None
-        PES.6 (opt) - Sender Sequence Number (NM) S7.11.1.6
+        PES.6 - Sender Sequence Number (NM) O S7.11.1.6
 
     pes_7 : list[str] | None
-        PES.7 (opt, rep) - Sender Event Description (FT) S7.11.1.7
+        PES.7 - Sender Event Description (FT) O rep S7.11.1.7
 
     pes_8 : str | None
-        PES.8 (opt) - Sender Comment (FT) S7.11.1.8
+        PES.8 - Sender Comment (FT) O S7.11.1.8
 
     pes_9 : TS | None
-        PES.9 (opt) - Sender Aware Date/Time (TS) S7.11.1.9
+        PES.9 - Sender Aware Date/Time (TS) O S7.11.1.9
 
     pes_10 : TS
-        PES.10 (req) - Event Report Date (TS) S7.11.1.10
+        PES.10 - Event Report Date (TS) R S7.11.1.10
 
     pes_11 : list[str] | None
-        PES.11 (opt, rep) - Event Report Timing/Type (ID) S7.11.1.11 | 0234 - Report Timing
+        PES.11 - Event Report Timing/Type (ID) O rep S7.11.1.11 | 0234 - Report Timing
 
     pes_12 : str | None
-        PES.12 (opt) - Event Report Source (ID) S7.11.1.12 | 0235 - Report Source
+        PES.12 - Event Report Source (ID) O S7.11.1.12 | 0235 - Report Source
 
     pes_13 : list[str] | None
-        PES.13 (opt, rep) - Event Reported To (ID) S7.11.1.13 | 0236 - Reported To
+        PES.13 - Event Reported To (ID) O rep S7.11.1.13 | 0236 - Reported To
     """
 
     pes_1: Optional[XON] = Field(
@@ -73,7 +73,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.1",
         title="Sender Organization Name",
-        description="Item #1059",
+        description="O | Item #01059",
     )
 
     pes_2: Optional[List[XCN]] = Field(
@@ -85,7 +85,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.2",
         title="Sender Individual Name",
-        description="Item #1060",
+        description="O | Item #01060",
     )
 
     pes_3: Optional[List[XAD]] = Field(
@@ -97,7 +97,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.3",
         title="Sender Address",
-        description="Item #1062",
+        description="O | Item #01062",
     )
 
     pes_4: Optional[List[XTN]] = Field(
@@ -109,7 +109,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.4",
         title="Sender Telephone",
-        description="Item #1063",
+        description="O | Item #01063",
     )
 
     pes_5: Optional[EI] = Field(
@@ -121,7 +121,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.5",
         title="Sender Event Identifier",
-        description="Item #1064",
+        description="O | Item #01064",
     )
 
     pes_6: Optional[str] = Field(
@@ -133,7 +133,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.6",
         title="Sender Sequence Number",
-        description="Item #1065",
+        description="O | Item #01065 | LEN:2",
     )
 
     pes_7: Optional[List[str]] = Field(
@@ -145,7 +145,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.7",
         title="Sender Event Description",
-        description="Item #1066",
+        description="O | Item #01066",
     )
 
     pes_8: Optional[str] = Field(
@@ -157,7 +157,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.8",
         title="Sender Comment",
-        description="Item #1067",
+        description="O | Item #01067",
     )
 
     pes_9: Optional[TS] = Field(
@@ -169,7 +169,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.9",
         title="Sender Aware Date/Time",
-        description="Item #1068",
+        description="O | Item #01068",
     )
 
     pes_10: TS = Field(
@@ -180,7 +180,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.10",
         title="Event Report Date",
-        description="Item #1069",
+        description="R | Item #01069",
     )
 
     pes_11: Optional[List[str]] = Field(
@@ -192,7 +192,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.11",
         title="Event Report Timing/Type",
-        description="Item #1070 | Table HL70234",
+        description="O | Item #01070 | Table 0234 - Report Timing | LEN:3",
     )
 
     pes_12: Optional[str] = Field(
@@ -204,7 +204,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.12",
         title="Event Report Source",
-        description="Item #1071 | Table HL70235",
+        description="O | Item #01071 | Table 0235 - Report Source | LEN:1",
     )
 
     pes_13: Optional[List[str]] = Field(
@@ -216,7 +216,7 @@ class PES(HL7Model):
         ),
         serialization_alias="PES.13",
         title="Event Reported To",
-        description="Item #1072 | Table HL70236",
+        description="O | Item #01072 | Table 0236 - Reported To | LEN:1",
     )
 
     @field_validator("pes_6", mode='before')

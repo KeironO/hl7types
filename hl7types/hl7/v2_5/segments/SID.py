@@ -20,16 +20,16 @@ class SID(HL7Model):
     Attributes
     ----------
     sid_1 : CE | None
-        SID.1 (opt) - Application / Method Identifier (CE) S13.4.11.1
+        SID.1 - Application / Method Identifier (CE) C S13.4.11.1
 
     sid_2 : str | None
-        SID.2 (opt) - Substance Lot Number (ST) S4.14.5.18
+        SID.2 - Substance Lot Number (ST) C S4.14.5.18
 
     sid_3 : str | None
-        SID.3 (opt) - Substance Container Identifier (ST) S13.4.11.3
+        SID.3 - Substance Container Identifier (ST) C S13.4.11.3
 
     sid_4 : CE | None
-        SID.4 (opt) - Substance Manufacturer Identifier (CE) S13.4.11.4 | 0385 - Manufacturer identifier
+        SID.4 - Substance Manufacturer Identifier (CE) C S13.4.11.4 | 0385 - Manufacturer identifier
     """
 
     sid_1: Optional[CE] = Field(
@@ -41,7 +41,7 @@ class SID(HL7Model):
         ),
         serialization_alias="SID.1",
         title="Application / Method Identifier",
-        description="Item #1426",
+        description="C | Item #01426",
     )
 
     sid_2: Optional[str] = Field(
@@ -53,7 +53,7 @@ class SID(HL7Model):
         ),
         serialization_alias="SID.2",
         title="Substance Lot Number",
-        description="Item #1129",
+        description="C | Item #01129 | LEN:20",
     )
 
     sid_3: Optional[str] = Field(
@@ -65,7 +65,7 @@ class SID(HL7Model):
         ),
         serialization_alias="SID.3",
         title="Substance Container Identifier",
-        description="Item #1428",
+        description="C | Item #01428 | LEN:200",
     )
 
     sid_4: Optional[CE] = Field(
@@ -77,7 +77,7 @@ class SID(HL7Model):
         ),
         serialization_alias="SID.4",
         title="Substance Manufacturer Identifier",
-        description="Item #1429 | Table HL70385",
+        description="C | Item #01429 | Table 0385 - Manufacturer identifier",
     )
 
     model_config = {"populate_by_name": True}

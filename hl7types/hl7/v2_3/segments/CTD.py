@@ -24,25 +24,25 @@ class CTD(HL7Model):
     Attributes
     ----------
     ctd_1 : CE
-        CTD.1 (req) - Contact Role (CE) S3.3.5.7 | 0131 - Contact Role
+        CTD.1 - Contact Role (CE) R S3.3.5.7 | 0131 - Contact Role
 
     ctd_2 : list[XPN] | None
-        CTD.2 (opt, rep) - Contact Name (XPN) S11.5.4.2
+        CTD.2 - Contact Name (XPN) O rep S11.5.4.2
 
     ctd_3 : list[XAD] | None
-        CTD.3 (opt, rep) - Contact Address (XAD) S7.11.6.7
+        CTD.3 - Contact Address (XAD) O rep S7.11.6.7
 
     ctd_4 : PL | None
-        CTD.4 (opt) - Contact Location (PL) S11.5.4.4
+        CTD.4 - Contact Location (PL) O S11.5.4.4
 
     ctd_5 : list[XTN] | None
-        CTD.5 (opt, rep) - Contact Communication Information (XTN) S11.5.4.5
+        CTD.5 - Contact Communication Information (XTN) O rep S11.5.4.5
 
     ctd_6 : CE | None
-        CTD.6 (opt) - Preferred Method of Contact (CE) S8.6.2.16 | 0185 - Preferred Method of Contact
+        CTD.6 - Preferred Method of Contact (CE) O S8.6.2.16 | 0185 - Preferred Method of Contact
 
     ctd_7 : list[str] | None
-        CTD.7 (opt, rep) - Contact Identifiers (CM) S11.5.4.7
+        CTD.7 - Contact Identifiers (CM) O rep S11.5.4.7
     """
 
     ctd_1: CE = Field(
@@ -53,7 +53,7 @@ class CTD(HL7Model):
         ),
         serialization_alias="CTD.1",
         title="Contact Role",
-        description="Item #196 | Table HL70131",
+        description="R | Item #00196 | Table 0131 - Contact Role",
     )
 
     ctd_2: Optional[List[XPN]] = Field(
@@ -65,7 +65,7 @@ class CTD(HL7Model):
         ),
         serialization_alias="CTD.2",
         title="Contact Name",
-        description="Item #1165",
+        description="O | Item #01165",
     )
 
     ctd_3: Optional[List[XAD]] = Field(
@@ -77,7 +77,7 @@ class CTD(HL7Model):
         ),
         serialization_alias="CTD.3",
         title="Contact Address",
-        description="Item #1268",
+        description="O | Item #01268",
     )
 
     ctd_4: Optional[PL] = Field(
@@ -89,7 +89,7 @@ class CTD(HL7Model):
         ),
         serialization_alias="CTD.4",
         title="Contact Location",
-        description="Item #1167",
+        description="O | Item #01167",
     )
 
     ctd_5: Optional[List[XTN]] = Field(
@@ -101,7 +101,7 @@ class CTD(HL7Model):
         ),
         serialization_alias="CTD.5",
         title="Contact Communication Information",
-        description="Item #1168",
+        description="O | Item #01168",
     )
 
     ctd_6: Optional[CE] = Field(
@@ -113,7 +113,9 @@ class CTD(HL7Model):
         ),
         serialization_alias="CTD.6",
         title="Preferred Method of Contact",
-        description="Item #684 | Table HL70185",
+        description=(
+            "O | Item #00684 | Table 0185 - Preferred Method of Contact"
+        ),
     )
 
     ctd_7: Optional[List[str]] = Field(
@@ -125,7 +127,7 @@ class CTD(HL7Model):
         ),
         serialization_alias="CTD.7",
         title="Contact Identifiers",
-        description="Item #1171",
+        description="O | Item #01171",
     )
 
     model_config = {"populate_by_name": True}

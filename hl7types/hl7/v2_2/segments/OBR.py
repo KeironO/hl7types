@@ -22,112 +22,112 @@ class OBR(HL7Model):
     Attributes
     ----------
     obr_1 : str | None
-        OBR.1 (opt) - Set ID - Observation Request (SI) S4.5.1.1
+        OBR.1 - Set ID - Observation Request (SI) NA S4.5.1.1
 
     obr_2 : str | None
-        OBR.2 (opt) - Placer Order Number (CM) S4.5.1.2
+        OBR.2 - Placer Order Number (CM) C S4.5.1.2
 
     obr_3 : str | None
-        OBR.3 (opt) - Filler Order Number (CM) S6.4.1.23
+        OBR.3 - Filler Order Number (CM) C S6.4.1.23
 
     obr_4 : CE
-        OBR.4 (req) - Universal Service ID (CE) S4.5.1.4
+        OBR.4 - Universal Service ID (CE) R S4.5.1.4
 
     obr_5 : str | None
-        OBR.5 (opt) - Priority (not used) (ID) S4.5.1.5
+        OBR.5 - Priority (not used) (ID) NA S4.5.1.5
 
     obr_6 : TS | None
-        OBR.6 (opt) - Requested date / time (not used) (TS) S4.5.1.6
+        OBR.6 - Requested date / time (not used) (TS) NA S4.5.1.6
 
     obr_7 : TS | None
-        OBR.7 (opt) - Observation date / time (TS) S4.5.1.7
+        OBR.7 - Observation date / time (TS) C S4.5.1.7
 
     obr_8 : TS | None
-        OBR.8 (opt) - Observation end date / time (TS) S4.5.1.8
+        OBR.8 - Observation end date / time (TS) C S4.5.1.8
 
     obr_9 : str | None
-        OBR.9 (opt) - Collection Volume (CQ) S4.5.1.9
+        OBR.9 - Collection Volume (CQ) C S4.5.1.9
 
     obr_10 : list[str] | None
-        OBR.10 (opt, rep) - Collector Identifier (CN) S4.5.1.10
+        OBR.10 - Collector Identifier (CN) NA rep S4.5.1.10
 
     obr_11 : str | None
-        OBR.11 (opt) - Specimen action code (ID) S4.5.1.11 | 0065 - ACTION CODE
+        OBR.11 - Specimen action code (ID) NA S4.5.1.11 | 0065 - ACTION CODE
 
     obr_12 : CE | None
-        OBR.12 (opt) - Danger Code (CE) S4-30
+        OBR.12 - Danger Code (CE) NA S4-30
 
     obr_13 : str | None
-        OBR.13 (opt) - Relevant clinical information (ST) S4.5.1.13
+        OBR.13 - Relevant clinical information (ST) NA S4.5.1.13
 
     obr_14 : TS | None
-        OBR.14 (opt) - Specimen received date / time (TS) S4.5.1.14
+        OBR.14 - Specimen received date / time (TS) C S4.5.1.14
 
     obr_15 : str | None
-        OBR.15 (opt) - Specimen source (CM) S4.5.1.15 | 0070 - SOURCE OF SPECIMEN
+        OBR.15 - Specimen source (CM) NA S4.5.1.15 | 0070 - SOURCE OF SPECIMEN
 
     obr_16 : str | None
-        OBR.16 (opt) - Ordering Provider (CN) S4.5.1.16
+        OBR.16 - Ordering Provider (CN) NA S4.5.1.16
 
     obr_17 : list[str] | None
-        OBR.17 (opt, rep) - Order Callback Phone Number (TN) S4.5.1.17
+        OBR.17 - Order Callback Phone Number (TN) NA rep S4.5.1.17
 
     obr_18 : str | None
-        OBR.18 (opt) - Placer field 1 (ST) S4.5.1.18
+        OBR.18 - Placer field 1 (ST) NA S4.5.1.18
 
     obr_19 : str | None
-        OBR.19 (opt) - Placer field 2 (ST) S4.5.1.19
+        OBR.19 - Placer field 2 (ST) NA S4.5.1.19
 
     obr_20 : str | None
-        OBR.20 (opt) - Filler Field 1 (ST) S4.5.1.20
+        OBR.20 - Filler Field 1 (ST) NA S4.5.1.20
 
     obr_21 : str | None
-        OBR.21 (opt) - Filler Field 2 (ST) S4.5.1.21
+        OBR.21 - Filler Field 2 (ST) NA S4.5.1.21
 
     obr_22 : TS | None
-        OBR.22 (opt) - Results report / status change - date / time (TS) S4.5.1.22
+        OBR.22 - Results report / status change - date / time (TS) C S4.5.1.22
 
     obr_23 : str | None
-        OBR.23 (opt) - Charge to Practice (CM) S4.5.1.23
+        OBR.23 - Charge to Practice (CM) NA S4.5.1.23
 
     obr_24 : str | None
-        OBR.24 (opt) - Diagnostic service section ID (ID) S4.5.1.24 | 0074 - DIAGNOSTIC SERVICE SECTION ID
+        OBR.24 - Diagnostic service section ID (ID) NA S4.5.1.24 | 0074 - DIAGNOSTIC SERVICE SECTION ID
 
     obr_25 : str | None
-        OBR.25 (opt) - Result Status (ID) S4.5.1.25 | 0123 - RESULT STATUS - OBR
+        OBR.25 - Result Status (ID) C S4.5.1.25 | 0123 - RESULT STATUS - OBR
 
     obr_26 : str | None
-        OBR.26 (opt) - Parent Result (CM) S4.5.1.26
+        OBR.26 - Parent Result (CM) NA S4.5.1.26
 
     obr_27 : list[TQ] | None
-        OBR.27 (opt, rep) - Quantity / timing (TQ) S4.8.12.3
+        OBR.27 - Quantity / timing (TQ) NA rep S4.8.12.3
 
     obr_28 : list[str] | None
-        OBR.28 (opt, rep) - Result Copies To (CN) S4.5.1.28
+        OBR.28 - Result Copies To (CN) NA rep S4.5.1.28
 
     obr_29 : str | None
-        OBR.29 (opt) - Parent Number (CM) S4.5.1.29
+        OBR.29 - Parent Number (CM) NA S4.5.1.29
 
     obr_30 : str | None
-        OBR.30 (opt) - Transportation Mode (ID) S4.5.1.30 | 0124 - TRANSPORTATION MODE
+        OBR.30 - Transportation Mode (ID) NA S4.5.1.30 | 0124 - TRANSPORTATION MODE
 
     obr_31 : list[CE] | None
-        OBR.31 (opt, rep) - Reason for Study (CE) S4.5.1.31
+        OBR.31 - Reason for Study (CE) NA rep S4.5.1.31
 
     obr_32 : str | None
-        OBR.32 (opt) - Principal Result Interpreter (CM) S4.5.1.32
+        OBR.32 - Principal Result Interpreter (CM) NA S4.5.1.32
 
     obr_33 : list[str] | None
-        OBR.33 (opt, rep) - Assistant Result Interpreter (CM) S4.5.1.33
+        OBR.33 - Assistant Result Interpreter (CM) NA rep S4.5.1.33
 
     obr_34 : list[str] | None
-        OBR.34 (opt, rep) - Technician (CM) S4.5.1.34
+        OBR.34 - Technician (CM) NA rep S4.5.1.34
 
     obr_35 : list[str] | None
-        OBR.35 (opt, rep) - Transcriptionist (CM) S4.5.1.35
+        OBR.35 - Transcriptionist (CM) NA rep S4.5.1.35
 
     obr_36 : TS | None
-        OBR.36 (opt) - Scheduled date / time (TS) S4.5.1.36
+        OBR.36 - Scheduled date / time (TS) NA S4.5.1.36
     """
 
     obr_1: Optional[str] = Field(
@@ -139,7 +139,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.1",
         title="Set ID - Observation Request",
-        description="Item #237",
+        description="NA | Item #00237 | LEN:4",
     )
 
     obr_2: Optional[str] = Field(
@@ -151,7 +151,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.2",
         title="Placer Order Number",
-        description="Item #216",
+        description="C | Item #00216",
     )
 
     obr_3: Optional[str] = Field(
@@ -163,7 +163,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.3",
         title="Filler Order Number",
-        description="Item #217",
+        description="C | Item #00217",
     )
 
     obr_4: CE = Field(
@@ -174,7 +174,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.4",
         title="Universal Service ID",
-        description="Item #238",
+        description="R | Item #00238",
     )
 
     obr_5: Optional[str] = Field(
@@ -186,7 +186,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.5",
         title="Priority (not used)",
-        description="Item #239",
+        description="NA | Item #00239 | LEN:2",
     )
 
     obr_6: Optional[TS] = Field(
@@ -198,7 +198,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.6",
         title="Requested date / time (not used)",
-        description="Item #240",
+        description="NA | Item #00240",
     )
 
     obr_7: Optional[TS] = Field(
@@ -210,7 +210,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.7",
         title="Observation date / time",
-        description="Item #241",
+        description="C | Item #00241",
     )
 
     obr_8: Optional[TS] = Field(
@@ -222,7 +222,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.8",
         title="Observation end date / time",
-        description="Item #242",
+        description="C | Item #00242",
     )
 
     obr_9: Optional[str] = Field(
@@ -234,7 +234,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.9",
         title="Collection Volume",
-        description="Item #243",
+        description="C | Item #00243",
     )
 
     obr_10: Optional[List[str]] = Field(
@@ -246,7 +246,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.10",
         title="Collector Identifier",
-        description="Item #244",
+        description="NA | Item #00244",
     )
 
     obr_11: Optional[str] = Field(
@@ -258,7 +258,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.11",
         title="Specimen action code",
-        description="Item #245 | Table HL70065",
+        description="NA | Item #00245 | Table 0065 - ACTION CODE | LEN:1",
     )
 
     obr_12: Optional[CE] = Field(
@@ -270,7 +270,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.12",
         title="Danger Code",
-        description="Item #246",
+        description="NA | Item #00246",
     )
 
     obr_13: Optional[str] = Field(
@@ -282,7 +282,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.13",
         title="Relevant clinical information",
-        description="Item #247",
+        description="NA | Item #00247 | LEN:300",
     )
 
     obr_14: Optional[TS] = Field(
@@ -294,7 +294,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.14",
         title="Specimen received date / time",
-        description="Item #248",
+        description="C | Item #00248",
     )
 
     obr_15: Optional[str] = Field(
@@ -306,7 +306,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.15",
         title="Specimen source",
-        description="Item #249 | Table HL70070",
+        description="NA | Item #00249 | Table 0070 - SOURCE OF SPECIMEN",
     )
 
     obr_16: Optional[str] = Field(
@@ -318,7 +318,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.16",
         title="Ordering Provider",
-        description="Item #226",
+        description="NA | Item #00226",
     )
 
     obr_17: Optional[List[str]] = Field(
@@ -330,7 +330,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.17",
         title="Order Callback Phone Number",
-        description="Item #250",
+        description="NA | Item #00250 | LEN:40",
     )
 
     obr_18: Optional[str] = Field(
@@ -342,7 +342,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.18",
         title="Placer field 1",
-        description="Item #251",
+        description="NA | Item #00251 | LEN:60",
     )
 
     obr_19: Optional[str] = Field(
@@ -354,7 +354,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.19",
         title="Placer field 2",
-        description="Item #252",
+        description="NA | Item #00252 | LEN:60",
     )
 
     obr_20: Optional[str] = Field(
@@ -366,7 +366,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.20",
         title="Filler Field 1",
-        description="Item #253",
+        description="NA | Item #00253 | LEN:60",
     )
 
     obr_21: Optional[str] = Field(
@@ -378,7 +378,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.21",
         title="Filler Field 2",
-        description="Item #254",
+        description="NA | Item #00254 | LEN:60",
     )
 
     obr_22: Optional[TS] = Field(
@@ -390,7 +390,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.22",
         title="Results report / status change - date / time",
-        description="Item #255",
+        description="C | Item #00255",
     )
 
     obr_23: Optional[str] = Field(
@@ -402,7 +402,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.23",
         title="Charge to Practice",
-        description="Item #256",
+        description="NA | Item #00256",
     )
 
     obr_24: Optional[str] = Field(
@@ -414,7 +414,10 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.24",
         title="Diagnostic service section ID",
-        description="Item #257 | Table HL70074",
+        description=(
+            "NA | Item #00257 | Table 0074 - DIAGNOSTIC SERVICE SECTION ID | "
+            "LEN:10"
+        ),
     )
 
     obr_25: Optional[str] = Field(
@@ -426,7 +429,9 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.25",
         title="Result Status",
-        description="Item #258 | Table HL70123",
+        description=(
+            "C | Item #00258 | Table 0123 - RESULT STATUS - OBR | LEN:1"
+        ),
     )
 
     obr_26: Optional[str] = Field(
@@ -438,7 +443,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.26",
         title="Parent Result",
-        description="Item #259",
+        description="NA | Item #00259",
     )
 
     obr_27: Optional[List[TQ]] = Field(
@@ -450,7 +455,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.27",
         title="Quantity / timing",
-        description="Item #221",
+        description="NA | Item #00221",
     )
 
     obr_28: Optional[List[str]] = Field(
@@ -462,7 +467,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.28",
         title="Result Copies To",
-        description="Item #260",
+        description="NA | Item #00260",
     )
 
     obr_29: Optional[str] = Field(
@@ -474,7 +479,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.29",
         title="Parent Number",
-        description="Item #261",
+        description="NA | Item #00261",
     )
 
     obr_30: Optional[str] = Field(
@@ -486,7 +491,9 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.30",
         title="Transportation Mode",
-        description="Item #262 | Table HL70124",
+        description=(
+            "NA | Item #00262 | Table 0124 - TRANSPORTATION MODE | LEN:20"
+        ),
     )
 
     obr_31: Optional[List[CE]] = Field(
@@ -498,7 +505,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.31",
         title="Reason for Study",
-        description="Item #263",
+        description="NA | Item #00263",
     )
 
     obr_32: Optional[str] = Field(
@@ -510,7 +517,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.32",
         title="Principal Result Interpreter",
-        description="Item #264",
+        description="NA | Item #00264",
     )
 
     obr_33: Optional[List[str]] = Field(
@@ -522,7 +529,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.33",
         title="Assistant Result Interpreter",
-        description="Item #265",
+        description="NA | Item #00265",
     )
 
     obr_34: Optional[List[str]] = Field(
@@ -534,7 +541,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.34",
         title="Technician",
-        description="Item #266",
+        description="NA | Item #00266",
     )
 
     obr_35: Optional[List[str]] = Field(
@@ -546,7 +553,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.35",
         title="Transcriptionist",
-        description="Item #267",
+        description="NA | Item #00267",
     )
 
     obr_36: Optional[TS] = Field(
@@ -558,7 +565,7 @@ class OBR(HL7Model):
         ),
         serialization_alias="OBR.36",
         title="Scheduled date / time",
-        description="Item #268",
+        description="NA | Item #00268",
     )
 
     @field_validator("obr_1", mode='before')

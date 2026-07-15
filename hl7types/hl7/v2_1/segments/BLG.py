@@ -18,13 +18,13 @@ class BLG(HL7Model):
     Attributes
     ----------
     blg_1 : str | None
-        BLG.1 (opt) - WHEN TO CHARGE (CM) S4-12 | 0100 - WHEN TO CHARGE
+        BLG.1 - WHEN TO CHARGE (CM) O S4-12 | 0100 - WHEN TO CHARGE
 
     blg_2 : str | None
-        BLG.2 (opt) - CHARGE TYPE (ID) | 0122 - CHARGE TYPE
+        BLG.2 - CHARGE TYPE (ID) O | 0122 - CHARGE TYPE
 
     blg_3 : str | None
-        BLG.3 (opt) - ACCOUNT ID (CM)
+        BLG.3 - ACCOUNT ID (CM) O
     """
 
     blg_1: Optional[str] = Field(
@@ -36,7 +36,7 @@ class BLG(HL7Model):
         ),
         serialization_alias="BLG.1",
         title="WHEN TO CHARGE",
-        description="Item #66 | Table HL70100",
+        description="O | Item #00066 | Table 0100 - WHEN TO CHARGE | LEN:15",
     )
 
     blg_2: Optional[str] = Field(
@@ -48,7 +48,7 @@ class BLG(HL7Model):
         ),
         serialization_alias="BLG.2",
         title="CHARGE TYPE",
-        description="Item #729 | Table HL70122",
+        description="O | Item #00729 | Table 0122 - CHARGE TYPE | LEN:50",
     )
 
     blg_3: Optional[str] = Field(
@@ -60,7 +60,7 @@ class BLG(HL7Model):
         ),
         serialization_alias="BLG.3",
         title="ACCOUNT ID",
-        description="Item #730",
+        description="O | Item #00730 | LEN:100",
     )
 
     model_config = {"populate_by_name": True}

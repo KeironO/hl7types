@@ -21,28 +21,28 @@ class NTE(HL7Model):
     Attributes
     ----------
     nte_1 : str | None
-        NTE.1 (opt) - Set ID - NTE (SI) S2.14.10.1
+        NTE.1 - Set ID - NTE (SI) O S2.14.10.1
 
     nte_2 : str | None
-        NTE.2 (opt) - Source of Comment (ID) S2.14.10.2 | 0105 - Source of Comment
+        NTE.2 - Source of Comment (ID) O S2.14.10.2 | 0105 - Source of Comment
 
     nte_3 : list[str] | None
-        NTE.3 (opt, rep) - Comment (FT) S2.14.10.3
+        NTE.3 - Comment (FT) O rep S2.14.10.3
 
     nte_4 : CWE | None
-        NTE.4 (opt) - Comment Type (CWE) S2.14.10.4 | 0364 - Comment Type
+        NTE.4 - Comment Type (CWE) O S2.14.10.4 | 0364 - Comment Type
 
     nte_5 : XCN | None
-        NTE.5 (opt) - Entered By (XCN) S2.14.10.5
+        NTE.5 - Entered By (XCN) O S2.14.10.5
 
     nte_6 : str | None
-        NTE.6 (opt) - Entered Date/Time (DTM) S2.14.10.6
+        NTE.6 - Entered Date/Time (DTM) O S2.14.10.6
 
     nte_7 : str | None
-        NTE.7 (opt) - Effective Start Date (DTM) S2.14.10.7
+        NTE.7 - Effective Start Date (DTM) O S2.14.10.7
 
     nte_8 : str | None
-        NTE.8 (opt) - Expiration Date (DTM) S2.14.10.8
+        NTE.8 - Expiration Date (DTM) O S2.14.10.8
     """
 
     nte_1: Optional[str] = Field(
@@ -54,7 +54,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.1",
         title="Set ID - NTE",
-        description="Item #96",
+        description="O | Item #00096",
     )
 
     nte_2: Optional[str] = Field(
@@ -66,7 +66,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.2",
         title="Source of Comment",
-        description="Item #97 | Table HL70105",
+        description="O | Item #00097 | Table 0105 - Source of Comment | LEN:1",
     )
 
     nte_3: Optional[List[str]] = Field(
@@ -78,7 +78,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.3",
         title="Comment",
-        description="Item #98",
+        description="O | Item #00098",
     )
 
     nte_4: Optional[CWE] = Field(
@@ -90,7 +90,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.4",
         title="Comment Type",
-        description="Item #1318 | Table HL70364",
+        description="O | Item #01318 | Table 0364 - Comment Type",
     )
 
     nte_5: Optional[XCN] = Field(
@@ -102,7 +102,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.5",
         title="Entered By",
-        description="Item #224",
+        description="O | Item #00224",
     )
 
     nte_6: Optional[str] = Field(
@@ -114,7 +114,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.6",
         title="Entered Date/Time",
-        description="Item #661",
+        description="O | Item #00661",
     )
 
     nte_7: Optional[str] = Field(
@@ -126,7 +126,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.7",
         title="Effective Start Date",
-        description="Item #1004",
+        description="O | Item #01004",
     )
 
     nte_8: Optional[str] = Field(
@@ -138,7 +138,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.8",
         title="Expiration Date",
-        description="Item #2185",
+        description="O | Item #02185",
     )
 
     @field_validator("nte_1", mode='before')

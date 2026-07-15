@@ -19,10 +19,10 @@ class QID(HL7Model):
     Attributes
     ----------
     qid_1 : str
-        QID.1 (req) - Query Tag (ST) S5.10.5.8.1
+        QID.1 - Query Tag (ST) R S5.10.5.8.1
 
     qid_2 : CE
-        QID.2 (req) - Message Query Name (CE) S5.5.3.2 | 0471 - Query name
+        QID.2 - Message Query Name (CE) R S5.5.3.2 | 0471 - Query name
     """
 
     qid_1: str = Field(
@@ -33,7 +33,7 @@ class QID(HL7Model):
         ),
         serialization_alias="QID.1",
         title="Query Tag",
-        description="Item #696",
+        description="R | Item #00696 | LEN:32",
     )
 
     qid_2: CE = Field(
@@ -44,7 +44,7 @@ class QID(HL7Model):
         ),
         serialization_alias="QID.2",
         title="Message Query Name",
-        description="Item #1375 | Table HL70471",
+        description="R | Item #01375 | Table 0471 - Query name",
     )
 
     model_config = {"populate_by_name": True}

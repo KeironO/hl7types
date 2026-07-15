@@ -20,19 +20,19 @@ class AL1(HL7Model):
     Attributes
     ----------
     al1_1 : str
-        AL1.1 (req) - Set ID - AL1 (SI) S3.4.6.1
+        AL1.1 - Set ID - AL1 (SI) R S3.4.6.1
 
     al1_2 : CWE | None
-        AL1.2 (opt) - Allergen Type Code (CWE) S3.4.6.2 | 0127 - Allergen Type
+        AL1.2 - Allergen Type Code (CWE) O S3.4.6.2 | 0127 - Allergen Type
 
     al1_3 : CWE
-        AL1.3 (req) - Allergen Code/Mnemonic/Description (CWE) S3.4.6.3
+        AL1.3 - Allergen Code/Mnemonic/Description (CWE) R S3.4.6.3
 
     al1_4 : CWE | None
-        AL1.4 (opt) - Allergy Severity Code (CWE) S3.4.6.4 | 0128 - Allergy Severity
+        AL1.4 - Allergy Severity Code (CWE) O S3.4.6.4 | 0128 - Allergy Severity
 
     al1_5 : list[str] | None
-        AL1.5 (opt, rep) - Allergy Reaction Code (ST) S3.4.6.5
+        AL1.5 - Allergy Reaction Code (ST) O rep S3.4.6.5
     """
 
     al1_1: str = Field(
@@ -43,7 +43,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.1",
         title="Set ID - AL1",
-        description="Item #203",
+        description="R | Item #00203 | LEN:4",
     )
 
     al1_2: Optional[CWE] = Field(
@@ -55,7 +55,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.2",
         title="Allergen Type Code",
-        description="Item #204 | Table HL70127",
+        description="O | Item #00204 | Table 0127 - Allergen Type",
     )
 
     al1_3: CWE = Field(
@@ -66,7 +66,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.3",
         title="Allergen Code/Mnemonic/Description",
-        description="Item #205",
+        description="R | Item #00205",
     )
 
     al1_4: Optional[CWE] = Field(
@@ -78,7 +78,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.4",
         title="Allergy Severity Code",
-        description="Item #206 | Table HL70128",
+        description="O | Item #00206 | Table 0128 - Allergy Severity",
     )
 
     al1_5: Optional[List[str]] = Field(
@@ -90,7 +90,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.5",
         title="Allergy Reaction Code",
-        description="Item #207",
+        description="O | Item #00207",
     )
 
     @field_validator("al1_1", mode='before')

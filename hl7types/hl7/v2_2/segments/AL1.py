@@ -20,22 +20,22 @@ class AL1(HL7Model):
     Attributes
     ----------
     al1_1 : str
-        AL1.1 (req) - Set ID - Allergy (SI) S3.3.6.1
+        AL1.1 - Set ID - Allergy (SI) R S3.3.6.1
 
     al1_2 : str | None
-        AL1.2 (opt) - Allergy Type (ID) S3.3.6.2 | 0127 - ALLERGY TYPE
+        AL1.2 - Allergy Type (ID) NA S3.3.6.2 | 0127 - ALLERGY TYPE
 
     al1_3 : CE
-        AL1.3 (req) - Allergy code / mnemonic / description (CE) S3.3.6.3
+        AL1.3 - Allergy code / mnemonic / description (CE) R S3.3.6.3
 
     al1_4 : str | None
-        AL1.4 (opt) - Allergy Severity (ID) S3.3.6.4 | 0128 - ALLERGY SEVERITY
+        AL1.4 - Allergy Severity (ID) NA S3.3.6.4 | 0128 - ALLERGY SEVERITY
 
     al1_5 : str | None
-        AL1.5 (opt) - Allergy Reaction (ST) S3.3.6.5
+        AL1.5 - Allergy Reaction (ST) NA S3.3.6.5
 
     al1_6 : str | None
-        AL1.6 (opt) - Identification Date (DT) S3.3.6.6
+        AL1.6 - Identification Date (DT) NA S3.3.6.6
     """
 
     al1_1: str = Field(
@@ -46,7 +46,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.1",
         title="Set ID - Allergy",
-        description="Item #203",
+        description="R | Item #00203 | LEN:4",
     )
 
     al1_2: Optional[str] = Field(
@@ -58,7 +58,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.2",
         title="Allergy Type",
-        description="Item #204 | Table HL70127",
+        description="NA | Item #00204 | Table 0127 - ALLERGY TYPE | LEN:2",
     )
 
     al1_3: CE = Field(
@@ -69,7 +69,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.3",
         title="Allergy code / mnemonic / description",
-        description="Item #205",
+        description="R | Item #00205",
     )
 
     al1_4: Optional[str] = Field(
@@ -81,7 +81,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.4",
         title="Allergy Severity",
-        description="Item #206 | Table HL70128",
+        description="NA | Item #00206 | Table 0128 - ALLERGY SEVERITY | LEN:2",
     )
 
     al1_5: Optional[str] = Field(
@@ -93,7 +93,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.5",
         title="Allergy Reaction",
-        description="Item #207",
+        description="NA | Item #00207 | LEN:15",
     )
 
     al1_6: Optional[str] = Field(
@@ -105,7 +105,7 @@ class AL1(HL7Model):
         ),
         serialization_alias="AL1.6",
         title="Identification Date",
-        description="Item #208",
+        description="NA | Item #00208 | LEN:8",
     )
 
     @field_validator("al1_1", mode='before')

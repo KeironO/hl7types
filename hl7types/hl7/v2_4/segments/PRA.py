@@ -23,40 +23,40 @@ class PRA(HL7Model):
     Attributes
     ----------
     pra_1 : CE | None
-        PRA.1 (opt) - Primary Key Value - PRA (CE) S15.4.5.1 | 9999 - for unknown CE data elements
+        PRA.1 - Primary Key Value - PRA (CE) C S15.4.5.1 | 9999 - for unknown CE data elements
 
     pra_2 : list[CE] | None
-        PRA.2 (opt, rep) - Practitioner Group (CE) S15.4.5.2 | 0358 - Practitioner group
+        PRA.2 - Practitioner Group (CE) O rep S15.4.5.2 | 0358 - Practitioner group
 
     pra_3 : list[str] | None
-        PRA.3 (opt, rep) - Practitioner Category (IS) S15.4.5.3 | 0186 - Practitioner category
+        PRA.3 - Practitioner Category (IS) O rep S15.4.5.3 | 0186 - Practitioner category
 
     pra_4 : str | None
-        PRA.4 (opt) - Provider Billing (ID) S15.4.5.4 | 0187 - Provider billing
+        PRA.4 - Provider Billing (ID) O S15.4.5.4 | 0187 - Provider billing
 
     pra_5 : list[SPD] | None
-        PRA.5 (opt, rep) - Specialty (SPD) S15.4.5.5 | 0337 - Certification status
+        PRA.5 - Specialty (SPD) O rep S15.4.5.5 | 0337 - Certification status
 
     pra_6 : list[PLN] | None
-        PRA.6 (opt, rep) - Practitioner ID Numbers (PLN) S15.4.5.6 | 0338 - Practitioner ID number type
+        PRA.6 - Practitioner ID Numbers (PLN) O rep S15.4.5.6 | 0338 - Practitioner ID number type
 
     pra_7 : list[PIP] | None
-        PRA.7 (opt, rep) - Privileges (PIP) S15.4.5.7
+        PRA.7 - Privileges (PIP) O rep S15.4.5.7
 
     pra_8 : str | None
-        PRA.8 (opt) - Date Entered Practice (DT) S15.4.5.8
+        PRA.8 - Date Entered Practice (DT) O S15.4.5.8
 
     pra_9 : CE | None
-        PRA.9 (opt) - Institution (CE) S15.4.5.9
+        PRA.9 - Institution (CE) O S15.4.5.9
 
     pra_10 : str | None
-        PRA.10 (opt) - Date Left Practice (DT) S15.4.5.10
+        PRA.10 - Date Left Practice (DT) O S15.4.5.10
 
     pra_11 : list[CE] | None
-        PRA.11 (opt, rep) - Government Reimbursement Billing Eligibility (CE) S15.4.5.11 | 0401 - Government reimbursement program
+        PRA.11 - Government Reimbursement Billing Eligibility (CE) O rep S15.4.5.11 | 0401 - Government reimbursement program
 
     pra_12 : str | None
-        PRA.12 (opt) - Set ID - PRA (SI) S15.4.5.12
+        PRA.12 - Set ID - PRA (SI) C S15.4.5.12
     """
 
     pra_1: Optional[CE] = Field(
@@ -68,7 +68,9 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.1",
         title="Primary Key Value - PRA",
-        description="Item #685 | Table HL79999",
+        description=(
+            "C | Item #00685 | Table 9999 - for unknown CE data elements"
+        ),
     )
 
     pra_2: Optional[List[CE]] = Field(
@@ -80,7 +82,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.2",
         title="Practitioner Group",
-        description="Item #686 | Table HL70358",
+        description="O | Item #00686 | Table 0358 - Practitioner group",
     )
 
     pra_3: Optional[List[str]] = Field(
@@ -92,7 +94,9 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.3",
         title="Practitioner Category",
-        description="Item #687 | Table HL70186",
+        description=(
+            "O | Item #00687 | Table 0186 - Practitioner category | LEN:3"
+        ),
     )
 
     pra_4: Optional[str] = Field(
@@ -104,7 +108,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.4",
         title="Provider Billing",
-        description="Item #688 | Table HL70187",
+        description="O | Item #00688 | Table 0187 - Provider billing | LEN:1",
     )
 
     pra_5: Optional[List[SPD]] = Field(
@@ -116,7 +120,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.5",
         title="Specialty",
-        description="Item #689 | Table HL70337",
+        description="O | Item #00689 | Table 0337 - Certification status",
     )
 
     pra_6: Optional[List[PLN]] = Field(
@@ -128,7 +132,9 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.6",
         title="Practitioner ID Numbers",
-        description="Item #690 | Table HL70338",
+        description=(
+            "O | Item #00690 | Table 0338 - Practitioner ID number type"
+        ),
     )
 
     pra_7: Optional[List[PIP]] = Field(
@@ -140,7 +146,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.7",
         title="Privileges",
-        description="Item #691",
+        description="O | Item #00691",
     )
 
     pra_8: Optional[str] = Field(
@@ -152,7 +158,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.8",
         title="Date Entered Practice",
-        description="Item #1296",
+        description="O | Item #01296 | LEN:8",
     )
 
     pra_9: Optional[CE] = Field(
@@ -164,7 +170,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.9",
         title="Institution",
-        description="Item #1613",
+        description="O | Item #01613",
     )
 
     pra_10: Optional[str] = Field(
@@ -176,7 +182,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.10",
         title="Date Left Practice",
-        description="Item #1348",
+        description="O | Item #01348 | LEN:8",
     )
 
     pra_11: Optional[List[CE]] = Field(
@@ -188,7 +194,9 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.11",
         title="Government Reimbursement Billing Eligibility",
-        description="Item #1388 | Table HL70401",
+        description=(
+            "O | Item #01388 | Table 0401 - Government reimbursement program"
+        ),
     )
 
     pra_12: Optional[str] = Field(
@@ -200,7 +208,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.12",
         title="Set ID - PRA",
-        description="Item #1616",
+        description="C | Item #01616 | LEN:60",
     )
 
     @field_validator("pra_8", "pra_10", mode='before')

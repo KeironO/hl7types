@@ -18,16 +18,16 @@ class MRG(HL7Model):
     Attributes
     ----------
     mrg_1 : str
-        MRG.1 (req) - Prior Patient ID - Internal (CM) S3.3.8.1
+        MRG.1 - Prior Patient ID - Internal (CM) R S3.3.8.1
 
     mrg_2 : str | None
-        MRG.2 (opt) - Prior Alternate Patient ID (CM) S3.3.8.2
+        MRG.2 - Prior Alternate Patient ID (CM) NA S3.3.8.2
 
     mrg_3 : str | None
-        MRG.3 (opt) - Prior Patient Account Number (CK) S3.3.8.3
+        MRG.3 - Prior Patient Account Number (CK) NA S3.3.8.3
 
     mrg_4 : str | None
-        MRG.4 (opt) - Prior Patient ID - External (CK) S3.3.8.4
+        MRG.4 - Prior Patient ID - External (CK) NA S3.3.8.4
     """
 
     mrg_1: str = Field(
@@ -38,7 +38,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.1",
         title="Prior Patient ID - Internal",
-        description="Item #211",
+        description="R | Item #00211",
     )
 
     mrg_2: Optional[str] = Field(
@@ -50,7 +50,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.2",
         title="Prior Alternate Patient ID",
-        description="Item #212",
+        description="NA | Item #00212",
     )
 
     mrg_3: Optional[str] = Field(
@@ -62,7 +62,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.3",
         title="Prior Patient Account Number",
-        description="Item #213",
+        description="NA | Item #00213 | LEN:20",
     )
 
     mrg_4: Optional[str] = Field(
@@ -74,7 +74,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.4",
         title="Prior Patient ID - External",
-        description="Item #214",
+        description="NA | Item #00214 | LEN:16",
     )
 
     model_config = {"populate_by_name": True}

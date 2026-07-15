@@ -19,7 +19,7 @@ class NCK(HL7Model):
     Attributes
     ----------
     nck_1 : TS
-        NCK.1 (req) - System Date/Time (TS) S14.4.1.1
+        NCK.1 - System Date/Time (TS) R S14.4.1.1
     """
 
     nck_1: TS = Field(
@@ -30,7 +30,7 @@ class NCK(HL7Model):
         ),
         serialization_alias="NCK.1",
         title="System Date/Time",
-        description="Item #1172",
+        description="R | Item #01172",
     )
 
     model_config = {"populate_by_name": True}

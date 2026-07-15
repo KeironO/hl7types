@@ -24,28 +24,28 @@ class LOC(HL7Model):
     Attributes
     ----------
     loc_1 : PL
-        LOC.1 (req) - Primary Key Value (PL) S8.8.4.1
+        LOC.1 - Primary Key Value (PL) R S8.8.4.1
 
     loc_2 : str | None
-        LOC.2 (opt) - Location Description (ST) S8.8.2.2
+        LOC.2 - Location Description (ST) O S8.8.2.2
 
     loc_3 : list[str]
-        LOC.3 (req, rep) - Location Type (IS) S8.8.2.3 | 0260 - Patient Location Type
+        LOC.3 - Location Type (IS) R rep S8.8.2.3 | 0260 - Patient Location Type
 
     loc_4 : XON | None
-        LOC.4 (opt) - Organization Name (XON) S8.8.2.4
+        LOC.4 - Organization Name (XON) O S8.8.2.4
 
     loc_5 : XAD | None
-        LOC.5 (opt) - Location Address (XAD) S8.8.2.5
+        LOC.5 - Location Address (XAD) O S8.8.2.5
 
     loc_6 : list[XTN] | None
-        LOC.6 (opt, rep) - Location Phone (XTN) S8.8.2.6
+        LOC.6 - Location Phone (XTN) O rep S8.8.2.6
 
     loc_7 : list[CE] | None
-        LOC.7 (opt, rep) - License Number (CE) S8.8.2.7
+        LOC.7 - License Number (CE) O rep S8.8.2.7
 
     loc_8 : list[str] | None
-        LOC.8 (opt, rep) - Location Equipment (ID) S8.8.2.8 | 0261 - Location Equipment
+        LOC.8 - Location Equipment (ID) O rep S8.8.2.8 | 0261 - Location Equipment
     """
 
     loc_1: PL = Field(
@@ -56,7 +56,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.1",
         title="Primary Key Value",
-        description="Item #943",
+        description="R | Item #00943",
     )
 
     loc_2: Optional[str] = Field(
@@ -68,7 +68,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.2",
         title="Location Description",
-        description="Item #944",
+        description="O | Item #00944 | LEN:48",
     )
 
     loc_3: List[str] = Field(
@@ -80,7 +80,9 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.3",
         title="Location Type",
-        description="Item #945 | Table HL70260",
+        description=(
+            "R | Item #00945 | Table 0260 - Patient Location Type | LEN:2"
+        ),
     )
 
     loc_4: Optional[XON] = Field(
@@ -92,7 +94,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.4",
         title="Organization Name",
-        description="Item #947",
+        description="O | Item #00947",
     )
 
     loc_5: Optional[XAD] = Field(
@@ -104,7 +106,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.5",
         title="Location Address",
-        description="Item #948",
+        description="O | Item #00948",
     )
 
     loc_6: Optional[List[XTN]] = Field(
@@ -116,7 +118,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.6",
         title="Location Phone",
-        description="Item #949",
+        description="O | Item #00949",
     )
 
     loc_7: Optional[List[CE]] = Field(
@@ -128,7 +130,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.7",
         title="License Number",
-        description="Item #951",
+        description="O | Item #00951",
     )
 
     loc_8: Optional[List[str]] = Field(
@@ -140,7 +142,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.8",
         title="Location Equipment",
-        description="Item #953 | Table HL70261",
+        description="O | Item #00953 | Table 0261 - Location Equipment | LEN:3",
     )
 
     model_config = {"populate_by_name": True}

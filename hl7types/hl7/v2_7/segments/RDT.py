@@ -19,7 +19,7 @@ class RDT(HL7Model):
     Attributes
     ----------
     rdt_1 : varies
-        RDT.1 (req) - Column Value (varies) S5.5.8.1
+        RDT.1 - Column Value (varies) R S5.5.8.1
     """
 
     rdt_1: varies = Field(
@@ -30,7 +30,7 @@ class RDT(HL7Model):
         ),
         serialization_alias="RDT.1",
         title="Column Value",
-        description="Item #703",
+        description="R | Item #00703",
     )
 
     model_config = {"populate_by_name": True}

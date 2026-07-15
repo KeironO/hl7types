@@ -25,94 +25,94 @@ class RXE(HL7Model):
     Attributes
     ----------
     rxe_1 : TQ
-        RXE.1 (req) - Quantity/Timing (TQ) S7.3.1.27
+        RXE.1 - Quantity/Timing (TQ) R S7.3.1.27
 
     rxe_2 : CE
-        RXE.2 (req) - Give Code (CE) S4.8.12.4 | 0292 - Vaccines administered
+        RXE.2 - Give Code (CE) R S4.8.12.4 | 0292 - Vaccines administered
 
     rxe_3 : str
-        RXE.3 (req) - Give Amount - Minimum (NM) S4.8.12.5
+        RXE.3 - Give Amount - Minimum (NM) R S4.8.12.5
 
     rxe_4 : str | None
-        RXE.4 (opt) - Give Amount - Maximum (NM) S4.8.12.6
+        RXE.4 - Give Amount - Maximum (NM) O S4.8.12.6
 
     rxe_5 : CE
-        RXE.5 (req) - Give Units (CE) S4.8.12.7
+        RXE.5 - Give Units (CE) R S4.8.12.7
 
     rxe_6 : CE | None
-        RXE.6 (opt) - Give Dosage Form (CE) S4.8.12.8
+        RXE.6 - Give Dosage Form (CE) O S4.8.12.8
 
     rxe_7 : list[CE] | None
-        RXE.7 (opt, rep) - Provider’s Administration Instructions (CE) S4.8.7.7
+        RXE.7 - Provider’s Administration Instructions (CE) O rep S4.8.7.7
 
     rxe_8 : LA1 | None
-        RXE.8 (opt) - Deliver-to Location (LA1) S4.8.7.8
+        RXE.8 - Deliver-to Location (LA1) C S4.8.7.8
 
     rxe_9 : str | None
-        RXE.9 (opt) - Substitution Status (ID) S4.8.12.10 | 0167 - Substitution status
+        RXE.9 - Substitution Status (ID) O S4.8.12.10 | 0167 - Substitution status
 
     rxe_10 : str | None
-        RXE.10 (opt) - Dispense Amount (NM) S4.8.7.10
+        RXE.10 - Dispense Amount (NM) C S4.8.7.10
 
     rxe_11 : CE | None
-        RXE.11 (opt) - Dispense Units (CE) S4.8.7.11
+        RXE.11 - Dispense Units (CE) C S4.8.7.11
 
     rxe_12 : str | None
-        RXE.12 (opt) - Number Of Refills (NM) S4.8.7.12
+        RXE.12 - Number Of Refills (NM) O S4.8.7.12
 
     rxe_13 : list[XCN] | None
-        RXE.13 (opt, rep) - Ordering Provider’s DEA Number (XCN) S4.8.7.13
+        RXE.13 - Ordering Provider’s DEA Number (XCN) C rep S4.8.7.13
 
     rxe_14 : list[XCN] | None
-        RXE.14 (opt, rep) - Pharmacist/Treatment Supplier’s Verifier ID (XCN) S4.8.7.14
+        RXE.14 - Pharmacist/Treatment Supplier’s Verifier ID (XCN) O rep S4.8.7.14
 
     rxe_15 : str | None
-        RXE.15 (opt) - Prescription Number (ST) S4.8.10.7
+        RXE.15 - Prescription Number (ST) C S4.8.10.7
 
     rxe_16 : str | None
-        RXE.16 (opt) - Number of Refills Remaining (NM) S4.8.10.8
+        RXE.16 - Number of Refills Remaining (NM) C S4.8.10.8
 
     rxe_17 : str | None
-        RXE.17 (opt) - Number of Refills/Doses Dispensed (NM) S4.8.7.17
+        RXE.17 - Number of Refills/Doses Dispensed (NM) C S4.8.7.17
 
     rxe_18 : TS | None
-        RXE.18 (opt) - D/T of Most Recent Refill or Dose Dispensed (TS) S4.8.7.18
+        RXE.18 - D/T of Most Recent Refill or Dose Dispensed (TS) C S4.8.7.18
 
     rxe_19 : CQ | None
-        RXE.19 (opt) - Total Daily Dose (CQ) S4.8.10.12
+        RXE.19 - Total Daily Dose (CQ) C S4.8.10.12
 
     rxe_20 : str | None
-        RXE.20 (opt) - Needs Human Review (ID) S4.8.12.12 | 0136 - Yes/no indicator
+        RXE.20 - Needs Human Review (ID) O S4.8.12.12 | 0136 - Yes/no indicator
 
     rxe_21 : list[CE] | None
-        RXE.21 (opt, rep) - Pharmacy/Treatment Supplier’s Special Dispensing Instructions (CE) S4.8.10.15
+        RXE.21 - Pharmacy/Treatment Supplier’s Special Dispensing Instructions (CE) O rep S4.8.10.15
 
     rxe_22 : str | None
-        RXE.22 (opt) - Give Per (Time Unit) (ST) S4.8.12.14
+        RXE.22 - Give Per (Time Unit) (ST) C S4.8.12.14
 
     rxe_23 : str | None
-        RXE.23 (opt) - Give Rate Amount (ST) S4.8.12.15
+        RXE.23 - Give Rate Amount (ST) O S4.8.12.15
 
     rxe_24 : CE | None
-        RXE.24 (opt) - Give Rate Units (CE) S4.8.12.16
+        RXE.24 - Give Rate Units (CE) O S4.8.12.16
 
     rxe_25 : str | None
-        RXE.25 (opt) - Give Strength (NM) S4.8.12.17
+        RXE.25 - Give Strength (NM) O S4.8.12.17
 
     rxe_26 : CE | None
-        RXE.26 (opt) - Give Strength Units (CE) S4.8.12.18
+        RXE.26 - Give Strength Units (CE) O S4.8.12.18
 
     rxe_27 : list[CE] | None
-        RXE.27 (opt, rep) - Give Indication (CE) S4.8.7.27
+        RXE.27 - Give Indication (CE) O rep S4.8.7.27
 
     rxe_28 : str | None
-        RXE.28 (opt) - Dispense Package Size (NM) S4.8.10.22
+        RXE.28 - Dispense Package Size (NM) O S4.8.10.22
 
     rxe_29 : CE | None
-        RXE.29 (opt) - Dispense Package Size Unit (CE) S4.8.10.23
+        RXE.29 - Dispense Package Size Unit (CE) O S4.8.10.23
 
     rxe_30 : str | None
-        RXE.30 (opt) - Dispense Package Method (ID) S4.8.10.24 | 0321 - Dispense method
+        RXE.30 - Dispense Package Method (ID) O S4.8.10.24 | 0321 - Dispense method
     """
 
     rxe_1: TQ = Field(
@@ -123,7 +123,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.1",
         title="Quantity/Timing",
-        description="Item #221",
+        description="R | Item #00221",
     )
 
     rxe_2: CE = Field(
@@ -134,7 +134,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.2",
         title="Give Code",
-        description="Item #317 | Table HL70292",
+        description="R | Item #00317 | Table 0292 - Vaccines administered",
     )
 
     rxe_3: str = Field(
@@ -145,7 +145,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.3",
         title="Give Amount - Minimum",
-        description="Item #318",
+        description="R | Item #00318 | LEN:20",
     )
 
     rxe_4: Optional[str] = Field(
@@ -157,7 +157,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.4",
         title="Give Amount - Maximum",
-        description="Item #319",
+        description="O | Item #00319 | LEN:20",
     )
 
     rxe_5: CE = Field(
@@ -168,7 +168,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.5",
         title="Give Units",
-        description="Item #320",
+        description="R | Item #00320",
     )
 
     rxe_6: Optional[CE] = Field(
@@ -180,7 +180,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.6",
         title="Give Dosage Form",
-        description="Item #321",
+        description="O | Item #00321",
     )
 
     rxe_7: Optional[List[CE]] = Field(
@@ -192,7 +192,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.7",
         title="Provider’s Administration Instructions",
-        description="Item #298",
+        description="O | Item #00298",
     )
 
     rxe_8: Optional[LA1] = Field(
@@ -204,7 +204,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.8",
         title="Deliver-to Location",
-        description="Item #299",
+        description="C | Item #00299",
     )
 
     rxe_9: Optional[str] = Field(
@@ -216,7 +216,9 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.9",
         title="Substitution Status",
-        description="Item #322 | Table HL70167",
+        description=(
+            "O | Item #00322 | Table 0167 - Substitution status | LEN:1"
+        ),
     )
 
     rxe_10: Optional[str] = Field(
@@ -228,7 +230,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.10",
         title="Dispense Amount",
-        description="Item #323",
+        description="C | Item #00323 | LEN:20",
     )
 
     rxe_11: Optional[CE] = Field(
@@ -240,7 +242,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.11",
         title="Dispense Units",
-        description="Item #324",
+        description="C | Item #00324",
     )
 
     rxe_12: Optional[str] = Field(
@@ -252,7 +254,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.12",
         title="Number Of Refills",
-        description="Item #304",
+        description="O | Item #00304 | LEN:3",
     )
 
     rxe_13: Optional[List[XCN]] = Field(
@@ -264,7 +266,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.13",
         title="Ordering Provider’s DEA Number",
-        description="Item #305",
+        description="C | Item #00305",
     )
 
     rxe_14: Optional[List[XCN]] = Field(
@@ -276,7 +278,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.14",
         title="Pharmacist/Treatment Supplier’s Verifier ID",
-        description="Item #306",
+        description="O | Item #00306",
     )
 
     rxe_15: Optional[str] = Field(
@@ -288,7 +290,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.15",
         title="Prescription Number",
-        description="Item #325",
+        description="C | Item #00325 | LEN:20",
     )
 
     rxe_16: Optional[str] = Field(
@@ -300,7 +302,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.16",
         title="Number of Refills Remaining",
-        description="Item #326",
+        description="C | Item #00326 | LEN:20",
     )
 
     rxe_17: Optional[str] = Field(
@@ -312,7 +314,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.17",
         title="Number of Refills/Doses Dispensed",
-        description="Item #327",
+        description="C | Item #00327 | LEN:20",
     )
 
     rxe_18: Optional[TS] = Field(
@@ -324,7 +326,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.18",
         title="D/T of Most Recent Refill or Dose Dispensed",
-        description="Item #328",
+        description="C | Item #00328",
     )
 
     rxe_19: Optional[CQ] = Field(
@@ -336,7 +338,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.19",
         title="Total Daily Dose",
-        description="Item #329",
+        description="C | Item #00329",
     )
 
     rxe_20: Optional[str] = Field(
@@ -348,7 +350,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.20",
         title="Needs Human Review",
-        description="Item #307 | Table HL70136",
+        description="O | Item #00307 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     rxe_21: Optional[List[CE]] = Field(
@@ -360,7 +362,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.21",
         title="Pharmacy/Treatment Supplier’s Special Dispensing Instructions",
-        description="Item #330",
+        description="O | Item #00330",
     )
 
     rxe_22: Optional[str] = Field(
@@ -372,7 +374,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.22",
         title="Give Per (Time Unit)",
-        description="Item #331",
+        description="C | Item #00331 | LEN:20",
     )
 
     rxe_23: Optional[str] = Field(
@@ -384,7 +386,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.23",
         title="Give Rate Amount",
-        description="Item #332",
+        description="O | Item #00332 | LEN:6",
     )
 
     rxe_24: Optional[CE] = Field(
@@ -396,7 +398,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.24",
         title="Give Rate Units",
-        description="Item #333",
+        description="O | Item #00333",
     )
 
     rxe_25: Optional[str] = Field(
@@ -408,7 +410,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.25",
         title="Give Strength",
-        description="Item #1126",
+        description="O | Item #01126 | LEN:20",
     )
 
     rxe_26: Optional[CE] = Field(
@@ -420,7 +422,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.26",
         title="Give Strength Units",
-        description="Item #1127",
+        description="O | Item #01127",
     )
 
     rxe_27: Optional[List[CE]] = Field(
@@ -432,7 +434,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.27",
         title="Give Indication",
-        description="Item #1128",
+        description="O | Item #01128",
     )
 
     rxe_28: Optional[str] = Field(
@@ -444,7 +446,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.28",
         title="Dispense Package Size",
-        description="Item #1220",
+        description="O | Item #01220 | LEN:20",
     )
 
     rxe_29: Optional[CE] = Field(
@@ -456,7 +458,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.29",
         title="Dispense Package Size Unit",
-        description="Item #1221",
+        description="O | Item #01221",
     )
 
     rxe_30: Optional[str] = Field(
@@ -468,7 +470,7 @@ class RXE(HL7Model):
         ),
         serialization_alias="RXE.30",
         title="Dispense Package Method",
-        description="Item #1222 | Table HL70321",
+        description="O | Item #01222 | Table 0321 - Dispense method | LEN:2",
     )
 
     @field_validator("rxe_3", "rxe_4", "rxe_10", "rxe_12", "rxe_16", "rxe_17", "rxe_25", "rxe_28", mode='before')

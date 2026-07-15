@@ -27,91 +27,91 @@ class AUT(HL7Model):
     Attributes
     ----------
     aut_1 : CWE | None
-        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE) S11.8.2.1 | 0072 - Insurance Plan ID
+        AUT.1 - Authorizing Payor, Plan ID (CWE) O S11.8.2.1 | 0072 - Insurance Plan ID
 
     aut_2 : CWE
-        AUT.2 (req) - Authorizing Payor, Company ID (CWE) S11.8.2.2 | 0285 - Insurance Company ID Codes
+        AUT.2 - Authorizing Payor, Company ID (CWE) R S11.8.2.2 | 0285 - Insurance Company ID Codes
 
     aut_3 : str | None
-        AUT.3 (opt) - Authorizing Payor, Company Name (ST) S11.8.2.3
+        AUT.3 - Authorizing Payor, Company Name (ST) O S11.8.2.3
 
     aut_4 : str | None
-        AUT.4 (opt) - Authorization Effective Date (DTM) S11.8.2.4
+        AUT.4 - Authorization Effective Date (DTM) O S11.8.2.4
 
     aut_5 : str | None
-        AUT.5 (opt) - Authorization Expiration Date (DTM) S11.8.2.5
+        AUT.5 - Authorization Expiration Date (DTM) O S11.8.2.5
 
     aut_6 : EI | None
-        AUT.6 (opt) - Authorization Identifier (EI) S11.8.2.6
+        AUT.6 - Authorization Identifier (EI) C S11.8.2.6
 
     aut_7 : CP | None
-        AUT.7 (opt) - Reimbursement Limit (CP) S11.8.2.7
+        AUT.7 - Reimbursement Limit (CP) O S11.8.2.7
 
     aut_8 : CQ | None
-        AUT.8 (opt) - Requested Number of Treatments (CQ) S11.8.2.8
+        AUT.8 - Requested Number of Treatments (CQ) O S11.8.2.8
 
     aut_9 : CQ | None
-        AUT.9 (opt) - Authorized Number of Treatments (CQ) S11.8.2.9
+        AUT.9 - Authorized Number of Treatments (CQ) O S11.8.2.9
 
     aut_10 : str | None
-        AUT.10 (opt) - Process Date (DTM) S11.8.1.9
+        AUT.10 - Process Date (DTM) O S11.8.1.9
 
     aut_11 : list[CWE] | None
-        AUT.11 (opt, rep) - Requested Discipline(s) (CWE) S11.8.2.11
+        AUT.11 - Requested Discipline(s) (CWE) O rep S11.8.2.11
 
     aut_12 : list[CWE] | None
-        AUT.12 (opt, rep) - Authorized Discipline(s) (CWE) S11.8.2.12
+        AUT.12 - Authorized Discipline(s) (CWE) O rep S11.8.2.12
 
     aut_13 : CWE
-        AUT.13 (req) - Authorization Referral Type (CWE) S11.8.2.13
+        AUT.13 - Authorization Referral Type (CWE) R S11.8.2.13
 
     aut_14 : CWE | None
-        AUT.14 (opt) - Approval Status (CWE) S11.8.2.14
+        AUT.14 - Approval Status (CWE) O S11.8.2.14
 
     aut_15 : str | None
-        AUT.15 (opt) - Planned Treatment Stop Date (DTM) S11.8.2.15
+        AUT.15 - Planned Treatment Stop Date (DTM) O S11.8.2.15
 
     aut_16 : CWE | None
-        AUT.16 (opt) - Clinical Service (CWE) S11.8.2.16
+        AUT.16 - Clinical Service (CWE) O S11.8.2.16
 
     aut_17 : str | None
-        AUT.17 (opt) - Reason Text (ST) S11.8.2.17
+        AUT.17 - Reason Text (ST) O S11.8.2.17
 
     aut_18 : CQ | None
-        AUT.18 (opt) - Number of Authorized Treatments/Units (CQ) S11.8.2.18
+        AUT.18 - Number of Authorized Treatments/Units (CQ) O S11.8.2.18
 
     aut_19 : CQ | None
-        AUT.19 (opt) - Number of Used Treatments/Units (CQ) S11.8.2.19
+        AUT.19 - Number of Used Treatments/Units (CQ) O S11.8.2.19
 
     aut_20 : CQ | None
-        AUT.20 (opt) - Number of Schedule Treatments/Units (CQ) S11.8.2.20
+        AUT.20 - Number of Schedule Treatments/Units (CQ) O S11.8.2.20
 
     aut_21 : CWE | None
-        AUT.21 (opt) - Encounter Type (CWE) S11.8.2.21
+        AUT.21 - Encounter Type (CWE) O S11.8.2.21
 
     aut_22 : MO | None
-        AUT.22 (opt) - Remaining Benefit Amount (MO) S11.8.2.22
+        AUT.22 - Remaining Benefit Amount (MO) O S11.8.2.22
 
     aut_23 : XON | None
-        AUT.23 (opt) - Authorized Provider (XON) S11.8.2.23
+        AUT.23 - Authorized Provider (XON) O S11.8.2.23
 
     aut_24 : XCN | None
-        AUT.24 (opt) - Authorized Health Professional (XCN) S11.8.2.24
+        AUT.24 - Authorized Health Professional (XCN) O S11.8.2.24
 
     aut_25 : str | None
-        AUT.25 (opt) - Source Text (ST) S11.8.2.25
+        AUT.25 - Source Text (ST) O S11.8.2.25
 
     aut_26 : str | None
-        AUT.26 (opt) - Source Date (DTM) S11.8.2.26
+        AUT.26 - Source Date (DTM) O S11.8.2.26
 
     aut_27 : XTN | None
-        AUT.27 (opt) - Source Phone (XTN) S11.8.2.27
+        AUT.27 - Source Phone (XTN) O S11.8.2.27
 
     aut_28 : str | None
-        AUT.28 (opt) - Comment (ST) S11.8.2.28
+        AUT.28 - Comment (ST) O S11.8.2.28
 
     aut_29 : str | None
-        AUT.29 (opt) - Action Code (ID) S11.8.2.29 | 0206 - Segment Action Code
+        AUT.29 - Action Code (ID) O S11.8.2.29 | 0206 - Segment Action Code
     """
 
     aut_1: Optional[CWE] = Field(
@@ -123,7 +123,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.1",
         title="Authorizing Payor, Plan ID",
-        description="Item #1146 | Table HL70072",
+        description="O | Item #01146 | Table 0072 - Insurance Plan ID",
     )
 
     aut_2: CWE = Field(
@@ -134,7 +134,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.2",
         title="Authorizing Payor, Company ID",
-        description="Item #1147 | Table HL70285",
+        description="R | Item #01147 | Table 0285 - Insurance Company ID Codes",
     )
 
     aut_3: Optional[str] = Field(
@@ -146,7 +146,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.3",
         title="Authorizing Payor, Company Name",
-        description="Item #1148",
+        description="O | Item #01148",
     )
 
     aut_4: Optional[str] = Field(
@@ -158,7 +158,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.4",
         title="Authorization Effective Date",
-        description="Item #1149",
+        description="O | Item #01149",
     )
 
     aut_5: Optional[str] = Field(
@@ -170,7 +170,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.5",
         title="Authorization Expiration Date",
-        description="Item #1150",
+        description="O | Item #01150",
     )
 
     aut_6: Optional[EI] = Field(
@@ -182,7 +182,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.6",
         title="Authorization Identifier",
-        description="Item #1151",
+        description="C | Item #01151",
     )
 
     aut_7: Optional[CP] = Field(
@@ -194,7 +194,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.7",
         title="Reimbursement Limit",
-        description="Item #1152",
+        description="O | Item #01152",
     )
 
     aut_8: Optional[CQ] = Field(
@@ -206,7 +206,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.8",
         title="Requested Number of Treatments",
-        description="Item #1153",
+        description="O | Item #01153",
     )
 
     aut_9: Optional[CQ] = Field(
@@ -218,7 +218,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.9",
         title="Authorized Number of Treatments",
-        description="Item #1154",
+        description="O | Item #01154",
     )
 
     aut_10: Optional[str] = Field(
@@ -230,7 +230,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.10",
         title="Process Date",
-        description="Item #1145",
+        description="O | Item #01145",
     )
 
     aut_11: Optional[List[CWE]] = Field(
@@ -242,7 +242,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.11",
         title="Requested Discipline(s)",
-        description="Item #2375",
+        description="O | Item #02375",
     )
 
     aut_12: Optional[List[CWE]] = Field(
@@ -254,7 +254,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.12",
         title="Authorized Discipline(s)",
-        description="Item #2376",
+        description="O | Item #02376",
     )
 
     aut_13: CWE = Field(
@@ -265,7 +265,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.13",
         title="Authorization Referral Type",
-        description="Item #3413",
+        description="R | Item #03413",
     )
 
     aut_14: Optional[CWE] = Field(
@@ -277,7 +277,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.14",
         title="Approval Status",
-        description="Item #3414",
+        description="O | Item #03414",
     )
 
     aut_15: Optional[str] = Field(
@@ -289,7 +289,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.15",
         title="Planned Treatment Stop Date",
-        description="Item #3415",
+        description="O | Item #03415 | LEN:24",
     )
 
     aut_16: Optional[CWE] = Field(
@@ -301,7 +301,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.16",
         title="Clinical Service",
-        description="Item #3416",
+        description="O | Item #03416",
     )
 
     aut_17: Optional[str] = Field(
@@ -313,7 +313,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.17",
         title="Reason Text",
-        description="Item #3417",
+        description="O | Item #03417 | LEN:60",
     )
 
     aut_18: Optional[CQ] = Field(
@@ -325,7 +325,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.18",
         title="Number of Authorized Treatments/Units",
-        description="Item #3418",
+        description="O | Item #03418",
     )
 
     aut_19: Optional[CQ] = Field(
@@ -337,7 +337,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.19",
         title="Number of Used Treatments/Units",
-        description="Item #3419",
+        description="O | Item #03419",
     )
 
     aut_20: Optional[CQ] = Field(
@@ -349,7 +349,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.20",
         title="Number of Schedule Treatments/Units",
-        description="Item #3420",
+        description="O | Item #03420",
     )
 
     aut_21: Optional[CWE] = Field(
@@ -361,7 +361,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.21",
         title="Encounter Type",
-        description="Item #3421",
+        description="O | Item #03421",
     )
 
     aut_22: Optional[MO] = Field(
@@ -373,7 +373,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.22",
         title="Remaining Benefit Amount",
-        description="Item #3422",
+        description="O | Item #03422",
     )
 
     aut_23: Optional[XON] = Field(
@@ -385,7 +385,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.23",
         title="Authorized Provider",
-        description="Item #3423",
+        description="O | Item #03423",
     )
 
     aut_24: Optional[XCN] = Field(
@@ -397,7 +397,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.24",
         title="Authorized Health Professional",
-        description="Item #3424",
+        description="O | Item #03424",
     )
 
     aut_25: Optional[str] = Field(
@@ -409,7 +409,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.25",
         title="Source Text",
-        description="Item #3425",
+        description="O | Item #03425 | LEN:60",
     )
 
     aut_26: Optional[str] = Field(
@@ -421,7 +421,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.26",
         title="Source Date",
-        description="Item #3426",
+        description="O | Item #03426 | LEN:24",
     )
 
     aut_27: Optional[XTN] = Field(
@@ -433,7 +433,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.27",
         title="Source Phone",
-        description="Item #3427",
+        description="O | Item #03427",
     )
 
     aut_28: Optional[str] = Field(
@@ -445,7 +445,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.28",
         title="Comment",
-        description="Item #3428",
+        description="O | Item #03428 | LEN:254",
     )
 
     aut_29: Optional[str] = Field(
@@ -457,7 +457,9 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.29",
         title="Action Code",
-        description="Item #3429 | Table HL70206",
+        description=(
+            "O | Item #03429 | Table 0206 - Segment Action Code | LEN:1"
+        ),
     )
 
     @field_validator("aut_4", "aut_5", "aut_10", "aut_15", "aut_26", mode='before')

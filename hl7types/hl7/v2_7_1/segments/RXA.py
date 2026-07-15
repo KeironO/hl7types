@@ -24,88 +24,88 @@ class RXA(HL7Model):
     Attributes
     ----------
     rxa_1 : str
-        RXA.1 (req) - Give Sub-ID Counter (NM) S4.A.1.1
+        RXA.1 - Give Sub-ID Counter (NM) R S4.A.1.1
 
     rxa_2 : str
-        RXA.2 (req) - Administration Sub-ID Counter (NM) S4.A.1.2
+        RXA.2 - Administration Sub-ID Counter (NM) R S4.A.1.2
 
     rxa_3 : str
-        RXA.3 (req) - Date/Time Start of Administration (DTM) S4.A.1.3
+        RXA.3 - Date/Time Start of Administration (DTM) R S4.A.1.3
 
     rxa_4 : str
-        RXA.4 (req) - Date/Time End of Administration (DTM) S4.A.1.4
+        RXA.4 - Date/Time End of Administration (DTM) R S4.A.1.4
 
     rxa_5 : CWE
-        RXA.5 (req) - Administered Code (CWE) S4.A.1.5 | 0292 - Vaccines administered
+        RXA.5 - Administered Code (CWE) R S4.A.1.5 | 0292 - Vaccines administered
 
     rxa_6 : str
-        RXA.6 (req) - Administered Amount (NM) S4.A.1.6
+        RXA.6 - Administered Amount (NM) R S4.A.1.6
 
     rxa_7 : CWE | None
-        RXA.7 (opt) - Administered Units (CWE) S4.A.1.7 | 9999 - no table for CE
+        RXA.7 - Administered Units (CWE) C S4.A.1.7 | 9999 - no table for CE
 
     rxa_8 : CWE | None
-        RXA.8 (opt) - Administered Dosage Form (CWE) S4.A.1.8 | 9999 - no table for CE
+        RXA.8 - Administered Dosage Form (CWE) O S4.A.1.8 | 9999 - no table for CE
 
     rxa_9 : list[CWE] | None
-        RXA.9 (opt, rep) - Administration Notes (CWE) S4.A.1.9 | 9999 - no table for CE
+        RXA.9 - Administration Notes (CWE) O rep S4.A.1.9 | 9999 - no table for CE
 
     rxa_10 : list[XCN] | None
-        RXA.10 (opt, rep) - Administering Provider (XCN) S4.A.1.10
+        RXA.10 - Administering Provider (XCN) O rep S4.A.1.10
 
     rxa_11 : LA2 | None
-        RXA.11 (opt) - Administered-at Location (LA2) S4.A.1.11
+        RXA.11 - Administered-at Location (LA2) O S4.A.1.11
 
     rxa_12 : str | None
-        RXA.12 (opt) - Administered Per (Time Unit) (ST) S4.A.1.12
+        RXA.12 - Administered Per (Time Unit) (ST) C S4.A.1.12
 
     rxa_13 : str | None
-        RXA.13 (opt) - Administered Strength (NM) S4.A.1.13
+        RXA.13 - Administered Strength (NM) O S4.A.1.13
 
     rxa_14 : CWE | None
-        RXA.14 (opt) - Administered Strength Units (CWE) S4.A.1.14 | 9999 - no table for CE
+        RXA.14 - Administered Strength Units (CWE) O S4.A.1.14 | 9999 - no table for CE
 
     rxa_15 : list[str] | None
-        RXA.15 (opt, rep) - Substance Lot Number (ST) S13.4.11.2
+        RXA.15 - Substance Lot Number (ST) O rep S13.4.11.2
 
     rxa_16 : list[str] | None
-        RXA.16 (opt, rep) - Substance Expiration Date (DTM) S4.A.1.16
+        RXA.16 - Substance Expiration Date (DTM) O rep S4.A.1.16
 
     rxa_17 : list[CWE] | None
-        RXA.17 (opt, rep) - Substance Manufacturer Name (CWE) S4.A.1.17 | 0227 - Manufacturers of Vaccines (code=MVX)
+        RXA.17 - Substance Manufacturer Name (CWE) O rep S4.A.1.17 | 0227 - Manufacturers of Vaccines (code=MVX)
 
     rxa_18 : list[CWE] | None
-        RXA.18 (opt, rep) - Substance/Treatment Refusal Reason (CWE) S4.A.1.18 | 9999 - no table for CE
+        RXA.18 - Substance/Treatment Refusal Reason (CWE) O rep S4.A.1.18 | 9999 - no table for CE
 
     rxa_19 : list[CWE] | None
-        RXA.19 (opt, rep) - Indication (CWE) S4.A.1.19 | 9999 - no table for CE
+        RXA.19 - Indication (CWE) O rep S4.A.1.19 | 9999 - no table for CE
 
     rxa_20 : str | None
-        RXA.20 (opt) - Completion Status (ID) S4.A.1.20 | 0322 - Completion Status
+        RXA.20 - Completion Status (ID) O S4.A.1.20 | 0322 - Completion Status
 
     rxa_21 : str | None
-        RXA.21 (opt) - Action Code - RXA (ID) S4.A.1.21 | 0206 - Segment action code
+        RXA.21 - Action Code - RXA (ID) O S4.A.1.21 | 0206 - Segment action code
 
     rxa_22 : str | None
-        RXA.22 (opt) - System Entry Date/Time (DTM) S4.A.1.22
+        RXA.22 - System Entry Date/Time (DTM) O S4.A.1.22
 
     rxa_23 : str | None
-        RXA.23 (opt) - Administered Drug Strength Volume (NM) S4.A.1.23
+        RXA.23 - Administered Drug Strength Volume (NM) O S4.A.1.23
 
     rxa_24 : CWE | None
-        RXA.24 (opt) - Administered Drug Strength Volume Units (CWE) S4.A.1.24 | 9999 - no table for CE
+        RXA.24 - Administered Drug Strength Volume Units (CWE) O S4.A.1.24 | 9999 - no table for CE
 
     rxa_25 : CWE | None
-        RXA.25 (opt) - Administered Barcode Identifier (CWE) S4.A.1.25 | 9999 - no table for CE
+        RXA.25 - Administered Barcode Identifier (CWE) O S4.A.1.25 | 9999 - no table for CE
 
     rxa_26 : str | None
-        RXA.26 (opt) - Pharmacy Order Type (ID) S4.A.1.26 | 0480 - Pharmacy Order Types
+        RXA.26 - Pharmacy Order Type (ID) O S4.A.1.26 | 0480 - Pharmacy Order Types
 
     rxa_27 : PL | None
-        RXA.27 (opt) - Administer-at (PL) S4.A.1.27
+        RXA.27 - Administer-at (PL) O S4.A.1.27
 
     rxa_28 : XAD | None
-        RXA.28 (opt) - Administered-at Address (XAD) S4.A.1.28
+        RXA.28 - Administered-at Address (XAD) O S4.A.1.28
     """
 
     rxa_1: str = Field(
@@ -116,7 +116,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.1",
         title="Give Sub-ID Counter",
-        description="Item #342",
+        description="R | Item #00342",
     )
 
     rxa_2: str = Field(
@@ -127,7 +127,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.2",
         title="Administration Sub-ID Counter",
-        description="Item #344",
+        description="R | Item #00344",
     )
 
     rxa_3: str = Field(
@@ -138,7 +138,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.3",
         title="Date/Time Start of Administration",
-        description="Item #345",
+        description="R | Item #00345",
     )
 
     rxa_4: str = Field(
@@ -149,7 +149,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.4",
         title="Date/Time End of Administration",
-        description="Item #346",
+        description="R | Item #00346",
     )
 
     rxa_5: CWE = Field(
@@ -160,7 +160,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.5",
         title="Administered Code",
-        description="Item #347 | Table HL70292",
+        description="R | Item #00347 | Table 0292 - Vaccines administered",
     )
 
     rxa_6: str = Field(
@@ -171,7 +171,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.6",
         title="Administered Amount",
-        description="Item #348",
+        description="R | Item #00348",
     )
 
     rxa_7: Optional[CWE] = Field(
@@ -183,7 +183,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.7",
         title="Administered Units",
-        description="Item #349 | Table HL79999",
+        description="C | Item #00349 | Table 9999 - no table for CE",
     )
 
     rxa_8: Optional[CWE] = Field(
@@ -195,7 +195,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.8",
         title="Administered Dosage Form",
-        description="Item #350 | Table HL79999",
+        description="O | Item #00350 | Table 9999 - no table for CE",
     )
 
     rxa_9: Optional[List[CWE]] = Field(
@@ -207,7 +207,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.9",
         title="Administration Notes",
-        description="Item #351 | Table HL79999",
+        description="O | Item #00351 | Table 9999 - no table for CE",
     )
 
     rxa_10: Optional[List[XCN]] = Field(
@@ -219,7 +219,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.10",
         title="Administering Provider",
-        description="Item #352",
+        description="O | Item #00352",
     )
 
     rxa_11: Optional[LA2] = Field(
@@ -231,7 +231,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.11",
         title="Administered-at Location",
-        description="Item #353",
+        description="O | Item #00353",
     )
 
     rxa_12: Optional[str] = Field(
@@ -243,7 +243,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.12",
         title="Administered Per (Time Unit)",
-        description="Item #354",
+        description="C | Item #00354",
     )
 
     rxa_13: Optional[str] = Field(
@@ -255,7 +255,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.13",
         title="Administered Strength",
-        description="Item #1134",
+        description="O | Item #01134",
     )
 
     rxa_14: Optional[CWE] = Field(
@@ -267,7 +267,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.14",
         title="Administered Strength Units",
-        description="Item #1135 | Table HL79999",
+        description="O | Item #01135 | Table 9999 - no table for CE",
     )
 
     rxa_15: Optional[List[str]] = Field(
@@ -279,7 +279,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.15",
         title="Substance Lot Number",
-        description="Item #1129",
+        description="O | Item #01129",
     )
 
     rxa_16: Optional[List[str]] = Field(
@@ -291,7 +291,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.16",
         title="Substance Expiration Date",
-        description="Item #1130",
+        description="O | Item #01130",
     )
 
     rxa_17: Optional[List[CWE]] = Field(
@@ -303,7 +303,9 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.17",
         title="Substance Manufacturer Name",
-        description="Item #1131 | Table HL70227",
+        description=(
+            "O | Item #01131 | Table 0227 - Manufacturers of Vaccines (code=MVX)"
+        ),
     )
 
     rxa_18: Optional[List[CWE]] = Field(
@@ -315,7 +317,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.18",
         title="Substance/Treatment Refusal Reason",
-        description="Item #1136 | Table HL79999",
+        description="O | Item #01136 | Table 9999 - no table for CE",
     )
 
     rxa_19: Optional[List[CWE]] = Field(
@@ -327,7 +329,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.19",
         title="Indication",
-        description="Item #1123 | Table HL79999",
+        description="O | Item #01123 | Table 9999 - no table for CE",
     )
 
     rxa_20: Optional[str] = Field(
@@ -339,7 +341,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.20",
         title="Completion Status",
-        description="Item #1223 | Table HL70322",
+        description="O | Item #01223 | Table 0322 - Completion Status | LEN:2",
     )
 
     rxa_21: Optional[str] = Field(
@@ -351,7 +353,9 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.21",
         title="Action Code - RXA",
-        description="Item #1224 | Table HL70206",
+        description=(
+            "O | Item #01224 | Table 0206 - Segment action code | LEN:1"
+        ),
     )
 
     rxa_22: Optional[str] = Field(
@@ -363,7 +367,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.22",
         title="System Entry Date/Time",
-        description="Item #1225",
+        description="O | Item #01225",
     )
 
     rxa_23: Optional[str] = Field(
@@ -375,7 +379,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.23",
         title="Administered Drug Strength Volume",
-        description="Item #1696",
+        description="O | Item #01696",
     )
 
     rxa_24: Optional[CWE] = Field(
@@ -387,7 +391,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.24",
         title="Administered Drug Strength Volume Units",
-        description="Item #1697 | Table HL79999",
+        description="O | Item #01697 | Table 9999 - no table for CE",
     )
 
     rxa_25: Optional[CWE] = Field(
@@ -399,7 +403,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.25",
         title="Administered Barcode Identifier",
-        description="Item #1698 | Table HL79999",
+        description="O | Item #01698 | Table 9999 - no table for CE",
     )
 
     rxa_26: Optional[str] = Field(
@@ -411,7 +415,9 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.26",
         title="Pharmacy Order Type",
-        description="Item #1699 | Table HL70480",
+        description=(
+            "O | Item #01699 | Table 0480 - Pharmacy Order Types | LEN:1"
+        ),
     )
 
     rxa_27: Optional[PL] = Field(
@@ -423,7 +429,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.27",
         title="Administer-at",
-        description="Item #2264",
+        description="O | Item #02264",
     )
 
     rxa_28: Optional[XAD] = Field(
@@ -435,7 +441,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.28",
         title="Administered-at Address",
-        description="Item #2265",
+        description="O | Item #02265",
     )
 
     @field_validator("rxa_1", "rxa_2", "rxa_6", "rxa_13", "rxa_23", mode='before')

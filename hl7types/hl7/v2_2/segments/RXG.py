@@ -21,52 +21,52 @@ class RXG(HL7Model):
     Attributes
     ----------
     rxg_1 : str
-        RXG.1 (req) - Give Sub-ID Counter (NM) S4.8.14.1
+        RXG.1 - Give Sub-ID Counter (NM) R S4.8.14.1
 
     rxg_2 : str | None
-        RXG.2 (opt) - Dispense Sub-ID Counter (NM) S4.8.12.2
+        RXG.2 - Dispense Sub-ID Counter (NM) NA S4.8.12.2
 
     rxg_3 : list[TQ] | None
-        RXG.3 (opt, rep) - Quantity / timing (TQ) S4.8.12.3
+        RXG.3 - Quantity / timing (TQ) NA rep S4.8.12.3
 
     rxg_4 : CE
-        RXG.4 (req) - Give Code (CE) S4.8.12.4
+        RXG.4 - Give Code (CE) R S4.8.12.4
 
     rxg_5 : str
-        RXG.5 (req) - Give Amount - Minimum (NM) S4.8.12.5
+        RXG.5 - Give Amount - Minimum (NM) R S4.8.12.5
 
     rxg_6 : str | None
-        RXG.6 (opt) - Give Amount - Maximum (NM) S4.8.12.6
+        RXG.6 - Give Amount - Maximum (NM) NA S4.8.12.6
 
     rxg_7 : CE
-        RXG.7 (req) - Give Units (CE) S4.8.12.7
+        RXG.7 - Give Units (CE) R S4.8.12.7
 
     rxg_8 : CE | None
-        RXG.8 (opt) - Give Dosage Form (CE) S4.8.12.8
+        RXG.8 - Give Dosage Form (CE) NA S4.8.12.8
 
     rxg_9 : str | None
-        RXG.9 (opt) - Administration Notes (ST) S4.8.14.9
+        RXG.9 - Administration Notes (ST) C S4.8.14.9
 
     rxg_10 : str | None
-        RXG.10 (opt) - Substitution Status (ID) S4.8.12.10 | 0167 - SUBSTITUTION STATUS
+        RXG.10 - Substitution Status (ID) NA S4.8.12.10 | 0167 - SUBSTITUTION STATUS
 
     rxg_11 : str | None
-        RXG.11 (opt) - Deliver-to location (CM) S4.8.12.11
+        RXG.11 - Deliver-to location (CM) C S4.8.12.11
 
     rxg_12 : str | None
-        RXG.12 (opt) - Needs Human Review (ID) S4.8.12.12
+        RXG.12 - Needs Human Review (ID) NA S4.8.12.12
 
     rxg_13 : list[CE] | None
-        RXG.13 (opt, rep) - Pharmacy Special Administration Instructions (CE) S4.8.12.9
+        RXG.13 - Pharmacy Special Administration Instructions (CE) NA rep S4.8.12.9
 
     rxg_14 : str | None
-        RXG.14 (opt) - Give Per (Time Unit) (ST) S4.8.12.14
+        RXG.14 - Give Per (Time Unit) (ST) C S4.8.12.14
 
     rxg_15 : CE | None
-        RXG.15 (opt) - Give Rate Amount (CE) S4.8.12.15
+        RXG.15 - Give Rate Amount (CE) NA S4.8.12.15
 
     rxg_16 : CE | None
-        RXG.16 (opt) - Give Rate Units (CE) S4.8.12.16
+        RXG.16 - Give Rate Units (CE) NA S4.8.12.16
     """
 
     rxg_1: str = Field(
@@ -77,7 +77,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.1",
         title="Give Sub-ID Counter",
-        description="Item #342",
+        description="R | Item #00342 | LEN:4",
     )
 
     rxg_2: Optional[str] = Field(
@@ -89,7 +89,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.2",
         title="Dispense Sub-ID Counter",
-        description="Item #334",
+        description="NA | Item #00334 | LEN:4",
     )
 
     rxg_3: Optional[List[TQ]] = Field(
@@ -101,7 +101,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.3",
         title="Quantity / timing",
-        description="Item #221",
+        description="NA | Item #00221",
     )
 
     rxg_4: CE = Field(
@@ -112,7 +112,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.4",
         title="Give Code",
-        description="Item #317",
+        description="R | Item #00317",
     )
 
     rxg_5: str = Field(
@@ -123,7 +123,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.5",
         title="Give Amount - Minimum",
-        description="Item #318",
+        description="R | Item #00318 | LEN:20",
     )
 
     rxg_6: Optional[str] = Field(
@@ -135,7 +135,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.6",
         title="Give Amount - Maximum",
-        description="Item #319",
+        description="NA | Item #00319 | LEN:20",
     )
 
     rxg_7: CE = Field(
@@ -146,7 +146,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.7",
         title="Give Units",
-        description="Item #320",
+        description="R | Item #00320",
     )
 
     rxg_8: Optional[CE] = Field(
@@ -158,7 +158,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.8",
         title="Give Dosage Form",
-        description="Item #321",
+        description="NA | Item #00321",
     )
 
     rxg_9: Optional[str] = Field(
@@ -170,7 +170,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.9",
         title="Administration Notes",
-        description="Item #351",
+        description="C | Item #00351 | LEN:200",
     )
 
     rxg_10: Optional[str] = Field(
@@ -182,7 +182,9 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.10",
         title="Substitution Status",
-        description="Item #322 | Table HL70167",
+        description=(
+            "NA | Item #00322 | Table 0167 - SUBSTITUTION STATUS | LEN:1"
+        ),
     )
 
     rxg_11: Optional[str] = Field(
@@ -194,7 +196,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.11",
         title="Deliver-to location",
-        description="Item #299",
+        description="C | Item #00299",
     )
 
     rxg_12: Optional[str] = Field(
@@ -206,7 +208,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.12",
         title="Needs Human Review",
-        description="Item #307",
+        description="NA | Item #00307 | LEN:1",
     )
 
     rxg_13: Optional[List[CE]] = Field(
@@ -218,7 +220,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.13",
         title="Pharmacy Special Administration Instructions",
-        description="Item #343",
+        description="NA | Item #00343",
     )
 
     rxg_14: Optional[str] = Field(
@@ -230,7 +232,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.14",
         title="Give Per (Time Unit)",
-        description="Item #331",
+        description="C | Item #00331 | LEN:20",
     )
 
     rxg_15: Optional[CE] = Field(
@@ -242,7 +244,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.15",
         title="Give Rate Amount",
-        description="Item #332",
+        description="NA | Item #00332",
     )
 
     rxg_16: Optional[CE] = Field(
@@ -254,7 +256,7 @@ class RXG(HL7Model):
         ),
         serialization_alias="RXG.16",
         title="Give Rate Units",
-        description="Item #333",
+        description="NA | Item #00333",
     )
 
     @field_validator("rxg_1", "rxg_2", "rxg_5", "rxg_6", mode='before')

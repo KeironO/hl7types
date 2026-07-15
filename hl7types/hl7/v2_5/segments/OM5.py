@@ -20,13 +20,13 @@ class OM5(HL7Model):
     Attributes
     ----------
     om5_1 : str | None
-        OM5.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.8.1
+        OM5.1 - Sequence Number - Test/Observation Master File (NM) O S8.8.8.1
 
     om5_2 : list[CE] | None
-        OM5.2 (opt, rep) - Test/Observations Included within an Ordered Test Battery (CE) S8.8.12.2 | 9999 - no table for CE
+        OM5.2 - Test/Observations Included within an Ordered Test Battery (CE) O rep S8.8.12.2 | 9999 - no table for CE
 
     om5_3 : str | None
-        OM5.3 (opt) - Observation ID Suffixes (ST) S8.8.12.3
+        OM5.3 - Observation ID Suffixes (ST) O S8.8.12.3
     """
 
     om5_1: Optional[str] = Field(
@@ -38,7 +38,7 @@ class OM5(HL7Model):
         ),
         serialization_alias="OM5.1",
         title="Sequence Number - Test/Observation Master File",
-        description="Item #586",
+        description="O | Item #00586 | LEN:4",
     )
 
     om5_2: Optional[List[CE]] = Field(
@@ -50,7 +50,7 @@ class OM5(HL7Model):
         ),
         serialization_alias="OM5.2",
         title="Test/Observations Included within an Ordered Test Battery",
-        description="Item #655 | Table HL79999",
+        description="O | Item #00655 | Table 9999 - no table for CE",
     )
 
     om5_3: Optional[str] = Field(
@@ -62,7 +62,7 @@ class OM5(HL7Model):
         ),
         serialization_alias="OM5.3",
         title="Observation ID Suffixes",
-        description="Item #656",
+        description="O | Item #00656 | LEN:250",
     )
 
     @field_validator("om5_1", mode='before')

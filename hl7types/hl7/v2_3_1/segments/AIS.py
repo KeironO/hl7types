@@ -21,34 +21,34 @@ class AIS(HL7Model):
     Attributes
     ----------
     ais_1 : str
-        AIS.1 (req) - Set ID - AIS (SI) S10.5.4.1
+        AIS.1 - Set ID - AIS (SI) R S10.5.4.1
 
     ais_2 : str | None
-        AIS.2 (opt) - Segment Action Code (ID) S10.5.7.2 | 0206 - Segment action code
+        AIS.2 - Segment Action Code (ID) C S10.5.7.2 | 0206 - Segment action code
 
     ais_3 : CE
-        AIS.3 (req) - Universal Service ID (CE) S10.5.4.3
+        AIS.3 - Universal Service ID (CE) R S10.5.4.3
 
     ais_4 : TS | None
-        AIS.4 (opt) - Start Date/Time (TS) S10.5.7.6
+        AIS.4 - Start Date/Time (TS) C S10.5.7.6
 
     ais_5 : str | None
-        AIS.5 (opt) - Start Date/Time Offset (NM) S10.5.7.7
+        AIS.5 - Start Date/Time Offset (NM) C S10.5.7.7
 
     ais_6 : CE | None
-        AIS.6 (opt) - Start Date/Time Offset Units (CE) S10.5.7.8
+        AIS.6 - Start Date/Time Offset Units (CE) C S10.5.7.8
 
     ais_7 : str | None
-        AIS.7 (opt) - Duration (NM) S10.5.7.9
+        AIS.7 - Duration (NM) O S10.5.7.9
 
     ais_8 : CE | None
-        AIS.8 (opt) - Duration Units (CE) S10.5.7.10
+        AIS.8 - Duration Units (CE) O S10.5.7.10
 
     ais_9 : str | None
-        AIS.9 (opt) - Allow Substitution Code (IS) S10.5.7.11 | 0279 - Allow substitution codes
+        AIS.9 - Allow Substitution Code (IS) C S10.5.7.11 | 0279 - Allow substitution codes
 
     ais_10 : CE | None
-        AIS.10 (opt) - Filler Status Code (CE) S10.5.7.12 | 0278 - Filler status codes
+        AIS.10 - Filler Status Code (CE) C S10.5.7.12 | 0278 - Filler status codes
     """
 
     ais_1: str = Field(
@@ -59,7 +59,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.1",
         title="Set ID - AIS",
-        description="Item #890",
+        description="R | Item #00890 | LEN:4",
     )
 
     ais_2: Optional[str] = Field(
@@ -71,7 +71,9 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description=(
+            "C | Item #00763 | Table 0206 - Segment action code | LEN:3"
+        ),
     )
 
     ais_3: CE = Field(
@@ -82,7 +84,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.3",
         title="Universal Service ID",
-        description="Item #238",
+        description="R | Item #00238",
     )
 
     ais_4: Optional[TS] = Field(
@@ -94,7 +96,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.4",
         title="Start Date/Time",
-        description="Item #1202",
+        description="C | Item #01202",
     )
 
     ais_5: Optional[str] = Field(
@@ -106,7 +108,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.5",
         title="Start Date/Time Offset",
-        description="Item #891",
+        description="C | Item #00891 | LEN:20",
     )
 
     ais_6: Optional[CE] = Field(
@@ -118,7 +120,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.6",
         title="Start Date/Time Offset Units",
-        description="Item #892",
+        description="C | Item #00892",
     )
 
     ais_7: Optional[str] = Field(
@@ -130,7 +132,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.7",
         title="Duration",
-        description="Item #893",
+        description="O | Item #00893 | LEN:20",
     )
 
     ais_8: Optional[CE] = Field(
@@ -142,7 +144,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.8",
         title="Duration Units",
-        description="Item #894",
+        description="O | Item #00894",
     )
 
     ais_9: Optional[str] = Field(
@@ -154,7 +156,9 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.9",
         title="Allow Substitution Code",
-        description="Item #895 | Table HL70279",
+        description=(
+            "C | Item #00895 | Table 0279 - Allow substitution codes | LEN:10"
+        ),
     )
 
     ais_10: Optional[CE] = Field(
@@ -166,7 +170,7 @@ class AIS(HL7Model):
         ),
         serialization_alias="AIS.10",
         title="Filler Status Code",
-        description="Item #889 | Table HL70278",
+        description="C | Item #00889 | Table 0278 - Filler status codes",
     )
 
     @field_validator("ais_1", mode='before')

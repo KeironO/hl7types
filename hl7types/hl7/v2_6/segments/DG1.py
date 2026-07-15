@@ -22,52 +22,52 @@ class DG1(HL7Model):
     Attributes
     ----------
     dg1_1 : str
-        DG1.1 (req) - Set ID - DG1 (SI) S6.5.2.1
+        DG1.1 - Set ID - DG1 (SI) R S6.5.2.1
 
     dg1_3 : CWE
-        DG1.3 (req) - Diagnosis Code - DG1 (CWE) S6.5.2.3 | 0051 - Diagnosis Code
+        DG1.3 - Diagnosis Code - DG1 (CWE) R S6.5.2.3 | 0051 - Diagnosis Code
 
     dg1_5 : str | None
-        DG1.5 (opt) - Diagnosis Date/Time (DTM) S6.5.2.5
+        DG1.5 - Diagnosis Date/Time (DTM) O S6.5.2.5
 
     dg1_6 : str
-        DG1.6 (req) - Diagnosis Type (IS) S6.5.2.6 | 0052 - Diagnosis Type
+        DG1.6 - Diagnosis Type (IS) R S6.5.2.6 | 0052 - Diagnosis Type
 
     dg1_15 : str | None
-        DG1.15 (opt) - Diagnosis Priority (ID) S6.5.2.15 | 0359 - Diagnosis Priority
+        DG1.15 - Diagnosis Priority (ID) O S6.5.2.15 | 0359 - Diagnosis Priority
 
     dg1_16 : list[XCN] | None
-        DG1.16 (opt, rep) - Diagnosing Clinician (XCN) S6.5.2.16
+        DG1.16 - Diagnosing Clinician (XCN) O rep S6.5.2.16
 
     dg1_17 : str | None
-        DG1.17 (opt) - Diagnosis Classification (IS) S6.5.2.17 | 0228 - Diagnosis Classification
+        DG1.17 - Diagnosis Classification (IS) O S6.5.2.17 | 0228 - Diagnosis Classification
 
     dg1_18 : str | None
-        DG1.18 (opt) - Confidential Indicator (ID) S6.5.2.18 | 0136 - Yes/no indicator
+        DG1.18 - Confidential Indicator (ID) O S6.5.2.18 | 0136 - Yes/no indicator
 
     dg1_19 : str | None
-        DG1.19 (opt) - Attestation Date/Time (DTM) S6.5.2.19
+        DG1.19 - Attestation Date/Time (DTM) O S6.5.2.19
 
     dg1_20 : EI | None
-        DG1.20 (opt) - Diagnosis Identifier (EI) S6.5.2.20
+        DG1.20 - Diagnosis Identifier (EI) C S6.5.2.20
 
     dg1_21 : str | None
-        DG1.21 (opt) - Diagnosis Action Code (ID) S6.5.2.21 | 0206 - Segment action code
+        DG1.21 - Diagnosis Action Code (ID) C S6.5.2.21 | 0206 - Segment action code
 
     dg1_22 : EI | None
-        DG1.22 (opt) - Parent Diagnosis (EI) S6.5.2.22
+        DG1.22 - Parent Diagnosis (EI) C S6.5.2.22
 
     dg1_23 : CWE | None
-        DG1.23 (opt) - DRG CCL Value Code (CWE) S6.5.2.23 | 0728 - CCL Value
+        DG1.23 - DRG CCL Value Code (CWE) O S6.5.2.23 | 0728 - CCL Value
 
     dg1_24 : str | None
-        DG1.24 (opt) - DRG Grouping Usage (ID) S6.5.2.24 | 0136 - Yes/no indicator
+        DG1.24 - DRG Grouping Usage (ID) O S6.5.2.24 | 0136 - Yes/no indicator
 
     dg1_25 : str | None
-        DG1.25 (opt) - DRG Diagnosis Determination Status (IS) S6.5.2.25 | 0731 - DRG Diagnosis Determination Status
+        DG1.25 - DRG Diagnosis Determination Status (IS) O S6.5.2.25 | 0731 - DRG Diagnosis Determination Status
 
     dg1_26 : str | None
-        DG1.26 (opt) - Present On Admission (POA) Indicator (IS) S6.5.2.26 | 0895 - Present On Admission (POA) Indicator
+        DG1.26 - Present On Admission (POA) Indicator (IS) O S6.5.2.26 | 0895 - Present On Admission (POA) Indicator
     """
 
     dg1_1: str = Field(
@@ -78,7 +78,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.1",
         title="Set ID - DG1",
-        description="Item #375",
+        description="R | Item #00375 | LEN:4",
     )
 
     dg1_3: CWE = Field(
@@ -89,7 +89,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.3",
         title="Diagnosis Code - DG1",
-        description="Item #377 | Table HL70051",
+        description="R | Item #00377 | Table 0051 - Diagnosis Code",
     )
 
     dg1_5: Optional[str] = Field(
@@ -101,7 +101,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.5",
         title="Diagnosis Date/Time",
-        description="Item #379",
+        description="O | Item #00379 | LEN:24",
     )
 
     dg1_6: str = Field(
@@ -112,7 +112,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.6",
         title="Diagnosis Type",
-        description="Item #380 | Table HL70052",
+        description="R | Item #00380 | Table 0052 - Diagnosis Type | LEN:2",
     )
 
     dg1_15: Optional[str] = Field(
@@ -124,7 +124,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.15",
         title="Diagnosis Priority",
-        description="Item #389 | Table HL70359",
+        description="O | Item #00389 | Table 0359 - Diagnosis Priority | LEN:2",
     )
 
     dg1_16: Optional[List[XCN]] = Field(
@@ -136,7 +136,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.16",
         title="Diagnosing Clinician",
-        description="Item #390",
+        description="O | Item #00390",
     )
 
     dg1_17: Optional[str] = Field(
@@ -148,7 +148,9 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.17",
         title="Diagnosis Classification",
-        description="Item #766 | Table HL70228",
+        description=(
+            "O | Item #00766 | Table 0228 - Diagnosis Classification | LEN:3"
+        ),
     )
 
     dg1_18: Optional[str] = Field(
@@ -160,7 +162,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.18",
         title="Confidential Indicator",
-        description="Item #767 | Table HL70136",
+        description="O | Item #00767 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     dg1_19: Optional[str] = Field(
@@ -172,7 +174,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.19",
         title="Attestation Date/Time",
-        description="Item #768",
+        description="O | Item #00768 | LEN:24",
     )
 
     dg1_20: Optional[EI] = Field(
@@ -184,7 +186,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.20",
         title="Diagnosis Identifier",
-        description="Item #1850",
+        description="C | Item #01850",
     )
 
     dg1_21: Optional[str] = Field(
@@ -196,7 +198,9 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.21",
         title="Diagnosis Action Code",
-        description="Item #1894 | Table HL70206",
+        description=(
+            "C | Item #01894 | Table 0206 - Segment action code | LEN:1"
+        ),
     )
 
     dg1_22: Optional[EI] = Field(
@@ -208,7 +212,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.22",
         title="Parent Diagnosis",
-        description="Item #2152",
+        description="C | Item #02152",
     )
 
     dg1_23: Optional[CWE] = Field(
@@ -220,7 +224,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.23",
         title="DRG CCL Value Code",
-        description="Item #2153 | Table HL70728",
+        description="O | Item #02153 | Table 0728 - CCL Value",
     )
 
     dg1_24: Optional[str] = Field(
@@ -232,7 +236,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.24",
         title="DRG Grouping Usage",
-        description="Item #2154 | Table HL70136",
+        description="O | Item #02154 | Table 0136 - Yes/no indicator | LEN:20",
     )
 
     dg1_25: Optional[str] = Field(
@@ -244,7 +248,10 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.25",
         title="DRG Diagnosis Determination Status",
-        description="Item #2155 | Table HL70731",
+        description=(
+            "O | Item #02155 | Table 0731 - DRG Diagnosis Determination Status | "
+            "LEN:20"
+        ),
     )
 
     dg1_26: Optional[str] = Field(
@@ -256,7 +263,10 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.26",
         title="Present On Admission (POA) Indicator",
-        description="Item #2288 | Table HL70895",
+        description=(
+            "O | Item #02288 | Table 0895 - Present On Admission (POA) Indicator "
+            "| LEN:1"
+        ),
     )
 
     @field_validator("dg1_1", mode='before')

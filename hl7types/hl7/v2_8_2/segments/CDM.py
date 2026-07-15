@@ -23,43 +23,43 @@ class CDM(HL7Model):
     Attributes
     ----------
     cdm_1 : CWE
-        CDM.1 (req) - Primary Key Value - CDM (CWE) S8.8.15.24
+        CDM.1 - Primary Key Value - CDM (CWE) R S8.8.15.24
 
     cdm_2 : list[CWE] | None
-        CDM.2 (opt, rep) - Charge Code Alias (CWE) S8.10.2.2 | 0132 - Transaction Code
+        CDM.2 - Charge Code Alias (CWE) O rep S8.10.2.2 | 0132 - Transaction Code
 
     cdm_3 : str
-        CDM.3 (req) - Charge Description Short (ST) S8.10.2.3
+        CDM.3 - Charge Description Short (ST) R S8.10.2.3
 
     cdm_4 : str | None
-        CDM.4 (opt) - Charge Description Long (ST) S8.10.2.4
+        CDM.4 - Charge Description Long (ST) O S8.10.2.4
 
     cdm_5 : CWE | None
-        CDM.5 (opt) - Description Override Indicator (CWE) S8.10.2.5 | 0268 - Override
+        CDM.5 - Description Override Indicator (CWE) O S8.10.2.5 | 0268 - Override
 
     cdm_6 : list[CWE] | None
-        CDM.6 (opt, rep) - Exploding Charges (CWE) S8.10.2.6 | 0132 - Transaction Code
+        CDM.6 - Exploding Charges (CWE) O rep S8.10.2.6 | 0132 - Transaction Code
 
     cdm_7 : list[CNE] | None
-        CDM.7 (opt, rep) - Procedure Code (CNE) S17.4.1.14 | 0088 - Procedure Code
+        CDM.7 - Procedure Code (CNE) O rep S17.4.1.14 | 0088 - Procedure Code
 
     cdm_8 : str | None
-        CDM.8 (opt) - Active/Inactive Flag (ID) S15.4.8.7 | 0183 - Active/Inactive
+        CDM.8 - Active/Inactive Flag (ID) O S15.4.8.7 | 0183 - Active/Inactive
 
     cdm_9 : list[CWE] | None
-        CDM.9 (opt, rep) - Inventory Number (CWE) S8.10.2.9 | 0463 - Inventory Number
+        CDM.9 - Inventory Number (CWE) O rep S8.10.2.9 | 0463 - Inventory Number
 
     cdm_10 : str | None
-        CDM.10 (opt) - Resource Load (NM) S8.10.2.10
+        CDM.10 - Resource Load (NM) O S8.10.2.10
 
     cdm_11 : list[CX] | None
-        CDM.11 (opt, rep) - Contract Number (CX) S8.10.2.11
+        CDM.11 - Contract Number (CX) O rep S8.10.2.11
 
     cdm_12 : list[XON] | None
-        CDM.12 (opt, rep) - Contract Organization (XON) S8.10.2.12
+        CDM.12 - Contract Organization (XON) O rep S8.10.2.12
 
     cdm_13 : str | None
-        CDM.13 (opt) - Room Fee Indicator (ID) S8.10.2.13 | 0136 - Yes/no Indicator
+        CDM.13 - Room Fee Indicator (ID) O S8.10.2.13 | 0136 - Yes/no Indicator
     """
 
     cdm_1: CWE = Field(
@@ -70,7 +70,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.1",
         title="Primary Key Value - CDM",
-        description="Item #1306",
+        description="R | Item #01306",
     )
 
     cdm_2: Optional[List[CWE]] = Field(
@@ -82,7 +82,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.2",
         title="Charge Code Alias",
-        description="Item #983 | Table HL70132",
+        description="O | Item #00983 | Table 0132 - Transaction Code",
     )
 
     cdm_3: str = Field(
@@ -93,7 +93,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.3",
         title="Charge Description Short",
-        description="Item #984",
+        description="R | Item #00984",
     )
 
     cdm_4: Optional[str] = Field(
@@ -105,7 +105,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.4",
         title="Charge Description Long",
-        description="Item #985",
+        description="O | Item #00985",
     )
 
     cdm_5: Optional[CWE] = Field(
@@ -117,7 +117,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.5",
         title="Description Override Indicator",
-        description="Item #986 | Table HL70268",
+        description="O | Item #00986 | Table 0268 - Override",
     )
 
     cdm_6: Optional[List[CWE]] = Field(
@@ -129,7 +129,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.6",
         title="Exploding Charges",
-        description="Item #987 | Table HL70132",
+        description="O | Item #00987 | Table 0132 - Transaction Code",
     )
 
     cdm_7: Optional[List[CNE]] = Field(
@@ -141,7 +141,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.7",
         title="Procedure Code",
-        description="Item #393 | Table HL70088",
+        description="O | Item #00393 | Table 0088 - Procedure Code",
     )
 
     cdm_8: Optional[str] = Field(
@@ -153,7 +153,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.8",
         title="Active/Inactive Flag",
-        description="Item #675 | Table HL70183",
+        description="O | Item #00675 | Table 0183 - Active/Inactive | LEN:1",
     )
 
     cdm_9: Optional[List[CWE]] = Field(
@@ -165,7 +165,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.9",
         title="Inventory Number",
-        description="Item #990 | Table HL70463",
+        description="O | Item #00990 | Table 0463 - Inventory Number",
     )
 
     cdm_10: Optional[str] = Field(
@@ -177,7 +177,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.10",
         title="Resource Load",
-        description="Item #991",
+        description="O | Item #00991",
     )
 
     cdm_11: Optional[List[CX]] = Field(
@@ -189,7 +189,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.11",
         title="Contract Number",
-        description="Item #992",
+        description="O | Item #00992",
     )
 
     cdm_12: Optional[List[XON]] = Field(
@@ -201,7 +201,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.12",
         title="Contract Organization",
-        description="Item #993",
+        description="O | Item #00993",
     )
 
     cdm_13: Optional[str] = Field(
@@ -213,7 +213,7 @@ class CDM(HL7Model):
         ),
         serialization_alias="CDM.13",
         title="Room Fee Indicator",
-        description="Item #994 | Table HL70136",
+        description="O | Item #00994 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     @field_validator("cdm_10", mode='before')

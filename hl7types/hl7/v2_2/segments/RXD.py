@@ -21,49 +21,49 @@ class RXD(HL7Model):
     Attributes
     ----------
     rxd_1 : str | None
-        RXD.1 (opt) - Dispense Sub-ID Counter (NM) S4.8.12.2
+        RXD.1 - Dispense Sub-ID Counter (NM) NA S4.8.12.2
 
     rxd_2 : CE
-        RXD.2 (req) - Dispense / give code (CE) S4.8.10.2
+        RXD.2 - Dispense / give code (CE) R S4.8.10.2
 
     rxd_3 : TS | None
-        RXD.3 (opt) - Date / time dispensed (TS) S4.8.10.3
+        RXD.3 - Date / time dispensed (TS) NA S4.8.10.3
 
     rxd_4 : str
-        RXD.4 (req) - Actual Dispense Amount (NM) S4.8.10.4
+        RXD.4 - Actual Dispense Amount (NM) R S4.8.10.4
 
     rxd_5 : CE | None
-        RXD.5 (opt) - Actual Dispense Units (CE) S4.8.10.5
+        RXD.5 - Actual Dispense Units (CE) C S4.8.10.5
 
     rxd_6 : CE | None
-        RXD.6 (opt) - Actual Dosage Form (CE) S4.8.10.6
+        RXD.6 - Actual Dosage Form (CE) NA S4.8.10.6
 
     rxd_7 : str
-        RXD.7 (req) - Prescription Number (ST) S4.8.10.7
+        RXD.7 - Prescription Number (ST) R S4.8.10.7
 
     rxd_8 : str | None
-        RXD.8 (opt) - Number of Refills Remaining (NM) S4.8.10.8
+        RXD.8 - Number of Refills Remaining (NM) C S4.8.10.8
 
     rxd_9 : list[str] | None
-        RXD.9 (opt, rep) - Dispense Notes (ST) S4.8.10.9
+        RXD.9 - Dispense Notes (ST) C rep S4.8.10.9
 
     rxd_10 : str | None
-        RXD.10 (opt) - Dispensing Provider (CN) S4.8.10.10
+        RXD.10 - Dispensing Provider (CN) NA S4.8.10.10
 
     rxd_11 : str | None
-        RXD.11 (opt) - Substitution Status (ID) S4.8.12.10 | 0167 - SUBSTITUTION STATUS
+        RXD.11 - Substitution Status (ID) NA S4.8.12.10 | 0167 - SUBSTITUTION STATUS
 
     rxd_12 : str | None
-        RXD.12 (opt) - Total Daily Dose (CQ) S4.8.7.19
+        RXD.12 - Total Daily Dose (CQ) NA S4.8.7.19
 
     rxd_13 : str | None
-        RXD.13 (opt) - Deliver-to location (CM) S4.8.12.11
+        RXD.13 - Deliver-to location (CM) C S4.8.12.11
 
     rxd_14 : str | None
-        RXD.14 (opt) - Needs Human Review (ID) S4.8.12.12
+        RXD.14 - Needs Human Review (ID) NA S4.8.12.12
 
     rxd_15 : CE | None
-        RXD.15 (opt) - Pharmacy Special Dispensing Instructions (CE) S4.8.10.15
+        RXD.15 - Pharmacy Special Dispensing Instructions (CE) NA S4.8.10.15
     """
 
     rxd_1: Optional[str] = Field(
@@ -75,7 +75,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.1",
         title="Dispense Sub-ID Counter",
-        description="Item #334",
+        description="NA | Item #00334 | LEN:4",
     )
 
     rxd_2: CE = Field(
@@ -86,7 +86,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.2",
         title="Dispense / give code",
-        description="Item #335",
+        description="R | Item #00335",
     )
 
     rxd_3: Optional[TS] = Field(
@@ -98,7 +98,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.3",
         title="Date / time dispensed",
-        description="Item #336",
+        description="NA | Item #00336",
     )
 
     rxd_4: str = Field(
@@ -109,7 +109,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.4",
         title="Actual Dispense Amount",
-        description="Item #337",
+        description="R | Item #00337 | LEN:20",
     )
 
     rxd_5: Optional[CE] = Field(
@@ -121,7 +121,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.5",
         title="Actual Dispense Units",
-        description="Item #338",
+        description="C | Item #00338",
     )
 
     rxd_6: Optional[CE] = Field(
@@ -133,7 +133,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.6",
         title="Actual Dosage Form",
-        description="Item #339",
+        description="NA | Item #00339",
     )
 
     rxd_7: str = Field(
@@ -144,7 +144,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.7",
         title="Prescription Number",
-        description="Item #325",
+        description="R | Item #00325 | LEN:20",
     )
 
     rxd_8: Optional[str] = Field(
@@ -156,7 +156,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.8",
         title="Number of Refills Remaining",
-        description="Item #326",
+        description="C | Item #00326 | LEN:20",
     )
 
     rxd_9: Optional[List[str]] = Field(
@@ -168,7 +168,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.9",
         title="Dispense Notes",
-        description="Item #340",
+        description="C | Item #00340 | LEN:200",
     )
 
     rxd_10: Optional[str] = Field(
@@ -180,7 +180,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.10",
         title="Dispensing Provider",
-        description="Item #341",
+        description="NA | Item #00341",
     )
 
     rxd_11: Optional[str] = Field(
@@ -192,7 +192,9 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.11",
         title="Substitution Status",
-        description="Item #322 | Table HL70167",
+        description=(
+            "NA | Item #00322 | Table 0167 - SUBSTITUTION STATUS | LEN:1"
+        ),
     )
 
     rxd_12: Optional[str] = Field(
@@ -204,7 +206,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.12",
         title="Total Daily Dose",
-        description="Item #329",
+        description="NA | Item #00329",
     )
 
     rxd_13: Optional[str] = Field(
@@ -216,7 +218,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.13",
         title="Deliver-to location",
-        description="Item #299",
+        description="C | Item #00299",
     )
 
     rxd_14: Optional[str] = Field(
@@ -228,7 +230,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.14",
         title="Needs Human Review",
-        description="Item #307",
+        description="NA | Item #00307 | LEN:1",
     )
 
     rxd_15: Optional[CE] = Field(
@@ -240,7 +242,7 @@ class RXD(HL7Model):
         ),
         serialization_alias="RXD.15",
         title="Pharmacy Special Dispensing Instructions",
-        description="Item #330",
+        description="NA | Item #00330",
     )
 
     @field_validator("rxd_1", "rxd_4", "rxd_8", mode='before')

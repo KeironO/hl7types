@@ -21,13 +21,13 @@ class ECR(HL7Model):
     Attributes
     ----------
     ecr_1 : CE
-        ECR.1 (req) - Command Response (CE) S13.4.6.1 | 0387 - Command response
+        ECR.1 - Command Response (CE) R S13.4.6.1 | 0387 - Command response
 
     ecr_2 : TS
-        ECR.2 (req) - Date/Time Completed (TS) S13.4.6.2
+        ECR.2 - Date/Time Completed (TS) R S13.4.6.2
 
     ecr_3 : list[str] | None
-        ECR.3 (opt, rep) - Command Response Parameters (TX) S13.4.6.3
+        ECR.3 - Command Response Parameters (TX) O rep S13.4.6.3
     """
 
     ecr_1: CE = Field(
@@ -38,7 +38,7 @@ class ECR(HL7Model):
         ),
         serialization_alias="ECR.1",
         title="Command Response",
-        description="Item #1395 | Table HL70387",
+        description="R | Item #01395 | Table 0387 - Command response",
     )
 
     ecr_2: TS = Field(
@@ -49,7 +49,7 @@ class ECR(HL7Model):
         ),
         serialization_alias="ECR.2",
         title="Date/Time Completed",
-        description="Item #1396",
+        description="R | Item #01396",
     )
 
     ecr_3: Optional[List[str]] = Field(
@@ -61,7 +61,7 @@ class ECR(HL7Model):
         ),
         serialization_alias="ECR.3",
         title="Command Response Parameters",
-        description="Item #1397",
+        description="O | Item #01397",
     )
 
     model_config = {"populate_by_name": True}

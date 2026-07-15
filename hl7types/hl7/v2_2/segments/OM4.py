@@ -20,49 +20,49 @@ class OM4(HL7Model):
     Attributes
     ----------
     om4_1 : str | None
-        OM4.1 (opt) - Segment Type ID (ST) S7.6.9.1
+        OM4.1 - Segment Type ID (ST) NA S7.6.9.1
 
     om4_2 : str | None
-        OM4.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
+        OM4.2 - Sequence Number - Test/ Observation Master File (NM) NA S7.6.9.2
 
     om4_3 : str | None
-        OM4.3 (opt) - Derived Specimen (ID) S7.6.7.3 | 0170 - DERIVED SPECIMEN
+        OM4.3 - Derived Specimen (ID) NA S7.6.7.3 | 0170 - DERIVED SPECIMEN
 
     om4_4 : str | None
-        OM4.4 (opt) - Container Description (TX) S7.6.7.4
+        OM4.4 - Container Description (TX) NA S7.6.7.4
 
     om4_5 : str | None
-        OM4.5 (opt) - Container Volume (NM) S7.6.7.5
+        OM4.5 - Container Volume (NM) NA S7.6.7.5
 
     om4_6 : CE | None
-        OM4.6 (opt) - Container Units (CE) S7.6.7.6
+        OM4.6 - Container Units (CE) O S7.6.7.6
 
     om4_7 : CE | None
-        OM4.7 (opt) - Specimen (CE) S7.6.7.7
+        OM4.7 - Specimen (CE) NA S7.6.7.7
 
     om4_8 : CE | None
-        OM4.8 (opt) - Additive (CE) S7.6.7.8
+        OM4.8 - Additive (CE) NA S7.6.7.8
 
     om4_9 : str | None
-        OM4.9 (opt) - Preparation (TX) S7.6.7.9
+        OM4.9 - Preparation (TX) NA S7.6.7.9
 
     om4_10 : str | None
-        OM4.10 (opt) - Special Handling Requirements (TX) S7.6.7.10
+        OM4.10 - Special Handling Requirements (TX) NA S7.6.7.10
 
     om4_11 : str | None
-        OM4.11 (opt) - Normal Collection Volume (CQ) S7.6.7.11
+        OM4.11 - Normal Collection Volume (CQ) NA S7.6.7.11
 
     om4_12 : str | None
-        OM4.12 (opt) - Minimum Collection Volume (CQ) S7.6.7.12
+        OM4.12 - Minimum Collection Volume (CQ) NA S7.6.7.12
 
     om4_13 : str | None
-        OM4.13 (opt) - Specimen Requirements (TX) S7.6.7.13
+        OM4.13 - Specimen Requirements (TX) NA S7.6.7.13
 
     om4_14 : list[str] | None
-        OM4.14 (opt, rep) - Specimen Priorities (ID) S7.6.7.14 | 0027 - PRIORITY (COMPONENT 6 QTY/TIMING[735])
+        OM4.14 - Specimen Priorities (ID) NA rep S7.6.7.14 | 0027 - PRIORITY (COMPONENT 6 QTY/TIMING[735])
 
     om4_15 : str | None
-        OM4.15 (opt) - Specimen Retention Time (CQ) S7.6.7.15
+        OM4.15 - Specimen Retention Time (CQ) NA S7.6.7.15
     """
 
     om4_1: Optional[str] = Field(
@@ -74,7 +74,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.1",
         title="Segment Type ID",
-        description="Item #585",
+        description="NA | Item #00585 | LEN:3",
     )
 
     om4_2: Optional[str] = Field(
@@ -86,7 +86,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.2",
         title="Sequence Number - Test/ Observation Master File",
-        description="Item #586",
+        description="NA | Item #00586 | LEN:4",
     )
 
     om4_3: Optional[str] = Field(
@@ -98,7 +98,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.3",
         title="Derived Specimen",
-        description="Item #642 | Table HL70170",
+        description="NA | Item #00642 | Table 0170 - DERIVED SPECIMEN | LEN:1",
     )
 
     om4_4: Optional[str] = Field(
@@ -110,7 +110,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.4",
         title="Container Description",
-        description="Item #643",
+        description="NA | Item #00643",
     )
 
     om4_5: Optional[str] = Field(
@@ -122,7 +122,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.5",
         title="Container Volume",
-        description="Item #644",
+        description="NA | Item #00644 | LEN:20",
     )
 
     om4_6: Optional[CE] = Field(
@@ -134,7 +134,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.6",
         title="Container Units",
-        description="Item #645",
+        description="O | Item #00645",
     )
 
     om4_7: Optional[CE] = Field(
@@ -146,7 +146,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.7",
         title="Specimen",
-        description="Item #646",
+        description="NA | Item #00646",
     )
 
     om4_8: Optional[CE] = Field(
@@ -158,7 +158,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.8",
         title="Additive",
-        description="Item #647",
+        description="NA | Item #00647",
     )
 
     om4_9: Optional[str] = Field(
@@ -170,7 +170,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.9",
         title="Preparation",
-        description="Item #648",
+        description="NA | Item #00648",
     )
 
     om4_10: Optional[str] = Field(
@@ -182,7 +182,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.10",
         title="Special Handling Requirements",
-        description="Item #649",
+        description="NA | Item #00649",
     )
 
     om4_11: Optional[str] = Field(
@@ -194,7 +194,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.11",
         title="Normal Collection Volume",
-        description="Item #650",
+        description="NA | Item #00650",
     )
 
     om4_12: Optional[str] = Field(
@@ -206,7 +206,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.12",
         title="Minimum Collection Volume",
-        description="Item #651",
+        description="NA | Item #00651",
     )
 
     om4_13: Optional[str] = Field(
@@ -218,7 +218,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.13",
         title="Specimen Requirements",
-        description="Item #652",
+        description="NA | Item #00652",
     )
 
     om4_14: Optional[List[str]] = Field(
@@ -230,7 +230,10 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.14",
         title="Specimen Priorities",
-        description="Item #653 | Table HL70027",
+        description=(
+            "NA | Item #00653 | Table 0027 - PRIORITY (COMPONENT 6 "
+            "QTY/TIMING[735]) | LEN:60"
+        ),
     )
 
     om4_15: Optional[str] = Field(
@@ -242,7 +245,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.15",
         title="Specimen Retention Time",
-        description="Item #654",
+        description="NA | Item #00654",
     )
 
     @field_validator("om4_2", "om4_5", mode='before')

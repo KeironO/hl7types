@@ -20,10 +20,10 @@ class UAC(HL7Model):
     Attributes
     ----------
     uac_1 : CWE
-        UAC.1 (req) - User Authentication Credential Type Code (CWE) S2.14.15.1 | 0615 - User Authentication Credential Type Code
+        UAC.1 - User Authentication Credential Type Code (CWE) R S2.14.15.1 | 0615 - User Authentication Credential Type Code
 
     uac_2 : ED
-        UAC.2 (req) - User Authentication Credential (ED) S2.14.15.2
+        UAC.2 - User Authentication Credential (ED) R S2.14.15.2
     """
 
     uac_1: CWE = Field(
@@ -34,7 +34,10 @@ class UAC(HL7Model):
         ),
         serialization_alias="UAC.1",
         title="User Authentication Credential Type Code",
-        description="Item #2267 | Table HL70615",
+        description=(
+            "R | Item #02267 | Table 0615 - User Authentication Credential Type "
+            "Code"
+        ),
     )
 
     uac_2: ED = Field(
@@ -45,7 +48,7 @@ class UAC(HL7Model):
         ),
         serialization_alias="UAC.2",
         title="User Authentication Credential",
-        description="Item #2268",
+        description="R | Item #02268",
     )
 
     model_config = {"populate_by_name": True}

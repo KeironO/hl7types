@@ -18,16 +18,16 @@ class EVN(HL7Model):
     Attributes
     ----------
     evn_1 : str
-        EVN.1 (req) - EVENT TYPE CODE (ID) S3-11 | 0003 - EVENT TYPE CODE
+        EVN.1 - EVENT TYPE CODE (ID) R S3-11 | 0003 - EVENT TYPE CODE
 
     evn_2 : str
-        EVN.2 (req) - DATE/TIME OF EVENT (TS)
+        EVN.2 - DATE/TIME OF EVENT (TS) R
 
     evn_3 : str | None
-        EVN.3 (opt) - DATE/TIME PLANNED EVENT (TS)
+        EVN.3 - DATE/TIME PLANNED EVENT (TS) O
 
     evn_4 : str | None
-        EVN.4 (opt) - EVENT REASON CODE (ID) | 0062 - EVENT REASON
+        EVN.4 - EVENT REASON CODE (ID) O | 0062 - EVENT REASON
     """
 
     evn_1: str = Field(
@@ -38,7 +38,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.1",
         title="EVENT TYPE CODE",
-        description="Item #29 | Table HL70003",
+        description="R | Item #00029 | Table 0003 - EVENT TYPE CODE | LEN:3",
     )
 
     evn_2: str = Field(
@@ -49,7 +49,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.2",
         title="DATE/TIME OF EVENT",
-        description="Item #30",
+        description="R | Item #00030 | LEN:19",
     )
 
     evn_3: Optional[str] = Field(
@@ -61,7 +61,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.3",
         title="DATE/TIME PLANNED EVENT",
-        description="Item #32",
+        description="O | Item #00032 | LEN:19",
     )
 
     evn_4: Optional[str] = Field(
@@ -73,7 +73,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.4",
         title="EVENT REASON CODE",
-        description="Item #369 | Table HL70062",
+        description="O | Item #00369 | Table 0062 - EVENT REASON | LEN:3",
     )
 
     model_config = {"populate_by_name": True}

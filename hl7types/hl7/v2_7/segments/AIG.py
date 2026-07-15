@@ -21,46 +21,46 @@ class AIG(HL7Model):
     Attributes
     ----------
     aig_1 : str
-        AIG.1 (req) - Set ID - AIG (SI) S10.6.5.1
+        AIG.1 - Set ID - AIG (SI) R S10.6.5.1
 
     aig_2 : str | None
-        AIG.2 (opt) - Segment Action Code (ID) S10.6.3.2 | 0206 - Segment action code
+        AIG.2 - Segment Action Code (ID) C S10.6.3.2 | 0206 - Segment action code
 
     aig_3 : CWE | None
-        AIG.3 (opt) - Resource ID (CWE) S10.6.5.3
+        AIG.3 - Resource ID (CWE) C S10.6.5.3
 
     aig_4 : CWE
-        AIG.4 (req) - Resource Type (CWE) S10.6.5.4
+        AIG.4 - Resource Type (CWE) R S10.6.5.4
 
     aig_5 : list[CWE] | None
-        AIG.5 (opt, rep) - Resource Group (CWE) S10.6.5.5
+        AIG.5 - Resource Group (CWE) O rep S10.6.5.5
 
     aig_6 : str | None
-        AIG.6 (opt) - Resource Quantity (NM) S10.6.5.6
+        AIG.6 - Resource Quantity (NM) O S10.6.5.6
 
     aig_7 : CNE | None
-        AIG.7 (opt) - Resource Quantity Units (CNE) S10.6.5.7
+        AIG.7 - Resource Quantity Units (CNE) O S10.6.5.7
 
     aig_8 : str | None
-        AIG.8 (opt) - Start Date/Time (DTM) S10.6.4.4
+        AIG.8 - Start Date/Time (DTM) C S10.6.4.4
 
     aig_9 : str | None
-        AIG.9 (opt) - Start Date/Time Offset (NM) S10.6.4.5
+        AIG.9 - Start Date/Time Offset (NM) C S10.6.4.5
 
     aig_10 : CNE | None
-        AIG.10 (opt) - Start Date/Time Offset Units (CNE) S10.6.4.6
+        AIG.10 - Start Date/Time Offset Units (CNE) C S10.6.4.6
 
     aig_11 : str | None
-        AIG.11 (opt) - Duration (NM) S10.6.4.7
+        AIG.11 - Duration (NM) O S10.6.4.7
 
     aig_12 : CNE | None
-        AIG.12 (opt) - Duration Units (CNE) S10.6.4.8
+        AIG.12 - Duration Units (CNE) O S10.6.4.8
 
     aig_13 : CWE | None
-        AIG.13 (opt) - Allow Substitution Code (CWE) S10.6.4.9 | 0279 - Allow Substitution Codes
+        AIG.13 - Allow Substitution Code (CWE) C S10.6.4.9 | 0279 - Allow Substitution Codes
 
     aig_14 : CWE | None
-        AIG.14 (opt) - Filler Status Code (CWE) S10.6.2.25 | 0278 - Filler status codes
+        AIG.14 - Filler Status Code (CWE) C S10.6.2.25 | 0278 - Filler status codes
     """
 
     aig_1: str = Field(
@@ -71,7 +71,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.1",
         title="Set ID - AIG",
-        description="Item #896",
+        description="R | Item #00896 | LEN:4",
     )
 
     aig_2: Optional[str] = Field(
@@ -83,7 +83,9 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description=(
+            "C | Item #00763 | Table 0206 - Segment action code | LEN:1"
+        ),
     )
 
     aig_3: Optional[CWE] = Field(
@@ -95,7 +97,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.3",
         title="Resource ID",
-        description="Item #897",
+        description="C | Item #00897",
     )
 
     aig_4: CWE = Field(
@@ -106,7 +108,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.4",
         title="Resource Type",
-        description="Item #898",
+        description="R | Item #00898",
     )
 
     aig_5: Optional[List[CWE]] = Field(
@@ -118,7 +120,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.5",
         title="Resource Group",
-        description="Item #899",
+        description="O | Item #00899",
     )
 
     aig_6: Optional[str] = Field(
@@ -130,7 +132,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.6",
         title="Resource Quantity",
-        description="Item #900",
+        description="O | Item #00900",
     )
 
     aig_7: Optional[CNE] = Field(
@@ -142,7 +144,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.7",
         title="Resource Quantity Units",
-        description="Item #901",
+        description="O | Item #00901",
     )
 
     aig_8: Optional[str] = Field(
@@ -154,7 +156,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.8",
         title="Start Date/Time",
-        description="Item #1202",
+        description="C | Item #01202",
     )
 
     aig_9: Optional[str] = Field(
@@ -166,7 +168,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.9",
         title="Start Date/Time Offset",
-        description="Item #891",
+        description="C | Item #00891",
     )
 
     aig_10: Optional[CNE] = Field(
@@ -178,7 +180,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.10",
         title="Start Date/Time Offset Units",
-        description="Item #892",
+        description="C | Item #00892",
     )
 
     aig_11: Optional[str] = Field(
@@ -190,7 +192,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.11",
         title="Duration",
-        description="Item #893",
+        description="O | Item #00893",
     )
 
     aig_12: Optional[CNE] = Field(
@@ -202,7 +204,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.12",
         title="Duration Units",
-        description="Item #894",
+        description="O | Item #00894",
     )
 
     aig_13: Optional[CWE] = Field(
@@ -214,7 +216,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.13",
         title="Allow Substitution Code",
-        description="Item #895 | Table HL70279",
+        description="C | Item #00895 | Table 0279 - Allow Substitution Codes",
     )
 
     aig_14: Optional[CWE] = Field(
@@ -226,7 +228,7 @@ class AIG(HL7Model):
         ),
         serialization_alias="AIG.14",
         title="Filler Status Code",
-        description="Item #889 | Table HL70278",
+        description="C | Item #00889 | Table 0278 - Filler status codes",
     )
 
     @field_validator("aig_1", mode='before')

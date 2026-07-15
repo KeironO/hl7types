@@ -20,49 +20,49 @@ class NST(HL7Model):
     Attributes
     ----------
     nst_1 : str | None
-        NST.1 (opt) - Statistics Available (ID) SC.2.2.1 | 0125 - Value Type
+        NST.1 - Statistics Available (ID) O SC.2.2.1 | 0125 - Value Type
 
     nst_2 : str | None
-        NST.2 (opt) - Source Identifier (ST) SC.2.2.2
+        NST.2 - Source Identifier (ST) NA SC.2.2.2
 
     nst_3 : str | None
-        NST.3 (opt) - Source Type (ID) SC.2.2.3
+        NST.3 - Source Type (ID) NA SC.2.2.3
 
     nst_4 : TS | None
-        NST.4 (opt) - Statistics Start (TS) SC.2.2.4
+        NST.4 - Statistics Start (TS) NA SC.2.2.4
 
     nst_5 : TS | None
-        NST.5 (opt) - Statistics End (TS) SC.2.2.5
+        NST.5 - Statistics End (TS) NA SC.2.2.5
 
     nst_6 : str | None
-        NST.6 (opt) - Receive Character Count (NM) SC.2.2.6
+        NST.6 - Receive Character Count (NM) NA SC.2.2.6
 
     nst_7 : str | None
-        NST.7 (opt) - Send Character Count (NM) SC.2.2.7
+        NST.7 - Send Character Count (NM) NA SC.2.2.7
 
     nst_8 : str | None
-        NST.8 (opt) - Messages Received (NM) SC.2.2.8
+        NST.8 - Messages Received (NM) NA SC.2.2.8
 
     nst_9 : str | None
-        NST.9 (opt) - Messages Sent (NM) SC.2.2.9
+        NST.9 - Messages Sent (NM) NA SC.2.2.9
 
     nst_10 : str | None
-        NST.10 (opt) - Checksum Errors Received (NM) SC.2.2.10
+        NST.10 - Checksum Errors Received (NM) NA SC.2.2.10
 
     nst_11 : str | None
-        NST.11 (opt) - Length Errors Received (NM) SC.2.2.11
+        NST.11 - Length Errors Received (NM) NA SC.2.2.11
 
     nst_12 : str | None
-        NST.12 (opt) - Other Errors Received (NM) SC.2.2.12
+        NST.12 - Other Errors Received (NM) NA SC.2.2.12
 
     nst_13 : str | None
-        NST.13 (opt) - Connect Timeouts (NM) SC.2.2.13
+        NST.13 - Connect Timeouts (NM) NA SC.2.2.13
 
     nst_14 : str | None
-        NST.14 (opt) - Receive Timeouts (NM) SC.2.2.14
+        NST.14 - Receive Timeouts (NM) NA SC.2.2.14
 
     nst_15 : str | None
-        NST.15 (opt) - Network Errors (NM) SC.2.2.15
+        NST.15 - Network Errors (NM) NA SC.2.2.15
     """
 
     nst_1: Optional[str] = Field(
@@ -74,7 +74,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.1",
         title="Statistics Available",
-        description="Item #1173 | Table HL70125",
+        description="O | Item #01173 | Table 0125 - Value Type | LEN:1",
     )
 
     nst_2: Optional[str] = Field(
@@ -86,7 +86,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.2",
         title="Source Identifier",
-        description="Item #1174",
+        description="NA | Item #01174 | LEN:30",
     )
 
     nst_3: Optional[str] = Field(
@@ -98,7 +98,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.3",
         title="Source Type",
-        description="Item #1175",
+        description="NA | Item #01175 | LEN:3",
     )
 
     nst_4: Optional[TS] = Field(
@@ -110,7 +110,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.4",
         title="Statistics Start",
-        description="Item #1176",
+        description="NA | Item #01176",
     )
 
     nst_5: Optional[TS] = Field(
@@ -122,7 +122,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.5",
         title="Statistics End",
-        description="Item #1177",
+        description="NA | Item #01177",
     )
 
     nst_6: Optional[str] = Field(
@@ -134,7 +134,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.6",
         title="Receive Character Count",
-        description="Item #1178",
+        description="NA | Item #01178 | LEN:10",
     )
 
     nst_7: Optional[str] = Field(
@@ -146,7 +146,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.7",
         title="Send Character Count",
-        description="Item #1179",
+        description="NA | Item #01179 | LEN:10",
     )
 
     nst_8: Optional[str] = Field(
@@ -158,7 +158,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.8",
         title="Messages Received",
-        description="Item #1180",
+        description="NA | Item #01180 | LEN:10",
     )
 
     nst_9: Optional[str] = Field(
@@ -170,7 +170,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.9",
         title="Messages Sent",
-        description="Item #1181",
+        description="NA | Item #01181 | LEN:10",
     )
 
     nst_10: Optional[str] = Field(
@@ -182,7 +182,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.10",
         title="Checksum Errors Received",
-        description="Item #1182",
+        description="NA | Item #01182 | LEN:10",
     )
 
     nst_11: Optional[str] = Field(
@@ -194,7 +194,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.11",
         title="Length Errors Received",
-        description="Item #1183",
+        description="NA | Item #01183 | LEN:10",
     )
 
     nst_12: Optional[str] = Field(
@@ -206,7 +206,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.12",
         title="Other Errors Received",
-        description="Item #1184",
+        description="NA | Item #01184 | LEN:10",
     )
 
     nst_13: Optional[str] = Field(
@@ -218,7 +218,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.13",
         title="Connect Timeouts",
-        description="Item #1185",
+        description="NA | Item #01185 | LEN:10",
     )
 
     nst_14: Optional[str] = Field(
@@ -230,7 +230,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.14",
         title="Receive Timeouts",
-        description="Item #1186",
+        description="NA | Item #01186 | LEN:10",
     )
 
     nst_15: Optional[str] = Field(
@@ -242,7 +242,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.15",
         title="Network Errors",
-        description="Item #1187",
+        description="NA | Item #01187 | LEN:10",
     )
 
     @field_validator("nst_6", "nst_7", "nst_8", "nst_9", "nst_10", "nst_11", "nst_12", "nst_13", "nst_14", "nst_15", mode='before')

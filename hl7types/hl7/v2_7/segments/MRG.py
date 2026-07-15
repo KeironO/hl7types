@@ -21,19 +21,19 @@ class MRG(HL7Model):
     Attributes
     ----------
     mrg_1 : list[CX]
-        MRG.1 (req, rep) - Prior Patient Identifier List (CX) S3.4.10.1 | 0061 - Check Digit Scheme
+        MRG.1 - Prior Patient Identifier List (CX) R rep S3.4.10.1 | 0061 - Check Digit Scheme
 
     mrg_3 : CX | None
-        MRG.3 (opt) - Prior Patient Account Number (CX) S3.4.10.3 | 0061 - Check Digit Scheme
+        MRG.3 - Prior Patient Account Number (CX) O S3.4.10.3 | 0061 - Check Digit Scheme
 
     mrg_5 : CX | None
-        MRG.5 (opt) - Prior Visit Number (CX) S3.4.10.5 | 0061 - Check Digit Scheme
+        MRG.5 - Prior Visit Number (CX) O S3.4.10.5 | 0061 - Check Digit Scheme
 
     mrg_6 : CX | None
-        MRG.6 (opt) - Prior Alternate Visit ID (CX) S3.4.10.6 | 0061 - Check Digit Scheme
+        MRG.6 - Prior Alternate Visit ID (CX) O S3.4.10.6 | 0061 - Check Digit Scheme
 
     mrg_7 : list[XPN] | None
-        MRG.7 (opt, rep) - Prior Patient Name (XPN) S3.4.10.7 | 0200 - Name Type
+        MRG.7 - Prior Patient Name (XPN) O rep S3.4.10.7 | 0200 - Name Type
     """
 
     mrg_1: List[CX] = Field(
@@ -45,7 +45,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.1",
         title="Prior Patient Identifier List",
-        description="Item #211 | Table HL70061",
+        description="R | Item #00211 | Table 0061 - Check Digit Scheme",
     )
 
     mrg_3: Optional[CX] = Field(
@@ -57,7 +57,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.3",
         title="Prior Patient Account Number",
-        description="Item #213 | Table HL70061",
+        description="O | Item #00213 | Table 0061 - Check Digit Scheme",
     )
 
     mrg_5: Optional[CX] = Field(
@@ -69,7 +69,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.5",
         title="Prior Visit Number",
-        description="Item #1279 | Table HL70061",
+        description="O | Item #01279 | Table 0061 - Check Digit Scheme",
     )
 
     mrg_6: Optional[CX] = Field(
@@ -81,7 +81,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.6",
         title="Prior Alternate Visit ID",
-        description="Item #1280 | Table HL70061",
+        description="O | Item #01280 | Table 0061 - Check Digit Scheme",
     )
 
     mrg_7: Optional[List[XPN]] = Field(
@@ -93,7 +93,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.7",
         title="Prior Patient Name",
-        description="Item #1281 | Table HL70200",
+        description="O | Item #01281 | Table 0200 - Name Type",
     )
 
     model_config = {"populate_by_name": True}

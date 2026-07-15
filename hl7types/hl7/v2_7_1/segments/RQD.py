@@ -21,34 +21,34 @@ class RQD(HL7Model):
     Attributes
     ----------
     rqd_1 : str | None
-        RQD.1 (opt) - Requisition Line Number (SI) S4.10.1.1
+        RQD.1 - Requisition Line Number (SI) O S4.10.1.1
 
     rqd_2 : CWE | None
-        RQD.2 (opt) - Item Code - Internal (CWE) S4.10.1.2 | 9999 - no table for CE
+        RQD.2 - Item Code - Internal (CWE) C S4.10.1.2 | 9999 - no table for CE
 
     rqd_3 : CWE | None
-        RQD.3 (opt) - Item Code - External (CWE) S4.10.1.3 | 9999 - no table for CE
+        RQD.3 - Item Code - External (CWE) C S4.10.1.3 | 9999 - no table for CE
 
     rqd_4 : CWE | None
-        RQD.4 (opt) - Hospital Item Code (CWE) S4.10.1.4 | 9999 - no table for CE
+        RQD.4 - Hospital Item Code (CWE) C S4.10.1.4 | 9999 - no table for CE
 
     rqd_5 : str | None
-        RQD.5 (opt) - Requisition Quantity (NM) S4.10.1.5
+        RQD.5 - Requisition Quantity (NM) O S4.10.1.5
 
     rqd_6 : CWE | None
-        RQD.6 (opt) - Requisition Unit of Measure (CWE) S4.10.1.6 | 9999 - no table for CE
+        RQD.6 - Requisition Unit of Measure (CWE) O S4.10.1.6 | 9999 - no table for CE
 
     rqd_7 : CX | None
-        RQD.7 (opt) - Cost Center Account Number (CX) S17.4.6.2 | 0319 - Department Cost Center
+        RQD.7 - Cost Center Account Number (CX) O S17.4.6.2 | 0319 - Department Cost Center
 
     rqd_8 : CWE | None
-        RQD.8 (opt) - Item Natural Account Code (CWE) S17.4.2.19 | 0320 - Item Natural Account Code
+        RQD.8 - Item Natural Account Code (CWE) O S17.4.2.19 | 0320 - Item Natural Account Code
 
     rqd_9 : CWE | None
-        RQD.9 (opt) - Deliver To ID (CWE) S4.10.1.9 | 9999 - no table for CE
+        RQD.9 - Deliver To ID (CWE) O S4.10.1.9 | 9999 - no table for CE
 
     rqd_10 : str | None
-        RQD.10 (opt) - Date Needed (DT) S4.10.1.10
+        RQD.10 - Date Needed (DT) O S4.10.1.10
     """
 
     rqd_1: Optional[str] = Field(
@@ -60,7 +60,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.1",
         title="Requisition Line Number",
-        description="Item #275",
+        description="O | Item #00275 | LEN:4",
     )
 
     rqd_2: Optional[CWE] = Field(
@@ -72,7 +72,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.2",
         title="Item Code - Internal",
-        description="Item #276 | Table HL79999",
+        description="C | Item #00276 | Table 9999 - no table for CE",
     )
 
     rqd_3: Optional[CWE] = Field(
@@ -84,7 +84,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.3",
         title="Item Code - External",
-        description="Item #277 | Table HL79999",
+        description="C | Item #00277 | Table 9999 - no table for CE",
     )
 
     rqd_4: Optional[CWE] = Field(
@@ -96,7 +96,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.4",
         title="Hospital Item Code",
-        description="Item #278 | Table HL79999",
+        description="C | Item #00278 | Table 9999 - no table for CE",
     )
 
     rqd_5: Optional[str] = Field(
@@ -108,7 +108,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.5",
         title="Requisition Quantity",
-        description="Item #279",
+        description="O | Item #00279",
     )
 
     rqd_6: Optional[CWE] = Field(
@@ -120,7 +120,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.6",
         title="Requisition Unit of Measure",
-        description="Item #280 | Table HL79999",
+        description="O | Item #00280 | Table 9999 - no table for CE",
     )
 
     rqd_7: Optional[CX] = Field(
@@ -132,7 +132,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.7",
         title="Cost Center Account Number",
-        description="Item #281 | Table HL70319",
+        description="O | Item #00281 | Table 0319 - Department Cost Center",
     )
 
     rqd_8: Optional[CWE] = Field(
@@ -144,7 +144,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.8",
         title="Item Natural Account Code",
-        description="Item #282 | Table HL70320",
+        description="O | Item #00282 | Table 0320 - Item Natural Account Code",
     )
 
     rqd_9: Optional[CWE] = Field(
@@ -156,7 +156,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.9",
         title="Deliver To ID",
-        description="Item #283 | Table HL79999",
+        description="O | Item #00283 | Table 9999 - no table for CE",
     )
 
     rqd_10: Optional[str] = Field(
@@ -168,7 +168,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.10",
         title="Date Needed",
-        description="Item #284",
+        description="O | Item #00284",
     )
 
     @field_validator("rqd_1", mode='before')

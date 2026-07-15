@@ -21,70 +21,70 @@ class RXV(HL7Model):
     Attributes
     ----------
     rxv_1 : str | None
-        RXV.1 (opt) - Set ID - RXV (SI) S4.A.8.1
+        RXV.1 - Set ID - RXV (SI) O S4.A.8.1
 
     rxv_2 : str
-        RXV.2 (req) - Bolus Type (ID) S4.A.8.2 | 0917 - Bolus Type
+        RXV.2 - Bolus Type (ID) R S4.A.8.2 | 0917 - Bolus Type
 
     rxv_3 : str | None
-        RXV.3 (opt) - Bolus Dose Amount (NM) S4.A.8.3
+        RXV.3 - Bolus Dose Amount (NM) O S4.A.8.3
 
     rxv_4 : CWE | None
-        RXV.4 (opt) - Bolus Dose Amount Units (CWE) S4.A.8.4 | 9999 - no table for CE
+        RXV.4 - Bolus Dose Amount Units (CWE) O S4.A.8.4 | 9999 - no table for CE
 
     rxv_5 : str | None
-        RXV.5 (opt) - Bolus Dose Volume (NM) S4.A.8.5
+        RXV.5 - Bolus Dose Volume (NM) O S4.A.8.5
 
     rxv_6 : CWE | None
-        RXV.6 (opt) - Bolus Dose Volume Units (CWE) S4.A.8.6 | 9999 - no table for CE
+        RXV.6 - Bolus Dose Volume Units (CWE) O S4.A.8.6 | 9999 - no table for CE
 
     rxv_7 : str
-        RXV.7 (req) - PCA Type (ID) S4.A.8.7 | 0918 - PCA Type
+        RXV.7 - PCA Type (ID) R S4.A.8.7 | 0918 - PCA Type
 
     rxv_8 : str | None
-        RXV.8 (opt) - PCA Dose Amount (NM) S4.A.8.8
+        RXV.8 - PCA Dose Amount (NM) O S4.A.8.8
 
     rxv_9 : CWE | None
-        RXV.9 (opt) - PCA Dose Amount Units (CWE) S4.A.8.9 | 9999 - no table for CE
+        RXV.9 - PCA Dose Amount Units (CWE) O S4.A.8.9 | 9999 - no table for CE
 
     rxv_10 : str | None
-        RXV.10 (opt) - PCA Dose Amount Volume (NM) S4.A.8.10
+        RXV.10 - PCA Dose Amount Volume (NM) O S4.A.8.10
 
     rxv_11 : CWE | None
-        RXV.11 (opt) - PCA Dose Amount Volume Units (CWE) S4.A.8.11 | 9999 - no table for CE
+        RXV.11 - PCA Dose Amount Volume Units (CWE) O S4.A.8.11 | 9999 - no table for CE
 
     rxv_12 : str | None
-        RXV.12 (opt) - Max Dose Amount (NM) S4.A.8.12
+        RXV.12 - Max Dose Amount (NM) O S4.A.8.12
 
     rxv_13 : CWE | None
-        RXV.13 (opt) - Max Dose Amount Units (CWE) S4.A.8.13 | 9999 - no table for CE
+        RXV.13 - Max Dose Amount Units (CWE) O S4.A.8.13 | 9999 - no table for CE
 
     rxv_14 : str | None
-        RXV.14 (opt) - Max Dose Amount Volume (NM) S4.A.8.14
+        RXV.14 - Max Dose Amount Volume (NM) O S4.A.8.14
 
     rxv_15 : CWE | None
-        RXV.15 (opt) - Max Dose Amount Volume Units (CWE) S4.A.8.15 | 9999 - no table for CE
+        RXV.15 - Max Dose Amount Volume Units (CWE) O S4.A.8.15 | 9999 - no table for CE
 
     rxv_16 : CQ
-        RXV.16 (req) - Max Dose per Time (CQ) S4.A.8.16
+        RXV.16 - Max Dose per Time (CQ) R S4.A.8.16
 
     rxv_17 : CQ | None
-        RXV.17 (opt) - Lockout Interval (CQ) S4.A.8.17
+        RXV.17 - Lockout Interval (CQ) O S4.A.8.17
 
     rxv_18 : CWE | None
-        RXV.18 (opt) - Syringe Manufacturer (CWE) S4.A.8.18
+        RXV.18 - Syringe Manufacturer (CWE) O S4.A.8.18
 
     rxv_19 : CWE | None
-        RXV.19 (opt) - Syringe Model Number (CWE) S4.A.8.19
+        RXV.19 - Syringe Model Number (CWE) O S4.A.8.19
 
     rxv_20 : str | None
-        RXV.20 (opt) - Syringe Size (NM) S4.A.8.20
+        RXV.20 - Syringe Size (NM) C S4.A.8.20
 
     rxv_21 : CWE | None
-        RXV.21 (opt) - Syringe Size Units (CWE) S4.A.8.21
+        RXV.21 - Syringe Size Units (CWE) C S4.A.8.21
 
     rxv_22 : str | None
-        RXV.22 (opt) - Action Code (ID) S4.A.9.2 | 0206 - Segment Action Code
+        RXV.22 - Action Code (ID) O S4.A.9.2 | 0206 - Segment Action Code
     """
 
     rxv_1: Optional[str] = Field(
@@ -96,7 +96,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.1",
         title="Set ID - RXV",
-        description="Item #3318",
+        description="O | Item #03318",
     )
 
     rxv_2: str = Field(
@@ -107,7 +107,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.2",
         title="Bolus Type",
-        description="Item #3319 | Table HL70917",
+        description="R | Item #03319 | Table 0917 - Bolus Type | LEN:1",
     )
 
     rxv_3: Optional[str] = Field(
@@ -119,7 +119,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.3",
         title="Bolus Dose Amount",
-        description="Item #3320",
+        description="O | Item #03320",
     )
 
     rxv_4: Optional[CWE] = Field(
@@ -131,7 +131,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.4",
         title="Bolus Dose Amount Units",
-        description="Item #3321 | Table HL79999",
+        description="O | Item #03321 | Table 9999 - no table for CE",
     )
 
     rxv_5: Optional[str] = Field(
@@ -143,7 +143,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.5",
         title="Bolus Dose Volume",
-        description="Item #3322",
+        description="O | Item #03322",
     )
 
     rxv_6: Optional[CWE] = Field(
@@ -155,7 +155,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.6",
         title="Bolus Dose Volume Units",
-        description="Item #3323 | Table HL79999",
+        description="O | Item #03323 | Table 9999 - no table for CE",
     )
 
     rxv_7: str = Field(
@@ -166,7 +166,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.7",
         title="PCA Type",
-        description="Item #3324 | Table HL70918",
+        description="R | Item #03324 | Table 0918 - PCA Type | LEN:2",
     )
 
     rxv_8: Optional[str] = Field(
@@ -178,7 +178,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.8",
         title="PCA Dose Amount",
-        description="Item #3325",
+        description="O | Item #03325",
     )
 
     rxv_9: Optional[CWE] = Field(
@@ -190,7 +190,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.9",
         title="PCA Dose Amount Units",
-        description="Item #3326 | Table HL79999",
+        description="O | Item #03326 | Table 9999 - no table for CE",
     )
 
     rxv_10: Optional[str] = Field(
@@ -202,7 +202,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.10",
         title="PCA Dose Amount Volume",
-        description="Item #3327",
+        description="O | Item #03327",
     )
 
     rxv_11: Optional[CWE] = Field(
@@ -214,7 +214,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.11",
         title="PCA Dose Amount Volume Units",
-        description="Item #3328 | Table HL79999",
+        description="O | Item #03328 | Table 9999 - no table for CE",
     )
 
     rxv_12: Optional[str] = Field(
@@ -226,7 +226,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.12",
         title="Max Dose Amount",
-        description="Item #3329",
+        description="O | Item #03329",
     )
 
     rxv_13: Optional[CWE] = Field(
@@ -238,7 +238,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.13",
         title="Max Dose Amount Units",
-        description="Item #3330 | Table HL79999",
+        description="O | Item #03330 | Table 9999 - no table for CE",
     )
 
     rxv_14: Optional[str] = Field(
@@ -250,7 +250,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.14",
         title="Max Dose Amount Volume",
-        description="Item #3331",
+        description="O | Item #03331",
     )
 
     rxv_15: Optional[CWE] = Field(
@@ -262,7 +262,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.15",
         title="Max Dose Amount Volume Units",
-        description="Item #3332 | Table HL79999",
+        description="O | Item #03332 | Table 9999 - no table for CE",
     )
 
     rxv_16: CQ = Field(
@@ -273,7 +273,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.16",
         title="Max Dose per Time",
-        description="Item #3333",
+        description="R | Item #03333",
     )
 
     rxv_17: Optional[CQ] = Field(
@@ -285,7 +285,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.17",
         title="Lockout Interval",
-        description="Item #3334",
+        description="O | Item #03334",
     )
 
     rxv_18: Optional[CWE] = Field(
@@ -297,7 +297,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.18",
         title="Syringe Manufacturer",
-        description="Item #3339",
+        description="O | Item #03339",
     )
 
     rxv_19: Optional[CWE] = Field(
@@ -309,7 +309,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.19",
         title="Syringe Model Number",
-        description="Item #3385",
+        description="O | Item #03385",
     )
 
     rxv_20: Optional[str] = Field(
@@ -321,7 +321,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.20",
         title="Syringe Size",
-        description="Item #3386",
+        description="C | Item #03386",
     )
 
     rxv_21: Optional[CWE] = Field(
@@ -333,7 +333,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.21",
         title="Syringe Size Units",
-        description="Item #3431",
+        description="C | Item #03431",
     )
 
     rxv_22: Optional[str] = Field(
@@ -345,7 +345,7 @@ class RXV(HL7Model):
         ),
         serialization_alias="RXV.22",
         title="Action Code",
-        description="Item #816 | Table HL70206",
+        description="O | Item #00816 | Table 0206 - Segment Action Code",
     )
 
     @field_validator("rxv_1", mode='before')

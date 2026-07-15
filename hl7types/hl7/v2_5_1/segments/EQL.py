@@ -20,16 +20,16 @@ class EQL(HL7Model):
     Attributes
     ----------
     eql_1 : str | None
-        EQL.1 (opt) - Query Tag (ST) S5.10.5.1.1
+        EQL.1 - Query Tag (ST) O S5.10.5.1.1
 
     eql_2 : str
-        EQL.2 (req) - Query/Response Format Code (ID) S5.10.5.1.2 | 0106 - Query/response format code
+        EQL.2 - Query/Response Format Code (ID) R S5.10.5.1.2 | 0106 - Query/response format code
 
     eql_3 : CE
-        EQL.3 (req) - EQL Query Name (CE) S5.10.5.1.3
+        EQL.3 - EQL Query Name (CE) R S5.10.5.1.3
 
     eql_4 : str
-        EQL.4 (req) - EQL Query Statement (ST) S5.10.5.1.4
+        EQL.4 - EQL Query Statement (ST) R S5.10.5.1.4
     """
 
     eql_1: Optional[str] = Field(
@@ -41,7 +41,7 @@ class EQL(HL7Model):
         ),
         serialization_alias="EQL.1",
         title="Query Tag",
-        description="Item #696",
+        description="O | Item #00696 | LEN:32",
     )
 
     eql_2: str = Field(
@@ -52,7 +52,9 @@ class EQL(HL7Model):
         ),
         serialization_alias="EQL.2",
         title="Query/Response Format Code",
-        description="Item #697 | Table HL70106",
+        description=(
+            "R | Item #00697 | Table 0106 - Query/response format code | LEN:1"
+        ),
     )
 
     eql_3: CE = Field(
@@ -63,7 +65,7 @@ class EQL(HL7Model):
         ),
         serialization_alias="EQL.3",
         title="EQL Query Name",
-        description="Item #709",
+        description="R | Item #00709",
     )
 
     eql_4: str = Field(
@@ -74,7 +76,7 @@ class EQL(HL7Model):
         ),
         serialization_alias="EQL.4",
         title="EQL Query Statement",
-        description="Item #710",
+        description="R | Item #00710 | LEN:4096",
     )
 
     model_config = {"populate_by_name": True}

@@ -21,19 +21,19 @@ class DMI(HL7Model):
     Attributes
     ----------
     dmi_1 : CNE | None
-        DMI.1 (opt) - Diagnostic Related Group (CNE) S6.5.3.1 | 0055 - Diagnosis related group
+        DMI.1 - Diagnostic Related Group (CNE) O S6.5.3.1 | 0055 - Diagnosis related group
 
     dmi_2 : CNE | None
-        DMI.2 (opt) - Major Diagnostic Category (CNE) S8.13.2.2 | 0118 - Major Diagnostic Category
+        DMI.2 - Major Diagnostic Category (CNE) C S8.13.2.2 | 0118 - Major Diagnostic Category
 
     dmi_3 : NR | None
-        DMI.3 (opt) - Lower and Upper Trim Points (NR) S8.13.2.3
+        DMI.3 - Lower and Upper Trim Points (NR) C S8.13.2.3
 
     dmi_4 : str | None
-        DMI.4 (opt) - Average Length of Stay (NM) S8.13.2.4
+        DMI.4 - Average Length of Stay (NM) C S8.13.2.4
 
     dmi_5 : str | None
-        DMI.5 (opt) - Relative Weight (NM) S8.13.2.5
+        DMI.5 - Relative Weight (NM) C S8.13.2.5
     """
 
     dmi_1: Optional[CNE] = Field(
@@ -45,7 +45,7 @@ class DMI(HL7Model):
         ),
         serialization_alias="DMI.1",
         title="Diagnostic Related Group",
-        description="Item #382 | Table HL70055",
+        description="O | Item #00382 | Table 0055 - Diagnosis related group",
     )
 
     dmi_2: Optional[CNE] = Field(
@@ -57,7 +57,7 @@ class DMI(HL7Model):
         ),
         serialization_alias="DMI.2",
         title="Major Diagnostic Category",
-        description="Item #381 | Table HL70118",
+        description="C | Item #00381 | Table 0118 - Major Diagnostic Category",
     )
 
     dmi_3: Optional[NR] = Field(
@@ -69,7 +69,7 @@ class DMI(HL7Model):
         ),
         serialization_alias="DMI.3",
         title="Lower and Upper Trim Points",
-        description="Item #2231",
+        description="C | Item #02231",
     )
 
     dmi_4: Optional[str] = Field(
@@ -81,7 +81,7 @@ class DMI(HL7Model):
         ),
         serialization_alias="DMI.4",
         title="Average Length of Stay",
-        description="Item #2232",
+        description="C | Item #02232 | LEN:5",
     )
 
     dmi_5: Optional[str] = Field(
@@ -93,7 +93,7 @@ class DMI(HL7Model):
         ),
         serialization_alias="DMI.5",
         title="Relative Weight",
-        description="Item #2233",
+        description="C | Item #02233 | LEN:7",
     )
 
     @field_validator("dmi_4", "dmi_5", mode='before')

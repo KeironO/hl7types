@@ -20,13 +20,13 @@ class CSS(HL7Model):
     Attributes
     ----------
     css_1 : CWE
-        CSS.1 (req) - Study Scheduled Time Point (CWE) S7.8.3.1 | 9999 - no table for CE
+        CSS.1 - Study Scheduled Time Point (CWE) R S7.8.3.1 | 9999 - no table for CE
 
     css_2 : str | None
-        CSS.2 (opt) - Study Scheduled Patient Time Point (DTM) S7.8.3.2
+        CSS.2 - Study Scheduled Patient Time Point (DTM) O S7.8.3.2
 
     css_3 : list[CWE] | None
-        CSS.3 (opt, rep) - Study Quality Control Codes (CWE) S7.8.3.3 | 9999 - no table for CE
+        CSS.3 - Study Quality Control Codes (CWE) O rep S7.8.3.3 | 9999 - no table for CE
     """
 
     css_1: CWE = Field(
@@ -37,7 +37,7 @@ class CSS(HL7Model):
         ),
         serialization_alias="CSS.1",
         title="Study Scheduled Time Point",
-        description="Item #1055 | Table HL79999",
+        description="R | Item #01055 | Table 9999 - no table for CE",
     )
 
     css_2: Optional[str] = Field(
@@ -49,7 +49,7 @@ class CSS(HL7Model):
         ),
         serialization_alias="CSS.2",
         title="Study Scheduled Patient Time Point",
-        description="Item #1056",
+        description="O | Item #01056 | LEN:24",
     )
 
     css_3: Optional[List[CWE]] = Field(
@@ -61,7 +61,7 @@ class CSS(HL7Model):
         ),
         serialization_alias="CSS.3",
         title="Study Quality Control Codes",
-        description="Item #1057 | Table HL79999",
+        description="O | Item #01057 | Table 9999 - no table for CE",
     )
 
     @field_validator("css_2", mode='before')

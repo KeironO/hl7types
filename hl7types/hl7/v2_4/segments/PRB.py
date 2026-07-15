@@ -22,79 +22,79 @@ class PRB(HL7Model):
     Attributes
     ----------
     prb_1 : str
-        PRB.1 (req) - Action Code (ID) S12.4.4.1 | 0287 - Problem/goal action code
+        PRB.1 - Action Code (ID) R S12.4.4.1 | 0287 - Problem/goal action code
 
     prb_2 : TS
-        PRB.2 (req) - Action Date/Time (TS) S12.4.2.2
+        PRB.2 - Action Date/Time (TS) R S12.4.2.2
 
     prb_3 : CE
-        PRB.3 (req) - Problem ID (CE) S12.4.2.3
+        PRB.3 - Problem ID (CE) R S12.4.2.3
 
     prb_4 : EI
-        PRB.4 (req) - Problem Instance ID (EI) S12.4.2.4
+        PRB.4 - Problem Instance ID (EI) R S12.4.2.4
 
     prb_5 : EI | None
-        PRB.5 (opt) - Episode of Care ID (EI) S12.4.2.5
+        PRB.5 - Episode of Care ID (EI) O S12.4.2.5
 
     prb_6 : str | None
-        PRB.6 (opt) - Problem List Priority (NM) S12.4.2.6
+        PRB.6 - Problem List Priority (NM) O S12.4.2.6
 
     prb_7 : TS | None
-        PRB.7 (opt) - Problem Established Date/Time (TS) S12.4.2.7
+        PRB.7 - Problem Established Date/Time (TS) O S12.4.2.7
 
     prb_8 : TS | None
-        PRB.8 (opt) - Anticipated Problem Resolution Date/Time (TS) S12.4.2.8
+        PRB.8 - Anticipated Problem Resolution Date/Time (TS) O S12.4.2.8
 
     prb_9 : TS | None
-        PRB.9 (opt) - Actual Problem Resolution Date/Time (TS) S12.4.2.9
+        PRB.9 - Actual Problem Resolution Date/Time (TS) O S12.4.2.9
 
     prb_10 : CE | None
-        PRB.10 (opt) - Problem Classification (CE) S12.4.2.10
+        PRB.10 - Problem Classification (CE) O S12.4.2.10
 
     prb_11 : list[CE] | None
-        PRB.11 (opt, rep) - Problem Management Discipline (CE) S12.4.2.11
+        PRB.11 - Problem Management Discipline (CE) O rep S12.4.2.11
 
     prb_12 : CE | None
-        PRB.12 (opt) - Problem Persistence (CE) S12.4.2.12
+        PRB.12 - Problem Persistence (CE) O S12.4.2.12
 
     prb_13 : CE | None
-        PRB.13 (opt) - Problem Confirmation Status (CE) S12.4.2.13
+        PRB.13 - Problem Confirmation Status (CE) O S12.4.2.13
 
     prb_14 : CE | None
-        PRB.14 (opt) - Problem Life Cycle Status (CE) S12.4.2.14
+        PRB.14 - Problem Life Cycle Status (CE) O S12.4.2.14
 
     prb_15 : TS | None
-        PRB.15 (opt) - Problem Life Cycle Status Date/Time (TS) S12.4.2.15
+        PRB.15 - Problem Life Cycle Status Date/Time (TS) O S12.4.2.15
 
     prb_16 : TS | None
-        PRB.16 (opt) - Problem Date of Onset (TS) S12.4.2.16
+        PRB.16 - Problem Date of Onset (TS) O S12.4.2.16
 
     prb_17 : str | None
-        PRB.17 (opt) - Problem Onset Text (ST) S12.4.2.17
+        PRB.17 - Problem Onset Text (ST) O S12.4.2.17
 
     prb_18 : CE | None
-        PRB.18 (opt) - Problem Ranking (CE) S12.4.2.18
+        PRB.18 - Problem Ranking (CE) O S12.4.2.18
 
     prb_19 : CE | None
-        PRB.19 (opt) - Certainty of Problem (CE) S12.4.2.19
+        PRB.19 - Certainty of Problem (CE) O S12.4.2.19
 
     prb_20 : str | None
-        PRB.20 (opt) - Probability of Problem (0-1) (NM) S12.4.2.20
+        PRB.20 - Probability of Problem (0-1) (NM) O S12.4.2.20
 
     prb_21 : CE | None
-        PRB.21 (opt) - Individual Awareness of Problem (CE) S12.4.2.21
+        PRB.21 - Individual Awareness of Problem (CE) O S12.4.2.21
 
     prb_22 : CE | None
-        PRB.22 (opt) - Problem Prognosis (CE) S12.4.2.22
+        PRB.22 - Problem Prognosis (CE) O S12.4.2.22
 
     prb_23 : CE | None
-        PRB.23 (opt) - Individual Awareness of Prognosis (CE) S12.4.2.23
+        PRB.23 - Individual Awareness of Prognosis (CE) O S12.4.2.23
 
     prb_24 : str | None
-        PRB.24 (opt) - Family/Significant Other Awareness of Problem/Prognosis (ST) S12.4.2.24
+        PRB.24 - Family/Significant Other Awareness of Problem/Prognosis (ST) O S12.4.2.24
 
     prb_25 : CE | None
-        PRB.25 (opt) - Security/Sensitivity (CE) S12.4.2.25
+        PRB.25 - Security/Sensitivity (CE) O S12.4.2.25
     """
 
     prb_1: str = Field(
@@ -105,7 +105,9 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.1",
         title="Action Code",
-        description="Item #816 | Table HL70287",
+        description=(
+            "R | Item #00816 | Table 0287 - Problem/goal action code | LEN:2"
+        ),
     )
 
     prb_2: TS = Field(
@@ -116,7 +118,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.2",
         title="Action Date/Time",
-        description="Item #817",
+        description="R | Item #00817",
     )
 
     prb_3: CE = Field(
@@ -127,7 +129,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.3",
         title="Problem ID",
-        description="Item #838",
+        description="R | Item #00838",
     )
 
     prb_4: EI = Field(
@@ -138,7 +140,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.4",
         title="Problem Instance ID",
-        description="Item #839",
+        description="R | Item #00839",
     )
 
     prb_5: Optional[EI] = Field(
@@ -150,7 +152,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.5",
         title="Episode of Care ID",
-        description="Item #820",
+        description="O | Item #00820",
     )
 
     prb_6: Optional[str] = Field(
@@ -162,7 +164,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.6",
         title="Problem List Priority",
-        description="Item #841",
+        description="O | Item #00841 | LEN:60",
     )
 
     prb_7: Optional[TS] = Field(
@@ -174,7 +176,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.7",
         title="Problem Established Date/Time",
-        description="Item #842",
+        description="O | Item #00842",
     )
 
     prb_8: Optional[TS] = Field(
@@ -186,7 +188,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.8",
         title="Anticipated Problem Resolution Date/Time",
-        description="Item #843",
+        description="O | Item #00843",
     )
 
     prb_9: Optional[TS] = Field(
@@ -198,7 +200,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.9",
         title="Actual Problem Resolution Date/Time",
-        description="Item #844",
+        description="O | Item #00844",
     )
 
     prb_10: Optional[CE] = Field(
@@ -210,7 +212,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.10",
         title="Problem Classification",
-        description="Item #845",
+        description="O | Item #00845",
     )
 
     prb_11: Optional[List[CE]] = Field(
@@ -222,7 +224,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.11",
         title="Problem Management Discipline",
-        description="Item #846",
+        description="O | Item #00846",
     )
 
     prb_12: Optional[CE] = Field(
@@ -234,7 +236,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.12",
         title="Problem Persistence",
-        description="Item #847",
+        description="O | Item #00847",
     )
 
     prb_13: Optional[CE] = Field(
@@ -246,7 +248,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.13",
         title="Problem Confirmation Status",
-        description="Item #848",
+        description="O | Item #00848",
     )
 
     prb_14: Optional[CE] = Field(
@@ -258,7 +260,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.14",
         title="Problem Life Cycle Status",
-        description="Item #849",
+        description="O | Item #00849",
     )
 
     prb_15: Optional[TS] = Field(
@@ -270,7 +272,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.15",
         title="Problem Life Cycle Status Date/Time",
-        description="Item #850",
+        description="O | Item #00850",
     )
 
     prb_16: Optional[TS] = Field(
@@ -282,7 +284,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.16",
         title="Problem Date of Onset",
-        description="Item #851",
+        description="O | Item #00851",
     )
 
     prb_17: Optional[str] = Field(
@@ -294,7 +296,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.17",
         title="Problem Onset Text",
-        description="Item #852",
+        description="O | Item #00852 | LEN:80",
     )
 
     prb_18: Optional[CE] = Field(
@@ -306,7 +308,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.18",
         title="Problem Ranking",
-        description="Item #853",
+        description="O | Item #00853",
     )
 
     prb_19: Optional[CE] = Field(
@@ -318,7 +320,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.19",
         title="Certainty of Problem",
-        description="Item #854",
+        description="O | Item #00854",
     )
 
     prb_20: Optional[str] = Field(
@@ -330,7 +332,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.20",
         title="Probability of Problem (0-1)",
-        description="Item #855",
+        description="O | Item #00855 | LEN:5",
     )
 
     prb_21: Optional[CE] = Field(
@@ -342,7 +344,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.21",
         title="Individual Awareness of Problem",
-        description="Item #856",
+        description="O | Item #00856",
     )
 
     prb_22: Optional[CE] = Field(
@@ -354,7 +356,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.22",
         title="Problem Prognosis",
-        description="Item #857",
+        description="O | Item #00857",
     )
 
     prb_23: Optional[CE] = Field(
@@ -366,7 +368,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.23",
         title="Individual Awareness of Prognosis",
-        description="Item #858",
+        description="O | Item #00858",
     )
 
     prb_24: Optional[str] = Field(
@@ -378,7 +380,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.24",
         title="Family/Significant Other Awareness of Problem/Prognosis",
-        description="Item #859",
+        description="O | Item #00859 | LEN:200",
     )
 
     prb_25: Optional[CE] = Field(
@@ -390,7 +392,7 @@ class PRB(HL7Model):
         ),
         serialization_alias="PRB.25",
         title="Security/Sensitivity",
-        description="Item #823",
+        description="O | Item #00823",
     )
 
     @field_validator("prb_6", "prb_20", mode='before')

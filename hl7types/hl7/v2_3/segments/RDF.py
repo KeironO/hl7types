@@ -20,10 +20,10 @@ class RDF(HL7Model):
     Attributes
     ----------
     rdf_1 : str
-        RDF.1 (req) - Number of Columns per Row (NM) S2.24.18.1
+        RDF.1 - Number of Columns per Row (NM) R S2.24.18.1
 
     rdf_2 : list[RCD]
-        RDF.2 (req, rep) - Column Description (RCD) S2.24.18.2
+        RDF.2 - Column Description (RCD) R rep S2.24.18.2
     """
 
     rdf_1: str = Field(
@@ -34,7 +34,7 @@ class RDF(HL7Model):
         ),
         serialization_alias="RDF.1",
         title="Number of Columns per Row",
-        description="Item #701",
+        description="R | Item #00701 | LEN:3",
     )
 
     rdf_2: List[RCD] = Field(
@@ -46,7 +46,7 @@ class RDF(HL7Model):
         ),
         serialization_alias="RDF.2",
         title="Column Description",
-        description="Item #702",
+        description="R | Item #00702",
     )
 
     @field_validator("rdf_1", mode='before')

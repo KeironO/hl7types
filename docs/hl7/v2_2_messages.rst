@@ -3,7 +3,7 @@ v2.2 Messages
 
 .. _hl7-v2_2-ACK:
 
-ACK General acknowledgment message.
+ACK: General acknowledgment message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ACK.ACK
@@ -15,24 +15,24 @@ ACK General acknowledgment message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
 
 .. _hl7-v2_2-ADR_A19:
 
-ADR_A19 HL7 v2 ADR_A19 message.
+ADR_A19: HL7 v2 ADR_A19 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADR_A19.ADR_A19
@@ -44,36 +44,36 @@ ADR_A19 HL7 v2 ADR_A19 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QUERY_RESPONSE``
-     - List[:ref:`ADR_A19_QUERY_RESPONSE <hl7-v2_2-ADR_A19_QUERY_RESPONSE>`]
-     - required
+     - list[:ref:`ADR_A19_QUERY_RESPONSE <hl7-v2_2-ADR_A19_QUERY_RESPONSE>`]
+     - R
      - QUERY_RESPONSE
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-ADT_A01:
 
-ADT_A01 HL7 v2 ADT_A01 message.
+ADT_A01: HL7 v2 ADT_A01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A01.ADT_A01
@@ -85,72 +85,72 @@ ADT_A01 HL7 v2 ADT_A01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A01_INSURANCE <hl7-v2_2-ADT_A01_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A01_INSURANCE <hl7-v2_2-ADT_A01_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A02:
 
-ADT_A02 HL7 v2 ADT_A02 message.
+ADT_A02: HL7 v2 ADT_A02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A02.ADT_A02
@@ -162,36 +162,36 @@ ADT_A02 HL7 v2 ADT_A02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A03:
 
-ADT_A03 HL7 v2 ADT_A03 message.
+ADT_A03: HL7 v2 ADT_A03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A03.ADT_A03
@@ -203,36 +203,36 @@ ADT_A03 HL7 v2 ADT_A03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A04:
 
-ADT_A04 HL7 v2 ADT_A04 message.
+ADT_A04: HL7 v2 ADT_A04 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A04.ADT_A04
@@ -244,72 +244,72 @@ ADT_A04 HL7 v2 ADT_A04 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A04_INSURANCE <hl7-v2_2-ADT_A04_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A04_INSURANCE <hl7-v2_2-ADT_A04_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A05:
 
-ADT_A05 HL7 v2 ADT_A05 message.
+ADT_A05: HL7 v2 ADT_A05 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A05.ADT_A05
@@ -321,72 +321,72 @@ ADT_A05 HL7 v2 ADT_A05 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A05_INSURANCE <hl7-v2_2-ADT_A05_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A05_INSURANCE <hl7-v2_2-ADT_A05_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A06:
 
-ADT_A06 HL7 v2 ADT_A06 message.
+ADT_A06: HL7 v2 ADT_A06 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A06.ADT_A06
@@ -398,76 +398,76 @@ ADT_A06 HL7 v2 ADT_A06 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``MRG``
-     - Optional[:ref:`MRG <hl7-v2_2-MRG>`]
-     - optional
-     - MERGE PATIENT INFORMATION
+     - :ref:`MRG <hl7-v2_2-MRG>`
+     - O
+     - MRG
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A06_INSURANCE <hl7-v2_2-ADT_A06_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A06_INSURANCE <hl7-v2_2-ADT_A06_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A07:
 
-ADT_A07 HL7 v2 ADT_A07 message.
+ADT_A07: HL7 v2 ADT_A07 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A07.ADT_A07
@@ -479,76 +479,76 @@ ADT_A07 HL7 v2 ADT_A07 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``MRG``
-     - Optional[:ref:`MRG <hl7-v2_2-MRG>`]
-     - optional
-     - MERGE PATIENT INFORMATION
+     - :ref:`MRG <hl7-v2_2-MRG>`
+     - O
+     - MRG
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A07_INSURANCE <hl7-v2_2-ADT_A07_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A07_INSURANCE <hl7-v2_2-ADT_A07_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A08:
 
-ADT_A08 HL7 v2 ADT_A08 message.
+ADT_A08: HL7 v2 ADT_A08 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A08.ADT_A08
@@ -560,72 +560,72 @@ ADT_A08 HL7 v2 ADT_A08 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A08_INSURANCE <hl7-v2_2-ADT_A08_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A08_INSURANCE <hl7-v2_2-ADT_A08_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A09:
 
-ADT_A09 HL7 v2 ADT_A09 message.
+ADT_A09: HL7 v2 ADT_A09 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A09.ADT_A09
@@ -637,40 +637,40 @@ ADT_A09 HL7 v2 ADT_A09 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
 
 .. _hl7-v2_2-ADT_A10:
 
-ADT_A10 HL7 v2 ADT_A10 message.
+ADT_A10: HL7 v2 ADT_A10 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A10.ADT_A10
@@ -682,40 +682,40 @@ ADT_A10 HL7 v2 ADT_A10 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
 
 .. _hl7-v2_2-ADT_A11:
 
-ADT_A11 HL7 v2 ADT_A11 message.
+ADT_A11: HL7 v2 ADT_A11 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A11.ADT_A11
@@ -727,40 +727,40 @@ ADT_A11 HL7 v2 ADT_A11 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
 
 .. _hl7-v2_2-ADT_A12:
 
-ADT_A12 HL7 v2 ADT_A12 message.
+ADT_A12: HL7 v2 ADT_A12 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A12.ADT_A12
@@ -772,40 +772,40 @@ ADT_A12 HL7 v2 ADT_A12 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
 
 .. _hl7-v2_2-ADT_A13:
 
-ADT_A13 HL7 v2 ADT_A13 message.
+ADT_A13: HL7 v2 ADT_A13 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A13.ADT_A13
@@ -817,72 +817,72 @@ ADT_A13 HL7 v2 ADT_A13 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A13_INSURANCE <hl7-v2_2-ADT_A13_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A13_INSURANCE <hl7-v2_2-ADT_A13_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A14:
 
-ADT_A14 HL7 v2 ADT_A14 message.
+ADT_A14: HL7 v2 ADT_A14 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A14.ADT_A14
@@ -894,72 +894,72 @@ ADT_A14 HL7 v2 ADT_A14 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A14_INSURANCE <hl7-v2_2-ADT_A14_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A14_INSURANCE <hl7-v2_2-ADT_A14_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A15:
 
-ADT_A15 HL7 v2 ADT_A15 message.
+ADT_A15: HL7 v2 ADT_A15 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A15.ADT_A15
@@ -971,40 +971,40 @@ ADT_A15 HL7 v2 ADT_A15 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
 
 .. _hl7-v2_2-ADT_A16:
 
-ADT_A16 HL7 v2 ADT_A16 message.
+ADT_A16: HL7 v2 ADT_A16 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A16.ADT_A16
@@ -1016,40 +1016,40 @@ ADT_A16 HL7 v2 ADT_A16 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
 
 .. _hl7-v2_2-ADT_A17:
 
-ADT_A17 HL7 v2 ADT_A17 message.
+ADT_A17: HL7 v2 ADT_A17 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A17.ADT_A17
@@ -1061,36 +1061,36 @@ ADT_A17 HL7 v2 ADT_A17 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A18:
 
-ADT_A18 HL7 v2 ADT_A18 message.
+ADT_A18: HL7 v2 ADT_A18 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A18.ADT_A18
@@ -1102,32 +1102,32 @@ ADT_A18 HL7 v2 ADT_A18 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``MRG``
-     - Optional[:ref:`MRG <hl7-v2_2-MRG>`]
-     - optional
-     - MERGE PATIENT INFORMATION
+     - :ref:`MRG <hl7-v2_2-MRG>`
+     - O
+     - MRG
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
 
 .. _hl7-v2_2-ADT_A20:
 
-ADT_A20 HL7 v2 ADT_A20 message.
+ADT_A20: HL7 v2 ADT_A20 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A20.ADT_A20
@@ -1139,24 +1139,24 @@ ADT_A20 HL7 v2 ADT_A20 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``NPU``
      - :ref:`NPU <hl7-v2_2-NPU>`
-     - required
-     - BED STATUS UPDATE
+     - R
+     - NPU
 
 .. _hl7-v2_2-ADT_A21:
 
-ADT_A21 HL7 v2 ADT_A21 message.
+ADT_A21: HL7 v2 ADT_A21 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A21.ADT_A21
@@ -1168,36 +1168,36 @@ ADT_A21 HL7 v2 ADT_A21 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A22:
 
-ADT_A22 HL7 v2 ADT_A22 message.
+ADT_A22: HL7 v2 ADT_A22 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A22.ADT_A22
@@ -1209,36 +1209,36 @@ ADT_A22 HL7 v2 ADT_A22 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A23:
 
-ADT_A23 HL7 v2 ADT_A23 message.
+ADT_A23: HL7 v2 ADT_A23 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A23.ADT_A23
@@ -1250,36 +1250,36 @@ ADT_A23 HL7 v2 ADT_A23 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A24:
 
-ADT_A24 HL7 v2 ADT_A24 message.
+ADT_A24: HL7 v2 ADT_A24 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A24.ADT_A24
@@ -1291,28 +1291,28 @@ ADT_A24 HL7 v2 ADT_A24 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
-     - Optional[:ref:`PV1 <hl7-v2_2-PV1>`]
-     - optional
-     - PATIENT VISIT
+     - :ref:`PV1 <hl7-v2_2-PV1>`
+     - O
+     - PV1
 
 .. _hl7-v2_2-ADT_A25:
 
-ADT_A25 HL7 v2 ADT_A25 message.
+ADT_A25: HL7 v2 ADT_A25 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A25.ADT_A25
@@ -1324,36 +1324,36 @@ ADT_A25 HL7 v2 ADT_A25 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A26:
 
-ADT_A26 HL7 v2 ADT_A26 message.
+ADT_A26: HL7 v2 ADT_A26 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A26.ADT_A26
@@ -1365,36 +1365,36 @@ ADT_A26 HL7 v2 ADT_A26 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A27:
 
-ADT_A27 HL7 v2 ADT_A27 message.
+ADT_A27: HL7 v2 ADT_A27 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A27.ADT_A27
@@ -1406,36 +1406,36 @@ ADT_A27 HL7 v2 ADT_A27 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A28:
 
-ADT_A28 HL7 v2 ADT_A28 message.
+ADT_A28: HL7 v2 ADT_A28 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A28.ADT_A28
@@ -1447,72 +1447,72 @@ ADT_A28 HL7 v2 ADT_A28 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A28_INSURANCE <hl7-v2_2-ADT_A28_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A28_INSURANCE <hl7-v2_2-ADT_A28_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A29:
 
-ADT_A29 HL7 v2 ADT_A29 message.
+ADT_A29: HL7 v2 ADT_A29 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A29.ADT_A29
@@ -1524,36 +1524,36 @@ ADT_A29 HL7 v2 ADT_A29 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A30:
 
-ADT_A30 HL7 v2 ADT_A30 message.
+ADT_A30: HL7 v2 ADT_A30 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A30.ADT_A30
@@ -1565,28 +1565,28 @@ ADT_A30 HL7 v2 ADT_A30 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``MRG``
      - :ref:`MRG <hl7-v2_2-MRG>`
-     - required
-     - MERGE PATIENT INFORMATION
+     - R
+     - MRG
 
 .. _hl7-v2_2-ADT_A31:
 
-ADT_A31 HL7 v2 ADT_A31 message.
+ADT_A31: HL7 v2 ADT_A31 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A31.ADT_A31
@@ -1598,72 +1598,72 @@ ADT_A31 HL7 v2 ADT_A31 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``NK1``
-     - Optional[List[:ref:`NK1 <hl7-v2_2-NK1>`]]
-     - optional
-     - NEXT OF KIN
+     - list[:ref:`NK1 <hl7-v2_2-NK1>`]
+     - O
+     - NK1
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``AL1``
-     - Optional[List[:ref:`AL1 <hl7-v2_2-AL1>`]]
-     - optional
-     - PATIENT ALLERGY INFORMATION
+     - list[:ref:`AL1 <hl7-v2_2-AL1>`]
+     - O
+     - AL1
    * - ``DG1``
-     - Optional[List[:ref:`DG1 <hl7-v2_2-DG1>`]]
-     - optional
-     - DIAGNOSIS
+     - list[:ref:`DG1 <hl7-v2_2-DG1>`]
+     - O
+     - DG1
    * - ``PR1``
-     - Optional[List[:ref:`PR1 <hl7-v2_2-PR1>`]]
-     - optional
-     - PROCEDURES
+     - list[:ref:`PR1 <hl7-v2_2-PR1>`]
+     - O
+     - PR1
    * - ``GT1``
-     - Optional[List[:ref:`GT1 <hl7-v2_2-GT1>`]]
-     - optional
-     - GUARANTOR
+     - list[:ref:`GT1 <hl7-v2_2-GT1>`]
+     - O
+     - GT1
    * - ``INSURANCE``
-     - Optional[List[:ref:`ADT_A31_INSURANCE <hl7-v2_2-ADT_A31_INSURANCE>`]]
-     - optional
+     - list[:ref:`ADT_A31_INSURANCE <hl7-v2_2-ADT_A31_INSURANCE>`]
+     - O
      - INSURANCE
    * - ``ACC``
-     - Optional[:ref:`ACC <hl7-v2_2-ACC>`]
-     - optional
-     - ACCIDENT
+     - :ref:`ACC <hl7-v2_2-ACC>`
+     - O
+     - ACC
    * - ``UB1``
-     - Optional[:ref:`UB1 <hl7-v2_2-UB1>`]
-     - optional
-     - UB82 DATA
+     - :ref:`UB1 <hl7-v2_2-UB1>`
+     - O
+     - UB1
    * - ``UB2``
-     - Optional[:ref:`UB2 <hl7-v2_2-UB2>`]
-     - optional
-     - UB92 DATA
+     - :ref:`UB2 <hl7-v2_2-UB2>`
+     - O
+     - UB2
 
 .. _hl7-v2_2-ADT_A32:
 
-ADT_A32 HL7 v2 ADT_A32 message.
+ADT_A32: HL7 v2 ADT_A32 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A32.ADT_A32
@@ -1675,36 +1675,36 @@ ADT_A32 HL7 v2 ADT_A32 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A33:
 
-ADT_A33 HL7 v2 ADT_A33 message.
+ADT_A33: HL7 v2 ADT_A33 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A33.ADT_A33
@@ -1716,36 +1716,36 @@ ADT_A33 HL7 v2 ADT_A33 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
      - :ref:`PV1 <hl7-v2_2-PV1>`
-     - required
-     - PATIENT VISIT
+     - R
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
 
 .. _hl7-v2_2-ADT_A34:
 
-ADT_A34 HL7 v2 ADT_A34 message.
+ADT_A34: HL7 v2 ADT_A34 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A34.ADT_A34
@@ -1757,28 +1757,28 @@ ADT_A34 HL7 v2 ADT_A34 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``MRG``
      - :ref:`MRG <hl7-v2_2-MRG>`
-     - required
-     - MERGE PATIENT INFORMATION
+     - R
+     - MRG
 
 .. _hl7-v2_2-ADT_A35:
 
-ADT_A35 HL7 v2 ADT_A35 message.
+ADT_A35: HL7 v2 ADT_A35 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A35.ADT_A35
@@ -1790,28 +1790,28 @@ ADT_A35 HL7 v2 ADT_A35 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``MRG``
      - :ref:`MRG <hl7-v2_2-MRG>`
-     - required
-     - MERGE PATIENT INFORMATION
+     - R
+     - MRG
 
 .. _hl7-v2_2-ADT_A36:
 
-ADT_A36 HL7 v2 ADT_A36 message.
+ADT_A36: HL7 v2 ADT_A36 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A36.ADT_A36
@@ -1823,28 +1823,28 @@ ADT_A36 HL7 v2 ADT_A36 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``MRG``
      - :ref:`MRG <hl7-v2_2-MRG>`
-     - required
-     - MERGE PATIENT INFORMATION
+     - R
+     - MRG
 
 .. _hl7-v2_2-ADT_A37:
 
-ADT_A37 HL7 v2 ADT_A37 message.
+ADT_A37: HL7 v2 ADT_A37 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ADT_A37.ADT_A37
@@ -1856,28 +1856,28 @@ ADT_A37 HL7 v2 ADT_A37 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
-     - Optional[:ref:`PV1 <hl7-v2_2-PV1>`]
-     - optional
-     - PATIENT VISIT
+     - :ref:`PV1 <hl7-v2_2-PV1>`
+     - O
+     - PV1
 
 .. _hl7-v2_2-BAR_P01:
 
-BAR_P01 HL7 v2 BAR_P01 message.
+BAR_P01: HL7 v2 BAR_P01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.BAR_P01.BAR_P01
@@ -1889,28 +1889,28 @@ BAR_P01 HL7 v2 BAR_P01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``VISIT``
-     - List[:ref:`BAR_P01_VISIT <hl7-v2_2-BAR_P01_VISIT>`]
-     - required
+     - list[:ref:`BAR_P01_VISIT <hl7-v2_2-BAR_P01_VISIT>`]
+     - R
      - VISIT
 
 .. _hl7-v2_2-BAR_P02:
 
-BAR_P02 HL7 v2 BAR_P02 message.
+BAR_P02: HL7 v2 BAR_P02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.BAR_P02.BAR_P02
@@ -1922,24 +1922,24 @@ BAR_P02 HL7 v2 BAR_P02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PATIENT``
-     - List[:ref:`BAR_P02_PATIENT <hl7-v2_2-BAR_P02_PATIENT>`]
-     - required
+     - list[:ref:`BAR_P02_PATIENT <hl7-v2_2-BAR_P02_PATIENT>`]
+     - R
      - PATIENT
 
 .. _hl7-v2_2-DFT_P03:
 
-DFT_P03 HL7 v2 DFT_P03 message.
+DFT_P03: HL7 v2 DFT_P03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.DFT_P03.DFT_P03
@@ -1951,40 +1951,40 @@ DFT_P03 HL7 v2 DFT_P03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``EVN``
      - :ref:`EVN <hl7-v2_2-EVN>`
-     - required
-     - EVENT TYPE
+     - R
+     - EVN
    * - ``PID``
      - :ref:`PID <hl7-v2_2-PID>`
-     - required
-     - PATIENT IDENTIFICATION
+     - R
+     - PID
    * - ``PV1``
-     - Optional[:ref:`PV1 <hl7-v2_2-PV1>`]
-     - optional
-     - PATIENT VISIT
+     - :ref:`PV1 <hl7-v2_2-PV1>`
+     - O
+     - PV1
    * - ``PV2``
-     - Optional[:ref:`PV2 <hl7-v2_2-PV2>`]
-     - optional
-     - PATIENT VISIT - additional information
+     - :ref:`PV2 <hl7-v2_2-PV2>`
+     - O
+     - PV2
    * - ``OBX``
-     - Optional[List[:ref:`OBX <hl7-v2_2-OBX>`]]
-     - optional
-     - OBSERVATION RESULT
+     - list[:ref:`OBX <hl7-v2_2-OBX>`]
+     - O
+     - OBX
    * - ``FT1``
-     - List[:ref:`FT1 <hl7-v2_2-FT1>`]
-     - required
-     - FINANCIAL TRANSACTION
+     - list[:ref:`FT1 <hl7-v2_2-FT1>`]
+     - R
+     - FT1
 
 .. _hl7-v2_2-DSR_P04:
 
-DSR_P04 HL7 v2 DSR_P04 message.
+DSR_P04: HL7 v2 DSR_P04 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.DSR_P04.DSR_P04
@@ -1996,40 +1996,40 @@ DSR_P04 HL7 v2 DSR_P04 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSP``
-     - List[:ref:`DSP <hl7-v2_2-DSP>`]
-     - required
-     - DISPLAY DATA
+     - list[:ref:`DSP <hl7-v2_2-DSP>`]
+     - R
+     - DSP
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-DSR_Q01:
 
-DSR_Q01 HL7 v2 DSR_Q01 message.
+DSR_Q01: HL7 v2 DSR_Q01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.DSR_Q01.DSR_Q01
@@ -2041,40 +2041,40 @@ DSR_Q01 HL7 v2 DSR_Q01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSP``
-     - List[:ref:`DSP <hl7-v2_2-DSP>`]
-     - required
-     - DISPLAY DATA
+     - list[:ref:`DSP <hl7-v2_2-DSP>`]
+     - R
+     - DSP
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-DSR_Q03:
 
-DSR_Q03 HL7 v2 DSR_Q03 message.
+DSR_Q03: HL7 v2 DSR_Q03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.DSR_Q03.DSR_Q03
@@ -2086,36 +2086,36 @@ DSR_Q03 HL7 v2 DSR_Q03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
-     - Optional[:ref:`MSA <hl7-v2_2-MSA>`]
-     - optional
-     - MESSAGE ACKNOWLEDGMENT
+     - :ref:`MSA <hl7-v2_2-MSA>`
+     - O
+     - MSA
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSP``
-     - List[:ref:`DSP <hl7-v2_2-DSP>`]
-     - required
-     - DISPLAY DATA
+     - list[:ref:`DSP <hl7-v2_2-DSP>`]
+     - R
+     - DSP
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-DSR_R03:
 
-DSR_R03 HL7 v2 DSR_R03 message.
+DSR_R03: HL7 v2 DSR_R03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.DSR_R03.DSR_R03
@@ -2127,36 +2127,36 @@ DSR_R03 HL7 v2 DSR_R03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
-     - Optional[:ref:`MSA <hl7-v2_2-MSA>`]
-     - optional
-     - MESSAGE ACKNOWLEDGMENT
+     - :ref:`MSA <hl7-v2_2-MSA>`
+     - O
+     - MSA
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSP``
-     - List[:ref:`DSP <hl7-v2_2-DSP>`]
-     - required
-     - DISPLAY DATA
+     - list[:ref:`DSP <hl7-v2_2-DSP>`]
+     - R
+     - DSP
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-MFD_M01:
 
-MFD_M01 HL7 v2 MFD_M01 message.
+MFD_M01: HL7 v2 MFD_M01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFD_M01.MFD_M01
@@ -2168,24 +2168,24 @@ MFD_M01 HL7 v2 MFD_M01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MFA``
-     - Optional[List[:ref:`MFA <hl7-v2_2-MFA>`]]
-     - optional
-     - MASTER FILE ACKNOWLEDGEMENT
+     - list[:ref:`MFA <hl7-v2_2-MFA>`]
+     - O
+     - MFA
 
 .. _hl7-v2_2-MFD_M02:
 
-MFD_M02 HL7 v2 MFD_M02 message.
+MFD_M02: HL7 v2 MFD_M02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFD_M02.MFD_M02
@@ -2197,24 +2197,24 @@ MFD_M02 HL7 v2 MFD_M02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MFA``
-     - Optional[List[:ref:`MFA <hl7-v2_2-MFA>`]]
-     - optional
-     - MASTER FILE ACKNOWLEDGEMENT
+     - list[:ref:`MFA <hl7-v2_2-MFA>`]
+     - O
+     - MFA
 
 .. _hl7-v2_2-MFD_M03:
 
-MFD_M03 HL7 v2 MFD_M03 message.
+MFD_M03: HL7 v2 MFD_M03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFD_M03.MFD_M03
@@ -2226,24 +2226,24 @@ MFD_M03 HL7 v2 MFD_M03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MFA``
-     - Optional[List[:ref:`MFA <hl7-v2_2-MFA>`]]
-     - optional
-     - MASTER FILE ACKNOWLEDGEMENT
+     - list[:ref:`MFA <hl7-v2_2-MFA>`]
+     - O
+     - MFA
 
 .. _hl7-v2_2-MFK_M01:
 
-MFK_M01 HL7 v2 MFK_M01 message.
+MFK_M01: HL7 v2 MFK_M01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFK_M01.MFK_M01
@@ -2255,32 +2255,32 @@ MFK_M01 HL7 v2 MFK_M01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MFA``
-     - Optional[List[:ref:`MFA <hl7-v2_2-MFA>`]]
-     - optional
-     - MASTER FILE ACKNOWLEDGEMENT
+     - list[:ref:`MFA <hl7-v2_2-MFA>`]
+     - O
+     - MFA
 
 .. _hl7-v2_2-MFK_M02:
 
-MFK_M02 HL7 v2 MFK_M02 message.
+MFK_M02: HL7 v2 MFK_M02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFK_M02.MFK_M02
@@ -2292,32 +2292,32 @@ MFK_M02 HL7 v2 MFK_M02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MFA``
-     - Optional[List[:ref:`MFA <hl7-v2_2-MFA>`]]
-     - optional
-     - MASTER FILE ACKNOWLEDGEMENT
+     - list[:ref:`MFA <hl7-v2_2-MFA>`]
+     - O
+     - MFA
 
 .. _hl7-v2_2-MFK_M03:
 
-MFK_M03 HL7 v2 MFK_M03 message.
+MFK_M03: HL7 v2 MFK_M03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFK_M03.MFK_M03
@@ -2329,32 +2329,32 @@ MFK_M03 HL7 v2 MFK_M03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MFA``
-     - Optional[List[:ref:`MFA <hl7-v2_2-MFA>`]]
-     - optional
-     - MASTER FILE ACKNOWLEDGEMENT
+     - list[:ref:`MFA <hl7-v2_2-MFA>`]
+     - O
+     - MFA
 
 .. _hl7-v2_2-MFN_M01:
 
-MFN_M01 HL7 v2 MFN_M01 message.
+MFN_M01: HL7 v2 MFN_M01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFN_M01.MFN_M01
@@ -2366,24 +2366,24 @@ MFN_M01 HL7 v2 MFN_M01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MF``
-     - List[:ref:`MFN_M01_MF <hl7-v2_2-MFN_M01_MF>`]
-     - required
+     - list[:ref:`MFN_M01_MF <hl7-v2_2-MFN_M01_MF>`]
+     - R
      - MF
 
 .. _hl7-v2_2-MFN_M02:
 
-MFN_M02 HL7 v2 MFN_M02 message.
+MFN_M02: HL7 v2 MFN_M02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFN_M02.MFN_M02
@@ -2395,24 +2395,24 @@ MFN_M02 HL7 v2 MFN_M02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MF_STAFF``
-     - List[:ref:`MFN_M02_MF_STAFF <hl7-v2_2-MFN_M02_MF_STAFF>`]
-     - required
+     - list[:ref:`MFN_M02_MF_STAFF <hl7-v2_2-MFN_M02_MF_STAFF>`]
+     - R
      - MF_STAFF
 
 .. _hl7-v2_2-MFN_M03:
 
-MFN_M03 HL7 v2 MFN_M03 message.
+MFN_M03: HL7 v2 MFN_M03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFN_M03.MFN_M03
@@ -2424,24 +2424,24 @@ MFN_M03 HL7 v2 MFN_M03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MF_TEST``
-     - List[:ref:`MFN_M03_MF_TEST <hl7-v2_2-MFN_M03_MF_TEST>`]
-     - required
+     - list[:ref:`MFN_M03_MF_TEST <hl7-v2_2-MFN_M03_MF_TEST>`]
+     - R
      - MF_TEST
 
 .. _hl7-v2_2-MFQ_M01:
 
-MFQ_M01 HL7 v2 MFQ_M01 message.
+MFQ_M01: HL7 v2 MFQ_M01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFQ_M01.MFQ_M01
@@ -2453,28 +2453,28 @@ MFQ_M01 HL7 v2 MFQ_M01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-MFQ_M02:
 
-MFQ_M02 HL7 v2 MFQ_M02 message.
+MFQ_M02: HL7 v2 MFQ_M02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFQ_M02.MFQ_M02
@@ -2486,28 +2486,28 @@ MFQ_M02 HL7 v2 MFQ_M02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-MFQ_M03:
 
-MFQ_M03 HL7 v2 MFQ_M03 message.
+MFQ_M03: HL7 v2 MFQ_M03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFQ_M03.MFQ_M03
@@ -2519,28 +2519,28 @@ MFQ_M03 HL7 v2 MFQ_M03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-MFR_M01:
 
-MFR_M01 HL7 v2 MFR_M01 message.
+MFR_M01: HL7 v2 MFR_M01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFR_M01.MFR_M01
@@ -2552,44 +2552,44 @@ MFR_M01 HL7 v2 MFR_M01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MF``
-     - List[:ref:`MFR_M01_MF <hl7-v2_2-MFR_M01_MF>`]
-     - required
+     - list[:ref:`MFR_M01_MF <hl7-v2_2-MFR_M01_MF>`]
+     - R
      - MF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-MFR_M02:
 
-MFR_M02 HL7 v2 MFR_M02 message.
+MFR_M02: HL7 v2 MFR_M02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFR_M02.MFR_M02
@@ -2601,44 +2601,44 @@ MFR_M02 HL7 v2 MFR_M02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MF_STAFF``
-     - List[:ref:`MFR_M02_MF_STAFF <hl7-v2_2-MFR_M02_MF_STAFF>`]
-     - required
+     - list[:ref:`MFR_M02_MF_STAFF <hl7-v2_2-MFR_M02_MF_STAFF>`]
+     - R
      - MF_STAFF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-MFR_M03:
 
-MFR_M03 HL7 v2 MFR_M03 message.
+MFR_M03: HL7 v2 MFR_M03 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.MFR_M03.MFR_M03
@@ -2650,44 +2650,44 @@ MFR_M03 HL7 v2 MFR_M03 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``MFI``
      - :ref:`MFI <hl7-v2_2-MFI>`
-     - required
-     - MASTER FILE IDENTIFICATION
+     - R
+     - MFI
    * - ``MF_TEST``
-     - List[:ref:`MFR_M03_MF_TEST <hl7-v2_2-MFR_M03_MF_TEST>`]
-     - required
+     - list[:ref:`MFR_M03_MF_TEST <hl7-v2_2-MFR_M03_MF_TEST>`]
+     - R
      - MF_TEST
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-NMD_N01:
 
-NMD_N01 HL7 v2 NMD_N01 message.
+NMD_N01: HL7 v2 NMD_N01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.NMD_N01.NMD_N01
@@ -2699,20 +2699,20 @@ NMD_N01 HL7 v2 NMD_N01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``CLOCK_AND_STATS_WITH_NOTES``
-     - List[:ref:`NMD_N01_CLOCK_AND_STATS_WITH_NOTES <hl7-v2_2-NMD_N01_CLOCK_AND_STATS_WITH_NOTES>`]
-     - required
+     - list[:ref:`NMD_N01_CLOCK_AND_STATS_WITH_NOTES <hl7-v2_2-NMD_N01_CLOCK_AND_STATS_WITH_NOTES>`]
+     - R
      - CLOCK_AND_STATS_WITH_NOTES
 
 .. _hl7-v2_2-NMQ_N02:
 
-NMQ_N02 HL7 v2 NMQ_N02 message.
+NMQ_N02: HL7 v2 NMQ_N02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.NMQ_N02.NMQ_N02
@@ -2724,24 +2724,24 @@ NMQ_N02 HL7 v2 NMQ_N02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRY_WITH_DETAIL``
-     - Optional[:ref:`NMQ_N02_QRY_WITH_DETAIL <hl7-v2_2-NMQ_N02_QRY_WITH_DETAIL>`]
-     - optional
+     - :ref:`NMQ_N02_QRY_WITH_DETAIL <hl7-v2_2-NMQ_N02_QRY_WITH_DETAIL>`
+     - O
      - QRY_WITH_DETAIL
    * - ``CLOCK_AND_STATISTICS``
-     - List[:ref:`NMQ_N02_CLOCK_AND_STATISTICS <hl7-v2_2-NMQ_N02_CLOCK_AND_STATISTICS>`]
-     - required
+     - list[:ref:`NMQ_N02_CLOCK_AND_STATISTICS <hl7-v2_2-NMQ_N02_CLOCK_AND_STATISTICS>`]
+     - R
      - CLOCK_AND_STATISTICS
 
 .. _hl7-v2_2-NMR_N02:
 
-NMR_N02 HL7 v2 NMR_N02 message.
+NMR_N02: HL7 v2 NMR_N02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.NMR_N02.NMR_N02
@@ -2753,32 +2753,32 @@ NMR_N02 HL7 v2 NMR_N02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``ERR``
-     - Optional[:ref:`ERR <hl7-v2_2-ERR>`]
-     - optional
-     - ERROR
+     - :ref:`ERR <hl7-v2_2-ERR>`
+     - O
+     - ERR
    * - ``QRD``
-     - Optional[:ref:`QRD <hl7-v2_2-QRD>`]
-     - optional
-     - QUERY DEFINITION
+     - :ref:`QRD <hl7-v2_2-QRD>`
+     - O
+     - QRD
    * - ``CLOCK_AND_STATS_WITH_NOTES_ALT``
-     - List[:ref:`NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT <hl7-v2_2-NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT>`]
-     - required
+     - list[:ref:`NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT <hl7-v2_2-NMR_N02_CLOCK_AND_STATS_WITH_NOTES_ALT>`]
+     - R
      - CLOCK_AND_STATS_WITH_NOTES_ALT
 
 .. _hl7-v2_2-ORF_R04:
 
-ORF_R04 HL7 v2 ORF_R04 message.
+ORF_R04: HL7 v2 ORF_R04 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ORF_R04.ORF_R04
@@ -2790,32 +2790,32 @@ ORF_R04 HL7 v2 ORF_R04 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``QUERY_RESPONSE``
-     - List[:ref:`ORF_R04_QUERY_RESPONSE <hl7-v2_2-ORF_R04_QUERY_RESPONSE>`]
-     - required
+     - list[:ref:`ORF_R04_QUERY_RESPONSE <hl7-v2_2-ORF_R04_QUERY_RESPONSE>`]
+     - R
      - QUERY_RESPONSE
    * - ``ORDER``
-     - List[:ref:`ORF_R04_ORDER <hl7-v2_2-ORF_R04_ORDER>`]
-     - required
+     - list[:ref:`ORF_R04_ORDER <hl7-v2_2-ORF_R04_ORDER>`]
+     - R
      - ORDER
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-ORM_O01:
 
-ORM_O01 HL7 v2 ORM_O01 message.
+ORM_O01: HL7 v2 ORM_O01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ORM_O01.ORM_O01
@@ -2827,28 +2827,28 @@ ORM_O01 HL7 v2 ORM_O01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``NTE``
-     - Optional[List[:ref:`NTE <hl7-v2_2-NTE>`]]
-     - optional
-     - NOTES AND COMMENTS
+     - list[:ref:`NTE <hl7-v2_2-NTE>`]
+     - O
+     - NTE
    * - ``PATIENT``
-     - Optional[:ref:`ORM_O01_PATIENT <hl7-v2_2-ORM_O01_PATIENT>`]
-     - optional
+     - :ref:`ORM_O01_PATIENT <hl7-v2_2-ORM_O01_PATIENT>`
+     - O
      - PATIENT
    * - ``ORDER``
-     - List[:ref:`ORM_O01_ORDER <hl7-v2_2-ORM_O01_ORDER>`]
-     - required
+     - list[:ref:`ORM_O01_ORDER <hl7-v2_2-ORM_O01_ORDER>`]
+     - R
      - ORDER
 
 .. _hl7-v2_2-ORR_O02:
 
-ORR_O02 HL7 v2 ORR_O02 message.
+ORR_O02: HL7 v2 ORR_O02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ORR_O02.ORR_O02
@@ -2860,28 +2860,28 @@ ORR_O02 HL7 v2 ORR_O02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``MSA``
      - :ref:`MSA <hl7-v2_2-MSA>`
-     - required
-     - MESSAGE ACKNOWLEDGMENT
+     - R
+     - MSA
    * - ``NTE``
-     - Optional[List[:ref:`NTE <hl7-v2_2-NTE>`]]
-     - optional
-     - NOTES AND COMMENTS
+     - list[:ref:`NTE <hl7-v2_2-NTE>`]
+     - O
+     - NTE
    * - ``PATIENT``
-     - Optional[:ref:`ORR_O02_PATIENT <hl7-v2_2-ORR_O02_PATIENT>`]
-     - optional
+     - :ref:`ORR_O02_PATIENT <hl7-v2_2-ORR_O02_PATIENT>`
+     - O
      - PATIENT
 
 .. _hl7-v2_2-ORU_R01:
 
-ORU_R01 HL7 v2 ORU_R01 message.
+ORU_R01: HL7 v2 ORU_R01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.ORU_R01.ORU_R01
@@ -2893,24 +2893,24 @@ ORU_R01 HL7 v2 ORU_R01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``PATIENT_RESULT``
-     - List[:ref:`ORU_R01_PATIENT_RESULT <hl7-v2_2-ORU_R01_PATIENT_RESULT>`]
-     - required
+     - list[:ref:`ORU_R01_PATIENT_RESULT <hl7-v2_2-ORU_R01_PATIENT_RESULT>`]
+     - R
      - PATIENT_RESULT
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-QRY_A19:
 
-QRY_A19 HL7 v2 QRY_A19 message.
+QRY_A19: HL7 v2 QRY_A19 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.QRY_A19.QRY_A19
@@ -2922,24 +2922,24 @@ QRY_A19 HL7 v2 QRY_A19 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
 
 .. _hl7-v2_2-QRY_P04:
 
-QRY_P04 HL7 v2 QRY_P04 message.
+QRY_P04: HL7 v2 QRY_P04 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.QRY_P04.QRY_P04
@@ -2951,28 +2951,28 @@ QRY_P04 HL7 v2 QRY_P04 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-QRY_Q01:
 
-QRY_Q01 HL7 v2 QRY_Q01 message.
+QRY_Q01: HL7 v2 QRY_Q01 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.QRY_Q01.QRY_Q01
@@ -2984,28 +2984,28 @@ QRY_Q01 HL7 v2 QRY_Q01 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-QRY_Q02:
 
-QRY_Q02 HL7 v2 QRY_Q02 message.
+QRY_Q02: HL7 v2 QRY_Q02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.QRY_Q02.QRY_Q02
@@ -3017,28 +3017,28 @@ QRY_Q02 HL7 v2 QRY_Q02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
-     - Optional[:ref:`QRF <hl7-v2_2-QRF>`]
-     - optional
-     - QUERY FILTER
+     - :ref:`QRF <hl7-v2_2-QRF>`
+     - O
+     - QRF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-QRY_R02:
 
-QRY_R02 HL7 v2 QRY_R02 message.
+QRY_R02: HL7 v2 QRY_R02 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.QRY_R02.QRY_R02
@@ -3050,28 +3050,28 @@ QRY_R02 HL7 v2 QRY_R02 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``QRD``
      - :ref:`QRD <hl7-v2_2-QRD>`
-     - required
-     - QUERY DEFINITION
+     - R
+     - QRD
    * - ``QRF``
      - :ref:`QRF <hl7-v2_2-QRF>`
-     - required
-     - QUERY FILTER
+     - R
+     - QRF
    * - ``DSC``
-     - Optional[:ref:`DSC <hl7-v2_2-DSC>`]
-     - optional
-     - CONTINUATION POINTER
+     - :ref:`DSC <hl7-v2_2-DSC>`
+     - O
+     - DSC
 
 .. _hl7-v2_2-UDM_Q05:
 
-UDM_Q05 HL7 v2 UDM_Q05 message.
+UDM_Q05: HL7 v2 UDM_Q05 message
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.messages.UDM_Q05.UDM_Q05
@@ -3083,25 +3083,25 @@ UDM_Q05 HL7 v2 UDM_Q05 message.
 
    * - Field
      - Type
-     - Required
+     - OPT
      - Description
    * - ``MSH``
      - :ref:`MSH <hl7-v2_2-MSH>`
-     - required
-     - MESSAGE HEADER
+     - R
+     - MSH
    * - ``URD``
      - :ref:`URD <hl7-v2_2-URD>`
-     - required
-     - RESULTS/UPDATE DEFINITION
+     - R
+     - URD
    * - ``URS``
-     - Optional[:ref:`URS <hl7-v2_2-URS>`]
-     - optional
-     - UNSOLICITED SELECTION
+     - :ref:`URS <hl7-v2_2-URS>`
+     - O
+     - URS
    * - ``DSP``
-     - List[:ref:`DSP <hl7-v2_2-DSP>`]
-     - required
-     - DISPLAY DATA
+     - list[:ref:`DSP <hl7-v2_2-DSP>`]
+     - R
+     - DSP
    * - ``DSC``
      - :ref:`DSC <hl7-v2_2-DSC>`
-     - required
-     - CONTINUATION POINTER
+     - R
+     - DSC

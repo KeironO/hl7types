@@ -21,16 +21,16 @@ class PCE(HL7Model):
     Attributes
     ----------
     pce_1 : str
-        PCE.1 (req) - Set ID - PCE (SI) S17.4.6.1
+        PCE.1 - Set ID - PCE (SI) R S17.4.6.1
 
     pce_2 : str | None
-        PCE.2 (opt) - Cost Center Account Number (IS) S17.4.6.2 | 0319 - Department Cost Center
+        PCE.2 - Cost Center Account Number (IS) O S17.4.6.2 | 0319 - Department Cost Center
 
     pce_3 : CWE | None
-        PCE.3 (opt) - Transaction Code (CWE) S17.4.2.12 | 0132 - Transaction Code
+        PCE.3 - Transaction Code (CWE) O S17.4.2.12 | 0132 - Transaction Code
 
     pce_4 : CP | None
-        PCE.4 (opt) - Transaction amount - unit (CP) S17.4.2.13
+        PCE.4 - Transaction amount - unit (CP) O S17.4.2.13
     """
 
     pce_1: str = Field(
@@ -41,7 +41,7 @@ class PCE(HL7Model):
         ),
         serialization_alias="PCE.1",
         title="Set ID - PCE",
-        description="Item #2228",
+        description="R | Item #02228 | LEN:2",
     )
 
     pce_2: Optional[str] = Field(
@@ -53,7 +53,9 @@ class PCE(HL7Model):
         ),
         serialization_alias="PCE.2",
         title="Cost Center Account Number",
-        description="Item #281 | Table HL70319",
+        description=(
+            "O | Item #00281 | Table 0319 - Department Cost Center | LEN:30"
+        ),
     )
 
     pce_3: Optional[CWE] = Field(
@@ -65,7 +67,7 @@ class PCE(HL7Model):
         ),
         serialization_alias="PCE.3",
         title="Transaction Code",
-        description="Item #361 | Table HL70132",
+        description="O | Item #00361 | Table 0132 - Transaction Code",
     )
 
     pce_4: Optional[CP] = Field(
@@ -77,7 +79,7 @@ class PCE(HL7Model):
         ),
         serialization_alias="PCE.4",
         title="Transaction amount - unit",
-        description="Item #366",
+        description="O | Item #00366",
     )
 
     @field_validator("pce_1", mode='before')

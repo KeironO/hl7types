@@ -20,16 +20,16 @@ class NDS(HL7Model):
     Attributes
     ----------
     nds_1 : str
-        NDS.1 (req) - Notification Reference Number (NM) S13.4.7.1
+        NDS.1 - Notification Reference Number (NM) R S13.4.7.1
 
     nds_2 : TS
-        NDS.2 (req) - Notification Date/Time (TS) S13.4.7.2
+        NDS.2 - Notification Date/Time (TS) R S13.4.7.2
 
     nds_3 : CE
-        NDS.3 (req) - Notification Alert Severity (CE) S13.4.7.3 | 0367 - Alert level
+        NDS.3 - Notification Alert Severity (CE) R S13.4.7.3 | 0367 - Alert level
 
     nds_4 : CE
-        NDS.4 (req) - Notification Code (CE) S13.4.7.4
+        NDS.4 - Notification Code (CE) R S13.4.7.4
     """
 
     nds_1: str = Field(
@@ -40,7 +40,7 @@ class NDS(HL7Model):
         ),
         serialization_alias="NDS.1",
         title="Notification Reference Number",
-        description="Item #1398",
+        description="R | Item #01398 | LEN:20",
     )
 
     nds_2: TS = Field(
@@ -51,7 +51,7 @@ class NDS(HL7Model):
         ),
         serialization_alias="NDS.2",
         title="Notification Date/Time",
-        description="Item #1399",
+        description="R | Item #01399",
     )
 
     nds_3: CE = Field(
@@ -62,7 +62,7 @@ class NDS(HL7Model):
         ),
         serialization_alias="NDS.3",
         title="Notification Alert Severity",
-        description="Item #1400 | Table HL70367",
+        description="R | Item #01400 | Table 0367 - Alert level",
     )
 
     nds_4: CE = Field(
@@ -73,7 +73,7 @@ class NDS(HL7Model):
         ),
         serialization_alias="NDS.4",
         title="Notification Code",
-        description="Item #1401",
+        description="R | Item #01401",
     )
 
     @field_validator("nds_1", mode='before')

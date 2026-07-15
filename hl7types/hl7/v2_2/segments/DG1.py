@@ -21,52 +21,52 @@ class DG1(HL7Model):
     Attributes
     ----------
     dg1_1 : str
-        DG1.1 (req) - Set ID - diagnosis (SI) S6.4.2.1
+        DG1.1 - Set ID - diagnosis (SI) R S6.4.2.1
 
     dg1_2 : str
-        DG1.2 (req) - Diagnosis coding method (ID) S6.4.2.2 | 0053 - DIAGNOSIS CODING METHOD
+        DG1.2 - Diagnosis coding method (ID) R S6.4.2.2 | 0053 - DIAGNOSIS CODING METHOD
 
     dg1_3 : str | None
-        DG1.3 (opt) - Diagnosis code (ID) S6.4.2.3 | 0051 - DIAGNOSIS CODE
+        DG1.3 - Diagnosis code (ID) NA S6.4.2.3 | 0051 - DIAGNOSIS CODE
 
     dg1_4 : str | None
-        DG1.4 (opt) - Diagnosis description (ST) S6.4.2.4
+        DG1.4 - Diagnosis description (ST) NA S6.4.2.4
 
     dg1_5 : TS | None
-        DG1.5 (opt) - Diagnosis date / time (TS) S6.4.2.5
+        DG1.5 - Diagnosis date / time (TS) NA S6.4.2.5
 
     dg1_6 : str
-        DG1.6 (req) - Diagnosis / DRG type (ID) S6.4.2.6 | 0052 - DIAGNOSIS TYPE
+        DG1.6 - Diagnosis / DRG type (ID) R S6.4.2.6 | 0052 - DIAGNOSIS TYPE
 
     dg1_7 : CE | None
-        DG1.7 (opt) - Major diagnostic category (CE) S6.4.2.7 | 0118 - MAJOR DIAGNOSTIC CATEGORY
+        DG1.7 - Major diagnostic category (CE) NA S6.4.2.7 | 0118 - MAJOR DIAGNOSTIC CATEGORY
 
     dg1_8 : str | None
-        DG1.8 (opt) - Diagnostic related group (ID) S6.4.2.8 | 0055 - DRG CODE
+        DG1.8 - Diagnostic related group (ID) NA S6.4.2.8 | 0055 - DRG CODE
 
     dg1_9 : str | None
-        DG1.9 (opt) - DRG approval indicator (ID) S6.4.2.9
+        DG1.9 - DRG approval indicator (ID) NA S6.4.2.9
 
     dg1_10 : str | None
-        DG1.10 (opt) - DRG grouper review code (ID) S6.4.2.10 | 0056 - DRG GROUPER REVIEW CODE
+        DG1.10 - DRG grouper review code (ID) NA S6.4.2.10 | 0056 - DRG GROUPER REVIEW CODE
 
     dg1_11 : str | None
-        DG1.11 (opt) - Outlier type (ID) S6.4.2.11 | 0083 - OUTLIER TYPE
+        DG1.11 - Outlier type (ID) NA S6.4.2.11 | 0083 - OUTLIER TYPE
 
     dg1_12 : str | None
-        DG1.12 (opt) - Outlier days (NM) S6.4.2.12
+        DG1.12 - Outlier days (NM) NA S6.4.2.12
 
     dg1_13 : str | None
-        DG1.13 (opt) - Outlier cost (NM) S6.4.2.13
+        DG1.13 - Outlier cost (NM) NA S6.4.2.13
 
     dg1_14 : str | None
-        DG1.14 (opt) - Grouper version and type (ST) S6.4.2.14
+        DG1.14 - Grouper version and type (ST) NA S6.4.2.14
 
     dg1_15 : str | None
-        DG1.15 (opt) - Diagnosis / DRG priority (NM) S6.4.2.15
+        DG1.15 - Diagnosis / DRG priority (NM) NA S6.4.2.15
 
     dg1_16 : str | None
-        DG1.16 (opt) - Diagnosing clinician (CN) S6.4.2.16
+        DG1.16 - Diagnosing clinician (CN) NA S6.4.2.16
     """
 
     dg1_1: str = Field(
@@ -77,7 +77,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.1",
         title="Set ID - diagnosis",
-        description="Item #375",
+        description="R | Item #00375 | LEN:4",
     )
 
     dg1_2: str = Field(
@@ -88,7 +88,9 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.2",
         title="Diagnosis coding method",
-        description="Item #376 | Table HL70053",
+        description=(
+            "R | Item #00376 | Table 0053 - DIAGNOSIS CODING METHOD | LEN:2"
+        ),
     )
 
     dg1_3: Optional[str] = Field(
@@ -100,7 +102,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.3",
         title="Diagnosis code",
-        description="Item #377 | Table HL70051",
+        description="NA | Item #00377 | Table 0051 - DIAGNOSIS CODE | LEN:8",
     )
 
     dg1_4: Optional[str] = Field(
@@ -112,7 +114,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.4",
         title="Diagnosis description",
-        description="Item #378",
+        description="NA | Item #00378 | LEN:40",
     )
 
     dg1_5: Optional[TS] = Field(
@@ -124,7 +126,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.5",
         title="Diagnosis date / time",
-        description="Item #379",
+        description="NA | Item #00379",
     )
 
     dg1_6: str = Field(
@@ -135,7 +137,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.6",
         title="Diagnosis / DRG type",
-        description="Item #380 | Table HL70052",
+        description="R | Item #00380 | Table 0052 - DIAGNOSIS TYPE | LEN:2",
     )
 
     dg1_7: Optional[CE] = Field(
@@ -147,7 +149,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.7",
         title="Major diagnostic category",
-        description="Item #381 | Table HL70118",
+        description="NA | Item #00381 | Table 0118 - MAJOR DIAGNOSTIC CATEGORY",
     )
 
     dg1_8: Optional[str] = Field(
@@ -159,7 +161,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.8",
         title="Diagnostic related group",
-        description="Item #382 | Table HL70055",
+        description="NA | Item #00382 | Table 0055 - DRG CODE | LEN:4",
     )
 
     dg1_9: Optional[str] = Field(
@@ -171,7 +173,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.9",
         title="DRG approval indicator",
-        description="Item #383",
+        description="NA | Item #00383 | LEN:2",
     )
 
     dg1_10: Optional[str] = Field(
@@ -183,7 +185,9 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.10",
         title="DRG grouper review code",
-        description="Item #384 | Table HL70056",
+        description=(
+            "NA | Item #00384 | Table 0056 - DRG GROUPER REVIEW CODE | LEN:2"
+        ),
     )
 
     dg1_11: Optional[str] = Field(
@@ -195,7 +199,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.11",
         title="Outlier type",
-        description="Item #385 | Table HL70083",
+        description="NA | Item #00385 | Table 0083 - OUTLIER TYPE | LEN:60",
     )
 
     dg1_12: Optional[str] = Field(
@@ -207,7 +211,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.12",
         title="Outlier days",
-        description="Item #386",
+        description="NA | Item #00386 | LEN:3",
     )
 
     dg1_13: Optional[str] = Field(
@@ -219,7 +223,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.13",
         title="Outlier cost",
-        description="Item #387",
+        description="NA | Item #00387 | LEN:12",
     )
 
     dg1_14: Optional[str] = Field(
@@ -231,7 +235,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.14",
         title="Grouper version and type",
-        description="Item #388",
+        description="NA | Item #00388 | LEN:4",
     )
 
     dg1_15: Optional[str] = Field(
@@ -243,7 +247,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.15",
         title="Diagnosis / DRG priority",
-        description="Item #389",
+        description="NA | Item #00389 | LEN:2",
     )
 
     dg1_16: Optional[str] = Field(
@@ -255,7 +259,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.16",
         title="Diagnosing clinician",
-        description="Item #390",
+        description="NA | Item #00390",
     )
 
     @field_validator("dg1_1", mode='before')

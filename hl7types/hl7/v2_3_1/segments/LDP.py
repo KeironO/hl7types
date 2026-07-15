@@ -24,37 +24,37 @@ class LDP(HL7Model):
     Attributes
     ----------
     ldp_1 : PL
-        LDP.1 (req) - Primary Key Value - LDP (PL) S8.8.5.1
+        LDP.1 - Primary Key Value - LDP (PL) R S8.8.5.1
 
     ldp_2 : str
-        LDP.2 (req) - Location Department (IS) S8.8.6.2 | 0264 - Location Department
+        LDP.2 - Location Department (IS) R S8.8.6.2 | 0264 - Location Department
 
     ldp_3 : list[str] | None
-        LDP.3 (opt, rep) - Location Service (IS) S8.8.5.3 | 0069 - Hospital Service
+        LDP.3 - Location Service (IS) O rep S8.8.5.3 | 0069 - Hospital Service
 
     ldp_4 : list[CE] | None
-        LDP.4 (opt, rep) - Specialty Type (CE) S8.8.5.4 | 0265 - Specialty type
+        LDP.4 - Specialty Type (CE) O rep S8.8.5.4 | 0265 - Specialty type
 
     ldp_5 : list[str] | None
-        LDP.5 (opt, rep) - Valid Patient Classes (IS) S8.9.3.4 | 0004 - Patient class
+        LDP.5 - Valid Patient Classes (IS) O rep S8.9.3.4 | 0004 - Patient class
 
     ldp_6 : str | None
-        LDP.6 (opt) - Active/Inactive Flag (ID) S8.9.3.16 | 0183 - Active/inactive
+        LDP.6 - Active/Inactive Flag (ID) O S8.9.3.16 | 0183 - Active/inactive
 
     ldp_7 : TS | None
-        LDP.7 (opt) - Activation Date  LDP (TS) S8.8.5.7
+        LDP.7 - Activation Date  LDP (TS) O S8.8.5.7
 
     ldp_8 : TS | None
-        LDP.8 (opt) - Inactivation Date - LDP (TS) S8.8.5.8
+        LDP.8 - Inactivation Date - LDP (TS) O S8.8.5.8
 
     ldp_9 : str | None
-        LDP.9 (opt) - Inactivated Reason (ST) S8.8.5.9
+        LDP.9 - Inactivated Reason (ST) O S8.8.5.9
 
     ldp_10 : list[VH] | None
-        LDP.10 (opt, rep) - Visiting Hours (VH) S8.8.5.10 | 0267 - Days of the Week
+        LDP.10 - Visiting Hours (VH) O rep S8.8.5.10 | 0267 - Days of the Week
 
     ldp_11 : XTN | None
-        LDP.11 (opt) - Contact Phone (XTN) S8.8.5.11
+        LDP.11 - Contact Phone (XTN) O S8.8.5.11
     """
 
     ldp_1: PL = Field(
@@ -65,7 +65,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.1",
         title="Primary Key Value - LDP",
-        description="Item #963",
+        description="R | Item #00963",
     )
 
     ldp_2: str = Field(
@@ -76,7 +76,9 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.2",
         title="Location Department",
-        description="Item #964 | Table HL70264",
+        description=(
+            "R | Item #00964 | Table 0264 - Location Department | LEN:10"
+        ),
     )
 
     ldp_3: Optional[List[str]] = Field(
@@ -88,7 +90,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.3",
         title="Location Service",
-        description="Item #965 | Table HL70069",
+        description="O | Item #00965 | Table 0069 - Hospital Service | LEN:3",
     )
 
     ldp_4: Optional[List[CE]] = Field(
@@ -100,7 +102,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.4",
         title="Specialty Type",
-        description="Item #966 | Table HL70265",
+        description="O | Item #00966 | Table 0265 - Specialty type",
     )
 
     ldp_5: Optional[List[str]] = Field(
@@ -112,7 +114,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.5",
         title="Valid Patient Classes",
-        description="Item #967 | Table HL70004",
+        description="O | Item #00967 | Table 0004 - Patient class | LEN:1",
     )
 
     ldp_6: Optional[str] = Field(
@@ -124,7 +126,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.6",
         title="Active/Inactive Flag",
-        description="Item #675 | Table HL70183",
+        description="O | Item #00675 | Table 0183 - Active/inactive | LEN:1",
     )
 
     ldp_7: Optional[TS] = Field(
@@ -136,7 +138,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.7",
         title="Activation Date  LDP",
-        description="Item #969",
+        description="O | Item #00969",
     )
 
     ldp_8: Optional[TS] = Field(
@@ -148,7 +150,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.8",
         title="Inactivation Date - LDP",
-        description="Item #970",
+        description="O | Item #00970",
     )
 
     ldp_9: Optional[str] = Field(
@@ -160,7 +162,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.9",
         title="Inactivated Reason",
-        description="Item #971",
+        description="O | Item #00971 | LEN:80",
     )
 
     ldp_10: Optional[List[VH]] = Field(
@@ -172,7 +174,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.10",
         title="Visiting Hours",
-        description="Item #976 | Table HL70267",
+        description="O | Item #00976 | Table 0267 - Days of the Week",
     )
 
     ldp_11: Optional[XTN] = Field(
@@ -184,7 +186,7 @@ class LDP(HL7Model):
         ),
         serialization_alias="LDP.11",
         title="Contact Phone",
-        description="Item #978",
+        description="O | Item #00978",
     )
 
     model_config = {"populate_by_name": True}

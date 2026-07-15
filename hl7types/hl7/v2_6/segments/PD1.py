@@ -23,70 +23,70 @@ class PD1(HL7Model):
     Attributes
     ----------
     pd1_1 : list[str] | None
-        PD1.1 (opt, rep) - Living Dependency (IS) S3.4.10.1 | 0223 - Living Dependency
+        PD1.1 - Living Dependency (IS) O rep S3.4.10.1 | 0223 - Living Dependency
 
     pd1_2 : str | None
-        PD1.2 (opt) - Living Arrangement (IS) S3.4.10.2 | 0220 - Living Arrangement
+        PD1.2 - Living Arrangement (IS) O S3.4.10.2 | 0220 - Living Arrangement
 
     pd1_3 : list[XON] | None
-        PD1.3 (opt, rep) - Patient Primary Facility (XON) S3.4.10.3 | 0204 - Organizational name type
+        PD1.3 - Patient Primary Facility (XON) O rep S3.4.10.3 | 0204 - Organizational name type
 
     pd1_4 : list[XCN] | None
-        PD1.4 (opt, rep) - Patient Primary Care Provider Name & ID No. (XCN) S3.4.10.4
+        PD1.4 - Patient Primary Care Provider Name & ID No. (XCN) O rep S3.4.10.4
 
     pd1_5 : str | None
-        PD1.5 (opt) - Student Indicator (IS) S3.4.10.5 | 0231 - Student Status
+        PD1.5 - Student Indicator (IS) O S3.4.10.5 | 0231 - Student Status
 
     pd1_6 : str | None
-        PD1.6 (opt) - Handicap (IS) S3.4.10.6 | 0295 - Handicap
+        PD1.6 - Handicap (IS) O S3.4.10.6 | 0295 - Handicap
 
     pd1_7 : str | None
-        PD1.7 (opt) - Living Will Code (IS) S3.4.10.7 | 0315 - Living Will Code
+        PD1.7 - Living Will Code (IS) O S3.4.10.7 | 0315 - Living Will Code
 
     pd1_8 : str | None
-        PD1.8 (opt) - Organ Donor Code (IS) S3.4.10.8 | 0316 - Organ Donor Code
+        PD1.8 - Organ Donor Code (IS) O S3.4.10.8 | 0316 - Organ Donor Code
 
     pd1_9 : str | None
-        PD1.9 (opt) - Separate Bill (ID) S3.4.10.9 | 0136 - Yes/no indicator
+        PD1.9 - Separate Bill (ID) O S3.4.10.9 | 0136 - Yes/no indicator
 
     pd1_10 : list[CX] | None
-        PD1.10 (opt, rep) - Duplicate Patient (CX) S3.4.10.10
+        PD1.10 - Duplicate Patient (CX) O rep S3.4.10.10
 
     pd1_11 : CWE | None
-        PD1.11 (opt) - Publicity Code (CWE) S3.4.10.11 | 0215 - Publicity Code
+        PD1.11 - Publicity Code (CWE) O S3.4.10.11 | 0215 - Publicity Code
 
     pd1_12 : str | None
-        PD1.12 (opt) - Protection Indicator (ID) S3.4.10.12 | 0136 - Yes/no indicator
+        PD1.12 - Protection Indicator (ID) O S3.4.10.12 | 0136 - Yes/no indicator
 
     pd1_13 : str | None
-        PD1.13 (opt) - Protection Indicator Effective Date (DT) S3.4.10.13
+        PD1.13 - Protection Indicator Effective Date (DT) O S3.4.10.13
 
     pd1_14 : list[XON] | None
-        PD1.14 (opt, rep) - Place of Worship (XON) S3.4.10.14
+        PD1.14 - Place of Worship (XON) O rep S3.4.10.14
 
     pd1_15 : list[CWE] | None
-        PD1.15 (opt, rep) - Advance Directive Code (CWE) S3.4.10.15 | 0435 - Advance Directive Code
+        PD1.15 - Advance Directive Code (CWE) C rep S3.4.10.15 | 0435 - Advance Directive Code
 
     pd1_16 : str | None
-        PD1.16 (opt) - Immunization Registry Status (IS) S3.4.10.16 | 0441 - Immunization Registry Status
+        PD1.16 - Immunization Registry Status (IS) O S3.4.10.16 | 0441 - Immunization Registry Status
 
     pd1_17 : str | None
-        PD1.17 (opt) - Immunization Registry Status Effective Date (DT) S3.4.10.17
+        PD1.17 - Immunization Registry Status Effective Date (DT) O S3.4.10.17
 
     pd1_18 : str | None
-        PD1.18 (opt) - Publicity Code Effective Date (DT) S3.4.10.18
+        PD1.18 - Publicity Code Effective Date (DT) O S3.4.10.18
 
     pd1_19 : str | None
-        PD1.19 (opt) - Military Branch (IS) S3.4.10.19 | 0140 - Military Service
+        PD1.19 - Military Branch (IS) O S3.4.10.19 | 0140 - Military Service
 
     pd1_20 : str | None
-        PD1.20 (opt) - Military Rank/Grade (IS) S3.4.10.20 | 0141 - Military Rank/Grade
+        PD1.20 - Military Rank/Grade (IS) O S3.4.10.20 | 0141 - Military Rank/Grade
 
     pd1_21 : str | None
-        PD1.21 (opt) - Military Status (IS) S3.4.10.21 | 0142 - Military Status
+        PD1.21 - Military Status (IS) O S3.4.10.21 | 0142 - Military Status
 
     pd1_22 : str | None
-        PD1.22 (opt) - Advance Directive Last Verified Date (DT) S3.4.10.22
+        PD1.22 - Advance Directive Last Verified Date (DT) O S3.4.10.22
     """
 
     pd1_1: Optional[List[str]] = Field(
@@ -98,7 +98,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.1",
         title="Living Dependency",
-        description="Item #755 | Table HL70223",
+        description="O | Item #00755 | Table 0223 - Living Dependency | LEN:2",
     )
 
     pd1_2: Optional[str] = Field(
@@ -110,7 +110,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.2",
         title="Living Arrangement",
-        description="Item #742 | Table HL70220",
+        description="O | Item #00742 | Table 0220 - Living Arrangement | LEN:2",
     )
 
     pd1_3: Optional[List[XON]] = Field(
@@ -122,7 +122,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.3",
         title="Patient Primary Facility",
-        description="Item #756 | Table HL70204",
+        description="O | Item #00756 | Table 0204 - Organizational name type",
     )
 
     pd1_4: Optional[List[XCN]] = Field(
@@ -134,7 +134,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.4",
         title="Patient Primary Care Provider Name & ID No.",
-        description="Item #757",
+        description="O | Item #00757",
     )
 
     pd1_5: Optional[str] = Field(
@@ -146,7 +146,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.5",
         title="Student Indicator",
-        description="Item #745 | Table HL70231",
+        description="O | Item #00745 | Table 0231 - Student Status | LEN:2",
     )
 
     pd1_6: Optional[str] = Field(
@@ -158,7 +158,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.6",
         title="Handicap",
-        description="Item #753 | Table HL70295",
+        description="O | Item #00753 | Table 0295 - Handicap | LEN:2",
     )
 
     pd1_7: Optional[str] = Field(
@@ -170,7 +170,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.7",
         title="Living Will Code",
-        description="Item #759 | Table HL70315",
+        description="O | Item #00759 | Table 0315 - Living Will Code | LEN:2",
     )
 
     pd1_8: Optional[str] = Field(
@@ -182,7 +182,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.8",
         title="Organ Donor Code",
-        description="Item #760 | Table HL70316",
+        description="O | Item #00760 | Table 0316 - Organ Donor Code | LEN:2",
     )
 
     pd1_9: Optional[str] = Field(
@@ -194,7 +194,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.9",
         title="Separate Bill",
-        description="Item #761 | Table HL70136",
+        description="O | Item #00761 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pd1_10: Optional[List[CX]] = Field(
@@ -206,7 +206,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.10",
         title="Duplicate Patient",
-        description="Item #762",
+        description="O | Item #00762",
     )
 
     pd1_11: Optional[CWE] = Field(
@@ -218,7 +218,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.11",
         title="Publicity Code",
-        description="Item #743 | Table HL70215",
+        description="O | Item #00743 | Table 0215 - Publicity Code",
     )
 
     pd1_12: Optional[str] = Field(
@@ -230,7 +230,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.12",
         title="Protection Indicator",
-        description="Item #744 | Table HL70136",
+        description="O | Item #00744 | Table 0136 - Yes/no indicator",
     )
 
     pd1_13: Optional[str] = Field(
@@ -242,7 +242,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.13",
         title="Protection Indicator Effective Date",
-        description="Item #1566",
+        description="O | Item #01566",
     )
 
     pd1_14: Optional[List[XON]] = Field(
@@ -254,7 +254,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.14",
         title="Place of Worship",
-        description="Item #1567",
+        description="O | Item #01567",
     )
 
     pd1_15: Optional[List[CWE]] = Field(
@@ -266,7 +266,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.15",
         title="Advance Directive Code",
-        description="Item #1548 | Table HL70435",
+        description="C | Item #01548 | Table 0435 - Advance Directive Code",
     )
 
     pd1_16: Optional[str] = Field(
@@ -278,7 +278,9 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.16",
         title="Immunization Registry Status",
-        description="Item #1569 | Table HL70441",
+        description=(
+            "O | Item #01569 | Table 0441 - Immunization Registry Status | LEN:1"
+        ),
     )
 
     pd1_17: Optional[str] = Field(
@@ -290,7 +292,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.17",
         title="Immunization Registry Status Effective Date",
-        description="Item #1570",
+        description="O | Item #01570 | LEN:8",
     )
 
     pd1_18: Optional[str] = Field(
@@ -302,7 +304,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.18",
         title="Publicity Code Effective Date",
-        description="Item #1571",
+        description="O | Item #01571 | LEN:8",
     )
 
     pd1_19: Optional[str] = Field(
@@ -314,7 +316,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.19",
         title="Military Branch",
-        description="Item #1572 | Table HL70140",
+        description="O | Item #01572 | Table 0140 - Military Service | LEN:5",
     )
 
     pd1_20: Optional[str] = Field(
@@ -326,7 +328,9 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.20",
         title="Military Rank/Grade",
-        description="Item #486 | Table HL70141",
+        description=(
+            "O | Item #00486 | Table 0141 - Military Rank/Grade | LEN:2"
+        ),
     )
 
     pd1_21: Optional[str] = Field(
@@ -338,7 +342,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.21",
         title="Military Status",
-        description="Item #1573 | Table HL70142",
+        description="O | Item #01573 | Table 0142 - Military Status | LEN:3",
     )
 
     pd1_22: Optional[str] = Field(
@@ -350,7 +354,7 @@ class PD1(HL7Model):
         ),
         serialization_alias="PD1.22",
         title="Advance Directive Last Verified Date",
-        description="Item #2141",
+        description="O | Item #02141 | LEN:8",
     )
 
     @field_validator("pd1_13", "pd1_17", "pd1_18", "pd1_22", mode='before')

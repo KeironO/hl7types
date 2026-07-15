@@ -20,31 +20,31 @@ class URS(HL7Model):
     Attributes
     ----------
     urs_1 : list[str]
-        URS.1 (req, rep) - R/U Where Subject Definition (ST) S5.10.4.4.1
+        URS.1 - R/U Where Subject Definition (ST) R rep S5.10.4.4.1
 
     urs_2 : str | None
-        URS.2 (opt) - R/U When Data Start Date/Time (DTM) S5.10.4.4.2
+        URS.2 - R/U When Data Start Date/Time (DTM) O S5.10.4.4.2
 
     urs_3 : str | None
-        URS.3 (opt) - R/U When Data End Date/Time (DTM) S5.10.4.4.3
+        URS.3 - R/U When Data End Date/Time (DTM) O S5.10.4.4.3
 
     urs_4 : list[str] | None
-        URS.4 (opt, rep) - R/U What User Qualifier (ST) S5.10.4.4.4
+        URS.4 - R/U What User Qualifier (ST) O rep S5.10.4.4.4
 
     urs_5 : list[str] | None
-        URS.5 (opt, rep) - R/U Other Results Subject Definition (ST) S5.10.4.4.5
+        URS.5 - R/U Other Results Subject Definition (ST) O rep S5.10.4.4.5
 
     urs_6 : list[str] | None
-        URS.6 (opt, rep) - R/U Which Date/Time Qualifier (ID) S5.10.4.4.6 | 0156 - Which date/time qualifier
+        URS.6 - R/U Which Date/Time Qualifier (ID) O rep S5.10.4.4.6 | 0156 - Which date/time qualifier
 
     urs_7 : list[str] | None
-        URS.7 (opt, rep) - R/U Which Date/Time Status Qualifier (ID) S5.10.4.4.7 | 0157 - Which date/time status qualifier
+        URS.7 - R/U Which Date/Time Status Qualifier (ID) O rep S5.10.4.4.7 | 0157 - Which date/time status qualifier
 
     urs_8 : list[str] | None
-        URS.8 (opt, rep) - R/U Date/Time Selection Qualifier (ID) S5.10.4.4.8 | 0158 - Date/time selection qualifier
+        URS.8 - R/U Date/Time Selection Qualifier (ID) O rep S5.10.4.4.8 | 0158 - Date/time selection qualifier
 
     urs_9 : TQ | None
-        URS.9 (opt) - R/U Quantity/Timing Qualifier (TQ) S5.10.4.4.9
+        URS.9 - R/U Quantity/Timing Qualifier (TQ) O S5.10.4.4.9
     """
 
     urs_1: List[str] = Field(
@@ -56,7 +56,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.1",
         title="R/U Where Subject Definition",
-        description="Item #52",
+        description="R | Item #00052 | LEN:20",
     )
 
     urs_2: Optional[str] = Field(
@@ -68,7 +68,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.2",
         title="R/U When Data Start Date/Time",
-        description="Item #53",
+        description="O | Item #00053 | LEN:24",
     )
 
     urs_3: Optional[str] = Field(
@@ -80,7 +80,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.3",
         title="R/U When Data End Date/Time",
-        description="Item #54",
+        description="O | Item #00054 | LEN:24",
     )
 
     urs_4: Optional[List[str]] = Field(
@@ -92,7 +92,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.4",
         title="R/U What User Qualifier",
-        description="Item #55",
+        description="O | Item #00055 | LEN:20",
     )
 
     urs_5: Optional[List[str]] = Field(
@@ -104,7 +104,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.5",
         title="R/U Other Results Subject Definition",
-        description="Item #56",
+        description="O | Item #00056 | LEN:20",
     )
 
     urs_6: Optional[List[str]] = Field(
@@ -116,7 +116,9 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.6",
         title="R/U Which Date/Time Qualifier",
-        description="Item #57 | Table HL70156",
+        description=(
+            "O | Item #00057 | Table 0156 - Which date/time qualifier | LEN:12"
+        ),
     )
 
     urs_7: Optional[List[str]] = Field(
@@ -128,7 +130,10 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.7",
         title="R/U Which Date/Time Status Qualifier",
-        description="Item #58 | Table HL70157",
+        description=(
+            "O | Item #00058 | Table 0157 - Which date/time status qualifier | "
+            "LEN:12"
+        ),
     )
 
     urs_8: Optional[List[str]] = Field(
@@ -140,7 +145,10 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.8",
         title="R/U Date/Time Selection Qualifier",
-        description="Item #59 | Table HL70158",
+        description=(
+            "O | Item #00059 | Table 0158 - Date/time selection qualifier | "
+            "LEN:12"
+        ),
     )
 
     urs_9: Optional[TQ] = Field(
@@ -152,7 +160,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.9",
         title="R/U Quantity/Timing Qualifier",
-        description="Item #695",
+        description="O | Item #00695",
     )
 
     @field_validator("urs_2", "urs_3", mode='before')

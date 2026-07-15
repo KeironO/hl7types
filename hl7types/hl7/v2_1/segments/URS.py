@@ -18,19 +18,19 @@ class URS(HL7Model):
     Attributes
     ----------
     urs_1 : list[str]
-        URS.1 (req, rep) - R/U WHERE SUBJECT DEFINITION (ST)
+        URS.1 - R/U WHERE SUBJECT DEFINITION (ST) R rep
 
     urs_2 : str | None
-        URS.2 (opt) - R/U WHEN DATA START DATE/TIME (TS)
+        URS.2 - R/U WHEN DATA START DATE/TIME (TS) O
 
     urs_3 : str | None
-        URS.3 (opt) - R/U WHEN DATA END DATE/TIME (TS)
+        URS.3 - R/U WHEN DATA END DATE/TIME (TS) O
 
     urs_4 : list[str] | None
-        URS.4 (opt, rep) - R/U WHAT USER QUALIFIER (ST)
+        URS.4 - R/U WHAT USER QUALIFIER (ST) O rep
 
     urs_5 : list[str] | None
-        URS.5 (opt, rep) - R/U OTHER RESULTS SUBJECT DEFINI (ST)
+        URS.5 - R/U OTHER RESULTS SUBJECT DEFINI (ST) O rep
     """
 
     urs_1: List[str] = Field(
@@ -42,7 +42,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.1",
         title="R/U WHERE SUBJECT DEFINITION",
-        description="Item #608",
+        description="R | Item #00608 | LEN:20",
     )
 
     urs_2: Optional[str] = Field(
@@ -54,7 +54,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.2",
         title="R/U WHEN DATA START DATE/TIME",
-        description="Item #609",
+        description="O | Item #00609 | LEN:19",
     )
 
     urs_3: Optional[str] = Field(
@@ -66,7 +66,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.3",
         title="R/U WHEN DATA END DATE/TIME",
-        description="Item #610",
+        description="O | Item #00610 | LEN:19",
     )
 
     urs_4: Optional[List[str]] = Field(
@@ -78,7 +78,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.4",
         title="R/U WHAT USER QUALIFIER",
-        description="Item #611",
+        description="O | Item #00611 | LEN:20",
     )
 
     urs_5: Optional[List[str]] = Field(
@@ -90,7 +90,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.5",
         title="R/U OTHER RESULTS SUBJECT DEFINI",
-        description="Item #612",
+        description="O | Item #00612 | LEN:20",
     )
 
     model_config = {"populate_by_name": True}

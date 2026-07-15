@@ -20,25 +20,25 @@ class PRA(HL7Model):
     Attributes
     ----------
     pra_1 : str
-        PRA.1 (req) - PRA - Primary Key Value (ST) S8.6.3.1
+        PRA.1 - PRA - Primary Key Value (ST) R S8.6.3.1
 
     pra_2 : list[CE] | None
-        PRA.2 (opt, rep) - Practioner Group (CE) S8.6.3.2
+        PRA.2 - Practioner Group (CE) O rep S8.6.3.2
 
     pra_3 : list[str] | None
-        PRA.3 (opt, rep) - Practioner Category (ID) S8.6.3.3
+        PRA.3 - Practioner Category (ID) O rep S8.6.3.3
 
     pra_4 : str | None
-        PRA.4 (opt) - Provider Billing (ID) S8.6.3.4 | 0186 - Practioner Category
+        PRA.4 - Provider Billing (ID) O S8.6.3.4 | 0186 - Practioner Category
 
     pra_5 : list[str] | None
-        PRA.5 (opt, rep) - Specialty (CM) S8.6.3.5 | 0187 - Provider Billing
+        PRA.5 - Specialty (CM) O rep S8.6.3.5 | 0187 - Provider Billing
 
     pra_6 : list[str] | None
-        PRA.6 (opt, rep) - Practitioner ID Numbers (CM) S8.6.3.6
+        PRA.6 - Practitioner ID Numbers (CM) O rep S8.6.3.6
 
     pra_7 : list[str] | None
-        PRA.7 (opt, rep) - Privileges (CM) S8.6.3.7
+        PRA.7 - Privileges (CM) O rep S8.6.3.7
     """
 
     pra_1: str = Field(
@@ -49,7 +49,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.1",
         title="PRA - Primary Key Value",
-        description="Item #685",
+        description="R | Item #00685 | LEN:20",
     )
 
     pra_2: Optional[List[CE]] = Field(
@@ -61,7 +61,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.2",
         title="Practioner Group",
-        description="Item #686",
+        description="O | Item #00686",
     )
 
     pra_3: Optional[List[str]] = Field(
@@ -73,7 +73,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.3",
         title="Practioner Category",
-        description="Item #687",
+        description="O | Item #00687 | LEN:3",
     )
 
     pra_4: Optional[str] = Field(
@@ -85,7 +85,9 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.4",
         title="Provider Billing",
-        description="Item #688 | Table HL70186",
+        description=(
+            "O | Item #00688 | Table 0186 - Practioner Category | LEN:1"
+        ),
     )
 
     pra_5: Optional[List[str]] = Field(
@@ -97,7 +99,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.5",
         title="Specialty",
-        description="Item #689 | Table HL70187",
+        description="O | Item #00689 | Table 0187 - Provider Billing",
     )
 
     pra_6: Optional[List[str]] = Field(
@@ -109,7 +111,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.6",
         title="Practitioner ID Numbers",
-        description="Item #690",
+        description="O | Item #00690",
     )
 
     pra_7: Optional[List[str]] = Field(
@@ -121,7 +123,7 @@ class PRA(HL7Model):
         ),
         serialization_alias="PRA.7",
         title="Privileges",
-        description="Item #691",
+        description="O | Item #00691",
     )
 
     model_config = {"populate_by_name": True}

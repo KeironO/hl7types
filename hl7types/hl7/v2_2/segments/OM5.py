@@ -20,16 +20,16 @@ class OM5(HL7Model):
     Attributes
     ----------
     om5_1 : str | None
-        OM5.1 (opt) - Segment Type ID (ST) S7.6.9.1
+        OM5.1 - Segment Type ID (ST) NA S7.6.9.1
 
     om5_2 : str | None
-        OM5.2 (opt) - Sequence Number - Test/ Observation Master File (NM) S7.6.9.2
+        OM5.2 - Sequence Number - Test/ Observation Master File (NM) NA S7.6.9.2
 
     om5_3 : list[CE] | None
-        OM5.3 (opt, rep) - Tests / observations included within an ordered test battery (CE) S7.6.8.3
+        OM5.3 - Tests / observations included within an ordered test battery (CE) NA rep S7.6.8.3
 
     om5_4 : str | None
-        OM5.4 (opt) - Observation ID Suffixes (ST) S7.6.8.4
+        OM5.4 - Observation ID Suffixes (ST) NA S7.6.8.4
     """
 
     om5_1: Optional[str] = Field(
@@ -41,7 +41,7 @@ class OM5(HL7Model):
         ),
         serialization_alias="OM5.1",
         title="Segment Type ID",
-        description="Item #585",
+        description="NA | Item #00585 | LEN:3",
     )
 
     om5_2: Optional[str] = Field(
@@ -53,7 +53,7 @@ class OM5(HL7Model):
         ),
         serialization_alias="OM5.2",
         title="Sequence Number - Test/ Observation Master File",
-        description="Item #586",
+        description="NA | Item #00586 | LEN:4",
     )
 
     om5_3: Optional[List[CE]] = Field(
@@ -65,7 +65,7 @@ class OM5(HL7Model):
         ),
         serialization_alias="OM5.3",
         title="Tests / observations included within an ordered test battery",
-        description="Item #655",
+        description="NA | Item #00655",
     )
 
     om5_4: Optional[str] = Field(
@@ -77,7 +77,7 @@ class OM5(HL7Model):
         ),
         serialization_alias="OM5.4",
         title="Observation ID Suffixes",
-        description="Item #656",
+        description="NA | Item #00656 | LEN:200",
     )
 
     @field_validator("om5_2", mode='before')

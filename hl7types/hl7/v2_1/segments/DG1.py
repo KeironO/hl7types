@@ -18,46 +18,46 @@ class DG1(HL7Model):
     Attributes
     ----------
     dg1_1 : str
-        DG1.1 (req) - SET ID - DIAGNOSIS (SI) S6-3
+        DG1.1 - SET ID - DIAGNOSIS (SI) R S6-3
 
     dg1_2 : str
-        DG1.2 (req) - DIAGNOSIS CODING METHOD (ID) | 0053 - DIAGNOSIS CODING METHOD
+        DG1.2 - DIAGNOSIS CODING METHOD (ID) R | 0053 - DIAGNOSIS CODING METHOD
 
     dg1_3 : str | None
-        DG1.3 (opt) - DIAGNOSIS CODE (ID) | 0051 - DIAGNOSIS CODE
+        DG1.3 - DIAGNOSIS CODE (ID) O | 0051 - DIAGNOSIS CODE
 
     dg1_4 : str | None
-        DG1.4 (opt) - DIAGNOSIS DESCRIPTION (ST)
+        DG1.4 - DIAGNOSIS DESCRIPTION (ST) O
 
     dg1_5 : str | None
-        DG1.5 (opt) - DIAGNOSIS DATE/TIME (TS)
+        DG1.5 - DIAGNOSIS DATE/TIME (TS) O
 
     dg1_6 : str
-        DG1.6 (req) - DIAGNOSIS/DRG TYPE (ID) | 0052 - DIAGNOSIS TYPE
+        DG1.6 - DIAGNOSIS/DRG TYPE (ID) R | 0052 - DIAGNOSIS TYPE
 
     dg1_7 : str | None
-        DG1.7 (opt) - MAJOR DIAGNOSTIC CATEGORY (ST) | 0118 - MAJOR DIAGNOSTIC CATEGORY
+        DG1.7 - MAJOR DIAGNOSTIC CATEGORY (ST) O | 0118 - MAJOR DIAGNOSTIC CATEGORY
 
     dg1_8 : str | None
-        DG1.8 (opt) - DIAGNOSTIC RELATED GROUP (ID) | 0055 - DRG CODE
+        DG1.8 - DIAGNOSTIC RELATED GROUP (ID) O | 0055 - DRG CODE
 
     dg1_9 : str | None
-        DG1.9 (opt) - DRG APPROVAL INDICATOR (ID)
+        DG1.9 - DRG APPROVAL INDICATOR (ID) O
 
     dg1_10 : str | None
-        DG1.10 (opt) - DRG GROUPER REVIEW CODE (ID) | 0056 - DRG GROUPER REVIEW CODE
+        DG1.10 - DRG GROUPER REVIEW CODE (ID) O | 0056 - DRG GROUPER REVIEW CODE
 
     dg1_11 : str | None
-        DG1.11 (opt) - OUTLIER TYPE (ID) | 0083 - OUTLIER TYPE
+        DG1.11 - OUTLIER TYPE (ID) O | 0083 - OUTLIER TYPE
 
     dg1_12 : str | None
-        DG1.12 (opt) - OUTLIER DAYS (NM)
+        DG1.12 - OUTLIER DAYS (NM) O
 
     dg1_13 : str | None
-        DG1.13 (opt) - OUTLIER COST (NM)
+        DG1.13 - OUTLIER COST (NM) O
 
     dg1_14 : str | None
-        DG1.14 (opt) - GROUPER VERSION AND TYPE (ST)
+        DG1.14 - GROUPER VERSION AND TYPE (ST) O
     """
 
     dg1_1: str = Field(
@@ -68,7 +68,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.1",
         title="SET ID - DIAGNOSIS",
-        description="Item #506",
+        description="R | Item #00506 | LEN:4",
     )
 
     dg1_2: str = Field(
@@ -79,7 +79,9 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.2",
         title="DIAGNOSIS CODING METHOD",
-        description="Item #394 | Table HL70053",
+        description=(
+            "R | Item #00394 | Table 0053 - DIAGNOSIS CODING METHOD | LEN:2"
+        ),
     )
 
     dg1_3: Optional[str] = Field(
@@ -91,7 +93,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.3",
         title="DIAGNOSIS CODE",
-        description="Item #293 | Table HL70051",
+        description="O | Item #00293 | Table 0051 - DIAGNOSIS CODE | LEN:8",
     )
 
     dg1_4: Optional[str] = Field(
@@ -103,7 +105,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.4",
         title="DIAGNOSIS DESCRIPTION",
-        description="Item #294",
+        description="O | Item #00294 | LEN:40",
     )
 
     dg1_5: Optional[str] = Field(
@@ -115,7 +117,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.5",
         title="DIAGNOSIS DATE/TIME",
-        description="Item #295",
+        description="O | Item #00295 | LEN:19",
     )
 
     dg1_6: str = Field(
@@ -126,7 +128,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.6",
         title="DIAGNOSIS/DRG TYPE",
-        description="Item #297 | Table HL70052",
+        description="R | Item #00297 | Table 0052 - DIAGNOSIS TYPE | LEN:2",
     )
 
     dg1_7: Optional[str] = Field(
@@ -138,7 +140,9 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.7",
         title="MAJOR DIAGNOSTIC CATEGORY",
-        description="Item #298 | Table HL70118",
+        description=(
+            "O | Item #00298 | Table 0118 - MAJOR DIAGNOSTIC CATEGORY | LEN:4"
+        ),
     )
 
     dg1_8: Optional[str] = Field(
@@ -150,7 +154,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.8",
         title="DIAGNOSTIC RELATED GROUP",
-        description="Item #299 | Table HL70055",
+        description="O | Item #00299 | Table 0055 - DRG CODE | LEN:4",
     )
 
     dg1_9: Optional[str] = Field(
@@ -162,7 +166,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.9",
         title="DRG APPROVAL INDICATOR",
-        description="Item #373",
+        description="O | Item #00373 | LEN:2",
     )
 
     dg1_10: Optional[str] = Field(
@@ -174,7 +178,9 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.10",
         title="DRG GROUPER REVIEW CODE",
-        description="Item #374 | Table HL70056",
+        description=(
+            "O | Item #00374 | Table 0056 - DRG GROUPER REVIEW CODE | LEN:2"
+        ),
     )
 
     dg1_11: Optional[str] = Field(
@@ -186,7 +192,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.11",
         title="OUTLIER TYPE",
-        description="Item #375 | Table HL70083",
+        description="O | Item #00375 | Table 0083 - OUTLIER TYPE | LEN:2",
     )
 
     dg1_12: Optional[str] = Field(
@@ -198,7 +204,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.12",
         title="OUTLIER DAYS",
-        description="Item #300",
+        description="O | Item #00300 | LEN:3",
     )
 
     dg1_13: Optional[str] = Field(
@@ -210,7 +216,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.13",
         title="OUTLIER COST",
-        description="Item #376",
+        description="O | Item #00376 | LEN:12",
     )
 
     dg1_14: Optional[str] = Field(
@@ -222,7 +228,7 @@ class DG1(HL7Model):
         ),
         serialization_alias="DG1.14",
         title="GROUPER VERSION AND TYPE",
-        description="Item #781",
+        description="O | Item #00781 | LEN:4",
     )
 
     @field_validator("dg1_1", mode='before')

@@ -20,13 +20,13 @@ class RGS(HL7Model):
     Attributes
     ----------
     rgs_1 : str
-        RGS.1 (req) - Set ID - RGS (SI) S10.6.3.1
+        RGS.1 - Set ID - RGS (SI) R S10.6.3.1
 
     rgs_2 : str | None
-        RGS.2 (opt) - Segment Action Code (ID) S10.6.3.2 | 0206 - Segment action code
+        RGS.2 - Segment Action Code (ID) C S10.6.3.2 | 0206 - Segment action code
 
     rgs_3 : CE | None
-        RGS.3 (opt) - Resource Group ID (CE) S10.6.3.3
+        RGS.3 - Resource Group ID (CE) O S10.6.3.3
     """
 
     rgs_1: str = Field(
@@ -37,7 +37,7 @@ class RGS(HL7Model):
         ),
         serialization_alias="RGS.1",
         title="Set ID - RGS",
-        description="Item #1203",
+        description="R | Item #01203 | LEN:4",
     )
 
     rgs_2: Optional[str] = Field(
@@ -49,7 +49,9 @@ class RGS(HL7Model):
         ),
         serialization_alias="RGS.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description=(
+            "C | Item #00763 | Table 0206 - Segment action code | LEN:3"
+        ),
     )
 
     rgs_3: Optional[CE] = Field(
@@ -61,7 +63,7 @@ class RGS(HL7Model):
         ),
         serialization_alias="RGS.3",
         title="Resource Group ID",
-        description="Item #1204",
+        description="O | Item #01204",
     )
 
     @field_validator("rgs_1", mode='before')

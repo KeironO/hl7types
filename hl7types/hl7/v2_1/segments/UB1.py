@@ -18,73 +18,73 @@ class UB1(HL7Model):
     Attributes
     ----------
     ub1_1 : str | None
-        UB1.1 (opt) - SET ID - UB82 (SI) S6-17
+        UB1.1 - SET ID - UB82 (SI) O S6-17
 
     ub1_2 : str | None
-        UB1.2 (opt) - BLOOD DEDUCTIBLE (ST)
+        UB1.2 - BLOOD DEDUCTIBLE (ST) O
 
     ub1_3 : str | None
-        UB1.3 (opt) - BLOOD FURN.-PINTS OF (40) (ST)
+        UB1.3 - BLOOD FURN.-PINTS OF (40) (ST) O
 
     ub1_4 : str | None
-        UB1.4 (opt) - BLOOD REPLACED-PINTS (41) (ST)
+        UB1.4 - BLOOD REPLACED-PINTS (41) (ST) O
 
     ub1_5 : str | None
-        UB1.5 (opt) - BLOOD NOT RPLCD-PINTS(42) (ST)
+        UB1.5 - BLOOD NOT RPLCD-PINTS(42) (ST) O
 
     ub1_6 : str | None
-        UB1.6 (opt) - CO-INSURANCE DAYS (25) (ST)
+        UB1.6 - CO-INSURANCE DAYS (25) (ST) O
 
     ub1_7 : list[str] | None
-        UB1.7 (opt, rep) - CONDITION CODE (ID) | 0043 - CONDITION
+        UB1.7 - CONDITION CODE (ID) O rep | 0043 - CONDITION
 
     ub1_8 : str | None
-        UB1.8 (opt) - COVERED DAYS - (23) (ST)
+        UB1.8 - COVERED DAYS - (23) (ST) O
 
     ub1_9 : str | None
-        UB1.9 (opt) - NON COVERED DAYS - (24) (ST)
+        UB1.9 - NON COVERED DAYS - (24) (ST) O
 
     ub1_10 : list[str] | None
-        UB1.10 (opt, rep) - VALUE AMOUNT & CODE (CM)
+        UB1.10 - VALUE AMOUNT & CODE (CM) O rep
 
     ub1_11 : str | None
-        UB1.11 (opt) - NUMBER OF GRACE DAYS (90) (ST)
+        UB1.11 - NUMBER OF GRACE DAYS (90) (ST) O
 
     ub1_12 : str | None
-        UB1.12 (opt) - SPEC. PROG. INDICATOR(44) (ID)
+        UB1.12 - SPEC. PROG. INDICATOR(44) (ID) O
 
     ub1_13 : str | None
-        UB1.13 (opt) - PSRO/UR APPROVAL IND. (87) (ID)
+        UB1.13 - PSRO/UR APPROVAL IND. (87) (ID) O
 
     ub1_14 : str | None
-        UB1.14 (opt) - PSRO/UR APRVD STAY-FM(88) (DT)
+        UB1.14 - PSRO/UR APRVD STAY-FM(88) (DT) O
 
     ub1_15 : str | None
-        UB1.15 (opt) - PSRO/UR APRVD STAY-TO(89) (DT)
+        UB1.15 - PSRO/UR APRVD STAY-TO(89) (DT) O
 
     ub1_16 : list[str] | None
-        UB1.16 (opt, rep) - OCCURRENCE (28-32) (ID)
+        UB1.16 - OCCURRENCE (28-32) (ID) O rep
 
     ub1_17 : str | None
-        UB1.17 (opt) - OCCURRENCE SPAN (33) (ID)
+        UB1.17 - OCCURRENCE SPAN (33) (ID) O
 
     ub1_18 : str | None
-        UB1.18 (opt) - OCCURRENCE SPAN START DATE(33) (DT)
+        UB1.18 - OCCURRENCE SPAN START DATE(33) (DT) O
 
     ub1_19 : str | None
-        UB1.19 (opt) - OCCUR. SPAN END DATE (33) (DT)
+        UB1.19 - OCCUR. SPAN END DATE (33) (DT) O
 
     ub1_20 : str | None
-        UB1.20 (opt) - UB-82 LOCATOR 2 (ST)
+        UB1.20 - UB-82 LOCATOR 2 (ST) O
 
     ub1_21 : str | None
-        UB1.21 (opt) - UB-82 LOCATOR 9 (ST)
+        UB1.21 - UB-82 LOCATOR 9 (ST) O
 
     ub1_22 : str | None
-        UB1.22 (opt) - UB-82 LOCATOR 27 (ST)
+        UB1.22 - UB-82 LOCATOR 27 (ST) O
 
     ub1_23 : str | None
-        UB1.23 (opt) - UB-82 LOCATOR 45 (ST)
+        UB1.23 - UB-82 LOCATOR 45 (ST) O
     """
 
     ub1_1: Optional[str] = Field(
@@ -96,7 +96,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.1",
         title="SET ID - UB82",
-        description="Item #459",
+        description="O | Item #00459 | LEN:4",
     )
 
     ub1_2: Optional[str] = Field(
@@ -108,7 +108,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.2",
         title="BLOOD DEDUCTIBLE",
-        description="Item #279",
+        description="O | Item #00279 | LEN:1",
     )
 
     ub1_3: Optional[str] = Field(
@@ -120,7 +120,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.3",
         title="BLOOD FURN.-PINTS OF (40)",
-        description="Item #396",
+        description="O | Item #00396 | LEN:2",
     )
 
     ub1_4: Optional[str] = Field(
@@ -132,7 +132,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.4",
         title="BLOOD REPLACED-PINTS (41)",
-        description="Item #397",
+        description="O | Item #00397 | LEN:2",
     )
 
     ub1_5: Optional[str] = Field(
@@ -144,7 +144,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.5",
         title="BLOOD NOT RPLCD-PINTS(42)",
-        description="Item #398",
+        description="O | Item #00398 | LEN:2",
     )
 
     ub1_6: Optional[str] = Field(
@@ -156,7 +156,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.6",
         title="CO-INSURANCE DAYS (25)",
-        description="Item #399",
+        description="O | Item #00399 | LEN:2",
     )
 
     ub1_7: Optional[List[str]] = Field(
@@ -168,7 +168,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.7",
         title="CONDITION CODE",
-        description="Item #400 | Table HL70043",
+        description="O | Item #00400 | Table 0043 - CONDITION | LEN:2",
     )
 
     ub1_8: Optional[str] = Field(
@@ -180,7 +180,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.8",
         title="COVERED DAYS - (23)",
-        description="Item #405",
+        description="O | Item #00405 | LEN:3",
     )
 
     ub1_9: Optional[str] = Field(
@@ -192,7 +192,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.9",
         title="NON COVERED DAYS - (24)",
-        description="Item #406",
+        description="O | Item #00406 | LEN:3",
     )
 
     ub1_10: Optional[List[str]] = Field(
@@ -204,7 +204,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.10",
         title="VALUE AMOUNT & CODE",
-        description="Item #407",
+        description="O | Item #00407 | LEN:12",
     )
 
     ub1_11: Optional[str] = Field(
@@ -216,7 +216,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.11",
         title="NUMBER OF GRACE DAYS (90)",
-        description="Item #424",
+        description="O | Item #00424 | LEN:2",
     )
 
     ub1_12: Optional[str] = Field(
@@ -228,7 +228,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.12",
         title="SPEC. PROG. INDICATOR(44)",
-        description="Item #425",
+        description="O | Item #00425 | LEN:2",
     )
 
     ub1_13: Optional[str] = Field(
@@ -240,7 +240,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.13",
         title="PSRO/UR APPROVAL IND. (87)",
-        description="Item #426",
+        description="O | Item #00426 | LEN:1",
     )
 
     ub1_14: Optional[str] = Field(
@@ -252,7 +252,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.14",
         title="PSRO/UR APRVD STAY-FM(88)",
-        description="Item #427",
+        description="O | Item #00427 | LEN:8",
     )
 
     ub1_15: Optional[str] = Field(
@@ -264,7 +264,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.15",
         title="PSRO/UR APRVD STAY-TO(89)",
-        description="Item #428",
+        description="O | Item #00428 | LEN:8",
     )
 
     ub1_16: Optional[List[str]] = Field(
@@ -276,7 +276,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.16",
         title="OCCURRENCE (28-32)",
-        description="Item #429",
+        description="O | Item #00429 | LEN:20",
     )
 
     ub1_17: Optional[str] = Field(
@@ -288,7 +288,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.17",
         title="OCCURRENCE SPAN (33)",
-        description="Item #435",
+        description="O | Item #00435 | LEN:2",
     )
 
     ub1_18: Optional[str] = Field(
@@ -300,7 +300,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.18",
         title="OCCURRENCE SPAN START DATE(33)",
-        description="Item #446",
+        description="O | Item #00446 | LEN:8",
     )
 
     ub1_19: Optional[str] = Field(
@@ -312,7 +312,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.19",
         title="OCCUR. SPAN END DATE (33)",
-        description="Item #447",
+        description="O | Item #00447 | LEN:8",
     )
 
     ub1_20: Optional[str] = Field(
@@ -324,7 +324,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.20",
         title="UB-82 LOCATOR 2",
-        description="Item #448",
+        description="O | Item #00448 | LEN:30",
     )
 
     ub1_21: Optional[str] = Field(
@@ -336,7 +336,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.21",
         title="UB-82 LOCATOR 9",
-        description="Item #449",
+        description="O | Item #00449 | LEN:7",
     )
 
     ub1_22: Optional[str] = Field(
@@ -348,7 +348,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.22",
         title="UB-82 LOCATOR 27",
-        description="Item #450",
+        description="O | Item #00450 | LEN:8",
     )
 
     ub1_23: Optional[str] = Field(
@@ -360,7 +360,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.23",
         title="UB-82 LOCATOR 45",
-        description="Item #451",
+        description="O | Item #00451 | LEN:17",
     )
 
     @field_validator("ub1_1", mode='before')

@@ -20,13 +20,13 @@ class RMI(HL7Model):
     Attributes
     ----------
     rmi_1 : CWE | None
-        RMI.1 (opt) - Risk Management Incident Code (CWE) S6.5.14.1 | 0427 - Risk Management Incident Code
+        RMI.1 - Risk Management Incident Code (CWE) O S6.5.14.1 | 0427 - Risk Management Incident Code
 
     rmi_2 : str | None
-        RMI.2 (opt) - Date/Time Incident (DTM) S6.5.14.2
+        RMI.2 - Date/Time Incident (DTM) O S6.5.14.2
 
     rmi_3 : CWE | None
-        RMI.3 (opt) - Incident Type Code (CWE) S6.5.14.3 | 0428 - Incident Type Code
+        RMI.3 - Incident Type Code (CWE) O S6.5.14.3 | 0428 - Incident Type Code
     """
 
     rmi_1: Optional[CWE] = Field(
@@ -38,7 +38,9 @@ class RMI(HL7Model):
         ),
         serialization_alias="RMI.1",
         title="Risk Management Incident Code",
-        description="Item #1530 | Table HL70427",
+        description=(
+            "O | Item #01530 | Table 0427 - Risk Management Incident Code"
+        ),
     )
 
     rmi_2: Optional[str] = Field(
@@ -50,7 +52,7 @@ class RMI(HL7Model):
         ),
         serialization_alias="RMI.2",
         title="Date/Time Incident",
-        description="Item #1531",
+        description="O | Item #01531",
     )
 
     rmi_3: Optional[CWE] = Field(
@@ -62,7 +64,7 @@ class RMI(HL7Model):
         ),
         serialization_alias="RMI.3",
         title="Incident Type Code",
-        description="Item #1533 | Table HL70428",
+        description="O | Item #01533 | Table 0428 - Incident Type Code",
     )
 
     @field_validator("rmi_2", mode='before')

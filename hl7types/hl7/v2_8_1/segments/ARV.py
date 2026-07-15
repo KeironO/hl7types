@@ -22,22 +22,22 @@ class ARV(HL7Model):
     Attributes
     ----------
     arv_1 : str | None
-        ARV.1 (opt) - Set ID (SI) S3.4.14.1
+        ARV.1 - Set ID (SI) O S3.4.14.1
 
     arv_2 : CNE
-        ARV.2 (req) - Access Restriction Action Code (CNE) S3.4.14.2 | 0206 - Segment Action Code
+        ARV.2 - Access Restriction Action Code (CNE) R S3.4.14.2 | 0206 - Segment Action Code
 
     arv_3 : CWE
-        ARV.3 (req) - Access Restriction Value (CWE) S3.4.14.3 | 0717 - Access Restriction Value
+        ARV.3 - Access Restriction Value (CWE) R S3.4.14.3 | 0717 - Access Restriction Value
 
     arv_4 : list[CWE] | None
-        ARV.4 (opt, rep) - Access Restriction Reason (CWE) S3.4.14.4 | 0719 - Access Restriction Reason Code
+        ARV.4 - Access Restriction Reason (CWE) O rep S3.4.14.4 | 0719 - Access Restriction Reason Code
 
     arv_5 : list[str] | None
-        ARV.5 (opt, rep) - Special Access Restriction Instructions (ST) S3.4.14.5
+        ARV.5 - Special Access Restriction Instructions (ST) O rep S3.4.14.5
 
     arv_6 : DR | None
-        ARV.6 (opt) - Access Restriction Date Range (DR) S3.4.14.6
+        ARV.6 - Access Restriction Date Range (DR) O S3.4.14.6
     """
 
     arv_1: Optional[str] = Field(
@@ -49,7 +49,7 @@ class ARV(HL7Model):
         ),
         serialization_alias="ARV.1",
         title="Set ID",
-        description="Item #2143",
+        description="O | Item #02143 | LEN:4",
     )
 
     arv_2: CNE = Field(
@@ -60,7 +60,7 @@ class ARV(HL7Model):
         ),
         serialization_alias="ARV.2",
         title="Access Restriction Action Code",
-        description="Item #2144 | Table HL70206",
+        description="R | Item #02144 | Table 0206 - Segment Action Code",
     )
 
     arv_3: CWE = Field(
@@ -71,7 +71,7 @@ class ARV(HL7Model):
         ),
         serialization_alias="ARV.3",
         title="Access Restriction Value",
-        description="Item #2145 | Table HL70717",
+        description="R | Item #02145 | Table 0717 - Access Restriction Value",
     )
 
     arv_4: Optional[List[CWE]] = Field(
@@ -83,7 +83,9 @@ class ARV(HL7Model):
         ),
         serialization_alias="ARV.4",
         title="Access Restriction Reason",
-        description="Item #2146 | Table HL70719",
+        description=(
+            "O | Item #02146 | Table 0719 - Access Restriction Reason Code"
+        ),
     )
 
     arv_5: Optional[List[str]] = Field(
@@ -95,7 +97,7 @@ class ARV(HL7Model):
         ),
         serialization_alias="ARV.5",
         title="Special Access Restriction Instructions",
-        description="Item #2147",
+        description="O | Item #02147",
     )
 
     arv_6: Optional[DR] = Field(
@@ -107,7 +109,7 @@ class ARV(HL7Model):
         ),
         serialization_alias="ARV.6",
         title="Access Restriction Date Range",
-        description="Item #2148",
+        description="O | Item #02148",
     )
 
     @field_validator("arv_1", mode='before')

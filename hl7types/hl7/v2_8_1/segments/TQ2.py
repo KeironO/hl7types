@@ -21,34 +21,34 @@ class TQ2(HL7Model):
     Attributes
     ----------
     tq2_1 : str | None
-        TQ2.1 (opt) - Set ID - TQ2 (SI) S4.5.5.1
+        TQ2.1 - Set ID - TQ2 (SI) O S4.5.5.1
 
     tq2_2 : str | None
-        TQ2.2 (opt) - Sequence/Results Flag (ID) S4.5.5.2 | 0503 - Sequence/Results Flag
+        TQ2.2 - Sequence/Results Flag (ID) O S4.5.5.2 | 0503 - Sequence/Results Flag
 
     tq2_3 : list[EI] | None
-        TQ2.3 (opt, rep) - Related Placer Number (EI) S4.5.5.3
+        TQ2.3 - Related Placer Number (EI) C rep S4.5.5.3
 
     tq2_4 : list[EI] | None
-        TQ2.4 (opt, rep) - Related Filler Number (EI) S4.5.5.4
+        TQ2.4 - Related Filler Number (EI) C rep S4.5.5.4
 
     tq2_5 : list[EI] | None
-        TQ2.5 (opt, rep) - Related Placer Group Number (EI) S4.5.5.5
+        TQ2.5 - Related Placer Group Number (EI) C rep S4.5.5.5
 
     tq2_6 : str | None
-        TQ2.6 (opt) - Sequence Condition Code (ID) S4.5.5.6 | 0504 - Sequence Condition Code
+        TQ2.6 - Sequence Condition Code (ID) C S4.5.5.6 | 0504 - Sequence Condition Code
 
     tq2_7 : str | None
-        TQ2.7 (opt) - Cyclic Entry/Exit Indicator (ID) S4.5.5.7 | 0505 - Cyclic Entry/Exit Indicator
+        TQ2.7 - Cyclic Entry/Exit Indicator (ID) C S4.5.5.7 | 0505 - Cyclic Entry/Exit Indicator
 
     tq2_8 : CQ | None
-        TQ2.8 (opt) - Sequence Condition Time Interval (CQ) S4.5.5.8
+        TQ2.8 - Sequence Condition Time Interval (CQ) O S4.5.5.8
 
     tq2_9 : str | None
-        TQ2.9 (opt) - Cyclic Group Maximum Number of Repeats (NM) S4.5.5.9
+        TQ2.9 - Cyclic Group Maximum Number of Repeats (NM) O S4.5.5.9
 
     tq2_10 : str | None
-        TQ2.10 (opt) - Special Service Request Relationship (ID) S4.5.5.10 | 0506 - Service Request Relationship
+        TQ2.10 - Special Service Request Relationship (ID) C S4.5.5.10 | 0506 - Service Request Relationship
     """
 
     tq2_1: Optional[str] = Field(
@@ -60,7 +60,7 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.1",
         title="Set ID - TQ2",
-        description="Item #1648",
+        description="O | Item #01648 | LEN:4",
     )
 
     tq2_2: Optional[str] = Field(
@@ -72,7 +72,9 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.2",
         title="Sequence/Results Flag",
-        description="Item #1649 | Table HL70503",
+        description=(
+            "O | Item #01649 | Table 0503 - Sequence/Results Flag | LEN:1"
+        ),
     )
 
     tq2_3: Optional[List[EI]] = Field(
@@ -84,7 +86,7 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.3",
         title="Related Placer Number",
-        description="Item #1650",
+        description="C | Item #01650",
     )
 
     tq2_4: Optional[List[EI]] = Field(
@@ -96,7 +98,7 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.4",
         title="Related Filler Number",
-        description="Item #1651",
+        description="C | Item #01651",
     )
 
     tq2_5: Optional[List[EI]] = Field(
@@ -108,7 +110,7 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.5",
         title="Related Placer Group Number",
-        description="Item #1652",
+        description="C | Item #01652",
     )
 
     tq2_6: Optional[str] = Field(
@@ -120,7 +122,7 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.6",
         title="Sequence Condition Code",
-        description="Item #1653 | Table HL70504",
+        description="C | Item #01653 | Table 0504 - Sequence Condition Code",
     )
 
     tq2_7: Optional[str] = Field(
@@ -132,7 +134,9 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.7",
         title="Cyclic Entry/Exit Indicator",
-        description="Item #1654 | Table HL70505",
+        description=(
+            "C | Item #01654 | Table 0505 - Cyclic Entry/Exit Indicator | LEN:1"
+        ),
     )
 
     tq2_8: Optional[CQ] = Field(
@@ -144,7 +148,7 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.8",
         title="Sequence Condition Time Interval",
-        description="Item #1655",
+        description="O | Item #01655",
     )
 
     tq2_9: Optional[str] = Field(
@@ -156,7 +160,7 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.9",
         title="Cyclic Group Maximum Number of Repeats",
-        description="Item #1656",
+        description="O | Item #01656",
     )
 
     tq2_10: Optional[str] = Field(
@@ -168,7 +172,9 @@ class TQ2(HL7Model):
         ),
         serialization_alias="TQ2.10",
         title="Special Service Request Relationship",
-        description="Item #1657 | Table HL70506",
+        description=(
+            "C | Item #01657 | Table 0506 - Service Request Relationship | LEN:1"
+        ),
     )
 
     @field_validator("tq2_1", mode='before')

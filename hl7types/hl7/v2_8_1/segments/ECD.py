@@ -20,16 +20,16 @@ class ECD(HL7Model):
     Attributes
     ----------
     ecd_1 : str
-        ECD.1 (req) - Reference Command Number (NM) S13.4.5.1
+        ECD.1 - Reference Command Number (NM) R S13.4.5.1
 
     ecd_2 : CWE
-        ECD.2 (req) - Remote Control Command (CWE) S13.4.5.2 | 0368 - Remote Control Command
+        ECD.2 - Remote Control Command (CWE) R S13.4.5.2 | 0368 - Remote Control Command
 
     ecd_3 : str | None
-        ECD.3 (opt) - Response Required (ID) S13.4.5.3 | 0136 - Yes/no Indicator
+        ECD.3 - Response Required (ID) O S13.4.5.3 | 0136 - Yes/no Indicator
 
     ecd_5 : list[str] | None
-        ECD.5 (opt, rep) - Parameters (TX) S13.4.5.5
+        ECD.5 - Parameters (TX) O rep S13.4.5.5
     """
 
     ecd_1: str = Field(
@@ -40,7 +40,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.1",
         title="Reference Command Number",
-        description="Item #1390",
+        description="R | Item #01390",
     )
 
     ecd_2: CWE = Field(
@@ -51,7 +51,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.2",
         title="Remote Control Command",
-        description="Item #1391 | Table HL70368",
+        description="R | Item #01391 | Table 0368 - Remote Control Command",
     )
 
     ecd_3: Optional[str] = Field(
@@ -63,7 +63,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.3",
         title="Response Required",
-        description="Item #1392 | Table HL70136",
+        description="O | Item #01392 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     ecd_5: Optional[List[str]] = Field(
@@ -75,7 +75,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.5",
         title="Parameters",
-        description="Item #1394",
+        description="O | Item #01394",
     )
 
     @field_validator("ecd_1", mode='before')

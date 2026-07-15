@@ -22,145 +22,145 @@ class OM1(HL7Model):
     Attributes
     ----------
     om1_1 : str
-        OM1.1 (req) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
+        OM1.1 - Sequence Number - Test/Observation Master File (NM) R S8.8.10.1
 
     om1_2 : CWE
-        OM1.2 (req) - Producer's Service/Test/Observation ID (CWE) S8.8.8.2 | 9999 - no table for CE
+        OM1.2 - Producer's Service/Test/Observation ID (CWE) R S8.8.8.2 | 9999 - no table for CE
 
     om1_3 : list[str] | None
-        OM1.3 (opt, rep) - Permitted Data Types (ID) S8.8.8.3 | 0125 - Value type
+        OM1.3 - Permitted Data Types (ID) O rep S8.8.8.3 | 0125 - Value type
 
     om1_4 : str
-        OM1.4 (req) - Specimen Required (ID) S8.8.8.4 | 0136 - Yes/no indicator
+        OM1.4 - Specimen Required (ID) R S8.8.8.4 | 0136 - Yes/no indicator
 
     om1_5 : CWE
-        OM1.5 (req) - Producer ID (CWE) S8.8.8.5 | 9999 - no table for CE
+        OM1.5 - Producer ID (CWE) R S8.8.8.5 | 9999 - no table for CE
 
     om1_6 : str | None
-        OM1.6 (opt) - Observation Description (TX) S8.8.8.6
+        OM1.6 - Observation Description (TX) O S8.8.8.6
 
     om1_7 : CWE | None
-        OM1.7 (opt) - Other Service/Test/Observation IDs for the Observation (CWE) S8.8.8.7 | 9999 - no table for CE
+        OM1.7 - Other Service/Test/Observation IDs for the Observation (CWE) O S8.8.8.7 | 9999 - no table for CE
 
     om1_8 : list[str]
-        OM1.8 (req, rep) - Other Names (ST) S8.8.8.8
+        OM1.8 - Other Names (ST) R rep S8.8.8.8
 
     om1_9 : str | None
-        OM1.9 (opt) - Preferred Report Name for the Observation (ST) S8.8.8.9
+        OM1.9 - Preferred Report Name for the Observation (ST) O S8.8.8.9
 
     om1_10 : str | None
-        OM1.10 (opt) - Preferred Short Name or Mnemonic for Observation (ST) S8.8.8.10
+        OM1.10 - Preferred Short Name or Mnemonic for Observation (ST) O S8.8.8.10
 
     om1_11 : str | None
-        OM1.11 (opt) - Preferred Long Name for the Observation (ST) S8.8.8.11
+        OM1.11 - Preferred Long Name for the Observation (ST) O S8.8.8.11
 
     om1_12 : str | None
-        OM1.12 (opt) - Orderability (ID) S8.8.8.12 | 0136 - Yes/no indicator
+        OM1.12 - Orderability (ID) O S8.8.8.12 | 0136 - Yes/no indicator
 
     om1_13 : list[CWE] | None
-        OM1.13 (opt, rep) - Identity of Instrument Used to Perform this Study (CWE) S8.8.8.13 | 9999 - no table for CE
+        OM1.13 - Identity of Instrument Used to Perform this Study (CWE) O rep S8.8.8.13 | 9999 - no table for CE
 
     om1_14 : list[CWE] | None
-        OM1.14 (opt, rep) - Coded Representation of Method (CWE) S8.8.8.14 | 9999 - no table for CE
+        OM1.14 - Coded Representation of Method (CWE) O rep S8.8.8.14 | 9999 - no table for CE
 
     om1_15 : str | None
-        OM1.15 (opt) - Portable Device Indicator (ID) S8.8.8.15 | 0136 - Yes/no indicator
+        OM1.15 - Portable Device Indicator (ID) O S8.8.8.15 | 0136 - Yes/no indicator
 
     om1_16 : list[CWE] | None
-        OM1.16 (opt, rep) - Observation Producing Department/Section (CWE) S8.8.8.16 | 9999 - no table for CE
+        OM1.16 - Observation Producing Department/Section (CWE) O rep S8.8.8.16 | 9999 - no table for CE
 
     om1_17 : XTN | None
-        OM1.17 (opt) - Telephone Number of Section (XTN) S8.8.8.17
+        OM1.17 - Telephone Number of Section (XTN) O S8.8.8.17
 
     om1_18 : str
-        OM1.18 (req) - Nature of Service/Test/Observation (IS) S8.8.8.18 | 0174 - Nature of Service/Test/Observation
+        OM1.18 - Nature of Service/Test/Observation (IS) R S8.8.8.18 | 0174 - Nature of Service/Test/Observation
 
     om1_19 : CWE | None
-        OM1.19 (opt) - Report Subheader (CWE) S8.8.8.19 | 9999 - no table for CE
+        OM1.19 - Report Subheader (CWE) O S8.8.8.19 | 9999 - no table for CE
 
     om1_20 : str | None
-        OM1.20 (opt) - Report Display Order (ST) S8.8.8.20
+        OM1.20 - Report Display Order (ST) O S8.8.8.20
 
     om1_21 : str | None
-        OM1.21 (opt) - Date/Time Stamp for any change in Definition for the Observation (DTM) S8.8.8.21
+        OM1.21 - Date/Time Stamp for any change in Definition for the Observation (DTM) O S8.8.8.21
 
     om1_22 : str | None
-        OM1.22 (opt) - Effective Date/Time of Change (DTM) S8.8.14.19
+        OM1.22 - Effective Date/Time of Change (DTM) O S8.8.14.19
 
     om1_23 : str | None
-        OM1.23 (opt) - Typical Turn-Around Time (NM) S8.8.8.23
+        OM1.23 - Typical Turn-Around Time (NM) O S8.8.8.23
 
     om1_24 : str | None
-        OM1.24 (opt) - Processing Time (NM) S8.8.8.24
+        OM1.24 - Processing Time (NM) O S8.8.8.24
 
     om1_25 : list[str] | None
-        OM1.25 (opt, rep) - Processing Priority (ID) S8.8.8.25 | 0168 - Processing priority
+        OM1.25 - Processing Priority (ID) O rep S8.8.8.25 | 0168 - Processing priority
 
     om1_26 : str | None
-        OM1.26 (opt) - Reporting Priority (ID) S8.8.8.26 | 0169 - Reporting priority
+        OM1.26 - Reporting Priority (ID) O S8.8.8.26 | 0169 - Reporting priority
 
     om1_27 : list[CWE] | None
-        OM1.27 (opt, rep) - Outside Site(s) Where Observation may be Performed (CWE) S8.8.8.27 | 9999 - no table for CE
+        OM1.27 - Outside Site(s) Where Observation may be Performed (CWE) O rep S8.8.8.27 | 9999 - no table for CE
 
     om1_28 : list[XAD] | None
-        OM1.28 (opt, rep) - Address of Outside Site(s) (XAD) S8.8.8.28
+        OM1.28 - Address of Outside Site(s) (XAD) O rep S8.8.8.28
 
     om1_29 : XTN | None
-        OM1.29 (opt) - Phone Number of Outside Site (XTN) S8.8.8.29
+        OM1.29 - Phone Number of Outside Site (XTN) O S8.8.8.29
 
     om1_30 : CWE | None
-        OM1.30 (opt) - Confidentiality Code (CWE) S4.5.1.28 | 0177 - Confidentiality code
+        OM1.30 - Confidentiality Code (CWE) O S4.5.1.28 | 0177 - Confidentiality code
 
     om1_31 : CWE | None
-        OM1.31 (opt) - Observations Required to Interpret the Observation (CWE) S8.8.8.31 | 9999 - no table for CE
+        OM1.31 - Observations Required to Interpret the Observation (CWE) O S8.8.8.31 | 9999 - no table for CE
 
     om1_32 : str | None
-        OM1.32 (opt) - Interpretation of Observations (TX) S8.8.8.32
+        OM1.32 - Interpretation of Observations (TX) O S8.8.8.32
 
     om1_33 : CWE | None
-        OM1.33 (opt) - Contraindications to Observations (CWE) S8.8.8.33 | 9999 - no table for CE
+        OM1.33 - Contraindications to Observations (CWE) O S8.8.8.33 | 9999 - no table for CE
 
     om1_34 : list[CWE] | None
-        OM1.34 (opt, rep) - Reflex Tests/Observations (CWE) S8.8.8.34 | 9999 - no table for CE
+        OM1.34 - Reflex Tests/Observations (CWE) O rep S8.8.8.34 | 9999 - no table for CE
 
     om1_35 : str | None
-        OM1.35 (opt) - Rules that Trigger Reflex Testing (TX) S8.8.8.35
+        OM1.35 - Rules that Trigger Reflex Testing (TX) O S8.8.8.35
 
     om1_36 : CWE | None
-        OM1.36 (opt) - Fixed Canned Message (CWE) S8.8.8.36 | 9999 - no table for CE
+        OM1.36 - Fixed Canned Message (CWE) O S8.8.8.36 | 9999 - no table for CE
 
     om1_37 : str | None
-        OM1.37 (opt) - Patient Preparation (TX) S8.8.8.37
+        OM1.37 - Patient Preparation (TX) O S8.8.8.37
 
     om1_38 : CWE | None
-        OM1.38 (opt) - Procedure Medication (CWE) S8.8.8.38 | 9999 - no table for CE
+        OM1.38 - Procedure Medication (CWE) O S8.8.8.38 | 9999 - no table for CE
 
     om1_39 : str | None
-        OM1.39 (opt) - Factors that may Affect the Observation (TX) S8.8.8.39
+        OM1.39 - Factors that may Affect the Observation (TX) O S8.8.8.39
 
     om1_40 : list[str] | None
-        OM1.40 (opt, rep) - Service/Test/Observation Performance Schedule (ST) S8.8.8.40
+        OM1.40 - Service/Test/Observation Performance Schedule (ST) O rep S8.8.8.40
 
     om1_41 : str | None
-        OM1.41 (opt) - Description of Test Methods (TX) S8.8.8.41
+        OM1.41 - Description of Test Methods (TX) O S8.8.8.41
 
     om1_42 : CWE | None
-        OM1.42 (opt) - Kind of Quantity Observed (CWE) S8.8.8.42 | 0254 - Kind of quantity
+        OM1.42 - Kind of Quantity Observed (CWE) O S8.8.8.42 | 0254 - Kind of quantity
 
     om1_43 : CWE | None
-        OM1.43 (opt) - Point Versus Interval (CWE) S8.8.8.43 | 0255 - Duration categories
+        OM1.43 - Point Versus Interval (CWE) O S8.8.8.43 | 0255 - Duration categories
 
     om1_44 : str | None
-        OM1.44 (opt) - Challenge Information (TX) S8.8.8.44 | 0256 - Time delay post challenge
+        OM1.44 - Challenge Information (TX) O S8.8.8.44 | 0256 - Time delay post challenge
 
     om1_45 : CWE | None
-        OM1.45 (opt) - Relationship Modifier (CWE) S8.8.8.45 | 0258 - Relationship modifier
+        OM1.45 - Relationship Modifier (CWE) O S8.8.8.45 | 0258 - Relationship modifier
 
     om1_46 : CWE | None
-        OM1.46 (opt) - Target Anatomic Site Of Test (CWE) S8.8.8.46 | 9999 - no table for CE
+        OM1.46 - Target Anatomic Site Of Test (CWE) O S8.8.8.46 | 9999 - no table for CE
 
     om1_47 : CWE | None
-        OM1.47 (opt) - Modality Of Imaging Measurement (CWE) S8.8.8.47 | 0259 - Modality
+        OM1.47 - Modality Of Imaging Measurement (CWE) O S8.8.8.47 | 0259 - Modality
     """
 
     om1_1: str = Field(
@@ -171,7 +171,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.1",
         title="Sequence Number - Test/Observation Master File",
-        description="Item #586",
+        description="R | Item #00586 | LEN:4",
     )
 
     om1_2: CWE = Field(
@@ -182,7 +182,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.2",
         title="Producer's Service/Test/Observation ID",
-        description="Item #587 | Table HL79999",
+        description="R | Item #00587 | Table 9999 - no table for CE",
     )
 
     om1_3: Optional[List[str]] = Field(
@@ -194,7 +194,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.3",
         title="Permitted Data Types",
-        description="Item #588 | Table HL70125",
+        description="O | Item #00588 | Table 0125 - Value type | LEN:12",
     )
 
     om1_4: str = Field(
@@ -205,7 +205,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.4",
         title="Specimen Required",
-        description="Item #589 | Table HL70136",
+        description="R | Item #00589 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     om1_5: CWE = Field(
@@ -216,7 +216,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.5",
         title="Producer ID",
-        description="Item #590 | Table HL79999",
+        description="R | Item #00590 | Table 9999 - no table for CE",
     )
 
     om1_6: Optional[str] = Field(
@@ -228,7 +228,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.6",
         title="Observation Description",
-        description="Item #591",
+        description="O | Item #00591",
     )
 
     om1_7: Optional[CWE] = Field(
@@ -240,7 +240,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.7",
         title="Other Service/Test/Observation IDs for the Observation",
-        description="Item #592 | Table HL79999",
+        description="O | Item #00592 | Table 9999 - no table for CE",
     )
 
     om1_8: List[str] = Field(
@@ -252,7 +252,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.8",
         title="Other Names",
-        description="Item #593",
+        description="R | Item #00593 | LEN:200",
     )
 
     om1_9: Optional[str] = Field(
@@ -264,7 +264,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.9",
         title="Preferred Report Name for the Observation",
-        description="Item #594",
+        description="O | Item #00594 | LEN:30",
     )
 
     om1_10: Optional[str] = Field(
@@ -276,7 +276,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.10",
         title="Preferred Short Name or Mnemonic for Observation",
-        description="Item #595",
+        description="O | Item #00595 | LEN:8",
     )
 
     om1_11: Optional[str] = Field(
@@ -288,7 +288,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.11",
         title="Preferred Long Name for the Observation",
-        description="Item #596",
+        description="O | Item #00596 | LEN:200",
     )
 
     om1_12: Optional[str] = Field(
@@ -300,7 +300,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.12",
         title="Orderability",
-        description="Item #597 | Table HL70136",
+        description="O | Item #00597 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     om1_13: Optional[List[CWE]] = Field(
@@ -312,7 +312,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.13",
         title="Identity of Instrument Used to Perform this Study",
-        description="Item #598 | Table HL79999",
+        description="O | Item #00598 | Table 9999 - no table for CE",
     )
 
     om1_14: Optional[List[CWE]] = Field(
@@ -324,7 +324,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.14",
         title="Coded Representation of Method",
-        description="Item #599 | Table HL79999",
+        description="O | Item #00599 | Table 9999 - no table for CE",
     )
 
     om1_15: Optional[str] = Field(
@@ -336,7 +336,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.15",
         title="Portable Device Indicator",
-        description="Item #600 | Table HL70136",
+        description="O | Item #00600 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     om1_16: Optional[List[CWE]] = Field(
@@ -348,7 +348,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.16",
         title="Observation Producing Department/Section",
-        description="Item #601 | Table HL79999",
+        description="O | Item #00601 | Table 9999 - no table for CE",
     )
 
     om1_17: Optional[XTN] = Field(
@@ -360,7 +360,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.17",
         title="Telephone Number of Section",
-        description="Item #602",
+        description="O | Item #00602",
     )
 
     om1_18: str = Field(
@@ -371,7 +371,10 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.18",
         title="Nature of Service/Test/Observation",
-        description="Item #603 | Table HL70174",
+        description=(
+            "R | Item #00603 | Table 0174 - Nature of Service/Test/Observation | "
+            "LEN:1"
+        ),
     )
 
     om1_19: Optional[CWE] = Field(
@@ -383,7 +386,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.19",
         title="Report Subheader",
-        description="Item #604 | Table HL79999",
+        description="O | Item #00604 | Table 9999 - no table for CE",
     )
 
     om1_20: Optional[str] = Field(
@@ -395,7 +398,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.20",
         title="Report Display Order",
-        description="Item #605",
+        description="O | Item #00605 | LEN:20",
     )
 
     om1_21: Optional[str] = Field(
@@ -409,7 +412,7 @@ class OM1(HL7Model):
         title=(
             "Date/Time Stamp for any change in Definition for the Observation"
         ),
-        description="Item #606",
+        description="O | Item #00606 | LEN:24",
     )
 
     om1_22: Optional[str] = Field(
@@ -421,7 +424,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.22",
         title="Effective Date/Time of Change",
-        description="Item #607",
+        description="O | Item #00607 | LEN:24",
     )
 
     om1_23: Optional[str] = Field(
@@ -433,7 +436,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.23",
         title="Typical Turn-Around Time",
-        description="Item #608",
+        description="O | Item #00608 | LEN:20",
     )
 
     om1_24: Optional[str] = Field(
@@ -445,7 +448,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.24",
         title="Processing Time",
-        description="Item #609",
+        description="O | Item #00609 | LEN:20",
     )
 
     om1_25: Optional[List[str]] = Field(
@@ -457,7 +460,9 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.25",
         title="Processing Priority",
-        description="Item #610 | Table HL70168",
+        description=(
+            "O | Item #00610 | Table 0168 - Processing priority | LEN:40"
+        ),
     )
 
     om1_26: Optional[str] = Field(
@@ -469,7 +474,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.26",
         title="Reporting Priority",
-        description="Item #611 | Table HL70169",
+        description="O | Item #00611 | Table 0169 - Reporting priority | LEN:5",
     )
 
     om1_27: Optional[List[CWE]] = Field(
@@ -481,7 +486,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.27",
         title="Outside Site(s) Where Observation may be Performed",
-        description="Item #612 | Table HL79999",
+        description="O | Item #00612 | Table 9999 - no table for CE",
     )
 
     om1_28: Optional[List[XAD]] = Field(
@@ -493,7 +498,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.28",
         title="Address of Outside Site(s)",
-        description="Item #613",
+        description="O | Item #00613",
     )
 
     om1_29: Optional[XTN] = Field(
@@ -505,7 +510,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.29",
         title="Phone Number of Outside Site",
-        description="Item #614",
+        description="O | Item #00614",
     )
 
     om1_30: Optional[CWE] = Field(
@@ -517,7 +522,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.30",
         title="Confidentiality Code",
-        description="Item #615 | Table HL70177",
+        description="O | Item #00615 | Table 0177 - Confidentiality code",
     )
 
     om1_31: Optional[CWE] = Field(
@@ -529,7 +534,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.31",
         title="Observations Required to Interpret the Observation",
-        description="Item #616 | Table HL79999",
+        description="O | Item #00616 | Table 9999 - no table for CE",
     )
 
     om1_32: Optional[str] = Field(
@@ -541,7 +546,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.32",
         title="Interpretation of Observations",
-        description="Item #617",
+        description="O | Item #00617",
     )
 
     om1_33: Optional[CWE] = Field(
@@ -553,7 +558,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.33",
         title="Contraindications to Observations",
-        description="Item #618 | Table HL79999",
+        description="O | Item #00618 | Table 9999 - no table for CE",
     )
 
     om1_34: Optional[List[CWE]] = Field(
@@ -565,7 +570,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.34",
         title="Reflex Tests/Observations",
-        description="Item #619 | Table HL79999",
+        description="O | Item #00619 | Table 9999 - no table for CE",
     )
 
     om1_35: Optional[str] = Field(
@@ -577,7 +582,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.35",
         title="Rules that Trigger Reflex Testing",
-        description="Item #620",
+        description="O | Item #00620",
     )
 
     om1_36: Optional[CWE] = Field(
@@ -589,7 +594,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.36",
         title="Fixed Canned Message",
-        description="Item #621 | Table HL79999",
+        description="O | Item #00621 | Table 9999 - no table for CE",
     )
 
     om1_37: Optional[str] = Field(
@@ -601,7 +606,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.37",
         title="Patient Preparation",
-        description="Item #622",
+        description="O | Item #00622",
     )
 
     om1_38: Optional[CWE] = Field(
@@ -613,7 +618,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.38",
         title="Procedure Medication",
-        description="Item #623 | Table HL79999",
+        description="O | Item #00623 | Table 9999 - no table for CE",
     )
 
     om1_39: Optional[str] = Field(
@@ -625,7 +630,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.39",
         title="Factors that may Affect the Observation",
-        description="Item #624",
+        description="O | Item #00624",
     )
 
     om1_40: Optional[List[str]] = Field(
@@ -637,7 +642,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.40",
         title="Service/Test/Observation Performance Schedule",
-        description="Item #625",
+        description="O | Item #00625 | LEN:60",
     )
 
     om1_41: Optional[str] = Field(
@@ -649,7 +654,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.41",
         title="Description of Test Methods",
-        description="Item #626",
+        description="O | Item #00626",
     )
 
     om1_42: Optional[CWE] = Field(
@@ -661,7 +666,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.42",
         title="Kind of Quantity Observed",
-        description="Item #937 | Table HL70254",
+        description="O | Item #00937 | Table 0254 - Kind of quantity",
     )
 
     om1_43: Optional[CWE] = Field(
@@ -673,7 +678,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.43",
         title="Point Versus Interval",
-        description="Item #938 | Table HL70255",
+        description="O | Item #00938 | Table 0255 - Duration categories",
     )
 
     om1_44: Optional[str] = Field(
@@ -685,7 +690,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.44",
         title="Challenge Information",
-        description="Item #939 | Table HL70256",
+        description="O | Item #00939 | Table 0256 - Time delay post challenge",
     )
 
     om1_45: Optional[CWE] = Field(
@@ -697,7 +702,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.45",
         title="Relationship Modifier",
-        description="Item #940 | Table HL70258",
+        description="O | Item #00940 | Table 0258 - Relationship modifier",
     )
 
     om1_46: Optional[CWE] = Field(
@@ -709,7 +714,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.46",
         title="Target Anatomic Site Of Test",
-        description="Item #941 | Table HL79999",
+        description="O | Item #00941 | Table 9999 - no table for CE",
     )
 
     om1_47: Optional[CWE] = Field(
@@ -721,7 +726,7 @@ class OM1(HL7Model):
         ),
         serialization_alias="OM1.47",
         title="Modality Of Imaging Measurement",
-        description="Item #942 | Table HL70259",
+        description="O | Item #00942 | Table 0259 - Modality",
     )
 
     @field_validator("om1_1", "om1_23", "om1_24", mode='before')

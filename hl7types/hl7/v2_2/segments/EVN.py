@@ -20,19 +20,19 @@ class EVN(HL7Model):
     Attributes
     ----------
     evn_1 : str
-        EVN.1 (req) - Event Type Code (ID) S3.3.1.1 | 0003 - EVENT TYPE CODE
+        EVN.1 - Event Type Code (ID) R S3.3.1.1 | 0003 - EVENT TYPE CODE
 
     evn_2 : TS
-        EVN.2 (req) - Date / time of event (TS) S3.3.1.2
+        EVN.2 - Date / time of event (TS) R S3.3.1.2
 
     evn_3 : TS | None
-        EVN.3 (opt) - Date / time planned event (TS) S3.3.1.3
+        EVN.3 - Date / time planned event (TS) NA S3.3.1.3
 
     evn_4 : str | None
-        EVN.4 (opt) - Event Reason Code (ID) S3.3.1.4 | 0062 - EVENT REASON
+        EVN.4 - Event Reason Code (ID) NA S3.3.1.4 | 0062 - EVENT REASON
 
     evn_5 : str | None
-        EVN.5 (opt) - Operator ID (ID) S3.3.1.5 | 0188 - Operator ID
+        EVN.5 - Operator ID (ID) NA S3.3.1.5 | 0188 - Operator ID
     """
 
     evn_1: str = Field(
@@ -43,7 +43,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.1",
         title="Event Type Code",
-        description="Item #99 | Table HL70003",
+        description="R | Item #00099 | Table 0003 - EVENT TYPE CODE | LEN:3",
     )
 
     evn_2: TS = Field(
@@ -54,7 +54,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.2",
         title="Date / time of event",
-        description="Item #100",
+        description="R | Item #00100",
     )
 
     evn_3: Optional[TS] = Field(
@@ -66,7 +66,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.3",
         title="Date / time planned event",
-        description="Item #101",
+        description="NA | Item #00101",
     )
 
     evn_4: Optional[str] = Field(
@@ -78,7 +78,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.4",
         title="Event Reason Code",
-        description="Item #102 | Table HL70062",
+        description="NA | Item #00102 | Table 0062 - EVENT REASON | LEN:3",
     )
 
     evn_5: Optional[str] = Field(
@@ -90,7 +90,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.5",
         title="Operator ID",
-        description="Item #103 | Table HL70188",
+        description="NA | Item #00103 | Table 0188 - Operator ID | LEN:5",
     )
 
     model_config = {"populate_by_name": True}

@@ -21,22 +21,22 @@ class ACC(HL7Model):
     Attributes
     ----------
     acc_1 : TS | None
-        ACC.1 (opt) - Accident Date/Time (TS) S6.4.9.1
+        ACC.1 - Accident Date/Time (TS) O S6.4.9.1
 
     acc_2 : CE | None
-        ACC.2 (opt) - Accident Code (CE) S6.4.9.2 | 0050 - Accident Code
+        ACC.2 - Accident Code (CE) O S6.4.9.2 | 0050 - Accident Code
 
     acc_3 : str | None
-        ACC.3 (opt) - Accident Location (ST) S6.4.9.3
+        ACC.3 - Accident Location (ST) O S6.4.9.3
 
     acc_4 : CE | None
-        ACC.4 (opt) - Auto Accident State (CE) S6.4.9.4
+        ACC.4 - Auto Accident State (CE) O S6.4.9.4
 
     acc_5 : str | None
-        ACC.5 (opt) - Accident Job Related Indicator (ID) S6.4.9.5 | 0136 - Yes/No Indicator
+        ACC.5 - Accident Job Related Indicator (ID) O S6.4.9.5 | 0136 - Yes/No Indicator
 
     acc_6 : str | None
-        ACC.6 (opt) - Accident Death Indicator (ID) S6.4.9.6 | 0136 - Yes/No Indicator
+        ACC.6 - Accident Death Indicator (ID) O S6.4.9.6 | 0136 - Yes/No Indicator
     """
 
     acc_1: Optional[TS] = Field(
@@ -48,7 +48,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.1",
         title="Accident Date/Time",
-        description="Item #527",
+        description="O | Item #00527",
     )
 
     acc_2: Optional[CE] = Field(
@@ -60,7 +60,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.2",
         title="Accident Code",
-        description="Item #528 | Table HL70050",
+        description="O | Item #00528 | Table 0050 - Accident Code",
     )
 
     acc_3: Optional[str] = Field(
@@ -72,7 +72,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.3",
         title="Accident Location",
-        description="Item #529",
+        description="O | Item #00529 | LEN:25",
     )
 
     acc_4: Optional[CE] = Field(
@@ -84,7 +84,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.4",
         title="Auto Accident State",
-        description="Item #812",
+        description="O | Item #00812",
     )
 
     acc_5: Optional[str] = Field(
@@ -96,7 +96,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.5",
         title="Accident Job Related Indicator",
-        description="Item #813 | Table HL70136",
+        description="O | Item #00813 | Table 0136 - Yes/No Indicator | LEN:2",
     )
 
     acc_6: Optional[str] = Field(
@@ -108,7 +108,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.6",
         title="Accident Death Indicator",
-        description="Item #814 | Table HL70136",
+        description="O | Item #00814 | Table 0136 - Yes/No Indicator | LEN:2",
     )
 
     model_config = {"populate_by_name": True}

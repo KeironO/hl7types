@@ -24,40 +24,40 @@ class BUI(HL7Model):
     Attributes
     ----------
     bui_1 : str | None
-        BUI.1 (opt) - Set ID - BUI (SI) S4.17.2.1
+        BUI.1 - Set ID - BUI (SI) O S4.17.2.1
 
     bui_2 : EI
-        BUI.2 (req) - Blood Unit Identifier (EI) S4.17.2.2
+        BUI.2 - Blood Unit Identifier (EI) R S4.17.2.2
 
     bui_3 : CWE
-        BUI.3 (req) - Blood Unit Type (CWE) S4.17.2.3 | 0566 - Blood Unit Type
+        BUI.3 - Blood Unit Type (CWE) R S4.17.2.3 | 0566 - Blood Unit Type
 
     bui_4 : str
-        BUI.4 (req) - Blood Unit Weight (NM) S4.17.2.4
+        BUI.4 - Blood Unit Weight (NM) R S4.17.2.4
 
     bui_5 : CNE
-        BUI.5 (req) - Weight Units (CNE) S4.17.2.5 | 0929 - Weight Units
+        BUI.5 - Weight Units (CNE) R S4.17.2.5 | 0929 - Weight Units
 
     bui_6 : str
-        BUI.6 (req) - Blood Unit Volume (NM) S4.17.2.6
+        BUI.6 - Blood Unit Volume (NM) R S4.17.2.6
 
     bui_7 : CNE
-        BUI.7 (req) - Volume Units (CNE) S4.17.2.7 | 0930 - Volume Units
+        BUI.7 - Volume Units (CNE) R S4.17.2.7 | 0930 - Volume Units
 
     bui_8 : str
-        BUI.8 (req) - Container Catalog Number (ST) S4.17.2.8
+        BUI.8 - Container Catalog Number (ST) R S4.17.2.8
 
     bui_9 : str
-        BUI.9 (req) - Container Lot Number (ST) S4.17.2.9
+        BUI.9 - Container Lot Number (ST) R S4.17.2.9
 
     bui_10 : XON
-        BUI.10 (req) - Container Manufacturer (XON) S4.17.2.10
+        BUI.10 - Container Manufacturer (XON) R S4.17.2.10
 
     bui_11 : NR
-        BUI.11 (req) - Transport Temperature (NR) S4.17.2.11
+        BUI.11 - Transport Temperature (NR) R S4.17.2.11
 
     bui_12 : CNE
-        BUI.12 (req) - Transport Temperature Units (CNE) S4.17.2.12 | 0931 - Temperature Units
+        BUI.12 - Transport Temperature Units (CNE) R S4.17.2.12 | 0931 - Temperature Units
     """
 
     bui_1: Optional[str] = Field(
@@ -69,7 +69,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.1",
         title="Set ID - BUI",
-        description="Item #3373",
+        description="O | Item #03373 | LEN:4",
     )
 
     bui_2: EI = Field(
@@ -80,7 +80,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.2",
         title="Blood Unit Identifier",
-        description="Item #3374",
+        description="R | Item #03374",
     )
 
     bui_3: CWE = Field(
@@ -91,7 +91,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.3",
         title="Blood Unit Type",
-        description="Item #3375 | Table HL70566",
+        description="R | Item #03375 | Table 0566 - Blood Unit Type",
     )
 
     bui_4: str = Field(
@@ -102,7 +102,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.4",
         title="Blood Unit Weight",
-        description="Item #3376",
+        description="R | Item #03376",
     )
 
     bui_5: CNE = Field(
@@ -113,7 +113,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.5",
         title="Weight Units",
-        description="Item #3377 | Table HL70929",
+        description="R | Item #03377 | Table 0929 - Weight Units",
     )
 
     bui_6: str = Field(
@@ -124,7 +124,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.6",
         title="Blood Unit Volume",
-        description="Item #3378",
+        description="R | Item #03378",
     )
 
     bui_7: CNE = Field(
@@ -135,7 +135,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.7",
         title="Volume Units",
-        description="Item #3379 | Table HL70930",
+        description="R | Item #03379 | Table 0930 - Volume Units",
     )
 
     bui_8: str = Field(
@@ -146,7 +146,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.8",
         title="Container Catalog Number",
-        description="Item #3380",
+        description="R | Item #03380",
     )
 
     bui_9: str = Field(
@@ -157,7 +157,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.9",
         title="Container Lot Number",
-        description="Item #3381",
+        description="R | Item #03381",
     )
 
     bui_10: XON = Field(
@@ -168,7 +168,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.10",
         title="Container Manufacturer",
-        description="Item #3382",
+        description="R | Item #03382",
     )
 
     bui_11: NR = Field(
@@ -179,7 +179,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.11",
         title="Transport Temperature",
-        description="Item #3383",
+        description="R | Item #03383",
     )
 
     bui_12: CNE = Field(
@@ -190,7 +190,7 @@ class BUI(HL7Model):
         ),
         serialization_alias="BUI.12",
         title="Transport Temperature Units",
-        description="Item #3384 | Table HL70931",
+        description="R | Item #03384 | Table 0931 - Temperature Units",
     )
 
     @field_validator("bui_1", mode='before')

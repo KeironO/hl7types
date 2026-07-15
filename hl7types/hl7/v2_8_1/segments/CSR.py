@@ -23,52 +23,52 @@ class CSR(HL7Model):
     Attributes
     ----------
     csr_1 : EI
-        CSR.1 (req) - Sponsor Study ID (EI) S7.8.1.1
+        CSR.1 - Sponsor Study ID (EI) R S7.8.1.1
 
     csr_2 : EI | None
-        CSR.2 (opt) - Alternate Study ID (EI) S7.8.1.2
+        CSR.2 - Alternate Study ID (EI) O S7.8.1.2
 
     csr_3 : CWE | None
-        CSR.3 (opt) - Institution Registering the Patient (CWE) S7.8.1.3 | 9999 - no table for CE
+        CSR.3 - Institution Registering the Patient (CWE) O S7.8.1.3 | 9999 - no table for CE
 
     csr_4 : CX
-        CSR.4 (req) - Sponsor Patient ID (CX) S7.8.1.4
+        CSR.4 - Sponsor Patient ID (CX) R S7.8.1.4
 
     csr_5 : CX | None
-        CSR.5 (opt) - Alternate Patient ID - CSR (CX) S7.8.1.5
+        CSR.5 - Alternate Patient ID - CSR (CX) O S7.8.1.5
 
     csr_6 : str
-        CSR.6 (req) - Date/Time of Patient Study Registration (DTM) S7.8.1.6
+        CSR.6 - Date/Time of Patient Study Registration (DTM) R S7.8.1.6
 
     csr_7 : list[XCN] | None
-        CSR.7 (opt, rep) - Person Performing Study Registration (XCN) S7.8.1.7
+        CSR.7 - Person Performing Study Registration (XCN) O rep S7.8.1.7
 
     csr_8 : list[XCN]
-        CSR.8 (req, rep) - Study Authorizing Provider (XCN) S7.8.1.8
+        CSR.8 - Study Authorizing Provider (XCN) R rep S7.8.1.8
 
     csr_9 : str | None
-        CSR.9 (opt) - Date/Time Patient Study Consent Signed (DTM) S7.8.1.9
+        CSR.9 - Date/Time Patient Study Consent Signed (DTM) C S7.8.1.9
 
     csr_10 : CWE | None
-        CSR.10 (opt) - Patient Study Eligibility Status (CWE) S7.8.1.10 | 9999 - no table for CE
+        CSR.10 - Patient Study Eligibility Status (CWE) C S7.8.1.10 | 9999 - no table for CE
 
     csr_11 : list[str] | None
-        CSR.11 (opt, rep) - Study Randomization Date/time (DTM) S7.8.1.11
+        CSR.11 - Study Randomization Date/time (DTM) O rep S7.8.1.11
 
     csr_12 : list[CWE] | None
-        CSR.12 (opt, rep) - Randomized Study Arm (CWE) S7.8.1.12 | 9999 - no table for CE
+        CSR.12 - Randomized Study Arm (CWE) O rep S7.8.1.12 | 9999 - no table for CE
 
     csr_13 : list[CWE] | None
-        CSR.13 (opt, rep) - Stratum for Study Randomization (CWE) S7.8.1.13 | 9999 - no table for CE
+        CSR.13 - Stratum for Study Randomization (CWE) O rep S7.8.1.13 | 9999 - no table for CE
 
     csr_14 : CWE | None
-        CSR.14 (opt) - Patient Evaluability Status (CWE) S7.8.1.14 | 9999 - no table for CE
+        CSR.14 - Patient Evaluability Status (CWE) C S7.8.1.14 | 9999 - no table for CE
 
     csr_15 : str | None
-        CSR.15 (opt) - Date/Time Ended Study (DTM) S7.8.1.15
+        CSR.15 - Date/Time Ended Study (DTM) C S7.8.1.15
 
     csr_16 : CWE | None
-        CSR.16 (opt) - Reason Ended Study (CWE) S7.8.1.16 | 9999 - no table for CE
+        CSR.16 - Reason Ended Study (CWE) C S7.8.1.16 | 9999 - no table for CE
     """
 
     csr_1: EI = Field(
@@ -79,7 +79,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.1",
         title="Sponsor Study ID",
-        description="Item #1011",
+        description="R | Item #01011",
     )
 
     csr_2: Optional[EI] = Field(
@@ -91,7 +91,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.2",
         title="Alternate Study ID",
-        description="Item #1036",
+        description="O | Item #01036",
     )
 
     csr_3: Optional[CWE] = Field(
@@ -103,7 +103,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.3",
         title="Institution Registering the Patient",
-        description="Item #1037 | Table HL79999",
+        description="O | Item #01037 | Table 9999 - no table for CE",
     )
 
     csr_4: CX = Field(
@@ -114,7 +114,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.4",
         title="Sponsor Patient ID",
-        description="Item #1038",
+        description="R | Item #01038",
     )
 
     csr_5: Optional[CX] = Field(
@@ -126,7 +126,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.5",
         title="Alternate Patient ID - CSR",
-        description="Item #1039",
+        description="O | Item #01039",
     )
 
     csr_6: str = Field(
@@ -137,7 +137,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.6",
         title="Date/Time of Patient Study Registration",
-        description="Item #1040",
+        description="R | Item #01040",
     )
 
     csr_7: Optional[List[XCN]] = Field(
@@ -149,7 +149,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.7",
         title="Person Performing Study Registration",
-        description="Item #1041",
+        description="O | Item #01041",
     )
 
     csr_8: List[XCN] = Field(
@@ -161,7 +161,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.8",
         title="Study Authorizing Provider",
-        description="Item #1042",
+        description="R | Item #01042",
     )
 
     csr_9: Optional[str] = Field(
@@ -173,7 +173,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.9",
         title="Date/Time Patient Study Consent Signed",
-        description="Item #1043",
+        description="C | Item #01043",
     )
 
     csr_10: Optional[CWE] = Field(
@@ -185,7 +185,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.10",
         title="Patient Study Eligibility Status",
-        description="Item #1044 | Table HL79999",
+        description="C | Item #01044 | Table 9999 - no table for CE",
     )
 
     csr_11: Optional[List[str]] = Field(
@@ -197,7 +197,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.11",
         title="Study Randomization Date/time",
-        description="Item #1045",
+        description="O | Item #01045",
     )
 
     csr_12: Optional[List[CWE]] = Field(
@@ -209,7 +209,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.12",
         title="Randomized Study Arm",
-        description="Item #1046 | Table HL79999",
+        description="O | Item #01046 | Table 9999 - no table for CE",
     )
 
     csr_13: Optional[List[CWE]] = Field(
@@ -221,7 +221,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.13",
         title="Stratum for Study Randomization",
-        description="Item #1047 | Table HL79999",
+        description="O | Item #01047 | Table 9999 - no table for CE",
     )
 
     csr_14: Optional[CWE] = Field(
@@ -233,7 +233,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.14",
         title="Patient Evaluability Status",
-        description="Item #1048 | Table HL79999",
+        description="C | Item #01048 | Table 9999 - no table for CE",
     )
 
     csr_15: Optional[str] = Field(
@@ -245,7 +245,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.15",
         title="Date/Time Ended Study",
-        description="Item #1049",
+        description="C | Item #01049",
     )
 
     csr_16: Optional[CWE] = Field(
@@ -257,7 +257,7 @@ class CSR(HL7Model):
         ),
         serialization_alias="CSR.16",
         title="Reason Ended Study",
-        description="Item #1050 | Table HL79999",
+        description="C | Item #01050 | Table 9999 - no table for CE",
     )
 
     @field_validator("csr_6", "csr_9", "csr_11", "csr_15", mode='before')

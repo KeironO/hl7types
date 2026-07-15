@@ -18,28 +18,28 @@ class NSC(HL7Model):
     Attributes
     ----------
     nsc_1 : str | None
-        NSC.1 (opt) - Network Change Type (ID) SC.2.3.1
+        NSC.1 - Network Change Type (ID) NA SC.2.3.1
 
     nsc_2 : str | None
-        NSC.2 (opt) - Current CPU (ST) SC.2.3.2
+        NSC.2 - Current CPU (ST) NA SC.2.3.2
 
     nsc_3 : str | None
-        NSC.3 (opt) - Current Fileserver (ST) SC.2.3.3
+        NSC.3 - Current Fileserver (ST) NA SC.2.3.3
 
     nsc_4 : str | None
-        NSC.4 (opt) - Current Application (ST) SC.2.3.4
+        NSC.4 - Current Application (ST) NA SC.2.3.4
 
     nsc_5 : str | None
-        NSC.5 (opt) - Current Facility (ST) SC.2.3.5
+        NSC.5 - Current Facility (ST) NA SC.2.3.5
 
     nsc_6 : str | None
-        NSC.6 (opt) - New CPU (ST) SC.2.3.6 | 0206 - Segment Action Code
+        NSC.6 - New CPU (ST) C SC.2.3.6 | 0206 - Segment Action Code
 
     nsc_7 : str | None
-        NSC.7 (opt) - New Fileserver (ST) SC.2.3.7
+        NSC.7 - New Fileserver (ST) NA SC.2.3.7
 
     nsc_8 : str | None
-        NSC.8 (opt) - New Application (ST) SC.2.3.8
+        NSC.8 - New Application (ST) NA SC.2.3.8
     """
 
     nsc_1: Optional[str] = Field(
@@ -51,7 +51,7 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.1",
         title="Network Change Type",
-        description="Item #1188",
+        description="NA | Item #01188 | LEN:4",
     )
 
     nsc_2: Optional[str] = Field(
@@ -63,7 +63,7 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.2",
         title="Current CPU",
-        description="Item #1189",
+        description="NA | Item #01189 | LEN:30",
     )
 
     nsc_3: Optional[str] = Field(
@@ -75,7 +75,7 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.3",
         title="Current Fileserver",
-        description="Item #1190",
+        description="NA | Item #01190 | LEN:30",
     )
 
     nsc_4: Optional[str] = Field(
@@ -87,7 +87,7 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.4",
         title="Current Application",
-        description="Item #1191",
+        description="NA | Item #01191 | LEN:30",
     )
 
     nsc_5: Optional[str] = Field(
@@ -99,7 +99,7 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.5",
         title="Current Facility",
-        description="Item #1192",
+        description="NA | Item #01192 | LEN:30",
     )
 
     nsc_6: Optional[str] = Field(
@@ -111,7 +111,9 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.6",
         title="New CPU",
-        description="Item #1193 | Table HL70206",
+        description=(
+            "C | Item #01193 | Table 0206 - Segment Action Code | LEN:30"
+        ),
     )
 
     nsc_7: Optional[str] = Field(
@@ -123,7 +125,7 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.7",
         title="New Fileserver",
-        description="Item #1194",
+        description="NA | Item #01194 | LEN:30",
     )
 
     nsc_8: Optional[str] = Field(
@@ -135,7 +137,7 @@ class NSC(HL7Model):
         ),
         serialization_alias="NSC.8",
         title="New Application",
-        description="Item #1195",
+        description="NA | Item #01195 | LEN:30",
     )
 
     model_config = {"populate_by_name": True}

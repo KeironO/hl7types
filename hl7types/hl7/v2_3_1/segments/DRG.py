@@ -22,34 +22,34 @@ class DRG(HL7Model):
     Attributes
     ----------
     drg_1 : CE | None
-        DRG.1 (opt) - Diagnostic Related Group (CE) S6.4.3.1 | 0055 - Diagnostic Related Group
+        DRG.1 - Diagnostic Related Group (CE) O S6.4.3.1 | 0055 - Diagnostic Related Group
 
     drg_2 : TS | None
-        DRG.2 (opt) - DRG Assigned Date/Time (TS) S6.4.3.2
+        DRG.2 - DRG Assigned Date/Time (TS) O S6.4.3.2
 
     drg_3 : str | None
-        DRG.3 (opt) - DRG Approval Indicator (ID) S6.4.3.3 | 0136 - Yes/no indicator
+        DRG.3 - DRG Approval Indicator (ID) O S6.4.3.3 | 0136 - Yes/no indicator
 
     drg_4 : str | None
-        DRG.4 (opt) - DRG Grouper Review Code (IS) S6.4.3.4 | 0056 - DRG Grouper Review Code
+        DRG.4 - DRG Grouper Review Code (IS) O S6.4.3.4 | 0056 - DRG Grouper Review Code
 
     drg_5 : CE | None
-        DRG.5 (opt) - Outlier Type (CE) S6.4.3.5 | 0083 - Outlier Type
+        DRG.5 - Outlier Type (CE) O S6.4.3.5 | 0083 - Outlier Type
 
     drg_6 : str | None
-        DRG.6 (opt) - Outlier Days (NM) S6.4.3.6
+        DRG.6 - Outlier Days (NM) O S6.4.3.6
 
     drg_7 : CP | None
-        DRG.7 (opt) - Outlier Cost (CP) S6.4.3.7
+        DRG.7 - Outlier Cost (CP) O S6.4.3.7
 
     drg_8 : str | None
-        DRG.8 (opt) - DRG Payor (IS) S6.4.3.8 | 0229 - DRG payor
+        DRG.8 - DRG Payor (IS) O S6.4.3.8 | 0229 - DRG payor
 
     drg_9 : CP | None
-        DRG.9 (opt) - Outlier Reimbursement (CP) S6.4.3.9
+        DRG.9 - Outlier Reimbursement (CP) O S6.4.3.9
 
     drg_10 : str | None
-        DRG.10 (opt) - Confidential Indicator (ID) S6.4.3.10 | 0136 - Yes/no indicator
+        DRG.10 - Confidential Indicator (ID) O S6.4.3.10 | 0136 - Yes/no indicator
     """
 
     drg_1: Optional[CE] = Field(
@@ -61,7 +61,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.1",
         title="Diagnostic Related Group",
-        description="Item #382 | Table HL70055",
+        description="O | Item #00382 | Table 0055 - Diagnostic Related Group",
     )
 
     drg_2: Optional[TS] = Field(
@@ -73,7 +73,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.2",
         title="DRG Assigned Date/Time",
-        description="Item #769",
+        description="O | Item #00769",
     )
 
     drg_3: Optional[str] = Field(
@@ -85,7 +85,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.3",
         title="DRG Approval Indicator",
-        description="Item #383 | Table HL70136",
+        description="O | Item #00383 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     drg_4: Optional[str] = Field(
@@ -97,7 +97,9 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.4",
         title="DRG Grouper Review Code",
-        description="Item #384 | Table HL70056",
+        description=(
+            "O | Item #00384 | Table 0056 - DRG Grouper Review Code | LEN:2"
+        ),
     )
 
     drg_5: Optional[CE] = Field(
@@ -109,7 +111,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.5",
         title="Outlier Type",
-        description="Item #385 | Table HL70083",
+        description="O | Item #00385 | Table 0083 - Outlier Type",
     )
 
     drg_6: Optional[str] = Field(
@@ -121,7 +123,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.6",
         title="Outlier Days",
-        description="Item #386",
+        description="O | Item #00386 | LEN:3",
     )
 
     drg_7: Optional[CP] = Field(
@@ -133,7 +135,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.7",
         title="Outlier Cost",
-        description="Item #387",
+        description="O | Item #00387",
     )
 
     drg_8: Optional[str] = Field(
@@ -145,7 +147,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.8",
         title="DRG Payor",
-        description="Item #770 | Table HL70229",
+        description="O | Item #00770 | Table 0229 - DRG payor | LEN:1",
     )
 
     drg_9: Optional[CP] = Field(
@@ -157,7 +159,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.9",
         title="Outlier Reimbursement",
-        description="Item #771",
+        description="O | Item #00771",
     )
 
     drg_10: Optional[str] = Field(
@@ -169,7 +171,7 @@ class DRG(HL7Model):
         ),
         serialization_alias="DRG.10",
         title="Confidential Indicator",
-        description="Item #767 | Table HL70136",
+        description="O | Item #00767 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     @field_validator("drg_6", mode='before')

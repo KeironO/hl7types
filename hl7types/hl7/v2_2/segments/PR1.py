@@ -20,46 +20,46 @@ class PR1(HL7Model):
     Attributes
     ----------
     pr1_1 : str
-        PR1.1 (req) - Set ID - procedure (SI) S6.4.3.1
+        PR1.1 - Set ID - procedure (SI) R S6.4.3.1
 
     pr1_2 : list[str]
-        PR1.2 (req, rep) - Procedure coding method (ID) S6.4.3.2 | 0089 - PROCEDURE CODING METHOD
+        PR1.2 - Procedure coding method (ID) R rep S6.4.3.2 | 0089 - PROCEDURE CODING METHOD
 
     pr1_3 : list[str]
-        PR1.3 (req, rep) - Procedure code (ID) S6.4.3.3 | 0088 - PROCEDURE CODE
+        PR1.3 - Procedure code (ID) R rep S6.4.3.3 | 0088 - PROCEDURE CODE
 
     pr1_4 : list[str] | None
-        PR1.4 (opt, rep) - Procedure description (ST) S6.4.3.4
+        PR1.4 - Procedure description (ST) NA rep S6.4.3.4
 
     pr1_5 : TS
-        PR1.5 (req) - Procedure date / time (TS) S6.4.3.5
+        PR1.5 - Procedure date / time (TS) R S6.4.3.5
 
     pr1_6 : str
-        PR1.6 (req) - Procedure type (ID) S6.4.3.6 | 0090 - PROCEDURE TYPE
+        PR1.6 - Procedure type (ID) R S6.4.3.6 | 0090 - PROCEDURE TYPE
 
     pr1_7 : str | None
-        PR1.7 (opt) - Procedure minutes (NM) S6.4.3.7
+        PR1.7 - Procedure minutes (NM) NA S6.4.3.7
 
     pr1_8 : str | None
-        PR1.8 (opt) - Anesthesiologist (CN) S6.4.3.8 | 0010 - PHYSICIAN ID
+        PR1.8 - Anesthesiologist (CN) NA S6.4.3.8 | 0010 - PHYSICIAN ID
 
     pr1_9 : str | None
-        PR1.9 (opt) - Anesthesia code (ID) S6.4.3.9 | 0019 - ANESTHESIA CODE
+        PR1.9 - Anesthesia code (ID) NA S6.4.3.9 | 0019 - ANESTHESIA CODE
 
     pr1_10 : str | None
-        PR1.10 (opt) - Anesthesia minutes (NM) S6.4.3.10
+        PR1.10 - Anesthesia minutes (NM) NA S6.4.3.10
 
     pr1_11 : str | None
-        PR1.11 (opt) - Surgeon (CN) S6.4.3.11 | 0010 - PHYSICIAN ID
+        PR1.11 - Surgeon (CN) NA S6.4.3.11 | 0010 - PHYSICIAN ID
 
     pr1_12 : list[str] | None
-        PR1.12 (opt, rep) - Procedure Practitioner (CM) S6.4.3.12 | 0010 - PHYSICIAN ID
+        PR1.12 - Procedure Practitioner (CM) NA rep S6.4.3.12 | 0010 - PHYSICIAN ID
 
     pr1_13 : str | None
-        PR1.13 (opt) - Consent code (ID) S6.4.3.13 | 0059 - CONSENT CODE
+        PR1.13 - Consent code (ID) NA S6.4.3.13 | 0059 - CONSENT CODE
 
     pr1_14 : str | None
-        PR1.14 (opt) - Procedure priority (NM) S6.4.3.14
+        PR1.14 - Procedure priority (NM) NA S6.4.3.14
     """
 
     pr1_1: str = Field(
@@ -70,7 +70,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.1",
         title="Set ID - procedure",
-        description="Item #391",
+        description="R | Item #00391 | LEN:4",
     )
 
     pr1_2: List[str] = Field(
@@ -82,7 +82,9 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.2",
         title="Procedure coding method",
-        description="Item #392 | Table HL70089",
+        description=(
+            "R | Item #00392 | Table 0089 - PROCEDURE CODING METHOD | LEN:2"
+        ),
     )
 
     pr1_3: List[str] = Field(
@@ -94,7 +96,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.3",
         title="Procedure code",
-        description="Item #393 | Table HL70088",
+        description="R | Item #00393 | Table 0088 - PROCEDURE CODE | LEN:10",
     )
 
     pr1_4: Optional[List[str]] = Field(
@@ -106,7 +108,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.4",
         title="Procedure description",
-        description="Item #394",
+        description="NA | Item #00394 | LEN:40",
     )
 
     pr1_5: TS = Field(
@@ -117,7 +119,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.5",
         title="Procedure date / time",
-        description="Item #395",
+        description="R | Item #00395",
     )
 
     pr1_6: str = Field(
@@ -128,7 +130,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.6",
         title="Procedure type",
-        description="Item #396 | Table HL70090",
+        description="R | Item #00396 | Table 0090 - PROCEDURE TYPE | LEN:2",
     )
 
     pr1_7: Optional[str] = Field(
@@ -140,7 +142,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.7",
         title="Procedure minutes",
-        description="Item #397",
+        description="NA | Item #00397 | LEN:4",
     )
 
     pr1_8: Optional[str] = Field(
@@ -152,7 +154,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.8",
         title="Anesthesiologist",
-        description="Item #398 | Table HL70010",
+        description="NA | Item #00398 | Table 0010 - PHYSICIAN ID",
     )
 
     pr1_9: Optional[str] = Field(
@@ -164,7 +166,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.9",
         title="Anesthesia code",
-        description="Item #399 | Table HL70019",
+        description="NA | Item #00399 | Table 0019 - ANESTHESIA CODE | LEN:2",
     )
 
     pr1_10: Optional[str] = Field(
@@ -176,7 +178,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.10",
         title="Anesthesia minutes",
-        description="Item #400",
+        description="NA | Item #00400 | LEN:4",
     )
 
     pr1_11: Optional[str] = Field(
@@ -188,7 +190,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.11",
         title="Surgeon",
-        description="Item #401 | Table HL70010",
+        description="NA | Item #00401 | Table 0010 - PHYSICIAN ID",
     )
 
     pr1_12: Optional[List[str]] = Field(
@@ -200,7 +202,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.12",
         title="Procedure Practitioner",
-        description="Item #402 | Table HL70010",
+        description="NA | Item #00402 | Table 0010 - PHYSICIAN ID",
     )
 
     pr1_13: Optional[str] = Field(
@@ -212,7 +214,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.13",
         title="Consent code",
-        description="Item #403 | Table HL70059",
+        description="NA | Item #00403 | Table 0059 - CONSENT CODE | LEN:2",
     )
 
     pr1_14: Optional[str] = Field(
@@ -224,7 +226,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.14",
         title="Procedure priority",
-        description="Item #404",
+        description="NA | Item #00404 | LEN:2",
     )
 
     @field_validator("pr1_1", mode='before')

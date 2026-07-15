@@ -27,73 +27,73 @@ class ARQ(HL7Model):
     Attributes
     ----------
     arq_1 : EI
-        ARQ.1 (req) - Placer Appointment ID (EI) S10.5.1
+        ARQ.1 - Placer Appointment ID (EI) R S10.5.1
 
     arq_2 : EI | None
-        ARQ.2 (opt) - Filler Appointment ID (EI) S10.5.1
+        ARQ.2 - Filler Appointment ID (EI) C S10.5.1
 
     arq_3 : str | None
-        ARQ.3 (opt) - Occurrence Number (NM) S10.5.1
+        ARQ.3 - Occurrence Number (NM) C S10.5.1
 
     arq_4 : EI | None
-        ARQ.4 (opt) - Placer Group Number (EI) S10.5.2
+        ARQ.4 - Placer Group Number (EI) O S10.5.2
 
     arq_5 : CE | None
-        ARQ.5 (opt) - Schedule ID (CE) S10.5.1
+        ARQ.5 - Schedule ID (CE) O S10.5.1
 
     arq_6 : CE | None
-        ARQ.6 (opt) - Request Event Reason (CE) S10.5.1
+        ARQ.6 - Request Event Reason (CE) O S10.5.1
 
     arq_7 : CE | None
-        ARQ.7 (opt) - Appointment Reason (CE) S10.5.1 | 0276 - Appointment Reason Codes
+        ARQ.7 - Appointment Reason (CE) O S10.5.1 | 0276 - Appointment Reason Codes
 
     arq_8 : CE | None
-        ARQ.8 (opt) - Appointment Type (CE) S10.5.1 | 0277 - Appointment Type Codes
+        ARQ.8 - Appointment Type (CE) O S10.5.1 | 0277 - Appointment Type Codes
 
     arq_9 : str | None
-        ARQ.9 (opt) - Appointment Duration (NM) S10.5.1
+        ARQ.9 - Appointment Duration (NM) O S10.5.1
 
     arq_10 : CE | None
-        ARQ.10 (opt) - Appointment Duration Units (CE) S10.5.1.10
+        ARQ.10 - Appointment Duration Units (CE) O S10.5.1.10
 
     arq_11 : list[DR] | None
-        ARQ.11 (opt, rep) - Requested Start Date/Time Range (DR) S10.5.1.11
+        ARQ.11 - Requested Start Date/Time Range (DR) O rep S10.5.1.11
 
     arq_12 : str | None
-        ARQ.12 (opt) - Priority (ST) S10.5.1.12
+        ARQ.12 - Priority (ST) O S10.5.1.12
 
     arq_13 : RI | None
-        ARQ.13 (opt) - Repeating Interval (RI) S10.5.1.13
+        ARQ.13 - Repeating Interval (RI) O S10.5.1.13
 
     arq_14 : str | None
-        ARQ.14 (opt) - Repeating Interval Duration (ST) S10.5.1.14
+        ARQ.14 - Repeating Interval Duration (ST) O S10.5.1.14
 
     arq_15 : XCN | None
-        ARQ.15 (opt) - Placer Contact Person (XCN) S10.5.1
+        ARQ.15 - Placer Contact Person (XCN) O S10.5.1
 
     arq_16 : XTN | None
-        ARQ.16 (opt) - Placer Contact Phone Number (XTN) S10.5.1
+        ARQ.16 - Placer Contact Phone Number (XTN) O S10.5.1
 
     arq_17 : XAD | None
-        ARQ.17 (opt) - Placer Contact Address (XAD) S10.5.1
+        ARQ.17 - Placer Contact Address (XAD) O S10.5.1
 
     arq_18 : PL | None
-        ARQ.18 (opt) - Placer Contact Location (PL) S10.5.1
+        ARQ.18 - Placer Contact Location (PL) O S10.5.1
 
     arq_19 : XCN
-        ARQ.19 (req) - Entered By Person (XCN) S10.5.1
+        ARQ.19 - Entered By Person (XCN) R S10.5.1
 
     arq_20 : list[XTN] | None
-        ARQ.20 (opt, rep) - Entered By Phone Number (XTN) S10.5.1
+        ARQ.20 - Entered By Phone Number (XTN) O rep S10.5.1
 
     arq_21 : PL | None
-        ARQ.21 (opt) - Entered By Location (PL) S10.5.1
+        ARQ.21 - Entered By Location (PL) O S10.5.1
 
     arq_22 : EI | None
-        ARQ.22 (opt) - Parent Placer Appointment ID (EI) S10.5.1
+        ARQ.22 - Parent Placer Appointment ID (EI) O S10.5.1
 
     arq_23 : EI | None
-        ARQ.23 (opt) - Parent Filler Appointment ID (EI) S10.5.1
+        ARQ.23 - Parent Filler Appointment ID (EI) O S10.5.1
     """
 
     arq_1: EI = Field(
@@ -104,7 +104,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.1",
         title="Placer Appointment ID",
-        description="Item #860",
+        description="R | Item #00860",
     )
 
     arq_2: Optional[EI] = Field(
@@ -116,7 +116,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.2",
         title="Filler Appointment ID",
-        description="Item #861",
+        description="C | Item #00861",
     )
 
     arq_3: Optional[str] = Field(
@@ -128,7 +128,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.3",
         title="Occurrence Number",
-        description="Item #862",
+        description="C | Item #00862 | LEN:5",
     )
 
     arq_4: Optional[EI] = Field(
@@ -140,7 +140,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.4",
         title="Placer Group Number",
-        description="Item #863",
+        description="O | Item #00863",
     )
 
     arq_5: Optional[CE] = Field(
@@ -152,7 +152,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.5",
         title="Schedule ID",
-        description="Item #864",
+        description="O | Item #00864",
     )
 
     arq_6: Optional[CE] = Field(
@@ -164,7 +164,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.6",
         title="Request Event Reason",
-        description="Item #865",
+        description="O | Item #00865",
     )
 
     arq_7: Optional[CE] = Field(
@@ -176,7 +176,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.7",
         title="Appointment Reason",
-        description="Item #866 | Table HL70276",
+        description="O | Item #00866 | Table 0276 - Appointment Reason Codes",
     )
 
     arq_8: Optional[CE] = Field(
@@ -188,7 +188,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.8",
         title="Appointment Type",
-        description="Item #867 | Table HL70277",
+        description="O | Item #00867 | Table 0277 - Appointment Type Codes",
     )
 
     arq_9: Optional[str] = Field(
@@ -200,7 +200,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.9",
         title="Appointment Duration",
-        description="Item #868",
+        description="O | Item #00868 | LEN:20",
     )
 
     arq_10: Optional[CE] = Field(
@@ -212,7 +212,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.10",
         title="Appointment Duration Units",
-        description="Item #869",
+        description="O | Item #00869",
     )
 
     arq_11: Optional[List[DR]] = Field(
@@ -224,7 +224,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.11",
         title="Requested Start Date/Time Range",
-        description="Item #870",
+        description="O | Item #00870",
     )
 
     arq_12: Optional[str] = Field(
@@ -236,7 +236,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.12",
         title="Priority",
-        description="Item #871",
+        description="O | Item #00871 | LEN:5",
     )
 
     arq_13: Optional[RI] = Field(
@@ -248,7 +248,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.13",
         title="Repeating Interval",
-        description="Item #872",
+        description="O | Item #00872",
     )
 
     arq_14: Optional[str] = Field(
@@ -260,7 +260,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.14",
         title="Repeating Interval Duration",
-        description="Item #873",
+        description="O | Item #00873 | LEN:5",
     )
 
     arq_15: Optional[XCN] = Field(
@@ -272,7 +272,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.15",
         title="Placer Contact Person",
-        description="Item #874",
+        description="O | Item #00874",
     )
 
     arq_16: Optional[XTN] = Field(
@@ -284,7 +284,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.16",
         title="Placer Contact Phone Number",
-        description="Item #875",
+        description="O | Item #00875",
     )
 
     arq_17: Optional[XAD] = Field(
@@ -296,7 +296,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.17",
         title="Placer Contact Address",
-        description="Item #876",
+        description="O | Item #00876",
     )
 
     arq_18: Optional[PL] = Field(
@@ -308,7 +308,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.18",
         title="Placer Contact Location",
-        description="Item #877",
+        description="O | Item #00877",
     )
 
     arq_19: XCN = Field(
@@ -319,7 +319,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.19",
         title="Entered By Person",
-        description="Item #878",
+        description="R | Item #00878",
     )
 
     arq_20: Optional[List[XTN]] = Field(
@@ -331,7 +331,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.20",
         title="Entered By Phone Number",
-        description="Item #879",
+        description="O | Item #00879",
     )
 
     arq_21: Optional[PL] = Field(
@@ -343,7 +343,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.21",
         title="Entered By Location",
-        description="Item #880",
+        description="O | Item #00880",
     )
 
     arq_22: Optional[EI] = Field(
@@ -355,7 +355,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.22",
         title="Parent Placer Appointment ID",
-        description="Item #881",
+        description="O | Item #00881",
     )
 
     arq_23: Optional[EI] = Field(
@@ -367,7 +367,7 @@ class ARQ(HL7Model):
         ),
         serialization_alias="ARQ.23",
         title="Parent Filler Appointment ID",
-        description="Item #882",
+        description="O | Item #00882",
     )
 
     @field_validator("arq_3", "arq_9", mode='before')

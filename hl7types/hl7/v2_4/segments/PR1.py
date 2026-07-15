@@ -22,58 +22,58 @@ class PR1(HL7Model):
     Attributes
     ----------
     pr1_1 : str
-        PR1.1 (req) - Set ID - PR1 (SI) S6.5.4.1
+        PR1.1 - Set ID - PR1 (SI) R S6.5.4.1
 
     pr1_2 : str | None
-        PR1.2 (opt) - Procedure Coding Method (IS) S6.5.4.2 | 0089 - Procedure coding method
+        PR1.2 - Procedure Coding Method (IS) R S6.5.4.2 | 0089 - Procedure coding method
 
     pr1_3 : CE
-        PR1.3 (req) - Procedure Code (CE) S8.10.2.7 | 0088 - Procedure Code
+        PR1.3 - Procedure Code (CE) R S8.10.2.7 | 0088 - Procedure Code
 
     pr1_4 : str | None
-        PR1.4 (opt) - Procedure Description (ST) S6.5.4.4
+        PR1.4 - Procedure Description (ST) O S6.5.4.4
 
     pr1_5 : TS
-        PR1.5 (req) - Procedure Date/Time (TS) S6.5.4.5
+        PR1.5 - Procedure Date/Time (TS) R S6.5.4.5
 
     pr1_6 : str | None
-        PR1.6 (opt) - Procedure Functional Type (IS) S6.5.4.6 | 0230 - Procedure functional type
+        PR1.6 - Procedure Functional Type (IS) O S6.5.4.6 | 0230 - Procedure functional type
 
     pr1_7 : str | None
-        PR1.7 (opt) - Procedure Minutes (NM) S6.5.4.7
+        PR1.7 - Procedure Minutes (NM) O S6.5.4.7
 
     pr1_8 : list[XCN] | None
-        PR1.8 (opt, rep) - Anesthesiologist (XCN) S6.5.4.8 | 0010 - Physician ID
+        PR1.8 - Anesthesiologist (XCN) O rep S6.5.4.8 | 0010 - Physician ID
 
     pr1_9 : str | None
-        PR1.9 (opt) - Anesthesia Code (IS) S6.5.4.9 | 0019 - Anesthesia code
+        PR1.9 - Anesthesia Code (IS) O S6.5.4.9 | 0019 - Anesthesia code
 
     pr1_10 : str | None
-        PR1.10 (opt) - Anesthesia Minutes (NM) S6.5.4.10
+        PR1.10 - Anesthesia Minutes (NM) O S6.5.4.10
 
     pr1_11 : list[XCN] | None
-        PR1.11 (opt, rep) - Surgeon (XCN) S6.5.4.11 | 0010 - Physician ID
+        PR1.11 - Surgeon (XCN) O rep S6.5.4.11 | 0010 - Physician ID
 
     pr1_12 : list[XCN] | None
-        PR1.12 (opt, rep) - Procedure Practitioner (XCN) S6.5.4.12 | 0010 - Physician ID
+        PR1.12 - Procedure Practitioner (XCN) O rep S6.5.4.12 | 0010 - Physician ID
 
     pr1_13 : CE | None
-        PR1.13 (opt) - Consent Code (CE) S6.5.4.13 | 0059 - Consent code
+        PR1.13 - Consent Code (CE) O S6.5.4.13 | 0059 - Consent code
 
     pr1_14 : str | None
-        PR1.14 (opt) - Procedure Priority (ID) S6.5.4.14 | 0418 - Procedure priority
+        PR1.14 - Procedure Priority (ID) O S6.5.4.14 | 0418 - Procedure priority
 
     pr1_15 : CE | None
-        PR1.15 (opt) - Associated Diagnosis Code (CE) S6.5.4.15 | 0051 - Diagnosis code
+        PR1.15 - Associated Diagnosis Code (CE) O S6.5.4.15 | 0051 - Diagnosis code
 
     pr1_16 : list[CE] | None
-        PR1.16 (opt, rep) - Procedure Code Modifier (CE) S7.4.1.45 | 0340 - Procedure Code modifier
+        PR1.16 - Procedure Code Modifier (CE) O rep S7.4.1.45 | 0340 - Procedure Code modifier
 
     pr1_17 : str | None
-        PR1.17 (opt) - Procedure DRG Type (IS) S6.5.4.17 | 0416 - Procedure DRG type
+        PR1.17 - Procedure DRG Type (IS) O S6.5.4.17 | 0416 - Procedure DRG type
 
     pr1_18 : list[CE] | None
-        PR1.18 (opt, rep) - Tissue Type Code (CE) S6.5.4.18 | 0417 - Tissue type code
+        PR1.18 - Tissue Type Code (CE) O rep S6.5.4.18 | 0417 - Tissue type code
     """
 
     pr1_1: str = Field(
@@ -84,7 +84,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.1",
         title="Set ID - PR1",
-        description="Item #391",
+        description="R | Item #00391 | LEN:4",
     )
 
     pr1_2: Optional[str] = Field(
@@ -96,7 +96,9 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.2",
         title="Procedure Coding Method",
-        description="Item #392 | Table HL70089",
+        description=(
+            "R | Item #00392 | Table 0089 - Procedure coding method | LEN:3"
+        ),
     )
 
     pr1_3: CE = Field(
@@ -107,7 +109,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.3",
         title="Procedure Code",
-        description="Item #393 | Table HL70088",
+        description="R | Item #00393 | Table 0088 - Procedure Code",
     )
 
     pr1_4: Optional[str] = Field(
@@ -119,7 +121,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.4",
         title="Procedure Description",
-        description="Item #394",
+        description="O | Item #00394 | LEN:40",
     )
 
     pr1_5: TS = Field(
@@ -130,7 +132,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.5",
         title="Procedure Date/Time",
-        description="Item #395",
+        description="R | Item #00395",
     )
 
     pr1_6: Optional[str] = Field(
@@ -142,7 +144,9 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.6",
         title="Procedure Functional Type",
-        description="Item #396 | Table HL70230",
+        description=(
+            "O | Item #00396 | Table 0230 - Procedure functional type | LEN:2"
+        ),
     )
 
     pr1_7: Optional[str] = Field(
@@ -154,7 +158,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.7",
         title="Procedure Minutes",
-        description="Item #397",
+        description="O | Item #00397 | LEN:4",
     )
 
     pr1_8: Optional[List[XCN]] = Field(
@@ -166,7 +170,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.8",
         title="Anesthesiologist",
-        description="Item #398 | Table HL70010",
+        description="O | Item #00398 | Table 0010 - Physician ID",
     )
 
     pr1_9: Optional[str] = Field(
@@ -178,7 +182,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.9",
         title="Anesthesia Code",
-        description="Item #399 | Table HL70019",
+        description="O | Item #00399 | Table 0019 - Anesthesia code | LEN:2",
     )
 
     pr1_10: Optional[str] = Field(
@@ -190,7 +194,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.10",
         title="Anesthesia Minutes",
-        description="Item #400",
+        description="O | Item #00400 | LEN:4",
     )
 
     pr1_11: Optional[List[XCN]] = Field(
@@ -202,7 +206,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.11",
         title="Surgeon",
-        description="Item #401 | Table HL70010",
+        description="O | Item #00401 | Table 0010 - Physician ID",
     )
 
     pr1_12: Optional[List[XCN]] = Field(
@@ -214,7 +218,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.12",
         title="Procedure Practitioner",
-        description="Item #402 | Table HL70010",
+        description="O | Item #00402 | Table 0010 - Physician ID",
     )
 
     pr1_13: Optional[CE] = Field(
@@ -226,7 +230,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.13",
         title="Consent Code",
-        description="Item #403 | Table HL70059",
+        description="O | Item #00403 | Table 0059 - Consent code",
     )
 
     pr1_14: Optional[str] = Field(
@@ -238,7 +242,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.14",
         title="Procedure Priority",
-        description="Item #404 | Table HL70418",
+        description="O | Item #00404 | Table 0418 - Procedure priority | LEN:2",
     )
 
     pr1_15: Optional[CE] = Field(
@@ -250,7 +254,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.15",
         title="Associated Diagnosis Code",
-        description="Item #772 | Table HL70051",
+        description="O | Item #00772 | Table 0051 - Diagnosis code",
     )
 
     pr1_16: Optional[List[CE]] = Field(
@@ -262,7 +266,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.16",
         title="Procedure Code Modifier",
-        description="Item #1316 | Table HL70340",
+        description="O | Item #01316 | Table 0340 - Procedure Code modifier",
     )
 
     pr1_17: Optional[str] = Field(
@@ -274,7 +278,9 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.17",
         title="Procedure DRG Type",
-        description="Item #1501 | Table HL70416",
+        description=(
+            "O | Item #01501 | Table 0416 - Procedure DRG type | LEN:20"
+        ),
     )
 
     pr1_18: Optional[List[CE]] = Field(
@@ -286,7 +292,7 @@ class PR1(HL7Model):
         ),
         serialization_alias="PR1.18",
         title="Tissue Type Code",
-        description="Item #1502 | Table HL70417",
+        description="O | Item #01502 | Table 0417 - Tissue type code",
     )
 
     @field_validator("pr1_1", mode='before')

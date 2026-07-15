@@ -26,79 +26,79 @@ class RF1(HL7Model):
     Attributes
     ----------
     rf1_1 : CWE | None
-        RF1.1 (opt) - Referral Status (CWE) S11.8.1.1 | 0283 - Referral Status
+        RF1.1 - Referral Status (CWE) O S11.8.1.1 | 0283 - Referral Status
 
     rf1_2 : CWE | None
-        RF1.2 (opt) - Referral Priority (CWE) S11.8.1.2 | 0280 - Referral Priority
+        RF1.2 - Referral Priority (CWE) O S11.8.1.2 | 0280 - Referral Priority
 
     rf1_3 : CWE | None
-        RF1.3 (opt) - Referral Type (CWE) S11.8.1.3 | 0281 - Referral Type
+        RF1.3 - Referral Type (CWE) O S11.8.1.3 | 0281 - Referral Type
 
     rf1_4 : list[CWE] | None
-        RF1.4 (opt, rep) - Referral Disposition (CWE) S11.8.1.4 | 0282 - Referral Disposition
+        RF1.4 - Referral Disposition (CWE) O rep S11.8.1.4 | 0282 - Referral Disposition
 
     rf1_5 : CWE | None
-        RF1.5 (opt) - Referral Category (CWE) S11.8.1.5 | 0284 - Referral Category
+        RF1.5 - Referral Category (CWE) O S11.8.1.5 | 0284 - Referral Category
 
     rf1_6 : EI
-        RF1.6 (req) - Originating Referral Identifier (EI) S11.8.1.6
+        RF1.6 - Originating Referral Identifier (EI) R S11.8.1.6
 
     rf1_7 : str | None
-        RF1.7 (opt) - Effective Date (DTM) S11.8.1.7
+        RF1.7 - Effective Date (DTM) O S11.8.1.7
 
     rf1_8 : str | None
-        RF1.8 (opt) - Expiration Date (DTM) S11.8.1.8
+        RF1.8 - Expiration Date (DTM) O S11.8.1.8
 
     rf1_9 : str | None
-        RF1.9 (opt) - Process Date (DTM) S11.8.1.9
+        RF1.9 - Process Date (DTM) O S11.8.1.9
 
     rf1_10 : list[CWE] | None
-        RF1.10 (opt, rep) - Referral Reason (CWE) S11.8.1.10 | 0336 - Referral Reason
+        RF1.10 - Referral Reason (CWE) O rep S11.8.1.10 | 0336 - Referral Reason
 
     rf1_11 : list[EI] | None
-        RF1.11 (opt, rep) - External Referral Identifier (EI) S11.8.1.11
+        RF1.11 - External Referral Identifier (EI) O rep S11.8.1.11
 
     rf1_12 : CWE | None
-        RF1.12 (opt) - Referral Documentation Completion Status (CWE) S11.8.1.12 | 0865 - Referral Documentation Completion Status
+        RF1.12 - Referral Documentation Completion Status (CWE) O S11.8.1.12 | 0865 - Referral Documentation Completion Status
 
     rf1_13 : str | None
-        RF1.13 (opt) - Planned Treatment Stop Date (DTM) S11.8.1.13
+        RF1.13 - Planned Treatment Stop Date (DTM) O S11.8.1.13
 
     rf1_14 : str | None
-        RF1.14 (opt) - Referral Reason Text (ST) S11.8.1.14
+        RF1.14 - Referral Reason Text (ST) O S11.8.1.14
 
     rf1_15 : CQ | None
-        RF1.15 (opt) - Number of Authorized Treatments/Units (CQ) S11.8.1.15
+        RF1.15 - Number of Authorized Treatments/Units (CQ) O S11.8.1.15
 
     rf1_16 : CQ | None
-        RF1.16 (opt) - Number of Used Treatments/Units (CQ) S11.8.1.16
+        RF1.16 - Number of Used Treatments/Units (CQ) O S11.8.1.16
 
     rf1_17 : CQ | None
-        RF1.17 (opt) - Number of Schedule Treatments/Units (CQ) S11.8.1.17
+        RF1.17 - Number of Schedule Treatments/Units (CQ) O S11.8.1.17
 
     rf1_18 : MO | None
-        RF1.18 (opt) - Remaining Benefit Amount (MO) S11.8.1.18
+        RF1.18 - Remaining Benefit Amount (MO) O S11.8.1.18
 
     rf1_19 : XON | None
-        RF1.19 (opt) - Authorized Provider (XON) S11.8.1.19
+        RF1.19 - Authorized Provider (XON) O S11.8.1.19
 
     rf1_20 : XCN | None
-        RF1.20 (opt) - Authorized Health Professional (XCN) S11.8.1.20
+        RF1.20 - Authorized Health Professional (XCN) O S11.8.1.20
 
     rf1_21 : str | None
-        RF1.21 (opt) - Source Text (ST) S11.8.1.21
+        RF1.21 - Source Text (ST) O S11.8.1.21
 
     rf1_22 : str | None
-        RF1.22 (opt) - Source Date (DTM) S11.8.1.22
+        RF1.22 - Source Date (DTM) O S11.8.1.22
 
     rf1_23 : XTN | None
-        RF1.23 (opt) - Source Phone (XTN) S11.8.1.23
+        RF1.23 - Source Phone (XTN) O S11.8.1.23
 
     rf1_24 : str | None
-        RF1.24 (opt) - Comment (ST) S11.8.1.24
+        RF1.24 - Comment (ST) O S11.8.1.24
 
     rf1_25 : str | None
-        RF1.25 (opt) - Action Code (ID) S11.8.1.25 | 0206 - Segment Action Code
+        RF1.25 - Action Code (ID) O S11.8.1.25 | 0206 - Segment Action Code
     """
 
     rf1_1: Optional[CWE] = Field(
@@ -110,7 +110,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.1",
         title="Referral Status",
-        description="Item #1137 | Table HL70283",
+        description="O | Item #01137 | Table 0283 - Referral Status",
     )
 
     rf1_2: Optional[CWE] = Field(
@@ -122,7 +122,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.2",
         title="Referral Priority",
-        description="Item #1138 | Table HL70280",
+        description="O | Item #01138 | Table 0280 - Referral Priority",
     )
 
     rf1_3: Optional[CWE] = Field(
@@ -134,7 +134,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.3",
         title="Referral Type",
-        description="Item #1139 | Table HL70281",
+        description="O | Item #01139 | Table 0281 - Referral Type",
     )
 
     rf1_4: Optional[List[CWE]] = Field(
@@ -146,7 +146,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.4",
         title="Referral Disposition",
-        description="Item #1140 | Table HL70282",
+        description="O | Item #01140 | Table 0282 - Referral Disposition",
     )
 
     rf1_5: Optional[CWE] = Field(
@@ -158,7 +158,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.5",
         title="Referral Category",
-        description="Item #1141 | Table HL70284",
+        description="O | Item #01141 | Table 0284 - Referral Category",
     )
 
     rf1_6: EI = Field(
@@ -169,7 +169,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.6",
         title="Originating Referral Identifier",
-        description="Item #1142",
+        description="R | Item #01142",
     )
 
     rf1_7: Optional[str] = Field(
@@ -181,7 +181,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.7",
         title="Effective Date",
-        description="Item #1143",
+        description="O | Item #01143",
     )
 
     rf1_8: Optional[str] = Field(
@@ -193,7 +193,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.8",
         title="Expiration Date",
-        description="Item #1144",
+        description="O | Item #01144",
     )
 
     rf1_9: Optional[str] = Field(
@@ -205,7 +205,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.9",
         title="Process Date",
-        description="Item #1145",
+        description="O | Item #01145",
     )
 
     rf1_10: Optional[List[CWE]] = Field(
@@ -217,7 +217,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.10",
         title="Referral Reason",
-        description="Item #1228 | Table HL70336",
+        description="O | Item #01228 | Table 0336 - Referral Reason",
     )
 
     rf1_11: Optional[List[EI]] = Field(
@@ -229,7 +229,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.11",
         title="External Referral Identifier",
-        description="Item #1300",
+        description="O | Item #01300",
     )
 
     rf1_12: Optional[CWE] = Field(
@@ -241,7 +241,10 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.12",
         title="Referral Documentation Completion Status",
-        description="Item #2262 | Table HL70865",
+        description=(
+            "O | Item #02262 | Table 0865 - Referral Documentation Completion "
+            "Status"
+        ),
     )
 
     rf1_13: Optional[str] = Field(
@@ -253,7 +256,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.13",
         title="Planned Treatment Stop Date",
-        description="Item #3400",
+        description="O | Item #03400",
     )
 
     rf1_14: Optional[str] = Field(
@@ -265,7 +268,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.14",
         title="Referral Reason Text",
-        description="Item #3401",
+        description="O | Item #03401",
     )
 
     rf1_15: Optional[CQ] = Field(
@@ -277,7 +280,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.15",
         title="Number of Authorized Treatments/Units",
-        description="Item #3402",
+        description="O | Item #03402",
     )
 
     rf1_16: Optional[CQ] = Field(
@@ -289,7 +292,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.16",
         title="Number of Used Treatments/Units",
-        description="Item #3403",
+        description="O | Item #03403",
     )
 
     rf1_17: Optional[CQ] = Field(
@@ -301,7 +304,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.17",
         title="Number of Schedule Treatments/Units",
-        description="Item #3404",
+        description="O | Item #03404",
     )
 
     rf1_18: Optional[MO] = Field(
@@ -313,7 +316,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.18",
         title="Remaining Benefit Amount",
-        description="Item #3405",
+        description="O | Item #03405",
     )
 
     rf1_19: Optional[XON] = Field(
@@ -325,7 +328,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.19",
         title="Authorized Provider",
-        description="Item #3406",
+        description="O | Item #03406",
     )
 
     rf1_20: Optional[XCN] = Field(
@@ -337,7 +340,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.20",
         title="Authorized Health Professional",
-        description="Item #3407",
+        description="O | Item #03407",
     )
 
     rf1_21: Optional[str] = Field(
@@ -349,7 +352,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.21",
         title="Source Text",
-        description="Item #3408",
+        description="O | Item #03408",
     )
 
     rf1_22: Optional[str] = Field(
@@ -361,7 +364,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.22",
         title="Source Date",
-        description="Item #3409",
+        description="O | Item #03409",
     )
 
     rf1_23: Optional[XTN] = Field(
@@ -373,7 +376,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.23",
         title="Source Phone",
-        description="Item #3410",
+        description="O | Item #03410",
     )
 
     rf1_24: Optional[str] = Field(
@@ -385,7 +388,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.24",
         title="Comment",
-        description="Item #3411",
+        description="O | Item #03411",
     )
 
     rf1_25: Optional[str] = Field(
@@ -397,7 +400,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.25",
         title="Action Code",
-        description="Item #3412 | Table HL70206",
+        description="O | Item #03412 | Table 0206 - Segment Action Code",
     )
 
     @field_validator("rf1_7", "rf1_8", "rf1_9", "rf1_13", "rf1_22", mode='before')

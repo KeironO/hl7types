@@ -22,43 +22,43 @@ class OMC(HL7Model):
     Attributes
     ----------
     omc_1 : str | None
-        OMC.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
+        OMC.1 - Sequence Number - Test/Observation Master File (NM) O S8.8.10.1
 
     omc_2 : str | None
-        OMC.2 (opt) - Segment Action Code (ID) S8.8.16.2 | 0206 - Segment Action Code
+        OMC.2 - Segment Action Code (ID) NA S8.8.16.2 | 0206 - Segment Action Code
 
     omc_3 : EI | None
-        OMC.3 (opt) - Segment Unique Key (EI) S8.8.16.3
+        OMC.3 - Segment Unique Key (EI) NA S8.8.16.3
 
     omc_4 : CWE
-        OMC.4 (req) - Clinical Information Request (CWE) S8.8.16.4 | 9999 - no table for CE
+        OMC.4 - Clinical Information Request (CWE) R S8.8.16.4 | 9999 - no table for CE
 
     omc_5 : list[CWE]
-        OMC.5 (req, rep) - Collection Event/Process Step (CWE) S8.8.16.5 | 0938 - Collection Event/Process Step Limit
+        OMC.5 - Collection Event/Process Step (CWE) R rep S8.8.16.5 | 0938 - Collection Event/Process Step Limit
 
     omc_6 : CWE
-        OMC.6 (req) - Communication Location (CWE) S8.8.16.6 | 0939 - Communication Location
+        OMC.6 - Communication Location (CWE) R S8.8.16.6 | 0939 - Communication Location
 
     omc_7 : str | None
-        OMC.7 (opt) - Answer Required (ID) S8.8.16.7 | 0136 - Yes/no Indicator
+        OMC.7 - Answer Required (ID) O S8.8.16.7 | 0136 - Yes/no Indicator
 
     omc_8 : str | None
-        OMC.8 (opt) - Hint/Help Text (ST) S8.8.16.8
+        OMC.8 - Hint/Help Text (ST) O S8.8.16.8
 
     omc_9 : varies | None
-        OMC.9 (opt) - Type of Answer (varies) S8.8.16.9 | 0125 - Value Type
+        OMC.9 - Type of Answer (varies) O S8.8.16.9 | 0125 - Value Type
 
     omc_10 : str | None
-        OMC.10 (opt) - Multiple Answers Allowed (ID) S8.8.16.10 | 0136 - Yes/no Indicator
+        OMC.10 - Multiple Answers Allowed (ID) O S8.8.16.10 | 0136 - Yes/no Indicator
 
     omc_11 : list[CWE] | None
-        OMC.11 (opt, rep) - Answer Choices (CWE) S8.8.16.11 | 9999 - no table for CE
+        OMC.11 - Answer Choices (CWE) O rep S8.8.16.11 | 9999 - no table for CE
 
     omc_12 : str | None
-        OMC.12 (opt) - Character Limit (NM) S8.8.16.12
+        OMC.12 - Character Limit (NM) O S8.8.16.12
 
     omc_13 : str | None
-        OMC.13 (opt) - Number of Decimals (NM) S8.8.16.13
+        OMC.13 - Number of Decimals (NM) O S8.8.16.13
     """
 
     omc_1: Optional[str] = Field(
@@ -70,7 +70,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.1",
         title="Sequence Number - Test/Observation Master File",
-        description="Item #586",
+        description="O | Item #00586",
     )
 
     omc_2: Optional[str] = Field(
@@ -82,7 +82,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description="NA | Item #00763 | Table 0206 - Segment Action Code",
     )
 
     omc_3: Optional[EI] = Field(
@@ -94,7 +94,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.3",
         title="Segment Unique Key",
-        description="Item #764",
+        description="NA | Item #00764",
     )
 
     omc_4: CWE = Field(
@@ -105,7 +105,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.4",
         title="Clinical Information Request",
-        description="Item #3444 | Table HL79999",
+        description="R | Item #03444 | Table 9999 - no table for CE",
     )
 
     omc_5: List[CWE] = Field(
@@ -117,7 +117,9 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.5",
         title="Collection Event/Process Step",
-        description="Item #3445 | Table HL70938",
+        description=(
+            "R | Item #03445 | Table 0938 - Collection Event/Process Step Limit"
+        ),
     )
 
     omc_6: CWE = Field(
@@ -128,7 +130,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.6",
         title="Communication Location",
-        description="Item #3446 | Table HL70939",
+        description="R | Item #03446 | Table 0939 - Communication Location",
     )
 
     omc_7: Optional[str] = Field(
@@ -140,7 +142,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.7",
         title="Answer Required",
-        description="Item #3447 | Table HL70136",
+        description="O | Item #03447 | Table 0136 - Yes/no Indicator",
     )
 
     omc_8: Optional[str] = Field(
@@ -152,7 +154,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.8",
         title="Hint/Help Text",
-        description="Item #3448",
+        description="O | Item #03448",
     )
 
     omc_9: Optional[varies] = Field(
@@ -164,7 +166,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.9",
         title="Type of Answer",
-        description="Item #3449 | Table HL70125",
+        description="O | Item #03449 | Table 0125 - Value Type",
     )
 
     omc_10: Optional[str] = Field(
@@ -176,7 +178,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.10",
         title="Multiple Answers Allowed",
-        description="Item #3450 | Table HL70136",
+        description="O | Item #03450 | Table 0136 - Yes/no Indicator",
     )
 
     omc_11: Optional[List[CWE]] = Field(
@@ -188,7 +190,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.11",
         title="Answer Choices",
-        description="Item #3451 | Table HL79999",
+        description="O | Item #03451 | Table 9999 - no table for CE",
     )
 
     omc_12: Optional[str] = Field(
@@ -200,7 +202,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.12",
         title="Character Limit",
-        description="Item #3452",
+        description="O | Item #03452",
     )
 
     omc_13: Optional[str] = Field(
@@ -212,7 +214,7 @@ class OMC(HL7Model):
         ),
         serialization_alias="OMC.13",
         title="Number of Decimals",
-        description="Item #3453",
+        description="O | Item #03453",
     )
 
     @field_validator("omc_1", "omc_12", "omc_13", mode='before')

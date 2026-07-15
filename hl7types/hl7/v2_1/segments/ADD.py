@@ -18,7 +18,7 @@ class ADD(HL7Model):
     Attributes
     ----------
     add_1 : str | None
-        ADD.1 (opt) - ADDENDUM CONTINUATION POINTER (ST) S2-39
+        ADD.1 - ADDENDUM CONTINUATION POINTER (ST) O S2-39
     """
 
     add_1: Optional[str] = Field(
@@ -30,7 +30,7 @@ class ADD(HL7Model):
         ),
         serialization_alias="ADD.1",
         title="ADDENDUM CONTINUATION POINTER",
-        description="Item #641",
+        description="O | Item #00641 | LEN:60",
     )
 
     model_config = {"populate_by_name": True}

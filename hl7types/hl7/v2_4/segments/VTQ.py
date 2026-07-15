@@ -21,19 +21,19 @@ class VTQ(HL7Model):
     Attributes
     ----------
     vtq_1 : str | None
-        VTQ.1 (opt) - Query Tag (ST) S5.10.5.8.1
+        VTQ.1 - Query Tag (ST) O S5.10.5.8.1
 
     vtq_2 : str
-        VTQ.2 (req) - Query/Response Format Code (ID) S5.10.5.8.2 | 0106 - Query/response format code
+        VTQ.2 - Query/Response Format Code (ID) R S5.10.5.8.2 | 0106 - Query/response format code
 
     vtq_3 : CE
-        VTQ.3 (req) - VT Query Name (CE) S5.10.5.8.3
+        VTQ.3 - VT Query Name (CE) R S5.10.5.8.3
 
     vtq_4 : CE
-        VTQ.4 (req) - Virtual Table Name (CE) S5.10.5.8.4
+        VTQ.4 - Virtual Table Name (CE) R S5.10.5.8.4
 
     vtq_5 : list[QSC] | None
-        VTQ.5 (opt, rep) - Selection Criteria (QSC) S5.10.5.8.5
+        VTQ.5 - Selection Criteria (QSC) O rep S5.10.5.8.5
     """
 
     vtq_1: Optional[str] = Field(
@@ -45,7 +45,7 @@ class VTQ(HL7Model):
         ),
         serialization_alias="VTQ.1",
         title="Query Tag",
-        description="Item #696",
+        description="O | Item #00696 | LEN:32",
     )
 
     vtq_2: str = Field(
@@ -56,7 +56,9 @@ class VTQ(HL7Model):
         ),
         serialization_alias="VTQ.2",
         title="Query/Response Format Code",
-        description="Item #697 | Table HL70106",
+        description=(
+            "R | Item #00697 | Table 0106 - Query/response format code | LEN:1"
+        ),
     )
 
     vtq_3: CE = Field(
@@ -67,7 +69,7 @@ class VTQ(HL7Model):
         ),
         serialization_alias="VTQ.3",
         title="VT Query Name",
-        description="Item #698",
+        description="R | Item #00698",
     )
 
     vtq_4: CE = Field(
@@ -78,7 +80,7 @@ class VTQ(HL7Model):
         ),
         serialization_alias="VTQ.4",
         title="Virtual Table Name",
-        description="Item #699",
+        description="R | Item #00699",
     )
 
     vtq_5: Optional[List[QSC]] = Field(
@@ -90,7 +92,7 @@ class VTQ(HL7Model):
         ),
         serialization_alias="VTQ.5",
         title="Selection Criteria",
-        description="Item #700",
+        description="O | Item #00700",
     )
 
     model_config = {"populate_by_name": True}

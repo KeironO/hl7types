@@ -26,46 +26,46 @@ class ROL(HL7Model):
     Attributes
     ----------
     rol_1 : EI | None
-        ROL.1 (opt) - Role Instance ID (EI) S15.4.7.1
+        ROL.1 - Role Instance ID (EI) C S15.4.7.1
 
     rol_2 : str
-        ROL.2 (req) - Action Code (ID) S4.A.8.22 | 0206 - Segment Action Code
+        ROL.2 - Action Code (ID) R S4.A.8.22 | 0206 - Segment Action Code
 
     rol_3 : CWE
-        ROL.3 (req) - Role-ROL (CWE) S15.4.7.3 | 0443 - Provider Role
+        ROL.3 - Role-ROL (CWE) R S15.4.7.3 | 0443 - Provider Role
 
     rol_4 : list[XCN]
-        ROL.4 (req, rep) - Role Person (XCN) S15.4.7.4
+        ROL.4 - Role Person (XCN) R rep S15.4.7.4
 
     rol_5 : str | None
-        ROL.5 (opt) - Role Begin Date/Time (DTM) S15.4.7.5
+        ROL.5 - Role Begin Date/Time (DTM) O S15.4.7.5
 
     rol_6 : str | None
-        ROL.6 (opt) - Role End Date/Time (DTM) S15.4.7.6
+        ROL.6 - Role End Date/Time (DTM) O S15.4.7.6
 
     rol_7 : CWE | None
-        ROL.7 (opt) - Role Duration (CWE) S15.4.7.7
+        ROL.7 - Role Duration (CWE) O S15.4.7.7
 
     rol_8 : CWE | None
-        ROL.8 (opt) - Role Action Reason (CWE) S15.4.7.8
+        ROL.8 - Role Action Reason (CWE) O S15.4.7.8
 
     rol_9 : list[CWE] | None
-        ROL.9 (opt, rep) - Provider Type (CWE) S15.4.7.9
+        ROL.9 - Provider Type (CWE) O rep S15.4.7.9
 
     rol_10 : CWE | None
-        ROL.10 (opt) - Organization Unit Type (CWE) S15.4.7.10 | 0406 - Organization Unit Type
+        ROL.10 - Organization Unit Type (CWE) O S15.4.7.10 | 0406 - Organization Unit Type
 
     rol_11 : list[XAD] | None
-        ROL.11 (opt, rep) - Office/Home Address/Birthplace (XAD) S15.4.7.11
+        ROL.11 - Office/Home Address/Birthplace (XAD) O rep S15.4.7.11
 
     rol_12 : list[XTN] | None
-        ROL.12 (opt, rep) - Phone (XTN) S15.4.7.12
+        ROL.12 - Phone (XTN) O rep S15.4.7.12
 
     rol_13 : PL | None
-        ROL.13 (opt) - Person's Location (PL) S15.4.7.13
+        ROL.13 - Person's Location (PL) O S15.4.7.13
 
     rol_14 : XON | None
-        ROL.14 (opt) - Organization (XON) S15.4.7.14
+        ROL.14 - Organization (XON) O S15.4.7.14
     """
 
     rol_1: Optional[EI] = Field(
@@ -77,7 +77,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.1",
         title="Role Instance ID",
-        description="Item #1206",
+        description="C | Item #01206",
     )
 
     rol_2: str = Field(
@@ -88,7 +88,9 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.2",
         title="Action Code",
-        description="Item #816 | Table HL70206",
+        description=(
+            "R | Item #00816 | Table 0206 - Segment Action Code | LEN:2"
+        ),
     )
 
     rol_3: CWE = Field(
@@ -99,7 +101,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.3",
         title="Role-ROL",
-        description="Item #1197 | Table HL70443",
+        description="R | Item #01197 | Table 0443 - Provider Role",
     )
 
     rol_4: List[XCN] = Field(
@@ -111,7 +113,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.4",
         title="Role Person",
-        description="Item #1198",
+        description="R | Item #01198",
     )
 
     rol_5: Optional[str] = Field(
@@ -123,7 +125,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.5",
         title="Role Begin Date/Time",
-        description="Item #1199",
+        description="O | Item #01199",
     )
 
     rol_6: Optional[str] = Field(
@@ -135,7 +137,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.6",
         title="Role End Date/Time",
-        description="Item #1200",
+        description="O | Item #01200",
     )
 
     rol_7: Optional[CWE] = Field(
@@ -147,7 +149,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.7",
         title="Role Duration",
-        description="Item #1201",
+        description="O | Item #01201",
     )
 
     rol_8: Optional[CWE] = Field(
@@ -159,7 +161,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.8",
         title="Role Action Reason",
-        description="Item #1205",
+        description="O | Item #01205",
     )
 
     rol_9: Optional[List[CWE]] = Field(
@@ -171,7 +173,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.9",
         title="Provider Type",
-        description="Item #1510",
+        description="O | Item #01510",
     )
 
     rol_10: Optional[CWE] = Field(
@@ -183,7 +185,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.10",
         title="Organization Unit Type",
-        description="Item #1461 | Table HL70406",
+        description="O | Item #01461 | Table 0406 - Organization Unit Type",
     )
 
     rol_11: Optional[List[XAD]] = Field(
@@ -195,7 +197,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.11",
         title="Office/Home Address/Birthplace",
-        description="Item #679",
+        description="O | Item #00679",
     )
 
     rol_12: Optional[List[XTN]] = Field(
@@ -207,7 +209,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.12",
         title="Phone",
-        description="Item #678",
+        description="O | Item #00678",
     )
 
     rol_13: Optional[PL] = Field(
@@ -219,7 +221,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.13",
         title="Person's Location",
-        description="Item #2183",
+        description="O | Item #02183",
     )
 
     rol_14: Optional[XON] = Field(
@@ -231,7 +233,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.14",
         title="Organization",
-        description="Item #2377",
+        description="O | Item #02377",
     )
 
     @field_validator("rol_5", "rol_6", mode='before')

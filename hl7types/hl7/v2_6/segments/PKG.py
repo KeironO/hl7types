@@ -22,25 +22,25 @@ class PKG(HL7Model):
     Attributes
     ----------
     pkg_1 : str
-        PKG.1 (req) - Set Id - PKG (SI) S17.4.5.1
+        PKG.1 - Set Id - PKG (SI) R S17.4.5.1
 
     pkg_2 : CWE | None
-        PKG.2 (opt) - Packaging Units (CWE) S17.4.5.2 | 0818 - Package
+        PKG.2 - Packaging Units (CWE) O S17.4.5.2 | 0818 - Package
 
     pkg_3 : CNE | None
-        PKG.3 (opt) - Default Order Unit Of Measure Indicator (CNE) S17.4.5.3 | 0532 - Expanded yes/no indicator
+        PKG.3 - Default Order Unit Of Measure Indicator (CNE) O S17.4.5.3 | 0532 - Expanded yes/no indicator
 
     pkg_4 : str | None
-        PKG.4 (opt) - Package Quantity (NM) S17.4.5.4
+        PKG.4 - Package Quantity (NM) O S17.4.5.4
 
     pkg_5 : CP | None
-        PKG.5 (opt) - Price (CP) S17.4.5.5
+        PKG.5 - Price (CP) O S17.4.5.5
 
     pkg_6 : CP | None
-        PKG.6 (opt) - Future Item Price (CP) S17.4.5.6
+        PKG.6 - Future Item Price (CP) O S17.4.5.6
 
     pkg_7 : str | None
-        PKG.7 (opt) - Future Item Price Effective Date (DTM) S17.4.5.7
+        PKG.7 - Future Item Price Effective Date (DTM) O S17.4.5.7
     """
 
     pkg_1: str = Field(
@@ -51,7 +51,7 @@ class PKG(HL7Model):
         ),
         serialization_alias="PKG.1",
         title="Set Id - PKG",
-        description="Item #2221",
+        description="R | Item #02221 | LEN:2",
     )
 
     pkg_2: Optional[CWE] = Field(
@@ -63,7 +63,7 @@ class PKG(HL7Model):
         ),
         serialization_alias="PKG.2",
         title="Packaging Units",
-        description="Item #2222 | Table HL70818",
+        description="O | Item #02222 | Table 0818 - Package",
     )
 
     pkg_3: Optional[CNE] = Field(
@@ -75,7 +75,7 @@ class PKG(HL7Model):
         ),
         serialization_alias="PKG.3",
         title="Default Order Unit Of Measure Indicator",
-        description="Item #2223 | Table HL70532",
+        description="O | Item #02223 | Table 0532 - Expanded yes/no indicator",
     )
 
     pkg_4: Optional[str] = Field(
@@ -87,7 +87,7 @@ class PKG(HL7Model):
         ),
         serialization_alias="PKG.4",
         title="Package Quantity",
-        description="Item #2224",
+        description="O | Item #02224 | LEN:12",
     )
 
     pkg_5: Optional[CP] = Field(
@@ -99,7 +99,7 @@ class PKG(HL7Model):
         ),
         serialization_alias="PKG.5",
         title="Price",
-        description="Item #2225",
+        description="O | Item #02225",
     )
 
     pkg_6: Optional[CP] = Field(
@@ -111,7 +111,7 @@ class PKG(HL7Model):
         ),
         serialization_alias="PKG.6",
         title="Future Item Price",
-        description="Item #2226",
+        description="O | Item #02226",
     )
 
     pkg_7: Optional[str] = Field(
@@ -123,7 +123,7 @@ class PKG(HL7Model):
         ),
         serialization_alias="PKG.7",
         title="Future Item Price Effective Date",
-        description="Item #2227",
+        description="O | Item #02227 | LEN:24",
     )
 
     @field_validator("pkg_1", mode='before')

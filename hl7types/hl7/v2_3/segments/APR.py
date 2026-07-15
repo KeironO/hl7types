@@ -20,19 +20,19 @@ class APR(HL7Model):
     Attributes
     ----------
     apr_1 : list[SCV] | None
-        APR.1 (opt, rep) - Time Selection Criteria (SCV) S10.5.8.1
+        APR.1 - Time Selection Criteria (SCV) O rep S10.5.8.1
 
     apr_2 : list[SCV] | None
-        APR.2 (opt, rep) - Resource Selection Criteria (SCV) S10.5.8.2
+        APR.2 - Resource Selection Criteria (SCV) O rep S10.5.8.2
 
     apr_3 : list[SCV] | None
-        APR.3 (opt, rep) - Location Selection Criteria (SCV) S10.5.8.3
+        APR.3 - Location Selection Criteria (SCV) O rep S10.5.8.3
 
     apr_4 : str | None
-        APR.4 (opt) - Slot Spacing Criteria (NM) S10.5.8.4
+        APR.4 - Slot Spacing Criteria (NM) O S10.5.8.4
 
     apr_5 : list[SCV] | None
-        APR.5 (opt, rep) - Filler Override Criteria (SCV) S10.5.8.5
+        APR.5 - Filler Override Criteria (SCV) O rep S10.5.8.5
     """
 
     apr_1: Optional[List[SCV]] = Field(
@@ -44,7 +44,7 @@ class APR(HL7Model):
         ),
         serialization_alias="APR.1",
         title="Time Selection Criteria",
-        description="Item #908",
+        description="O | Item #00908",
     )
 
     apr_2: Optional[List[SCV]] = Field(
@@ -56,7 +56,7 @@ class APR(HL7Model):
         ),
         serialization_alias="APR.2",
         title="Resource Selection Criteria",
-        description="Item #909",
+        description="O | Item #00909",
     )
 
     apr_3: Optional[List[SCV]] = Field(
@@ -68,7 +68,7 @@ class APR(HL7Model):
         ),
         serialization_alias="APR.3",
         title="Location Selection Criteria",
-        description="Item #910",
+        description="O | Item #00910",
     )
 
     apr_4: Optional[str] = Field(
@@ -80,7 +80,7 @@ class APR(HL7Model):
         ),
         serialization_alias="APR.4",
         title="Slot Spacing Criteria",
-        description="Item #911",
+        description="O | Item #00911 | LEN:5",
     )
 
     apr_5: Optional[List[SCV]] = Field(
@@ -92,7 +92,7 @@ class APR(HL7Model):
         ),
         serialization_alias="APR.5",
         title="Filler Override Criteria",
-        description="Item #912",
+        description="O | Item #00912",
     )
 
     @field_validator("apr_4", mode='before')

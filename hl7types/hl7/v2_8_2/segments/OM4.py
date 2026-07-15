@@ -21,58 +21,58 @@ class OM4(HL7Model):
     Attributes
     ----------
     om4_1 : str | None
-        OM4.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
+        OM4.1 - Sequence Number - Test/Observation Master File (NM) O S8.8.10.1
 
     om4_2 : str | None
-        OM4.2 (opt) - Derived Specimen (ID) S8.8.12.2 | 0170 - Derived Specimen
+        OM4.2 - Derived Specimen (ID) O S8.8.12.2 | 0170 - Derived Specimen
 
     om4_3 : list[str] | None
-        OM4.3 (opt, rep) - Container Description (TX) S8.8.12.3
+        OM4.3 - Container Description (TX) O rep S8.8.12.3
 
     om4_4 : list[str] | None
-        OM4.4 (opt, rep) - Container Volume (NM) S8.8.12.4
+        OM4.4 - Container Volume (NM) O rep S8.8.12.4
 
     om4_5 : list[CWE] | None
-        OM4.5 (opt, rep) - Container Units (CWE) S8.8.12.5 | 9999 - no table for CE
+        OM4.5 - Container Units (CWE) O rep S8.8.12.5 | 9999 - no table for CE
 
     om4_6 : CWE | None
-        OM4.6 (opt) - Specimen (CWE) S8.8.12.6 | 9999 - no table for CE
+        OM4.6 - Specimen (CWE) O S8.8.12.6 | 9999 - no table for CE
 
     om4_7 : CWE | None
-        OM4.7 (opt) - Additive (CWE) S13.4.3.27 | 0371 - Additive/Preservative
+        OM4.7 - Additive (CWE) O S13.4.3.27 | 0371 - Additive/Preservative
 
     om4_8 : str | None
-        OM4.8 (opt) - Preparation (TX) S8.8.12.8
+        OM4.8 - Preparation (TX) O S8.8.12.8
 
     om4_9 : str | None
-        OM4.9 (opt) - Special Handling Requirements (TX) S8.8.12.9
+        OM4.9 - Special Handling Requirements (TX) O S8.8.12.9
 
     om4_10 : CQ | None
-        OM4.10 (opt) - Normal Collection Volume (CQ) S8.8.12.10
+        OM4.10 - Normal Collection Volume (CQ) O S8.8.12.10
 
     om4_11 : CQ | None
-        OM4.11 (opt) - Minimum Collection Volume (CQ) S8.8.12.11
+        OM4.11 - Minimum Collection Volume (CQ) O S8.8.12.11
 
     om4_12 : str | None
-        OM4.12 (opt) - Specimen Requirements (TX) S8.8.12.12
+        OM4.12 - Specimen Requirements (TX) O S8.8.12.12
 
     om4_13 : list[str] | None
-        OM4.13 (opt, rep) - Specimen Priorities (ID) S8.8.12.13 | 0027 - Priority
+        OM4.13 - Specimen Priorities (ID) O rep S8.8.12.13 | 0027 - Priority
 
     om4_14 : CQ | None
-        OM4.14 (opt) - Specimen Retention Time (CQ) S8.8.12.14
+        OM4.14 - Specimen Retention Time (CQ) O S8.8.12.14
 
     om4_15 : list[CWE] | None
-        OM4.15 (opt, rep) - Specimen Handling Code (CWE) S7.4.3.15 | 0376 - Special Handling Code
+        OM4.15 - Specimen Handling Code (CWE) O rep S7.4.3.15 | 0376 - Special Handling Code
 
     om4_16 : str | None
-        OM4.16 (opt) - Specimen Preference (ID) S8.8.12.16 | 0920 - Preferred Specimen/Attribute Status
+        OM4.16 - Specimen Preference (ID) O S8.8.12.16 | 0920 - Preferred Specimen/Attribute Status
 
     om4_17 : str | None
-        OM4.17 (opt) - Preferred Specimen/Attribture Sequence ID (NM) S8.8.12.17
+        OM4.17 - Preferred Specimen/Attribture Sequence ID (NM) O S8.8.12.17
 
     om4_18 : list[CWE] | None
-        OM4.18 (opt, rep) - Taxonomic Classification Code (CWE) S3.4.2.35
+        OM4.18 - Taxonomic Classification Code (CWE) O rep S3.4.2.35
     """
 
     om4_1: Optional[str] = Field(
@@ -84,7 +84,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.1",
         title="Sequence Number - Test/Observation Master File",
-        description="Item #586",
+        description="O | Item #00586",
     )
 
     om4_2: Optional[str] = Field(
@@ -96,7 +96,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.2",
         title="Derived Specimen",
-        description="Item #642 | Table HL70170",
+        description="O | Item #00642 | Table 0170 - Derived Specimen | LEN:1",
     )
 
     om4_3: Optional[List[str]] = Field(
@@ -108,7 +108,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.3",
         title="Container Description",
-        description="Item #643",
+        description="O | Item #00643",
     )
 
     om4_4: Optional[List[str]] = Field(
@@ -120,7 +120,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.4",
         title="Container Volume",
-        description="Item #644",
+        description="O | Item #00644",
     )
 
     om4_5: Optional[List[CWE]] = Field(
@@ -132,7 +132,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.5",
         title="Container Units",
-        description="Item #645 | Table HL79999",
+        description="O | Item #00645 | Table 9999 - no table for CE",
     )
 
     om4_6: Optional[CWE] = Field(
@@ -144,7 +144,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.6",
         title="Specimen",
-        description="Item #646 | Table HL79999",
+        description="O | Item #00646 | Table 9999 - no table for CE",
     )
 
     om4_7: Optional[CWE] = Field(
@@ -156,7 +156,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.7",
         title="Additive",
-        description="Item #647 | Table HL70371",
+        description="O | Item #00647 | Table 0371 - Additive/Preservative",
     )
 
     om4_8: Optional[str] = Field(
@@ -168,7 +168,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.8",
         title="Preparation",
-        description="Item #648",
+        description="O | Item #00648",
     )
 
     om4_9: Optional[str] = Field(
@@ -180,7 +180,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.9",
         title="Special Handling Requirements",
-        description="Item #649",
+        description="O | Item #00649",
     )
 
     om4_10: Optional[CQ] = Field(
@@ -192,7 +192,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.10",
         title="Normal Collection Volume",
-        description="Item #650",
+        description="O | Item #00650",
     )
 
     om4_11: Optional[CQ] = Field(
@@ -204,7 +204,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.11",
         title="Minimum Collection Volume",
-        description="Item #651",
+        description="O | Item #00651",
     )
 
     om4_12: Optional[str] = Field(
@@ -216,7 +216,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.12",
         title="Specimen Requirements",
-        description="Item #652",
+        description="O | Item #00652",
     )
 
     om4_13: Optional[List[str]] = Field(
@@ -228,7 +228,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.13",
         title="Specimen Priorities",
-        description="Item #653 | Table HL70027",
+        description="O | Item #00653 | Table 0027 - Priority | LEN:1",
     )
 
     om4_14: Optional[CQ] = Field(
@@ -240,7 +240,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.14",
         title="Specimen Retention Time",
-        description="Item #654",
+        description="O | Item #00654",
     )
 
     om4_15: Optional[List[CWE]] = Field(
@@ -252,7 +252,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.15",
         title="Specimen Handling Code",
-        description="Item #1908 | Table HL70376",
+        description="O | Item #01908 | Table 0376 - Special Handling Code",
     )
 
     om4_16: Optional[str] = Field(
@@ -264,7 +264,9 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.16",
         title="Specimen Preference",
-        description="Item #3311 | Table HL70920",
+        description=(
+            "O | Item #03311 | Table 0920 - Preferred Specimen/Attribute Status"
+        ),
     )
 
     om4_17: Optional[str] = Field(
@@ -276,7 +278,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.17",
         title="Preferred Specimen/Attribture Sequence ID",
-        description="Item #3312",
+        description="O | Item #03312",
     )
 
     om4_18: Optional[List[CWE]] = Field(
@@ -288,7 +290,7 @@ class OM4(HL7Model):
         ),
         serialization_alias="OM4.18",
         title="Taxonomic Classification Code",
-        description="Item #1539",
+        description="O | Item #01539",
     )
 
     @field_validator("om4_1", "om4_4", "om4_17", mode='before')

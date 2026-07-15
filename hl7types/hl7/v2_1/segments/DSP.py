@@ -18,19 +18,19 @@ class DSP(HL7Model):
     Attributes
     ----------
     dsp_1 : str | None
-        DSP.1 (opt) - SET ID - DISPLAY DATA (SI)
+        DSP.1 - SET ID - DISPLAY DATA (SI) O
 
     dsp_2 : str | None
-        DSP.2 (opt) - DISPLAY LEVEL (SI)
+        DSP.2 - DISPLAY LEVEL (SI) O
 
     dsp_3 : str
-        DSP.3 (req) - DATA LINE (TX)
+        DSP.3 - DATA LINE (TX) R
 
     dsp_4 : str | None
-        DSP.4 (opt) - LOGICAL BREAK POINT (ST)
+        DSP.4 - LOGICAL BREAK POINT (ST) O
 
     dsp_5 : str | None
-        DSP.5 (opt) - RESULT ID (TX)
+        DSP.5 - RESULT ID (TX) O
     """
 
     dsp_1: Optional[str] = Field(
@@ -42,7 +42,7 @@ class DSP(HL7Model):
         ),
         serialization_alias="DSP.1",
         title="SET ID - DISPLAY DATA",
-        description="Item #570",
+        description="O | Item #00570 | LEN:4",
     )
 
     dsp_2: Optional[str] = Field(
@@ -54,7 +54,7 @@ class DSP(HL7Model):
         ),
         serialization_alias="DSP.2",
         title="DISPLAY LEVEL",
-        description="Item #571",
+        description="O | Item #00571 | LEN:4",
     )
 
     dsp_3: str = Field(
@@ -65,7 +65,7 @@ class DSP(HL7Model):
         ),
         serialization_alias="DSP.3",
         title="DATA LINE",
-        description="Item #153",
+        description="R | Item #00153",
     )
 
     dsp_4: Optional[str] = Field(
@@ -77,7 +77,7 @@ class DSP(HL7Model):
         ),
         serialization_alias="DSP.4",
         title="LOGICAL BREAK POINT",
-        description="Item #154",
+        description="O | Item #00154 | LEN:2",
     )
 
     dsp_5: Optional[str] = Field(
@@ -89,7 +89,7 @@ class DSP(HL7Model):
         ),
         serialization_alias="DSP.5",
         title="RESULT ID",
-        description="Item #599",
+        description="O | Item #00599",
     )
 
     @field_validator("dsp_1", "dsp_2", mode='before')

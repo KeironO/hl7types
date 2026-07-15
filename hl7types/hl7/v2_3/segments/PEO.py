@@ -24,79 +24,79 @@ class PEO(HL7Model):
     Attributes
     ----------
     peo_1 : list[CE] | None
-        PEO.1 (opt, rep) - Event Identifiers Used (CE) S7.11.2.1
+        PEO.1 - Event Identifiers Used (CE) O rep S7.11.2.1
 
     peo_2 : list[CE] | None
-        PEO.2 (opt, rep) - Event Symptom/Diagnosis Code (CE) S7.11.2.2
+        PEO.2 - Event Symptom/Diagnosis Code (CE) O rep S7.11.2.2
 
     peo_3 : TS
-        PEO.3 (req) - Event Onset Date/Time (TS) S7.11.2.3
+        PEO.3 - Event Onset Date/Time (TS) R S7.11.2.3
 
     peo_4 : TS | None
-        PEO.4 (opt) - Event Exacerbation Date/Time (TS) S7.11.2.4
+        PEO.4 - Event Exacerbation Date/Time (TS) O S7.11.2.4
 
     peo_5 : TS | None
-        PEO.5 (opt) - Event Improved Date/Time (TS) S7.11.2.5
+        PEO.5 - Event Improved Date/Time (TS) O S7.11.2.5
 
     peo_6 : TS | None
-        PEO.6 (opt) - Event Ended Data/Time (TS) S7.11.2.6
+        PEO.6 - Event Ended Data/Time (TS) O S7.11.2.6
 
     peo_7 : XAD | None
-        PEO.7 (opt) - Event Location Occurred Address (XAD) S7.11.2.7
+        PEO.7 - Event Location Occurred Address (XAD) O S7.11.2.7
 
     peo_8 : list[str] | None
-        PEO.8 (opt, rep) - Event Qualification (ID) S7.11.2.8 | 0237 - Event Qualification
+        PEO.8 - Event Qualification (ID) O rep S7.11.2.8 | 0237 - Event Qualification
 
     peo_9 : str | None
-        PEO.9 (opt) - Event Serious (ID) S7.11.2.9 | 0238 - Event Seriousness
+        PEO.9 - Event Serious (ID) O S7.11.2.9 | 0238 - Event Seriousness
 
     peo_10 : str | None
-        PEO.10 (opt) - Event Expected (ID) S7.11.2.10 | 0239 - Event Expected
+        PEO.10 - Event Expected (ID) O S7.11.2.10 | 0239 - Event Expected
 
     peo_11 : list[str] | None
-        PEO.11 (opt, rep) - Event Outcome (ID) S7.11.2.11 | 0240 - Event Consequence
+        PEO.11 - Event Outcome (ID) O rep S7.11.2.11 | 0240 - Event Consequence
 
     peo_12 : str | None
-        PEO.12 (opt) - Patient Outcome (ID) S7.11.2.12 | 0241 - Patient Outcome
+        PEO.12 - Patient Outcome (ID) O S7.11.2.12 | 0241 - Patient Outcome
 
     peo_13 : list[str] | None
-        PEO.13 (opt, rep) - Event Description From Others (FT) S7.11.2.13
+        PEO.13 - Event Description From Others (FT) O rep S7.11.2.13
 
     peo_14 : list[str] | None
-        PEO.14 (opt, rep) - Event From Original Reporter (FT) S7.11.2.14
+        PEO.14 - Event From Original Reporter (FT) O rep S7.11.2.14
 
     peo_15 : list[str] | None
-        PEO.15 (opt, rep) - Event Description From Patient (FT) S7.11.2.15
+        PEO.15 - Event Description From Patient (FT) O rep S7.11.2.15
 
     peo_16 : list[str] | None
-        PEO.16 (opt, rep) - Event Description From Practitioner (FT) S7.11.2.16
+        PEO.16 - Event Description From Practitioner (FT) O rep S7.11.2.16
 
     peo_17 : list[str] | None
-        PEO.17 (opt, rep) - Event Description From Autopsy (FT) S7.11.2.17
+        PEO.17 - Event Description From Autopsy (FT) O rep S7.11.2.17
 
     peo_18 : list[CE] | None
-        PEO.18 (opt, rep) - Cause Of Death (CE) S7.11.2.18
+        PEO.18 - Cause Of Death (CE) O rep S7.11.2.18
 
     peo_19 : XPN | None
-        PEO.19 (opt) - Primary Observer Name (XPN) S7.11.2.19
+        PEO.19 - Primary Observer Name (XPN) O S7.11.2.19
 
     peo_20 : list[XAD] | None
-        PEO.20 (opt, rep) - Primary Observer Address (XAD) S7.11.2.20
+        PEO.20 - Primary Observer Address (XAD) O rep S7.11.2.20
 
     peo_21 : list[XTN] | None
-        PEO.21 (opt, rep) - Primary Observer Telephone (XTN) S7.11.2.21
+        PEO.21 - Primary Observer Telephone (XTN) O rep S7.11.2.21
 
     peo_22 : str | None
-        PEO.22 (opt) - Primary Observer’s Qualification (ID) S7.11.2.22 | 0242 - Primary Observer's Qualification
+        PEO.22 - Primary Observer’s Qualification (ID) O S7.11.2.22 | 0242 - Primary Observer's Qualification
 
     peo_23 : str | None
-        PEO.23 (opt) - Confirmation Provided By (ID) S7.11.2.23 | 0242 - Primary Observer's Qualification
+        PEO.23 - Confirmation Provided By (ID) O S7.11.2.23 | 0242 - Primary Observer's Qualification
 
     peo_24 : TS | None
-        PEO.24 (opt) - Primary Observer Aware Date/Time (TS) S7.11.2.24
+        PEO.24 - Primary Observer Aware Date/Time (TS) O S7.11.2.24
 
     peo_25 : str | None
-        PEO.25 (opt) - Primary Observer’s Identity May Be Divulged (ID) S7.11.2.25 | 0243 - Identity may be Divulged
+        PEO.25 - Primary Observer’s Identity May Be Divulged (ID) O S7.11.2.25 | 0243 - Identity may be Divulged
     """
 
     peo_1: Optional[List[CE]] = Field(
@@ -108,7 +108,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.1",
         title="Event Identifiers Used",
-        description="Item #1073",
+        description="O | Item #01073",
     )
 
     peo_2: Optional[List[CE]] = Field(
@@ -120,7 +120,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.2",
         title="Event Symptom/Diagnosis Code",
-        description="Item #1074",
+        description="O | Item #01074",
     )
 
     peo_3: TS = Field(
@@ -131,7 +131,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.3",
         title="Event Onset Date/Time",
-        description="Item #1075",
+        description="R | Item #01075",
     )
 
     peo_4: Optional[TS] = Field(
@@ -143,7 +143,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.4",
         title="Event Exacerbation Date/Time",
-        description="Item #1076",
+        description="O | Item #01076",
     )
 
     peo_5: Optional[TS] = Field(
@@ -155,7 +155,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.5",
         title="Event Improved Date/Time",
-        description="Item #1077",
+        description="O | Item #01077",
     )
 
     peo_6: Optional[TS] = Field(
@@ -167,7 +167,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.6",
         title="Event Ended Data/Time",
-        description="Item #1078",
+        description="O | Item #01078",
     )
 
     peo_7: Optional[XAD] = Field(
@@ -179,7 +179,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.7",
         title="Event Location Occurred Address",
-        description="Item #1079",
+        description="O | Item #01079",
     )
 
     peo_8: Optional[List[str]] = Field(
@@ -191,7 +191,9 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.8",
         title="Event Qualification",
-        description="Item #1080 | Table HL70237",
+        description=(
+            "O | Item #01080 | Table 0237 - Event Qualification | LEN:1"
+        ),
     )
 
     peo_9: Optional[str] = Field(
@@ -203,7 +205,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.9",
         title="Event Serious",
-        description="Item #1081 | Table HL70238",
+        description="O | Item #01081 | Table 0238 - Event Seriousness | LEN:1",
     )
 
     peo_10: Optional[str] = Field(
@@ -215,7 +217,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.10",
         title="Event Expected",
-        description="Item #1082 | Table HL70239",
+        description="O | Item #01082 | Table 0239 - Event Expected | LEN:1",
     )
 
     peo_11: Optional[List[str]] = Field(
@@ -227,7 +229,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.11",
         title="Event Outcome",
-        description="Item #1083 | Table HL70240",
+        description="O | Item #01083 | Table 0240 - Event Consequence | LEN:1",
     )
 
     peo_12: Optional[str] = Field(
@@ -239,7 +241,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.12",
         title="Patient Outcome",
-        description="Item #1084 | Table HL70241",
+        description="O | Item #01084 | Table 0241 - Patient Outcome | LEN:1",
     )
 
     peo_13: Optional[List[str]] = Field(
@@ -251,7 +253,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.13",
         title="Event Description From Others",
-        description="Item #1085",
+        description="O | Item #01085",
     )
 
     peo_14: Optional[List[str]] = Field(
@@ -263,7 +265,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.14",
         title="Event From Original Reporter",
-        description="Item #1086",
+        description="O | Item #01086",
     )
 
     peo_15: Optional[List[str]] = Field(
@@ -275,7 +277,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.15",
         title="Event Description From Patient",
-        description="Item #1087",
+        description="O | Item #01087",
     )
 
     peo_16: Optional[List[str]] = Field(
@@ -287,7 +289,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.16",
         title="Event Description From Practitioner",
-        description="Item #1088",
+        description="O | Item #01088",
     )
 
     peo_17: Optional[List[str]] = Field(
@@ -299,7 +301,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.17",
         title="Event Description From Autopsy",
-        description="Item #1089",
+        description="O | Item #01089",
     )
 
     peo_18: Optional[List[CE]] = Field(
@@ -311,7 +313,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.18",
         title="Cause Of Death",
-        description="Item #1090",
+        description="O | Item #01090",
     )
 
     peo_19: Optional[XPN] = Field(
@@ -323,7 +325,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.19",
         title="Primary Observer Name",
-        description="Item #1091",
+        description="O | Item #01091",
     )
 
     peo_20: Optional[List[XAD]] = Field(
@@ -335,7 +337,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.20",
         title="Primary Observer Address",
-        description="Item #1092",
+        description="O | Item #01092",
     )
 
     peo_21: Optional[List[XTN]] = Field(
@@ -347,7 +349,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.21",
         title="Primary Observer Telephone",
-        description="Item #1093",
+        description="O | Item #01093",
     )
 
     peo_22: Optional[str] = Field(
@@ -359,7 +361,10 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.22",
         title="Primary Observer’s Qualification",
-        description="Item #1094 | Table HL70242",
+        description=(
+            "O | Item #01094 | Table 0242 - Primary Observer's Qualification | "
+            "LEN:1"
+        ),
     )
 
     peo_23: Optional[str] = Field(
@@ -371,7 +376,10 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.23",
         title="Confirmation Provided By",
-        description="Item #1095 | Table HL70242",
+        description=(
+            "O | Item #01095 | Table 0242 - Primary Observer's Qualification | "
+            "LEN:1"
+        ),
     )
 
     peo_24: Optional[TS] = Field(
@@ -383,7 +391,7 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.24",
         title="Primary Observer Aware Date/Time",
-        description="Item #1096",
+        description="O | Item #01096",
     )
 
     peo_25: Optional[str] = Field(
@@ -395,7 +403,9 @@ class PEO(HL7Model):
         ),
         serialization_alias="PEO.25",
         title="Primary Observer’s Identity May Be Divulged",
-        description="Item #1097 | Table HL70243",
+        description=(
+            "O | Item #01097 | Table 0243 - Identity may be Divulged | LEN:1"
+        ),
     )
 
     model_config = {"populate_by_name": True}

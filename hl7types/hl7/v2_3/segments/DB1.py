@@ -20,28 +20,28 @@ class DB1(HL7Model):
     Attributes
     ----------
     db1_1 : str
-        DB1.1 (req) - Set ID - DB1 (SI) S3.3.10.1
+        DB1.1 - Set ID - DB1 (SI) R S3.3.10.1
 
     db1_2 : str | None
-        DB1.2 (opt) - Disabled person code (IS) S3.3.10.2 | 0334 - Disabled Person
+        DB1.2 - Disabled person code (IS) O S3.3.10.2 | 0334 - Disabled Person
 
     db1_3 : list[CX] | None
-        DB1.3 (opt, rep) - Disabled person identifier (CX) S3.3.10.3
+        DB1.3 - Disabled person identifier (CX) O rep S3.3.10.3
 
     db1_4 : str | None
-        DB1.4 (opt) - Disabled Indicator (ID) S3.3.10.4 | 0136 - Yes/No Indicator
+        DB1.4 - Disabled Indicator (ID) O S3.3.10.4 | 0136 - Yes/No Indicator
 
     db1_5 : str | None
-        DB1.5 (opt) - Disability start date (DT) S3.3.10.5
+        DB1.5 - Disability start date (DT) NA S3.3.10.5
 
     db1_6 : str | None
-        DB1.6 (opt) - Disability end date (DT) S3.3.10.6
+        DB1.6 - Disability end date (DT) NA S3.3.10.6
 
     db1_7 : str | None
-        DB1.7 (opt) - Disability return to work date (DT) S3.3.10.7
+        DB1.7 - Disability return to work date (DT) NA S3.3.10.7
 
     db1_8 : str | None
-        DB1.8 (opt) - Disability unable to work date (DT) S3.3.10.8
+        DB1.8 - Disability unable to work date (DT) NA S3.3.10.8
     """
 
     db1_1: str = Field(
@@ -52,7 +52,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.1",
         title="Set ID - DB1",
-        description="Item #1283",
+        description="R | Item #01283 | LEN:4",
     )
 
     db1_2: Optional[str] = Field(
@@ -64,7 +64,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.2",
         title="Disabled person code",
-        description="Item #1284 | Table HL70033",
+        description="O | Item #01284 | Table 0334 - Disabled Person | LEN:2",
     )
 
     db1_3: Optional[List[CX]] = Field(
@@ -76,7 +76,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.3",
         title="Disabled person identifier",
-        description="Item #1285",
+        description="O | Item #01285",
     )
 
     db1_4: Optional[str] = Field(
@@ -88,7 +88,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.4",
         title="Disabled Indicator",
-        description="Item #1286 | Table HL70136",
+        description="O | Item #01286 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     db1_5: Optional[str] = Field(
@@ -100,7 +100,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.5",
         title="Disability start date",
-        description="Item #1287",
+        description="NA | Item #01287 | LEN:8",
     )
 
     db1_6: Optional[str] = Field(
@@ -112,7 +112,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.6",
         title="Disability end date",
-        description="Item #1288",
+        description="NA | Item #01288 | LEN:8",
     )
 
     db1_7: Optional[str] = Field(
@@ -124,7 +124,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.7",
         title="Disability return to work date",
-        description="Item #1289",
+        description="NA | Item #01289 | LEN:8",
     )
 
     db1_8: Optional[str] = Field(
@@ -136,7 +136,7 @@ class DB1(HL7Model):
         ),
         serialization_alias="DB1.8",
         title="Disability unable to work date",
-        description="Item #1290",
+        description="NA | Item #01290 | LEN:8",
     )
 
     @field_validator("db1_1", mode='before')

@@ -20,22 +20,22 @@ class MSA(HL7Model):
     Attributes
     ----------
     msa_1 : str
-        MSA.1 (req) - Acknowledgement Code (ID) S2.24.2.1 | 0008 - Acknowledgment code
+        MSA.1 - Acknowledgement Code (ID) R S2.24.2.1 | 0008 - Acknowledgment code
 
     msa_2 : str
-        MSA.2 (req) - Message Control ID (ST) S2.24.2.2
+        MSA.2 - Message Control ID (ST) R S2.24.2.2
 
     msa_3 : str | None
-        MSA.3 (opt) - Text Message (ST) S2.24.2.3
+        MSA.3 - Text Message (ST) O S2.24.2.3
 
     msa_4 : str | None
-        MSA.4 (opt) - Expected Sequence Number (NM) S2.24.2.4
+        MSA.4 - Expected Sequence Number (NM) O S2.24.2.4
 
     msa_5 : str | None
-        MSA.5 (opt) - Delayed Acknowledgment Type (ID) S2.24.2.5 | 0102 - Delayed acknowledgment type
+        MSA.5 - Delayed Acknowledgment Type (ID) O S2.24.2.5 | 0102 - Delayed acknowledgment type
 
     msa_6 : CE | None
-        MSA.6 (opt) - Error Condition (CE) S2.24.2.6
+        MSA.6 - Error Condition (CE) O S2.24.2.6
     """
 
     msa_1: str = Field(
@@ -46,7 +46,9 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.1",
         title="Acknowledgement Code",
-        description="Item #18 | Table HL70008",
+        description=(
+            "R | Item #00018 | Table 0008 - Acknowledgment code | LEN:2"
+        ),
     )
 
     msa_2: str = Field(
@@ -57,7 +59,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.2",
         title="Message Control ID",
-        description="Item #10",
+        description="R | Item #00010 | LEN:20",
     )
 
     msa_3: Optional[str] = Field(
@@ -69,7 +71,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.3",
         title="Text Message",
-        description="Item #20",
+        description="O | Item #00020 | LEN:80",
     )
 
     msa_4: Optional[str] = Field(
@@ -81,7 +83,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.4",
         title="Expected Sequence Number",
-        description="Item #21",
+        description="O | Item #00021 | LEN:15",
     )
 
     msa_5: Optional[str] = Field(
@@ -93,7 +95,9 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.5",
         title="Delayed Acknowledgment Type",
-        description="Item #22 | Table HL70102",
+        description=(
+            "O | Item #00022 | Table 0102 - Delayed acknowledgment type | LEN:1"
+        ),
     )
 
     msa_6: Optional[CE] = Field(
@@ -105,7 +109,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.6",
         title="Error Condition",
-        description="Item #23",
+        description="O | Item #00023",
     )
 
     @field_validator("msa_4", mode='before')

@@ -21,13 +21,13 @@ class QPD(HL7Model):
     Attributes
     ----------
     qpd_1 : CWE
-        QPD.1 (req) - Message Query Name (CWE) S5.5.2.3 | 0471 - Query Name
+        QPD.1 - Message Query Name (CWE) R S5.5.2.3 | 0471 - Query Name
 
     qpd_2 : str | None
-        QPD.2 (opt) - Query Tag (ST) S5.5.2.1
+        QPD.2 - Query Tag (ST) C S5.5.2.1
 
     qpd_3 : varies | None
-        QPD.3 (opt) - User Parameters (in successive fields) (varies) S5.5.4.3
+        QPD.3 - User Parameters (in successive fields) (varies) O S5.5.4.3
     """
 
     qpd_1: CWE = Field(
@@ -38,7 +38,7 @@ class QPD(HL7Model):
         ),
         serialization_alias="QPD.1",
         title="Message Query Name",
-        description="Item #1375 | Table HL70471",
+        description="R | Item #01375 | Table 0471 - Query Name",
     )
 
     qpd_2: Optional[str] = Field(
@@ -50,7 +50,7 @@ class QPD(HL7Model):
         ),
         serialization_alias="QPD.2",
         title="Query Tag",
-        description="Item #696",
+        description="C | Item #00696",
     )
 
     qpd_3: Optional[varies] = Field(
@@ -62,7 +62,7 @@ class QPD(HL7Model):
         ),
         serialization_alias="QPD.3",
         title="User Parameters (in successive fields)",
-        description="Item #1435",
+        description="O | Item #01435",
     )
 
     model_config = {"populate_by_name": True}

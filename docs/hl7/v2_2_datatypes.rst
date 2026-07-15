@@ -3,8 +3,10 @@ v2.2 Data Types
 
 .. _hl7-v2_2-AD:
 
-AD Address (S2.4.5.10).
-~~~~~~~~~~~~~~~~~~~~~~~
+AD: Address
+~~~~~~~~~~~
+
+Section 2.4.5.10
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.AD.AD
    :noindex:
@@ -16,52 +18,52 @@ AD Address (S2.4.5.10).
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``ad_1``
      - AD.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - street address
    * - ``ad_2``
      - AD.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - other designation
    * - ``ad_3``
      - AD.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - city
    * - ``ad_4``
      - AD.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - state or province
    * - ``ad_5``
      - AD.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - zip or postal code
    * - ``ad_6``
      - AD.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - country
    * - ``ad_7``
      - AD.7
-     - Optional[str]
-     - optional
+     - str
+     - O
      - type
    * - ``ad_8``
      - AD.8
-     - Optional[str]
-     - optional
+     - str
+     - O
      - other geographic designation
 
 .. _hl7-v2_2-CE:
 
-CE Coded element.
+CE: Coded element
 ~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CE.CE
@@ -74,42 +76,42 @@ CE Coded element.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``ce_1``
      - CE.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - identifier
    * - ``ce_2``
      - CE.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - text
    * - ``ce_3``
      - CE.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - name of coding system
    * - ``ce_4``
      - CE.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - alternate identifier
    * - ``ce_5``
      - CE.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - alternate text
    * - ``ce_6``
      - CE.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - name of alternate coding system
 
 .. _hl7-v2_2-CK_ACCOUNT_NO:
 
-CK_ACCOUNT_NO Abrechnungsnummer.
+CK_ACCOUNT_NO: Abrechnungsnummer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CK_ACCOUNT_NO.CK_ACCOUNT_NO
@@ -122,32 +124,32 @@ CK_ACCOUNT_NO Abrechnungsnummer.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``ck_account_no_1``
      - CK_ACCOUNT_NO.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - account number
    * - ``ck_account_no_2``
      - CK_ACCOUNT_NO.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit
    * - ``ck_account_no_3``
      - CK_ACCOUNT_NO.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit scheme
    * - ``ck_account_no_4``
      - CK_ACCOUNT_NO.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Facility ID
 
 .. _hl7-v2_2-CK_PAT_ID:
 
-CK_PAT_ID Ck für patienten-ids.
+CK_PAT_ID: Ck für patienten-ids
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CK_PAT_ID.CK_PAT_ID
@@ -160,32 +162,32 @@ CK_PAT_ID Ck für patienten-ids.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``ck_pat_id_1``
      - CK_PAT_ID.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Patient ID
    * - ``ck_pat_id_2``
      - CK_PAT_ID.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit
    * - ``ck_pat_id_3``
      - CK_PAT_ID.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit scheme
    * - ``ck_pat_id_4``
      - CK_PAT_ID.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Facility ID
 
 .. _hl7-v2_2-CM_ABS_RANGE:
 
-CM_ABS_RANGE Absolute range.
+CM_ABS_RANGE: Absolute range
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_ABS_RANGE.CM_ABS_RANGE
@@ -198,32 +200,32 @@ CM_ABS_RANGE Absolute range.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_abs_range_1``
      - CM_ABS_RANGE.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Range
    * - ``cm_abs_range_2``
      - CM_ABS_RANGE.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Numeric Change
    * - ``cm_abs_range_3``
      - CM_ABS_RANGE.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Percent per Change
    * - ``cm_abs_range_4``
      - CM_ABS_RANGE.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Days
 
 .. _hl7-v2_2-CM_AUI:
 
-CM_AUI Authorization information.
+CM_AUI: Authorization information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_AUI.CM_AUI
@@ -236,27 +238,27 @@ CM_AUI Authorization information.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_aui_1``
      - CM_AUI.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - authorization number
    * - ``cm_aui_2``
      - CM_AUI.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - date
    * - ``cm_aui_3``
      - CM_AUI.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - source
 
 .. _hl7-v2_2-CM_BATCH_TOTAL:
 
-CM_BATCH_TOTAL Cm for batch totals.
+CM_BATCH_TOTAL: Cm for batch totals
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_BATCH_TOTAL.CM_BATCH_TOTAL
@@ -269,22 +271,22 @@ CM_BATCH_TOTAL Cm for batch totals.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_batch_total_1``
      - CM_BATCH_TOTAL.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Batch total 1
    * - ``cm_batch_total_2``
      - CM_BATCH_TOTAL.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Batch total 2
 
 .. _hl7-v2_2-CM_CCD:
 
-CM_CCD Charge time.
+CM_CCD: Charge time
 ~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_CCD.CM_CCD
@@ -297,22 +299,22 @@ CM_CCD Charge time.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_ccd_1``
      - CM_CCD.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - When to Charge
    * - ``cm_ccd_2``
      - CM_CCD.2
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - date/time
 
 .. _hl7-v2_2-CM_DDI:
 
-CM_DDI Daily deductible.
+CM_DDI: Daily deductible
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_DDI.CM_DDI
@@ -325,27 +327,27 @@ CM_DDI Daily deductible.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_ddi_1``
      - CM_DDI.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - delay days
    * - ``cm_ddi_2``
      - CM_DDI.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - amount
    * - ``cm_ddi_3``
      - CM_DDI.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - number of days
 
 .. _hl7-v2_2-CM_DIN:
 
-CM_DIN Activation date.
+CM_DIN: Activation date
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_DIN.CM_DIN
@@ -358,22 +360,22 @@ CM_DIN Activation date.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_din_1``
      - CM_DIN.1
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - Date
    * - ``cm_din_2``
      - CM_DIN.2
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - institution name
 
 .. _hl7-v2_2-CM_DLD:
 
-CM_DLD Discharge location.
+CM_DLD: Discharge location
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_DLD.CM_DLD
@@ -386,22 +388,22 @@ CM_DLD Discharge location.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_dld_1``
      - CM_DLD.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - discharge location
    * - ``cm_dld_2``
      - CM_DLD.2
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - effective date
 
 .. _hl7-v2_2-CM_DLT:
 
-CM_DLT Delta check.
+CM_DLT: Delta check
 ~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_DLT.CM_DLT
@@ -414,32 +416,32 @@ CM_DLT Delta check.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_dlt_1``
      - CM_DLT.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Range
    * - ``cm_dlt_2``
      - CM_DLT.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - numeric threshold
    * - ``cm_dlt_3``
      - CM_DLT.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - change
    * - ``cm_dlt_4``
      - CM_DLT.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - length of time-days
 
 .. _hl7-v2_2-CM_DTN:
 
-CM_DTN Day type and number.
+CM_DTN: Day type and number
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_DTN.CM_DTN
@@ -452,22 +454,22 @@ CM_DTN Day type and number.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_dtn_1``
      - CM_DTN.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - day type
    * - ``cm_dtn_2``
      - CM_DTN.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - number of days
 
 .. _hl7-v2_2-CM_EIP:
 
-CM_EIP Parent order.
+CM_EIP: Parent order
 ~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_EIP.CM_EIP
@@ -480,22 +482,22 @@ CM_EIP Parent order.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_eip_1``
      - CM_EIP.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - parent´s placer order number
    * - ``cm_eip_2``
      - CM_EIP.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - parent´s filler order number
 
 .. _hl7-v2_2-CM_ELD:
 
-CM_ELD Error.
+CM_ELD: Error
 ~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_ELD.CM_ELD
@@ -508,32 +510,32 @@ CM_ELD Error.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_eld_1``
      - CM_ELD.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Segment-ID
    * - ``cm_eld_2``
      - CM_ELD.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Sequence
    * - ``cm_eld_3``
      - CM_ELD.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Field-Position
    * - ``cm_eld_4``
      - CM_ELD.4
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - Code Identifying Error
 
 .. _hl7-v2_2-CM_FILLER:
 
-CM_FILLER Bearbeitungsnummer der leistungsstelle.
+CM_FILLER: Bearbeitungsnummer der leistungsstelle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_FILLER.CM_FILLER
@@ -546,22 +548,22 @@ CM_FILLER Bearbeitungsnummer der leistungsstelle.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_filler_1``
      - CM_FILLER.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - unique filler id
    * - ``cm_filler_2``
      - CM_FILLER.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - filler application ID
 
 .. _hl7-v2_2-CM_FINANCE:
 
-CM_FINANCE Cm für finanzen.
+CM_FINANCE: Cm für finanzen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_FINANCE.CM_FINANCE
@@ -574,22 +576,22 @@ CM_FINANCE Cm für finanzen.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_finance_1``
      - CM_FINANCE.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - financial class ID
    * - ``cm_finance_2``
      - CM_FINANCE.2
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - effective date
 
 .. _hl7-v2_2-CM_GROUP_ID:
 
-CM_GROUP_ID Auftragsgruppennummer.
+CM_GROUP_ID: Auftragsgruppennummer
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_GROUP_ID.CM_GROUP_ID
@@ -602,22 +604,22 @@ CM_GROUP_ID Auftragsgruppennummer.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_group_id_1``
      - CM_GROUP_ID.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - unique group id
    * - ``cm_group_id_2``
      - CM_GROUP_ID.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - placer application id
 
 .. _hl7-v2_2-CM_INTERNAL_LOCATION:
 
-CM_INTERNAL_LOCATION Cm für ortsangaben im krankenhaus.
+CM_INTERNAL_LOCATION: Cm für ortsangaben im krankenhaus
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_INTERNAL_LOCATION.CM_INTERNAL_LOCATION
@@ -630,52 +632,52 @@ CM_INTERNAL_LOCATION Cm für ortsangaben im krankenhaus.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_internal_location_1``
      - CM_INTERNAL_LOCATION.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - nurse unit (Station)
    * - ``cm_internal_location_2``
      - CM_INTERNAL_LOCATION.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Room
    * - ``cm_internal_location_3``
      - CM_INTERNAL_LOCATION.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Bed
    * - ``cm_internal_location_4``
      - CM_INTERNAL_LOCATION.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Facility ID
    * - ``cm_internal_location_5``
      - CM_INTERNAL_LOCATION.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Bed Status
    * - ``cm_internal_location_6``
      - CM_INTERNAL_LOCATION.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Etage
    * - ``cm_internal_location_7``
      - CM_INTERNAL_LOCATION.7
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Klinik
    * - ``cm_internal_location_8``
      - CM_INTERNAL_LOCATION.8
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Zentrum
 
 .. _hl7-v2_2-CM_JOB_CODE:
 
-CM_JOB_CODE Berufsbezeichnung.
+CM_JOB_CODE: Berufsbezeichnung
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_JOB_CODE.CM_JOB_CODE
@@ -688,22 +690,22 @@ CM_JOB_CODE Berufsbezeichnung.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_job_code_1``
      - CM_JOB_CODE.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - job code
    * - ``cm_job_code_2``
      - CM_JOB_CODE.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - employee classification
 
 .. _hl7-v2_2-CM_LA1:
 
-CM_LA1 Location with address information.
+CM_LA1: Location with address information
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_LA1.CM_LA1
@@ -716,22 +718,22 @@ CM_LA1 Location with address information.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_la1_1``
      - CM_LA1.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Dispense / Deliver to Location
    * - ``cm_la1_2``
      - CM_LA1.2
-     - Optional[:ref:`AD <hl7-v2_2-AD>`]
-     - optional
+     - :ref:`AD <hl7-v2_2-AD>`
+     - O
      - location
 
 .. _hl7-v2_2-CM_LICENSE_NO:
 
-CM_LICENSE_NO Cm für führerscheinlizenzen.
+CM_LICENSE_NO: Cm für führerscheinlizenzen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_LICENSE_NO.CM_LICENSE_NO
@@ -744,22 +746,22 @@ CM_LICENSE_NO Cm für führerscheinlizenzen.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_license_no_1``
      - CM_LICENSE_NO.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - License Number
    * - ``cm_license_no_2``
      - CM_LICENSE_NO.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - issuing state,province,country
 
 .. _hl7-v2_2-CM_MOC:
 
-CM_MOC Charge to practise.
+CM_MOC: Charge to practise
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_MOC.CM_MOC
@@ -772,22 +774,22 @@ CM_MOC Charge to practise.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_moc_1``
      - CM_MOC.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - dollar amount
    * - ``cm_moc_2``
      - CM_MOC.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - charge code
 
 .. _hl7-v2_2-CM_MSG:
 
-CM_MSG Message type.
+CM_MSG: Message type
 ~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_MSG.CM_MSG
@@ -800,22 +802,22 @@ CM_MSG Message type.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_msg_1``
      - CM_MSG.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - message type
    * - ``cm_msg_2``
      - CM_MSG.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Trigger Event
 
 .. _hl7-v2_2-CM_NDL:
 
-CM_NDL Observing practitioner.
+CM_NDL: Observing practitioner
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_NDL.CM_NDL
@@ -828,32 +830,32 @@ CM_NDL Observing practitioner.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_ndl_1``
      - CM_NDL.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - interpreter / technician
    * - ``cm_ndl_2``
      - CM_NDL.2
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - start date/time
    * - ``cm_ndl_3``
      - CM_NDL.3
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - end date/time
    * - ``cm_ndl_4``
      - CM_NDL.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - location
 
 .. _hl7-v2_2-CM_OCD:
 
-CM_OCD Occurence.
+CM_OCD: Occurence
 ~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_OCD.CM_OCD
@@ -866,22 +868,22 @@ CM_OCD Occurence.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_ocd_1``
      - CM_OCD.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - occurrence code
    * - ``cm_ocd_2``
      - CM_OCD.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - occurrence date
 
 .. _hl7-v2_2-CM_OSP:
 
-CM_OSP Occurence span.
+CM_OSP: Occurence span
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_OSP.CM_OSP
@@ -894,27 +896,27 @@ CM_OSP Occurence span.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_osp_1``
      - CM_OSP.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - occurrence span code
    * - ``cm_osp_2``
      - CM_OSP.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - occurrence span start date
    * - ``cm_osp_3``
      - CM_OSP.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - occurrence span stop date
 
 .. _hl7-v2_2-CM_PAT_ID:
 
-CM_PAT_ID Patient id.
+CM_PAT_ID: Patient id
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PAT_ID.CM_PAT_ID
@@ -927,37 +929,37 @@ CM_PAT_ID Patient id.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_pat_id_1``
      - CM_PAT_ID.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Patient ID
    * - ``cm_pat_id_2``
      - CM_PAT_ID.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit
    * - ``cm_pat_id_3``
      - CM_PAT_ID.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit scheme
    * - ``cm_pat_id_4``
      - CM_PAT_ID.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Facility ID
    * - ``cm_pat_id_5``
      - CM_PAT_ID.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - type
 
 .. _hl7-v2_2-CM_PAT_ID_0192:
 
-CM_PAT_ID_0192 Patient id with table 0192.
+CM_PAT_ID_0192: Patient id with table 0192
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PAT_ID_0192.CM_PAT_ID_0192
@@ -970,37 +972,37 @@ CM_PAT_ID_0192 Patient id with table 0192.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_pat_id_0192_1``
      - CM_PAT_ID_0192.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Patient ID
    * - ``cm_pat_id_0192_2``
      - CM_PAT_ID_0192.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit
    * - ``cm_pat_id_0192_3``
      - CM_PAT_ID_0192.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Check digit scheme
    * - ``cm_pat_id_0192_4``
      - CM_PAT_ID_0192.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Facility ID
    * - ``cm_pat_id_0192_5``
      - CM_PAT_ID_0192.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - type
 
 .. _hl7-v2_2-CM_PCF:
 
-CM_PCF Pre-certification required.
+CM_PCF: Pre-certification required
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PCF.CM_PCF
@@ -1013,27 +1015,27 @@ CM_PCF Pre-certification required.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_pcf_1``
      - CM_PCF.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - pre-certification patient type
    * - ``cm_pcf_2``
      - CM_PCF.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - pre-certication required
    * - ``cm_pcf_3``
      - CM_PCF.3
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - pre-certification window
 
 .. _hl7-v2_2-CM_PEN:
 
-CM_PEN Penalty.
+CM_PEN: Penalty
 ~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PEN.CM_PEN
@@ -1046,22 +1048,22 @@ CM_PEN Penalty.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_pen_1``
      - CM_PEN.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Penalty ID
    * - ``cm_pen_2``
      - CM_PEN.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - penalty amount
 
 .. _hl7-v2_2-CM_PIP:
 
-CM_PIP Privileges.
+CM_PIP: Privileges
 ~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PIP.CM_PIP
@@ -1074,32 +1076,32 @@ CM_PIP Privileges.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_pip_1``
      - CM_PIP.1
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - Privilege
    * - ``cm_pip_2``
      - CM_PIP.2
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - privilege class
    * - ``cm_pip_3``
      - CM_PIP.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - expiration date
    * - ``cm_pip_4``
      - CM_PIP.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - activation date
 
 .. _hl7-v2_2-CM_PLACER:
 
-CM_PLACER Auftragsnummer des auftraggebers / der auftraggebenden stelle.
+CM_PLACER: Auftragsnummer des auftraggebers / der auftraggebenden stelle
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PLACER.CM_PLACER
@@ -1112,22 +1114,22 @@ CM_PLACER Auftragsnummer des auftraggebers / der auftraggebenden stelle.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_placer_1``
      - CM_PLACER.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - unique placer id
    * - ``cm_placer_2``
      - CM_PLACER.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - placer application
 
 .. _hl7-v2_2-CM_PLN:
 
-CM_PLN Practitioner id numbers.
+CM_PLN: Practitioner id numbers
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PLN.CM_PLN
@@ -1140,27 +1142,27 @@ CM_PLN Practitioner id numbers.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_pln_1``
      - CM_PLN.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - ID number
    * - ``cm_pln_2``
      - CM_PLN.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - type of ID number (ID)
    * - ``cm_pln_3``
      - CM_PLN.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - state/other qualifiying info
 
 .. _hl7-v2_2-CM_POSITION:
 
-CM_POSITION Sitzplatz bzw. saal / tisch / stuhl.
+CM_POSITION: Sitzplatz bzw. saal / tisch / stuhl
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_POSITION.CM_POSITION
@@ -1173,27 +1175,27 @@ CM_POSITION Sitzplatz bzw. saal / tisch / stuhl.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_position_1``
      - CM_POSITION.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Saal
    * - ``cm_position_2``
      - CM_POSITION.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Tisch
    * - ``cm_position_3``
      - CM_POSITION.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Stuhl
 
 .. _hl7-v2_2-CM_PRACTITIONER:
 
-CM_PRACTITIONER Maßnahme durchgeführt von.
+CM_PRACTITIONER: Maßnahme durchgeführt von
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PRACTITIONER.CM_PRACTITIONER
@@ -1206,22 +1208,22 @@ CM_PRACTITIONER Maßnahme durchgeführt von.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_practitioner_1``
      - CM_PRACTITIONER.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Procedure Practitioner  ID
    * - ``cm_practitioner_2``
      - CM_PRACTITIONER.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - procedure practitioner type
 
 .. _hl7-v2_2-CM_PTA:
 
-CM_PTA Policy type.
+CM_PTA: Policy type
 ~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_PTA.CM_PTA
@@ -1234,27 +1236,27 @@ CM_PTA Policy type.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_pta_1``
      - CM_PTA.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - policy type
    * - ``cm_pta_2``
      - CM_PTA.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - amount class
    * - ``cm_pta_3``
      - CM_PTA.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - amount
 
 .. _hl7-v2_2-CM_RANGE:
 
-CM_RANGE Wertebereich.
+CM_RANGE: Wertebereich
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_RANGE.CM_RANGE
@@ -1267,22 +1269,22 @@ CM_RANGE Wertebereich.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_range_1``
      - CM_RANGE.1
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - Low Value
    * - ``cm_range_2``
      - CM_RANGE.2
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - High Value
 
 .. _hl7-v2_2-CM_RFR:
 
-CM_RFR Reference range.
+CM_RFR: Reference range
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_RFR.CM_RFR
@@ -1295,47 +1297,47 @@ CM_RFR Reference range.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_rfr_1``
      - CM_RFR.1
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - Reference Range
    * - ``cm_rfr_2``
      - CM_RFR.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Sex
    * - ``cm_rfr_3``
      - CM_RFR.3
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - Age Range
    * - ``cm_rfr_4``
      - CM_RFR.4
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - Gestational Age Range
    * - ``cm_rfr_5``
      - CM_RFR.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Species
    * - ``cm_rfr_6``
      - CM_RFR.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Race / Subspecies
    * - ``cm_rfr_7``
      - CM_RFR.7
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Text Condition
 
 .. _hl7-v2_2-CM_RI:
 
-CM_RI Interval.
+CM_RI: Interval
 ~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_RI.CM_RI
@@ -1348,22 +1350,22 @@ CM_RI Interval.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_ri_1``
      - CM_RI.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - repeat pattern
    * - ``cm_ri_2``
      - CM_RI.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - explicit time intevall
 
 .. _hl7-v2_2-CM_RMC:
 
-CM_RMC Room coverage.
+CM_RMC: Room coverage
 ~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_RMC.CM_RMC
@@ -1376,27 +1378,27 @@ CM_RMC Room coverage.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_rmc_1``
      - CM_RMC.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - room type
    * - ``cm_rmc_2``
      - CM_RMC.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - amount type
    * - ``cm_rmc_3``
      - CM_RMC.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - coverage amount
 
 .. _hl7-v2_2-CM_SPD:
 
-CM_SPD Specialty.
+CM_SPD: Specialty
 ~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_SPD.CM_SPD
@@ -1409,32 +1411,32 @@ CM_SPD Specialty.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_spd_1``
      - CM_SPD.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - specialty name
    * - ``cm_spd_2``
      - CM_SPD.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - governing board
    * - ``cm_spd_3``
      - CM_SPD.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - eligible or certified
    * - ``cm_spd_4``
      - CM_SPD.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - date of certification
 
 .. _hl7-v2_2-CM_SPS:
 
-CM_SPS Specimen source.
+CM_SPS: Specimen source
 ~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_SPS.CM_SPS
@@ -1447,37 +1449,37 @@ CM_SPS Specimen source.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_sps_1``
      - CM_SPS.1
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - Specimen source name or code
    * - ``cm_sps_2``
      - CM_SPS.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - additives
    * - ``cm_sps_3``
      - CM_SPS.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - freetext
    * - ``cm_sps_4``
      - CM_SPS.4
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - body site
    * - ``cm_sps_5``
      - CM_SPS.5
-     - Optional[:ref:`CE <hl7-v2_2-CE>`]
-     - optional
+     - :ref:`CE <hl7-v2_2-CE>`
+     - O
      - site modifier
 
 .. _hl7-v2_2-CM_UVC:
 
-CM_UVC Value code and amount.
+CM_UVC: Value code and amount
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_UVC.CM_UVC
@@ -1490,22 +1492,22 @@ CM_UVC Value code and amount.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_uvc_1``
      - CM_UVC.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Value code
    * - ``cm_uvc_2``
      - CM_UVC.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - value amount
 
 .. _hl7-v2_2-CM_VR:
 
-CM_VR Value qualifier.
+CM_VR: Value qualifier
 ~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CM_VR.CM_VR
@@ -1518,22 +1520,22 @@ CM_VR Value qualifier.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cm_vr_1``
      - CM_VR.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - First data code value
    * - ``cm_vr_2``
      - CM_VR.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Last data code calue
 
 .. _hl7-v2_2-CN_PERSON:
 
-CN_PERSON Cn für personen.
+CN_PERSON: Cn für personen
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CN_PERSON.CN_PERSON
@@ -1546,52 +1548,52 @@ CN_PERSON Cn für personen.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cn_person_1``
      - CN_PERSON.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - ID number
    * - ``cn_person_2``
      - CN_PERSON.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - familiy name
    * - ``cn_person_3``
      - CN_PERSON.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - given name
    * - ``cn_person_4``
      - CN_PERSON.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - middle initial or name
    * - ``cn_person_5``
      - CN_PERSON.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - suffix (e.g. JR or III)
    * - ``cn_person_6``
      - CN_PERSON.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - prefix (e.g. DR)
    * - ``cn_person_7``
      - CN_PERSON.7
-     - Optional[str]
-     - optional
+     - str
+     - O
      - degree (e.g. MD)
    * - ``cn_person_8``
      - CN_PERSON.8
-     - Optional[str]
-     - optional
+     - str
+     - O
      - source table id
 
 .. _hl7-v2_2-CN_PHYSICIAN:
 
-CN_PHYSICIAN Cn für ärzte.
+CN_PHYSICIAN: Cn für ärzte
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CN_PHYSICIAN.CN_PHYSICIAN
@@ -1604,77 +1606,77 @@ CN_PHYSICIAN Cn für ärzte.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cn_physician_1``
      - CN_PHYSICIAN.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - physician ID
    * - ``cn_physician_2``
      - CN_PHYSICIAN.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - familiy name
    * - ``cn_physician_3``
      - CN_PHYSICIAN.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - given name
    * - ``cn_physician_4``
      - CN_PHYSICIAN.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - middle initial or name
    * - ``cn_physician_5``
      - CN_PHYSICIAN.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - suffix (e.g. JR or III)
    * - ``cn_physician_6``
      - CN_PHYSICIAN.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - prefix (e.g. DR)
    * - ``cn_physician_7``
      - CN_PHYSICIAN.7
-     - Optional[str]
-     - optional
+     - str
+     - O
      - degree (e.g. MD)
    * - ``cn_physician_8``
      - CN_PHYSICIAN.8
-     - Optional[str]
-     - optional
+     - str
+     - O
      - source table id
    * - ``cn_physician_9``
      - CN_PHYSICIAN.9
-     - Optional[:ref:`AD <hl7-v2_2-AD>`]
-     - optional
+     - :ref:`AD <hl7-v2_2-AD>`
+     - O
      - Adresse
    * - ``cn_physician_10``
      - CN_PHYSICIAN.10
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Telefon
    * - ``cn_physician_11``
      - CN_PHYSICIAN.11
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Faxnummer
    * - ``cn_physician_12``
      - CN_PHYSICIAN.12
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Online-Nummer
    * - ``cn_physician_13``
      - CN_PHYSICIAN.13
-     - Optional[str]
-     - optional
+     - str
+     - O
      - E-Mail
 
 .. _hl7-v2_2-CQ_QUANTITY:
 
-CQ_QUANTITY Cq für mengenangaben.
+CQ_QUANTITY: Cq für mengenangaben
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.CQ_QUANTITY.CQ_QUANTITY
@@ -1687,23 +1689,25 @@ CQ_QUANTITY Cq für mengenangaben.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``cq_quantity_1``
      - CQ_QUANTITY.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - quantity
    * - ``cq_quantity_2``
      - CQ_QUANTITY.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - units
 
 .. _hl7-v2_2-PN:
 
-PN Person name (S2.4.5.8).
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+PN: Person name
+~~~~~~~~~~~~~~~
+
+Section 2.4.5.8
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.PN.PN
    :noindex:
@@ -1715,43 +1719,45 @@ PN Person name (S2.4.5.8).
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``pn_1``
      - PN.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - familiy name
    * - ``pn_2``
      - PN.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - given name
    * - ``pn_3``
      - PN.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - middle initial or name
    * - ``pn_4``
      - PN.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - suffix (e.g. JR or III)
    * - ``pn_5``
      - PN.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - prefix (e.g. DR)
    * - ``pn_6``
      - PN.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - degree (e.g. MD)
 
 .. _hl7-v2_2-TQ:
 
-TQ Timing quantity (S2.4.5.20).
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+TQ: Timing quantity
+~~~~~~~~~~~~~~~~~~~
+
+Section 2.4.5.20
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.TQ.TQ
    :noindex:
@@ -1763,63 +1769,65 @@ TQ Timing quantity (S2.4.5.20).
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``tq_1``
      - TQ.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - Quantity
    * - ``tq_2``
      - TQ.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - interval
    * - ``tq_3``
      - TQ.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - duration
    * - ``tq_4``
      - TQ.4
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - start date/time
    * - ``tq_5``
      - TQ.5
-     - Optional[:ref:`TS <hl7-v2_2-TS>`]
-     - optional
+     - :ref:`TS <hl7-v2_2-TS>`
+     - O
      - end date/time
    * - ``tq_6``
      - TQ.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - priority
    * - ``tq_7``
      - TQ.7
-     - Optional[str]
-     - optional
+     - str
+     - O
      - condition
    * - ``tq_8``
      - TQ.8
-     - Optional[str]
-     - optional
+     - str
+     - O
      - text (TX)
    * - ``tq_9``
      - TQ.9
-     - Optional[str]
-     - optional
+     - str
+     - O
      - conjunction
    * - ``tq_10``
      - TQ.10
-     - Optional[str]
-     - optional
+     - str
+     - O
      - order sequencing
 
 .. _hl7-v2_2-TS:
 
-TS Time stamp (S2.4.5.7).
-~~~~~~~~~~~~~~~~~~~~~~~~~
+TS: Time stamp
+~~~~~~~~~~~~~~
+
+Section 2.4.5.7
 
 .. py:class:: hl7types.hl7.v2_2.datatypes.TS.TS
    :noindex:
@@ -1831,15 +1839,15 @@ TS Time stamp (S2.4.5.7).
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``ts_1``
      - TS.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - time of an event
    * - ``ts_2``
      - TS.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - degree of precision

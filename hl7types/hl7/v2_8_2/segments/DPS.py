@@ -21,19 +21,19 @@ class DPS(HL7Model):
     Attributes
     ----------
     dps_1 : CWE
-        DPS.1 (req) - Diagnosis Code - MCP (CWE) S8.8.19.1 | 0051 - Diagnosis Code
+        DPS.1 - Diagnosis Code - MCP (CWE) R S8.8.19.1 | 0051 - Diagnosis Code
 
     dps_2 : list[CWE]
-        DPS.2 (req, rep) - Procedure Code (CWE) S8.8.19.2 | 0941 - Procedure Code
+        DPS.2 - Procedure Code (CWE) R rep S8.8.19.2 | 0941 - Procedure Code
 
     dps_3 : str | None
-        DPS.3 (opt) - Effective Date/Time (DTM) S8.5.1.5
+        DPS.3 - Effective Date/Time (DTM) O S8.5.1.5
 
     dps_4 : str | None
-        DPS.4 (opt) - Expiration Date/Time (DTM) S8.8.19.4
+        DPS.4 - Expiration Date/Time (DTM) O S8.8.19.4
 
     dps_5 : CNE | None
-        DPS.5 (opt) - Type of Limitation (CNE) S8.8.19.5 | 0940 - Limitation Type Codes
+        DPS.5 - Type of Limitation (CNE) O S8.8.19.5 | 0940 - Limitation Type Codes
     """
 
     dps_1: CWE = Field(
@@ -44,7 +44,7 @@ class DPS(HL7Model):
         ),
         serialization_alias="DPS.1",
         title="Diagnosis Code - MCP",
-        description="Item #3472 | Table HL70051",
+        description="R | Item #03472 | Table 0051 - Diagnosis Code",
     )
 
     dps_2: List[CWE] = Field(
@@ -56,7 +56,7 @@ class DPS(HL7Model):
         ),
         serialization_alias="DPS.2",
         title="Procedure Code",
-        description="Item #3484 | Table HL70941",
+        description="R | Item #03484 | Table 0941 - Procedure Code",
     )
 
     dps_3: Optional[str] = Field(
@@ -68,7 +68,7 @@ class DPS(HL7Model):
         ),
         serialization_alias="DPS.3",
         title="Effective Date/Time",
-        description="Item #662",
+        description="O | Item #00662",
     )
 
     dps_4: Optional[str] = Field(
@@ -80,7 +80,7 @@ class DPS(HL7Model):
         ),
         serialization_alias="DPS.4",
         title="Expiration Date/Time",
-        description="Item #3473",
+        description="O | Item #03473",
     )
 
     dps_5: Optional[CNE] = Field(
@@ -92,7 +92,7 @@ class DPS(HL7Model):
         ),
         serialization_alias="DPS.5",
         title="Type of Limitation",
-        description="Item #3474 | Table HL70940",
+        description="O | Item #03474 | Table 0940 - Limitation Type Codes",
     )
 
     @field_validator("dps_3", "dps_4", mode='before')

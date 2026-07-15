@@ -20,16 +20,16 @@ class ODS(HL7Model):
     Attributes
     ----------
     ods_1 : str
-        ODS.1 (req) - Type (ID) S4.8.1.1 | 0159 - Diet Code Specification Type
+        ODS.1 - Type (ID) R S4.8.1.1 | 0159 - Diet Code Specification Type
 
     ods_2 : list[CWE] | None
-        ODS.2 (opt, rep) - Service Period (CWE) S4.8.1.2 | 9999 - no table for CE
+        ODS.2 - Service Period (CWE) O rep S4.8.1.2 | 9999 - no table for CE
 
     ods_3 : list[CWE]
-        ODS.3 (req, rep) - Diet, Supplement, or Preference Code (CWE) S4.8.1.3 | 9999 - no table for CE
+        ODS.3 - Diet, Supplement, or Preference Code (CWE) R rep S4.8.1.3 | 9999 - no table for CE
 
     ods_4 : list[str] | None
-        ODS.4 (opt, rep) - Text Instruction (ST) S4.8.1.4
+        ODS.4 - Text Instruction (ST) O rep S4.8.1.4
     """
 
     ods_1: str = Field(
@@ -40,7 +40,9 @@ class ODS(HL7Model):
         ),
         serialization_alias="ODS.1",
         title="Type",
-        description="Item #269 | Table HL70159",
+        description=(
+            "R | Item #00269 | Table 0159 - Diet Code Specification Type | LEN:1"
+        ),
     )
 
     ods_2: Optional[List[CWE]] = Field(
@@ -52,7 +54,7 @@ class ODS(HL7Model):
         ),
         serialization_alias="ODS.2",
         title="Service Period",
-        description="Item #270 | Table HL79999",
+        description="O | Item #00270 | Table 9999 - no table for CE",
     )
 
     ods_3: List[CWE] = Field(
@@ -64,7 +66,7 @@ class ODS(HL7Model):
         ),
         serialization_alias="ODS.3",
         title="Diet, Supplement, or Preference Code",
-        description="Item #271 | Table HL79999",
+        description="R | Item #00271 | Table 9999 - no table for CE",
     )
 
     ods_4: Optional[List[str]] = Field(
@@ -76,7 +78,7 @@ class ODS(HL7Model):
         ),
         serialization_alias="ODS.4",
         title="Text Instruction",
-        description="Item #272",
+        description="O | Item #00272",
     )
 
     model_config = {"populate_by_name": True}
