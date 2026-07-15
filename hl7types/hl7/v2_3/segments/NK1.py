@@ -27,115 +27,115 @@ class NK1(HL7Model):
     Attributes
     ----------
     nk1_1 : str
-        NK1.1 (req) - Set ID - Next of Kin (SI) S3.3.5.1
+        NK1.1 - Set ID - Next of Kin (SI) R S3.3.5.1
 
     nk1_2 : list[XPN] | None
-        NK1.2 (opt, rep) - Name (XPN) S3.3.5.2
+        NK1.2 - Name (XPN) O rep S3.3.5.2
 
     nk1_3 : CE | None
-        NK1.3 (opt) - Relationship (CE) S3.3.5.3 | 0063 - Relationship
+        NK1.3 - Relationship (CE) O S3.3.5.3 | 0063 - Relationship
 
     nk1_4 : list[XAD] | None
-        NK1.4 (opt, rep) - Address (XAD) S3.3.5.4
+        NK1.4 - Address (XAD) O rep S3.3.5.4
 
     nk1_5 : list[XTN] | None
-        NK1.5 (opt, rep) - Phone Number (XTN) S3.3.5.5
+        NK1.5 - Phone Number (XTN) O rep S3.3.5.5
 
     nk1_6 : list[XTN] | None
-        NK1.6 (opt, rep) - Business Phone Number (XTN) S3.3.5.6
+        NK1.6 - Business Phone Number (XTN) O rep S3.3.5.6
 
     nk1_7 : CE | None
-        NK1.7 (opt) - Contact Role (CE) S3.3.5.7 | 0131 - Contact Role
+        NK1.7 - Contact Role (CE) R S3.3.5.7 | 0131 - Contact Role
 
     nk1_8 : str | None
-        NK1.8 (opt) - Start Date (DT) S3.3.5.8
+        NK1.8 - Start Date (DT) O S3.3.5.8
 
     nk1_9 : str | None
-        NK1.9 (opt) - End Date (DT) S3.3.5.9
+        NK1.9 - End Date (DT) O S3.3.5.9
 
     nk1_10 : str | None
-        NK1.10 (opt) - Next of Kin/Associated Parties Job Title (ST) S3.3.5.10
+        NK1.10 - Next of Kin/Associated Parties Job Title (ST) O S3.3.5.10
 
     nk1_11 : JCC | None
-        NK1.11 (opt) - Next of Kin Job/Associated Parties Code/Class (JCC) S3.3.5.11
+        NK1.11 - Next of Kin Job/Associated Parties Code/Class (JCC) O S3.3.5.11
 
     nk1_12 : CX | None
-        NK1.12 (opt) - Next of Kin/Associated Parties Employee Number (CX) S3.3.5.12
+        NK1.12 - Next of Kin/Associated Parties Employee Number (CX) O S3.3.5.12
 
     nk1_13 : list[XON] | None
-        NK1.13 (opt, rep) - Organization Name (XON) S3.3.5.13
+        NK1.13 - Organization Name (XON) O rep S3.3.5.13
 
     nk1_14 : list[str] | None
-        NK1.14 (opt, rep) - Marital Status (IS) S3.3.2 | 0002 - Marital Status
+        NK1.14 - Marital Status (IS) NA rep S3.3.2 | 0002 - Marital Status
 
     nk1_15 : str | None
-        NK1.15 (opt) - Sex (IS) S3.3.2 | 0001 - Sex
+        NK1.15 - Sex (IS) NA S3.3.2 | 0001 - Sex
 
     nk1_16 : TS | None
-        NK1.16 (opt) - Date of Birth (TS) S3.3.2
+        NK1.16 - Date of Birth (TS) O S3.3.2
 
     nk1_17 : str | None
-        NK1.17 (opt) - Living Dependency (IS) S3.3.5 | 0223 - Living Dependency
+        NK1.17 - Living Dependency (IS) O S3.3.5 | 0223 - Living Dependency
 
     nk1_18 : str | None
-        NK1.18 (opt) - Ambulatory Status (IS) S3.3.3 | 0009 - Ambulatory Status
+        NK1.18 - Ambulatory Status (IS) O S3.3.3 | 0009 - Ambulatory Status
 
     nk1_19 : str | None
-        NK1.19 (opt) - Citizenship (IS) S3.3.2 | 0171 - Country Code
+        NK1.19 - Citizenship (IS) O S3.3.2 | 0171 - Country Code
 
     nk1_20 : CE | None
-        NK1.20 (opt) - Primary Language (CE) S3.3.2 | 0296 - Language
+        NK1.20 - Primary Language (CE) O S3.3.2 | 0296 - Language
 
     nk1_21 : str | None
-        NK1.21 (opt) - Living Arrangement (IS) S3.3.5 | 0220 - Living Arrangements
+        NK1.21 - Living Arrangement (IS) O S3.3.5 | 0220 - Living Arrangements
 
     nk1_22 : CE | None
-        NK1.22 (opt) - Publicity Indicator (CE) S3.3.5 | 0215 - Publicity Code
+        NK1.22 - Publicity Indicator (CE) O S3.3.5 | 0215 - Publicity Code
 
     nk1_23 : str | None
-        NK1.23 (opt) - Protection Indicator (ID) S3.3.5 | 0136 - Yes/No Indicator
+        NK1.23 - Protection Indicator (ID) O S3.3.5 | 0136 - Yes/No Indicator
 
     nk1_24 : str | None
-        NK1.24 (opt) - Student Indicator (IS) S3.3.5 | 0231 - Student Status
+        NK1.24 - Student Indicator (IS) O S3.3.5 | 0231 - Student Status
 
     nk1_25 : str | None
-        NK1.25 (opt) - Religion (IS) S3.3.2 | 0006 - Religion
+        NK1.25 - Religion (IS) O S3.3.2 | 0006 - Religion
 
     nk1_26 : XPN | None
-        NK1.26 (opt) - Mother’s Maiden Name (XPN) S3.3.5
+        NK1.26 - Mother’s Maiden Name (XPN) O S3.3.5
 
     nk1_27 : CE | None
-        NK1.27 (opt) - Nationality Code (CE) S3.3.2 | 0212 - Nationality
+        NK1.27 - Nationality Code (CE) O S3.3.2 | 0212 - Nationality
 
     nk1_28 : str | None
-        NK1.28 (opt) - Ethnic Group (IS) S3.3.2 | 0189 - Ethnic Group
+        NK1.28 - Ethnic Group (IS) O S3.3.2 | 0189 - Ethnic Group
 
     nk1_29 : CE | None
-        NK1.29 (opt) - Contact Reason (CE) S3.3.5 | 0222 - Contact Reason
+        NK1.29 - Contact Reason (CE) O S3.3.5 | 0222 - Contact Reason
 
     nk1_30 : list[XPN] | None
-        NK1.30 (opt, rep) - Contact Person's Name (XPN) S3.3.5
+        NK1.30 - Contact Person's Name (XPN) O rep S3.3.5
 
     nk1_31 : list[XTN] | None
-        NK1.31 (opt, rep) - Contact Person’s Telephone Number (XTN) S3.3.5
+        NK1.31 - Contact Person’s Telephone Number (XTN) O rep S3.3.5
 
     nk1_32 : list[XAD] | None
-        NK1.32 (opt, rep) - Contact Person’s Address (XAD) S3.3.5
+        NK1.32 - Contact Person’s Address (XAD) NA rep S3.3.5
 
     nk1_33 : list[CX] | None
-        NK1.33 (opt, rep) - Associated Party’s Identifiers (CX) S3.3.5.33
+        NK1.33 - Associated Party’s Identifiers (CX) NA rep S3.3.5.33
 
     nk1_34 : str | None
-        NK1.34 (opt) - Job Status (IS) S3.3.5 | 0311 - Job Status
+        NK1.34 - Job Status (IS) O S3.3.5 | 0311 - Job Status
 
     nk1_35 : str | None
-        NK1.35 (opt) - Race (IS) S3.3.2 | 0005 - Race
+        NK1.35 - Race (IS) NA S3.3.2 | 0005 - Race
 
     nk1_36 : str | None
-        NK1.36 (opt) - Handicap (IS) S3.3.5 | 0295 - Handicap
+        NK1.36 - Handicap (IS) O S3.3.5 | 0295 - Handicap
 
     nk1_37 : str | None
-        NK1.37 (opt) - Contact Person Social Security Number (ST) S3.3.5.37
+        NK1.37 - Contact Person Social Security Number (ST) NA S3.3.5.37
     """
 
     nk1_1: str = Field(
@@ -146,7 +146,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.1",
         title="Set ID - Next of Kin",
-        description="Item #190",
+        description="R | Item #00190 | LEN:4",
     )
 
     nk1_2: Optional[List[XPN]] = Field(
@@ -158,7 +158,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.2",
         title="Name",
-        description="Item #191",
+        description="O | Item #00191",
     )
 
     nk1_3: Optional[CE] = Field(
@@ -170,7 +170,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.3",
         title="Relationship",
-        description="Item #192 | Table HL70063",
+        description="O | Item #00192 | Table 0063 - Relationship",
     )
 
     nk1_4: Optional[List[XAD]] = Field(
@@ -182,7 +182,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.4",
         title="Address",
-        description="Item #193",
+        description="O | Item #00193",
     )
 
     nk1_5: Optional[List[XTN]] = Field(
@@ -194,7 +194,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.5",
         title="Phone Number",
-        description="Item #194",
+        description="O | Item #00194",
     )
 
     nk1_6: Optional[List[XTN]] = Field(
@@ -206,7 +206,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.6",
         title="Business Phone Number",
-        description="Item #195",
+        description="O | Item #00195",
     )
 
     nk1_7: Optional[CE] = Field(
@@ -218,7 +218,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.7",
         title="Contact Role",
-        description="Item #196 | Table HL70131",
+        description="R | Item #00196 | Table 0131 - Contact Role",
     )
 
     nk1_8: Optional[str] = Field(
@@ -230,7 +230,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.8",
         title="Start Date",
-        description="Item #197",
+        description="O | Item #00197 | LEN:8",
     )
 
     nk1_9: Optional[str] = Field(
@@ -242,7 +242,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.9",
         title="End Date",
-        description="Item #198",
+        description="O | Item #00198 | LEN:8",
     )
 
     nk1_10: Optional[str] = Field(
@@ -254,7 +254,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.10",
         title="Next of Kin/Associated Parties Job Title",
-        description="Item #199",
+        description="O | Item #00199 | LEN:60",
     )
 
     nk1_11: Optional[JCC] = Field(
@@ -266,7 +266,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.11",
         title="Next of Kin Job/Associated Parties Code/Class",
-        description="Item #200",
+        description="O | Item #00200",
     )
 
     nk1_12: Optional[CX] = Field(
@@ -278,7 +278,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.12",
         title="Next of Kin/Associated Parties Employee Number",
-        description="Item #201",
+        description="O | Item #00201",
     )
 
     nk1_13: Optional[List[XON]] = Field(
@@ -290,7 +290,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.13",
         title="Organization Name",
-        description="Item #202",
+        description="O | Item #00202",
     )
 
     nk1_14: Optional[List[str]] = Field(
@@ -302,7 +302,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.14",
         title="Marital Status",
-        description="Item #119 | Table HL70002",
+        description="NA | Item #00119 | Table 0002 - Marital Status | LEN:1",
     )
 
     nk1_15: Optional[str] = Field(
@@ -314,7 +314,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.15",
         title="Sex",
-        description="Item #111 | Table HL70001",
+        description="NA | Item #00111 | Table 0001 - Sex | LEN:1",
     )
 
     nk1_16: Optional[TS] = Field(
@@ -326,7 +326,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.16",
         title="Date of Birth",
-        description="Item #110",
+        description="O | Item #00110",
     )
 
     nk1_17: Optional[str] = Field(
@@ -338,7 +338,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.17",
         title="Living Dependency",
-        description="Item #755 | Table HL70223",
+        description="O | Item #00755 | Table 0223 - Living Dependency | LEN:2",
     )
 
     nk1_18: Optional[str] = Field(
@@ -350,7 +350,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.18",
         title="Ambulatory Status",
-        description="Item #145 | Table HL70009",
+        description="O | Item #00145 | Table 0009 - Ambulatory Status | LEN:2",
     )
 
     nk1_19: Optional[str] = Field(
@@ -362,7 +362,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.19",
         title="Citizenship",
-        description="Item #129 | Table HL70171",
+        description="O | Item #00129 | Table 0171 - Country Code | LEN:4",
     )
 
     nk1_20: Optional[CE] = Field(
@@ -374,7 +374,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.20",
         title="Primary Language",
-        description="Item #118 | Table HL70296",
+        description="O | Item #00118 | Table 0296 - Language",
     )
 
     nk1_21: Optional[str] = Field(
@@ -386,7 +386,9 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.21",
         title="Living Arrangement",
-        description="Item #742 | Table HL70220",
+        description=(
+            "O | Item #00742 | Table 0220 - Living Arrangements | LEN:2"
+        ),
     )
 
     nk1_22: Optional[CE] = Field(
@@ -398,7 +400,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.22",
         title="Publicity Indicator",
-        description="Item #743 | Table HL70215",
+        description="O | Item #00743 | Table 0215 - Publicity Code",
     )
 
     nk1_23: Optional[str] = Field(
@@ -410,7 +412,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.23",
         title="Protection Indicator",
-        description="Item #744 | Table HL70136",
+        description="O | Item #00744 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     nk1_24: Optional[str] = Field(
@@ -422,7 +424,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.24",
         title="Student Indicator",
-        description="Item #745 | Table HL70231",
+        description="O | Item #00745 | Table 0231 - Student Status | LEN:2",
     )
 
     nk1_25: Optional[str] = Field(
@@ -434,7 +436,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.25",
         title="Religion",
-        description="Item #120 | Table HL70006",
+        description="O | Item #00120 | Table 0006 - Religion | LEN:3",
     )
 
     nk1_26: Optional[XPN] = Field(
@@ -446,7 +448,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.26",
         title="Mother’s Maiden Name",
-        description="Item #746",
+        description="O | Item #00746",
     )
 
     nk1_27: Optional[CE] = Field(
@@ -458,7 +460,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.27",
         title="Nationality Code",
-        description="Item #739 | Table HL70212",
+        description="O | Item #00739 | Table 0212 - Nationality",
     )
 
     nk1_28: Optional[str] = Field(
@@ -470,7 +472,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.28",
         title="Ethnic Group",
-        description="Item #125 | Table HL70189",
+        description="O | Item #00125 | Table 0189 - Ethnic Group | LEN:1",
     )
 
     nk1_29: Optional[CE] = Field(
@@ -482,7 +484,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.29",
         title="Contact Reason",
-        description="Item #747 | Table HL70222",
+        description="O | Item #00747 | Table 0222 - Contact Reason",
     )
 
     nk1_30: Optional[List[XPN]] = Field(
@@ -494,7 +496,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.30",
         title="Contact Person's Name",
-        description="Item #748",
+        description="O | Item #00748",
     )
 
     nk1_31: Optional[List[XTN]] = Field(
@@ -506,7 +508,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.31",
         title="Contact Person’s Telephone Number",
-        description="Item #749",
+        description="O | Item #00749",
     )
 
     nk1_32: Optional[List[XAD]] = Field(
@@ -518,7 +520,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.32",
         title="Contact Person’s Address",
-        description="Item #750",
+        description="NA | Item #00750",
     )
 
     nk1_33: Optional[List[CX]] = Field(
@@ -530,7 +532,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.33",
         title="Associated Party’s Identifiers",
-        description="Item #751",
+        description="NA | Item #00751",
     )
 
     nk1_34: Optional[str] = Field(
@@ -542,7 +544,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.34",
         title="Job Status",
-        description="Item #752 | Table HL70311",
+        description="O | Item #00752 | Table 0311 - Job Status | LEN:2",
     )
 
     nk1_35: Optional[str] = Field(
@@ -554,7 +556,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.35",
         title="Race",
-        description="Item #113 | Table HL70005",
+        description="NA | Item #00113 | Table 0005 - Race | LEN:1",
     )
 
     nk1_36: Optional[str] = Field(
@@ -566,7 +568,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.36",
         title="Handicap",
-        description="Item #753 | Table HL70310",
+        description="O | Item #00753 | Table 0295 - Handicap | LEN:2",
     )
 
     nk1_37: Optional[str] = Field(
@@ -578,7 +580,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.37",
         title="Contact Person Social Security Number",
-        description="Item #754",
+        description="NA | Item #00754 | LEN:16",
     )
 
     @field_validator("nk1_1", mode='before')

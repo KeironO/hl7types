@@ -20,19 +20,19 @@ class RXR(HL7Model):
     Attributes
     ----------
     rxr_1 : CE
-        RXR.1 (req) - Route (CE) S4.14.2.1 | 0162 - Route of administration
+        RXR.1 - Route (CE) R S4.14.2.1 | 0162 - Route of administration
 
     rxr_2 : CE | None
-        RXR.2 (opt) - Administration Site (CE) S4.14.2.2 | 0163 - Body site
+        RXR.2 - Administration Site (CE) O S4.14.2.2 | 0163 - Body site
 
     rxr_3 : CE | None
-        RXR.3 (opt) - Administration Device (CE) S4.14.2.3 | 0164 - Administration device
+        RXR.3 - Administration Device (CE) O S4.14.2.3 | 0164 - Administration device
 
     rxr_4 : CE | None
-        RXR.4 (opt) - Administration Method (CE) S4.14.2.4 | 0165 - Administration method
+        RXR.4 - Administration Method (CE) O S4.14.2.4 | 0165 - Administration method
 
     rxr_5 : CE | None
-        RXR.5 (opt) - Routing Instruction (CE) S4.14.2.5
+        RXR.5 - Routing Instruction (CE) O S4.14.2.5
     """
 
     rxr_1: CE = Field(
@@ -43,7 +43,7 @@ class RXR(HL7Model):
         ),
         serialization_alias="RXR.1",
         title="Route",
-        description="Item #309 | Table HL70162",
+        description="R | Item #00309 | Table 0162 - Route of administration",
     )
 
     rxr_2: Optional[CE] = Field(
@@ -55,7 +55,7 @@ class RXR(HL7Model):
         ),
         serialization_alias="RXR.2",
         title="Administration Site",
-        description="Item #310 | Table HL70163",
+        description="O | Item #00310 | Table 0163 - Body site",
     )
 
     rxr_3: Optional[CE] = Field(
@@ -67,7 +67,7 @@ class RXR(HL7Model):
         ),
         serialization_alias="RXR.3",
         title="Administration Device",
-        description="Item #311 | Table HL70164",
+        description="O | Item #00311 | Table 0164 - Administration device",
     )
 
     rxr_4: Optional[CE] = Field(
@@ -79,7 +79,7 @@ class RXR(HL7Model):
         ),
         serialization_alias="RXR.4",
         title="Administration Method",
-        description="Item #312 | Table HL70165",
+        description="O | Item #00312 | Table 0165 - Administration method",
     )
 
     rxr_5: Optional[CE] = Field(
@@ -91,7 +91,7 @@ class RXR(HL7Model):
         ),
         serialization_alias="RXR.5",
         title="Routing Instruction",
-        description="Item #1315",
+        description="O | Item #01315",
     )
 
     model_config = {"populate_by_name": True}

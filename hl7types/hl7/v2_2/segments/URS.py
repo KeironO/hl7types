@@ -20,28 +20,28 @@ class URS(HL7Model):
     Attributes
     ----------
     urs_1 : list[str]
-        URS.1 (req, rep) - R/U Where Subject Definition (ST) S2.10.7.1
+        URS.1 - R/U Where Subject Definition (ST) R rep S2.10.7.1
 
     urs_2 : TS | None
-        URS.2 (opt) - R/U when data start date / time (TS) S2.10.7.2
+        URS.2 - R/U when data start date / time (TS) NA S2.10.7.2
 
     urs_3 : TS | None
-        URS.3 (opt) - R/U when data end date / time (TS) S2.10.7.3
+        URS.3 - R/U when data end date / time (TS) NA S2.10.7.3
 
     urs_4 : list[str] | None
-        URS.4 (opt, rep) - R/U What User Qualifier (ST) S2.10.7.4
+        URS.4 - R/U What User Qualifier (ST) NA rep S2.10.7.4
 
     urs_5 : list[str] | None
-        URS.5 (opt, rep) - R/U Other Results Subject Definition (ST) S2.10.7.5
+        URS.5 - R/U Other Results Subject Definition (ST) NA rep S2.10.7.5
 
     urs_6 : list[str] | None
-        URS.6 (opt, rep) - R/U which date / time qualifier (ID) S2.10.7.6 | 0156 - DATE/TIME QUALIFIER
+        URS.6 - R/U which date / time qualifier (ID) NA rep S2.10.7.6 | 0156 - DATE/TIME QUALIFIER
 
     urs_7 : list[str] | None
-        URS.7 (opt, rep) - R/U which date / time status qualifier (ID) S2.10.7.7 | 0157 - WHIHC DATE/TIME STATUS QUALIFIER
+        URS.7 - R/U which date / time status qualifier (ID) NA rep S2.10.7.7 | 0157 - WHIHC DATE/TIME STATUS QUALIFIER
 
     urs_8 : list[str] | None
-        URS.8 (opt, rep) - R/U date / time selection qualifier (ID) S2.10.7.8 | 0158 - DATE/TIME SELECTION QUALIFIER
+        URS.8 - R/U date / time selection qualifier (ID) NA rep S2.10.7.8 | 0158 - DATE/TIME SELECTION QUALIFIER
     """
 
     urs_1: List[str] = Field(
@@ -53,7 +53,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.1",
         title="R/U Where Subject Definition",
-        description="Item #52",
+        description="R | Item #00052 | LEN:20",
     )
 
     urs_2: Optional[TS] = Field(
@@ -65,7 +65,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.2",
         title="R/U when data start date / time",
-        description="Item #53",
+        description="NA | Item #00053",
     )
 
     urs_3: Optional[TS] = Field(
@@ -77,7 +77,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.3",
         title="R/U when data end date / time",
-        description="Item #54",
+        description="NA | Item #00054",
     )
 
     urs_4: Optional[List[str]] = Field(
@@ -89,7 +89,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.4",
         title="R/U What User Qualifier",
-        description="Item #55",
+        description="NA | Item #00055 | LEN:20",
     )
 
     urs_5: Optional[List[str]] = Field(
@@ -101,7 +101,7 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.5",
         title="R/U Other Results Subject Definition",
-        description="Item #56",
+        description="NA | Item #00056 | LEN:20",
     )
 
     urs_6: Optional[List[str]] = Field(
@@ -113,7 +113,9 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.6",
         title="R/U which date / time qualifier",
-        description="Item #57 | Table HL70156",
+        description=(
+            "NA | Item #00057 | Table 0156 - DATE/TIME QUALIFIER | LEN:12"
+        ),
     )
 
     urs_7: Optional[List[str]] = Field(
@@ -125,7 +127,10 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.7",
         title="R/U which date / time status qualifier",
-        description="Item #58 | Table HL70157",
+        description=(
+            "NA | Item #00058 | Table 0157 - WHIHC DATE/TIME STATUS QUALIFIER | "
+            "LEN:12"
+        ),
     )
 
     urs_8: Optional[List[str]] = Field(
@@ -137,7 +142,10 @@ class URS(HL7Model):
         ),
         serialization_alias="URS.8",
         title="R/U date / time selection qualifier",
-        description="Item #59 | Table HL70158",
+        description=(
+            "NA | Item #00059 | Table 0158 - DATE/TIME SELECTION QUALIFIER | "
+            "LEN:12"
+        ),
     )
 
     model_config = {"populate_by_name": True}

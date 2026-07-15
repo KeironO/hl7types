@@ -20,16 +20,16 @@ class CM2(HL7Model):
     Attributes
     ----------
     cm2_1 : str | None
-        CM2.1 (opt) - Set ID - CM2 (SI) S8.10.4.1
+        CM2.1 - Set ID - CM2 (SI) O S8.10.4.1
 
     cm2_2 : CE
-        CM2.2 (req) - Scheduled Time Point (CE) S8.10.4.2
+        CM2.2 - Scheduled Time Point (CE) R S8.10.4.2
 
     cm2_3 : str | None
-        CM2.3 (opt) - Description of Time Point (ST) S8.10.4.3
+        CM2.3 - Description of Time Point (ST) O S8.10.4.3
 
     cm2_4 : list[CE]
-        CM2.4 (req, rep) - Events Scheduled This Time Point (CE) S8.10.4.4
+        CM2.4 - Events Scheduled This Time Point (CE) R rep S8.10.4.4
     """
 
     cm2_1: Optional[str] = Field(
@@ -41,7 +41,7 @@ class CM2(HL7Model):
         ),
         serialization_alias="CM2.1",
         title="Set ID - CM2",
-        description="Item #1024",
+        description="O | Item #01024 | LEN:4",
     )
 
     cm2_2: CE = Field(
@@ -52,7 +52,7 @@ class CM2(HL7Model):
         ),
         serialization_alias="CM2.2",
         title="Scheduled Time Point",
-        description="Item #1025",
+        description="R | Item #01025",
     )
 
     cm2_3: Optional[str] = Field(
@@ -64,7 +64,7 @@ class CM2(HL7Model):
         ),
         serialization_alias="CM2.3",
         title="Description of Time Point",
-        description="Item #1026",
+        description="O | Item #01026 | LEN:300",
     )
 
     cm2_4: List[CE] = Field(
@@ -76,7 +76,7 @@ class CM2(HL7Model):
         ),
         serialization_alias="CM2.4",
         title="Events Scheduled This Time Point",
-        description="Item #1027",
+        description="R | Item #01027",
     )
 
     @field_validator("cm2_1", mode='before')

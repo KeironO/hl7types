@@ -18,52 +18,52 @@ class UB2(HL7Model):
     Attributes
     ----------
     ub2_1 : str | None
-        UB2.1 (opt) - Set ID - UB92 (SI) S6.4.10.1
+        UB2.1 - Set ID - UB92 (SI) NA S6.4.10.1
 
     ub2_2 : str | None
-        UB2.2 (opt) - Co-insurance days (9) (ST) S6.4.10.2
+        UB2.2 - Co-insurance days (9) (ST) NA S6.4.10.2
 
     ub2_3 : list[str] | None
-        UB2.3 (opt, rep) - Condition code (24-30) (ID) S6.4.10.3 | 0043 - CONDITION CODE
+        UB2.3 - Condition code (24-30) (ID) NA rep S6.4.10.3 | 0043 - CONDITION CODE
 
     ub2_4 : str | None
-        UB2.4 (opt) - Covered days (7) (ST) S6.4.10.4
+        UB2.4 - Covered days (7) (ST) NA S6.4.10.4
 
     ub2_5 : str | None
-        UB2.5 (opt) - Non-covered days (8) (ST) S6.4.10.5
+        UB2.5 - Non-covered days (8) (ST) NA S6.4.10.5
 
     ub2_6 : list[str] | None
-        UB2.6 (opt, rep) - Value amount and code (39-41) (CM) S6.4.10.6
+        UB2.6 - Value amount and code (39-41) (CM) NA rep S6.4.10.6
 
     ub2_7 : list[str] | None
-        UB2.7 (opt, rep) - Occurrence code and date (32-35) (CM) S6.4.10.7
+        UB2.7 - Occurrence code and date (32-35) (CM) NA rep S6.4.10.7
 
     ub2_8 : list[str] | None
-        UB2.8 (opt, rep) - Occurrence span code / dates (36) (CM) S6.4.10.8
+        UB2.8 - Occurrence span code / dates (36) (CM) NA rep S6.4.10.8
 
     ub2_9 : list[str] | None
-        UB2.9 (opt, rep) - UB92 locator 2 (state) (ST) S6.4.10.9
+        UB2.9 - UB92 locator 2 (state) (ST) NA rep S6.4.10.9
 
     ub2_10 : list[str] | None
-        UB2.10 (opt, rep) - UB92 locator 11 (state) (ST) S6.4.10.10
+        UB2.10 - UB92 locator 11 (state) (ST) NA rep S6.4.10.10
 
     ub2_11 : str | None
-        UB2.11 (opt) - UB92 locator 31 (national) (ST) S6.4.10.11
+        UB2.11 - UB92 locator 31 (national) (ST) NA S6.4.10.11
 
     ub2_12 : list[str] | None
-        UB2.12 (opt, rep) - Document control number (37) (ST) S6.4.10.12
+        UB2.12 - Document control number (37) (ST) NA rep S6.4.10.12
 
     ub2_13 : list[str] | None
-        UB2.13 (opt, rep) - UB92 locator 49 (national) (ST) S6.4.10.13
+        UB2.13 - UB92 locator 49 (national) (ST) NA rep S6.4.10.13
 
     ub2_14 : list[str] | None
-        UB2.14 (opt, rep) - UB92 locator 56 (state) (ST) S6.4.10.14
+        UB2.14 - UB92 locator 56 (state) (ST) NA rep S6.4.10.14
 
     ub2_15 : str | None
-        UB2.15 (opt) - UB92 locator 57 (national) (ST) S6.4.10.15
+        UB2.15 - UB92 locator 57 (national) (ST) NA S6.4.10.15
 
     ub2_16 : list[str] | None
-        UB2.16 (opt, rep) - UB92 Locator 78 (state) (ST) S6.4.10.16
+        UB2.16 - UB92 Locator 78 (state) (ST) NA rep S6.4.10.16
     """
 
     ub2_1: Optional[str] = Field(
@@ -75,7 +75,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.1",
         title="Set ID - UB92",
-        description="Item #553",
+        description="NA | Item #00553 | LEN:4",
     )
 
     ub2_2: Optional[str] = Field(
@@ -87,7 +87,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.2",
         title="Co-insurance days (9)",
-        description="Item #554",
+        description="NA | Item #00554 | LEN:3",
     )
 
     ub2_3: Optional[List[str]] = Field(
@@ -99,7 +99,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.3",
         title="Condition code (24-30)",
-        description="Item #555 | Table HL70043",
+        description="NA | Item #00555 | Table 0043 - CONDITION CODE | LEN:2",
     )
 
     ub2_4: Optional[str] = Field(
@@ -111,7 +111,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.4",
         title="Covered days (7)",
-        description="Item #556",
+        description="NA | Item #00556 | LEN:3",
     )
 
     ub2_5: Optional[str] = Field(
@@ -123,7 +123,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.5",
         title="Non-covered days (8)",
-        description="Item #557",
+        description="NA | Item #00557 | LEN:4",
     )
 
     ub2_6: Optional[List[str]] = Field(
@@ -135,7 +135,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.6",
         title="Value amount and code (39-41)",
-        description="Item #558",
+        description="NA | Item #00558",
     )
 
     ub2_7: Optional[List[str]] = Field(
@@ -147,7 +147,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.7",
         title="Occurrence code and date (32-35)",
-        description="Item #559",
+        description="NA | Item #00559",
     )
 
     ub2_8: Optional[List[str]] = Field(
@@ -159,7 +159,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.8",
         title="Occurrence span code / dates (36)",
-        description="Item #560",
+        description="NA | Item #00560",
     )
 
     ub2_9: Optional[List[str]] = Field(
@@ -171,7 +171,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.9",
         title="UB92 locator 2 (state)",
-        description="Item #561",
+        description="NA | Item #00561 | LEN:29",
     )
 
     ub2_10: Optional[List[str]] = Field(
@@ -183,7 +183,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.10",
         title="UB92 locator 11 (state)",
-        description="Item #562",
+        description="NA | Item #00562 | LEN:12",
     )
 
     ub2_11: Optional[str] = Field(
@@ -195,7 +195,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.11",
         title="UB92 locator 31 (national)",
-        description="Item #563",
+        description="NA | Item #00563 | LEN:5",
     )
 
     ub2_12: Optional[List[str]] = Field(
@@ -207,7 +207,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.12",
         title="Document control number (37)",
-        description="Item #564",
+        description="NA | Item #00564 | LEN:23",
     )
 
     ub2_13: Optional[List[str]] = Field(
@@ -219,7 +219,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.13",
         title="UB92 locator 49 (national)",
-        description="Item #565",
+        description="NA | Item #00565 | LEN:4",
     )
 
     ub2_14: Optional[List[str]] = Field(
@@ -231,7 +231,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.14",
         title="UB92 locator 56 (state)",
-        description="Item #566",
+        description="NA | Item #00566 | LEN:14",
     )
 
     ub2_15: Optional[str] = Field(
@@ -243,7 +243,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.15",
         title="UB92 locator 57 (national)",
-        description="Item #567",
+        description="NA | Item #00567 | LEN:27",
     )
 
     ub2_16: Optional[List[str]] = Field(
@@ -255,7 +255,7 @@ class UB2(HL7Model):
         ),
         serialization_alias="UB2.16",
         title="UB92 Locator 78 (state)",
-        description="Item #568",
+        description="NA | Item #00568 | LEN:2",
     )
 
     @field_validator("ub2_1", mode='before')

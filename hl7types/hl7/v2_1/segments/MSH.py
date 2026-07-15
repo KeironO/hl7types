@@ -18,46 +18,46 @@ class MSH(HL7Model):
     Attributes
     ----------
     msh_1 : str
-        MSH.1 (req) - FIELD SEPARATOR (ST) S2-46
+        MSH.1 - FIELD SEPARATOR (ST) R S2-46
 
     msh_2 : str
-        MSH.2 (req) - ENCODING CHARACTERS (ST)
+        MSH.2 - ENCODING CHARACTERS (ST) R
 
     msh_3 : str | None
-        MSH.3 (opt) - SENDING APPLICATION (ST)
+        MSH.3 - SENDING APPLICATION (ST) O
 
     msh_4 : str | None
-        MSH.4 (opt) - SENDING FACILITY (ST)
+        MSH.4 - SENDING FACILITY (ST) O
 
     msh_5 : str | None
-        MSH.5 (opt) - RECEIVING APPLICATION (ST)
+        MSH.5 - RECEIVING APPLICATION (ST) O
 
     msh_6 : str | None
-        MSH.6 (opt) - RECEIVING FACILITY (ST)
+        MSH.6 - RECEIVING FACILITY (ST) O
 
     msh_7 : str | None
-        MSH.7 (opt) - DATE/TIME OF MESSAGE (TS)
+        MSH.7 - DATE/TIME OF MESSAGE (TS) O
 
     msh_8 : str | None
-        MSH.8 (opt) - Security (ST)
+        MSH.8 - Security (ST) O
 
     msh_9 : str
-        MSH.9 (req) - MESSAGE TYPE (ID) | 0076 - MESSAGE TYPE
+        MSH.9 - MESSAGE TYPE (ID) R | 0076 - MESSAGE TYPE
 
     msh_10 : str
-        MSH.10 (req) - MESSAGE CONTROL ID (ST)
+        MSH.10 - MESSAGE CONTROL ID (ST) R
 
     msh_11 : str
-        MSH.11 (req) - PROCESSING ID (ID) | 0103 - PROCESSING ID
+        MSH.11 - PROCESSING ID (ID) R | 0103 - PROCESSING ID
 
     msh_12 : str
-        MSH.12 (req) - VERSION ID (NM) | 0104 - VERSION CONTROL TABLE
+        MSH.12 - VERSION ID (NM) R | 0104 - VERSION CONTROL TABLE
 
     msh_13 : str | None
-        MSH.13 (opt) - SEQUENCE NUMBER (NM)
+        MSH.13 - SEQUENCE NUMBER (NM) O
 
     msh_14 : str | None
-        MSH.14 (opt) - CONTINUATION POINTER (ST)
+        MSH.14 - CONTINUATION POINTER (ST) O
     """
 
     msh_1: str = Field(
@@ -69,7 +69,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.1",
         title="FIELD SEPARATOR",
-        description="Item #5",
+        description="R | Item #00005 | LEN:1",
     )
 
     msh_2: str = Field(
@@ -81,7 +81,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.2",
         title="ENCODING CHARACTERS",
-        description="Item #509",
+        description="R | Item #00509 | LEN:4",
     )
 
     msh_3: Optional[str] = Field(
@@ -93,7 +93,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.3",
         title="SENDING APPLICATION",
-        description="Item #6",
+        description="O | Item #00006 | LEN:15",
     )
 
     msh_4: Optional[str] = Field(
@@ -105,7 +105,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.4",
         title="SENDING FACILITY",
-        description="Item #512",
+        description="O | Item #00512 | LEN:20",
     )
 
     msh_5: Optional[str] = Field(
@@ -117,7 +117,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.5",
         title="RECEIVING APPLICATION",
-        description="Item #9",
+        description="O | Item #00009 | LEN:15",
     )
 
     msh_6: Optional[str] = Field(
@@ -129,7 +129,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.6",
         title="RECEIVING FACILITY",
-        description="Item #513",
+        description="O | Item #00513 | LEN:30",
     )
 
     msh_7: Optional[str] = Field(
@@ -141,7 +141,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.7",
         title="DATE/TIME OF MESSAGE",
-        description="Item #10",
+        description="O | Item #00010 | LEN:19",
     )
 
     msh_8: Optional[str] = Field(
@@ -153,7 +153,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.8",
         title="Security",
-        description="Item #8",
+        description="O | Item #00008 | LEN:40",
     )
 
     msh_9: str = Field(
@@ -164,7 +164,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.9",
         title="MESSAGE TYPE",
-        description="Item #12 | Table HL70076",
+        description="R | Item #00012 | Table 0076 - MESSAGE TYPE | LEN:7",
     )
 
     msh_10: str = Field(
@@ -175,7 +175,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.10",
         title="MESSAGE CONTROL ID",
-        description="Item #13",
+        description="R | Item #00013 | LEN:20",
     )
 
     msh_11: str = Field(
@@ -186,7 +186,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.11",
         title="PROCESSING ID",
-        description="Item #14 | Table HL70103",
+        description="R | Item #00014 | Table 0103 - PROCESSING ID | LEN:1",
     )
 
     msh_12: str = Field(
@@ -197,7 +197,9 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.12",
         title="VERSION ID",
-        description="Item #15 | Table HL70104",
+        description=(
+            "R | Item #00015 | Table 0104 - VERSION CONTROL TABLE | LEN:8"
+        ),
     )
 
     msh_13: Optional[str] = Field(
@@ -209,7 +211,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.13",
         title="SEQUENCE NUMBER",
-        description="Item #633",
+        description="O | Item #00633 | LEN:15",
     )
 
     msh_14: Optional[str] = Field(
@@ -221,7 +223,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.14",
         title="CONTINUATION POINTER",
-        description="Item #699",
+        description="O | Item #00699 | LEN:180",
     )
 
     @field_validator("msh_12", "msh_13", mode='before')

@@ -25,115 +25,115 @@ class SCD(HL7Model):
     Attributes
     ----------
     scd_1 : str | None
-        SCD.1 (opt) - Cycle Start Time (TM) S17.7.4.1
+        SCD.1 - Cycle Start Time (TM) O S17.7.4.1
 
     scd_2 : str | None
-        SCD.2 (opt) - Cycle Count (NM) S17.7.4.2
+        SCD.2 - Cycle Count (NM) O S17.7.4.2
 
     scd_3 : CQ | None
-        SCD.3 (opt) - Temp Max (CQ) S17.7.4.3
+        SCD.3 - Temp Max (CQ) O S17.7.4.3
 
     scd_4 : CQ | None
-        SCD.4 (opt) - Temp Min (CQ) S17.7.4.4
+        SCD.4 - Temp Min (CQ) O S17.7.4.4
 
     scd_5 : str | None
-        SCD.5 (opt) - Load Number (NM) S17.7.4.5
+        SCD.5 - Load Number (NM) O S17.7.4.5
 
     scd_6 : CQ | None
-        SCD.6 (opt) - Condition Time (CQ) S17.7.4.6
+        SCD.6 - Condition Time (CQ) O S17.7.4.6
 
     scd_7 : CQ | None
-        SCD.7 (opt) - Sterilize Time (CQ) S17.7.4.7
+        SCD.7 - Sterilize Time (CQ) O S17.7.4.7
 
     scd_8 : CQ | None
-        SCD.8 (opt) - Exhaust Time (CQ) S17.7.4.8
+        SCD.8 - Exhaust Time (CQ) O S17.7.4.8
 
     scd_9 : CQ | None
-        SCD.9 (opt) - Total Cycle Time (CQ) S17.7.4.9
+        SCD.9 - Total Cycle Time (CQ) O S17.7.4.9
 
     scd_10 : CWE | None
-        SCD.10 (opt) - Device Status (CWE) S17.7.4.10 | 0682 - Device Status
+        SCD.10 - Device Status (CWE) O S17.7.4.10 | 0682 - Device Status
 
     scd_11 : str | None
-        SCD.11 (opt) - Cycle Start Date/Time (DTM) S17.7.4.11
+        SCD.11 - Cycle Start Date/Time (DTM) O S17.7.4.11
 
     scd_12 : CQ | None
-        SCD.12 (opt) - Dry Time (CQ) S17.7.4.12
+        SCD.12 - Dry Time (CQ) O S17.7.4.12
 
     scd_13 : CQ | None
-        SCD.13 (opt) - Leak Rate (CQ) S17.7.4.13
+        SCD.13 - Leak Rate (CQ) O S17.7.4.13
 
     scd_14 : CQ | None
-        SCD.14 (opt) - Control Temperature (CQ) S17.7.4.14
+        SCD.14 - Control Temperature (CQ) O S17.7.4.14
 
     scd_15 : CQ | None
-        SCD.15 (opt) - Sterilizer Temperature (CQ) S17.7.4.15
+        SCD.15 - Sterilizer Temperature (CQ) O S17.7.4.15
 
     scd_16 : str | None
-        SCD.16 (opt) - Cycle Complete Time (TM) S17.7.4.16
+        SCD.16 - Cycle Complete Time (TM) O S17.7.4.16
 
     scd_17 : CQ | None
-        SCD.17 (opt) - Under Temperature (CQ) S17.7.4.17
+        SCD.17 - Under Temperature (CQ) O S17.7.4.17
 
     scd_18 : CQ | None
-        SCD.18 (opt) - Over Temperature (CQ) S17.7.4.18
+        SCD.18 - Over Temperature (CQ) O S17.7.4.18
 
     scd_19 : CNE | None
-        SCD.19 (opt) - Abort Cycle (CNE) S17.7.4.19 | 0532 - Expanded yes/no indicator
+        SCD.19 - Abort Cycle (CNE) O S17.7.4.19 | 0532 - Expanded yes/no indicator
 
     scd_20 : CNE | None
-        SCD.20 (opt) - Alarm (CNE) S17.7.4.20 | 0532 - Expanded yes/no indicator
+        SCD.20 - Alarm (CNE) O S17.7.4.20 | 0532 - Expanded yes/no indicator
 
     scd_21 : CNE | None
-        SCD.21 (opt) - Long in Charge Phase (CNE) S17.7.4.21 | 0532 - Expanded yes/no indicator
+        SCD.21 - Long in Charge Phase (CNE) O S17.7.4.21 | 0532 - Expanded yes/no indicator
 
     scd_22 : CNE | None
-        SCD.22 (opt) - Long in Exhaust Phase (CNE) S17.7.4.22 | 0532 - Expanded yes/no indicator
+        SCD.22 - Long in Exhaust Phase (CNE) O S17.7.4.22 | 0532 - Expanded yes/no indicator
 
     scd_23 : CNE | None
-        SCD.23 (opt) - Long in Fast Exhaust Phase (CNE) S17.7.4.23 | 0532 - Expanded yes/no indicator
+        SCD.23 - Long in Fast Exhaust Phase (CNE) O S17.7.4.23 | 0532 - Expanded yes/no indicator
 
     scd_24 : CNE | None
-        SCD.24 (opt) - Reset (CNE) S17.7.4.24 | 0532 - Expanded yes/no indicator
+        SCD.24 - Reset (CNE) O S17.7.4.24 | 0532 - Expanded yes/no indicator
 
     scd_25 : XCN | None
-        SCD.25 (opt) - Operator - Unload (XCN) S17.7.4.25
+        SCD.25 - Operator - Unload (XCN) O S17.7.4.25
 
     scd_26 : CNE | None
-        SCD.26 (opt) - Door Open (CNE) S17.7.4.26 | 0532 - Expanded yes/no indicator
+        SCD.26 - Door Open (CNE) O S17.7.4.26 | 0532 - Expanded yes/no indicator
 
     scd_27 : CNE | None
-        SCD.27 (opt) - Reading Failure (CNE) S17.7.4.27 | 0532 - Expanded yes/no indicator
+        SCD.27 - Reading Failure (CNE) O S17.7.4.27 | 0532 - Expanded yes/no indicator
 
     scd_28 : CWE | None
-        SCD.28 (opt) - Cycle Type (CWE) S17.7.4.28 | 0702 - Cycle Type
+        SCD.28 - Cycle Type (CWE) O S17.7.4.28 | 0702 - Cycle Type
 
     scd_29 : CQ | None
-        SCD.29 (opt) - Thermal Rinse Time (CQ) S17.7.4.29
+        SCD.29 - Thermal Rinse Time (CQ) O S17.7.4.29
 
     scd_30 : CQ | None
-        SCD.30 (opt) - Wash Time (CQ) S17.7.4.30
+        SCD.30 - Wash Time (CQ) O S17.7.4.30
 
     scd_31 : CQ | None
-        SCD.31 (opt) - Injection Rate (CQ) S17.7.4.31
+        SCD.31 - Injection Rate (CQ) O S17.7.4.31
 
     scd_32 : CNE | None
-        SCD.32 (opt) - Procedure Code (CNE) S17.4.1.14 | 0088 - Procedure Code
+        SCD.32 - Procedure Code (CNE) O S17.4.1.14 | 0088 - Procedure Code
 
     scd_33 : list[CX] | None
-        SCD.33 (opt, rep) - Patient Identifier List (CX) S17.7.4.33
+        SCD.33 - Patient Identifier List (CX) O rep S17.7.4.33
 
     scd_34 : XCN | None
-        SCD.34 (opt) - Attending Doctor (XCN) S17.7.4.34 | 0010 - Physician ID
+        SCD.34 - Attending Doctor (XCN) O S17.7.4.34 | 0010 - Physician ID
 
     scd_35 : SN | None
-        SCD.35 (opt) - Dilution Factor (SN) S13.4.3.29
+        SCD.35 - Dilution Factor (SN) O S13.4.3.29
 
     scd_36 : CQ | None
-        SCD.36 (opt) - Fill Time (CQ) S17.7.4.36
+        SCD.36 - Fill Time (CQ) O S17.7.4.36
 
     scd_37 : CQ | None
-        SCD.37 (opt) - Inlet Temperature (CQ) S17.7.4.37
+        SCD.37 - Inlet Temperature (CQ) O S17.7.4.37
     """
 
     scd_1: Optional[str] = Field(
@@ -145,7 +145,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.1",
         title="Cycle Start Time",
-        description="Item #2104",
+        description="O | Item #02104 | LEN:16",
     )
 
     scd_2: Optional[str] = Field(
@@ -157,7 +157,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.2",
         title="Cycle Count",
-        description="Item #2105",
+        description="O | Item #02105 | LEN:16",
     )
 
     scd_3: Optional[CQ] = Field(
@@ -169,7 +169,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.3",
         title="Temp Max",
-        description="Item #2106",
+        description="O | Item #02106",
     )
 
     scd_4: Optional[CQ] = Field(
@@ -181,7 +181,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.4",
         title="Temp Min",
-        description="Item #2107",
+        description="O | Item #02107",
     )
 
     scd_5: Optional[str] = Field(
@@ -193,7 +193,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.5",
         title="Load Number",
-        description="Item #2108",
+        description="O | Item #02108 | LEN:16",
     )
 
     scd_6: Optional[CQ] = Field(
@@ -205,7 +205,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.6",
         title="Condition Time",
-        description="Item #2109",
+        description="O | Item #02109",
     )
 
     scd_7: Optional[CQ] = Field(
@@ -217,7 +217,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.7",
         title="Sterilize Time",
-        description="Item #2110",
+        description="O | Item #02110",
     )
 
     scd_8: Optional[CQ] = Field(
@@ -229,7 +229,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.8",
         title="Exhaust Time",
-        description="Item #2111",
+        description="O | Item #02111",
     )
 
     scd_9: Optional[CQ] = Field(
@@ -241,7 +241,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.9",
         title="Total Cycle Time",
-        description="Item #2112",
+        description="O | Item #02112",
     )
 
     scd_10: Optional[CWE] = Field(
@@ -253,7 +253,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.10",
         title="Device Status",
-        description="Item #2113 | Table HL70682",
+        description="O | Item #02113 | Table 0682 - Device Status",
     )
 
     scd_11: Optional[str] = Field(
@@ -265,7 +265,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.11",
         title="Cycle Start Date/Time",
-        description="Item #2114",
+        description="O | Item #02114 | LEN:24",
     )
 
     scd_12: Optional[CQ] = Field(
@@ -277,7 +277,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.12",
         title="Dry Time",
-        description="Item #2115",
+        description="O | Item #02115",
     )
 
     scd_13: Optional[CQ] = Field(
@@ -289,7 +289,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.13",
         title="Leak Rate",
-        description="Item #2116",
+        description="O | Item #02116",
     )
 
     scd_14: Optional[CQ] = Field(
@@ -301,7 +301,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.14",
         title="Control Temperature",
-        description="Item #2117",
+        description="O | Item #02117",
     )
 
     scd_15: Optional[CQ] = Field(
@@ -313,7 +313,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.15",
         title="Sterilizer Temperature",
-        description="Item #2118",
+        description="O | Item #02118",
     )
 
     scd_16: Optional[str] = Field(
@@ -325,7 +325,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.16",
         title="Cycle Complete Time",
-        description="Item #2119",
+        description="O | Item #02119 | LEN:16",
     )
 
     scd_17: Optional[CQ] = Field(
@@ -337,7 +337,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.17",
         title="Under Temperature",
-        description="Item #2120",
+        description="O | Item #02120",
     )
 
     scd_18: Optional[CQ] = Field(
@@ -349,7 +349,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.18",
         title="Over Temperature",
-        description="Item #2121",
+        description="O | Item #02121",
     )
 
     scd_19: Optional[CNE] = Field(
@@ -361,7 +361,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.19",
         title="Abort Cycle",
-        description="Item #2122 | Table HL70532",
+        description="O | Item #02122 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_20: Optional[CNE] = Field(
@@ -373,7 +373,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.20",
         title="Alarm",
-        description="Item #2123 | Table HL70532",
+        description="O | Item #02123 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_21: Optional[CNE] = Field(
@@ -385,7 +385,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.21",
         title="Long in Charge Phase",
-        description="Item #2124 | Table HL70532",
+        description="O | Item #02124 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_22: Optional[CNE] = Field(
@@ -397,7 +397,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.22",
         title="Long in Exhaust Phase",
-        description="Item #2125 | Table HL70532",
+        description="O | Item #02125 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_23: Optional[CNE] = Field(
@@ -409,7 +409,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.23",
         title="Long in Fast Exhaust Phase",
-        description="Item #2126 | Table HL70532",
+        description="O | Item #02126 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_24: Optional[CNE] = Field(
@@ -421,7 +421,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.24",
         title="Reset",
-        description="Item #2127 | Table HL70532",
+        description="O | Item #02127 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_25: Optional[XCN] = Field(
@@ -433,7 +433,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.25",
         title="Operator - Unload",
-        description="Item #2128",
+        description="O | Item #02128",
     )
 
     scd_26: Optional[CNE] = Field(
@@ -445,7 +445,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.26",
         title="Door Open",
-        description="Item #2129 | Table HL70532",
+        description="O | Item #02129 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_27: Optional[CNE] = Field(
@@ -457,7 +457,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.27",
         title="Reading Failure",
-        description="Item #2130 | Table HL70532",
+        description="O | Item #02130 | Table 0532 - Expanded yes/no indicator",
     )
 
     scd_28: Optional[CWE] = Field(
@@ -469,7 +469,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.28",
         title="Cycle Type",
-        description="Item #2131 | Table HL70702",
+        description="O | Item #02131 | Table 0702 - Cycle Type",
     )
 
     scd_29: Optional[CQ] = Field(
@@ -481,7 +481,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.29",
         title="Thermal Rinse Time",
-        description="Item #2132",
+        description="O | Item #02132",
     )
 
     scd_30: Optional[CQ] = Field(
@@ -493,7 +493,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.30",
         title="Wash Time",
-        description="Item #2133",
+        description="O | Item #02133",
     )
 
     scd_31: Optional[CQ] = Field(
@@ -505,7 +505,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.31",
         title="Injection Rate",
-        description="Item #2134",
+        description="O | Item #02134",
     )
 
     scd_32: Optional[CNE] = Field(
@@ -517,7 +517,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.32",
         title="Procedure Code",
-        description="Item #393 | Table HL70088",
+        description="O | Item #00393 | Table 0088 - Procedure Code",
     )
 
     scd_33: Optional[List[CX]] = Field(
@@ -529,7 +529,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.33",
         title="Patient Identifier List",
-        description="Item #106",
+        description="O | Item #00106",
     )
 
     scd_34: Optional[XCN] = Field(
@@ -541,7 +541,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.34",
         title="Attending Doctor",
-        description="Item #137 | Table HL70010",
+        description="O | Item #00137 | Table 0010 - Physician ID",
     )
 
     scd_35: Optional[SN] = Field(
@@ -553,7 +553,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.35",
         title="Dilution Factor",
-        description="Item #1356",
+        description="O | Item #01356",
     )
 
     scd_36: Optional[CQ] = Field(
@@ -565,7 +565,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.36",
         title="Fill Time",
-        description="Item #2139",
+        description="O | Item #02139",
     )
 
     scd_37: Optional[CQ] = Field(
@@ -577,7 +577,7 @@ class SCD(HL7Model):
         ),
         serialization_alias="SCD.37",
         title="Inlet Temperature",
-        description="Item #2140",
+        description="O | Item #02140",
     )
 
     @field_validator("scd_1", "scd_16", mode='before')

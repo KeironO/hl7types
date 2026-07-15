@@ -21,28 +21,28 @@ class SCP(HL7Model):
     Attributes
     ----------
     scp_1 : str | None
-        SCP.1 (opt) - Number Of Decontamination/Sterilization Devices (NM) S17.7.1.1
+        SCP.1 - Number Of Decontamination/Sterilization Devices (NM) O S17.7.1.1
 
     scp_2 : CWE | None
-        SCP.2 (opt) - Labor Calculation Type (CWE) S17.7.1.2 | 0651 - Labor Calculation Type
+        SCP.2 - Labor Calculation Type (CWE) O S17.7.1.2 | 0651 - Labor Calculation Type
 
     scp_3 : CWE | None
-        SCP.3 (opt) - Date Format (CWE) S17.7.1.3 | 0653 - Date Format
+        SCP.3 - Date Format (CWE) O S17.7.1.3 | 0653 - Date Format
 
     scp_4 : EI | None
-        SCP.4 (opt) - Device Number (EI) S17.7.1.4
+        SCP.4 - Device Number (EI) O S17.7.1.4
 
     scp_5 : str | None
-        SCP.5 (opt) - Device Name (ST) S17.7.1.5
+        SCP.5 - Device Name (ST) O S17.7.1.5
 
     scp_6 : str | None
-        SCP.6 (opt) - Device Model Name (ST) S17.7.1.6
+        SCP.6 - Device Model Name (ST) O S17.7.1.6
 
     scp_7 : CWE | None
-        SCP.7 (opt) - Device Type (CWE) S17.7.1.7 | 0657 - Device Type
+        SCP.7 - Device Type (CWE) O S17.7.1.7 | 0657 - Device Type
 
     scp_8 : CWE | None
-        SCP.8 (opt) - Lot Control (CWE) S17.7.1.8 | 0659 - Lot Control
+        SCP.8 - Lot Control (CWE) O S17.7.1.8 | 0659 - Lot Control
     """
 
     scp_1: Optional[str] = Field(
@@ -54,7 +54,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.1",
         title="Number Of Decontamination/Sterilization Devices",
-        description="Item #2087",
+        description="O | Item #02087 | LEN:2",
     )
 
     scp_2: Optional[CWE] = Field(
@@ -66,7 +66,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.2",
         title="Labor Calculation Type",
-        description="Item #2088 | Table HL70651",
+        description="O | Item #02088 | Table 0651 - Labor Calculation Type",
     )
 
     scp_3: Optional[CWE] = Field(
@@ -78,7 +78,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.3",
         title="Date Format",
-        description="Item #2089 | Table HL70653",
+        description="O | Item #02089 | Table 0653 - Date Format",
     )
 
     scp_4: Optional[EI] = Field(
@@ -90,7 +90,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.4",
         title="Device Number",
-        description="Item #2090",
+        description="O | Item #02090",
     )
 
     scp_5: Optional[str] = Field(
@@ -102,7 +102,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.5",
         title="Device Name",
-        description="Item #2279",
+        description="O | Item #02279 | LEN:999",
     )
 
     scp_6: Optional[str] = Field(
@@ -114,7 +114,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.6",
         title="Device Model Name",
-        description="Item #2091",
+        description="O | Item #02091 | LEN:2",
     )
 
     scp_7: Optional[CWE] = Field(
@@ -126,7 +126,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.7",
         title="Device Type",
-        description="Item #2092 | Table HL70657",
+        description="O | Item #02092 | Table 0657 - Device Type",
     )
 
     scp_8: Optional[CWE] = Field(
@@ -138,7 +138,7 @@ class SCP(HL7Model):
         ),
         serialization_alias="SCP.8",
         title="Lot Control",
-        description="Item #2093 | Table HL70659",
+        description="O | Item #02093 | Table 0659 - Lot Control",
     )
 
     @field_validator("scp_1", mode='before')

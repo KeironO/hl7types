@@ -18,19 +18,19 @@ class MSA(HL7Model):
     Attributes
     ----------
     msa_1 : str
-        MSA.1 (req) - Acknowledgment Code (ID) S2.14.8.1 | 0008 - Acknowledgment Code
+        MSA.1 - Acknowledgment Code (ID) R S2.14.8.1 | 0008 - Acknowledgment Code
 
     msa_2 : str
-        MSA.2 (req) - Message Control ID (ST) S2.14.8.2
+        MSA.2 - Message Control ID (ST) R S2.14.8.2
 
     msa_4 : str | None
-        MSA.4 (opt) - Expected Sequence Number (NM) S2.14.8.4
+        MSA.4 - Expected Sequence Number (NM) O S2.14.8.4
 
     msa_7 : str | None
-        MSA.7 (opt) - Message Waiting Number (NM) S2.14.8.7
+        MSA.7 - Message Waiting Number (NM) O S2.14.8.7
 
     msa_8 : str | None
-        MSA.8 (opt) - Message Waiting Priority (ID) S2.14.8.8 | 0520 - Message Waiting Priority
+        MSA.8 - Message Waiting Priority (ID) O S2.14.8.8 | 0520 - Message Waiting Priority
     """
 
     msa_1: str = Field(
@@ -41,7 +41,9 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.1",
         title="Acknowledgment Code",
-        description="Item #18 | Table HL70008",
+        description=(
+            "R | Item #00018 | Table 0008 - Acknowledgment Code | LEN:2"
+        ),
     )
 
     msa_2: str = Field(
@@ -52,7 +54,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.2",
         title="Message Control ID",
-        description="Item #10",
+        description="R | Item #00010 | LEN:199",
     )
 
     msa_4: Optional[str] = Field(
@@ -64,7 +66,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.4",
         title="Expected Sequence Number",
-        description="Item #21",
+        description="O | Item #00021",
     )
 
     msa_7: Optional[str] = Field(
@@ -76,7 +78,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.7",
         title="Message Waiting Number",
-        description="Item #1827",
+        description="O | Item #01827",
     )
 
     msa_8: Optional[str] = Field(
@@ -88,7 +90,9 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.8",
         title="Message Waiting Priority",
-        description="Item #1828 | Table HL70520",
+        description=(
+            "O | Item #01828 | Table 0520 - Message Waiting Priority | LEN:1"
+        ),
     )
 
     @field_validator("msa_4", "msa_7", mode='before')

@@ -22,40 +22,40 @@ class AIL(HL7Model):
     Attributes
     ----------
     ail_1 : str
-        AIL.1 (req) - Set ID - AIL (SI) S10.6.6.1
+        AIL.1 - Set ID - AIL (SI) R S10.6.6.1
 
     ail_2 : str | None
-        AIL.2 (opt) - Segment Action Code (ID) S10.6.3.2 | 0206 - Segment action code
+        AIL.2 - Segment Action Code (ID) C S10.6.3.2 | 0206 - Segment action code
 
     ail_3 : list[PL] | None
-        AIL.3 (opt, rep) - Location Resource ID (PL) S10.6.6.3
+        AIL.3 - Location Resource ID (PL) C rep S10.6.6.3
 
     ail_4 : CWE | None
-        AIL.4 (opt) - Location Type - AIL (CWE) S10.6.6.4 | 0305 - Person Location Type
+        AIL.4 - Location Type - AIL (CWE) C S10.6.6.4 | 0305 - Person Location Type
 
     ail_5 : CWE | None
-        AIL.5 (opt) - Location Group (CWE) S10.6.6.5
+        AIL.5 - Location Group (CWE) O S10.6.6.5
 
     ail_6 : str | None
-        AIL.6 (opt) - Start Date/Time (DTM) S10.6.4.4
+        AIL.6 - Start Date/Time (DTM) C S10.6.4.4
 
     ail_7 : str | None
-        AIL.7 (opt) - Start Date/Time Offset (NM) S10.6.4.5
+        AIL.7 - Start Date/Time Offset (NM) C S10.6.4.5
 
     ail_8 : CNE | None
-        AIL.8 (opt) - Start Date/Time Offset Units (CNE) S10.6.4.6
+        AIL.8 - Start Date/Time Offset Units (CNE) C S10.6.4.6
 
     ail_9 : str | None
-        AIL.9 (opt) - Duration (NM) S10.6.4.7
+        AIL.9 - Duration (NM) O S10.6.4.7
 
     ail_10 : CNE | None
-        AIL.10 (opt) - Duration Units (CNE) S10.6.4.8
+        AIL.10 - Duration Units (CNE) O S10.6.4.8
 
     ail_11 : CWE | None
-        AIL.11 (opt) - Allow Substitution Code (CWE) S10.6.4.9 | 0279 - Allow Substitution Codes
+        AIL.11 - Allow Substitution Code (CWE) C S10.6.4.9 | 0279 - Allow Substitution Codes
 
     ail_12 : CWE | None
-        AIL.12 (opt) - Filler Status Code (CWE) S10.6.2.25 | 0278 - Filler status codes
+        AIL.12 - Filler Status Code (CWE) C S10.6.2.25 | 0278 - Filler status codes
     """
 
     ail_1: str = Field(
@@ -66,7 +66,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.1",
         title="Set ID - AIL",
-        description="Item #902",
+        description="R | Item #00902 | LEN:4",
     )
 
     ail_2: Optional[str] = Field(
@@ -78,7 +78,9 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description=(
+            "C | Item #00763 | Table 0206 - Segment action code | LEN:1"
+        ),
     )
 
     ail_3: Optional[List[PL]] = Field(
@@ -90,7 +92,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.3",
         title="Location Resource ID",
-        description="Item #903",
+        description="C | Item #00903",
     )
 
     ail_4: Optional[CWE] = Field(
@@ -102,7 +104,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.4",
         title="Location Type - AIL",
-        description="Item #904 | Table HL70305",
+        description="C | Item #00904 | Table 0305 - Person Location Type",
     )
 
     ail_5: Optional[CWE] = Field(
@@ -114,7 +116,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.5",
         title="Location Group",
-        description="Item #905",
+        description="O | Item #00905",
     )
 
     ail_6: Optional[str] = Field(
@@ -126,7 +128,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.6",
         title="Start Date/Time",
-        description="Item #1202",
+        description="C | Item #01202",
     )
 
     ail_7: Optional[str] = Field(
@@ -138,7 +140,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.7",
         title="Start Date/Time Offset",
-        description="Item #891",
+        description="C | Item #00891",
     )
 
     ail_8: Optional[CNE] = Field(
@@ -150,7 +152,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.8",
         title="Start Date/Time Offset Units",
-        description="Item #892",
+        description="C | Item #00892",
     )
 
     ail_9: Optional[str] = Field(
@@ -162,7 +164,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.9",
         title="Duration",
-        description="Item #893",
+        description="O | Item #00893",
     )
 
     ail_10: Optional[CNE] = Field(
@@ -174,7 +176,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.10",
         title="Duration Units",
-        description="Item #894",
+        description="O | Item #00894",
     )
 
     ail_11: Optional[CWE] = Field(
@@ -186,7 +188,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.11",
         title="Allow Substitution Code",
-        description="Item #895 | Table HL70279",
+        description="C | Item #00895 | Table 0279 - Allow Substitution Codes",
     )
 
     ail_12: Optional[CWE] = Field(
@@ -198,7 +200,7 @@ class AIL(HL7Model):
         ),
         serialization_alias="AIL.12",
         title="Filler Status Code",
-        description="Item #889 | Table HL70278",
+        description="C | Item #00889 | Table 0278 - Filler status codes",
     )
 
     @field_validator("ail_1", mode='before')

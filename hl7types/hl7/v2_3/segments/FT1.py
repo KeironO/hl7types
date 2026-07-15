@@ -25,79 +25,79 @@ class FT1(HL7Model):
     Attributes
     ----------
     ft1_1 : str | None
-        FT1.1 (opt) - Set ID - Financial Transaction (SI) S6.4.1.1
+        FT1.1 - Set ID - Financial Transaction (SI) O S6.4.1.1
 
     ft1_2 : str | None
-        FT1.2 (opt) - Transaction ID (ST) S6.4.1.2
+        FT1.2 - Transaction ID (ST) O S6.4.1.2
 
     ft1_3 : str | None
-        FT1.3 (opt) - Transaction Batch ID (ST) S6.4.1.3
+        FT1.3 - Transaction Batch ID (ST) O S6.4.1.3
 
     ft1_4 : TS
-        FT1.4 (req) - Transaction Date (TS) S6.4.1.4
+        FT1.4 - Transaction Date (TS) R S6.4.1.4
 
     ft1_5 : TS | None
-        FT1.5 (opt) - Transaction Posting Date (TS) S6.4.1.5
+        FT1.5 - Transaction Posting Date (TS) O S6.4.1.5
 
     ft1_6 : str
-        FT1.6 (req) - Transaction Type (ID) S6.4.1.6 | 0017 - Transaction Type
+        FT1.6 - Transaction Type (ID) R S6.4.1.6 | 0017 - Transaction Type
 
     ft1_7 : CE
-        FT1.7 (req) - Transaction Code (CE) S6.4.1.7 | 0132 - Transaction Code
+        FT1.7 - Transaction Code (CE) R S6.4.1.7 | 0132 - Transaction Code
 
     ft1_8 : str | None
-        FT1.8 (opt) - Transaction Description (ST) S6.4.1.8
+        FT1.8 - Transaction Description (ST) O S6.4.1.8
 
     ft1_9 : str | None
-        FT1.9 (opt) - Transaction Description - alternate (ST) S6.4.1.9
+        FT1.9 - Transaction Description - alternate (ST) O S6.4.1.9
 
     ft1_10 : str | None
-        FT1.10 (opt) - Transaction Quantity (NM) S6.4.1.10
+        FT1.10 - Transaction Quantity (NM) O S6.4.1.10
 
     ft1_11 : CP | None
-        FT1.11 (opt) - Transaction Amount - Extended (CP) S6.4.1.11
+        FT1.11 - Transaction Amount - Extended (CP) O S6.4.1.11
 
     ft1_12 : CP | None
-        FT1.12 (opt) - Transaction Amount - Unit (CP) S6.4.1.12
+        FT1.12 - Transaction Amount - Unit (CP) O S6.4.1.12
 
     ft1_13 : CE | None
-        FT1.13 (opt) - Department Code (CE) S6.4.1.13 | 0049 - Department Code
+        FT1.13 - Department Code (CE) O S6.4.1.13 | 0049 - Department Code
 
     ft1_14 : CE | None
-        FT1.14 (opt) - Insurance Plan ID (CE) S6.4.1.14 | 0072 - Insurance Plan ID
+        FT1.14 - Insurance Plan ID (CE) O S6.4.1.14 | 0072 - Insurance Plan ID
 
     ft1_15 : CP | None
-        FT1.15 (opt) - Insurance Amount (CP) S6.4.1.15
+        FT1.15 - Insurance Amount (CP) O S6.4.1.15
 
     ft1_16 : PL | None
-        FT1.16 (opt) - Assigned Patient Location (PL) S3.3.3
+        FT1.16 - Assigned Patient Location (PL) O S3.3.3
 
     ft1_17 : str | None
-        FT1.17 (opt) - Fee Schedule (ID) S6.4.1.17 | 0024 - Fee Schedule
+        FT1.17 - Fee Schedule (ID) O S6.4.1.17 | 0024 - Fee Schedule
 
     ft1_18 : str | None
-        FT1.18 (opt) - Patient Type (ID) S3.3.3.17 | 0018 - Patient Type
+        FT1.18 - Patient Type (ID) O S3.3.3.17 | 0018 - Patient Type
 
     ft1_19 : list[CE] | None
-        FT1.19 (opt, rep) - Diagnosis Code (CE) S6.4.1.19 | 0051 - Diagnosis Code
+        FT1.19 - Diagnosis Code (CE) O rep S6.4.1.19 | 0051 - Diagnosis Code
 
     ft1_20 : XCN | None
-        FT1.20 (opt) - Performed By Code (XCN) S6.4.1.20 | 0084 - Performed By
+        FT1.20 - Performed By Code (XCN) O S6.4.1.20 | 0084 - Performed By
 
     ft1_21 : XCN | None
-        FT1.21 (opt) - Ordered By Code (XCN) S6.4.1.21
+        FT1.21 - Ordered By Code (XCN) O S6.4.1.21
 
     ft1_22 : str | None
-        FT1.22 (opt) - Unit Cost (NM) S6.4.1.22
+        FT1.22 - Unit Cost (NM) O S6.4.1.22
 
     ft1_23 : EI | None
-        FT1.23 (opt) - Filler Order Number (EI) S4.3.1
+        FT1.23 - Filler Order Number (EI) C S4.3.1
 
     ft1_24 : XCN | None
-        FT1.24 (opt) - Entered By Code (XCN) S6.4.1
+        FT1.24 - Entered By Code (XCN) O S6.4.1
 
     ft1_25 : CE | None
-        FT1.25 (opt) - Procedure Code (CE) S6.4.1 | 0088 - Procedure Code
+        FT1.25 - Procedure Code (CE) O S6.4.1 | 0088 - Procedure Code
     """
 
     ft1_1: Optional[str] = Field(
@@ -109,7 +109,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.1",
         title="Set ID - Financial Transaction",
-        description="Item #355",
+        description="O | Item #00355 | LEN:4",
     )
 
     ft1_2: Optional[str] = Field(
@@ -121,7 +121,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.2",
         title="Transaction ID",
-        description="Item #356",
+        description="O | Item #00356 | LEN:12",
     )
 
     ft1_3: Optional[str] = Field(
@@ -133,7 +133,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.3",
         title="Transaction Batch ID",
-        description="Item #357",
+        description="O | Item #00357 | LEN:10",
     )
 
     ft1_4: TS = Field(
@@ -144,7 +144,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.4",
         title="Transaction Date",
-        description="Item #358",
+        description="R | Item #00358",
     )
 
     ft1_5: Optional[TS] = Field(
@@ -156,7 +156,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.5",
         title="Transaction Posting Date",
-        description="Item #359",
+        description="O | Item #00359",
     )
 
     ft1_6: str = Field(
@@ -167,7 +167,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.6",
         title="Transaction Type",
-        description="Item #360 | Table HL70017",
+        description="R | Item #00360 | Table 0017 - Transaction Type | LEN:8",
     )
 
     ft1_7: CE = Field(
@@ -178,7 +178,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.7",
         title="Transaction Code",
-        description="Item #361 | Table HL70132",
+        description="R | Item #00361 | Table 0132 - Transaction Code",
     )
 
     ft1_8: Optional[str] = Field(
@@ -190,7 +190,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.8",
         title="Transaction Description",
-        description="Item #362",
+        description="O | Item #00362 | LEN:40",
     )
 
     ft1_9: Optional[str] = Field(
@@ -202,7 +202,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.9",
         title="Transaction Description - alternate",
-        description="Item #363",
+        description="O | Item #00363 | LEN:40",
     )
 
     ft1_10: Optional[str] = Field(
@@ -214,7 +214,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.10",
         title="Transaction Quantity",
-        description="Item #364",
+        description="O | Item #00364 | LEN:6",
     )
 
     ft1_11: Optional[CP] = Field(
@@ -226,7 +226,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.11",
         title="Transaction Amount - Extended",
-        description="Item #365",
+        description="O | Item #00365",
     )
 
     ft1_12: Optional[CP] = Field(
@@ -238,7 +238,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.12",
         title="Transaction Amount - Unit",
-        description="Item #366",
+        description="O | Item #00366",
     )
 
     ft1_13: Optional[CE] = Field(
@@ -250,7 +250,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.13",
         title="Department Code",
-        description="Item #367 | Table HL70049",
+        description="O | Item #00367 | Table 0049 - Department Code",
     )
 
     ft1_14: Optional[CE] = Field(
@@ -262,7 +262,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.14",
         title="Insurance Plan ID",
-        description="Item #368 | Table HL70072",
+        description="O | Item #00368 | Table 0072 - Insurance Plan ID",
     )
 
     ft1_15: Optional[CP] = Field(
@@ -274,7 +274,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.15",
         title="Insurance Amount",
-        description="Item #369",
+        description="O | Item #00369",
     )
 
     ft1_16: Optional[PL] = Field(
@@ -286,7 +286,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.16",
         title="Assigned Patient Location",
-        description="Item #133",
+        description="O | Item #00133",
     )
 
     ft1_17: Optional[str] = Field(
@@ -298,7 +298,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.17",
         title="Fee Schedule",
-        description="Item #370 | Table HL70024",
+        description="O | Item #00370 | Table 0024 - Fee Schedule | LEN:1",
     )
 
     ft1_18: Optional[str] = Field(
@@ -310,7 +310,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.18",
         title="Patient Type",
-        description="Item #148 | Table HL70018",
+        description="O | Item #00148 | Table 0018 - Patient Type | LEN:2",
     )
 
     ft1_19: Optional[List[CE]] = Field(
@@ -322,7 +322,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.19",
         title="Diagnosis Code",
-        description="Item #371 | Table HL70051",
+        description="O | Item #00371 | Table 0051 - Diagnosis Code",
     )
 
     ft1_20: Optional[XCN] = Field(
@@ -334,7 +334,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.20",
         title="Performed By Code",
-        description="Item #372 | Table HL70084",
+        description="O | Item #00372 | Table 0084 - Performed By",
     )
 
     ft1_21: Optional[XCN] = Field(
@@ -346,7 +346,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.21",
         title="Ordered By Code",
-        description="Item #373",
+        description="O | Item #00373",
     )
 
     ft1_22: Optional[str] = Field(
@@ -358,7 +358,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.22",
         title="Unit Cost",
-        description="Item #374",
+        description="O | Item #00374 | LEN:12",
     )
 
     ft1_23: Optional[EI] = Field(
@@ -370,7 +370,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.23",
         title="Filler Order Number",
-        description="Item #217",
+        description="C | Item #00217",
     )
 
     ft1_24: Optional[XCN] = Field(
@@ -382,7 +382,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.24",
         title="Entered By Code",
-        description="Item #765",
+        description="O | Item #00765",
     )
 
     ft1_25: Optional[CE] = Field(
@@ -394,7 +394,7 @@ class FT1(HL7Model):
         ),
         serialization_alias="FT1.25",
         title="Procedure Code",
-        description="Item #393 | Table HL70088",
+        description="O | Item #00393 | Table 0088 - Procedure Code",
     )
 
     @field_validator("ft1_1", mode='before')

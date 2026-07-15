@@ -21,40 +21,40 @@ class RXA(HL7Model):
     Attributes
     ----------
     rxa_1 : str
-        RXA.1 (req) - Give Sub-ID Counter (NM) S4.8.14.1
+        RXA.1 - Give Sub-ID Counter (NM) R S4.8.14.1
 
     rxa_2 : str
-        RXA.2 (req) - Administration Sub-ID Counter (NM) S4.8.14.2
+        RXA.2 - Administration Sub-ID Counter (NM) R S4.8.14.2
 
     rxa_3 : TS
-        RXA.3 (req) - Date / time start of administration (TS) S4.8.14.3
+        RXA.3 - Date / time start of administration (TS) R S4.8.14.3
 
     rxa_4 : TS
-        RXA.4 (req) - Date / time end of administration (TS) S4.8.14.4
+        RXA.4 - Date / time end of administration (TS) R S4.8.14.4
 
     rxa_5 : CE
-        RXA.5 (req) - Administered Code (CE) S4.8.14.5
+        RXA.5 - Administered Code (CE) R S4.8.14.5
 
     rxa_6 : str
-        RXA.6 (req) - Administered Amount (NM) S4.8.14.6
+        RXA.6 - Administered Amount (NM) R S4.8.14.6
 
     rxa_7 : CE | None
-        RXA.7 (opt) - Administered Units (CE) S4.8.14.7
+        RXA.7 - Administered Units (CE) C S4.8.14.7
 
     rxa_8 : CE | None
-        RXA.8 (opt) - Administered Dosage Form (CE) S4.8.14.8
+        RXA.8 - Administered Dosage Form (CE) NA S4.8.14.8
 
     rxa_9 : str | None
-        RXA.9 (opt) - Administration Notes (ST) S4.8.14.9
+        RXA.9 - Administration Notes (ST) C S4.8.14.9
 
     rxa_10 : str | None
-        RXA.10 (opt) - Administering Provider (CN) S4.8.14.10
+        RXA.10 - Administering Provider (CN) NA S4.8.14.10
 
     rxa_11 : str | None
-        RXA.11 (opt) - Administered-at Location (CM) S4.8.14.11
+        RXA.11 - Administered-at Location (CM) C S4.8.14.11
 
     rxa_12 : str | None
-        RXA.12 (opt) - Administered Per (Time Unit) (ST) S4.8.14.12
+        RXA.12 - Administered Per (Time Unit) (ST) C S4.8.14.12
     """
 
     rxa_1: str = Field(
@@ -65,7 +65,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.1",
         title="Give Sub-ID Counter",
-        description="Item #342",
+        description="R | Item #00342 | LEN:4",
     )
 
     rxa_2: str = Field(
@@ -76,7 +76,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.2",
         title="Administration Sub-ID Counter",
-        description="Item #344",
+        description="R | Item #00344 | LEN:4",
     )
 
     rxa_3: TS = Field(
@@ -87,7 +87,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.3",
         title="Date / time start of administration",
-        description="Item #345",
+        description="R | Item #00345",
     )
 
     rxa_4: TS = Field(
@@ -98,7 +98,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.4",
         title="Date / time end of administration",
-        description="Item #346",
+        description="R | Item #00346",
     )
 
     rxa_5: CE = Field(
@@ -109,7 +109,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.5",
         title="Administered Code",
-        description="Item #347",
+        description="R | Item #00347",
     )
 
     rxa_6: str = Field(
@@ -120,7 +120,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.6",
         title="Administered Amount",
-        description="Item #348",
+        description="R | Item #00348 | LEN:20",
     )
 
     rxa_7: Optional[CE] = Field(
@@ -132,7 +132,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.7",
         title="Administered Units",
-        description="Item #349",
+        description="C | Item #00349",
     )
 
     rxa_8: Optional[CE] = Field(
@@ -144,7 +144,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.8",
         title="Administered Dosage Form",
-        description="Item #350",
+        description="NA | Item #00350",
     )
 
     rxa_9: Optional[str] = Field(
@@ -156,7 +156,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.9",
         title="Administration Notes",
-        description="Item #351",
+        description="C | Item #00351 | LEN:200",
     )
 
     rxa_10: Optional[str] = Field(
@@ -168,7 +168,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.10",
         title="Administering Provider",
-        description="Item #352",
+        description="NA | Item #00352",
     )
 
     rxa_11: Optional[str] = Field(
@@ -180,7 +180,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.11",
         title="Administered-at Location",
-        description="Item #353",
+        description="C | Item #00353",
     )
 
     rxa_12: Optional[str] = Field(
@@ -192,7 +192,7 @@ class RXA(HL7Model):
         ),
         serialization_alias="RXA.12",
         title="Administered Per (Time Unit)",
-        description="Item #354",
+        description="C | Item #00354 | LEN:20",
     )
 
     @field_validator("rxa_1", "rxa_2", "rxa_6", mode='before')

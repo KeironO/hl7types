@@ -18,13 +18,13 @@ class NTE(HL7Model):
     Attributes
     ----------
     nte_1 : str | None
-        NTE.1 (opt) - Set ID - Notes and Comments (SI) S2.10.15.1
+        NTE.1 - Set ID - Notes and Comments (SI) NA S2.10.15.1
 
     nte_2 : str | None
-        NTE.2 (opt) - Source of Comment (ID) S2.10.15.2 | 0105 - SOURCE OF COMMENT
+        NTE.2 - Source of Comment (ID) NA S2.10.15.2 | 0105 - SOURCE OF COMMENT
 
     nte_3 : list[str] | None
-        NTE.3 (opt, rep) - Comment (FT) S2.10.15.3
+        NTE.3 - Comment (FT) NA rep S2.10.15.3
     """
 
     nte_1: Optional[str] = Field(
@@ -36,7 +36,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.1",
         title="Set ID - Notes and Comments",
-        description="Item #96",
+        description="NA | Item #00096 | LEN:4",
     )
 
     nte_2: Optional[str] = Field(
@@ -48,7 +48,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.2",
         title="Source of Comment",
-        description="Item #97 | Table HL70105",
+        description="NA | Item #00097 | Table 0105 - SOURCE OF COMMENT | LEN:8",
     )
 
     nte_3: Optional[List[str]] = Field(
@@ -60,7 +60,7 @@ class NTE(HL7Model):
         ),
         serialization_alias="NTE.3",
         title="Comment",
-        description="Item #98",
+        description="NA | Item #00098",
     )
 
     @field_validator("nte_1", mode='before')

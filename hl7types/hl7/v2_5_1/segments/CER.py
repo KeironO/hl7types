@@ -25,97 +25,97 @@ class CER(HL7Model):
     Attributes
     ----------
     cer_1 : str
-        CER.1 (req) - Set ID - CER (SI) S15.4.2.1
+        CER.1 - Set ID - CER (SI) R S15.4.2.1
 
     cer_2 : str | None
-        CER.2 (opt) - Serial Number (ST) S15.4.2.2
+        CER.2 - Serial Number (ST) O S15.4.2.2
 
     cer_3 : str | None
-        CER.3 (opt) - Version (ST) S15.4.2.3
+        CER.3 - Version (ST) O S15.4.2.3
 
     cer_4 : XON | None
-        CER.4 (opt) - Granting Authority (XON) S15.4.2.4
+        CER.4 - Granting Authority (XON) O S15.4.2.4
 
     cer_5 : XCN | None
-        CER.5 (opt) - Issuing Authority (XCN) S15.4.2.5
+        CER.5 - Issuing Authority (XCN) O S15.4.2.5
 
     cer_6 : ED | None
-        CER.6 (opt) - Signature of Issuing Authority (ED) S15.4.2.6
+        CER.6 - Signature of Issuing Authority (ED) O S15.4.2.6
 
     cer_7 : str | None
-        CER.7 (opt) - Granting Country (ID) S15.4.2.7 | 0399 - Country code
+        CER.7 - Granting Country (ID) O S15.4.2.7 | 0399 - Country code
 
     cer_8 : CWE | None
-        CER.8 (opt) - Granting State/Province (CWE) S15.4.2.8 | 0347 - State/province
+        CER.8 - Granting State/Province (CWE) O S15.4.2.8 | 0347 - State/province
 
     cer_9 : CWE | None
-        CER.9 (opt) - Granting County/Parish (CWE) S15.4.2.9 | 0289 - County/parish
+        CER.9 - Granting County/Parish (CWE) O S15.4.2.9 | 0289 - County/parish
 
     cer_10 : CWE | None
-        CER.10 (opt) - Certificate Type (CWE) S15.4.2.10
+        CER.10 - Certificate Type (CWE) O S15.4.2.10
 
     cer_11 : CWE | None
-        CER.11 (opt) - Certificate Domain (CWE) S15.4.2.11
+        CER.11 - Certificate Domain (CWE) O S15.4.2.11
 
     cer_12 : str | None
-        CER.12 (opt) - Subject ID (ID) S15.4.2.12
+        CER.12 - Subject ID (ID) C S15.4.2.12
 
     cer_13 : str
-        CER.13 (req) - Subject Name (ST) S15.4.2.13
+        CER.13 - Subject Name (ST) R S15.4.2.13
 
     cer_14 : list[CWE] | None
-        CER.14 (opt, rep) - Subject Directory Attribute Extension (Health Professional Data) (CWE) S15.4.2.14
+        CER.14 - Subject Directory Attribute Extension (Health Professional Data) (CWE) O rep S15.4.2.14
 
     cer_15 : CWE | None
-        CER.15 (opt) - Subject Public Key Info (CWE) S15.4.2.15
+        CER.15 - Subject Public Key Info (CWE) O S15.4.2.15
 
     cer_16 : CWE | None
-        CER.16 (opt) - Authority Key Identifier (CWE) S15.4.2.16
+        CER.16 - Authority Key Identifier (CWE) O S15.4.2.16
 
     cer_17 : str | None
-        CER.17 (opt) - Basic Constraint (ID) S15.4.2.17 | 0136 - Yes/no indicator
+        CER.17 - Basic Constraint (ID) O S15.4.2.17 | 0136 - Yes/no indicator
 
     cer_18 : list[CWE] | None
-        CER.18 (opt, rep) - CRL Distribution Point (CWE) S15.4.2.18
+        CER.18 - CRL Distribution Point (CWE) O rep S15.4.2.18
 
     cer_19 : str | None
-        CER.19 (opt) - Jurisdiction Country (ID) S15.4.2.19 | 0399 - Country code
+        CER.19 - Jurisdiction Country (ID) O S15.4.2.19 | 0399 - Country code
 
     cer_20 : CWE | None
-        CER.20 (opt) - Jurisdiction State/Province (CWE) S15.4.2.20 | 0347 - State/province
+        CER.20 - Jurisdiction State/Province (CWE) O S15.4.2.20 | 0347 - State/province
 
     cer_21 : CWE | None
-        CER.21 (opt) - Jurisdiction County/Parish (CWE) S15.4.2.21 | 0289 - County/parish
+        CER.21 - Jurisdiction County/Parish (CWE) O S15.4.2.21 | 0289 - County/parish
 
     cer_22 : list[CWE] | None
-        CER.22 (opt, rep) - Jurisdiction Breadth (CWE) S15.4.2.22 | 0547 - Jurisdictional Breadth
+        CER.22 - Jurisdiction Breadth (CWE) O rep S15.4.2.22 | 0547 - Jurisdictional Breadth
 
     cer_23 : TS | None
-        CER.23 (opt) - Granting Date (TS) S15.4.2.23
+        CER.23 - Granting Date (TS) O S15.4.2.23
 
     cer_24 : TS | None
-        CER.24 (opt) - Issuing Date (TS) S15.4.2.24
+        CER.24 - Issuing Date (TS) O S15.4.2.24
 
     cer_25 : TS | None
-        CER.25 (opt) - Activation Date (TS) S15.4.2.25
+        CER.25 - Activation Date (TS) O S15.4.2.25
 
     cer_26 : TS | None
-        CER.26 (opt) - Inactivation Date (TS) S15.4.2.26
+        CER.26 - Inactivation Date (TS) O S15.4.2.26
 
     cer_27 : TS | None
-        CER.27 (opt) - Expiration Date (TS) S15.4.2.27
+        CER.27 - Expiration Date (TS) O S15.4.2.27
 
     cer_28 : TS | None
-        CER.28 (opt) - Renewal Date (TS) S15.4.2.28
+        CER.28 - Renewal Date (TS) O S15.4.2.28
 
     cer_29 : TS | None
-        CER.29 (opt) - Revocation Date (TS) S15.4.2.29
+        CER.29 - Revocation Date (TS) O S15.4.2.29
 
     cer_30 : CE | None
-        CER.30 (opt) - Revocation Reason Code (CE) S15.4.2.30
+        CER.30 - Revocation Reason Code (CE) O S15.4.2.30
 
     cer_31 : CWE | None
-        CER.31 (opt) - Certificate Status (CWE) S15.4.2.31 | 0536 - Certificate Status
+        CER.31 - Certificate Status (CWE) O S15.4.2.31 | 0536 - Certificate Status
     """
 
     cer_1: str = Field(
@@ -126,7 +126,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.1",
         title="Set ID - CER",
-        description="Item #1856",
+        description="R | Item #01856 | LEN:4",
     )
 
     cer_2: Optional[str] = Field(
@@ -138,7 +138,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.2",
         title="Serial Number",
-        description="Item #1857",
+        description="O | Item #01857 | LEN:80",
     )
 
     cer_3: Optional[str] = Field(
@@ -150,7 +150,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.3",
         title="Version",
-        description="Item #1858",
+        description="O | Item #01858 | LEN:80",
     )
 
     cer_4: Optional[XON] = Field(
@@ -162,7 +162,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.4",
         title="Granting Authority",
-        description="Item #1859",
+        description="O | Item #01859",
     )
 
     cer_5: Optional[XCN] = Field(
@@ -174,7 +174,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.5",
         title="Issuing Authority",
-        description="Item #1860",
+        description="O | Item #01860",
     )
 
     cer_6: Optional[ED] = Field(
@@ -186,7 +186,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.6",
         title="Signature of Issuing Authority",
-        description="Item #1861",
+        description="O | Item #01861",
     )
 
     cer_7: Optional[str] = Field(
@@ -198,7 +198,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.7",
         title="Granting Country",
-        description="Item #1862 | Table HL70399",
+        description="O | Item #01862 | Table 0399 - Country code | LEN:3",
     )
 
     cer_8: Optional[CWE] = Field(
@@ -210,7 +210,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.8",
         title="Granting State/Province",
-        description="Item #1863 | Table HL70347",
+        description="O | Item #01863 | Table 0347 - State/province",
     )
 
     cer_9: Optional[CWE] = Field(
@@ -222,7 +222,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.9",
         title="Granting County/Parish",
-        description="Item #1864 | Table HL70289",
+        description="O | Item #01864 | Table 0289 - County/parish",
     )
 
     cer_10: Optional[CWE] = Field(
@@ -234,7 +234,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.10",
         title="Certificate Type",
-        description="Item #1865",
+        description="O | Item #01865",
     )
 
     cer_11: Optional[CWE] = Field(
@@ -246,7 +246,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.11",
         title="Certificate Domain",
-        description="Item #1866",
+        description="O | Item #01866",
     )
 
     cer_12: Optional[str] = Field(
@@ -258,7 +258,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.12",
         title="Subject ID",
-        description="Item #1867",
+        description="C | Item #01867 | LEN:250",
     )
 
     cer_13: str = Field(
@@ -269,7 +269,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.13",
         title="Subject Name",
-        description="Item #1907",
+        description="R | Item #01907 | LEN:250",
     )
 
     cer_14: Optional[List[CWE]] = Field(
@@ -283,7 +283,7 @@ class CER(HL7Model):
         title=(
             "Subject Directory Attribute Extension (Health Professional Data)"
         ),
-        description="Item #1868",
+        description="O | Item #01868",
     )
 
     cer_15: Optional[CWE] = Field(
@@ -295,7 +295,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.15",
         title="Subject Public Key Info",
-        description="Item #1869",
+        description="O | Item #01869",
     )
 
     cer_16: Optional[CWE] = Field(
@@ -307,7 +307,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.16",
         title="Authority Key Identifier",
-        description="Item #1870",
+        description="O | Item #01870",
     )
 
     cer_17: Optional[str] = Field(
@@ -319,7 +319,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.17",
         title="Basic Constraint",
-        description="Item #1871 | Table HL70136",
+        description="O | Item #01871 | Table 0136 - Yes/no indicator | LEN:250",
     )
 
     cer_18: Optional[List[CWE]] = Field(
@@ -331,7 +331,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.18",
         title="CRL Distribution Point",
-        description="Item #1872",
+        description="O | Item #01872",
     )
 
     cer_19: Optional[str] = Field(
@@ -343,7 +343,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.19",
         title="Jurisdiction Country",
-        description="Item #1875 | Table HL70399",
+        description="O | Item #01875 | Table 0399 - Country code | LEN:3",
     )
 
     cer_20: Optional[CWE] = Field(
@@ -355,7 +355,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.20",
         title="Jurisdiction State/Province",
-        description="Item #1873 | Table HL70347",
+        description="O | Item #01873 | Table 0347 - State/province",
     )
 
     cer_21: Optional[CWE] = Field(
@@ -367,7 +367,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.21",
         title="Jurisdiction County/Parish",
-        description="Item #1874 | Table HL70289",
+        description="O | Item #01874 | Table 0289 - County/parish",
     )
 
     cer_22: Optional[List[CWE]] = Field(
@@ -379,7 +379,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.22",
         title="Jurisdiction Breadth",
-        description="Item #1895 | Table HL70547",
+        description="O | Item #01895 | Table 0547 - Jurisdictional Breadth",
     )
 
     cer_23: Optional[TS] = Field(
@@ -391,7 +391,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.23",
         title="Granting Date",
-        description="Item #1876",
+        description="O | Item #01876",
     )
 
     cer_24: Optional[TS] = Field(
@@ -403,7 +403,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.24",
         title="Issuing Date",
-        description="Item #1877",
+        description="O | Item #01877",
     )
 
     cer_25: Optional[TS] = Field(
@@ -415,7 +415,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.25",
         title="Activation Date",
-        description="Item #1878",
+        description="O | Item #01878",
     )
 
     cer_26: Optional[TS] = Field(
@@ -427,7 +427,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.26",
         title="Inactivation Date",
-        description="Item #1879",
+        description="O | Item #01879",
     )
 
     cer_27: Optional[TS] = Field(
@@ -439,7 +439,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.27",
         title="Expiration Date",
-        description="Item #1880",
+        description="O | Item #01880",
     )
 
     cer_28: Optional[TS] = Field(
@@ -451,7 +451,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.28",
         title="Renewal Date",
-        description="Item #1881",
+        description="O | Item #01881",
     )
 
     cer_29: Optional[TS] = Field(
@@ -463,7 +463,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.29",
         title="Revocation Date",
-        description="Item #1882",
+        description="O | Item #01882",
     )
 
     cer_30: Optional[CE] = Field(
@@ -475,7 +475,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.30",
         title="Revocation Reason Code",
-        description="Item #1883",
+        description="O | Item #01883",
     )
 
     cer_31: Optional[CWE] = Field(
@@ -487,7 +487,7 @@ class CER(HL7Model):
         ),
         serialization_alias="CER.31",
         title="Certificate Status",
-        description="Item #1884 | Table HL70536",
+        description="O | Item #01884 | Table 0536 - Certificate Status",
     )
 
     @field_validator("cer_1", mode='before')

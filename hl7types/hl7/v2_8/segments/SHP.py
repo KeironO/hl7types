@@ -21,37 +21,37 @@ class SHP(HL7Model):
     Attributes
     ----------
     shp_1 : EI
-        SHP.1 (req) - Shipment ID (EI) S7.18.2.1
+        SHP.1 - Shipment ID (EI) R S7.18.2.1
 
     shp_2 : list[EI] | None
-        SHP.2 (opt, rep) - Internal Shipment ID (EI) S7.18.2.2
+        SHP.2 - Internal Shipment ID (EI) O rep S7.18.2.2
 
     shp_3 : CWE | None
-        SHP.3 (opt) - Shipment Status (CWE) S7.18.2.3 | 0905 - Shipment Status
+        SHP.3 - Shipment Status (CWE) O S7.18.2.3 | 0905 - Shipment Status
 
     shp_4 : str
-        SHP.4 (req) - Shipment Status Date/Time (DTM) S7.18.2.4
+        SHP.4 - Shipment Status Date/Time (DTM) R S7.18.2.4
 
     shp_5 : str | None
-        SHP.5 (opt) - Shipment Status Reason (TX) S7.18.2.5
+        SHP.5 - Shipment Status Reason (TX) O S7.18.2.5
 
     shp_6 : CWE | None
-        SHP.6 (opt) - Shipment Priority (CWE) S7.18.2.6 | 0906 - ActPriority
+        SHP.6 - Shipment Priority (CWE) O S7.18.2.6 | 0906 - ActPriority
 
     shp_7 : list[CWE] | None
-        SHP.7 (opt, rep) - Shipment Confidentiality (CWE) S7.18.2.7 | 0907 - Confidentiality
+        SHP.7 - Shipment Confidentiality (CWE) O rep S7.18.2.7 | 0907 - Confidentiality
 
     shp_8 : str | None
-        SHP.8 (opt) - Number of Packages in Shipment (NM) S7.18.2.8
+        SHP.8 - Number of Packages in Shipment (NM) O S7.18.2.8
 
     shp_9 : list[CWE] | None
-        SHP.9 (opt, rep) - Shipment Condition (CWE) S7.18.2.9 | 0544 - Container Condition
+        SHP.9 - Shipment Condition (CWE) O rep S7.18.2.9 | 0544 - Container Condition
 
     shp_10 : list[CWE] | None
-        SHP.10 (opt, rep) - Shipment Handling Code (CWE) S7.18.2.10 | 0376 - Special Handling Code
+        SHP.10 - Shipment Handling Code (CWE) O rep S7.18.2.10 | 0376 - Special Handling Code
 
     shp_11 : list[CWE] | None
-        SHP.11 (opt, rep) - Shipment Risk Code (CWE) S7.18.2.11 | 0489 - Risk Codes
+        SHP.11 - Shipment Risk Code (CWE) O rep S7.18.2.11 | 0489 - Risk Codes
     """
 
     shp_1: EI = Field(
@@ -62,7 +62,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.1",
         title="Shipment ID",
-        description="Item #2317",
+        description="R | Item #02317",
     )
 
     shp_2: Optional[List[EI]] = Field(
@@ -74,7 +74,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.2",
         title="Internal Shipment ID",
-        description="Item #2318",
+        description="O | Item #02318",
     )
 
     shp_3: Optional[CWE] = Field(
@@ -86,7 +86,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.3",
         title="Shipment Status",
-        description="Item #2319 | Table HL70905",
+        description="O | Item #02319 | Table 0905 - Shipment Status",
     )
 
     shp_4: str = Field(
@@ -97,7 +97,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.4",
         title="Shipment Status Date/Time",
-        description="Item #2320",
+        description="R | Item #02320",
     )
 
     shp_5: Optional[str] = Field(
@@ -109,7 +109,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.5",
         title="Shipment Status Reason",
-        description="Item #2321",
+        description="O | Item #02321",
     )
 
     shp_6: Optional[CWE] = Field(
@@ -121,7 +121,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.6",
         title="Shipment Priority",
-        description="Item #2322 | Table HL70906",
+        description="O | Item #02322 | Table 0906 - ActPriority",
     )
 
     shp_7: Optional[List[CWE]] = Field(
@@ -133,7 +133,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.7",
         title="Shipment Confidentiality",
-        description="Item #2323 | Table HL70907",
+        description="O | Item #02323 | Table 0907 - Confidentiality",
     )
 
     shp_8: Optional[str] = Field(
@@ -145,7 +145,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.8",
         title="Number of Packages in Shipment",
-        description="Item #2324",
+        description="O | Item #02324",
     )
 
     shp_9: Optional[List[CWE]] = Field(
@@ -157,7 +157,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.9",
         title="Shipment Condition",
-        description="Item #2325 | Table HL70544",
+        description="O | Item #02325 | Table 0544 - Container Condition",
     )
 
     shp_10: Optional[List[CWE]] = Field(
@@ -169,7 +169,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.10",
         title="Shipment Handling Code",
-        description="Item #2326 | Table HL70376",
+        description="O | Item #02326 | Table 0376 - Special Handling Code",
     )
 
     shp_11: Optional[List[CWE]] = Field(
@@ -181,7 +181,7 @@ class SHP(HL7Model):
         ),
         serialization_alias="SHP.11",
         title="Shipment Risk Code",
-        description="Item #2327 | Table HL70489",
+        description="O | Item #02327 | Table 0489 - Risk Codes",
     )
 
     @field_validator("shp_4", mode='before')

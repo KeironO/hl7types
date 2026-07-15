@@ -23,25 +23,25 @@ class PYE(HL7Model):
     Attributes
     ----------
     pye_1 : str
-        PYE.1 (req) - Set ID - PYE (SI) S16.4.3.1
+        PYE.1 - Set ID - PYE (SI) R S16.4.3.1
 
     pye_2 : CWE
-        PYE.2 (req) - Payee Type (CWE) S16.4.3.2 | 0557 - Payee Type
+        PYE.2 - Payee Type (CWE) R S16.4.3.2 | 0557 - Payee Type
 
     pye_3 : CWE | None
-        PYE.3 (opt) - Payee Relationship to Invoice (Patient) (CWE) S16.4.3.3 | 0558 - Payee Relationship to Invoice
+        PYE.3 - Payee Relationship to Invoice (Patient) (CWE) C S16.4.3.3 | 0558 - Payee Relationship to Invoice
 
     pye_4 : list[XON] | None
-        PYE.4 (opt, rep) - Payee Identification List (XON) S16.4.3.4
+        PYE.4 - Payee Identification List (XON) C rep S16.4.3.4
 
     pye_5 : list[XPN] | None
-        PYE.5 (opt, rep) - Payee Person Name (XPN) S16.4.3.5
+        PYE.5 - Payee Person Name (XPN) C rep S16.4.3.5
 
     pye_6 : list[XAD] | None
-        PYE.6 (opt, rep) - Payee Address (XAD) S16.4.3.6
+        PYE.6 - Payee Address (XAD) C rep S16.4.3.6
 
     pye_7 : CWE | None
-        PYE.7 (opt) - Payment Method (CWE) S16.4.3.7 | 0570 - Payment Method Code
+        PYE.7 - Payment Method (CWE) O S16.4.3.7 | 0570 - Payment Method Code
     """
 
     pye_1: str = Field(
@@ -52,7 +52,7 @@ class PYE(HL7Model):
         ),
         serialization_alias="PYE.1",
         title="Set ID - PYE",
-        description="Item #1939",
+        description="R | Item #01939 | LEN:4",
     )
 
     pye_2: CWE = Field(
@@ -63,7 +63,7 @@ class PYE(HL7Model):
         ),
         serialization_alias="PYE.2",
         title="Payee Type",
-        description="Item #1940 | Table HL70557",
+        description="R | Item #01940 | Table 0557 - Payee Type",
     )
 
     pye_3: Optional[CWE] = Field(
@@ -75,7 +75,9 @@ class PYE(HL7Model):
         ),
         serialization_alias="PYE.3",
         title="Payee Relationship to Invoice (Patient)",
-        description="Item #1941 | Table HL70558",
+        description=(
+            "C | Item #01941 | Table 0558 - Payee Relationship to Invoice"
+        ),
     )
 
     pye_4: Optional[List[XON]] = Field(
@@ -87,7 +89,7 @@ class PYE(HL7Model):
         ),
         serialization_alias="PYE.4",
         title="Payee Identification List",
-        description="Item #1942",
+        description="C | Item #01942",
     )
 
     pye_5: Optional[List[XPN]] = Field(
@@ -99,7 +101,7 @@ class PYE(HL7Model):
         ),
         serialization_alias="PYE.5",
         title="Payee Person Name",
-        description="Item #1943",
+        description="C | Item #01943",
     )
 
     pye_6: Optional[List[XAD]] = Field(
@@ -111,7 +113,7 @@ class PYE(HL7Model):
         ),
         serialization_alias="PYE.6",
         title="Payee Address",
-        description="Item #1944",
+        description="C | Item #01944",
     )
 
     pye_7: Optional[CWE] = Field(
@@ -123,7 +125,7 @@ class PYE(HL7Model):
         ),
         serialization_alias="PYE.7",
         title="Payment Method",
-        description="Item #1945 | Table HL70570",
+        description="O | Item #01945 | Table 0570 - Payment Method Code",
     )
 
     @field_validator("pye_1", mode='before')

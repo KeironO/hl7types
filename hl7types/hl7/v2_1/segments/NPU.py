@@ -18,10 +18,10 @@ class NPU(HL7Model):
     Attributes
     ----------
     npu_1 : str
-        NPU.1 (req) - BED LOCATION (ID) S3-22 | 0079 - LOCATION
+        NPU.1 - BED LOCATION (ID) R S3-22 | 0079 - LOCATION
 
     npu_2 : str | None
-        NPU.2 (opt) - BED STATUS (ID) | 0116 - BED STATUS
+        NPU.2 - BED STATUS (ID) O | 0116 - BED STATUS
     """
 
     npu_1: str = Field(
@@ -32,7 +32,7 @@ class NPU(HL7Model):
         ),
         serialization_alias="NPU.1",
         title="BED LOCATION",
-        description="Item #785 | Table HL70079",
+        description="R | Item #00785 | Table 0079 - LOCATION | LEN:12",
     )
 
     npu_2: Optional[str] = Field(
@@ -44,7 +44,7 @@ class NPU(HL7Model):
         ),
         serialization_alias="NPU.2",
         title="BED STATUS",
-        description="Item #671 | Table HL70116",
+        description="O | Item #00671 | Table 0116 - BED STATUS | LEN:1",
     )
 
     model_config = {"populate_by_name": True}

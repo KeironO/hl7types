@@ -24,103 +24,103 @@ class DON(HL7Model):
     Attributes
     ----------
     don_1 : EI | None
-        DON.1 (opt) - Donation Identification Number - DIN (EI) S4.17.1.1
+        DON.1 - Donation Identification Number - DIN (EI) C S4.17.1.1
 
     don_2 : CNE | None
-        DON.2 (opt) - Donation Type (CNE) S4.17.1.2
+        DON.2 - Donation Type (CNE) C S4.17.1.2
 
     don_3 : str
-        DON.3 (req) - Phlebotomy Start Date/Time (DTM) S4.17.1.3
+        DON.3 - Phlebotomy Start Date/Time (DTM) R S4.17.1.3
 
     don_4 : str
-        DON.4 (req) - Phlebotomy End Date/Time (DTM) S4.17.1.4
+        DON.4 - Phlebotomy End Date/Time (DTM) R S4.17.1.4
 
     don_5 : str
-        DON.5 (req) - Donation Duration (NM) S4.17.1.5
+        DON.5 - Donation Duration (NM) R S4.17.1.5
 
     don_6 : CNE
-        DON.6 (req) - Donation Duration Units (CNE) S4.17.1.6 | 0932 - Donation Duration Units
+        DON.6 - Donation Duration Units (CNE) R S4.17.1.6 | 0932 - Donation Duration Units
 
     don_7 : list[CNE]
-        DON.7 (req, rep) - Intended Procedure Type (CNE) S4.17.1.7 | 0933 - Intended Procedure Type
+        DON.7 - Intended Procedure Type (CNE) R rep S4.17.1.7 | 0933 - Intended Procedure Type
 
     don_8 : list[CNE]
-        DON.8 (req, rep) - Actual Procedure Type (CNE) S4.17.1.8 | 0933 - Intended Procedure Type
+        DON.8 - Actual Procedure Type (CNE) R rep S4.17.1.8 | 0933 - Intended Procedure Type
 
     don_9 : str
-        DON.9 (req) - Donor Eligibility Flag (ID) S4.17.1.9 | 0136 - Yes/no Indicator
+        DON.9 - Donor Eligibility Flag (ID) R S4.17.1.9 | 0136 - Yes/no Indicator
 
     don_10 : list[CNE]
-        DON.10 (req, rep) - Donor Eligibility Procedure Type (CNE) S4.17.1.10 | 0933 - Intended Procedure Type
+        DON.10 - Donor Eligibility Procedure Type (CNE) R rep S4.17.1.10 | 0933 - Intended Procedure Type
 
     don_11 : str
-        DON.11 (req) - Donor Eligibility Date (DTM) S4.17.1.11
+        DON.11 - Donor Eligibility Date (DTM) R S4.17.1.11
 
     don_12 : CNE
-        DON.12 (req) - Process Interruption (CNE) S4.17.1.12 | 0923 - Process Interruption
+        DON.12 - Process Interruption (CNE) R S4.17.1.12 | 0923 - Process Interruption
 
     don_13 : CNE
-        DON.13 (req) - Process Interruption Reason (CNE) S4.17.1.13 | 0935 - Process Interruption Reason
+        DON.13 - Process Interruption Reason (CNE) R S4.17.1.13 | 0935 - Process Interruption Reason
 
     don_14 : list[CNE]
-        DON.14 (req, rep) - Phlebotomy Issue (CNE) S4.17.1.14 | 0925 - Phlebotomy Issue
+        DON.14 - Phlebotomy Issue (CNE) R rep S4.17.1.14 | 0925 - Phlebotomy Issue
 
     don_15 : str
-        DON.15 (req) - Intended Recipient Blood Relative (ID) S4.17.1.15 | 0136 - Yes/no Indicator
+        DON.15 - Intended Recipient Blood Relative (ID) R S4.17.1.15 | 0136 - Yes/no Indicator
 
     don_16 : XPN
-        DON.16 (req) - Intended Recipient Name (XPN) S4.17.1.16
+        DON.16 - Intended Recipient Name (XPN) R S4.17.1.16
 
     don_17 : str
-        DON.17 (req) - Intended Recipient DOB (DTM) S4.17.1.17
+        DON.17 - Intended Recipient DOB (DTM) R S4.17.1.17
 
     don_18 : XON
-        DON.18 (req) - Intended Recipient Facility (XON) S4.17.1.18
+        DON.18 - Intended Recipient Facility (XON) R S4.17.1.18
 
     don_19 : str
-        DON.19 (req) - Intended Recipient Procedure Date (DTM) S4.17.1.19
+        DON.19 - Intended Recipient Procedure Date (DTM) R S4.17.1.19
 
     don_20 : XPN
-        DON.20 (req) - Intended Recipient Ordering Provider (XPN) S4.17.1.20
+        DON.20 - Intended Recipient Ordering Provider (XPN) R S4.17.1.20
 
     don_21 : CNE
-        DON.21 (req) - Phlebotomy Status (CNE) S4.17.1.21 | 0926 - Phlebotomy Status
+        DON.21 - Phlebotomy Status (CNE) R S4.17.1.21 | 0926 - Phlebotomy Status
 
     don_22 : CNE
-        DON.22 (req) - Arm Stick (CNE) S4.17.1.22 | 0927 - Arm Stick
+        DON.22 - Arm Stick (CNE) R S4.17.1.22 | 0927 - Arm Stick
 
     don_23 : XPN
-        DON.23 (req) - Bleed Start Phlebotomist (XPN) S4.17.1.23
+        DON.23 - Bleed Start Phlebotomist (XPN) R S4.17.1.23
 
     don_24 : XPN
-        DON.24 (req) - Bleed End Phlebotomist (XPN) S4.17.1.24
+        DON.24 - Bleed End Phlebotomist (XPN) R S4.17.1.24
 
     don_25 : str
-        DON.25 (req) - Aphaeresis Type Machine (ST) S4.17.1.25
+        DON.25 - Aphaeresis Type Machine (ST) R S4.17.1.25
 
     don_26 : str
-        DON.26 (req) - Aphaeresis Machine Serial Number (ST) S4.17.1.26
+        DON.26 - Aphaeresis Machine Serial Number (ST) R S4.17.1.26
 
     don_27 : str
-        DON.27 (req) - Donor Reaction (ID) S4.17.1.27 | 0136 - Yes/no Indicator
+        DON.27 - Donor Reaction (ID) R S4.17.1.27 | 0136 - Yes/no Indicator
 
     don_28 : XPN
-        DON.28 (req) - Final Review Staff ID (XPN) S4.17.1.28
+        DON.28 - Final Review Staff ID (XPN) R S4.17.1.28
 
     don_29 : str
-        DON.29 (req) - Final Review Date/Time (DTM) S4.17.1.29
+        DON.29 - Final Review Date/Time (DTM) R S4.17.1.29
 
     don_30 : str
-        DON.30 (req) - Number of Tubes Collected (NM) S4.17.1.30
+        DON.30 - Number of Tubes Collected (NM) R S4.17.1.30
 
     don_31 : list[EI]
-        DON.31 (req, rep) - Donation Sample Identifier (EI) S4.17.1.31
+        DON.31 - Donation Sample Identifier (EI) R rep S4.17.1.31
 
     don_32 : XCN
-        DON.32 (req) - Donation Accept Staff (XCN) S4.17.1.32
+        DON.32 - Donation Accept Staff (XCN) R S4.17.1.32
 
     don_33 : list[XCN]
-        DON.33 (req, rep) - Donation Material Review Staff (XCN) S4.17.1.33
+        DON.33 - Donation Material Review Staff (XCN) R rep S4.17.1.33
     """
 
     don_1: Optional[EI] = Field(
@@ -132,7 +132,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.1",
         title="Donation Identification Number - DIN",
-        description="Item #3340",
+        description="C | Item #03340",
     )
 
     don_2: Optional[CNE] = Field(
@@ -144,7 +144,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.2",
         title="Donation Type",
-        description="Item #3341",
+        description="C | Item #03341",
     )
 
     don_3: str = Field(
@@ -155,7 +155,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.3",
         title="Phlebotomy Start Date/Time",
-        description="Item #3342",
+        description="R | Item #03342",
     )
 
     don_4: str = Field(
@@ -166,7 +166,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.4",
         title="Phlebotomy End Date/Time",
-        description="Item #3343",
+        description="R | Item #03343",
     )
 
     don_5: str = Field(
@@ -177,7 +177,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.5",
         title="Donation Duration",
-        description="Item #3344",
+        description="R | Item #03344",
     )
 
     don_6: CNE = Field(
@@ -188,7 +188,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.6",
         title="Donation Duration Units",
-        description="Item #3345 | Table HL70932",
+        description="R | Item #03345 | Table 0932 - Donation Duration Units",
     )
 
     don_7: List[CNE] = Field(
@@ -200,7 +200,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.7",
         title="Intended Procedure Type",
-        description="Item #3346 | Table HL70933",
+        description="R | Item #03346 | Table 0933 - Intended Procedure Type",
     )
 
     don_8: List[CNE] = Field(
@@ -212,7 +212,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.8",
         title="Actual Procedure Type",
-        description="Item #3347 | Table HL70933",
+        description="R | Item #03347 | Table 0933 - Intended Procedure Type",
     )
 
     don_9: str = Field(
@@ -223,7 +223,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.9",
         title="Donor Eligibility Flag",
-        description="Item #3348 | Table HL70136",
+        description="R | Item #03348 | Table 0136 - Yes/no Indicator",
     )
 
     don_10: List[CNE] = Field(
@@ -235,7 +235,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.10",
         title="Donor Eligibility Procedure Type",
-        description="Item #3349 | Table HL70933",
+        description="R | Item #03349 | Table 0933 - Intended Procedure Type",
     )
 
     don_11: str = Field(
@@ -246,7 +246,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.11",
         title="Donor Eligibility Date",
-        description="Item #3350",
+        description="R | Item #03350",
     )
 
     don_12: CNE = Field(
@@ -257,7 +257,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.12",
         title="Process Interruption",
-        description="Item #3351 | Table HL70923",
+        description="R | Item #03351 | Table 0923 - Process Interruption",
     )
 
     don_13: CNE = Field(
@@ -268,7 +268,9 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.13",
         title="Process Interruption Reason",
-        description="Item #3352 | Table HL70935",
+        description=(
+            "R | Item #03352 | Table 0935 - Process Interruption Reason"
+        ),
     )
 
     don_14: List[CNE] = Field(
@@ -280,7 +282,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.14",
         title="Phlebotomy Issue",
-        description="Item #3353 | Table HL70925",
+        description="R | Item #03353 | Table 0925 - Phlebotomy Issue",
     )
 
     don_15: str = Field(
@@ -291,7 +293,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.15",
         title="Intended Recipient Blood Relative",
-        description="Item #3354 | Table HL70136",
+        description="R | Item #03354 | Table 0136 - Yes/no Indicator",
     )
 
     don_16: XPN = Field(
@@ -302,7 +304,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.16",
         title="Intended Recipient Name",
-        description="Item #3355",
+        description="R | Item #03355",
     )
 
     don_17: str = Field(
@@ -313,7 +315,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.17",
         title="Intended Recipient DOB",
-        description="Item #3356",
+        description="R | Item #03356",
     )
 
     don_18: XON = Field(
@@ -324,7 +326,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.18",
         title="Intended Recipient Facility",
-        description="Item #3357",
+        description="R | Item #03357",
     )
 
     don_19: str = Field(
@@ -335,7 +337,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.19",
         title="Intended Recipient Procedure Date",
-        description="Item #3358",
+        description="R | Item #03358",
     )
 
     don_20: XPN = Field(
@@ -346,7 +348,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.20",
         title="Intended Recipient Ordering Provider",
-        description="Item #3359",
+        description="R | Item #03359",
     )
 
     don_21: CNE = Field(
@@ -357,7 +359,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.21",
         title="Phlebotomy Status",
-        description="Item #3360 | Table HL70926",
+        description="R | Item #03360 | Table 0926 - Phlebotomy Status",
     )
 
     don_22: CNE = Field(
@@ -368,7 +370,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.22",
         title="Arm Stick",
-        description="Item #3361 | Table HL70927",
+        description="R | Item #03361 | Table 0927 - Arm Stick",
     )
 
     don_23: XPN = Field(
@@ -379,7 +381,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.23",
         title="Bleed Start Phlebotomist",
-        description="Item #3362",
+        description="R | Item #03362",
     )
 
     don_24: XPN = Field(
@@ -390,7 +392,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.24",
         title="Bleed End Phlebotomist",
-        description="Item #3363",
+        description="R | Item #03363",
     )
 
     don_25: str = Field(
@@ -401,7 +403,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.25",
         title="Aphaeresis Type Machine",
-        description="Item #3364",
+        description="R | Item #03364",
     )
 
     don_26: str = Field(
@@ -412,7 +414,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.26",
         title="Aphaeresis Machine Serial Number",
-        description="Item #3365",
+        description="R | Item #03365",
     )
 
     don_27: str = Field(
@@ -423,7 +425,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.27",
         title="Donor Reaction",
-        description="Item #3366 | Table HL70136",
+        description="R | Item #03366 | Table 0136 - Yes/no Indicator",
     )
 
     don_28: XPN = Field(
@@ -434,7 +436,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.28",
         title="Final Review Staff ID",
-        description="Item #3367",
+        description="R | Item #03367",
     )
 
     don_29: str = Field(
@@ -445,7 +447,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.29",
         title="Final Review Date/Time",
-        description="Item #3368",
+        description="R | Item #03368",
     )
 
     don_30: str = Field(
@@ -456,7 +458,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.30",
         title="Number of Tubes Collected",
-        description="Item #3369",
+        description="R | Item #03369",
     )
 
     don_31: List[EI] = Field(
@@ -468,7 +470,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.31",
         title="Donation Sample Identifier",
-        description="Item #3370",
+        description="R | Item #03370",
     )
 
     don_32: XCN = Field(
@@ -479,7 +481,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.32",
         title="Donation Accept Staff",
-        description="Item #3371",
+        description="R | Item #03371",
     )
 
     don_33: List[XCN] = Field(
@@ -491,7 +493,7 @@ class DON(HL7Model):
         ),
         serialization_alias="DON.33",
         title="Donation Material Review Staff",
-        description="Item #3372",
+        description="R | Item #03372",
     )
 
     @field_validator("don_3", "don_4", "don_11", "don_17", "don_19", "don_29", mode='before')

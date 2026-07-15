@@ -22,22 +22,22 @@ class MFI(HL7Model):
     Attributes
     ----------
     mfi_1 : CE
-        MFI.1 (req) - Master File Identifier (CE) S8.5.1.1 | 0175 - Master file identifier code
+        MFI.1 - Master File Identifier (CE) R S8.5.1.1 | 0175 - Master file identifier code
 
     mfi_2 : HD | None
-        MFI.2 (opt) - Master File Application Identifier (HD) S8.5.1.2
+        MFI.2 - Master File Application Identifier (HD) O S8.5.1.2
 
     mfi_3 : str
-        MFI.3 (req) - File-Level Event Code (ID) S8.5.1.3 | 0178 - File level event code
+        MFI.3 - File-Level Event Code (ID) R S8.5.1.3 | 0178 - File level event code
 
     mfi_4 : TS | None
-        MFI.4 (opt) - Entered Date/Time (TS) S8.5.1.4
+        MFI.4 - Entered Date/Time (TS) O S8.5.1.4
 
     mfi_5 : TS | None
-        MFI.5 (opt) - Effective Date/Time (TS) S8.5.2.3
+        MFI.5 - Effective Date/Time (TS) O S8.5.2.3
 
     mfi_6 : str
-        MFI.6 (req) - Response Level Code (ID) S8.5.1.6 | 0179 - Response level
+        MFI.6 - Response Level Code (ID) R S8.5.1.6 | 0179 - Response level
     """
 
     mfi_1: CE = Field(
@@ -48,7 +48,9 @@ class MFI(HL7Model):
         ),
         serialization_alias="MFI.1",
         title="Master File Identifier",
-        description="Item #658 | Table HL70175",
+        description=(
+            "R | Item #00658 | Table 0175 - Master file identifier code"
+        ),
     )
 
     mfi_2: Optional[HD] = Field(
@@ -60,7 +62,7 @@ class MFI(HL7Model):
         ),
         serialization_alias="MFI.2",
         title="Master File Application Identifier",
-        description="Item #659",
+        description="O | Item #00659",
     )
 
     mfi_3: str = Field(
@@ -71,7 +73,9 @@ class MFI(HL7Model):
         ),
         serialization_alias="MFI.3",
         title="File-Level Event Code",
-        description="Item #660 | Table HL70178",
+        description=(
+            "R | Item #00660 | Table 0178 - File level event code | LEN:3"
+        ),
     )
 
     mfi_4: Optional[TS] = Field(
@@ -83,7 +87,7 @@ class MFI(HL7Model):
         ),
         serialization_alias="MFI.4",
         title="Entered Date/Time",
-        description="Item #661",
+        description="O | Item #00661",
     )
 
     mfi_5: Optional[TS] = Field(
@@ -95,7 +99,7 @@ class MFI(HL7Model):
         ),
         serialization_alias="MFI.5",
         title="Effective Date/Time",
-        description="Item #662",
+        description="O | Item #00662",
     )
 
     mfi_6: str = Field(
@@ -106,7 +110,7 @@ class MFI(HL7Model):
         ),
         serialization_alias="MFI.6",
         title="Response Level Code",
-        description="Item #663 | Table HL70179",
+        description="R | Item #00663 | Table 0179 - Response level | LEN:2",
     )
 
     model_config = {"populate_by_name": True}

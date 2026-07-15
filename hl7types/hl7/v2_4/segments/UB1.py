@@ -22,73 +22,73 @@ class UB1(HL7Model):
     Attributes
     ----------
     ub1_1 : str | None
-        UB1.1 (opt) - Set ID - UB1 (SI) S6.5.10.1
+        UB1.1 - Set ID - UB1 (SI) O S6.5.10.1
 
     ub1_2 : str | None
-        UB1.2 (opt) - Blood Deductible  (43) (NM) S6.5.10.2
+        UB1.2 - Blood Deductible  (43) (NM) O S6.5.10.2
 
     ub1_3 : str | None
-        UB1.3 (opt) - Blood Furnished-Pints Of (40) (NM) S6.5.10.3
+        UB1.3 - Blood Furnished-Pints Of (40) (NM) O S6.5.10.3
 
     ub1_4 : str | None
-        UB1.4 (opt) - Blood Replaced-Pints (41) (NM) S6.5.10.4
+        UB1.4 - Blood Replaced-Pints (41) (NM) O S6.5.10.4
 
     ub1_5 : str | None
-        UB1.5 (opt) - Blood Not Replaced-Pints(42) (NM) S6.5.10.5
+        UB1.5 - Blood Not Replaced-Pints(42) (NM) O S6.5.10.5
 
     ub1_6 : str | None
-        UB1.6 (opt) - Co-Insurance Days (25) (NM) S6.5.10.6
+        UB1.6 - Co-Insurance Days (25) (NM) O S6.5.10.6
 
     ub1_7 : list[str] | None
-        UB1.7 (opt, rep) - Condition Code (35-39) (IS) S6.5.10.7 | 0043 - Condition code
+        UB1.7 - Condition Code (35-39) (IS) O rep S6.5.10.7 | 0043 - Condition code
 
     ub1_8 : str | None
-        UB1.8 (opt) - Covered Days - (23) (NM) S6.5.10.8
+        UB1.8 - Covered Days - (23) (NM) O S6.5.10.8
 
     ub1_9 : str | None
-        UB1.9 (opt) - Non Covered Days - (24) (NM) S6.5.10.9
+        UB1.9 - Non Covered Days - (24) (NM) O S6.5.10.9
 
     ub1_10 : list[UVC] | None
-        UB1.10 (opt, rep) - Value Amount & Code (46-49) (UVC) S6.5.10.10 | 0153 - Value code
+        UB1.10 - Value Amount & Code (46-49) (UVC) O rep S6.5.10.10 | 0153 - Value code
 
     ub1_11 : str | None
-        UB1.11 (opt) - Number Of Grace Days (90) (NM) S6.5.10.11
+        UB1.11 - Number Of Grace Days (90) (NM) O S6.5.10.11
 
     ub1_12 : CE | None
-        UB1.12 (opt) - Special Program Indicator (44) (CE) S6.5.10.12 | 0348 - Special program indicator
+        UB1.12 - Special Program Indicator (44) (CE) O S6.5.10.12 | 0348 - Special program indicator
 
     ub1_13 : CE | None
-        UB1.13 (opt) - PSRO/UR Approval Indicator (87) (CE) S6.5.10.13 | 0349 - PSRO/UR approval indicator
+        UB1.13 - PSRO/UR Approval Indicator (87) (CE) O S6.5.10.13 | 0349 - PSRO/UR approval indicator
 
     ub1_14 : str | None
-        UB1.14 (opt) - PSRO/UR Approved Stay-Fm (88) (DT) S6.5.10.14
+        UB1.14 - PSRO/UR Approved Stay-Fm (88) (DT) O S6.5.10.14
 
     ub1_15 : str | None
-        UB1.15 (opt) - PSRO/UR Approved Stay-To (89) (DT) S6.5.10.15
+        UB1.15 - PSRO/UR Approved Stay-To (89) (DT) O S6.5.10.15
 
     ub1_16 : list[OCD] | None
-        UB1.16 (opt, rep) - Occurrence (28-32) (OCD) S6.5.10.16 | 0350 - Occurrence code
+        UB1.16 - Occurrence (28-32) (OCD) O rep S6.5.10.16 | 0350 - Occurrence code
 
     ub1_17 : CE | None
-        UB1.17 (opt) - Occurrence Span (33) (CE) S6.5.10.17 | 0351 - Occurrence span
+        UB1.17 - Occurrence Span (33) (CE) O S6.5.10.17 | 0351 - Occurrence span
 
     ub1_18 : str | None
-        UB1.18 (opt) - Occur Span Start Date(33) (DT) S6.5.10.18
+        UB1.18 - Occur Span Start Date(33) (DT) O S6.5.10.18
 
     ub1_19 : str | None
-        UB1.19 (opt) - Occur Span End Date (33) (DT) S6.5.10.19
+        UB1.19 - Occur Span End Date (33) (DT) O S6.5.10.19
 
     ub1_20 : str | None
-        UB1.20 (opt) - UB-82 Locator 2 (ST) S6.5.10.20
+        UB1.20 - UB-82 Locator 2 (ST) O S6.5.10.20
 
     ub1_21 : str | None
-        UB1.21 (opt) - UB-82 Locator 9 (ST) S6.5.10.21
+        UB1.21 - UB-82 Locator 9 (ST) O S6.5.10.21
 
     ub1_22 : str | None
-        UB1.22 (opt) - UB-82 Locator 27 (ST) S6.5.10.22
+        UB1.22 - UB-82 Locator 27 (ST) O S6.5.10.22
 
     ub1_23 : str | None
-        UB1.23 (opt) - UB-82 Locator 45 (ST) S6.5.10.23
+        UB1.23 - UB-82 Locator 45 (ST) O S6.5.10.23
     """
 
     ub1_1: Optional[str] = Field(
@@ -100,7 +100,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.1",
         title="Set ID - UB1",
-        description="Item #530",
+        description="O | Item #00530 | LEN:4",
     )
 
     ub1_2: Optional[str] = Field(
@@ -112,7 +112,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.2",
         title="Blood Deductible  (43)",
-        description="Item #531",
+        description="O | Item #00531 | LEN:1",
     )
 
     ub1_3: Optional[str] = Field(
@@ -124,7 +124,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.3",
         title="Blood Furnished-Pints Of (40)",
-        description="Item #532",
+        description="O | Item #00532 | LEN:2",
     )
 
     ub1_4: Optional[str] = Field(
@@ -136,7 +136,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.4",
         title="Blood Replaced-Pints (41)",
-        description="Item #533",
+        description="O | Item #00533 | LEN:2",
     )
 
     ub1_5: Optional[str] = Field(
@@ -148,7 +148,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.5",
         title="Blood Not Replaced-Pints(42)",
-        description="Item #534",
+        description="O | Item #00534 | LEN:2",
     )
 
     ub1_6: Optional[str] = Field(
@@ -160,7 +160,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.6",
         title="Co-Insurance Days (25)",
-        description="Item #535",
+        description="O | Item #00535 | LEN:2",
     )
 
     ub1_7: Optional[List[str]] = Field(
@@ -172,7 +172,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.7",
         title="Condition Code (35-39)",
-        description="Item #536 | Table HL70043",
+        description="O | Item #00536 | Table 0043 - Condition code | LEN:14",
     )
 
     ub1_8: Optional[str] = Field(
@@ -184,7 +184,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.8",
         title="Covered Days - (23)",
-        description="Item #537",
+        description="O | Item #00537 | LEN:3",
     )
 
     ub1_9: Optional[str] = Field(
@@ -196,7 +196,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.9",
         title="Non Covered Days - (24)",
-        description="Item #538",
+        description="O | Item #00538 | LEN:3",
     )
 
     ub1_10: Optional[List[UVC]] = Field(
@@ -208,7 +208,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.10",
         title="Value Amount & Code (46-49)",
-        description="Item #539 | Table HL70153",
+        description="O | Item #00539 | Table 0153 - Value code",
     )
 
     ub1_11: Optional[str] = Field(
@@ -220,7 +220,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.11",
         title="Number Of Grace Days (90)",
-        description="Item #540",
+        description="O | Item #00540 | LEN:2",
     )
 
     ub1_12: Optional[CE] = Field(
@@ -232,7 +232,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.12",
         title="Special Program Indicator (44)",
-        description="Item #541 | Table HL70348",
+        description="O | Item #00541 | Table 0348 - Special program indicator",
     )
 
     ub1_13: Optional[CE] = Field(
@@ -244,7 +244,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.13",
         title="PSRO/UR Approval Indicator (87)",
-        description="Item #542 | Table HL70349",
+        description="O | Item #00542 | Table 0349 - PSRO/UR approval indicator",
     )
 
     ub1_14: Optional[str] = Field(
@@ -256,7 +256,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.14",
         title="PSRO/UR Approved Stay-Fm (88)",
-        description="Item #543",
+        description="O | Item #00543 | LEN:8",
     )
 
     ub1_15: Optional[str] = Field(
@@ -268,7 +268,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.15",
         title="PSRO/UR Approved Stay-To (89)",
-        description="Item #544",
+        description="O | Item #00544 | LEN:8",
     )
 
     ub1_16: Optional[List[OCD]] = Field(
@@ -280,7 +280,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.16",
         title="Occurrence (28-32)",
-        description="Item #545 | Table HL70350",
+        description="O | Item #00545 | Table 0350 - Occurrence code",
     )
 
     ub1_17: Optional[CE] = Field(
@@ -292,7 +292,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.17",
         title="Occurrence Span (33)",
-        description="Item #546 | Table HL70351",
+        description="O | Item #00546 | Table 0351 - Occurrence span",
     )
 
     ub1_18: Optional[str] = Field(
@@ -304,7 +304,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.18",
         title="Occur Span Start Date(33)",
-        description="Item #547",
+        description="O | Item #00547 | LEN:8",
     )
 
     ub1_19: Optional[str] = Field(
@@ -316,7 +316,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.19",
         title="Occur Span End Date (33)",
-        description="Item #548",
+        description="O | Item #00548 | LEN:8",
     )
 
     ub1_20: Optional[str] = Field(
@@ -328,7 +328,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.20",
         title="UB-82 Locator 2",
-        description="Item #549",
+        description="O | Item #00549 | LEN:30",
     )
 
     ub1_21: Optional[str] = Field(
@@ -340,7 +340,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.21",
         title="UB-82 Locator 9",
-        description="Item #550",
+        description="O | Item #00550 | LEN:7",
     )
 
     ub1_22: Optional[str] = Field(
@@ -352,7 +352,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.22",
         title="UB-82 Locator 27",
-        description="Item #551",
+        description="O | Item #00551 | LEN:8",
     )
 
     ub1_23: Optional[str] = Field(
@@ -364,7 +364,7 @@ class UB1(HL7Model):
         ),
         serialization_alias="UB1.23",
         title="UB-82 Locator 45",
-        description="Item #552",
+        description="O | Item #00552 | LEN:17",
     )
 
     @field_validator("ub1_1", mode='before')

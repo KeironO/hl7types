@@ -25,94 +25,94 @@ class IAM(HL7Model):
     Attributes
     ----------
     iam_1 : str
-        IAM.1 (req) - Set ID - IAM (SI) S3.4.7.1
+        IAM.1 - Set ID - IAM (SI) R S3.4.7.1
 
     iam_2 : CWE | None
-        IAM.2 (opt) - Allergen Type Code (CWE) S3.4.6.2 | 0127 - Allergen Type
+        IAM.2 - Allergen Type Code (CWE) O S3.4.6.2 | 0127 - Allergen Type
 
     iam_3 : CWE
-        IAM.3 (req) - Allergen Code/Mnemonic/Description (CWE) S3.4.6.3
+        IAM.3 - Allergen Code/Mnemonic/Description (CWE) R S3.4.6.3
 
     iam_4 : CWE | None
-        IAM.4 (opt) - Allergy Severity Code (CWE) S3.4.6.4 | 0128 - Allergy Severity
+        IAM.4 - Allergy Severity Code (CWE) O S3.4.6.4 | 0128 - Allergy Severity
 
     iam_5 : list[str] | None
-        IAM.5 (opt, rep) - Allergy Reaction Code (ST) S3.4.6.5
+        IAM.5 - Allergy Reaction Code (ST) O rep S3.4.6.5
 
     iam_6 : CNE
-        IAM.6 (req) - Allergy Action Code (CNE) S3.4.7.6 | 0206 - Segment Action Code
+        IAM.6 - Allergy Action Code (CNE) R S3.4.7.6 | 0206 - Segment Action Code
 
     iam_7 : EI | None
-        IAM.7 (opt) - Allergy Unique Identifier (EI) S3.4.7.7
+        IAM.7 - Allergy Unique Identifier (EI) C S3.4.7.7
 
     iam_8 : str | None
-        IAM.8 (opt) - Action Reason (ST) S3.4.7.8
+        IAM.8 - Action Reason (ST) O S3.4.7.8
 
     iam_9 : CWE | None
-        IAM.9 (opt) - Sensitivity to Causative Agent Code (CWE) S3.4.7.9 | 0436 - Sensitivity to Causative Agent Code
+        IAM.9 - Sensitivity to Causative Agent Code (CWE) O S3.4.7.9 | 0436 - Sensitivity to Causative Agent Code
 
     iam_10 : CWE | None
-        IAM.10 (opt) - Allergen Group Code/Mnemonic/Description (CWE) S3.4.7.10
+        IAM.10 - Allergen Group Code/Mnemonic/Description (CWE) O S3.4.7.10
 
     iam_11 : str | None
-        IAM.11 (opt) - Onset Date (DT) S3.4.7.11
+        IAM.11 - Onset Date (DT) O S3.4.7.11
 
     iam_12 : str | None
-        IAM.12 (opt) - Onset Date Text (ST) S3.4.7.12
+        IAM.12 - Onset Date Text (ST) O S3.4.7.12
 
     iam_13 : str | None
-        IAM.13 (opt) - Reported Date/Time (DTM) S3.4.7.13
+        IAM.13 - Reported Date/Time (DTM) O S3.4.7.13
 
     iam_14 : XPN | None
-        IAM.14 (opt) - Reported By (XPN) S3.4.7.14
+        IAM.14 - Reported By (XPN) O S3.4.7.14
 
     iam_15 : CWE | None
-        IAM.15 (opt) - Relationship to Patient Code (CWE) S3.4.7.15 | 0063 - Relationship
+        IAM.15 - Relationship to Patient Code (CWE) O S3.4.7.15 | 0063 - Relationship
 
     iam_16 : CWE | None
-        IAM.16 (opt) - Alert Device Code (CWE) S3.4.7.16 | 0437 - Alert Device Code
+        IAM.16 - Alert Device Code (CWE) O S3.4.7.16 | 0437 - Alert Device Code
 
     iam_17 : CWE | None
-        IAM.17 (opt) - Allergy Clinical Status Code (CWE) S3.4.7.17 | 0438 - Allergy Clinical Status
+        IAM.17 - Allergy Clinical Status Code (CWE) O S3.4.7.17 | 0438 - Allergy Clinical Status
 
     iam_18 : XCN | None
-        IAM.18 (opt) - Statused by Person (XCN) S3.4.7.18
+        IAM.18 - Statused by Person (XCN) O S3.4.7.18
 
     iam_19 : XON | None
-        IAM.19 (opt) - Statused by Organization (XON) S3.4.7.19
+        IAM.19 - Statused by Organization (XON) O S3.4.7.19
 
     iam_20 : str | None
-        IAM.20 (opt) - Statused at Date/Time (DTM) S3.4.7.20
+        IAM.20 - Statused at Date/Time (DTM) O S3.4.7.20
 
     iam_21 : XCN | None
-        IAM.21 (opt) - Inactivated by Person (XCN) S3.4.7.21
+        IAM.21 - Inactivated by Person (XCN) O S3.4.7.21
 
     iam_22 : str | None
-        IAM.22 (opt) - Inactivated Date/Time (DTM) S3.4.7.22
+        IAM.22 - Inactivated Date/Time (DTM) O S3.4.7.22
 
     iam_23 : XCN | None
-        IAM.23 (opt) - Initially Recorded by Person (XCN) S3.4.7.23
+        IAM.23 - Initially Recorded by Person (XCN) O S3.4.7.23
 
     iam_24 : str | None
-        IAM.24 (opt) - Initially Recorded Date/Time (DTM) S3.4.7.24
+        IAM.24 - Initially Recorded Date/Time (DTM) O S3.4.7.24
 
     iam_25 : XCN | None
-        IAM.25 (opt) - Modified by Person (XCN) S3.4.7.25
+        IAM.25 - Modified by Person (XCN) O S3.4.7.25
 
     iam_26 : str | None
-        IAM.26 (opt) - Modified Date/Time (DTM) S3.4.7.26
+        IAM.26 - Modified Date/Time (DTM) O S3.4.7.26
 
     iam_27 : CWE | None
-        IAM.27 (opt) - Clinician Identified Code (CWE) S3.4.7.27
+        IAM.27 - Clinician Identified Code (CWE) O S3.4.7.27
 
     iam_28 : XON | None
-        IAM.28 (opt) - Initially Recorded by Organization (XON) S3.4.7.28
+        IAM.28 - Initially Recorded by Organization (XON) O S3.4.7.28
 
     iam_29 : XON | None
-        IAM.29 (opt) - Modified by Organization (XON) S3.4.7.29
+        IAM.29 - Modified by Organization (XON) O S3.4.7.29
 
     iam_30 : XON | None
-        IAM.30 (opt) - Inactivated by Organization (XON) S3.4.7.30
+        IAM.30 - Inactivated by Organization (XON) O S3.4.7.30
     """
 
     iam_1: str = Field(
@@ -123,7 +123,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.1",
         title="Set ID - IAM",
-        description="Item #1612",
+        description="R | Item #01612 | LEN:4",
     )
 
     iam_2: Optional[CWE] = Field(
@@ -135,7 +135,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.2",
         title="Allergen Type Code",
-        description="Item #204 | Table HL70127",
+        description="O | Item #00204 | Table 0127 - Allergen Type",
     )
 
     iam_3: CWE = Field(
@@ -146,7 +146,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.3",
         title="Allergen Code/Mnemonic/Description",
-        description="Item #205",
+        description="R | Item #00205",
     )
 
     iam_4: Optional[CWE] = Field(
@@ -158,7 +158,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.4",
         title="Allergy Severity Code",
-        description="Item #206 | Table HL70128",
+        description="O | Item #00206 | Table 0128 - Allergy Severity",
     )
 
     iam_5: Optional[List[str]] = Field(
@@ -170,7 +170,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.5",
         title="Allergy Reaction Code",
-        description="Item #207",
+        description="O | Item #00207",
     )
 
     iam_6: CNE = Field(
@@ -181,7 +181,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.6",
         title="Allergy Action Code",
-        description="Item #1551 | Table HL70206",
+        description="R | Item #01551 | Table 0206 - Segment Action Code",
     )
 
     iam_7: Optional[EI] = Field(
@@ -193,7 +193,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.7",
         title="Allergy Unique Identifier",
-        description="Item #1552",
+        description="C | Item #01552",
     )
 
     iam_8: Optional[str] = Field(
@@ -205,7 +205,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.8",
         title="Action Reason",
-        description="Item #1553",
+        description="O | Item #01553",
     )
 
     iam_9: Optional[CWE] = Field(
@@ -217,7 +217,9 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.9",
         title="Sensitivity to Causative Agent Code",
-        description="Item #1554 | Table HL70436",
+        description=(
+            "O | Item #01554 | Table 0436 - Sensitivity to Causative Agent Code"
+        ),
     )
 
     iam_10: Optional[CWE] = Field(
@@ -229,7 +231,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.10",
         title="Allergen Group Code/Mnemonic/Description",
-        description="Item #1555",
+        description="O | Item #01555",
     )
 
     iam_11: Optional[str] = Field(
@@ -241,7 +243,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.11",
         title="Onset Date",
-        description="Item #1556",
+        description="O | Item #01556",
     )
 
     iam_12: Optional[str] = Field(
@@ -253,7 +255,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.12",
         title="Onset Date Text",
-        description="Item #1557",
+        description="O | Item #01557",
     )
 
     iam_13: Optional[str] = Field(
@@ -265,7 +267,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.13",
         title="Reported Date/Time",
-        description="Item #1558",
+        description="O | Item #01558",
     )
 
     iam_14: Optional[XPN] = Field(
@@ -277,7 +279,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.14",
         title="Reported By",
-        description="Item #1559",
+        description="O | Item #01559",
     )
 
     iam_15: Optional[CWE] = Field(
@@ -289,7 +291,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.15",
         title="Relationship to Patient Code",
-        description="Item #1560 | Table HL70063",
+        description="O | Item #01560 | Table 0063 - Relationship",
     )
 
     iam_16: Optional[CWE] = Field(
@@ -301,7 +303,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.16",
         title="Alert Device Code",
-        description="Item #1561 | Table HL70437",
+        description="O | Item #01561 | Table 0437 - Alert Device Code",
     )
 
     iam_17: Optional[CWE] = Field(
@@ -313,7 +315,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.17",
         title="Allergy Clinical Status Code",
-        description="Item #1562 | Table HL70438",
+        description="O | Item #01562 | Table 0438 - Allergy Clinical Status",
     )
 
     iam_18: Optional[XCN] = Field(
@@ -325,7 +327,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.18",
         title="Statused by Person",
-        description="Item #1563",
+        description="O | Item #01563",
     )
 
     iam_19: Optional[XON] = Field(
@@ -337,7 +339,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.19",
         title="Statused by Organization",
-        description="Item #1564",
+        description="O | Item #01564",
     )
 
     iam_20: Optional[str] = Field(
@@ -349,7 +351,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.20",
         title="Statused at Date/Time",
-        description="Item #1565",
+        description="O | Item #01565",
     )
 
     iam_21: Optional[XCN] = Field(
@@ -361,7 +363,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.21",
         title="Inactivated by Person",
-        description="Item #2294",
+        description="O | Item #02294",
     )
 
     iam_22: Optional[str] = Field(
@@ -373,7 +375,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.22",
         title="Inactivated Date/Time",
-        description="Item #2295",
+        description="O | Item #02295",
     )
 
     iam_23: Optional[XCN] = Field(
@@ -385,7 +387,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.23",
         title="Initially Recorded by Person",
-        description="Item #2296",
+        description="O | Item #02296",
     )
 
     iam_24: Optional[str] = Field(
@@ -397,7 +399,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.24",
         title="Initially Recorded Date/Time",
-        description="Item #2297",
+        description="O | Item #02297",
     )
 
     iam_25: Optional[XCN] = Field(
@@ -409,7 +411,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.25",
         title="Modified by Person",
-        description="Item #2298",
+        description="O | Item #02298",
     )
 
     iam_26: Optional[str] = Field(
@@ -421,7 +423,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.26",
         title="Modified Date/Time",
-        description="Item #2299",
+        description="O | Item #02299",
     )
 
     iam_27: Optional[CWE] = Field(
@@ -433,7 +435,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.27",
         title="Clinician Identified Code",
-        description="Item #2300",
+        description="O | Item #02300",
     )
 
     iam_28: Optional[XON] = Field(
@@ -445,7 +447,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.28",
         title="Initially Recorded by Organization",
-        description="Item #3293",
+        description="O | Item #03293",
     )
 
     iam_29: Optional[XON] = Field(
@@ -457,7 +459,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.29",
         title="Modified by Organization",
-        description="Item #3294",
+        description="O | Item #03294",
     )
 
     iam_30: Optional[XON] = Field(
@@ -469,7 +471,7 @@ class IAM(HL7Model):
         ),
         serialization_alias="IAM.30",
         title="Inactivated by Organization",
-        description="Item #3295",
+        description="O | Item #03295",
     )
 
     @field_validator("iam_1", mode='before')

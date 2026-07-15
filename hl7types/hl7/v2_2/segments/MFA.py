@@ -21,19 +21,19 @@ class MFA(HL7Model):
     Attributes
     ----------
     mfa_1 : str
-        MFA.1 (req) - Record-level event code (ID) S8.4.3.1 | 0180 - REcord Level Event Code
+        MFA.1 - Record-level event code (ID) R S8.4.3.1 | 0180 - REcord Level Event Code
 
     mfa_2 : str | None
-        MFA.2 (opt) - MFN control ID (ST) S8.4.3.2
+        MFA.2 - MFN control ID (ST) C S8.4.3.2
 
     mfa_3 : TS | None
-        MFA.3 (opt) - Event completion date / time (TS) S8.4.3.3
+        MFA.3 - Event completion date / time (TS) C S8.4.3.3
 
     mfa_4 : CE
-        MFA.4 (req) - Error return code and/or text (CE) S8.4.3.4 | 0181 - MFN Recode-Level Error Return
+        MFA.4 - Error return code and/or text (CE) R S8.4.3.4 | 0181 - MFN Recode-Level Error Return
 
     mfa_5 : list[CE]
-        MFA.5 (req, rep) - Primary key value (CE) S8.4.2.4
+        MFA.5 - Primary key value (CE) R rep S8.4.2.4
     """
 
     mfa_1: str = Field(
@@ -44,7 +44,9 @@ class MFA(HL7Model):
         ),
         serialization_alias="MFA.1",
         title="Record-level event code",
-        description="Item #664 | Table HL70180",
+        description=(
+            "R | Item #00664 | Table 0180 - REcord Level Event Code | LEN:3"
+        ),
     )
 
     mfa_2: Optional[str] = Field(
@@ -56,7 +58,7 @@ class MFA(HL7Model):
         ),
         serialization_alias="MFA.2",
         title="MFN control ID",
-        description="Item #665",
+        description="C | Item #00665 | LEN:20",
     )
 
     mfa_3: Optional[TS] = Field(
@@ -68,7 +70,7 @@ class MFA(HL7Model):
         ),
         serialization_alias="MFA.3",
         title="Event completion date / time",
-        description="Item #668",
+        description="C | Item #00668",
     )
 
     mfa_4: CE = Field(
@@ -79,7 +81,9 @@ class MFA(HL7Model):
         ),
         serialization_alias="MFA.4",
         title="Error return code and/or text",
-        description="Item #669 | Table HL70181",
+        description=(
+            "R | Item #00669 | Table 0181 - MFN Recode-Level Error Return"
+        ),
     )
 
     mfa_5: List[CE] = Field(
@@ -91,7 +95,7 @@ class MFA(HL7Model):
         ),
         serialization_alias="MFA.5",
         title="Primary key value",
-        description="Item #667",
+        description="R | Item #00667",
     )
 
     model_config = {"populate_by_name": True}

@@ -26,85 +26,85 @@ class SCH(HL7Model):
     Attributes
     ----------
     sch_1 : EI | None
-        SCH.1 (opt) - Placer Appointment ID (EI) S10.6.2.1
+        SCH.1 - Placer Appointment ID (EI) C S10.6.2.1
 
     sch_2 : EI | None
-        SCH.2 (opt) - Filler Appointment ID (EI) S10.6.2.2
+        SCH.2 - Filler Appointment ID (EI) C S10.6.2.2
 
     sch_3 : str | None
-        SCH.3 (opt) - Occurrence Number (NM) S10.6.2.3
+        SCH.3 - Occurrence Number (NM) C S10.6.2.3
 
     sch_4 : EI | None
-        SCH.4 (opt) - Placer Group Number (EI) S10.6.2.4
+        SCH.4 - Placer Group Number (EI) O S10.6.2.4
 
     sch_5 : CE | None
-        SCH.5 (opt) - Schedule ID (CE) S10.6.2.5
+        SCH.5 - Schedule ID (CE) O S10.6.2.5
 
     sch_6 : CE
-        SCH.6 (req) - Event Reason (CE) S10.6.2.6
+        SCH.6 - Event Reason (CE) R S10.6.2.6
 
     sch_7 : CE | None
-        SCH.7 (opt) - Appointment Reason (CE) S10.6.2.7 | 0276 - Appointment reason codes
+        SCH.7 - Appointment Reason (CE) O S10.6.2.7 | 0276 - Appointment reason codes
 
     sch_8 : CE | None
-        SCH.8 (opt) - Appointment Type (CE) S10.6.2.8 | 0277 - Appointment type codes
+        SCH.8 - Appointment Type (CE) O S10.6.2.8 | 0277 - Appointment type codes
 
     sch_9 : str | None
-        SCH.9 (opt) - Appointment Duration (NM) S10.6.2.9
+        SCH.9 - Appointment Duration (NM) O S10.6.2.9
 
     sch_10 : CE | None
-        SCH.10 (opt) - Appointment Duration Units (CE) S10.6.2.10
+        SCH.10 - Appointment Duration Units (CE) O S10.6.2.10
 
     sch_11 : list[TQ]
-        SCH.11 (req, rep) - Appointment Timing Quantity (TQ) S10.6.2.11
+        SCH.11 - Appointment Timing Quantity (TQ) R rep S10.6.2.11
 
     sch_12 : list[XCN] | None
-        SCH.12 (opt, rep) - Placer Contact Person (XCN) S10.6.2.12
+        SCH.12 - Placer Contact Person (XCN) O rep S10.6.2.12
 
     sch_13 : XTN | None
-        SCH.13 (opt) - Placer Contact Phone Number (XTN) S10.6.2.13
+        SCH.13 - Placer Contact Phone Number (XTN) O S10.6.2.13
 
     sch_14 : list[XAD] | None
-        SCH.14 (opt, rep) - Placer Contact Address (XAD) S10.6.2.14
+        SCH.14 - Placer Contact Address (XAD) O rep S10.6.2.14
 
     sch_15 : PL | None
-        SCH.15 (opt) - Placer Contact Location (PL) S10.6.2.15
+        SCH.15 - Placer Contact Location (PL) O S10.6.2.15
 
     sch_16 : list[XCN]
-        SCH.16 (req, rep) - Filler Contact Person (XCN) S10.6.2.16
+        SCH.16 - Filler Contact Person (XCN) R rep S10.6.2.16
 
     sch_17 : XTN | None
-        SCH.17 (opt) - Filler Contact Phone Number (XTN) S10.6.2.17
+        SCH.17 - Filler Contact Phone Number (XTN) O S10.6.2.17
 
     sch_18 : list[XAD] | None
-        SCH.18 (opt, rep) - Filler Contact Address (XAD) S10.6.2.18
+        SCH.18 - Filler Contact Address (XAD) O rep S10.6.2.18
 
     sch_19 : PL | None
-        SCH.19 (opt) - Filler Contact Location (PL) S10.6.2.19
+        SCH.19 - Filler Contact Location (PL) O S10.6.2.19
 
     sch_20 : list[XCN]
-        SCH.20 (req, rep) - Entered By Person (XCN) S10.6.2.20
+        SCH.20 - Entered By Person (XCN) R rep S10.6.2.20
 
     sch_21 : list[XTN] | None
-        SCH.21 (opt, rep) - Entered By Phone Number (XTN) S10.6.2.21
+        SCH.21 - Entered By Phone Number (XTN) O rep S10.6.2.21
 
     sch_22 : PL | None
-        SCH.22 (opt) - Entered by Location (PL) S10.6.2.22
+        SCH.22 - Entered by Location (PL) O S10.6.2.22
 
     sch_23 : EI | None
-        SCH.23 (opt) - Parent Placer Appointment ID (EI) S10.6.2.23
+        SCH.23 - Parent Placer Appointment ID (EI) O S10.6.2.23
 
     sch_24 : EI | None
-        SCH.24 (opt) - Parent Filler Appointment ID (EI) S10.6.2.24
+        SCH.24 - Parent Filler Appointment ID (EI) C S10.6.2.24
 
     sch_25 : CE | None
-        SCH.25 (opt) - Filler Status Code (CE) S10.6.7.12 | 0278 - Filler status codes
+        SCH.25 - Filler Status Code (CE) O S10.6.7.12 | 0278 - Filler status codes
 
     sch_26 : list[EI] | None
-        SCH.26 (opt, rep) - Placer Order Number (EI) S10.6.2.26
+        SCH.26 - Placer Order Number (EI) C rep S10.6.2.26
 
     sch_27 : list[EI] | None
-        SCH.27 (opt, rep) - Filler Order Number (EI) S10.6.2.27
+        SCH.27 - Filler Order Number (EI) C rep S10.6.2.27
     """
 
     sch_1: Optional[EI] = Field(
@@ -116,7 +116,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.1",
         title="Placer Appointment ID",
-        description="Item #860",
+        description="C | Item #00860",
     )
 
     sch_2: Optional[EI] = Field(
@@ -128,7 +128,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.2",
         title="Filler Appointment ID",
-        description="Item #861",
+        description="C | Item #00861",
     )
 
     sch_3: Optional[str] = Field(
@@ -140,7 +140,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.3",
         title="Occurrence Number",
-        description="Item #862",
+        description="C | Item #00862 | LEN:5",
     )
 
     sch_4: Optional[EI] = Field(
@@ -152,7 +152,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.4",
         title="Placer Group Number",
-        description="Item #218",
+        description="O | Item #00218",
     )
 
     sch_5: Optional[CE] = Field(
@@ -164,7 +164,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.5",
         title="Schedule ID",
-        description="Item #864",
+        description="O | Item #00864",
     )
 
     sch_6: CE = Field(
@@ -175,7 +175,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.6",
         title="Event Reason",
-        description="Item #883",
+        description="R | Item #00883",
     )
 
     sch_7: Optional[CE] = Field(
@@ -187,7 +187,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.7",
         title="Appointment Reason",
-        description="Item #866 | Table HL70276",
+        description="O | Item #00866 | Table 0276 - Appointment reason codes",
     )
 
     sch_8: Optional[CE] = Field(
@@ -199,7 +199,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.8",
         title="Appointment Type",
-        description="Item #867 | Table HL70277",
+        description="O | Item #00867 | Table 0277 - Appointment type codes",
     )
 
     sch_9: Optional[str] = Field(
@@ -211,7 +211,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.9",
         title="Appointment Duration",
-        description="Item #868",
+        description="O | Item #00868 | LEN:20",
     )
 
     sch_10: Optional[CE] = Field(
@@ -223,7 +223,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.10",
         title="Appointment Duration Units",
-        description="Item #869",
+        description="O | Item #00869",
     )
 
     sch_11: List[TQ] = Field(
@@ -235,7 +235,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.11",
         title="Appointment Timing Quantity",
-        description="Item #884",
+        description="R | Item #00884",
     )
 
     sch_12: Optional[List[XCN]] = Field(
@@ -247,7 +247,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.12",
         title="Placer Contact Person",
-        description="Item #874",
+        description="O | Item #00874",
     )
 
     sch_13: Optional[XTN] = Field(
@@ -259,7 +259,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.13",
         title="Placer Contact Phone Number",
-        description="Item #875",
+        description="O | Item #00875",
     )
 
     sch_14: Optional[List[XAD]] = Field(
@@ -271,7 +271,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.14",
         title="Placer Contact Address",
-        description="Item #876",
+        description="O | Item #00876",
     )
 
     sch_15: Optional[PL] = Field(
@@ -283,7 +283,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.15",
         title="Placer Contact Location",
-        description="Item #877",
+        description="O | Item #00877",
     )
 
     sch_16: List[XCN] = Field(
@@ -295,7 +295,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.16",
         title="Filler Contact Person",
-        description="Item #885",
+        description="R | Item #00885",
     )
 
     sch_17: Optional[XTN] = Field(
@@ -307,7 +307,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.17",
         title="Filler Contact Phone Number",
-        description="Item #886",
+        description="O | Item #00886",
     )
 
     sch_18: Optional[List[XAD]] = Field(
@@ -319,7 +319,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.18",
         title="Filler Contact Address",
-        description="Item #887",
+        description="O | Item #00887",
     )
 
     sch_19: Optional[PL] = Field(
@@ -331,7 +331,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.19",
         title="Filler Contact Location",
-        description="Item #888",
+        description="O | Item #00888",
     )
 
     sch_20: List[XCN] = Field(
@@ -343,7 +343,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.20",
         title="Entered By Person",
-        description="Item #878",
+        description="R | Item #00878",
     )
 
     sch_21: Optional[List[XTN]] = Field(
@@ -355,7 +355,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.21",
         title="Entered By Phone Number",
-        description="Item #879",
+        description="O | Item #00879",
     )
 
     sch_22: Optional[PL] = Field(
@@ -367,7 +367,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.22",
         title="Entered by Location",
-        description="Item #880",
+        description="O | Item #00880",
     )
 
     sch_23: Optional[EI] = Field(
@@ -379,7 +379,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.23",
         title="Parent Placer Appointment ID",
-        description="Item #881",
+        description="O | Item #00881",
     )
 
     sch_24: Optional[EI] = Field(
@@ -391,7 +391,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.24",
         title="Parent Filler Appointment ID",
-        description="Item #882",
+        description="C | Item #00882",
     )
 
     sch_25: Optional[CE] = Field(
@@ -403,7 +403,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.25",
         title="Filler Status Code",
-        description="Item #889 | Table HL70278",
+        description="O | Item #00889 | Table 0278 - Filler status codes",
     )
 
     sch_26: Optional[List[EI]] = Field(
@@ -415,7 +415,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.26",
         title="Placer Order Number",
-        description="Item #216",
+        description="C | Item #00216",
     )
 
     sch_27: Optional[List[EI]] = Field(
@@ -427,7 +427,7 @@ class SCH(HL7Model):
         ),
         serialization_alias="SCH.27",
         title="Filler Order Number",
-        description="Item #217",
+        description="C | Item #00217",
     )
 
     @field_validator("sch_3", "sch_9", mode='before')

@@ -18,13 +18,13 @@ class MRG(HL7Model):
     Attributes
     ----------
     mrg_1 : str
-        MRG.1 (req) - PRIOR PATIENT ID - INTERNAL (CK) S3-13 | 0061 - CHECK DIGIT SCHEME
+        MRG.1 - PRIOR PATIENT ID - INTERNAL (CK) R S3-13 | 0061 - CHECK DIGIT SCHEME
 
     mrg_2 : str | None
-        MRG.2 (opt) - PRIOR ALTERNATE PATIENT ID (CK) | 0061 - CHECK DIGIT SCHEME
+        MRG.2 - PRIOR ALTERNATE PATIENT ID (CK) O | 0061 - CHECK DIGIT SCHEME
 
     mrg_3 : str | None
-        MRG.3 (opt) - PRIOR PATIENT ACCOUNT NUMBER (CK) | 0061 - CHECK DIGIT SCHEME
+        MRG.3 - PRIOR PATIENT ACCOUNT NUMBER (CK) O | 0061 - CHECK DIGIT SCHEME
     """
 
     mrg_1: str = Field(
@@ -35,7 +35,9 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.1",
         title="PRIOR PATIENT ID - INTERNAL",
-        description="Item #576 | Table HL70061",
+        description=(
+            "R | Item #00576 | Table 0061 - CHECK DIGIT SCHEME | LEN:16"
+        ),
     )
 
     mrg_2: Optional[str] = Field(
@@ -47,7 +49,9 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.2",
         title="PRIOR ALTERNATE PATIENT ID",
-        description="Item #577 | Table HL70061",
+        description=(
+            "O | Item #00577 | Table 0061 - CHECK DIGIT SCHEME | LEN:16"
+        ),
     )
 
     mrg_3: Optional[str] = Field(
@@ -59,7 +63,9 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.3",
         title="PRIOR PATIENT ACCOUNT NUMBER",
-        description="Item #578 | Table HL70061",
+        description=(
+            "O | Item #00578 | Table 0061 - CHECK DIGIT SCHEME | LEN:20"
+        ),
     )
 
     model_config = {"populate_by_name": True}

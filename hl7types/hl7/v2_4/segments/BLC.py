@@ -21,10 +21,10 @@ class BLC(HL7Model):
     Attributes
     ----------
     blc_1 : CE | None
-        BLC.1 (opt) - Blood Product Code (CE) S6.5.13.1 | 0426 - Blood product code
+        BLC.1 - Blood Product Code (CE) O S6.5.13.1 | 0426 - Blood product code
 
     blc_2 : CQ | None
-        BLC.2 (opt) - Blood Amount (CQ) S6.5.13.2
+        BLC.2 - Blood Amount (CQ) O S6.5.13.2
     """
 
     blc_1: Optional[CE] = Field(
@@ -36,7 +36,7 @@ class BLC(HL7Model):
         ),
         serialization_alias="BLC.1",
         title="Blood Product Code",
-        description="Item #1528 | Table HL70426",
+        description="O | Item #01528 | Table 0426 - Blood product code",
     )
 
     blc_2: Optional[CQ] = Field(
@@ -48,7 +48,7 @@ class BLC(HL7Model):
         ),
         serialization_alias="BLC.2",
         title="Blood Amount",
-        description="Item #1529",
+        description="O | Item #01529",
     )
 
     model_config = {"populate_by_name": True}

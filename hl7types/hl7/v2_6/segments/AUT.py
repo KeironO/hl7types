@@ -22,34 +22,34 @@ class AUT(HL7Model):
     Attributes
     ----------
     aut_1 : CWE | None
-        AUT.1 (opt) - Authorizing Payor, Plan ID (CWE) S11.6.2.1 | 0072 - Insurance Plan ID
+        AUT.1 - Authorizing Payor, Plan ID (CWE) O S11.6.2.1 | 0072 - Insurance Plan ID
 
     aut_2 : CWE
-        AUT.2 (req) - Authorizing Payor, Company ID (CWE) S11.6.2.2 | 0285 - Insurance company ID codes
+        AUT.2 - Authorizing Payor, Company ID (CWE) R S11.6.2.2 | 0285 - Insurance company ID codes
 
     aut_3 : str | None
-        AUT.3 (opt) - Authorizing Payor, Company Name (ST) S11.6.2.3
+        AUT.3 - Authorizing Payor, Company Name (ST) O S11.6.2.3
 
     aut_4 : str | None
-        AUT.4 (opt) - Authorization Effective Date (DTM) S11.6.2.4
+        AUT.4 - Authorization Effective Date (DTM) O S11.6.2.4
 
     aut_5 : str | None
-        AUT.5 (opt) - Authorization Expiration Date (DTM) S11.6.2.5
+        AUT.5 - Authorization Expiration Date (DTM) O S11.6.2.5
 
     aut_6 : EI | None
-        AUT.6 (opt) - Authorization Identifier (EI) S11.6.2.6
+        AUT.6 - Authorization Identifier (EI) C S11.6.2.6
 
     aut_7 : CP | None
-        AUT.7 (opt) - Reimbursement Limit (CP) S11.6.2.7
+        AUT.7 - Reimbursement Limit (CP) O S11.6.2.7
 
     aut_8 : str | None
-        AUT.8 (opt) - Requested Number of Treatments (NM) S11.6.2.8
+        AUT.8 - Requested Number of Treatments (NM) O S11.6.2.8
 
     aut_9 : str | None
-        AUT.9 (opt) - Authorized Number of Treatments (NM) S11.6.2.9
+        AUT.9 - Authorized Number of Treatments (NM) O S11.6.2.9
 
     aut_10 : str | None
-        AUT.10 (opt) - Process Date (DTM) S11.6.1.9
+        AUT.10 - Process Date (DTM) O S11.6.1.9
     """
 
     aut_1: Optional[CWE] = Field(
@@ -61,7 +61,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.1",
         title="Authorizing Payor, Plan ID",
-        description="Item #1146 | Table HL70072",
+        description="O | Item #01146 | Table 0072 - Insurance Plan ID",
     )
 
     aut_2: CWE = Field(
@@ -72,7 +72,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.2",
         title="Authorizing Payor, Company ID",
-        description="Item #1147 | Table HL70285",
+        description="R | Item #01147 | Table 0285 - Insurance company ID codes",
     )
 
     aut_3: Optional[str] = Field(
@@ -84,7 +84,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.3",
         title="Authorizing Payor, Company Name",
-        description="Item #1148",
+        description="O | Item #01148 | LEN:45",
     )
 
     aut_4: Optional[str] = Field(
@@ -96,7 +96,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.4",
         title="Authorization Effective Date",
-        description="Item #1149",
+        description="O | Item #01149 | LEN:24",
     )
 
     aut_5: Optional[str] = Field(
@@ -108,7 +108,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.5",
         title="Authorization Expiration Date",
-        description="Item #1150",
+        description="O | Item #01150 | LEN:24",
     )
 
     aut_6: Optional[EI] = Field(
@@ -120,7 +120,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.6",
         title="Authorization Identifier",
-        description="Item #1151",
+        description="C | Item #01151",
     )
 
     aut_7: Optional[CP] = Field(
@@ -132,7 +132,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.7",
         title="Reimbursement Limit",
-        description="Item #1152",
+        description="O | Item #01152",
     )
 
     aut_8: Optional[str] = Field(
@@ -144,7 +144,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.8",
         title="Requested Number of Treatments",
-        description="Item #1153",
+        description="O | Item #01153 | LEN:2",
     )
 
     aut_9: Optional[str] = Field(
@@ -156,7 +156,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.9",
         title="Authorized Number of Treatments",
-        description="Item #1154",
+        description="O | Item #01154 | LEN:2",
     )
 
     aut_10: Optional[str] = Field(
@@ -168,7 +168,7 @@ class AUT(HL7Model):
         ),
         serialization_alias="AUT.10",
         title="Process Date",
-        description="Item #1145",
+        description="O | Item #01145 | LEN:24",
     )
 
     @field_validator("aut_4", "aut_5", "aut_10", mode='before')

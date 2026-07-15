@@ -18,19 +18,19 @@ class MSA(HL7Model):
     Attributes
     ----------
     msa_1 : str
-        MSA.1 (req) - ACKNOWLEDGMENT CODE (ID) S2-45 | 0008 - ACKNOWLEDGMENT CODE
+        MSA.1 - ACKNOWLEDGMENT CODE (ID) R S2-45 | 0008 - ACKNOWLEDGMENT CODE
 
     msa_2 : str
-        MSA.2 (req) - MESSAGE CONTROL ID (ST)
+        MSA.2 - MESSAGE CONTROL ID (ST) R
 
     msa_3 : str | None
-        MSA.3 (opt) - TEXT MESSAGE (ST)
+        MSA.3 - TEXT MESSAGE (ST) O
 
     msa_4 : str | None
-        MSA.4 (opt) - EXPECTED SEQUENCE NUMBER (NM)
+        MSA.4 - EXPECTED SEQUENCE NUMBER (NM) O
 
     msa_5 : str | None
-        MSA.5 (opt) - DELAYED ACKNOWLEDGMENT TYPE (ID) | 0102 - DELAYED ACKNOWLEDGMENT TYPE
+        MSA.5 - DELAYED ACKNOWLEDGMENT TYPE (ID) O | 0102 - DELAYED ACKNOWLEDGMENT TYPE
     """
 
     msa_1: str = Field(
@@ -41,7 +41,9 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.1",
         title="ACKNOWLEDGMENT CODE",
-        description="Item #2 | Table HL70008",
+        description=(
+            "R | Item #00002 | Table 0008 - ACKNOWLEDGMENT CODE | LEN:2"
+        ),
     )
 
     msa_2: str = Field(
@@ -52,7 +54,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.2",
         title="MESSAGE CONTROL ID",
-        description="Item #3",
+        description="R | Item #00003 | LEN:20",
     )
 
     msa_3: Optional[str] = Field(
@@ -64,7 +66,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.3",
         title="TEXT MESSAGE",
-        description="Item #4",
+        description="O | Item #00004 | LEN:80",
     )
 
     msa_4: Optional[str] = Field(
@@ -76,7 +78,7 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.4",
         title="EXPECTED SEQUENCE NUMBER",
-        description="Item #598",
+        description="O | Item #00598 | LEN:15",
     )
 
     msa_5: Optional[str] = Field(
@@ -88,7 +90,9 @@ class MSA(HL7Model):
         ),
         serialization_alias="MSA.5",
         title="DELAYED ACKNOWLEDGMENT TYPE",
-        description="Item #632 | Table HL70102",
+        description=(
+            "O | Item #00632 | Table 0102 - DELAYED ACKNOWLEDGMENT TYPE | LEN:1"
+        ),
     )
 
     @field_validator("msa_4", mode='before')

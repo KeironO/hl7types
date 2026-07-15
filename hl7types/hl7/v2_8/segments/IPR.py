@@ -22,28 +22,28 @@ class IPR(HL7Model):
     Attributes
     ----------
     ipr_1 : EI
-        IPR.1 (req) - IPR Identifier (EI) S16.4.9.1
+        IPR.1 - IPR Identifier (EI) R S16.4.9.1
 
     ipr_2 : EI
-        IPR.2 (req) - Provider Cross Reference Identifier (EI) S16.4.9.2
+        IPR.2 - Provider Cross Reference Identifier (EI) R S16.4.9.2
 
     ipr_3 : EI
-        IPR.3 (req) - Payer Cross Reference Identifier (EI) S16.4.9.3
+        IPR.3 - Payer Cross Reference Identifier (EI) R S16.4.9.3
 
     ipr_4 : CWE
-        IPR.4 (req) - IPR Status (CWE) S16.4.9.4 | 0571 - Invoice Processing Results Status
+        IPR.4 - IPR Status (CWE) R S16.4.9.4 | 0571 - Invoice Processing Results Status
 
     ipr_5 : str
-        IPR.5 (req) - IPR Date/Time (DTM) S16.4.9.5
+        IPR.5 - IPR Date/Time (DTM) R S16.4.9.5
 
     ipr_6 : CP | None
-        IPR.6 (opt) - Adjudicated/Paid Amount (CP) S16.4.9.6
+        IPR.6 - Adjudicated/Paid Amount (CP) O S16.4.9.6
 
     ipr_7 : str | None
-        IPR.7 (opt) - Expected Payment Date/Time (DTM) S16.4.9.7
+        IPR.7 - Expected Payment Date/Time (DTM) O S16.4.9.7
 
     ipr_8 : str
-        IPR.8 (req) - IPR Checksum (ST) S16.4.9.8
+        IPR.8 - IPR Checksum (ST) R S16.4.9.8
     """
 
     ipr_1: EI = Field(
@@ -54,7 +54,7 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.1",
         title="IPR Identifier",
-        description="Item #2030",
+        description="R | Item #02030",
     )
 
     ipr_2: EI = Field(
@@ -65,7 +65,7 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.2",
         title="Provider Cross Reference Identifier",
-        description="Item #2031",
+        description="R | Item #02031",
     )
 
     ipr_3: EI = Field(
@@ -76,7 +76,7 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.3",
         title="Payer Cross Reference Identifier",
-        description="Item #2032",
+        description="R | Item #02032",
     )
 
     ipr_4: CWE = Field(
@@ -87,7 +87,9 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.4",
         title="IPR Status",
-        description="Item #2033 | Table HL70571",
+        description=(
+            "R | Item #02033 | Table 0571 - Invoice Processing Results Status"
+        ),
     )
 
     ipr_5: str = Field(
@@ -98,7 +100,7 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.5",
         title="IPR Date/Time",
-        description="Item #2034",
+        description="R | Item #02034",
     )
 
     ipr_6: Optional[CP] = Field(
@@ -110,7 +112,7 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.6",
         title="Adjudicated/Paid Amount",
-        description="Item #2035",
+        description="O | Item #02035",
     )
 
     ipr_7: Optional[str] = Field(
@@ -122,7 +124,7 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.7",
         title="Expected Payment Date/Time",
-        description="Item #2036",
+        description="O | Item #02036",
     )
 
     ipr_8: str = Field(
@@ -133,7 +135,7 @@ class IPR(HL7Model):
         ),
         serialization_alias="IPR.8",
         title="IPR Checksum",
-        description="Item #2037",
+        description="R | Item #02037",
     )
 
     @field_validator("ipr_5", "ipr_7", mode='before')

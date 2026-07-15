@@ -20,40 +20,40 @@ class QRD(HL7Model):
     Attributes
     ----------
     qrd_1 : TS
-        QRD.1 (req) - Query date / time (TS) S2.10.4.1
+        QRD.1 - Query date / time (TS) R S2.10.4.1
 
     qrd_2 : str
-        QRD.2 (req) - Query Format Code (ID) S2.10.4.2 | 0106 - QUERY FORMAT CODE
+        QRD.2 - Query Format Code (ID) R S2.10.4.2 | 0106 - QUERY FORMAT CODE
 
     qrd_3 : str
-        QRD.3 (req) - Query Priority (ID) S2.10.4.3 | 0091 - QUERY PRIORITY
+        QRD.3 - Query Priority (ID) R S2.10.4.3 | 0091 - QUERY PRIORITY
 
     qrd_4 : str
-        QRD.4 (req) - Query ID (ST) S2.10.4.4
+        QRD.4 - Query ID (ST) R S2.10.4.4
 
     qrd_5 : str | None
-        QRD.5 (opt) - Deferred Response Type (ID) S2.10.4.5 | 0107 - DEFERRED RESPONSE TYPE
+        QRD.5 - Deferred Response Type (ID) NA S2.10.4.5 | 0107 - DEFERRED RESPONSE TYPE
 
     qrd_6 : TS | None
-        QRD.6 (opt) - Deferred response date / time (TS) S2.10.4.6
+        QRD.6 - Deferred response date / time (TS) NA S2.10.4.6
 
     qrd_7 : str
-        QRD.7 (req) - Quantity Limited Request (CQ) S2.10.4.7 | 0126 - QUANTITY LIMITED REQUEST
+        QRD.7 - Quantity Limited Request (CQ) R S2.10.4.7 | 0126 - QUANTITY LIMITED REQUEST
 
     qrd_8 : list[str]
-        QRD.8 (req, rep) - Who Subject Filter (ST) S2.10.4.8
+        QRD.8 - Who Subject Filter (ST) R rep S2.10.4.8
 
     qrd_9 : list[str]
-        QRD.9 (req, rep) - What Subject Filter (ID) S2.10.4.9 | 0048 - WHAT SUBJECT FILTER
+        QRD.9 - What Subject Filter (ID) R rep S2.10.4.9 | 0048 - WHAT SUBJECT FILTER
 
     qrd_10 : list[str]
-        QRD.10 (req, rep) - What Department Data Code (ST) S2.10.4.10
+        QRD.10 - What Department Data Code (ST) R rep S2.10.4.10
 
     qrd_11 : list[str] | None
-        QRD.11 (opt, rep) - What data code value qualifier (CM) S2.10.4.11
+        QRD.11 - What data code value qualifier (CM) NA rep S2.10.4.11
 
     qrd_12 : str | None
-        QRD.12 (opt) - Query Results Level (ID) S2.10.4.12 | 0108 - QUERY RESULTS LEVEL
+        QRD.12 - Query Results Level (ID) NA S2.10.4.12 | 0108 - QUERY RESULTS LEVEL
     """
 
     qrd_1: TS = Field(
@@ -64,7 +64,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.1",
         title="Query date / time",
-        description="Item #25",
+        description="R | Item #00025",
     )
 
     qrd_2: str = Field(
@@ -75,7 +75,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.2",
         title="Query Format Code",
-        description="Item #26 | Table HL70106",
+        description="R | Item #00026 | Table 0106 - QUERY FORMAT CODE | LEN:1",
     )
 
     qrd_3: str = Field(
@@ -86,7 +86,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.3",
         title="Query Priority",
-        description="Item #27 | Table HL70091",
+        description="R | Item #00027 | Table 0091 - QUERY PRIORITY | LEN:1",
     )
 
     qrd_4: str = Field(
@@ -97,7 +97,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.4",
         title="Query ID",
-        description="Item #28",
+        description="R | Item #00028 | LEN:10",
     )
 
     qrd_5: Optional[str] = Field(
@@ -109,7 +109,9 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.5",
         title="Deferred Response Type",
-        description="Item #29 | Table HL70107",
+        description=(
+            "NA | Item #00029 | Table 0107 - DEFERRED RESPONSE TYPE | LEN:1"
+        ),
     )
 
     qrd_6: Optional[TS] = Field(
@@ -121,7 +123,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.6",
         title="Deferred response date / time",
-        description="Item #30",
+        description="NA | Item #00030",
     )
 
     qrd_7: str = Field(
@@ -132,7 +134,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.7",
         title="Quantity Limited Request",
-        description="Item #31 | Table HL70126",
+        description="R | Item #00031 | Table 0126 - QUANTITY LIMITED REQUEST",
     )
 
     qrd_8: List[str] = Field(
@@ -144,7 +146,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.8",
         title="Who Subject Filter",
-        description="Item #32",
+        description="R | Item #00032 | LEN:20",
     )
 
     qrd_9: List[str] = Field(
@@ -156,7 +158,9 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.9",
         title="What Subject Filter",
-        description="Item #33 | Table HL70048",
+        description=(
+            "R | Item #00033 | Table 0048 - WHAT SUBJECT FILTER | LEN:3"
+        ),
     )
 
     qrd_10: List[str] = Field(
@@ -168,7 +172,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.10",
         title="What Department Data Code",
-        description="Item #34",
+        description="R | Item #00034 | LEN:20",
     )
 
     qrd_11: Optional[List[str]] = Field(
@@ -180,7 +184,7 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.11",
         title="What data code value qualifier",
-        description="Item #35",
+        description="NA | Item #00035",
     )
 
     qrd_12: Optional[str] = Field(
@@ -192,7 +196,9 @@ class QRD(HL7Model):
         ),
         serialization_alias="QRD.12",
         title="Query Results Level",
-        description="Item #36 | Table HL70108",
+        description=(
+            "NA | Item #00036 | Table 0108 - QUERY RESULTS LEVEL | LEN:1"
+        ),
     )
 
     model_config = {"populate_by_name": True}

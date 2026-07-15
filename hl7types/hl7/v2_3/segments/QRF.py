@@ -21,31 +21,31 @@ class QRF(HL7Model):
     Attributes
     ----------
     qrf_1 : list[str]
-        QRF.1 (req, rep) - Where Subject Filter (ST) S2.24.5.1
+        QRF.1 - Where Subject Filter (ST) R rep S2.24.5.1
 
     qrf_2 : TS | None
-        QRF.2 (opt) - When Data Start Date/Time (TS) S2.24.5.2
+        QRF.2 - When Data Start Date/Time (TS) NA S2.24.5.2
 
     qrf_3 : TS | None
-        QRF.3 (opt) - When Data End Date/Time (TS) S2.24.5.3
+        QRF.3 - When Data End Date/Time (TS) NA S2.24.5.3
 
     qrf_4 : list[str] | None
-        QRF.4 (opt, rep) - What User Qualifier (ST) S2.24.5.4
+        QRF.4 - What User Qualifier (ST) O rep S2.24.5.4
 
     qrf_5 : list[str] | None
-        QRF.5 (opt, rep) - Other QRY Subject Filter (ST) S2.24.5.5
+        QRF.5 - Other QRY Subject Filter (ST) O rep S2.24.5.5
 
     qrf_6 : list[str] | None
-        QRF.6 (opt, rep) - Which Date/Time Qualifier (ID) S2.24.5.6 | 0156 - Which Date/Time Qualifier
+        QRF.6 - Which Date/Time Qualifier (ID) O rep S2.24.5.6 | 0156 - Which Date/Time Qualifier
 
     qrf_7 : list[str] | None
-        QRF.7 (opt, rep) - Which Date/Time Status Qualifier (ID) S2.24.5.7 | 0157 - Which Date/Time Status Qualifier
+        QRF.7 - Which Date/Time Status Qualifier (ID) O rep S2.24.5.7 | 0157 - Which Date/Time Status Qualifier
 
     qrf_8 : list[str] | None
-        QRF.8 (opt, rep) - Date/Time Selection Qualifier (ID) S2.24.5.8 | 0158 - Date/Time Selection Qualifier
+        QRF.8 - Date/Time Selection Qualifier (ID) O rep S2.24.5.8 | 0158 - Date/Time Selection Qualifier
 
     qrf_9 : TQ | None
-        QRF.9 (opt) - When Quantity/Timing Qualifier (TQ) S2.24.5.9
+        QRF.9 - When Quantity/Timing Qualifier (TQ) O S2.24.5.9
     """
 
     qrf_1: List[str] = Field(
@@ -57,7 +57,7 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.1",
         title="Where Subject Filter",
-        description="Item #37",
+        description="R | Item #00037 | LEN:20",
     )
 
     qrf_2: Optional[TS] = Field(
@@ -69,7 +69,7 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.2",
         title="When Data Start Date/Time",
-        description="Item #38",
+        description="NA | Item #00038",
     )
 
     qrf_3: Optional[TS] = Field(
@@ -81,7 +81,7 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.3",
         title="When Data End Date/Time",
-        description="Item #39",
+        description="NA | Item #00039",
     )
 
     qrf_4: Optional[List[str]] = Field(
@@ -93,7 +93,7 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.4",
         title="What User Qualifier",
-        description="Item #40",
+        description="O | Item #00040 | LEN:60",
     )
 
     qrf_5: Optional[List[str]] = Field(
@@ -105,7 +105,7 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.5",
         title="Other QRY Subject Filter",
-        description="Item #41",
+        description="O | Item #00041 | LEN:60",
     )
 
     qrf_6: Optional[List[str]] = Field(
@@ -117,7 +117,9 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.6",
         title="Which Date/Time Qualifier",
-        description="Item #42 | Table HL70156",
+        description=(
+            "O | Item #00042 | Table 0156 - Which Date/Time Qualifier | LEN:12"
+        ),
     )
 
     qrf_7: Optional[List[str]] = Field(
@@ -129,7 +131,10 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.7",
         title="Which Date/Time Status Qualifier",
-        description="Item #43 | Table HL70157",
+        description=(
+            "O | Item #00043 | Table 0157 - Which Date/Time Status Qualifier | "
+            "LEN:12"
+        ),
     )
 
     qrf_8: Optional[List[str]] = Field(
@@ -141,7 +146,10 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.8",
         title="Date/Time Selection Qualifier",
-        description="Item #44 | Table HL70158",
+        description=(
+            "O | Item #00044 | Table 0158 - Date/Time Selection Qualifier | "
+            "LEN:12"
+        ),
     )
 
     qrf_9: Optional[TQ] = Field(
@@ -153,7 +161,7 @@ class QRF(HL7Model):
         ),
         serialization_alias="QRF.9",
         title="When Quantity/Timing Qualifier",
-        description="Item #694",
+        description="O | Item #00694",
     )
 
     model_config = {"populate_by_name": True}

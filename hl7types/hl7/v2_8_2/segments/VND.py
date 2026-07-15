@@ -21,19 +21,19 @@ class VND(HL7Model):
     Attributes
     ----------
     vnd_1 : str
-        VND.1 (req) - Set Id - VND (SI) S17.4.4.1
+        VND.1 - Set Id - VND (SI) R S17.4.4.1
 
     vnd_2 : EI
-        VND.2 (req) - Vendor Identifier (EI) S17.4.4.2
+        VND.2 - Vendor Identifier (EI) R S17.4.4.2
 
     vnd_3 : str | None
-        VND.3 (opt) - Vendor Name (ST) S17.4.4.3
+        VND.3 - Vendor Name (ST) O S17.4.4.3
 
     vnd_4 : EI | None
-        VND.4 (opt) - Vendor Catalog Number (EI) S17.4.4.4
+        VND.4 - Vendor Catalog Number (EI) O S17.4.4.4
 
     vnd_5 : CNE | None
-        VND.5 (opt) - Primary Vendor Indicator (CNE) S17.4.4.5 | 0532 - Expanded Yes/no Indicator
+        VND.5 - Primary Vendor Indicator (CNE) O S17.4.4.5 | 0532 - Expanded Yes/no Indicator
     """
 
     vnd_1: str = Field(
@@ -44,7 +44,7 @@ class VND(HL7Model):
         ),
         serialization_alias="VND.1",
         title="Set Id - VND",
-        description="Item #2217",
+        description="R | Item #02217 | LEN:4",
     )
 
     vnd_2: EI = Field(
@@ -55,7 +55,7 @@ class VND(HL7Model):
         ),
         serialization_alias="VND.2",
         title="Vendor Identifier",
-        description="Item #2218",
+        description="R | Item #02218",
     )
 
     vnd_3: Optional[str] = Field(
@@ -67,7 +67,7 @@ class VND(HL7Model):
         ),
         serialization_alias="VND.3",
         title="Vendor Name",
-        description="Item #2276",
+        description="O | Item #02276",
     )
 
     vnd_4: Optional[EI] = Field(
@@ -79,7 +79,7 @@ class VND(HL7Model):
         ),
         serialization_alias="VND.4",
         title="Vendor Catalog Number",
-        description="Item #2219",
+        description="O | Item #02219",
     )
 
     vnd_5: Optional[CNE] = Field(
@@ -91,7 +91,7 @@ class VND(HL7Model):
         ),
         serialization_alias="VND.5",
         title="Primary Vendor Indicator",
-        description="Item #2220 | Table HL70532",
+        description="O | Item #02220 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     @field_validator("vnd_1", mode='before')

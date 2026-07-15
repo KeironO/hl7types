@@ -24,79 +24,79 @@ class CON(HL7Model):
     Attributes
     ----------
     con_1 : str
-        CON.1 (req) - Set ID - CON (SI) S9.9.4.1
+        CON.1 - Set ID - CON (SI) R S9.9.4.1
 
     con_2 : CWE | None
-        CON.2 (opt) - Consent Type (CWE) S9.9.4.2 | 0496 - Consent Type
+        CON.2 - Consent Type (CWE) O S9.9.4.2 | 0496 - Consent Type
 
     con_3 : str | None
-        CON.3 (opt) - Consent Form ID (ST) S9.9.4.3
+        CON.3 - Consent Form ID (ST) O S9.9.4.3
 
     con_4 : EI | None
-        CON.4 (opt) - Consent Form Number (EI) S9.9.4.4
+        CON.4 - Consent Form Number (EI) O S9.9.4.4
 
     con_5 : list[str] | None
-        CON.5 (opt, rep) - Consent Text (FT) S9.9.4.5
+        CON.5 - Consent Text (FT) O rep S9.9.4.5
 
     con_6 : list[str] | None
-        CON.6 (opt, rep) - Subject-specific Consent Text (FT) S9.9.4.6
+        CON.6 - Subject-specific Consent Text (FT) O rep S9.9.4.6
 
     con_7 : list[str] | None
-        CON.7 (opt, rep) - Consent Background (FT) S9.9.4.7
+        CON.7 - Consent Background (FT) O rep S9.9.4.7
 
     con_8 : list[str] | None
-        CON.8 (opt, rep) - Subject-specific Consent Background (FT) S9.9.4.8
+        CON.8 - Subject-specific Consent Background (FT) O rep S9.9.4.8
 
     con_9 : list[str] | None
-        CON.9 (opt, rep) - Consenter-imposed limitations (FT) S9.9.4.9
+        CON.9 - Consenter-imposed limitations (FT) O rep S9.9.4.9
 
     con_10 : CNE | None
-        CON.10 (opt) - Consent Mode (CNE) S9.9.4.10 | 0497 - Consent Mode
+        CON.10 - Consent Mode (CNE) O S9.9.4.10 | 0497 - Consent Mode
 
     con_11 : CNE
-        CON.11 (req) - Consent Status (CNE) S9.9.4.11 | 0498 - Consent Status
+        CON.11 - Consent Status (CNE) R S9.9.4.11 | 0498 - Consent Status
 
     con_12 : TS | None
-        CON.12 (opt) - Consent Discussion Date/Time (TS) S9.9.4.12
+        CON.12 - Consent Discussion Date/Time (TS) O S9.9.4.12
 
     con_13 : TS | None
-        CON.13 (opt) - Consent Decision Date/Time (TS) S9.9.4.13
+        CON.13 - Consent Decision Date/Time (TS) O S9.9.4.13
 
     con_14 : TS | None
-        CON.14 (opt) - Consent Effective Date/Time (TS) S9.9.4.14
+        CON.14 - Consent Effective Date/Time (TS) O S9.9.4.14
 
     con_15 : TS | None
-        CON.15 (opt) - Consent End Date/Time (TS) S9.9.4.15
+        CON.15 - Consent End Date/Time (TS) O S9.9.4.15
 
     con_16 : str | None
-        CON.16 (opt) - Subject Competence Indicator (ID) S9.9.4.16 | 0136 - Yes/no indicator
+        CON.16 - Subject Competence Indicator (ID) O S9.9.4.16 | 0136 - Yes/no indicator
 
     con_17 : str | None
-        CON.17 (opt) - Translator Assistance Indicator (ID) S9.9.4.17 | 0136 - Yes/no indicator
+        CON.17 - Translator Assistance Indicator (ID) O S9.9.4.17 | 0136 - Yes/no indicator
 
     con_18 : str | None
-        CON.18 (opt) - Language Translated To (ID) S9.9.4.18 | 0296 - Primary Language
+        CON.18 - Language Translated To (ID) O S9.9.4.18 | 0296 - Primary Language
 
     con_19 : str | None
-        CON.19 (opt) - Informational Material Supplied Indicator (ID) S9.9.4.19 | 0136 - Yes/no indicator
+        CON.19 - Informational Material Supplied Indicator (ID) O S9.9.4.19 | 0136 - Yes/no indicator
 
     con_20 : CWE | None
-        CON.20 (opt) - Consent Bypass Reason (CWE) S9.9.4.20 | 0499 - Consent Bypass Reason
+        CON.20 - Consent Bypass Reason (CWE) O S9.9.4.20 | 0499 - Consent Bypass Reason
 
     con_21 : str | None
-        CON.21 (opt) - Consent Disclosure Level (ID) S9.9.4.21 | 0500 - Consent Disclosure Level
+        CON.21 - Consent Disclosure Level (ID) O S9.9.4.21 | 0500 - Consent Disclosure Level
 
     con_22 : CWE | None
-        CON.22 (opt) - Consent Non-disclosure Reason (CWE) S9.9.4.22 | 0501 - Consent Non-Disclosure Reason
+        CON.22 - Consent Non-disclosure Reason (CWE) O S9.9.4.22 | 0501 - Consent Non-Disclosure Reason
 
     con_23 : CWE | None
-        CON.23 (opt) - Non-subject Consenter Reason (CWE) S9.9.4.23 | 0502 - Non-Subject Consenter Reason
+        CON.23 - Non-subject Consenter Reason (CWE) O S9.9.4.23 | 0502 - Non-Subject Consenter Reason
 
     con_24 : list[XPN]
-        CON.24 (req, rep) - Consenter ID (XPN) S9.9.4.24
+        CON.24 - Consenter ID (XPN) R rep S9.9.4.24
 
     con_25 : list[str]
-        CON.25 (req, rep) - Relationship to Subject Table (IS) S9.9.4.25 | 0548 - Signatory's Relationship to Subject
+        CON.25 - Relationship to Subject Table (IS) R rep S9.9.4.25 | 0548 - Signatory's Relationship to Subject
     """
 
     con_1: str = Field(
@@ -107,7 +107,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.1",
         title="Set ID - CON",
-        description="Item #1776",
+        description="R | Item #01776 | LEN:4",
     )
 
     con_2: Optional[CWE] = Field(
@@ -119,7 +119,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.2",
         title="Consent Type",
-        description="Item #1777 | Table HL70496",
+        description="O | Item #01777 | Table 0496 - Consent Type",
     )
 
     con_3: Optional[str] = Field(
@@ -131,7 +131,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.3",
         title="Consent Form ID",
-        description="Item #1778",
+        description="O | Item #01778 | LEN:40",
     )
 
     con_4: Optional[EI] = Field(
@@ -143,7 +143,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.4",
         title="Consent Form Number",
-        description="Item #1779",
+        description="O | Item #01779",
     )
 
     con_5: Optional[List[str]] = Field(
@@ -155,7 +155,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.5",
         title="Consent Text",
-        description="Item #1780",
+        description="O | Item #01780",
     )
 
     con_6: Optional[List[str]] = Field(
@@ -167,7 +167,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.6",
         title="Subject-specific Consent Text",
-        description="Item #1781",
+        description="O | Item #01781",
     )
 
     con_7: Optional[List[str]] = Field(
@@ -179,7 +179,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.7",
         title="Consent Background",
-        description="Item #1782",
+        description="O | Item #01782",
     )
 
     con_8: Optional[List[str]] = Field(
@@ -191,7 +191,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.8",
         title="Subject-specific Consent Background",
-        description="Item #1783",
+        description="O | Item #01783",
     )
 
     con_9: Optional[List[str]] = Field(
@@ -203,7 +203,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.9",
         title="Consenter-imposed limitations",
-        description="Item #1784",
+        description="O | Item #01784",
     )
 
     con_10: Optional[CNE] = Field(
@@ -215,7 +215,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.10",
         title="Consent Mode",
-        description="Item #1785 | Table HL70497",
+        description="O | Item #01785 | Table 0497 - Consent Mode",
     )
 
     con_11: CNE = Field(
@@ -226,7 +226,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.11",
         title="Consent Status",
-        description="Item #1786 | Table HL70498",
+        description="R | Item #01786 | Table 0498 - Consent Status",
     )
 
     con_12: Optional[TS] = Field(
@@ -238,7 +238,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.12",
         title="Consent Discussion Date/Time",
-        description="Item #1787",
+        description="O | Item #01787",
     )
 
     con_13: Optional[TS] = Field(
@@ -250,7 +250,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.13",
         title="Consent Decision Date/Time",
-        description="Item #1788",
+        description="O | Item #01788",
     )
 
     con_14: Optional[TS] = Field(
@@ -262,7 +262,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.14",
         title="Consent Effective Date/Time",
-        description="Item #1789",
+        description="O | Item #01789",
     )
 
     con_15: Optional[TS] = Field(
@@ -274,7 +274,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.15",
         title="Consent End Date/Time",
-        description="Item #1790",
+        description="O | Item #01790",
     )
 
     con_16: Optional[str] = Field(
@@ -286,7 +286,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.16",
         title="Subject Competence Indicator",
-        description="Item #1791 | Table HL70136",
+        description="O | Item #01791 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     con_17: Optional[str] = Field(
@@ -298,7 +298,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.17",
         title="Translator Assistance Indicator",
-        description="Item #1792 | Table HL70136",
+        description="O | Item #01792 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     con_18: Optional[str] = Field(
@@ -310,7 +310,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.18",
         title="Language Translated To",
-        description="Item #1793 | Table HL70296",
+        description="O | Item #01793 | Table 0296 - Primary Language | LEN:1",
     )
 
     con_19: Optional[str] = Field(
@@ -322,7 +322,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.19",
         title="Informational Material Supplied Indicator",
-        description="Item #1794 | Table HL70136",
+        description="O | Item #01794 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     con_20: Optional[CWE] = Field(
@@ -334,7 +334,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.20",
         title="Consent Bypass Reason",
-        description="Item #1795 | Table HL70499",
+        description="O | Item #01795 | Table 0499 - Consent Bypass Reason",
     )
 
     con_21: Optional[str] = Field(
@@ -346,7 +346,9 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.21",
         title="Consent Disclosure Level",
-        description="Item #1796 | Table HL70500",
+        description=(
+            "O | Item #01796 | Table 0500 - Consent Disclosure Level | LEN:1"
+        ),
     )
 
     con_22: Optional[CWE] = Field(
@@ -358,7 +360,9 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.22",
         title="Consent Non-disclosure Reason",
-        description="Item #1797 | Table HL70501",
+        description=(
+            "O | Item #01797 | Table 0501 - Consent Non-Disclosure Reason"
+        ),
     )
 
     con_23: Optional[CWE] = Field(
@@ -370,7 +374,9 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.23",
         title="Non-subject Consenter Reason",
-        description="Item #1798 | Table HL70502",
+        description=(
+            "O | Item #01798 | Table 0502 - Non-Subject Consenter Reason"
+        ),
     )
 
     con_24: List[XPN] = Field(
@@ -382,7 +388,7 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.24",
         title="Consenter ID",
-        description="Item #1909",
+        description="R | Item #01909",
     )
 
     con_25: List[str] = Field(
@@ -394,7 +400,10 @@ class CON(HL7Model):
         ),
         serialization_alias="CON.25",
         title="Relationship to Subject Table",
-        description="Item #1898 | Table HL70548",
+        description=(
+            "R | Item #01898 | Table 0548 - Signatory's Relationship to Subject | "
+            "LEN:100"
+        ),
     )
 
     @field_validator("con_1", mode='before')

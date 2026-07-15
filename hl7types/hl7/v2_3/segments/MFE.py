@@ -21,16 +21,16 @@ class MFE(HL7Model):
     Attributes
     ----------
     mfe_1 : str
-        MFE.1 (req) - Record-Level Event Code (ID) S8.4.2 | 0180 - Record Level Event Code
+        MFE.1 - Record-Level Event Code (ID) R S8.4.2 | 0180 - Record Level Event Code
 
     mfe_2 : str | None
-        MFE.2 (opt) - MFN Control ID (ST) S8.4.2
+        MFE.2 - MFN Control ID (ST) C S8.4.2
 
     mfe_3 : TS | None
-        MFE.3 (opt) - Effective Date/Time (TS) S8.4.1
+        MFE.3 - Effective Date/Time (TS) NA S8.4.1
 
     mfe_4 : list[CE]
-        MFE.4 (req, rep) - Primary Key Value (CE) S8.4.2.4
+        MFE.4 - Primary Key Value (CE) R rep S8.4.2.4
     """
 
     mfe_1: str = Field(
@@ -41,7 +41,9 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.1",
         title="Record-Level Event Code",
-        description="Item #664 | Table HL70180",
+        description=(
+            "R | Item #00664 | Table 0180 - Record Level Event Code | LEN:3"
+        ),
     )
 
     mfe_2: Optional[str] = Field(
@@ -53,7 +55,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.2",
         title="MFN Control ID",
-        description="Item #665",
+        description="C | Item #00665 | LEN:20",
     )
 
     mfe_3: Optional[TS] = Field(
@@ -65,7 +67,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.3",
         title="Effective Date/Time",
-        description="Item #662",
+        description="NA | Item #00662",
     )
 
     mfe_4: List[CE] = Field(
@@ -77,7 +79,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.4",
         title="Primary Key Value",
-        description="Item #667",
+        description="R | Item #00667",
     )
 
     model_config = {"populate_by_name": True}

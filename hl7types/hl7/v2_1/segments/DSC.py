@@ -18,7 +18,7 @@ class DSC(HL7Model):
     Attributes
     ----------
     dsc_1 : str | None
-        DSC.1 (opt) - CONTINUATION POINTER (ST)
+        DSC.1 - CONTINUATION POINTER (ST) O
     """
 
     dsc_1: Optional[str] = Field(
@@ -30,7 +30,7 @@ class DSC(HL7Model):
         ),
         serialization_alias="DSC.1",
         title="CONTINUATION POINTER",
-        description="Item #167",
+        description="O | Item #00167 | LEN:60",
     )
 
     model_config = {"populate_by_name": True}

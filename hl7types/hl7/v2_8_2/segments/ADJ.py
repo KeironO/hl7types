@@ -24,49 +24,49 @@ class ADJ(HL7Model):
     Attributes
     ----------
     adj_1 : EI
-        ADJ.1 (req) - Provider Adjustment Number (EI) S16.4.7.1
+        ADJ.1 - Provider Adjustment Number (EI) R S16.4.7.1
 
     adj_2 : EI
-        ADJ.2 (req) - Payer Adjustment Number (EI) S16.4.7.2
+        ADJ.2 - Payer Adjustment Number (EI) R S16.4.7.2
 
     adj_3 : str
-        ADJ.3 (req) - Adjustment Sequence Number (SI) S16.4.7.3
+        ADJ.3 - Adjustment Sequence Number (SI) R S16.4.7.3
 
     adj_4 : CWE
-        ADJ.4 (req) - Adjustment Category (CWE) S16.4.7.4 | 0564 - Adjustment Category Code
+        ADJ.4 - Adjustment Category (CWE) R S16.4.7.4 | 0564 - Adjustment Category Code
 
     adj_5 : list[CP] | None
-        ADJ.5 (opt, rep) - Adjustment Amount (CP) S16.4.7.5
+        ADJ.5 - Adjustment Amount (CP) O rep S16.4.7.5
 
     adj_6 : CQ | None
-        ADJ.6 (opt) - Adjustment Quantity (CQ) S16.4.7.6 | 0560 - Quantity Units
+        ADJ.6 - Adjustment Quantity (CQ) O S16.4.7.6 | 0560 - Quantity Units
 
     adj_7 : CWE | None
-        ADJ.7 (opt) - Adjustment Reason PA (CWE) S16.4.7.7 | 0565 - Provider Adjustment Reason Code
+        ADJ.7 - Adjustment Reason PA (CWE) C S16.4.7.7 | 0565 - Provider Adjustment Reason Code
 
     adj_8 : str | None
-        ADJ.8 (opt) - Adjustment Description (ST) S16.4.7.8
+        ADJ.8 - Adjustment Description (ST) O S16.4.7.8
 
     adj_9 : str | None
-        ADJ.9 (opt) - Original Value (NM) S16.4.7.9
+        ADJ.9 - Original Value (NM) O S16.4.7.9
 
     adj_10 : str | None
-        ADJ.10 (opt) - Substitute Value (NM) S16.4.7.10
+        ADJ.10 - Substitute Value (NM) O S16.4.7.10
 
     adj_11 : CWE | None
-        ADJ.11 (opt) - Adjustment Action (CWE) S16.4.7.11 | 0569 - Adjustment Action
+        ADJ.11 - Adjustment Action (CWE) O S16.4.7.11 | 0569 - Adjustment Action
 
     adj_12 : EI | None
-        ADJ.12 (opt) - Provider Adjustment Number Cross Reference (EI) S16.4.7.12
+        ADJ.12 - Provider Adjustment Number Cross Reference (EI) O S16.4.7.12
 
     adj_13 : EI | None
-        ADJ.13 (opt) - Provider Product/Service Line Item Number Cross Reference (EI) S16.4.7.13
+        ADJ.13 - Provider Product/Service Line Item Number Cross Reference (EI) O S16.4.7.13
 
     adj_14 : str
-        ADJ.14 (req) - Adjustment Date (DTM) S16.4.7.14
+        ADJ.14 - Adjustment Date (DTM) R S16.4.7.14
 
     adj_15 : XON | None
-        ADJ.15 (opt) - Responsible Organization (XON) S16.4.7.15
+        ADJ.15 - Responsible Organization (XON) O S16.4.7.15
     """
 
     adj_1: EI = Field(
@@ -77,7 +77,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.1",
         title="Provider Adjustment Number",
-        description="Item #2003",
+        description="R | Item #02003",
     )
 
     adj_2: EI = Field(
@@ -88,7 +88,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.2",
         title="Payer Adjustment Number",
-        description="Item #2004",
+        description="R | Item #02004",
     )
 
     adj_3: str = Field(
@@ -99,7 +99,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.3",
         title="Adjustment Sequence Number",
-        description="Item #2005",
+        description="R | Item #02005 | LEN:4",
     )
 
     adj_4: CWE = Field(
@@ -110,7 +110,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.4",
         title="Adjustment Category",
-        description="Item #2006 | Table HL70564",
+        description="R | Item #02006 | Table 0564 - Adjustment Category Code",
     )
 
     adj_5: Optional[List[CP]] = Field(
@@ -122,7 +122,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.5",
         title="Adjustment Amount",
-        description="Item #2007",
+        description="O | Item #02007",
     )
 
     adj_6: Optional[CQ] = Field(
@@ -134,7 +134,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.6",
         title="Adjustment Quantity",
-        description="Item #2008 | Table HL70560",
+        description="O | Item #02008 | Table 0560 - Quantity Units",
     )
 
     adj_7: Optional[CWE] = Field(
@@ -146,7 +146,9 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.7",
         title="Adjustment Reason PA",
-        description="Item #2009 | Table HL70565",
+        description=(
+            "C | Item #02009 | Table 0565 - Provider Adjustment Reason Code"
+        ),
     )
 
     adj_8: Optional[str] = Field(
@@ -158,7 +160,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.8",
         title="Adjustment Description",
-        description="Item #2010",
+        description="O | Item #02010",
     )
 
     adj_9: Optional[str] = Field(
@@ -170,7 +172,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.9",
         title="Original Value",
-        description="Item #2011",
+        description="O | Item #02011",
     )
 
     adj_10: Optional[str] = Field(
@@ -182,7 +184,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.10",
         title="Substitute Value",
-        description="Item #2012",
+        description="O | Item #02012",
     )
 
     adj_11: Optional[CWE] = Field(
@@ -194,7 +196,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.11",
         title="Adjustment Action",
-        description="Item #2013 | Table HL70569",
+        description="O | Item #02013 | Table 0569 - Adjustment Action",
     )
 
     adj_12: Optional[EI] = Field(
@@ -206,7 +208,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.12",
         title="Provider Adjustment Number Cross Reference",
-        description="Item #2014",
+        description="O | Item #02014",
     )
 
     adj_13: Optional[EI] = Field(
@@ -218,7 +220,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.13",
         title="Provider Product/Service Line Item Number Cross Reference",
-        description="Item #2015",
+        description="O | Item #02015",
     )
 
     adj_14: str = Field(
@@ -229,7 +231,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.14",
         title="Adjustment Date",
-        description="Item #2016",
+        description="R | Item #02016",
     )
 
     adj_15: Optional[XON] = Field(
@@ -241,7 +243,7 @@ class ADJ(HL7Model):
         ),
         serialization_alias="ADJ.15",
         title="Responsible Organization",
-        description="Item #2017",
+        description="O | Item #02017",
     )
 
     @field_validator("adj_3", mode='before')

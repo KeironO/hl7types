@@ -21,22 +21,22 @@ class CNS(HL7Model):
     Attributes
     ----------
     cns_1 : str | None
-        CNS.1 (opt) - Starting Notification Reference Number (NM) S13.4.8.1
+        CNS.1 - Starting Notification Reference Number (NM) O S13.4.8.1
 
     cns_2 : str | None
-        CNS.2 (opt) - Ending Notification Reference Number (NM) S13.4.8.2
+        CNS.2 - Ending Notification Reference Number (NM) O S13.4.8.2
 
     cns_3 : TS | None
-        CNS.3 (opt) - Starting Notification Date/Time (TS) S13.4.8.3
+        CNS.3 - Starting Notification Date/Time (TS) O S13.4.8.3
 
     cns_4 : TS | None
-        CNS.4 (opt) - Ending Notification Date/Time (TS) S13.4.8.4
+        CNS.4 - Ending Notification Date/Time (TS) O S13.4.8.4
 
     cns_5 : CE | None
-        CNS.5 (opt) - Starting Notification Code (CE) S13.4.8.5
+        CNS.5 - Starting Notification Code (CE) O S13.4.8.5
 
     cns_6 : CE | None
-        CNS.6 (opt) - Ending Notification Code (CE) S13.4.8.6
+        CNS.6 - Ending Notification Code (CE) O S13.4.8.6
     """
 
     cns_1: Optional[str] = Field(
@@ -48,7 +48,7 @@ class CNS(HL7Model):
         ),
         serialization_alias="CNS.1",
         title="Starting Notification Reference Number",
-        description="Item #1402",
+        description="O | Item #01402 | LEN:20",
     )
 
     cns_2: Optional[str] = Field(
@@ -60,7 +60,7 @@ class CNS(HL7Model):
         ),
         serialization_alias="CNS.2",
         title="Ending Notification Reference Number",
-        description="Item #1403",
+        description="O | Item #01403 | LEN:20",
     )
 
     cns_3: Optional[TS] = Field(
@@ -72,7 +72,7 @@ class CNS(HL7Model):
         ),
         serialization_alias="CNS.3",
         title="Starting Notification Date/Time",
-        description="Item #1404",
+        description="O | Item #01404",
     )
 
     cns_4: Optional[TS] = Field(
@@ -84,7 +84,7 @@ class CNS(HL7Model):
         ),
         serialization_alias="CNS.4",
         title="Ending Notification Date/Time",
-        description="Item #1405",
+        description="O | Item #01405",
     )
 
     cns_5: Optional[CE] = Field(
@@ -96,7 +96,7 @@ class CNS(HL7Model):
         ),
         serialization_alias="CNS.5",
         title="Starting Notification Code",
-        description="Item #1406",
+        description="O | Item #01406",
     )
 
     cns_6: Optional[CE] = Field(
@@ -108,7 +108,7 @@ class CNS(HL7Model):
         ),
         serialization_alias="CNS.6",
         title="Ending Notification Code",
-        description="Item #1407",
+        description="O | Item #01407",
     )
 
     @field_validator("cns_1", "cns_2", mode='before')

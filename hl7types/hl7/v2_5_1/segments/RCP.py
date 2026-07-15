@@ -23,25 +23,25 @@ class RCP(HL7Model):
     Attributes
     ----------
     rcp_1 : str | None
-        RCP.1 (opt) - Query Priority (ID) S5.10.5.3.3 | 0091 - Query priority
+        RCP.1 - Query Priority (ID) O S5.10.5.3.3 | 0091 - Query priority
 
     rcp_2 : CQ | None
-        RCP.2 (opt) - Quantity Limited Request (CQ) S5.10.5.3.7 | 0126 - Quantity limited request
+        RCP.2 - Quantity Limited Request (CQ) O S5.10.5.3.7 | 0126 - Quantity limited request
 
     rcp_3 : CE | None
-        RCP.3 (opt) - Response Modality (CE) S5.5.6.3 | 0394 - Response modality
+        RCP.3 - Response Modality (CE) O S5.5.6.3 | 0394 - Response modality
 
     rcp_4 : TS | None
-        RCP.4 (opt) - Execution and Delivery Time (TS) S5.5.6.4
+        RCP.4 - Execution and Delivery Time (TS) C S5.5.6.4
 
     rcp_5 : str | None
-        RCP.5 (opt) - Modify Indicator (ID) S5.5.6.5 | 0395 - Modify indicator
+        RCP.5 - Modify Indicator (ID) O S5.5.6.5 | 0395 - Modify indicator
 
     rcp_6 : list[SRT] | None
-        RCP.6 (opt, rep) - Sort-by Field (SRT) S5.5.6.6
+        RCP.6 - Sort-by Field (SRT) O rep S5.5.6.6
 
     rcp_7 : list[str] | None
-        RCP.7 (opt, rep) - Segment group inclusion (ID) S5.5.6.7
+        RCP.7 - Segment group inclusion (ID) O rep S5.5.6.7
     """
 
     rcp_1: Optional[str] = Field(
@@ -53,7 +53,7 @@ class RCP(HL7Model):
         ),
         serialization_alias="RCP.1",
         title="Query Priority",
-        description="Item #27 | Table HL70091",
+        description="O | Item #00027 | Table 0091 - Query priority | LEN:1",
     )
 
     rcp_2: Optional[CQ] = Field(
@@ -65,7 +65,7 @@ class RCP(HL7Model):
         ),
         serialization_alias="RCP.2",
         title="Quantity Limited Request",
-        description="Item #31 | Table HL70126",
+        description="O | Item #00031 | Table 0126 - Quantity limited request",
     )
 
     rcp_3: Optional[CE] = Field(
@@ -77,7 +77,7 @@ class RCP(HL7Model):
         ),
         serialization_alias="RCP.3",
         title="Response Modality",
-        description="Item #1440 | Table HL70394",
+        description="O | Item #01440 | Table 0394 - Response modality",
     )
 
     rcp_4: Optional[TS] = Field(
@@ -89,7 +89,7 @@ class RCP(HL7Model):
         ),
         serialization_alias="RCP.4",
         title="Execution and Delivery Time",
-        description="Item #1441",
+        description="C | Item #01441",
     )
 
     rcp_5: Optional[str] = Field(
@@ -101,7 +101,7 @@ class RCP(HL7Model):
         ),
         serialization_alias="RCP.5",
         title="Modify Indicator",
-        description="Item #1443 | Table HL70395",
+        description="O | Item #01443 | Table 0395 - Modify indicator | LEN:1",
     )
 
     rcp_6: Optional[List[SRT]] = Field(
@@ -113,7 +113,7 @@ class RCP(HL7Model):
         ),
         serialization_alias="RCP.6",
         title="Sort-by Field",
-        description="Item #1624",
+        description="O | Item #01624",
     )
 
     rcp_7: Optional[List[str]] = Field(
@@ -125,7 +125,7 @@ class RCP(HL7Model):
         ),
         serialization_alias="RCP.7",
         title="Segment group inclusion",
-        description="Item #1594",
+        description="O | Item #01594 | LEN:256",
     )
 
     model_config = {"populate_by_name": True}

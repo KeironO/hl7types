@@ -20,7 +20,7 @@ class NCK(HL7Model):
     Attributes
     ----------
     nck_1 : TS | None
-        NCK.1 (opt) - System Date/Time (TS) SC.2.1.1
+        NCK.1 - System Date/Time (TS) NA SC.2.1.1
     """
 
     nck_1: Optional[TS] = Field(
@@ -32,7 +32,7 @@ class NCK(HL7Model):
         ),
         serialization_alias="NCK.1",
         title="System Date/Time",
-        description="Item #1172",
+        description="NA | Item #01172",
     )
 
     model_config = {"populate_by_name": True}

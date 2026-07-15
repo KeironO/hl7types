@@ -20,46 +20,46 @@ class BHS(HL7Model):
     Attributes
     ----------
     bhs_1 : str
-        BHS.1 (req) - Batch Field Separator (ST) S2.14.2.1
+        BHS.1 - Batch Field Separator (ST) R S2.14.2.1
 
     bhs_2 : str
-        BHS.2 (req) - Batch Encoding Characters (ST) S2.14.2.2
+        BHS.2 - Batch Encoding Characters (ST) R S2.14.2.2
 
     bhs_3 : HD | None
-        BHS.3 (opt) - Batch Sending Application (HD) S2.14.2.3
+        BHS.3 - Batch Sending Application (HD) O S2.14.2.3
 
     bhs_4 : HD | None
-        BHS.4 (opt) - Batch Sending Facility (HD) S2.14.2.4
+        BHS.4 - Batch Sending Facility (HD) O S2.14.2.4
 
     bhs_5 : HD | None
-        BHS.5 (opt) - Batch Receiving Application (HD) S2.14.2.5
+        BHS.5 - Batch Receiving Application (HD) O S2.14.2.5
 
     bhs_6 : HD | None
-        BHS.6 (opt) - Batch Receiving Facility (HD) S2.14.2.6
+        BHS.6 - Batch Receiving Facility (HD) O S2.14.2.6
 
     bhs_7 : str | None
-        BHS.7 (opt) - Batch Creation Date/Time (DTM) S2.14.2.7
+        BHS.7 - Batch Creation Date/Time (DTM) O S2.14.2.7
 
     bhs_8 : str | None
-        BHS.8 (opt) - Batch Security (ST) S2.14.2.8
+        BHS.8 - Batch Security (ST) O S2.14.2.8
 
     bhs_9 : str | None
-        BHS.9 (opt) - Batch Name/ID/Type (ST) S2.14.2.9
+        BHS.9 - Batch Name/ID/Type (ST) O S2.14.2.9
 
     bhs_10 : str | None
-        BHS.10 (opt) - Batch Comment (ST) S2.14.3.2
+        BHS.10 - Batch Comment (ST) O S2.14.3.2
 
     bhs_11 : str | None
-        BHS.11 (opt) - Batch Control ID (ST) S2.14.2.11
+        BHS.11 - Batch Control ID (ST) O S2.14.2.11
 
     bhs_12 : str | None
-        BHS.12 (opt) - Reference Batch Control ID (ST) S2.14.2.12
+        BHS.12 - Reference Batch Control ID (ST) O S2.14.2.12
 
     bhs_13 : HD | None
-        BHS.13 (opt) - Batch Sending Network Address (HD) S2.14.2.13
+        BHS.13 - Batch Sending Network Address (HD) O S2.14.2.13
 
     bhs_14 : HD | None
-        BHS.14 (opt) - Batch Receiving Network Address (HD) S2.14.2.14
+        BHS.14 - Batch Receiving Network Address (HD) O S2.14.2.14
     """
 
     bhs_1: str = Field(
@@ -71,7 +71,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.1",
         title="Batch Field Separator",
-        description="Item #81",
+        description="R | Item #00081 | LEN:1",
     )
 
     bhs_2: str = Field(
@@ -83,7 +83,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.2",
         title="Batch Encoding Characters",
-        description="Item #82",
+        description="R | Item #00082 | LEN:5",
     )
 
     bhs_3: Optional[HD] = Field(
@@ -95,7 +95,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.3",
         title="Batch Sending Application",
-        description="Item #83",
+        description="O | Item #00083",
     )
 
     bhs_4: Optional[HD] = Field(
@@ -107,7 +107,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.4",
         title="Batch Sending Facility",
-        description="Item #84",
+        description="O | Item #00084",
     )
 
     bhs_5: Optional[HD] = Field(
@@ -119,7 +119,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.5",
         title="Batch Receiving Application",
-        description="Item #85",
+        description="O | Item #00085",
     )
 
     bhs_6: Optional[HD] = Field(
@@ -131,7 +131,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.6",
         title="Batch Receiving Facility",
-        description="Item #86",
+        description="O | Item #00086",
     )
 
     bhs_7: Optional[str] = Field(
@@ -143,7 +143,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.7",
         title="Batch Creation Date/Time",
-        description="Item #87",
+        description="O | Item #00087",
     )
 
     bhs_8: Optional[str] = Field(
@@ -155,7 +155,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.8",
         title="Batch Security",
-        description="Item #88",
+        description="O | Item #00088",
     )
 
     bhs_9: Optional[str] = Field(
@@ -167,7 +167,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.9",
         title="Batch Name/ID/Type",
-        description="Item #89",
+        description="O | Item #00089",
     )
 
     bhs_10: Optional[str] = Field(
@@ -179,7 +179,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.10",
         title="Batch Comment",
-        description="Item #90",
+        description="O | Item #00090",
     )
 
     bhs_11: Optional[str] = Field(
@@ -191,7 +191,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.11",
         title="Batch Control ID",
-        description="Item #91",
+        description="O | Item #00091",
     )
 
     bhs_12: Optional[str] = Field(
@@ -203,7 +203,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.12",
         title="Reference Batch Control ID",
-        description="Item #92",
+        description="O | Item #00092",
     )
 
     bhs_13: Optional[HD] = Field(
@@ -215,7 +215,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.13",
         title="Batch Sending Network Address",
-        description="Item #2271",
+        description="O | Item #02271",
     )
 
     bhs_14: Optional[HD] = Field(
@@ -227,7 +227,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.14",
         title="Batch Receiving Network Address",
-        description="Item #2272",
+        description="O | Item #02272",
     )
 
     @field_validator("bhs_7", mode='before')

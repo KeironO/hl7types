@@ -22,19 +22,19 @@ class AFF(HL7Model):
     Attributes
     ----------
     aff_1 : str
-        AFF.1 (req) - Set ID _ AFF (SI) S15.4.1.1
+        AFF.1 - Set ID _ AFF (SI) R S15.4.1.1
 
     aff_2 : XON
-        AFF.2 (req) - Professional Organization (XON) S15.4.1.2
+        AFF.2 - Professional Organization (XON) R S15.4.1.2
 
     aff_3 : XAD | None
-        AFF.3 (opt) - Professional Organization Address (XAD) S15.4.1.3
+        AFF.3 - Professional Organization Address (XAD) O S15.4.1.3
 
     aff_4 : list[DR] | None
-        AFF.4 (opt, rep) - Professional Organization Affiliation Date Range (DR) S15.4.1.4
+        AFF.4 - Professional Organization Affiliation Date Range (DR) O rep S15.4.1.4
 
     aff_5 : str | None
-        AFF.5 (opt) - Professional Affiliation Additional Information (ST) S15.4.1.5
+        AFF.5 - Professional Affiliation Additional Information (ST) O S15.4.1.5
     """
 
     aff_1: str = Field(
@@ -45,7 +45,7 @@ class AFF(HL7Model):
         ),
         serialization_alias="AFF.1",
         title="Set ID _ AFF",
-        description="Item #1427",
+        description="R | Item #01427 | LEN:60",
     )
 
     aff_2: XON = Field(
@@ -56,7 +56,7 @@ class AFF(HL7Model):
         ),
         serialization_alias="AFF.2",
         title="Professional Organization",
-        description="Item #1444",
+        description="R | Item #01444",
     )
 
     aff_3: Optional[XAD] = Field(
@@ -68,7 +68,7 @@ class AFF(HL7Model):
         ),
         serialization_alias="AFF.3",
         title="Professional Organization Address",
-        description="Item #1445",
+        description="O | Item #01445",
     )
 
     aff_4: Optional[List[DR]] = Field(
@@ -80,7 +80,7 @@ class AFF(HL7Model):
         ),
         serialization_alias="AFF.4",
         title="Professional Organization Affiliation Date Range",
-        description="Item #1446",
+        description="O | Item #01446",
     )
 
     aff_5: Optional[str] = Field(
@@ -92,7 +92,7 @@ class AFF(HL7Model):
         ),
         serialization_alias="AFF.5",
         title="Professional Affiliation Additional Information",
-        description="Item #1447",
+        description="O | Item #01447 | LEN:60",
     )
 
     @field_validator("aff_1", mode='before')

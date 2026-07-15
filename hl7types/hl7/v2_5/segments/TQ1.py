@@ -23,46 +23,46 @@ class TQ1(HL7Model):
     Attributes
     ----------
     tq1_1 : str | None
-        TQ1.1 (opt) - Set ID - TQ1 (SI) S4.5.4.1
+        TQ1.1 - Set ID - TQ1 (SI) O S4.5.4.1
 
     tq1_2 : CQ | None
-        TQ1.2 (opt) - Quantity (CQ) S4.5.4.2
+        TQ1.2 - Quantity (CQ) O S4.5.4.2
 
     tq1_3 : list[RPT] | None
-        TQ1.3 (opt, rep) - Repeat Pattern (RPT) S4.5.4.3 | 0335 - Repeat pattern
+        TQ1.3 - Repeat Pattern (RPT) O rep S4.5.4.3 | 0335 - Repeat pattern
 
     tq1_4 : list[str] | None
-        TQ1.4 (opt, rep) - Explicit Time (TM) S4.5.4.4
+        TQ1.4 - Explicit Time (TM) O rep S4.5.4.4
 
     tq1_5 : list[CQ] | None
-        TQ1.5 (opt, rep) - Relative Time and Units (CQ) S4.5.4.5
+        TQ1.5 - Relative Time and Units (CQ) O rep S4.5.4.5
 
     tq1_6 : CQ | None
-        TQ1.6 (opt) - Service Duration (CQ) S4.5.4.6
+        TQ1.6 - Service Duration (CQ) O S4.5.4.6
 
     tq1_7 : TS | None
-        TQ1.7 (opt) - Start date/time (TS) S4.5.4.7
+        TQ1.7 - Start date/time (TS) O S4.5.4.7
 
     tq1_8 : TS | None
-        TQ1.8 (opt) - End date/time (TS) S4.5.4.8
+        TQ1.8 - End date/time (TS) O S4.5.4.8
 
     tq1_9 : list[CWE] | None
-        TQ1.9 (opt, rep) - Priority (CWE) S4.5.4.9 | 0485 - Extended Priority Codes
+        TQ1.9 - Priority (CWE) O rep S4.5.4.9 | 0485 - Extended Priority Codes
 
     tq1_10 : str | None
-        TQ1.10 (opt) - Condition text (TX) S4.5.4.10
+        TQ1.10 - Condition text (TX) O S4.5.4.10
 
     tq1_11 : str | None
-        TQ1.11 (opt) - Text instruction (TX) S4.5.4.11
+        TQ1.11 - Text instruction (TX) O S4.5.4.11
 
     tq1_12 : str | None
-        TQ1.12 (opt) - Conjunction (ID) S4.5.4.12 | 0427 - Risk Management Incident Code
+        TQ1.12 - Conjunction (ID) C S4.5.4.12 | 0427 - Risk Management Incident Code
 
     tq1_13 : CQ | None
-        TQ1.13 (opt) - Occurrence duration (CQ) S4.5.4.13
+        TQ1.13 - Occurrence duration (CQ) O S4.5.4.13
 
     tq1_14 : str | None
-        TQ1.14 (opt) - Total occurrence's (NM) S4.5.4.14
+        TQ1.14 - Total occurrence's (NM) O S4.5.4.14
     """
 
     tq1_1: Optional[str] = Field(
@@ -74,7 +74,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.1",
         title="Set ID - TQ1",
-        description="Item #1627",
+        description="O | Item #01627 | LEN:4",
     )
 
     tq1_2: Optional[CQ] = Field(
@@ -86,7 +86,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.2",
         title="Quantity",
-        description="Item #1628",
+        description="O | Item #01628",
     )
 
     tq1_3: Optional[List[RPT]] = Field(
@@ -98,7 +98,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.3",
         title="Repeat Pattern",
-        description="Item #1629 | Table HL70335",
+        description="O | Item #01629 | Table 0335 - Repeat pattern",
     )
 
     tq1_4: Optional[List[str]] = Field(
@@ -110,7 +110,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.4",
         title="Explicit Time",
-        description="Item #1630",
+        description="O | Item #01630 | LEN:20",
     )
 
     tq1_5: Optional[List[CQ]] = Field(
@@ -122,7 +122,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.5",
         title="Relative Time and Units",
-        description="Item #1631",
+        description="O | Item #01631",
     )
 
     tq1_6: Optional[CQ] = Field(
@@ -134,7 +134,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.6",
         title="Service Duration",
-        description="Item #1632",
+        description="O | Item #01632",
     )
 
     tq1_7: Optional[TS] = Field(
@@ -146,7 +146,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.7",
         title="Start date/time",
-        description="Item #1633",
+        description="O | Item #01633",
     )
 
     tq1_8: Optional[TS] = Field(
@@ -158,7 +158,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.8",
         title="End date/time",
-        description="Item #1634",
+        description="O | Item #01634",
     )
 
     tq1_9: Optional[List[CWE]] = Field(
@@ -170,7 +170,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.9",
         title="Priority",
-        description="Item #1635 | Table HL70485",
+        description="O | Item #01635 | Table 0485 - Extended Priority Codes",
     )
 
     tq1_10: Optional[str] = Field(
@@ -182,7 +182,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.10",
         title="Condition text",
-        description="Item #1636",
+        description="O | Item #01636",
     )
 
     tq1_11: Optional[str] = Field(
@@ -194,7 +194,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.11",
         title="Text instruction",
-        description="Item #1637",
+        description="O | Item #01637",
     )
 
     tq1_12: Optional[str] = Field(
@@ -206,7 +206,10 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.12",
         title="Conjunction",
-        description="Item #1638 | Table HL70427",
+        description=(
+            "C | Item #01638 | Table 0427 - Risk Management Incident Code | "
+            "LEN:10"
+        ),
     )
 
     tq1_13: Optional[CQ] = Field(
@@ -218,7 +221,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.13",
         title="Occurrence duration",
-        description="Item #1639",
+        description="O | Item #01639",
     )
 
     tq1_14: Optional[str] = Field(
@@ -230,7 +233,7 @@ class TQ1(HL7Model):
         ),
         serialization_alias="TQ1.14",
         title="Total occurrence's",
-        description="Item #1640",
+        description="O | Item #01640 | LEN:10",
     )
 
     @field_validator("tq1_1", mode='before')

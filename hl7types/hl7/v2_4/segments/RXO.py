@@ -23,76 +23,76 @@ class RXO(HL7Model):
     Attributes
     ----------
     rxo_1 : CE | None
-        RXO.1 (opt) - Requested Give Code (CE) S4.14.1.1
+        RXO.1 - Requested Give Code (CE) C S4.14.1.1
 
     rxo_2 : str | None
-        RXO.2 (opt) - Requested Give Amount - Minimum (NM) S4.14.1.2
+        RXO.2 - Requested Give Amount - Minimum (NM) C S4.14.1.2
 
     rxo_3 : str | None
-        RXO.3 (opt) - Requested Give Amount - Maximum (NM) S4.14.1.3
+        RXO.3 - Requested Give Amount - Maximum (NM) O S4.14.1.3
 
     rxo_4 : CE | None
-        RXO.4 (opt) - Requested Give Units (CE) S4.14.1.4
+        RXO.4 - Requested Give Units (CE) C S4.14.1.4
 
     rxo_5 : CE | None
-        RXO.5 (opt) - Requested Dosage Form (CE) S4.14.1.5
+        RXO.5 - Requested Dosage Form (CE) C S4.14.1.5
 
     rxo_6 : list[CE] | None
-        RXO.6 (opt, rep) - Provider's Pharmacy/Treatment Instructions (CE) S4
+        RXO.6 - Provider's Pharmacy/Treatment Instructions (CE) O rep S4
 
     rxo_7 : list[CE] | None
-        RXO.7 (opt, rep) - Provider's Administration Instructions (CE) S4
+        RXO.7 - Provider's Administration Instructions (CE) O rep S4
 
     rxo_8 : LA1 | None
-        RXO.8 (opt) - Deliver-To Location (LA1) S4.14.4.8
+        RXO.8 - Deliver-To Location (LA1) O S4.14.4.8
 
     rxo_9 : str | None
-        RXO.9 (opt) - Allow Substitutions (ID) S4.14.1.9 | 0161 - Allow substitution
+        RXO.9 - Allow Substitutions (ID) O S4.14.1.9 | 0161 - Allow substitution
 
     rxo_10 : CE | None
-        RXO.10 (opt) - Requested Dispense Code (CE) S4.14.1.10
+        RXO.10 - Requested Dispense Code (CE) O S4.14.1.10
 
     rxo_11 : str | None
-        RXO.11 (opt) - Requested Dispense Amount (NM) S4.14.1.11
+        RXO.11 - Requested Dispense Amount (NM) O S4.14.1.11
 
     rxo_12 : CE | None
-        RXO.12 (opt) - Requested Dispense Units (CE) S4.14.1.12
+        RXO.12 - Requested Dispense Units (CE) O S4.14.1.12
 
     rxo_13 : str | None
-        RXO.13 (opt) - Number of Refills (NM) S4.14.4.12
+        RXO.13 - Number of Refills (NM) O S4.14.4.12
 
     rxo_14 : list[XCN] | None
-        RXO.14 (opt, rep) - Ordering Provider's DEA Number (XCN) S4
+        RXO.14 - Ordering Provider's DEA Number (XCN) C rep S4
 
     rxo_15 : list[XCN] | None
-        RXO.15 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN) S4.14.1.15
+        RXO.15 - Pharmacist/Treatment Supplier's Verifier ID (XCN) C rep S4.14.1.15
 
     rxo_16 : str | None
-        RXO.16 (opt) - Needs Human Review (ID) S4.14.6.12 | 0136 - Yes/no indicator
+        RXO.16 - Needs Human Review (ID) O S4.14.6.12 | 0136 - Yes/no indicator
 
     rxo_17 : str | None
-        RXO.17 (opt) - Requested Give Per (Time Unit) (ST) S4.14.1.17
+        RXO.17 - Requested Give Per (Time Unit) (ST) C S4.14.1.17
 
     rxo_18 : str | None
-        RXO.18 (opt) - Requested Give Strength (NM) S4.14.1.18
+        RXO.18 - Requested Give Strength (NM) O S4.14.1.18
 
     rxo_19 : CE | None
-        RXO.19 (opt) - Requested Give Strength Units (CE) S4.14.1.19
+        RXO.19 - Requested Give Strength Units (CE) O S4.14.1.19
 
     rxo_20 : list[CE] | None
-        RXO.20 (opt, rep) - Indication (CE) S4.14.7.19
+        RXO.20 - Indication (CE) O rep S4.14.7.19
 
     rxo_21 : str | None
-        RXO.21 (opt) - Requested Give Rate Amount (ST) S4.14.1.21
+        RXO.21 - Requested Give Rate Amount (ST) O S4.14.1.21
 
     rxo_22 : CE | None
-        RXO.22 (opt) - Requested Give Rate Units (CE) S4.14.1.22
+        RXO.22 - Requested Give Rate Units (CE) O S4.14.1.22
 
     rxo_23 : CQ | None
-        RXO.23 (opt) - Total Daily Dose (CQ) S4.14.5.12
+        RXO.23 - Total Daily Dose (CQ) O S4.14.5.12
 
     rxo_24 : list[CE] | None
-        RXO.24 (opt, rep) - Supplementary Code (CE) S4.14.5.25
+        RXO.24 - Supplementary Code (CE) O rep S4.14.5.25
     """
 
     rxo_1: Optional[CE] = Field(
@@ -104,7 +104,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.1",
         title="Requested Give Code",
-        description="Item #292",
+        description="C | Item #00292",
     )
 
     rxo_2: Optional[str] = Field(
@@ -116,7 +116,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.2",
         title="Requested Give Amount - Minimum",
-        description="Item #293",
+        description="C | Item #00293 | LEN:20",
     )
 
     rxo_3: Optional[str] = Field(
@@ -128,7 +128,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.3",
         title="Requested Give Amount - Maximum",
-        description="Item #294",
+        description="O | Item #00294 | LEN:20",
     )
 
     rxo_4: Optional[CE] = Field(
@@ -140,7 +140,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.4",
         title="Requested Give Units",
-        description="Item #295",
+        description="C | Item #00295",
     )
 
     rxo_5: Optional[CE] = Field(
@@ -152,7 +152,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.5",
         title="Requested Dosage Form",
-        description="Item #296",
+        description="C | Item #00296",
     )
 
     rxo_6: Optional[List[CE]] = Field(
@@ -164,7 +164,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.6",
         title="Provider's Pharmacy/Treatment Instructions",
-        description="Item #297",
+        description="O | Item #00297",
     )
 
     rxo_7: Optional[List[CE]] = Field(
@@ -176,7 +176,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.7",
         title="Provider's Administration Instructions",
-        description="Item #298",
+        description="O | Item #00298",
     )
 
     rxo_8: Optional[LA1] = Field(
@@ -188,7 +188,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.8",
         title="Deliver-To Location",
-        description="Item #299",
+        description="O | Item #00299",
     )
 
     rxo_9: Optional[str] = Field(
@@ -200,7 +200,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.9",
         title="Allow Substitutions",
-        description="Item #300 | Table HL70161",
+        description="O | Item #00300 | Table 0161 - Allow substitution | LEN:1",
     )
 
     rxo_10: Optional[CE] = Field(
@@ -212,7 +212,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.10",
         title="Requested Dispense Code",
-        description="Item #301",
+        description="O | Item #00301",
     )
 
     rxo_11: Optional[str] = Field(
@@ -224,7 +224,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.11",
         title="Requested Dispense Amount",
-        description="Item #302",
+        description="O | Item #00302 | LEN:20",
     )
 
     rxo_12: Optional[CE] = Field(
@@ -236,7 +236,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.12",
         title="Requested Dispense Units",
-        description="Item #303",
+        description="O | Item #00303",
     )
 
     rxo_13: Optional[str] = Field(
@@ -248,7 +248,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.13",
         title="Number of Refills",
-        description="Item #304",
+        description="O | Item #00304 | LEN:3",
     )
 
     rxo_14: Optional[List[XCN]] = Field(
@@ -260,7 +260,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.14",
         title="Ordering Provider's DEA Number",
-        description="Item #305",
+        description="C | Item #00305",
     )
 
     rxo_15: Optional[List[XCN]] = Field(
@@ -272,7 +272,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.15",
         title="Pharmacist/Treatment Supplier's Verifier ID",
-        description="Item #306",
+        description="C | Item #00306",
     )
 
     rxo_16: Optional[str] = Field(
@@ -284,7 +284,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.16",
         title="Needs Human Review",
-        description="Item #307 | Table HL70136",
+        description="O | Item #00307 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     rxo_17: Optional[str] = Field(
@@ -296,7 +296,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.17",
         title="Requested Give Per (Time Unit)",
-        description="Item #308",
+        description="C | Item #00308 | LEN:20",
     )
 
     rxo_18: Optional[str] = Field(
@@ -308,7 +308,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.18",
         title="Requested Give Strength",
-        description="Item #1121",
+        description="O | Item #01121 | LEN:20",
     )
 
     rxo_19: Optional[CE] = Field(
@@ -320,7 +320,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.19",
         title="Requested Give Strength Units",
-        description="Item #1122",
+        description="O | Item #01122",
     )
 
     rxo_20: Optional[List[CE]] = Field(
@@ -332,7 +332,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.20",
         title="Indication",
-        description="Item #1123",
+        description="O | Item #01123",
     )
 
     rxo_21: Optional[str] = Field(
@@ -344,7 +344,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.21",
         title="Requested Give Rate Amount",
-        description="Item #1218",
+        description="O | Item #01218 | LEN:6",
     )
 
     rxo_22: Optional[CE] = Field(
@@ -356,7 +356,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.22",
         title="Requested Give Rate Units",
-        description="Item #1219",
+        description="O | Item #01219",
     )
 
     rxo_23: Optional[CQ] = Field(
@@ -368,7 +368,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.23",
         title="Total Daily Dose",
-        description="Item #329",
+        description="O | Item #00329",
     )
 
     rxo_24: Optional[List[CE]] = Field(
@@ -380,7 +380,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.24",
         title="Supplementary Code",
-        description="Item #1476",
+        description="O | Item #01476",
     )
 
     @field_validator("rxo_2", "rxo_3", "rxo_11", "rxo_13", "rxo_18", mode='before')

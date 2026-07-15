@@ -27,109 +27,109 @@ class RXO(HL7Model):
     Attributes
     ----------
     rxo_1 : CWE | None
-        RXO.1 (opt) - Requested Give Code (CWE) S4.A.1.1 | 9999 - no table for CE
+        RXO.1 - Requested Give Code (CWE) C S4.A.1.1 | 9999 - no table for CE
 
     rxo_2 : str | None
-        RXO.2 (opt) - Requested Give Amount - Minimum (NM) S4.A.1.2
+        RXO.2 - Requested Give Amount - Minimum (NM) C S4.A.1.2
 
     rxo_3 : str | None
-        RXO.3 (opt) - Requested Give Amount - Maximum (NM) S4.A.1.3
+        RXO.3 - Requested Give Amount - Maximum (NM) O S4.A.1.3
 
     rxo_4 : CWE | None
-        RXO.4 (opt) - Requested Give Units (CWE) S4.A.1.4 | 9999 - no table for CE
+        RXO.4 - Requested Give Units (CWE) C S4.A.1.4 | 9999 - no table for CE
 
     rxo_5 : CWE | None
-        RXO.5 (opt) - Requested Dosage Form (CWE) S4.A.1.5 | 9999 - no table for CE
+        RXO.5 - Requested Dosage Form (CWE) C S4.A.1.5 | 9999 - no table for CE
 
     rxo_6 : list[CWE] | None
-        RXO.6 (opt, rep) - Provider's Pharmacy/Treatment Instructions (CWE) S4.A.1.6 | 9999 - no table for CE
+        RXO.6 - Provider's Pharmacy/Treatment Instructions (CWE) O rep S4.A.1.6 | 9999 - no table for CE
 
     rxo_7 : list[CWE] | None
-        RXO.7 (opt, rep) - Provider's Administration Instructions (CWE) S4.A.1.7 | 9999 - no table for CE
+        RXO.7 - Provider's Administration Instructions (CWE) O rep S4.A.1.7 | 9999 - no table for CE
 
     rxo_9 : str | None
-        RXO.9 (opt) - Allow Substitutions (ID) S4.A.1.9 | 0161 - Allow Substitution
+        RXO.9 - Allow Substitutions (ID) O S4.A.1.9 | 0161 - Allow Substitution
 
     rxo_10 : CWE | None
-        RXO.10 (opt) - Requested Dispense Code (CWE) S4.A.1.10 | 9999 - no table for CE
+        RXO.10 - Requested Dispense Code (CWE) O S4.A.1.10 | 9999 - no table for CE
 
     rxo_11 : str | None
-        RXO.11 (opt) - Requested Dispense Amount (NM) S4.A.1.11
+        RXO.11 - Requested Dispense Amount (NM) O S4.A.1.11
 
     rxo_12 : CWE | None
-        RXO.12 (opt) - Requested Dispense Units (CWE) S4.A.1.12 | 9999 - no table for CE
+        RXO.12 - Requested Dispense Units (CWE) O S4.A.1.12 | 9999 - no table for CE
 
     rxo_13 : str | None
-        RXO.13 (opt) - Number Of Refills (NM) S4.A.1.13
+        RXO.13 - Number Of Refills (NM) O S4.A.1.13
 
     rxo_14 : list[XCN] | None
-        RXO.14 (opt, rep) - Ordering Provider's DEA Number (XCN) S4.A.1.14
+        RXO.14 - Ordering Provider's DEA Number (XCN) O rep S4.A.1.14
 
     rxo_15 : list[XCN] | None
-        RXO.15 (opt, rep) - Pharmacist/Treatment Supplier's Verifier ID (XCN) S4.A.1.15
+        RXO.15 - Pharmacist/Treatment Supplier's Verifier ID (XCN) C rep S4.A.1.15
 
     rxo_16 : str | None
-        RXO.16 (opt) - Needs Human Review (ID) S4.A.1.16 | 0136 - Yes/no Indicator
+        RXO.16 - Needs Human Review (ID) O S4.A.1.16 | 0136 - Yes/no Indicator
 
     rxo_17 : str | None
-        RXO.17 (opt) - Requested Give Per (Time Unit) (ST) S4.A.1.17
+        RXO.17 - Requested Give Per (Time Unit) (ST) C S4.A.1.17
 
     rxo_18 : str | None
-        RXO.18 (opt) - Requested Give Strength (NM) S4.A.1.18
+        RXO.18 - Requested Give Strength (NM) O S4.A.1.18
 
     rxo_19 : CWE | None
-        RXO.19 (opt) - Requested Give Strength Units (CWE) S4.A.1.19 | 9999 - no table for CE
+        RXO.19 - Requested Give Strength Units (CWE) O S4.A.1.19 | 9999 - no table for CE
 
     rxo_20 : list[CWE] | None
-        RXO.20 (opt, rep) - Indication (CWE) S4.A.1.19 | 9999 - no table for CE
+        RXO.20 - Indication (CWE) O rep S4.A.1.19 | 9999 - no table for CE
 
     rxo_21 : str | None
-        RXO.21 (opt) - Requested Give Rate Amount (ST) S4.A.1.21
+        RXO.21 - Requested Give Rate Amount (ST) O S4.A.1.21
 
     rxo_22 : CWE | None
-        RXO.22 (opt) - Requested Give Rate Units (CWE) S4.A.1.22 | 9999 - no table for CE
+        RXO.22 - Requested Give Rate Units (CWE) O S4.A.1.22 | 9999 - no table for CE
 
     rxo_23 : CQ | None
-        RXO.23 (opt) - Total Daily Dose (CQ) S4.A.1.23
+        RXO.23 - Total Daily Dose (CQ) O S4.A.1.23
 
     rxo_24 : list[CWE] | None
-        RXO.24 (opt, rep) - Supplementary Code (CWE) S4.A.1.24 | 9999 - no table for CE
+        RXO.24 - Supplementary Code (CWE) O rep S4.A.1.24 | 9999 - no table for CE
 
     rxo_25 : str | None
-        RXO.25 (opt) - Requested Drug Strength Volume (NM) S4.A.1.25
+        RXO.25 - Requested Drug Strength Volume (NM) O S4.A.1.25
 
     rxo_26 : CWE | None
-        RXO.26 (opt) - Requested Drug Strength Volume Units (CWE) S4.A.1.26 | 9999 - no table for CE
+        RXO.26 - Requested Drug Strength Volume Units (CWE) O S4.A.1.26 | 9999 - no table for CE
 
     rxo_27 : str | None
-        RXO.27 (opt) - Pharmacy Order Type (ID) S4.A.1.27 | 0480 - Pharmacy Order Types
+        RXO.27 - Pharmacy Order Type (ID) O S4.A.1.27 | 0480 - Pharmacy Order Types
 
     rxo_28 : str | None
-        RXO.28 (opt) - Dispensing Interval (NM) S4.A.1.28
+        RXO.28 - Dispensing Interval (NM) O S4.A.1.28
 
     rxo_29 : EI | None
-        RXO.29 (opt) - Medication Instance Identifier (EI) S4.A.1.29
+        RXO.29 - Medication Instance Identifier (EI) O S4.A.1.29
 
     rxo_30 : EI | None
-        RXO.30 (opt) - Segment Instance Identifier (EI) S4.A.1.30
+        RXO.30 - Segment Instance Identifier (EI) O S4.A.1.30
 
     rxo_31 : CNE | None
-        RXO.31 (opt) - Mood Code (CNE) S4.A.1.31 | 0725 - Mood Codes
+        RXO.31 - Mood Code (CNE) C S4.A.1.31 | 0725 - Mood Codes
 
     rxo_32 : CWE | None
-        RXO.32 (opt) - Dispensing Pharmacy (CWE) S4.A.1.32 | 9999 - no table for CE
+        RXO.32 - Dispensing Pharmacy (CWE) O S4.A.1.32 | 9999 - no table for CE
 
     rxo_33 : XAD | None
-        RXO.33 (opt) - Dispensing Pharmacy Address (XAD) S4.A.1.33
+        RXO.33 - Dispensing Pharmacy Address (XAD) O S4.A.1.33
 
     rxo_34 : PL | None
-        RXO.34 (opt) - Deliver-to Patient Location (PL) S4.A.1.34
+        RXO.34 - Deliver-to Patient Location (PL) O S4.A.1.34
 
     rxo_35 : XAD | None
-        RXO.35 (opt) - Deliver-to Address (XAD) S4.A.1.35
+        RXO.35 - Deliver-to Address (XAD) O S4.A.1.35
 
     rxo_36 : list[XTN] | None
-        RXO.36 (opt, rep) - Pharmacy Phone Number (XTN) S4.A.1.36
+        RXO.36 - Pharmacy Phone Number (XTN) O rep S4.A.1.36
     """
 
     rxo_1: Optional[CWE] = Field(
@@ -141,7 +141,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.1",
         title="Requested Give Code",
-        description="Item #292 | Table HL79999",
+        description="C | Item #00292 | Table 9999 - no table for CE",
     )
 
     rxo_2: Optional[str] = Field(
@@ -153,7 +153,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.2",
         title="Requested Give Amount - Minimum",
-        description="Item #293",
+        description="C | Item #00293",
     )
 
     rxo_3: Optional[str] = Field(
@@ -165,7 +165,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.3",
         title="Requested Give Amount - Maximum",
-        description="Item #294",
+        description="O | Item #00294",
     )
 
     rxo_4: Optional[CWE] = Field(
@@ -177,7 +177,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.4",
         title="Requested Give Units",
-        description="Item #295 | Table HL79999",
+        description="C | Item #00295 | Table 9999 - no table for CE",
     )
 
     rxo_5: Optional[CWE] = Field(
@@ -189,7 +189,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.5",
         title="Requested Dosage Form",
-        description="Item #296 | Table HL79999",
+        description="C | Item #00296 | Table 9999 - no table for CE",
     )
 
     rxo_6: Optional[List[CWE]] = Field(
@@ -201,7 +201,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.6",
         title="Provider's Pharmacy/Treatment Instructions",
-        description="Item #297 | Table HL79999",
+        description="O | Item #00297 | Table 9999 - no table for CE",
     )
 
     rxo_7: Optional[List[CWE]] = Field(
@@ -213,7 +213,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.7",
         title="Provider's Administration Instructions",
-        description="Item #298 | Table HL79999",
+        description="O | Item #00298 | Table 9999 - no table for CE",
     )
 
     rxo_9: Optional[str] = Field(
@@ -225,7 +225,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.9",
         title="Allow Substitutions",
-        description="Item #300 | Table HL70161",
+        description="O | Item #00300 | Table 0161 - Allow Substitution | LEN:1",
     )
 
     rxo_10: Optional[CWE] = Field(
@@ -237,7 +237,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.10",
         title="Requested Dispense Code",
-        description="Item #301 | Table HL79999",
+        description="O | Item #00301 | Table 9999 - no table for CE",
     )
 
     rxo_11: Optional[str] = Field(
@@ -249,7 +249,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.11",
         title="Requested Dispense Amount",
-        description="Item #302",
+        description="O | Item #00302",
     )
 
     rxo_12: Optional[CWE] = Field(
@@ -261,7 +261,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.12",
         title="Requested Dispense Units",
-        description="Item #303 | Table HL79999",
+        description="O | Item #00303 | Table 9999 - no table for CE",
     )
 
     rxo_13: Optional[str] = Field(
@@ -273,7 +273,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.13",
         title="Number Of Refills",
-        description="Item #304",
+        description="O | Item #00304",
     )
 
     rxo_14: Optional[List[XCN]] = Field(
@@ -285,7 +285,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.14",
         title="Ordering Provider's DEA Number",
-        description="Item #305",
+        description="O | Item #00305",
     )
 
     rxo_15: Optional[List[XCN]] = Field(
@@ -297,7 +297,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.15",
         title="Pharmacist/Treatment Supplier's Verifier ID",
-        description="Item #306",
+        description="C | Item #00306",
     )
 
     rxo_16: Optional[str] = Field(
@@ -309,7 +309,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.16",
         title="Needs Human Review",
-        description="Item #307 | Table HL70136",
+        description="O | Item #00307 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     rxo_17: Optional[str] = Field(
@@ -321,7 +321,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.17",
         title="Requested Give Per (Time Unit)",
-        description="Item #308",
+        description="C | Item #00308",
     )
 
     rxo_18: Optional[str] = Field(
@@ -333,7 +333,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.18",
         title="Requested Give Strength",
-        description="Item #1121",
+        description="O | Item #01121",
     )
 
     rxo_19: Optional[CWE] = Field(
@@ -345,7 +345,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.19",
         title="Requested Give Strength Units",
-        description="Item #1122 | Table HL79999",
+        description="O | Item #01122 | Table 9999 - no table for CE",
     )
 
     rxo_20: Optional[List[CWE]] = Field(
@@ -357,7 +357,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.20",
         title="Indication",
-        description="Item #1123 | Table HL79999",
+        description="O | Item #01123 | Table 9999 - no table for CE",
     )
 
     rxo_21: Optional[str] = Field(
@@ -369,7 +369,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.21",
         title="Requested Give Rate Amount",
-        description="Item #1218",
+        description="O | Item #01218",
     )
 
     rxo_22: Optional[CWE] = Field(
@@ -381,7 +381,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.22",
         title="Requested Give Rate Units",
-        description="Item #1219 | Table HL79999",
+        description="O | Item #01219 | Table 9999 - no table for CE",
     )
 
     rxo_23: Optional[CQ] = Field(
@@ -393,7 +393,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.23",
         title="Total Daily Dose",
-        description="Item #329",
+        description="O | Item #00329",
     )
 
     rxo_24: Optional[List[CWE]] = Field(
@@ -405,7 +405,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.24",
         title="Supplementary Code",
-        description="Item #1476 | Table HL79999",
+        description="O | Item #01476 | Table 9999 - no table for CE",
     )
 
     rxo_25: Optional[str] = Field(
@@ -417,7 +417,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.25",
         title="Requested Drug Strength Volume",
-        description="Item #1666",
+        description="O | Item #01666",
     )
 
     rxo_26: Optional[CWE] = Field(
@@ -429,7 +429,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.26",
         title="Requested Drug Strength Volume Units",
-        description="Item #1667 | Table HL79999",
+        description="O | Item #01667 | Table 9999 - no table for CE",
     )
 
     rxo_27: Optional[str] = Field(
@@ -441,7 +441,9 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.27",
         title="Pharmacy Order Type",
-        description="Item #1668 | Table HL70480",
+        description=(
+            "O | Item #01668 | Table 0480 - Pharmacy Order Types | LEN:1"
+        ),
     )
 
     rxo_28: Optional[str] = Field(
@@ -453,7 +455,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.28",
         title="Dispensing Interval",
-        description="Item #1669",
+        description="O | Item #01669",
     )
 
     rxo_29: Optional[EI] = Field(
@@ -465,7 +467,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.29",
         title="Medication Instance Identifier",
-        description="Item #2149",
+        description="O | Item #02149",
     )
 
     rxo_30: Optional[EI] = Field(
@@ -477,7 +479,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.30",
         title="Segment Instance Identifier",
-        description="Item #2150",
+        description="O | Item #02150",
     )
 
     rxo_31: Optional[CNE] = Field(
@@ -489,7 +491,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.31",
         title="Mood Code",
-        description="Item #2151 | Table HL70725",
+        description="C | Item #02151 | Table 0725 - Mood Codes",
     )
 
     rxo_32: Optional[CWE] = Field(
@@ -501,7 +503,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.32",
         title="Dispensing Pharmacy",
-        description="Item #1681 | Table HL79999",
+        description="O | Item #01681 | Table 9999 - no table for CE",
     )
 
     rxo_33: Optional[XAD] = Field(
@@ -513,7 +515,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.33",
         title="Dispensing Pharmacy Address",
-        description="Item #1682",
+        description="O | Item #01682",
     )
 
     rxo_34: Optional[PL] = Field(
@@ -525,7 +527,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.34",
         title="Deliver-to Patient Location",
-        description="Item #1683",
+        description="O | Item #01683",
     )
 
     rxo_35: Optional[XAD] = Field(
@@ -537,7 +539,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.35",
         title="Deliver-to Address",
-        description="Item #1684",
+        description="O | Item #01684",
     )
 
     rxo_36: Optional[List[XTN]] = Field(
@@ -549,7 +551,7 @@ class RXO(HL7Model):
         ),
         serialization_alias="RXO.36",
         title="Pharmacy Phone Number",
-        description="Item #2309",
+        description="O | Item #02309",
     )
 
     @field_validator("rxo_2", "rxo_3", "rxo_11", "rxo_13", "rxo_18", "rxo_25", "rxo_28", mode='before')

@@ -24,58 +24,58 @@ class PRC(HL7Model):
     Attributes
     ----------
     prc_1 : CE
-        PRC.1 (req) - Primary Key Value (CE) S8.9.3.1 | 0132 - Transaction Code
+        PRC.1 - Primary Key Value (CE) R S8.9.3.1 | 0132 - Transaction Code
 
     prc_2 : list[EI]
-        PRC.2 (req, rep) - Facility ID (EI) S7.11.6.1
+        PRC.2 - Facility ID (EI) R rep S7.11.6.1
 
     prc_3 : list[CE] | None
-        PRC.3 (opt, rep) - Department (CE) S8.9.3.3
+        PRC.3 - Department (CE) O rep S8.9.3.3
 
     prc_4 : list[str] | None
-        PRC.4 (opt, rep) - Valid Patient Classes (ID) S8.8.5.5 | 0004 - Patient Class
+        PRC.4 - Valid Patient Classes (ID) O rep S8.8.5.5 | 0004 - Patient Class
 
     prc_5 : list[CP] | None
-        PRC.5 (opt, rep) - Price (CP) S8.9.3.5
+        PRC.5 - Price (CP) C rep S8.9.3.5
 
     prc_6 : list[str] | None
-        PRC.6 (opt, rep) - Formula (ST) S8.9.3.6
+        PRC.6 - Formula (ST) O rep S8.9.3.6
 
     prc_7 : str | None
-        PRC.7 (opt) - Minimum Quantity (NM) S8.9.3.7
+        PRC.7 - Minimum Quantity (NM) O S8.9.3.7
 
     prc_8 : str | None
-        PRC.8 (opt) - Maximum Quantity (NM) S8.9.3.8
+        PRC.8 - Maximum Quantity (NM) O S8.9.3.8
 
     prc_9 : MO | None
-        PRC.9 (opt) - Minimum Price (MO) S8.9.3.9
+        PRC.9 - Minimum Price (MO) O S8.9.3.9
 
     prc_10 : MO | None
-        PRC.10 (opt) - Maximum Price (MO) S8.9.3.10
+        PRC.10 - Maximum Price (MO) O S8.9.3.10
 
     prc_11 : TS | None
-        PRC.11 (opt) - Effective Start Date (TS) S8.9.3.11
+        PRC.11 - Effective Start Date (TS) NA S8.9.3.11
 
     prc_12 : TS | None
-        PRC.12 (opt) - Effective End Date (TS) S8.9.3.12
+        PRC.12 - Effective End Date (TS) NA S8.9.3.12
 
     prc_13 : str | None
-        PRC.13 (opt) - Price Override Flag (ID) S8.9.3.13 | 0268 - Override
+        PRC.13 - Price Override Flag (ID) O S8.9.3.13 | 0268 - Override
 
     prc_14 : list[CE] | None
-        PRC.14 (opt, rep) - Billing Category (CE) S8.9.3.14 | 0293 - Billing Category
+        PRC.14 - Billing Category (CE) O rep S8.9.3.14 | 0293 - Billing Category
 
     prc_15 : str | None
-        PRC.15 (opt) - Chargeable Flag (ID) S8.9.3.15 | 0136 - Yes/No Indicator
+        PRC.15 - Chargeable Flag (ID) O S8.9.3.15 | 0136 - Yes/No Indicator
 
     prc_16 : str | None
-        PRC.16 (opt) - Active/Inactive Flag (ID) S8.6.2 | 0183 - Active/Inactive
+        PRC.16 - Active/Inactive Flag (ID) O S8.6.2 | 0183 - Active/Inactive
 
     prc_17 : MO | None
-        PRC.17 (opt) - Cost (MO) S8.9.3.17
+        PRC.17 - Cost (MO) O S8.9.3.17
 
     prc_18 : str | None
-        PRC.18 (opt) - Charge On Indicator (ID) S8.9.3.18 | 0269 - Charge on Indicator
+        PRC.18 - Charge On Indicator (ID) O S8.9.3.18 | 0269 - Charge on Indicator
     """
 
     prc_1: CE = Field(
@@ -86,7 +86,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.1",
         title="Primary Key Value",
-        description="Item #982 | Table HL70132",
+        description="R | Item #00982 | Table 0132 - Transaction Code",
     )
 
     prc_2: List[EI] = Field(
@@ -98,7 +98,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.2",
         title="Facility ID",
-        description="Item #1262",
+        description="R | Item #01262",
     )
 
     prc_3: Optional[List[CE]] = Field(
@@ -110,7 +110,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.3",
         title="Department",
-        description="Item #996",
+        description="O | Item #00996",
     )
 
     prc_4: Optional[List[str]] = Field(
@@ -122,7 +122,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.4",
         title="Valid Patient Classes",
-        description="Item #967 | Table HL70004",
+        description="O | Item #00967 | Table 0004 - Patient Class | LEN:1",
     )
 
     prc_5: Optional[List[CP]] = Field(
@@ -134,7 +134,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.5",
         title="Price",
-        description="Item #998",
+        description="C | Item #00998",
     )
 
     prc_6: Optional[List[str]] = Field(
@@ -146,7 +146,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.6",
         title="Formula",
-        description="Item #999",
+        description="O | Item #00999 | LEN:200",
     )
 
     prc_7: Optional[str] = Field(
@@ -158,7 +158,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.7",
         title="Minimum Quantity",
-        description="Item #1000",
+        description="O | Item #01000 | LEN:4",
     )
 
     prc_8: Optional[str] = Field(
@@ -170,7 +170,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.8",
         title="Maximum Quantity",
-        description="Item #1001",
+        description="O | Item #01001 | LEN:4",
     )
 
     prc_9: Optional[MO] = Field(
@@ -182,7 +182,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.9",
         title="Minimum Price",
-        description="Item #1002",
+        description="O | Item #01002",
     )
 
     prc_10: Optional[MO] = Field(
@@ -194,7 +194,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.10",
         title="Maximum Price",
-        description="Item #1003",
+        description="O | Item #01003",
     )
 
     prc_11: Optional[TS] = Field(
@@ -206,7 +206,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.11",
         title="Effective Start Date",
-        description="Item #1004",
+        description="NA | Item #01004",
     )
 
     prc_12: Optional[TS] = Field(
@@ -218,7 +218,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.12",
         title="Effective End Date",
-        description="Item #1005",
+        description="NA | Item #01005",
     )
 
     prc_13: Optional[str] = Field(
@@ -230,7 +230,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.13",
         title="Price Override Flag",
-        description="Item #1006 | Table HL70268",
+        description="O | Item #01006 | Table 0268 - Override | LEN:1",
     )
 
     prc_14: Optional[List[CE]] = Field(
@@ -242,7 +242,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.14",
         title="Billing Category",
-        description="Item #1007 | Table HL70293",
+        description="O | Item #01007 | Table 0293 - Billing Category",
     )
 
     prc_15: Optional[str] = Field(
@@ -254,7 +254,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.15",
         title="Chargeable Flag",
-        description="Item #1008 | Table HL70136",
+        description="O | Item #01008 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     prc_16: Optional[str] = Field(
@@ -266,7 +266,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.16",
         title="Active/Inactive Flag",
-        description="Item #675 | Table HL70183",
+        description="O | Item #00675 | Table 0183 - Active/Inactive | LEN:1",
     )
 
     prc_17: Optional[MO] = Field(
@@ -278,7 +278,7 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.17",
         title="Cost",
-        description="Item #989",
+        description="O | Item #00989",
     )
 
     prc_18: Optional[str] = Field(
@@ -290,7 +290,9 @@ class PRC(HL7Model):
         ),
         serialization_alias="PRC.18",
         title="Charge On Indicator",
-        description="Item #1009 | Table HL70269",
+        description=(
+            "O | Item #01009 | Table 0269 - Charge on Indicator | LEN:1"
+        ),
     )
 
     @field_validator("prc_7", "prc_8", mode='before')

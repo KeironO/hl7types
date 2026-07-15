@@ -21,67 +21,67 @@ class GT1(HL7Model):
     Attributes
     ----------
     gt1_1 : str
-        GT1.1 (req) - Set ID - guarantor (SI) S6.4.4.1
+        GT1.1 - Set ID - guarantor (SI) R S6.4.4.1
 
     gt1_2 : str | None
-        GT1.2 (opt) - Guarantor number (CK) S6.4.4.2
+        GT1.2 - Guarantor number (CK) NA S6.4.4.2
 
     gt1_3 : PN
-        GT1.3 (req) - Guarantor name (PN) S6.4.4.3
+        GT1.3 - Guarantor name (PN) R S6.4.4.3
 
     gt1_4 : PN | None
-        GT1.4 (opt) - Guarantor spouse name (PN) S6.4.4.4
+        GT1.4 - Guarantor spouse name (PN) NA S6.4.4.4
 
     gt1_5 : AD | None
-        GT1.5 (opt) - Guarantor address (AD) S6.4.4.5
+        GT1.5 - Guarantor address (AD) NA S6.4.4.5
 
     gt1_6 : list[str] | None
-        GT1.6 (opt, rep) - Guarantor phone number - home (TN) S6.4.4.6
+        GT1.6 - Guarantor phone number - home (TN) NA rep S6.4.4.6
 
     gt1_7 : list[str] | None
-        GT1.7 (opt, rep) - Guarantor phone number - business (TN) S6.4.4.7
+        GT1.7 - Guarantor phone number - business (TN) NA rep S6.4.4.7
 
     gt1_8 : str | None
-        GT1.8 (opt) - Guarantor date of birth (DT) S6.4.4.8
+        GT1.8 - Guarantor date of birth (DT) NA S6.4.4.8
 
     gt1_9 : str | None
-        GT1.9 (opt) - Guarantor sex (ID) S6.4.4.9 | 0001 - SEX
+        GT1.9 - Guarantor sex (ID) NA S6.4.4.9 | 0001 - SEX
 
     gt1_10 : str | None
-        GT1.10 (opt) - Guarantor type (ID) S6.4.4.10 | 0068 - GUARANTOR TYPE
+        GT1.10 - Guarantor type (ID) NA S6.4.4.10 | 0068 - GUARANTOR TYPE
 
     gt1_11 : str | None
-        GT1.11 (opt) - Guarantor relationship (ID) S6.4.4.11 | 0063 - RELATIONSHIP
+        GT1.11 - Guarantor relationship (ID) NA S6.4.4.11 | 0063 - RELATIONSHIP
 
     gt1_12 : str | None
-        GT1.12 (opt) - Guarantor social security number (ST) S6.4.4.12
+        GT1.12 - Guarantor social security number (ST) NA S6.4.4.12
 
     gt1_13 : str | None
-        GT1.13 (opt) - Guarantor date - begin (DT) S6.4.4.13
+        GT1.13 - Guarantor date - begin (DT) NA S6.4.4.13
 
     gt1_14 : str | None
-        GT1.14 (opt) - Guarantor date - end (DT) S6.4.4.14
+        GT1.14 - Guarantor date - end (DT) NA S6.4.4.14
 
     gt1_15 : str | None
-        GT1.15 (opt) - Guarantor priority (NM) S6.4.4.15
+        GT1.15 - Guarantor priority (NM) NA S6.4.4.15
 
     gt1_16 : str | None
-        GT1.16 (opt) - Guarantor employer name (ST) S6.4.4.16
+        GT1.16 - Guarantor employer name (ST) NA S6.4.4.16
 
     gt1_17 : AD | None
-        GT1.17 (opt) - Guarantor employer address (AD) S6.4.4.17
+        GT1.17 - Guarantor employer address (AD) NA S6.4.4.17
 
     gt1_18 : list[str] | None
-        GT1.18 (opt, rep) - Guarantor employ phone number (TN) S6.4.4.18
+        GT1.18 - Guarantor employ phone number (TN) NA rep S6.4.4.18
 
     gt1_19 : str | None
-        GT1.19 (opt) - Guarantor employee ID number (ST) S6.4.4.19
+        GT1.19 - Guarantor employee ID number (ST) NA S6.4.4.19
 
     gt1_20 : str | None
-        GT1.20 (opt) - Guarantor employment status (ID) S6.4.4.20 | 0066 - EMPLOYMENT STATUS
+        GT1.20 - Guarantor employment status (ID) NA S6.4.4.20 | 0066 - EMPLOYMENT STATUS
 
     gt1_21 : str | None
-        GT1.21 (opt) - Guarantor organization (ST) S6.4.4.21
+        GT1.21 - Guarantor organization (ST) NA S6.4.4.21
     """
 
     gt1_1: str = Field(
@@ -92,7 +92,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.1",
         title="Set ID - guarantor",
-        description="Item #405",
+        description="R | Item #00405 | LEN:4",
     )
 
     gt1_2: Optional[str] = Field(
@@ -104,7 +104,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.2",
         title="Guarantor number",
-        description="Item #406",
+        description="NA | Item #00406 | LEN:20",
     )
 
     gt1_3: PN = Field(
@@ -115,7 +115,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.3",
         title="Guarantor name",
-        description="Item #407",
+        description="R | Item #00407",
     )
 
     gt1_4: Optional[PN] = Field(
@@ -127,7 +127,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.4",
         title="Guarantor spouse name",
-        description="Item #408",
+        description="NA | Item #00408",
     )
 
     gt1_5: Optional[AD] = Field(
@@ -139,7 +139,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.5",
         title="Guarantor address",
-        description="Item #409",
+        description="NA | Item #00409",
     )
 
     gt1_6: Optional[List[str]] = Field(
@@ -151,7 +151,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.6",
         title="Guarantor phone number - home",
-        description="Item #410",
+        description="NA | Item #00410 | LEN:40",
     )
 
     gt1_7: Optional[List[str]] = Field(
@@ -163,7 +163,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.7",
         title="Guarantor phone number - business",
-        description="Item #411",
+        description="NA | Item #00411 | LEN:40",
     )
 
     gt1_8: Optional[str] = Field(
@@ -175,7 +175,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.8",
         title="Guarantor date of birth",
-        description="Item #412",
+        description="NA | Item #00412 | LEN:8",
     )
 
     gt1_9: Optional[str] = Field(
@@ -187,7 +187,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.9",
         title="Guarantor sex",
-        description="Item #413 | Table HL70001",
+        description="NA | Item #00413 | Table 0001 - SEX | LEN:1",
     )
 
     gt1_10: Optional[str] = Field(
@@ -199,7 +199,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.10",
         title="Guarantor type",
-        description="Item #414 | Table HL70068",
+        description="NA | Item #00414 | Table 0068 - GUARANTOR TYPE | LEN:2",
     )
 
     gt1_11: Optional[str] = Field(
@@ -211,7 +211,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.11",
         title="Guarantor relationship",
-        description="Item #415 | Table HL70063",
+        description="NA | Item #00415 | Table 0063 - RELATIONSHIP | LEN:2",
     )
 
     gt1_12: Optional[str] = Field(
@@ -223,7 +223,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.12",
         title="Guarantor social security number",
-        description="Item #416",
+        description="NA | Item #00416 | LEN:11",
     )
 
     gt1_13: Optional[str] = Field(
@@ -235,7 +235,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.13",
         title="Guarantor date - begin",
-        description="Item #417",
+        description="NA | Item #00417 | LEN:8",
     )
 
     gt1_14: Optional[str] = Field(
@@ -247,7 +247,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.14",
         title="Guarantor date - end",
-        description="Item #418",
+        description="NA | Item #00418 | LEN:8",
     )
 
     gt1_15: Optional[str] = Field(
@@ -259,7 +259,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.15",
         title="Guarantor priority",
-        description="Item #419",
+        description="NA | Item #00419 | LEN:2",
     )
 
     gt1_16: Optional[str] = Field(
@@ -271,7 +271,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.16",
         title="Guarantor employer name",
-        description="Item #420",
+        description="NA | Item #00420 | LEN:45",
     )
 
     gt1_17: Optional[AD] = Field(
@@ -283,7 +283,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.17",
         title="Guarantor employer address",
-        description="Item #421",
+        description="NA | Item #00421",
     )
 
     gt1_18: Optional[List[str]] = Field(
@@ -295,7 +295,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.18",
         title="Guarantor employ phone number",
-        description="Item #422",
+        description="NA | Item #00422 | LEN:40",
     )
 
     gt1_19: Optional[str] = Field(
@@ -307,7 +307,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.19",
         title="Guarantor employee ID number",
-        description="Item #423",
+        description="NA | Item #00423 | LEN:20",
     )
 
     gt1_20: Optional[str] = Field(
@@ -319,7 +319,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.20",
         title="Guarantor employment status",
-        description="Item #424 | Table HL70066",
+        description="NA | Item #00424 | Table 0066 - EMPLOYMENT STATUS | LEN:2",
     )
 
     gt1_21: Optional[str] = Field(
@@ -331,7 +331,7 @@ class GT1(HL7Model):
         ),
         serialization_alias="GT1.21",
         title="Guarantor organization",
-        description="Item #425",
+        description="NA | Item #00425 | LEN:60",
     )
 
     @field_validator("gt1_1", mode='before')

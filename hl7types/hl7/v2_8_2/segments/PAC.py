@@ -22,28 +22,28 @@ class PAC(HL7Model):
     Attributes
     ----------
     pac_1 : str
-        PAC.1 (req) - Set Id - PAC (SI) S7.18.3.1
+        PAC.1 - Set Id - PAC (SI) R S7.18.3.1
 
     pac_2 : EI | None
-        PAC.2 (opt) - Package ID (EI) S7.18.3.2
+        PAC.2 - Package ID (EI) C S7.18.3.2
 
     pac_3 : EI | None
-        PAC.3 (opt) - Parent Package ID (EI) S7.18.3.3
+        PAC.3 - Parent Package ID (EI) O S7.18.3.3
 
     pac_4 : NA | None
-        PAC.4 (opt) - Position in Parent Package (NA) S7.18.3.4
+        PAC.4 - Position in Parent Package (NA) O S7.18.3.4
 
     pac_5 : CWE
-        PAC.5 (req) - Package Type (CWE) S7.18.3.5 | 0908 - Package Type
+        PAC.5 - Package Type (CWE) R S7.18.3.5 | 0908 - Package Type
 
     pac_6 : list[CWE] | None
-        PAC.6 (opt, rep) - Package Condition (CWE) S7.18.3.6 | 0544 - Container Condition
+        PAC.6 - Package Condition (CWE) O rep S7.18.3.6 | 0544 - Container Condition
 
     pac_7 : list[CWE] | None
-        PAC.7 (opt, rep) - Package Handling Code (CWE) S7.18.3.7 | 0376 - Special Handling Code
+        PAC.7 - Package Handling Code (CWE) O rep S7.18.3.7 | 0376 - Special Handling Code
 
     pac_8 : list[CWE] | None
-        PAC.8 (opt, rep) - Package Risk Code (CWE) S7.18.3.8 | 0489 - Risk Codes
+        PAC.8 - Package Risk Code (CWE) O rep S7.18.3.8 | 0489 - Risk Codes
     """
 
     pac_1: str = Field(
@@ -54,7 +54,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.1",
         title="Set Id - PAC",
-        description="Item #2350",
+        description="R | Item #02350 | LEN:4",
     )
 
     pac_2: Optional[EI] = Field(
@@ -66,7 +66,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.2",
         title="Package ID",
-        description="Item #2351",
+        description="C | Item #02351",
     )
 
     pac_3: Optional[EI] = Field(
@@ -78,7 +78,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.3",
         title="Parent Package ID",
-        description="Item #2352",
+        description="O | Item #02352",
     )
 
     pac_4: Optional[NA] = Field(
@@ -90,7 +90,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.4",
         title="Position in Parent Package",
-        description="Item #2353",
+        description="O | Item #02353",
     )
 
     pac_5: CWE = Field(
@@ -101,7 +101,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.5",
         title="Package Type",
-        description="Item #2354 | Table HL70908",
+        description="R | Item #02354 | Table 0908 - Package Type",
     )
 
     pac_6: Optional[List[CWE]] = Field(
@@ -113,7 +113,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.6",
         title="Package Condition",
-        description="Item #2355 | Table HL70544",
+        description="O | Item #02355 | Table 0544 - Container Condition",
     )
 
     pac_7: Optional[List[CWE]] = Field(
@@ -125,7 +125,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.7",
         title="Package Handling Code",
-        description="Item #2356 | Table HL70376",
+        description="O | Item #02356 | Table 0376 - Special Handling Code",
     )
 
     pac_8: Optional[List[CWE]] = Field(
@@ -137,7 +137,7 @@ class PAC(HL7Model):
         ),
         serialization_alias="PAC.8",
         title="Package Risk Code",
-        description="Item #2357 | Table HL70489",
+        description="O | Item #02357 | Table 0489 - Risk Codes",
     )
 
     @field_validator("pac_1", mode='before')

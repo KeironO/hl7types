@@ -18,10 +18,10 @@ class SGH(HL7Model):
     Attributes
     ----------
     sgh_1 : str
-        SGH.1 (req) - Set ID - SGH (SI) S2.14.13.1
+        SGH.1 - Set ID - SGH (SI) R S2.14.13.1
 
     sgh_2 : str | None
-        SGH.2 (opt) - Segment Group Name (ST) S2.14.13.2
+        SGH.2 - Segment Group Name (ST) O S2.14.13.2
     """
 
     sgh_1: str = Field(
@@ -32,7 +32,7 @@ class SGH(HL7Model):
         ),
         serialization_alias="SGH.1",
         title="Set ID - SGH",
-        description="Item #3389",
+        description="R | Item #03389 | LEN:4",
     )
 
     sgh_2: Optional[str] = Field(
@@ -44,7 +44,7 @@ class SGH(HL7Model):
         ),
         serialization_alias="SGH.2",
         title="Segment Group Name",
-        description="Item #3390",
+        description="O | Item #03390",
     )
 
     @field_validator("sgh_1", mode='before')

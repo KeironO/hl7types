@@ -20,16 +20,16 @@ class LAN(HL7Model):
     Attributes
     ----------
     lan_1 : str
-        LAN.1 (req) - Set ID - LAN (SI) S15.4.4.1
+        LAN.1 - Set ID - LAN (SI) R S15.4.4.1
 
     lan_2 : CWE
-        LAN.2 (req) - Language Code (CWE) S15.4.4.2 | 0296 - Primary Language
+        LAN.2 - Language Code (CWE) R S15.4.4.2 | 0296 - Primary Language
 
     lan_3 : list[CWE] | None
-        LAN.3 (opt, rep) - Language Ability Code (CWE) S15.4.4.3 | 0403 - Language Ability
+        LAN.3 - Language Ability Code (CWE) O rep S15.4.4.3 | 0403 - Language Ability
 
     lan_4 : CWE | None
-        LAN.4 (opt) - Language Proficiency Code (CWE) S15.4.4.4 | 0404 - Language Proficiency
+        LAN.4 - Language Proficiency Code (CWE) O S15.4.4.4 | 0404 - Language Proficiency
     """
 
     lan_1: str = Field(
@@ -40,7 +40,7 @@ class LAN(HL7Model):
         ),
         serialization_alias="LAN.1",
         title="Set ID - LAN",
-        description="Item #1455",
+        description="R | Item #01455 | LEN:4",
     )
 
     lan_2: CWE = Field(
@@ -51,7 +51,7 @@ class LAN(HL7Model):
         ),
         serialization_alias="LAN.2",
         title="Language Code",
-        description="Item #1456 | Table HL70296",
+        description="R | Item #01456 | Table 0296 - Primary Language",
     )
 
     lan_3: Optional[List[CWE]] = Field(
@@ -63,7 +63,7 @@ class LAN(HL7Model):
         ),
         serialization_alias="LAN.3",
         title="Language Ability Code",
-        description="Item #1457 | Table HL70403",
+        description="O | Item #01457 | Table 0403 - Language Ability",
     )
 
     lan_4: Optional[CWE] = Field(
@@ -75,7 +75,7 @@ class LAN(HL7Model):
         ),
         serialization_alias="LAN.4",
         title="Language Proficiency Code",
-        description="Item #1458 | Table HL70404",
+        description="O | Item #01458 | Table 0404 - Language Proficiency",
     )
 
     @field_validator("lan_1", mode='before')

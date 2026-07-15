@@ -26,220 +26,220 @@ class IN2(HL7Model):
     Attributes
     ----------
     in2_1 : CX | None
-        IN2.1 (opt) - Insured's Employee ID (CX) S6.4.7.1
+        IN2.1 - Insured's Employee ID (CX) NA S6.4.7.1
 
     in2_2 : str | None
-        IN2.2 (opt) - Insured's Social Security Number (ST) S6.4.7.2
+        IN2.2 - Insured's Social Security Number (ST) NA S6.4.7.2
 
     in2_3 : XCN | None
-        IN2.3 (opt) - Insured's Employer Name (XCN) S6.4.7.3
+        IN2.3 - Insured's Employer Name (XCN) NA S6.4.7.3
 
     in2_4 : str | None
-        IN2.4 (opt) - Employer Information Data (IS) S6.4.7.4 | 0139 - Employer Information Data
+        IN2.4 - Employer Information Data (IS) NA S6.4.7.4 | 0139 - Employer Information Data
 
     in2_5 : str | None
-        IN2.5 (opt) - Mail Claim Party (IS) S6.4.7.5 | 0137 - Mail Claim Party
+        IN2.5 - Mail Claim Party (IS) NA S6.4.7.5 | 0137 - Mail Claim Party
 
     in2_6 : str | None
-        IN2.6 (opt) - Medicare Health Ins Card Number (ST) S6.4.7.6
+        IN2.6 - Medicare Health Ins Card Number (ST) NA S6.4.7.6
 
     in2_7 : XPN | None
-        IN2.7 (opt) - Medicaid Case Name (XPN) S6.4.7.7
+        IN2.7 - Medicaid Case Name (XPN) NA S6.4.7.7
 
     in2_8 : str | None
-        IN2.8 (opt) - Medicaid Case Number (ST) S6.4.7.8
+        IN2.8 - Medicaid Case Number (ST) NA S6.4.7.8
 
     in2_9 : XPN | None
-        IN2.9 (opt) - Champus Sponsor Name (XPN) S6.4.7.9
+        IN2.9 - Champus Sponsor Name (XPN) NA S6.4.7.9
 
     in2_10 : str | None
-        IN2.10 (opt) - Champus ID Number (ST) S6.4.7.10
+        IN2.10 - Champus ID Number (ST) NA S6.4.7.10
 
     in2_11 : CE | None
-        IN2.11 (opt) - Dependent of Champus Recipient (CE) S6.4.7.11
+        IN2.11 - Dependent of Champus Recipient (CE) NA S6.4.7.11
 
     in2_12 : str | None
-        IN2.12 (opt) - Champus Organization (ST) S6.4.7.12
+        IN2.12 - Champus Organization (ST) NA S6.4.7.12
 
     in2_13 : str | None
-        IN2.13 (opt) - Champus Station (ST) S6.4.7.13
+        IN2.13 - Champus Station (ST) NA S6.4.7.13
 
     in2_14 : str | None
-        IN2.14 (opt) - Champus Service (IS) S6.4.7.14 | 0140 - Champus Service
+        IN2.14 - Champus Service (IS) NA S6.4.7.14 | 0140 - Champus Service
 
     in2_15 : str | None
-        IN2.15 (opt) - Champus Rank/Grade (IS) S6.4.7.15 | 0141 - Champus Rank/Grade
+        IN2.15 - Champus Rank/Grade (IS) NA S6.4.7.15 | 0141 - Champus Rank/Grade
 
     in2_16 : str | None
-        IN2.16 (opt) - Champus Status (IS) S6.4.7.16 | 0142 - Champus Status
+        IN2.16 - Champus Status (IS) NA S6.4.7.16 | 0142 - Champus Status
 
     in2_17 : str | None
-        IN2.17 (opt) - Champus Retire Date (DT) S6.4.7.17
+        IN2.17 - Champus Retire Date (DT) NA S6.4.7.17
 
     in2_18 : str | None
-        IN2.18 (opt) - Champus Non-Avail Cert on File (ID) S6.4.7.18 | 0136 - Yes/No Indicator
+        IN2.18 - Champus Non-Avail Cert on File (ID) NA S6.4.7.18 | 0136 - Yes/No Indicator
 
     in2_19 : str | None
-        IN2.19 (opt) - Baby Coverage (ID) S6.4.7.19 | 0136 - Yes/No Indicator
+        IN2.19 - Baby Coverage (ID) NA S6.4.7.19 | 0136 - Yes/No Indicator
 
     in2_20 : str | None
-        IN2.20 (opt) - Combine Baby Bill (ID) S6.4.7.20 | 0136 - Yes/No Indicator
+        IN2.20 - Combine Baby Bill (ID) NA S6.4.7.20 | 0136 - Yes/No Indicator
 
     in2_21 : str | None
-        IN2.21 (opt) - Blood Deductible (ST) S6.4.7.21
+        IN2.21 - Blood Deductible (ST) NA S6.4.7.21
 
     in2_22 : XPN | None
-        IN2.22 (opt) - Special Coverage Approval Name (XPN) S6.4.7.22
+        IN2.22 - Special Coverage Approval Name (XPN) NA S6.4.7.22
 
     in2_23 : str | None
-        IN2.23 (opt) - Special Coverage Approval Title (ST) S6.4.7.23
+        IN2.23 - Special Coverage Approval Title (ST) NA S6.4.7.23
 
     in2_24 : list[str] | None
-        IN2.24 (opt, rep) - Non-Covered Insurance Code (ST) S6.4.7.24 | 0143 - Non-covered Insurance Code
+        IN2.24 - Non-Covered Insurance Code (ST) NA rep S6.4.7.24 | 0143 - Non-covered Insurance Code
 
     in2_25 : CX | None
-        IN2.25 (opt) - Payor ID (CX) S6.4.7.25
+        IN2.25 - Payor ID (CX) NA S6.4.7.25
 
     in2_26 : CX | None
-        IN2.26 (opt) - Payor Subscriber ID (CX) S6.4.7.26
+        IN2.26 - Payor Subscriber ID (CX) NA S6.4.7.26
 
     in2_27 : str | None
-        IN2.27 (opt) - Eligibility Source (IS) S6.4.7.27 | 0144 - Eligibility Source
+        IN2.27 - Eligibility Source (IS) NA S6.4.7.27 | 0144 - Eligibility Source
 
     in2_28 : list[str] | None
-        IN2.28 (opt, rep) - Room Coverage Type/Amount (CM) S6.4.7.28
+        IN2.28 - Room Coverage Type/Amount (CM) NA rep S6.4.7.28
 
     in2_29 : list[str] | None
-        IN2.29 (opt, rep) - Policy Type/Amount (CM) S6.4.7.29
+        IN2.29 - Policy Type/Amount (CM) NA rep S6.4.7.29
 
     in2_30 : str | None
-        IN2.30 (opt) - Daily Deductible (CM) S6.4.7.30
+        IN2.30 - Daily Deductible (CM) NA S6.4.7.30
 
     in2_31 : str | None
-        IN2.31 (opt) - Living Dependency (IS) S3.3.5 | 0223 - Living Dependency
+        IN2.31 - Living Dependency (IS) O S3.3.5 | 0223 - Living Dependency
 
     in2_32 : str | None
-        IN2.32 (opt) - Ambulatory Status (IS) S3.3.3 | 0009 - Ambulatory Status
+        IN2.32 - Ambulatory Status (IS) O S3.3.3 | 0009 - Ambulatory Status
 
     in2_33 : str | None
-        IN2.33 (opt) - Citizenship (IS) S3.3.2 | 0171 - Country Code
+        IN2.33 - Citizenship (IS) O S3.3.2 | 0171 - Country Code
 
     in2_34 : CE | None
-        IN2.34 (opt) - Primary Language (CE) S3.3.2 | 0296 - Language
+        IN2.34 - Primary Language (CE) O S3.3.2 | 0296 - Language
 
     in2_35 : str | None
-        IN2.35 (opt) - Living Arrangement (IS) S3.3.5 | 0220 - Living Arrangements
+        IN2.35 - Living Arrangement (IS) O S3.3.5 | 0220 - Living Arrangements
 
     in2_36 : CE | None
-        IN2.36 (opt) - Publicity Indicator (CE) S3.3.5 | 0215 - Publicity Code
+        IN2.36 - Publicity Indicator (CE) O S3.3.5 | 0215 - Publicity Code
 
     in2_37 : str | None
-        IN2.37 (opt) - Protection Indicator (ID) S3.3.5 | 0136 - Yes/No Indicator
+        IN2.37 - Protection Indicator (ID) O S3.3.5 | 0136 - Yes/No Indicator
 
     in2_38 : str | None
-        IN2.38 (opt) - Student Indicator (IS) S3.3.5 | 0231 - Student Status
+        IN2.38 - Student Indicator (IS) O S3.3.5 | 0231 - Student Status
 
     in2_39 : str | None
-        IN2.39 (opt) - Religion (IS) S3.3.2 | 0006 - Religion
+        IN2.39 - Religion (IS) O S3.3.2 | 0006 - Religion
 
     in2_40 : XPN | None
-        IN2.40 (opt) - Mother’s Maiden Name (XPN) S3.3.5
+        IN2.40 - Mother’s Maiden Name (XPN) O S3.3.5
 
     in2_41 : CE | None
-        IN2.41 (opt) - Nationality Code (CE) S3.3.2 | 0212 - Nationality
+        IN2.41 - Nationality Code (CE) O S3.3.2 | 0212 - Nationality
 
     in2_42 : str | None
-        IN2.42 (opt) - Ethnic Group (IS) S3.3.2 | 0189 - Ethnic Group
+        IN2.42 - Ethnic Group (IS) O S3.3.2 | 0189 - Ethnic Group
 
     in2_43 : list[str] | None
-        IN2.43 (opt, rep) - Marital Status (IS) S3.3.2 | 0002 - Marital Status
+        IN2.43 - Marital Status (IS) NA rep S3.3.2 | 0002 - Marital Status
 
     in2_44 : str | None
-        IN2.44 (opt) - Employment Start Date (DT) S6.4.7.44
+        IN2.44 - Employment Start Date (DT) NA S6.4.7.44
 
     in2_45 : str | None
-        IN2.45 (opt) - Employment Stop Date (DT) S6.4.5
+        IN2.45 - Employment Stop Date (DT) O S6.4.5
 
     in2_46 : str | None
-        IN2.46 (opt) - Job Title (ST) S6.4.5
+        IN2.46 - Job Title (ST) O S6.4.5
 
     in2_47 : JCC | None
-        IN2.47 (opt) - Job Code/Class (JCC) S6.4.5
+        IN2.47 - Job Code/Class (JCC) O S6.4.5
 
     in2_48 : str | None
-        IN2.48 (opt) - Job Status (IS) S3.3.5 | 0311 - Job Status
+        IN2.48 - Job Status (IS) O S3.3.5 | 0311 - Job Status
 
     in2_49 : list[XPN] | None
-        IN2.49 (opt, rep) - Employer Contact Person Name (XPN) S6.4.7.49
+        IN2.49 - Employer Contact Person Name (XPN) NA rep S6.4.7.49
 
     in2_50 : list[XTN] | None
-        IN2.50 (opt, rep) - Employer Contact Person Phone Number (XTN) S6.4.7.50
+        IN2.50 - Employer Contact Person Phone Number (XTN) NA rep S6.4.7.50
 
     in2_51 : str | None
-        IN2.51 (opt) - Employer Contact Reason (IS) S6.4.7.51 | 0222 - Contact Reason
+        IN2.51 - Employer Contact Reason (IS) NA S6.4.7.51 | 0222 - Contact Reason
 
     in2_52 : list[XPN] | None
-        IN2.52 (opt, rep) - Insured’s Contact Person’s Name (XPN) S6.4.7.52
+        IN2.52 - Insured’s Contact Person’s Name (XPN) NA rep S6.4.7.52
 
     in2_53 : list[XTN] | None
-        IN2.53 (opt, rep) - Insured’s Contact Person Telephone Number (XTN) S6.4.7.53
+        IN2.53 - Insured’s Contact Person Telephone Number (XTN) NA rep S6.4.7.53
 
     in2_54 : list[str] | None
-        IN2.54 (opt, rep) - Insured’s Contact Person Reason (IS) S6.4.7.54 | 0222 - Contact Reason
+        IN2.54 - Insured’s Contact Person Reason (IS) NA rep S6.4.7.54 | 0222 - Contact Reason
 
     in2_55 : str | None
-        IN2.55 (opt) - Relationship To The Patient Start Date (DT) S6.4.7.55
+        IN2.55 - Relationship To The Patient Start Date (DT) NA S6.4.7.55
 
     in2_56 : list[str] | None
-        IN2.56 (opt, rep) - Relationship To The Patient Stop Date (DT) S6.4.7.56
+        IN2.56 - Relationship To The Patient Stop Date (DT) NA rep S6.4.7.56
 
     in2_57 : str | None
-        IN2.57 (opt) - Insurance Co. Contact Reason (IS) S6.4.7.57 | 0232 - Insurance Company Contact Reason
+        IN2.57 - Insurance Co. Contact Reason (IS) NA S6.4.7.57 | 0232 - Insurance Company Contact Reason
 
     in2_58 : XTN | None
-        IN2.58 (opt) - Insurance Co. Contact Phone Number (XTN) S6.4.7.58
+        IN2.58 - Insurance Co. Contact Phone Number (XTN) NA S6.4.7.58
 
     in2_59 : str | None
-        IN2.59 (opt) - Policy Scope (IS) S6.4.7.59 | 0312 - Policy Scope
+        IN2.59 - Policy Scope (IS) NA S6.4.7.59 | 0312 - Policy Scope
 
     in2_60 : str | None
-        IN2.60 (opt) - Policy Source (IS) S6.4.7.60 | 0313 - Policy Source
+        IN2.60 - Policy Source (IS) NA S6.4.7.60 | 0313 - Policy Source
 
     in2_61 : CX | None
-        IN2.61 (opt) - Patient Member Number (CX) S6.4.7.61
+        IN2.61 - Patient Member Number (CX) NA S6.4.7.61
 
     in2_62 : str | None
-        IN2.62 (opt) - Guarantor’s Relationship To Insured (IS) S6.4.7.62 | 0063 - Relationship
+        IN2.62 - Guarantor’s Relationship To Insured (IS) NA S6.4.7.62 | 0063 - Relationship
 
     in2_63 : list[XTN] | None
-        IN2.63 (opt, rep) - Insured’s Telephone Number - Home (XTN) S6.4.7.63
+        IN2.63 - Insured’s Telephone Number - Home (XTN) NA rep S6.4.7.63
 
     in2_64 : list[XTN] | None
-        IN2.64 (opt, rep) - Insured’s Employer Telephone Number (XTN) S6.4.7.64
+        IN2.64 - Insured’s Employer Telephone Number (XTN) NA rep S6.4.7.64
 
     in2_65 : CE | None
-        IN2.65 (opt) - Military Handicapped Program (CE) S6.4.7.65
+        IN2.65 - Military Handicapped Program (CE) NA S6.4.7.65
 
     in2_66 : str | None
-        IN2.66 (opt) - Suspend Flag (ID) S6.4.7.66 | 0136 - Yes/No Indicator
+        IN2.66 - Suspend Flag (ID) NA S6.4.7.66 | 0136 - Yes/No Indicator
 
     in2_67 : str | None
-        IN2.67 (opt) - Co-pay Limit Flag (ID) S6.4.7.67 | 0136 - Yes/No Indicator
+        IN2.67 - Co-pay Limit Flag (ID) NA S6.4.7.67 | 0136 - Yes/No Indicator
 
     in2_68 : str | None
-        IN2.68 (opt) - Stoploss Limit Flag (ID) S6.4.7.68 | 0136 - Yes/No Indicator
+        IN2.68 - Stoploss Limit Flag (ID) NA S6.4.7.68 | 0136 - Yes/No Indicator
 
     in2_69 : list[XON] | None
-        IN2.69 (opt, rep) - Insured Organization Name And ID (XON) S6.4.7.69
+        IN2.69 - Insured Organization Name And ID (XON) NA rep S6.4.7.69
 
     in2_70 : list[XON] | None
-        IN2.70 (opt, rep) - Insured Employer Organization Name And ID (XON) S6.4.7.70
+        IN2.70 - Insured Employer Organization Name And ID (XON) NA rep S6.4.7.70
 
     in2_71 : str | None
-        IN2.71 (opt) - Race (IS) S3.3.2 | 0005 - Race
+        IN2.71 - Race (IS) NA S3.3.2 | 0005 - Race
 
     in2_72 : str | None
-        IN2.72 (opt) - Patient Relationship to Insured (ID) S6.4.7.72
+        IN2.72 - Patient Relationship to Insured (ID) NA S6.4.7.72
     """
 
     in2_1: Optional[CX] = Field(
@@ -251,7 +251,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.1",
         title="Insured's Employee ID",
-        description="Item #472",
+        description="NA | Item #00472",
     )
 
     in2_2: Optional[str] = Field(
@@ -263,7 +263,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.2",
         title="Insured's Social Security Number",
-        description="Item #473",
+        description="NA | Item #00473 | LEN:11",
     )
 
     in2_3: Optional[XCN] = Field(
@@ -275,7 +275,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.3",
         title="Insured's Employer Name",
-        description="Item #474",
+        description="NA | Item #00474",
     )
 
     in2_4: Optional[str] = Field(
@@ -287,7 +287,9 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.4",
         title="Employer Information Data",
-        description="Item #475 | Table HL70139",
+        description=(
+            "NA | Item #00475 | Table 0139 - Employer Information Data | LEN:1"
+        ),
     )
 
     in2_5: Optional[str] = Field(
@@ -299,7 +301,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.5",
         title="Mail Claim Party",
-        description="Item #476 | Table HL70137",
+        description="NA | Item #00476 | Table 0137 - Mail Claim Party | LEN:1",
     )
 
     in2_6: Optional[str] = Field(
@@ -311,7 +313,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.6",
         title="Medicare Health Ins Card Number",
-        description="Item #477",
+        description="NA | Item #00477 | LEN:15",
     )
 
     in2_7: Optional[XPN] = Field(
@@ -323,7 +325,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.7",
         title="Medicaid Case Name",
-        description="Item #478",
+        description="NA | Item #00478",
     )
 
     in2_8: Optional[str] = Field(
@@ -335,7 +337,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.8",
         title="Medicaid Case Number",
-        description="Item #479",
+        description="NA | Item #00479 | LEN:15",
     )
 
     in2_9: Optional[XPN] = Field(
@@ -347,7 +349,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.9",
         title="Champus Sponsor Name",
-        description="Item #480",
+        description="NA | Item #00480",
     )
 
     in2_10: Optional[str] = Field(
@@ -359,7 +361,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.10",
         title="Champus ID Number",
-        description="Item #481",
+        description="NA | Item #00481 | LEN:20",
     )
 
     in2_11: Optional[CE] = Field(
@@ -371,7 +373,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.11",
         title="Dependent of Champus Recipient",
-        description="Item #482",
+        description="NA | Item #00482",
     )
 
     in2_12: Optional[str] = Field(
@@ -383,7 +385,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.12",
         title="Champus Organization",
-        description="Item #483",
+        description="NA | Item #00483 | LEN:25",
     )
 
     in2_13: Optional[str] = Field(
@@ -395,7 +397,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.13",
         title="Champus Station",
-        description="Item #484",
+        description="NA | Item #00484 | LEN:25",
     )
 
     in2_14: Optional[str] = Field(
@@ -407,7 +409,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.14",
         title="Champus Service",
-        description="Item #485 | Table HL70140",
+        description="NA | Item #00485 | Table 0140 - Champus Service | LEN:14",
     )
 
     in2_15: Optional[str] = Field(
@@ -419,7 +421,9 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.15",
         title="Champus Rank/Grade",
-        description="Item #486 | Table HL70141",
+        description=(
+            "NA | Item #00486 | Table 0141 - Champus Rank/Grade | LEN:2"
+        ),
     )
 
     in2_16: Optional[str] = Field(
@@ -431,7 +435,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.16",
         title="Champus Status",
-        description="Item #487 | Table HL70142",
+        description="NA | Item #00487 | Table 0142 - Champus Status | LEN:3",
     )
 
     in2_17: Optional[str] = Field(
@@ -443,7 +447,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.17",
         title="Champus Retire Date",
-        description="Item #488",
+        description="NA | Item #00488 | LEN:8",
     )
 
     in2_18: Optional[str] = Field(
@@ -455,7 +459,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.18",
         title="Champus Non-Avail Cert on File",
-        description="Item #489 | Table HL70136",
+        description="NA | Item #00489 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     in2_19: Optional[str] = Field(
@@ -467,7 +471,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.19",
         title="Baby Coverage",
-        description="Item #490 | Table HL70136",
+        description="NA | Item #00490 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     in2_20: Optional[str] = Field(
@@ -479,7 +483,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.20",
         title="Combine Baby Bill",
-        description="Item #491 | Table HL70136",
+        description="NA | Item #00491 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     in2_21: Optional[str] = Field(
@@ -491,7 +495,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.21",
         title="Blood Deductible",
-        description="Item #492",
+        description="NA | Item #00492 | LEN:1",
     )
 
     in2_22: Optional[XPN] = Field(
@@ -503,7 +507,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.22",
         title="Special Coverage Approval Name",
-        description="Item #493",
+        description="NA | Item #00493",
     )
 
     in2_23: Optional[str] = Field(
@@ -515,7 +519,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.23",
         title="Special Coverage Approval Title",
-        description="Item #494",
+        description="NA | Item #00494 | LEN:30",
     )
 
     in2_24: Optional[List[str]] = Field(
@@ -527,7 +531,9 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.24",
         title="Non-Covered Insurance Code",
-        description="Item #495 | Table HL70143",
+        description=(
+            "NA | Item #00495 | Table 0143 - Non-covered Insurance Code | LEN:8"
+        ),
     )
 
     in2_25: Optional[CX] = Field(
@@ -539,7 +545,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.25",
         title="Payor ID",
-        description="Item #496",
+        description="NA | Item #00496",
     )
 
     in2_26: Optional[CX] = Field(
@@ -551,7 +557,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.26",
         title="Payor Subscriber ID",
-        description="Item #497",
+        description="NA | Item #00497",
     )
 
     in2_27: Optional[str] = Field(
@@ -563,7 +569,9 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.27",
         title="Eligibility Source",
-        description="Item #498 | Table HL70144",
+        description=(
+            "NA | Item #00498 | Table 0144 - Eligibility Source | LEN:1"
+        ),
     )
 
     in2_28: Optional[List[str]] = Field(
@@ -575,7 +583,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.28",
         title="Room Coverage Type/Amount",
-        description="Item #499",
+        description="NA | Item #00499",
     )
 
     in2_29: Optional[List[str]] = Field(
@@ -587,7 +595,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.29",
         title="Policy Type/Amount",
-        description="Item #500",
+        description="NA | Item #00500",
     )
 
     in2_30: Optional[str] = Field(
@@ -599,7 +607,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.30",
         title="Daily Deductible",
-        description="Item #501",
+        description="NA | Item #00501",
     )
 
     in2_31: Optional[str] = Field(
@@ -611,7 +619,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.31",
         title="Living Dependency",
-        description="Item #755 | Table HL70223",
+        description="O | Item #00755 | Table 0223 - Living Dependency | LEN:2",
     )
 
     in2_32: Optional[str] = Field(
@@ -623,7 +631,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.32",
         title="Ambulatory Status",
-        description="Item #145 | Table HL70009",
+        description="O | Item #00145 | Table 0009 - Ambulatory Status | LEN:2",
     )
 
     in2_33: Optional[str] = Field(
@@ -635,7 +643,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.33",
         title="Citizenship",
-        description="Item #129 | Table HL70171",
+        description="O | Item #00129 | Table 0171 - Country Code | LEN:4",
     )
 
     in2_34: Optional[CE] = Field(
@@ -647,7 +655,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.34",
         title="Primary Language",
-        description="Item #118 | Table HL70296",
+        description="O | Item #00118 | Table 0296 - Language",
     )
 
     in2_35: Optional[str] = Field(
@@ -659,7 +667,9 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.35",
         title="Living Arrangement",
-        description="Item #742 | Table HL70220",
+        description=(
+            "O | Item #00742 | Table 0220 - Living Arrangements | LEN:2"
+        ),
     )
 
     in2_36: Optional[CE] = Field(
@@ -671,7 +681,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.36",
         title="Publicity Indicator",
-        description="Item #743 | Table HL70215",
+        description="O | Item #00743 | Table 0215 - Publicity Code",
     )
 
     in2_37: Optional[str] = Field(
@@ -683,7 +693,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.37",
         title="Protection Indicator",
-        description="Item #744 | Table HL70136",
+        description="O | Item #00744 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     in2_38: Optional[str] = Field(
@@ -695,7 +705,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.38",
         title="Student Indicator",
-        description="Item #745 | Table HL70231",
+        description="O | Item #00745 | Table 0231 - Student Status | LEN:2",
     )
 
     in2_39: Optional[str] = Field(
@@ -707,7 +717,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.39",
         title="Religion",
-        description="Item #120 | Table HL70006",
+        description="O | Item #00120 | Table 0006 - Religion | LEN:3",
     )
 
     in2_40: Optional[XPN] = Field(
@@ -719,7 +729,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.40",
         title="Mother’s Maiden Name",
-        description="Item #746",
+        description="O | Item #00746",
     )
 
     in2_41: Optional[CE] = Field(
@@ -731,7 +741,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.41",
         title="Nationality Code",
-        description="Item #739 | Table HL70212",
+        description="O | Item #00739 | Table 0212 - Nationality",
     )
 
     in2_42: Optional[str] = Field(
@@ -743,7 +753,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.42",
         title="Ethnic Group",
-        description="Item #125 | Table HL70189",
+        description="O | Item #00125 | Table 0189 - Ethnic Group | LEN:1",
     )
 
     in2_43: Optional[List[str]] = Field(
@@ -755,7 +765,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.43",
         title="Marital Status",
-        description="Item #119 | Table HL70002",
+        description="NA | Item #00119 | Table 0002 - Marital Status | LEN:1",
     )
 
     in2_44: Optional[str] = Field(
@@ -767,7 +777,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.44",
         title="Employment Start Date",
-        description="Item #787",
+        description="NA | Item #00787 | LEN:8",
     )
 
     in2_45: Optional[str] = Field(
@@ -779,7 +789,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.45",
         title="Employment Stop Date",
-        description="Item #783",
+        description="O | Item #00783 | LEN:8",
     )
 
     in2_46: Optional[str] = Field(
@@ -791,7 +801,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.46",
         title="Job Title",
-        description="Item #785",
+        description="O | Item #00785 | LEN:20",
     )
 
     in2_47: Optional[JCC] = Field(
@@ -803,7 +813,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.47",
         title="Job Code/Class",
-        description="Item #786",
+        description="O | Item #00786",
     )
 
     in2_48: Optional[str] = Field(
@@ -815,7 +825,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.48",
         title="Job Status",
-        description="Item #752 | Table HL70311",
+        description="O | Item #00752 | Table 0311 - Job Status | LEN:2",
     )
 
     in2_49: Optional[List[XPN]] = Field(
@@ -827,7 +837,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.49",
         title="Employer Contact Person Name",
-        description="Item #789",
+        description="NA | Item #00789",
     )
 
     in2_50: Optional[List[XTN]] = Field(
@@ -839,7 +849,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.50",
         title="Employer Contact Person Phone Number",
-        description="Item #790",
+        description="NA | Item #00790",
     )
 
     in2_51: Optional[str] = Field(
@@ -851,7 +861,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.51",
         title="Employer Contact Reason",
-        description="Item #791 | Table HL70222",
+        description="NA | Item #00791 | Table 0222 - Contact Reason | LEN:2",
     )
 
     in2_52: Optional[List[XPN]] = Field(
@@ -863,7 +873,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.52",
         title="Insured’s Contact Person’s Name",
-        description="Item #792",
+        description="NA | Item #00792",
     )
 
     in2_53: Optional[List[XTN]] = Field(
@@ -875,7 +885,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.53",
         title="Insured’s Contact Person Telephone Number",
-        description="Item #793",
+        description="NA | Item #00793",
     )
 
     in2_54: Optional[List[str]] = Field(
@@ -887,7 +897,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.54",
         title="Insured’s Contact Person Reason",
-        description="Item #794 | Table HL70222",
+        description="NA | Item #00794 | Table 0222 - Contact Reason | LEN:2",
     )
 
     in2_55: Optional[str] = Field(
@@ -899,7 +909,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.55",
         title="Relationship To The Patient Start Date",
-        description="Item #795",
+        description="NA | Item #00795 | LEN:8",
     )
 
     in2_56: Optional[List[str]] = Field(
@@ -911,7 +921,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.56",
         title="Relationship To The Patient Stop Date",
-        description="Item #796",
+        description="NA | Item #00796 | LEN:8",
     )
 
     in2_57: Optional[str] = Field(
@@ -923,7 +933,10 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.57",
         title="Insurance Co. Contact Reason",
-        description="Item #797 | Table HL70232",
+        description=(
+            "NA | Item #00797 | Table 0232 - Insurance Company Contact Reason | "
+            "LEN:2"
+        ),
     )
 
     in2_58: Optional[XTN] = Field(
@@ -935,7 +948,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.58",
         title="Insurance Co. Contact Phone Number",
-        description="Item #798",
+        description="NA | Item #00798",
     )
 
     in2_59: Optional[str] = Field(
@@ -947,7 +960,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.59",
         title="Policy Scope",
-        description="Item #799 | Table HL70312",
+        description="NA | Item #00799 | Table 0312 - Policy Scope | LEN:2",
     )
 
     in2_60: Optional[str] = Field(
@@ -959,7 +972,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.60",
         title="Policy Source",
-        description="Item #800 | Table HL70313",
+        description="NA | Item #00800 | Table 0313 - Policy Source | LEN:2",
     )
 
     in2_61: Optional[CX] = Field(
@@ -971,7 +984,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.61",
         title="Patient Member Number",
-        description="Item #801",
+        description="NA | Item #00801",
     )
 
     in2_62: Optional[str] = Field(
@@ -983,7 +996,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.62",
         title="Guarantor’s Relationship To Insured",
-        description="Item #802 | Table HL70063",
+        description="NA | Item #00802 | Table 0063 - Relationship | LEN:2",
     )
 
     in2_63: Optional[List[XTN]] = Field(
@@ -995,7 +1008,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.63",
         title="Insured’s Telephone Number - Home",
-        description="Item #803",
+        description="NA | Item #00803",
     )
 
     in2_64: Optional[List[XTN]] = Field(
@@ -1007,7 +1020,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.64",
         title="Insured’s Employer Telephone Number",
-        description="Item #804",
+        description="NA | Item #00804",
     )
 
     in2_65: Optional[CE] = Field(
@@ -1019,7 +1032,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.65",
         title="Military Handicapped Program",
-        description="Item #805",
+        description="NA | Item #00805",
     )
 
     in2_66: Optional[str] = Field(
@@ -1031,7 +1044,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.66",
         title="Suspend Flag",
-        description="Item #806 | Table HL70136",
+        description="NA | Item #00806 | Table 0136 - Yes/No Indicator | LEN:2",
     )
 
     in2_67: Optional[str] = Field(
@@ -1043,7 +1056,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.67",
         title="Co-pay Limit Flag",
-        description="Item #807 | Table HL70136",
+        description="NA | Item #00807 | Table 0136 - Yes/No Indicator | LEN:2",
     )
 
     in2_68: Optional[str] = Field(
@@ -1055,7 +1068,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.68",
         title="Stoploss Limit Flag",
-        description="Item #808 | Table HL70136",
+        description="NA | Item #00808 | Table 0136 - Yes/No Indicator | LEN:2",
     )
 
     in2_69: Optional[List[XON]] = Field(
@@ -1067,7 +1080,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.69",
         title="Insured Organization Name And ID",
-        description="Item #809",
+        description="NA | Item #00809",
     )
 
     in2_70: Optional[List[XON]] = Field(
@@ -1079,7 +1092,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.70",
         title="Insured Employer Organization Name And ID",
-        description="Item #810",
+        description="NA | Item #00810",
     )
 
     in2_71: Optional[str] = Field(
@@ -1091,7 +1104,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.71",
         title="Race",
-        description="Item #113 | Table HL70005",
+        description="NA | Item #00113 | Table 0005 - Race | LEN:1",
     )
 
     in2_72: Optional[str] = Field(
@@ -1103,7 +1116,7 @@ class IN2(HL7Model):
         ),
         serialization_alias="IN2.72",
         title="Patient Relationship to Insured",
-        description="Item #811",
+        description="NA | Item #00811 | LEN:1",
     )
 
     @field_validator("in2_17", "in2_44", "in2_45", "in2_55", "in2_56", mode='before')

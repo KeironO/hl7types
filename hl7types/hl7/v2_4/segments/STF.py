@@ -28,91 +28,91 @@ class STF(HL7Model):
     Attributes
     ----------
     stf_1 : CE | None
-        STF.1 (opt) - Primary Key Value - STF (CE) S15.4.6.1 | 9999 - for unknown CE data elements
+        STF.1 - Primary Key Value - STF (CE) C S15.4.6.1 | 9999 - for unknown CE data elements
 
     stf_2 : list[CX] | None
-        STF.2 (opt, rep) - Staff ID Code (CX) S15.4.6.2
+        STF.2 - Staff ID Code (CX) O rep S15.4.6.2
 
     stf_3 : list[XPN] | None
-        STF.3 (opt, rep) - Staff Name (XPN) S15.4.6.3
+        STF.3 - Staff Name (XPN) O rep S15.4.6.3
 
     stf_4 : list[str] | None
-        STF.4 (opt, rep) - Staff Type (IS) S15.4.6.4 | 0182 - Staff type
+        STF.4 - Staff Type (IS) O rep S15.4.6.4 | 0182 - Staff type
 
     stf_5 : str | None
-        STF.5 (opt) - Administrative Sex (IS) S15.4.6.5 | 0001 - Administrative sex
+        STF.5 - Administrative Sex (IS) O S15.4.6.5 | 0001 - Administrative sex
 
     stf_6 : TS | None
-        STF.6 (opt) - Date/Time Of Birth (TS) S15.4.6.6
+        STF.6 - Date/Time Of Birth (TS) O S15.4.6.6
 
     stf_7 : str | None
-        STF.7 (opt) - Active/Inactive Flag (ID) S15.4.6.7 | 0183 - Active/inactive
+        STF.7 - Active/Inactive Flag (ID) O S15.4.6.7 | 0183 - Active/inactive
 
     stf_8 : list[CE] | None
-        STF.8 (opt, rep) - Department (CE) S15.4.6.8 | 0184 - Department
+        STF.8 - Department (CE) O rep S15.4.6.8 | 0184 - Department
 
     stf_9 : list[CE] | None
-        STF.9 (opt, rep) - Hospital Service (CE) S15.4.6.9 | 0069 - Hospital service
+        STF.9 - Hospital Service (CE) O rep S15.4.6.9 | 0069 - Hospital service
 
     stf_10 : list[XTN] | None
-        STF.10 (opt, rep) - Phone (XTN) S15.4.6.10
+        STF.10 - Phone (XTN) O rep S15.4.6.10
 
     stf_11 : list[XAD] | None
-        STF.11 (opt, rep) - Office/Home Address (XAD) S15.4.6.11
+        STF.11 - Office/Home Address (XAD) O rep S15.4.6.11
 
     stf_12 : list[DIN] | None
-        STF.12 (opt, rep) - Institution Activation Date (DIN) S15.4.6.12
+        STF.12 - Institution Activation Date (DIN) O rep S15.4.6.12
 
     stf_13 : list[DIN] | None
-        STF.13 (opt, rep) - Institution Inactivation Date (DIN) S15.4.6.13
+        STF.13 - Institution Inactivation Date (DIN) O rep S15.4.6.13
 
     stf_14 : list[CE] | None
-        STF.14 (opt, rep) - Backup Person ID (CE) S15.4.6.14
+        STF.14 - Backup Person ID (CE) O rep S15.4.6.14
 
     stf_15 : list[str] | None
-        STF.15 (opt, rep) - E-Mail Address (ST) S15.4.6.15
+        STF.15 - E-Mail Address (ST) O rep S15.4.6.15
 
     stf_16 : CE | None
-        STF.16 (opt) - Preferred Method of Contact (CE) S15.4.6.16 | 0185 - Preferred method of contact
+        STF.16 - Preferred Method of Contact (CE) O S15.4.6.16 | 0185 - Preferred method of contact
 
     stf_17 : CE | None
-        STF.17 (opt) - Marital Status (CE) S15.4.6.17 | 0002 - Marital status
+        STF.17 - Marital Status (CE) O S15.4.6.17 | 0002 - Marital status
 
     stf_18 : str | None
-        STF.18 (opt) - Job Title (ST) S15.4.6.18
+        STF.18 - Job Title (ST) O S15.4.6.18
 
     stf_19 : JCC | None
-        STF.19 (opt) - Job Code/Class (JCC) S15.4.6.19 | 0327 - Job code/class
+        STF.19 - Job Code/Class (JCC) O S15.4.6.19 | 0327 - Job code/class
 
     stf_20 : CE | None
-        STF.20 (opt) - Employment Status Code (CE) S15.4.6.20 | 0066 - Employment status
+        STF.20 - Employment Status Code (CE) O S15.4.6.20 | 0066 - Employment status
 
     stf_21 : str | None
-        STF.21 (opt) - Additional Insured on  Auto (ID) S15.4.6.21 | 0136 - Yes/no indicator
+        STF.21 - Additional Insured on  Auto (ID) O S15.4.6.21 | 0136 - Yes/no indicator
 
     stf_22 : DLN | None
-        STF.22 (opt) - Driver's License Number - Staff (DLN) S15.4.6.22
+        STF.22 - Driver's License Number - Staff (DLN) O S15.4.6.22
 
     stf_23 : str | None
-        STF.23 (opt) - Copy  Auto Ins (ID) S15.4.6.23 | 0136 - Yes/no indicator
+        STF.23 - Copy  Auto Ins (ID) O S15.4.6.23 | 0136 - Yes/no indicator
 
     stf_24 : str | None
-        STF.24 (opt) - Auto Ins. Expires (DT) S15.4.6.24
+        STF.24 - Auto Ins. Expires (DT) O S15.4.6.24
 
     stf_25 : str | None
-        STF.25 (opt) - Date Last DMV Review (DT) S15.4.6.25
+        STF.25 - Date Last DMV Review (DT) O S15.4.6.25
 
     stf_26 : str | None
-        STF.26 (opt) - Date Next DMV Review (DT) S15.4.6.26
+        STF.26 - Date Next DMV Review (DT) O S15.4.6.26
 
     stf_27 : CE | None
-        STF.27 (opt) - Race (CE) S15.4.6.27 | 0005 - Race
+        STF.27 - Race (CE) O S15.4.6.27 | 0005 - Race
 
     stf_28 : CE | None
-        STF.28 (opt) - Ethnic Group (CE) S15.4.6.28 | 0189 - Ethnic group
+        STF.28 - Ethnic Group (CE) O S15.4.6.28 | 0189 - Ethnic group
 
     stf_29 : str | None
-        STF.29 (opt) - Re-activation Approval Indicator (ID) S15.4.6.29 | 0136 - Yes/no indicator
+        STF.29 - Re-activation Approval Indicator (ID) O S15.4.6.29 | 0136 - Yes/no indicator
     """
 
     stf_1: Optional[CE] = Field(
@@ -124,7 +124,9 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.1",
         title="Primary Key Value - STF",
-        description="Item #671 | Table HL79999",
+        description=(
+            "C | Item #00671 | Table 9999 - for unknown CE data elements"
+        ),
     )
 
     stf_2: Optional[List[CX]] = Field(
@@ -136,7 +138,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.2",
         title="Staff ID Code",
-        description="Item #672",
+        description="O | Item #00672",
     )
 
     stf_3: Optional[List[XPN]] = Field(
@@ -148,7 +150,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.3",
         title="Staff Name",
-        description="Item #673",
+        description="O | Item #00673",
     )
 
     stf_4: Optional[List[str]] = Field(
@@ -160,7 +162,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.4",
         title="Staff Type",
-        description="Item #674 | Table HL70182",
+        description="O | Item #00674 | Table 0182 - Staff type | LEN:2",
     )
 
     stf_5: Optional[str] = Field(
@@ -172,7 +174,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.5",
         title="Administrative Sex",
-        description="Item #111 | Table HL70001",
+        description="O | Item #00111 | Table 0001 - Administrative sex | LEN:1",
     )
 
     stf_6: Optional[TS] = Field(
@@ -184,7 +186,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.6",
         title="Date/Time Of Birth",
-        description="Item #110",
+        description="O | Item #00110",
     )
 
     stf_7: Optional[str] = Field(
@@ -196,7 +198,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.7",
         title="Active/Inactive Flag",
-        description="Item #675 | Table HL70183",
+        description="O | Item #00675 | Table 0183 - Active/inactive | LEN:1",
     )
 
     stf_8: Optional[List[CE]] = Field(
@@ -208,7 +210,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.8",
         title="Department",
-        description="Item #676 | Table HL70184",
+        description="O | Item #00676 | Table 0184 - Department",
     )
 
     stf_9: Optional[List[CE]] = Field(
@@ -220,7 +222,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.9",
         title="Hospital Service",
-        description="Item #677 | Table HL70069",
+        description="O | Item #00677 | Table 0069 - Hospital service",
     )
 
     stf_10: Optional[List[XTN]] = Field(
@@ -232,7 +234,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.10",
         title="Phone",
-        description="Item #678",
+        description="O | Item #00678",
     )
 
     stf_11: Optional[List[XAD]] = Field(
@@ -244,7 +246,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.11",
         title="Office/Home Address",
-        description="Item #679",
+        description="O | Item #00679",
     )
 
     stf_12: Optional[List[DIN]] = Field(
@@ -256,7 +258,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.12",
         title="Institution Activation Date",
-        description="Item #680",
+        description="O | Item #00680",
     )
 
     stf_13: Optional[List[DIN]] = Field(
@@ -268,7 +270,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.13",
         title="Institution Inactivation Date",
-        description="Item #681",
+        description="O | Item #00681",
     )
 
     stf_14: Optional[List[CE]] = Field(
@@ -280,7 +282,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.14",
         title="Backup Person ID",
-        description="Item #682",
+        description="O | Item #00682",
     )
 
     stf_15: Optional[List[str]] = Field(
@@ -292,7 +294,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.15",
         title="E-Mail Address",
-        description="Item #683",
+        description="O | Item #00683 | LEN:40",
     )
 
     stf_16: Optional[CE] = Field(
@@ -304,7 +306,9 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.16",
         title="Preferred Method of Contact",
-        description="Item #684 | Table HL70185",
+        description=(
+            "O | Item #00684 | Table 0185 - Preferred method of contact"
+        ),
     )
 
     stf_17: Optional[CE] = Field(
@@ -316,7 +320,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.17",
         title="Marital Status",
-        description="Item #119 | Table HL70002",
+        description="O | Item #00119 | Table 0002 - Marital status",
     )
 
     stf_18: Optional[str] = Field(
@@ -328,7 +332,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.18",
         title="Job Title",
-        description="Item #785",
+        description="O | Item #00785 | LEN:20",
     )
 
     stf_19: Optional[JCC] = Field(
@@ -340,7 +344,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.19",
         title="Job Code/Class",
-        description="Item #786 | Table HL70327",
+        description="O | Item #00786 | Table 0327 - Job code/class",
     )
 
     stf_20: Optional[CE] = Field(
@@ -352,7 +356,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.20",
         title="Employment Status Code",
-        description="Item #1276 | Table HL70066",
+        description="O | Item #01276 | Table 0066 - Employment status",
     )
 
     stf_21: Optional[str] = Field(
@@ -364,7 +368,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.21",
         title="Additional Insured on  Auto",
-        description="Item #1275 | Table HL70136",
+        description="O | Item #01275 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     stf_22: Optional[DLN] = Field(
@@ -376,7 +380,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.22",
         title="Driver's License Number - Staff",
-        description="Item #1302",
+        description="O | Item #01302",
     )
 
     stf_23: Optional[str] = Field(
@@ -388,7 +392,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.23",
         title="Copy  Auto Ins",
-        description="Item #1229 | Table HL70136",
+        description="O | Item #01229 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     stf_24: Optional[str] = Field(
@@ -400,7 +404,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.24",
         title="Auto Ins. Expires",
-        description="Item #1232",
+        description="O | Item #01232 | LEN:8",
     )
 
     stf_25: Optional[str] = Field(
@@ -412,7 +416,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.25",
         title="Date Last DMV Review",
-        description="Item #1298",
+        description="O | Item #01298 | LEN:8",
     )
 
     stf_26: Optional[str] = Field(
@@ -424,7 +428,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.26",
         title="Date Next DMV Review",
-        description="Item #1234",
+        description="O | Item #01234 | LEN:8",
     )
 
     stf_27: Optional[CE] = Field(
@@ -436,7 +440,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.27",
         title="Race",
-        description="Item #113 | Table HL70005",
+        description="O | Item #00113 | Table 0005 - Race",
     )
 
     stf_28: Optional[CE] = Field(
@@ -448,7 +452,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.28",
         title="Ethnic Group",
-        description="Item #125 | Table HL70189",
+        description="O | Item #00125 | Table 0189 - Ethnic group",
     )
 
     stf_29: Optional[str] = Field(
@@ -460,7 +464,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.29",
         title="Re-activation Approval Indicator",
-        description="Item #1596 | Table HL70136",
+        description="O | Item #01596 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     @field_validator("stf_24", "stf_25", "stf_26", mode='before')

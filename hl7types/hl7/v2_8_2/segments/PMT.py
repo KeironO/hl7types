@@ -24,40 +24,40 @@ class PMT(HL7Model):
     Attributes
     ----------
     pmt_1 : EI
-        PMT.1 (req) - Payment/Remittance Advice Number (EI) S16.4.8.1
+        PMT.1 - Payment/Remittance Advice Number (EI) R S16.4.8.1
 
     pmt_2 : str
-        PMT.2 (req) - Payment/Remittance Effective Date/Time (DTM) S16.4.8.2
+        PMT.2 - Payment/Remittance Effective Date/Time (DTM) R S16.4.8.2
 
     pmt_3 : str
-        PMT.3 (req) - Payment/Remittance Expiration Date/Time (DTM) S16.4.8.3
+        PMT.3 - Payment/Remittance Expiration Date/Time (DTM) R S16.4.8.3
 
     pmt_4 : CWE
-        PMT.4 (req) - Payment Method (CWE) S16.4.8.4 | 0570 - Payment Method Code
+        PMT.4 - Payment Method (CWE) R S16.4.8.4 | 0570 - Payment Method Code
 
     pmt_5 : str
-        PMT.5 (req) - Payment/Remittance Date/Time (DTM) S16.4.8.5
+        PMT.5 - Payment/Remittance Date/Time (DTM) R S16.4.8.5
 
     pmt_6 : CP
-        PMT.6 (req) - Payment/Remittance Amount (CP) S16.4.8.6
+        PMT.6 - Payment/Remittance Amount (CP) R S16.4.8.6
 
     pmt_7 : EI | None
-        PMT.7 (opt) - Check Number (EI) S16.4.8.7
+        PMT.7 - Check Number (EI) O S16.4.8.7
 
     pmt_8 : XON | None
-        PMT.8 (opt) - Payee Bank Identification (XON) S16.4.8.8
+        PMT.8 - Payee Bank Identification (XON) O S16.4.8.8
 
     pmt_9 : str | None
-        PMT.9 (opt) - Payee Transit Number (ST) S16.4.8.9
+        PMT.9 - Payee Transit Number (ST) O S16.4.8.9
 
     pmt_10 : CX | None
-        PMT.10 (opt) - Payee Bank Account ID (CX) S16.4.8.10
+        PMT.10 - Payee Bank Account ID (CX) O S16.4.8.10
 
     pmt_11 : XON
-        PMT.11 (req) - Payment Organization (XON) S16.4.8.11
+        PMT.11 - Payment Organization (XON) R S16.4.8.11
 
     pmt_12 : str | None
-        PMT.12 (opt) - ESR-Code-Line (ST) S16.4.8.12
+        PMT.12 - ESR-Code-Line (ST) O S16.4.8.12
     """
 
     pmt_1: EI = Field(
@@ -68,7 +68,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.1",
         title="Payment/Remittance Advice Number",
-        description="Item #2018",
+        description="R | Item #02018",
     )
 
     pmt_2: str = Field(
@@ -79,7 +79,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.2",
         title="Payment/Remittance Effective Date/Time",
-        description="Item #2019",
+        description="R | Item #02019",
     )
 
     pmt_3: str = Field(
@@ -90,7 +90,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.3",
         title="Payment/Remittance Expiration Date/Time",
-        description="Item #2020",
+        description="R | Item #02020",
     )
 
     pmt_4: CWE = Field(
@@ -101,7 +101,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.4",
         title="Payment Method",
-        description="Item #2021 | Table HL70570",
+        description="R | Item #02021 | Table 0570 - Payment Method Code",
     )
 
     pmt_5: str = Field(
@@ -112,7 +112,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.5",
         title="Payment/Remittance Date/Time",
-        description="Item #2022",
+        description="R | Item #02022",
     )
 
     pmt_6: CP = Field(
@@ -123,7 +123,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.6",
         title="Payment/Remittance Amount",
-        description="Item #2023",
+        description="R | Item #02023",
     )
 
     pmt_7: Optional[EI] = Field(
@@ -135,7 +135,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.7",
         title="Check Number",
-        description="Item #2024",
+        description="O | Item #02024",
     )
 
     pmt_8: Optional[XON] = Field(
@@ -147,7 +147,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.8",
         title="Payee Bank Identification",
-        description="Item #2025",
+        description="O | Item #02025",
     )
 
     pmt_9: Optional[str] = Field(
@@ -159,7 +159,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.9",
         title="Payee Transit Number",
-        description="Item #2026",
+        description="O | Item #02026",
     )
 
     pmt_10: Optional[CX] = Field(
@@ -171,7 +171,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.10",
         title="Payee Bank Account ID",
-        description="Item #2027",
+        description="O | Item #02027",
     )
 
     pmt_11: XON = Field(
@@ -182,7 +182,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.11",
         title="Payment Organization",
-        description="Item #2028",
+        description="R | Item #02028",
     )
 
     pmt_12: Optional[str] = Field(
@@ -194,7 +194,7 @@ class PMT(HL7Model):
         ),
         serialization_alias="PMT.12",
         title="ESR-Code-Line",
-        description="Item #2029",
+        description="O | Item #02029",
     )
 
     @field_validator("pmt_2", "pmt_3", "pmt_5", mode='before')

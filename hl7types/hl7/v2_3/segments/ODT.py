@@ -20,13 +20,13 @@ class ODT(HL7Model):
     Attributes
     ----------
     odt_1 : CE
-        ODT.1 (req) - Tray Type (CE) S4.6.2.1 | 0160 - Tray Type
+        ODT.1 - Tray Type (CE) R S4.6.2.1 | 0160 - Tray Type
 
     odt_2 : list[CE] | None
-        ODT.2 (opt, rep) - Service Period (CE) S4.6.1.2
+        ODT.2 - Service Period (CE) O rep S4.6.1.2
 
     odt_3 : str | None
-        ODT.3 (opt) - Text Instruction (ST) S4.6.1
+        ODT.3 - Text Instruction (ST) O S4.6.1
     """
 
     odt_1: CE = Field(
@@ -37,7 +37,7 @@ class ODT(HL7Model):
         ),
         serialization_alias="ODT.1",
         title="Tray Type",
-        description="Item #273 | Table HL70160",
+        description="R | Item #00273 | Table 0160 - Tray Type",
     )
 
     odt_2: Optional[List[CE]] = Field(
@@ -49,7 +49,7 @@ class ODT(HL7Model):
         ),
         serialization_alias="ODT.2",
         title="Service Period",
-        description="Item #270",
+        description="O | Item #00270",
     )
 
     odt_3: Optional[str] = Field(
@@ -61,7 +61,7 @@ class ODT(HL7Model):
         ),
         serialization_alias="ODT.3",
         title="Text Instruction",
-        description="Item #272",
+        description="O | Item #00272 | LEN:80",
     )
 
     model_config = {"populate_by_name": True}

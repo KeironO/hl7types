@@ -20,22 +20,22 @@ class QAK(HL7Model):
     Attributes
     ----------
     qak_1 : str | None
-        QAK.1 (opt) - Query Tag (ST) S5.10.5.1.1
+        QAK.1 - Query Tag (ST) C S5.10.5.1.1
 
     qak_2 : str | None
-        QAK.2 (opt) - Query Response Status (ID) S5.5.2.2 | 0208 - Query Response Status
+        QAK.2 - Query Response Status (ID) O S5.5.2.2 | 0208 - Query Response Status
 
     qak_3 : CE | None
-        QAK.3 (opt) - Message Query Name (CE) S5.5.2.3 | 0471 - Query name
+        QAK.3 - Message Query Name (CE) O S5.5.2.3 | 0471 - Query name
 
     qak_4 : str | None
-        QAK.4 (opt) - Hit Count (NM) S5.5.2.4
+        QAK.4 - Hit Count (NM) O S5.5.2.4
 
     qak_5 : str | None
-        QAK.5 (opt) - This payload (NM) S5.5.2.5
+        QAK.5 - This payload (NM) O S5.5.2.5
 
     qak_6 : str | None
-        QAK.6 (opt) - Hits remaining (NM) S5.5.2.6
+        QAK.6 - Hits remaining (NM) O S5.5.2.6
     """
 
     qak_1: Optional[str] = Field(
@@ -47,7 +47,7 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.1",
         title="Query Tag",
-        description="Item #696",
+        description="C | Item #00696 | LEN:32",
     )
 
     qak_2: Optional[str] = Field(
@@ -59,7 +59,9 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.2",
         title="Query Response Status",
-        description="Item #708 | Table HL70208",
+        description=(
+            "O | Item #00708 | Table 0208 - Query Response Status | LEN:2"
+        ),
     )
 
     qak_3: Optional[CE] = Field(
@@ -71,7 +73,7 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.3",
         title="Message Query Name",
-        description="Item #1375 | Table HL70471",
+        description="O | Item #01375 | Table 0471 - Query name",
     )
 
     qak_4: Optional[str] = Field(
@@ -83,7 +85,7 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.4",
         title="Hit Count",
-        description="Item #1434",
+        description="O | Item #01434 | LEN:10",
     )
 
     qak_5: Optional[str] = Field(
@@ -95,7 +97,7 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.5",
         title="This payload",
-        description="Item #1622",
+        description="O | Item #01622 | LEN:10",
     )
 
     qak_6: Optional[str] = Field(
@@ -107,7 +109,7 @@ class QAK(HL7Model):
         ),
         serialization_alias="QAK.6",
         title="Hits remaining",
-        description="Item #1623",
+        description="O | Item #01623 | LEN:10",
     )
 
     @field_validator("qak_4", "qak_5", "qak_6", mode='before')

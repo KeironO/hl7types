@@ -21,31 +21,31 @@ class RXC(HL7Model):
     Attributes
     ----------
     rxc_1 : str
-        RXC.1 (req) - RX Component Type (ID) S4.14.3.1 | 0166 - RX Component Type
+        RXC.1 - RX Component Type (ID) R S4.14.3.1 | 0166 - RX Component Type
 
     rxc_2 : CE
-        RXC.2 (req) - Component Code (CE) S4.14.3.2
+        RXC.2 - Component Code (CE) R S4.14.3.2
 
     rxc_3 : str
-        RXC.3 (req) - Component Amount (NM) S4.14.3.3
+        RXC.3 - Component Amount (NM) R S4.14.3.3
 
     rxc_4 : CE
-        RXC.4 (req) - Component Units (CE) S4.14.3.4
+        RXC.4 - Component Units (CE) R S4.14.3.4
 
     rxc_5 : str | None
-        RXC.5 (opt) - Component Strength (NM) S4.14.3.5
+        RXC.5 - Component Strength (NM) O S4.14.3.5
 
     rxc_6 : CE | None
-        RXC.6 (opt) - Component Strength Units (CE) S4.14.3.6
+        RXC.6 - Component Strength Units (CE) O S4.14.3.6
 
     rxc_7 : list[CE] | None
-        RXC.7 (opt, rep) - Supplementary Code (CE) S4.14.1.24
+        RXC.7 - Supplementary Code (CE) O rep S4.14.1.24
 
     rxc_8 : str | None
-        RXC.8 (opt) - Component Drug Strength Volume (NM) S4.14.3.8
+        RXC.8 - Component Drug Strength Volume (NM) O S4.14.3.8
 
     rxc_9 : CWE | None
-        RXC.9 (opt) - Component Drug Strength Volume Units (CWE) S4.14.3.9
+        RXC.9 - Component Drug Strength Volume Units (CWE) O S4.14.3.9
     """
 
     rxc_1: str = Field(
@@ -56,7 +56,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.1",
         title="RX Component Type",
-        description="Item #313 | Table HL70166",
+        description="R | Item #00313 | Table 0166 - RX Component Type | LEN:1",
     )
 
     rxc_2: CE = Field(
@@ -67,7 +67,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.2",
         title="Component Code",
-        description="Item #314",
+        description="R | Item #00314",
     )
 
     rxc_3: str = Field(
@@ -78,7 +78,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.3",
         title="Component Amount",
-        description="Item #315",
+        description="R | Item #00315 | LEN:20",
     )
 
     rxc_4: CE = Field(
@@ -89,7 +89,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.4",
         title="Component Units",
-        description="Item #316",
+        description="R | Item #00316",
     )
 
     rxc_5: Optional[str] = Field(
@@ -101,7 +101,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.5",
         title="Component Strength",
-        description="Item #1124",
+        description="O | Item #01124 | LEN:20",
     )
 
     rxc_6: Optional[CE] = Field(
@@ -113,7 +113,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.6",
         title="Component Strength Units",
-        description="Item #1125",
+        description="O | Item #01125",
     )
 
     rxc_7: Optional[List[CE]] = Field(
@@ -125,7 +125,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.7",
         title="Supplementary Code",
-        description="Item #1476",
+        description="O | Item #01476",
     )
 
     rxc_8: Optional[str] = Field(
@@ -137,7 +137,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.8",
         title="Component Drug Strength Volume",
-        description="Item #1671",
+        description="O | Item #01671 | LEN:5",
     )
 
     rxc_9: Optional[CWE] = Field(
@@ -149,7 +149,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.9",
         title="Component Drug Strength Volume Units",
-        description="Item #1672",
+        description="O | Item #01672",
     )
 
     @field_validator("rxc_3", "rxc_5", "rxc_8", mode='before')

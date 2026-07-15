@@ -20,16 +20,16 @@ class CDO(HL7Model):
     Attributes
     ----------
     cdo_1 : str | None
-        CDO.1 (opt) - Set ID - CDO (SI) S4.A.9.1
+        CDO.1 - Set ID - CDO (SI) O S4.A.9.1
 
     cdo_2 : str | None
-        CDO.2 (opt) - Action Code (ID) S4.A.8.22 | 0206 - Segment Action Code
+        CDO.2 - Action Code (ID) O S4.A.8.22 | 0206 - Segment Action Code
 
     cdo_3 : CQ | None
-        CDO.3 (opt) - Cumulative Dosage Limit (CQ) S4.A.9.3
+        CDO.3 - Cumulative Dosage Limit (CQ) O S4.A.9.3
 
     cdo_4 : CQ | None
-        CDO.4 (opt) - Cumulative Dosage Limit Time Interval (CQ) S4.A.9.4 | 0924 - Cumulative Dosage Limit UoM
+        CDO.4 - Cumulative Dosage Limit Time Interval (CQ) O S4.A.9.4 | 0924 - Cumulative Dosage Limit UoM
     """
 
     cdo_1: Optional[str] = Field(
@@ -41,7 +41,7 @@ class CDO(HL7Model):
         ),
         serialization_alias="CDO.1",
         title="Set ID - CDO",
-        description="Item #3430",
+        description="O | Item #03430 | LEN:4",
     )
 
     cdo_2: Optional[str] = Field(
@@ -53,7 +53,9 @@ class CDO(HL7Model):
         ),
         serialization_alias="CDO.2",
         title="Action Code",
-        description="Item #816 | Table HL70206",
+        description=(
+            "O | Item #00816 | Table 0206 - Segment Action Code | LEN:2"
+        ),
     )
 
     cdo_3: Optional[CQ] = Field(
@@ -65,7 +67,7 @@ class CDO(HL7Model):
         ),
         serialization_alias="CDO.3",
         title="Cumulative Dosage Limit",
-        description="Item #3397",
+        description="O | Item #03397",
     )
 
     cdo_4: Optional[CQ] = Field(
@@ -77,7 +79,9 @@ class CDO(HL7Model):
         ),
         serialization_alias="CDO.4",
         title="Cumulative Dosage Limit Time Interval",
-        description="Item #3398 | Table HL70924",
+        description=(
+            "O | Item #03398 | Table 0924 - Cumulative Dosage Limit UoM"
+        ),
     )
 
     @field_validator("cdo_1", mode='before')

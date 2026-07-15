@@ -20,25 +20,25 @@ class SDD(HL7Model):
     Attributes
     ----------
     sdd_1 : EI | None
-        SDD.1 (opt) - Lot Number (EI) S17.7.3.1
+        SDD.1 - Lot Number (EI) O S17.7.3.1
 
     sdd_2 : EI | None
-        SDD.2 (opt) - Device Number (EI) S17.7.3.2
+        SDD.2 - Device Number (EI) O S17.7.3.2
 
     sdd_3 : str | None
-        SDD.3 (opt) - Device Name (ST) S17.7.3.3
+        SDD.3 - Device Name (ST) O S17.7.3.3
 
     sdd_4 : str | None
-        SDD.4 (opt) - Device Data State (IS) S17.7.3.4 | 0667 - Device Data State
+        SDD.4 - Device Data State (IS) O S17.7.3.4 | 0667 - Device Data State
 
     sdd_5 : str | None
-        SDD.5 (opt) - Load Status (IS) S17.7.3.5 | 0669 - Load Status
+        SDD.5 - Load Status (IS) O S17.7.3.5 | 0669 - Load Status
 
     sdd_6 : str | None
-        SDD.6 (opt) - Control Code (NM) S17.7.3.6
+        SDD.6 - Control Code (NM) O S17.7.3.6
 
     sdd_7 : str | None
-        SDD.7 (opt) - Operator Name (ST) S17.7.3.7
+        SDD.7 - Operator Name (ST) O S17.7.3.7
     """
 
     sdd_1: Optional[EI] = Field(
@@ -50,7 +50,7 @@ class SDD(HL7Model):
         ),
         serialization_alias="SDD.1",
         title="Lot Number",
-        description="Item #2098",
+        description="O | Item #02098",
     )
 
     sdd_2: Optional[EI] = Field(
@@ -62,7 +62,7 @@ class SDD(HL7Model):
         ),
         serialization_alias="SDD.2",
         title="Device Number",
-        description="Item #2099",
+        description="O | Item #02099",
     )
 
     sdd_3: Optional[str] = Field(
@@ -74,7 +74,7 @@ class SDD(HL7Model):
         ),
         serialization_alias="SDD.3",
         title="Device Name",
-        description="Item #2281",
+        description="O | Item #02281 | LEN:999",
     )
 
     sdd_4: Optional[str] = Field(
@@ -86,7 +86,7 @@ class SDD(HL7Model):
         ),
         serialization_alias="SDD.4",
         title="Device Data State",
-        description="Item #2100 | Table HL70667",
+        description="O | Item #02100 | Table 0667 - Device Data State | LEN:1",
     )
 
     sdd_5: Optional[str] = Field(
@@ -98,7 +98,7 @@ class SDD(HL7Model):
         ),
         serialization_alias="SDD.5",
         title="Load Status",
-        description="Item #2101 | Table HL70669",
+        description="O | Item #02101 | Table 0669 - Load Status | LEN:3",
     )
 
     sdd_6: Optional[str] = Field(
@@ -110,7 +110,7 @@ class SDD(HL7Model):
         ),
         serialization_alias="SDD.6",
         title="Control Code",
-        description="Item #2102",
+        description="O | Item #02102 | LEN:3",
     )
 
     sdd_7: Optional[str] = Field(
@@ -122,7 +122,7 @@ class SDD(HL7Model):
         ),
         serialization_alias="SDD.7",
         title="Operator Name",
-        description="Item #2103",
+        description="O | Item #02103 | LEN:15",
     )
 
     @field_validator("sdd_6", mode='before')

@@ -20,16 +20,16 @@ class IAR(HL7Model):
     Attributes
     ----------
     iar_1 : CWE
-        IAR.1 (req) - Allergy Reaction Code (CWE) S3.4.8.1
+        IAR.1 - Allergy Reaction Code (CWE) R S3.4.8.1
 
     iar_2 : CWE
-        IAR.2 (req) - Allergy Severity Code (CWE) S3.4.8.2 | 0128 - Allergy Severity
+        IAR.2 - Allergy Severity Code (CWE) R S3.4.8.2 | 0128 - Allergy Severity
 
     iar_3 : CWE | None
-        IAR.3 (opt) - Sensitivity to Causative Agent Code (CWE) S3.4.8.3 | 0436 - Sensitivity to Causative Agent Code
+        IAR.3 - Sensitivity to Causative Agent Code (CWE) O S3.4.8.3 | 0436 - Sensitivity to Causative Agent Code
 
     iar_4 : str | None
-        IAR.4 (opt) - Management (ST) S3.4.8.4
+        IAR.4 - Management (ST) O S3.4.8.4
     """
 
     iar_1: CWE = Field(
@@ -40,7 +40,7 @@ class IAR(HL7Model):
         ),
         serialization_alias="IAR.1",
         title="Allergy Reaction Code",
-        description="Item #3296",
+        description="R | Item #03296",
     )
 
     iar_2: CWE = Field(
@@ -51,7 +51,7 @@ class IAR(HL7Model):
         ),
         serialization_alias="IAR.2",
         title="Allergy Severity Code",
-        description="Item #3297 | Table HL70128",
+        description="R | Item #03297 | Table 0128 - Allergy Severity",
     )
 
     iar_3: Optional[CWE] = Field(
@@ -63,7 +63,9 @@ class IAR(HL7Model):
         ),
         serialization_alias="IAR.3",
         title="Sensitivity to Causative Agent Code",
-        description="Item #3298 | Table HL70436",
+        description=(
+            "O | Item #03298 | Table 0436 - Sensitivity to Causative Agent Code"
+        ),
     )
 
     iar_4: Optional[str] = Field(
@@ -75,7 +77,7 @@ class IAR(HL7Model):
         ),
         serialization_alias="IAR.4",
         title="Management",
-        description="Item #3299",
+        description="O | Item #03299",
     )
 
     model_config = {"populate_by_name": True}

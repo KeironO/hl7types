@@ -21,46 +21,46 @@ class PSH(HL7Model):
     Attributes
     ----------
     psh_1 : str
-        PSH.1 (req) - Report Type (ST) S7.11.4.1
+        PSH.1 - Report Type (ST) R S7.11.4.1
 
     psh_2 : str | None
-        PSH.2 (opt) - Report Form Identifier (ST) S7.11.4.2
+        PSH.2 - Report Form Identifier (ST) O S7.11.4.2
 
     psh_3 : TS
-        PSH.3 (req) - Report Date (TS) S7.11.4.3
+        PSH.3 - Report Date (TS) R S7.11.4.3
 
     psh_4 : TS | None
-        PSH.4 (opt) - Report Interval Start Date (TS) S7.11.4.4
+        PSH.4 - Report Interval Start Date (TS) O S7.11.4.4
 
     psh_5 : TS | None
-        PSH.5 (opt) - Report Interval End Date (TS) S7.11.4.5
+        PSH.5 - Report Interval End Date (TS) O S7.11.4.5
 
     psh_6 : CQ | None
-        PSH.6 (opt) - Quantity Manufactured (CQ) S7.11.4.6
+        PSH.6 - Quantity Manufactured (CQ) O S7.11.4.6
 
     psh_7 : CQ | None
-        PSH.7 (opt) - Quantity Distributed (CQ) S7.11.4.7
+        PSH.7 - Quantity Distributed (CQ) O S7.11.4.7
 
     psh_8 : str | None
-        PSH.8 (opt) - Quantity Distributed Method (ID) S7.11.4.8 | 0329 - Quantity method
+        PSH.8 - Quantity Distributed Method (ID) O S7.11.4.8 | 0329 - Quantity method
 
     psh_9 : str | None
-        PSH.9 (opt) - Quantity Distributed Comment (FT) S7.11.4.9
+        PSH.9 - Quantity Distributed Comment (FT) O S7.11.4.9
 
     psh_10 : CQ | None
-        PSH.10 (opt) - Quantity in Use (CQ) S7.11.4.10
+        PSH.10 - Quantity in Use (CQ) O S7.11.4.10
 
     psh_11 : str | None
-        PSH.11 (opt) - Quantity in Use Method (ID) S7.11.4.11 | 0329 - Quantity method
+        PSH.11 - Quantity in Use Method (ID) O S7.11.4.11 | 0329 - Quantity method
 
     psh_12 : str | None
-        PSH.12 (opt) - Quantity in Use Comment (FT) S7.11.4.12
+        PSH.12 - Quantity in Use Comment (FT) O S7.11.4.12
 
     psh_13 : list[str] | None
-        PSH.13 (opt, rep) - Number of Product Experience Reports Filed by Facility (NM) S7.11.4.13
+        PSH.13 - Number of Product Experience Reports Filed by Facility (NM) O rep S7.11.4.13
 
     psh_14 : list[str] | None
-        PSH.14 (opt, rep) - Number of Product Experience Reports Filed by Distributor (NM) S7.11.4.14
+        PSH.14 - Number of Product Experience Reports Filed by Distributor (NM) O rep S7.11.4.14
     """
 
     psh_1: str = Field(
@@ -71,7 +71,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.1",
         title="Report Type",
-        description="Item #1233",
+        description="R | Item #01233 | LEN:60",
     )
 
     psh_2: Optional[str] = Field(
@@ -83,7 +83,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.2",
         title="Report Form Identifier",
-        description="Item #1297",
+        description="O | Item #01297 | LEN:60",
     )
 
     psh_3: TS = Field(
@@ -94,7 +94,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.3",
         title="Report Date",
-        description="Item #1235",
+        description="R | Item #01235",
     )
 
     psh_4: Optional[TS] = Field(
@@ -106,7 +106,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.4",
         title="Report Interval Start Date",
-        description="Item #1236",
+        description="O | Item #01236",
     )
 
     psh_5: Optional[TS] = Field(
@@ -118,7 +118,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.5",
         title="Report Interval End Date",
-        description="Item #1237",
+        description="O | Item #01237",
     )
 
     psh_6: Optional[CQ] = Field(
@@ -130,7 +130,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.6",
         title="Quantity Manufactured",
-        description="Item #1238",
+        description="O | Item #01238",
     )
 
     psh_7: Optional[CQ] = Field(
@@ -142,7 +142,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.7",
         title="Quantity Distributed",
-        description="Item #1239",
+        description="O | Item #01239",
     )
 
     psh_8: Optional[str] = Field(
@@ -154,7 +154,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.8",
         title="Quantity Distributed Method",
-        description="Item #1240 | Table HL70329",
+        description="O | Item #01240 | Table 0329 - Quantity method | LEN:1",
     )
 
     psh_9: Optional[str] = Field(
@@ -166,7 +166,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.9",
         title="Quantity Distributed Comment",
-        description="Item #1241",
+        description="O | Item #01241",
     )
 
     psh_10: Optional[CQ] = Field(
@@ -178,7 +178,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.10",
         title="Quantity in Use",
-        description="Item #1242",
+        description="O | Item #01242",
     )
 
     psh_11: Optional[str] = Field(
@@ -190,7 +190,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.11",
         title="Quantity in Use Method",
-        description="Item #1243 | Table HL70329",
+        description="O | Item #01243 | Table 0329 - Quantity method | LEN:1",
     )
 
     psh_12: Optional[str] = Field(
@@ -202,7 +202,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.12",
         title="Quantity in Use Comment",
-        description="Item #1244",
+        description="O | Item #01244",
     )
 
     psh_13: Optional[List[str]] = Field(
@@ -214,7 +214,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.13",
         title="Number of Product Experience Reports Filed by Facility",
-        description="Item #1245",
+        description="O | Item #01245 | LEN:2",
     )
 
     psh_14: Optional[List[str]] = Field(
@@ -226,7 +226,7 @@ class PSH(HL7Model):
         ),
         serialization_alias="PSH.14",
         title="Number of Product Experience Reports Filed by Distributor",
-        description="Item #1246",
+        description="O | Item #01246 | LEN:2",
     )
 
     @field_validator("psh_13", "psh_14", mode='before')

@@ -23,31 +23,31 @@ class PDA(HL7Model):
     Attributes
     ----------
     pda_1 : list[CWE] | None
-        PDA.1 (opt, rep) - Death Cause Code (CWE) S3.4.13.1
+        PDA.1 - Death Cause Code (CWE) O rep S3.4.13.1
 
     pda_2 : PL | None
-        PDA.2 (opt) - Death Location (PL) S3.4.13.2
+        PDA.2 - Death Location (PL) O S3.4.13.2
 
     pda_3 : str | None
-        PDA.3 (opt) - Death Certified Indicator (ID) S3.4.13.3 | 0136 - Yes/no Indicator
+        PDA.3 - Death Certified Indicator (ID) O S3.4.13.3 | 0136 - Yes/no Indicator
 
     pda_4 : str | None
-        PDA.4 (opt) - Death Certificate Signed Date/Time (DTM) S3.4.13.4
+        PDA.4 - Death Certificate Signed Date/Time (DTM) O S3.4.13.4
 
     pda_5 : XCN | None
-        PDA.5 (opt) - Death Certified By (XCN) S3.4.13.5
+        PDA.5 - Death Certified By (XCN) O S3.4.13.5
 
     pda_6 : str | None
-        PDA.6 (opt) - Autopsy Indicator (ID) S3.4.13.6 | 0136 - Yes/no Indicator
+        PDA.6 - Autopsy Indicator (ID) O S3.4.13.6 | 0136 - Yes/no Indicator
 
     pda_7 : DR | None
-        PDA.7 (opt) - Autopsy Start and End Date/Time (DR) S3.4.13.7
+        PDA.7 - Autopsy Start and End Date/Time (DR) O S3.4.13.7
 
     pda_8 : XCN | None
-        PDA.8 (opt) - Autopsy Performed By (XCN) S3.4.13.8
+        PDA.8 - Autopsy Performed By (XCN) O S3.4.13.8
 
     pda_9 : str | None
-        PDA.9 (opt) - Coroner Indicator (ID) S3.4.13.9 | 0136 - Yes/no Indicator
+        PDA.9 - Coroner Indicator (ID) O S3.4.13.9 | 0136 - Yes/no Indicator
     """
 
     pda_1: Optional[List[CWE]] = Field(
@@ -59,7 +59,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.1",
         title="Death Cause Code",
-        description="Item #1574",
+        description="O | Item #01574",
     )
 
     pda_2: Optional[PL] = Field(
@@ -71,7 +71,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.2",
         title="Death Location",
-        description="Item #1575",
+        description="O | Item #01575",
     )
 
     pda_3: Optional[str] = Field(
@@ -83,7 +83,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.3",
         title="Death Certified Indicator",
-        description="Item #1576 | Table HL70136",
+        description="O | Item #01576 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     pda_4: Optional[str] = Field(
@@ -95,7 +95,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.4",
         title="Death Certificate Signed Date/Time",
-        description="Item #1577",
+        description="O | Item #01577",
     )
 
     pda_5: Optional[XCN] = Field(
@@ -107,7 +107,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.5",
         title="Death Certified By",
-        description="Item #1578",
+        description="O | Item #01578",
     )
 
     pda_6: Optional[str] = Field(
@@ -119,7 +119,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.6",
         title="Autopsy Indicator",
-        description="Item #1579 | Table HL70136",
+        description="O | Item #01579 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     pda_7: Optional[DR] = Field(
@@ -131,7 +131,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.7",
         title="Autopsy Start and End Date/Time",
-        description="Item #1580",
+        description="O | Item #01580",
     )
 
     pda_8: Optional[XCN] = Field(
@@ -143,7 +143,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.8",
         title="Autopsy Performed By",
-        description="Item #1581",
+        description="O | Item #01581",
     )
 
     pda_9: Optional[str] = Field(
@@ -155,7 +155,7 @@ class PDA(HL7Model):
         ),
         serialization_alias="PDA.9",
         title="Coroner Indicator",
-        description="Item #1582 | Table HL70136",
+        description="O | Item #01582 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     @field_validator("pda_4", mode='before')

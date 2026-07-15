@@ -21,13 +21,13 @@ class CSS(HL7Model):
     Attributes
     ----------
     css_1 : CE | None
-        CSS.1 (opt) - Study Scheduled Time Point (CE) S7.7.3
+        CSS.1 - Study Scheduled Time Point (CE) O S7.7.3
 
     css_2 : TS | None
-        CSS.2 (opt) - Study Scheduled Patient Time Point (TS) S7.7.3.2
+        CSS.2 - Study Scheduled Patient Time Point (TS) O S7.7.3.2
 
     css_3 : list[CE] | None
-        CSS.3 (opt, rep) - Study Quality Control Codes (CE) S7.7.3.3
+        CSS.3 - Study Quality Control Codes (CE) O rep S7.7.3.3
     """
 
     css_1: Optional[CE] = Field(
@@ -39,7 +39,7 @@ class CSS(HL7Model):
         ),
         serialization_alias="CSS.1",
         title="Study Scheduled Time Point",
-        description="Item #1055",
+        description="O | Item #01055",
     )
 
     css_2: Optional[TS] = Field(
@@ -51,7 +51,7 @@ class CSS(HL7Model):
         ),
         serialization_alias="CSS.2",
         title="Study Scheduled Patient Time Point",
-        description="Item #1056",
+        description="O | Item #01056",
     )
 
     css_3: Optional[List[CE]] = Field(
@@ -63,7 +63,7 @@ class CSS(HL7Model):
         ),
         serialization_alias="CSS.3",
         title="Study Quality Control Codes",
-        description="Item #1057",
+        description="O | Item #01057",
     )
 
     model_config = {"populate_by_name": True}

@@ -21,19 +21,19 @@ class ECD(HL7Model):
     Attributes
     ----------
     ecd_1 : str
-        ECD.1 (req) - Reference Command Number (NM) S13.4.5.1
+        ECD.1 - Reference Command Number (NM) R S13.4.5.1
 
     ecd_2 : CE
-        ECD.2 (req) - Remote Control Command (CE) S13.4.5.2 | 0368 - Remote control command
+        ECD.2 - Remote Control Command (CE) R S13.4.5.2 | 0368 - Remote control command
 
     ecd_3 : str | None
-        ECD.3 (opt) - Response Required (ID) S13.4.5.3 | 0136 - Yes/no indicator
+        ECD.3 - Response Required (ID) O S13.4.5.3 | 0136 - Yes/no indicator
 
     ecd_4 : TQ | None
-        ECD.4 (opt) - Requested Completion Time (TQ) S13.4.5.4
+        ECD.4 - Requested Completion Time (TQ) O S13.4.5.4
 
     ecd_5 : list[str] | None
-        ECD.5 (opt, rep) - Parameters (TX) S13.4.5.5
+        ECD.5 - Parameters (TX) O rep S13.4.5.5
     """
 
     ecd_1: str = Field(
@@ -44,7 +44,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.1",
         title="Reference Command Number",
-        description="Item #1390",
+        description="R | Item #01390 | LEN:20",
     )
 
     ecd_2: CE = Field(
@@ -55,7 +55,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.2",
         title="Remote Control Command",
-        description="Item #1391 | Table HL70368",
+        description="R | Item #01391 | Table 0368 - Remote control command",
     )
 
     ecd_3: Optional[str] = Field(
@@ -67,7 +67,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.3",
         title="Response Required",
-        description="Item #1392 | Table HL70136",
+        description="O | Item #01392 | Table 0136 - Yes/no indicator | LEN:80",
     )
 
     ecd_4: Optional[TQ] = Field(
@@ -79,7 +79,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.4",
         title="Requested Completion Time",
-        description="Item #1393",
+        description="O | Item #01393",
     )
 
     ecd_5: Optional[List[str]] = Field(
@@ -91,7 +91,7 @@ class ECD(HL7Model):
         ),
         serialization_alias="ECD.5",
         title="Parameters",
-        description="Item #1394",
+        description="O | Item #01394",
     )
 
     @field_validator("ecd_1", mode='before')

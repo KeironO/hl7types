@@ -18,40 +18,40 @@ class FHS(HL7Model):
     Attributes
     ----------
     fhs_1 : str
-        FHS.1 (req) - FILE FIELD SEPARATOR (ST) S2-43
+        FHS.1 - FILE FIELD SEPARATOR (ST) R S2-43
 
     fhs_2 : str
-        FHS.2 (req) - FILE ENCODING CHARACTERS (ST)
+        FHS.2 - FILE ENCODING CHARACTERS (ST) R
 
     fhs_3 : str | None
-        FHS.3 (opt) - FILE SENDING APPLICATION (ST)
+        FHS.3 - FILE SENDING APPLICATION (ST) O
 
     fhs_4 : str | None
-        FHS.4 (opt) - FILE SENDING FACILITY (ST)
+        FHS.4 - FILE SENDING FACILITY (ST) O
 
     fhs_5 : str | None
-        FHS.5 (opt) - FILE RECEIVING APPLICATION (ST)
+        FHS.5 - FILE RECEIVING APPLICATION (ST) O
 
     fhs_6 : str | None
-        FHS.6 (opt) - FILE RECEIVING FACILITY (ST)
+        FHS.6 - FILE RECEIVING FACILITY (ST) O
 
     fhs_7 : str | None
-        FHS.7 (opt) - DATE/TIME OF FILE CREATION (TS)
+        FHS.7 - DATE/TIME OF FILE CREATION (TS) O
 
     fhs_8 : str | None
-        FHS.8 (opt) - FILE SECURITY (ST)
+        FHS.8 - FILE SECURITY (ST) O
 
     fhs_9 : str | None
-        FHS.9 (opt) - FILE NAME/ID (ST)
+        FHS.9 - FILE NAME/ID (ST) O
 
     fhs_10 : str | None
-        FHS.10 (opt) - FILE HEADER COMMENT (ST)
+        FHS.10 - FILE HEADER COMMENT (ST) O
 
     fhs_11 : str | None
-        FHS.11 (opt) - FILE CONTROL ID (ST)
+        FHS.11 - FILE CONTROL ID (ST) O
 
     fhs_12 : str | None
-        FHS.12 (opt) - REFERENCE FILE CONTROL ID (ST)
+        FHS.12 - REFERENCE FILE CONTROL ID (ST) O
     """
 
     fhs_1: str = Field(
@@ -63,7 +63,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.1",
         title="FILE FIELD SEPARATOR",
-        description="Item #692",
+        description="R | Item #00692 | LEN:1",
     )
 
     fhs_2: str = Field(
@@ -75,7 +75,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.2",
         title="FILE ENCODING CHARACTERS",
-        description="Item #693",
+        description="R | Item #00693 | LEN:4",
     )
 
     fhs_3: Optional[str] = Field(
@@ -87,7 +87,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.3",
         title="FILE SENDING APPLICATION",
-        description="Item #694",
+        description="O | Item #00694 | LEN:15",
     )
 
     fhs_4: Optional[str] = Field(
@@ -99,7 +99,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.4",
         title="FILE SENDING FACILITY",
-        description="Item #695",
+        description="O | Item #00695 | LEN:20",
     )
 
     fhs_5: Optional[str] = Field(
@@ -111,7 +111,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.5",
         title="FILE RECEIVING APPLICATION",
-        description="Item #696",
+        description="O | Item #00696 | LEN:15",
     )
 
     fhs_6: Optional[str] = Field(
@@ -123,7 +123,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.6",
         title="FILE RECEIVING FACILITY",
-        description="Item #697",
+        description="O | Item #00697 | LEN:20",
     )
 
     fhs_7: Optional[str] = Field(
@@ -135,7 +135,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.7",
         title="DATE/TIME OF FILE CREATION",
-        description="Item #660",
+        description="O | Item #00660 | LEN:19",
     )
 
     fhs_8: Optional[str] = Field(
@@ -147,7 +147,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.8",
         title="FILE SECURITY",
-        description="Item #698",
+        description="O | Item #00698 | LEN:40",
     )
 
     fhs_9: Optional[str] = Field(
@@ -159,7 +159,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.9",
         title="FILE NAME/ID",
-        description="Item #661",
+        description="O | Item #00661 | LEN:20",
     )
 
     fhs_10: Optional[str] = Field(
@@ -171,7 +171,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.10",
         title="FILE HEADER COMMENT",
-        description="Item #662",
+        description="O | Item #00662 | LEN:80",
     )
 
     fhs_11: Optional[str] = Field(
@@ -183,7 +183,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.11",
         title="FILE CONTROL ID",
-        description="Item #663",
+        description="O | Item #00663 | LEN:20",
     )
 
     fhs_12: Optional[str] = Field(
@@ -195,7 +195,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.12",
         title="REFERENCE FILE CONTROL ID",
-        description="Item #768",
+        description="O | Item #00768 | LEN:20",
     )
 
     model_config = {"populate_by_name": True}

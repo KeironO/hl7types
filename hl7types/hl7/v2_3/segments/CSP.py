@@ -21,16 +21,16 @@ class CSP(HL7Model):
     Attributes
     ----------
     csp_1 : CE | None
-        CSP.1 (opt) - Study Phase Identifier (CE) S7.7.2
+        CSP.1 - Study Phase Identifier (CE) C S7.7.2
 
     csp_2 : TS
-        CSP.2 (req) - Date/time Study Phase Began (TS) S7.7.2.2
+        CSP.2 - Date/time Study Phase Began (TS) R S7.7.2.2
 
     csp_3 : TS | None
-        CSP.3 (opt) - Date/time Study Phase Ended (TS) S7.7.2.3
+        CSP.3 - Date/time Study Phase Ended (TS) O S7.7.2.3
 
     csp_4 : CE | None
-        CSP.4 (opt) - Study Phase Evaluability (CE) S7.7.2.4
+        CSP.4 - Study Phase Evaluability (CE) O S7.7.2.4
     """
 
     csp_1: Optional[CE] = Field(
@@ -42,7 +42,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.1",
         title="Study Phase Identifier",
-        description="Item #1051",
+        description="C | Item #01051",
     )
 
     csp_2: TS = Field(
@@ -53,7 +53,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.2",
         title="Date/time Study Phase Began",
-        description="Item #1052",
+        description="R | Item #01052",
     )
 
     csp_3: Optional[TS] = Field(
@@ -65,7 +65,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.3",
         title="Date/time Study Phase Ended",
-        description="Item #1053",
+        description="O | Item #01053",
     )
 
     csp_4: Optional[CE] = Field(
@@ -77,7 +77,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.4",
         title="Study Phase Evaluability",
-        description="Item #1054",
+        description="O | Item #01054",
     )
 
     model_config = {"populate_by_name": True}

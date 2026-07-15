@@ -19,13 +19,13 @@ class CM1(HL7Model):
     Attributes
     ----------
     cm1_1 : str
-        CM1.1 (req) - Set ID - CM1 (SI) S8.10.3.1
+        CM1.1 - Set ID - CM1 (SI) R S8.10.3.1
 
     cm1_2 : CE
-        CM1.2 (req) - Study Phase Identifier (CE) S8.10.3.2
+        CM1.2 - Study Phase Identifier (CE) R S8.10.3.2
 
     cm1_3 : str
-        CM1.3 (req) - Description of Study Phase (ST) S8.10.3.3
+        CM1.3 - Description of Study Phase (ST) R S8.10.3.3
     """
 
     cm1_1: str = Field(
@@ -36,7 +36,7 @@ class CM1(HL7Model):
         ),
         serialization_alias="CM1.1",
         title="Set ID - CM1",
-        description="Item #1021",
+        description="R | Item #01021 | LEN:4",
     )
 
     cm1_2: CE = Field(
@@ -47,7 +47,7 @@ class CM1(HL7Model):
         ),
         serialization_alias="CM1.2",
         title="Study Phase Identifier",
-        description="Item #1022",
+        description="R | Item #01022",
     )
 
     cm1_3: str = Field(
@@ -58,7 +58,7 @@ class CM1(HL7Model):
         ),
         serialization_alias="CM1.3",
         title="Description of Study Phase",
-        description="Item #1023",
+        description="R | Item #01023 | LEN:300",
     )
 
     @field_validator("cm1_1", mode='before')

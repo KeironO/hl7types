@@ -21,13 +21,13 @@ class CTI(HL7Model):
     Attributes
     ----------
     cti_1 : EI
-        CTI.1 (req) - Sponsor Study ID (EI) S7.8.1.1
+        CTI.1 - Sponsor Study ID (EI) R S7.8.1.1
 
     cti_2 : CWE | None
-        CTI.2 (opt) - Study Phase Identifier (CWE) S8.11.3.2
+        CTI.2 - Study Phase Identifier (CWE) C S8.11.3.2
 
     cti_3 : CWE | None
-        CTI.3 (opt) - Study Scheduled Time Point (CWE) S7.8.3.1 | 9999 - no table for CE
+        CTI.3 - Study Scheduled Time Point (CWE) O S7.8.3.1 | 9999 - no table for CE
     """
 
     cti_1: EI = Field(
@@ -38,7 +38,7 @@ class CTI(HL7Model):
         ),
         serialization_alias="CTI.1",
         title="Sponsor Study ID",
-        description="Item #1011",
+        description="R | Item #01011",
     )
 
     cti_2: Optional[CWE] = Field(
@@ -50,7 +50,7 @@ class CTI(HL7Model):
         ),
         serialization_alias="CTI.2",
         title="Study Phase Identifier",
-        description="Item #1022",
+        description="C | Item #01022",
     )
 
     cti_3: Optional[CWE] = Field(
@@ -62,7 +62,7 @@ class CTI(HL7Model):
         ),
         serialization_alias="CTI.3",
         title="Study Scheduled Time Point",
-        description="Item #1055 | Table HL79999",
+        description="O | Item #01055 | Table 9999 - no table for CE",
     )
 
     model_config = {"populate_by_name": True}

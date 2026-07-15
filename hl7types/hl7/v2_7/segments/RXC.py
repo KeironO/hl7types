@@ -20,31 +20,31 @@ class RXC(HL7Model):
     Attributes
     ----------
     rxc_1 : str
-        RXC.1 (req) - RX Component Type (ID) S4.A.4.2.1 | 0166 - RX Component Type
+        RXC.1 - RX Component Type (ID) R S4.A.4.2.1 | 0166 - RX Component Type
 
     rxc_2 : CWE
-        RXC.2 (req) - Component Code (CWE) S4.A.4.2.2 | 9999 - no table for CE
+        RXC.2 - Component Code (CWE) R S4.A.4.2.2 | 9999 - no table for CE
 
     rxc_3 : str
-        RXC.3 (req) - Component Amount (NM) S4.A.4.2.3
+        RXC.3 - Component Amount (NM) R S4.A.4.2.3
 
     rxc_4 : CWE
-        RXC.4 (req) - Component Units (CWE) S4.A.4.2.4 | 9999 - no table for CE
+        RXC.4 - Component Units (CWE) R S4.A.4.2.4 | 9999 - no table for CE
 
     rxc_5 : str | None
-        RXC.5 (opt) - Component Strength (NM) S4.A.4.2.5
+        RXC.5 - Component Strength (NM) O S4.A.4.2.5
 
     rxc_6 : CWE | None
-        RXC.6 (opt) - Component Strength Units (CWE) S4.A.4.2.6 | 9999 - no table for CE
+        RXC.6 - Component Strength Units (CWE) O S4.A.4.2.6 | 9999 - no table for CE
 
     rxc_7 : list[CWE] | None
-        RXC.7 (opt, rep) - Supplementary Code (CWE) S4.A.4.0.24 | 9999 - no table for CE
+        RXC.7 - Supplementary Code (CWE) O rep S4.A.4.0.24 | 9999 - no table for CE
 
     rxc_8 : str | None
-        RXC.8 (opt) - Component Drug Strength Volume (NM) S4.A.4.2.8
+        RXC.8 - Component Drug Strength Volume (NM) O S4.A.4.2.8
 
     rxc_9 : CWE | None
-        RXC.9 (opt) - Component Drug Strength Volume Units (CWE) S4.A.4.2.9 | 9999 - no table for CE
+        RXC.9 - Component Drug Strength Volume Units (CWE) O S4.A.4.2.9 | 9999 - no table for CE
     """
 
     rxc_1: str = Field(
@@ -55,7 +55,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.1",
         title="RX Component Type",
-        description="Item #313 | Table HL70166",
+        description="R | Item #00313 | Table 0166 - RX Component Type | LEN:1",
     )
 
     rxc_2: CWE = Field(
@@ -66,7 +66,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.2",
         title="Component Code",
-        description="Item #314 | Table HL79999",
+        description="R | Item #00314 | Table 9999 - no table for CE",
     )
 
     rxc_3: str = Field(
@@ -77,7 +77,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.3",
         title="Component Amount",
-        description="Item #315",
+        description="R | Item #00315",
     )
 
     rxc_4: CWE = Field(
@@ -88,7 +88,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.4",
         title="Component Units",
-        description="Item #316 | Table HL79999",
+        description="R | Item #00316 | Table 9999 - no table for CE",
     )
 
     rxc_5: Optional[str] = Field(
@@ -100,7 +100,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.5",
         title="Component Strength",
-        description="Item #1124",
+        description="O | Item #01124",
     )
 
     rxc_6: Optional[CWE] = Field(
@@ -112,7 +112,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.6",
         title="Component Strength Units",
-        description="Item #1125 | Table HL79999",
+        description="O | Item #01125 | Table 9999 - no table for CE",
     )
 
     rxc_7: Optional[List[CWE]] = Field(
@@ -124,7 +124,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.7",
         title="Supplementary Code",
-        description="Item #1476 | Table HL79999",
+        description="O | Item #01476 | Table 9999 - no table for CE",
     )
 
     rxc_8: Optional[str] = Field(
@@ -136,7 +136,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.8",
         title="Component Drug Strength Volume",
-        description="Item #1671",
+        description="O | Item #01671",
     )
 
     rxc_9: Optional[CWE] = Field(
@@ -148,7 +148,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.9",
         title="Component Drug Strength Volume Units",
-        description="Item #1672 | Table HL79999",
+        description="O | Item #01672 | Table 9999 - no table for CE",
     )
 
     @field_validator("rxc_3", "rxc_5", "rxc_8", mode='before')

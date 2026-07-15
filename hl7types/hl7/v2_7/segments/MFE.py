@@ -21,25 +21,25 @@ class MFE(HL7Model):
     Attributes
     ----------
     mfe_1 : str
-        MFE.1 (req) - Record-Level Event Code (ID) S8.5.2.1 | 0180 - Record-level Event Code
+        MFE.1 - Record-Level Event Code (ID) R S8.5.2.1 | 0180 - Record-level Event Code
 
     mfe_2 : str | None
-        MFE.2 (opt) - MFN Control ID (ST) S8.5.2.2
+        MFE.2 - MFN Control ID (ST) C S8.5.2.2
 
     mfe_3 : str | None
-        MFE.3 (opt) - Effective Date/Time (DTM) S8.5.1.5
+        MFE.3 - Effective Date/Time (DTM) O S8.5.1.5
 
     mfe_4 : list[varies]
-        MFE.4 (req, rep) - Primary Key Value - MFE (varies) S8.5.2.4 | 9999 - no table for CE
+        MFE.4 - Primary Key Value - MFE (varies) R rep S8.5.2.4 | 9999 - no table for CE
 
     mfe_5 : list[str]
-        MFE.5 (req, rep) - Primary Key Value Type (ID) S8.5.2.5 | 0355 - Primary Key Value Type
+        MFE.5 - Primary Key Value Type (ID) R rep S8.5.2.5 | 0355 - Primary Key Value Type
 
     mfe_6 : str | None
-        MFE.6 (opt) - Entered Date/Time (DTM) S2.14.10.6
+        MFE.6 - Entered Date/Time (DTM) O S2.14.10.6
 
     mfe_7 : XCN | None
-        MFE.7 (opt) - Entered By (XCN) S2.14.10.5
+        MFE.7 - Entered By (XCN) O S2.14.10.5
     """
 
     mfe_1: str = Field(
@@ -50,7 +50,9 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.1",
         title="Record-Level Event Code",
-        description="Item #664 | Table HL70180",
+        description=(
+            "R | Item #00664 | Table 0180 - Record-level Event Code | LEN:3"
+        ),
     )
 
     mfe_2: Optional[str] = Field(
@@ -62,7 +64,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.2",
         title="MFN Control ID",
-        description="Item #665",
+        description="C | Item #00665",
     )
 
     mfe_3: Optional[str] = Field(
@@ -74,7 +76,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.3",
         title="Effective Date/Time",
-        description="Item #662",
+        description="O | Item #00662",
     )
 
     mfe_4: List[varies] = Field(
@@ -86,7 +88,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.4",
         title="Primary Key Value - MFE",
-        description="Item #667 | Table HL79999",
+        description="R | Item #00667 | Table 9999 - no table for CE",
     )
 
     mfe_5: List[str] = Field(
@@ -98,7 +100,9 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.5",
         title="Primary Key Value Type",
-        description="Item #1319 | Table HL70355",
+        description=(
+            "R | Item #01319 | Table 0355 - Primary Key Value Type | LEN:3"
+        ),
     )
 
     mfe_6: Optional[str] = Field(
@@ -110,7 +114,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.6",
         title="Entered Date/Time",
-        description="Item #661",
+        description="O | Item #00661",
     )
 
     mfe_7: Optional[XCN] = Field(
@@ -122,7 +126,7 @@ class MFE(HL7Model):
         ),
         serialization_alias="MFE.7",
         title="Entered By",
-        description="Item #224",
+        description="O | Item #00224",
     )
 
     @field_validator("mfe_3", "mfe_6", mode='before')

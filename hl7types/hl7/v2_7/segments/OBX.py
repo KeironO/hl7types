@@ -26,82 +26,82 @@ class OBX(HL7Model):
     Attributes
     ----------
     obx_1 : str | None
-        OBX.1 (opt) - Set ID - OBX (SI) S7.4.2.1
+        OBX.1 - Set ID - OBX (SI) O S7.4.2.1
 
     obx_2 : str | None
-        OBX.2 (opt) - Value Type (ID) S7.4.2.2 | 0125 - Value Type
+        OBX.2 - Value Type (ID) C S7.4.2.2 | 0125 - Value Type
 
     obx_3 : CWE
-        OBX.3 (req) - Observation Identifier (CWE) S7.4.2.3 | 9999 - no table for CE
+        OBX.3 - Observation Identifier (CWE) R S7.4.2.3 | 9999 - no table for CE
 
     obx_4 : str | None
-        OBX.4 (opt) - Observation Sub-ID (ST) S7.4.2.4
+        OBX.4 - Observation Sub-ID (ST) C S7.4.2.4
 
     obx_5 : list[varies] | None
-        OBX.5 (opt, rep) - Observation Value (varies) S7.4.2.5
+        OBX.5 - Observation Value (varies) C rep S7.4.2.5
 
     obx_6 : CWE | None
-        OBX.6 (opt) - Units (CWE) S13.4.9.13 | 9999 - no table for CE
+        OBX.6 - Units (CWE) O S13.4.9.13 | 9999 - no table for CE
 
     obx_7 : str | None
-        OBX.7 (opt) - References Range (ST) S7.4.2.7
+        OBX.7 - References Range (ST) O S7.4.2.7
 
     obx_8 : list[CWE] | None
-        OBX.8 (opt, rep) - Interpretation Codes (CWE) S7.4.2.8
+        OBX.8 - Interpretation Codes (CWE) O rep S7.4.2.8
 
     obx_9 : str | None
-        OBX.9 (opt) - Probability (NM) S7.4.2.9
+        OBX.9 - Probability (NM) O S7.4.2.9
 
     obx_10 : list[str] | None
-        OBX.10 (opt, rep) - Nature of Abnormal Test (ID) S7.4.2.10 | 0080 - Nature of Abnormal Testing
+        OBX.10 - Nature of Abnormal Test (ID) O rep S7.4.2.10 | 0080 - Nature of Abnormal Testing
 
     obx_11 : str
-        OBX.11 (req) - Observation Result Status (ID) S7.4.2.11 | 0085 - Observation Result Status Codes Interpretation
+        OBX.11 - Observation Result Status (ID) R S7.4.2.11 | 0085 - Observation Result Status Codes Interpretation
 
     obx_12 : str | None
-        OBX.12 (opt) - Effective Date of Reference Range (DTM) S7.4.2.12
+        OBX.12 - Effective Date of Reference Range (DTM) O S7.4.2.12
 
     obx_13 : str | None
-        OBX.13 (opt) - User Defined Access Checks (ST) S7.4.2.13
+        OBX.13 - User Defined Access Checks (ST) O S7.4.2.13
 
     obx_14 : str | None
-        OBX.14 (opt) - Date/Time of the Observation (DTM) S7.4.2.14
+        OBX.14 - Date/Time of the Observation (DTM) O S7.4.2.14
 
     obx_15 : CWE | None
-        OBX.15 (opt) - Producer's ID (CWE) S7.4.2.15 | 9999 - no table for CE
+        OBX.15 - Producer's ID (CWE) O S7.4.2.15 | 9999 - no table for CE
 
     obx_16 : list[XCN] | None
-        OBX.16 (opt, rep) - Responsible Observer (XCN) S7.4.2.16
+        OBX.16 - Responsible Observer (XCN) O rep S7.4.2.16
 
     obx_17 : list[CWE] | None
-        OBX.17 (opt, rep) - Observation Method (CWE) S7.4.2.17 | 9999 - no table for CE
+        OBX.17 - Observation Method (CWE) O rep S7.4.2.17 | 9999 - no table for CE
 
     obx_18 : list[EI] | None
-        OBX.18 (opt, rep) - Equipment Instance Identifier (EI) S13.4.1.1
+        OBX.18 - Equipment Instance Identifier (EI) O rep S13.4.1.1
 
     obx_19 : str | None
-        OBX.19 (opt) - Date/Time of the Analysis (DTM) S7.4.2.19
+        OBX.19 - Date/Time of the Analysis (DTM) O S7.4.2.19
 
     obx_20 : list[CWE] | None
-        OBX.20 (opt, rep) - Observation Site (CWE) S7.4.2.20 | 0163 - Body Site
+        OBX.20 - Observation Site (CWE) O rep S7.4.2.20 | 0163 - Body Site
 
     obx_21 : EI | None
-        OBX.21 (opt) - Observation Instance Identifier (EI) S7.4.2.21
+        OBX.21 - Observation Instance Identifier (EI) O S7.4.2.21
 
     obx_22 : CNE | None
-        OBX.22 (opt) - Mood Code (CNE) S12.4.1.22 | 0725 - Mood Codes
+        OBX.22 - Mood Code (CNE) C S12.4.1.22 | 0725 - Mood Codes
 
     obx_23 : XON | None
-        OBX.23 (opt) - Performing Organization Name (XON) S7.4.2.23
+        OBX.23 - Performing Organization Name (XON) O S7.4.2.23
 
     obx_24 : XAD | None
-        OBX.24 (opt) - Performing Organization Address (XAD) S7.4.2.24
+        OBX.24 - Performing Organization Address (XAD) O S7.4.2.24
 
     obx_25 : XCN | None
-        OBX.25 (opt) - Performing Organization Medical Director (XCN) S7.4.2.25
+        OBX.25 - Performing Organization Medical Director (XCN) O S7.4.2.25
 
     obx_26 : str | None
-        OBX.26 (opt) - Patient Results Release Category (ID) S7.4.2.26 | 0909 - Patient Results Release Categorization Scheme
+        OBX.26 - Patient Results Release Category (ID) O S7.4.2.26 | 0909 - Patient Results Release Categorization Scheme
     """
 
     obx_1: Optional[str] = Field(
@@ -113,7 +113,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.1",
         title="Set ID - OBX",
-        description="Item #569",
+        description="O | Item #00569 | LEN:4",
     )
 
     obx_2: Optional[str] = Field(
@@ -125,7 +125,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.2",
         title="Value Type",
-        description="Item #570 | Table HL70125",
+        description="C | Item #00570 | Table 0125 - Value Type | LEN:3",
     )
 
     obx_3: CWE = Field(
@@ -136,7 +136,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.3",
         title="Observation Identifier",
-        description="Item #571 | Table HL79999",
+        description="R | Item #00571 | Table 9999 - no table for CE",
     )
 
     obx_4: Optional[str] = Field(
@@ -148,7 +148,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.4",
         title="Observation Sub-ID",
-        description="Item #572",
+        description="C | Item #00572",
     )
 
     obx_5: Optional[List[varies]] = Field(
@@ -160,7 +160,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.5",
         title="Observation Value",
-        description="Item #573",
+        description="C | Item #00573",
     )
 
     obx_6: Optional[CWE] = Field(
@@ -172,7 +172,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.6",
         title="Units",
-        description="Item #574 | Table HL79999",
+        description="O | Item #00574 | Table 9999 - no table for CE",
     )
 
     obx_7: Optional[str] = Field(
@@ -184,7 +184,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.7",
         title="References Range",
-        description="Item #575",
+        description="O | Item #00575",
     )
 
     obx_8: Optional[List[CWE]] = Field(
@@ -196,7 +196,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.8",
         title="Interpretation Codes",
-        description="Item #576",
+        description="O | Item #00576",
     )
 
     obx_9: Optional[str] = Field(
@@ -208,7 +208,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.9",
         title="Probability",
-        description="Item #577",
+        description="O | Item #00577",
     )
 
     obx_10: Optional[List[str]] = Field(
@@ -220,7 +220,9 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.10",
         title="Nature of Abnormal Test",
-        description="Item #578 | Table HL70080",
+        description=(
+            "O | Item #00578 | Table 0080 - Nature of Abnormal Testing | LEN:2"
+        ),
     )
 
     obx_11: str = Field(
@@ -231,7 +233,10 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.11",
         title="Observation Result Status",
-        description="Item #579 | Table HL70085",
+        description=(
+            "R | Item #00579 | Table 0085 - Observation Result Status Codes "
+            "Interpretation | LEN:1"
+        ),
     )
 
     obx_12: Optional[str] = Field(
@@ -243,7 +248,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.12",
         title="Effective Date of Reference Range",
-        description="Item #580",
+        description="O | Item #00580",
     )
 
     obx_13: Optional[str] = Field(
@@ -255,7 +260,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.13",
         title="User Defined Access Checks",
-        description="Item #581",
+        description="O | Item #00581",
     )
 
     obx_14: Optional[str] = Field(
@@ -267,7 +272,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.14",
         title="Date/Time of the Observation",
-        description="Item #582",
+        description="O | Item #00582",
     )
 
     obx_15: Optional[CWE] = Field(
@@ -279,7 +284,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.15",
         title="Producer's ID",
-        description="Item #583 | Table HL79999",
+        description="O | Item #00583 | Table 9999 - no table for CE",
     )
 
     obx_16: Optional[List[XCN]] = Field(
@@ -291,7 +296,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.16",
         title="Responsible Observer",
-        description="Item #584",
+        description="O | Item #00584",
     )
 
     obx_17: Optional[List[CWE]] = Field(
@@ -303,7 +308,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.17",
         title="Observation Method",
-        description="Item #936 | Table HL79999",
+        description="O | Item #00936 | Table 9999 - no table for CE",
     )
 
     obx_18: Optional[List[EI]] = Field(
@@ -315,7 +320,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.18",
         title="Equipment Instance Identifier",
-        description="Item #1479",
+        description="O | Item #01479",
     )
 
     obx_19: Optional[str] = Field(
@@ -327,7 +332,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.19",
         title="Date/Time of the Analysis",
-        description="Item #1480",
+        description="O | Item #01480",
     )
 
     obx_20: Optional[List[CWE]] = Field(
@@ -339,7 +344,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.20",
         title="Observation Site",
-        description="Item #2179 | Table HL70163",
+        description="O | Item #02179 | Table 0163 - Body Site",
     )
 
     obx_21: Optional[EI] = Field(
@@ -351,7 +356,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.21",
         title="Observation Instance Identifier",
-        description="Item #2180",
+        description="O | Item #02180",
     )
 
     obx_22: Optional[CNE] = Field(
@@ -363,7 +368,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.22",
         title="Mood Code",
-        description="Item #2182 | Table HL70725",
+        description="C | Item #02182 | Table 0725 - Mood Codes",
     )
 
     obx_23: Optional[XON] = Field(
@@ -375,7 +380,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.23",
         title="Performing Organization Name",
-        description="Item #2283",
+        description="O | Item #02283",
     )
 
     obx_24: Optional[XAD] = Field(
@@ -387,7 +392,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.24",
         title="Performing Organization Address",
-        description="Item #2284",
+        description="O | Item #02284",
     )
 
     obx_25: Optional[XCN] = Field(
@@ -399,7 +404,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.25",
         title="Performing Organization Medical Director",
-        description="Item #2285",
+        description="O | Item #02285",
     )
 
     obx_26: Optional[str] = Field(
@@ -411,7 +416,10 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.26",
         title="Patient Results Release Category",
-        description="Item #2313 | Table HL70909",
+        description=(
+            "O | Item #02313 | Table 0909 - Patient Results Release "
+            "Categorization Scheme | LEN:10"
+        ),
     )
 
     @field_validator("obx_1", mode='before')

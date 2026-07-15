@@ -18,136 +18,136 @@ class IN1(HL7Model):
     Attributes
     ----------
     in1_1 : str
-        IN1.1 (req) - SET ID - INSURANCE (SI) S6-10
+        IN1.1 - SET ID - INSURANCE (SI) R S6-10
 
     in1_2 : str
-        IN1.2 (req) - INSURANCE PLAN ID (ID) | 0072 - INS. PLAN ID
+        IN1.2 - INSURANCE PLAN ID (ID) R | 0072 - INS. PLAN ID
 
     in1_3 : str
-        IN1.3 (req) - INSURANCE COMPANY ID (ST)
+        IN1.3 - INSURANCE COMPANY ID (ST) R
 
     in1_4 : str | None
-        IN1.4 (opt) - INSURANCE COMPANY NAME (ST)
+        IN1.4 - INSURANCE COMPANY NAME (ST) O
 
     in1_5 : str | None
-        IN1.5 (opt) - INSURANCE COMPANY ADDRESS (AD)
+        IN1.5 - INSURANCE COMPANY ADDRESS (AD) O
 
     in1_6 : str | None
-        IN1.6 (opt) - INSURANCE CO. CONTACT PERS (PN)
+        IN1.6 - INSURANCE CO. CONTACT PERS (PN) O
 
     in1_7 : str | None
-        IN1.7 (opt) - INSURANCE CO PHONE NUMBER (TN)
+        IN1.7 - INSURANCE CO PHONE NUMBER (TN) O
 
     in1_8 : str | None
-        IN1.8 (opt) - GROUP NUMBER (ST)
+        IN1.8 - GROUP NUMBER (ST) O
 
     in1_9 : str | None
-        IN1.9 (opt) - GROUP NAME (ST)
+        IN1.9 - GROUP NAME (ST) O
 
     in1_10 : str | None
-        IN1.10 (opt) - INSURED'S GROUP EMP. ID (ST)
+        IN1.10 - INSURED'S GROUP EMP. ID (ST) O
 
     in1_11 : str | None
-        IN1.11 (opt) - INSURED'S GROUP EMP. NAME (ST)
+        IN1.11 - INSURED'S GROUP EMP. NAME (ST) O
 
     in1_12 : str | None
-        IN1.12 (opt) - PLAN EFFECTIVE DATE (DT)
+        IN1.12 - PLAN EFFECTIVE DATE (DT) O
 
     in1_13 : str | None
-        IN1.13 (opt) - PLAN EXPIRATION DATE (DT)
+        IN1.13 - PLAN EXPIRATION DATE (DT) O
 
     in1_14 : str | None
-        IN1.14 (opt) - AUTHORIZATION INFORMATION (ST)
+        IN1.14 - AUTHORIZATION INFORMATION (ST) O
 
     in1_15 : str | None
-        IN1.15 (opt) - PLAN TYPE (ID) | 0086 - INS. PLAN TYPE
+        IN1.15 - PLAN TYPE (ID) O | 0086 - INS. PLAN TYPE
 
     in1_16 : str | None
-        IN1.16 (opt) - NAME OF INSURED (PN)
+        IN1.16 - NAME OF INSURED (PN) O
 
     in1_17 : str | None
-        IN1.17 (opt) - INSURED'S RELATIONSHIP TO PATIENT (ID) | 0063 - RELATIONSHIP
+        IN1.17 - INSURED'S RELATIONSHIP TO PATIENT (ID) O | 0063 - RELATIONSHIP
 
     in1_18 : str | None
-        IN1.18 (opt) - INSURED'S DATE OF BIRTH (DT)
+        IN1.18 - INSURED'S DATE OF BIRTH (DT) O
 
     in1_19 : str | None
-        IN1.19 (opt) - INSURED'S ADDRESS (AD)
+        IN1.19 - INSURED'S ADDRESS (AD) O
 
     in1_20 : str | None
-        IN1.20 (opt) - ASSIGNMENT OF BENEFITS (ID)
+        IN1.20 - ASSIGNMENT OF BENEFITS (ID) O
 
     in1_21 : str | None
-        IN1.21 (opt) - COORDINATION OF BENEFITS (ID)
+        IN1.21 - COORDINATION OF BENEFITS (ID) O
 
     in1_22 : str | None
-        IN1.22 (opt) - COORD OF BEN. PRIORITY (ST)
+        IN1.22 - COORD OF BEN. PRIORITY (ST) O
 
     in1_23 : str | None
-        IN1.23 (opt) - NOTICE OF ADMISSION CODE (ID) | 0081 - NOTICE OF ADMISSION
+        IN1.23 - NOTICE OF ADMISSION CODE (ID) O | 0081 - NOTICE OF ADMISSION
 
     in1_24 : str | None
-        IN1.24 (opt) - NOTICE OF ADMISSION DATE (DT)
+        IN1.24 - NOTICE OF ADMISSION DATE (DT) O
 
     in1_25 : str | None
-        IN1.25 (opt) - RPT OF ELIGIBILITY CODE (ID) | 0094 - REPORT OF ELIGIBILITY
+        IN1.25 - RPT OF ELIGIBILITY CODE (ID) O | 0094 - REPORT OF ELIGIBILITY
 
     in1_26 : str | None
-        IN1.26 (opt) - RPT OF ELIGIBILITY DATE (DT)
+        IN1.26 - RPT OF ELIGIBILITY DATE (DT) O
 
     in1_27 : str | None
-        IN1.27 (opt) - RELEASE INFORMATION CODE (ID) | 0093 - RELEASE OF INFORMATION
+        IN1.27 - RELEASE INFORMATION CODE (ID) O | 0093 - RELEASE OF INFORMATION
 
     in1_28 : str | None
-        IN1.28 (opt) - PRE-ADMIT CERT. (PAC) (ST)
+        IN1.28 - PRE-ADMIT CERT. (PAC) (ST) O
 
     in1_29 : str | None
-        IN1.29 (opt) - VERIFICATION DATE (DT)
+        IN1.29 - VERIFICATION DATE (DT) O
 
     in1_30 : str | None
-        IN1.30 (opt) - VERIFICATION BY (CM)
+        IN1.30 - VERIFICATION BY (CM) O
 
     in1_31 : str | None
-        IN1.31 (opt) - TYPE OF AGREEMENT CODE (ID) | 0098 - TYPE OF AGREEMENT CODE
+        IN1.31 - TYPE OF AGREEMENT CODE (ID) O | 0098 - TYPE OF AGREEMENT CODE
 
     in1_32 : str | None
-        IN1.32 (opt) - BILLING STATUS (ID) | 0022 - BILLING STATUS
+        IN1.32 - BILLING STATUS (ID) O | 0022 - BILLING STATUS
 
     in1_33 : str | None
-        IN1.33 (opt) - LIFETIME RESERVE DAYS (NM)
+        IN1.33 - LIFETIME RESERVE DAYS (NM) O
 
     in1_34 : str | None
-        IN1.34 (opt) - DELAY BEFORE L. R. DAY (NM)
+        IN1.34 - DELAY BEFORE L. R. DAY (NM) O
 
     in1_35 : str | None
-        IN1.35 (opt) - COMPANY PLAN CODE (ST) | 0042 - INS. COMPANY PLAN CODE
+        IN1.35 - COMPANY PLAN CODE (ST) O | 0042 - INS. COMPANY PLAN CODE
 
     in1_36 : str | None
-        IN1.36 (opt) - POLICY NUMBER (ST)
+        IN1.36 - POLICY NUMBER (ST) O
 
     in1_37 : str | None
-        IN1.37 (opt) - POLICY DEDUCTIBLE (NM)
+        IN1.37 - POLICY DEDUCTIBLE (NM) O
 
     in1_38 : str | None
-        IN1.38 (opt) - POLICY LIMIT - AMOUNT (NM)
+        IN1.38 - POLICY LIMIT - AMOUNT (NM) O
 
     in1_39 : str | None
-        IN1.39 (opt) - POLICY LIMIT - DAYS (NM)
+        IN1.39 - POLICY LIMIT - DAYS (NM) O
 
     in1_40 : str | None
-        IN1.40 (opt) - ROOM RATE - SEMI-PRIVATE (NM)
+        IN1.40 - ROOM RATE - SEMI-PRIVATE (NM) O
 
     in1_41 : str | None
-        IN1.41 (opt) - ROOM RATE - PRIVATE (NM)
+        IN1.41 - ROOM RATE - PRIVATE (NM) O
 
     in1_42 : str | None
-        IN1.42 (opt) - INSURED'S EMPLOYMENT STATUS (ID) | 0066 - EMPLOYMENT STATUS
+        IN1.42 - INSURED'S EMPLOYMENT STATUS (ID) O | 0066 - EMPLOYMENT STATUS
 
     in1_43 : str | None
-        IN1.43 (opt) - INSURED'S SEX (ID) | 0001 - SEX
+        IN1.43 - INSURED'S SEX (ID) O | 0001 - SEX
 
     in1_44 : str | None
-        IN1.44 (opt) - INSURED'S EMPLOYER ADDRESS (AD)
+        IN1.44 - INSURED'S EMPLOYER ADDRESS (AD) O
     """
 
     in1_1: str = Field(
@@ -158,7 +158,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.1",
         title="SET ID - INSURANCE",
-        description="Item #234",
+        description="R | Item #00234 | LEN:4",
     )
 
     in1_2: str = Field(
@@ -169,7 +169,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.2",
         title="INSURANCE PLAN ID",
-        description="Item #378 | Table HL70072",
+        description="R | Item #00378 | Table 0072 - INS. PLAN ID | LEN:8",
     )
 
     in1_3: str = Field(
@@ -180,7 +180,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.3",
         title="INSURANCE COMPANY ID",
-        description="Item #235",
+        description="R | Item #00235 | LEN:6",
     )
 
     in1_4: Optional[str] = Field(
@@ -192,7 +192,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.4",
         title="INSURANCE COMPANY NAME",
-        description="Item #236",
+        description="O | Item #00236 | LEN:45",
     )
 
     in1_5: Optional[str] = Field(
@@ -204,7 +204,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.5",
         title="INSURANCE COMPANY ADDRESS",
-        description="Item #237",
+        description="O | Item #00237 | LEN:106",
     )
 
     in1_6: Optional[str] = Field(
@@ -216,7 +216,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.6",
         title="INSURANCE CO. CONTACT PERS",
-        description="Item #242",
+        description="O | Item #00242 | LEN:48",
     )
 
     in1_7: Optional[str] = Field(
@@ -228,7 +228,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.7",
         title="INSURANCE CO PHONE NUMBER",
-        description="Item #243",
+        description="O | Item #00243 | LEN:40",
     )
 
     in1_8: Optional[str] = Field(
@@ -240,7 +240,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.8",
         title="GROUP NUMBER",
-        description="Item #248",
+        description="O | Item #00248 | LEN:12",
     )
 
     in1_9: Optional[str] = Field(
@@ -252,7 +252,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.9",
         title="GROUP NAME",
-        description="Item #249",
+        description="O | Item #00249 | LEN:35",
     )
 
     in1_10: Optional[str] = Field(
@@ -264,7 +264,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.10",
         title="INSURED'S GROUP EMP. ID",
-        description="Item #250",
+        description="O | Item #00250 | LEN:12",
     )
 
     in1_11: Optional[str] = Field(
@@ -276,7 +276,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.11",
         title="INSURED'S GROUP EMP. NAME",
-        description="Item #251",
+        description="O | Item #00251 | LEN:45",
     )
 
     in1_12: Optional[str] = Field(
@@ -288,7 +288,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.12",
         title="PLAN EFFECTIVE DATE",
-        description="Item #252",
+        description="O | Item #00252 | LEN:8",
     )
 
     in1_13: Optional[str] = Field(
@@ -300,7 +300,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.13",
         title="PLAN EXPIRATION DATE",
-        description="Item #253",
+        description="O | Item #00253 | LEN:8",
     )
 
     in1_14: Optional[str] = Field(
@@ -312,7 +312,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.14",
         title="AUTHORIZATION INFORMATION",
-        description="Item #254",
+        description="O | Item #00254 | LEN:55",
     )
 
     in1_15: Optional[str] = Field(
@@ -324,7 +324,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.15",
         title="PLAN TYPE",
-        description="Item #260 | Table HL70086",
+        description="O | Item #00260 | Table 0086 - INS. PLAN TYPE | LEN:2",
     )
 
     in1_16: Optional[str] = Field(
@@ -336,7 +336,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.16",
         title="NAME OF INSURED",
-        description="Item #261",
+        description="O | Item #00261 | LEN:48",
     )
 
     in1_17: Optional[str] = Field(
@@ -348,7 +348,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.17",
         title="INSURED'S RELATIONSHIP TO PATIENT",
-        description="Item #262 | Table HL70063",
+        description="O | Item #00262 | Table 0063 - RELATIONSHIP | LEN:2",
     )
 
     in1_18: Optional[str] = Field(
@@ -360,7 +360,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.18",
         title="INSURED'S DATE OF BIRTH",
-        description="Item #708",
+        description="O | Item #00708 | LEN:8",
     )
 
     in1_19: Optional[str] = Field(
@@ -372,7 +372,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.19",
         title="INSURED'S ADDRESS",
-        description="Item #709",
+        description="O | Item #00709 | LEN:106",
     )
 
     in1_20: Optional[str] = Field(
@@ -384,7 +384,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.20",
         title="ASSIGNMENT OF BENEFITS",
-        description="Item #263",
+        description="O | Item #00263 | LEN:2",
     )
 
     in1_21: Optional[str] = Field(
@@ -396,7 +396,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.21",
         title="COORDINATION OF BENEFITS",
-        description="Item #264",
+        description="O | Item #00264 | LEN:2",
     )
 
     in1_22: Optional[str] = Field(
@@ -408,7 +408,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.22",
         title="COORD OF BEN. PRIORITY",
-        description="Item #265",
+        description="O | Item #00265 | LEN:2",
     )
 
     in1_23: Optional[str] = Field(
@@ -420,7 +420,9 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.23",
         title="NOTICE OF ADMISSION CODE",
-        description="Item #266 | Table HL70081",
+        description=(
+            "O | Item #00266 | Table 0081 - NOTICE OF ADMISSION | LEN:2"
+        ),
     )
 
     in1_24: Optional[str] = Field(
@@ -432,7 +434,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.24",
         title="NOTICE OF ADMISSION DATE",
-        description="Item #267",
+        description="O | Item #00267 | LEN:8",
     )
 
     in1_25: Optional[str] = Field(
@@ -444,7 +446,9 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.25",
         title="RPT OF ELIGIBILITY CODE",
-        description="Item #268 | Table HL70094",
+        description=(
+            "O | Item #00268 | Table 0094 - REPORT OF ELIGIBILITY | LEN:2"
+        ),
     )
 
     in1_26: Optional[str] = Field(
@@ -456,7 +460,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.26",
         title="RPT OF ELIGIBILITY DATE",
-        description="Item #269",
+        description="O | Item #00269 | LEN:8",
     )
 
     in1_27: Optional[str] = Field(
@@ -468,7 +472,9 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.27",
         title="RELEASE INFORMATION CODE",
-        description="Item #270 | Table HL70093",
+        description=(
+            "O | Item #00270 | Table 0093 - RELEASE OF INFORMATION | LEN:2"
+        ),
     )
 
     in1_28: Optional[str] = Field(
@@ -480,7 +486,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.28",
         title="PRE-ADMIT CERT. (PAC)",
-        description="Item #271",
+        description="O | Item #00271 | LEN:15",
     )
 
     in1_29: Optional[str] = Field(
@@ -492,7 +498,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.29",
         title="VERIFICATION DATE",
-        description="Item #272",
+        description="O | Item #00272 | LEN:8",
     )
 
     in1_30: Optional[str] = Field(
@@ -504,7 +510,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.30",
         title="VERIFICATION BY",
-        description="Item #273",
+        description="O | Item #00273 | LEN:60",
     )
 
     in1_31: Optional[str] = Field(
@@ -516,7 +522,9 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.31",
         title="TYPE OF AGREEMENT CODE",
-        description="Item #277 | Table HL70098",
+        description=(
+            "O | Item #00277 | Table 0098 - TYPE OF AGREEMENT CODE | LEN:2"
+        ),
     )
 
     in1_32: Optional[str] = Field(
@@ -528,7 +536,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.32",
         title="BILLING STATUS",
-        description="Item #278 | Table HL70022",
+        description="O | Item #00278 | Table 0022 - BILLING STATUS | LEN:2",
     )
 
     in1_33: Optional[str] = Field(
@@ -540,7 +548,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.33",
         title="LIFETIME RESERVE DAYS",
-        description="Item #280",
+        description="O | Item #00280 | LEN:4",
     )
 
     in1_34: Optional[str] = Field(
@@ -552,7 +560,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.34",
         title="DELAY BEFORE L. R. DAY",
-        description="Item #281",
+        description="O | Item #00281 | LEN:4",
     )
 
     in1_35: Optional[str] = Field(
@@ -564,7 +572,9 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.35",
         title="COMPANY PLAN CODE",
-        description="Item #282 | Table HL70042",
+        description=(
+            "O | Item #00282 | Table 0042 - INS. COMPANY PLAN CODE | LEN:8"
+        ),
     )
 
     in1_36: Optional[str] = Field(
@@ -576,7 +586,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.36",
         title="POLICY NUMBER",
-        description="Item #283",
+        description="O | Item #00283 | LEN:15",
     )
 
     in1_37: Optional[str] = Field(
@@ -588,7 +598,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.37",
         title="POLICY DEDUCTIBLE",
-        description="Item #284",
+        description="O | Item #00284 | LEN:12",
     )
 
     in1_38: Optional[str] = Field(
@@ -600,7 +610,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.38",
         title="POLICY LIMIT - AMOUNT",
-        description="Item #285",
+        description="O | Item #00285 | LEN:12",
     )
 
     in1_39: Optional[str] = Field(
@@ -612,7 +622,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.39",
         title="POLICY LIMIT - DAYS",
-        description="Item #286",
+        description="O | Item #00286 | LEN:4",
     )
 
     in1_40: Optional[str] = Field(
@@ -624,7 +634,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.40",
         title="ROOM RATE - SEMI-PRIVATE",
-        description="Item #287",
+        description="O | Item #00287 | LEN:12",
     )
 
     in1_41: Optional[str] = Field(
@@ -636,7 +646,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.41",
         title="ROOM RATE - PRIVATE",
-        description="Item #288",
+        description="O | Item #00288 | LEN:12",
     )
 
     in1_42: Optional[str] = Field(
@@ -648,7 +658,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.42",
         title="INSURED'S EMPLOYMENT STATUS",
-        description="Item #710 | Table HL70066",
+        description="O | Item #00710 | Table 0066 - EMPLOYMENT STATUS | LEN:1",
     )
 
     in1_43: Optional[str] = Field(
@@ -660,7 +670,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.43",
         title="INSURED'S SEX",
-        description="Item #711 | Table HL70001",
+        description="O | Item #00711 | Table 0001 - SEX | LEN:1",
     )
 
     in1_44: Optional[str] = Field(
@@ -672,7 +682,7 @@ class IN1(HL7Model):
         ),
         serialization_alias="IN1.44",
         title="INSURED'S EMPLOYER ADDRESS",
-        description="Item #713",
+        description="O | Item #00713 | LEN:106",
     )
 
     @field_validator("in1_1", mode='before')

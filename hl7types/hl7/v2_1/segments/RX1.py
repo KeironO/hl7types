@@ -20,94 +20,94 @@ class RX1(HL7Model):
     Attributes
     ----------
     rx1_1 : str | None
-        RX1.1 (opt) - UNUSED (ST) S4-14
+        RX1.1 - UNUSED (ST) O S4-14
 
     rx1_2 : str | None
-        RX1.2 (opt) - UNUSED (ST)
+        RX1.2 - UNUSED (ST) O
 
     rx1_3 : str | None
-        RX1.3 (opt) - ROUTE (ST) | 0033 - ROUTE
+        RX1.3 - ROUTE (ST) O | 0033 - ROUTE
 
     rx1_4 : str | None
-        RX1.4 (opt) - SITE ADMINISTERED (ST) | 0034 - SITE ADMINISTERED
+        RX1.4 - SITE ADMINISTERED (ST) O | 0034 - SITE ADMINISTERED
 
     rx1_5 : str | None
-        RX1.5 (opt) - IV SOLUTION RATE (CQ)
+        RX1.5 - IV SOLUTION RATE (CQ) O
 
     rx1_6 : str | None
-        RX1.6 (opt) - DRUG STRENGTH (CQ)
+        RX1.6 - DRUG STRENGTH (CQ) O
 
     rx1_7 : str | None
-        RX1.7 (opt) - FINAL CONCENTRATION (NM)
+        RX1.7 - FINAL CONCENTRATION (NM) O
 
     rx1_8 : str | None
-        RX1.8 (opt) - FINAL VOLUME IN ML. (NM)
+        RX1.8 - FINAL VOLUME IN ML. (NM) O
 
     rx1_9 : str | None
-        RX1.9 (opt) - DRUG DOSE (CM)
+        RX1.9 - DRUG DOSE (CM) O
 
     rx1_10 : str | None
-        RX1.10 (opt) - DRUG ROLE (ID)
+        RX1.10 - DRUG ROLE (ID) O
 
     rx1_11 : str | None
-        RX1.11 (opt) - PRESCRIPTION SEQUENCE # (NM)
+        RX1.11 - PRESCRIPTION SEQUENCE # (NM) O
 
     rx1_12 : str | None
-        RX1.12 (opt) - QUANTITY DISPENSED (CQ)
+        RX1.12 - QUANTITY DISPENSED (CQ) O
 
     rx1_13 : str | None
-        RX1.13 (opt) - UNUSED (ST)
+        RX1.13 - UNUSED (ST) O
 
     rx1_14 : CE | None
-        RX1.14 (opt) - DRUG ID (CE) | 0057 - DRUG CODE
+        RX1.14 - DRUG ID (CE) O | 0057 - DRUG CODE
 
     rx1_15 : list[str] | None
-        RX1.15 (opt, rep) - COMPONENT DRUG IDS (ID)
+        RX1.15 - COMPONENT DRUG IDS (ID) O rep
 
     rx1_16 : str | None
-        RX1.16 (opt) - PRESCRIPTION TYPE (ID)
+        RX1.16 - PRESCRIPTION TYPE (ID) O
 
     rx1_17 : str | None
-        RX1.17 (opt) - SUBSTITUTION STATUS (ID)
+        RX1.17 - SUBSTITUTION STATUS (ID) O
 
     rx1_18 : str | None
-        RX1.18 (opt) - RX ORDER STATUS (ID) | 0038 - ORDER STATUS
+        RX1.18 - RX ORDER STATUS (ID) O | 0038 - ORDER STATUS
 
     rx1_19 : str | None
-        RX1.19 (opt) - NUMBER OF REFILLS (NM)
+        RX1.19 - NUMBER OF REFILLS (NM) O
 
     rx1_20 : str | None
-        RX1.20 (opt) - UNUSED (ST)
+        RX1.20 - UNUSED (ST) O
 
     rx1_21 : str | None
-        RX1.21 (opt) - REFILLS REMAINING (NM)
+        RX1.21 - REFILLS REMAINING (NM) O
 
     rx1_22 : str | None
-        RX1.22 (opt) - DEA CLASS (ID)
+        RX1.22 - DEA CLASS (ID) O
 
     rx1_23 : str | None
-        RX1.23 (opt) - ORDERING MD'S DEA NUMBER (NM)
+        RX1.23 - ORDERING MD'S DEA NUMBER (NM) O
 
     rx1_24 : str | None
-        RX1.24 (opt) - UNUSED (ST)
+        RX1.24 - UNUSED (ST) O
 
     rx1_25 : str | None
-        RX1.25 (opt) - LAST REFILL DATE/TIME (TS)
+        RX1.25 - LAST REFILL DATE/TIME (TS) O
 
     rx1_26 : str | None
-        RX1.26 (opt) - RX NUMBER (ST)
+        RX1.26 - RX NUMBER (ST) O
 
     rx1_27 : str | None
-        RX1.27 (opt) - PRN STATUS (ID)
+        RX1.27 - PRN STATUS (ID) O
 
     rx1_28 : list[str] | None
-        RX1.28 (opt, rep) - PHARMACY INSTRUCTIONS (TX)
+        RX1.28 - PHARMACY INSTRUCTIONS (TX) O rep
 
     rx1_29 : list[str] | None
-        RX1.29 (opt, rep) - PATIENT INSTRUCTIONS (TX)
+        RX1.29 - PATIENT INSTRUCTIONS (TX) O rep
 
     rx1_30 : list[str] | None
-        RX1.30 (opt, rep) - INSTRUCTIONS (SIG) (TX)
+        RX1.30 - INSTRUCTIONS (SIG) (TX) O rep
     """
 
     rx1_1: Optional[str] = Field(
@@ -119,7 +119,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.1",
         title="UNUSED",
-        description="Item #770",
+        description="O | Item #00770",
     )
 
     rx1_2: Optional[str] = Field(
@@ -131,7 +131,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.2",
         title="UNUSED",
-        description="Item #771",
+        description="O | Item #00771",
     )
 
     rx1_3: Optional[str] = Field(
@@ -143,7 +143,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.3",
         title="ROUTE",
-        description="Item #129 | Table HL70033",
+        description="O | Item #00129 | Table 0033 - ROUTE | LEN:8",
     )
 
     rx1_4: Optional[str] = Field(
@@ -155,7 +155,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.4",
         title="SITE ADMINISTERED",
-        description="Item #130 | Table HL70034",
+        description="O | Item #00130 | Table 0034 - SITE ADMINISTERED | LEN:20",
     )
 
     rx1_5: Optional[str] = Field(
@@ -167,7 +167,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.5",
         title="IV SOLUTION RATE",
-        description="Item #131",
+        description="O | Item #00131 | LEN:10",
     )
 
     rx1_6: Optional[str] = Field(
@@ -179,7 +179,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.6",
         title="DRUG STRENGTH",
-        description="Item #133",
+        description="O | Item #00133 | LEN:14",
     )
 
     rx1_7: Optional[str] = Field(
@@ -191,7 +191,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.7",
         title="FINAL CONCENTRATION",
-        description="Item #137",
+        description="O | Item #00137 | LEN:10",
     )
 
     rx1_8: Optional[str] = Field(
@@ -203,7 +203,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.8",
         title="FINAL VOLUME IN ML.",
-        description="Item #138",
+        description="O | Item #00138 | LEN:10",
     )
 
     rx1_9: Optional[str] = Field(
@@ -215,7 +215,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.9",
         title="DRUG DOSE",
-        description="Item #135",
+        description="O | Item #00135 | LEN:10",
     )
 
     rx1_10: Optional[str] = Field(
@@ -227,7 +227,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.10",
         title="DRUG ROLE",
-        description="Item #139",
+        description="O | Item #00139 | LEN:1",
     )
 
     rx1_11: Optional[str] = Field(
@@ -239,7 +239,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.11",
         title="PRESCRIPTION SEQUENCE #",
-        description="Item #469",
+        description="O | Item #00469 | LEN:3",
     )
 
     rx1_12: Optional[str] = Field(
@@ -251,7 +251,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.12",
         title="QUANTITY DISPENSED",
-        description="Item #470",
+        description="O | Item #00470 | LEN:4",
     )
 
     rx1_13: Optional[str] = Field(
@@ -263,7 +263,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.13",
         title="UNUSED",
-        description="Item #772",
+        description="O | Item #00772",
     )
 
     rx1_14: Optional[CE] = Field(
@@ -275,7 +275,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.14",
         title="DRUG ID",
-        description="Item #473 | Table HL70057",
+        description="O | Item #00473 | Table 0057 - DRUG CODE",
     )
 
     rx1_15: Optional[List[str]] = Field(
@@ -287,7 +287,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.15",
         title="COMPONENT DRUG IDS",
-        description="Item #474",
+        description="O | Item #00474 | LEN:5",
     )
 
     rx1_16: Optional[str] = Field(
@@ -299,7 +299,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.16",
         title="PRESCRIPTION TYPE",
-        description="Item #479",
+        description="O | Item #00479 | LEN:2",
     )
 
     rx1_17: Optional[str] = Field(
@@ -311,7 +311,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.17",
         title="SUBSTITUTION STATUS",
-        description="Item #480",
+        description="O | Item #00480 | LEN:1",
     )
 
     rx1_18: Optional[str] = Field(
@@ -323,7 +323,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.18",
         title="RX ORDER STATUS",
-        description="Item #588 | Table HL70038",
+        description="O | Item #00588 | Table 0038 - ORDER STATUS | LEN:2",
     )
 
     rx1_19: Optional[str] = Field(
@@ -335,7 +335,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.19",
         title="NUMBER OF REFILLS",
-        description="Item #481",
+        description="O | Item #00481 | LEN:3",
     )
 
     rx1_20: Optional[str] = Field(
@@ -347,7 +347,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.20",
         title="UNUSED",
-        description="Item #773",
+        description="O | Item #00773",
     )
 
     rx1_21: Optional[str] = Field(
@@ -359,7 +359,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.21",
         title="REFILLS REMAINING",
-        description="Item #482",
+        description="O | Item #00482 | LEN:3",
     )
 
     rx1_22: Optional[str] = Field(
@@ -371,7 +371,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.22",
         title="DEA CLASS",
-        description="Item #619",
+        description="O | Item #00619 | LEN:5",
     )
 
     rx1_23: Optional[str] = Field(
@@ -383,7 +383,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.23",
         title="ORDERING MD'S DEA NUMBER",
-        description="Item #620",
+        description="O | Item #00620 | LEN:10",
     )
 
     rx1_24: Optional[str] = Field(
@@ -395,7 +395,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.24",
         title="UNUSED",
-        description="Item #774",
+        description="O | Item #00774",
     )
 
     rx1_25: Optional[str] = Field(
@@ -407,7 +407,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.25",
         title="LAST REFILL DATE/TIME",
-        description="Item #483",
+        description="O | Item #00483 | LEN:19",
     )
 
     rx1_26: Optional[str] = Field(
@@ -419,7 +419,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.26",
         title="RX NUMBER",
-        description="Item #596",
+        description="O | Item #00596 | LEN:20",
     )
 
     rx1_27: Optional[str] = Field(
@@ -431,7 +431,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.27",
         title="PRN STATUS",
-        description="Item #621",
+        description="O | Item #00621 | LEN:5",
     )
 
     rx1_28: Optional[List[str]] = Field(
@@ -443,7 +443,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.28",
         title="PHARMACY INSTRUCTIONS",
-        description="Item #484",
+        description="O | Item #00484",
     )
 
     rx1_29: Optional[List[str]] = Field(
@@ -455,7 +455,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.29",
         title="PATIENT INSTRUCTIONS",
-        description="Item #489",
+        description="O | Item #00489",
     )
 
     rx1_30: Optional[List[str]] = Field(
@@ -467,7 +467,7 @@ class RX1(HL7Model):
         ),
         serialization_alias="RX1.30",
         title="INSTRUCTIONS (SIG)",
-        description="Item #618",
+        description="O | Item #00618",
     )
 
     @field_validator("rx1_7", "rx1_8", "rx1_11", "rx1_19", "rx1_21", "rx1_23", mode='before')

@@ -26,52 +26,52 @@ class REL(HL7Model):
     Attributes
     ----------
     rel_1 : str | None
-        REL.1 (opt) - Set ID -REL (SI) S12.4.5.1
+        REL.1 - Set ID -REL (SI) C S12.4.5.1
 
     rel_2 : CWE
-        REL.2 (req) - Relationship Type (CWE) S12.4.5.2
+        REL.2 - Relationship Type (CWE) R S12.4.5.2
 
     rel_3 : EI
-        REL.3 (req) - This Relationship Instance Identifier (EI) S12.4.5.3
+        REL.3 - This Relationship Instance Identifier (EI) R S12.4.5.3
 
     rel_4 : EI
-        REL.4 (req) - Source Information Instance Identifier (EI) S12.4.5.4
+        REL.4 - Source Information Instance Identifier (EI) R S12.4.5.4
 
     rel_5 : EI
-        REL.5 (req) - Target Information Instance Identifier (EI) S12.4.5.5
+        REL.5 - Target Information Instance Identifier (EI) R S12.4.5.5
 
     rel_6 : EI | None
-        REL.6 (opt) - Asserting Entity Instance ID (EI) S12.4.5.6
+        REL.6 - Asserting Entity Instance ID (EI) O S12.4.5.6
 
     rel_7 : XCN | None
-        REL.7 (opt) - Asserting Person (XCN) S12.4.5.7
+        REL.7 - Asserting Person (XCN) O S12.4.5.7
 
     rel_8 : XON | None
-        REL.8 (opt) - Asserting Organization (XON) S12.4.5.8
+        REL.8 - Asserting Organization (XON) O S12.4.5.8
 
     rel_9 : XAD | None
-        REL.9 (opt) - Assertor Address (XAD) S12.4.5.9
+        REL.9 - Assertor Address (XAD) O S12.4.5.9
 
     rel_10 : XTN | None
-        REL.10 (opt) - Assertor Contact (XTN) S12.4.5.10
+        REL.10 - Assertor Contact (XTN) O S12.4.5.10
 
     rel_11 : DR | None
-        REL.11 (opt) - Assertion Date Range (DR) S12.4.5.11
+        REL.11 - Assertion Date Range (DR) O S12.4.5.11
 
     rel_12 : str | None
-        REL.12 (opt) - Negation Indicator (ID) S12.4.5.12 | 0136 - Yes/no Indicator
+        REL.12 - Negation Indicator (ID) O S12.4.5.12 | 0136 - Yes/no Indicator
 
     rel_13 : CWE | None
-        REL.13 (opt) - Certainty of Relationship (CWE) S12.4.5.13
+        REL.13 - Certainty of Relationship (CWE) O S12.4.5.13
 
     rel_14 : str | None
-        REL.14 (opt) - Priority No (NM) S12.4.5.14
+        REL.14 - Priority No (NM) O S12.4.5.14
 
     rel_15 : str | None
-        REL.15 (opt) - Priority  Sequence No (rel preference for consideration) (NM) S12.4.5.15
+        REL.15 - Priority  Sequence No (rel preference for consideration) (NM) O S12.4.5.15
 
     rel_16 : str | None
-        REL.16 (opt) - Separability Indicator (ID) S12.4.5.16 | 0136 - Yes/no Indicator
+        REL.16 - Separability Indicator (ID) O S12.4.5.16 | 0136 - Yes/no Indicator
     """
 
     rel_1: Optional[str] = Field(
@@ -83,7 +83,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.1",
         title="Set ID -REL",
-        description="Item #2240",
+        description="C | Item #02240 | LEN:4",
     )
 
     rel_2: CWE = Field(
@@ -94,7 +94,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.2",
         title="Relationship Type",
-        description="Item #2241",
+        description="R | Item #02241",
     )
 
     rel_3: EI = Field(
@@ -105,7 +105,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.3",
         title="This Relationship Instance Identifier",
-        description="Item #2242",
+        description="R | Item #02242",
     )
 
     rel_4: EI = Field(
@@ -116,7 +116,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.4",
         title="Source Information Instance Identifier",
-        description="Item #2243",
+        description="R | Item #02243",
     )
 
     rel_5: EI = Field(
@@ -127,7 +127,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.5",
         title="Target Information Instance Identifier",
-        description="Item #2244",
+        description="R | Item #02244",
     )
 
     rel_6: Optional[EI] = Field(
@@ -139,7 +139,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.6",
         title="Asserting Entity Instance ID",
-        description="Item #2245",
+        description="O | Item #02245",
     )
 
     rel_7: Optional[XCN] = Field(
@@ -151,7 +151,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.7",
         title="Asserting Person",
-        description="Item #2246",
+        description="O | Item #02246",
     )
 
     rel_8: Optional[XON] = Field(
@@ -163,7 +163,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.8",
         title="Asserting Organization",
-        description="Item #2247",
+        description="O | Item #02247",
     )
 
     rel_9: Optional[XAD] = Field(
@@ -175,7 +175,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.9",
         title="Assertor Address",
-        description="Item #2248",
+        description="O | Item #02248",
     )
 
     rel_10: Optional[XTN] = Field(
@@ -187,7 +187,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.10",
         title="Assertor Contact",
-        description="Item #2249",
+        description="O | Item #02249",
     )
 
     rel_11: Optional[DR] = Field(
@@ -199,7 +199,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.11",
         title="Assertion Date Range",
-        description="Item #2250",
+        description="O | Item #02250",
     )
 
     rel_12: Optional[str] = Field(
@@ -211,7 +211,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.12",
         title="Negation Indicator",
-        description="Item #2251 | Table HL70136",
+        description="O | Item #02251 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     rel_13: Optional[CWE] = Field(
@@ -223,7 +223,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.13",
         title="Certainty of Relationship",
-        description="Item #2252",
+        description="O | Item #02252",
     )
 
     rel_14: Optional[str] = Field(
@@ -235,7 +235,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.14",
         title="Priority No",
-        description="Item #2253",
+        description="O | Item #02253",
     )
 
     rel_15: Optional[str] = Field(
@@ -247,7 +247,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.15",
         title="Priority  Sequence No (rel preference for consideration)",
-        description="Item #2254",
+        description="O | Item #02254",
     )
 
     rel_16: Optional[str] = Field(
@@ -259,7 +259,7 @@ class REL(HL7Model):
         ),
         serialization_alias="REL.16",
         title="Separability Indicator",
-        description="Item #2255 | Table HL70136",
+        description="O | Item #02255 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     @field_validator("rel_1", mode='before')

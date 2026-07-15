@@ -23,52 +23,52 @@ class STF(HL7Model):
     Attributes
     ----------
     stf_1 : CE
-        STF.1 (req) - STF - primary key value (CE) S9.1.1.1
+        STF.1 - STF - primary key value (CE) R S9.1.1.1
 
     stf_2 : list[CE] | None
-        STF.2 (opt, rep) - Staff ID Code (CE) S9.1.1.2
+        STF.2 - Staff ID Code (CE) NA rep S9.1.1.2
 
     stf_3 : PN | None
-        STF.3 (opt) - Staff Name (PN) S9.1.1.3
+        STF.3 - Staff Name (PN) NA S9.1.1.3
 
     stf_4 : list[str] | None
-        STF.4 (opt, rep) - Staff Type (ID) S9.1.1.4 | 0182 - Staff Type
+        STF.4 - Staff Type (ID) NA rep S9.1.1.4 | 0182 - Staff Type
 
     stf_5 : str | None
-        STF.5 (opt) - Sex (ID) S3.3.2.8 | 0001 - SEX
+        STF.5 - Sex (ID) NA S3.3.2.8 | 0001 - SEX
 
     stf_6 : TS | None
-        STF.6 (opt) - Date of Birth (TS) S3.3.2.7
+        STF.6 - Date of Birth (TS) NA S3.3.2.7
 
     stf_7 : str | None
-        STF.7 (opt) - Active / inactive (ID) S9.1.1.7 | 0183 - Active/Inactive
+        STF.7 - Active / inactive (ID) NA S9.1.1.7 | 0183 - Active/Inactive
 
     stf_8 : list[CE] | None
-        STF.8 (opt, rep) - Department (CE) S9.1.1.8 | 0184 - Department
+        STF.8 - Department (CE) NA rep S9.1.1.8 | 0184 - Department
 
     stf_9 : list[CE] | None
-        STF.9 (opt, rep) - Service (CE) S9.1.1.9
+        STF.9 - Service (CE) NA rep S9.1.1.9
 
     stf_10 : list[str] | None
-        STF.10 (opt, rep) - Phone (TN) S9.1.1.10
+        STF.10 - Phone (TN) NA rep S9.1.1.10
 
     stf_11 : list[AD] | None
-        STF.11 (opt, rep) - Office / home address (AD) S9.1.1.11
+        STF.11 - Office / home address (AD) NA rep S9.1.1.11
 
     stf_12 : list[str] | None
-        STF.12 (opt, rep) - Activation Date (CM) S9.1.1.12
+        STF.12 - Activation Date (CM) NA rep S9.1.1.12
 
     stf_13 : list[str] | None
-        STF.13 (opt, rep) - Inactivation Date (CM) S9.1.1.13
+        STF.13 - Inactivation Date (CM) NA rep S9.1.1.13
 
     stf_14 : list[CE] | None
-        STF.14 (opt, rep) - Backup Person ID (CE) S9.1.1.14
+        STF.14 - Backup Person ID (CE) NA rep S9.1.1.14
 
     stf_15 : list[str] | None
-        STF.15 (opt, rep) - E-mail Address (ST) S9.1.1.15
+        STF.15 - E-mail Address (ST) NA rep S9.1.1.15
 
     stf_16 : str | None
-        STF.16 (opt) - Preferred method of Contact (ID) S9.1.1.16 | 0185 - Preferred Method Of Contrct
+        STF.16 - Preferred method of Contact (ID) NA S9.1.1.16 | 0185 - Preferred Method Of Contrct
     """
 
     stf_1: CE = Field(
@@ -79,7 +79,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.1",
         title="STF - primary key value",
-        description="Item #671",
+        description="R | Item #00671",
     )
 
     stf_2: Optional[List[CE]] = Field(
@@ -91,7 +91,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.2",
         title="Staff ID Code",
-        description="Item #672",
+        description="NA | Item #00672",
     )
 
     stf_3: Optional[PN] = Field(
@@ -103,7 +103,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.3",
         title="Staff Name",
-        description="Item #673",
+        description="NA | Item #00673",
     )
 
     stf_4: Optional[List[str]] = Field(
@@ -115,7 +115,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.4",
         title="Staff Type",
-        description="Item #674 | Table HL70182",
+        description="NA | Item #00674 | Table 0182 - Staff Type | LEN:2",
     )
 
     stf_5: Optional[str] = Field(
@@ -127,7 +127,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.5",
         title="Sex",
-        description="Item #111 | Table HL70001",
+        description="NA | Item #00111 | Table 0001 - SEX | LEN:1",
     )
 
     stf_6: Optional[TS] = Field(
@@ -139,7 +139,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.6",
         title="Date of Birth",
-        description="Item #110",
+        description="NA | Item #00110",
     )
 
     stf_7: Optional[str] = Field(
@@ -151,7 +151,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.7",
         title="Active / inactive",
-        description="Item #675 | Table HL70183",
+        description="NA | Item #00675 | Table 0183 - Active/Inactive | LEN:1",
     )
 
     stf_8: Optional[List[CE]] = Field(
@@ -163,7 +163,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.8",
         title="Department",
-        description="Item #676 | Table HL70184",
+        description="NA | Item #00676 | Table 0184 - Department",
     )
 
     stf_9: Optional[List[CE]] = Field(
@@ -175,7 +175,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.9",
         title="Service",
-        description="Item #677",
+        description="NA | Item #00677",
     )
 
     stf_10: Optional[List[str]] = Field(
@@ -187,7 +187,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.10",
         title="Phone",
-        description="Item #678",
+        description="NA | Item #00678 | LEN:40",
     )
 
     stf_11: Optional[List[AD]] = Field(
@@ -199,7 +199,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.11",
         title="Office / home address",
-        description="Item #679",
+        description="NA | Item #00679",
     )
 
     stf_12: Optional[List[str]] = Field(
@@ -211,7 +211,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.12",
         title="Activation Date",
-        description="Item #680",
+        description="NA | Item #00680",
     )
 
     stf_13: Optional[List[str]] = Field(
@@ -223,7 +223,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.13",
         title="Inactivation Date",
-        description="Item #681",
+        description="NA | Item #00681",
     )
 
     stf_14: Optional[List[CE]] = Field(
@@ -235,7 +235,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.14",
         title="Backup Person ID",
-        description="Item #682",
+        description="NA | Item #00682",
     )
 
     stf_15: Optional[List[str]] = Field(
@@ -247,7 +247,7 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.15",
         title="E-mail Address",
-        description="Item #683",
+        description="NA | Item #00683 | LEN:40",
     )
 
     stf_16: Optional[str] = Field(
@@ -259,7 +259,9 @@ class STF(HL7Model):
         ),
         serialization_alias="STF.16",
         title="Preferred method of Contact",
-        description="Item #684 | Table HL70185",
+        description=(
+            "NA | Item #00684 | Table 0185 - Preferred Method Of Contrct | LEN:1"
+        ),
     )
 
     model_config = {"populate_by_name": True}

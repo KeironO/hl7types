@@ -23,37 +23,37 @@ class CM0(HL7Model):
     Attributes
     ----------
     cm0_1 : str | None
-        CM0.1 (opt) - Set ID - CM0 (SI) S8.11.2.1
+        CM0.1 - Set ID - CM0 (SI) O S8.11.2.1
 
     cm0_2 : EI
-        CM0.2 (req) - Sponsor Study ID (EI) S7.8.1.1
+        CM0.2 - Sponsor Study ID (EI) R S7.8.1.1
 
     cm0_3 : list[EI] | None
-        CM0.3 (opt, rep) - Alternate Study ID (EI) S7.8.1.2
+        CM0.3 - Alternate Study ID (EI) O rep S7.8.1.2
 
     cm0_4 : str
-        CM0.4 (req) - Title of Study (ST) S8.11.2.4
+        CM0.4 - Title of Study (ST) R S8.11.2.4
 
     cm0_5 : list[XCN] | None
-        CM0.5 (opt, rep) - Chairman of Study (XCN) S8.11.2.5
+        CM0.5 - Chairman of Study (XCN) O rep S8.11.2.5
 
     cm0_6 : str | None
-        CM0.6 (opt) - Last IRB Approval Date (DT) S8.11.2.6
+        CM0.6 - Last IRB Approval Date (DT) O S8.11.2.6
 
     cm0_7 : str | None
-        CM0.7 (opt) - Total Accrual to Date (NM) S8.11.2.7
+        CM0.7 - Total Accrual to Date (NM) O S8.11.2.7
 
     cm0_8 : str | None
-        CM0.8 (opt) - Last Accrual Date (DT) S8.11.2.8
+        CM0.8 - Last Accrual Date (DT) O S8.11.2.8
 
     cm0_9 : list[XCN] | None
-        CM0.9 (opt, rep) - Contact for Study (XCN) S8.11.2.9
+        CM0.9 - Contact for Study (XCN) O rep S8.11.2.9
 
     cm0_10 : XTN | None
-        CM0.10 (opt) - Contact's Telephone Number (XTN) S8.11.2.10
+        CM0.10 - Contact's Telephone Number (XTN) O S8.11.2.10
 
     cm0_11 : list[XAD] | None
-        CM0.11 (opt, rep) - Contact's Address (XAD) S8.11.2.11
+        CM0.11 - Contact's Address (XAD) O rep S8.11.2.11
     """
 
     cm0_1: Optional[str] = Field(
@@ -65,7 +65,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.1",
         title="Set ID - CM0",
-        description="Item #1010",
+        description="O | Item #01010 | LEN:4",
     )
 
     cm0_2: EI = Field(
@@ -76,7 +76,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.2",
         title="Sponsor Study ID",
-        description="Item #1011",
+        description="R | Item #01011",
     )
 
     cm0_3: Optional[List[EI]] = Field(
@@ -88,7 +88,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.3",
         title="Alternate Study ID",
-        description="Item #1036",
+        description="O | Item #01036",
     )
 
     cm0_4: str = Field(
@@ -99,7 +99,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.4",
         title="Title of Study",
-        description="Item #1013",
+        description="R | Item #01013 | LEN:300",
     )
 
     cm0_5: Optional[List[XCN]] = Field(
@@ -111,7 +111,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.5",
         title="Chairman of Study",
-        description="Item #1014",
+        description="O | Item #01014",
     )
 
     cm0_6: Optional[str] = Field(
@@ -123,7 +123,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.6",
         title="Last IRB Approval Date",
-        description="Item #1015",
+        description="O | Item #01015 | LEN:8",
     )
 
     cm0_7: Optional[str] = Field(
@@ -135,7 +135,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.7",
         title="Total Accrual to Date",
-        description="Item #1016",
+        description="O | Item #01016 | LEN:8",
     )
 
     cm0_8: Optional[str] = Field(
@@ -147,7 +147,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.8",
         title="Last Accrual Date",
-        description="Item #1017",
+        description="O | Item #01017 | LEN:8",
     )
 
     cm0_9: Optional[List[XCN]] = Field(
@@ -159,7 +159,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.9",
         title="Contact for Study",
-        description="Item #1018",
+        description="O | Item #01018",
     )
 
     cm0_10: Optional[XTN] = Field(
@@ -171,7 +171,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.10",
         title="Contact's Telephone Number",
-        description="Item #1019",
+        description="O | Item #01019",
     )
 
     cm0_11: Optional[List[XAD]] = Field(
@@ -183,7 +183,7 @@ class CM0(HL7Model):
         ),
         serialization_alias="CM0.11",
         title="Contact's Address",
-        description="Item #1020",
+        description="O | Item #01020",
     )
 
     @field_validator("cm0_1", mode='before')

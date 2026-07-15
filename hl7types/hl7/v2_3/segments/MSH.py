@@ -23,61 +23,61 @@ class MSH(HL7Model):
     Attributes
     ----------
     msh_1 : str
-        MSH.1 (req) - Field Separator (ST) S2.24.1.1
+        MSH.1 - Field Separator (ST) R S2.24.1.1
 
     msh_2 : str
-        MSH.2 (req) - Encoding Characters (ST) S2.24.1.2
+        MSH.2 - Encoding Characters (ST) R S2.24.1.2
 
     msh_3 : HD | None
-        MSH.3 (opt) - Sending Application (HD) S2.24.1.3
+        MSH.3 - Sending Application (HD) O S2.24.1.3
 
     msh_4 : HD | None
-        MSH.4 (opt) - Sending Facility (HD) S2.24.1.4
+        MSH.4 - Sending Facility (HD) O S2.24.1.4
 
     msh_5 : HD | None
-        MSH.5 (opt) - Receiving Application (HD) S2.24.1.5
+        MSH.5 - Receiving Application (HD) O S2.24.1.5
 
     msh_6 : HD | None
-        MSH.6 (opt) - Receiving Facility (HD) S2.24.1.6
+        MSH.6 - Receiving Facility (HD) O S2.24.1.6
 
     msh_7 : TS | None
-        MSH.7 (opt) - Date / Time of Message (TS) S2.24.1.7
+        MSH.7 - Date / Time of Message (TS) NA S2.24.1.7
 
     msh_8 : str | None
-        MSH.8 (opt) - Security (ST) S2.24.1.8
+        MSH.8 - Security (ST) O S2.24.1.8
 
     msh_9 : str
-        MSH.9 (req) - Message Type (CM) S2.24.1.9
+        MSH.9 - Message Type (CM) R S2.24.1.9
 
     msh_10 : str
-        MSH.10 (req) - Message Control ID (ST) S2.24.1
+        MSH.10 - Message Control ID (ST) R S2.24.1
 
     msh_11 : PT
-        MSH.11 (req) - Processing ID (PT) S2.24.1.11
+        MSH.11 - Processing ID (PT) R S2.24.1.11
 
     msh_12 : str
-        MSH.12 (req) - Version ID (ID) S2.24.1.12 | 0104 - Version ID
+        MSH.12 - Version ID (ID) R S2.24.1.12 | 0104 - Version ID
 
     msh_13 : str | None
-        MSH.13 (opt) - Sequence Number (NM) S2.24.1.13
+        MSH.13 - Sequence Number (NM) O S2.24.1.13
 
     msh_14 : str | None
-        MSH.14 (opt) - Continuation Pointer (ST) S2.24.1
+        MSH.14 - Continuation Pointer (ST) O S2.24.1
 
     msh_15 : str | None
-        MSH.15 (opt) - Accept Acknowledgement Type (ID) S2.24.1.15 | 0155 - Accept/Application Acknowledgement Conditions
+        MSH.15 - Accept Acknowledgement Type (ID) O S2.24.1.15 | 0155 - Accept/Application Acknowledgement Conditions
 
     msh_16 : str | None
-        MSH.16 (opt) - Application Acknowledgement Type (ID) S2.24.1.16 | 0155 - Accept/Application Acknowledgement Conditions
+        MSH.16 - Application Acknowledgement Type (ID) O S2.24.1.16 | 0155 - Accept/Application Acknowledgement Conditions
 
     msh_17 : str | None
-        MSH.17 (opt) - Country Code (ID) S2.24.1.17
+        MSH.17 - Country Code (ID) O S2.24.1.17
 
     msh_18 : str | None
-        MSH.18 (opt) - Character Set (ID) S2.24.1.18 | 0211 - Alternate Character Sets
+        MSH.18 - Character Set (ID) O S2.24.1.18 | 0211 - Alternate Character Sets
 
     msh_19 : CE | None
-        MSH.19 (opt) - Principal Language of Message (CE) S2.24.1.19
+        MSH.19 - Principal Language of Message (CE) O S2.24.1.19
     """
 
     msh_1: str = Field(
@@ -89,7 +89,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.1",
         title="Field Separator",
-        description="Item #1",
+        description="R | Item #00001 | LEN:1",
     )
 
     msh_2: str = Field(
@@ -101,7 +101,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.2",
         title="Encoding Characters",
-        description="Item #2",
+        description="R | Item #00002 | LEN:4",
     )
 
     msh_3: Optional[HD] = Field(
@@ -113,7 +113,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.3",
         title="Sending Application",
-        description="Item #3",
+        description="O | Item #00003",
     )
 
     msh_4: Optional[HD] = Field(
@@ -125,7 +125,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.4",
         title="Sending Facility",
-        description="Item #4",
+        description="O | Item #00004",
     )
 
     msh_5: Optional[HD] = Field(
@@ -137,7 +137,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.5",
         title="Receiving Application",
-        description="Item #5",
+        description="O | Item #00005",
     )
 
     msh_6: Optional[HD] = Field(
@@ -149,7 +149,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.6",
         title="Receiving Facility",
-        description="Item #6",
+        description="O | Item #00006",
     )
 
     msh_7: Optional[TS] = Field(
@@ -161,7 +161,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.7",
         title="Date / Time of Message",
-        description="Item #7",
+        description="NA | Item #00007",
     )
 
     msh_8: Optional[str] = Field(
@@ -173,7 +173,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.8",
         title="Security",
-        description="Item #8",
+        description="O | Item #00008 | LEN:40",
     )
 
     msh_9: str = Field(
@@ -184,7 +184,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.9",
         title="Message Type",
-        description="Item #9",
+        description="R | Item #00009",
     )
 
     msh_10: str = Field(
@@ -195,7 +195,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.10",
         title="Message Control ID",
-        description="Item #10",
+        description="R | Item #00010 | LEN:20",
     )
 
     msh_11: PT = Field(
@@ -206,7 +206,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.11",
         title="Processing ID",
-        description="Item #11",
+        description="R | Item #00011",
     )
 
     msh_12: str = Field(
@@ -217,7 +217,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.12",
         title="Version ID",
-        description="Item #12 | Table HL70104",
+        description="R | Item #00012 | Table 0104 - Version ID | LEN:8",
     )
 
     msh_13: Optional[str] = Field(
@@ -229,7 +229,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.13",
         title="Sequence Number",
-        description="Item #13",
+        description="O | Item #00013 | LEN:15",
     )
 
     msh_14: Optional[str] = Field(
@@ -241,7 +241,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.14",
         title="Continuation Pointer",
-        description="Item #14",
+        description="O | Item #00014 | LEN:180",
     )
 
     msh_15: Optional[str] = Field(
@@ -253,7 +253,10 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.15",
         title="Accept Acknowledgement Type",
-        description="Item #15 | Table HL70155",
+        description=(
+            "O | Item #00015 | Table 0155 - Accept/Application Acknowledgement "
+            "Conditions | LEN:2"
+        ),
     )
 
     msh_16: Optional[str] = Field(
@@ -265,7 +268,10 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.16",
         title="Application Acknowledgement Type",
-        description="Item #16 | Table HL70155",
+        description=(
+            "O | Item #00016 | Table 0155 - Accept/Application Acknowledgement "
+            "Conditions | LEN:2"
+        ),
     )
 
     msh_17: Optional[str] = Field(
@@ -277,7 +283,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.17",
         title="Country Code",
-        description="Item #17",
+        description="O | Item #00017 | LEN:2",
     )
 
     msh_18: Optional[str] = Field(
@@ -289,7 +295,9 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.18",
         title="Character Set",
-        description="Item #692 | Table HL70211",
+        description=(
+            "O | Item #00692 | Table 0211 - Alternate Character Sets | LEN:6"
+        ),
     )
 
     msh_19: Optional[CE] = Field(
@@ -301,7 +309,7 @@ class MSH(HL7Model):
         ),
         serialization_alias="MSH.19",
         title="Principal Language of Message",
-        description="Item #693",
+        description="O | Item #00693",
     )
 
     @field_validator("msh_13", mode='before')

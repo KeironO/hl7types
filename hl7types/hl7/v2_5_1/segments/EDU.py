@@ -24,31 +24,31 @@ class EDU(HL7Model):
     Attributes
     ----------
     edu_1 : str
-        EDU.1 (req) - Set ID - EDU (SI) S15.4.3.1
+        EDU.1 - Set ID - EDU (SI) R S15.4.3.1
 
     edu_2 : str | None
-        EDU.2 (opt) - Academic Degree (IS) S15.4.3.2 | 0360 - Degree/license/certificate
+        EDU.2 - Academic Degree (IS) O S15.4.3.2 | 0360 - Degree/license/certificate
 
     edu_3 : DR | None
-        EDU.3 (opt) - Academic Degree Program Date Range (DR) S15.4.3.3
+        EDU.3 - Academic Degree Program Date Range (DR) O S15.4.3.3
 
     edu_4 : DR | None
-        EDU.4 (opt) - Academic Degree Program Participation Date Range (DR) S15.4.3.4
+        EDU.4 - Academic Degree Program Participation Date Range (DR) O S15.4.3.4
 
     edu_5 : str | None
-        EDU.5 (opt) - Academic Degree Granted Date (DT) S15.4.3.5
+        EDU.5 - Academic Degree Granted Date (DT) O S15.4.3.5
 
     edu_6 : XON | None
-        EDU.6 (opt) - School (XON) S15.4.3.6
+        EDU.6 - School (XON) O S15.4.3.6
 
     edu_7 : CE | None
-        EDU.7 (opt) - School Type Code (CE) S15.4.3.7 | 0402 - School type
+        EDU.7 - School Type Code (CE) O S15.4.3.7 | 0402 - School type
 
     edu_8 : XAD | None
-        EDU.8 (opt) - School Address (XAD) S15.4.3.8
+        EDU.8 - School Address (XAD) O S15.4.3.8
 
     edu_9 : list[CWE] | None
-        EDU.9 (opt, rep) - Major Field of Study (CWE) S15.4.3.9
+        EDU.9 - Major Field of Study (CWE) O rep S15.4.3.9
     """
 
     edu_1: str = Field(
@@ -59,7 +59,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.1",
         title="Set ID - EDU",
-        description="Item #1448",
+        description="R | Item #01448 | LEN:60",
     )
 
     edu_2: Optional[str] = Field(
@@ -71,7 +71,9 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.2",
         title="Academic Degree",
-        description="Item #1449 | Table HL70360",
+        description=(
+            "O | Item #01449 | Table 0360 - Degree/license/certificate | LEN:10"
+        ),
     )
 
     edu_3: Optional[DR] = Field(
@@ -83,7 +85,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.3",
         title="Academic Degree Program Date Range",
-        description="Item #1597",
+        description="O | Item #01597",
     )
 
     edu_4: Optional[DR] = Field(
@@ -95,7 +97,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.4",
         title="Academic Degree Program Participation Date Range",
-        description="Item #1450",
+        description="O | Item #01450",
     )
 
     edu_5: Optional[str] = Field(
@@ -107,7 +109,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.5",
         title="Academic Degree Granted Date",
-        description="Item #1451",
+        description="O | Item #01451 | LEN:8",
     )
 
     edu_6: Optional[XON] = Field(
@@ -119,7 +121,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.6",
         title="School",
-        description="Item #1452",
+        description="O | Item #01452",
     )
 
     edu_7: Optional[CE] = Field(
@@ -131,7 +133,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.7",
         title="School Type Code",
-        description="Item #1453 | Table HL70402",
+        description="O | Item #01453 | Table 0402 - School type",
     )
 
     edu_8: Optional[XAD] = Field(
@@ -143,7 +145,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.8",
         title="School Address",
-        description="Item #1454",
+        description="O | Item #01454",
     )
 
     edu_9: Optional[List[CWE]] = Field(
@@ -155,7 +157,7 @@ class EDU(HL7Model):
         ),
         serialization_alias="EDU.9",
         title="Major Field of Study",
-        description="Item #1885",
+        description="O | Item #01885",
     )
 
     @field_validator("edu_1", mode='before')

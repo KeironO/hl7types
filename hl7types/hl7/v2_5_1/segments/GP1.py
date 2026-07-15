@@ -20,19 +20,19 @@ class GP1(HL7Model):
     Attributes
     ----------
     gp1_1 : str
-        GP1.1 (req) - Type of Bill Code (IS) S6.5.15.1 | 0455 - Type of Bill Code
+        GP1.1 - Type of Bill Code (IS) R S6.5.15.1 | 0455 - Type of Bill Code
 
     gp1_2 : list[str] | None
-        GP1.2 (opt, rep) - Revenue Code (IS) S6.5.15.2 | 0456 - Revenue code
+        GP1.2 - Revenue Code (IS) O rep S6.5.15.2 | 0456 - Revenue code
 
     gp1_3 : str | None
-        GP1.3 (opt) - Overall Claim Disposition Code (IS) S6.5.15.3 | 0457 - Overall Claim Disposition Code
+        GP1.3 - Overall Claim Disposition Code (IS) O S6.5.15.3 | 0457 - Overall Claim Disposition Code
 
     gp1_4 : list[str] | None
-        GP1.4 (opt, rep) - OCE Edits per Visit Code (IS) S6.5.15.4 | 0458 - OCE Edit Code
+        GP1.4 - OCE Edits per Visit Code (IS) O rep S6.5.15.4 | 0458 - OCE Edit Code
 
     gp1_5 : CP | None
-        GP1.5 (opt) - Outlier Cost (CP) S6.5.15.5
+        GP1.5 - Outlier Cost (CP) O S6.5.15.5
     """
 
     gp1_1: str = Field(
@@ -43,7 +43,7 @@ class GP1(HL7Model):
         ),
         serialization_alias="GP1.1",
         title="Type of Bill Code",
-        description="Item #1599 | Table HL70455",
+        description="R | Item #01599 | Table 0455 - Type of Bill Code | LEN:3",
     )
 
     gp1_2: Optional[List[str]] = Field(
@@ -55,7 +55,7 @@ class GP1(HL7Model):
         ),
         serialization_alias="GP1.2",
         title="Revenue Code",
-        description="Item #1600 | Table HL70456",
+        description="O | Item #01600 | Table 0456 - Revenue code | LEN:3",
     )
 
     gp1_3: Optional[str] = Field(
@@ -67,7 +67,10 @@ class GP1(HL7Model):
         ),
         serialization_alias="GP1.3",
         title="Overall Claim Disposition Code",
-        description="Item #1601 | Table HL70457",
+        description=(
+            "O | Item #01601 | Table 0457 - Overall Claim Disposition Code | "
+            "LEN:1"
+        ),
     )
 
     gp1_4: Optional[List[str]] = Field(
@@ -79,7 +82,7 @@ class GP1(HL7Model):
         ),
         serialization_alias="GP1.4",
         title="OCE Edits per Visit Code",
-        description="Item #1602 | Table HL70458",
+        description="O | Item #01602 | Table 0458 - OCE Edit Code | LEN:2",
     )
 
     gp1_5: Optional[CP] = Field(
@@ -91,7 +94,7 @@ class GP1(HL7Model):
         ),
         serialization_alias="GP1.5",
         title="Outlier Cost",
-        description="Item #387",
+        description="O | Item #00387",
     )
 
     model_config = {"populate_by_name": True}

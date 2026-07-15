@@ -25,61 +25,61 @@ class ORC(HL7Model):
     Attributes
     ----------
     orc_1 : str
-        ORC.1 (req) - Order Control (ID) S4.3.1.1 | 0119 - Order Control Code
+        ORC.1 - Order Control (ID) R S4.3.1.1 | 0119 - Order Control Code
 
     orc_2 : list[EI] | None
-        ORC.2 (opt, rep) - Placer Order Number (EI) S4.3.1
+        ORC.2 - Placer Order Number (EI) O rep S4.3.1
 
     orc_3 : EI | None
-        ORC.3 (opt) - Filler Order Number (EI) S4.3.1
+        ORC.3 - Filler Order Number (EI) C S4.3.1
 
     orc_4 : EI | None
-        ORC.4 (opt) - Placer Group Number (EI) S4.3.1
+        ORC.4 - Placer Group Number (EI) O S4.3.1
 
     orc_5 : str | None
-        ORC.5 (opt) - Order Status (ID) S4.3.1.5 | 0038 - Order Status
+        ORC.5 - Order Status (ID) O S4.3.1.5 | 0038 - Order Status
 
     orc_6 : str | None
-        ORC.6 (opt) - Response Flag (ID) S4.3.1.6 | 0121 - Response Flag
+        ORC.6 - Response Flag (ID) O S4.3.1.6 | 0121 - Response Flag
 
     orc_7 : TQ
-        ORC.7 (req) - Quantity/Timing (TQ) S4.3.1
+        ORC.7 - Quantity/Timing (TQ) R S4.3.1
 
     orc_8 : str | None
-        ORC.8 (opt) - Parent (CM) S4.3.1.8
+        ORC.8 - Parent (CM) O S4.3.1.8
 
     orc_9 : TS | None
-        ORC.9 (opt) - Date/Time of Transaction (TS) S4.3.1.9
+        ORC.9 - Date/Time of Transaction (TS) NA S4.3.1.9
 
     orc_10 : XCN | None
-        ORC.10 (opt) - Entered By (XCN) S4.3.1.10
+        ORC.10 - Entered By (XCN) O S4.3.1.10
 
     orc_11 : XCN | None
-        ORC.11 (opt) - Verified By (XCN) S4.3.1.11
+        ORC.11 - Verified By (XCN) O S4.3.1.11
 
     orc_12 : list[XCN] | None
-        ORC.12 (opt, rep) - Ordering Provider (XCN) S4.3.1
+        ORC.12 - Ordering Provider (XCN) O rep S4.3.1
 
     orc_13 : PL | None
-        ORC.13 (opt) - Enterer's Location (PL) S4.3.1.13
+        ORC.13 - Enterer's Location (PL) O S4.3.1.13
 
     orc_14 : list[str] | None
-        ORC.14 (opt, rep) - Call Back Phone Number (TN) S4.3.1.14
+        ORC.14 - Call Back Phone Number (TN) O rep S4.3.1.14
 
     orc_15 : TS | None
-        ORC.15 (opt) - Order Effective Date/Time (TS) S4.3.1.15
+        ORC.15 - Order Effective Date/Time (TS) NA S4.3.1.15
 
     orc_16 : CE | None
-        ORC.16 (opt) - Order Control Code Reason (CE) S4.3.1.16
+        ORC.16 - Order Control Code Reason (CE) O S4.3.1.16
 
     orc_17 : CE | None
-        ORC.17 (opt) - Entering Organization (CE) S4.3.1.17
+        ORC.17 - Entering Organization (CE) O S4.3.1.17
 
     orc_18 : CE | None
-        ORC.18 (opt) - Entering Device (CE) S4.3.1.18
+        ORC.18 - Entering Device (CE) O S4.3.1.18
 
     orc_19 : XCN | None
-        ORC.19 (opt) - Action By (XCN) S4.3.1.19
+        ORC.19 - Action By (XCN) O S4.3.1.19
     """
 
     orc_1: str = Field(
@@ -90,7 +90,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.1",
         title="Order Control",
-        description="Item #215 | Table HL70119",
+        description="R | Item #00215 | Table 0119 - Order Control Code | LEN:2",
     )
 
     orc_2: Optional[List[EI]] = Field(
@@ -102,7 +102,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.2",
         title="Placer Order Number",
-        description="Item #216",
+        description="O | Item #00216",
     )
 
     orc_3: Optional[EI] = Field(
@@ -114,7 +114,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.3",
         title="Filler Order Number",
-        description="Item #217",
+        description="C | Item #00217",
     )
 
     orc_4: Optional[EI] = Field(
@@ -126,7 +126,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.4",
         title="Placer Group Number",
-        description="Item #218",
+        description="O | Item #00218",
     )
 
     orc_5: Optional[str] = Field(
@@ -138,7 +138,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.5",
         title="Order Status",
-        description="Item #219 | Table HL70038",
+        description="O | Item #00219 | Table 0038 - Order Status | LEN:2",
     )
 
     orc_6: Optional[str] = Field(
@@ -150,7 +150,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.6",
         title="Response Flag",
-        description="Item #220 | Table HL70121",
+        description="O | Item #00220 | Table 0121 - Response Flag | LEN:1",
     )
 
     orc_7: TQ = Field(
@@ -161,7 +161,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.7",
         title="Quantity/Timing",
-        description="Item #221",
+        description="R | Item #00221",
     )
 
     orc_8: Optional[str] = Field(
@@ -173,7 +173,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.8",
         title="Parent",
-        description="Item #222",
+        description="O | Item #00222",
     )
 
     orc_9: Optional[TS] = Field(
@@ -185,7 +185,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.9",
         title="Date/Time of Transaction",
-        description="Item #223",
+        description="NA | Item #00223",
     )
 
     orc_10: Optional[XCN] = Field(
@@ -197,7 +197,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.10",
         title="Entered By",
-        description="Item #224",
+        description="O | Item #00224",
     )
 
     orc_11: Optional[XCN] = Field(
@@ -209,7 +209,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.11",
         title="Verified By",
-        description="Item #225",
+        description="O | Item #00225",
     )
 
     orc_12: Optional[List[XCN]] = Field(
@@ -221,7 +221,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.12",
         title="Ordering Provider",
-        description="Item #226",
+        description="O | Item #00226",
     )
 
     orc_13: Optional[PL] = Field(
@@ -233,7 +233,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.13",
         title="Enterer's Location",
-        description="Item #227",
+        description="O | Item #00227",
     )
 
     orc_14: Optional[List[str]] = Field(
@@ -245,7 +245,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.14",
         title="Call Back Phone Number",
-        description="Item #228",
+        description="O | Item #00228 | LEN:40",
     )
 
     orc_15: Optional[TS] = Field(
@@ -257,7 +257,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.15",
         title="Order Effective Date/Time",
-        description="Item #229",
+        description="NA | Item #00229",
     )
 
     orc_16: Optional[CE] = Field(
@@ -269,7 +269,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.16",
         title="Order Control Code Reason",
-        description="Item #230",
+        description="O | Item #00230",
     )
 
     orc_17: Optional[CE] = Field(
@@ -281,7 +281,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.17",
         title="Entering Organization",
-        description="Item #231",
+        description="O | Item #00231",
     )
 
     orc_18: Optional[CE] = Field(
@@ -293,7 +293,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.18",
         title="Entering Device",
-        description="Item #232",
+        description="O | Item #00232",
     )
 
     orc_19: Optional[XCN] = Field(
@@ -305,7 +305,7 @@ class ORC(HL7Model):
         ),
         serialization_alias="ORC.19",
         title="Action By",
-        description="Item #233",
+        description="O | Item #00233",
     )
 
     model_config = {"populate_by_name": True}

@@ -23,37 +23,37 @@ class ACC(HL7Model):
     Attributes
     ----------
     acc_1 : TS | None
-        ACC.1 (opt) - Accident Date/Time (TS) S6.5.9.1
+        ACC.1 - Accident Date/Time (TS) O S6.5.9.1
 
     acc_2 : CE | None
-        ACC.2 (opt) - Accident Code (CE) S6.5.9.2 | 0050 - Accident Code
+        ACC.2 - Accident Code (CE) O S6.5.9.2 | 0050 - Accident Code
 
     acc_3 : str | None
-        ACC.3 (opt) - Accident Location (ST) S6.5.9.3
+        ACC.3 - Accident Location (ST) O S6.5.9.3
 
     acc_4 : CE | None
-        ACC.4 (opt) - Auto Accident State (CE) S6.5.9.4 | 0347 - State/province
+        ACC.4 - Auto Accident State (CE) O S6.5.9.4 | 0347 - State/province
 
     acc_5 : str | None
-        ACC.5 (opt) - Accident Job Related Indicator (ID) S6.5.9.5 | 0136 - Yes/no indicator
+        ACC.5 - Accident Job Related Indicator (ID) O S6.5.9.5 | 0136 - Yes/no indicator
 
     acc_6 : str | None
-        ACC.6 (opt) - Accident Death Indicator (ID) S6.5.9.6 | 0136 - Yes/no indicator
+        ACC.6 - Accident Death Indicator (ID) O S6.5.9.6 | 0136 - Yes/no indicator
 
     acc_7 : XCN | None
-        ACC.7 (opt) - Entered By (XCN) S4.5.1.10
+        ACC.7 - Entered By (XCN) O S4.5.1.10
 
     acc_8 : str | None
-        ACC.8 (opt) - Accident Description (ST) S6.5.9.8
+        ACC.8 - Accident Description (ST) O S6.5.9.8
 
     acc_9 : str | None
-        ACC.9 (opt) - Brought In By (ST) S6.5.9.9
+        ACC.9 - Brought In By (ST) O S6.5.9.9
 
     acc_10 : str | None
-        ACC.10 (opt) - Police Notified Indicator (ID) S6.5.9.10 | 0136 - Yes/no indicator
+        ACC.10 - Police Notified Indicator (ID) O S6.5.9.10 | 0136 - Yes/no indicator
 
     acc_11 : XAD | None
-        ACC.11 (opt) - Accident Address (XAD) S6.5.9.11
+        ACC.11 - Accident Address (XAD) O S6.5.9.11
     """
 
     acc_1: Optional[TS] = Field(
@@ -65,7 +65,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.1",
         title="Accident Date/Time",
-        description="Item #527",
+        description="O | Item #00527",
     )
 
     acc_2: Optional[CE] = Field(
@@ -77,7 +77,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.2",
         title="Accident Code",
-        description="Item #528 | Table HL70050",
+        description="O | Item #00528 | Table 0050 - Accident Code",
     )
 
     acc_3: Optional[str] = Field(
@@ -89,7 +89,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.3",
         title="Accident Location",
-        description="Item #529",
+        description="O | Item #00529 | LEN:25",
     )
 
     acc_4: Optional[CE] = Field(
@@ -101,7 +101,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.4",
         title="Auto Accident State",
-        description="Item #812 | Table HL70347",
+        description="O | Item #00812 | Table 0347 - State/province",
     )
 
     acc_5: Optional[str] = Field(
@@ -113,7 +113,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.5",
         title="Accident Job Related Indicator",
-        description="Item #813 | Table HL70136",
+        description="O | Item #00813 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     acc_6: Optional[str] = Field(
@@ -125,7 +125,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.6",
         title="Accident Death Indicator",
-        description="Item #814 | Table HL70136",
+        description="O | Item #00814 | Table 0136 - Yes/no indicator | LEN:12",
     )
 
     acc_7: Optional[XCN] = Field(
@@ -137,7 +137,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.7",
         title="Entered By",
-        description="Item #224",
+        description="O | Item #00224",
     )
 
     acc_8: Optional[str] = Field(
@@ -149,7 +149,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.8",
         title="Accident Description",
-        description="Item #1503",
+        description="O | Item #01503 | LEN:25",
     )
 
     acc_9: Optional[str] = Field(
@@ -161,7 +161,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.9",
         title="Brought In By",
-        description="Item #1504",
+        description="O | Item #01504 | LEN:80",
     )
 
     acc_10: Optional[str] = Field(
@@ -173,7 +173,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.10",
         title="Police Notified Indicator",
-        description="Item #1505 | Table HL70136",
+        description="O | Item #01505 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     acc_11: Optional[XAD] = Field(
@@ -185,7 +185,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.11",
         title="Accident Address",
-        description="Item #1853",
+        description="O | Item #01853",
     )
 
     model_config = {"populate_by_name": True}

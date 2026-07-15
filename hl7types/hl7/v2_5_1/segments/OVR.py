@@ -21,19 +21,19 @@ class OVR(HL7Model):
     Attributes
     ----------
     ovr_1 : CWE | None
-        OVR.1 (opt) - Business Rule Override Type (CWE) S2.15.11.1 | 0518 - Override type
+        OVR.1 - Business Rule Override Type (CWE) O S2.15.11.1 | 0518 - Override type
 
     ovr_2 : CWE | None
-        OVR.2 (opt) - Business Rule Override Code (CWE) S2.15.11.2 | 0521 - Override code
+        OVR.2 - Business Rule Override Code (CWE) O S2.15.11.2 | 0521 - Override code
 
     ovr_3 : str | None
-        OVR.3 (opt) - Override Comments (TX) S2.15.11.3
+        OVR.3 - Override Comments (TX) O S2.15.11.3
 
     ovr_4 : XCN | None
-        OVR.4 (opt) - Override Entered By (XCN) S2.15.11.4
+        OVR.4 - Override Entered By (XCN) O S2.15.11.4
 
     ovr_5 : XCN | None
-        OVR.5 (opt) - Override Authorized By (XCN) S2.15.11.5
+        OVR.5 - Override Authorized By (XCN) O S2.15.11.5
     """
 
     ovr_1: Optional[CWE] = Field(
@@ -45,7 +45,7 @@ class OVR(HL7Model):
         ),
         serialization_alias="OVR.1",
         title="Business Rule Override Type",
-        description="Item #1829 | Table HL70518",
+        description="O | Item #01829 | Table 0518 - Override type",
     )
 
     ovr_2: Optional[CWE] = Field(
@@ -57,7 +57,7 @@ class OVR(HL7Model):
         ),
         serialization_alias="OVR.2",
         title="Business Rule Override Code",
-        description="Item #1830 | Table HL70521",
+        description="O | Item #01830 | Table 0521 - Override code",
     )
 
     ovr_3: Optional[str] = Field(
@@ -69,7 +69,7 @@ class OVR(HL7Model):
         ),
         serialization_alias="OVR.3",
         title="Override Comments",
-        description="Item #1831",
+        description="O | Item #01831",
     )
 
     ovr_4: Optional[XCN] = Field(
@@ -81,7 +81,7 @@ class OVR(HL7Model):
         ),
         serialization_alias="OVR.4",
         title="Override Entered By",
-        description="Item #1832",
+        description="O | Item #01832",
     )
 
     ovr_5: Optional[XCN] = Field(
@@ -93,7 +93,7 @@ class OVR(HL7Model):
         ),
         serialization_alias="OVR.5",
         title="Override Authorized By",
-        description="Item #1833",
+        description="O | Item #01833",
     )
 
     model_config = {"populate_by_name": True}

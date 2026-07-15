@@ -22,40 +22,40 @@ class AIP(HL7Model):
     Attributes
     ----------
     aip_1 : str
-        AIP.1 (req) - Set ID - AIP (SI) S10.6.7.1
+        AIP.1 - Set ID - AIP (SI) R S10.6.7.1
 
     aip_2 : str | None
-        AIP.2 (opt) - Segment Action Code (ID) S10.6.3.2 | 0206 - Segment Action Code
+        AIP.2 - Segment Action Code (ID) C S10.6.3.2 | 0206 - Segment Action Code
 
     aip_3 : list[XCN] | None
-        AIP.3 (opt, rep) - Personnel Resource ID (XCN) S10.6.7.3
+        AIP.3 - Personnel Resource ID (XCN) C rep S10.6.7.3
 
     aip_4 : CWE | None
-        AIP.4 (opt) - Resource Type (CWE) S10.6.7.4 | 0182 - Staff type
+        AIP.4 - Resource Type (CWE) C S10.6.7.4 | 0182 - Staff type
 
     aip_5 : CWE | None
-        AIP.5 (opt) - Resource Group (CWE) S10.6.5.5
+        AIP.5 - Resource Group (CWE) O S10.6.5.5
 
     aip_6 : str | None
-        AIP.6 (opt) - Start Date/Time (DTM) S10.6.4.4
+        AIP.6 - Start Date/Time (DTM) C S10.6.4.4
 
     aip_7 : str | None
-        AIP.7 (opt) - Start Date/Time Offset (NM) S10.6.4.5
+        AIP.7 - Start Date/Time Offset (NM) C S10.6.4.5
 
     aip_8 : CNE | None
-        AIP.8 (opt) - Start Date/Time Offset Units (CNE) S10.6.4.6
+        AIP.8 - Start Date/Time Offset Units (CNE) C S10.6.4.6
 
     aip_9 : str | None
-        AIP.9 (opt) - Duration (NM) S10.6.4.7
+        AIP.9 - Duration (NM) O S10.6.4.7
 
     aip_10 : CNE | None
-        AIP.10 (opt) - Duration Units (CNE) S10.6.4.8
+        AIP.10 - Duration Units (CNE) O S10.6.4.8
 
     aip_11 : CWE | None
-        AIP.11 (opt) - Allow Substitution Code (CWE) S10.6.4.9 | 0279 - Allow Substitution Codes
+        AIP.11 - Allow Substitution Code (CWE) C S10.6.4.9 | 0279 - Allow Substitution Codes
 
     aip_12 : CWE | None
-        AIP.12 (opt) - Filler Status Code (CWE) S10.6.2.25 | 0278 - Filler status codes
+        AIP.12 - Filler Status Code (CWE) C S10.6.2.25 | 0278 - Filler status codes
     """
 
     aip_1: str = Field(
@@ -66,7 +66,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.1",
         title="Set ID - AIP",
-        description="Item #906",
+        description="R | Item #00906 | LEN:4",
     )
 
     aip_2: Optional[str] = Field(
@@ -78,7 +78,9 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description=(
+            "C | Item #00763 | Table 0206 - Segment Action Code | LEN:1"
+        ),
     )
 
     aip_3: Optional[List[XCN]] = Field(
@@ -90,7 +92,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.3",
         title="Personnel Resource ID",
-        description="Item #913",
+        description="C | Item #00913",
     )
 
     aip_4: Optional[CWE] = Field(
@@ -102,7 +104,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.4",
         title="Resource Type",
-        description="Item #907 | Table HL70182",
+        description="C | Item #00907 | Table 0182 - Staff type",
     )
 
     aip_5: Optional[CWE] = Field(
@@ -114,7 +116,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.5",
         title="Resource Group",
-        description="Item #899",
+        description="O | Item #00899",
     )
 
     aip_6: Optional[str] = Field(
@@ -126,7 +128,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.6",
         title="Start Date/Time",
-        description="Item #1202",
+        description="C | Item #01202",
     )
 
     aip_7: Optional[str] = Field(
@@ -138,7 +140,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.7",
         title="Start Date/Time Offset",
-        description="Item #891",
+        description="C | Item #00891",
     )
 
     aip_8: Optional[CNE] = Field(
@@ -150,7 +152,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.8",
         title="Start Date/Time Offset Units",
-        description="Item #892",
+        description="C | Item #00892",
     )
 
     aip_9: Optional[str] = Field(
@@ -162,7 +164,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.9",
         title="Duration",
-        description="Item #893",
+        description="O | Item #00893",
     )
 
     aip_10: Optional[CNE] = Field(
@@ -174,7 +176,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.10",
         title="Duration Units",
-        description="Item #894",
+        description="O | Item #00894",
     )
 
     aip_11: Optional[CWE] = Field(
@@ -186,7 +188,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.11",
         title="Allow Substitution Code",
-        description="Item #895 | Table HL70279",
+        description="C | Item #00895 | Table 0279 - Allow Substitution Codes",
     )
 
     aip_12: Optional[CWE] = Field(
@@ -198,7 +200,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.12",
         title="Filler Status Code",
-        description="Item #889 | Table HL70278",
+        description="C | Item #00889 | Table 0278 - Filler status codes",
     )
 
     @field_validator("aip_1", mode='before')

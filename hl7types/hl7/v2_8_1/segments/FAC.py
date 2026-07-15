@@ -23,40 +23,40 @@ class FAC(HL7Model):
     Attributes
     ----------
     fac_1 : EI
-        FAC.1 (req) - Facility ID-FAC (EI) S7.12.6.1
+        FAC.1 - Facility ID-FAC (EI) R S7.12.6.1
 
     fac_2 : str | None
-        FAC.2 (opt) - Facility Type (ID) S7.12.6.2 | 0331 - Facility Type
+        FAC.2 - Facility Type (ID) O S7.12.6.2 | 0331 - Facility Type
 
     fac_3 : list[XAD]
-        FAC.3 (req, rep) - Facility Address (XAD) S7.12.6.3
+        FAC.3 - Facility Address (XAD) R rep S7.12.6.3
 
     fac_4 : XTN
-        FAC.4 (req) - Facility Telecommunication (XTN) S7.12.6.4
+        FAC.4 - Facility Telecommunication (XTN) R S7.12.6.4
 
     fac_5 : list[XCN] | None
-        FAC.5 (opt, rep) - Contact Person (XCN) S7.12.6.5
+        FAC.5 - Contact Person (XCN) O rep S7.12.6.5
 
     fac_6 : list[str] | None
-        FAC.6 (opt, rep) - Contact Title (ST) S7.12.6.6
+        FAC.6 - Contact Title (ST) O rep S7.12.6.6
 
     fac_7 : list[XAD] | None
-        FAC.7 (opt, rep) - Contact Address (XAD) S11.8.4.3
+        FAC.7 - Contact Address (XAD) O rep S11.8.4.3
 
     fac_8 : list[XTN] | None
-        FAC.8 (opt, rep) - Contact Telecommunication (XTN) S7.12.6.8
+        FAC.8 - Contact Telecommunication (XTN) O rep S7.12.6.8
 
     fac_9 : list[XCN]
-        FAC.9 (req, rep) - Signature Authority (XCN) S7.12.6.9
+        FAC.9 - Signature Authority (XCN) R rep S7.12.6.9
 
     fac_10 : str | None
-        FAC.10 (opt) - Signature Authority Title (ST) S7.12.6.10
+        FAC.10 - Signature Authority Title (ST) O S7.12.6.10
 
     fac_11 : list[XAD] | None
-        FAC.11 (opt, rep) - Signature Authority Address (XAD) S7.12.6.11
+        FAC.11 - Signature Authority Address (XAD) O rep S7.12.6.11
 
     fac_12 : XTN | None
-        FAC.12 (opt) - Signature Authority Telecommunication (XTN) S7.12.6.12
+        FAC.12 - Signature Authority Telecommunication (XTN) O S7.12.6.12
     """
 
     fac_1: EI = Field(
@@ -67,7 +67,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.1",
         title="Facility ID-FAC",
-        description="Item #1262",
+        description="R | Item #01262",
     )
 
     fac_2: Optional[str] = Field(
@@ -79,7 +79,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.2",
         title="Facility Type",
-        description="Item #1263 | Table HL70331",
+        description="O | Item #01263 | Table 0331 - Facility Type | LEN:1",
     )
 
     fac_3: List[XAD] = Field(
@@ -91,7 +91,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.3",
         title="Facility Address",
-        description="Item #1264",
+        description="R | Item #01264",
     )
 
     fac_4: XTN = Field(
@@ -102,7 +102,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.4",
         title="Facility Telecommunication",
-        description="Item #1265",
+        description="R | Item #01265",
     )
 
     fac_5: Optional[List[XCN]] = Field(
@@ -114,7 +114,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.5",
         title="Contact Person",
-        description="Item #1266",
+        description="O | Item #01266",
     )
 
     fac_6: Optional[List[str]] = Field(
@@ -126,7 +126,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.6",
         title="Contact Title",
-        description="Item #1267",
+        description="O | Item #01267",
     )
 
     fac_7: Optional[List[XAD]] = Field(
@@ -138,7 +138,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.7",
         title="Contact Address",
-        description="Item #1166",
+        description="O | Item #01166",
     )
 
     fac_8: Optional[List[XTN]] = Field(
@@ -150,7 +150,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.8",
         title="Contact Telecommunication",
-        description="Item #1269",
+        description="O | Item #01269",
     )
 
     fac_9: List[XCN] = Field(
@@ -162,7 +162,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.9",
         title="Signature Authority",
-        description="Item #1270",
+        description="R | Item #01270",
     )
 
     fac_10: Optional[str] = Field(
@@ -174,7 +174,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.10",
         title="Signature Authority Title",
-        description="Item #1271",
+        description="O | Item #01271",
     )
 
     fac_11: Optional[List[XAD]] = Field(
@@ -186,7 +186,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.11",
         title="Signature Authority Address",
-        description="Item #1272",
+        description="O | Item #01272",
     )
 
     fac_12: Optional[XTN] = Field(
@@ -198,7 +198,7 @@ class FAC(HL7Model):
         ),
         serialization_alias="FAC.12",
         title="Signature Authority Telecommunication",
-        description="Item #1273",
+        description="O | Item #01273",
     )
 
     model_config = {"populate_by_name": True}

@@ -22,37 +22,37 @@ class RF1(HL7Model):
     Attributes
     ----------
     rf1_1 : CE | None
-        RF1.1 (opt) - Referral Status (CE) S11.5.1.1 | 0283 - Referral Status
+        RF1.1 - Referral Status (CE) O S11.5.1.1 | 0283 - Referral Status
 
     rf1_2 : CE | None
-        RF1.2 (opt) - Referral Priority (CE) S11.5.1.2 | 0280 - Referral Priority
+        RF1.2 - Referral Priority (CE) O S11.5.1.2 | 0280 - Referral Priority
 
     rf1_3 : CE | None
-        RF1.3 (opt) - Referral Type (CE) S11.5.1.3 | 0281 - Referral Type
+        RF1.3 - Referral Type (CE) O S11.5.1.3 | 0281 - Referral Type
 
     rf1_4 : list[CE] | None
-        RF1.4 (opt, rep) - Referral Disposition (CE) S11.5.1.4 | 0282 - Referral Disposition
+        RF1.4 - Referral Disposition (CE) O rep S11.5.1.4 | 0282 - Referral Disposition
 
     rf1_5 : CE | None
-        RF1.5 (opt) - Referral Category (CE) S11.5.1.5 | 0284 - Referral Category
+        RF1.5 - Referral Category (CE) O S11.5.1.5 | 0284 - Referral Category
 
     rf1_6 : EI
-        RF1.6 (req) - Originating Referral Identifier (EI) S11.5.1.6
+        RF1.6 - Originating Referral Identifier (EI) R S11.5.1.6
 
     rf1_7 : TS | None
-        RF1.7 (opt) - Effective Date (TS) S11.5.1.7
+        RF1.7 - Effective Date (TS) O S11.5.1.7
 
     rf1_8 : TS | None
-        RF1.8 (opt) - Expiration Date (TS) S11.5.1.8
+        RF1.8 - Expiration Date (TS) O S11.5.1.8
 
     rf1_9 : TS | None
-        RF1.9 (opt) - Process Date (TS) S11.5.1
+        RF1.9 - Process Date (TS) O S11.5.1
 
     rf1_10 : list[CE] | None
-        RF1.10 (opt, rep) - Referral Reason (CE) S11.5.1.10 | 0336 - Referral Reason
+        RF1.10 - Referral Reason (CE) O rep S11.5.1.10 | 0336 - Referral Reason
 
     rf1_11 : list[EI] | None
-        RF1.11 (opt, rep) - External Referral Identifier (EI) S11.5.1.11
+        RF1.11 - External Referral Identifier (EI) O rep S11.5.1.11
     """
 
     rf1_1: Optional[CE] = Field(
@@ -64,7 +64,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.1",
         title="Referral Status",
-        description="Item #1137 | Table HL70283",
+        description="O | Item #01137 | Table 0283 - Referral Status",
     )
 
     rf1_2: Optional[CE] = Field(
@@ -76,7 +76,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.2",
         title="Referral Priority",
-        description="Item #1138 | Table HL70280",
+        description="O | Item #01138 | Table 0280 - Referral Priority",
     )
 
     rf1_3: Optional[CE] = Field(
@@ -88,7 +88,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.3",
         title="Referral Type",
-        description="Item #1139 | Table HL70281",
+        description="O | Item #01139 | Table 0281 - Referral Type",
     )
 
     rf1_4: Optional[List[CE]] = Field(
@@ -100,7 +100,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.4",
         title="Referral Disposition",
-        description="Item #1140 | Table HL70282",
+        description="O | Item #01140 | Table 0282 - Referral Disposition",
     )
 
     rf1_5: Optional[CE] = Field(
@@ -112,7 +112,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.5",
         title="Referral Category",
-        description="Item #1141 | Table HL70284",
+        description="O | Item #01141 | Table 0284 - Referral Category",
     )
 
     rf1_6: EI = Field(
@@ -123,7 +123,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.6",
         title="Originating Referral Identifier",
-        description="Item #1142",
+        description="R | Item #01142",
     )
 
     rf1_7: Optional[TS] = Field(
@@ -135,7 +135,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.7",
         title="Effective Date",
-        description="Item #1143",
+        description="O | Item #01143",
     )
 
     rf1_8: Optional[TS] = Field(
@@ -147,7 +147,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.8",
         title="Expiration Date",
-        description="Item #1144",
+        description="O | Item #01144",
     )
 
     rf1_9: Optional[TS] = Field(
@@ -159,7 +159,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.9",
         title="Process Date",
-        description="Item #1145",
+        description="O | Item #01145",
     )
 
     rf1_10: Optional[List[CE]] = Field(
@@ -171,7 +171,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.10",
         title="Referral Reason",
-        description="Item #1228 | Table HL70336",
+        description="O | Item #01228 | Table 0336 - Referral Reason",
     )
 
     rf1_11: Optional[List[EI]] = Field(
@@ -183,7 +183,7 @@ class RF1(HL7Model):
         ),
         serialization_alias="RF1.11",
         title="External Referral Identifier",
-        description="Item #1300",
+        description="O | Item #01300",
     )
 
     model_config = {"populate_by_name": True}

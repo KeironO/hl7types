@@ -21,46 +21,46 @@ class ABS(HL7Model):
     Attributes
     ----------
     abs_1 : XCN | None
-        ABS.1 (opt) - Discharge Care Provider (XCN) S6.5.12.1 | 0010 - Physician ID
+        ABS.1 - Discharge Care Provider (XCN) O S6.5.12.1 | 0010 - Physician ID
 
     abs_2 : CWE | None
-        ABS.2 (opt) - Transfer Medical Service Code (CWE) S6.5.12.2 | 0069 - Hospital Service
+        ABS.2 - Transfer Medical Service Code (CWE) O S6.5.12.2 | 0069 - Hospital Service
 
     abs_3 : CWE | None
-        ABS.3 (opt) - Severity of Illness Code (CWE) S6.5.12.3 | 0421 - Severity of Illness Code
+        ABS.3 - Severity of Illness Code (CWE) O S6.5.12.3 | 0421 - Severity of Illness Code
 
     abs_4 : str | None
-        ABS.4 (opt) - Date/Time of Attestation (DTM) S6.5.12.4
+        ABS.4 - Date/Time of Attestation (DTM) O S6.5.12.4
 
     abs_5 : XCN | None
-        ABS.5 (opt) - Attested By (XCN) S6.5.12.5
+        ABS.5 - Attested By (XCN) O S6.5.12.5
 
     abs_6 : CWE | None
-        ABS.6 (opt) - Triage Code (CWE) S6.5.12.6 | 0422 - Triage Code
+        ABS.6 - Triage Code (CWE) O S6.5.12.6 | 0422 - Triage Code
 
     abs_7 : str | None
-        ABS.7 (opt) - Abstract Completion Date/Time (DTM) S6.5.12.7
+        ABS.7 - Abstract Completion Date/Time (DTM) O S6.5.12.7
 
     abs_8 : XCN | None
-        ABS.8 (opt) - Abstracted By (XCN) S6.5.12.8
+        ABS.8 - Abstracted By (XCN) O S6.5.12.8
 
     abs_9 : CWE | None
-        ABS.9 (opt) - Case Category Code (CWE) S6.5.12.9 | 0423 - Case Category Code
+        ABS.9 - Case Category Code (CWE) O S6.5.12.9 | 0423 - Case Category Code
 
     abs_10 : str | None
-        ABS.10 (opt) - Caesarian Section Indicator (ID) S6.5.12.10 | 0136 - Yes/no indicator
+        ABS.10 - Caesarian Section Indicator (ID) O S6.5.12.10 | 0136 - Yes/no indicator
 
     abs_11 : CWE | None
-        ABS.11 (opt) - Gestation Category Code (CWE) S6.5.12.11 | 0424 - Gestation Category Code
+        ABS.11 - Gestation Category Code (CWE) O S6.5.12.11 | 0424 - Gestation Category Code
 
     abs_12 : str | None
-        ABS.12 (opt) - Gestation Period - Weeks (NM) S6.5.12.12
+        ABS.12 - Gestation Period - Weeks (NM) O S6.5.12.12
 
     abs_13 : CWE | None
-        ABS.13 (opt) - Newborn Code (CWE) S6.5.12.13 | 0425 - Newborn Code
+        ABS.13 - Newborn Code (CWE) O S6.5.12.13 | 0425 - Newborn Code
 
     abs_14 : str | None
-        ABS.14 (opt) - Stillborn Indicator (ID) S6.5.12.14 | 0136 - Yes/no indicator
+        ABS.14 - Stillborn Indicator (ID) O S6.5.12.14 | 0136 - Yes/no indicator
     """
 
     abs_1: Optional[XCN] = Field(
@@ -72,7 +72,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.1",
         title="Discharge Care Provider",
-        description="Item #1514 | Table HL70010",
+        description="O | Item #01514 | Table 0010 - Physician ID",
     )
 
     abs_2: Optional[CWE] = Field(
@@ -84,7 +84,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.2",
         title="Transfer Medical Service Code",
-        description="Item #1515 | Table HL70069",
+        description="O | Item #01515 | Table 0069 - Hospital Service",
     )
 
     abs_3: Optional[CWE] = Field(
@@ -96,7 +96,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.3",
         title="Severity of Illness Code",
-        description="Item #1516 | Table HL70421",
+        description="O | Item #01516 | Table 0421 - Severity of Illness Code",
     )
 
     abs_4: Optional[str] = Field(
@@ -108,7 +108,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.4",
         title="Date/Time of Attestation",
-        description="Item #1517",
+        description="O | Item #01517 | LEN:24",
     )
 
     abs_5: Optional[XCN] = Field(
@@ -120,7 +120,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.5",
         title="Attested By",
-        description="Item #1518",
+        description="O | Item #01518",
     )
 
     abs_6: Optional[CWE] = Field(
@@ -132,7 +132,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.6",
         title="Triage Code",
-        description="Item #1519 | Table HL70422",
+        description="O | Item #01519 | Table 0422 - Triage Code",
     )
 
     abs_7: Optional[str] = Field(
@@ -144,7 +144,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.7",
         title="Abstract Completion Date/Time",
-        description="Item #1520",
+        description="O | Item #01520 | LEN:24",
     )
 
     abs_8: Optional[XCN] = Field(
@@ -156,7 +156,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.8",
         title="Abstracted By",
-        description="Item #1521",
+        description="O | Item #01521",
     )
 
     abs_9: Optional[CWE] = Field(
@@ -168,7 +168,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.9",
         title="Case Category Code",
-        description="Item #1522 | Table HL70423",
+        description="O | Item #01522 | Table 0423 - Case Category Code",
     )
 
     abs_10: Optional[str] = Field(
@@ -180,7 +180,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.10",
         title="Caesarian Section Indicator",
-        description="Item #1523 | Table HL70136",
+        description="O | Item #01523 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     abs_11: Optional[CWE] = Field(
@@ -192,7 +192,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.11",
         title="Gestation Category Code",
-        description="Item #1524 | Table HL70424",
+        description="O | Item #01524 | Table 0424 - Gestation Category Code",
     )
 
     abs_12: Optional[str] = Field(
@@ -204,7 +204,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.12",
         title="Gestation Period - Weeks",
-        description="Item #1525",
+        description="O | Item #01525 | LEN:3",
     )
 
     abs_13: Optional[CWE] = Field(
@@ -216,7 +216,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.13",
         title="Newborn Code",
-        description="Item #1526 | Table HL70425",
+        description="O | Item #01526 | Table 0425 - Newborn Code",
     )
 
     abs_14: Optional[str] = Field(
@@ -228,7 +228,7 @@ class ABS(HL7Model):
         ),
         serialization_alias="ABS.14",
         title="Stillborn Indicator",
-        description="Item #1527 | Table HL70136",
+        description="O | Item #01527 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     @field_validator("abs_4", "abs_7", mode='before')

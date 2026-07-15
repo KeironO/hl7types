@@ -23,46 +23,46 @@ class TCC(HL7Model):
     Attributes
     ----------
     tcc_1 : CE
-        TCC.1 (req) - Universal Service Identifier (CE) S13.4.10.1
+        TCC.1 - Universal Service Identifier (CE) R S13.4.10.1
 
     tcc_2 : EI
-        TCC.2 (req) - Test Application Identifier (EI) S13.4.9.2
+        TCC.2 - Test Application Identifier (EI) R S13.4.9.2
 
     tcc_3 : SPS | None
-        TCC.3 (opt) - Specimen Source (SPS) S13.4.9.3 | 0070 - Specimen source codes
+        TCC.3 - Specimen Source (SPS) O S13.4.9.3 | 0070 - Specimen source codes
 
     tcc_4 : SN | None
-        TCC.4 (opt) - Auto-Dilution Factor Default (SN) S13.4.9.4
+        TCC.4 - Auto-Dilution Factor Default (SN) O S13.4.9.4
 
     tcc_5 : SN | None
-        TCC.5 (opt) - Rerun Dilution Factor Default (SN) S13.4.9.5
+        TCC.5 - Rerun Dilution Factor Default (SN) O S13.4.9.5
 
     tcc_6 : SN | None
-        TCC.6 (opt) - Pre-Dilution Factor Default (SN) S13.4.9.6
+        TCC.6 - Pre-Dilution Factor Default (SN) O S13.4.9.6
 
     tcc_7 : SN | None
-        TCC.7 (opt) - Endogenous Content of Pre-Dilution Diluent (SN) S13.4.10.5
+        TCC.7 - Endogenous Content of Pre-Dilution Diluent (SN) O S13.4.10.5
 
     tcc_8 : str | None
-        TCC.8 (opt) - Inventory Limits Warning Level (NM) S13.4.9.8
+        TCC.8 - Inventory Limits Warning Level (NM) O S13.4.9.8
 
     tcc_9 : str | None
-        TCC.9 (opt) - Automatic Rerun Allowed (ID) S13.4.9.9 | 0136 - Yes/no indicator
+        TCC.9 - Automatic Rerun Allowed (ID) O S13.4.9.9 | 0136 - Yes/no indicator
 
     tcc_10 : str | None
-        TCC.10 (opt) - Automatic Repeat Allowed (ID) S13.4.10.6 | 0136 - Yes/no indicator
+        TCC.10 - Automatic Repeat Allowed (ID) O S13.4.10.6 | 0136 - Yes/no indicator
 
     tcc_11 : str | None
-        TCC.11 (opt) - Automatic Reflex Allowed (ID) S13.4.9.11 | 0136 - Yes/no indicator
+        TCC.11 - Automatic Reflex Allowed (ID) O S13.4.9.11 | 0136 - Yes/no indicator
 
     tcc_12 : SN | None
-        TCC.12 (opt) - Equipment Dynamic Range (SN) S13.4.9.12
+        TCC.12 - Equipment Dynamic Range (SN) O S13.4.9.12
 
     tcc_13 : CE | None
-        TCC.13 (opt) - Units (CE) S13.4.9.13
+        TCC.13 - Units (CE) O S13.4.9.13
 
     tcc_14 : CE | None
-        TCC.14 (opt) - Processing Type (CE) S13.4.9.14 | 0388 - Processing type
+        TCC.14 - Processing Type (CE) O S13.4.9.14 | 0388 - Processing type
     """
 
     tcc_1: CE = Field(
@@ -73,7 +73,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.1",
         title="Universal Service Identifier",
-        description="Item #238",
+        description="R | Item #00238",
     )
 
     tcc_2: EI = Field(
@@ -84,7 +84,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.2",
         title="Test Application Identifier",
-        description="Item #1408",
+        description="R | Item #01408",
     )
 
     tcc_3: Optional[SPS] = Field(
@@ -96,7 +96,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.3",
         title="Specimen Source",
-        description="Item #249 | Table HL70070",
+        description="O | Item #00249 | Table 0070 - Specimen source codes",
     )
 
     tcc_4: Optional[SN] = Field(
@@ -108,7 +108,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.4",
         title="Auto-Dilution Factor Default",
-        description="Item #1410",
+        description="O | Item #01410",
     )
 
     tcc_5: Optional[SN] = Field(
@@ -120,7 +120,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.5",
         title="Rerun Dilution Factor Default",
-        description="Item #1411",
+        description="O | Item #01411",
     )
 
     tcc_6: Optional[SN] = Field(
@@ -132,7 +132,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.6",
         title="Pre-Dilution Factor Default",
-        description="Item #1412",
+        description="O | Item #01412",
     )
 
     tcc_7: Optional[SN] = Field(
@@ -144,7 +144,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.7",
         title="Endogenous Content of Pre-Dilution Diluent",
-        description="Item #1413",
+        description="O | Item #01413",
     )
 
     tcc_8: Optional[str] = Field(
@@ -156,7 +156,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.8",
         title="Inventory Limits Warning Level",
-        description="Item #1414",
+        description="O | Item #01414 | LEN:10",
     )
 
     tcc_9: Optional[str] = Field(
@@ -168,7 +168,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.9",
         title="Automatic Rerun Allowed",
-        description="Item #1415 | Table HL70136",
+        description="O | Item #01415 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     tcc_10: Optional[str] = Field(
@@ -180,7 +180,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.10",
         title="Automatic Repeat Allowed",
-        description="Item #1416 | Table HL70136",
+        description="O | Item #01416 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     tcc_11: Optional[str] = Field(
@@ -192,7 +192,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.11",
         title="Automatic Reflex Allowed",
-        description="Item #1417 | Table HL70136",
+        description="O | Item #01417 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     tcc_12: Optional[SN] = Field(
@@ -204,7 +204,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.12",
         title="Equipment Dynamic Range",
-        description="Item #1418",
+        description="O | Item #01418",
     )
 
     tcc_13: Optional[CE] = Field(
@@ -216,7 +216,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.13",
         title="Units",
-        description="Item #574",
+        description="O | Item #00574",
     )
 
     tcc_14: Optional[CE] = Field(
@@ -228,7 +228,7 @@ class TCC(HL7Model):
         ),
         serialization_alias="TCC.14",
         title="Processing Type",
-        description="Item #1419 | Table HL70388",
+        description="O | Item #01419 | Table 0388 - Processing type",
     )
 
     @field_validator("tcc_8", mode='before')

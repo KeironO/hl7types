@@ -18,19 +18,19 @@ class NK1(HL7Model):
     Attributes
     ----------
     nk1_1 : str
-        NK1.1 (req) - SET ID - NEXT OF KIN (SI) S3-23, 6-15
+        NK1.1 - SET ID - NEXT OF KIN (SI) R S3-23, 6-15
 
     nk1_2 : str | None
-        NK1.2 (opt) - NEXT OF KIN NAME (PN)
+        NK1.2 - NEXT OF KIN NAME (PN) O
 
     nk1_3 : str | None
-        NK1.3 (opt) - NEXT OF KIN RELATIONSHIP (ST) | 0063 - RELATIONSHIP
+        NK1.3 - NEXT OF KIN RELATIONSHIP (ST) O | 0063 - RELATIONSHIP
 
     nk1_4 : str | None
-        NK1.4 (opt) - NEXT OF KIN - ADDRESS (AD)
+        NK1.4 - NEXT OF KIN - ADDRESS (AD) O
 
     nk1_5 : list[str] | None
-        NK1.5 (opt, rep) - NEXT OF KIN - PHONE NUMBER (TN)
+        NK1.5 - NEXT OF KIN - PHONE NUMBER (TN) O rep
     """
 
     nk1_1: str = Field(
@@ -41,7 +41,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.1",
         title="SET ID - NEXT OF KIN",
-        description="Item #712",
+        description="R | Item #00712 | LEN:4",
     )
 
     nk1_2: Optional[str] = Field(
@@ -53,7 +53,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.2",
         title="NEXT OF KIN NAME",
-        description="Item #48",
+        description="O | Item #00048 | LEN:48",
     )
 
     nk1_3: Optional[str] = Field(
@@ -65,7 +65,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.3",
         title="NEXT OF KIN RELATIONSHIP",
-        description="Item #47 | Table HL70063",
+        description="O | Item #00047 | Table 0063 - RELATIONSHIP | LEN:15",
     )
 
     nk1_4: Optional[str] = Field(
@@ -77,7 +77,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.4",
         title="NEXT OF KIN - ADDRESS",
-        description="Item #225",
+        description="O | Item #00225 | LEN:106",
     )
 
     nk1_5: Optional[List[str]] = Field(
@@ -89,7 +89,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.5",
         title="NEXT OF KIN - PHONE NUMBER",
-        description="Item #230",
+        description="O | Item #00230 | LEN:40",
     )
 
     @field_validator("nk1_1", mode='before')

@@ -20,16 +20,16 @@ class STZ(HL7Model):
     Attributes
     ----------
     stz_1 : CWE | None
-        STZ.1 (opt) - Sterilization Type (CWE) S17.4.3.1 | 0806 - Sterilization Type
+        STZ.1 - Sterilization Type (CWE) O S17.4.3.1 | 0806 - Sterilization Type
 
     stz_2 : CWE | None
-        STZ.2 (opt) - Sterilization Cycle (CWE) S17.4.3.2 | 0702 - Cycle Type
+        STZ.2 - Sterilization Cycle (CWE) O S17.4.3.2 | 0702 - Cycle Type
 
     stz_3 : CWE | None
-        STZ.3 (opt) - Maintenance Cycle (CWE) S17.4.3.3 | 0809 - Maintenance Cycle
+        STZ.3 - Maintenance Cycle (CWE) O S17.4.3.3 | 0809 - Maintenance Cycle
 
     stz_4 : CWE | None
-        STZ.4 (opt) - Maintenance Type (CWE) S17.4.3.4 | 0811 - Maintenance Type
+        STZ.4 - Maintenance Type (CWE) O S17.4.3.4 | 0811 - Maintenance Type
     """
 
     stz_1: Optional[CWE] = Field(
@@ -41,7 +41,7 @@ class STZ(HL7Model):
         ),
         serialization_alias="STZ.1",
         title="Sterilization Type",
-        description="Item #2213 | Table HL70806",
+        description="O | Item #02213 | Table 0806 - Sterilization Type",
     )
 
     stz_2: Optional[CWE] = Field(
@@ -53,7 +53,7 @@ class STZ(HL7Model):
         ),
         serialization_alias="STZ.2",
         title="Sterilization Cycle",
-        description="Item #2214 | Table HL70702",
+        description="O | Item #02214 | Table 0702 - Cycle Type",
     )
 
     stz_3: Optional[CWE] = Field(
@@ -65,7 +65,7 @@ class STZ(HL7Model):
         ),
         serialization_alias="STZ.3",
         title="Maintenance Cycle",
-        description="Item #2215 | Table HL70809",
+        description="O | Item #02215 | Table 0809 - Maintenance Cycle",
     )
 
     stz_4: Optional[CWE] = Field(
@@ -77,7 +77,7 @@ class STZ(HL7Model):
         ),
         serialization_alias="STZ.4",
         title="Maintenance Type",
-        description="Item #2216 | Table HL70811",
+        description="O | Item #02216 | Table 0811 - Maintenance Type",
     )
 
     model_config = {"populate_by_name": True}

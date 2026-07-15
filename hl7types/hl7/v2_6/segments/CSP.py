@@ -20,16 +20,16 @@ class CSP(HL7Model):
     Attributes
     ----------
     csp_1 : CWE
-        CSP.1 (req) - Study Phase Identifier (CWE) S8.11.3.2
+        CSP.1 - Study Phase Identifier (CWE) R S8.11.3.2
 
     csp_2 : str
-        CSP.2 (req) - Date/time Study Phase Began (DTM) S7.8.2.2
+        CSP.2 - Date/time Study Phase Began (DTM) R S7.8.2.2
 
     csp_3 : str | None
-        CSP.3 (opt) - Date/time Study Phase Ended (DTM) S7.8.2.3
+        CSP.3 - Date/time Study Phase Ended (DTM) O S7.8.2.3
 
     csp_4 : CWE | None
-        CSP.4 (opt) - Study Phase Evaluability (CWE) S7.8.2.4 | 9999 - no table for CE
+        CSP.4 - Study Phase Evaluability (CWE) C S7.8.2.4 | 9999 - no table for CE
     """
 
     csp_1: CWE = Field(
@@ -40,7 +40,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.1",
         title="Study Phase Identifier",
-        description="Item #1022",
+        description="R | Item #01022",
     )
 
     csp_2: str = Field(
@@ -51,7 +51,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.2",
         title="Date/time Study Phase Began",
-        description="Item #1052",
+        description="R | Item #01052 | LEN:24",
     )
 
     csp_3: Optional[str] = Field(
@@ -63,7 +63,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.3",
         title="Date/time Study Phase Ended",
-        description="Item #1053",
+        description="O | Item #01053 | LEN:24",
     )
 
     csp_4: Optional[CWE] = Field(
@@ -75,7 +75,7 @@ class CSP(HL7Model):
         ),
         serialization_alias="CSP.4",
         title="Study Phase Evaluability",
-        description="Item #1054 | Table HL79999",
+        description="C | Item #01054 | Table 9999 - no table for CE",
     )
 
     @field_validator("csp_2", "csp_3", mode='before')

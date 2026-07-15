@@ -23,64 +23,64 @@ class INV(HL7Model):
     Attributes
     ----------
     inv_1 : CE
-        INV.1 (req) - Substance Identifier (CE) S13.4.4.1 | 0451 - Substance identifier
+        INV.1 - Substance Identifier (CE) R S13.4.4.1 | 0451 - Substance identifier
 
     inv_2 : list[CE]
-        INV.2 (req, rep) - Substance Status (CE) S13.4.4.2 | 0383 - Substance status
+        INV.2 - Substance Status (CE) R rep S13.4.4.2 | 0383 - Substance status
 
     inv_3 : CE | None
-        INV.3 (opt) - Substance Type (CE) S13.4.4.3 | 0384 - Substance type
+        INV.3 - Substance Type (CE) O S13.4.4.3 | 0384 - Substance type
 
     inv_4 : CE | None
-        INV.4 (opt) - Inventory Container Identifier (CE) S13.4.4.4
+        INV.4 - Inventory Container Identifier (CE) O S13.4.4.4
 
     inv_5 : CE | None
-        INV.5 (opt) - Container Carrier Identifier (CE) S13.4.4.5
+        INV.5 - Container Carrier Identifier (CE) O S13.4.4.5
 
     inv_6 : CE | None
-        INV.6 (opt) - Position on Carrier (CE) S13.4.4.6
+        INV.6 - Position on Carrier (CE) O S13.4.4.6
 
     inv_7 : str | None
-        INV.7 (opt) - Initial Quantity (NM) S13.4.4.7
+        INV.7 - Initial Quantity (NM) O S13.4.4.7
 
     inv_8 : str | None
-        INV.8 (opt) - Current Quantity (NM) S13.4.4.8
+        INV.8 - Current Quantity (NM) O S13.4.4.8
 
     inv_9 : str | None
-        INV.9 (opt) - Available Quantity (NM) S13.4.4.9
+        INV.9 - Available Quantity (NM) O S13.4.4.9
 
     inv_10 : str | None
-        INV.10 (opt) - Consumption Quantity (NM) S13.4.4.10
+        INV.10 - Consumption Quantity (NM) O S13.4.4.10
 
     inv_11 : CE | None
-        INV.11 (opt) - Quantity Units (CE) S13.4.4.11
+        INV.11 - Quantity Units (CE) O S13.4.4.11
 
     inv_12 : TS | None
-        INV.12 (opt) - Expiration Date/Time (TS) S13.4.4.12
+        INV.12 - Expiration Date/Time (TS) O S13.4.4.12
 
     inv_13 : TS | None
-        INV.13 (opt) - First Used Date/Time (TS) S13.4.4.13
+        INV.13 - First Used Date/Time (TS) O S13.4.4.13
 
     inv_14 : TQ | None
-        INV.14 (opt) - On Board Stability Duration (TQ) S13.4.4.14
+        INV.14 - On Board Stability Duration (TQ) O S13.4.4.14
 
     inv_15 : list[CE] | None
-        INV.15 (opt, rep) - Test/Fluid Identifier(s) (CE) S13.4.4.15
+        INV.15 - Test/Fluid Identifier(s) (CE) O rep S13.4.4.15
 
     inv_16 : str | None
-        INV.16 (opt) - Manufacturer Lot Number (ST) S13.4.4.16
+        INV.16 - Manufacturer Lot Number (ST) O S13.4.4.16
 
     inv_17 : CE | None
-        INV.17 (opt) - Manufacturer Identifier (CE) S4.11.2.2 | 0385 - Manufacturer identifier
+        INV.17 - Manufacturer Identifier (CE) O S4.11.2.2 | 0385 - Manufacturer identifier
 
     inv_18 : CE | None
-        INV.18 (opt) - Supplier Identifier (CE) S13.4.4.18 | 0386 - Supplier identifier
+        INV.18 - Supplier Identifier (CE) O S13.4.4.18 | 0386 - Supplier identifier
 
     inv_19 : CQ | None
-        INV.19 (opt) - On Board Stability Time (CQ) S13.4.4.19
+        INV.19 - On Board Stability Time (CQ) O S13.4.4.19
 
     inv_20 : CQ | None
-        INV.20 (opt) - Target Value (CQ) S13.4.4.20
+        INV.20 - Target Value (CQ) O S13.4.4.20
     """
 
     inv_1: CE = Field(
@@ -91,7 +91,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.1",
         title="Substance Identifier",
-        description="Item #1372 | Table HL70451",
+        description="R | Item #01372 | Table 0451 - Substance identifier",
     )
 
     inv_2: List[CE] = Field(
@@ -103,7 +103,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.2",
         title="Substance Status",
-        description="Item #1373 | Table HL70383",
+        description="R | Item #01373 | Table 0383 - Substance status",
     )
 
     inv_3: Optional[CE] = Field(
@@ -115,7 +115,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.3",
         title="Substance Type",
-        description="Item #1374 | Table HL70384",
+        description="O | Item #01374 | Table 0384 - Substance type",
     )
 
     inv_4: Optional[CE] = Field(
@@ -127,7 +127,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.4",
         title="Inventory Container Identifier",
-        description="Item #1532",
+        description="O | Item #01532",
     )
 
     inv_5: Optional[CE] = Field(
@@ -139,7 +139,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.5",
         title="Container Carrier Identifier",
-        description="Item #1376",
+        description="O | Item #01376",
     )
 
     inv_6: Optional[CE] = Field(
@@ -151,7 +151,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.6",
         title="Position on Carrier",
-        description="Item #1377",
+        description="O | Item #01377",
     )
 
     inv_7: Optional[str] = Field(
@@ -163,7 +163,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.7",
         title="Initial Quantity",
-        description="Item #1378",
+        description="O | Item #01378 | LEN:20",
     )
 
     inv_8: Optional[str] = Field(
@@ -175,7 +175,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.8",
         title="Current Quantity",
-        description="Item #1379",
+        description="O | Item #01379 | LEN:20",
     )
 
     inv_9: Optional[str] = Field(
@@ -187,7 +187,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.9",
         title="Available Quantity",
-        description="Item #1380",
+        description="O | Item #01380 | LEN:20",
     )
 
     inv_10: Optional[str] = Field(
@@ -199,7 +199,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.10",
         title="Consumption Quantity",
-        description="Item #1381",
+        description="O | Item #01381 | LEN:20",
     )
 
     inv_11: Optional[CE] = Field(
@@ -211,7 +211,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.11",
         title="Quantity Units",
-        description="Item #1382",
+        description="O | Item #01382",
     )
 
     inv_12: Optional[TS] = Field(
@@ -223,7 +223,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.12",
         title="Expiration Date/Time",
-        description="Item #1383",
+        description="O | Item #01383",
     )
 
     inv_13: Optional[TS] = Field(
@@ -235,7 +235,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.13",
         title="First Used Date/Time",
-        description="Item #1384",
+        description="O | Item #01384",
     )
 
     inv_14: Optional[TQ] = Field(
@@ -247,7 +247,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.14",
         title="On Board Stability Duration",
-        description="Item #1385",
+        description="O | Item #01385",
     )
 
     inv_15: Optional[List[CE]] = Field(
@@ -259,7 +259,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.15",
         title="Test/Fluid Identifier(s)",
-        description="Item #1386",
+        description="O | Item #01386",
     )
 
     inv_16: Optional[str] = Field(
@@ -271,7 +271,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.16",
         title="Manufacturer Lot Number",
-        description="Item #1387",
+        description="O | Item #01387 | LEN:200",
     )
 
     inv_17: Optional[CE] = Field(
@@ -283,7 +283,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.17",
         title="Manufacturer Identifier",
-        description="Item #286 | Table HL70385",
+        description="O | Item #00286 | Table 0385 - Manufacturer identifier",
     )
 
     inv_18: Optional[CE] = Field(
@@ -295,7 +295,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.18",
         title="Supplier Identifier",
-        description="Item #1389 | Table HL70386",
+        description="O | Item #01389 | Table 0386 - Supplier identifier",
     )
 
     inv_19: Optional[CQ] = Field(
@@ -307,7 +307,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.19",
         title="On Board Stability Time",
-        description="Item #1626",
+        description="O | Item #01626",
     )
 
     inv_20: Optional[CQ] = Field(
@@ -319,7 +319,7 @@ class INV(HL7Model):
         ),
         serialization_alias="INV.20",
         title="Target Value",
-        description="Item #1896",
+        description="O | Item #01896",
     )
 
     @field_validator("inv_7", "inv_8", "inv_9", "inv_10", mode='before')

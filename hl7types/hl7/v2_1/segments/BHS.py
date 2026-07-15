@@ -18,40 +18,40 @@ class BHS(HL7Model):
     Attributes
     ----------
     bhs_1 : str
-        BHS.1 (req) - BATCH FIELD SEPARATOR (ST) S2-40
+        BHS.1 - BATCH FIELD SEPARATOR (ST) R S2-40
 
     bhs_2 : str
-        BHS.2 (req) - BATCH ENCODING CHARACTERS (ST)
+        BHS.2 - BATCH ENCODING CHARACTERS (ST) R
 
     bhs_3 : str | None
-        BHS.3 (opt) - BATCH SENDING APPLICATION (ST)
+        BHS.3 - BATCH SENDING APPLICATION (ST) O
 
     bhs_4 : str | None
-        BHS.4 (opt) - BATCH SENDING FACILITY (ST)
+        BHS.4 - BATCH SENDING FACILITY (ST) O
 
     bhs_5 : str | None
-        BHS.5 (opt) - BATCH RECEIVING APPLICATION (ST)
+        BHS.5 - BATCH RECEIVING APPLICATION (ST) O
 
     bhs_6 : str | None
-        BHS.6 (opt) - BATCH RECEIVING FACILITY (ST)
+        BHS.6 - BATCH RECEIVING FACILITY (ST) O
 
     bhs_7 : str | None
-        BHS.7 (opt) - BATCH CREATION DATE/TIME (TS)
+        BHS.7 - BATCH CREATION DATE/TIME (TS) O
 
     bhs_8 : str | None
-        BHS.8 (opt) - BATCH SECURITY (ST)
+        BHS.8 - BATCH SECURITY (ST) O
 
     bhs_9 : str | None
-        BHS.9 (opt) - BATCH NAME/ID/TYPE (ST)
+        BHS.9 - BATCH NAME/ID/TYPE (ST) O
 
     bhs_10 : str | None
-        BHS.10 (opt) - BATCH COMMENT (ST)
+        BHS.10 - BATCH COMMENT (ST) O
 
     bhs_11 : str | None
-        BHS.11 (opt) - BATCH CONTROL ID (ST)
+        BHS.11 - BATCH CONTROL ID (ST) O
 
     bhs_12 : str | None
-        BHS.12 (opt) - REFERENCE BATCH CONTROL ID (ST)
+        BHS.12 - REFERENCE BATCH CONTROL ID (ST) O
     """
 
     bhs_1: str = Field(
@@ -63,7 +63,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.1",
         title="BATCH FIELD SEPARATOR",
-        description="Item #685",
+        description="R | Item #00685 | LEN:1",
     )
 
     bhs_2: str = Field(
@@ -75,7 +75,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.2",
         title="BATCH ENCODING CHARACTERS",
-        description="Item #686",
+        description="R | Item #00686 | LEN:3",
     )
 
     bhs_3: Optional[str] = Field(
@@ -87,7 +87,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.3",
         title="BATCH SENDING APPLICATION",
-        description="Item #687",
+        description="O | Item #00687 | LEN:15",
     )
 
     bhs_4: Optional[str] = Field(
@@ -99,7 +99,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.4",
         title="BATCH SENDING FACILITY",
-        description="Item #688",
+        description="O | Item #00688 | LEN:20",
     )
 
     bhs_5: Optional[str] = Field(
@@ -111,7 +111,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.5",
         title="BATCH RECEIVING APPLICATION",
-        description="Item #689",
+        description="O | Item #00689 | LEN:15",
     )
 
     bhs_6: Optional[str] = Field(
@@ -123,7 +123,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.6",
         title="BATCH RECEIVING FACILITY",
-        description="Item #690",
+        description="O | Item #00690 | LEN:20",
     )
 
     bhs_7: Optional[str] = Field(
@@ -135,7 +135,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.7",
         title="BATCH CREATION DATE/TIME",
-        description="Item #655",
+        description="O | Item #00655 | LEN:19",
     )
 
     bhs_8: Optional[str] = Field(
@@ -147,7 +147,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.8",
         title="BATCH SECURITY",
-        description="Item #691",
+        description="O | Item #00691 | LEN:40",
     )
 
     bhs_9: Optional[str] = Field(
@@ -159,7 +159,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.9",
         title="BATCH NAME/ID/TYPE",
-        description="Item #656",
+        description="O | Item #00656 | LEN:20",
     )
 
     bhs_10: Optional[str] = Field(
@@ -171,7 +171,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.10",
         title="BATCH COMMENT",
-        description="Item #657",
+        description="O | Item #00657 | LEN:80",
     )
 
     bhs_11: Optional[str] = Field(
@@ -183,7 +183,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.11",
         title="BATCH CONTROL ID",
-        description="Item #658",
+        description="O | Item #00658 | LEN:20",
     )
 
     bhs_12: Optional[str] = Field(
@@ -195,7 +195,7 @@ class BHS(HL7Model):
         ),
         serialization_alias="BHS.12",
         title="REFERENCE BATCH CONTROL ID",
-        description="Item #659",
+        description="O | Item #00659 | LEN:20",
     )
 
     model_config = {"populate_by_name": True}

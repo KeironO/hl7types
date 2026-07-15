@@ -18,151 +18,151 @@ class PV1(HL7Model):
     Attributes
     ----------
     pv1_1 : str | None
-        PV1.1 (opt) - SET ID - PATIENT VISIT (SI) S3-18
+        PV1.1 - SET ID - PATIENT VISIT (SI) O S3-18
 
     pv1_2 : str
-        PV1.2 (req) - PATIENT CLASS (ID) | 0004 - PATIENT CLASS
+        PV1.2 - PATIENT CLASS (ID) R | 0004 - PATIENT CLASS
 
     pv1_3 : str
-        PV1.3 (req) - ASSIGNED PATIENT LOCATION (ID) | 0079 - LOCATION
+        PV1.3 - ASSIGNED PATIENT LOCATION (ID) R | 0079 - LOCATION
 
     pv1_4 : str | None
-        PV1.4 (opt) - ADMISSION TYPE (ID) | 0007 - ADMISSION TYPE
+        PV1.4 - ADMISSION TYPE (ID) O | 0007 - ADMISSION TYPE
 
     pv1_5 : str | None
-        PV1.5 (opt) - PRE-ADMIT NUMBER (ST)
+        PV1.5 - PRE-ADMIT NUMBER (ST) O
 
     pv1_6 : str | None
-        PV1.6 (opt) - PRIOR PATIENT LOCATION (ID) | 0079 - LOCATION
+        PV1.6 - PRIOR PATIENT LOCATION (ID) O | 0079 - LOCATION
 
     pv1_7 : str | None
-        PV1.7 (opt) - ATTENDING DOCTOR (CN) | 0010 - PHYSICIAN ID
+        PV1.7 - ATTENDING DOCTOR (CN) O | 0010 - PHYSICIAN ID
 
     pv1_8 : str | None
-        PV1.8 (opt) - REFERRING DOCTOR (CN) | 0010 - PHYSICIAN ID
+        PV1.8 - REFERRING DOCTOR (CN) O | 0010 - PHYSICIAN ID
 
     pv1_9 : list[str] | None
-        PV1.9 (opt, rep) - CONSULTING DOCTOR (CN) | 0010 - PHYSICIAN ID
+        PV1.9 - CONSULTING DOCTOR (CN) O rep | 0010 - PHYSICIAN ID
 
     pv1_10 : str | None
-        PV1.10 (opt) - HOSPITAL SERVICE (ID) | 0069 - HOSPITAL SERVICE
+        PV1.10 - HOSPITAL SERVICE (ID) O | 0069 - HOSPITAL SERVICE
 
     pv1_11 : str | None
-        PV1.11 (opt) - TEMPORARY LOCATION (ID) | 0079 - LOCATION
+        PV1.11 - TEMPORARY LOCATION (ID) O | 0079 - LOCATION
 
     pv1_12 : str | None
-        PV1.12 (opt) - PRE-ADMIT TEST INDICATOR (ID) | 0087 - PRE-ADMIT TESTING
+        PV1.12 - PRE-ADMIT TEST INDICATOR (ID) O | 0087 - PRE-ADMIT TESTING
 
     pv1_13 : str | None
-        PV1.13 (opt) - RE-ADMISSION INDICATOR (ID) | 0092 - RE-ADMISSION INDICATOR
+        PV1.13 - RE-ADMISSION INDICATOR (ID) O | 0092 - RE-ADMISSION INDICATOR
 
     pv1_14 : str | None
-        PV1.14 (opt) - ADMIT SOURCE (ID) | 0023 - ADMIT SOURCE
+        PV1.14 - ADMIT SOURCE (ID) O | 0023 - ADMIT SOURCE
 
     pv1_15 : str | None
-        PV1.15 (opt) - AMBULATORY STATUS (ID) | 0009 - AMBULATORY STATUS
+        PV1.15 - AMBULATORY STATUS (ID) O | 0009 - AMBULATORY STATUS
 
     pv1_16 : str | None
-        PV1.16 (opt) - VIP INDICATOR (ID) | 0099 - VIP INDICATOR
+        PV1.16 - VIP INDICATOR (ID) O | 0099 - VIP INDICATOR
 
     pv1_17 : str | None
-        PV1.17 (opt) - ADMITTING DOCTOR (CN) | 0010 - PHYSICIAN ID
+        PV1.17 - ADMITTING DOCTOR (CN) O | 0010 - PHYSICIAN ID
 
     pv1_18 : str | None
-        PV1.18 (opt) - PATIENT TYPE (ID) | 0018 - PATIENT TYPE
+        PV1.18 - PATIENT TYPE (ID) O | 0018 - PATIENT TYPE
 
     pv1_19 : str | None
-        PV1.19 (opt) - VISIT NUMBER (NM)
+        PV1.19 - VISIT NUMBER (NM) O
 
     pv1_20 : list[str] | None
-        PV1.20 (opt, rep) - FINANCIAL CLASS (ID) | 0064 - FINANCIAL CLASS
+        PV1.20 - FINANCIAL CLASS (ID) O rep | 0064 - FINANCIAL CLASS
 
     pv1_21 : str | None
-        PV1.21 (opt) - CHARGE PRICE INDICATOR (ID) | 0032 - CHARGE/PRICE INDICATOR
+        PV1.21 - CHARGE PRICE INDICATOR (ID) O | 0032 - CHARGE/PRICE INDICATOR
 
     pv1_22 : str | None
-        PV1.22 (opt) - COURTESY CODE (ID) | 0045 - COURTESY CODE
+        PV1.22 - COURTESY CODE (ID) O | 0045 - COURTESY CODE
 
     pv1_23 : str | None
-        PV1.23 (opt) - CREDIT RATING (ID) | 0046 - CREDIT RATING
+        PV1.23 - CREDIT RATING (ID) O | 0046 - CREDIT RATING
 
     pv1_24 : list[str] | None
-        PV1.24 (opt, rep) - CONTRACT CODE (ID) | 0044 - CONTRACT CODE
+        PV1.24 - CONTRACT CODE (ID) O rep | 0044 - CONTRACT CODE
 
     pv1_25 : list[str] | None
-        PV1.25 (opt, rep) - CONTRACT EFFECTIVE DATE (DT)
+        PV1.25 - CONTRACT EFFECTIVE DATE (DT) O rep
 
     pv1_26 : list[str] | None
-        PV1.26 (opt, rep) - CONTRACT AMOUNT (NM)
+        PV1.26 - CONTRACT AMOUNT (NM) O rep
 
     pv1_27 : list[str] | None
-        PV1.27 (opt, rep) - CONTRACT PERIOD (NM)
+        PV1.27 - CONTRACT PERIOD (NM) O rep
 
     pv1_28 : str | None
-        PV1.28 (opt) - INTEREST CODE (ID) | 0073 - INTEREST RATE CODE
+        PV1.28 - INTEREST CODE (ID) O | 0073 - INTEREST RATE CODE
 
     pv1_29 : str | None
-        PV1.29 (opt) - TRANSFER TO BAD DEBT CODE (ID) | 0110 - TRANSFER TO BAD DEBT CODE
+        PV1.29 - TRANSFER TO BAD DEBT CODE (ID) O | 0110 - TRANSFER TO BAD DEBT CODE
 
     pv1_30 : str | None
-        PV1.30 (opt) - TRANSFER TO BAD DEBT DATE (DT)
+        PV1.30 - TRANSFER TO BAD DEBT DATE (DT) O
 
     pv1_31 : str | None
-        PV1.31 (opt) - BAD DEBT AGENCY CODE (ST) | 0021 - BAD DEBT AGENCY CODE
+        PV1.31 - BAD DEBT AGENCY CODE (ST) O | 0021 - BAD DEBT AGENCY CODE
 
     pv1_32 : str | None
-        PV1.32 (opt) - BAD DEBT TRANSFER AMOUNT (NM)
+        PV1.32 - BAD DEBT TRANSFER AMOUNT (NM) O
 
     pv1_33 : str | None
-        PV1.33 (opt) - BAD DEBT RECOVERY AMOUNT (NM)
+        PV1.33 - BAD DEBT RECOVERY AMOUNT (NM) O
 
     pv1_34 : str | None
-        PV1.34 (opt) - DELETE ACCOUNT INDICATOR (ID) | 0111 - DELETE ACCOUNT CODE
+        PV1.34 - DELETE ACCOUNT INDICATOR (ID) O | 0111 - DELETE ACCOUNT CODE
 
     pv1_35 : str | None
-        PV1.35 (opt) - DELETE ACCOUNT DATE (DT)
+        PV1.35 - DELETE ACCOUNT DATE (DT) O
 
     pv1_36 : str | None
-        PV1.36 (opt) - DISCHARGE DISPOSITION (ID) | 0112 - DISCHARGED DISPOSITION
+        PV1.36 - DISCHARGE DISPOSITION (ID) O | 0112 - DISCHARGED DISPOSITION
 
     pv1_37 : str | None
-        PV1.37 (opt) - DISCHARGED TO LOCATION (ID) | 0113 - DISCHARGED TO LOCATION
+        PV1.37 - DISCHARGED TO LOCATION (ID) O | 0113 - DISCHARGED TO LOCATION
 
     pv1_38 : str | None
-        PV1.38 (opt) - DIET TYPE (ID) | 0114 - DIET TYPE
+        PV1.38 - DIET TYPE (ID) O | 0114 - DIET TYPE
 
     pv1_39 : str | None
-        PV1.39 (opt) - SERVICING FACILITY (ID) | 0115 - SERVICING FACILITY
+        PV1.39 - SERVICING FACILITY (ID) O | 0115 - SERVICING FACILITY
 
     pv1_40 : str | None
-        PV1.40 (opt) - BED STATUS (ID) | 0116 - BED STATUS
+        PV1.40 - BED STATUS (ID) O | 0116 - BED STATUS
 
     pv1_41 : str | None
-        PV1.41 (opt) - ACCOUNT STATUS (ID) | 0117 - ACCOUNT STATUS
+        PV1.41 - ACCOUNT STATUS (ID) O | 0117 - ACCOUNT STATUS
 
     pv1_42 : str | None
-        PV1.42 (opt) - PENDING LOCATION (ID) | 0079 - LOCATION
+        PV1.42 - PENDING LOCATION (ID) O | 0079 - LOCATION
 
     pv1_43 : str | None
-        PV1.43 (opt) - PRIOR TEMPORARY LOCATION (ID) | 0079 - LOCATION
+        PV1.43 - PRIOR TEMPORARY LOCATION (ID) O | 0079 - LOCATION
 
     pv1_44 : str | None
-        PV1.44 (opt) - ADMIT DATE/TIME (TS)
+        PV1.44 - ADMIT DATE/TIME (TS) O
 
     pv1_45 : str | None
-        PV1.45 (opt) - DISCHARGE DATE/TIME (TS)
+        PV1.45 - DISCHARGE DATE/TIME (TS) O
 
     pv1_46 : str | None
-        PV1.46 (opt) - CURRENT PATIENT BALANCE (NM)
+        PV1.46 - CURRENT PATIENT BALANCE (NM) O
 
     pv1_47 : str | None
-        PV1.47 (opt) - TOTAL CHARGES (NM)
+        PV1.47 - TOTAL CHARGES (NM) O
 
     pv1_48 : str | None
-        PV1.48 (opt) - TOTAL ADJUSTMENTS (NM)
+        PV1.48 - TOTAL ADJUSTMENTS (NM) O
 
     pv1_49 : str | None
-        PV1.49 (opt) - TOTAL PAYMENTS (NM)
+        PV1.49 - TOTAL PAYMENTS (NM) O
     """
 
     pv1_1: Optional[str] = Field(
@@ -174,7 +174,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.1",
         title="SET ID - PATIENT VISIT",
-        description="Item #458",
+        description="O | Item #00458 | LEN:4",
     )
 
     pv1_2: str = Field(
@@ -185,7 +185,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.2",
         title="PATIENT CLASS",
-        description="Item #52 | Table HL70004",
+        description="R | Item #00052 | Table 0004 - PATIENT CLASS | LEN:1",
     )
 
     pv1_3: str = Field(
@@ -196,7 +196,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.3",
         title="ASSIGNED PATIENT LOCATION",
-        description="Item #53 | Table HL70079",
+        description="R | Item #00053 | Table 0079 - LOCATION | LEN:12",
     )
 
     pv1_4: Optional[str] = Field(
@@ -208,7 +208,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.4",
         title="ADMISSION TYPE",
-        description="Item #218 | Table HL70007",
+        description="O | Item #00218 | Table 0007 - ADMISSION TYPE | LEN:2",
     )
 
     pv1_5: Optional[str] = Field(
@@ -220,7 +220,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.5",
         title="PRE-ADMIT NUMBER",
-        description="Item #219",
+        description="O | Item #00219 | LEN:20",
     )
 
     pv1_6: Optional[str] = Field(
@@ -232,7 +232,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.6",
         title="PRIOR PATIENT LOCATION",
-        description="Item #56 | Table HL70079",
+        description="O | Item #00056 | Table 0079 - LOCATION | LEN:12",
     )
 
     pv1_7: Optional[str] = Field(
@@ -244,7 +244,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.7",
         title="ATTENDING DOCTOR",
-        description="Item #57 | Table HL70010",
+        description="O | Item #00057 | Table 0010 - PHYSICIAN ID | LEN:60",
     )
 
     pv1_8: Optional[str] = Field(
@@ -256,7 +256,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.8",
         title="REFERRING DOCTOR",
-        description="Item #579 | Table HL70010",
+        description="O | Item #00579 | Table 0010 - PHYSICIAN ID | LEN:60",
     )
 
     pv1_9: Optional[List[str]] = Field(
@@ -268,7 +268,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.9",
         title="CONSULTING DOCTOR",
-        description="Item #580 | Table HL70010",
+        description="O | Item #00580 | Table 0010 - PHYSICIAN ID | LEN:60",
     )
 
     pv1_10: Optional[str] = Field(
@@ -280,7 +280,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.10",
         title="HOSPITAL SERVICE",
-        description="Item #59 | Table HL70069",
+        description="O | Item #00059 | Table 0069 - HOSPITAL SERVICE | LEN:3",
     )
 
     pv1_11: Optional[str] = Field(
@@ -292,7 +292,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.11",
         title="TEMPORARY LOCATION",
-        description="Item #60 | Table HL70079",
+        description="O | Item #00060 | Table 0079 - LOCATION | LEN:12",
     )
 
     pv1_12: Optional[str] = Field(
@@ -304,7 +304,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.12",
         title="PRE-ADMIT TEST INDICATOR",
-        description="Item #220 | Table HL70087",
+        description="O | Item #00220 | Table 0087 - PRE-ADMIT TESTING | LEN:2",
     )
 
     pv1_13: Optional[str] = Field(
@@ -316,7 +316,9 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.13",
         title="RE-ADMISSION INDICATOR",
-        description="Item #221 | Table HL70092",
+        description=(
+            "O | Item #00221 | Table 0092 - RE-ADMISSION INDICATOR | LEN:2"
+        ),
     )
 
     pv1_14: Optional[str] = Field(
@@ -328,7 +330,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.14",
         title="ADMIT SOURCE",
-        description="Item #63 | Table HL70023",
+        description="O | Item #00063 | Table 0023 - ADMIT SOURCE | LEN:3",
     )
 
     pv1_15: Optional[str] = Field(
@@ -340,7 +342,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.15",
         title="AMBULATORY STATUS",
-        description="Item #64 | Table HL70009",
+        description="O | Item #00064 | Table 0009 - AMBULATORY STATUS | LEN:2",
     )
 
     pv1_16: Optional[str] = Field(
@@ -352,7 +354,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.16",
         title="VIP INDICATOR",
-        description="Item #193 | Table HL70099",
+        description="O | Item #00193 | Table 0099 - VIP INDICATOR | LEN:2",
     )
 
     pv1_17: Optional[str] = Field(
@@ -364,7 +366,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.17",
         title="ADMITTING DOCTOR",
-        description="Item #189 | Table HL70010",
+        description="O | Item #00189 | Table 0010 - PHYSICIAN ID | LEN:60",
     )
 
     pv1_18: Optional[str] = Field(
@@ -376,7 +378,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.18",
         title="PATIENT TYPE",
-        description="Item #191 | Table HL70018",
+        description="O | Item #00191 | Table 0018 - PATIENT TYPE | LEN:2",
     )
 
     pv1_19: Optional[str] = Field(
@@ -388,7 +390,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.19",
         title="VISIT NUMBER",
-        description="Item #194",
+        description="O | Item #00194 | LEN:4",
     )
 
     pv1_20: Optional[List[str]] = Field(
@@ -400,7 +402,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.20",
         title="FINANCIAL CLASS",
-        description="Item #195 | Table HL70064",
+        description="O | Item #00195 | Table 0064 - FINANCIAL CLASS | LEN:11",
     )
 
     pv1_21: Optional[str] = Field(
@@ -412,7 +414,9 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.21",
         title="CHARGE PRICE INDICATOR",
-        description="Item #199 | Table HL70032",
+        description=(
+            "O | Item #00199 | Table 0032 - CHARGE/PRICE INDICATOR | LEN:2"
+        ),
     )
 
     pv1_22: Optional[str] = Field(
@@ -424,7 +428,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.22",
         title="COURTESY CODE",
-        description="Item #386 | Table HL70045",
+        description="O | Item #00386 | Table 0045 - COURTESY CODE | LEN:2",
     )
 
     pv1_23: Optional[str] = Field(
@@ -436,7 +440,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.23",
         title="CREDIT RATING",
-        description="Item #200 | Table HL70046",
+        description="O | Item #00200 | Table 0046 - CREDIT RATING | LEN:2",
     )
 
     pv1_24: Optional[List[str]] = Field(
@@ -448,7 +452,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.24",
         title="CONTRACT CODE",
-        description="Item #201 | Table HL70044",
+        description="O | Item #00201 | Table 0044 - CONTRACT CODE | LEN:2",
     )
 
     pv1_25: Optional[List[str]] = Field(
@@ -460,7 +464,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.25",
         title="CONTRACT EFFECTIVE DATE",
-        description="Item #202",
+        description="O | Item #00202 | LEN:8",
     )
 
     pv1_26: Optional[List[str]] = Field(
@@ -472,7 +476,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.26",
         title="CONTRACT AMOUNT",
-        description="Item #203",
+        description="O | Item #00203 | LEN:12",
     )
 
     pv1_27: Optional[List[str]] = Field(
@@ -484,7 +488,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.27",
         title="CONTRACT PERIOD",
-        description="Item #204",
+        description="O | Item #00204 | LEN:3",
     )
 
     pv1_28: Optional[str] = Field(
@@ -496,7 +500,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.28",
         title="INTEREST CODE",
-        description="Item #387 | Table HL70073",
+        description="O | Item #00387 | Table 0073 - INTEREST RATE CODE | LEN:2",
     )
 
     pv1_29: Optional[str] = Field(
@@ -508,7 +512,9 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.29",
         title="TRANSFER TO BAD DEBT CODE",
-        description="Item #205 | Table HL70110",
+        description=(
+            "O | Item #00205 | Table 0110 - TRANSFER TO BAD DEBT CODE | LEN:1"
+        ),
     )
 
     pv1_30: Optional[str] = Field(
@@ -520,7 +526,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.30",
         title="TRANSFER TO BAD DEBT DATE",
-        description="Item #388",
+        description="O | Item #00388 | LEN:8",
     )
 
     pv1_31: Optional[str] = Field(
@@ -532,7 +538,9 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.31",
         title="BAD DEBT AGENCY CODE",
-        description="Item #206 | Table HL70021",
+        description=(
+            "O | Item #00206 | Table 0021 - BAD DEBT AGENCY CODE | LEN:10"
+        ),
     )
 
     pv1_32: Optional[str] = Field(
@@ -544,7 +552,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.32",
         title="BAD DEBT TRANSFER AMOUNT",
-        description="Item #389",
+        description="O | Item #00389 | LEN:12",
     )
 
     pv1_33: Optional[str] = Field(
@@ -556,7 +564,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.33",
         title="BAD DEBT RECOVERY AMOUNT",
-        description="Item #390",
+        description="O | Item #00390 | LEN:12",
     )
 
     pv1_34: Optional[str] = Field(
@@ -568,7 +576,9 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.34",
         title="DELETE ACCOUNT INDICATOR",
-        description="Item #207 | Table HL70111",
+        description=(
+            "O | Item #00207 | Table 0111 - DELETE ACCOUNT CODE | LEN:1"
+        ),
     )
 
     pv1_35: Optional[str] = Field(
@@ -580,7 +590,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.35",
         title="DELETE ACCOUNT DATE",
-        description="Item #208",
+        description="O | Item #00208 | LEN:8",
     )
 
     pv1_36: Optional[str] = Field(
@@ -592,7 +602,9 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.36",
         title="DISCHARGE DISPOSITION",
-        description="Item #613 | Table HL70112",
+        description=(
+            "O | Item #00613 | Table 0112 - DISCHARGED DISPOSITION | LEN:2"
+        ),
     )
 
     pv1_37: Optional[str] = Field(
@@ -604,7 +616,9 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.37",
         title="DISCHARGED TO LOCATION",
-        description="Item #614 | Table HL70113",
+        description=(
+            "O | Item #00614 | Table 0113 - DISCHARGED TO LOCATION | LEN:2"
+        ),
     )
 
     pv1_38: Optional[str] = Field(
@@ -616,7 +630,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.38",
         title="DIET TYPE",
-        description="Item #615 | Table HL70114",
+        description="O | Item #00615 | Table 0114 - DIET TYPE | LEN:2",
     )
 
     pv1_39: Optional[str] = Field(
@@ -628,7 +642,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.39",
         title="SERVICING FACILITY",
-        description="Item #616 | Table HL70115",
+        description="O | Item #00616 | Table 0115 - SERVICING FACILITY | LEN:2",
     )
 
     pv1_40: Optional[str] = Field(
@@ -640,7 +654,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.40",
         title="BED STATUS",
-        description="Item #617 | Table HL70116",
+        description="O | Item #00617 | Table 0116 - BED STATUS | LEN:1",
     )
 
     pv1_41: Optional[str] = Field(
@@ -652,7 +666,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.41",
         title="ACCOUNT STATUS",
-        description="Item #703 | Table HL70117",
+        description="O | Item #00703 | Table 0117 - ACCOUNT STATUS | LEN:2",
     )
 
     pv1_42: Optional[str] = Field(
@@ -664,7 +678,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.42",
         title="PENDING LOCATION",
-        description="Item #704 | Table HL70079",
+        description="O | Item #00704 | Table 0079 - LOCATION | LEN:12",
     )
 
     pv1_43: Optional[str] = Field(
@@ -676,7 +690,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.43",
         title="PRIOR TEMPORARY LOCATION",
-        description="Item #705 | Table HL70079",
+        description="O | Item #00705 | Table 0079 - LOCATION | LEN:12",
     )
 
     pv1_44: Optional[str] = Field(
@@ -688,7 +702,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.44",
         title="ADMIT DATE/TIME",
-        description="Item #775",
+        description="O | Item #00775 | LEN:19",
     )
 
     pv1_45: Optional[str] = Field(
@@ -700,7 +714,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.45",
         title="DISCHARGE DATE/TIME",
-        description="Item #776",
+        description="O | Item #00776 | LEN:19",
     )
 
     pv1_46: Optional[str] = Field(
@@ -712,7 +726,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.46",
         title="CURRENT PATIENT BALANCE",
-        description="Item #777",
+        description="O | Item #00777 | LEN:12",
     )
 
     pv1_47: Optional[str] = Field(
@@ -724,7 +738,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.47",
         title="TOTAL CHARGES",
-        description="Item #778",
+        description="O | Item #00778 | LEN:12",
     )
 
     pv1_48: Optional[str] = Field(
@@ -736,7 +750,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.48",
         title="TOTAL ADJUSTMENTS",
-        description="Item #779",
+        description="O | Item #00779 | LEN:12",
     )
 
     pv1_49: Optional[str] = Field(
@@ -748,7 +762,7 @@ class PV1(HL7Model):
         ),
         serialization_alias="PV1.49",
         title="TOTAL PAYMENTS",
-        description="Item #780",
+        description="O | Item #00780 | LEN:12",
     )
 
     @field_validator("pv1_1", mode='before')

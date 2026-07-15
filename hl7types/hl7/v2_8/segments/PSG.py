@@ -21,22 +21,22 @@ class PSG(HL7Model):
     Attributes
     ----------
     psg_1 : EI
-        PSG.1 (req) - Provider Product/Service Group Number (EI) S16.4.5.1
+        PSG.1 - Provider Product/Service Group Number (EI) R S16.4.5.1
 
     psg_2 : EI | None
-        PSG.2 (opt) - Payer Product/Service Group Number (EI) S16.4.5.2
+        PSG.2 - Payer Product/Service Group Number (EI) O S16.4.5.2
 
     psg_3 : str
-        PSG.3 (req) - Product/Service Group Sequence Number (SI) S16.4.5.3
+        PSG.3 - Product/Service Group Sequence Number (SI) R S16.4.5.3
 
     psg_4 : str
-        PSG.4 (req) - Adjudicate as Group (ID) S16.4.5.4 | 0136 - Yes/no Indicator
+        PSG.4 - Adjudicate as Group (ID) R S16.4.5.4 | 0136 - Yes/no Indicator
 
     psg_5 : CP
-        PSG.5 (req) - Product/Service Group Billed Amount (CP) S16.4.5.5
+        PSG.5 - Product/Service Group Billed Amount (CP) R S16.4.5.5
 
     psg_6 : str
-        PSG.6 (req) - Product/Service Group Description (ST) S16.4.5.6
+        PSG.6 - Product/Service Group Description (ST) R S16.4.5.6
     """
 
     psg_1: EI = Field(
@@ -47,7 +47,7 @@ class PSG(HL7Model):
         ),
         serialization_alias="PSG.1",
         title="Provider Product/Service Group Number",
-        description="Item #1950",
+        description="R | Item #01950",
     )
 
     psg_2: Optional[EI] = Field(
@@ -59,7 +59,7 @@ class PSG(HL7Model):
         ),
         serialization_alias="PSG.2",
         title="Payer Product/Service Group Number",
-        description="Item #1951",
+        description="O | Item #01951",
     )
 
     psg_3: str = Field(
@@ -70,7 +70,7 @@ class PSG(HL7Model):
         ),
         serialization_alias="PSG.3",
         title="Product/Service Group Sequence Number",
-        description="Item #1952",
+        description="R | Item #01952 | LEN:4",
     )
 
     psg_4: str = Field(
@@ -81,7 +81,7 @@ class PSG(HL7Model):
         ),
         serialization_alias="PSG.4",
         title="Adjudicate as Group",
-        description="Item #1953 | Table HL70136",
+        description="R | Item #01953 | Table 0136 - Yes/no Indicator | LEN:1",
     )
 
     psg_5: CP = Field(
@@ -92,7 +92,7 @@ class PSG(HL7Model):
         ),
         serialization_alias="PSG.5",
         title="Product/Service Group Billed Amount",
-        description="Item #1954",
+        description="R | Item #01954",
     )
 
     psg_6: str = Field(
@@ -103,7 +103,7 @@ class PSG(HL7Model):
         ),
         serialization_alias="PSG.6",
         title="Product/Service Group Description",
-        description="Item #2044",
+        description="R | Item #02044",
     )
 
     @field_validator("psg_3", mode='before')

@@ -21,22 +21,22 @@ class EVN(HL7Model):
     Attributes
     ----------
     evn_1 : str
-        EVN.1 (req) - Event Type Code (ID) S3.3.1.1 | 0003 - Event Type
+        EVN.1 - Event Type Code (ID) R S3.3.1.1 | 0003 - Event Type
 
     evn_2 : TS | None
-        EVN.2 (opt) - Recorded Date/Time (TS) S3.3.1.2
+        EVN.2 - Recorded Date/Time (TS) NA S3.3.1.2
 
     evn_3 : TS | None
-        EVN.3 (opt) - Date/Time Planned Event (TS) S3.3.1.3
+        EVN.3 - Date/Time Planned Event (TS) NA S3.3.1.3
 
     evn_4 : str | None
-        EVN.4 (opt) - Event Reason Code (ID) S3.3.1.4 | 0062 - Event Reason
+        EVN.4 - Event Reason Code (ID) O S3.3.1.4 | 0062 - Event Reason
 
     evn_5 : CN | None
-        EVN.5 (opt) - Operator ID (CN) S3.3.1.5 | 0188 - Operator ID
+        EVN.5 - Operator ID (CN) O S3.3.1.5 | 0188 - Operator ID
 
     evn_6 : TS | None
-        EVN.6 (opt) - Event occured (TS) S3.3.1.6
+        EVN.6 - Event occured (TS) O S3.3.1.6
     """
 
     evn_1: str = Field(
@@ -47,7 +47,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.1",
         title="Event Type Code",
-        description="Item #99 | Table HL70003",
+        description="R | Item #00099 | Table 0003 - Event Type | LEN:3",
     )
 
     evn_2: Optional[TS] = Field(
@@ -59,7 +59,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.2",
         title="Recorded Date/Time",
-        description="Item #100",
+        description="NA | Item #00100",
     )
 
     evn_3: Optional[TS] = Field(
@@ -71,7 +71,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.3",
         title="Date/Time Planned Event",
-        description="Item #101",
+        description="NA | Item #00101",
     )
 
     evn_4: Optional[str] = Field(
@@ -83,7 +83,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.4",
         title="Event Reason Code",
-        description="Item #102 | Table HL70062",
+        description="O | Item #00102 | Table 0062 - Event Reason | LEN:3",
     )
 
     evn_5: Optional[CN] = Field(
@@ -95,7 +95,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.5",
         title="Operator ID",
-        description="Item #103 | Table HL70188",
+        description="O | Item #00103 | Table 0188 - Operator ID",
     )
 
     evn_6: Optional[TS] = Field(
@@ -107,7 +107,7 @@ class EVN(HL7Model):
         ),
         serialization_alias="EVN.6",
         title="Event occured",
-        description="Item #1278",
+        description="O | Item #01278",
     )
 
     model_config = {"populate_by_name": True}

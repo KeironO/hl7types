@@ -24,31 +24,31 @@ class LOC(HL7Model):
     Attributes
     ----------
     loc_1 : PL
-        LOC.1 (req) - Primary Key Value - LOC (PL) S8.9.2.1
+        LOC.1 - Primary Key Value - LOC (PL) R S8.9.2.1
 
     loc_2 : str | None
-        LOC.2 (opt) - Location Description (ST) S8.9.2.2
+        LOC.2 - Location Description (ST) O S8.9.2.2
 
     loc_3 : list[CWE]
-        LOC.3 (req, rep) - Location Type - LOC (CWE) S8.9.2.3 | 0260 - Patient Location Type
+        LOC.3 - Location Type - LOC (CWE) R rep S8.9.2.3 | 0260 - Patient Location Type
 
     loc_4 : list[XON] | None
-        LOC.4 (opt, rep) - Organization Name - LOC (XON) S8.9.2.4
+        LOC.4 - Organization Name - LOC (XON) O rep S8.9.2.4
 
     loc_5 : list[XAD] | None
-        LOC.5 (opt, rep) - Location Address (XAD) S8.9.2.5
+        LOC.5 - Location Address (XAD) O rep S8.9.2.5
 
     loc_6 : list[XTN] | None
-        LOC.6 (opt, rep) - Location Phone (XTN) S8.9.2.6
+        LOC.6 - Location Phone (XTN) O rep S8.9.2.6
 
     loc_7 : list[CWE] | None
-        LOC.7 (opt, rep) - License Number (CWE) S8.9.2.7 | 0461 - License Number
+        LOC.7 - License Number (CWE) O rep S8.9.2.7 | 0461 - License Number
 
     loc_8 : list[CWE] | None
-        LOC.8 (opt, rep) - Location Equipment (CWE) S8.9.2.8 | 0261 - Location Equipment
+        LOC.8 - Location Equipment (CWE) O rep S8.9.2.8 | 0261 - Location Equipment
 
     loc_9 : CWE | None
-        LOC.9 (opt) - Location Service Code (CWE) S8.9.2.9 | 0442 - Location Service Code
+        LOC.9 - Location Service Code (CWE) O S8.9.2.9 | 0442 - Location Service Code
     """
 
     loc_1: PL = Field(
@@ -59,7 +59,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.1",
         title="Primary Key Value - LOC",
-        description="Item #1307",
+        description="R | Item #01307",
     )
 
     loc_2: Optional[str] = Field(
@@ -71,7 +71,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.2",
         title="Location Description",
-        description="Item #944",
+        description="O | Item #00944",
     )
 
     loc_3: List[CWE] = Field(
@@ -83,7 +83,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.3",
         title="Location Type - LOC",
-        description="Item #945 | Table HL70260",
+        description="R | Item #00945 | Table 0260 - Patient Location Type",
     )
 
     loc_4: Optional[List[XON]] = Field(
@@ -95,7 +95,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.4",
         title="Organization Name - LOC",
-        description="Item #947",
+        description="O | Item #00947",
     )
 
     loc_5: Optional[List[XAD]] = Field(
@@ -107,7 +107,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.5",
         title="Location Address",
-        description="Item #948",
+        description="O | Item #00948",
     )
 
     loc_6: Optional[List[XTN]] = Field(
@@ -119,7 +119,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.6",
         title="Location Phone",
-        description="Item #949",
+        description="O | Item #00949",
     )
 
     loc_7: Optional[List[CWE]] = Field(
@@ -131,7 +131,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.7",
         title="License Number",
-        description="Item #951 | Table HL70461",
+        description="O | Item #00951 | Table 0461 - License Number",
     )
 
     loc_8: Optional[List[CWE]] = Field(
@@ -143,7 +143,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.8",
         title="Location Equipment",
-        description="Item #953 | Table HL70261",
+        description="O | Item #00953 | Table 0261 - Location Equipment",
     )
 
     loc_9: Optional[CWE] = Field(
@@ -155,7 +155,7 @@ class LOC(HL7Model):
         ),
         serialization_alias="LOC.9",
         title="Location Service Code",
-        description="Item #1583 | Table HL70442",
+        description="O | Item #01583 | Table 0442 - Location Service Code",
     )
 
     model_config = {"populate_by_name": True}

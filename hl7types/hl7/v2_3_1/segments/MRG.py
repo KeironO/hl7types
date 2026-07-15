@@ -21,25 +21,25 @@ class MRG(HL7Model):
     Attributes
     ----------
     mrg_1 : list[CX]
-        MRG.1 (req, rep) - Prior Patient Identifier List (CX) S3.3.8.1
+        MRG.1 - Prior Patient Identifier List (CX) R rep S3.3.8.1
 
     mrg_2 : list[CX] | None
-        MRG.2 (opt, rep) - Prior Alternate Patient ID (CX) S3.3.8.2
+        MRG.2 - Prior Alternate Patient ID (CX) O rep S3.3.8.2
 
     mrg_3 : CX | None
-        MRG.3 (opt) - Prior Patient Account Number (CX) S3.3.8.3
+        MRG.3 - Prior Patient Account Number (CX) O S3.3.8.3
 
     mrg_4 : CX | None
-        MRG.4 (opt) - Prior Patient ID (CX) S3.3.8.4
+        MRG.4 - Prior Patient ID (CX) O S3.3.8.4
 
     mrg_5 : CX | None
-        MRG.5 (opt) - Prior Visit Number (CX) S3.3.8.5
+        MRG.5 - Prior Visit Number (CX) O S3.3.8.5
 
     mrg_6 : CX | None
-        MRG.6 (opt) - Prior Alternate Visit ID (CX) S3.3.8.6
+        MRG.6 - Prior Alternate Visit ID (CX) O S3.3.8.6
 
     mrg_7 : list[XPN] | None
-        MRG.7 (opt, rep) - Prior Patient Name (XPN) S3.3.8.7
+        MRG.7 - Prior Patient Name (XPN) O rep S3.3.8.7
     """
 
     mrg_1: List[CX] = Field(
@@ -51,7 +51,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.1",
         title="Prior Patient Identifier List",
-        description="Item #211",
+        description="R | Item #00211",
     )
 
     mrg_2: Optional[List[CX]] = Field(
@@ -63,7 +63,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.2",
         title="Prior Alternate Patient ID",
-        description="Item #212",
+        description="O | Item #00212",
     )
 
     mrg_3: Optional[CX] = Field(
@@ -75,7 +75,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.3",
         title="Prior Patient Account Number",
-        description="Item #213",
+        description="O | Item #00213",
     )
 
     mrg_4: Optional[CX] = Field(
@@ -87,7 +87,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.4",
         title="Prior Patient ID",
-        description="Item #214",
+        description="O | Item #00214",
     )
 
     mrg_5: Optional[CX] = Field(
@@ -99,7 +99,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.5",
         title="Prior Visit Number",
-        description="Item #1279",
+        description="O | Item #01279",
     )
 
     mrg_6: Optional[CX] = Field(
@@ -111,7 +111,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.6",
         title="Prior Alternate Visit ID",
-        description="Item #1280",
+        description="O | Item #01280",
     )
 
     mrg_7: Optional[List[XPN]] = Field(
@@ -123,7 +123,7 @@ class MRG(HL7Model):
         ),
         serialization_alias="MRG.7",
         title="Prior Patient Name",
-        description="Item #1281",
+        description="O | Item #01281",
     )
 
     model_config = {"populate_by_name": True}

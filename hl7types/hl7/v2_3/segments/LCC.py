@@ -21,16 +21,16 @@ class LCC(HL7Model):
     Attributes
     ----------
     lcc_1 : PL
-        LCC.1 (req) - Primary Key Value (PL) S8.8.6.1
+        LCC.1 - Primary Key Value (PL) R S8.8.6.1
 
     lcc_2 : str
-        LCC.2 (req) - Location Department (IS) S8.8.5 | 0264 - Location Department
+        LCC.2 - Location Department (IS) R S8.8.5 | 0264 - Location Department
 
     lcc_3 : list[CE] | None
-        LCC.3 (opt, rep) - Accommodation Type (CE) S8.8.6.3
+        LCC.3 - Accommodation Type (CE) O rep S8.8.6.3
 
     lcc_4 : list[CE]
-        LCC.4 (req, rep) - Charge Code (CE) S8.8.6.4
+        LCC.4 - Charge Code (CE) R rep S8.8.6.4
     """
 
     lcc_1: PL = Field(
@@ -41,7 +41,7 @@ class LCC(HL7Model):
         ),
         serialization_alias="LCC.1",
         title="Primary Key Value",
-        description="Item #979",
+        description="R | Item #00979",
     )
 
     lcc_2: str = Field(
@@ -52,7 +52,9 @@ class LCC(HL7Model):
         ),
         serialization_alias="LCC.2",
         title="Location Department",
-        description="Item #964 | Table HL70264",
+        description=(
+            "R | Item #00964 | Table 0264 - Location Department | LEN:10"
+        ),
     )
 
     lcc_3: Optional[List[CE]] = Field(
@@ -64,7 +66,7 @@ class LCC(HL7Model):
         ),
         serialization_alias="LCC.3",
         title="Accommodation Type",
-        description="Item #980",
+        description="O | Item #00980",
     )
 
     lcc_4: List[CE] = Field(
@@ -76,7 +78,7 @@ class LCC(HL7Model):
         ),
         serialization_alias="LCC.4",
         title="Charge Code",
-        description="Item #981",
+        description="R | Item #00981",
     )
 
     model_config = {"populate_by_name": True}

@@ -25,76 +25,76 @@ class PM1(HL7Model):
     Attributes
     ----------
     pm1_1 : CWE
-        PM1.1 (req) - Health Plan ID (CWE) S6.5.1.14 | 0072 - Insurance Plan ID
+        PM1.1 - Health Plan ID (CWE) R S6.5.1.14 | 0072 - Insurance Plan ID
 
     pm1_2 : list[CX]
-        PM1.2 (req, rep) - Insurance Company ID (CX) S6.5.6.3
+        PM1.2 - Insurance Company ID (CX) R rep S6.5.6.3
 
     pm1_3 : list[XON] | None
-        PM1.3 (opt, rep) - Insurance Company Name (XON) S6.5.6.4
+        PM1.3 - Insurance Company Name (XON) O rep S6.5.6.4
 
     pm1_4 : list[XAD] | None
-        PM1.4 (opt, rep) - Insurance Company Address (XAD) S6.5.6.5
+        PM1.4 - Insurance Company Address (XAD) O rep S6.5.6.5
 
     pm1_5 : list[XPN] | None
-        PM1.5 (opt, rep) - Insurance Co Contact Person (XPN) S6.5.6.6
+        PM1.5 - Insurance Co Contact Person (XPN) O rep S6.5.6.6
 
     pm1_6 : list[XTN] | None
-        PM1.6 (opt, rep) - Insurance Co Phone Number (XTN) S6.5.6.7
+        PM1.6 - Insurance Co Phone Number (XTN) O rep S6.5.6.7
 
     pm1_7 : str | None
-        PM1.7 (opt) - Group Number (ST) S6.5.6.8
+        PM1.7 - Group Number (ST) O S6.5.6.8
 
     pm1_8 : list[XON] | None
-        PM1.8 (opt, rep) - Group Name (XON) S6.5.6.9
+        PM1.8 - Group Name (XON) O rep S6.5.6.9
 
     pm1_9 : str | None
-        PM1.9 (opt) - Plan Effective Date (DT) S6.5.6.12
+        PM1.9 - Plan Effective Date (DT) O S6.5.6.12
 
     pm1_10 : str | None
-        PM1.10 (opt) - Plan Expiration Date (DT) S6.5.6.13
+        PM1.10 - Plan Expiration Date (DT) O S6.5.6.13
 
     pm1_11 : str | None
-        PM1.11 (opt) - Patient DOB Required (ID) S8.8.17.11 | 0136 - Yes/no Indicator
+        PM1.11 - Patient DOB Required (ID) O S8.8.17.11 | 0136 - Yes/no Indicator
 
     pm1_12 : str | None
-        PM1.12 (opt) - Patient Gender Required (ID) S8.8.17.12 | 0136 - Yes/no Indicator
+        PM1.12 - Patient Gender Required (ID) O S8.8.17.12 | 0136 - Yes/no Indicator
 
     pm1_13 : str | None
-        PM1.13 (opt) - Patient Relationship Required (ID) S8.8.17.13 | 0136 - Yes/no Indicator
+        PM1.13 - Patient Relationship Required (ID) O S8.8.17.13 | 0136 - Yes/no Indicator
 
     pm1_14 : str | None
-        PM1.14 (opt) - Patient Signature Required (ID) S8.8.17.14 | 0136 - Yes/no Indicator
+        PM1.14 - Patient Signature Required (ID) O S8.8.17.14 | 0136 - Yes/no Indicator
 
     pm1_15 : str | None
-        PM1.15 (opt) - Diagnosis Required (ID) S8.8.17.15 | 0136 - Yes/no Indicator
+        PM1.15 - Diagnosis Required (ID) O S8.8.17.15 | 0136 - Yes/no Indicator
 
     pm1_16 : str | None
-        PM1.16 (opt) - Service Required (ID) S8.8.17.16 | 0136 - Yes/no Indicator
+        PM1.16 - Service Required (ID) O S8.8.17.16 | 0136 - Yes/no Indicator
 
     pm1_17 : str | None
-        PM1.17 (opt) - Patient Name Required (ID) S8.8.17.17 | 0136 - Yes/no Indicator
+        PM1.17 - Patient Name Required (ID) O S8.8.17.17 | 0136 - Yes/no Indicator
 
     pm1_18 : str | None
-        PM1.18 (opt) - Patient Address Required (ID) S8.8.17.18 | 0136 - Yes/no Indicator
+        PM1.18 - Patient Address Required (ID) O S8.8.17.18 | 0136 - Yes/no Indicator
 
     pm1_19 : str | None
-        PM1.19 (opt) - Subscribers Name Required (ID) S8.8.17.19 | 0136 - Yes/no Indicator
+        PM1.19 - Subscribers Name Required (ID) O S8.8.17.19 | 0136 - Yes/no Indicator
 
     pm1_20 : str | None
-        PM1.20 (opt) - Workman's Comp Indicator (ID) S8.8.17.20 | 0136 - Yes/no Indicator
+        PM1.20 - Workman's Comp Indicator (ID) O S8.8.17.20 | 0136 - Yes/no Indicator
 
     pm1_21 : str | None
-        PM1.21 (opt) - Bill Type Required (ID) S8.8.17.21 | 0136 - Yes/no Indicator
+        PM1.21 - Bill Type Required (ID) O S8.8.17.21 | 0136 - Yes/no Indicator
 
     pm1_22 : str | None
-        PM1.22 (opt) - Commercial Carrier Name and Address Required (ID) S8.8.17.22 | 0136 - Yes/no Indicator
+        PM1.22 - Commercial Carrier Name and Address Required (ID) O S8.8.17.22 | 0136 - Yes/no Indicator
 
     pm1_23 : str | None
-        PM1.23 (opt) - Policy Number Pattern (ST) S8.8.17.23
+        PM1.23 - Policy Number Pattern (ST) O S8.8.17.23
 
     pm1_24 : str | None
-        PM1.24 (opt) - Group Number Pattern (ST) S8.8.17.24
+        PM1.24 - Group Number Pattern (ST) O S8.8.17.24
     """
 
     pm1_1: CWE = Field(
@@ -105,7 +105,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.1",
         title="Health Plan ID",
-        description="Item #368 | Table HL70072",
+        description="R | Item #00368 | Table 0072 - Insurance Plan ID",
     )
 
     pm1_2: List[CX] = Field(
@@ -117,7 +117,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.2",
         title="Insurance Company ID",
-        description="Item #428",
+        description="R | Item #00428",
     )
 
     pm1_3: Optional[List[XON]] = Field(
@@ -129,7 +129,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.3",
         title="Insurance Company Name",
-        description="Item #429",
+        description="O | Item #00429",
     )
 
     pm1_4: Optional[List[XAD]] = Field(
@@ -141,7 +141,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.4",
         title="Insurance Company Address",
-        description="Item #430",
+        description="O | Item #00430",
     )
 
     pm1_5: Optional[List[XPN]] = Field(
@@ -153,7 +153,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.5",
         title="Insurance Co Contact Person",
-        description="Item #431",
+        description="O | Item #00431",
     )
 
     pm1_6: Optional[List[XTN]] = Field(
@@ -165,7 +165,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.6",
         title="Insurance Co Phone Number",
-        description="Item #432",
+        description="O | Item #00432",
     )
 
     pm1_7: Optional[str] = Field(
@@ -177,7 +177,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.7",
         title="Group Number",
-        description="Item #433",
+        description="O | Item #00433",
     )
 
     pm1_8: Optional[List[XON]] = Field(
@@ -189,7 +189,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.8",
         title="Group Name",
-        description="Item #434",
+        description="O | Item #00434",
     )
 
     pm1_9: Optional[str] = Field(
@@ -201,7 +201,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.9",
         title="Plan Effective Date",
-        description="Item #437",
+        description="O | Item #00437",
     )
 
     pm1_10: Optional[str] = Field(
@@ -213,7 +213,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.10",
         title="Plan Expiration Date",
-        description="Item #438",
+        description="O | Item #00438",
     )
 
     pm1_11: Optional[str] = Field(
@@ -225,7 +225,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.11",
         title="Patient DOB Required",
-        description="Item #3454 | Table HL70136",
+        description="O | Item #03454 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_12: Optional[str] = Field(
@@ -237,7 +237,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.12",
         title="Patient Gender Required",
-        description="Item #3455 | Table HL70136",
+        description="O | Item #03455 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_13: Optional[str] = Field(
@@ -249,7 +249,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.13",
         title="Patient Relationship Required",
-        description="Item #3456 | Table HL70136",
+        description="O | Item #03456 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_14: Optional[str] = Field(
@@ -261,7 +261,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.14",
         title="Patient Signature Required",
-        description="Item #3457 | Table HL70136",
+        description="O | Item #03457 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_15: Optional[str] = Field(
@@ -273,7 +273,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.15",
         title="Diagnosis Required",
-        description="Item #3458 | Table HL70136",
+        description="O | Item #03458 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_16: Optional[str] = Field(
@@ -285,7 +285,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.16",
         title="Service Required",
-        description="Item #3459 | Table HL70136",
+        description="O | Item #03459 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_17: Optional[str] = Field(
@@ -297,7 +297,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.17",
         title="Patient Name Required",
-        description="Item #3460 | Table HL70136",
+        description="O | Item #03460 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_18: Optional[str] = Field(
@@ -309,7 +309,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.18",
         title="Patient Address Required",
-        description="Item #3461 | Table HL70136",
+        description="O | Item #03461 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_19: Optional[str] = Field(
@@ -321,7 +321,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.19",
         title="Subscribers Name Required",
-        description="Item #3462 | Table HL70136",
+        description="O | Item #03462 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_20: Optional[str] = Field(
@@ -333,7 +333,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.20",
         title="Workman's Comp Indicator",
-        description="Item #3463 | Table HL70136",
+        description="O | Item #03463 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_21: Optional[str] = Field(
@@ -345,7 +345,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.21",
         title="Bill Type Required",
-        description="Item #3464 | Table HL70136",
+        description="O | Item #03464 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_22: Optional[str] = Field(
@@ -357,7 +357,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.22",
         title="Commercial Carrier Name and Address Required",
-        description="Item #3465 | Table HL70136",
+        description="O | Item #03465 | Table 0136 - Yes/no Indicator",
     )
 
     pm1_23: Optional[str] = Field(
@@ -369,7 +369,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.23",
         title="Policy Number Pattern",
-        description="Item #3466",
+        description="O | Item #03466",
     )
 
     pm1_24: Optional[str] = Field(
@@ -381,7 +381,7 @@ class PM1(HL7Model):
         ),
         serialization_alias="PM1.24",
         title="Group Number Pattern",
-        description="Item #3467",
+        description="O | Item #03467",
     )
 
     @field_validator("pm1_9", "pm1_10", mode='before')

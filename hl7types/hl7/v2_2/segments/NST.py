@@ -20,49 +20,49 @@ class NST(HL7Model):
     Attributes
     ----------
     nst_1 : str
-        NST.1 (req) - Statistics Available (ID) SC-4 | 0136 - Y/N Indicator
+        NST.1 - Statistics Available (ID) R SC-4 | 0136 - Y/N Indicator
 
     nst_2 : str | None
-        NST.2 (opt) - Source Identifier (ST)
+        NST.2 - Source Identifier (ST) NA
 
     nst_3 : str | None
-        NST.3 (opt) - Source Type (ID)
+        NST.3 - Source Type (ID) NA
 
     nst_4 : TS | None
-        NST.4 (opt) - Statistics Start (TS)
+        NST.4 - Statistics Start (TS) NA
 
     nst_5 : TS | None
-        NST.5 (opt) - Statistics End (TS)
+        NST.5 - Statistics End (TS) NA
 
     nst_6 : str | None
-        NST.6 (opt) - Receive Character Count (NM)
+        NST.6 - Receive Character Count (NM) NA
 
     nst_7 : str | None
-        NST.7 (opt) - Send Character Count (NM)
+        NST.7 - Send Character Count (NM) NA
 
     nst_8 : str | None
-        NST.8 (opt) - Message Received (NM)
+        NST.8 - Message Received (NM) NA
 
     nst_9 : str | None
-        NST.9 (opt) - Message Sent (NM)
+        NST.9 - Message Sent (NM) NA
 
     nst_10 : str | None
-        NST.10 (opt) - Checksum Errors Received (NM)
+        NST.10 - Checksum Errors Received (NM) NA
 
     nst_11 : str | None
-        NST.11 (opt) - Length Errors Received (NM)
+        NST.11 - Length Errors Received (NM) NA
 
     nst_12 : str | None
-        NST.12 (opt) - Other Errors Received (NM)
+        NST.12 - Other Errors Received (NM) NA
 
     nst_13 : str | None
-        NST.13 (opt) - Connect Timeouts (NM)
+        NST.13 - Connect Timeouts (NM) NA
 
     nst_14 : str | None
-        NST.14 (opt) - Receive Timeouts (NM)
+        NST.14 - Receive Timeouts (NM) NA
 
     nst_15 : str | None
-        NST.15 (opt) - Network Errors (NM)
+        NST.15 - Network Errors (NM) NA
     """
 
     nst_1: str = Field(
@@ -73,7 +73,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.1",
         title="Statistics Available",
-        description="Item #743 | Table HL70136",
+        description="R | Item #00743 | Table 0136 - Y/N Indicator | LEN:1",
     )
 
     nst_2: Optional[str] = Field(
@@ -85,7 +85,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.2",
         title="Source Identifier",
-        description="Item #744",
+        description="NA | Item #00744 | LEN:30",
     )
 
     nst_3: Optional[str] = Field(
@@ -97,7 +97,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.3",
         title="Source Type",
-        description="Item #745",
+        description="NA | Item #00745 | LEN:3",
     )
 
     nst_4: Optional[TS] = Field(
@@ -109,7 +109,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.4",
         title="Statistics Start",
-        description="Item #746",
+        description="NA | Item #00746",
     )
 
     nst_5: Optional[TS] = Field(
@@ -121,7 +121,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.5",
         title="Statistics End",
-        description="Item #747",
+        description="NA | Item #00747",
     )
 
     nst_6: Optional[str] = Field(
@@ -133,7 +133,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.6",
         title="Receive Character Count",
-        description="Item #748",
+        description="NA | Item #00748 | LEN:10",
     )
 
     nst_7: Optional[str] = Field(
@@ -145,7 +145,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.7",
         title="Send Character Count",
-        description="Item #749",
+        description="NA | Item #00749 | LEN:10",
     )
 
     nst_8: Optional[str] = Field(
@@ -157,7 +157,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.8",
         title="Message Received",
-        description="Item #750",
+        description="NA | Item #00750 | LEN:10",
     )
 
     nst_9: Optional[str] = Field(
@@ -169,7 +169,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.9",
         title="Message Sent",
-        description="Item #751",
+        description="NA | Item #00751 | LEN:10",
     )
 
     nst_10: Optional[str] = Field(
@@ -181,7 +181,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.10",
         title="Checksum Errors Received",
-        description="Item #752",
+        description="NA | Item #00752 | LEN:10",
     )
 
     nst_11: Optional[str] = Field(
@@ -193,7 +193,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.11",
         title="Length Errors Received",
-        description="Item #753",
+        description="NA | Item #00753 | LEN:10",
     )
 
     nst_12: Optional[str] = Field(
@@ -205,7 +205,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.12",
         title="Other Errors Received",
-        description="Item #754",
+        description="NA | Item #00754 | LEN:10",
     )
 
     nst_13: Optional[str] = Field(
@@ -217,7 +217,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.13",
         title="Connect Timeouts",
-        description="Item #755",
+        description="NA | Item #00755 | LEN:10",
     )
 
     nst_14: Optional[str] = Field(
@@ -229,7 +229,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.14",
         title="Receive Timeouts",
-        description="Item #756",
+        description="NA | Item #00756 | LEN:10",
     )
 
     nst_15: Optional[str] = Field(
@@ -241,7 +241,7 @@ class NST(HL7Model):
         ),
         serialization_alias="NST.15",
         title="Network Errors",
-        description="Item #757",
+        description="NA | Item #00757 | LEN:10",
     )
 
     @field_validator("nst_6", "nst_7", "nst_8", "nst_9", "nst_10", "nst_11", "nst_12", "nst_13", "nst_14", "nst_15", mode='before')

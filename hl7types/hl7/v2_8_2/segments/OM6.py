@@ -18,10 +18,10 @@ class OM6(HL7Model):
     Attributes
     ----------
     om6_1 : str | None
-        OM6.1 (opt) - Sequence Number - Test/Observation Master File (NM) S8.8.10.1
+        OM6.1 - Sequence Number - Test/Observation Master File (NM) O S8.8.10.1
 
     om6_2 : str | None
-        OM6.2 (opt) - Derivation Rule (TX) S8.8.14.2
+        OM6.2 - Derivation Rule (TX) O S8.8.14.2
     """
 
     om6_1: Optional[str] = Field(
@@ -33,7 +33,7 @@ class OM6(HL7Model):
         ),
         serialization_alias="OM6.1",
         title="Sequence Number - Test/Observation Master File",
-        description="Item #586",
+        description="O | Item #00586",
     )
 
     om6_2: Optional[str] = Field(
@@ -45,7 +45,7 @@ class OM6(HL7Model):
         ),
         serialization_alias="OM6.2",
         title="Derivation Rule",
-        description="Item #657",
+        description="O | Item #00657",
     )
 
     @field_validator("om6_1", mode='before')

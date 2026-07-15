@@ -20,13 +20,13 @@ class ISD(HL7Model):
     Attributes
     ----------
     isd_1 : str
-        ISD.1 (req) - Reference Interaction Number (NM) S13.4.2.1
+        ISD.1 - Reference Interaction Number (NM) R S13.4.2.1
 
     isd_2 : CWE | None
-        ISD.2 (opt) - Interaction Type Identifier (CWE) S13.4.2.2 | 0368 - Remote Control Command
+        ISD.2 - Interaction Type Identifier (CWE) O S13.4.2.2 | 0368 - Remote Control Command
 
     isd_3 : CWE
-        ISD.3 (req) - Interaction Active State (CWE) S13.4.2.3 | 0387 - Command Response
+        ISD.3 - Interaction Active State (CWE) R S13.4.2.3 | 0387 - Command Response
     """
 
     isd_1: str = Field(
@@ -37,7 +37,7 @@ class ISD(HL7Model):
         ),
         serialization_alias="ISD.1",
         title="Reference Interaction Number",
-        description="Item #1326",
+        description="R | Item #01326",
     )
 
     isd_2: Optional[CWE] = Field(
@@ -49,7 +49,7 @@ class ISD(HL7Model):
         ),
         serialization_alias="ISD.2",
         title="Interaction Type Identifier",
-        description="Item #1327 | Table HL70368",
+        description="O | Item #01327 | Table 0368 - Remote Control Command",
     )
 
     isd_3: CWE = Field(
@@ -60,7 +60,7 @@ class ISD(HL7Model):
         ),
         serialization_alias="ISD.3",
         title="Interaction Active State",
-        description="Item #1328 | Table HL70387",
+        description="R | Item #01328 | Table 0387 - Command Response",
     )
 
     @field_validator("isd_1", mode='before')

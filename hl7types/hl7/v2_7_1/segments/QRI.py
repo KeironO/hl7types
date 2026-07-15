@@ -20,13 +20,13 @@ class QRI(HL7Model):
     Attributes
     ----------
     qri_1 : str | None
-        QRI.1 (opt) - Candidate Confidence (NM) S5.5.5.1
+        QRI.1 - Candidate Confidence (NM) O S5.5.5.1
 
     qri_2 : list[CWE] | None
-        QRI.2 (opt, rep) - Match Reason Code (CWE) S5.5.5.2 | 0392 - Match Reason
+        QRI.2 - Match Reason Code (CWE) O rep S5.5.5.2 | 0392 - Match Reason
 
     qri_3 : CWE | None
-        QRI.3 (opt) - Algorithm Descriptor (CWE) S5.5.5.3 | 0393 - Match Algorithms
+        QRI.3 - Algorithm Descriptor (CWE) O S5.5.5.3 | 0393 - Match Algorithms
     """
 
     qri_1: Optional[str] = Field(
@@ -38,7 +38,7 @@ class QRI(HL7Model):
         ),
         serialization_alias="QRI.1",
         title="Candidate Confidence",
-        description="Item #1436",
+        description="O | Item #01436",
     )
 
     qri_2: Optional[List[CWE]] = Field(
@@ -50,7 +50,7 @@ class QRI(HL7Model):
         ),
         serialization_alias="QRI.2",
         title="Match Reason Code",
-        description="Item #1437 | Table HL70392",
+        description="O | Item #01437 | Table 0392 - Match Reason",
     )
 
     qri_3: Optional[CWE] = Field(
@@ -62,7 +62,7 @@ class QRI(HL7Model):
         ),
         serialization_alias="QRI.3",
         title="Algorithm Descriptor",
-        description="Item #1438 | Table HL70393",
+        description="O | Item #01438 | Table 0393 - Match Algorithms",
     )
 
     @field_validator("qri_1", mode='before')

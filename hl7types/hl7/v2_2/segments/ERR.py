@@ -18,7 +18,7 @@ class ERR(HL7Model):
     Attributes
     ----------
     err_1 : list[str]
-        ERR.1 (req, rep) - Error Code and Location (CM) S2.10.3.1 | 0060 - ERROR CODE
+        ERR.1 - Error Code and Location (CM) R rep S2.10.3.1 | 0060 - ERROR CODE
     """
 
     err_1: List[str] = Field(
@@ -30,7 +30,7 @@ class ERR(HL7Model):
         ),
         serialization_alias="ERR.1",
         title="Error Code and Location",
-        description="Item #24 | Table HL70060",
+        description="R | Item #00024 | Table 0060 - ERROR CODE",
     )
 
     model_config = {"populate_by_name": True}

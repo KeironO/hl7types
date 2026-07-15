@@ -20,25 +20,25 @@ class URD(HL7Model):
     Attributes
     ----------
     urd_1 : TS | None
-        URD.1 (opt) - R/U date / time (TS) S2.10.6.1
+        URD.1 - R/U date / time (TS) NA S2.10.6.1
 
     urd_2 : str | None
-        URD.2 (opt) - Report Priority (ID) S2.10.6.2 | 0109 - REPORT PRIORITY
+        URD.2 - Report Priority (ID) NA S2.10.6.2 | 0109 - REPORT PRIORITY
 
     urd_3 : list[str]
-        URD.3 (req, rep) - R/U Who Subject Definition (ST) S2.10.6.3
+        URD.3 - R/U Who Subject Definition (ST) R rep S2.10.6.3
 
     urd_4 : list[str] | None
-        URD.4 (opt, rep) - R/U What Subject Definition (ID) S2.10.6.4 | 0048 - WHAT SUBJECT FILTER
+        URD.4 - R/U What Subject Definition (ID) NA rep S2.10.6.4 | 0048 - WHAT SUBJECT FILTER
 
     urd_5 : list[str] | None
-        URD.5 (opt, rep) - R/U What Department Code (ST) S2.10.6.5
+        URD.5 - R/U What Department Code (ST) NA rep S2.10.6.5
 
     urd_6 : list[str] | None
-        URD.6 (opt, rep) - R/U display / print locations (ST) S2.10.6.6
+        URD.6 - R/U display / print locations (ST) NA rep S2.10.6.6
 
     urd_7 : str | None
-        URD.7 (opt) - R/U Results Level (ID) S2.10.6.7 | 0108 - QUERY RESULTS LEVEL
+        URD.7 - R/U Results Level (ID) NA S2.10.6.7 | 0108 - QUERY RESULTS LEVEL
     """
 
     urd_1: Optional[TS] = Field(
@@ -50,7 +50,7 @@ class URD(HL7Model):
         ),
         serialization_alias="URD.1",
         title="R/U date / time",
-        description="Item #45",
+        description="NA | Item #00045",
     )
 
     urd_2: Optional[str] = Field(
@@ -62,7 +62,7 @@ class URD(HL7Model):
         ),
         serialization_alias="URD.2",
         title="Report Priority",
-        description="Item #46 | Table HL70109",
+        description="NA | Item #00046 | Table 0109 - REPORT PRIORITY | LEN:1",
     )
 
     urd_3: List[str] = Field(
@@ -74,7 +74,7 @@ class URD(HL7Model):
         ),
         serialization_alias="URD.3",
         title="R/U Who Subject Definition",
-        description="Item #47",
+        description="R | Item #00047 | LEN:20",
     )
 
     urd_4: Optional[List[str]] = Field(
@@ -86,7 +86,9 @@ class URD(HL7Model):
         ),
         serialization_alias="URD.4",
         title="R/U What Subject Definition",
-        description="Item #48 | Table HL70048",
+        description=(
+            "NA | Item #00048 | Table 0048 - WHAT SUBJECT FILTER | LEN:3"
+        ),
     )
 
     urd_5: Optional[List[str]] = Field(
@@ -98,7 +100,7 @@ class URD(HL7Model):
         ),
         serialization_alias="URD.5",
         title="R/U What Department Code",
-        description="Item #49",
+        description="NA | Item #00049 | LEN:20",
     )
 
     urd_6: Optional[List[str]] = Field(
@@ -110,7 +112,7 @@ class URD(HL7Model):
         ),
         serialization_alias="URD.6",
         title="R/U display / print locations",
-        description="Item #50",
+        description="NA | Item #00050 | LEN:20",
     )
 
     urd_7: Optional[str] = Field(
@@ -122,7 +124,9 @@ class URD(HL7Model):
         ),
         serialization_alias="URD.7",
         title="R/U Results Level",
-        description="Item #51 | Table HL70108",
+        description=(
+            "NA | Item #00051 | Table 0108 - QUERY RESULTS LEVEL | LEN:1"
+        ),
     )
 
     model_config = {"populate_by_name": True}

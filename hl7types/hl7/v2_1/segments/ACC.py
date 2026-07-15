@@ -18,13 +18,13 @@ class ACC(HL7Model):
     Attributes
     ----------
     acc_1 : str | None
-        ACC.1 (opt) - ACCIDENT DATE/TIME (TS) S6-3
+        ACC.1 - ACCIDENT DATE/TIME (TS) O S6-3
 
     acc_2 : str | None
-        ACC.2 (opt) - ACCIDENT CODE (ID) | 0050 - ACCIDENT CODE
+        ACC.2 - ACCIDENT CODE (ID) O | 0050 - ACCIDENT CODE
 
     acc_3 : str | None
-        ACC.3 (opt) - ACCIDENT LOCATION (ST)
+        ACC.3 - ACCIDENT LOCATION (ST) O
     """
 
     acc_1: Optional[str] = Field(
@@ -36,7 +36,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.1",
         title="ACCIDENT DATE/TIME",
-        description="Item #182",
+        description="O | Item #00182 | LEN:19",
     )
 
     acc_2: Optional[str] = Field(
@@ -48,7 +48,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.2",
         title="ACCIDENT CODE",
-        description="Item #184 | Table HL70050",
+        description="O | Item #00184 | Table 0050 - ACCIDENT CODE | LEN:2",
     )
 
     acc_3: Optional[str] = Field(
@@ -60,7 +60,7 @@ class ACC(HL7Model):
         ),
         serialization_alias="ACC.3",
         title="ACCIDENT LOCATION",
-        description="Item #185",
+        description="O | Item #00185 | LEN:25",
     )
 
     model_config = {"populate_by_name": True}

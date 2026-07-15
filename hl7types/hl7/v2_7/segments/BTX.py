@@ -24,61 +24,61 @@ class BTX(HL7Model):
     Attributes
     ----------
     btx_1 : str
-        BTX.1 (req) - Set ID - BTX (SI) S4.14.3.1
+        BTX.1 - Set ID - BTX (SI) R S4.14.3.1
 
     btx_2 : EI | None
-        BTX.2 (opt) - BC Donation ID (EI) S4.14.3.2
+        BTX.2 - BC Donation ID (EI) C S4.14.3.2
 
     btx_3 : CNE | None
-        BTX.3 (opt) - BC Component (CNE) S4.14.3.3 | 9999 - no table for CE
+        BTX.3 - BC Component (CNE) C S4.14.3.3 | 9999 - no table for CE
 
     btx_4 : CNE | None
-        BTX.4 (opt) - BC Blood Group (CNE) S4.14.3.4 | 9999 - no table for CE
+        BTX.4 - BC Blood Group (CNE) C S4.14.3.4 | 9999 - no table for CE
 
     btx_5 : CWE | None
-        BTX.5 (opt) - CP Commercial Product (CWE) S4.14.3.5 | 0512 - Commercial Product
+        BTX.5 - CP Commercial Product (CWE) C S4.14.3.5 | 0512 - Commercial Product
 
     btx_6 : XON | None
-        BTX.6 (opt) - CP Manufacturer (XON) S4.14.3.6
+        BTX.6 - CP Manufacturer (XON) C S4.14.3.6
 
     btx_7 : EI | None
-        BTX.7 (opt) - CP Lot Number (EI) S4.14.3.7
+        BTX.7 - CP Lot Number (EI) C S4.14.3.7
 
     btx_8 : str
-        BTX.8 (req) - BP Quantity (NM) S4.14.3.8
+        BTX.8 - BP Quantity (NM) R S4.14.3.8
 
     btx_9 : str | None
-        BTX.9 (opt) - BP Amount (NM) S4.14.3.9
+        BTX.9 - BP Amount (NM) O S4.14.3.9
 
     btx_10 : CWE | None
-        BTX.10 (opt) - BP Units (CWE) S4.14.3.10 | 9999 - no table for CE
+        BTX.10 - BP Units (CWE) O S4.14.3.10 | 9999 - no table for CE
 
     btx_11 : CWE
-        BTX.11 (req) - BP Transfusion/Disposition Status (CWE) S4.14.3.11 | 0513 - Blood Product Transfusion/Disposition Status
+        BTX.11 - BP Transfusion/Disposition Status (CWE) R S4.14.3.11 | 0513 - Blood Product Transfusion/Disposition Status
 
     btx_12 : str
-        BTX.12 (req) - BP Message Status (ID) S4.14.3.12 | 0511 - BP Observation Status Codes Interpretation
+        BTX.12 - BP Message Status (ID) R S4.14.3.12 | 0511 - BP Observation Status Codes Interpretation
 
     btx_13 : str
-        BTX.13 (req) - BP Date/Time of Status (DTM) S4.14.3.13
+        BTX.13 - BP Date/Time of Status (DTM) R S4.14.3.13
 
     btx_14 : XCN | None
-        BTX.14 (opt) - BP Transfusion Administrator (XCN) S4.14.3.14
+        BTX.14 - BP Transfusion Administrator (XCN) O S4.14.3.14
 
     btx_15 : XCN | None
-        BTX.15 (opt) - BP Transfusion Verifier (XCN) S4.14.3.15
+        BTX.15 - BP Transfusion Verifier (XCN) O S4.14.3.15
 
     btx_16 : str | None
-        BTX.16 (opt) - BP Transfusion Start Date/Time of Status (DTM) S4.14.3.16
+        BTX.16 - BP Transfusion Start Date/Time of Status (DTM) O S4.14.3.16
 
     btx_17 : str | None
-        BTX.17 (opt) - BP Transfusion End Date/Time of Status (DTM) S4.14.3.17
+        BTX.17 - BP Transfusion End Date/Time of Status (DTM) O S4.14.3.17
 
     btx_18 : list[CWE] | None
-        BTX.18 (opt, rep) - BP Adverse Reaction Type (CWE) S4.14.3.18 | 0514 - Transfusion Adverse Reaction
+        BTX.18 - BP Adverse Reaction Type (CWE) O rep S4.14.3.18 | 0514 - Transfusion Adverse Reaction
 
     btx_19 : CWE | None
-        BTX.19 (opt) - BP Transfusion Interrupted Reason (CWE) S4.14.3.19 | 0515 - Transfusion Interrupted Reason
+        BTX.19 - BP Transfusion Interrupted Reason (CWE) O S4.14.3.19 | 0515 - Transfusion Interrupted Reason
     """
 
     btx_1: str = Field(
@@ -89,7 +89,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.1",
         title="Set ID - BTX",
-        description="Item #1735",
+        description="R | Item #01735 | LEN:4",
     )
 
     btx_2: Optional[EI] = Field(
@@ -101,7 +101,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.2",
         title="BC Donation ID",
-        description="Item #1736",
+        description="C | Item #01736",
     )
 
     btx_3: Optional[CNE] = Field(
@@ -113,7 +113,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.3",
         title="BC Component",
-        description="Item #1737 | Table HL79999",
+        description="C | Item #01737 | Table 9999 - no table for CE",
     )
 
     btx_4: Optional[CNE] = Field(
@@ -125,7 +125,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.4",
         title="BC Blood Group",
-        description="Item #1738 | Table HL79999",
+        description="C | Item #01738 | Table 9999 - no table for CE",
     )
 
     btx_5: Optional[CWE] = Field(
@@ -137,7 +137,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.5",
         title="CP Commercial Product",
-        description="Item #1739 | Table HL70512",
+        description="C | Item #01739 | Table 0512 - Commercial Product",
     )
 
     btx_6: Optional[XON] = Field(
@@ -149,7 +149,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.6",
         title="CP Manufacturer",
-        description="Item #1740",
+        description="C | Item #01740",
     )
 
     btx_7: Optional[EI] = Field(
@@ -161,7 +161,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.7",
         title="CP Lot Number",
-        description="Item #1741",
+        description="C | Item #01741",
     )
 
     btx_8: str = Field(
@@ -172,7 +172,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.8",
         title="BP Quantity",
-        description="Item #1742",
+        description="R | Item #01742",
     )
 
     btx_9: Optional[str] = Field(
@@ -184,7 +184,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.9",
         title="BP Amount",
-        description="Item #1743",
+        description="O | Item #01743",
     )
 
     btx_10: Optional[CWE] = Field(
@@ -196,7 +196,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.10",
         title="BP Units",
-        description="Item #1744 | Table HL79999",
+        description="O | Item #01744 | Table 9999 - no table for CE",
     )
 
     btx_11: CWE = Field(
@@ -207,7 +207,10 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.11",
         title="BP Transfusion/Disposition Status",
-        description="Item #1745 | Table HL70513",
+        description=(
+            "R | Item #01745 | Table 0513 - Blood Product Transfusion/Disposition "
+            "Status"
+        ),
     )
 
     btx_12: str = Field(
@@ -218,7 +221,10 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.12",
         title="BP Message Status",
-        description="Item #1746 | Table HL70511",
+        description=(
+            "R | Item #01746 | Table 0511 - BP Observation Status Codes "
+            "Interpretation | LEN:1"
+        ),
     )
 
     btx_13: str = Field(
@@ -229,7 +235,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.13",
         title="BP Date/Time of Status",
-        description="Item #1747",
+        description="R | Item #01747",
     )
 
     btx_14: Optional[XCN] = Field(
@@ -241,7 +247,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.14",
         title="BP Transfusion Administrator",
-        description="Item #1748",
+        description="O | Item #01748",
     )
 
     btx_15: Optional[XCN] = Field(
@@ -253,7 +259,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.15",
         title="BP Transfusion Verifier",
-        description="Item #1749",
+        description="O | Item #01749",
     )
 
     btx_16: Optional[str] = Field(
@@ -265,7 +271,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.16",
         title="BP Transfusion Start Date/Time of Status",
-        description="Item #1750",
+        description="O | Item #01750",
     )
 
     btx_17: Optional[str] = Field(
@@ -277,7 +283,7 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.17",
         title="BP Transfusion End Date/Time of Status",
-        description="Item #1751",
+        description="O | Item #01751",
     )
 
     btx_18: Optional[List[CWE]] = Field(
@@ -289,7 +295,9 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.18",
         title="BP Adverse Reaction Type",
-        description="Item #1752 | Table HL70514",
+        description=(
+            "O | Item #01752 | Table 0514 - Transfusion Adverse Reaction"
+        ),
     )
 
     btx_19: Optional[CWE] = Field(
@@ -301,7 +309,9 @@ class BTX(HL7Model):
         ),
         serialization_alias="BTX.19",
         title="BP Transfusion Interrupted Reason",
-        description="Item #1753 | Table HL70515",
+        description=(
+            "O | Item #01753 | Table 0515 - Transfusion Interrupted Reason"
+        ),
     )
 
     @field_validator("btx_1", mode='before')

@@ -23,49 +23,49 @@ class PDC(HL7Model):
     Attributes
     ----------
     pdc_1 : XON
-        PDC.1 (req) - Manufacturer/Distributor (XON) S7.11.5.1
+        PDC.1 - Manufacturer/Distributor (XON) R S7.11.5.1
 
     pdc_2 : CE
-        PDC.2 (req) - Country (CE) S7.11.5.2
+        PDC.2 - Country (CE) R S7.11.5.2
 
     pdc_3 : str
-        PDC.3 (req) - Brand Name (ST) S7.11.5.3
+        PDC.3 - Brand Name (ST) R S7.11.5.3
 
     pdc_4 : str | None
-        PDC.4 (opt) - Device Family Name (ST) S7.11.5.4
+        PDC.4 - Device Family Name (ST) O S7.11.5.4
 
     pdc_5 : CE | None
-        PDC.5 (opt) - Generic Name (CE) S7.11.5.5
+        PDC.5 - Generic Name (CE) O S7.11.5.5
 
     pdc_6 : list[str] | None
-        PDC.6 (opt, rep) - Model Identifier (ST) S7.11.5.6
+        PDC.6 - Model Identifier (ST) O rep S7.11.5.6
 
     pdc_7 : str | None
-        PDC.7 (opt) - Catalogue Identifier (ST) S7.11.5.7
+        PDC.7 - Catalogue Identifier (ST) O S7.11.5.7
 
     pdc_8 : list[str] | None
-        PDC.8 (opt, rep) - Other Identifier (ST) S7.11.5.8
+        PDC.8 - Other Identifier (ST) O rep S7.11.5.8
 
     pdc_9 : CE | None
-        PDC.9 (opt) - Product Code (CE) S7.11.5.9
+        PDC.9 - Product Code (CE) O S7.11.5.9
 
     pdc_10 : str | None
-        PDC.10 (opt) - Marketing Basis (ID) S7.11.5.10 | 0330 - Marketing Basis
+        PDC.10 - Marketing Basis (ID) O S7.11.5.10 | 0330 - Marketing Basis
 
     pdc_11 : str | None
-        PDC.11 (opt) - Marketing Approval Identifier (ST) S7.11.5.11
+        PDC.11 - Marketing Approval Identifier (ST) O S7.11.5.11
 
     pdc_12 : CQ | None
-        PDC.12 (opt) - Labeled Shelf Life (CQ) S7.11.5.12
+        PDC.12 - Labeled Shelf Life (CQ) O S7.11.5.12
 
     pdc_13 : CQ | None
-        PDC.13 (opt) - Expected Shelf Life (CQ) S7.11.5.13
+        PDC.13 - Expected Shelf Life (CQ) O S7.11.5.13
 
     pdc_14 : TS | None
-        PDC.14 (opt) - Date First Marked (TS) S7.11.5.14
+        PDC.14 - Date First Marked (TS) O S7.11.5.14
 
     pdc_15 : TS | None
-        PDC.15 (opt) - Date Last Marked (TS) S7.11.5.15
+        PDC.15 - Date Last Marked (TS) O S7.11.5.15
     """
 
     pdc_1: XON = Field(
@@ -76,7 +76,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.1",
         title="Manufacturer/Distributor",
-        description="Item #1247",
+        description="R | Item #01247",
     )
 
     pdc_2: CE = Field(
@@ -87,7 +87,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.2",
         title="Country",
-        description="Item #1248",
+        description="R | Item #01248",
     )
 
     pdc_3: str = Field(
@@ -98,7 +98,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.3",
         title="Brand Name",
-        description="Item #1249",
+        description="R | Item #01249 | LEN:60",
     )
 
     pdc_4: Optional[str] = Field(
@@ -110,7 +110,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.4",
         title="Device Family Name",
-        description="Item #1250",
+        description="O | Item #01250 | LEN:60",
     )
 
     pdc_5: Optional[CE] = Field(
@@ -122,7 +122,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.5",
         title="Generic Name",
-        description="Item #1251",
+        description="O | Item #01251",
     )
 
     pdc_6: Optional[List[str]] = Field(
@@ -134,7 +134,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.6",
         title="Model Identifier",
-        description="Item #1252",
+        description="O | Item #01252 | LEN:60",
     )
 
     pdc_7: Optional[str] = Field(
@@ -146,7 +146,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.7",
         title="Catalogue Identifier",
-        description="Item #1253",
+        description="O | Item #01253 | LEN:60",
     )
 
     pdc_8: Optional[List[str]] = Field(
@@ -158,7 +158,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.8",
         title="Other Identifier",
-        description="Item #1254",
+        description="O | Item #01254 | LEN:60",
     )
 
     pdc_9: Optional[CE] = Field(
@@ -170,7 +170,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.9",
         title="Product Code",
-        description="Item #1255",
+        description="O | Item #01255",
     )
 
     pdc_10: Optional[str] = Field(
@@ -182,7 +182,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.10",
         title="Marketing Basis",
-        description="Item #1256 | Table HL70330",
+        description="O | Item #01256 | Table 0330 - Marketing Basis | LEN:4",
     )
 
     pdc_11: Optional[str] = Field(
@@ -194,7 +194,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.11",
         title="Marketing Approval Identifier",
-        description="Item #1257",
+        description="O | Item #01257 | LEN:60",
     )
 
     pdc_12: Optional[CQ] = Field(
@@ -206,7 +206,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.12",
         title="Labeled Shelf Life",
-        description="Item #1258",
+        description="O | Item #01258",
     )
 
     pdc_13: Optional[CQ] = Field(
@@ -218,7 +218,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.13",
         title="Expected Shelf Life",
-        description="Item #1259",
+        description="O | Item #01259",
     )
 
     pdc_14: Optional[TS] = Field(
@@ -230,7 +230,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.14",
         title="Date First Marked",
-        description="Item #1260",
+        description="O | Item #01260",
     )
 
     pdc_15: Optional[TS] = Field(
@@ -242,7 +242,7 @@ class PDC(HL7Model):
         ),
         serialization_alias="PDC.15",
         title="Date Last Marked",
-        description="Item #1261",
+        description="O | Item #01261",
     )
 
     model_config = {"populate_by_name": True}

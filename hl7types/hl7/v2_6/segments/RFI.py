@@ -18,16 +18,16 @@ class RFI(HL7Model):
     Attributes
     ----------
     rfi_1 : str
-        RFI.1 (req) - Request Date (DTM) S16.4.1.1
+        RFI.1 - Request Date (DTM) R S16.4.1.1
 
     rfi_2 : str
-        RFI.2 (req) - Response Due Date (DTM) S16.4.1.2
+        RFI.2 - Response Due Date (DTM) R S16.4.1.2
 
     rfi_3 : str | None
-        RFI.3 (opt) - Patient Consent (ID) S16.4.1.3 | 0136 - Yes/no indicator
+        RFI.3 - Patient Consent (ID) O S16.4.1.3 | 0136 - Yes/no indicator
 
     rfi_4 : str | None
-        RFI.4 (opt) - Date Additional Information was submitted (DTM) S16.4.1.4
+        RFI.4 - Date Additional Information was submitted (DTM) O S16.4.1.4
     """
 
     rfi_1: str = Field(
@@ -38,7 +38,7 @@ class RFI(HL7Model):
         ),
         serialization_alias="RFI.1",
         title="Request Date",
-        description="Item #1910",
+        description="R | Item #01910 | LEN:24",
     )
 
     rfi_2: str = Field(
@@ -49,7 +49,7 @@ class RFI(HL7Model):
         ),
         serialization_alias="RFI.2",
         title="Response Due Date",
-        description="Item #1911",
+        description="R | Item #01911 | LEN:24",
     )
 
     rfi_3: Optional[str] = Field(
@@ -61,7 +61,7 @@ class RFI(HL7Model):
         ),
         serialization_alias="RFI.3",
         title="Patient Consent",
-        description="Item #1912 | Table HL70136",
+        description="O | Item #01912 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     rfi_4: Optional[str] = Field(
@@ -73,7 +73,7 @@ class RFI(HL7Model):
         ),
         serialization_alias="RFI.4",
         title="Date Additional Information was submitted",
-        description="Item #1913",
+        description="O | Item #01913 | LEN:24",
     )
 
     @field_validator("rfi_1", "rfi_2", "rfi_4", mode='before')

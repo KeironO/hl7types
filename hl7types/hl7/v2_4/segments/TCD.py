@@ -21,28 +21,28 @@ class TCD(HL7Model):
     Attributes
     ----------
     tcd_1 : CE
-        TCD.1 (req) - Universal Service Identifier (CE) S13.4.10.1
+        TCD.1 - Universal Service Identifier (CE) R S13.4.10.1
 
     tcd_2 : SN | None
-        TCD.2 (opt) - Auto-Dilution Factor (SN) S13.4.10.2
+        TCD.2 - Auto-Dilution Factor (SN) O S13.4.10.2
 
     tcd_3 : SN | None
-        TCD.3 (opt) - Rerun Dilution Factor (SN) S13.4.10.3
+        TCD.3 - Rerun Dilution Factor (SN) O S13.4.10.3
 
     tcd_4 : SN | None
-        TCD.4 (opt) - Pre-Dilution Factor (SN) S13.4.10.4
+        TCD.4 - Pre-Dilution Factor (SN) O S13.4.10.4
 
     tcd_5 : SN | None
-        TCD.5 (opt) - Endogenous Content of Pre-Dilution Diluent (SN) S13.4.10.5
+        TCD.5 - Endogenous Content of Pre-Dilution Diluent (SN) O S13.4.10.5
 
     tcd_6 : str | None
-        TCD.6 (opt) - Automatic Repeat Allowed (ID) S13.4.10.6 | 0136 - Yes/no indicator
+        TCD.6 - Automatic Repeat Allowed (ID) O S13.4.10.6 | 0136 - Yes/no indicator
 
     tcd_7 : str | None
-        TCD.7 (opt) - Reflex Allowed (ID) S13.4.10.7 | 0136 - Yes/no indicator
+        TCD.7 - Reflex Allowed (ID) O S13.4.10.7 | 0136 - Yes/no indicator
 
     tcd_8 : CE | None
-        TCD.8 (opt) - Analyte Repeat Status (CE) S13.4.10.8 | 0389 - Analyte repeat status
+        TCD.8 - Analyte Repeat Status (CE) O S13.4.10.8 | 0389 - Analyte repeat status
     """
 
     tcd_1: CE = Field(
@@ -53,7 +53,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.1",
         title="Universal Service Identifier",
-        description="Item #238",
+        description="R | Item #00238",
     )
 
     tcd_2: Optional[SN] = Field(
@@ -65,7 +65,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.2",
         title="Auto-Dilution Factor",
-        description="Item #1420",
+        description="O | Item #01420",
     )
 
     tcd_3: Optional[SN] = Field(
@@ -77,7 +77,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.3",
         title="Rerun Dilution Factor",
-        description="Item #1421",
+        description="O | Item #01421",
     )
 
     tcd_4: Optional[SN] = Field(
@@ -89,7 +89,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.4",
         title="Pre-Dilution Factor",
-        description="Item #1422",
+        description="O | Item #01422",
     )
 
     tcd_5: Optional[SN] = Field(
@@ -101,7 +101,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.5",
         title="Endogenous Content of Pre-Dilution Diluent",
-        description="Item #1413",
+        description="O | Item #01413",
     )
 
     tcd_6: Optional[str] = Field(
@@ -113,7 +113,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.6",
         title="Automatic Repeat Allowed",
-        description="Item #1416 | Table HL70136",
+        description="O | Item #01416 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     tcd_7: Optional[str] = Field(
@@ -125,7 +125,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.7",
         title="Reflex Allowed",
-        description="Item #1424 | Table HL70136",
+        description="O | Item #01424 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     tcd_8: Optional[CE] = Field(
@@ -137,7 +137,7 @@ class TCD(HL7Model):
         ),
         serialization_alias="TCD.8",
         title="Analyte Repeat Status",
-        description="Item #1425 | Table HL70389",
+        description="O | Item #01425 | Table 0389 - Analyte repeat status",
     )
 
     model_config = {"populate_by_name": True}

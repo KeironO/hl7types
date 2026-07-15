@@ -3,7 +3,7 @@ v2.1 Data Types
 
 .. _hl7-v2_1-CE:
 
-CE Coded element.
+CE: Coded element
 ~~~~~~~~~~~~~~~~~
 
 .. py:class:: hl7types.hl7.v2_1.datatypes.CE.CE
@@ -16,35 +16,35 @@ CE Coded element.
    * - Field
      - HL7
      - Type
-     - Required
+     - OPT
      - Description
    * - ``ce_1``
      - CE.1
-     - Optional[str]
-     - optional
+     - str
+     - O
      - identifier
    * - ``ce_2``
      - CE.2
-     - Optional[str]
-     - optional
+     - str
+     - O
      - text
    * - ``ce_3``
      - CE.3
-     - Optional[str]
-     - optional
+     - str
+     - O
      - name of coding system
    * - ``ce_4``
      - CE.4
-     - Optional[str]
-     - optional
+     - str
+     - O
      - alternate identifier
    * - ``ce_5``
      - CE.5
-     - Optional[str]
-     - optional
+     - str
+     - O
      - alternate text
    * - ``ce_6``
      - CE.6
-     - Optional[str]
-     - optional
+     - str
+     - O
      - name of alternate coding system

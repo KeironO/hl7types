@@ -22,43 +22,43 @@ class NK1(HL7Model):
     Attributes
     ----------
     nk1_1 : str
-        NK1.1 (req) - Set ID - Next of Kin (SI) S3.3.5.1
+        NK1.1 - Set ID - Next of Kin (SI) R S3.3.5.1
 
     nk1_2 : PN | None
-        NK1.2 (opt) - Name (PN) S3.3.5.2
+        NK1.2 - Name (PN) NA S3.3.5.2
 
     nk1_3 : CE | None
-        NK1.3 (opt) - Relationship (CE) S3.3.5.3 | 0063 - RELATIONSHIP
+        NK1.3 - Relationship (CE) NA S3.3.5.3 | 0063 - RELATIONSHIP
 
     nk1_4 : AD | None
-        NK1.4 (opt) - Address (AD) S3.3.5.4
+        NK1.4 - Address (AD) NA S3.3.5.4
 
     nk1_5 : list[str] | None
-        NK1.5 (opt, rep) - Phone Number (TN) S3.3.5.5
+        NK1.5 - Phone Number (TN) NA rep S3.3.5.5
 
     nk1_6 : str | None
-        NK1.6 (opt) - Business Phone Number (TN) S3.3.5.6
+        NK1.6 - Business Phone Number (TN) NA S3.3.5.6
 
     nk1_7 : CE | None
-        NK1.7 (opt) - Contact Role (CE) S3.3.5.7 | 0131 - CONTRACT ROLE
+        NK1.7 - Contact Role (CE) NA S3.3.5.7 | 0131 - CONTRACT ROLE
 
     nk1_8 : str | None
-        NK1.8 (opt) - Start Date (DT) S3.3.5.8
+        NK1.8 - Start Date (DT) NA S3.3.5.8
 
     nk1_9 : str | None
-        NK1.9 (opt) - End Date (DT) S3.3.5.9
+        NK1.9 - End Date (DT) NA S3.3.5.9
 
     nk1_10 : str | None
-        NK1.10 (opt) - Next of Kin (ST) S3.3.5.10
+        NK1.10 - Next of Kin (ST) NA S3.3.5.10
 
     nk1_11 : str | None
-        NK1.11 (opt) - Next of kin job code / class (CM) S3.3.5.11
+        NK1.11 - Next of kin job code / class (CM) NA S3.3.5.11
 
     nk1_12 : str | None
-        NK1.12 (opt) - Next of Kin Employee Number (ST) S3.3.5.12
+        NK1.12 - Next of Kin Employee Number (ST) NA S3.3.5.12
 
     nk1_13 : str | None
-        NK1.13 (opt) - Organization Name (ST) S3.3.5.13
+        NK1.13 - Organization Name (ST) NA S3.3.5.13
     """
 
     nk1_1: str = Field(
@@ -69,7 +69,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.1",
         title="Set ID - Next of Kin",
-        description="Item #190",
+        description="R | Item #00190 | LEN:4",
     )
 
     nk1_2: Optional[PN] = Field(
@@ -81,7 +81,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.2",
         title="Name",
-        description="Item #191",
+        description="NA | Item #00191",
     )
 
     nk1_3: Optional[CE] = Field(
@@ -93,7 +93,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.3",
         title="Relationship",
-        description="Item #192 | Table HL70063",
+        description="NA | Item #00192 | Table 0063 - RELATIONSHIP",
     )
 
     nk1_4: Optional[AD] = Field(
@@ -105,7 +105,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.4",
         title="Address",
-        description="Item #193",
+        description="NA | Item #00193",
     )
 
     nk1_5: Optional[List[str]] = Field(
@@ -117,7 +117,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.5",
         title="Phone Number",
-        description="Item #194",
+        description="NA | Item #00194 | LEN:40",
     )
 
     nk1_6: Optional[str] = Field(
@@ -129,7 +129,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.6",
         title="Business Phone Number",
-        description="Item #195",
+        description="NA | Item #00195 | LEN:40",
     )
 
     nk1_7: Optional[CE] = Field(
@@ -141,7 +141,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.7",
         title="Contact Role",
-        description="Item #196 | Table HL70131",
+        description="NA | Item #00196 | Table 0131 - CONTRACT ROLE",
     )
 
     nk1_8: Optional[str] = Field(
@@ -153,7 +153,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.8",
         title="Start Date",
-        description="Item #197",
+        description="NA | Item #00197 | LEN:8",
     )
 
     nk1_9: Optional[str] = Field(
@@ -165,7 +165,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.9",
         title="End Date",
-        description="Item #198",
+        description="NA | Item #00198 | LEN:8",
     )
 
     nk1_10: Optional[str] = Field(
@@ -177,7 +177,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.10",
         title="Next of Kin",
-        description="Item #199",
+        description="NA | Item #00199 | LEN:60",
     )
 
     nk1_11: Optional[str] = Field(
@@ -189,7 +189,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.11",
         title="Next of kin job code / class",
-        description="Item #200",
+        description="NA | Item #00200",
     )
 
     nk1_12: Optional[str] = Field(
@@ -201,7 +201,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.12",
         title="Next of Kin Employee Number",
-        description="Item #201",
+        description="NA | Item #00201 | LEN:20",
     )
 
     nk1_13: Optional[str] = Field(
@@ -213,7 +213,7 @@ class NK1(HL7Model):
         ),
         serialization_alias="NK1.13",
         title="Organization Name",
-        description="Item #202",
+        description="NA | Item #00202 | LEN:60",
     )
 
     @field_validator("nk1_1", mode='before')

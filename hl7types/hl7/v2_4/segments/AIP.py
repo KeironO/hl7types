@@ -22,40 +22,40 @@ class AIP(HL7Model):
     Attributes
     ----------
     aip_1 : str
-        AIP.1 (req) - Set ID - AIP (SI) S10.6.7.1
+        AIP.1 - Set ID - AIP (SI) R S10.6.7.1
 
     aip_2 : str | None
-        AIP.2 (opt) - Segment Action Code (ID) S10.6.7.2 | 0206 - Segment action code
+        AIP.2 - Segment Action Code (ID) C S10.6.7.2 | 0206 - Segment action code
 
     aip_3 : list[XCN] | None
-        AIP.3 (opt, rep) - Personnel Resource ID (XCN) S10.6.7.3
+        AIP.3 - Personnel Resource ID (XCN) C rep S10.6.7.3
 
     aip_4 : CE
-        AIP.4 (req) - Resource Role (CE) S10.6.7.4
+        AIP.4 - Resource Role (CE) R S10.6.7.4
 
     aip_5 : CE | None
-        AIP.5 (opt) - Resource Group (CE) S10.6.7.5
+        AIP.5 - Resource Group (CE) O S10.6.7.5
 
     aip_6 : TS | None
-        AIP.6 (opt) - Start Date/Time (TS) S13.4.12.3
+        AIP.6 - Start Date/Time (TS) C S13.4.12.3
 
     aip_7 : str | None
-        AIP.7 (opt) - Start Date/Time Offset (NM) S10.6.7.7
+        AIP.7 - Start Date/Time Offset (NM) C S10.6.7.7
 
     aip_8 : CE | None
-        AIP.8 (opt) - Start Date/Time Offset Units (CE) S10.6.7.8
+        AIP.8 - Start Date/Time Offset Units (CE) C S10.6.7.8
 
     aip_9 : str | None
-        AIP.9 (opt) - Duration (NM) S10.6.7.9
+        AIP.9 - Duration (NM) O S10.6.7.9
 
     aip_10 : CE | None
-        AIP.10 (opt) - Duration Units (CE) S10.6.7.10
+        AIP.10 - Duration Units (CE) O S10.6.7.10
 
     aip_11 : str | None
-        AIP.11 (opt) - Allow Substitution Code (IS) S10.6.7.11 | 0279 - Allow substitution codes
+        AIP.11 - Allow Substitution Code (IS) C S10.6.7.11 | 0279 - Allow substitution codes
 
     aip_12 : CE | None
-        AIP.12 (opt) - Filler Status Code (CE) S10.6.7.12 | 0278 - Filler status codes
+        AIP.12 - Filler Status Code (CE) C S10.6.7.12 | 0278 - Filler status codes
     """
 
     aip_1: str = Field(
@@ -66,7 +66,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.1",
         title="Set ID - AIP",
-        description="Item #906",
+        description="R | Item #00906 | LEN:4",
     )
 
     aip_2: Optional[str] = Field(
@@ -78,7 +78,9 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.2",
         title="Segment Action Code",
-        description="Item #763 | Table HL70206",
+        description=(
+            "C | Item #00763 | Table 0206 - Segment action code | LEN:3"
+        ),
     )
 
     aip_3: Optional[List[XCN]] = Field(
@@ -90,7 +92,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.3",
         title="Personnel Resource ID",
-        description="Item #913",
+        description="C | Item #00913",
     )
 
     aip_4: CE = Field(
@@ -101,7 +103,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.4",
         title="Resource Role",
-        description="Item #907",
+        description="R | Item #00907",
     )
 
     aip_5: Optional[CE] = Field(
@@ -113,7 +115,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.5",
         title="Resource Group",
-        description="Item #899",
+        description="O | Item #00899",
     )
 
     aip_6: Optional[TS] = Field(
@@ -125,7 +127,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.6",
         title="Start Date/Time",
-        description="Item #1202",
+        description="C | Item #01202",
     )
 
     aip_7: Optional[str] = Field(
@@ -137,7 +139,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.7",
         title="Start Date/Time Offset",
-        description="Item #891",
+        description="C | Item #00891 | LEN:20",
     )
 
     aip_8: Optional[CE] = Field(
@@ -149,7 +151,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.8",
         title="Start Date/Time Offset Units",
-        description="Item #892",
+        description="C | Item #00892",
     )
 
     aip_9: Optional[str] = Field(
@@ -161,7 +163,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.9",
         title="Duration",
-        description="Item #893",
+        description="O | Item #00893 | LEN:20",
     )
 
     aip_10: Optional[CE] = Field(
@@ -173,7 +175,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.10",
         title="Duration Units",
-        description="Item #894",
+        description="O | Item #00894",
     )
 
     aip_11: Optional[str] = Field(
@@ -185,7 +187,9 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.11",
         title="Allow Substitution Code",
-        description="Item #895 | Table HL70279",
+        description=(
+            "C | Item #00895 | Table 0279 - Allow substitution codes | LEN:10"
+        ),
     )
 
     aip_12: Optional[CE] = Field(
@@ -197,7 +201,7 @@ class AIP(HL7Model):
         ),
         serialization_alias="AIP.12",
         title="Filler Status Code",
-        description="Item #889 | Table HL70278",
+        description="C | Item #00889 | Table 0278 - Filler status codes",
     )
 
     @field_validator("aip_1", mode='before')

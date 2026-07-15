@@ -23,154 +23,154 @@ class PV2(HL7Model):
     Attributes
     ----------
     pv2_1 : PL | None
-        PV2.1 (opt) - Prior Pending Location (PL) S3.4.4.1
+        PV2.1 - Prior Pending Location (PL) C S3.4.4.1
 
     pv2_2 : CWE | None
-        PV2.2 (opt) - Accommodation Code (CWE) S3.4.4.2 | 0129 - Accommodation code
+        PV2.2 - Accommodation Code (CWE) O S3.4.4.2 | 0129 - Accommodation code
 
     pv2_3 : CWE | None
-        PV2.3 (opt) - Admit Reason (CWE) S3.4.4.3
+        PV2.3 - Admit Reason (CWE) O S3.4.4.3
 
     pv2_4 : CWE | None
-        PV2.4 (opt) - Transfer Reason (CWE) S3.4.4.4
+        PV2.4 - Transfer Reason (CWE) O S3.4.4.4
 
     pv2_5 : list[str] | None
-        PV2.5 (opt, rep) - Patient Valuables (ST) S3.4.4.5
+        PV2.5 - Patient Valuables (ST) O rep S3.4.4.5
 
     pv2_6 : str | None
-        PV2.6 (opt) - Patient Valuables Location (ST) S3.4.4.6
+        PV2.6 - Patient Valuables Location (ST) O S3.4.4.6
 
     pv2_7 : list[str] | None
-        PV2.7 (opt, rep) - Visit User Code (IS) S3.4.4.7 | 0130 - Visit User Code
+        PV2.7 - Visit User Code (IS) O rep S3.4.4.7 | 0130 - Visit User Code
 
     pv2_8 : str | None
-        PV2.8 (opt) - Expected Admit Date/Time (DTM) S3.4.4.8
+        PV2.8 - Expected Admit Date/Time (DTM) O S3.4.4.8
 
     pv2_9 : str | None
-        PV2.9 (opt) - Expected Discharge Date/Time (DTM) S3.4.4.9
+        PV2.9 - Expected Discharge Date/Time (DTM) O S3.4.4.9
 
     pv2_10 : str | None
-        PV2.10 (opt) - Estimated Length of Inpatient Stay (NM) S3.4.4.10
+        PV2.10 - Estimated Length of Inpatient Stay (NM) O S3.4.4.10
 
     pv2_11 : str | None
-        PV2.11 (opt) - Actual Length of Inpatient Stay (NM) S3.4.4.11
+        PV2.11 - Actual Length of Inpatient Stay (NM) O S3.4.4.11
 
     pv2_12 : str | None
-        PV2.12 (opt) - Visit Description (ST) S3.4.4.12
+        PV2.12 - Visit Description (ST) O S3.4.4.12
 
     pv2_13 : list[XCN] | None
-        PV2.13 (opt, rep) - Referral Source Code (XCN) S3.4.4.13
+        PV2.13 - Referral Source Code (XCN) O rep S3.4.4.13
 
     pv2_14 : str | None
-        PV2.14 (opt) - Previous Service Date (DT) S3.4.4.14
+        PV2.14 - Previous Service Date (DT) O S3.4.4.14
 
     pv2_15 : str | None
-        PV2.15 (opt) - Employment Illness Related Indicator (ID) S3.4.4.15 | 0136 - Yes/no indicator
+        PV2.15 - Employment Illness Related Indicator (ID) O S3.4.4.15 | 0136 - Yes/no indicator
 
     pv2_16 : str | None
-        PV2.16 (opt) - Purge Status Code (IS) S3.4.4.16 | 0213 - Purge Status Code
+        PV2.16 - Purge Status Code (IS) O S3.4.4.16 | 0213 - Purge Status Code
 
     pv2_17 : str | None
-        PV2.17 (opt) - Purge Status Date (DT) S3.4.4.17
+        PV2.17 - Purge Status Date (DT) O S3.4.4.17
 
     pv2_18 : str | None
-        PV2.18 (opt) - Special Program Code (IS) S3.4.4.18 | 0214 - Special Program Code
+        PV2.18 - Special Program Code (IS) O S3.4.4.18 | 0214 - Special Program Code
 
     pv2_19 : str | None
-        PV2.19 (opt) - Retention Indicator (ID) S3.4.4.19 | 0136 - Yes/no indicator
+        PV2.19 - Retention Indicator (ID) O S3.4.4.19 | 0136 - Yes/no indicator
 
     pv2_20 : str | None
-        PV2.20 (opt) - Expected Number of Insurance Plans (NM) S3.4.4.20
+        PV2.20 - Expected Number of Insurance Plans (NM) O S3.4.4.20
 
     pv2_21 : str | None
-        PV2.21 (opt) - Visit Publicity Code (IS) S3.4.4.21 | 0215 - Publicity Code
+        PV2.21 - Visit Publicity Code (IS) O S3.4.4.21 | 0215 - Publicity Code
 
     pv2_22 : str | None
-        PV2.22 (opt) - Visit Protection Indicator (ID) S3.4.4.22 | 0136 - Yes/no indicator
+        PV2.22 - Visit Protection Indicator (ID) O S3.4.4.22 | 0136 - Yes/no indicator
 
     pv2_23 : list[XON] | None
-        PV2.23 (opt, rep) - Clinic Organization Name (XON) S3.4.4.23
+        PV2.23 - Clinic Organization Name (XON) O rep S3.4.4.23
 
     pv2_24 : str | None
-        PV2.24 (opt) - Patient Status Code (IS) S3.4.4.24 | 0216 - Patient Status Code
+        PV2.24 - Patient Status Code (IS) O S3.4.4.24 | 0216 - Patient Status Code
 
     pv2_25 : str | None
-        PV2.25 (opt) - Visit Priority Code (IS) S3.4.4.25 | 0217 - Visit Priority Code
+        PV2.25 - Visit Priority Code (IS) O S3.4.4.25 | 0217 - Visit Priority Code
 
     pv2_26 : str | None
-        PV2.26 (opt) - Previous Treatment Date (DT) S3.4.4.26
+        PV2.26 - Previous Treatment Date (DT) O S3.4.4.26
 
     pv2_27 : str | None
-        PV2.27 (opt) - Expected Discharge Disposition (IS) S3.4.4.27 | 0112 - Discharge Disposition
+        PV2.27 - Expected Discharge Disposition (IS) O S3.4.4.27 | 0112 - Discharge Disposition
 
     pv2_28 : str | None
-        PV2.28 (opt) - Signature on File Date (DT) S3.4.4.28
+        PV2.28 - Signature on File Date (DT) O S3.4.4.28
 
     pv2_29 : str | None
-        PV2.29 (opt) - First Similar Illness Date (DT) S3.4.4.29
+        PV2.29 - First Similar Illness Date (DT) O S3.4.4.29
 
     pv2_30 : CWE | None
-        PV2.30 (opt) - Patient Charge Adjustment Code (CWE) S3.4.4.30 | 0218 - Patient Charge Adjustment
+        PV2.30 - Patient Charge Adjustment Code (CWE) O S3.4.4.30 | 0218 - Patient Charge Adjustment
 
     pv2_31 : str | None
-        PV2.31 (opt) - Recurring Service Code (IS) S3.4.4.31 | 0219 - Recurring Service Code
+        PV2.31 - Recurring Service Code (IS) O S3.4.4.31 | 0219 - Recurring Service Code
 
     pv2_32 : str | None
-        PV2.32 (opt) - Billing Media Code (ID) S3.4.4.32 | 0136 - Yes/no indicator
+        PV2.32 - Billing Media Code (ID) O S3.4.4.32 | 0136 - Yes/no indicator
 
     pv2_33 : str | None
-        PV2.33 (opt) - Expected Surgery Date and Time (DTM) S3.4.4.33
+        PV2.33 - Expected Surgery Date and Time (DTM) O S3.4.4.33
 
     pv2_34 : str | None
-        PV2.34 (opt) - Military Partnership Code (ID) S3.4.4.34 | 0136 - Yes/no indicator
+        PV2.34 - Military Partnership Code (ID) O S3.4.4.34 | 0136 - Yes/no indicator
 
     pv2_35 : str | None
-        PV2.35 (opt) - Military Non-Availability Code (ID) S3.4.4.35 | 0136 - Yes/no indicator
+        PV2.35 - Military Non-Availability Code (ID) O S3.4.4.35 | 0136 - Yes/no indicator
 
     pv2_36 : str | None
-        PV2.36 (opt) - Newborn Baby Indicator (ID) S3.4.4.36 | 0136 - Yes/no indicator
+        PV2.36 - Newborn Baby Indicator (ID) O S3.4.4.36 | 0136 - Yes/no indicator
 
     pv2_37 : str | None
-        PV2.37 (opt) - Baby Detained Indicator (ID) S3.4.4.37 | 0136 - Yes/no indicator
+        PV2.37 - Baby Detained Indicator (ID) O S3.4.4.37 | 0136 - Yes/no indicator
 
     pv2_38 : CWE | None
-        PV2.38 (opt) - Mode of Arrival Code (CWE) S3.4.4.38 | 0430 - Mode of Arrival Code
+        PV2.38 - Mode of Arrival Code (CWE) O S3.4.4.38 | 0430 - Mode of Arrival Code
 
     pv2_39 : list[CWE] | None
-        PV2.39 (opt, rep) - Recreational Drug Use Code (CWE) S3.4.4.39 | 0431 - Recreational Drug Use Code
+        PV2.39 - Recreational Drug Use Code (CWE) O rep S3.4.4.39 | 0431 - Recreational Drug Use Code
 
     pv2_40 : CWE | None
-        PV2.40 (opt) - Admission Level of Care Code (CWE) S3.4.4.40 | 0432 - Admission Level of Care Code
+        PV2.40 - Admission Level of Care Code (CWE) O S3.4.4.40 | 0432 - Admission Level of Care Code
 
     pv2_41 : list[CWE] | None
-        PV2.41 (opt, rep) - Precaution Code (CWE) S3.4.4.41 | 0433 - Precaution Code
+        PV2.41 - Precaution Code (CWE) O rep S3.4.4.41 | 0433 - Precaution Code
 
     pv2_42 : CWE | None
-        PV2.42 (opt) - Patient Condition Code (CWE) S3.4.4.42 | 0434 - Patient Condition Code
+        PV2.42 - Patient Condition Code (CWE) O S3.4.4.42 | 0434 - Patient Condition Code
 
     pv2_43 : str | None
-        PV2.43 (opt) - Living Will Code (IS) S3.4.10.7 | 0315 - Living Will Code
+        PV2.43 - Living Will Code (IS) O S3.4.10.7 | 0315 - Living Will Code
 
     pv2_44 : str | None
-        PV2.44 (opt) - Organ Donor Code (IS) S3.4.10.8 | 0316 - Organ Donor Code
+        PV2.44 - Organ Donor Code (IS) O S3.4.10.8 | 0316 - Organ Donor Code
 
     pv2_45 : list[CWE] | None
-        PV2.45 (opt, rep) - Advance Directive Code (CWE) S3.4.10.15 | 0435 - Advance Directive Code
+        PV2.45 - Advance Directive Code (CWE) C rep S3.4.10.15 | 0435 - Advance Directive Code
 
     pv2_46 : str | None
-        PV2.46 (opt) - Patient Status Effective Date (DT) S3.4.4.46
+        PV2.46 - Patient Status Effective Date (DT) O S3.4.4.46
 
     pv2_47 : str | None
-        PV2.47 (opt) - Expected LOA Return Date/Time (DTM) S3.4.4.47
+        PV2.47 - Expected LOA Return Date/Time (DTM) C S3.4.4.47
 
     pv2_48 : str | None
-        PV2.48 (opt) - Expected Pre-admission Testing Date/Time (DTM) S3.4.4.48
+        PV2.48 - Expected Pre-admission Testing Date/Time (DTM) O S3.4.4.48
 
     pv2_49 : list[str] | None
-        PV2.49 (opt, rep) - Notify Clergy Code (IS) S3.4.4.49 | 0534 - Notify Clergy Code
+        PV2.49 - Notify Clergy Code (IS) O rep S3.4.4.49 | 0534 - Notify Clergy Code
 
     pv2_50 : str | None
-        PV2.50 (opt) - Advance Directive Last Verified Date (DT) S3.4.10.22
+        PV2.50 - Advance Directive Last Verified Date (DT) O S3.4.10.22
     """
 
     pv2_1: Optional[PL] = Field(
@@ -182,7 +182,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.1",
         title="Prior Pending Location",
-        description="Item #181",
+        description="C | Item #00181",
     )
 
     pv2_2: Optional[CWE] = Field(
@@ -194,7 +194,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.2",
         title="Accommodation Code",
-        description="Item #182 | Table HL70129",
+        description="O | Item #00182 | Table 0129 - Accommodation code",
     )
 
     pv2_3: Optional[CWE] = Field(
@@ -206,7 +206,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.3",
         title="Admit Reason",
-        description="Item #183",
+        description="O | Item #00183",
     )
 
     pv2_4: Optional[CWE] = Field(
@@ -218,7 +218,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.4",
         title="Transfer Reason",
-        description="Item #184",
+        description="O | Item #00184",
     )
 
     pv2_5: Optional[List[str]] = Field(
@@ -230,7 +230,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.5",
         title="Patient Valuables",
-        description="Item #185",
+        description="O | Item #00185 | LEN:25",
     )
 
     pv2_6: Optional[str] = Field(
@@ -242,7 +242,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.6",
         title="Patient Valuables Location",
-        description="Item #186",
+        description="O | Item #00186 | LEN:25",
     )
 
     pv2_7: Optional[List[str]] = Field(
@@ -254,7 +254,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.7",
         title="Visit User Code",
-        description="Item #187 | Table HL70130",
+        description="O | Item #00187 | Table 0130 - Visit User Code | LEN:2",
     )
 
     pv2_8: Optional[str] = Field(
@@ -266,7 +266,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.8",
         title="Expected Admit Date/Time",
-        description="Item #188",
+        description="O | Item #00188 | LEN:24",
     )
 
     pv2_9: Optional[str] = Field(
@@ -278,7 +278,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.9",
         title="Expected Discharge Date/Time",
-        description="Item #189",
+        description="O | Item #00189 | LEN:24",
     )
 
     pv2_10: Optional[str] = Field(
@@ -290,7 +290,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.10",
         title="Estimated Length of Inpatient Stay",
-        description="Item #711",
+        description="O | Item #00711 | LEN:3",
     )
 
     pv2_11: Optional[str] = Field(
@@ -302,7 +302,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.11",
         title="Actual Length of Inpatient Stay",
-        description="Item #712",
+        description="O | Item #00712 | LEN:3",
     )
 
     pv2_12: Optional[str] = Field(
@@ -314,7 +314,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.12",
         title="Visit Description",
-        description="Item #713",
+        description="O | Item #00713 | LEN:50",
     )
 
     pv2_13: Optional[List[XCN]] = Field(
@@ -326,7 +326,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.13",
         title="Referral Source Code",
-        description="Item #714",
+        description="O | Item #00714",
     )
 
     pv2_14: Optional[str] = Field(
@@ -338,7 +338,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.14",
         title="Previous Service Date",
-        description="Item #715",
+        description="O | Item #00715 | LEN:8",
     )
 
     pv2_15: Optional[str] = Field(
@@ -350,7 +350,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.15",
         title="Employment Illness Related Indicator",
-        description="Item #716 | Table HL70136",
+        description="O | Item #00716 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pv2_16: Optional[str] = Field(
@@ -362,7 +362,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.16",
         title="Purge Status Code",
-        description="Item #717 | Table HL70213",
+        description="O | Item #00717 | Table 0213 - Purge Status Code | LEN:1",
     )
 
     pv2_17: Optional[str] = Field(
@@ -374,7 +374,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.17",
         title="Purge Status Date",
-        description="Item #718",
+        description="O | Item #00718 | LEN:8",
     )
 
     pv2_18: Optional[str] = Field(
@@ -386,7 +386,9 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.18",
         title="Special Program Code",
-        description="Item #719 | Table HL70214",
+        description=(
+            "O | Item #00719 | Table 0214 - Special Program Code | LEN:2"
+        ),
     )
 
     pv2_19: Optional[str] = Field(
@@ -398,7 +400,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.19",
         title="Retention Indicator",
-        description="Item #720 | Table HL70136",
+        description="O | Item #00720 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pv2_20: Optional[str] = Field(
@@ -410,7 +412,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.20",
         title="Expected Number of Insurance Plans",
-        description="Item #721",
+        description="O | Item #00721 | LEN:1",
     )
 
     pv2_21: Optional[str] = Field(
@@ -422,7 +424,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.21",
         title="Visit Publicity Code",
-        description="Item #722 | Table HL70215",
+        description="O | Item #00722 | Table 0215 - Publicity Code | LEN:1",
     )
 
     pv2_22: Optional[str] = Field(
@@ -434,7 +436,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.22",
         title="Visit Protection Indicator",
-        description="Item #723 | Table HL70136",
+        description="O | Item #00723 | Table 0136 - Yes/no indicator",
     )
 
     pv2_23: Optional[List[XON]] = Field(
@@ -446,7 +448,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.23",
         title="Clinic Organization Name",
-        description="Item #724",
+        description="O | Item #00724",
     )
 
     pv2_24: Optional[str] = Field(
@@ -458,7 +460,9 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.24",
         title="Patient Status Code",
-        description="Item #725 | Table HL70216",
+        description=(
+            "O | Item #00725 | Table 0216 - Patient Status Code | LEN:2"
+        ),
     )
 
     pv2_25: Optional[str] = Field(
@@ -470,7 +474,9 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.25",
         title="Visit Priority Code",
-        description="Item #726 | Table HL70217",
+        description=(
+            "O | Item #00726 | Table 0217 - Visit Priority Code | LEN:1"
+        ),
     )
 
     pv2_26: Optional[str] = Field(
@@ -482,7 +488,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.26",
         title="Previous Treatment Date",
-        description="Item #727",
+        description="O | Item #00727 | LEN:8",
     )
 
     pv2_27: Optional[str] = Field(
@@ -494,7 +500,9 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.27",
         title="Expected Discharge Disposition",
-        description="Item #728 | Table HL70112",
+        description=(
+            "O | Item #00728 | Table 0112 - Discharge Disposition | LEN:2"
+        ),
     )
 
     pv2_28: Optional[str] = Field(
@@ -506,7 +514,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.28",
         title="Signature on File Date",
-        description="Item #729",
+        description="O | Item #00729 | LEN:8",
     )
 
     pv2_29: Optional[str] = Field(
@@ -518,7 +526,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.29",
         title="First Similar Illness Date",
-        description="Item #730",
+        description="O | Item #00730 | LEN:8",
     )
 
     pv2_30: Optional[CWE] = Field(
@@ -530,7 +538,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.30",
         title="Patient Charge Adjustment Code",
-        description="Item #731 | Table HL70218",
+        description="O | Item #00731 | Table 0218 - Patient Charge Adjustment",
     )
 
     pv2_31: Optional[str] = Field(
@@ -542,7 +550,9 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.31",
         title="Recurring Service Code",
-        description="Item #732 | Table HL70219",
+        description=(
+            "O | Item #00732 | Table 0219 - Recurring Service Code | LEN:2"
+        ),
     )
 
     pv2_32: Optional[str] = Field(
@@ -554,7 +564,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.32",
         title="Billing Media Code",
-        description="Item #733 | Table HL70136",
+        description="O | Item #00733 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pv2_33: Optional[str] = Field(
@@ -566,7 +576,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.33",
         title="Expected Surgery Date and Time",
-        description="Item #734",
+        description="O | Item #00734 | LEN:24",
     )
 
     pv2_34: Optional[str] = Field(
@@ -578,7 +588,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.34",
         title="Military Partnership Code",
-        description="Item #735 | Table HL70136",
+        description="O | Item #00735 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pv2_35: Optional[str] = Field(
@@ -590,7 +600,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.35",
         title="Military Non-Availability Code",
-        description="Item #736 | Table HL70136",
+        description="O | Item #00736 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pv2_36: Optional[str] = Field(
@@ -602,7 +612,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.36",
         title="Newborn Baby Indicator",
-        description="Item #737 | Table HL70136",
+        description="O | Item #00737 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pv2_37: Optional[str] = Field(
@@ -614,7 +624,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.37",
         title="Baby Detained Indicator",
-        description="Item #738 | Table HL70136",
+        description="O | Item #00738 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     pv2_38: Optional[CWE] = Field(
@@ -626,7 +636,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.38",
         title="Mode of Arrival Code",
-        description="Item #1543 | Table HL70430",
+        description="O | Item #01543 | Table 0430 - Mode of Arrival Code",
     )
 
     pv2_39: Optional[List[CWE]] = Field(
@@ -638,7 +648,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.39",
         title="Recreational Drug Use Code",
-        description="Item #1544 | Table HL70431",
+        description="O | Item #01544 | Table 0431 - Recreational Drug Use Code",
     )
 
     pv2_40: Optional[CWE] = Field(
@@ -650,7 +660,9 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.40",
         title="Admission Level of Care Code",
-        description="Item #1545 | Table HL70432",
+        description=(
+            "O | Item #01545 | Table 0432 - Admission Level of Care Code"
+        ),
     )
 
     pv2_41: Optional[List[CWE]] = Field(
@@ -662,7 +674,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.41",
         title="Precaution Code",
-        description="Item #1546 | Table HL70433",
+        description="O | Item #01546 | Table 0433 - Precaution Code",
     )
 
     pv2_42: Optional[CWE] = Field(
@@ -674,7 +686,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.42",
         title="Patient Condition Code",
-        description="Item #1547 | Table HL70434",
+        description="O | Item #01547 | Table 0434 - Patient Condition Code",
     )
 
     pv2_43: Optional[str] = Field(
@@ -686,7 +698,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.43",
         title="Living Will Code",
-        description="Item #759 | Table HL70315",
+        description="O | Item #00759 | Table 0315 - Living Will Code | LEN:2",
     )
 
     pv2_44: Optional[str] = Field(
@@ -698,7 +710,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.44",
         title="Organ Donor Code",
-        description="Item #760 | Table HL70316",
+        description="O | Item #00760 | Table 0316 - Organ Donor Code | LEN:2",
     )
 
     pv2_45: Optional[List[CWE]] = Field(
@@ -710,7 +722,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.45",
         title="Advance Directive Code",
-        description="Item #1548 | Table HL70435",
+        description="C | Item #01548 | Table 0435 - Advance Directive Code",
     )
 
     pv2_46: Optional[str] = Field(
@@ -722,7 +734,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.46",
         title="Patient Status Effective Date",
-        description="Item #1549",
+        description="O | Item #01549 | LEN:8",
     )
 
     pv2_47: Optional[str] = Field(
@@ -734,7 +746,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.47",
         title="Expected LOA Return Date/Time",
-        description="Item #1550",
+        description="C | Item #01550 | LEN:24",
     )
 
     pv2_48: Optional[str] = Field(
@@ -746,7 +758,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.48",
         title="Expected Pre-admission Testing Date/Time",
-        description="Item #1841",
+        description="O | Item #01841 | LEN:24",
     )
 
     pv2_49: Optional[List[str]] = Field(
@@ -758,7 +770,9 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.49",
         title="Notify Clergy Code",
-        description="Item #1842 | Table HL70534",
+        description=(
+            "O | Item #01842 | Table 0534 - Notify Clergy Code | LEN:20"
+        ),
     )
 
     pv2_50: Optional[str] = Field(
@@ -770,7 +784,7 @@ class PV2(HL7Model):
         ),
         serialization_alias="PV2.50",
         title="Advance Directive Last Verified Date",
-        description="Item #2141",
+        description="O | Item #02141 | LEN:8",
     )
 
     @field_validator("pv2_8", "pv2_9", "pv2_33", "pv2_47", "pv2_48", mode='before')

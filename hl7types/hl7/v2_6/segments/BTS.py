@@ -18,13 +18,13 @@ class BTS(HL7Model):
     Attributes
     ----------
     bts_1 : str | None
-        BTS.1 (opt) - Batch Message Count (ST) S2.14.3.1
+        BTS.1 - Batch Message Count (ST) O S2.14.3.1
 
     bts_2 : str | None
-        BTS.2 (opt) - Batch Comment (ST) S2.14.2.10
+        BTS.2 - Batch Comment (ST) O S2.14.2.10
 
     bts_3 : list[str] | None
-        BTS.3 (opt, rep) - Batch Totals (NM) S2.14.3.3
+        BTS.3 - Batch Totals (NM) O rep S2.14.3.3
     """
 
     bts_1: Optional[str] = Field(
@@ -36,7 +36,7 @@ class BTS(HL7Model):
         ),
         serialization_alias="BTS.1",
         title="Batch Message Count",
-        description="Item #93",
+        description="O | Item #00093 | LEN:10",
     )
 
     bts_2: Optional[str] = Field(
@@ -48,7 +48,7 @@ class BTS(HL7Model):
         ),
         serialization_alias="BTS.2",
         title="Batch Comment",
-        description="Item #90",
+        description="O | Item #00090 | LEN:80",
     )
 
     bts_3: Optional[List[str]] = Field(
@@ -60,7 +60,7 @@ class BTS(HL7Model):
         ),
         serialization_alias="BTS.3",
         title="Batch Totals",
-        description="Item #95",
+        description="O | Item #00095 | LEN:100",
     )
 
     @field_validator("bts_3", mode='before')

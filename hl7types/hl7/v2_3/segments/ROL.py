@@ -23,28 +23,28 @@ class ROL(HL7Model):
     Attributes
     ----------
     rol_1 : EI
-        ROL.1 (req) - Role Instance ID (EI) S12.3.3.1
+        ROL.1 - Role Instance ID (EI) R S12.3.3.1
 
     rol_2 : str
-        ROL.2 (req) - Action Code (ID) S12.3.1 | 0287 - Action Code
+        ROL.2 - Action Code (ID) R S12.3.1 | 0287 - Action Code
 
     rol_3 : CE | None
-        ROL.3 (opt) - Role (CE) S12.3.3.3
+        ROL.3 - Role (CE) O S12.3.3.3
 
     rol_4 : XCN
-        ROL.4 (req) - Role Person (XCN) S12.3.3.4
+        ROL.4 - Role Person (XCN) R S12.3.3.4
 
     rol_5 : TS | None
-        ROL.5 (opt) - Role Begin Date/Time (TS) S12.3.3.5
+        ROL.5 - Role Begin Date/Time (TS) O S12.3.3.5
 
     rol_6 : TS | None
-        ROL.6 (opt) - Role End Date/Time (TS) S12.3.3.6
+        ROL.6 - Role End Date/Time (TS) O S12.3.3.6
 
     rol_7 : CE | None
-        ROL.7 (opt) - Role Duration (CE) S12.3.3.7
+        ROL.7 - Role Duration (CE) O S12.3.3.7
 
     rol_8 : CE | None
-        ROL.8 (opt) - Role Action (Assumption) Reason (CE) S12.3.3.8
+        ROL.8 - Role Action (Assumption) Reason (CE) O S12.3.3.8
     """
 
     rol_1: EI = Field(
@@ -55,7 +55,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.1",
         title="Role Instance ID",
-        description="Item #1206",
+        description="R | Item #01206",
     )
 
     rol_2: str = Field(
@@ -66,7 +66,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.2",
         title="Action Code",
-        description="Item #816 | Table HL70287",
+        description="R | Item #00816 | Table 0287 - Action Code | LEN:2",
     )
 
     rol_3: Optional[CE] = Field(
@@ -78,7 +78,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.3",
         title="Role",
-        description="Item #1197",
+        description="O | Item #01197",
     )
 
     rol_4: XCN = Field(
@@ -89,7 +89,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.4",
         title="Role Person",
-        description="Item #1198",
+        description="R | Item #01198",
     )
 
     rol_5: Optional[TS] = Field(
@@ -101,7 +101,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.5",
         title="Role Begin Date/Time",
-        description="Item #1199",
+        description="O | Item #01199",
     )
 
     rol_6: Optional[TS] = Field(
@@ -113,7 +113,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.6",
         title="Role End Date/Time",
-        description="Item #1200",
+        description="O | Item #01200",
     )
 
     rol_7: Optional[CE] = Field(
@@ -125,7 +125,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.7",
         title="Role Duration",
-        description="Item #1201",
+        description="O | Item #01201",
     )
 
     rol_8: Optional[CE] = Field(
@@ -137,7 +137,7 @@ class ROL(HL7Model):
         ),
         serialization_alias="ROL.8",
         title="Role Action (Assumption) Reason",
-        description="Item #1205",
+        description="O | Item #01205",
     )
 
     model_config = {"populate_by_name": True}

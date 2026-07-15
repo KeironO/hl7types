@@ -20,40 +20,40 @@ class OBX(HL7Model):
     Attributes
     ----------
     obx_1 : str | None
-        OBX.1 (opt) - SET ID - OBSERVATION SIMPLE (SI) S7-14
+        OBX.1 - SET ID - OBSERVATION SIMPLE (SI) O S7-14
 
     obx_2 : str | None
-        OBX.2 (opt) - VALUE TYPE (ID) | 0125 - VALUE TYPE
+        OBX.2 - VALUE TYPE (ID) O | 0125 - VALUE TYPE
 
     obx_3 : CE
-        OBX.3 (req) - OBSERVATION IDENTIFIER (CE)
+        OBX.3 - OBSERVATION IDENTIFIER (CE) R
 
     obx_4 : str | None
-        OBX.4 (opt) - OBSERVATION SUB-ID (NM)
+        OBX.4 - OBSERVATION SUB-ID (NM) O
 
     obx_5 : str
-        OBX.5 (req) - OBSERVATION RESULTS (ST)
+        OBX.5 - OBSERVATION RESULTS (ST) R
 
     obx_6 : str | None
-        OBX.6 (opt) - UNITS (ID)
+        OBX.6 - UNITS (ID) O
 
     obx_7 : str | None
-        OBX.7 (opt) - REFERENCES RANGE (ST)
+        OBX.7 - REFERENCES RANGE (ST) O
 
     obx_8 : list[str] | None
-        OBX.8 (opt, rep) - ABNORMAL FLAGS (ST) | 0078 - ABNORMAL FLAGS
+        OBX.8 - ABNORMAL FLAGS (ST) O rep | 0078 - ABNORMAL FLAGS
 
     obx_9 : str | None
-        OBX.9 (opt) - PROBABILITY (NM)
+        OBX.9 - PROBABILITY (NM) O
 
     obx_10 : str | None
-        OBX.10 (opt) - NATURE OF ABNORMAL TEST (ID) | 0080 - NATURE OF ABNORMAL TESTING
+        OBX.10 - NATURE OF ABNORMAL TEST (ID) O | 0080 - NATURE OF ABNORMAL TESTING
 
     obx_11 : str | None
-        OBX.11 (opt) - OBSERV RESULT STATUS (ID) | 0085 - OBSERVATION RESULT STATUS
+        OBX.11 - OBSERV RESULT STATUS (ID) O | 0085 - OBSERVATION RESULT STATUS
 
     obx_12 : str | None
-        OBX.12 (opt) - DATE LAST OBS NORMAL VALUES (TS)
+        OBX.12 - DATE LAST OBS NORMAL VALUES (TS) O
     """
 
     obx_1: Optional[str] = Field(
@@ -65,7 +65,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.1",
         title="SET ID - OBSERVATION SIMPLE",
-        description="Item #559",
+        description="O | Item #00559 | LEN:4",
     )
 
     obx_2: Optional[str] = Field(
@@ -77,7 +77,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.2",
         title="VALUE TYPE",
-        description="Item #676 | Table HL70125",
+        description="O | Item #00676 | Table 0125 - VALUE TYPE | LEN:2",
     )
 
     obx_3: CE = Field(
@@ -88,7 +88,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.3",
         title="OBSERVATION IDENTIFIER",
-        description="Item #560",
+        description="R | Item #00560",
     )
 
     obx_4: Optional[str] = Field(
@@ -100,7 +100,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.4",
         title="OBSERVATION SUB-ID",
-        description="Item #769",
+        description="O | Item #00769 | LEN:20",
     )
 
     obx_5: str = Field(
@@ -111,7 +111,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.5",
         title="OBSERVATION RESULTS",
-        description="Item #561",
+        description="R | Item #00561 | LEN:65",
     )
 
     obx_6: Optional[str] = Field(
@@ -123,7 +123,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.6",
         title="UNITS",
-        description="Item #562",
+        description="O | Item #00562 | LEN:20",
     )
 
     obx_7: Optional[str] = Field(
@@ -135,7 +135,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.7",
         title="REFERENCES RANGE",
-        description="Item #563",
+        description="O | Item #00563 | LEN:60",
     )
 
     obx_8: Optional[List[str]] = Field(
@@ -147,7 +147,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.8",
         title="ABNORMAL FLAGS",
-        description="Item #564 | Table HL70078",
+        description="O | Item #00564 | Table 0078 - ABNORMAL FLAGS | LEN:10",
     )
 
     obx_9: Optional[str] = Field(
@@ -159,7 +159,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.9",
         title="PROBABILITY",
-        description="Item #639",
+        description="O | Item #00639 | LEN:5",
     )
 
     obx_10: Optional[str] = Field(
@@ -171,7 +171,9 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.10",
         title="NATURE OF ABNORMAL TEST",
-        description="Item #565 | Table HL70080",
+        description=(
+            "O | Item #00565 | Table 0080 - NATURE OF ABNORMAL TESTING | LEN:5"
+        ),
     )
 
     obx_11: Optional[str] = Field(
@@ -183,7 +185,9 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.11",
         title="OBSERV RESULT STATUS",
-        description="Item #566 | Table HL70085",
+        description=(
+            "O | Item #00566 | Table 0085 - OBSERVATION RESULT STATUS | LEN:2"
+        ),
     )
 
     obx_12: Optional[str] = Field(
@@ -195,7 +199,7 @@ class OBX(HL7Model):
         ),
         serialization_alias="OBX.12",
         title="DATE LAST OBS NORMAL VALUES",
-        description="Item #567",
+        description="O | Item #00567 | LEN:19",
     )
 
     @field_validator("obx_1", mode='before')

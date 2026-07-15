@@ -20,34 +20,34 @@ class RQD(HL7Model):
     Attributes
     ----------
     rqd_1 : str | None
-        RQD.1 (opt) - Requisition Line Number (SI) S4.7.1.1
+        RQD.1 - Requisition Line Number (SI) NA S4.7.1.1
 
     rqd_2 : CE | None
-        RQD.2 (opt) - Item Code - Internal (CE) S4.7.1.2
+        RQD.2 - Item Code - Internal (CE) NA S4.7.1.2
 
     rqd_3 : CE | None
-        RQD.3 (opt) - Item Code - External (CE) S4.7.1.3
+        RQD.3 - Item Code - External (CE) NA S4.7.1.3
 
     rqd_4 : CE | None
-        RQD.4 (opt) - Hospital Item Code (CE) S4.7.1.4
+        RQD.4 - Hospital Item Code (CE) NA S4.7.1.4
 
     rqd_5 : str | None
-        RQD.5 (opt) - Requisition Quantity (NM) S4.7.1.5
+        RQD.5 - Requisition Quantity (NM) NA S4.7.1.5
 
     rqd_6 : CE | None
-        RQD.6 (opt) - Requisition Unit of measure (CE) S4.7.1.6
+        RQD.6 - Requisition Unit of measure (CE) NA S4.7.1.6
 
     rqd_7 : str | None
-        RQD.7 (opt) - Department cost center (ID) S4.7.1.7
+        RQD.7 - Department cost center (ID) NA S4.7.1.7
 
     rqd_8 : str | None
-        RQD.8 (opt) - Item Natural Account Code (ID) S4.7.1.8
+        RQD.8 - Item Natural Account Code (ID) NA S4.7.1.8
 
     rqd_9 : CE | None
-        RQD.9 (opt) - Deliver-to ID (CE) S4.7.1.9
+        RQD.9 - Deliver-to ID (CE) NA S4.7.1.9
 
     rqd_10 : str | None
-        RQD.10 (opt) - Date Needed (DT) S4.7.1.10
+        RQD.10 - Date Needed (DT) NA S4.7.1.10
     """
 
     rqd_1: Optional[str] = Field(
@@ -59,7 +59,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.1",
         title="Requisition Line Number",
-        description="Item #275",
+        description="NA | Item #00275 | LEN:4",
     )
 
     rqd_2: Optional[CE] = Field(
@@ -71,7 +71,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.2",
         title="Item Code - Internal",
-        description="Item #276",
+        description="NA | Item #00276",
     )
 
     rqd_3: Optional[CE] = Field(
@@ -83,7 +83,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.3",
         title="Item Code - External",
-        description="Item #277",
+        description="NA | Item #00277",
     )
 
     rqd_4: Optional[CE] = Field(
@@ -95,7 +95,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.4",
         title="Hospital Item Code",
-        description="Item #278",
+        description="NA | Item #00278",
     )
 
     rqd_5: Optional[str] = Field(
@@ -107,7 +107,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.5",
         title="Requisition Quantity",
-        description="Item #279",
+        description="NA | Item #00279 | LEN:6",
     )
 
     rqd_6: Optional[CE] = Field(
@@ -119,7 +119,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.6",
         title="Requisition Unit of measure",
-        description="Item #280",
+        description="NA | Item #00280",
     )
 
     rqd_7: Optional[str] = Field(
@@ -131,7 +131,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.7",
         title="Department cost center",
-        description="Item #281",
+        description="NA | Item #00281 | LEN:30",
     )
 
     rqd_8: Optional[str] = Field(
@@ -143,7 +143,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.8",
         title="Item Natural Account Code",
-        description="Item #282",
+        description="NA | Item #00282 | LEN:30",
     )
 
     rqd_9: Optional[CE] = Field(
@@ -155,7 +155,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.9",
         title="Deliver-to ID",
-        description="Item #283",
+        description="NA | Item #00283",
     )
 
     rqd_10: Optional[str] = Field(
@@ -167,7 +167,7 @@ class RQD(HL7Model):
         ),
         serialization_alias="RQD.10",
         title="Date Needed",
-        description="Item #284",
+        description="NA | Item #00284 | LEN:8",
     )
 
     @field_validator("rqd_1", mode='before')

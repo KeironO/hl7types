@@ -25,91 +25,91 @@ class ITM(HL7Model):
     Attributes
     ----------
     itm_1 : EI
-        ITM.1 (req) - Item Identifier (EI) S17.4.2.1
+        ITM.1 - Item Identifier (EI) R S17.4.2.1
 
     itm_2 : str | None
-        ITM.2 (opt) - Item Description (ST) S17.4.2.2
+        ITM.2 - Item Description (ST) O S17.4.2.2
 
     itm_3 : CWE | None
-        ITM.3 (opt) - Item Status (CWE) S17.4.2.3 | 0776 - Item Status
+        ITM.3 - Item Status (CWE) O S17.4.2.3 | 0776 - Item Status
 
     itm_4 : CWE | None
-        ITM.4 (opt) - Item Type (CWE) S17.4.2.4 | 0778 - Item Type
+        ITM.4 - Item Type (CWE) O S17.4.2.4 | 0778 - Item Type
 
     itm_5 : CWE | None
-        ITM.5 (opt) - Item Category (CWE) S17.4.2.5
+        ITM.5 - Item Category (CWE) O S17.4.2.5
 
     itm_6 : CNE | None
-        ITM.6 (opt) - Subject to Expiration Indicator (CNE) S17.4.2.6 | 0532 - Expanded Yes/no Indicator
+        ITM.6 - Subject to Expiration Indicator (CNE) O S17.4.2.6 | 0532 - Expanded Yes/no Indicator
 
     itm_7 : EI | None
-        ITM.7 (opt) - Manufacturer Identifier (EI) S17.4.2.7
+        ITM.7 - Manufacturer Identifier (EI) O S17.4.2.7
 
     itm_8 : str | None
-        ITM.8 (opt) - Manufacturer Name (ST) S17.4.2.8
+        ITM.8 - Manufacturer Name (ST) O S17.4.2.8
 
     itm_9 : str | None
-        ITM.9 (opt) - Manufacturer Catalog Number (ST) S17.4.2.9
+        ITM.9 - Manufacturer Catalog Number (ST) O S17.4.2.9
 
     itm_10 : CWE | None
-        ITM.10 (opt) - Manufacturer Labeler Identification Code (CWE) S17.4.2.10
+        ITM.10 - Manufacturer Labeler Identification Code (CWE) O S17.4.2.10
 
     itm_11 : CNE | None
-        ITM.11 (opt) - Patient Chargeable Indicator (CNE) S17.4.2.11 | 0532 - Expanded Yes/no Indicator
+        ITM.11 - Patient Chargeable Indicator (CNE) O S17.4.2.11 | 0532 - Expanded Yes/no Indicator
 
     itm_12 : CWE | None
-        ITM.12 (opt) - Transaction Code (CWE) S17.4.2.12 | 0132 - Transaction Code
+        ITM.12 - Transaction Code (CWE) O S17.4.2.12 | 0132 - Transaction Code
 
     itm_13 : CP | None
-        ITM.13 (opt) - Transaction amount - unit (CP) S17.4.2.13
+        ITM.13 - Transaction amount - unit (CP) O S17.4.2.13
 
     itm_14 : CNE | None
-        ITM.14 (opt) - Stocked Item Indicator (CNE) S17.4.2.14 | 0532 - Expanded Yes/no Indicator
+        ITM.14 - Stocked Item Indicator (CNE) O S17.4.2.14 | 0532 - Expanded Yes/no Indicator
 
     itm_15 : CWE | None
-        ITM.15 (opt) - Supply Risk Codes (CWE) S17.4.2.15 | 0871 - Supply Risk Codes
+        ITM.15 - Supply Risk Codes (CWE) O S17.4.2.15 | 0871 - Supply Risk Codes
 
     itm_16 : list[XON] | None
-        ITM.16 (opt, rep) - Approving Regulatory Agency (XON) S17.4.2.16 | 0790 - Approving Regulatory Agency
+        ITM.16 - Approving Regulatory Agency (XON) O rep S17.4.2.16 | 0790 - Approving Regulatory Agency
 
     itm_17 : CNE | None
-        ITM.17 (opt) - Latex Indicator (CNE) S17.4.2.17 | 0532 - Expanded Yes/no Indicator
+        ITM.17 - Latex Indicator (CNE) O S17.4.2.17 | 0532 - Expanded Yes/no Indicator
 
     itm_18 : list[CWE] | None
-        ITM.18 (opt, rep) - Ruling Act (CWE) S17.4.2.18 | 0793 - Ruling Act
+        ITM.18 - Ruling Act (CWE) O rep S17.4.2.18 | 0793 - Ruling Act
 
     itm_19 : CWE | None
-        ITM.19 (opt) - Item Natural Account Code (CWE) S17.4.2.19 | 0320 - Item Natural Account Code
+        ITM.19 - Item Natural Account Code (CWE) O S17.4.2.19 | 0320 - Item Natural Account Code
 
     itm_20 : str | None
-        ITM.20 (opt) - Approved To Buy Quantity (NM) S17.4.2.20
+        ITM.20 - Approved To Buy Quantity (NM) O S17.4.2.20
 
     itm_21 : MO | None
-        ITM.21 (opt) - Approved To Buy Price (MO) S17.4.2.21
+        ITM.21 - Approved To Buy Price (MO) O S17.4.2.21
 
     itm_22 : CNE | None
-        ITM.22 (opt) - Taxable Item Indicator (CNE) S17.4.2.22 | 0532 - Expanded Yes/no Indicator
+        ITM.22 - Taxable Item Indicator (CNE) O S17.4.2.22 | 0532 - Expanded Yes/no Indicator
 
     itm_23 : CNE | None
-        ITM.23 (opt) - Freight Charge Indicator (CNE) S17.4.2.23 | 0532 - Expanded Yes/no Indicator
+        ITM.23 - Freight Charge Indicator (CNE) O S17.4.2.23 | 0532 - Expanded Yes/no Indicator
 
     itm_24 : CNE | None
-        ITM.24 (opt) - Item Set Indicator (CNE) S17.4.2.24 | 0532 - Expanded Yes/no Indicator
+        ITM.24 - Item Set Indicator (CNE) O S17.4.2.24 | 0532 - Expanded Yes/no Indicator
 
     itm_25 : EI | None
-        ITM.25 (opt) - Item Set Identifier (EI) S17.4.2.25
+        ITM.25 - Item Set Identifier (EI) O S17.4.2.25
 
     itm_26 : CNE | None
-        ITM.26 (opt) - Track Department Usage Indicator (CNE) S17.4.2.26 | 0532 - Expanded Yes/no Indicator
+        ITM.26 - Track Department Usage Indicator (CNE) O S17.4.2.26 | 0532 - Expanded Yes/no Indicator
 
     itm_27 : CNE | None
-        ITM.27 (opt) - Procedure Code (CNE) S17.4.1.14 | 0088 - Procedure Code
+        ITM.27 - Procedure Code (CNE) O S17.4.1.14 | 0088 - Procedure Code
 
     itm_28 : list[CNE] | None
-        ITM.28 (opt, rep) - Procedure Code Modifier (CNE) S17.4.1.15 | 0340 - Procedure Code Modifier
+        ITM.28 - Procedure Code Modifier (CNE) O rep S17.4.1.15 | 0340 - Procedure Code Modifier
 
     itm_29 : CWE | None
-        ITM.29 (opt) - Special Handling Code (CWE) S13.4.3.43 | 0376 - Special Handling Code
+        ITM.29 - Special Handling Code (CWE) O S13.4.3.43 | 0376 - Special Handling Code
     """
 
     itm_1: EI = Field(
@@ -120,7 +120,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.1",
         title="Item Identifier",
-        description="Item #2186",
+        description="R | Item #02186",
     )
 
     itm_2: Optional[str] = Field(
@@ -132,7 +132,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.2",
         title="Item Description",
-        description="Item #2274",
+        description="O | Item #02274",
     )
 
     itm_3: Optional[CWE] = Field(
@@ -144,7 +144,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.3",
         title="Item Status",
-        description="Item #2187 | Table HL70776",
+        description="O | Item #02187 | Table 0776 - Item Status",
     )
 
     itm_4: Optional[CWE] = Field(
@@ -156,7 +156,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.4",
         title="Item Type",
-        description="Item #2188 | Table HL70778",
+        description="O | Item #02188 | Table 0778 - Item Type",
     )
 
     itm_5: Optional[CWE] = Field(
@@ -168,7 +168,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.5",
         title="Item Category",
-        description="Item #2189",
+        description="O | Item #02189",
     )
 
     itm_6: Optional[CNE] = Field(
@@ -180,7 +180,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.6",
         title="Subject to Expiration Indicator",
-        description="Item #2190 | Table HL70532",
+        description="O | Item #02190 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_7: Optional[EI] = Field(
@@ -192,7 +192,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.7",
         title="Manufacturer Identifier",
-        description="Item #2191",
+        description="O | Item #02191",
     )
 
     itm_8: Optional[str] = Field(
@@ -204,7 +204,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.8",
         title="Manufacturer Name",
-        description="Item #2275",
+        description="O | Item #02275",
     )
 
     itm_9: Optional[str] = Field(
@@ -216,7 +216,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.9",
         title="Manufacturer Catalog Number",
-        description="Item #2192",
+        description="O | Item #02192",
     )
 
     itm_10: Optional[CWE] = Field(
@@ -228,7 +228,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.10",
         title="Manufacturer Labeler Identification Code",
-        description="Item #2193",
+        description="O | Item #02193",
     )
 
     itm_11: Optional[CNE] = Field(
@@ -240,7 +240,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.11",
         title="Patient Chargeable Indicator",
-        description="Item #2070 | Table HL70532",
+        description="O | Item #02070 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_12: Optional[CWE] = Field(
@@ -252,7 +252,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.12",
         title="Transaction Code",
-        description="Item #361 | Table HL70132",
+        description="O | Item #00361 | Table 0132 - Transaction Code",
     )
 
     itm_13: Optional[CP] = Field(
@@ -264,7 +264,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.13",
         title="Transaction amount - unit",
-        description="Item #366",
+        description="O | Item #00366",
     )
 
     itm_14: Optional[CNE] = Field(
@@ -276,7 +276,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.14",
         title="Stocked Item Indicator",
-        description="Item #2197 | Table HL70532",
+        description="O | Item #02197 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_15: Optional[CWE] = Field(
@@ -288,7 +288,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.15",
         title="Supply Risk Codes",
-        description="Item #2266 | Table HL70871",
+        description="O | Item #02266 | Table 0871 - Supply Risk Codes",
     )
 
     itm_16: Optional[List[XON]] = Field(
@@ -300,7 +300,9 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.16",
         title="Approving Regulatory Agency",
-        description="Item #2199 | Table HL70790",
+        description=(
+            "O | Item #02199 | Table 0790 - Approving Regulatory Agency"
+        ),
     )
 
     itm_17: Optional[CNE] = Field(
@@ -312,7 +314,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.17",
         title="Latex Indicator",
-        description="Item #2200 | Table HL70532",
+        description="O | Item #02200 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_18: Optional[List[CWE]] = Field(
@@ -324,7 +326,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.18",
         title="Ruling Act",
-        description="Item #2201 | Table HL70793",
+        description="O | Item #02201 | Table 0793 - Ruling Act",
     )
 
     itm_19: Optional[CWE] = Field(
@@ -336,7 +338,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.19",
         title="Item Natural Account Code",
-        description="Item #282 | Table HL70320",
+        description="O | Item #00282 | Table 0320 - Item Natural Account Code",
     )
 
     itm_20: Optional[str] = Field(
@@ -348,7 +350,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.20",
         title="Approved To Buy Quantity",
-        description="Item #2203",
+        description="O | Item #02203",
     )
 
     itm_21: Optional[MO] = Field(
@@ -360,7 +362,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.21",
         title="Approved To Buy Price",
-        description="Item #2204",
+        description="O | Item #02204",
     )
 
     itm_22: Optional[CNE] = Field(
@@ -372,7 +374,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.22",
         title="Taxable Item Indicator",
-        description="Item #2205 | Table HL70532",
+        description="O | Item #02205 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_23: Optional[CNE] = Field(
@@ -384,7 +386,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.23",
         title="Freight Charge Indicator",
-        description="Item #2206 | Table HL70532",
+        description="O | Item #02206 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_24: Optional[CNE] = Field(
@@ -396,7 +398,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.24",
         title="Item Set Indicator",
-        description="Item #2207 | Table HL70532",
+        description="O | Item #02207 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_25: Optional[EI] = Field(
@@ -408,7 +410,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.25",
         title="Item Set Identifier",
-        description="Item #2208",
+        description="O | Item #02208",
     )
 
     itm_26: Optional[CNE] = Field(
@@ -420,7 +422,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.26",
         title="Track Department Usage Indicator",
-        description="Item #2209 | Table HL70532",
+        description="O | Item #02209 | Table 0532 - Expanded Yes/no Indicator",
     )
 
     itm_27: Optional[CNE] = Field(
@@ -432,7 +434,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.27",
         title="Procedure Code",
-        description="Item #393 | Table HL70088",
+        description="O | Item #00393 | Table 0088 - Procedure Code",
     )
 
     itm_28: Optional[List[CNE]] = Field(
@@ -444,7 +446,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.28",
         title="Procedure Code Modifier",
-        description="Item #1316 | Table HL70340",
+        description="O | Item #01316 | Table 0340 - Procedure Code Modifier",
     )
 
     itm_29: Optional[CWE] = Field(
@@ -456,7 +458,7 @@ class ITM(HL7Model):
         ),
         serialization_alias="ITM.29",
         title="Special Handling Code",
-        description="Item #1370 | Table HL70376",
+        description="O | Item #01370 | Table 0376 - Special Handling Code",
     )
 
     @field_validator("itm_20", mode='before')

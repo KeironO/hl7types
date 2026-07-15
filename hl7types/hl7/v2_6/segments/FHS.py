@@ -20,46 +20,46 @@ class FHS(HL7Model):
     Attributes
     ----------
     fhs_1 : str
-        FHS.1 (req) - File Field Separator (ST) S2.14.6.1
+        FHS.1 - File Field Separator (ST) R S2.14.6.1
 
     fhs_2 : str
-        FHS.2 (req) - File Encoding Characters (ST) S2.14.6.2
+        FHS.2 - File Encoding Characters (ST) R S2.14.6.2
 
     fhs_3 : HD | None
-        FHS.3 (opt) - File Sending Application (HD) S2.14.6.3
+        FHS.3 - File Sending Application (HD) O S2.14.6.3
 
     fhs_4 : HD | None
-        FHS.4 (opt) - File Sending Facility (HD) S2.14.6.4
+        FHS.4 - File Sending Facility (HD) O S2.14.6.4
 
     fhs_5 : HD | None
-        FHS.5 (opt) - File Receiving Application (HD) S2.14.6.5
+        FHS.5 - File Receiving Application (HD) O S2.14.6.5
 
     fhs_6 : HD | None
-        FHS.6 (opt) - File Receiving Facility (HD) S2.14.6.6
+        FHS.6 - File Receiving Facility (HD) O S2.14.6.6
 
     fhs_7 : str | None
-        FHS.7 (opt) - File Creation Date/Time (DTM) S2.14.6.7
+        FHS.7 - File Creation Date/Time (DTM) O S2.14.6.7
 
     fhs_8 : str | None
-        FHS.8 (opt) - File Security (ST) S2.14.6.8
+        FHS.8 - File Security (ST) O S2.14.6.8
 
     fhs_9 : str | None
-        FHS.9 (opt) - File Name/ID (ST) S2.14.6.9
+        FHS.9 - File Name/ID (ST) O S2.14.6.9
 
     fhs_10 : str | None
-        FHS.10 (opt) - File Header Comment (ST) S2.14.6.10
+        FHS.10 - File Header Comment (ST) O S2.14.6.10
 
     fhs_11 : str | None
-        FHS.11 (opt) - File Control ID (ST) S2.14.6.11
+        FHS.11 - File Control ID (ST) O S2.14.6.11
 
     fhs_12 : str | None
-        FHS.12 (opt) - Reference File Control ID (ST) S2.14.6.12
+        FHS.12 - Reference File Control ID (ST) O S2.14.6.12
 
     fhs_13 : HD | None
-        FHS.13 (opt) - File Sending Network Address (HD) S2.14.6.13
+        FHS.13 - File Sending Network Address (HD) O S2.14.6.13
 
     fhs_14 : HD | None
-        FHS.14 (opt) - File Receiving Network Address (HD) S2.14.6.14
+        FHS.14 - File Receiving Network Address (HD) O S2.14.6.14
     """
 
     fhs_1: str = Field(
@@ -71,7 +71,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.1",
         title="File Field Separator",
-        description="Item #67",
+        description="R | Item #00067 | LEN:1",
     )
 
     fhs_2: str = Field(
@@ -83,7 +83,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.2",
         title="File Encoding Characters",
-        description="Item #68",
+        description="R | Item #00068 | LEN:4",
     )
 
     fhs_3: Optional[HD] = Field(
@@ -95,7 +95,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.3",
         title="File Sending Application",
-        description="Item #69",
+        description="O | Item #00069",
     )
 
     fhs_4: Optional[HD] = Field(
@@ -107,7 +107,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.4",
         title="File Sending Facility",
-        description="Item #70",
+        description="O | Item #00070",
     )
 
     fhs_5: Optional[HD] = Field(
@@ -119,7 +119,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.5",
         title="File Receiving Application",
-        description="Item #71",
+        description="O | Item #00071",
     )
 
     fhs_6: Optional[HD] = Field(
@@ -131,7 +131,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.6",
         title="File Receiving Facility",
-        description="Item #72",
+        description="O | Item #00072",
     )
 
     fhs_7: Optional[str] = Field(
@@ -143,7 +143,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.7",
         title="File Creation Date/Time",
-        description="Item #73",
+        description="O | Item #00073 | LEN:24",
     )
 
     fhs_8: Optional[str] = Field(
@@ -155,7 +155,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.8",
         title="File Security",
-        description="Item #74",
+        description="O | Item #00074 | LEN:40",
     )
 
     fhs_9: Optional[str] = Field(
@@ -167,7 +167,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.9",
         title="File Name/ID",
-        description="Item #75",
+        description="O | Item #00075 | LEN:20",
     )
 
     fhs_10: Optional[str] = Field(
@@ -179,7 +179,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.10",
         title="File Header Comment",
-        description="Item #76",
+        description="O | Item #00076 | LEN:80",
     )
 
     fhs_11: Optional[str] = Field(
@@ -191,7 +191,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.11",
         title="File Control ID",
-        description="Item #77",
+        description="O | Item #00077 | LEN:20",
     )
 
     fhs_12: Optional[str] = Field(
@@ -203,7 +203,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.12",
         title="Reference File Control ID",
-        description="Item #78",
+        description="O | Item #00078 | LEN:20",
     )
 
     fhs_13: Optional[HD] = Field(
@@ -215,7 +215,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.13",
         title="File Sending Network Address",
-        description="Item #2269",
+        description="O | Item #02269",
     )
 
     fhs_14: Optional[HD] = Field(
@@ -227,7 +227,7 @@ class FHS(HL7Model):
         ),
         serialization_alias="FHS.14",
         title="File Receiving Network Address",
-        description="Item #2270",
+        description="O | Item #02270",
     )
 
     @field_validator("fhs_7", mode='before')

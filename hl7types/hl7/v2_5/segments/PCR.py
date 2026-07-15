@@ -22,73 +22,73 @@ class PCR(HL7Model):
     Attributes
     ----------
     pcr_1 : CE
-        PCR.1 (req) - Implicated Product (CE) S7.12.3.1
+        PCR.1 - Implicated Product (CE) R S7.12.3.1
 
     pcr_2 : str | None
-        PCR.2 (opt) - Generic Product (IS) S7.12.3.2 | 0249 - Generic Product
+        PCR.2 - Generic Product (IS) O S7.12.3.2 | 0249 - Generic Product
 
     pcr_3 : CE | None
-        PCR.3 (opt) - Product Class (CE) S7.12.3.3
+        PCR.3 - Product Class (CE) O S7.12.3.3
 
     pcr_4 : CQ | None
-        PCR.4 (opt) - Total Duration Of Therapy (CQ) S7.12.3.4
+        PCR.4 - Total Duration Of Therapy (CQ) O S7.12.3.4
 
     pcr_5 : TS | None
-        PCR.5 (opt) - Product Manufacture Date (TS) S7.12.3.5
+        PCR.5 - Product Manufacture Date (TS) O S7.12.3.5
 
     pcr_6 : TS | None
-        PCR.6 (opt) - Product Expiration Date (TS) S7.12.3.6
+        PCR.6 - Product Expiration Date (TS) O S7.12.3.6
 
     pcr_7 : TS | None
-        PCR.7 (opt) - Product Implantation Date (TS) S7.12.3.7
+        PCR.7 - Product Implantation Date (TS) O S7.12.3.7
 
     pcr_8 : TS | None
-        PCR.8 (opt) - Product Explantation Date (TS) S7.12.3.8
+        PCR.8 - Product Explantation Date (TS) O S7.12.3.8
 
     pcr_9 : str | None
-        PCR.9 (opt) - Single Use Device (IS) S7.12.3.9 | 0244 - Single Use Device
+        PCR.9 - Single Use Device (IS) O S7.12.3.9 | 0244 - Single Use Device
 
     pcr_10 : CE | None
-        PCR.10 (opt) - Indication For Product Use (CE) S7.12.3.10
+        PCR.10 - Indication For Product Use (CE) O S7.12.3.10
 
     pcr_11 : str | None
-        PCR.11 (opt) - Product Problem (IS) S7.12.3.11 | 0245 - Product Problem
+        PCR.11 - Product Problem (IS) O S7.12.3.11 | 0245 - Product Problem
 
     pcr_12 : list[str] | None
-        PCR.12 (opt, rep) - Product Serial/Lot Number (ST) S7.12.3.12
+        PCR.12 - Product Serial/Lot Number (ST) O rep S7.12.3.12
 
     pcr_13 : str | None
-        PCR.13 (opt) - Product Available For Inspection (IS) S7.12.3.13 | 0246 - Product Available for Inspection
+        PCR.13 - Product Available For Inspection (IS) O S7.12.3.13 | 0246 - Product Available for Inspection
 
     pcr_14 : CE | None
-        PCR.14 (opt) - Product Evaluation Performed (CE) S7.12.3.14
+        PCR.14 - Product Evaluation Performed (CE) O S7.12.3.14
 
     pcr_15 : CE | None
-        PCR.15 (opt) - Product Evaluation Status (CE) S7.12.3.15 | 0247 - Status of Evaluation
+        PCR.15 - Product Evaluation Status (CE) O S7.12.3.15 | 0247 - Status of Evaluation
 
     pcr_16 : CE | None
-        PCR.16 (opt) - Product Evaluation Results (CE) S7.12.3.16
+        PCR.16 - Product Evaluation Results (CE) O S7.12.3.16
 
     pcr_17 : str | None
-        PCR.17 (opt) - Evaluated Product Source (ID) S7.12.3.17 | 0248 - Product source
+        PCR.17 - Evaluated Product Source (ID) O S7.12.3.17 | 0248 - Product source
 
     pcr_18 : TS | None
-        PCR.18 (opt) - Date Product Returned To Manufacturer (TS) S7.12.3.18
+        PCR.18 - Date Product Returned To Manufacturer (TS) O S7.12.3.18
 
     pcr_19 : str | None
-        PCR.19 (opt) - Device Operator Qualifications (ID) S7.12.3.19 | 0242 - Primary Observer's Qualification
+        PCR.19 - Device Operator Qualifications (ID) O S7.12.3.19 | 0242 - Primary Observer's Qualification
 
     pcr_20 : str | None
-        PCR.20 (opt) - Relatedness Assessment (ID) S7.12.3.20 | 0250 - Relatedness Assessment
+        PCR.20 - Relatedness Assessment (ID) O S7.12.3.20 | 0250 - Relatedness Assessment
 
     pcr_21 : list[str] | None
-        PCR.21 (opt, rep) - Action Taken In Response To The Event (ID) S7.12.3.21 | 0251 - Action Taken in Response to the Event
+        PCR.21 - Action Taken In Response To The Event (ID) O rep S7.12.3.21 | 0251 - Action Taken in Response to the Event
 
     pcr_22 : list[str] | None
-        PCR.22 (opt, rep) - Event Causality Observations (ID) S7.12.3.22 | 0252 - Causality Observations
+        PCR.22 - Event Causality Observations (ID) O rep S7.12.3.22 | 0252 - Causality Observations
 
     pcr_23 : list[str] | None
-        PCR.23 (opt, rep) - Indirect Exposure Mechanism (ID) S7.12.3.23 | 0253 - Indirect exposure mechanism
+        PCR.23 - Indirect Exposure Mechanism (ID) O rep S7.12.3.23 | 0253 - Indirect exposure mechanism
     """
 
     pcr_1: CE = Field(
@@ -99,7 +99,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.1",
         title="Implicated Product",
-        description="Item #1098",
+        description="R | Item #01098",
     )
 
     pcr_2: Optional[str] = Field(
@@ -111,7 +111,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.2",
         title="Generic Product",
-        description="Item #1099 | Table HL70249",
+        description="O | Item #01099 | Table 0249 - Generic Product | LEN:1",
     )
 
     pcr_3: Optional[CE] = Field(
@@ -123,7 +123,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.3",
         title="Product Class",
-        description="Item #1100",
+        description="O | Item #01100",
     )
 
     pcr_4: Optional[CQ] = Field(
@@ -135,7 +135,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.4",
         title="Total Duration Of Therapy",
-        description="Item #1101",
+        description="O | Item #01101",
     )
 
     pcr_5: Optional[TS] = Field(
@@ -147,7 +147,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.5",
         title="Product Manufacture Date",
-        description="Item #1102",
+        description="O | Item #01102",
     )
 
     pcr_6: Optional[TS] = Field(
@@ -159,7 +159,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.6",
         title="Product Expiration Date",
-        description="Item #1103",
+        description="O | Item #01103",
     )
 
     pcr_7: Optional[TS] = Field(
@@ -171,7 +171,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.7",
         title="Product Implantation Date",
-        description="Item #1104",
+        description="O | Item #01104",
     )
 
     pcr_8: Optional[TS] = Field(
@@ -183,7 +183,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.8",
         title="Product Explantation Date",
-        description="Item #1105",
+        description="O | Item #01105",
     )
 
     pcr_9: Optional[str] = Field(
@@ -195,7 +195,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.9",
         title="Single Use Device",
-        description="Item #1106 | Table HL70244",
+        description="O | Item #01106 | Table 0244 - Single Use Device | LEN:8",
     )
 
     pcr_10: Optional[CE] = Field(
@@ -207,7 +207,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.10",
         title="Indication For Product Use",
-        description="Item #1107",
+        description="O | Item #01107",
     )
 
     pcr_11: Optional[str] = Field(
@@ -219,7 +219,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.11",
         title="Product Problem",
-        description="Item #1108 | Table HL70245",
+        description="O | Item #01108 | Table 0245 - Product Problem | LEN:8",
     )
 
     pcr_12: Optional[List[str]] = Field(
@@ -231,7 +231,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.12",
         title="Product Serial/Lot Number",
-        description="Item #1109",
+        description="O | Item #01109 | LEN:30",
     )
 
     pcr_13: Optional[str] = Field(
@@ -243,7 +243,10 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.13",
         title="Product Available For Inspection",
-        description="Item #1110 | Table HL70246",
+        description=(
+            "O | Item #01110 | Table 0246 - Product Available for Inspection | "
+            "LEN:1"
+        ),
     )
 
     pcr_14: Optional[CE] = Field(
@@ -255,7 +258,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.14",
         title="Product Evaluation Performed",
-        description="Item #1111",
+        description="O | Item #01111",
     )
 
     pcr_15: Optional[CE] = Field(
@@ -267,7 +270,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.15",
         title="Product Evaluation Status",
-        description="Item #1112 | Table HL70247",
+        description="O | Item #01112 | Table 0247 - Status of Evaluation",
     )
 
     pcr_16: Optional[CE] = Field(
@@ -279,7 +282,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.16",
         title="Product Evaluation Results",
-        description="Item #1113",
+        description="O | Item #01113",
     )
 
     pcr_17: Optional[str] = Field(
@@ -291,7 +294,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.17",
         title="Evaluated Product Source",
-        description="Item #1114 | Table HL70248",
+        description="O | Item #01114 | Table 0248 - Product source | LEN:8",
     )
 
     pcr_18: Optional[TS] = Field(
@@ -303,7 +306,7 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.18",
         title="Date Product Returned To Manufacturer",
-        description="Item #1115",
+        description="O | Item #01115",
     )
 
     pcr_19: Optional[str] = Field(
@@ -315,7 +318,10 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.19",
         title="Device Operator Qualifications",
-        description="Item #1116 | Table HL70242",
+        description=(
+            "O | Item #01116 | Table 0242 - Primary Observer's Qualification | "
+            "LEN:1"
+        ),
     )
 
     pcr_20: Optional[str] = Field(
@@ -327,7 +333,9 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.20",
         title="Relatedness Assessment",
-        description="Item #1117 | Table HL70250",
+        description=(
+            "O | Item #01117 | Table 0250 - Relatedness Assessment | LEN:1"
+        ),
     )
 
     pcr_21: Optional[List[str]] = Field(
@@ -339,7 +347,10 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.21",
         title="Action Taken In Response To The Event",
-        description="Item #1118 | Table HL70251",
+        description=(
+            "O | Item #01118 | Table 0251 - Action Taken in Response to the Event "
+            "| LEN:2"
+        ),
     )
 
     pcr_22: Optional[List[str]] = Field(
@@ -351,7 +362,9 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.22",
         title="Event Causality Observations",
-        description="Item #1119 | Table HL70252",
+        description=(
+            "O | Item #01119 | Table 0252 - Causality Observations | LEN:2"
+        ),
     )
 
     pcr_23: Optional[List[str]] = Field(
@@ -363,7 +376,9 @@ class PCR(HL7Model):
         ),
         serialization_alias="PCR.23",
         title="Indirect Exposure Mechanism",
-        description="Item #1120 | Table HL70253",
+        description=(
+            "O | Item #01120 | Table 0253 - Indirect exposure mechanism | LEN:1"
+        ),
     )
 
     model_config = {"populate_by_name": True}

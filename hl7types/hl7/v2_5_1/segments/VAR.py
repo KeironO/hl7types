@@ -23,22 +23,22 @@ class VAR(HL7Model):
     Attributes
     ----------
     var_1 : EI
-        VAR.1 (req) - Variance Instance ID (EI) S12.4.5.1
+        VAR.1 - Variance Instance ID (EI) R S12.4.5.1
 
     var_2 : TS
-        VAR.2 (req) - Documented Date/Time (TS) S12.4.5.2
+        VAR.2 - Documented Date/Time (TS) R S12.4.5.2
 
     var_3 : TS | None
-        VAR.3 (opt) - Stated Variance Date/Time (TS) S12.4.5.3
+        VAR.3 - Stated Variance Date/Time (TS) O S12.4.5.3
 
     var_4 : list[XCN] | None
-        VAR.4 (opt, rep) - Variance Originator (XCN) S12.4.5.4
+        VAR.4 - Variance Originator (XCN) O rep S12.4.5.4
 
     var_5 : CE | None
-        VAR.5 (opt) - Variance Classification (CE) S12.4.5.5
+        VAR.5 - Variance Classification (CE) O S12.4.5.5
 
     var_6 : list[str] | None
-        VAR.6 (opt, rep) - Variance Description (ST) S12.4.5.6
+        VAR.6 - Variance Description (ST) O rep S12.4.5.6
     """
 
     var_1: EI = Field(
@@ -49,7 +49,7 @@ class VAR(HL7Model):
         ),
         serialization_alias="VAR.1",
         title="Variance Instance ID",
-        description="Item #1212",
+        description="R | Item #01212",
     )
 
     var_2: TS = Field(
@@ -60,7 +60,7 @@ class VAR(HL7Model):
         ),
         serialization_alias="VAR.2",
         title="Documented Date/Time",
-        description="Item #1213",
+        description="R | Item #01213",
     )
 
     var_3: Optional[TS] = Field(
@@ -72,7 +72,7 @@ class VAR(HL7Model):
         ),
         serialization_alias="VAR.3",
         title="Stated Variance Date/Time",
-        description="Item #1214",
+        description="O | Item #01214",
     )
 
     var_4: Optional[List[XCN]] = Field(
@@ -84,7 +84,7 @@ class VAR(HL7Model):
         ),
         serialization_alias="VAR.4",
         title="Variance Originator",
-        description="Item #1215",
+        description="O | Item #01215",
     )
 
     var_5: Optional[CE] = Field(
@@ -96,7 +96,7 @@ class VAR(HL7Model):
         ),
         serialization_alias="VAR.5",
         title="Variance Classification",
-        description="Item #1216",
+        description="O | Item #01216",
     )
 
     var_6: Optional[List[str]] = Field(
@@ -108,7 +108,7 @@ class VAR(HL7Model):
         ),
         serialization_alias="VAR.6",
         title="Variance Description",
-        description="Item #1217",
+        description="O | Item #01217 | LEN:512",
     )
 
     model_config = {"populate_by_name": True}

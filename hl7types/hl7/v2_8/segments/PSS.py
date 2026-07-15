@@ -21,19 +21,19 @@ class PSS(HL7Model):
     Attributes
     ----------
     pss_1 : EI
-        PSS.1 (req) - Provider Product/Service Section Number (EI) S16.4.4.1
+        PSS.1 - Provider Product/Service Section Number (EI) R S16.4.4.1
 
     pss_2 : EI | None
-        PSS.2 (opt) - Payer Product/Service Section Number (EI) S16.4.4.2
+        PSS.2 - Payer Product/Service Section Number (EI) O S16.4.4.2
 
     pss_3 : str
-        PSS.3 (req) - Product/Service Section Sequence Number (SI) S16.4.4.3
+        PSS.3 - Product/Service Section Sequence Number (SI) R S16.4.4.3
 
     pss_4 : CP
-        PSS.4 (req) - Billed Amount (CP) S16.4.4.4
+        PSS.4 - Billed Amount (CP) R S16.4.4.4
 
     pss_5 : str
-        PSS.5 (req) - Section Description or Heading (ST) S16.4.4.5
+        PSS.5 - Section Description or Heading (ST) R S16.4.4.5
     """
 
     pss_1: EI = Field(
@@ -44,7 +44,7 @@ class PSS(HL7Model):
         ),
         serialization_alias="PSS.1",
         title="Provider Product/Service Section Number",
-        description="Item #1946",
+        description="R | Item #01946",
     )
 
     pss_2: Optional[EI] = Field(
@@ -56,7 +56,7 @@ class PSS(HL7Model):
         ),
         serialization_alias="PSS.2",
         title="Payer Product/Service Section Number",
-        description="Item #1947",
+        description="O | Item #01947",
     )
 
     pss_3: str = Field(
@@ -67,7 +67,7 @@ class PSS(HL7Model):
         ),
         serialization_alias="PSS.3",
         title="Product/Service Section Sequence Number",
-        description="Item #1948",
+        description="R | Item #01948 | LEN:4",
     )
 
     pss_4: CP = Field(
@@ -78,7 +78,7 @@ class PSS(HL7Model):
         ),
         serialization_alias="PSS.4",
         title="Billed Amount",
-        description="Item #1949",
+        description="R | Item #01949",
     )
 
     pss_5: str = Field(
@@ -89,7 +89,7 @@ class PSS(HL7Model):
         ),
         serialization_alias="PSS.5",
         title="Section Description or Heading",
-        description="Item #2043",
+        description="R | Item #02043",
     )
 
     @field_validator("pss_3", mode='before')

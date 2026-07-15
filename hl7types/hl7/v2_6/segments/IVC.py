@@ -24,94 +24,94 @@ class IVC(HL7Model):
     Attributes
     ----------
     ivc_1 : EI
-        IVC.1 (req) - Provider Invoice Number (EI) S16.4.2.1
+        IVC.1 - Provider Invoice Number (EI) R S16.4.2.1
 
     ivc_2 : EI | None
-        IVC.2 (opt) - Payer Invoice Number (EI) S16.4.2.2
+        IVC.2 - Payer Invoice Number (EI) O S16.4.2.2
 
     ivc_3 : EI | None
-        IVC.3 (opt) - Contract/Agreement Number (EI) S16.4.2.3
+        IVC.3 - Contract/Agreement Number (EI) O S16.4.2.3
 
     ivc_4 : str
-        IVC.4 (req) - Invoice Control (IS) S16.4.2.4 | 0553 - Invoice Control Code
+        IVC.4 - Invoice Control (IS) R S16.4.2.4 | 0553 - Invoice Control Code
 
     ivc_5 : str
-        IVC.5 (req) - Invoice Reason (IS) S16.4.2.5 | 0554 - Invoice Reason Codes
+        IVC.5 - Invoice Reason (IS) R S16.4.2.5 | 0554 - Invoice Reason Codes
 
     ivc_6 : str
-        IVC.6 (req) - Invoice Type (IS) S16.4.2.6 | 0555 - Invoice Type
+        IVC.6 - Invoice Type (IS) R S16.4.2.6 | 0555 - Invoice Type
 
     ivc_7 : str
-        IVC.7 (req) - Invoice Date/Time (DTM) S16.4.2.7
+        IVC.7 - Invoice Date/Time (DTM) R S16.4.2.7
 
     ivc_8 : CP
-        IVC.8 (req) - Invoice Amount (CP) S16.4.2.8
+        IVC.8 - Invoice Amount (CP) R S16.4.2.8
 
     ivc_9 : str | None
-        IVC.9 (opt) - Payment Terms (ST) S16.4.2.9
+        IVC.9 - Payment Terms (ST) O S16.4.2.9
 
     ivc_10 : XON
-        IVC.10 (req) - Provider Organization (XON) S16.4.2.10
+        IVC.10 - Provider Organization (XON) R S16.4.2.10
 
     ivc_11 : XON
-        IVC.11 (req) - Payer Organization (XON) S16.4.2.11
+        IVC.11 - Payer Organization (XON) R S16.4.2.11
 
     ivc_12 : XCN | None
-        IVC.12 (opt) - Attention (XCN) S16.4.2.12
+        IVC.12 - Attention (XCN) O S16.4.2.12
 
     ivc_13 : str | None
-        IVC.13 (opt) - Last Invoice Indicator (ID) S16.4.2.13 | 0136 - Yes/no indicator
+        IVC.13 - Last Invoice Indicator (ID) O S16.4.2.13 | 0136 - Yes/no indicator
 
     ivc_14 : str | None
-        IVC.14 (opt) - Invoice Booking Period (DTM) S16.4.2.14
+        IVC.14 - Invoice Booking Period (DTM) O S16.4.2.14
 
     ivc_15 : str | None
-        IVC.15 (opt) - Origin (ST) S16.4.2.15
+        IVC.15 - Origin (ST) O S16.4.2.15
 
     ivc_16 : CP | None
-        IVC.16 (opt) - Invoice Fixed Amount (CP) S16.4.2.16
+        IVC.16 - Invoice Fixed Amount (CP) O S16.4.2.16
 
     ivc_17 : CP | None
-        IVC.17 (opt) - Special Costs (CP) S16.4.2.17
+        IVC.17 - Special Costs (CP) O S16.4.2.17
 
     ivc_18 : CP | None
-        IVC.18 (opt) - Amount for Doctors Treatment (CP) S16.4.2.18
+        IVC.18 - Amount for Doctors Treatment (CP) O S16.4.2.18
 
     ivc_19 : XCN | None
-        IVC.19 (opt) - Responsible Physician (XCN) S16.4.2.19
+        IVC.19 - Responsible Physician (XCN) O S16.4.2.19
 
     ivc_20 : CX | None
-        IVC.20 (opt) - Cost Center (CX) S16.4.2.20
+        IVC.20 - Cost Center (CX) O S16.4.2.20
 
     ivc_21 : CP | None
-        IVC.21 (opt) - Invoice Prepaid Amount (CP) S16.4.2.21
+        IVC.21 - Invoice Prepaid Amount (CP) O S16.4.2.21
 
     ivc_22 : CP | None
-        IVC.22 (opt) - Total Invoice Amount without Prepaid Amount (CP) S16.4.2.22
+        IVC.22 - Total Invoice Amount without Prepaid Amount (CP) O S16.4.2.22
 
     ivc_23 : CP | None
-        IVC.23 (opt) - Total-Amount of VAT (CP) S16.4.2.23
+        IVC.23 - Total-Amount of VAT (CP) C S16.4.2.23
 
     ivc_24 : list[str] | None
-        IVC.24 (opt, rep) - VAT-Rates applied (NM) S16.4.2.24
+        IVC.24 - VAT-Rates applied (NM) O rep S16.4.2.24
 
     ivc_25 : str
-        IVC.25 (req) - Benefit Group (IS) S16.4.2.25 | 0556 - Benefit Group
+        IVC.25 - Benefit Group (IS) R S16.4.2.25 | 0556 - Benefit Group
 
     ivc_26 : str | None
-        IVC.26 (opt) - Provider Tax ID (ST) S16.4.2.26
+        IVC.26 - Provider Tax ID (ST) O S16.4.2.26
 
     ivc_27 : str | None
-        IVC.27 (opt) - Payer Tax ID (ST) S16.4.2.27
+        IVC.27 - Payer Tax ID (ST) O S16.4.2.27
 
     ivc_28 : str | None
-        IVC.28 (opt) - Provider Tax status (IS) S16.4.2.28 | 0572 - Tax status
+        IVC.28 - Provider Tax status (IS) O S16.4.2.28 | 0572 - Tax status
 
     ivc_29 : str | None
-        IVC.29 (opt) - Payer Tax status (IS) S16.4.2.29 | 0572 - Tax status
+        IVC.29 - Payer Tax status (IS) O S16.4.2.29 | 0572 - Tax status
 
     ivc_30 : str | None
-        IVC.30 (opt) - Sales Tax ID (ST) S16.4.2.30
+        IVC.30 - Sales Tax ID (ST) O S16.4.2.30
     """
 
     ivc_1: EI = Field(
@@ -122,7 +122,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.1",
         title="Provider Invoice Number",
-        description="Item #1914",
+        description="R | Item #01914",
     )
 
     ivc_2: Optional[EI] = Field(
@@ -134,7 +134,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.2",
         title="Payer Invoice Number",
-        description="Item #1915",
+        description="O | Item #01915",
     )
 
     ivc_3: Optional[EI] = Field(
@@ -146,7 +146,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.3",
         title="Contract/Agreement Number",
-        description="Item #1916",
+        description="O | Item #01916",
     )
 
     ivc_4: str = Field(
@@ -157,7 +157,9 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.4",
         title="Invoice Control",
-        description="Item #1917 | Table HL70553",
+        description=(
+            "R | Item #01917 | Table 0553 - Invoice Control Code | LEN:2"
+        ),
     )
 
     ivc_5: str = Field(
@@ -168,7 +170,9 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.5",
         title="Invoice Reason",
-        description="Item #1918 | Table HL70554",
+        description=(
+            "R | Item #01918 | Table 0554 - Invoice Reason Codes | LEN:4"
+        ),
     )
 
     ivc_6: str = Field(
@@ -179,7 +183,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.6",
         title="Invoice Type",
-        description="Item #1919 | Table HL70555",
+        description="R | Item #01919 | Table 0555 - Invoice Type | LEN:2",
     )
 
     ivc_7: str = Field(
@@ -190,7 +194,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.7",
         title="Invoice Date/Time",
-        description="Item #1920",
+        description="R | Item #01920 | LEN:24",
     )
 
     ivc_8: CP = Field(
@@ -201,7 +205,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.8",
         title="Invoice Amount",
-        description="Item #1921",
+        description="R | Item #01921",
     )
 
     ivc_9: Optional[str] = Field(
@@ -213,7 +217,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.9",
         title="Payment Terms",
-        description="Item #1922",
+        description="O | Item #01922 | LEN:80",
     )
 
     ivc_10: XON = Field(
@@ -224,7 +228,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.10",
         title="Provider Organization",
-        description="Item #1923",
+        description="R | Item #01923",
     )
 
     ivc_11: XON = Field(
@@ -235,7 +239,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.11",
         title="Payer Organization",
-        description="Item #1924",
+        description="R | Item #01924",
     )
 
     ivc_12: Optional[XCN] = Field(
@@ -247,7 +251,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.12",
         title="Attention",
-        description="Item #1925",
+        description="O | Item #01925",
     )
 
     ivc_13: Optional[str] = Field(
@@ -259,7 +263,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.13",
         title="Last Invoice Indicator",
-        description="Item #1926 | Table HL70136",
+        description="O | Item #01926 | Table 0136 - Yes/no indicator | LEN:1",
     )
 
     ivc_14: Optional[str] = Field(
@@ -271,7 +275,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.14",
         title="Invoice Booking Period",
-        description="Item #1927",
+        description="O | Item #01927 | LEN:24",
     )
 
     ivc_15: Optional[str] = Field(
@@ -283,7 +287,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.15",
         title="Origin",
-        description="Item #1928",
+        description="O | Item #01928 | LEN:250",
     )
 
     ivc_16: Optional[CP] = Field(
@@ -295,7 +299,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.16",
         title="Invoice Fixed Amount",
-        description="Item #1929",
+        description="O | Item #01929",
     )
 
     ivc_17: Optional[CP] = Field(
@@ -307,7 +311,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.17",
         title="Special Costs",
-        description="Item #1930",
+        description="O | Item #01930",
     )
 
     ivc_18: Optional[CP] = Field(
@@ -319,7 +323,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.18",
         title="Amount for Doctors Treatment",
-        description="Item #1931",
+        description="O | Item #01931",
     )
 
     ivc_19: Optional[XCN] = Field(
@@ -331,7 +335,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.19",
         title="Responsible Physician",
-        description="Item #1932",
+        description="O | Item #01932",
     )
 
     ivc_20: Optional[CX] = Field(
@@ -343,7 +347,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.20",
         title="Cost Center",
-        description="Item #1933",
+        description="O | Item #01933",
     )
 
     ivc_21: Optional[CP] = Field(
@@ -355,7 +359,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.21",
         title="Invoice Prepaid Amount",
-        description="Item #1934",
+        description="O | Item #01934",
     )
 
     ivc_22: Optional[CP] = Field(
@@ -367,7 +371,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.22",
         title="Total Invoice Amount without Prepaid Amount",
-        description="Item #1935",
+        description="O | Item #01935",
     )
 
     ivc_23: Optional[CP] = Field(
@@ -379,7 +383,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.23",
         title="Total-Amount of VAT",
-        description="Item #1936",
+        description="C | Item #01936",
     )
 
     ivc_24: Optional[List[str]] = Field(
@@ -391,7 +395,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.24",
         title="VAT-Rates applied",
-        description="Item #1937",
+        description="O | Item #01937 | LEN:1024",
     )
 
     ivc_25: str = Field(
@@ -402,7 +406,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.25",
         title="Benefit Group",
-        description="Item #1938 | Table HL70556",
+        description="R | Item #01938 | Table 0556 - Benefit Group | LEN:4",
     )
 
     ivc_26: Optional[str] = Field(
@@ -414,7 +418,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.26",
         title="Provider Tax ID",
-        description="Item #2038",
+        description="O | Item #02038 | LEN:20",
     )
 
     ivc_27: Optional[str] = Field(
@@ -426,7 +430,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.27",
         title="Payer Tax ID",
-        description="Item #2039",
+        description="O | Item #02039 | LEN:20",
     )
 
     ivc_28: Optional[str] = Field(
@@ -438,7 +442,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.28",
         title="Provider Tax status",
-        description="Item #2040 | Table HL70572",
+        description="O | Item #02040 | Table 0572 - Tax status | LEN:4",
     )
 
     ivc_29: Optional[str] = Field(
@@ -450,7 +454,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.29",
         title="Payer Tax status",
-        description="Item #2041 | Table HL70572",
+        description="O | Item #02041 | Table 0572 - Tax status | LEN:4",
     )
 
     ivc_30: Optional[str] = Field(
@@ -462,7 +466,7 @@ class IVC(HL7Model):
         ),
         serialization_alias="IVC.30",
         title="Sales Tax ID",
-        description="Item #2042",
+        description="O | Item #02042 | LEN:20",
     )
 
     @field_validator("ivc_7", "ivc_14", mode='before')

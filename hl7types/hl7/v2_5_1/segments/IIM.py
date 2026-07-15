@@ -23,49 +23,49 @@ class IIM(HL7Model):
     Attributes
     ----------
     iim_1 : CWE
-        IIM.1 (req) - Primary Key Value - IIM (CWE) S8.12.2.1
+        IIM.1 - Primary Key Value - IIM (CWE) R S8.12.2.1
 
     iim_2 : CWE
-        IIM.2 (req) - Service Item Code (CWE) S8.12.2.2
+        IIM.2 - Service Item Code (CWE) R S8.12.2.2
 
     iim_3 : str | None
-        IIM.3 (opt) - Inventory Lot Number (ST) S8.12.2.3
+        IIM.3 - Inventory Lot Number (ST) O S8.12.2.3
 
     iim_4 : TS | None
-        IIM.4 (opt) - Inventory Expiration Date (TS) S8.12.2.4
+        IIM.4 - Inventory Expiration Date (TS) O S8.12.2.4
 
     iim_5 : CWE | None
-        IIM.5 (opt) - Inventory Manufacturer Name (CWE) S8.12.2.5
+        IIM.5 - Inventory Manufacturer Name (CWE) O S8.12.2.5
 
     iim_6 : CWE | None
-        IIM.6 (opt) - Inventory Location (CWE) S8.12.2.6
+        IIM.6 - Inventory Location (CWE) O S8.12.2.6
 
     iim_7 : TS | None
-        IIM.7 (opt) - Inventory Received Date (TS) S8.12.2.7
+        IIM.7 - Inventory Received Date (TS) O S8.12.2.7
 
     iim_8 : str | None
-        IIM.8 (opt) - Inventory Received Quantity (NM) S8.12.2.8
+        IIM.8 - Inventory Received Quantity (NM) O S8.12.2.8
 
     iim_9 : CWE | None
-        IIM.9 (opt) - Inventory Received Quantity Unit (CWE) S8.12.2.9
+        IIM.9 - Inventory Received Quantity Unit (CWE) O S8.12.2.9
 
     iim_10 : MO | None
-        IIM.10 (opt) - Inventory Received Item Cost (MO) S8.12.2.10
+        IIM.10 - Inventory Received Item Cost (MO) O S8.12.2.10
 
     iim_11 : TS | None
-        IIM.11 (opt) - Inventory On Hand Date (TS) S8.12.2.11
+        IIM.11 - Inventory On Hand Date (TS) O S8.12.2.11
 
     iim_12 : str | None
-        IIM.12 (opt) - Inventory On Hand Quantity (NM) S8.12.2.12
+        IIM.12 - Inventory On Hand Quantity (NM) O S8.12.2.12
 
     iim_13 : CWE | None
-        IIM.13 (opt) - Inventory On Hand Quantity Unit (CWE) S8.12.2.13
+        IIM.13 - Inventory On Hand Quantity Unit (CWE) O S8.12.2.13
 
     iim_14 : CE | None
-        IIM.14 (opt) - Procedure Code (CE) S4.5.3.44 | 0088 - Procedure Code
+        IIM.14 - Procedure Code (CE) O S4.5.3.44 | 0088 - Procedure Code
 
     iim_15 : list[CE] | None
-        IIM.15 (opt, rep) - Procedure Code Modifier (CE) S4.5.3.45 | 0340 - Procedure code modifier
+        IIM.15 - Procedure Code Modifier (CE) O rep S4.5.3.45 | 0340 - Procedure code modifier
     """
 
     iim_1: CWE = Field(
@@ -76,7 +76,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.1",
         title="Primary Key Value - IIM",
-        description="Item #1897",
+        description="R | Item #01897",
     )
 
     iim_2: CWE = Field(
@@ -87,7 +87,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.2",
         title="Service Item Code",
-        description="Item #1799",
+        description="R | Item #01799",
     )
 
     iim_3: Optional[str] = Field(
@@ -99,7 +99,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.3",
         title="Inventory Lot Number",
-        description="Item #1800",
+        description="O | Item #01800 | LEN:250",
     )
 
     iim_4: Optional[TS] = Field(
@@ -111,7 +111,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.4",
         title="Inventory Expiration Date",
-        description="Item #1801",
+        description="O | Item #01801",
     )
 
     iim_5: Optional[CWE] = Field(
@@ -123,7 +123,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.5",
         title="Inventory Manufacturer Name",
-        description="Item #1802",
+        description="O | Item #01802",
     )
 
     iim_6: Optional[CWE] = Field(
@@ -135,7 +135,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.6",
         title="Inventory Location",
-        description="Item #1803",
+        description="O | Item #01803",
     )
 
     iim_7: Optional[TS] = Field(
@@ -147,7 +147,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.7",
         title="Inventory Received Date",
-        description="Item #1804",
+        description="O | Item #01804",
     )
 
     iim_8: Optional[str] = Field(
@@ -159,7 +159,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.8",
         title="Inventory Received Quantity",
-        description="Item #1805",
+        description="O | Item #01805 | LEN:12",
     )
 
     iim_9: Optional[CWE] = Field(
@@ -171,7 +171,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.9",
         title="Inventory Received Quantity Unit",
-        description="Item #1806",
+        description="O | Item #01806",
     )
 
     iim_10: Optional[MO] = Field(
@@ -183,7 +183,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.10",
         title="Inventory Received Item Cost",
-        description="Item #1807",
+        description="O | Item #01807",
     )
 
     iim_11: Optional[TS] = Field(
@@ -195,7 +195,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.11",
         title="Inventory On Hand Date",
-        description="Item #1808",
+        description="O | Item #01808",
     )
 
     iim_12: Optional[str] = Field(
@@ -207,7 +207,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.12",
         title="Inventory On Hand Quantity",
-        description="Item #1809",
+        description="O | Item #01809 | LEN:12",
     )
 
     iim_13: Optional[CWE] = Field(
@@ -219,7 +219,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.13",
         title="Inventory On Hand Quantity Unit",
-        description="Item #1810",
+        description="O | Item #01810",
     )
 
     iim_14: Optional[CE] = Field(
@@ -231,7 +231,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.14",
         title="Procedure Code",
-        description="Item #393 | Table HL70088",
+        description="O | Item #00393 | Table 0088 - Procedure Code",
     )
 
     iim_15: Optional[List[CE]] = Field(
@@ -243,7 +243,7 @@ class IIM(HL7Model):
         ),
         serialization_alias="IIM.15",
         title="Procedure Code Modifier",
-        description="Item #1316 | Table HL70340",
+        description="O | Item #01316 | Table 0340 - Procedure code modifier",
     )
 
     @field_validator("iim_8", "iim_12", mode='before')

@@ -17,7 +17,7 @@ class NCK(HL7Model):
     Attributes
     ----------
     nck_1 : str
-        NCK.1 (req) - System Date/Time (DTM) S14.4.1.1
+        NCK.1 - System Date/Time (DTM) R S14.4.1.1
     """
 
     nck_1: str = Field(
@@ -28,7 +28,7 @@ class NCK(HL7Model):
         ),
         serialization_alias="NCK.1",
         title="System Date/Time",
-        description="Item #1172",
+        description="R | Item #01172 | LEN:24",
     )
 
     @field_validator("nck_1", mode='before')

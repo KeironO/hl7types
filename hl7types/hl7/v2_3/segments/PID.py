@@ -26,94 +26,94 @@ class PID(HL7Model):
     Attributes
     ----------
     pid_1 : str | None
-        PID.1 (opt) - Set ID - Patient ID (SI) S3.3.2.1
+        PID.1 - Set ID - Patient ID (SI) O S3.3.2.1
 
     pid_2 : CX | None
-        PID.2 (opt) - Patient ID (External ID) (CX) S3.3.2.2
+        PID.2 - Patient ID (External ID) (CX) O S3.3.2.2
 
     pid_3 : list[CX]
-        PID.3 (req, rep) - Patient ID (Internal ID) (CX) S3.3.2.3
+        PID.3 - Patient ID (Internal ID) (CX) R rep S3.3.2.3
 
     pid_4 : CX | None
-        PID.4 (opt) - Alternate Patient ID (CX) S3.3.2.4
+        PID.4 - Alternate Patient ID (CX) O S3.3.2.4
 
     pid_5 : XPN
-        PID.5 (req) - Patient Name (XPN) S3.3.2.5
+        PID.5 - Patient Name (XPN) R S3.3.2.5
 
     pid_6 : XPN | None
-        PID.6 (opt) - Mother's Maiden Name (XPN) S3.3.2.6
+        PID.6 - Mother's Maiden Name (XPN) O S3.3.2.6
 
     pid_7 : TS | None
-        PID.7 (opt) - Date of Birth (TS) S3.3.2
+        PID.7 - Date of Birth (TS) O S3.3.2
 
     pid_8 : str | None
-        PID.8 (opt) - Sex (IS) S3.3.2 | 0001 - Sex
+        PID.8 - Sex (IS) NA S3.3.2 | 0001 - Sex
 
     pid_9 : list[XPN] | None
-        PID.9 (opt, rep) - Patient Alias (XPN) S3.3.2
+        PID.9 - Patient Alias (XPN) O rep S3.3.2
 
     pid_10 : str | None
-        PID.10 (opt) - Race (IS) S3.3.2 | 0005 - Race
+        PID.10 - Race (IS) NA S3.3.2 | 0005 - Race
 
     pid_11 : list[XAD] | None
-        PID.11 (opt, rep) - Patient Address (XAD) S3.3.2.11
+        PID.11 - Patient Address (XAD) O rep S3.3.2.11
 
     pid_12 : str | None
-        PID.12 (opt) - County Code (IS) S3.3.2.12
+        PID.12 - County Code (IS) O S3.3.2.12
 
     pid_13 : list[XTN] | None
-        PID.13 (opt, rep) - Phone Number - Home (XTN) S3.3.2.13
+        PID.13 - Phone Number - Home (XTN) O rep S3.3.2.13
 
     pid_14 : list[XTN] | None
-        PID.14 (opt, rep) - Phone Number - Business (XTN) S3.3.2.14
+        PID.14 - Phone Number - Business (XTN) O rep S3.3.2.14
 
     pid_15 : CE | None
-        PID.15 (opt) - Primary Language (CE) S3.3.2 | 0296 - Language
+        PID.15 - Primary Language (CE) O S3.3.2 | 0296 - Language
 
     pid_16 : list[str] | None
-        PID.16 (opt, rep) - Marital Status (IS) S3.3.2 | 0002 - Marital Status
+        PID.16 - Marital Status (IS) NA rep S3.3.2 | 0002 - Marital Status
 
     pid_17 : str | None
-        PID.17 (opt) - Religion (IS) S3.3.2 | 0006 - Religion
+        PID.17 - Religion (IS) O S3.3.2 | 0006 - Religion
 
     pid_18 : CX | None
-        PID.18 (opt) - Patient Account Number (CX) S3.3.2.18
+        PID.18 - Patient Account Number (CX) O S3.3.2.18
 
     pid_19 : str | None
-        PID.19 (opt) - SSN Number - Patient (ST) S3.3.2.19
+        PID.19 - SSN Number - Patient (ST) O S3.3.2.19
 
     pid_20 : DLN | None
-        PID.20 (opt) - Driver's License Number (DLN) S3.3.2.20
+        PID.20 - Driver's License Number (DLN) O S3.3.2.20
 
     pid_21 : CX | None
-        PID.21 (opt) - Mother's Identifier (CX) S3.3.2.21
+        PID.21 - Mother's Identifier (CX) O S3.3.2.21
 
     pid_22 : str | None
-        PID.22 (opt) - Ethnic Group (IS) S3.3.2 | 0189 - Ethnic Group
+        PID.22 - Ethnic Group (IS) O S3.3.2 | 0189 - Ethnic Group
 
     pid_23 : str | None
-        PID.23 (opt) - Birth Place (ST) S3.3.2.23
+        PID.23 - Birth Place (ST) O S3.3.2.23
 
     pid_24 : str | None
-        PID.24 (opt) - Multiple Birth Indicator (ID) S3.3.2.24 | 0136 - Yes/No Indicator
+        PID.24 - Multiple Birth Indicator (ID) O S3.3.2.24 | 0136 - Yes/No Indicator
 
     pid_25 : str | None
-        PID.25 (opt) - Birth Order (NM) S3.3.2.25
+        PID.25 - Birth Order (NM) O S3.3.2.25
 
     pid_26 : str | None
-        PID.26 (opt) - Citizenship (IS) S3.3.2 | 0171 - Country Code
+        PID.26 - Citizenship (IS) O S3.3.2 | 0171 - Country Code
 
     pid_27 : CE | None
-        PID.27 (opt) - Veterans Military Status (CE) S3.3.2.27 | 0172 - Veterans Military Status
+        PID.27 - Veterans Military Status (CE) O S3.3.2.27 | 0172 - Veterans Military Status
 
     pid_28 : CE | None
-        PID.28 (opt) - Nationality Code (CE) S3.3.2 | 0212 - Nationality
+        PID.28 - Nationality Code (CE) O S3.3.2 | 0212 - Nationality
 
     pid_29 : TS | None
-        PID.29 (opt) - Patient Death Date and Time (TS) S3.3.2.29
+        PID.29 - Patient Death Date and Time (TS) NA S3.3.2.29
 
     pid_30 : str | None
-        PID.30 (opt) - Patient Death Indicator (ID) S3.3.2.30 | 0136 - Yes/No Indicator
+        PID.30 - Patient Death Indicator (ID) O S3.3.2.30 | 0136 - Yes/No Indicator
     """
 
     pid_1: Optional[str] = Field(
@@ -125,7 +125,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.1",
         title="Set ID - Patient ID",
-        description="Item #104",
+        description="O | Item #00104 | LEN:4",
     )
 
     pid_2: Optional[CX] = Field(
@@ -137,7 +137,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.2",
         title="Patient ID (External ID)",
-        description="Item #105",
+        description="O | Item #00105",
     )
 
     pid_3: List[CX] = Field(
@@ -149,7 +149,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.3",
         title="Patient ID (Internal ID)",
-        description="Item #106",
+        description="R | Item #00106",
     )
 
     pid_4: Optional[CX] = Field(
@@ -161,7 +161,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.4",
         title="Alternate Patient ID",
-        description="Item #107",
+        description="O | Item #00107",
     )
 
     pid_5: XPN = Field(
@@ -172,7 +172,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.5",
         title="Patient Name",
-        description="Item #108",
+        description="R | Item #00108",
     )
 
     pid_6: Optional[XPN] = Field(
@@ -184,7 +184,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.6",
         title="Mother's Maiden Name",
-        description="Item #109",
+        description="O | Item #00109",
     )
 
     pid_7: Optional[TS] = Field(
@@ -196,7 +196,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.7",
         title="Date of Birth",
-        description="Item #110",
+        description="O | Item #00110",
     )
 
     pid_8: Optional[str] = Field(
@@ -208,7 +208,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.8",
         title="Sex",
-        description="Item #111 | Table HL70001",
+        description="NA | Item #00111 | Table 0001 - Sex | LEN:1",
     )
 
     pid_9: Optional[List[XPN]] = Field(
@@ -220,7 +220,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.9",
         title="Patient Alias",
-        description="Item #112",
+        description="O | Item #00112",
     )
 
     pid_10: Optional[str] = Field(
@@ -232,7 +232,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.10",
         title="Race",
-        description="Item #113 | Table HL70005",
+        description="NA | Item #00113 | Table 0005 - Race | LEN:1",
     )
 
     pid_11: Optional[List[XAD]] = Field(
@@ -244,7 +244,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.11",
         title="Patient Address",
-        description="Item #114",
+        description="O | Item #00114",
     )
 
     pid_12: Optional[str] = Field(
@@ -256,7 +256,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.12",
         title="County Code",
-        description="Item #115",
+        description="O | Item #00115 | LEN:4",
     )
 
     pid_13: Optional[List[XTN]] = Field(
@@ -268,7 +268,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.13",
         title="Phone Number - Home",
-        description="Item #116",
+        description="O | Item #00116",
     )
 
     pid_14: Optional[List[XTN]] = Field(
@@ -280,7 +280,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.14",
         title="Phone Number - Business",
-        description="Item #117",
+        description="O | Item #00117",
     )
 
     pid_15: Optional[CE] = Field(
@@ -292,7 +292,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.15",
         title="Primary Language",
-        description="Item #118 | Table HL70296",
+        description="O | Item #00118 | Table 0296 - Language",
     )
 
     pid_16: Optional[List[str]] = Field(
@@ -304,7 +304,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.16",
         title="Marital Status",
-        description="Item #119 | Table HL70002",
+        description="NA | Item #00119 | Table 0002 - Marital Status | LEN:1",
     )
 
     pid_17: Optional[str] = Field(
@@ -316,7 +316,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.17",
         title="Religion",
-        description="Item #120 | Table HL70006",
+        description="O | Item #00120 | Table 0006 - Religion | LEN:3",
     )
 
     pid_18: Optional[CX] = Field(
@@ -328,7 +328,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.18",
         title="Patient Account Number",
-        description="Item #121",
+        description="O | Item #00121",
     )
 
     pid_19: Optional[str] = Field(
@@ -340,7 +340,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.19",
         title="SSN Number - Patient",
-        description="Item #122",
+        description="O | Item #00122 | LEN:16",
     )
 
     pid_20: Optional[DLN] = Field(
@@ -352,7 +352,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.20",
         title="Driver's License Number",
-        description="Item #123",
+        description="O | Item #00123",
     )
 
     pid_21: Optional[CX] = Field(
@@ -364,7 +364,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.21",
         title="Mother's Identifier",
-        description="Item #124",
+        description="O | Item #00124",
     )
 
     pid_22: Optional[str] = Field(
@@ -376,7 +376,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.22",
         title="Ethnic Group",
-        description="Item #125 | Table HL70189",
+        description="O | Item #00125 | Table 0189 - Ethnic Group | LEN:1",
     )
 
     pid_23: Optional[str] = Field(
@@ -388,7 +388,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.23",
         title="Birth Place",
-        description="Item #126",
+        description="O | Item #00126 | LEN:60",
     )
 
     pid_24: Optional[str] = Field(
@@ -400,7 +400,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.24",
         title="Multiple Birth Indicator",
-        description="Item #127 | Table HL70136",
+        description="O | Item #00127 | Table 0136 - Yes/No Indicator | LEN:2",
     )
 
     pid_25: Optional[str] = Field(
@@ -412,7 +412,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.25",
         title="Birth Order",
-        description="Item #128",
+        description="O | Item #00128 | LEN:2",
     )
 
     pid_26: Optional[str] = Field(
@@ -424,7 +424,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.26",
         title="Citizenship",
-        description="Item #129 | Table HL70171",
+        description="O | Item #00129 | Table 0171 - Country Code | LEN:4",
     )
 
     pid_27: Optional[CE] = Field(
@@ -436,7 +436,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.27",
         title="Veterans Military Status",
-        description="Item #130 | Table HL70172",
+        description="O | Item #00130 | Table 0172 - Veterans Military Status",
     )
 
     pid_28: Optional[CE] = Field(
@@ -448,7 +448,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.28",
         title="Nationality Code",
-        description="Item #739 | Table HL70212",
+        description="O | Item #00739 | Table 0212 - Nationality",
     )
 
     pid_29: Optional[TS] = Field(
@@ -460,7 +460,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.29",
         title="Patient Death Date and Time",
-        description="Item #740",
+        description="NA | Item #00740",
     )
 
     pid_30: Optional[str] = Field(
@@ -472,7 +472,7 @@ class PID(HL7Model):
         ),
         serialization_alias="PID.30",
         title="Patient Death Indicator",
-        description="Item #741 | Table HL70136",
+        description="O | Item #00741 | Table 0136 - Yes/No Indicator | LEN:1",
     )
 
     @field_validator("pid_1", mode='before')

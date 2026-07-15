@@ -17,7 +17,7 @@ class RDT(HL7Model):
     Attributes
     ----------
     rdt_1 : str
-        RDT.1 (req) - Column Value (*) S5.5.8.1
+        RDT.1 - Column Value (*) R S5.5.8.1
     """
 
     rdt_1: str = Field(
@@ -28,7 +28,7 @@ class RDT(HL7Model):
         ),
         serialization_alias="RDT.1",
         title="Column Value",
-        description="Item #703",
+        description="R | Item #00703",
     )
 
     model_config = {"populate_by_name": True}

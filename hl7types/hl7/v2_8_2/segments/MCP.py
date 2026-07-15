@@ -21,19 +21,19 @@ class MCP(HL7Model):
     Attributes
     ----------
     mcp_1 : str
-        MCP.1 (req) - Set ID - MCP (SI) S8.8.18.1
+        MCP.1 - Set ID - MCP (SI) R S8.8.18.1
 
     mcp_2 : CWE
-        MCP.2 (req) - Producer's Service/Test/Observation ID (CWE) S8.8.18.2
+        MCP.2 - Producer's Service/Test/Observation ID (CWE) R S8.8.18.2
 
     mcp_3 : MO | None
-        MCP.3 (opt) - Universal Service Price Range - Low Value (MO) S8.8.18.3
+        MCP.3 - Universal Service Price Range - Low Value (MO) O S8.8.18.3
 
     mcp_4 : MO | None
-        MCP.4 (opt) - Universal Service Price Range - High Value (MO) S8.8.18.4
+        MCP.4 - Universal Service Price Range - High Value (MO) O S8.8.18.4
 
     mcp_5 : str | None
-        MCP.5 (opt) - Reason for Universal Service Cost Range (ST) S8.8.18.5
+        MCP.5 - Reason for Universal Service Cost Range (ST) C S8.8.18.5
     """
 
     mcp_1: str = Field(
@@ -44,7 +44,7 @@ class MCP(HL7Model):
         ),
         serialization_alias="MCP.1",
         title="Set ID - MCP",
-        description="Item #3468",
+        description="R | Item #03468 | LEN:4",
     )
 
     mcp_2: CWE = Field(
@@ -55,7 +55,7 @@ class MCP(HL7Model):
         ),
         serialization_alias="MCP.2",
         title="Producer's Service/Test/Observation ID",
-        description="Item #587",
+        description="R | Item #00587",
     )
 
     mcp_3: Optional[MO] = Field(
@@ -67,7 +67,7 @@ class MCP(HL7Model):
         ),
         serialization_alias="MCP.3",
         title="Universal Service Price Range - Low Value",
-        description="Item #3469",
+        description="O | Item #03469",
     )
 
     mcp_4: Optional[MO] = Field(
@@ -79,7 +79,7 @@ class MCP(HL7Model):
         ),
         serialization_alias="MCP.4",
         title="Universal Service Price Range - High Value",
-        description="Item #3470",
+        description="O | Item #03470",
     )
 
     mcp_5: Optional[str] = Field(
@@ -91,7 +91,7 @@ class MCP(HL7Model):
         ),
         serialization_alias="MCP.5",
         title="Reason for Universal Service Cost Range",
-        description="Item #3471",
+        description="C | Item #03471",
     )
 
     @field_validator("mcp_1", mode='before')

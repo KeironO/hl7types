@@ -21,31 +21,31 @@ class IPC(HL7Model):
     Attributes
     ----------
     ipc_1 : EI
-        IPC.1 (req) - Accession Identifier (EI) S13.4.3.2
+        IPC.1 - Accession Identifier (EI) R S13.4.3.2
 
     ipc_2 : EI
-        IPC.2 (req) - Requested Procedure ID (EI) S4.5.6.2
+        IPC.2 - Requested Procedure ID (EI) R S4.5.6.2
 
     ipc_3 : EI
-        IPC.3 (req) - Study Instance UID (EI) S4.5.6.3
+        IPC.3 - Study Instance UID (EI) R S4.5.6.3
 
     ipc_4 : EI
-        IPC.4 (req) - Scheduled Procedure Step ID (EI) S4.5.6.4
+        IPC.4 - Scheduled Procedure Step ID (EI) R S4.5.6.4
 
     ipc_5 : CWE | None
-        IPC.5 (opt) - Modality (CWE) S4.5.6.5 | 9999 - no table for CE
+        IPC.5 - Modality (CWE) O S4.5.6.5 | 9999 - no table for CE
 
     ipc_6 : list[CWE] | None
-        IPC.6 (opt, rep) - Protocol Code (CWE) S4.5.6.6 | 9999 - no table for CE
+        IPC.6 - Protocol Code (CWE) O rep S4.5.6.6 | 9999 - no table for CE
 
     ipc_7 : EI | None
-        IPC.7 (opt) - Scheduled Station Name (EI) S4.5.6.7
+        IPC.7 - Scheduled Station Name (EI) O S4.5.6.7
 
     ipc_8 : list[CWE] | None
-        IPC.8 (opt, rep) - Scheduled Procedure Step Location (CWE) S4.5.6.8 | 9999 - no table for CE
+        IPC.8 - Scheduled Procedure Step Location (CWE) O rep S4.5.6.8 | 9999 - no table for CE
 
     ipc_9 : str | None
-        IPC.9 (opt) - Scheduled Station AE Title (ST) S4.5.6.9
+        IPC.9 - Scheduled Station AE Title (ST) O S4.5.6.9
     """
 
     ipc_1: EI = Field(
@@ -56,7 +56,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.1",
         title="Accession Identifier",
-        description="Item #1330",
+        description="R | Item #01330",
     )
 
     ipc_2: EI = Field(
@@ -67,7 +67,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.2",
         title="Requested Procedure ID",
-        description="Item #1658",
+        description="R | Item #01658",
     )
 
     ipc_3: EI = Field(
@@ -78,7 +78,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.3",
         title="Study Instance UID",
-        description="Item #1659",
+        description="R | Item #01659",
     )
 
     ipc_4: EI = Field(
@@ -89,7 +89,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.4",
         title="Scheduled Procedure Step ID",
-        description="Item #1660",
+        description="R | Item #01660",
     )
 
     ipc_5: Optional[CWE] = Field(
@@ -101,7 +101,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.5",
         title="Modality",
-        description="Item #1661 | Table HL79999",
+        description="O | Item #01661 | Table 9999 - no table for CE",
     )
 
     ipc_6: Optional[List[CWE]] = Field(
@@ -113,7 +113,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.6",
         title="Protocol Code",
-        description="Item #1662 | Table HL79999",
+        description="O | Item #01662 | Table 9999 - no table for CE",
     )
 
     ipc_7: Optional[EI] = Field(
@@ -125,7 +125,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.7",
         title="Scheduled Station Name",
-        description="Item #1663",
+        description="O | Item #01663",
     )
 
     ipc_8: Optional[List[CWE]] = Field(
@@ -137,7 +137,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.8",
         title="Scheduled Procedure Step Location",
-        description="Item #1664 | Table HL79999",
+        description="O | Item #01664 | Table 9999 - no table for CE",
     )
 
     ipc_9: Optional[str] = Field(
@@ -149,7 +149,7 @@ class IPC(HL7Model):
         ),
         serialization_alias="IPC.9",
         title="Scheduled Station AE Title",
-        description="Item #1665",
+        description="O | Item #01665 | LEN:16",
     )
 
     model_config = {"populate_by_name": True}

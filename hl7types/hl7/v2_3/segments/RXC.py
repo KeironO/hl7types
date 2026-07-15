@@ -20,22 +20,22 @@ class RXC(HL7Model):
     Attributes
     ----------
     rxc_1 : str
-        RXC.1 (req) - RX Component Type (ID) S4.8.4.1 | 0166 - RX Component Type
+        RXC.1 - RX Component Type (ID) R S4.8.4.1 | 0166 - RX Component Type
 
     rxc_2 : CE
-        RXC.2 (req) - Component Code (CE) S4.8.4.2
+        RXC.2 - Component Code (CE) R S4.8.4.2
 
     rxc_3 : str
-        RXC.3 (req) - Component Amount (NM) S4.8.4.3
+        RXC.3 - Component Amount (NM) R S4.8.4.3
 
     rxc_4 : CE
-        RXC.4 (req) - Component Units (CE) S4.8.4.4
+        RXC.4 - Component Units (CE) R S4.8.4.4
 
     rxc_5 : str | None
-        RXC.5 (opt) - Component Strength (NM) S4.8.4.5
+        RXC.5 - Component Strength (NM) O S4.8.4.5
 
     rxc_6 : CE | None
-        RXC.6 (opt) - Component Strength Units (CE) S4.8.4.6
+        RXC.6 - Component Strength Units (CE) O S4.8.4.6
     """
 
     rxc_1: str = Field(
@@ -46,7 +46,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.1",
         title="RX Component Type",
-        description="Item #313 | Table HL70166",
+        description="R | Item #00313 | Table 0166 - RX Component Type | LEN:1",
     )
 
     rxc_2: CE = Field(
@@ -57,7 +57,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.2",
         title="Component Code",
-        description="Item #314",
+        description="R | Item #00314",
     )
 
     rxc_3: str = Field(
@@ -68,7 +68,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.3",
         title="Component Amount",
-        description="Item #315",
+        description="R | Item #00315 | LEN:20",
     )
 
     rxc_4: CE = Field(
@@ -79,7 +79,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.4",
         title="Component Units",
-        description="Item #316",
+        description="R | Item #00316",
     )
 
     rxc_5: Optional[str] = Field(
@@ -91,7 +91,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.5",
         title="Component Strength",
-        description="Item #1124",
+        description="O | Item #01124 | LEN:20",
     )
 
     rxc_6: Optional[CE] = Field(
@@ -103,7 +103,7 @@ class RXC(HL7Model):
         ),
         serialization_alias="RXC.6",
         title="Component Strength Units",
-        description="Item #1125",
+        description="O | Item #01125",
     )
 
     @field_validator("rxc_3", "rxc_5", mode='before')

@@ -26,31 +26,31 @@ class PRD(HL7Model):
     Attributes
     ----------
     prd_1 : list[CE]
-        PRD.1 (req, rep) - Provider Role (CE) S11.6.3.1 | 0286 - Provider role
+        PRD.1 - Provider Role (CE) R rep S11.6.3.1 | 0286 - Provider role
 
     prd_2 : list[XPN] | None
-        PRD.2 (opt, rep) - Provider Name (XPN) S11.6.3.2
+        PRD.2 - Provider Name (XPN) O rep S11.6.3.2
 
     prd_3 : list[XAD] | None
-        PRD.3 (opt, rep) - Provider Address (XAD) S11.6.3.3
+        PRD.3 - Provider Address (XAD) O rep S11.6.3.3
 
     prd_4 : PL | None
-        PRD.4 (opt) - Provider Location (PL) S11.6.3.4
+        PRD.4 - Provider Location (PL) O S11.6.3.4
 
     prd_5 : list[XTN] | None
-        PRD.5 (opt, rep) - Provider Communication Information (XTN) S11.6.3.5
+        PRD.5 - Provider Communication Information (XTN) O rep S11.6.3.5
 
     prd_6 : CE | None
-        PRD.6 (opt) - Preferred Method of Contact (CE) S15.4.6.16 | 0185 - Preferred method of contact
+        PRD.6 - Preferred Method of Contact (CE) O S15.4.6.16 | 0185 - Preferred method of contact
 
     prd_7 : list[PI] | None
-        PRD.7 (opt, rep) - Provider Identifiers (PI) S11.6.3.7
+        PRD.7 - Provider Identifiers (PI) O rep S11.6.3.7
 
     prd_8 : TS | None
-        PRD.8 (opt) - Effective Start Date of Provider Role (TS) S11.6.3.8
+        PRD.8 - Effective Start Date of Provider Role (TS) O S11.6.3.8
 
     prd_9 : TS | None
-        PRD.9 (opt) - Effective End Date of Provider Role (TS) S11.6.3.9
+        PRD.9 - Effective End Date of Provider Role (TS) O S11.6.3.9
     """
 
     prd_1: List[CE] = Field(
@@ -62,7 +62,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.1",
         title="Provider Role",
-        description="Item #1155 | Table HL70286",
+        description="R | Item #01155 | Table 0286 - Provider role",
     )
 
     prd_2: Optional[List[XPN]] = Field(
@@ -74,7 +74,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.2",
         title="Provider Name",
-        description="Item #1156",
+        description="O | Item #01156",
     )
 
     prd_3: Optional[List[XAD]] = Field(
@@ -86,7 +86,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.3",
         title="Provider Address",
-        description="Item #1157",
+        description="O | Item #01157",
     )
 
     prd_4: Optional[PL] = Field(
@@ -98,7 +98,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.4",
         title="Provider Location",
-        description="Item #1158",
+        description="O | Item #01158",
     )
 
     prd_5: Optional[List[XTN]] = Field(
@@ -110,7 +110,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.5",
         title="Provider Communication Information",
-        description="Item #1159",
+        description="O | Item #01159",
     )
 
     prd_6: Optional[CE] = Field(
@@ -122,7 +122,9 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.6",
         title="Preferred Method of Contact",
-        description="Item #684 | Table HL70185",
+        description=(
+            "O | Item #00684 | Table 0185 - Preferred method of contact"
+        ),
     )
 
     prd_7: Optional[List[PI]] = Field(
@@ -134,7 +136,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.7",
         title="Provider Identifiers",
-        description="Item #1162",
+        description="O | Item #01162",
     )
 
     prd_8: Optional[TS] = Field(
@@ -146,7 +148,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.8",
         title="Effective Start Date of Provider Role",
-        description="Item #1163",
+        description="O | Item #01163",
     )
 
     prd_9: Optional[TS] = Field(
@@ -158,7 +160,7 @@ class PRD(HL7Model):
         ),
         serialization_alias="PRD.9",
         title="Effective End Date of Provider Role",
-        description="Item #1164",
+        description="O | Item #01164",
     )
 
     model_config = {"populate_by_name": True}
