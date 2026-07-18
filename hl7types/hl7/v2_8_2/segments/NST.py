@@ -7,9 +7,15 @@ Type: Segment
 """
 from __future__ import annotations
 
+import re
+
 from typing import Optional
-from pydantic import AliasChoices, Field, field_validator
+from pydantic import AliasChoices, ConfigDict, Field, ValidationInfo, field_validator
 from hl7types.hl7 import HL7Model
+from hl7types.hl7._validators import _apply_dt_fallback
+
+_RE_DTM = re.compile(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?')
+_RE_NM = re.compile(r'(\+|\-)?\d*\.?\d*')
 
 
 class NST(HL7Model):
@@ -245,8 +251,7 @@ class NST(HL7Model):
     @field_validator("nst_4", "nst_5", mode='before')
     @classmethod
     def _validate_dtm(cls, v: str, info: ValidationInfo) -> str:
-        import re
-        if re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+        if _RE_DTM.fullmatch(v or ''):
             return v
         ctx: dict[str, object] = info.context or {}
         from typing import cast, Callable
@@ -255,9 +260,8 @@ class NST(HL7Model):
     @field_validator("nst_6", "nst_7", "nst_8", "nst_9", "nst_10", "nst_11", "nst_12", "nst_13", "nst_14", "nst_15", mode='before')
     @classmethod
     def _validate_nm(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+        if not _RE_NM.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or numeric")
         return v
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

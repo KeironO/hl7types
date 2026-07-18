@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.PD1 import PD1
@@ -37,4 +37,4 @@ class OML_O33_PATIENT_PRIOR(HL7Model):
         description="Patient Additional Demographic",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

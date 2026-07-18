@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.AUT import AUT
@@ -46,4 +46,4 @@ class EHC_E24_PSL_ITEM_INFO(HL7Model):
         title="PAYER_ADJUSTMENT",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

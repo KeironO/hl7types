@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.CTI import CTI
@@ -54,4 +54,4 @@ class ORR_O02_ORDER(HL7Model):
         description="CTI - clinical trial identification segment",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.AIP import AIP
@@ -39,4 +39,4 @@ class SRR_S01_PERSONNEL_RESOURCE(HL7Model):
         description="NTE - notes and comments segment",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

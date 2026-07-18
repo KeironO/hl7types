@@ -7,13 +7,17 @@ Type: Datatype
 """
 from __future__ import annotations
 
+import re
+
 from typing import Optional
-from pydantic import AliasChoices, Field, field_validator, ValidationInfo
+from pydantic import AliasChoices, ConfigDict, Field, ValidationInfo, field_validator
 from hl7types.hl7 import HL7Model
 from hl7types.hl7._validators import _apply_dt_fallback
 
 from .CWE import CWE
 from .FN import FN
+
+_RE_DTM = re.compile(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?')
 
 
 class XPN(HL7Model):
@@ -210,11 +214,10 @@ class XPN(HL7Model):
     @field_validator("xpn_12", "xpn_13", mode='before')
     @classmethod
     def _validate_dtm(cls, v: str, info: ValidationInfo) -> str:
-        import re
-        if re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+        if _RE_DTM.fullmatch(v or ''):
             return v
         ctx: dict[str, object] = info.context or {}
         from typing import cast, Callable
         return _apply_dt_fallback(v, parser=cast(Callable[[str], str] | None, ctx.get("dtm_parser")), datatype="DTM", field_path="TS.1")
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

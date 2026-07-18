@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.OBR import OBR
@@ -46,4 +46,4 @@ class ORL_O40_OBSERVATION_REQUEST(HL7Model):
         title="SPECIMEN_SHIPMENT",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

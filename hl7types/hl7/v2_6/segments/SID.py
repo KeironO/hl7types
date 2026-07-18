@@ -8,7 +8,7 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
@@ -80,4 +80,4 @@ class SID(HL7Model):
         description="C | Item #01429 | Table 0385 - Manufacturer identifier",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

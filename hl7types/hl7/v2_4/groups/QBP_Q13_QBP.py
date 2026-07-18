@@ -8,6 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, Any
+from pydantic import ConfigDict
 from hl7types.hl7 import HL7Model
 
 
@@ -20,4 +21,4 @@ class QBP_Q13_QBP(HL7Model):
 
     anyzsegment: Optional[Any] = None
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

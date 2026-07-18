@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.PMT import PMT
@@ -38,4 +38,4 @@ class EHC_E15_PAYMENT_REMITTANCE_HEADER_INFO(HL7Model):
         description="Payee Information",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

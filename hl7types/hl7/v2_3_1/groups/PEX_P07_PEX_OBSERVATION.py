@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.PEO import PEO
@@ -37,4 +37,4 @@ class PEX_P07_PEX_OBSERVATION(HL7Model):
         title="PEX_CAUSE",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

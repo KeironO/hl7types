@@ -7,14 +7,20 @@ Type: Segment
 """
 from __future__ import annotations
 
+import re
+
 from typing import Optional, List
-from pydantic import AliasChoices, Field, field_validator
+from pydantic import AliasChoices, ConfigDict, Field, field_validator
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
 from ..datatypes.RPT import RPT
 from ..datatypes.TS import TS
+
+_RE_SI = re.compile(r'\d*')
+_RE_TM = re.compile(r'([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?([+\-]\d{4})?')
+_RE_NM = re.compile(r'(\+|\-)?\d*\.?\d*')
 
 
 class TQ1(HL7Model):
@@ -239,25 +245,22 @@ class TQ1(HL7Model):
     @field_validator("tq1_1", mode='before')
     @classmethod
     def _validate_si(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'\d*', v or ''):
+        if not _RE_SI.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or a non-negative integer")
         return v
 
     @field_validator("tq1_4", mode='before')
     @classmethod
     def _validate_tm(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+        if not _RE_TM.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or a valid HL7 time")
         return v
 
     @field_validator("tq1_14", mode='before')
     @classmethod
     def _validate_nm(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+        if not _RE_NM.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or numeric")
         return v
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

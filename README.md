@@ -24,7 +24,7 @@ HL7® is a registered trademark owned by [Health Level Seven International](http
 
 ## Version info
 
-Each HL7 version is available as a sub-package under `hl7types.hl7.<version>`, where the version string uses underscores in place of dots , so v2.5.1 is at `hl7types.hl7.v2_5_1` and v2.1 is at `hl7types.hl7.v2_1`.
+Each HL7 version is available as a sub-package under `hl7types.hl7.<version>`, where the version string uses underscores in place of dots, so v2.5.1 is at `hl7types.hl7.v2_5_1` and v2.1 is at `hl7types.hl7.v2_1`.
 
 **Available versions:**
 
@@ -131,7 +131,7 @@ True
 
 
 
-**Example 5:** Type validation is enforced , passing the wrong type raises a `ValidationError`:
+**Example 5:** Type validation is enforced, passing the wrong type raises a `ValidationError`:
 
 ```python
 >>> from pydantic import ValidationError
@@ -150,7 +150,7 @@ pid_5
 
 
 
-**Example 6:** Fields accept human-readable aliases as well as the positional names , all three forms are equivalent:
+**Example 6:** Fields accept human-readable aliases as well as the positional names, all three forms are equivalent:
 
 ```python
 >>> from hl7types.hl7.v2_5_1.segments import MSH

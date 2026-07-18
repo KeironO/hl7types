@@ -7,6 +7,7 @@ Type: Segment
 """
 from __future__ import annotations
 
+from pydantic import ConfigDict
 from hl7types.hl7 import HL7Model
 
 
@@ -15,4 +16,4 @@ class Zxx(HL7Model):
 
     pass
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

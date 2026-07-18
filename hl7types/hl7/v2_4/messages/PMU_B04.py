@@ -8,7 +8,7 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.EVN import EVN
@@ -62,4 +62,4 @@ class PMU_B04(HL7Model):
         description="Practitioner Organization Unit",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

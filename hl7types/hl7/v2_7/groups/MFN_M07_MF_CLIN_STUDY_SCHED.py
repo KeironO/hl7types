@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.CM0 import CM0
@@ -45,4 +45,4 @@ class MFN_M07_MF_CLIN_STUDY_SCHED(HL7Model):
         description="Clinical Study Schedule Master",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

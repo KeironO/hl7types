@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.CTD import CTD
@@ -72,4 +72,4 @@ class OMG_O19_ORDER_PRIOR(HL7Model):
         title="OBSERVATION_PRIOR",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.PSL import PSL
@@ -27,4 +27,4 @@ class RSP_E22_PSL_ITEM_INFO(HL7Model):
         description="Product/Service Line Item",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

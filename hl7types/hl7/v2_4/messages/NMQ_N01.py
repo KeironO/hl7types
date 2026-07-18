@@ -8,7 +8,7 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
@@ -45,4 +45,4 @@ class NMQ_N01(HL7Model):
         title="CLOCK_AND_STATISTICS",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

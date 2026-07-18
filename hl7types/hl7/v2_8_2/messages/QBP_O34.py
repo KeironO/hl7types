@@ -8,7 +8,7 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
@@ -62,4 +62,4 @@ class QBP_O34(HL7Model):
         description="Response Control Parameter",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

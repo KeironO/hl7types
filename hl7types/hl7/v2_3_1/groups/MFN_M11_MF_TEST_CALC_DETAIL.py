@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.OM2 import OM2
@@ -38,4 +38,4 @@ class MFN_M11_MF_TEST_CALC_DETAIL(HL7Model):
         description="OM2 - numeric observation segment",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

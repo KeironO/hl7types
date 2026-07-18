@@ -7,7 +7,7 @@ Type: Segment
 """
 from __future__ import annotations
 
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
@@ -47,4 +47,4 @@ class QID(HL7Model):
         description="R | Item #01375 | Table 0471 - Query name",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.OBR import OBR
@@ -56,4 +56,4 @@ class CCR_I16_CLINICAL_ORDER_OBJECT(HL7Model):
         description="Procedures",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

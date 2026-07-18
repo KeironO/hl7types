@@ -7,7 +7,7 @@ Type: Segment
 """
 from __future__ import annotations
 
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.TS import TS
@@ -33,4 +33,4 @@ class NCK(HL7Model):
         description="R | Item #00742",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)
