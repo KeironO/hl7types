@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from .ORU_R03_ORDER_OBSERVATION import ORU_R03_ORDER_OBSERVATION
@@ -36,4 +36,4 @@ class ORU_R03_PATIENT_RESULT(HL7Model):
         title="ORDER_OBSERVATION",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

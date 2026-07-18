@@ -7,7 +7,7 @@ Type: Segment
 """
 from __future__ import annotations
 
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
@@ -51,4 +51,4 @@ class UAC(HL7Model):
         description="R | Item #02268",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

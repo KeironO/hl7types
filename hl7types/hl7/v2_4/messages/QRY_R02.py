@@ -7,7 +7,7 @@ Type: Message
 """
 from __future__ import annotations
 
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.MSH import MSH
@@ -43,4 +43,4 @@ class QRY_R02(HL7Model):
         description="Original Style Query Filter",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

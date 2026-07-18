@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.RXA import RXA
@@ -35,4 +35,4 @@ class CSU_C09_RX_ADMIN(HL7Model):
         description="Pharmacy route segment",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

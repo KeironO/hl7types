@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.MFE import MFE
@@ -45,4 +45,4 @@ class MFN_M08_MF_TEST_NUMERIC(HL7Model):
         title="MF_NUMERIC_OBSERVATION",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

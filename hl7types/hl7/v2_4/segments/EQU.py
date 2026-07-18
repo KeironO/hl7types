@@ -8,7 +8,7 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
@@ -95,4 +95,4 @@ class EQU(HL7Model):
         description="O | Item #01325 | Table 0367 - Alert level",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

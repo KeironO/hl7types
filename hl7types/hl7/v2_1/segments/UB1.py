@@ -7,9 +7,14 @@ Type: Segment
 """
 from __future__ import annotations
 
+import re
+
 from typing import Optional, List
-from pydantic import AliasChoices, Field, field_validator
+from pydantic import AliasChoices, ConfigDict, Field, field_validator
 from hl7types.hl7 import HL7Model
+
+_RE_SI = re.compile(r'\d*')
+_RE_DT = re.compile(r'(\d{4}([01]\d(\d{2})?)?)?')
 
 
 class UB1(HL7Model):
@@ -366,17 +371,15 @@ class UB1(HL7Model):
     @field_validator("ub1_1", mode='before')
     @classmethod
     def _validate_si(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'\d*', v or ''):
+        if not _RE_SI.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or a non-negative integer")
         return v
 
     @field_validator("ub1_14", "ub1_15", "ub1_18", "ub1_19", mode='before')
     @classmethod
     def _validate_dt(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'(\d{4}([01]\d(\d{2})?)?)?', v or ''):
+        if not _RE_DT.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or a valid HL7 date (YYYY[MM[DD]])")
         return v
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

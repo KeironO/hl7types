@@ -8,7 +8,7 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.MFI import MFI
@@ -63,4 +63,4 @@ class MFN_M16(HL7Model):
         title="MATERIAL_ITEM_RECORD",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

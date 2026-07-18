@@ -7,7 +7,7 @@ Type: Message
 """
 from __future__ import annotations
 
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.EVN import EVN
@@ -59,4 +59,4 @@ class MDM_T01(HL7Model):
         description="Document notification segment",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from .BRP_O30_PATIENT import BRP_O30_PATIENT
@@ -28,4 +28,4 @@ class BRP_O30_RESPONSE(HL7Model):
         title="PATIENT",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

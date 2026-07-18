@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.PID import PID
@@ -37,4 +37,4 @@ class ORL_O36_RESPONSE(HL7Model):
         title="SPECIMEN",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

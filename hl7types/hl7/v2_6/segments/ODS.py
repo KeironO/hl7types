@@ -8,7 +8,7 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CWE import CWE
@@ -81,4 +81,4 @@ class ODS(HL7Model):
         description="O | Item #00272 | LEN:80",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

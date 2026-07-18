@@ -8,7 +8,7 @@ Type: Segment
 from __future__ import annotations
 
 from typing import Optional
-from pydantic import AliasChoices, Field
+from pydantic import AliasChoices, ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
@@ -79,4 +79,4 @@ class RXR(HL7Model):
         description="O | Item #00312 | Table 0165 - Administration Method",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

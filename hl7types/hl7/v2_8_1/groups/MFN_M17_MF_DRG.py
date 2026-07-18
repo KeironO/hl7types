@@ -7,7 +7,7 @@ Type: Group
 """
 from __future__ import annotations
 
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.DMI import DMI
@@ -35,4 +35,4 @@ class MFN_M17_MF_DRG(HL7Model):
         description="DRG Master File Information",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

@@ -7,7 +7,7 @@ Type: Message
 """
 from __future__ import annotations
 
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.MSA import MSA
@@ -35,4 +35,4 @@ class MCF_Q02(HL7Model):
         description="MESSAGE ACKNOWLEDGMENT",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

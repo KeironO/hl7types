@@ -15,10 +15,10 @@ time too, and vice versa.
    from pydantic import ValidationError
    from hl7types.hl7.v2_5_1.datatypes import DT
 
-   # Accepted,  valid HL7 date
+    # Accepted. Valid HL7 date.
    d = DT(value="20260101")
 
-   # Rejected,  invalid format, whether from wire or code
+    # Rejected. Invalid format, whether from wire or code.
    try:
        DT(value="01-01-2026")
    except ValidationError as e:
@@ -39,7 +39,7 @@ specification. Strict mode is the default for ``decode_er7``, ``model_validate_e
 ``decode_er7_segment``.
 
 **Lenient mode** (``strict=False``) is opt-in and designed for integration with real-world
-systems that routinely omit technically required fields,  a common reality in HL7 v2 deployments.
+systems that routinely omit technically required fields. This is a common reality in HL7 v2 deployments.
 Rather than raising, the decoder injects placeholder values for any missing required field before
 calling ``model_validate``:
 
@@ -49,7 +49,7 @@ calling ``model_validate``:
 - Missing required repeating fields receive an empty list (``[]``).
 
 A ``UserWarning`` is emitted for every segment where placeholders were injected, listing the
-affected field names. This means lenient decoding never silently discards information,  the
+affected field names. This means lenient decoding never silently discards information. The
 warning tells you exactly what was missing.
 
 .. code-block:: python
@@ -58,13 +58,13 @@ warning tells you exactly what was missing.
    from hl7types import decode_er7
    from pydantic import ValidationError
 
-   # Strict (default),  raises ValidationError on missing required segments
+    # Strict (default). Raises ValidationError on missing required segments.
    try:
        msg = decode_er7(wire)
    except ValidationError as e:
        print(e)
 
-   # Lenient (opt-in),  injects placeholders and warns
+    # Lenient (opt-in). Injects placeholders and warns.
    with warnings.catch_warnings(record=True) as caught:
        msg = decode_er7(wire, strict=False)
        for w in caught:
@@ -83,10 +83,10 @@ itself rather than in the decoder, they fire identically whether a value arrives
 wire string, is passed to the constructor directly, or is loaded via ``model_validate`` from a
 dict.
 
-For most primitive types,  ``ST``, ``TX``, ``FT``, ``ID``, ``IS``,  the only constraint is
-``max_length``. For structured primitive types, the validators apply regex patterns taken verbatim
+For most primitive types, the only constraint is ``max_length``. These include ``ST``, ``TX``,
+``FT``, ``ID``, and ``IS``. For structured primitive types, the validators apply regex patterns taken verbatim
 from HAPI's ``DefaultValidationWithoutTNBuilder``, the reference Java HL7 implementation. The
-patterns use ``re.fullmatch``, meaning the entire value must conform,  a partial match is a
+patterns use ``re.fullmatch``, meaning the entire value must conform. A partial match is a
 failure.
 
 .. list-table::
@@ -111,9 +111,9 @@ failure.
    * - ``DTM`` (Date/Time)
      - Any truncated datetime from ``YYYY`` up to ``YYYYMMDDHHMMSS.SSSS``, with optional timezone
      - ``2026``, ``20260101``, ``202601011230``, ``20260101123045.1234+0100``
-   * - ``NULLDT``
-     - Must be empty,  this is a withdrawn datatype
-     - ``""``
+    * - ``NULLDT``
+      - Must be empty. This is a withdrawn datatype.
+      - ``""``
 
 Pre-v2.5 timestamp handling
 -----------------------------
@@ -167,7 +167,7 @@ that the value cannot be parsed.
    print(msg.MSH.msh_7.ts_1)  # "20261101"
 
 When the fallback parser succeeds, a :class:`~hl7types.NonStandardDateWarning` is always
-emitted. This warning is never silenced automatically,  it is a deliberate signal that a
+emitted. This warning is never silenced automatically. It is a deliberate signal that a
 value was accepted outside the HL7 specification.
 
 The same parameters are accepted by :func:`~hl7types.decode_er7_segment`,

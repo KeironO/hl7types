@@ -7,13 +7,20 @@ Type: Segment
 """
 from __future__ import annotations
 
+import re
+
 from typing import Optional, List
-from pydantic import AliasChoices, Field, field_validator
+from pydantic import AliasChoices, ConfigDict, Field, ValidationInfo, field_validator
 from hl7types.hl7 import HL7Model
+from hl7types.hl7._validators import _apply_dt_fallback
 
 from ..datatypes.CWE import CWE
 from ..datatypes.EI import EI
 from ..datatypes.XCN import XCN
+
+_RE_SI = re.compile(r'\d*')
+_RE_DTM = re.compile(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?')
+_RE_NM = re.compile(r'(\+|\-)?\d*\.?\d*')
 
 
 class DG1(HL7Model):
@@ -268,16 +275,14 @@ class DG1(HL7Model):
     @field_validator("dg1_1", mode='before')
     @classmethod
     def _validate_si(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'\d*', v or ''):
+        if not _RE_SI.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or a non-negative integer")
         return v
 
     @field_validator("dg1_5", "dg1_19", mode='before')
     @classmethod
     def _validate_dtm(cls, v: str, info: ValidationInfo) -> str:
-        import re
-        if re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+        if _RE_DTM.fullmatch(v or ''):
             return v
         ctx: dict[str, object] = info.context or {}
         from typing import cast, Callable
@@ -286,9 +291,8 @@ class DG1(HL7Model):
     @field_validator("dg1_15", mode='before')
     @classmethod
     def _validate_nm(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+        if not _RE_NM.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or numeric")
         return v
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

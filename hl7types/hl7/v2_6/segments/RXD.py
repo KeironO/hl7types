@@ -7,15 +7,21 @@ Type: Segment
 """
 from __future__ import annotations
 
+import re
+
 from typing import Optional, List
-from pydantic import AliasChoices, Field, field_validator
+from pydantic import AliasChoices, ConfigDict, Field, ValidationInfo, field_validator
 from hl7types.hl7 import HL7Model
+from hl7types.hl7._validators import _apply_dt_fallback
 
 from ..datatypes.CQ import CQ
 from ..datatypes.CWE import CWE
 from ..datatypes.LA2 import LA2
 from ..datatypes.XAD import XAD
 from ..datatypes.XCN import XCN
+
+_RE_NM = re.compile(r'(\+|\-)?\d*\.?\d*')
+_RE_DTM = re.compile(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?')
 
 
 class RXD(HL7Model):
@@ -523,19 +529,17 @@ class RXD(HL7Model):
     @field_validator("rxd_1", "rxd_4", "rxd_8", "rxd_16", "rxd_22", "rxd_28", mode='before')
     @classmethod
     def _validate_nm(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+        if not _RE_NM.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or numeric")
         return v
 
     @field_validator("rxd_3", "rxd_19", mode='before')
     @classmethod
     def _validate_dtm(cls, v: str, info: ValidationInfo) -> str:
-        import re
-        if re.fullmatch(r'(\d{4}([01]\d(\d{2}([012]\d([0-5]\d([0-5]\d(\.\d(\d(\d(\d)?)?)?)?)?)?)?)?)?)?([+\-]\d{4})?', v or ''):
+        if _RE_DTM.fullmatch(v or ''):
             return v
         ctx: dict[str, object] = info.context or {}
         from typing import cast, Callable
         return _apply_dt_fallback(v, parser=cast(Callable[[str], str] | None, ctx.get("dtm_parser")), datatype="DTM", field_path="TS.1")
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

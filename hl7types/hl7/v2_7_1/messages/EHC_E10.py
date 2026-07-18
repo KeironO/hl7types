@@ -8,7 +8,7 @@ Type: Message
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.ERR import ERR
@@ -72,4 +72,4 @@ class EHC_E10(HL7Model):
         title="INVOICE_PROCESSING_RESULTS_INFO",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

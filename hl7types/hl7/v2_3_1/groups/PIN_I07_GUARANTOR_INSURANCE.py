@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from ..segments.GT1 import GT1
@@ -38,4 +38,4 @@ class PIN_I07_GUARANTOR_INSURANCE(HL7Model):
         title="INSURANCE",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

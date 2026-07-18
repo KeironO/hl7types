@@ -7,8 +7,10 @@ Type: Segment
 """
 from __future__ import annotations
 
+import re
+
 from typing import Optional, List
-from pydantic import AliasChoices, Field, field_validator
+from pydantic import AliasChoices, ConfigDict, Field, field_validator
 from hl7types.hl7 import HL7Model
 
 from ..datatypes.CE import CE
@@ -18,6 +20,8 @@ from ..datatypes.NA import NA
 from ..datatypes.SN import SN
 from ..datatypes.SPS import SPS
 from ..datatypes.TS import TS
+
+_RE_NM = re.compile(r'(\+|\-)?\d*\.?\d*')
 
 
 class SAC(HL7Model):
@@ -693,9 +697,8 @@ class SAC(HL7Model):
     @field_validator("sac_16", "sac_17", "sac_18", "sac_19", "sac_21", "sac_22", "sac_23", "sac_32", "sac_34", "sac_36", "sac_38", mode='before')
     @classmethod
     def _validate_nm(cls, v: str) -> str:
-        import re
-        if not re.fullmatch(r'(\+|\-)?\d*\.?\d*', v or ''):
+        if not _RE_NM.fullmatch(v or ''):
             raise ValueError(f"{v!r} is not empty or numeric")
         return v
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

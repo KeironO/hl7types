@@ -8,7 +8,7 @@ Type: Group
 from __future__ import annotations
 
 from typing import Optional, List
-from pydantic import Field
+from pydantic import ConfigDict, Field
 from hl7types.hl7 import HL7Model
 
 from .ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP import ORF_R04_ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP
@@ -36,4 +36,4 @@ class ORF_R04_PIDNTEORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP(HL7Model):
         title="ORCOBRNTETQ1TQ2CTDOBXNTECTI_SUPPGRP",
     )
 
-    model_config = {"populate_by_name": True}
+    model_config = ConfigDict(populate_by_name=True)

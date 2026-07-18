@@ -35,7 +35,7 @@ Every HL7 v2 message is a structured container of segments. Each segment has a d
 message and carries a specific set of fields. The message type determines which segments are
 required and which are optional.
 
-We will use :ref:`ACK <hl7-v2_5_1-ACK>` (general acknowledgement) as our example,  it is one of
+We will use :ref:`ACK <hl7-v2_5_1-ACK>` (general acknowledgement) as our example. It is one of
 the most common messages in any HL7 deployment and has a minimal structure that makes it easy to
 reason about. It requires exactly two segments: :ref:`MSH <hl7-v2_5_1-MSH>` (message header),
 which is mandatory in every HL7 v2 message and carries routing and encoding metadata, and
@@ -119,5 +119,5 @@ the receiving system does not always know the message type in advance.
    print(decoded.MSA.msa_1)        # "AA"
    print(decoded.MSA.msa_2)        # "MSG000001"
 
-The result is a fully typed :ref:`ACK <hl7-v2_5_1-ACK>` instance,  field access, validation, and
+The result is a fully typed :ref:`ACK <hl7-v2_5_1-ACK>` instance. Field access, validation, and
 serialisation all work exactly as they did on the original object.

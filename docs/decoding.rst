@@ -16,13 +16,10 @@ Encoding character detection
 -----------------------------
 
 Before any field can be parsed, the decoder needs to know which characters serve as delimiters.
-These are declared in the opening delimiter segment,  always :ref:`MSH <hl7-v2_5_1-MSH>`,
+These are declared in the opening delimiter segment. This is always :ref:`MSH <hl7-v2_5_1-MSH>`,
 :ref:`FHS <hl7-v2_5_1-FHS>`, or :ref:`BHS <hl7-v2_5_1-BHS>`.
 
-The field separator is read directly from position 3 of the segment string (not from a parsed
-field,  it cannot be, since it defines how fields are parsed). The remaining four encoding
-characters,  component separator, repetition separator, escape character, and subcomponent
-separator,  are read from the next field, conventionally ``^~\&``.
+The field separator is read directly from position 3 of the segment string. It is not read from a parsed field, because the field separator defines how fields are parsed. The remaining four encoding characters are the component separator, repetition separator, escape character, and subcomponent separator. They are read from the next field, conventionally ``^~\&``.
 
 The defaults are:
 
@@ -74,7 +71,7 @@ Field and component parsing
 
 With encoding characters known and a model class resolved, each segment is tokenised and matched
 against the model's field positions. Field positions are derived from the Pydantic
-``serialization_alias`` on each field,  ``MSH.9`` maps to position 9, ``PID.3`` to position 3,
+``serialization_alias`` on each field. ``MSH.9`` maps to position 9, ``PID.3`` to position 3,
 and so on.
 
 The parsing hierarchy mirrors the HL7 wire hierarchy:
@@ -86,7 +83,7 @@ The parsing hierarchy mirrors the HL7 wire hierarchy:
 4. **Subcomponents** within a component are split on the subcomponent separator (``&``).
 
 Whether a field is expected to be a scalar, a composite datatype (another ``HL7Model``), or a
-list of either is determined entirely by the type annotations on the model,  no runtime
+list of either is determined entirely by the type annotations on the model. No runtime
 configuration is needed.
 
 Escape sequences
@@ -101,8 +98,8 @@ Escape sequences in field values are resolved after tokenisation. The five stand
 - ``\E\`` to ``\`` (escape character)
 
 This behaviour is derived from HAPI (the reference Java HL7 implementation). Unknown escape
-sequences,  such as ``\H\``, ``\N\``, or ``\.br\``, which are presentation-layer formatting
-hints are left untouched rather than raising an error.
+sequences such as ``\H\``, ``\N\``, or ``\.br\`` are presentation-layer formatting hints. They
+are left untouched rather than raising an error.
 
 See :doc:`validation` for details on field-level validation, strict versus lenient decoding, and
 fallback parsing for non-standard date formats.
