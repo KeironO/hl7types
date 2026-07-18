@@ -2,6 +2,18 @@
 
 All notable changes to hl7types are documented here.
 
+## [0.9.3] :  2026-07-18
+
+### Changes
+
+- Update changelog (#79)
+- Added more documentation to pass openssf stuff (#81)
+- Create CODE_OF_CONDUCT.md
+
+### Chores
+
+- Chore(deps-dev): bump ruff from 0.15.21 to 0.15.22 (#80)
+
 ## [0.9.2] :  2026-07-15
 
 ### Changes
