@@ -5,6 +5,10 @@
 [![Documentation](https://readthedocs.org/projects/hl7types/badge/?version=latest)](https://hl7types.readthedocs.io)
 [![codecov](https://codecov.io/gh/KeironO/hl7types/branch/main/graph/badge.svg)](https://codecov.io/gh/KeironO/hl7types)
 [![Downloads](https://static.pepy.tech/personalized-badge/hl7types?period=total&units=international_system&left_color=black&right_color=green&left_text=Downloads)](https://pepy.tech/project/hl7types)
+[![OpenSSF Baseline](https://www.bestpractices.dev/projects/13237/baseline)](https://www.bestpractices.dev/projects/13237)
+[![OpenSSF Best Practices](https://www.bestpractices.dev/projects/13237/badge)](https://www.bestpractices.dev/projects/13237)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 
 > For full API reference, usage guides, and HL7 type documentation, visit **[hl7types.readthedocs.io](https://hl7types.readthedocs.io/en/latest/)**.
 
@@ -362,6 +366,13 @@ ERR|||101^Required field missing^HL70357|E
 ```
 
 The correct `ERR` structure is produced for every supported HL7 version, from the simple CM string of v2.1 through to the fully structured `CWE`/`ERL` form of v2.4 and later. See the [error handling documentation](https://hl7types.readthedocs.io/en/latest/errors.html) for full details.
+
+## Feedback and contributing
+
+- **Report a bug:** [Open an issue](https://github.com/KeironO/hl7types/issues/new?template=bug_report.md)
+- **Request a feature:** [Open an issue](https://github.com/KeironO/hl7types/issues/new?template=feature_request.md)
+- **Contribute:** See [CONTRIBUTING.md](CONTRIBUTING.md) for setup instructions, coding standards, and the release process.
+
 ## License
 
 Proudly licensed under the MIT License. See [LICENSE](LICENSE) for details.
