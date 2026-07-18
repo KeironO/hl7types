@@ -2,6 +2,13 @@
 
 All notable changes to hl7types are documented here.
 
+## [0.9.4] :  2026-07-18
+
+### Changes
+
+- Update changelog (#82)
+- Added support for configdict  (#83)
+
 ## [0.9.3] :  2026-07-18
 
 ### Changes
