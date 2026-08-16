@@ -13,10 +13,12 @@ from annotated_types import MinLen
 from pydantic import BaseModel
 
 from hl7types._utils import version_to_module
-from hl7types.codecs.er7.encoder import (
+from hl7types.encoding import (
     DEFAULT_ENCODING,
     DELIM_DEF,
     EncodingChars,
+    encoding_from_segment,
+    split_segments,
 )
 from hl7types.registry import HL7Registry
 
@@ -269,19 +271,10 @@ def decode_er7_segment(
     if seg_name in DELIM_DEF and len(seg_str) > 3:
         field_sep = seg_str[3]
         if field_sep != enc.field:
-            rest = seg_str[4:]
-            msh2_end = rest.find(field_sep)
-            msh2 = rest[:msh2_end] if msh2_end != -1 else rest
             # Version unknown at this point; truncation support requires decode_er7 path
-            base = EncodingChars.from_msh2(msh2) if msh2 else enc
-            enc = EncodingChars(
-                field=field_sep,
-                component=base.component,
-                repetition=base.repetition,
-                escape=base.escape,
-                subcomponent=base.subcomponent,
-                truncation=base.truncation,
-            )
+            detected = encoding_from_segment(seg_str, fallback=enc)
+            if detected is not None:
+                enc = detected
 
     tokens = seg_str.split(enc.field)
     pm = _build_pos_map(seg_cls)
@@ -556,12 +549,6 @@ def _resolve_msg_cls(
         ) from exc
 
 
-def _split_segments(wire: str, segment_separator: str) -> list[str]:
-    if segment_separator in ("\r", "\n", "\r\n"):
-        return [s for s in re.split(r"\r\n|\r|\n", wire) if s]
-    return [s for s in wire.split(segment_separator) if s]
-
-
 def decode_er7(
     wire: str,
     msg_cls: type[BaseModel] | None = None,
@@ -641,7 +628,35 @@ def decode_er7(
     >>> msg.MSA.msa_1
     'AA'
     """
-    seg_strings = _split_segments(wire, segment_separator)
+    seg_strings = split_segments(wire, segment_separator)
+    return decode_er7_from_segments(
+        seg_strings,
+        msg_cls,
+        strict=strict,
+        registry=registry,
+        dt_parser=dt_parser,
+        dtm_parser=dtm_parser,
+    )
+
+
+def decode_er7_from_segments(
+    seg_strings: list[str],
+    msg_cls: type[BaseModel] | None,
+    *,
+    strict: bool = True,
+    registry: HL7Registry | None = None,
+    dt_parser: Callable[[str], str] | None = None,
+    dtm_parser: Callable[[str], str] | None = None,
+) -> BaseModel:
+    """Decode pre-split ER7 segment strings into a typed message model.
+
+    This is the segment-split-free core of :func:`decode_er7`. It accepts the
+    list of segment strings already produced by :func:`split_segments` (or
+    retained verbatim by a :class:`~hl7types.codecs.er7.hybrid.GenericMessage`)
+    and performs message-class resolution, encoding-character detection, and
+    structural decoding. Splitting the wire once and sharing the result avoids
+    re-parsing when a caller already has the segment strings.
+    """
     if not seg_strings:
         raise ValueError("Empty wire string")
 
@@ -653,17 +668,10 @@ def decode_er7(
         if ss[:3] in DELIM_DEF and len(ss) > 3:
             field_sep = ss[3]
             tokens = ss.split(field_sep)
-            msh2 = tokens[1] if len(tokens) > 1 else ""
             msh12 = tokens[11] if len(tokens) > 11 else ""
-            base = EncodingChars.from_msh2(msh2, msh12 or None) if msh2 else DEFAULT_ENCODING
-            enc = EncodingChars(
-                field=field_sep,
-                component=base.component,
-                repetition=base.repetition,
-                escape=base.escape,
-                subcomponent=base.subcomponent,
-                truncation=base.truncation,
-            )
+            detected = encoding_from_segment(ss, hl7_version=msh12 or None)
+            if detected is not None:
+                enc = detected
             break
 
     segs = [(_seg_name(ss, enc.field), ss) for ss in seg_strings]

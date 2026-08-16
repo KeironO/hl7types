@@ -1,53 +1,13 @@
 from __future__ import annotations
 
 import re
-from dataclasses import dataclass
 from typing import Any, cast
 
 from pydantic import BaseModel
 
-DELIM_DEF = frozenset({"MSH", "FHS", "BHS"})
+from hl7types.encoding import DEFAULT_ENCODING, DELIM_DEF, EncodingChars
+
 SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,3}\.\d+$")
-
-
-@dataclass(frozen=True)
-class EncodingChars:
-    field: str = "|"
-    component: str = "^"
-    repetition: str = "~"
-    escape: str = "\\"
-    subcomponent: str = "&"
-    truncation: str = ""
-
-    @classmethod
-    def from_msh2(cls, msh2: str, hl7_version: str | None = None) -> EncodingChars:
-        if len(msh2) not in (4, 5):
-            raise ValueError(
-                f"MSH.2 must be 4 or 5 encoding characters, got {len(msh2)!r}: {msh2!r}"
-            )
-        truncation = ""
-        if len(msh2) == 5:
-            v = hl7_version or ""
-            try:
-                major, minor = int(v.split(".")[0]), int(v.split(".")[1]) if "." in v else 0
-            except (ValueError, IndexError):
-                major, minor = 0, 0
-            if (major, minor) < (2, 7):
-                raise ValueError(
-                    f"Truncation character in MSH.2 is only supported from HL7 v2.7 "
-                    f"(got version {hl7_version!r})"
-                )
-            truncation = msh2[4]
-        return cls(
-            component=msh2[0],
-            repetition=msh2[1],
-            escape=msh2[2],
-            subcomponent=msh2[3],
-            truncation=truncation,
-        )
-
-
-DEFAULT_ENCODING = EncodingChars()
 
 
 def _strip_trailing(s: str, delim: str) -> str:
