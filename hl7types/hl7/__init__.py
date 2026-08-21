@@ -14,13 +14,12 @@ from hl7types.hl7._validators import NonStandardDateWarning as NonStandardDateWa
 
 from hl7types.codecs.er7.decoder import is_segment_cls, decode_er7, decode_er7_segment
 from hl7types.codecs.er7.encoder import (
-    DEFAULT_ENCODING,
-    EncodingChars,
     is_segment,
     encode_er7,
     encode_er7_segment,
 )
 from hl7types.codecs.xml.encoder import encode_xml
+from hl7types.codecs.encoding import DEFAULT_ENCODING, EncodingChars
 
 
 class HL7Model(BaseModel):

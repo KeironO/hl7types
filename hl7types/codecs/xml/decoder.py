@@ -12,7 +12,8 @@ from defusedxml import ElementTree as ET
 from pydantic import BaseModel
 
 from hl7types._utils import version_to_module
-from hl7types.codecs.er7.encoder import DELIM_DEF, SEG_ALIAS_RE, EncodingChars
+from hl7types.codecs.encoding import DELIM_DEF, EncodingChars
+from hl7types.codecs.er7.encoder import SEG_ALIAS_RE
 from hl7types.registry import HL7Registry
 
 _HL7_XML_NS = "urn:hl7-org:v2xml"
