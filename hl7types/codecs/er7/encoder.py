@@ -5,7 +5,7 @@ from typing import Any, cast
 
 from pydantic import BaseModel
 
-from hl7types.encoding import DEFAULT_ENCODING, DELIM_DEF, EncodingChars
+from hl7types.codecs.encoding import DEFAULT_ENCODING, DELIM_DEF, EncodingChars
 
 SEG_ALIAS_RE = re.compile(r"^[A-Z][A-Z0-9]{1,3}\.\d+$")
 

@@ -1,13 +1,13 @@
 from __future__ import annotations
 
 import json
+import warnings
 from datetime import datetime
 from typing import Optional
 
-import pytest
 from pydantic import Field
 
-from hl7types import HL7Registry, decode_er7, decode_er7_hybrid
+from hl7types import HL7Registry, NonStandardDateWarning, decode_er7, decode_er7_hybrid
 from hl7types.hl7 import HL7Model
 from hl7types.hl7.v2_5_1.datatypes.HD import HD
 from hl7types.hl7.v2_5_1.datatypes.MSG import MSG
@@ -91,11 +91,18 @@ def test_hybrid_decoder_passes_dt_parser_through_to_typed_view() -> None:
     # MSH.7 is a non-standard ISO date that the fallback parser must convert.
     wire = "MSH|^~\\&|SEND||RECV||2026-01-01||ACK|001|P|2.5.1\rMSA|AA|001\r"
 
-    message = decode_er7_hybrid(wire, dtm_parser=to_hl7_date)
+    with warnings.catch_warnings(record=True) as emitted:
+        warnings.simplefilter("always")
+        message = decode_er7_hybrid(wire, dtm_parser=to_hl7_date)
 
     assert message.typed is not None
     assert message.typed.MSH.msh_7.ts_1 == "20260101"  # type: ignore[union-attr]
     assert message.generic.MSH.msh_7.value == "2026-01-01"
+    assert not any(issubclass(warning.category, NonStandardDateWarning) for warning in emitted)
+    assert any(
+        diagnostic.level == "warning" and "Non-standard DTM value" in diagnostic.message
+        for diagnostic in message.diagnostics
+    )
 
 
 def test_hybrid_decoder_keeps_multiple_unknown_segments() -> None:
@@ -183,8 +190,7 @@ def test_hybrid_generic_view_preserves_unknown_segments_and_empty_values() -> No
     generic = message.generic
 
     assert message.model_dump_er7() == wire
-    with pytest.raises(AttributeError):
-        _ = generic.raw
+    assert generic.raw == wire
     assert generic.encoding.field == "|"
     assert [segment.name for segment in generic.segments] == ["MSH", "ZPD", "PID"]
     assert generic.segments[0].fields[0].repetitions[0].components[0].subcomponents == ("|",)
@@ -213,10 +219,16 @@ def test_hybrid_generic_field_values_can_be_reconstructed() -> None:
 def test_hybrid_generic_view_dumps_json() -> None:
     message = decode_er7_hybrid("MSH|^~\\&|SENDER\rZPD|value\r")
 
-    dumped = json.loads(message.generic.model_dump_json())
+    generic_dump = message.generic.model_dump()
+    hybrid_dump = message.model_dump()["generic"]
+    hybrid_json_dump = json.loads(message.model_dump_json())["generic"]
 
-    assert "raw" not in dumped
-    assert dumped["encoding"]["field"] == "|"
-    assert dumped["MSH"]["msh_1"]["value"] == "|"
-    assert dumped["MSH"]["msh_2"]["value"] == "^~\\&"
-    assert dumped["ZPD"]["zpd_1"]["repetitions"][0]["components"][0]["subcomponents"] == ["value"]
+    assert hybrid_dump == generic_dump
+    assert hybrid_json_dump == generic_dump
+    assert "raw" not in hybrid_dump
+    assert hybrid_dump["encoding"]["field"] == "|"
+    assert hybrid_dump["MSH"]["msh_1"]["value"] == "|"
+    assert hybrid_dump["MSH"]["msh_2"]["value"] == "^~\\&"
+    assert hybrid_dump["ZPD"]["zpd_1"]["repetitions"][0]["components"][0][
+        "subcomponents"
+    ] == ["value"]

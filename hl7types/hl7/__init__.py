@@ -19,7 +19,7 @@ from hl7types.codecs.er7.encoder import (
     encode_er7_segment,
 )
 from hl7types.codecs.xml.encoder import encode_xml
-from hl7types.encoding import DEFAULT_ENCODING, EncodingChars
+from hl7types.codecs.encoding import DEFAULT_ENCODING, EncodingChars
 
 
 class HL7Model(BaseModel):

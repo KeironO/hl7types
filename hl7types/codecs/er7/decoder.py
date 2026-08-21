@@ -13,7 +13,7 @@ from annotated_types import MinLen
 from pydantic import BaseModel
 
 from hl7types._utils import version_to_module
-from hl7types.encoding import (
+from hl7types.codecs.encoding import (
     DEFAULT_ENCODING,
     DELIM_DEF,
     EncodingChars,
@@ -205,6 +205,7 @@ def decode_er7_segment(
     strict: bool = True,
     dt_parser: Callable[[str], str] | None = None,
     dtm_parser: Callable[[str], str] | None = None,
+    _diagnostics: list[str] | None = None,
 ) -> BaseModel:
     """Decode a single ER7 segment string into a typed segment model.
 
@@ -335,15 +336,15 @@ def decode_er7_segment(
                 data[fname] = ""
 
         if skipped_fields:
-            warnings.warn(
-                (
-                    f"Lenient ER7 decoding skipped missing required field(s) "
-                    f"on segment {seg_name}: {', '.join(skipped_fields)}. "
-                    "Placeholder values were injected because strict=False."
-                ),
-                UserWarning,
-                stacklevel=2,
+            msg = (
+                f"Lenient ER7 decoding skipped missing required field(s) "
+                f"on segment {seg_name}: {', '.join(skipped_fields)}. "
+                "Placeholder values were injected because strict=False."
             )
+            if _diagnostics is not None:
+                _diagnostics.append(msg)
+            else:
+                warnings.warn(msg, UserWarning, stacklevel=2)
 
     context: dict[str, Any] | None = None
     if dt_parser is not None or dtm_parser is not None:
@@ -362,12 +363,19 @@ def _decode_struct(
     _globally_reachable: frozenset[str] | None = None,
     dt_parser: Callable[[str], str] | None = None,
     dtm_parser: Callable[[str], str] | None = None,
+    _diagnostics: list[str] | None = None,
 ) -> tuple[int, BaseModel | None]:
     if is_segment_cls(model_cls, registry):
         if idx >= len(segs) or segs[idx][0] != model_cls.__name__:
             return idx, None
         return idx + 1, decode_er7_segment(
-            segs[idx][1], model_cls, enc, strict=strict, dt_parser=dt_parser, dtm_parser=dtm_parser
+            segs[idx][1],
+            model_cls,
+            enc,
+            strict=strict,
+            dt_parser=dt_parser,
+            dtm_parser=dtm_parser,
+            _diagnostics=_diagnostics,
         )
 
     hints = get_type_hints(model_cls)
@@ -390,11 +398,11 @@ def _decode_struct(
         # Drain segments whose names are not reachable anywhere in the message
         # structure. These are true unknowns (e.g. unregistered Z-segments).
         while idx < len(segs) and segs[idx][0] not in _globally_reachable:
-            warnings.warn(
-                f"Skipped unknown segment {segs[idx][0]!r} in {model_cls.__name__}.",
-                UserWarning,
-                stacklevel=2,
-            )
+            msg = f"Skipped unknown segment {segs[idx][0]!r} in {model_cls.__name__}."
+            if _diagnostics is not None:
+                _diagnostics.append(msg)
+            else:
+                warnings.warn(msg, UserWarning, stacklevel=2)
             idx += 1
 
         seg_name = base_type.__name__
@@ -409,11 +417,11 @@ def _decode_struct(
             while idx < len(segs):
                 # Drain unknowns between repetitions of a list field too.
                 while idx < len(segs) and segs[idx][0] not in _globally_reachable:
-                    warnings.warn(
-                        f"Skipped unknown segment {segs[idx][0]!r} in {model_cls.__name__}.",
-                        UserWarning,
-                        stacklevel=2,
-                    )
+                    msg = f"Skipped unknown segment {segs[idx][0]!r} in {model_cls.__name__}."
+                    if _diagnostics is not None:
+                        _diagnostics.append(msg)
+                    else:
+                        warnings.warn(msg, UserWarning, stacklevel=2)
                     idx += 1
                 if idx >= len(segs):
                     break
@@ -427,6 +435,7 @@ def _decode_struct(
                     _globally_reachable=_globally_reachable,
                     dt_parser=dt_parser,
                     dtm_parser=dtm_parser,
+                    _diagnostics=_diagnostics,
                 )
                 if item is None:
                     break
@@ -445,6 +454,7 @@ def _decode_struct(
                 _globally_reachable=_globally_reachable,
                 dt_parser=dt_parser,
                 dtm_parser=dtm_parser,
+                _diagnostics=_diagnostics,
             )
             if item is not None:
                 data[fname] = item
@@ -476,15 +486,15 @@ def _decode_struct(
             data[fname] = [] if is_list else base_type.model_construct()
 
         if skipped_fields:
-            warnings.warn(
-                (
-                    f"Lenient ER7 decoding skipped missing required segment/group "
-                    f"field(s) on {model_cls.__name__}: {', '.join(skipped_fields)}. "
-                    "Placeholder values were injected because strict=False."
-                ),
-                UserWarning,
-                stacklevel=2,
+            msg = (
+                f"Lenient ER7 decoding skipped missing required segment/group "
+                f"field(s) on {model_cls.__name__}: {', '.join(skipped_fields)}. "
+                "Placeholder values were injected because strict=False."
             )
+            if _diagnostics is not None:
+                _diagnostics.append(msg)
+            else:
+                warnings.warn(msg, UserWarning, stacklevel=2)
 
     context: dict[str, Any] | None = None
     if dt_parser is not None or dtm_parser is not None:
@@ -647,12 +657,13 @@ def decode_er7_from_segments(
     registry: HL7Registry | None = None,
     dt_parser: Callable[[str], str] | None = None,
     dtm_parser: Callable[[str], str] | None = None,
+    _diagnostics: list[str] | None = None,
 ) -> BaseModel:
     """Decode pre-split ER7 segment strings into a typed message model.
 
     This is the segment-split-free core of :func:`decode_er7`. It accepts the
     list of segment strings already produced by :func:`split_segments` (or
-    retained verbatim by a :class:`~hl7types.codecs.er7.hybrid.GenericMessage`)
+    retained verbatim by a :class:`~hl7types.codecs.er7.generic.GenericMessage`)
     and performs message-class resolution, encoding-character detection, and
     structural decoding. Splitting the wire once and sharing the result avoids
     re-parsing when a caller already has the segment strings.
@@ -684,6 +695,7 @@ def decode_er7_from_segments(
         registry=registry,
         dt_parser=dt_parser,
         dtm_parser=dtm_parser,
+        _diagnostics=_diagnostics,
     )
     if result is None:
         raise ValueError(f"Could not decode wire string as {msg_cls.__name__}")
