@@ -2,6 +2,19 @@
 
 All notable changes to hl7types are documented here.
 
+## [0.9.5] :  2026-08-21
+
+### Changes
+
+- Update changelog (#84)
+- Non standard loading (#92)
+
+### Chores
+
+- Chore(deps-dev): bump ruff from 0.15.22 to 0.16.3 (#93)
+- Chore(deps-dev): bump pre-commit from 4.6.0 to 4.6.2 (#91)
+- Chore(deps-dev): bump hatchling from 1.31.0 to 1.32.0 (#90)
+
 ## [0.9.4] :  2026-07-18
 
 ### Changes
